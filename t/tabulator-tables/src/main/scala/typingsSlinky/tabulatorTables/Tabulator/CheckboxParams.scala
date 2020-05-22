@@ -4,52 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CheckboxParams
   extends SharedEditorParams
-     with EditorParams {
-  var indeterminateValue: js.UndefOr[String] = js.native
+     with _EditorParams {
+  var indeterminateValue: js.UndefOr[String] = js.undefined
   // tick
-  var tristate: js.UndefOr[Boolean] = js.native
+  var tristate: js.UndefOr[Boolean] = js.undefined
 }
 
 object CheckboxParams {
   @scala.inline
-  def apply(): CheckboxParams = {
+  def apply(
+    elementAttributes: JSONRecord = null,
+    indeterminateValue: String = null,
+    mask: String = null,
+    maskAutoFill: js.UndefOr[Boolean] = js.undefined,
+    maskLetterChar: String = null,
+    maskNumberChar: String = null,
+    maskWildcardChar: String = null,
+    tristate: js.UndefOr[Boolean] = js.undefined
+  ): CheckboxParams = {
     val __obj = js.Dynamic.literal()
+    if (elementAttributes != null) __obj.updateDynamic("elementAttributes")(elementAttributes.asInstanceOf[js.Any])
+    if (indeterminateValue != null) __obj.updateDynamic("indeterminateValue")(indeterminateValue.asInstanceOf[js.Any])
+    if (mask != null) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
+    if (!js.isUndefined(maskAutoFill)) __obj.updateDynamic("maskAutoFill")(maskAutoFill.get.asInstanceOf[js.Any])
+    if (maskLetterChar != null) __obj.updateDynamic("maskLetterChar")(maskLetterChar.asInstanceOf[js.Any])
+    if (maskNumberChar != null) __obj.updateDynamic("maskNumberChar")(maskNumberChar.asInstanceOf[js.Any])
+    if (maskWildcardChar != null) __obj.updateDynamic("maskWildcardChar")(maskWildcardChar.asInstanceOf[js.Any])
+    if (!js.isUndefined(tristate)) __obj.updateDynamic("tristate")(tristate.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CheckboxParams]
   }
-  @scala.inline
-  implicit class CheckboxParamsOps[Self <: CheckboxParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndeterminateValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indeterminateValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndeterminateValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indeterminateValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTristate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tristate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTristate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tristate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

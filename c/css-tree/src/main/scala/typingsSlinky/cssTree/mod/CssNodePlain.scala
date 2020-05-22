@@ -1,5 +1,7 @@
 package typingsSlinky.cssTree.mod
 
+import typingsSlinky.cssTree.cssTreeStrings.Function
+import typingsSlinky.cssTree.cssTreeStrings.Number
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -50,84 +52,387 @@ trait CssNodePlain extends js.Object
 
 object CssNodePlain {
   @scala.inline
-  implicit def apply(value: AnPlusB): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def BracketsPlain(
+    children: js.Array[CssNodePlain],
+    `type`: typingsSlinky.cssTree.cssTreeStrings.Brackets,
+    loc: CssLocation = null
+  ): CssNodePlain = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: AtrulePlain): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def DeclarationPlain(
+    important: Boolean | String,
+    property: String,
+    `type`: typingsSlinky.cssTree.cssTreeStrings.Declaration,
+    value: ValuePlain | Raw,
+    loc: CssLocation = null
+  ): CssNodePlain = {
+    val __obj = js.Dynamic.literal(important = important.asInstanceOf[js.Any], property = property.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: AtrulePreludePlain): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def DeclarationListPlain(
+    children: js.Array[CssNodePlain],
+    `type`: typingsSlinky.cssTree.cssTreeStrings.DeclarationList,
+    loc: CssLocation = null
+  ): CssNodePlain = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: AttributeSelector): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def NthPlain(
+    nth: AnPlusB | Identifier,
+    `type`: typingsSlinky.cssTree.cssTreeStrings.Nth,
+    loc: CssLocation = null,
+    selector: SelectorListPlain = null
+  ): CssNodePlain = {
+    val __obj = js.Dynamic.literal(nth = nth.asInstanceOf[js.Any], selector = selector.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: BlockPlain): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def AttributeSelector(
+    name: Identifier,
+    `type`: typingsSlinky.cssTree.cssTreeStrings.AttributeSelector,
+    flags: String = null,
+    loc: CssLocation = null,
+    matcher: String = null,
+    value: StringNode | Identifier = null
+  ): CssNodePlain = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], matcher = matcher.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: BracketsPlain): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def ClassSelector(name: String, `type`: typingsSlinky.cssTree.cssTreeStrings.ClassSelector, loc: CssLocation = null): CssNodePlain = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: CDC): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def AnPlusB(
+    `type`: typingsSlinky.cssTree.cssTreeStrings.AnPlusB,
+    a: String = null,
+    b: String = null,
+    loc: CssLocation = null
+  ): CssNodePlain = {
+    val __obj = js.Dynamic.literal(a = a.asInstanceOf[js.Any], b = b.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: CDO): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def AtrulePlain(
+    name: String,
+    `type`: typingsSlinky.cssTree.cssTreeStrings.Atrule,
+    block: BlockPlain = null,
+    loc: CssLocation = null,
+    prelude: AtrulePreludePlain | Raw = null
+  ): CssNodePlain = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], block = block.asInstanceOf[js.Any], prelude = prelude.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: ClassSelector): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def CDO(`type`: typingsSlinky.cssTree.cssTreeStrings.CDO, loc: CssLocation = null): CssNodePlain = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: Combinator): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def Url(`type`: typingsSlinky.cssTree.cssTreeStrings.Url, value: StringNode | Raw, loc: CssLocation = null): CssNodePlain = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: Comment): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def IdSelector(name: String, `type`: typingsSlinky.cssTree.cssTreeStrings.IdSelector, loc: CssLocation = null): CssNodePlain = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: DeclarationListPlain): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def Combinator(name: String, `type`: typingsSlinky.cssTree.cssTreeStrings.Combinator, loc: CssLocation = null): CssNodePlain = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: DeclarationPlain): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def Percentage(`type`: typingsSlinky.cssTree.cssTreeStrings.Percentage, value: String, loc: CssLocation = null): CssNodePlain = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: Dimension): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def TypeSelector(name: String, `type`: typingsSlinky.cssTree.cssTreeStrings.TypeSelector, loc: CssLocation = null): CssNodePlain = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: FunctionNodePlain): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def ValuePlain(
+    children: js.Array[CssNodePlain],
+    `type`: typingsSlinky.cssTree.cssTreeStrings.Value,
+    loc: CssLocation = null
+  ): CssNodePlain = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: HexColor): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def UnicodeRange(`type`: typingsSlinky.cssTree.cssTreeStrings.UnicodeRange, value: String, loc: CssLocation = null): CssNodePlain = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: IdSelector): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def MediaQueryListPlain(
+    children: js.Array[CssNodePlain],
+    `type`: typingsSlinky.cssTree.cssTreeStrings.MediaQueryList,
+    loc: CssLocation = null
+  ): CssNodePlain = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: Identifier): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def ParenthesesPlain(
+    children: js.Array[CssNodePlain],
+    `type`: typingsSlinky.cssTree.cssTreeStrings.Parentheses,
+    loc: CssLocation = null
+  ): CssNodePlain = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: MediaFeature): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def SelectorPlain(
+    children: js.Array[CssNodePlain],
+    `type`: typingsSlinky.cssTree.cssTreeStrings.Selector,
+    loc: CssLocation = null
+  ): CssNodePlain = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: MediaQueryListPlain): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def Dimension(
+    `type`: typingsSlinky.cssTree.cssTreeStrings.Dimension,
+    unit: String,
+    value: String,
+    loc: CssLocation = null
+  ): CssNodePlain = {
+    val __obj = js.Dynamic.literal(unit = unit.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: MediaQueryPlain): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def BlockPlain(
+    children: js.Array[CssNodePlain],
+    `type`: typingsSlinky.cssTree.cssTreeStrings.Block,
+    loc: CssLocation = null
+  ): CssNodePlain = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: NthPlain): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def Comment(`type`: typingsSlinky.cssTree.cssTreeStrings.Comment, value: String, loc: CssLocation = null): CssNodePlain = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: NumberNode): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def Raw(`type`: typingsSlinky.cssTree.cssTreeStrings.Raw, value: String, loc: CssLocation = null): CssNodePlain = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: Operator): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def RulePlain(
+    block: BlockPlain,
+    prelude: SelectorListPlain | Raw,
+    `type`: typingsSlinky.cssTree.cssTreeStrings.Rule,
+    loc: CssLocation = null
+  ): CssNodePlain = {
+    val __obj = js.Dynamic.literal(block = block.asInstanceOf[js.Any], prelude = prelude.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: ParenthesesPlain): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def StringNode(`type`: typingsSlinky.cssTree.cssTreeStrings.String, value: String, loc: CssLocation = null): CssNodePlain = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: Percentage): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def MediaQueryPlain(
+    children: js.Array[CssNodePlain],
+    `type`: typingsSlinky.cssTree.cssTreeStrings.MediaQuery,
+    loc: CssLocation = null
+  ): CssNodePlain = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: PseudoClassSelectorPlain): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def PseudoElementSelectorPlain(
+    name: String,
+    `type`: typingsSlinky.cssTree.cssTreeStrings.PseudoElementSelector,
+    children: js.Array[CssNodePlain] = null,
+    loc: CssLocation = null
+  ): CssNodePlain = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], children = children.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: PseudoElementSelectorPlain): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def CDC(`type`: typingsSlinky.cssTree.cssTreeStrings.CDC, loc: CssLocation = null): CssNodePlain = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: Ratio): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def PseudoClassSelectorPlain(
+    name: String,
+    `type`: typingsSlinky.cssTree.cssTreeStrings.PseudoClassSelector,
+    children: js.Array[CssNodePlain] = null,
+    loc: CssLocation = null
+  ): CssNodePlain = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], children = children.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: Raw): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def Identifier(name: String, `type`: typingsSlinky.cssTree.cssTreeStrings.Identifier, loc: CssLocation = null): CssNodePlain = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: RulePlain): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def NumberNode(`type`: Number, value: String, loc: CssLocation = null): CssNodePlain = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: SelectorListPlain): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def MediaFeature(
+    name: String,
+    `type`: typingsSlinky.cssTree.cssTreeStrings.MediaFeature,
+    loc: CssLocation = null,
+    value: Identifier | NumberNode | Dimension | Ratio = null
+  ): CssNodePlain = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: SelectorPlain): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def SelectorListPlain(
+    children: js.Array[CssNodePlain],
+    `type`: typingsSlinky.cssTree.cssTreeStrings.SelectorList,
+    loc: CssLocation = null
+  ): CssNodePlain = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: StringNode): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def Operator(`type`: typingsSlinky.cssTree.cssTreeStrings.Operator, value: String, loc: CssLocation = null): CssNodePlain = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: StyleSheetPlain): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def FunctionNodePlain(children: js.Array[CssNodePlain], name: String, `type`: Function, loc: CssLocation = null): CssNodePlain = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: TypeSelector): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def AtrulePreludePlain(
+    children: js.Array[CssNodePlain],
+    `type`: typingsSlinky.cssTree.cssTreeStrings.AtrulePrelude,
+    loc: CssLocation = null
+  ): CssNodePlain = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: UnicodeRange): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def HexColor(`type`: typingsSlinky.cssTree.cssTreeStrings.HexColor, value: String, loc: CssLocation = null): CssNodePlain = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: Url): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def StyleSheetPlain(
+    children: js.Array[CssNodePlain],
+    `type`: typingsSlinky.cssTree.cssTreeStrings.StyleSheet,
+    loc: CssLocation = null
+  ): CssNodePlain = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: ValuePlain): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def Ratio(
+    left: String,
+    right: String,
+    `type`: typingsSlinky.cssTree.cssTreeStrings.Ratio,
+    loc: CssLocation = null
+  ): CssNodePlain = {
+    val __obj = js.Dynamic.literal(left = left.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
   @scala.inline
-  implicit def apply(value: WhiteSpace): CssNodePlain = value.asInstanceOf[CssNodePlain]
+  def WhiteSpace(`type`: typingsSlinky.cssTree.cssTreeStrings.WhiteSpace, value: String, loc: CssLocation = null): CssNodePlain = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CssNodePlain]
+  }
 }
 

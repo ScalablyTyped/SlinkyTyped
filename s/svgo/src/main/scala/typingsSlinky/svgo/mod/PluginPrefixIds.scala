@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PluginPrefixIds extends PluginConfig {
-  /** prefix IDs and classes with the SVG filename or an arbitrary string	 */
-  var prefixIds: Boolean | js.Object = js.native
+  /** prefix IDs and classes with the SVG filename or an arbitrary string     */
+  var prefixIds: Boolean | js.Object
 }
 
 object PluginPrefixIds {
@@ -16,19 +15,5 @@ object PluginPrefixIds {
     val __obj = js.Dynamic.literal(prefixIds = prefixIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[PluginPrefixIds]
   }
-  @scala.inline
-  implicit class PluginPrefixIdsOps[Self <: PluginPrefixIds] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrefixIds(value: Boolean | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

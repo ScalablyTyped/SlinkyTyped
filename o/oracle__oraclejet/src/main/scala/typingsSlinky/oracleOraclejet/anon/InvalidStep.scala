@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InvalidStep extends js.Object {
-  var invalidStep: js.UndefOr[String] = js.native
-  var maxMin: js.UndefOr[String] = js.native
-  var noValue: js.UndefOr[String] = js.native
-  var optionNum: js.UndefOr[String] = js.native
-  var valueRange: js.UndefOr[String] = js.native
+  var invalidStep: js.UndefOr[String] = js.undefined
+  var maxMin: js.UndefOr[String] = js.undefined
+  var noValue: js.UndefOr[String] = js.undefined
+  var optionNum: js.UndefOr[String] = js.undefined
+  var valueRange: js.UndefOr[String] = js.undefined
 }
 
 object InvalidStep {
   @scala.inline
-  def apply(): InvalidStep = {
+  def apply(
+    invalidStep: String = null,
+    maxMin: String = null,
+    noValue: String = null,
+    optionNum: String = null,
+    valueRange: String = null
+  ): InvalidStep = {
     val __obj = js.Dynamic.literal()
+    if (invalidStep != null) __obj.updateDynamic("invalidStep")(invalidStep.asInstanceOf[js.Any])
+    if (maxMin != null) __obj.updateDynamic("maxMin")(maxMin.asInstanceOf[js.Any])
+    if (noValue != null) __obj.updateDynamic("noValue")(noValue.asInstanceOf[js.Any])
+    if (optionNum != null) __obj.updateDynamic("optionNum")(optionNum.asInstanceOf[js.Any])
+    if (valueRange != null) __obj.updateDynamic("valueRange")(valueRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidStep]
   }
-  @scala.inline
-  implicit class InvalidStepOps[Self <: InvalidStep] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInvalidStep(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidStep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvalidStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidStep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxMin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptionNum(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionNum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptionNum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionNum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueRange(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueRange")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

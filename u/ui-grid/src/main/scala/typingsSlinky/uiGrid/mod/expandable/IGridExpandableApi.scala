@@ -5,28 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IGridExpandableApi[TEntity] extends js.Object {
   // Events
-  var on: RowExpandedStateChanged[TEntity] = js.native
+  var on: RowExpandedStateChanged[TEntity]
   // Methods
   /**
     * Collapse all subgrids.
     */
-  def collapseAllRows(): Unit = js.native
+  def collapseAllRows(): Unit
   /**
     * expand all subgrids
     */
-  def expandAllRows(): Unit = js.native
+  def expandAllRows(): Unit
   /**
     * Toggle all subgrids
     */
-  def toggleAllRows(): Unit = js.native
+  def toggleAllRows(): Unit
   /**
     * Toggle a specific row
     * @param {TEntity} rowEntity The data entity for the row you want to expand
     */
-  def toggleRowExpansion(rowEntity: TEntity): Unit = js.native
+  def toggleRowExpansion(rowEntity: TEntity): Unit
 }
 
 object IGridExpandableApi {
@@ -41,43 +40,5 @@ object IGridExpandableApi {
     val __obj = js.Dynamic.literal(collapseAllRows = js.Any.fromFunction0(collapseAllRows), expandAllRows = js.Any.fromFunction0(expandAllRows), on = on.asInstanceOf[js.Any], toggleAllRows = js.Any.fromFunction0(toggleAllRows), toggleRowExpansion = js.Any.fromFunction1(toggleRowExpansion))
     __obj.asInstanceOf[IGridExpandableApi[TEntity]]
   }
-  @scala.inline
-  implicit class IGridExpandableApiOps[Self[tentity] <: IGridExpandableApi[tentity], TEntity] (val x: Self[TEntity]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TEntity] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TEntity]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[TEntity] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TEntity] with Other]
-    @scala.inline
-    def withCollapseAllRows(value: () => Unit): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseAllRows")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withExpandAllRows(value: () => Unit): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandAllRows")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOn(value: RowExpandedStateChanged[TEntity]): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToggleAllRows(value: () => Unit): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleAllRows")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withToggleRowExpansion(value: TEntity => Unit): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleRowExpansion")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

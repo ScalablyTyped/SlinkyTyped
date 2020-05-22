@@ -7,558 +7,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Params extends js.Object {
-  var alt_text: js.UndefOr[Text] = js.native
-  var count: js.UndefOr[Double] = js.native
-  var cursor: js.UndefOr[Double | String] = js.native
-  var exclude_replies: js.UndefOr[Boolean] = js.native
-  var follow: js.UndefOr[Boolean | String | js.Array[String]] = js.native
-  var geocode: js.UndefOr[String] = js.native
-  var id: js.UndefOr[String] = js.native
-  var in_reply_to_status_id: js.UndefOr[Double | String] = js.native
-  var include_email: js.UndefOr[Boolean] = js.native
-  var include_entities: js.UndefOr[Boolean] = js.native
-  var include_rts: js.UndefOr[Boolean] = js.native
-  var include_user_entities: js.UndefOr[Boolean] = js.native
-  var lang: js.UndefOr[String] = js.native
-  var lat: js.UndefOr[Double] = js.native
-  var locale: js.UndefOr[String] = js.native
-  var long: js.UndefOr[Double] = js.native
-  var max_id: js.UndefOr[String] = js.native
-  var media_data: js.UndefOr[Buffer | String] = js.native
-  var media_id: js.UndefOr[String] = js.native
-  var media_ids: js.UndefOr[js.Array[String]] = js.native
-  var owner_screen_name: js.UndefOr[String] = js.native
-  var page: js.UndefOr[Double] = js.native
+  var alt_text: js.UndefOr[Text] = js.undefined
+  var count: js.UndefOr[Double] = js.undefined
+  var cursor: js.UndefOr[Double | String] = js.undefined
+  var exclude_replies: js.UndefOr[Boolean] = js.undefined
+  var follow: js.UndefOr[Boolean | String | js.Array[String]] = js.undefined
+  var geocode: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var in_reply_to_status_id: js.UndefOr[Double | String] = js.undefined
+  var include_email: js.UndefOr[Boolean] = js.undefined
+  var include_entities: js.UndefOr[Boolean] = js.undefined
+  var include_rts: js.UndefOr[Boolean] = js.undefined
+  var include_user_entities: js.UndefOr[Boolean] = js.undefined
+  var lang: js.UndefOr[String] = js.undefined
+  var lat: js.UndefOr[Double] = js.undefined
+  var locale: js.UndefOr[String] = js.undefined
+  var long: js.UndefOr[Double] = js.undefined
+  var max_id: js.UndefOr[String] = js.undefined
+  var media_data: js.UndefOr[Buffer | String] = js.undefined
+  var media_id: js.UndefOr[String] = js.undefined
+  var media_ids: js.UndefOr[js.Array[String]] = js.undefined
+  var owner_screen_name: js.UndefOr[String] = js.undefined
+  var page: js.UndefOr[Double] = js.undefined
   // search/tweets
-  var q: js.UndefOr[String] = js.native
-  var result_type: js.UndefOr[ResultType] = js.native
-  var results_per_page: js.UndefOr[Double] = js.native
-  var screen_name: js.UndefOr[String] = js.native
-  var since_id: js.UndefOr[String] = js.native
-  var skip_status: js.UndefOr[Boolean] = js.native
-  var slug: js.UndefOr[String] = js.native
-  var source_id: js.UndefOr[Double] = js.native
-  var source_screen_name: js.UndefOr[String] = js.native
-  var status: js.UndefOr[String] = js.native
-  var stringify_ids: js.UndefOr[Boolean] = js.native
-  var target_id: js.UndefOr[Double] = js.native
-  var target_screen_name: js.UndefOr[String] = js.native
+  var q: js.UndefOr[String] = js.undefined
+  var result_type: js.UndefOr[ResultType] = js.undefined
+  var results_per_page: js.UndefOr[Double] = js.undefined
+  var screen_name: js.UndefOr[String] = js.undefined
+  var since_id: js.UndefOr[String] = js.undefined
+  var skip_status: js.UndefOr[Boolean] = js.undefined
+  var slug: js.UndefOr[String] = js.undefined
+  var source_id: js.UndefOr[Double] = js.undefined
+  var source_screen_name: js.UndefOr[String] = js.undefined
+  var status: js.UndefOr[String] = js.undefined
+  var stringify_ids: js.UndefOr[Boolean] = js.undefined
+  var target_id: js.UndefOr[Double] = js.undefined
+  var target_screen_name: js.UndefOr[String] = js.undefined
   // Other params from various endpoints
-  var track: js.UndefOr[String | js.Array[String]] = js.native
-  var trim_user: js.UndefOr[Boolean] = js.native
-  var tweet_mode: js.UndefOr[String] = js.native
-  var until: js.UndefOr[String] = js.native
-  var url: js.UndefOr[String] = js.native
-  var user_id: js.UndefOr[Double | String] = js.native
+  var track: js.UndefOr[String | js.Array[String]] = js.undefined
+  var trim_user: js.UndefOr[Boolean] = js.undefined
+  var tweet_mode: js.UndefOr[String] = js.undefined
+  var until: js.UndefOr[String] = js.undefined
+  var url: js.UndefOr[String] = js.undefined
+  var user_id: js.UndefOr[Double | String] = js.undefined
 }
 
 object Params {
   @scala.inline
-  def apply(): Params = {
+  def apply(
+    alt_text: Text = null,
+    count: js.UndefOr[Double] = js.undefined,
+    cursor: Double | String = null,
+    exclude_replies: js.UndefOr[Boolean] = js.undefined,
+    follow: Boolean | String | js.Array[String] = null,
+    geocode: String = null,
+    id: String = null,
+    in_reply_to_status_id: Double | String = null,
+    include_email: js.UndefOr[Boolean] = js.undefined,
+    include_entities: js.UndefOr[Boolean] = js.undefined,
+    include_rts: js.UndefOr[Boolean] = js.undefined,
+    include_user_entities: js.UndefOr[Boolean] = js.undefined,
+    lang: String = null,
+    lat: js.UndefOr[Double] = js.undefined,
+    locale: String = null,
+    long: js.UndefOr[Double] = js.undefined,
+    max_id: String = null,
+    media_data: Buffer | String = null,
+    media_id: String = null,
+    media_ids: js.Array[String] = null,
+    owner_screen_name: String = null,
+    page: js.UndefOr[Double] = js.undefined,
+    q: String = null,
+    result_type: ResultType = null,
+    results_per_page: js.UndefOr[Double] = js.undefined,
+    screen_name: String = null,
+    since_id: String = null,
+    skip_status: js.UndefOr[Boolean] = js.undefined,
+    slug: String = null,
+    source_id: js.UndefOr[Double] = js.undefined,
+    source_screen_name: String = null,
+    status: String = null,
+    stringify_ids: js.UndefOr[Boolean] = js.undefined,
+    target_id: js.UndefOr[Double] = js.undefined,
+    target_screen_name: String = null,
+    track: String | js.Array[String] = null,
+    trim_user: js.UndefOr[Boolean] = js.undefined,
+    tweet_mode: String = null,
+    until: String = null,
+    url: String = null,
+    user_id: Double | String = null
+  ): Params = {
     val __obj = js.Dynamic.literal()
+    if (alt_text != null) __obj.updateDynamic("alt_text")(alt_text.asInstanceOf[js.Any])
+    if (!js.isUndefined(count)) __obj.updateDynamic("count")(count.get.asInstanceOf[js.Any])
+    if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
+    if (!js.isUndefined(exclude_replies)) __obj.updateDynamic("exclude_replies")(exclude_replies.get.asInstanceOf[js.Any])
+    if (follow != null) __obj.updateDynamic("follow")(follow.asInstanceOf[js.Any])
+    if (geocode != null) __obj.updateDynamic("geocode")(geocode.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (in_reply_to_status_id != null) __obj.updateDynamic("in_reply_to_status_id")(in_reply_to_status_id.asInstanceOf[js.Any])
+    if (!js.isUndefined(include_email)) __obj.updateDynamic("include_email")(include_email.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(include_entities)) __obj.updateDynamic("include_entities")(include_entities.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(include_rts)) __obj.updateDynamic("include_rts")(include_rts.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(include_user_entities)) __obj.updateDynamic("include_user_entities")(include_user_entities.get.asInstanceOf[js.Any])
+    if (lang != null) __obj.updateDynamic("lang")(lang.asInstanceOf[js.Any])
+    if (!js.isUndefined(lat)) __obj.updateDynamic("lat")(lat.get.asInstanceOf[js.Any])
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (!js.isUndefined(long)) __obj.updateDynamic("long")(long.get.asInstanceOf[js.Any])
+    if (max_id != null) __obj.updateDynamic("max_id")(max_id.asInstanceOf[js.Any])
+    if (media_data != null) __obj.updateDynamic("media_data")(media_data.asInstanceOf[js.Any])
+    if (media_id != null) __obj.updateDynamic("media_id")(media_id.asInstanceOf[js.Any])
+    if (media_ids != null) __obj.updateDynamic("media_ids")(media_ids.asInstanceOf[js.Any])
+    if (owner_screen_name != null) __obj.updateDynamic("owner_screen_name")(owner_screen_name.asInstanceOf[js.Any])
+    if (!js.isUndefined(page)) __obj.updateDynamic("page")(page.get.asInstanceOf[js.Any])
+    if (q != null) __obj.updateDynamic("q")(q.asInstanceOf[js.Any])
+    if (result_type != null) __obj.updateDynamic("result_type")(result_type.asInstanceOf[js.Any])
+    if (!js.isUndefined(results_per_page)) __obj.updateDynamic("results_per_page")(results_per_page.get.asInstanceOf[js.Any])
+    if (screen_name != null) __obj.updateDynamic("screen_name")(screen_name.asInstanceOf[js.Any])
+    if (since_id != null) __obj.updateDynamic("since_id")(since_id.asInstanceOf[js.Any])
+    if (!js.isUndefined(skip_status)) __obj.updateDynamic("skip_status")(skip_status.get.asInstanceOf[js.Any])
+    if (slug != null) __obj.updateDynamic("slug")(slug.asInstanceOf[js.Any])
+    if (!js.isUndefined(source_id)) __obj.updateDynamic("source_id")(source_id.get.asInstanceOf[js.Any])
+    if (source_screen_name != null) __obj.updateDynamic("source_screen_name")(source_screen_name.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (!js.isUndefined(stringify_ids)) __obj.updateDynamic("stringify_ids")(stringify_ids.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(target_id)) __obj.updateDynamic("target_id")(target_id.get.asInstanceOf[js.Any])
+    if (target_screen_name != null) __obj.updateDynamic("target_screen_name")(target_screen_name.asInstanceOf[js.Any])
+    if (track != null) __obj.updateDynamic("track")(track.asInstanceOf[js.Any])
+    if (!js.isUndefined(trim_user)) __obj.updateDynamic("trim_user")(trim_user.get.asInstanceOf[js.Any])
+    if (tweet_mode != null) __obj.updateDynamic("tweet_mode")(tweet_mode.asInstanceOf[js.Any])
+    if (until != null) __obj.updateDynamic("until")(until.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
+    if (user_id != null) __obj.updateDynamic("user_id")(user_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[Params]
   }
-  @scala.inline
-  implicit class ParamsOps[Self <: Params] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlt_text(value: Text): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alt_text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlt_text: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alt_text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCursor(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCursor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExclude_replies(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude_replies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExclude_replies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude_replies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFollow(value: Boolean | String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("follow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFollow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("follow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGeocode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geocode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeocode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geocode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIn_reply_to_status_id(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("in_reply_to_status_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIn_reply_to_status_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("in_reply_to_status_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInclude_email(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInclude_email: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_email")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInclude_entities(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_entities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInclude_entities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_entities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInclude_rts(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_rts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInclude_rts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_rts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInclude_user_entities(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_user_entities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInclude_user_entities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_user_entities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLang(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLang: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLat(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLong(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("long")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLong: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("long")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMedia_data(value: Buffer | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media_data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMedia_data: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media_data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMedia_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMedia_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMedia_ids(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media_ids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMedia_ids: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media_ids")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwner_screen_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner_screen_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner_screen_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner_screen_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQ(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResult_type(value: ResultType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResult_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResults_per_page(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("results_per_page")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResults_per_page: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("results_per_page")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScreen_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screen_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScreen_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screen_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSince_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("since_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSince_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("since_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkip_status(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip_status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkip_status: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip_status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlug(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource_screen_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source_screen_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource_screen_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source_screen_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringify_ids(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringify_ids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStringify_ids: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringify_ids")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget_screen_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target_screen_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget_screen_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target_screen_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrack(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrack: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrim_user(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trim_user")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrim_user: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trim_user")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTweet_mode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tweet_mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTweet_mode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tweet_mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUntil(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("until")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUntil: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("until")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser_id(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user_id")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

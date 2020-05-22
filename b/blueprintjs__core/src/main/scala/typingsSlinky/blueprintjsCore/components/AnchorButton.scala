@@ -27,6 +27,8 @@ import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.reset
 import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.submit
 import typingsSlinky.blueprintjsCore.intentMod.Intent
 import typingsSlinky.blueprintjsCore.propsMod.MaybeElement
+import typingsSlinky.blueprintjsCore.refUtilsMod.IRefCallback
+import typingsSlinky.blueprintjsCore.refUtilsMod.IRefObject
 import typingsSlinky.blueprintjsIcons.iconNameMod.IconName
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnchorHTMLAttributes
@@ -226,7 +228,9 @@ object AnchorButton {
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     @scala.inline
-    def elementRef(value: /* ref */ HTMLElement | Null => _): this.type = set("elementRef", js.Any.fromFunction1(value))
+    def elementRefFunction1(value: /* ref */ HTMLElement | Null => js.Any): this.type = set("elementRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def elementRef(value: IRefCallback[HTMLElement] | IRefObject[HTMLElement]): this.type = set("elementRef", value.asInstanceOf[js.Any])
     @scala.inline
     def fill(value: Boolean): this.type = set("fill", value.asInstanceOf[js.Any])
     @scala.inline

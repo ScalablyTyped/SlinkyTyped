@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 trait ImportEqualsDeclaration
   extends DeclarationStatement
      with JSDocContainer
-     with HasJSDoc {
+     with _HasJSDoc {
   @JSName("kind")
   var kind_ImportEqualsDeclaration: typingsSlinky.typescript.mod.SyntaxKind.ImportEqualsDeclaration = js.native
   var moduleReference: ModuleReference = js.native

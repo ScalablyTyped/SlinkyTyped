@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IEditorMimeTypeService extends js.Object {
   /**
     * Get a mime type for the given file path.
@@ -17,7 +16,7 @@ trait IEditorMimeTypeService extends js.Object {
     * #### Notes
     * If a mime type cannot be found returns the defaul mime type `text/plain`, never `null`.
     */
-  def getMimeTypeByFilePath(filePath: String): String = js.native
+  def getMimeTypeByFilePath(filePath: String): String
   /**
     * Get a mime type for the given language info.
     *
@@ -28,7 +27,7 @@ trait IEditorMimeTypeService extends js.Object {
     * #### Notes
     * If a mime type cannot be found returns the defaul mime type `text/plain`, never `null`.
     */
-  def getMimeTypeByLanguage(info: ILanguageInfoMetadata): String = js.native
+  def getMimeTypeByLanguage(info: ILanguageInfoMetadata): String
 }
 
 @JSImport("@jupyterlab/codeeditor/lib/mimetype", "IEditorMimeTypeService")

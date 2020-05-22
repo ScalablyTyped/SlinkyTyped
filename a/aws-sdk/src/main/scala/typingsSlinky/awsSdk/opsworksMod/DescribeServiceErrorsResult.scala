@@ -14,29 +14,10 @@ trait DescribeServiceErrorsResult extends js.Object {
 
 object DescribeServiceErrorsResult {
   @scala.inline
-  def apply(): DescribeServiceErrorsResult = {
+  def apply(ServiceErrors: ServiceErrors = null): DescribeServiceErrorsResult = {
     val __obj = js.Dynamic.literal()
+    if (ServiceErrors != null) __obj.updateDynamic("ServiceErrors")(ServiceErrors.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeServiceErrorsResult]
   }
-  @scala.inline
-  implicit class DescribeServiceErrorsResultOps[Self <: DescribeServiceErrorsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withServiceErrors(value: ServiceErrors): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceErrors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WorkerSettings extends js.Object {
   /**
     * The base URL for accessing Google Cloud APIs.
@@ -17,19 +16,19 @@ trait WorkerSettings extends js.Object {
     *
     * If not specified, the default value is "http://www.googleapis.com/"
     */
-  var baseUrl: js.UndefOr[String] = js.native
+  var baseUrl: js.UndefOr[String] = js.undefined
   /** Whether to send work progress updates to the service. */
-  var reportingEnabled: js.UndefOr[Boolean] = js.native
+  var reportingEnabled: js.UndefOr[Boolean] = js.undefined
   /**
     * The Cloud Dataflow service path relative to the root URL, for example,
     * "dataflow/v1b3/projects".
     */
-  var servicePath: js.UndefOr[String] = js.native
+  var servicePath: js.UndefOr[String] = js.undefined
   /**
     * The Shuffle service path relative to the root URL, for example,
     * "shuffle/v1beta1".
     */
-  var shuffleServicePath: js.UndefOr[String] = js.native
+  var shuffleServicePath: js.UndefOr[String] = js.undefined
   /**
     * The prefix of the resources the system should use for temporary
     * storage.
@@ -41,96 +40,29 @@ trait WorkerSettings extends js.Object {
     * storage.googleapis.com/{bucket}/{object}
     * bucket.storage.googleapis.com/{object}
     */
-  var tempStoragePrefix: js.UndefOr[String] = js.native
+  var tempStoragePrefix: js.UndefOr[String] = js.undefined
   /** The ID of the worker running this pipeline. */
-  var workerId: js.UndefOr[String] = js.native
+  var workerId: js.UndefOr[String] = js.undefined
 }
 
 object WorkerSettings {
   @scala.inline
-  def apply(): WorkerSettings = {
+  def apply(
+    baseUrl: String = null,
+    reportingEnabled: js.UndefOr[Boolean] = js.undefined,
+    servicePath: String = null,
+    shuffleServicePath: String = null,
+    tempStoragePrefix: String = null,
+    workerId: String = null
+  ): WorkerSettings = {
     val __obj = js.Dynamic.literal()
+    if (baseUrl != null) __obj.updateDynamic("baseUrl")(baseUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(reportingEnabled)) __obj.updateDynamic("reportingEnabled")(reportingEnabled.get.asInstanceOf[js.Any])
+    if (servicePath != null) __obj.updateDynamic("servicePath")(servicePath.asInstanceOf[js.Any])
+    if (shuffleServicePath != null) __obj.updateDynamic("shuffleServicePath")(shuffleServicePath.asInstanceOf[js.Any])
+    if (tempStoragePrefix != null) __obj.updateDynamic("tempStoragePrefix")(tempStoragePrefix.asInstanceOf[js.Any])
+    if (workerId != null) __obj.updateDynamic("workerId")(workerId.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkerSettings]
   }
-  @scala.inline
-  implicit class WorkerSettingsOps[Self <: WorkerSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBaseUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportingEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportingEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReportingEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportingEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServicePath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("servicePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServicePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("servicePath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShuffleServicePath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shuffleServicePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShuffleServicePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shuffleServicePath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTempStoragePrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tempStoragePrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTempStoragePrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tempStoragePrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

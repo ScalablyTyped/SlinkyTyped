@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   *  * How are requests for this priority level limited?
   *  * What should be done with requests that exceed the limit?
   */
-@js.native
 trait LimitedPriorityLevelConfiguration extends js.Object {
   /**
     * `assuredConcurrencyShares` (ACS) configures the execution limit, which is a limit on the
@@ -26,50 +25,20 @@ trait LimitedPriorityLevelConfiguration extends js.Object {
     * bigger numbers of ACS mean more reserved concurrent requests (at the expense of every other
     * PL). This field has a default value of 30.
     */
-  var assuredConcurrencyShares: js.UndefOr[Input[Double]] = js.native
+  var assuredConcurrencyShares: js.UndefOr[Input[Double]] = js.undefined
   /**
     * `limitResponse` indicates what to do with requests that can not be executed right now
     */
-  var limitResponse: js.UndefOr[Input[LimitResponse]] = js.native
+  var limitResponse: js.UndefOr[Input[LimitResponse]] = js.undefined
 }
 
 object LimitedPriorityLevelConfiguration {
   @scala.inline
-  def apply(): LimitedPriorityLevelConfiguration = {
+  def apply(assuredConcurrencyShares: Input[Double] = null, limitResponse: Input[LimitResponse] = null): LimitedPriorityLevelConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (assuredConcurrencyShares != null) __obj.updateDynamic("assuredConcurrencyShares")(assuredConcurrencyShares.asInstanceOf[js.Any])
+    if (limitResponse != null) __obj.updateDynamic("limitResponse")(limitResponse.asInstanceOf[js.Any])
     __obj.asInstanceOf[LimitedPriorityLevelConfiguration]
   }
-  @scala.inline
-  implicit class LimitedPriorityLevelConfigurationOps[Self <: LimitedPriorityLevelConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssuredConcurrencyShares(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assuredConcurrencyShares")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssuredConcurrencyShares: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assuredConcurrencyShares")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimitResponse(value: Input[LimitResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limitResponse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimitResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limitResponse")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

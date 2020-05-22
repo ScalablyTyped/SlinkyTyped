@@ -15,77 +15,20 @@ trait FileShareInfo extends js.Object {
 
 object FileShareInfo {
   @scala.inline
-  def apply(): FileShareInfo = {
+  def apply(
+    FileShareARN: FileShareARN = null,
+    FileShareId: FileShareId = null,
+    FileShareStatus: FileShareStatus = null,
+    FileShareType: FileShareType = null,
+    GatewayARN: GatewayARN = null
+  ): FileShareInfo = {
     val __obj = js.Dynamic.literal()
+    if (FileShareARN != null) __obj.updateDynamic("FileShareARN")(FileShareARN.asInstanceOf[js.Any])
+    if (FileShareId != null) __obj.updateDynamic("FileShareId")(FileShareId.asInstanceOf[js.Any])
+    if (FileShareStatus != null) __obj.updateDynamic("FileShareStatus")(FileShareStatus.asInstanceOf[js.Any])
+    if (FileShareType != null) __obj.updateDynamic("FileShareType")(FileShareType.asInstanceOf[js.Any])
+    if (GatewayARN != null) __obj.updateDynamic("GatewayARN")(GatewayARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileShareInfo]
   }
-  @scala.inline
-  implicit class FileShareInfoOps[Self <: FileShareInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFileShareARN(value: FileShareARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileShareARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileShareARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileShareARN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileShareId(value: FileShareId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileShareId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileShareId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileShareId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileShareStatus(value: FileShareStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileShareStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileShareStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileShareStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileShareType(value: FileShareType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileShareType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileShareType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileShareType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGatewayARN(value: GatewayARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGatewayARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

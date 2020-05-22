@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RangeType extends js.Object {
-  var endCol: Double = js.native
-  var endRow: Double = js.native
-  var startCol: Double = js.native
-  var startRow: Double = js.native
+  var endCol: Double
+  var endRow: Double
+  var startCol: Double
+  var startRow: Double
 }
 
 object RangeType {
@@ -18,37 +17,5 @@ object RangeType {
     val __obj = js.Dynamic.literal(endCol = endCol.asInstanceOf[js.Any], endRow = endRow.asInstanceOf[js.Any], startCol = startCol.asInstanceOf[js.Any], startRow = startRow.asInstanceOf[js.Any])
     __obj.asInstanceOf[RangeType]
   }
-  @scala.inline
-  implicit class RangeTypeOps[Self <: RangeType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndCol(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endCol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndRow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartCol(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startCol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartRow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

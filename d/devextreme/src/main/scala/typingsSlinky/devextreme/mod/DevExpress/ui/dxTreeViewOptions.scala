@@ -1,15 +1,21 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.devextreme.anon.ComponentDxTreeView
+import typingsSlinky.devextreme.anon.ComponentElement
 import typingsSlinky.devextreme.anon.ComponentElementModelValue
 import typingsSlinky.devextreme.anon.ElementItemElement
 import typingsSlinky.devextreme.anon.EventItemDataItemElement
 import typingsSlinky.devextreme.anon.ItemDataItemElementItemIndex
 import typingsSlinky.devextreme.anon.ItemElementItemIndexModel
+import typingsSlinky.devextreme.anon.Model
 import typingsSlinky.devextreme.anon.ModelNode
+import typingsSlinky.devextreme.anon.Name
 import typingsSlinky.devextreme.devextremeStrings.both
 import typingsSlinky.devextreme.devextremeStrings.click
+import typingsSlinky.devextreme.devextremeStrings.contains
 import typingsSlinky.devextreme.devextremeStrings.dblclick_
+import typingsSlinky.devextreme.devextremeStrings.equals
 import typingsSlinky.devextreme.devextremeStrings.horizontal
 import typingsSlinky.devextreme.devextremeStrings.multiple
 import typingsSlinky.devextreme.devextremeStrings.none
@@ -17,436 +23,226 @@ import typingsSlinky.devextreme.devextremeStrings.normal
 import typingsSlinky.devextreme.devextremeStrings.plain
 import typingsSlinky.devextreme.devextremeStrings.selectAll
 import typingsSlinky.devextreme.devextremeStrings.single_
+import typingsSlinky.devextreme.devextremeStrings.startswith
 import typingsSlinky.devextreme.devextremeStrings.tree
 import typingsSlinky.devextreme.devextremeStrings.vertical
+import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
+import typingsSlinky.devextreme.mod.global.JQuery
 import typingsSlinky.devextreme.mod.global.JQueryPromise
 import typingsSlinky.devextreme.mod.global.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxTreeViewOptions
   extends HierarchicalCollectionWidgetOptions[dxTreeView]
      with SearchBoxMixinOptions[dxTreeView] {
-  /** Specifies whether or not to animate item collapsing and expanding. */
-  var animationEnabled: js.UndefOr[Boolean] = js.native
-  /** Allows you to load nodes on demand. */
+  /** @name dxTreeView.Options.animationEnabled */
+  var animationEnabled: js.UndefOr[Boolean] = js.undefined
+  /** @name dxTreeView.Options.createChildren */
   var createChildren: js.UndefOr[
     js.Function1[/* parentNode */ dxTreeViewNode, Promise[_] | JQueryPromise[_] | js.Array[_]]
-  ] = js.native
-  /** Binds the widget to data. */
+  ] = js.undefined
+  /** @name dxTreeView.Options.dataSource */
   @JSName("dataSource")
-  var dataSource_dxTreeViewOptions: js.UndefOr[String | js.Array[dxTreeViewItem] | DataSource | DataSourceOptions] = js.native
-  /** Notifies the widget of the used data structure. */
-  var dataStructure: js.UndefOr[plain | tree] = js.native
-  /** Specifies whether or not a user can expand all tree view items by the "*" hot key. */
-  var expandAllEnabled: js.UndefOr[Boolean] = js.native
-  /** Specifies the event on which to expand/collapse a node. */
-  var expandEvent: js.UndefOr[dblclick_ | click] = js.native
-  /** Specifies whether or not all parent nodes of an initially expanded node are displayed expanded. */
-  var expandNodesRecursive: js.UndefOr[Boolean] = js.native
-  /** Specifies which data source field specifies whether an item is expanded. */
-  var expandedExpr: js.UndefOr[String | js.Function] = js.native
-  /** Specifies the name of the data source item field whose value defines whether or not the corresponding node includes child nodes. */
-  var hasItemsExpr: js.UndefOr[String | js.Function] = js.native
-  /** An array of items displayed by the widget. */
+  var dataSource_dxTreeViewOptions: js.UndefOr[String | js.Array[dxTreeViewItem] | DataSource | DataSourceOptions] = js.undefined
+  /** @name dxTreeView.Options.dataStructure */
+  var dataStructure: js.UndefOr[plain | tree] = js.undefined
+  /** @name dxTreeView.Options.expandAllEnabled */
+  var expandAllEnabled: js.UndefOr[Boolean] = js.undefined
+  /** @name dxTreeView.Options.expandEvent */
+  var expandEvent: js.UndefOr[dblclick_ | click] = js.undefined
+  /** @name dxTreeView.Options.expandNodesRecursive */
+  var expandNodesRecursive: js.UndefOr[Boolean] = js.undefined
+  /** @name dxTreeView.Options.expandedExpr */
+  var expandedExpr: js.UndefOr[String | js.Function] = js.undefined
+  /** @name dxTreeView.Options.hasItemsExpr */
+  var hasItemsExpr: js.UndefOr[String | js.Function] = js.undefined
+  /** @name dxTreeView.Options.items */
   @JSName("items")
-  var items_dxTreeViewOptions: js.UndefOr[js.Array[dxTreeViewItem]] = js.native
-  /** A function that is executed when a collection item is clicked or tapped. */
+  var items_dxTreeViewOptions: js.UndefOr[js.Array[dxTreeViewItem]] = js.undefined
+  /** @name dxTreeView.Options.onItemClick */
   @JSName("onItemClick")
-  var onItemClick_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ ModelNode, _]] = js.native
-  /** A function that is executed when a tree view item is collapsed. */
-  var onItemCollapsed: js.UndefOr[js.Function1[/* e */ EventItemDataItemElement, _]] = js.native
-  /** A function that is executed when a collection item is right-clicked or pressed. */
+  var onItemClick_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ ModelNode, _]] = js.undefined
+  /** @name dxTreeView.Options.onItemCollapsed */
+  var onItemCollapsed: js.UndefOr[js.Function1[/* e */ EventItemDataItemElement, _]] = js.undefined
+  /** @name dxTreeView.Options.onItemContextMenu */
   @JSName("onItemContextMenu")
-  var onItemContextMenu_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ ModelNode, _]] = js.native
-  /** A function that is executed when a tree view item is expanded. */
-  var onItemExpanded: js.UndefOr[js.Function1[/* e */ EventItemDataItemElement, _]] = js.native
-  /** A function that is executed when a collection item has been held for a specified period. */
+  var onItemContextMenu_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ ModelNode, _]] = js.undefined
+  /** @name dxTreeView.Options.onItemExpanded */
+  var onItemExpanded: js.UndefOr[js.Function1[/* e */ EventItemDataItemElement, _]] = js.undefined
+  /** @name dxTreeView.Options.onItemHold */
   @JSName("onItemHold")
-  var onItemHold_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ ItemDataItemElementItemIndex, _]] = js.native
-  /** A function that is executed after a collection item is rendered. */
+  var onItemHold_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ ItemDataItemElementItemIndex, _]] = js.undefined
+  /** @name dxTreeView.Options.onItemRendered */
   @JSName("onItemRendered")
-  var onItemRendered_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ ItemElementItemIndexModel, _]] = js.native
-  /** A function that is executed when a tree view item is selected or selection is canceled. */
-  var onItemSelectionChanged: js.UndefOr[js.Function1[/* e */ ElementItemElement, _]] = js.native
-  /** A function that is executed when the "Select All" check box value is changed. Applies only if showCheckBoxesMode is "selectAll" and selectionMode is "multiple". */
-  var onSelectAllValueChanged: js.UndefOr[js.Function1[/* e */ ComponentElementModelValue, _]] = js.native
-  /** A function that is executed when a tree view item is selected or selection is canceled. */
+  var onItemRendered_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ ItemElementItemIndexModel, _]] = js.undefined
+  /** @name dxTreeView.Options.onItemSelectionChanged */
+  var onItemSelectionChanged: js.UndefOr[js.Function1[/* e */ ElementItemElement, _]] = js.undefined
+  /** @name dxTreeView.Options.onSelectAllValueChanged */
+  var onSelectAllValueChanged: js.UndefOr[js.Function1[/* e */ ComponentElementModelValue, _]] = js.undefined
+  /** @name dxTreeView.Options.onSelectionChanged */
   @JSName("onSelectionChanged")
-  var onSelectionChanged_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ ComponentDxTreeView, _]] = js.native
-  /** Specifies the name of the data source item field for holding the parent key of the corresponding node. */
-  var parentIdExpr: js.UndefOr[String | js.Function] = js.native
-  /** Specifies the parent ID value of the root item. */
-  var rootValue: js.UndefOr[js.Any] = js.native
-  /** A string value specifying available scrolling directions. */
-  var scrollDirection: js.UndefOr[both | horizontal | vertical] = js.native
-  /** Specifies the text displayed at the "Select All" check box. */
-  var selectAllText: js.UndefOr[String] = js.native
-  /** Specifies whether or not an item becomes selected if a user clicks it. */
-  var selectByClick: js.UndefOr[Boolean] = js.native
-  /** Specifies whether or not to select nodes recursively. */
-  var selectNodesRecursive: js.UndefOr[Boolean] = js.native
-  /** Specifies item selection mode. */
-  var selectionMode: js.UndefOr[multiple | single_] = js.native
-  /** Specifies the current check boxes display mode. */
-  var showCheckBoxesMode: js.UndefOr[none | normal | selectAll] = js.native
-  /** Enables the virtual mode in which nodes are loaded on demand. Use it to enhance the performance on large datasets. */
-  var virtualModeEnabled: js.UndefOr[Boolean] = js.native
+  var onSelectionChanged_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ ComponentDxTreeView, _]] = js.undefined
+  /** @name dxTreeView.Options.parentIdExpr */
+  var parentIdExpr: js.UndefOr[String | js.Function] = js.undefined
+  /** @name dxTreeView.Options.rootValue */
+  var rootValue: js.UndefOr[js.Any] = js.undefined
+  /** @name dxTreeView.Options.scrollDirection */
+  var scrollDirection: js.UndefOr[both | horizontal | vertical] = js.undefined
+  /** @name dxTreeView.Options.selectAllText */
+  var selectAllText: js.UndefOr[String] = js.undefined
+  /** @name dxTreeView.Options.selectByClick */
+  var selectByClick: js.UndefOr[Boolean] = js.undefined
+  /** @name dxTreeView.Options.selectNodesRecursive */
+  var selectNodesRecursive: js.UndefOr[Boolean] = js.undefined
+  /** @name dxTreeView.Options.selectionMode */
+  var selectionMode: js.UndefOr[multiple | single_] = js.undefined
+  /** @name dxTreeView.Options.showCheckBoxesMode */
+  var showCheckBoxesMode: js.UndefOr[none | normal | selectAll] = js.undefined
+  /** @name dxTreeView.Options.virtualModeEnabled */
+  var virtualModeEnabled: js.UndefOr[Boolean] = js.undefined
 }
 
 object dxTreeViewOptions {
   @scala.inline
-  def apply(): dxTreeViewOptions = {
+  def apply(
+    accessKey: String = null,
+    activeStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    animationEnabled: js.UndefOr[Boolean] = js.undefined,
+    bindingOptions: js.Any = null,
+    createChildren: /* parentNode */ dxTreeViewNode => Promise[_] | JQueryPromise[_] | js.Array[_] = null,
+    dataSource: String | js.Array[dxTreeViewItem] | DataSource | DataSourceOptions = null,
+    dataStructure: plain | tree = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    disabledExpr: String | js.Function = null,
+    displayExpr: String | (js.Function1[/* item */ js.Any, String]) = null,
+    elementAttr: js.Any = null,
+    expandAllEnabled: js.UndefOr[Boolean] = js.undefined,
+    expandEvent: dblclick_ | click = null,
+    expandNodesRecursive: js.UndefOr[Boolean] = js.undefined,
+    expandedExpr: String | js.Function = null,
+    focusStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    hasItemsExpr: String | js.Function = null,
+    height: Double | String | (js.Function0[Double | String]) = null,
+    hint: String = null,
+    hoverStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    itemHoldTimeout: js.UndefOr[Double] = js.undefined,
+    itemTemplate: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
+      /* itemData */ js.Any, 
+      /* itemIndex */ Double, 
+      /* itemElement */ dxElement, 
+      String | Element | JQuery
+    ]) = null,
+    items: js.Array[dxTreeViewItem] = null,
+    itemsExpr: String | js.Function = null,
+    keyExpr: String | js.Function = null,
+    noDataText: String = null,
+    onContentReady: /* e */ ComponentElement[dxTreeView] => _ = null,
+    onDisposing: /* e */ Model[dxTreeView] => _ = null,
+    onInitialized: /* e */ typingsSlinky.devextreme.anon.Element[dxTreeView] => _ = null,
+    onItemClick: /* e */ ModelNode => _ = null,
+    onItemCollapsed: /* e */ EventItemDataItemElement => _ = null,
+    onItemContextMenu: /* e */ ModelNode => _ = null,
+    onItemExpanded: /* e */ EventItemDataItemElement => _ = null,
+    onItemHold: /* e */ ItemDataItemElementItemIndex => _ = null,
+    onItemRendered: /* e */ ItemElementItemIndexModel => _ = null,
+    onItemSelectionChanged: /* e */ ElementItemElement => _ = null,
+    onOptionChanged: /* e */ Name[dxTreeView] => _ = null,
+    onSelectAllValueChanged: /* e */ ComponentElementModelValue => _ = null,
+    onSelectionChanged: /* e */ ComponentDxTreeView => _ = null,
+    parentIdExpr: String | js.Function = null,
+    rootValue: js.Any = null,
+    rtlEnabled: js.UndefOr[Boolean] = js.undefined,
+    scrollDirection: both | horizontal | vertical = null,
+    searchEditorOptions: dxTextBoxOptions[dxTextBox] = null,
+    searchEnabled: js.UndefOr[Boolean] = js.undefined,
+    searchExpr: String | js.Function | (js.Array[String | js.Function]) = null,
+    searchMode: contains | startswith | equals = null,
+    searchTimeout: js.UndefOr[Double] = js.undefined,
+    searchValue: String = null,
+    selectAllText: String = null,
+    selectByClick: js.UndefOr[Boolean] = js.undefined,
+    selectNodesRecursive: js.UndefOr[Boolean] = js.undefined,
+    selectedExpr: String | js.Function = null,
+    selectedIndex: js.UndefOr[Double] = js.undefined,
+    selectedItem: js.Any = null,
+    selectedItemKeys: js.Array[_] = null,
+    selectedItems: js.Array[_] = null,
+    selectionMode: multiple | single_ = null,
+    showCheckBoxesMode: none | normal | selectAll = null,
+    tabIndex: js.UndefOr[Double] = js.undefined,
+    virtualModeEnabled: js.UndefOr[Boolean] = js.undefined,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    width: Double | String | (js.Function0[Double | String]) = null
+  ): dxTreeViewOptions = {
     val __obj = js.Dynamic.literal()
+    if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(activeStateEnabled)) __obj.updateDynamic("activeStateEnabled")(activeStateEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(animationEnabled)) __obj.updateDynamic("animationEnabled")(animationEnabled.get.asInstanceOf[js.Any])
+    if (bindingOptions != null) __obj.updateDynamic("bindingOptions")(bindingOptions.asInstanceOf[js.Any])
+    if (createChildren != null) __obj.updateDynamic("createChildren")(js.Any.fromFunction1(createChildren))
+    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
+    if (dataStructure != null) __obj.updateDynamic("dataStructure")(dataStructure.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (disabledExpr != null) __obj.updateDynamic("disabledExpr")(disabledExpr.asInstanceOf[js.Any])
+    if (displayExpr != null) __obj.updateDynamic("displayExpr")(displayExpr.asInstanceOf[js.Any])
+    if (elementAttr != null) __obj.updateDynamic("elementAttr")(elementAttr.asInstanceOf[js.Any])
+    if (!js.isUndefined(expandAllEnabled)) __obj.updateDynamic("expandAllEnabled")(expandAllEnabled.get.asInstanceOf[js.Any])
+    if (expandEvent != null) __obj.updateDynamic("expandEvent")(expandEvent.asInstanceOf[js.Any])
+    if (!js.isUndefined(expandNodesRecursive)) __obj.updateDynamic("expandNodesRecursive")(expandNodesRecursive.get.asInstanceOf[js.Any])
+    if (expandedExpr != null) __obj.updateDynamic("expandedExpr")(expandedExpr.asInstanceOf[js.Any])
+    if (!js.isUndefined(focusStateEnabled)) __obj.updateDynamic("focusStateEnabled")(focusStateEnabled.get.asInstanceOf[js.Any])
+    if (hasItemsExpr != null) __obj.updateDynamic("hasItemsExpr")(hasItemsExpr.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
+    if (!js.isUndefined(hoverStateEnabled)) __obj.updateDynamic("hoverStateEnabled")(hoverStateEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(itemHoldTimeout)) __obj.updateDynamic("itemHoldTimeout")(itemHoldTimeout.get.asInstanceOf[js.Any])
+    if (itemTemplate != null) __obj.updateDynamic("itemTemplate")(itemTemplate.asInstanceOf[js.Any])
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
+    if (itemsExpr != null) __obj.updateDynamic("itemsExpr")(itemsExpr.asInstanceOf[js.Any])
+    if (keyExpr != null) __obj.updateDynamic("keyExpr")(keyExpr.asInstanceOf[js.Any])
+    if (noDataText != null) __obj.updateDynamic("noDataText")(noDataText.asInstanceOf[js.Any])
+    if (onContentReady != null) __obj.updateDynamic("onContentReady")(js.Any.fromFunction1(onContentReady))
+    if (onDisposing != null) __obj.updateDynamic("onDisposing")(js.Any.fromFunction1(onDisposing))
+    if (onInitialized != null) __obj.updateDynamic("onInitialized")(js.Any.fromFunction1(onInitialized))
+    if (onItemClick != null) __obj.updateDynamic("onItemClick")(js.Any.fromFunction1(onItemClick))
+    if (onItemCollapsed != null) __obj.updateDynamic("onItemCollapsed")(js.Any.fromFunction1(onItemCollapsed))
+    if (onItemContextMenu != null) __obj.updateDynamic("onItemContextMenu")(js.Any.fromFunction1(onItemContextMenu))
+    if (onItemExpanded != null) __obj.updateDynamic("onItemExpanded")(js.Any.fromFunction1(onItemExpanded))
+    if (onItemHold != null) __obj.updateDynamic("onItemHold")(js.Any.fromFunction1(onItemHold))
+    if (onItemRendered != null) __obj.updateDynamic("onItemRendered")(js.Any.fromFunction1(onItemRendered))
+    if (onItemSelectionChanged != null) __obj.updateDynamic("onItemSelectionChanged")(js.Any.fromFunction1(onItemSelectionChanged))
+    if (onOptionChanged != null) __obj.updateDynamic("onOptionChanged")(js.Any.fromFunction1(onOptionChanged))
+    if (onSelectAllValueChanged != null) __obj.updateDynamic("onSelectAllValueChanged")(js.Any.fromFunction1(onSelectAllValueChanged))
+    if (onSelectionChanged != null) __obj.updateDynamic("onSelectionChanged")(js.Any.fromFunction1(onSelectionChanged))
+    if (parentIdExpr != null) __obj.updateDynamic("parentIdExpr")(parentIdExpr.asInstanceOf[js.Any])
+    if (rootValue != null) __obj.updateDynamic("rootValue")(rootValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(rtlEnabled)) __obj.updateDynamic("rtlEnabled")(rtlEnabled.get.asInstanceOf[js.Any])
+    if (scrollDirection != null) __obj.updateDynamic("scrollDirection")(scrollDirection.asInstanceOf[js.Any])
+    if (searchEditorOptions != null) __obj.updateDynamic("searchEditorOptions")(searchEditorOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(searchEnabled)) __obj.updateDynamic("searchEnabled")(searchEnabled.get.asInstanceOf[js.Any])
+    if (searchExpr != null) __obj.updateDynamic("searchExpr")(searchExpr.asInstanceOf[js.Any])
+    if (searchMode != null) __obj.updateDynamic("searchMode")(searchMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(searchTimeout)) __obj.updateDynamic("searchTimeout")(searchTimeout.get.asInstanceOf[js.Any])
+    if (searchValue != null) __obj.updateDynamic("searchValue")(searchValue.asInstanceOf[js.Any])
+    if (selectAllText != null) __obj.updateDynamic("selectAllText")(selectAllText.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectByClick)) __obj.updateDynamic("selectByClick")(selectByClick.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectNodesRecursive)) __obj.updateDynamic("selectNodesRecursive")(selectNodesRecursive.get.asInstanceOf[js.Any])
+    if (selectedExpr != null) __obj.updateDynamic("selectedExpr")(selectedExpr.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectedIndex)) __obj.updateDynamic("selectedIndex")(selectedIndex.get.asInstanceOf[js.Any])
+    if (selectedItem != null) __obj.updateDynamic("selectedItem")(selectedItem.asInstanceOf[js.Any])
+    if (selectedItemKeys != null) __obj.updateDynamic("selectedItemKeys")(selectedItemKeys.asInstanceOf[js.Any])
+    if (selectedItems != null) __obj.updateDynamic("selectedItems")(selectedItems.asInstanceOf[js.Any])
+    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
+    if (showCheckBoxesMode != null) __obj.updateDynamic("showCheckBoxesMode")(showCheckBoxesMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(tabIndex)) __obj.updateDynamic("tabIndex")(tabIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(virtualModeEnabled)) __obj.updateDynamic("virtualModeEnabled")(virtualModeEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxTreeViewOptions]
   }
-  @scala.inline
-  implicit class dxTreeViewOptionsOps[Self <: dxTreeViewOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimationEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateChildren(value: /* parentNode */ dxTreeViewNode => Promise[_] | JQueryPromise[_] | js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createChildren")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCreateChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createChildren")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSource(value: String | js.Array[dxTreeViewItem] | DataSource | DataSourceOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataStructure(value: plain | tree): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataStructure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataStructure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataStructure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpandAllEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandAllEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpandAllEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandAllEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpandEvent(value: dblclick_ | click): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpandEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpandNodesRecursive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandNodesRecursive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpandNodesRecursive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandNodesRecursive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpandedExpr(value: String | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandedExpr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpandedExpr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandedExpr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasItemsExpr(value: String | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasItemsExpr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasItemsExpr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasItemsExpr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItems(value: js.Array[dxTreeViewItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemClick(value: /* e */ ModelNode => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnItemClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemCollapsed(value: /* e */ EventItemDataItemElement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemCollapsed")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnItemCollapsed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemCollapsed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemContextMenu(value: /* e */ ModelNode => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemContextMenu")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnItemContextMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemContextMenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemExpanded(value: /* e */ EventItemDataItemElement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemExpanded")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnItemExpanded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemExpanded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemHold(value: /* e */ ItemDataItemElementItemIndex => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemHold")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnItemHold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemHold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemRendered(value: /* e */ ItemElementItemIndexModel => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemRendered")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnItemRendered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemRendered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemSelectionChanged(value: /* e */ ElementItemElement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemSelectionChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnItemSelectionChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemSelectionChanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelectAllValueChanged(value: /* e */ ComponentElementModelValue => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectAllValueChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSelectAllValueChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectAllValueChanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelectionChanged(value: /* e */ ComponentDxTreeView => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSelectionChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentIdExpr(value: String | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentIdExpr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentIdExpr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentIdExpr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRootValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollDirection(value: both | horizontal | vertical): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollDirection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectAllText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectAllText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectAllText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectAllText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectByClick(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectByClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectByClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectByClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectNodesRecursive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectNodesRecursive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectNodesRecursive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectNodesRecursive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionMode(value: multiple | single_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowCheckBoxesMode(value: none | normal | selectAll): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCheckBoxesMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowCheckBoxesMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCheckBoxesMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVirtualModeEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualModeEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualModeEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualModeEnabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

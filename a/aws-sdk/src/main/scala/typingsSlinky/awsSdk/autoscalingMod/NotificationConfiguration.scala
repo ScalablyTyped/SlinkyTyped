@@ -22,53 +22,16 @@ trait NotificationConfiguration extends js.Object {
 
 object NotificationConfiguration {
   @scala.inline
-  def apply(): NotificationConfiguration = {
+  def apply(
+    AutoScalingGroupName: ResourceName = null,
+    NotificationType: XmlStringMaxLen255 = null,
+    TopicARN: ResourceName = null
+  ): NotificationConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (AutoScalingGroupName != null) __obj.updateDynamic("AutoScalingGroupName")(AutoScalingGroupName.asInstanceOf[js.Any])
+    if (NotificationType != null) __obj.updateDynamic("NotificationType")(NotificationType.asInstanceOf[js.Any])
+    if (TopicARN != null) __obj.updateDynamic("TopicARN")(TopicARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotificationConfiguration]
   }
-  @scala.inline
-  implicit class NotificationConfigurationOps[Self <: NotificationConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoScalingGroupName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoScalingGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingGroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotificationType(value: XmlStringMaxLen255): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotificationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopicARN(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopicARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicARN")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

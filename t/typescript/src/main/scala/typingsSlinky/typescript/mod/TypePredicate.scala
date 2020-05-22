@@ -1,5 +1,8 @@
 package typingsSlinky.typescript.mod
 
+import typingsSlinky.typescript.mod.TypePredicateKind.AssertsIdentifier
+import typingsSlinky.typescript.mod.TypePredicateKind.AssertsThis
+import typingsSlinky.typescript.mod.TypePredicateKind.This
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +17,38 @@ trait TypePredicate extends js.Object
 
 object TypePredicate {
   @scala.inline
-  implicit def apply(value: AssertsIdentifierTypePredicate): TypePredicate = value.asInstanceOf[TypePredicate]
+  def ThisTypePredicate(kind: This, `type`: Type): TypePredicate = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TypePredicate]
+  }
   @scala.inline
-  implicit def apply(value: AssertsThisTypePredicate): TypePredicate = value.asInstanceOf[TypePredicate]
+  def IdentifierTypePredicate(
+    kind: typingsSlinky.typescript.mod.TypePredicateKind.Identifier,
+    parameterIndex: Double,
+    parameterName: java.lang.String,
+    `type`: Type
+  ): TypePredicate = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], parameterIndex = parameterIndex.asInstanceOf[js.Any], parameterName = parameterName.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TypePredicate]
+  }
   @scala.inline
-  implicit def apply(value: IdentifierTypePredicate): TypePredicate = value.asInstanceOf[TypePredicate]
+  def AssertsThisTypePredicate(kind: AssertsThis, `type`: Type = null): TypePredicate = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TypePredicate]
+  }
   @scala.inline
-  implicit def apply(value: ThisTypePredicate): TypePredicate = value.asInstanceOf[TypePredicate]
+  def AssertsIdentifierTypePredicate(
+    kind: AssertsIdentifier,
+    parameterIndex: Double,
+    parameterName: java.lang.String,
+    `type`: Type = null
+  ): TypePredicate = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], parameterIndex = parameterIndex.asInstanceOf[js.Any], parameterName = parameterName.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TypePredicate]
+  }
 }
 

@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PrimaryDark extends js.Object {
-  val primary: js.UndefOr[String] = js.native
-  val primaryDark: js.UndefOr[String] = js.native
-  val primaryLight: js.UndefOr[String] = js.native
+  val primary: js.UndefOr[String] = js.undefined
+  val primaryDark: js.UndefOr[String] = js.undefined
+  val primaryLight: js.UndefOr[String] = js.undefined
 }
 
 object PrimaryDark {
   @scala.inline
-  def apply(): PrimaryDark = {
+  def apply(primary: String = null, primaryDark: String = null, primaryLight: String = null): PrimaryDark = {
     val __obj = js.Dynamic.literal()
+    if (primary != null) __obj.updateDynamic("primary")(primary.asInstanceOf[js.Any])
+    if (primaryDark != null) __obj.updateDynamic("primaryDark")(primaryDark.asInstanceOf[js.Any])
+    if (primaryLight != null) __obj.updateDynamic("primaryLight")(primaryLight.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrimaryDark]
   }
-  @scala.inline
-  implicit class PrimaryDarkOps[Self <: PrimaryDark] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrimary(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryDark(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryDark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryDark: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryDark")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryLight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryLight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryLight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryLight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

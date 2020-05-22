@@ -20,29 +20,10 @@ trait SchemaIosTestSetup extends js.Object {
 
 object SchemaIosTestSetup {
   @scala.inline
-  def apply(): SchemaIosTestSetup = {
+  def apply(networkProfile: String = null): SchemaIosTestSetup = {
     val __obj = js.Dynamic.literal()
+    if (networkProfile != null) __obj.updateDynamic("networkProfile")(networkProfile.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaIosTestSetup]
   }
-  @scala.inline
-  implicit class SchemaIosTestSetupOps[Self <: SchemaIosTestSetup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNetworkProfile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkProfile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkProfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkProfile")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

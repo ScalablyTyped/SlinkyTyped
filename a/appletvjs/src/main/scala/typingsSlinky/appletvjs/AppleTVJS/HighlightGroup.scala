@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HighlightGroup extends js.Object {
   /** The hightlights in the highlight group. */
-  var hightlights: js.Array[Highlight] = js.native
+  var hightlights: js.Array[Highlight]
   /** The name of the highlight group. */
-  var name: String = js.native
+  var name: String
 }
 
 object HighlightGroup {
@@ -18,25 +17,5 @@ object HighlightGroup {
     val __obj = js.Dynamic.literal(hightlights = hightlights.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[HighlightGroup]
   }
-  @scala.inline
-  implicit class HighlightGroupOps[Self <: HighlightGroup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHightlights(value: js.Array[Highlight]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hightlights")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

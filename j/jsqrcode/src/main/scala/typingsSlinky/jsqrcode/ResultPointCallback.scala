@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ResultPointCallback extends js.Object {
-  def foundPossibleResultPoint(point: FinderPattern): Unit = js.native
+  def foundPossibleResultPoint(point: FinderPattern): Unit
 }
 
 object ResultPointCallback {
@@ -15,19 +14,5 @@ object ResultPointCallback {
     val __obj = js.Dynamic.literal(foundPossibleResultPoint = js.Any.fromFunction1(foundPossibleResultPoint))
     __obj.asInstanceOf[ResultPointCallback]
   }
-  @scala.inline
-  implicit class ResultPointCallbackOps[Self <: ResultPointCallback] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFoundPossibleResultPoint(value: FinderPattern => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("foundPossibleResultPoint")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

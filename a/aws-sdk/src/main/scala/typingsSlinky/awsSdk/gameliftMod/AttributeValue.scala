@@ -26,65 +26,18 @@ trait AttributeValue extends js.Object {
 
 object AttributeValue {
   @scala.inline
-  def apply(): AttributeValue = {
+  def apply(
+    N: js.UndefOr[DoubleObject] = js.undefined,
+    S: NonZeroAndMaxString = null,
+    SDM: StringDoubleMap = null,
+    SL: StringList = null
+  ): AttributeValue = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(N)) __obj.updateDynamic("N")(N.get.asInstanceOf[js.Any])
+    if (S != null) __obj.updateDynamic("S")(S.asInstanceOf[js.Any])
+    if (SDM != null) __obj.updateDynamic("SDM")(SDM.asInstanceOf[js.Any])
+    if (SL != null) __obj.updateDynamic("SL")(SL.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttributeValue]
   }
-  @scala.inline
-  implicit class AttributeValueOps[Self <: AttributeValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withN(value: DoubleObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("N")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("N")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS(value: NonZeroAndMaxString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSDM(value: StringDoubleMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SDM")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSDM: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SDM")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSL(value: StringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SL")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

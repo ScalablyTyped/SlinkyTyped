@@ -6,12 +6,28 @@ import scala.scalajs.js.annotation._
 
 package object std {
   type AAGUID = typingsSlinky.std.BufferSource
+  type AlgorithmIdentifier = java.lang.String | org.scalajs.dom.crypto.Algorithm
   type AudioWorklet = typingsSlinky.std.Worklet
   type AuthenticationExtensionsSupported = js.Array[java.lang.String]
   type AuthenticatorSelectionList = js.Array[typingsSlinky.std.AAGUID]
   type AutoKeyword = typingsSlinky.std.stdStrings.auto
   type BigInteger = js.typedarray.Uint8Array
   type BlobCallback = js.Function1[/* blob */ org.scalajs.dom.raw.Blob | scala.Null, scala.Unit]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.std.BufferSource
+    - typingsSlinky.std.Blob
+    - java.lang.String
+  */
+  type BlobPart = typingsSlinky.std._BlobPart | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.std.Blob
+    - typingsSlinky.std.BufferSource
+    - typingsSlinky.std.FormData
+    - typingsSlinky.std.URLSearchParams
+    - typingsSlinky.std.ReadableStream[typingsSlinky.std.Uint8Array]
+    - java.lang.String
+  */
+  type BodyInit = typingsSlinky.std._BodyInit | org.scalajs.dom.experimental.ReadableStream[js.typedarray.Uint8Array] | java.lang.String
   /** A CDATA section that can be used within XML to include extended portions of unescaped text. The symbols < and & don’t need escaping as they normally do when inside a CDATA section. */
   type CDATASection = org.scalajs.dom.raw.Text
   type COSEAlgorithmIdentifier = scala.Double
@@ -24,6 +40,10 @@ package object std {
   type ClassDecorator = js.Function1[/* target */ js.Function, js.Function | scala.Unit]
   /** Textual notations within markup; although it is generally not visually shown, such comments are available to be read in the source view. */
   type Comment = org.scalajs.dom.raw.CharacterData
+  type ConstrainBoolean = scala.Boolean | typingsSlinky.std.ConstrainBooleanParameters
+  type ConstrainDOMString = java.lang.String | js.Array[java.lang.String] | typingsSlinky.std.ConstrainDOMStringParameters
+  type ConstrainDouble = scala.Double | typingsSlinky.std.ConstrainDoubleRange
+  type ConstrainULong = scala.Double | typingsSlinky.std.ConstrainULongRange
   /**
     * Obtain the parameters of a constructor function type in a tuple
     */
@@ -46,6 +66,7 @@ package object std {
   type EvalError = js.Error
   type EventHandlerNonNull = js.Function1[/* event */ org.scalajs.dom.raw.Event, js.Any]
   type EventListener = js.Function1[/* evt */ org.scalajs.dom.raw.Event, scala.Unit]
+  type EventListenerOrEventListenerObject = typingsSlinky.std.EventListener | typingsSlinky.std.EventListenerObject
   /**
     * Exclude from T those types that are assignable to U
     */
@@ -54,11 +75,14 @@ package object std {
     * Extract from T those types that are assignable to U
     */
   type Extract[T, U] = T
+  type FlatArray[Arr, Depth /* <: scala.Double */] = /* import warning: importer.ImportType#apply Failed type conversion: std.anon.Done<Arr>[Depth extends -1 ? 'done' : 'recur'] */ js.Any
+  type Float32List = js.typedarray.Float32Array | js.Array[typingsSlinky.std.GLfloat]
   type ForEachCallback = js.Function2[
     /* keyId */ js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer | scala.Null, 
     /* status */ typingsSlinky.std.MediaKeyStatus, 
     scala.Unit
   ]
+  type FormDataEntryValue = org.scalajs.dom.raw.File | java.lang.String
   type FrameRequestCallback = js.Function1[/* time */ scala.Double, scala.Unit]
   type FunctionStringCallback = js.Function1[/* data */ java.lang.String, scala.Unit]
   type GLbitfield = scala.Double
@@ -75,19 +99,36 @@ package object std {
   type GLuint64 = scala.Double
   type GamepadHapticActuatorType = typingsSlinky.std.stdStrings.vibration
   type HashAlgorithmIdentifier = typingsSlinky.std.AlgorithmIdentifier
+  type HeadersInit = org.scalajs.dom.experimental.Headers | js.Array[js.Array[java.lang.String]] | (typingsSlinky.std.Record[java.lang.String, java.lang.String])
   type IDBKeyPath = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - scala.Double
+    - java.lang.String
+    - typingsSlinky.std.Date
+    - typingsSlinky.std.BufferSource
+    - typingsSlinky.std.IDBArrayKey
+  */
+  type IDBValidKey = typingsSlinky.std._IDBValidKey | scala.Double | java.lang.String
   /**
     * Obtain the return type of a constructor function type
     */
   type InstanceType[T /* <: org.scalablytyped.runtime.Instantiable1[/* args */ js.Any, js.Any] */] = js.Any
+  type Int32List = js.typedarray.Int32Array | js.Array[typingsSlinky.std.GLint]
   type IntersectionObserverCallback = js.Function2[
     /* entries */ js.Array[typingsSlinky.std.IntersectionObserverEntry], 
     /* observer */ typingsSlinky.std.IntersectionObserver, 
     scala.Unit
   ]
+  type LineAndPositionSetting = scala.Double | typingsSlinky.std.AutoKeyword
   type MSCredentialType = typingsSlinky.std.stdStrings.FIDO_2_0
   type MSLaunchUriCallback = js.Function0[scala.Unit]
   type MediaStreamTrackAudioSourceNode = org.scalajs.dom.raw.AudioNode
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.std.WindowProxy
+    - typingsSlinky.std.MessagePort
+    - typingsSlinky.std.ServiceWorker
+  */
+  type MessageEventSource = typingsSlinky.std._MessageEventSource | org.scalajs.dom.raw.Window
   type MethodDecorator = js.Function3[
     /* target */ js.Object, 
     /* propertyKey */ java.lang.String | js.Symbol, 
@@ -113,7 +154,13 @@ package object std {
     * Construct a type with the properties of T except for those in type K.
     */
   type Omit[T, K /* <: /* keyof any */ java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
+  /**
+    * Removes the 'this' parameter from a function type.
+    */
+  type OmitThisParameter[T] = T | (js.Function1[/* args */ js.Any, js.Any])
+  type OnBeforeUnloadEventHandler = typingsSlinky.std.OnBeforeUnloadEventHandlerNonNull | scala.Null
   type OnBeforeUnloadEventHandlerNonNull = js.Function1[/* event */ org.scalajs.dom.raw.Event, java.lang.String | scala.Null]
+  type OnErrorEventHandler = typingsSlinky.std.OnErrorEventHandlerNonNull | scala.Null
   type OnErrorEventHandlerNonNull = js.Function5[
     /* event */ org.scalajs.dom.raw.Event | java.lang.String, 
     /* source */ js.UndefOr[java.lang.String], 
@@ -167,6 +214,7 @@ package object std {
   ]
   type PropertyDecorator = js.Function2[/* target */ js.Object, /* propertyKey */ java.lang.String | js.Symbol, scala.Unit]
   type PropertyDescriptorMap = org.scalablytyped.runtime.StringDictionary[js.PropertyDescriptor]
+  type PropertyKey = java.lang.String | scala.Double | js.Symbol
   type PublicKeyCredentialType = typingsSlinky.std.stdStrings.`public-key`
   type QueuingStrategySizeCallback[T] = js.Function1[/* chunk */ T, scala.Double]
   type RTCAnswerOptions = typingsSlinky.std.RTCOfferAnswerOptions
@@ -198,6 +246,7 @@ package object std {
     */
   type Record[K /* <: /* keyof any */ java.lang.String */, T] = org.scalablytyped.runtime.StringDictionary[T]
   type ReferenceError = js.Error
+  type RequestInfo = org.scalajs.dom.experimental.Request | java.lang.String
   /**
     * Make all properties in T required
     */
@@ -219,6 +268,7 @@ package object std {
     * Extracts the type of the 'this' parameter of a function type, or 'unknown' if the function type has no 'this' parameter.
     */
   type ThisParameterType[T] = js.Any
+  type TimerHandler = java.lang.String | js.Function
   type TransformStreamDefaultControllerCallback[O] = js.Function1[
     /* controller */ typingsSlinky.std.TransformStreamDefaultController[O], 
     scala.Unit | js.Thenable[scala.Unit]
@@ -230,8 +280,10 @@ package object std {
   ]
   type TypeError = js.Error
   type URIError = js.Error
+  type Uint32List = js.typedarray.Uint32Array | js.Array[typingsSlinky.std.GLuint]
   type UvmEntries = js.Array[typingsSlinky.std.UvmEntry]
   type UvmEntry = js.Array[scala.Double]
+  type VibratePattern = scala.Double | js.Array[scala.Double]
   type VoidFunction = js.Function0[scala.Unit]
   /** Part of the WebGL API and represents an opaque buffer object storing data such as vertices or colors. */
   type WebGLBuffer = typingsSlinky.std.WebGLObject
@@ -266,5 +318,6 @@ package object std {
   type WritableStreamErrorCallback = js.Function1[/* reason */ js.Any, scala.Unit | js.Thenable[scala.Unit]]
   /** The XPathEvaluator interface allows to compile and evaluate XPath expressions. */
   type XPathEvaluator = typingsSlinky.std.XPathEvaluatorBase
+  type XPathNSResolver = (js.Function1[/* prefix */ java.lang.String | scala.Null, java.lang.String | scala.Null]) | typingsSlinky.std.anon.LookupNamespaceURI
   type webkitURL = org.scalajs.dom.experimental.URL
 }

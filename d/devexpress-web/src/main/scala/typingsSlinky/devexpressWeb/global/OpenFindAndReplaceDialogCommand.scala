@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("OpenFindAndReplaceDialogCommand")
 @js.native
 class OpenFindAndReplaceDialogCommand ()
-  extends typingsSlinky.devexpressWeb.OpenFindAndReplaceDialogCommand
+  extends typingsSlinky.devexpressWeb.OpenFindAndReplaceDialogCommand {
+  /**
+    * Executes the OpenFindAndReplaceDialogCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

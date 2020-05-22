@@ -26,41 +26,11 @@ trait SchemaListBreakpointsResponse extends js.Object {
 
 object SchemaListBreakpointsResponse {
   @scala.inline
-  def apply(): SchemaListBreakpointsResponse = {
+  def apply(breakpoints: js.Array[SchemaBreakpoint] = null, nextWaitToken: String = null): SchemaListBreakpointsResponse = {
     val __obj = js.Dynamic.literal()
+    if (breakpoints != null) __obj.updateDynamic("breakpoints")(breakpoints.asInstanceOf[js.Any])
+    if (nextWaitToken != null) __obj.updateDynamic("nextWaitToken")(nextWaitToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListBreakpointsResponse]
   }
-  @scala.inline
-  implicit class SchemaListBreakpointsResponseOps[Self <: SchemaListBreakpointsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBreakpoints(value: js.Array[SchemaBreakpoint]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breakpoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBreakpoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breakpoints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextWaitToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextWaitToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextWaitToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextWaitToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

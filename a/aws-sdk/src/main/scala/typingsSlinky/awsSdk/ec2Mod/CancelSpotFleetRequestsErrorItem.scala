@@ -18,41 +18,11 @@ trait CancelSpotFleetRequestsErrorItem extends js.Object {
 
 object CancelSpotFleetRequestsErrorItem {
   @scala.inline
-  def apply(): CancelSpotFleetRequestsErrorItem = {
+  def apply(Error: CancelSpotFleetRequestsError = null, SpotFleetRequestId: String = null): CancelSpotFleetRequestsErrorItem = {
     val __obj = js.Dynamic.literal()
+    if (Error != null) __obj.updateDynamic("Error")(Error.asInstanceOf[js.Any])
+    if (SpotFleetRequestId != null) __obj.updateDynamic("SpotFleetRequestId")(SpotFleetRequestId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CancelSpotFleetRequestsErrorItem]
   }
-  @scala.inline
-  implicit class CancelSpotFleetRequestsErrorItemOps[Self <: CancelSpotFleetRequestsErrorItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withError(value: CancelSpotFleetRequestsError): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpotFleetRequestId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotFleetRequestId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpotFleetRequestId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotFleetRequestId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

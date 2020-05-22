@@ -1,5 +1,6 @@
 package typingsSlinky.statsJs.mod
 
+import org.scalajs.dom.raw.HTMLCanvasElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,5 +10,9 @@ import scala.scalajs.js.annotation._
 class Panel protected ()
   extends typingsSlinky.statsJs.Stats.Panel {
   def this(name: String, foregroundColor: String, backgroundColor: String) = this()
+  /* CompleteClass */
+  override var dom: HTMLCanvasElement = js.native
+  /* CompleteClass */
+  override def update(value: Double, maxValue: Double): Unit = js.native
 }
 

@@ -23,41 +23,11 @@ trait SchemaListGuardiansResponse extends js.Object {
 
 object SchemaListGuardiansResponse {
   @scala.inline
-  def apply(): SchemaListGuardiansResponse = {
+  def apply(guardians: js.Array[SchemaGuardian] = null, nextPageToken: String = null): SchemaListGuardiansResponse = {
     val __obj = js.Dynamic.literal()
+    if (guardians != null) __obj.updateDynamic("guardians")(guardians.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListGuardiansResponse]
   }
-  @scala.inline
-  implicit class SchemaListGuardiansResponseOps[Self <: SchemaListGuardiansResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGuardians(value: js.Array[SchemaGuardian]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guardians")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGuardians: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guardians")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

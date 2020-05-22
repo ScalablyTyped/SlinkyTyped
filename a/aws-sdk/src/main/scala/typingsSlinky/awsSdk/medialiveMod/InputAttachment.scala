@@ -7,6 +7,10 @@ import scala.scalajs.js.annotation._
 @js.native
 trait InputAttachment extends js.Object {
   /**
+    * User-specified settings for defining what the conditions are for declaring the input unhealthy and failing over to a different input.
+    */
+  var AutomaticInputFailoverSettings: js.UndefOr[typingsSlinky.awsSdk.medialiveMod.AutomaticInputFailoverSettings] = js.native
+  /**
     * User-specified name for the attachment. This is required if the user wants to use this input in an input switch action.
     */
   var InputAttachmentName: js.UndefOr[string] = js.native
@@ -22,53 +26,18 @@ trait InputAttachment extends js.Object {
 
 object InputAttachment {
   @scala.inline
-  def apply(): InputAttachment = {
+  def apply(
+    AutomaticInputFailoverSettings: AutomaticInputFailoverSettings = null,
+    InputAttachmentName: string = null,
+    InputId: string = null,
+    InputSettings: InputSettings = null
+  ): InputAttachment = {
     val __obj = js.Dynamic.literal()
+    if (AutomaticInputFailoverSettings != null) __obj.updateDynamic("AutomaticInputFailoverSettings")(AutomaticInputFailoverSettings.asInstanceOf[js.Any])
+    if (InputAttachmentName != null) __obj.updateDynamic("InputAttachmentName")(InputAttachmentName.asInstanceOf[js.Any])
+    if (InputId != null) __obj.updateDynamic("InputId")(InputId.asInstanceOf[js.Any])
+    if (InputSettings != null) __obj.updateDynamic("InputSettings")(InputSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputAttachment]
   }
-  @scala.inline
-  implicit class InputAttachmentOps[Self <: InputAttachment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInputAttachmentName(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputAttachmentName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputAttachmentName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputAttachmentName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputSettings(value: InputSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputSettings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

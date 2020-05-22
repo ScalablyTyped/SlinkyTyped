@@ -19,7 +19,7 @@ trait DescribeUserProfileResponse extends js.Object {
     */
   var FailureReason: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.FailureReason] = js.native
   /**
-    * The homa Amazon Elastic File System (EFS) Uid.
+    * The home Amazon Elastic File System (EFS) Uid.
     */
   var HomeEfsFileSystemUid: js.UndefOr[EfsUid] = js.native
   /**
@@ -54,149 +54,32 @@ trait DescribeUserProfileResponse extends js.Object {
 
 object DescribeUserProfileResponse {
   @scala.inline
-  def apply(): DescribeUserProfileResponse = {
+  def apply(
+    CreationTime: js.Date = null,
+    DomainId: DomainId = null,
+    FailureReason: FailureReason = null,
+    HomeEfsFileSystemUid: EfsUid = null,
+    LastModifiedTime: js.Date = null,
+    SingleSignOnUserIdentifier: SingleSignOnUserIdentifier = null,
+    SingleSignOnUserValue: String256 = null,
+    Status: UserProfileStatus = null,
+    UserProfileArn: UserProfileArn = null,
+    UserProfileName: UserProfileName = null,
+    UserSettings: UserSettings = null
+  ): DescribeUserProfileResponse = {
     val __obj = js.Dynamic.literal()
+    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
+    if (DomainId != null) __obj.updateDynamic("DomainId")(DomainId.asInstanceOf[js.Any])
+    if (FailureReason != null) __obj.updateDynamic("FailureReason")(FailureReason.asInstanceOf[js.Any])
+    if (HomeEfsFileSystemUid != null) __obj.updateDynamic("HomeEfsFileSystemUid")(HomeEfsFileSystemUid.asInstanceOf[js.Any])
+    if (LastModifiedTime != null) __obj.updateDynamic("LastModifiedTime")(LastModifiedTime.asInstanceOf[js.Any])
+    if (SingleSignOnUserIdentifier != null) __obj.updateDynamic("SingleSignOnUserIdentifier")(SingleSignOnUserIdentifier.asInstanceOf[js.Any])
+    if (SingleSignOnUserValue != null) __obj.updateDynamic("SingleSignOnUserValue")(SingleSignOnUserValue.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (UserProfileArn != null) __obj.updateDynamic("UserProfileArn")(UserProfileArn.asInstanceOf[js.Any])
+    if (UserProfileName != null) __obj.updateDynamic("UserProfileName")(UserProfileName.asInstanceOf[js.Any])
+    if (UserSettings != null) __obj.updateDynamic("UserSettings")(UserSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeUserProfileResponse]
   }
-  @scala.inline
-  implicit class DescribeUserProfileResponseOps[Self <: DescribeUserProfileResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomainId(value: DomainId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomainId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailureReason(value: FailureReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHomeEfsFileSystemUid(value: EfsUid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HomeEfsFileSystemUid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHomeEfsFileSystemUid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HomeEfsFileSystemUid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifiedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSingleSignOnUserIdentifier(value: SingleSignOnUserIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SingleSignOnUserIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSingleSignOnUserIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SingleSignOnUserIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSingleSignOnUserValue(value: String256): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SingleSignOnUserValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSingleSignOnUserValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SingleSignOnUserValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: UserProfileStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserProfileArn(value: UserProfileArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserProfileArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserProfileArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserProfileArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserProfileName(value: UserProfileName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserProfileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserProfileName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserProfileName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserSettings(value: UserSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserSettings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -26,65 +26,18 @@ trait InputDecryptionSettings extends js.Object {
 
 object InputDecryptionSettings {
   @scala.inline
-  def apply(): InputDecryptionSettings = {
+  def apply(
+    DecryptionMode: DecryptionMode = null,
+    EncryptedDecryptionKey: stringMin24Max512PatternAZaZ0902 = null,
+    InitializationVector: stringMin16Max24PatternAZaZ0922AZaZ0916 = null,
+    KmsKeyRegion: stringMin9Max19PatternAZ26EastWestCentralNorthSouthEastWest1912 = null
+  ): InputDecryptionSettings = {
     val __obj = js.Dynamic.literal()
+    if (DecryptionMode != null) __obj.updateDynamic("DecryptionMode")(DecryptionMode.asInstanceOf[js.Any])
+    if (EncryptedDecryptionKey != null) __obj.updateDynamic("EncryptedDecryptionKey")(EncryptedDecryptionKey.asInstanceOf[js.Any])
+    if (InitializationVector != null) __obj.updateDynamic("InitializationVector")(InitializationVector.asInstanceOf[js.Any])
+    if (KmsKeyRegion != null) __obj.updateDynamic("KmsKeyRegion")(KmsKeyRegion.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputDecryptionSettings]
   }
-  @scala.inline
-  implicit class InputDecryptionSettingsOps[Self <: InputDecryptionSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDecryptionMode(value: DecryptionMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DecryptionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecryptionMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DecryptionMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryptedDecryptionKey(value: stringMin24Max512PatternAZaZ0902): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptedDecryptionKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptedDecryptionKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptedDecryptionKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitializationVector(value: stringMin16Max24PatternAZaZ0922AZaZ0916): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InitializationVector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitializationVector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InitializationVector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKmsKeyRegion(value: stringMin9Max19PatternAZ26EastWestCentralNorthSouthEastWest1912): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKmsKeyRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyRegion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

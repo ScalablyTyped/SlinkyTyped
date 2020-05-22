@@ -26,6 +26,11 @@ trait Arm64Writer extends js.Object {
     */
   var pc: NativePointer = js.native
   /**
+    * Determines whether a direct branch is possible between the two
+    * given memory locations.
+    */
+  def canBranchDirectlyBetween(from: NativePointerValue, to: NativePointerValue): Boolean = js.native
+  /**
     * Eagerly cleans up memory.
     */
   def dispose(): Unit = js.native
@@ -84,11 +89,21 @@ trait Arm64Writer extends js.Object {
     */
   def putBlrReg(reg: Arm64Register): Unit = js.native
   /**
+    * Puts a BLR instruction expecting a raw pointer without
+    * any authentication bits.
+    */
+  def putBlrRegNoAuth(reg: Arm64Register): Unit = js.native
+  /**
     * Puts a BR instruction.
     */
   def putBrReg(reg: Arm64Register): Unit = js.native
   /**
-    * Puts a BRANCH instruction.
+    * Puts a BR instruction expecting a raw pointer without
+    * any authentication bits.
+    */
+  def putBrRegNoAuth(reg: Arm64Register): Unit = js.native
+  /**
+    * Puts code needed for branching/jumping to the given address.
     */
   def putBranchAddress(address: NativePointerValue): Unit = js.native
   /**
@@ -284,10 +299,18 @@ trait Arm64Writer extends js.Object {
     */
   def putUxtwRegReg(dstReg: Arm64Register, srcReg: Arm64Register): Unit = js.native
   /**
+    * Puts an XPACI instruction.
+    */
+  def putXpaciReg(reg: Arm64Register): Unit = js.native
+  /**
     * Recycles instance.
     */
   def reset(codeAddress: NativePointerValue): Unit = js.native
   def reset(codeAddress: NativePointerValue, options: Arm64WriterOptions): Unit = js.native
+  /**
+    * Signs the given pointer value.
+    */
+  def sign(value: NativePointerValue): NativePointer = js.native
   /**
     * Skips `nBytes`.
     */

@@ -11,6 +11,12 @@ object cumsumGpuMod extends js.Object {
   @js.native
   class CumSumProgram protected () extends GPGPUProgram {
     def this(shape: js.Array[Double], exclusive: Boolean, reverse: Boolean) = this()
+    /* CompleteClass */
+    override var outputShape: js.Array[Double] = js.native
+    /* CompleteClass */
+    override var userCode: String = js.native
+    /* CompleteClass */
+    override var variableNames: js.Array[String] = js.native
   }
   
 }

@@ -6,14 +6,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a token that contains a hardware based identification that is sufficiently unique. */
-@js.native
 trait HardwareToken extends js.Object {
   /** Gets the certificate that is used to sign the Id and is used to help verify the authenticity of the Id. */
-  var certificate: IBuffer = js.native
+  var certificate: IBuffer
   /** Gets the hardware identifier that identifies the device. */
-  var id: IBuffer = js.native
+  var id: IBuffer
   /** Gets the digital signature of hardware Id that helps verify the authenticity of returned Id. */
-  var signature: IBuffer = js.native
+  var signature: IBuffer
 }
 
 object HardwareToken {
@@ -22,31 +21,5 @@ object HardwareToken {
     val __obj = js.Dynamic.literal(certificate = certificate.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], signature = signature.asInstanceOf[js.Any])
     __obj.asInstanceOf[HardwareToken]
   }
-  @scala.inline
-  implicit class HardwareTokenOps[Self <: HardwareToken] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificate(value: IBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: IBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSignature(value: IBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

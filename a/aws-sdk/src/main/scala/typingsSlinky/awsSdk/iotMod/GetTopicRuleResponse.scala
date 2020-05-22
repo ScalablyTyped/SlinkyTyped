@@ -18,41 +18,11 @@ trait GetTopicRuleResponse extends js.Object {
 
 object GetTopicRuleResponse {
   @scala.inline
-  def apply(): GetTopicRuleResponse = {
+  def apply(rule: TopicRule = null, ruleArn: RuleArn = null): GetTopicRuleResponse = {
     val __obj = js.Dynamic.literal()
+    if (rule != null) __obj.updateDynamic("rule")(rule.asInstanceOf[js.Any])
+    if (ruleArn != null) __obj.updateDynamic("ruleArn")(ruleArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetTopicRuleResponse]
   }
-  @scala.inline
-  implicit class GetTopicRuleResponseOps[Self <: GetTopicRuleResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRule(value: TopicRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuleArn(value: RuleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

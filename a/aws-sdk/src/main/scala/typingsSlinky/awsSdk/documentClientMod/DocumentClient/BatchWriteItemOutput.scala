@@ -22,53 +22,16 @@ trait BatchWriteItemOutput extends js.Object {
 
 object BatchWriteItemOutput {
   @scala.inline
-  def apply(): BatchWriteItemOutput = {
+  def apply(
+    ConsumedCapacity: ConsumedCapacityMultiple = null,
+    ItemCollectionMetrics: ItemCollectionMetricsPerTable = null,
+    UnprocessedItems: BatchWriteItemRequestMap = null
+  ): BatchWriteItemOutput = {
     val __obj = js.Dynamic.literal()
+    if (ConsumedCapacity != null) __obj.updateDynamic("ConsumedCapacity")(ConsumedCapacity.asInstanceOf[js.Any])
+    if (ItemCollectionMetrics != null) __obj.updateDynamic("ItemCollectionMetrics")(ItemCollectionMetrics.asInstanceOf[js.Any])
+    if (UnprocessedItems != null) __obj.updateDynamic("UnprocessedItems")(UnprocessedItems.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchWriteItemOutput]
   }
-  @scala.inline
-  implicit class BatchWriteItemOutputOps[Self <: BatchWriteItemOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConsumedCapacity(value: ConsumedCapacityMultiple): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsumedCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsumedCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsumedCapacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemCollectionMetrics(value: ItemCollectionMetricsPerTable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemCollectionMetrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemCollectionMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemCollectionMetrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnprocessedItems(value: BatchWriteItemRequestMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnprocessedItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnprocessedItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnprocessedItems")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

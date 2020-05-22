@@ -6,107 +6,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HttpClientConfig extends HttpClientBaseConfig {
   /** Whether enable dns cache */
-  var enableDNSCache: js.UndefOr[Boolean] = js.native
+  var enableDNSCache: js.UndefOr[Boolean] = js.undefined
   /** Enable proxy request, default is false. */
-  var enableProxy: js.UndefOr[Boolean] = js.native
+  var enableProxy: js.UndefOr[Boolean] = js.undefined
   /** http.Agent */
-  var httpAgent: js.UndefOr[HttpClientBaseConfig] = js.native
+  var httpAgent: js.UndefOr[HttpClientBaseConfig] = js.undefined
   /** https.Agent */
-  var httpsAgent: js.UndefOr[HttpClientBaseConfig] = js.native
+  var httpsAgent: js.UndefOr[HttpClientBaseConfig] = js.undefined
   /** proxy agent uri or options, default is null. */
-  var proxy: js.UndefOr[String | StringDictionary[js.Any]] = js.native
+  var proxy: js.UndefOr[String | StringDictionary[js.Any]] = js.undefined
   /** Default request args for httpclient */
-  var request: js.UndefOr[RequestOptions2] = js.native
+  var request: js.UndefOr[RequestOptions2] = js.undefined
 }
 
 object HttpClientConfig {
   @scala.inline
-  def apply(): HttpClientConfig = {
+  def apply(
+    enableDNSCache: js.UndefOr[Boolean] = js.undefined,
+    enableProxy: js.UndefOr[Boolean] = js.undefined,
+    freeSocketKeepAliveTimeout: js.UndefOr[Double] = js.undefined,
+    freeSocketTimeout: js.UndefOr[Double] = js.undefined,
+    httpAgent: HttpClientBaseConfig = null,
+    httpsAgent: HttpClientBaseConfig = null,
+    keepAlive: js.UndefOr[Boolean] = js.undefined,
+    maxFreeSockets: js.UndefOr[Double] = js.undefined,
+    maxSockets: js.UndefOr[Double] = js.undefined,
+    proxy: String | StringDictionary[js.Any] = null,
+    request: RequestOptions2 = null,
+    timeout: js.UndefOr[Double] = js.undefined
+  ): HttpClientConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(enableDNSCache)) __obj.updateDynamic("enableDNSCache")(enableDNSCache.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableProxy)) __obj.updateDynamic("enableProxy")(enableProxy.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(freeSocketKeepAliveTimeout)) __obj.updateDynamic("freeSocketKeepAliveTimeout")(freeSocketKeepAliveTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(freeSocketTimeout)) __obj.updateDynamic("freeSocketTimeout")(freeSocketTimeout.get.asInstanceOf[js.Any])
+    if (httpAgent != null) __obj.updateDynamic("httpAgent")(httpAgent.asInstanceOf[js.Any])
+    if (httpsAgent != null) __obj.updateDynamic("httpsAgent")(httpsAgent.asInstanceOf[js.Any])
+    if (!js.isUndefined(keepAlive)) __obj.updateDynamic("keepAlive")(keepAlive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxFreeSockets)) __obj.updateDynamic("maxFreeSockets")(maxFreeSockets.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxSockets)) __obj.updateDynamic("maxSockets")(maxSockets.get.asInstanceOf[js.Any])
+    if (proxy != null) __obj.updateDynamic("proxy")(proxy.asInstanceOf[js.Any])
+    if (request != null) __obj.updateDynamic("request")(request.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[HttpClientConfig]
   }
-  @scala.inline
-  implicit class HttpClientConfigOps[Self <: HttpClientConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnableDNSCache(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDNSCache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableDNSCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDNSCache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableProxy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableProxy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableProxy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableProxy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpAgent(value: HttpClientBaseConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpAgent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpAgent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpAgent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpsAgent(value: HttpClientBaseConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpsAgent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpsAgent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpsAgent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProxy(value: String | StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProxy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequest(value: RequestOptions2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

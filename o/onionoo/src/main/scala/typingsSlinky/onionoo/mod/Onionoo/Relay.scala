@@ -10,98 +10,97 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Relay extends js.Object {
   /**
     * Bandwidth in bytes per second that this relay is willing and capable to provide. This bandwidth
     * value is the minimum of `bandwidth_rate`, `bandwidth_burst`, and `observed_bandwidth`.
     * Missing if router descriptor containing this information cannot be found.
     */
-  var advertised_bandwidth: js.UndefOr[Double] = js.native
+  var advertised_bandwidth: js.UndefOr[Double] = js.undefined
   /**
     * Array of fingerprints of relays that are not in an effective, mutual family relationship with this relay.
     * These relays are part of this relay's family but they don't consider this relay to be part of their family.
     * Omitted if empty or if descriptor containing this information cannot be found.
     */
-  var alleged_family: js.UndefOr[js.Array[String]] = js.native
+  var alleged_family: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * AS number as found in an AS database by resolving the relay's first onion-routing IP address.
     * AS number strings start with "AS", followed directly by the AS number. Omitted if the relay IP
     * address could not be found in the AS database.
     */
-  var as: js.UndefOr[String] = js.native
+  var as: js.UndefOr[String] = js.undefined
   /**
     * AS name as found in an AS database by resolving the relay's first onion-routing IP address.
     * Omitted if the relay IP address could not be found in the AS database.
     */
-  var as_name: js.UndefOr[String] = js.native
+  var as_name: js.UndefOr[String] = js.undefined
   /**
     * Bandwidth in bytes per second that this relay is willing to sustain in very short intervals.
     * Missing if router descriptor containing this information cannot be found.
     */
-  var bandwidth_burst: js.UndefOr[Double] = js.native
+  var bandwidth_burst: js.UndefOr[Double] = js.undefined
   /**
     * Average bandwidth in bytes per second that this relay is willing to sustain over long periods.
     * Missing if router descriptor containing this information cannot be found.
     */
-  var bandwidth_rate: js.UndefOr[Double] = js.native
+  var bandwidth_rate: js.UndefOr[Double] = js.undefined
   /**
     * City name as found in a GeoIP database by resolving the relay's first onion-routing IP address.
     * Omitted if the relay IP address could not be found in the GeoIP database, or if the GeoIP database
     * did not contain a city name.
     */
-  var city_name: js.UndefOr[String] = js.native
+  var city_name: js.UndefOr[String] = js.undefined
   /**
     * Weight assigned to this relay by the directory authorities that clients use in their path selection algorithm.
     * The unit is arbitrary; currently it's kilobytes per second, but that might change in the future.
     */
-  var consensus_weight: Double = js.native
+  var consensus_weight: Double
   /**
     * Fraction of this relay's consensus weight compared to the sum of all consensus weights in the network.
     * This fraction is a very rough approximation of the probability of this relay to be selected by clients.
     * Omitted if the relay is not running.
     */
-  var consensus_weight_fraction: js.UndefOr[Double] = js.native
+  var consensus_weight_fraction: js.UndefOr[Double] = js.undefined
   /**
     * Contact address of the relay operator. Omitted if empty or if descriptor containing this information
     * cannot be found.
     */
-  var contact: js.UndefOr[String] = js.native
+  var contact: js.UndefOr[String] = js.undefined
   /**
     * Two-letter lower-case country code as found in a GeoIP database by resolving the relay's first
     * onion-routing IP address. Omitted if the relay IP address could not be found in the GeoIP database.
     */
-  var country: js.UndefOr[String] = js.native
+  var country: js.UndefOr[String] = js.undefined
   /**
     * Country name as found in a GeoIP database by resolving the relay's first onion-routing IP address.
     * Omitted if the relay IP address could not be found in the GeoIP database, or if the GeoIP database
     * did not contain a country name.
     */
-  var country_name: js.UndefOr[String] = js.native
+  var country_name: js.UndefOr[String] = js.undefined
   /**
     * IPv4 address and TCP port where the relay accepts directory connections.
     * Omitted if the relay does not accept directory connections.
     */
-  var dir_address: js.UndefOr[String] = js.native
+  var dir_address: js.UndefOr[String] = js.undefined
   /**
     * Array of fingerprints of relays that are in an effective, mutual family relationship with this relay.
     * These relays are part of this relay's family and they consider this relay to be part of their family.
     * Always contains the relay's own fingerprint. Omitted if the descriptor containing this information
     * cannot be found.
     */
-  var effective_family: js.UndefOr[js.Array[String]] = js.native
+  var effective_family: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Array of IPv4 addresses that the relay used to exit to the Internet in the past 24 hours. Omitted if
     * array is empty. Includes all exit addresses, regardless of whether they are used as onion-routing addresses
     * or not.
     */
-  var exit_addresses: js.UndefOr[js.Array[String]] = js.native
+  var exit_addresses: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Array of exit-policy lines. Missing if router descriptor containing this information cannot be found.
     * May contradict the `exit_policy_summary` field in a rare edge case: this happens when the relay changes
     * its exit policy after the directory authorities summarized the previous exit policy.
     */
-  var exit_policy: js.UndefOr[js.Array[String]] = js.native
+  var exit_policy: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Summary version of the relay's exit policy containing a dictionary with either an `accept` or a `reject` element.
     * If there is an `accept` (`reject`) element, the relay accepts (rejects) all TCP ports or port ranges
@@ -109,7 +108,7 @@ trait Relay extends js.Object {
     * `exit_policy` field in a rare edge case: this happens when the relay changes its exit policy after
     * the directory authorities summarized the previous exit policy.
     */
-  var exit_policy_summary: js.UndefOr[Accept] = js.native
+  var exit_policy_summary: js.UndefOr[Accept] = js.undefined
   /**
     * Summary version of the relay's IPv6 exit policy containing a dictionary with either an `accept` or a `reject`
     * element. If there is an `accept` (`reject`) element, the relay accepts (rejects) all TCP ports or port ranges
@@ -118,129 +117,129 @@ trait Relay extends js.Object {
     * this happens when the relay changes its exit policy after the directory authorities summarized the previous
     * exit policy.
     */
-  var exit_policy_v6_summary: js.UndefOr[Accept] = js.native
+  var exit_policy_v6_summary: js.UndefOr[Accept] = js.undefined
   /**
     * Probability of this relay to be selected for the exit position. This probability is calculated based on
     * consensus weights, relay flags, and bandwidth weights in the consensus. Path selection depends on more
     * factors, so that this probability can only be an approximation. Omitted if the relay is not running,
     * or the consensus does not contain bandwidth weights.
     */
-  var exit_probability: js.UndefOr[Double] = js.native
+  var exit_probability: js.UndefOr[Double] = js.undefined
   /**
     * Relay fingerprint consisting of 40 upper-case hexadecimal characters.
     */
-  var fingerprint: String = js.native
+  var fingerprint: String
   /**
     * UTC timestamp (YYYY-MM-DD hh:mm:ss) when this relay was first seen in a network status consensus.
     */
-  var first_seen: String = js.native
+  var first_seen: String
   /**
     * Array of relay flags that the directory authorities assigned to this relay. May be omitted if empty.
     */
-  var flags: js.UndefOr[js.Array[String]] = js.native
+  var flags: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Probability of this relay to be selected for the guard position. This probability is calculated based on
     * consensus weights, relay flags, and bandwidth weights in the consensus. Path selection depends on more
     * factors, so that this probability can only be an approximation. Omitted if the relay is not running,
     * or the consensus does not contain bandwidth weights.
     */
-  var guard_probability: js.UndefOr[Double] = js.native
+  var guard_probability: js.UndefOr[Double] = js.undefined
   /**
     * Boolean field saying whether this relay indicated that it is hibernating in its last known server descriptor.
     * This information may be helpful to decide whether a relay that is not running anymore has reached its
     * accounting limit and has not dropped out of the network for another, unknown reason. Omitted if either
     * the relay is not hibernating, or if no information is available about the hibernation status of the relay.
     */
-  var hibernating: js.UndefOr[Boolean] = js.native
+  var hibernating: js.UndefOr[Boolean] = js.undefined
   /**
     * Host name as found in a reverse DNS lookup of the relay's primary IP address. This field is updated at most
     * once in 12 hours, unless the relay IP address changes. Omitted if the relay IP address was not looked up,
     * if no lookup request was successful yet, or if no A record was found matching the PTR record.
     * @deprecated
     */
-  var host_name: js.UndefOr[String] = js.native
+  var host_name: js.UndefOr[String] = js.undefined
   /**
     * Array of fingerprints of relays that are not in an effective, mutual family relationship with this relay
     * but that can be reached by following effective, mutual family relationships starting at this relay.
     * Omitted if empty or if descriptor containing this information cannot be found.
     */
-  var indirect_family: js.UndefOr[js.Array[String]] = js.native
+  var indirect_family: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * UTC timestamp (YYYY-MM-DD hh:mm:ss) when this relay last stopped announcing an IPv4 or IPv6 address or
     * TCP port where it previously accepted onion-routing or directory connections. This timestamp can serve
     * as indicator whether this relay would be a suitable fallback directory.
     */
-  var last_changed_address_or_port: String = js.native
+  var last_changed_address_or_port: String
   /**
     * UTC timestamp (YYYY-MM-DD hh:mm:ss) when the relay was last (re-)started.
     * Missing if router descriptor containing this information cannot be found.
     */
-  var last_restarted: js.UndefOr[String] = js.native
+  var last_restarted: js.UndefOr[String] = js.undefined
   /**
     * UTC timestamp (YYYY-MM-DD hh:mm:ss) when this relay was last seen in a network status consensus.
     */
-  var last_seen: String = js.native
+  var last_seen: String
   /**
     * Latitude as found in a GeoIP database by resolving the relay's first onion-routing IP address.
     * Omitted if the relay IP address could not be found in the GeoIP database.
     */
-  var latitude: js.UndefOr[Double] = js.native
+  var latitude: js.UndefOr[Double] = js.undefined
   /**
     * Longitude as found in a GeoIP database by resolving the relay's first onion-routing IP address.
     * Omitted if the relay IP address could not be found in the GeoIP database.
     */
-  var longitude: js.UndefOr[Double] = js.native
+  var longitude: js.UndefOr[Double] = js.undefined
   /**
     * Boolean field saying whether the consensus weight of this relay is based on a threshold of 3 or more
     * measurements by Tor bandwidth authorities. Omitted if the network status consensus containing this
     * relay does not contain measurement information.
     */
-  var measured: js.UndefOr[Boolean] = js.native
+  var measured: js.UndefOr[Boolean] = js.undefined
   /**
     * Probability of this relay to be selected for the middle position. This probability is calculated based on
     * consensus weights, relay flags, and bandwidth weights in the consensus. Path selection depends on more
     * factors, so that this probability can only be an approximation. Omitted if the relay is not running,
     * or the consensus does not contain bandwidth weights.
     */
-  var middle_probability: js.UndefOr[Double] = js.native
+  var middle_probability: js.UndefOr[Double] = js.undefined
   /**
     * Relay nickname consisting of 1–19 alphanumerical characters.
     */
-  var nickname: String = js.native
+  var nickname: String
   /**
     * Bandwidth estimate in bytes per second of the capacity this relay can handle. The relay remembers
     * the maximum bandwidth sustained output over any ten second period in the past day, and another
     * sustained input. The `observed_bandwidth` value is the lesser of these two numbers. Missing if
     * router descriptor containing this information cannot be found.
     */
-  var observed_bandwidth: js.UndefOr[Double] = js.native
+  var observed_bandwidth: js.UndefOr[Double] = js.undefined
   /**
     * Array of IPv4 or IPv6 addresses and TCP ports or port lists where the relay accepts onion-routing connections.
     * The first address is the primary onion-routing address that the relay used to register in the network,
     * subsequent addresses are in arbitrary order. IPv6 hex characters are all lower-case.
     */
-  var or_addresses: js.Array[String] = js.native
+  var or_addresses: js.Array[String]
   /**
     * Platform string containing operating system and Tor version details. Omitted if empty or if descriptor
     * containing this information cannot be found.
     */
-  var platform: js.UndefOr[String] = js.native
+  var platform: js.UndefOr[String] = js.undefined
   /**
     * Boolean field saying whether the Tor software version of this relay is recommended by the directory
     * authorities or not. Uses the relay version in the consensus. Omitted if either the directory authorities
     * did not recommend versions, or the relay did not report which version it runs.
     */
-  var recommended_version: js.UndefOr[Boolean] = js.native
+  var recommended_version: js.UndefOr[Boolean] = js.undefined
   /**
     * Region name as found in a GeoIP database by resolving the relay's first onion-routing IP address.
     * Omitted if the relay IP address could not be found in the GeoIP database, or if the GeoIP database
     * did not contain a region name.
     */
-  var region_name: js.UndefOr[String] = js.native
+  var region_name: js.UndefOr[String] = js.undefined
   /**
     * Boolean field saying whether this relay was listed as running in the last relay network status consensus.
     */
-  var running: Boolean = js.native
+  var running: Boolean
   /**
     * Array of IPv4 or IPv6 addresses and TCP ports or port lists where the relay claims in its descriptor to
     * accept onion-routing connections but that the directory authorities failed to confirm as reachable.
@@ -252,7 +251,7 @@ trait Relay extends js.Object {
     * to the processing, relays with unreachable addresses will be included here. Addresses are in arbitrary order.
     * IPv6 hex characters are all lower-case. Omitted if empty.
     */
-  var unreachable_or_addresses: js.UndefOr[js.Array[String]] = js.native
+  var unreachable_or_addresses: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Host names as found in a reverse DNS lookup of the relay's primary IP address that for which a matching
     * A record was not found. This field is updated at most once in 12 hours, unless the relay IP address changes.
@@ -261,7 +260,7 @@ trait Relay extends js.Object {
     * A DNSSEC validating resolver is used for these lookups. Failure to validate DNSSEC signatures will prevent
     * those names from appearing in this field.
     */
-  var unverified_host_names: js.UndefOr[js.Array[String]] = js.native
+  var unverified_host_names: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Host names as found in a reverse DNS lookup of the relay's primary IP address for which a matching A record
     * was also found. This field is updated at most once in 12 hours, unless the relay IP address changes.
@@ -270,13 +269,13 @@ trait Relay extends js.Object {
     * of the PTR records). A DNSSEC validating resolver is used for these lookups. Failure to validate
     * DNSSEC signatures will prevent those names from appearing in this field.
     */
-  var verified_host_names: js.UndefOr[js.Array[String]] = js.native
+  var verified_host_names: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Tor software version without leading "Tor" as reported by the directory authorities in the "v" line of
     * the consensus. Omitted if either the directory authorities or the relay did not report which version
     * the relay runs or if the relay runs an alternative Tor implementation.
     */
-  var version: js.UndefOr[String] = js.native
+  var version: js.UndefOr[String] = js.undefined
   /**
     * Status of the Tor software version of this relay based on the versions recommended by the directory authorities.
     * Possible version statuses are: `recommended` if a version is listed as recommended; `experimental` if a version
@@ -286,7 +285,7 @@ trait Relay extends js.Object {
     * `unrecommended` if none of the above conditions hold. Omitted if either the directory authorities did not
     * recommend versions, or the relay did not report which version it runs.
     */
-  var version_status: js.UndefOr[recommended | experimental | obsolete | (`new in series`) | unrecommended] = js.native
+  var version_status: js.UndefOr[recommended | experimental | obsolete | (`new in series`) | unrecommended] = js.undefined
 }
 
 object Relay {
@@ -299,510 +298,84 @@ object Relay {
     last_seen: String,
     nickname: String,
     or_addresses: js.Array[String],
-    running: Boolean
+    running: Boolean,
+    advertised_bandwidth: js.UndefOr[Double] = js.undefined,
+    alleged_family: js.Array[String] = null,
+    as: String = null,
+    as_name: String = null,
+    bandwidth_burst: js.UndefOr[Double] = js.undefined,
+    bandwidth_rate: js.UndefOr[Double] = js.undefined,
+    city_name: String = null,
+    consensus_weight_fraction: js.UndefOr[Double] = js.undefined,
+    contact: String = null,
+    country: String = null,
+    country_name: String = null,
+    dir_address: String = null,
+    effective_family: js.Array[String] = null,
+    exit_addresses: js.Array[String] = null,
+    exit_policy: js.Array[String] = null,
+    exit_policy_summary: Accept = null,
+    exit_policy_v6_summary: Accept = null,
+    exit_probability: js.UndefOr[Double] = js.undefined,
+    flags: js.Array[String] = null,
+    guard_probability: js.UndefOr[Double] = js.undefined,
+    hibernating: js.UndefOr[Boolean] = js.undefined,
+    host_name: String = null,
+    indirect_family: js.Array[String] = null,
+    last_restarted: String = null,
+    latitude: js.UndefOr[Double] = js.undefined,
+    longitude: js.UndefOr[Double] = js.undefined,
+    measured: js.UndefOr[Boolean] = js.undefined,
+    middle_probability: js.UndefOr[Double] = js.undefined,
+    observed_bandwidth: js.UndefOr[Double] = js.undefined,
+    platform: String = null,
+    recommended_version: js.UndefOr[Boolean] = js.undefined,
+    region_name: String = null,
+    unreachable_or_addresses: js.Array[String] = null,
+    unverified_host_names: js.Array[String] = null,
+    verified_host_names: js.Array[String] = null,
+    version: String = null,
+    version_status: recommended | experimental | obsolete | (`new in series`) | unrecommended = null
   ): Relay = {
     val __obj = js.Dynamic.literal(consensus_weight = consensus_weight.asInstanceOf[js.Any], fingerprint = fingerprint.asInstanceOf[js.Any], first_seen = first_seen.asInstanceOf[js.Any], last_changed_address_or_port = last_changed_address_or_port.asInstanceOf[js.Any], last_seen = last_seen.asInstanceOf[js.Any], nickname = nickname.asInstanceOf[js.Any], or_addresses = or_addresses.asInstanceOf[js.Any], running = running.asInstanceOf[js.Any])
+    if (!js.isUndefined(advertised_bandwidth)) __obj.updateDynamic("advertised_bandwidth")(advertised_bandwidth.get.asInstanceOf[js.Any])
+    if (alleged_family != null) __obj.updateDynamic("alleged_family")(alleged_family.asInstanceOf[js.Any])
+    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
+    if (as_name != null) __obj.updateDynamic("as_name")(as_name.asInstanceOf[js.Any])
+    if (!js.isUndefined(bandwidth_burst)) __obj.updateDynamic("bandwidth_burst")(bandwidth_burst.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bandwidth_rate)) __obj.updateDynamic("bandwidth_rate")(bandwidth_rate.get.asInstanceOf[js.Any])
+    if (city_name != null) __obj.updateDynamic("city_name")(city_name.asInstanceOf[js.Any])
+    if (!js.isUndefined(consensus_weight_fraction)) __obj.updateDynamic("consensus_weight_fraction")(consensus_weight_fraction.get.asInstanceOf[js.Any])
+    if (contact != null) __obj.updateDynamic("contact")(contact.asInstanceOf[js.Any])
+    if (country != null) __obj.updateDynamic("country")(country.asInstanceOf[js.Any])
+    if (country_name != null) __obj.updateDynamic("country_name")(country_name.asInstanceOf[js.Any])
+    if (dir_address != null) __obj.updateDynamic("dir_address")(dir_address.asInstanceOf[js.Any])
+    if (effective_family != null) __obj.updateDynamic("effective_family")(effective_family.asInstanceOf[js.Any])
+    if (exit_addresses != null) __obj.updateDynamic("exit_addresses")(exit_addresses.asInstanceOf[js.Any])
+    if (exit_policy != null) __obj.updateDynamic("exit_policy")(exit_policy.asInstanceOf[js.Any])
+    if (exit_policy_summary != null) __obj.updateDynamic("exit_policy_summary")(exit_policy_summary.asInstanceOf[js.Any])
+    if (exit_policy_v6_summary != null) __obj.updateDynamic("exit_policy_v6_summary")(exit_policy_v6_summary.asInstanceOf[js.Any])
+    if (!js.isUndefined(exit_probability)) __obj.updateDynamic("exit_probability")(exit_probability.get.asInstanceOf[js.Any])
+    if (flags != null) __obj.updateDynamic("flags")(flags.asInstanceOf[js.Any])
+    if (!js.isUndefined(guard_probability)) __obj.updateDynamic("guard_probability")(guard_probability.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hibernating)) __obj.updateDynamic("hibernating")(hibernating.get.asInstanceOf[js.Any])
+    if (host_name != null) __obj.updateDynamic("host_name")(host_name.asInstanceOf[js.Any])
+    if (indirect_family != null) __obj.updateDynamic("indirect_family")(indirect_family.asInstanceOf[js.Any])
+    if (last_restarted != null) __obj.updateDynamic("last_restarted")(last_restarted.asInstanceOf[js.Any])
+    if (!js.isUndefined(latitude)) __obj.updateDynamic("latitude")(latitude.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(longitude)) __obj.updateDynamic("longitude")(longitude.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(measured)) __obj.updateDynamic("measured")(measured.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(middle_probability)) __obj.updateDynamic("middle_probability")(middle_probability.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(observed_bandwidth)) __obj.updateDynamic("observed_bandwidth")(observed_bandwidth.get.asInstanceOf[js.Any])
+    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
+    if (!js.isUndefined(recommended_version)) __obj.updateDynamic("recommended_version")(recommended_version.get.asInstanceOf[js.Any])
+    if (region_name != null) __obj.updateDynamic("region_name")(region_name.asInstanceOf[js.Any])
+    if (unreachable_or_addresses != null) __obj.updateDynamic("unreachable_or_addresses")(unreachable_or_addresses.asInstanceOf[js.Any])
+    if (unverified_host_names != null) __obj.updateDynamic("unverified_host_names")(unverified_host_names.asInstanceOf[js.Any])
+    if (verified_host_names != null) __obj.updateDynamic("verified_host_names")(verified_host_names.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
+    if (version_status != null) __obj.updateDynamic("version_status")(version_status.asInstanceOf[js.Any])
     __obj.asInstanceOf[Relay]
   }
-  @scala.inline
-  implicit class RelayOps[Self <: Relay] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConsensus_weight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consensus_weight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFingerprint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFirst_seen(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("first_seen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLast_changed_address_or_port(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("last_changed_address_or_port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLast_seen(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("last_seen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNickname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nickname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOr_addresses(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("or_addresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRunning(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("running")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAdvertised_bandwidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertised_bandwidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdvertised_bandwidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertised_bandwidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlleged_family(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alleged_family")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlleged_family: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alleged_family")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAs_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAs_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBandwidth_burst(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bandwidth_burst")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBandwidth_burst: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bandwidth_burst")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBandwidth_rate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bandwidth_rate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBandwidth_rate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bandwidth_rate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCity_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("city_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCity_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("city_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConsensus_weight_fraction(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consensus_weight_fraction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsensus_weight_fraction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consensus_weight_fraction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContact(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCountry(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCountry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCountry_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("country_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCountry_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("country_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDir_address(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dir_address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDir_address: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dir_address")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEffective_family(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effective_family")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEffective_family: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effective_family")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExit_addresses(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exit_addresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExit_addresses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exit_addresses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExit_policy(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exit_policy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExit_policy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exit_policy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExit_policy_summary(value: Accept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exit_policy_summary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExit_policy_summary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exit_policy_summary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExit_policy_v6_summary(value: Accept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exit_policy_v6_summary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExit_policy_v6_summary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exit_policy_v6_summary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExit_probability(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exit_probability")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExit_probability: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exit_probability")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlags(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGuard_probability(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guard_probability")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGuard_probability: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guard_probability")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHibernating(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hibernating")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHibernating: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hibernating")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHost_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndirect_family(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indirect_family")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndirect_family: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indirect_family")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLast_restarted(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("last_restarted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLast_restarted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("last_restarted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLatitude(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latitude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatitude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latitude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLongitude(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("longitude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLongitude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("longitude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeasured(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measured")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeasured: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measured")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMiddle_probability(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("middle_probability")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMiddle_probability: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("middle_probability")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObserved_bandwidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("observed_bandwidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObserved_bandwidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("observed_bandwidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlatform(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecommended_version(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recommended_version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecommended_version: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recommended_version")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegion_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegion_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnreachable_or_addresses(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unreachable_or_addresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnreachable_or_addresses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unreachable_or_addresses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnverified_host_names(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unverified_host_names")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnverified_host_names: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unverified_host_names")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerified_host_names(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verified_host_names")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerified_host_names: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verified_host_names")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion_status(value: recommended | experimental | obsolete | (`new in series`) | unrecommended): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version_status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion_status: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version_status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

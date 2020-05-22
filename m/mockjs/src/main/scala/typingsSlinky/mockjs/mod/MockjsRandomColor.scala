@@ -6,18 +6,17 @@ import scala.scalajs.js.annotation._
 
 // Mockjs.Random - Color
 // see https://github.com/nuysoft/Mock/wiki/Color
-@js.native
 trait MockjsRandomColor extends js.Object {
   // Random.color
-  def color(): S = js.native
+  def color(): S
   // Random.hex
-  def hex(): S = js.native
+  def hex(): S
   // Random.hsl
-  def hsl(): S = js.native
+  def hsl(): S
   // Random.rgb
-  def rgb(): S = js.native
+  def rgb(): S
   // Random.rgba
-  def rgba(): S = js.native
+  def rgba(): S
 }
 
 object MockjsRandomColor {
@@ -26,43 +25,5 @@ object MockjsRandomColor {
     val __obj = js.Dynamic.literal(color = js.Any.fromFunction0(color), hex = js.Any.fromFunction0(hex), hsl = js.Any.fromFunction0(hsl), rgb = js.Any.fromFunction0(rgb), rgba = js.Any.fromFunction0(rgba))
     __obj.asInstanceOf[MockjsRandomColor]
   }
-  @scala.inline
-  implicit class MockjsRandomColorOps[Self <: MockjsRandomColor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColor(value: () => S): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHex(value: () => S): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hex")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHsl(value: () => S): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hsl")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRgb(value: () => S): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rgb")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRgba(value: () => S): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rgba")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

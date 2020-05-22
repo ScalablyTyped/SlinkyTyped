@@ -12,141 +12,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UserPreferences extends js.Object {
-  val allowTextChangesInNewFiles: js.UndefOr[Boolean] = js.native
-  val disableSuggestions: js.UndefOr[Boolean] = js.native
+  val allowTextChangesInNewFiles: js.UndefOr[Boolean] = js.undefined
+  val disableSuggestions: js.UndefOr[Boolean] = js.undefined
   /** Determines whether we import `foo/index.ts` as "foo", "foo/index", or "foo/index.js" */
-  val importModuleSpecifierEnding: js.UndefOr[minimal | index | js_] = js.native
-  val importModuleSpecifierPreference: js.UndefOr[auto | relative | `non-relative`] = js.native
-  val includeAutomaticOptionalChainCompletions: js.UndefOr[Boolean] = js.native
-  val includeCompletionsForModuleExports: js.UndefOr[Boolean] = js.native
-  val includeCompletionsWithInsertText: js.UndefOr[Boolean] = js.native
-  val providePrefixAndSuffixTextForRename: js.UndefOr[Boolean] = js.native
-  val quotePreference: js.UndefOr[auto | double | single] = js.native
+  val importModuleSpecifierEnding: js.UndefOr[auto | minimal | index | js_] = js.undefined
+  val importModuleSpecifierPreference: js.UndefOr[auto | relative | `non-relative`] = js.undefined
+  val includeAutomaticOptionalChainCompletions: js.UndefOr[Boolean] = js.undefined
+  val includeCompletionsForModuleExports: js.UndefOr[Boolean] = js.undefined
+  val includeCompletionsWithInsertText: js.UndefOr[Boolean] = js.undefined
+  val providePrefixAndSuffixTextForRename: js.UndefOr[Boolean] = js.undefined
+  val quotePreference: js.UndefOr[auto | double | single] = js.undefined
 }
 
 object UserPreferences {
   @scala.inline
-  def apply(): UserPreferences = {
+  def apply(
+    allowTextChangesInNewFiles: js.UndefOr[Boolean] = js.undefined,
+    disableSuggestions: js.UndefOr[Boolean] = js.undefined,
+    importModuleSpecifierEnding: auto | minimal | index | js_ = null,
+    importModuleSpecifierPreference: auto | relative | `non-relative` = null,
+    includeAutomaticOptionalChainCompletions: js.UndefOr[Boolean] = js.undefined,
+    includeCompletionsForModuleExports: js.UndefOr[Boolean] = js.undefined,
+    includeCompletionsWithInsertText: js.UndefOr[Boolean] = js.undefined,
+    providePrefixAndSuffixTextForRename: js.UndefOr[Boolean] = js.undefined,
+    quotePreference: auto | double | single = null
+  ): UserPreferences = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowTextChangesInNewFiles)) __obj.updateDynamic("allowTextChangesInNewFiles")(allowTextChangesInNewFiles.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableSuggestions)) __obj.updateDynamic("disableSuggestions")(disableSuggestions.get.asInstanceOf[js.Any])
+    if (importModuleSpecifierEnding != null) __obj.updateDynamic("importModuleSpecifierEnding")(importModuleSpecifierEnding.asInstanceOf[js.Any])
+    if (importModuleSpecifierPreference != null) __obj.updateDynamic("importModuleSpecifierPreference")(importModuleSpecifierPreference.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeAutomaticOptionalChainCompletions)) __obj.updateDynamic("includeAutomaticOptionalChainCompletions")(includeAutomaticOptionalChainCompletions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeCompletionsForModuleExports)) __obj.updateDynamic("includeCompletionsForModuleExports")(includeCompletionsForModuleExports.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeCompletionsWithInsertText)) __obj.updateDynamic("includeCompletionsWithInsertText")(includeCompletionsWithInsertText.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(providePrefixAndSuffixTextForRename)) __obj.updateDynamic("providePrefixAndSuffixTextForRename")(providePrefixAndSuffixTextForRename.get.asInstanceOf[js.Any])
+    if (quotePreference != null) __obj.updateDynamic("quotePreference")(quotePreference.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserPreferences]
   }
-  @scala.inline
-  implicit class UserPreferencesOps[Self <: UserPreferences] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowTextChangesInNewFiles(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTextChangesInNewFiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowTextChangesInNewFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTextChangesInNewFiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableSuggestions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableSuggestions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableSuggestions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableSuggestions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportModuleSpecifierEnding(value: minimal | index | js_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importModuleSpecifierEnding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportModuleSpecifierEnding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importModuleSpecifierEnding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportModuleSpecifierPreference(value: auto | relative | `non-relative`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importModuleSpecifierPreference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportModuleSpecifierPreference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importModuleSpecifierPreference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeAutomaticOptionalChainCompletions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeAutomaticOptionalChainCompletions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeAutomaticOptionalChainCompletions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeAutomaticOptionalChainCompletions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeCompletionsForModuleExports(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeCompletionsForModuleExports")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeCompletionsForModuleExports: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeCompletionsForModuleExports")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeCompletionsWithInsertText(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeCompletionsWithInsertText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeCompletionsWithInsertText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeCompletionsWithInsertText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProvidePrefixAndSuffixTextForRename(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("providePrefixAndSuffixTextForRename")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProvidePrefixAndSuffixTextForRename: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("providePrefixAndSuffixTextForRename")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuotePreference(value: auto | double | single): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotePreference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuotePreference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotePreference")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,53 +22,16 @@ trait LDAPSSettingInfo extends js.Object {
 
 object LDAPSSettingInfo {
   @scala.inline
-  def apply(): LDAPSSettingInfo = {
+  def apply(
+    LDAPSStatus: LDAPSStatus = null,
+    LDAPSStatusReason: LDAPSStatusReason = null,
+    LastUpdatedDateTime: js.Date = null
+  ): LDAPSSettingInfo = {
     val __obj = js.Dynamic.literal()
+    if (LDAPSStatus != null) __obj.updateDynamic("LDAPSStatus")(LDAPSStatus.asInstanceOf[js.Any])
+    if (LDAPSStatusReason != null) __obj.updateDynamic("LDAPSStatusReason")(LDAPSStatusReason.asInstanceOf[js.Any])
+    if (LastUpdatedDateTime != null) __obj.updateDynamic("LastUpdatedDateTime")(LastUpdatedDateTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[LDAPSSettingInfo]
   }
-  @scala.inline
-  implicit class LDAPSSettingInfoOps[Self <: LDAPSSettingInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLDAPSStatus(value: LDAPSStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LDAPSStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLDAPSStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LDAPSStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLDAPSStatusReason(value: LDAPSStatusReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LDAPSStatusReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLDAPSStatusReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LDAPSStatusReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdatedDateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdatedDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedDateTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

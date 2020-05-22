@@ -12,7 +12,7 @@ object FormFolder {
   @js.native
   object component extends js.Object
   
-  def withProps(p: IconProps with SVGProps[SVGSVGElement]): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.FormFolder] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.FormFolder](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: FormFolder.type): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.FormFolder] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.FormFolder](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: IconProps with SVGProps[SVGSVGElement]): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.FormFolder] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.FormFolder](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FormFolder.type): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.FormFolder] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.FormFolder](js.Array(this.component, js.Dictionary.empty))()
 }
 

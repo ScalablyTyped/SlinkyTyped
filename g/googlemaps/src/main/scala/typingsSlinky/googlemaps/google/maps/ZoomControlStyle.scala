@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 sealed trait ZoomControlStyle extends js.Object
 
+// TODO find source documentation
 @JSGlobal("google.maps.ZoomControlStyle")
 @js.native
 object ZoomControlStyle extends js.Object {

@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * implements {@link Backend} provides access to a configuration database composed of one or more storage backends containing settings used by software
   * modules.
   */
-@js.native
 trait MultiStratumBackend
   extends XSchemaSupplier
      with XBackend

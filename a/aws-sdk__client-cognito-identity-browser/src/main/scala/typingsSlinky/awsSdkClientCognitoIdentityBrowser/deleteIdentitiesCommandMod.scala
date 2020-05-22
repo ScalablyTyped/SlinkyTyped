@@ -26,9 +26,16 @@ object deleteIdentitiesCommandMod extends js.Object {
           Blob
         ] {
     def this(input: DeleteIdentitiesInput) = this()
+    /* CompleteClass */
+    override val input: DeleteIdentitiesInput = js.native
     val middlewareStack: MiddlewareStack[DeleteIdentitiesInput, DeleteIdentitiesOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: CognitoIdentityResolvedConfiguration
+    ): Handler[DeleteIdentitiesInput, DeleteIdentitiesOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: CognitoIdentityResolvedConfiguration
     ): Handler[DeleteIdentitiesInput, DeleteIdentitiesOutput] = js.native
   }

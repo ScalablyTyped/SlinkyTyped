@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MediaParam extends js.Object {
-  var file_path: String = js.native
+  var file_path: String
 }
 
 object MediaParam {
@@ -15,19 +14,5 @@ object MediaParam {
     val __obj = js.Dynamic.literal(file_path = file_path.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaParam]
   }
-  @scala.inline
-  implicit class MediaParamOps[Self <: MediaParam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFile_path(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file_path")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

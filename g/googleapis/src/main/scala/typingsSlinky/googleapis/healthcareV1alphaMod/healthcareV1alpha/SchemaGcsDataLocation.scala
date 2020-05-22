@@ -23,29 +23,10 @@ trait SchemaGcsDataLocation extends js.Object {
 
 object SchemaGcsDataLocation {
   @scala.inline
-  def apply(): SchemaGcsDataLocation = {
+  def apply(gcsUri: String = null): SchemaGcsDataLocation = {
     val __obj = js.Dynamic.literal()
+    if (gcsUri != null) __obj.updateDynamic("gcsUri")(gcsUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGcsDataLocation]
   }
-  @scala.inline
-  implicit class SchemaGcsDataLocationOps[Self <: SchemaGcsDataLocation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGcsUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGcsUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsUri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

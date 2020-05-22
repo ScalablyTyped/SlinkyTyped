@@ -3,128 +3,61 @@ package typingsSlinky.awsSdkClientS3Node.typesUploadPartOutputMod
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.AES256
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.awsColonkms
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.requester_
-import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod.OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod._OutputTypesUnion
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UploadPartOutput
   extends MetadataBearer
-     with OutputTypesUnion {
+     with _OutputTypesUnion {
   /**
     * <p>Entity tag for the uploaded object.</p>
     */
-  var ETag: js.UndefOr[String] = js.native
+  var ETag: js.UndefOr[String] = js.undefined
   /**
     * <p>If present, indicates that the requester was successfully charged for the request.</p>
     */
-  var RequestCharged: js.UndefOr[requester_ | String] = js.native
+  var RequestCharged: js.UndefOr[requester_ | String] = js.undefined
   /**
     * <p>If server-side encryption with a customer-provided encryption key was requested, the response will include this header confirming the encryption algorithm used.</p>
     */
-  var SSECustomerAlgorithm: js.UndefOr[String] = js.native
+  var SSECustomerAlgorithm: js.UndefOr[String] = js.undefined
   /**
     * <p>If server-side encryption with a customer-provided encryption key was requested, the response will include this header to provide round trip message integrity verification of the customer-provided encryption key.</p>
     */
-  var SSECustomerKeyMD5: js.UndefOr[String] = js.native
+  var SSECustomerKeyMD5: js.UndefOr[String] = js.undefined
   /**
     * <p>If present, specifies the ID of the AWS Key Management Service (KMS) master encryption key that was used for the object.</p>
     */
-  var SSEKMSKeyId: js.UndefOr[String] = js.native
+  var SSEKMSKeyId: js.UndefOr[String] = js.undefined
   /**
     * <p>The Server-side encryption algorithm used when storing this object in S3 (e.g., AES256, aws:kms).</p>
     */
-  var ServerSideEncryption: js.UndefOr[AES256 | awsColonkms | String] = js.native
+  var ServerSideEncryption: js.UndefOr[AES256 | awsColonkms | String] = js.undefined
 }
 
 object UploadPartOutput {
   @scala.inline
-  def apply($metadata: ResponseMetadata): UploadPartOutput = {
+  def apply(
+    $metadata: ResponseMetadata,
+    ETag: String = null,
+    RequestCharged: requester_ | String = null,
+    SSECustomerAlgorithm: String = null,
+    SSECustomerKeyMD5: String = null,
+    SSEKMSKeyId: String = null,
+    ServerSideEncryption: AES256 | awsColonkms | String = null
+  ): UploadPartOutput = {
     val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any])
+    if (ETag != null) __obj.updateDynamic("ETag")(ETag.asInstanceOf[js.Any])
+    if (RequestCharged != null) __obj.updateDynamic("RequestCharged")(RequestCharged.asInstanceOf[js.Any])
+    if (SSECustomerAlgorithm != null) __obj.updateDynamic("SSECustomerAlgorithm")(SSECustomerAlgorithm.asInstanceOf[js.Any])
+    if (SSECustomerKeyMD5 != null) __obj.updateDynamic("SSECustomerKeyMD5")(SSECustomerKeyMD5.asInstanceOf[js.Any])
+    if (SSEKMSKeyId != null) __obj.updateDynamic("SSEKMSKeyId")(SSEKMSKeyId.asInstanceOf[js.Any])
+    if (ServerSideEncryption != null) __obj.updateDynamic("ServerSideEncryption")(ServerSideEncryption.asInstanceOf[js.Any])
     __obj.asInstanceOf[UploadPartOutput]
   }
-  @scala.inline
-  implicit class UploadPartOutputOps[Self <: UploadPartOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withETag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutETag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestCharged(value: requester_ | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCharged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestCharged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCharged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSECustomerAlgorithm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerAlgorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSECustomerAlgorithm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerAlgorithm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSECustomerKeyMD5(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerKeyMD5")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSECustomerKeyMD5: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerKeyMD5")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSEKMSKeyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSEKMSKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSEKMSKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSEKMSKeyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerSideEncryption(value: AES256 | awsColonkms | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerSideEncryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerSideEncryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerSideEncryption")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

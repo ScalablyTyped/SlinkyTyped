@@ -6,382 +6,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetIssuesParams
   extends /* customField_ */ StringDictionary[js.Any] {
-  var assigneeId: js.UndefOr[js.Array[Double]] = js.native
-  var attachment: js.UndefOr[Boolean] = js.native
-  var categoryId: js.UndefOr[js.Array[Double]] = js.native
-  var count: js.UndefOr[Double] = js.native
-  var createdSince: js.UndefOr[String] = js.native
-  var createdUntil: js.UndefOr[String] = js.native
-  var createdUserId: js.UndefOr[js.Array[Double]] = js.native
-  var dueDateSince: js.UndefOr[String] = js.native
-  var dueDateUntil: js.UndefOr[String] = js.native
-  var id: js.UndefOr[js.Array[Double]] = js.native
-  var issueTypeId: js.UndefOr[js.Array[Double]] = js.native
-  var keyword: String = js.native
-  var milestoneId: js.UndefOr[js.Array[Double]] = js.native
-  var offset: js.UndefOr[Double] = js.native
-  var order: js.UndefOr[Order] = js.native
-  var parentChild: js.UndefOr[ParentChildType] = js.native
-  var parentIssueId: js.UndefOr[js.Array[Double]] = js.native
-  var priorityId: js.UndefOr[js.Array[Double]] = js.native
-  var projectId: js.UndefOr[js.Array[Double]] = js.native
-  var resolutionId: js.UndefOr[js.Array[Double]] = js.native
-  var sharedFile: js.UndefOr[Boolean] = js.native
-  var sort: js.UndefOr[SortKey] = js.native
-  var startDateSince: js.UndefOr[String] = js.native
-  var startDateUntil: js.UndefOr[String] = js.native
-  var statusId: js.UndefOr[js.Array[Double]] = js.native
-  var updatedSince: js.UndefOr[String] = js.native
-  var updatedUntil: js.UndefOr[String] = js.native
-  var versionId: js.UndefOr[js.Array[Double]] = js.native
+  var assigneeId: js.UndefOr[js.Array[Double]] = js.undefined
+  var attachment: js.UndefOr[Boolean] = js.undefined
+  var categoryId: js.UndefOr[js.Array[Double]] = js.undefined
+  var count: js.UndefOr[Double] = js.undefined
+  var createdSince: js.UndefOr[String] = js.undefined
+  var createdUntil: js.UndefOr[String] = js.undefined
+  var createdUserId: js.UndefOr[js.Array[Double]] = js.undefined
+  var dueDateSince: js.UndefOr[String] = js.undefined
+  var dueDateUntil: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[js.Array[Double]] = js.undefined
+  var issueTypeId: js.UndefOr[js.Array[Double]] = js.undefined
+  var keyword: String
+  var milestoneId: js.UndefOr[js.Array[Double]] = js.undefined
+  var offset: js.UndefOr[Double] = js.undefined
+  var order: js.UndefOr[Order] = js.undefined
+  var parentChild: js.UndefOr[ParentChildType] = js.undefined
+  var parentIssueId: js.UndefOr[js.Array[Double]] = js.undefined
+  var priorityId: js.UndefOr[js.Array[Double]] = js.undefined
+  var projectId: js.UndefOr[js.Array[Double]] = js.undefined
+  var resolutionId: js.UndefOr[js.Array[Double]] = js.undefined
+  var sharedFile: js.UndefOr[Boolean] = js.undefined
+  var sort: js.UndefOr[SortKey] = js.undefined
+  var startDateSince: js.UndefOr[String] = js.undefined
+  var startDateUntil: js.UndefOr[String] = js.undefined
+  var statusId: js.UndefOr[js.Array[Double]] = js.undefined
+  var updatedSince: js.UndefOr[String] = js.undefined
+  var updatedUntil: js.UndefOr[String] = js.undefined
+  var versionId: js.UndefOr[js.Array[Double]] = js.undefined
 }
 
 object GetIssuesParams {
   @scala.inline
-  def apply(keyword: String): GetIssuesParams = {
+  def apply(
+    keyword: String,
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    assigneeId: js.Array[Double] = null,
+    attachment: js.UndefOr[Boolean] = js.undefined,
+    categoryId: js.Array[Double] = null,
+    count: js.UndefOr[Double] = js.undefined,
+    createdSince: String = null,
+    createdUntil: String = null,
+    createdUserId: js.Array[Double] = null,
+    dueDateSince: String = null,
+    dueDateUntil: String = null,
+    id: js.Array[Double] = null,
+    issueTypeId: js.Array[Double] = null,
+    milestoneId: js.Array[Double] = null,
+    offset: js.UndefOr[Double] = js.undefined,
+    order: Order = null,
+    parentChild: ParentChildType = null,
+    parentIssueId: js.Array[Double] = null,
+    priorityId: js.Array[Double] = null,
+    projectId: js.Array[Double] = null,
+    resolutionId: js.Array[Double] = null,
+    sharedFile: js.UndefOr[Boolean] = js.undefined,
+    sort: SortKey = null,
+    startDateSince: String = null,
+    startDateUntil: String = null,
+    statusId: js.Array[Double] = null,
+    updatedSince: String = null,
+    updatedUntil: String = null,
+    versionId: js.Array[Double] = null
+  ): GetIssuesParams = {
     val __obj = js.Dynamic.literal(keyword = keyword.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (assigneeId != null) __obj.updateDynamic("assigneeId")(assigneeId.asInstanceOf[js.Any])
+    if (!js.isUndefined(attachment)) __obj.updateDynamic("attachment")(attachment.get.asInstanceOf[js.Any])
+    if (categoryId != null) __obj.updateDynamic("categoryId")(categoryId.asInstanceOf[js.Any])
+    if (!js.isUndefined(count)) __obj.updateDynamic("count")(count.get.asInstanceOf[js.Any])
+    if (createdSince != null) __obj.updateDynamic("createdSince")(createdSince.asInstanceOf[js.Any])
+    if (createdUntil != null) __obj.updateDynamic("createdUntil")(createdUntil.asInstanceOf[js.Any])
+    if (createdUserId != null) __obj.updateDynamic("createdUserId")(createdUserId.asInstanceOf[js.Any])
+    if (dueDateSince != null) __obj.updateDynamic("dueDateSince")(dueDateSince.asInstanceOf[js.Any])
+    if (dueDateUntil != null) __obj.updateDynamic("dueDateUntil")(dueDateUntil.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (issueTypeId != null) __obj.updateDynamic("issueTypeId")(issueTypeId.asInstanceOf[js.Any])
+    if (milestoneId != null) __obj.updateDynamic("milestoneId")(milestoneId.asInstanceOf[js.Any])
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
+    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
+    if (parentChild != null) __obj.updateDynamic("parentChild")(parentChild.asInstanceOf[js.Any])
+    if (parentIssueId != null) __obj.updateDynamic("parentIssueId")(parentIssueId.asInstanceOf[js.Any])
+    if (priorityId != null) __obj.updateDynamic("priorityId")(priorityId.asInstanceOf[js.Any])
+    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
+    if (resolutionId != null) __obj.updateDynamic("resolutionId")(resolutionId.asInstanceOf[js.Any])
+    if (!js.isUndefined(sharedFile)) __obj.updateDynamic("sharedFile")(sharedFile.get.asInstanceOf[js.Any])
+    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
+    if (startDateSince != null) __obj.updateDynamic("startDateSince")(startDateSince.asInstanceOf[js.Any])
+    if (startDateUntil != null) __obj.updateDynamic("startDateUntil")(startDateUntil.asInstanceOf[js.Any])
+    if (statusId != null) __obj.updateDynamic("statusId")(statusId.asInstanceOf[js.Any])
+    if (updatedSince != null) __obj.updateDynamic("updatedSince")(updatedSince.asInstanceOf[js.Any])
+    if (updatedUntil != null) __obj.updateDynamic("updatedUntil")(updatedUntil.asInstanceOf[js.Any])
+    if (versionId != null) __obj.updateDynamic("versionId")(versionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetIssuesParams]
   }
-  @scala.inline
-  implicit class GetIssuesParamsOps[Self <: GetIssuesParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeyword(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyword")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAssigneeId(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assigneeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssigneeId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assigneeId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttachment(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCategoryId(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategoryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedSince(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdSince")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedSince: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdSince")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedUntil(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdUntil")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedUntil: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdUntil")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedUserId(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdUserId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedUserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdUserId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDueDateSince(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dueDateSince")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDueDateSince: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dueDateSince")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDueDateUntil(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dueDateUntil")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDueDateUntil: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dueDateUntil")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIssueTypeId(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issueTypeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIssueTypeId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issueTypeId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMilestoneId(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("milestoneId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMilestoneId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("milestoneId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrder(value: Order): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentChild(value: ParentChildType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentChild")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentChild: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentChild")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentIssueId(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentIssueId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentIssueId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentIssueId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPriorityId(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priorityId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPriorityId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priorityId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjectId(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResolutionId(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolutionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolutionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolutionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSharedFile(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sharedFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSharedFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sharedFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSort(value: SortKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartDateSince(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDateSince")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartDateSince: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDateSince")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartDateUntil(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDateUntil")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartDateUntil: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDateUntil")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusId(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatedSince(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedSince")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatedSince: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedSince")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatedUntil(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedUntil")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatedUntil: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedUntil")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionId(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

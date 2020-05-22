@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait AnimationOptions extends TimelineAnimationType {
+trait AnimationOptions extends js.Object {
   /**
     * The duration (in milliseconds).
     */
-  var duration: Double = js.native
+  var duration: Double
   /**
     * The easing function.
     *
@@ -18,7 +17,7 @@ trait AnimationOptions extends TimelineAnimationType {
     * easeOutCubic, easeInOutCubic, easeInQuart, easeOutQuart, easeInOutQuart,
     * easeInQuint, easeOutQuint, easeInOutQuint.
     */
-  var easingFunction: EasingFunction = js.native
+  var easingFunction: EasingFunction
 }
 
 object AnimationOptions {
@@ -27,25 +26,5 @@ object AnimationOptions {
     val __obj = js.Dynamic.literal(duration = duration.asInstanceOf[js.Any], easingFunction = easingFunction.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnimationOptions]
   }
-  @scala.inline
-  implicit class AnimationOptionsOps[Self <: AnimationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEasingFunction(value: EasingFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easingFunction")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -38,83 +38,21 @@ trait CreateGrantRequest extends js.Object {
 
 object CreateGrantRequest {
   @scala.inline
-  def apply(GranteePrincipal: PrincipalIdType, KeyId: KeyIdType, Operations: GrantOperationList): CreateGrantRequest = {
+  def apply(
+    GranteePrincipal: PrincipalIdType,
+    KeyId: KeyIdType,
+    Operations: GrantOperationList,
+    Constraints: GrantConstraints = null,
+    GrantTokens: GrantTokenList = null,
+    Name: GrantNameType = null,
+    RetiringPrincipal: PrincipalIdType = null
+  ): CreateGrantRequest = {
     val __obj = js.Dynamic.literal(GranteePrincipal = GranteePrincipal.asInstanceOf[js.Any], KeyId = KeyId.asInstanceOf[js.Any], Operations = Operations.asInstanceOf[js.Any])
+    if (Constraints != null) __obj.updateDynamic("Constraints")(Constraints.asInstanceOf[js.Any])
+    if (GrantTokens != null) __obj.updateDynamic("GrantTokens")(GrantTokens.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (RetiringPrincipal != null) __obj.updateDynamic("RetiringPrincipal")(RetiringPrincipal.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateGrantRequest]
   }
-  @scala.inline
-  implicit class CreateGrantRequestOps[Self <: CreateGrantRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGranteePrincipal(value: PrincipalIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GranteePrincipal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeyId(value: KeyIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOperations(value: GrantOperationList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Operations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConstraints(value: GrantConstraints): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Constraints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstraints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Constraints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrantTokens(value: GrantTokenList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantTokens")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrantTokens: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantTokens")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: GrantNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetiringPrincipal(value: PrincipalIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RetiringPrincipal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetiringPrincipal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RetiringPrincipal")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

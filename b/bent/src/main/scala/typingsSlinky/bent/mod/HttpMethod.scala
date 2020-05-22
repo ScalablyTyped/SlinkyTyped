@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.bent.bentStrings.CONNECT
   - typingsSlinky.bent.bentStrings.TRACE
 */
-trait HttpMethod extends Options
+trait HttpMethod extends js.Object
 
 object HttpMethod {
   @scala.inline

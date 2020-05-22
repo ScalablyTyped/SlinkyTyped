@@ -4,75 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PicomatchOptions extends js.Object {
-  var ignore: js.UndefOr[String] = js.native
-  var onIgnore: js.UndefOr[js.Function1[/* result */ Result, Unit]] = js.native
-  var onMatch: js.UndefOr[js.Function1[/* result */ Result, Unit]] = js.native
-  var onResult: js.UndefOr[js.Function1[/* result */ Result, Unit]] = js.native
+  var contains: js.UndefOr[Boolean] = js.undefined
+  var dot: js.UndefOr[Boolean] = js.undefined
+  var format: js.UndefOr[js.Function1[/* input */ String, String]] = js.undefined
+  var ignore: js.UndefOr[String] = js.undefined
+  var onIgnore: js.UndefOr[js.Function1[/* result */ Result, Unit]] = js.undefined
+  var onMatch: js.UndefOr[js.Function1[/* result */ Result, Unit]] = js.undefined
+  var onResult: js.UndefOr[js.Function1[/* result */ Result, Unit]] = js.undefined
+  var windows: js.UndefOr[Boolean] = js.undefined
 }
 
 object PicomatchOptions {
   @scala.inline
-  def apply(): PicomatchOptions = {
+  def apply(
+    contains: js.UndefOr[Boolean] = js.undefined,
+    dot: js.UndefOr[Boolean] = js.undefined,
+    format: /* input */ String => String = null,
+    ignore: String = null,
+    onIgnore: /* result */ Result => Unit = null,
+    onMatch: /* result */ Result => Unit = null,
+    onResult: /* result */ Result => Unit = null,
+    windows: js.UndefOr[Boolean] = js.undefined
+  ): PicomatchOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(contains)) __obj.updateDynamic("contains")(contains.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dot)) __obj.updateDynamic("dot")(dot.get.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(js.Any.fromFunction1(format))
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (onIgnore != null) __obj.updateDynamic("onIgnore")(js.Any.fromFunction1(onIgnore))
+    if (onMatch != null) __obj.updateDynamic("onMatch")(js.Any.fromFunction1(onMatch))
+    if (onResult != null) __obj.updateDynamic("onResult")(js.Any.fromFunction1(onResult))
+    if (!js.isUndefined(windows)) __obj.updateDynamic("windows")(windows.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PicomatchOptions]
   }
-  @scala.inline
-  implicit class PicomatchOptionsOps[Self <: PicomatchOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIgnore(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnIgnore(value: /* result */ Result => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIgnore")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnIgnore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIgnore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMatch(value: /* result */ Result => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMatch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMatch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnResult(value: /* result */ Result => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResult")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResult")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

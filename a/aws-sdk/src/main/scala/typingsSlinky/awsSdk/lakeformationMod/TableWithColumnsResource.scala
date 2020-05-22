@@ -26,65 +26,18 @@ trait TableWithColumnsResource extends js.Object {
 
 object TableWithColumnsResource {
   @scala.inline
-  def apply(): TableWithColumnsResource = {
+  def apply(
+    ColumnNames: ColumnNames = null,
+    ColumnWildcard: ColumnWildcard = null,
+    DatabaseName: NameString = null,
+    Name: NameString = null
+  ): TableWithColumnsResource = {
     val __obj = js.Dynamic.literal()
+    if (ColumnNames != null) __obj.updateDynamic("ColumnNames")(ColumnNames.asInstanceOf[js.Any])
+    if (ColumnWildcard != null) __obj.updateDynamic("ColumnWildcard")(ColumnWildcard.asInstanceOf[js.Any])
+    if (DatabaseName != null) __obj.updateDynamic("DatabaseName")(DatabaseName.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableWithColumnsResource]
   }
-  @scala.inline
-  implicit class TableWithColumnsResourceOps[Self <: TableWithColumnsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumnNames(value: ColumnNames): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnWildcard(value: ColumnWildcard): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnWildcard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnWildcard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnWildcard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatabaseName(value: NameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatabaseName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: NameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

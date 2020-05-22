@@ -2,8 +2,9 @@ package typingsSlinky.rcTooltip.mod.RCTooltip
 
 import org.scalajs.dom.raw.Element
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.Key
+import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.mod.ReactChild
 import typingsSlinky.react.mod.ReactFragment
 import typingsSlinky.react.mod.ReactPortal
@@ -11,283 +12,78 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Props
   extends typingsSlinky.react.mod.Props[js.Any] {
-  var afterVisibleChange: js.UndefOr[js.Function1[/* visible */ js.UndefOr[Boolean], Unit]] = js.native
-  var align: js.UndefOr[js.Object] = js.native
-  var arrowContent: js.UndefOr[TagMod[Any]] = js.native
-  var defaultVisible: js.UndefOr[Boolean] = js.native
-  var destroyTooltipOnHide: js.UndefOr[Boolean] = js.native
-  var getTooltipContainer: js.UndefOr[js.Function0[Element]] = js.native
-  var id: js.UndefOr[String] = js.native
-  var mouseEnterDelay: js.UndefOr[Double] = js.native
-  var mouseLeaveDelay: js.UndefOr[Double] = js.native
-  var onPopupAlign: js.UndefOr[js.Function2[/* popupDomNode */ Element, /* align */ js.Object, Unit]] = js.native
-  var onVisibleChange: js.UndefOr[js.Function1[/* visible */ js.UndefOr[Boolean], Unit]] = js.native
-  var overlay: js.Function0[ReactChild] | ReactChild | ReactFragment | ReactPortal = js.native
-  var overlayClassName: js.UndefOr[String] = js.native
-  var overlayStyle: js.UndefOr[CSSProperties] = js.native
-  var placement: js.UndefOr[Placement | js.Object] = js.native
-  var prefixCls: js.UndefOr[String] = js.native
-  var transitionName: js.UndefOr[String] = js.native
-  var trigger: js.UndefOr[js.Array[Trigger]] = js.native
-  var visible: js.UndefOr[Boolean] = js.native
+  var afterVisibleChange: js.UndefOr[js.Function1[/* visible */ js.UndefOr[Boolean], Unit]] = js.undefined
+  var align: js.UndefOr[js.Object] = js.undefined
+  var arrowContent: js.UndefOr[TagMod[Any]] = js.undefined
+  var defaultVisible: js.UndefOr[Boolean] = js.undefined
+  var destroyTooltipOnHide: js.UndefOr[Boolean] = js.undefined
+  var getTooltipContainer: js.UndefOr[js.Function0[Element]] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var mouseEnterDelay: js.UndefOr[Double] = js.undefined
+  var mouseLeaveDelay: js.UndefOr[Double] = js.undefined
+  var onPopupAlign: js.UndefOr[js.Function2[/* popupDomNode */ Element, /* align */ js.Object, Unit]] = js.undefined
+  var onVisibleChange: js.UndefOr[js.Function1[/* visible */ js.UndefOr[Boolean], Unit]] = js.undefined
+  var overlay: js.Function0[ReactChild] | ReactChild | ReactFragment | ReactPortal
+  var overlayClassName: js.UndefOr[String] = js.undefined
+  var overlayStyle: js.UndefOr[CSSProperties] = js.undefined
+  var placement: js.UndefOr[Placement | js.Object] = js.undefined
+  var prefixCls: js.UndefOr[String] = js.undefined
+  var transitionName: js.UndefOr[String] = js.undefined
+  var trigger: js.UndefOr[js.Array[Trigger]] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.undefined
 }
 
 object Props {
   @scala.inline
-  def apply(overlay: js.Function0[ReactChild] | ReactChild | ReactFragment | ReactPortal): Props = {
+  def apply(
+    overlay: js.Function0[ReactChild] | ReactChild | ReactFragment | ReactPortal,
+    afterVisibleChange: /* visible */ js.UndefOr[Boolean] => Unit = null,
+    align: js.Object = null,
+    arrowContent: TagMod[Any] = null,
+    children: TagMod[Any] = null,
+    defaultVisible: js.UndefOr[Boolean] = js.undefined,
+    destroyTooltipOnHide: js.UndefOr[Boolean] = js.undefined,
+    getTooltipContainer: () => Element = null,
+    id: String = null,
+    key: Key = null,
+    mouseEnterDelay: js.UndefOr[Double] = js.undefined,
+    mouseLeaveDelay: js.UndefOr[Double] = js.undefined,
+    onPopupAlign: (/* popupDomNode */ Element, /* align */ js.Object) => Unit = null,
+    onVisibleChange: /* visible */ js.UndefOr[Boolean] => Unit = null,
+    overlayClassName: String = null,
+    overlayStyle: CSSProperties = null,
+    placement: Placement | js.Object = null,
+    prefixCls: String = null,
+    ref: js.UndefOr[Null | LegacyRef[js.Any]] = js.undefined,
+    transitionName: String = null,
+    trigger: js.Array[Trigger] = null,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): Props = {
     val __obj = js.Dynamic.literal(overlay = overlay.asInstanceOf[js.Any])
+    if (afterVisibleChange != null) __obj.updateDynamic("afterVisibleChange")(js.Any.fromFunction1(afterVisibleChange))
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (arrowContent != null) __obj.updateDynamic("arrowContent")(arrowContent.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultVisible)) __obj.updateDynamic("defaultVisible")(defaultVisible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(destroyTooltipOnHide)) __obj.updateDynamic("destroyTooltipOnHide")(destroyTooltipOnHide.get.asInstanceOf[js.Any])
+    if (getTooltipContainer != null) __obj.updateDynamic("getTooltipContainer")(js.Any.fromFunction0(getTooltipContainer))
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(mouseEnterDelay)) __obj.updateDynamic("mouseEnterDelay")(mouseEnterDelay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mouseLeaveDelay)) __obj.updateDynamic("mouseLeaveDelay")(mouseLeaveDelay.get.asInstanceOf[js.Any])
+    if (onPopupAlign != null) __obj.updateDynamic("onPopupAlign")(js.Any.fromFunction2(onPopupAlign))
+    if (onVisibleChange != null) __obj.updateDynamic("onVisibleChange")(js.Any.fromFunction1(onVisibleChange))
+    if (overlayClassName != null) __obj.updateDynamic("overlayClassName")(overlayClassName.asInstanceOf[js.Any])
+    if (overlayStyle != null) __obj.updateDynamic("overlayStyle")(overlayStyle.asInstanceOf[js.Any])
+    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
+    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
+    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+    if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
+    if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Props]
   }
-  @scala.inline
-  implicit class PropsOps[Self <: Props] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOverlayReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOverlayFunction0(value: () => ReactChild): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOverlay(value: js.Function0[ReactChild] | ReactChild | ReactFragment | ReactPortal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAfterVisibleChange(value: /* visible */ js.UndefOr[Boolean] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterVisibleChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAfterVisibleChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterVisibleChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlign(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArrowContentReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArrowContent(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArrowContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultVisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestroyTooltipOnHide(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroyTooltipOnHide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestroyTooltipOnHide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroyTooltipOnHide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetTooltipContainer(value: () => Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTooltipContainer")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetTooltipContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTooltipContainer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseEnterDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseEnterDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMouseEnterDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseEnterDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseLeaveDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseLeaveDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMouseLeaveDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseLeaveDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPopupAlign(value: (/* popupDomNode */ Element, /* align */ js.Object) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPopupAlign")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPopupAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPopupAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnVisibleChange(value: /* visible */ js.UndefOr[Boolean] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onVisibleChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnVisibleChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onVisibleChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverlayClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverlayClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverlayStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverlayStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlacement(value: Placement | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlacement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefixCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefixCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransitionName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransitionName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrigger(value: js.Array[Trigger]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrigger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

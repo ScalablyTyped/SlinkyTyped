@@ -5,35 +5,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VideoSourceRaw
   extends Source
      with VideoSourceOptions
      with AnySourceData {
   @JSName("type")
-  var type_VideoSourceRaw: video = js.native
+  var type_VideoSourceRaw: video
 }
 
 object VideoSourceRaw {
   @scala.inline
-  def apply(`type`: video): VideoSourceRaw = {
+  def apply(`type`: video, coordinates: js.Array[js.Array[Double]] = null, urls: js.Array[String] = null): VideoSourceRaw = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (coordinates != null) __obj.updateDynamic("coordinates")(coordinates.asInstanceOf[js.Any])
+    if (urls != null) __obj.updateDynamic("urls")(urls.asInstanceOf[js.Any])
     __obj.asInstanceOf[VideoSourceRaw]
   }
-  @scala.inline
-  implicit class VideoSourceRawOps[Self <: VideoSourceRaw] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: video): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

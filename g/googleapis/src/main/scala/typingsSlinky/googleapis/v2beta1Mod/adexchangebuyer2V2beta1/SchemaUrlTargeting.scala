@@ -24,41 +24,11 @@ trait SchemaUrlTargeting extends js.Object {
 
 object SchemaUrlTargeting {
   @scala.inline
-  def apply(): SchemaUrlTargeting = {
+  def apply(excludedUrls: js.Array[String] = null, targetedUrls: js.Array[String] = null): SchemaUrlTargeting = {
     val __obj = js.Dynamic.literal()
+    if (excludedUrls != null) __obj.updateDynamic("excludedUrls")(excludedUrls.asInstanceOf[js.Any])
+    if (targetedUrls != null) __obj.updateDynamic("targetedUrls")(targetedUrls.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUrlTargeting]
   }
-  @scala.inline
-  implicit class SchemaUrlTargetingOps[Self <: SchemaUrlTargeting] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExcludedUrls(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludedUrls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludedUrls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludedUrls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetedUrls(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetedUrls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetedUrls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetedUrls")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

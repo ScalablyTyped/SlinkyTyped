@@ -55,6 +55,7 @@ package object firestoreProtoApiMod {
   type StructuredQuery = typingsSlinky.firebaseFirestore.firestoreProtoApiMod.firestoreV1ApiClientInterfaces.StructuredQuery
   type Target = typingsSlinky.firebaseFirestore.firestoreProtoApiMod.firestoreV1ApiClientInterfaces.Target
   type TargetChange = typingsSlinky.firebaseFirestore.firestoreProtoApiMod.firestoreV1ApiClientInterfaces.TargetChange
+  type Timestamp = java.lang.String | typingsSlinky.firebaseFirestore.anon.Seconds
   type TransactionOptions = typingsSlinky.firebaseFirestore.firestoreProtoApiMod.firestoreV1ApiClientInterfaces.TransactionOptions
   type UnaryFilter = typingsSlinky.firebaseFirestore.firestoreProtoApiMod.firestoreV1ApiClientInterfaces.UnaryFilter
   type Value = typingsSlinky.firebaseFirestore.firestoreProtoApiMod.firestoreV1ApiClientInterfaces.Value

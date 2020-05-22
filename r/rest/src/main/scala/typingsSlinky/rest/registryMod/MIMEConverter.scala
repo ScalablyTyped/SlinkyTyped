@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MIMEConverter extends js.Object {
-  def read(value: String): js.Any | Promise[_] = js.native
-  def write(value: js.Any): String | Promise[String] = js.native
+  def read(value: String): js.Any | Promise[_]
+  def write(value: js.Any): String | Promise[String]
 }
 
 object MIMEConverter {
@@ -17,25 +16,5 @@ object MIMEConverter {
     val __obj = js.Dynamic.literal(read = js.Any.fromFunction1(read), write = js.Any.fromFunction1(write))
     __obj.asInstanceOf[MIMEConverter]
   }
-  @scala.inline
-  implicit class MIMEConverterOps[Self <: MIMEConverter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRead(value: String => js.Any | Promise[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withWrite(value: js.Any => String | Promise[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("write")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

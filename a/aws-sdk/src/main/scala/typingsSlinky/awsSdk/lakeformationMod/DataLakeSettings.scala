@@ -22,53 +22,16 @@ trait DataLakeSettings extends js.Object {
 
 object DataLakeSettings {
   @scala.inline
-  def apply(): DataLakeSettings = {
+  def apply(
+    CreateDatabaseDefaultPermissions: PrincipalPermissionsList = null,
+    CreateTableDefaultPermissions: PrincipalPermissionsList = null,
+    DataLakeAdmins: DataLakePrincipalList = null
+  ): DataLakeSettings = {
     val __obj = js.Dynamic.literal()
+    if (CreateDatabaseDefaultPermissions != null) __obj.updateDynamic("CreateDatabaseDefaultPermissions")(CreateDatabaseDefaultPermissions.asInstanceOf[js.Any])
+    if (CreateTableDefaultPermissions != null) __obj.updateDynamic("CreateTableDefaultPermissions")(CreateTableDefaultPermissions.asInstanceOf[js.Any])
+    if (DataLakeAdmins != null) __obj.updateDynamic("DataLakeAdmins")(DataLakeAdmins.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataLakeSettings]
   }
-  @scala.inline
-  implicit class DataLakeSettingsOps[Self <: DataLakeSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateDatabaseDefaultPermissions(value: PrincipalPermissionsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateDatabaseDefaultPermissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateDatabaseDefaultPermissions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateDatabaseDefaultPermissions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateTableDefaultPermissions(value: PrincipalPermissionsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateTableDefaultPermissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateTableDefaultPermissions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateTableDefaultPermissions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataLakeAdmins(value: DataLakePrincipalList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataLakeAdmins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataLakeAdmins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataLakeAdmins")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

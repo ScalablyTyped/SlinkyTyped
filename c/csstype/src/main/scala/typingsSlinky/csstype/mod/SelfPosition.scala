@@ -14,12 +14,12 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.start
 */
 trait SelfPosition
-  extends AlignItemsProperty
-     with AlignSelfProperty
-     with JustifyItemsProperty
-     with JustifySelfProperty
-     with PlaceItemsProperty
-     with PlaceSelfProperty
+  extends _AlignItemsProperty
+     with _AlignSelfProperty
+     with _JustifyItemsProperty
+     with _JustifySelfProperty
+     with _PlaceItemsProperty
+     with _PlaceSelfProperty
 
 object SelfPosition {
   @scala.inline

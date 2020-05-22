@@ -17,25 +17,24 @@ import scala.scalajs.js.annotation._
   * @see XContentIdentifier
   * @version 1.0
   */
-@js.native
 trait XContentAccess extends XInterface {
   /**
     * returns the content ( "most expensive method" ).
     * @returns the content.
     */
-  def queryContent(): XContent = js.native
+  def queryContent(): XContent
   /**
     * returns the identifier object of the content.
     * @returns the identifier object.
     */
-  def queryContentIdentifier(): XContentIdentifier = js.native
+  def queryContentIdentifier(): XContentIdentifier
   /**
     * returns the identifier string of the content ( "cheap method" ).
     *
     * Note that this string can be used later to recreate the content.
     * @returns the identifier string.
     */
-  def queryContentIdentifierString(): String = js.native
+  def queryContentIdentifierString(): String
 }
 
 object XContentAccess {
@@ -51,31 +50,5 @@ object XContentAccess {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), queryContent = js.Any.fromFunction0(queryContent), queryContentIdentifier = js.Any.fromFunction0(queryContentIdentifier), queryContentIdentifierString = js.Any.fromFunction0(queryContentIdentifierString), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XContentAccess]
   }
-  @scala.inline
-  implicit class XContentAccessOps[Self <: XContentAccess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQueryContent(value: () => XContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryContent")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withQueryContentIdentifier(value: () => XContentIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryContentIdentifier")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withQueryContentIdentifierString(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryContentIdentifierString")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

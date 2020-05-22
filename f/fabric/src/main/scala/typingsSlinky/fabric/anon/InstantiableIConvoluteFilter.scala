@@ -12,9 +12,9 @@ trait InstantiableIConvoluteFilter
   extends Instantiable0[IConvoluteFilter]
      with Instantiable1[/* options */ Opaque, IConvoluteFilter] {
   /**
-  		 * Returns filter instance from an object representation
-  		 * @param object Object to create an instance from
-  		 */
+    * Returns filter instance from an object representation
+    * @param object Object to create an instance from
+    */
   def fromObject(`object`: js.Any): IConvoluteFilter = js.native
 }
 

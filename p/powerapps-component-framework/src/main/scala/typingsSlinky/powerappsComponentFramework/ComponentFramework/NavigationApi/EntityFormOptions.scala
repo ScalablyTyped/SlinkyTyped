@@ -6,165 +6,72 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * Interface for entity form options.
-		 */
-@js.native
+  * Interface for entity form options.
+  */
 trait EntityFormOptions extends js.Object {
   /**
-  			 * Designates a record that will provide default values based on mapped attribute values. The lookup object has the following String properties: entityType, id, and name
-  			 */
-  var createFromEntity: js.UndefOr[EntityReference] = js.native
+    * Designates a record that will provide default values based on mapped attribute values. The lookup object has the following String properties: entityType, id, and name
+    */
+  var createFromEntity: js.UndefOr[EntityReference] = js.undefined
   /**
-  			 * ID of the entity record to display the form for.
-  			 */
-  var entityId: js.UndefOr[String] = js.native
+    * ID of the entity record to display the form for.
+    */
+  var entityId: js.UndefOr[String] = js.undefined
   /**
-  			 * Logical name of the entity to display the form for.
-  			 */
-  var entityName: String = js.native
+    * Logical name of the entity to display the form for.
+    */
+  var entityName: String
   /**
-  			 * ID of the form instance to be displayed.
-  			 */
-  var formId: js.UndefOr[String] = js.native
+    * ID of the form instance to be displayed.
+    */
+  var formId: js.UndefOr[String] = js.undefined
   /**
-  			 * Height of the form window to be displayed in pixels.
-  			 */
-  var height: js.UndefOr[Double] = js.native
+    * Height of the form window to be displayed in pixels.
+    */
+  var height: js.UndefOr[Double] = js.undefined
   /**
-  			 * Indicates whether to display form in a new window.
-  			 */
-  var openInNewWindow: js.UndefOr[Boolean] = js.native
+    * Indicates whether to display form in a new window.
+    */
+  var openInNewWindow: js.UndefOr[Boolean] = js.undefined
   /**
-  			 * Indicates whether to open a quick create form. If you do not specify this, by default false is passed.
-  			 */
-  var useQuickCreateForm: js.UndefOr[Boolean] = js.native
+    * Indicates whether to open a quick create form. If you do not specify this, by default false is passed.
+    */
+  var useQuickCreateForm: js.UndefOr[Boolean] = js.undefined
   /**
-  			 * Width of the form window to be displayed in pixels.
-  			 */
-  var width: js.UndefOr[Double] = js.native
+    * Width of the form window to be displayed in pixels.
+    */
+  var width: js.UndefOr[Double] = js.undefined
   /**
-  			 * Specify one of the following values for the window position of the form on the screen:
-  			 *   1:center
-  			 *   2:side
-  			 */
-  var windowPosition: js.UndefOr[Double] = js.native
+    * Specify one of the following values for the window position of the form on the screen:
+    *   1:center
+    *   2:side
+    */
+  var windowPosition: js.UndefOr[Double] = js.undefined
 }
 
 object EntityFormOptions {
   @scala.inline
-  def apply(entityName: String): EntityFormOptions = {
+  def apply(
+    entityName: String,
+    createFromEntity: EntityReference = null,
+    entityId: String = null,
+    formId: String = null,
+    height: js.UndefOr[Double] = js.undefined,
+    openInNewWindow: js.UndefOr[Boolean] = js.undefined,
+    useQuickCreateForm: js.UndefOr[Boolean] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined,
+    windowPosition: js.UndefOr[Double] = js.undefined
+  ): EntityFormOptions = {
     val __obj = js.Dynamic.literal(entityName = entityName.asInstanceOf[js.Any])
+    if (createFromEntity != null) __obj.updateDynamic("createFromEntity")(createFromEntity.asInstanceOf[js.Any])
+    if (entityId != null) __obj.updateDynamic("entityId")(entityId.asInstanceOf[js.Any])
+    if (formId != null) __obj.updateDynamic("formId")(formId.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(openInNewWindow)) __obj.updateDynamic("openInNewWindow")(openInNewWindow.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useQuickCreateForm)) __obj.updateDynamic("useQuickCreateForm")(useQuickCreateForm.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(windowPosition)) __obj.updateDynamic("windowPosition")(windowPosition.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[EntityFormOptions]
   }
-  @scala.inline
-  implicit class EntityFormOptionsOps[Self <: EntityFormOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntityName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreateFromEntity(value: EntityReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createFromEntity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateFromEntity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createFromEntity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntityId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntityId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpenInNewWindow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openInNewWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenInNewWindow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openInNewWindow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseQuickCreateForm(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useQuickCreateForm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseQuickCreateForm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useQuickCreateForm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowPosition")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

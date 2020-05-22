@@ -28,6 +28,22 @@ package object JQuery {
     /* flags */ js.UndefOr[java.lang.String], 
     typingsSlinky.jquery.JQuery.Callbacks[js.Function]
   ]
+  // Workaround for TypeScript 2.3 which does not have support for weak types handling.
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.jquery.anon.PickCoordinatesleft
+    - typingsSlinky.jquery.anon.PickCoordinatestop
+    - org.scalablytyped.runtime.StringDictionary[scala.Nothing]
+  */
+  type CoordinatesPartial = typingsSlinky.jquery.JQuery._CoordinatesPartial | org.scalablytyped.runtime.StringDictionary[scala.Nothing]
+  // #endregion
+  // region Effects
+  // #region Effects
+  /* Rewritten from type alias, can be one of: 
+    - scala.Double
+    - typingsSlinky.jquery.jqueryStrings.fast
+    - typingsSlinky.jquery.jqueryStrings.slow
+  */
+  type Duration = typingsSlinky.jquery.JQuery._Duration | scala.Double
   // #endregion
   // region Easing
   // #region Easing
@@ -39,6 +55,19 @@ package object JQuery {
   ]
   // Extra parameters can be passed from trigger()
   type EventHandlerBase[TContext, T] = js.ThisFunction2[/* this */ TContext, /* t */ T, /* repeated */ js.Any, js.Any]
+  // #endregion
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.jquery.jqueryBooleans.`false`
+    - scala.Null
+    - js.UndefOr[scala.Nothing]
+    - typingsSlinky.jquery.jqueryNumbers.`0`
+    - typingsSlinky.jquery.jqueryStrings._empty
+    - typingsSlinky.std.HTMLAllCollection
+  */
+  type Falsy = js.UndefOr[
+    typingsSlinky.jquery.JQuery._Falsy | scala.Null | typingsSlinky.std.HTMLAllCollection
+  ]
+  type Node = org.scalajs.dom.raw.Element | org.scalajs.dom.raw.Text | org.scalajs.dom.raw.Comment | org.scalajs.dom.raw.Document | org.scalajs.dom.raw.DocumentFragment
   /**
     * The PlainObject type is a JavaScript object containing zero or more key-value pairs. The plain object is, in other words, an Object object. It is designated "plain" in jQuery documentation to distinguish it from other kinds of JavaScript objects: for example, null, user-defined arrays, and host objects such as document, all of which have a typeof value of "object."
     *
@@ -77,15 +106,62 @@ package object JQuery {
     * @see \`{@link https://gist.github.com/gnarf/54829d408993526fe475#tween-hooks }\`
     * @since 1.8
     */
+  // Workaround for TypeScript 2.3 which does not have support for weak types handling.
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.jquery.anon.Get[TElement]
+    - typingsSlinky.jquery.anon.Set[TElement]
+    - org.scalablytyped.runtime.StringDictionary[scala.Nothing]
+  */
+  type PropHook[TElement] = typingsSlinky.jquery.JQuery._PropHook[TElement] | org.scalablytyped.runtime.StringDictionary[scala.Nothing]
+  /**
+    * @see \`{@link https://gist.github.com/gnarf/54829d408993526fe475#tween-hooks }\`
+    * @since 1.8
+    */
   type PropHooks = org.scalablytyped.runtime.StringDictionary[typingsSlinky.jquery.JQuery.PropHook[typingsSlinky.jquery.JQuery.Node]]
   type QueueFunction[TElement] = js.ThisFunction1[/* this */ TElement, /* next */ js.Function0[scala.Unit], scala.Unit]
   /**
     * A selector is used in jQuery to select DOM elements from a DOM document. That document is, in most cases, the DOM document present in all browsers, but can also be an XML document received via Ajax.
     */
   type Selector = java.lang.String
+  // region Special event hooks
+  // #region Special event hooks
+  /**
+    * The jQuery special event hooks are a set of per-event-name functions and properties that allow code to control the behavior of event processing within jQuery. The mechanism is similar to `fixHooks` in that the special event information is stored in `jQuery.event.special.NAME`, where `NAME` is the name of the special event. Event names are case sensitive.
+    *
+    * As with `fixHooks`, the special event hooks design assumes it will be very rare that two unrelated pieces of code want to process the same event name. Special event authors who need to modify events with existing hooks will need to take precautions to avoid introducing unwanted side-effects by clobbering those hooks.
+    * @see \`{@link https://learn.jquery.com/events/event-extensions/#special-event-hooks }\`
+    */
+  // Workaround for TypeScript 2.3 which does not have support for weak types handling.
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.jquery.anon.NoBubble
+    - typingsSlinky.jquery.anon.BindType
+    - typingsSlinky.jquery.anon.DelegateType
+    - typingsSlinky.jquery.anon.Setup[TTarget, TData]
+    - typingsSlinky.jquery.anon.Teardown[TTarget]
+    - typingsSlinky.jquery.anon.Add[TTarget, TData]
+    - typingsSlinky.jquery.anon.Remove[TTarget, TData]
+    - typingsSlinky.jquery.anon.Trigger[TTarget, TData]
+    - typingsSlinky.jquery.anon.Default[TTarget, TData]
+    - typingsSlinky.jquery.anon.Handle[TTarget, TData]
+    - typingsSlinky.jquery.anon.PreDispatch[TTarget]
+    - typingsSlinky.jquery.anon.PostDispatch[TTarget]
+    - org.scalablytyped.runtime.StringDictionary[scala.Nothing]
+  */
+  type SpecialEventHook[TTarget, TData] = (typingsSlinky.jquery.JQuery._SpecialEventHook[TTarget, TData]) | org.scalablytyped.runtime.StringDictionary[scala.Nothing]
   type SpecialEventHooks = org.scalablytyped.runtime.StringDictionary[
     typingsSlinky.jquery.JQuery.SpecialEventHook[org.scalajs.dom.raw.EventTarget, js.Any]
   ]
+  // #endregion
+  // region Speed
+  // #region Speed
+  // Workaround for TypeScript 2.3 which does not have support for weak types handling.
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.jquery.anon.Duration
+    - typingsSlinky.jquery.anon.Easing
+    - typingsSlinky.jquery.anon.Complete[TElement]
+    - org.scalablytyped.runtime.StringDictionary[scala.Nothing]
+  */
+  type SpeedSettings[TElement] = typingsSlinky.jquery.JQuery._SpeedSettings[TElement] | org.scalablytyped.runtime.StringDictionary[scala.Nothing]
   // #endregion
   // region Deferred
   // #region Deferred
@@ -108,6 +184,17 @@ package object JQuery {
     TCurrentTarget, 
     /* import warning: importer.ImportType#apply Failed type conversion: jquery.JQuery.TypeToTriggeredEventMap<TDelegateTarget, TData, TCurrentTarget, TTarget>[TType] */ js.Any
   ]
+  type TypeOrArray[T] = T | js.Array[T]
+  // #endregion
+  // region Val hooks
+  // #region Val hooks
+  // Workaround for TypeScript 2.3 which does not have support for weak types handling.
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.jquery.anon.`0`[TElement]
+    - typingsSlinky.jquery.anon.`1`[TElement]
+    - org.scalablytyped.runtime.StringDictionary[scala.Nothing]
+  */
+  type ValHook[TElement] = typingsSlinky.jquery.JQuery._ValHook[TElement] | org.scalablytyped.runtime.StringDictionary[scala.Nothing]
   type ValHooks = // Set to HTMLElement to minimize breaks but should probably be Element.
   org.scalablytyped.runtime.StringDictionary[typingsSlinky.jquery.JQuery.ValHook[org.scalajs.dom.raw.HTMLElement]]
   /**

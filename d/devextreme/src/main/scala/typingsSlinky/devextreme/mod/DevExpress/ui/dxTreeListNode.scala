@@ -4,121 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxTreeListNode extends js.Object {
-  /** Contains all child nodes. */
-  var children: js.UndefOr[js.Array[dxTreeListNode]] = js.native
-  /** The node's data object. */
-  var data: js.UndefOr[js.Any] = js.native
-  /** Indicates whether the node has child nodes. */
-  var hasChildren: js.UndefOr[Boolean] = js.native
-  /** The node's key. */
-  var key: js.UndefOr[js.Any] = js.native
-  /** The node's hierarchical level. */
-  var level: js.UndefOr[Double] = js.native
-  /** The parent node. */
-  var parent: js.UndefOr[dxTreeListNode] = js.native
-  /** Indicates whether the node is visualized as a row. */
-  var visible: js.UndefOr[Boolean] = js.native
+  /** @name dxTreeListNode.children */
+  var children: js.UndefOr[js.Array[dxTreeListNode]] = js.undefined
+  /** @name dxTreeListNode.data */
+  var data: js.UndefOr[js.Any] = js.undefined
+  /** @name dxTreeListNode.hasChildren */
+  var hasChildren: js.UndefOr[Boolean] = js.undefined
+  /** @name dxTreeListNode.key */
+  var key: js.UndefOr[js.Any] = js.undefined
+  /** @name dxTreeListNode.level */
+  var level: js.UndefOr[Double] = js.undefined
+  /** @name dxTreeListNode.parent */
+  var parent: js.UndefOr[dxTreeListNode] = js.undefined
+  /** @name dxTreeListNode.visible */
+  var visible: js.UndefOr[Boolean] = js.undefined
 }
 
 object dxTreeListNode {
   @scala.inline
-  def apply(): dxTreeListNode = {
+  def apply(
+    children: js.Array[dxTreeListNode] = null,
+    data: js.Any = null,
+    hasChildren: js.UndefOr[Boolean] = js.undefined,
+    key: js.Any = null,
+    level: js.UndefOr[Double] = js.undefined,
+    parent: dxTreeListNode = null,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): dxTreeListNode = {
     val __obj = js.Dynamic.literal()
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasChildren)) __obj.updateDynamic("hasChildren")(hasChildren.get.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(level)) __obj.updateDynamic("level")(level.get.asInstanceOf[js.Any])
+    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxTreeListNode]
   }
-  @scala.inline
-  implicit class dxTreeListNodeOps[Self <: dxTreeListNode] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildren(value: js.Array[dxTreeListNode]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasChildren(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasChildren")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasChildren")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParent(value: dxTreeListNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -29,53 +29,16 @@ trait SchemaAutoFillRequest extends js.Object {
 
 object SchemaAutoFillRequest {
   @scala.inline
-  def apply(): SchemaAutoFillRequest = {
+  def apply(
+    range: SchemaGridRange = null,
+    sourceAndDestination: SchemaSourceAndDestination = null,
+    useAlternateSeries: js.UndefOr[Boolean] = js.undefined
+  ): SchemaAutoFillRequest = {
     val __obj = js.Dynamic.literal()
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (sourceAndDestination != null) __obj.updateDynamic("sourceAndDestination")(sourceAndDestination.asInstanceOf[js.Any])
+    if (!js.isUndefined(useAlternateSeries)) __obj.updateDynamic("useAlternateSeries")(useAlternateSeries.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAutoFillRequest]
   }
-  @scala.inline
-  implicit class SchemaAutoFillRequestOps[Self <: SchemaAutoFillRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRange(value: SchemaGridRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceAndDestination(value: SchemaSourceAndDestination): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceAndDestination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceAndDestination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceAndDestination")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseAlternateSeries(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useAlternateSeries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseAlternateSeries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useAlternateSeries")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

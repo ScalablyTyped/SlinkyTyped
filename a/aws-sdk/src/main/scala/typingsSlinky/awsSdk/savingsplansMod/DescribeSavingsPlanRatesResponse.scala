@@ -22,53 +22,16 @@ trait DescribeSavingsPlanRatesResponse extends js.Object {
 
 object DescribeSavingsPlanRatesResponse {
   @scala.inline
-  def apply(): DescribeSavingsPlanRatesResponse = {
+  def apply(
+    nextToken: PaginationToken = null,
+    savingsPlanId: SavingsPlanId = null,
+    searchResults: SavingsPlanRateList = null
+  ): DescribeSavingsPlanRatesResponse = {
     val __obj = js.Dynamic.literal()
+    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
+    if (savingsPlanId != null) __obj.updateDynamic("savingsPlanId")(savingsPlanId.asInstanceOf[js.Any])
+    if (searchResults != null) __obj.updateDynamic("searchResults")(searchResults.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeSavingsPlanRatesResponse]
   }
-  @scala.inline
-  implicit class DescribeSavingsPlanRatesResponseOps[Self <: DescribeSavingsPlanRatesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: PaginationToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSavingsPlanId(value: SavingsPlanId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("savingsPlanId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSavingsPlanId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("savingsPlanId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchResults(value: SavingsPlanRateList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchResults")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

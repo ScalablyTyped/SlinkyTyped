@@ -18,41 +18,14 @@ trait ResourcePendingMaintenanceActions extends js.Object {
 
 object ResourcePendingMaintenanceActions {
   @scala.inline
-  def apply(): ResourcePendingMaintenanceActions = {
+  def apply(
+    PendingMaintenanceActionDetails: PendingMaintenanceActionDetails = null,
+    ResourceIdentifier: String = null
+  ): ResourcePendingMaintenanceActions = {
     val __obj = js.Dynamic.literal()
+    if (PendingMaintenanceActionDetails != null) __obj.updateDynamic("PendingMaintenanceActionDetails")(PendingMaintenanceActionDetails.asInstanceOf[js.Any])
+    if (ResourceIdentifier != null) __obj.updateDynamic("ResourceIdentifier")(ResourceIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourcePendingMaintenanceActions]
   }
-  @scala.inline
-  implicit class ResourcePendingMaintenanceActionsOps[Self <: ResourcePendingMaintenanceActions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPendingMaintenanceActionDetails(value: PendingMaintenanceActionDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PendingMaintenanceActionDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPendingMaintenanceActionDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PendingMaintenanceActionDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceIdentifier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -117,12 +117,12 @@ trait Typeofjest extends js.Object {
     * Returns the actual module instead of a mock, bypassing all checks on
     * whether the module should receive a mock implementation or not.
     */
-  def requireActual(moduleName: String): js.Any = js.native
+  def requireActual[TModule](moduleName: String): TModule = js.native
   /**
     * Returns a mock module instead of the actual module, bypassing all checks
     * on whether the module should be required normally or not.
     */
-  def requireMock(moduleName: String): js.Any = js.native
+  def requireMock[TModule](moduleName: String): TModule = js.native
   /**
     * Resets the state of all mocks.
     * Equivalent to calling .mockReset() on every mocked function.

@@ -7,12 +7,11 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for events which concern manipulations on menu items.
   */
-@js.native
 trait ASPxClientMenuItemEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the menu item object related to the event.
     */
-  var item: ASPxClientMenuItem = js.native
+  var item: ASPxClientMenuItem
 }
 
 object ASPxClientMenuItemEventArgs {
@@ -21,19 +20,5 @@ object ASPxClientMenuItemEventArgs {
     val __obj = js.Dynamic.literal(item = item.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientMenuItemEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientMenuItemEventArgsOps[Self <: ASPxClientMenuItemEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItem(value: ASPxClientMenuItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

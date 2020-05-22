@@ -6,8 +6,9 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait DeploymentTarget extends js.Object {
+  var cloudFormationTarget: js.UndefOr[CloudFormationTarget] = js.native
   /**
-    *  The deployment type that is specific to the deployment's compute platform. 
+    * The deployment type that is specific to the deployment's compute platform or deployments initiated by a CloudFormation stack update.
     */
   var deploymentTargetType: js.UndefOr[DeploymentTargetType] = js.native
   /**
@@ -26,65 +27,20 @@ trait DeploymentTarget extends js.Object {
 
 object DeploymentTarget {
   @scala.inline
-  def apply(): DeploymentTarget = {
+  def apply(
+    cloudFormationTarget: CloudFormationTarget = null,
+    deploymentTargetType: DeploymentTargetType = null,
+    ecsTarget: ECSTarget = null,
+    instanceTarget: InstanceTarget = null,
+    lambdaTarget: LambdaTarget = null
+  ): DeploymentTarget = {
     val __obj = js.Dynamic.literal()
+    if (cloudFormationTarget != null) __obj.updateDynamic("cloudFormationTarget")(cloudFormationTarget.asInstanceOf[js.Any])
+    if (deploymentTargetType != null) __obj.updateDynamic("deploymentTargetType")(deploymentTargetType.asInstanceOf[js.Any])
+    if (ecsTarget != null) __obj.updateDynamic("ecsTarget")(ecsTarget.asInstanceOf[js.Any])
+    if (instanceTarget != null) __obj.updateDynamic("instanceTarget")(instanceTarget.asInstanceOf[js.Any])
+    if (lambdaTarget != null) __obj.updateDynamic("lambdaTarget")(lambdaTarget.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeploymentTarget]
   }
-  @scala.inline
-  implicit class DeploymentTargetOps[Self <: DeploymentTarget] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeploymentTargetType(value: DeploymentTargetType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentTargetType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentTargetType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentTargetType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEcsTarget(value: ECSTarget): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ecsTarget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEcsTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ecsTarget")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceTarget(value: InstanceTarget): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceTarget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceTarget")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLambdaTarget(value: LambdaTarget): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaTarget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLambdaTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaTarget")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

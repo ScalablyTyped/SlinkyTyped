@@ -1,5 +1,6 @@
 package typingsSlinky.applepayjs
 
+import typingsSlinky.applepayjs.ApplePayJS.ApplePayLineItem
 import typingsSlinky.applepayjs.ApplePayJS.ApplePayPaymentRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -47,7 +48,13 @@ object global extends js.Object {
       */
     @js.native
     class ApplePayShippingContactUpdate ()
-      extends typingsSlinky.applepayjs.ApplePayJS.ApplePayShippingContactUpdate
+      extends typingsSlinky.applepayjs.ApplePayJS.ApplePayShippingContactUpdate {
+      /**
+        * The new total resulting from a change in the shipping contact.
+        */
+      /* CompleteClass */
+      override var newTotal: ApplePayLineItem = js.native
+    }
     
     /**
       * The ApplePayShippingMethodSelectedEvent class defines the attribute contained by the ApplePaySession.onshippingmethodselected callback function.

@@ -6,36 +6,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LocaleMatcher extends js.Object {
-  var localeMatcher: js.UndefOr[(`best fit`) | lookup] = js.native
+  var localeMatcher: js.UndefOr[(`best fit`) | lookup] = js.undefined
 }
 
 object LocaleMatcher {
   @scala.inline
-  def apply(): LocaleMatcher = {
+  def apply(localeMatcher: (`best fit`) | lookup = null): LocaleMatcher = {
     val __obj = js.Dynamic.literal()
+    if (localeMatcher != null) __obj.updateDynamic("localeMatcher")(localeMatcher.asInstanceOf[js.Any])
     __obj.asInstanceOf[LocaleMatcher]
   }
-  @scala.inline
-  implicit class LocaleMatcherOps[Self <: LocaleMatcher] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocaleMatcher(value: (`best fit`) | lookup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localeMatcher")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocaleMatcher: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localeMatcher")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

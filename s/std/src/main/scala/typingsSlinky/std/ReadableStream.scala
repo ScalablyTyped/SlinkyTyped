@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 /** This Streams API interface represents a readable stream of byte data. The Fetch API offers a concrete instance of a ReadableStream through the body property of a Response object. */
 @js.native
-trait ReadableStream[R] extends BodyInit {
+trait ReadableStream[R] extends js.Object {
   val locked: scala.Boolean = js.native
   def cancel(): js.Promise[Unit] = js.native
   def cancel(reason: js.Any): js.Promise[Unit] = js.native

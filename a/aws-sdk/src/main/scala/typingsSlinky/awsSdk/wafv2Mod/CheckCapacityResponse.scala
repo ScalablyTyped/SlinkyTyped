@@ -14,29 +14,10 @@ trait CheckCapacityResponse extends js.Object {
 
 object CheckCapacityResponse {
   @scala.inline
-  def apply(): CheckCapacityResponse = {
+  def apply(Capacity: js.UndefOr[ConsumedCapacity] = js.undefined): CheckCapacityResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Capacity)) __obj.updateDynamic("Capacity")(Capacity.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CheckCapacityResponse]
   }
-  @scala.inline
-  implicit class CheckCapacityResponseOps[Self <: CheckCapacityResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCapacity(value: ConsumedCapacity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Capacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Capacity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

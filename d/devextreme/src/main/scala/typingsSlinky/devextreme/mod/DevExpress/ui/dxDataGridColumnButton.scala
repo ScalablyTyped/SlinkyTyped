@@ -15,107 +15,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxDataGridColumnButton extends GridBaseColumnButton {
-  /** The name used to identify a built-in button. */
-  var name: js.UndefOr[cancel | delete | edit | save | undelete | String] = js.native
-  /** A function that is executed when the button is clicked or tapped. Not executed if a template is used. */
-  var onClick: js.UndefOr[(js.Function1[/* e */ ColumnComponent, _]) | String] = js.native
-  /** Specifies a custom button template. */
+  /** @name dxDataGridColumnButton.name */
+  var name: js.UndefOr[cancel | delete | edit | save | undelete | String] = js.undefined
+  /** @name dxDataGridColumnButton.onClick */
+  var onClick: js.UndefOr[(js.Function1[/* e */ ColumnComponent, _]) | String] = js.undefined
+  /** @name dxDataGridColumnButton.template */
   var template: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ RowType, String | Element | JQuery])
-  ] = js.native
-  /** Specifies the button's visibility. */
-  var visible: js.UndefOr[Boolean | (js.Function1[/* options */ ColumnComponentRow, Boolean])] = js.native
+  ] = js.undefined
+  /** @name dxDataGridColumnButton.visible */
+  var visible: js.UndefOr[Boolean | (js.Function1[/* options */ ColumnComponentRow, Boolean])] = js.undefined
 }
 
 object dxDataGridColumnButton {
   @scala.inline
-  def apply(): dxDataGridColumnButton = {
+  def apply(
+    cssClass: String = null,
+    hint: String = null,
+    icon: String = null,
+    name: cancel | delete | edit | save | undelete | String = null,
+    onClick: (js.Function1[/* e */ ColumnComponent, _]) | String = null,
+    template: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ RowType, String | Element | JQuery]) = null,
+    text: String = null,
+    visible: Boolean | (js.Function1[/* options */ ColumnComponentRow, Boolean]) = null
+  ): dxDataGridColumnButton = {
     val __obj = js.Dynamic.literal()
+    if (cssClass != null) __obj.updateDynamic("cssClass")(cssClass.asInstanceOf[js.Any])
+    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(onClick.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (visible != null) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxDataGridColumnButton]
   }
-  @scala.inline
-  implicit class dxDataGridColumnButtonOps[Self <: dxDataGridColumnButton] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: cancel | delete | edit | save | undelete | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClickFunction1(value: /* e */ ColumnComponent => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnClick(value: (js.Function1[/* e */ ColumnComponent, _]) | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateFunction2(value: (/* cellElement */ dxElement, /* cellInfo */ RowType) => String | Element | JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withTemplateElement(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemplate(
-      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ RowType, String | Element | JQuery])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibleFunction1(value: /* options */ ColumnComponentRow => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean | (js.Function1[/* options */ ColumnComponentRow, Boolean])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

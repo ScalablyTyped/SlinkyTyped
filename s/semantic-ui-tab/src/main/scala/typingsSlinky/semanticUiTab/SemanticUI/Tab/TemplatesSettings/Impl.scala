@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Impl extends js.Object {
   /**
     * returns page title
     */
-  def determineTitle(tabArray: js.Array[_]): String = js.native
+  def determineTitle(tabArray: js.Array[_]): String
 }
 
 object Impl {
@@ -18,19 +17,5 @@ object Impl {
     val __obj = js.Dynamic.literal(determineTitle = js.Any.fromFunction1(determineTitle))
     __obj.asInstanceOf[Impl]
   }
-  @scala.inline
-  implicit class ImplOps[Self <: Impl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDetermineTitle(value: js.Array[_] => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("determineTitle")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

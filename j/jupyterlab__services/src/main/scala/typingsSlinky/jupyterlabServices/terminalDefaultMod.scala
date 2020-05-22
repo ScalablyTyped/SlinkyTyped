@@ -39,15 +39,88 @@ object terminalDefaultMod extends js.Object {
     var _url: js.Any = js.native
     var _ws: js.Any = js.native
     /**
+      * Test whether the object has been disposed.
+      *
+      * #### Notes
+      * This property is always safe to access.
+      */
+    /* CompleteClass */
+    override val isDisposed: Boolean = js.native
+    /**
+      * Test whether the session is ready.
+      */
+    /* CompleteClass */
+    override val isReady: Boolean = js.native
+    /**
+      * A signal emitted when a message is received from the server.
+      */
+    /* CompleteClass */
+    override var messageReceived: ISignal[ISession, IMessage] = js.native
+    /**
       * A signal emitted when a message is received from the server.
       */
     @JSName("messageReceived")
     val messageReceived_DefaultTerminalSession: ISignal[this.type, IMessage] = js.native
     /**
+      * The model associated with the session.
+      */
+    /* CompleteClass */
+    override val model: IModel = js.native
+    /**
+      * Get the name of the terminal session.
+      */
+    /* CompleteClass */
+    override val name: String = js.native
+    /**
+      * A promise that fulfills when the session is initially ready.
+      */
+    /* CompleteClass */
+    override val ready: js.Promise[Unit] = js.native
+    /**
+      * The server settings for the session.
+      */
+    /* CompleteClass */
+    override val serverSettings: ISettings = js.native
+    /**
+      * A signal emitted when the session is shut down.
+      */
+    /* CompleteClass */
+    override var terminated: ISignal[ISession, Unit] = js.native
+    /**
       * A signal emitted when the session is shut down.
       */
     @JSName("terminated")
     val terminated_DefaultTerminalSession: Signal[this.type, Unit] = js.native
+    /**
+      * Dispose of the resources held by the object.
+      *
+      * #### Notes
+      * If the object's `dispose` method is called more than once, all
+      * calls made after the first will be a no-op.
+      *
+      * #### Undefined Behavior
+      * It is undefined behavior to use any functionality of the object
+      * after it has been disposed unless otherwise explicitly noted.
+      */
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
+    /**
+      * Reconnect to the terminal.
+      *
+      * @returns A promise that resolves when the terminal has reconnected.
+      */
+    /* CompleteClass */
+    override def reconnect(): js.Promise[Unit] = js.native
+    /**
+      * Send a message to the terminal session.
+      */
+    /* CompleteClass */
+    override def send(message: IMessage): Unit = js.native
+    /**
+      * Shut down the terminal session.
+      */
+    /* CompleteClass */
+    override def shutdown(): js.Promise[Unit] = js.native
   }
   
   @js.native

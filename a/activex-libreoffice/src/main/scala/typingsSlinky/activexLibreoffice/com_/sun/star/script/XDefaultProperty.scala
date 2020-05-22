@@ -26,18 +26,17 @@ import scala.scalajs.js.annotation._
   *
   * bar = ExampleObject.Value
   */
-@js.native
 trait XDefaultProperty extends XInterface {
   /**
     * Returns the name of the default property
     * @returns The `string` name of default property
     */
-  val DefaultPropertyName: String = js.native
+  val DefaultPropertyName: String
   /**
     * Returns the name of the default property
     * @returns The `string` name of default property
     */
-  def getDefaultPropertyName(): String = js.native
+  def getDefaultPropertyName(): String
 }
 
 object XDefaultProperty {
@@ -52,25 +51,5 @@ object XDefaultProperty {
     val __obj = js.Dynamic.literal(DefaultPropertyName = DefaultPropertyName.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getDefaultPropertyName = js.Any.fromFunction0(getDefaultPropertyName), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XDefaultProperty]
   }
-  @scala.inline
-  implicit class XDefaultPropertyOps[Self <: XDefaultProperty] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultPropertyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultPropertyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetDefaultPropertyName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDefaultPropertyName")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

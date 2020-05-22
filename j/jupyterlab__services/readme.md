@@ -1,7 +1,7 @@
 
 # Scala.js typings for jupyterlab__services
 
-Typings are for version 4.2.0
+Typings are for version 4.2.2
 
 ## Library description:
 Client APIs for the Jupyter services REST APIs

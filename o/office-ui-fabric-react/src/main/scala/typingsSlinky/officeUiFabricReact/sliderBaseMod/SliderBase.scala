@@ -15,7 +15,8 @@ class SliderBase protected ()
   def this(props: ISliderProps) = this()
   var _async: js.Any = js.native
   var _clearOnKeyDownTimer: js.Any = js.native
-  var _events: js.Any = js.native
+  var _disposables: js.Any = js.native
+  var _disposeListeners: js.Any = js.native
   var _getAriaValueText: js.Any = js.native
   var _getPosition: js.Any = js.native
   var _getStyleUsingOffsetPercent: js.Any = js.native
@@ -32,6 +33,8 @@ class SliderBase protected ()
   val renderedValue: js.Any = js.native
   @JSName("componentWillUnmount")
   def componentWillUnmount_MSliderBase(): Unit = js.native
+  /* CompleteClass */
+  override def focus(): Unit = js.native
 }
 
 /* static members */

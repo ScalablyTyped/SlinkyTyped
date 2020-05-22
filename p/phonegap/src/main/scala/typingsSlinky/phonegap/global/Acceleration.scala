@@ -8,7 +8,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Acceleration")
 @js.native
 class Acceleration ()
-  extends typingsSlinky.phonegap.Acceleration
+  extends typingsSlinky.phonegap.Acceleration {
+  /* CompleteClass */
+  override var timestamp: Double = js.native
+  /* CompleteClass */
+  override var x: Double = js.native
+  /* CompleteClass */
+  override var y: Double = js.native
+  /* CompleteClass */
+  override var z: Double = js.native
+}
 
 @JSGlobal("Acceleration")
 @js.native

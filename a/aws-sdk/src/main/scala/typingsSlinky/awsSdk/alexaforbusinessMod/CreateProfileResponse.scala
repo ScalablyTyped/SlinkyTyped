@@ -14,29 +14,10 @@ trait CreateProfileResponse extends js.Object {
 
 object CreateProfileResponse {
   @scala.inline
-  def apply(): CreateProfileResponse = {
+  def apply(ProfileArn: Arn = null): CreateProfileResponse = {
     val __obj = js.Dynamic.literal()
+    if (ProfileArn != null) __obj.updateDynamic("ProfileArn")(ProfileArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateProfileResponse]
   }
-  @scala.inline
-  implicit class CreateProfileResponseOps[Self <: CreateProfileResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProfileArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProfileArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProfileArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProfileArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

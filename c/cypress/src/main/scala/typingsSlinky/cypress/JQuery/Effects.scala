@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 // #endregion
 // region Effects (fx)
 // #region Effects (fx)
-@js.native
 trait Effects extends js.Object {
   /**
     * The rate (in milliseconds) at which animations fire.
@@ -51,7 +50,7 @@ trait Effects extends js.Object {
   </html>
   ```
     */
-  var interval: Double = js.native
+  var interval: Double
   /**
     * Globally disable all animations.
     * @see \`{@link https://api.jquery.com/jQuery.fx.off/ }\`
@@ -94,25 +93,25 @@ trait Effects extends js.Object {
   </html>
   ```
     */
-  var off: Boolean = js.native
+  var off: Boolean
   /**
     * @deprecated ​ Deprecated since 1.8. Use \`{@link Tween.propHooks jQuery.Tween.propHooks}\`.
     *
     * `jQuery.fx.step` functions are being replaced by `jQuery.Tween.propHooks` and may eventually be removed, but are still supported via the default tween propHook.
     */
-  var step: PlainObject[AnimationHook[Node]] = js.native
+  var step: PlainObject[AnimationHook[Node]]
   /**
     * _overridable_ Clears up the `setInterval`
     * @see \`{@link https://gist.github.com/gnarf/54829d408993526fe475#plugging-in-a-different-timer-loop }\`
     * @since 1.8
     */
-  def stop(): Unit = js.native
+  def stop(): Unit
   /**
     * Calls `.run()` on each object in the `jQuery.timers` array, removing it from the array if `.run()` returns a falsy value. Calls `jQuery.fx.stop()` whenever there are no timers remaining.
     * @see \`{@link https://gist.github.com/gnarf/54829d408993526fe475#plugging-in-a-different-timer-loop }\`
     * @since 1.8
     */
-  def tick(): Unit = js.native
+  def tick(): Unit
   /**
     * _overridable_ Creates a `setInterval` if one doesn't already exist, and pushes `tickFunction` to the `jQuery.timers` array. `tickFunction` should also have `anim`, `elem`, and `queue` properties that reference the animation object, animated element, and queue option to facilitate `jQuery.fn.stop()`
     *
@@ -122,7 +121,7 @@ trait Effects extends js.Object {
     * @see \`{@link https://gist.github.com/gnarf/54829d408993526fe475#plugging-in-a-different-timer-loop }\`
     * @since 1.8
     */
-  def timer(tickFunction: TickFunction[_]): Unit = js.native
+  def timer(tickFunction: TickFunction[_]): Unit
 }
 
 object Effects {
@@ -138,49 +137,5 @@ object Effects {
     val __obj = js.Dynamic.literal(interval = interval.asInstanceOf[js.Any], off = off.asInstanceOf[js.Any], step = step.asInstanceOf[js.Any], stop = js.Any.fromFunction0(stop), tick = js.Any.fromFunction0(tick), timer = js.Any.fromFunction1(timer))
     __obj.asInstanceOf[Effects]
   }
-  @scala.inline
-  implicit class EffectsOps[Self <: Effects] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOff(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("off")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStep(value: PlainObject[AnimationHook[Node]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStop(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withTick(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withTimer(value: TickFunction[_] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timer")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -12,10 +12,9 @@ import scala.scalajs.js.annotation._
   * @see XModeChangeBroadcaster
   * @since OOo 1.1.2
   */
-@js.native
 trait XModeChangeListener extends XEventListener {
   /** indicates that the mode of the broadcasting component has changed. */
-  def modeChanged(rSource: ModeChangeEvent): Unit = js.native
+  def modeChanged(rSource: ModeChangeEvent): Unit
 }
 
 object XModeChangeListener {
@@ -30,19 +29,5 @@ object XModeChangeListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), disposing = js.Any.fromFunction1(disposing), modeChanged = js.Any.fromFunction1(modeChanged), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XModeChangeListener]
   }
-  @scala.inline
-  implicit class XModeChangeListenerOps[Self <: XModeChangeListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withModeChanged(value: ModeChangeEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modeChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -7,139 +7,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RasterSource
   extends Source
      with AnySourceData
      with AnySourceImpl {
-  var attribution: js.UndefOr[String] = js.native
-  var bounds: js.UndefOr[js.Array[Double]] = js.native
-  var maxzoom: js.UndefOr[Double] = js.native
-  var minzoom: js.UndefOr[Double] = js.native
-  var scheme: js.UndefOr[xyz | tms] = js.native
-  var tileSize: js.UndefOr[Double] = js.native
-  var tiles: js.UndefOr[js.Array[String]] = js.native
+  var attribution: js.UndefOr[String] = js.undefined
+  var bounds: js.UndefOr[js.Array[Double]] = js.undefined
+  var maxzoom: js.UndefOr[Double] = js.undefined
+  var minzoom: js.UndefOr[Double] = js.undefined
+  var scheme: js.UndefOr[xyz | tms] = js.undefined
+  var tileSize: js.UndefOr[Double] = js.undefined
+  var tiles: js.UndefOr[js.Array[String]] = js.undefined
   @JSName("type")
-  var type_RasterSource: raster = js.native
-  var url: js.UndefOr[String] = js.native
+  var type_RasterSource: raster
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object RasterSource {
   @scala.inline
-  def apply(`type`: raster): RasterSource = {
+  def apply(
+    `type`: raster,
+    attribution: String = null,
+    bounds: js.Array[Double] = null,
+    maxzoom: js.UndefOr[Double] = js.undefined,
+    minzoom: js.UndefOr[Double] = js.undefined,
+    scheme: xyz | tms = null,
+    tileSize: js.UndefOr[Double] = js.undefined,
+    tiles: js.Array[String] = null,
+    url: String = null
+  ): RasterSource = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (attribution != null) __obj.updateDynamic("attribution")(attribution.asInstanceOf[js.Any])
+    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxzoom)) __obj.updateDynamic("maxzoom")(maxzoom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minzoom)) __obj.updateDynamic("minzoom")(minzoom.get.asInstanceOf[js.Any])
+    if (scheme != null) __obj.updateDynamic("scheme")(scheme.asInstanceOf[js.Any])
+    if (!js.isUndefined(tileSize)) __obj.updateDynamic("tileSize")(tileSize.get.asInstanceOf[js.Any])
+    if (tiles != null) __obj.updateDynamic("tiles")(tiles.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[RasterSource]
   }
-  @scala.inline
-  implicit class RasterSourceOps[Self <: RasterSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: raster): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttribution(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attribution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttribution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attribution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBounds(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBounds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxzoom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxzoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxzoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxzoom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinzoom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minzoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinzoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minzoom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScheme(value: xyz | tms): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTileSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTileSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTiles(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

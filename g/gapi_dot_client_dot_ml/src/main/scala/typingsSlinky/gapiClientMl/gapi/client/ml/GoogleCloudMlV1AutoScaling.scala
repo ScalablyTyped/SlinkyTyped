@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GoogleCloudMlV1AutoScaling extends js.Object {
   /**
     * Optional. The minimum number of nodes to allocate for this model. These
@@ -26,34 +25,15 @@ trait GoogleCloudMlV1AutoScaling extends js.Object {
     * to a model stops (and after a cool-down period), nodes will be shut down
     * and no charges will be incurred until traffic to the model resumes.
     */
-  var minNodes: js.UndefOr[Double] = js.native
+  var minNodes: js.UndefOr[Double] = js.undefined
 }
 
 object GoogleCloudMlV1AutoScaling {
   @scala.inline
-  def apply(): GoogleCloudMlV1AutoScaling = {
+  def apply(minNodes: js.UndefOr[Double] = js.undefined): GoogleCloudMlV1AutoScaling = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(minNodes)) __obj.updateDynamic("minNodes")(minNodes.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleCloudMlV1AutoScaling]
   }
-  @scala.inline
-  implicit class GoogleCloudMlV1AutoScalingOps[Self <: GoogleCloudMlV1AutoScaling] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMinNodes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minNodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinNodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minNodes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

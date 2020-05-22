@@ -8,439 +8,197 @@ import scala.scalajs.js.annotation._
   * Legal Agreement
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.fhir.fhir.Resource because Already inherited */ @js.native
-trait Contract extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait Contract extends DomainResource {
   /**
     * Contains extended information for property 'issued'.
     */
-  var _issued: js.UndefOr[Element] = js.native
+  var _issued: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'status'.
     */
-  var _status: js.UndefOr[Element] = js.native
+  var _status: js.UndefOr[Element] = js.undefined
   /**
     * Action stipulated by this Contract
     */
-  var action: js.UndefOr[js.Array[CodeableConcept]] = js.native
+  var action: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
   /**
     * Rationale for the stiplulated action
     */
-  var actionReason: js.UndefOr[js.Array[CodeableConcept]] = js.native
+  var actionReason: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
   /**
     * Entity being ascribed responsibility
     */
-  var agent: js.UndefOr[js.Array[ContractAgent]] = js.native
+  var agent: js.UndefOr[js.Array[ContractAgent]] = js.undefined
   /**
     * Effective time
     */
-  var applies: js.UndefOr[Period] = js.native
+  var applies: js.UndefOr[Period] = js.undefined
   /**
     * Authority under which this Contract has standing
     */
-  var authority: js.UndefOr[js.Array[Reference]] = js.native
+  var authority: js.UndefOr[js.Array[Reference]] = js.undefined
   /**
     * Binding Contract
     */
-  var bindingAttachment: js.UndefOr[Attachment] = js.native
+  var bindingAttachment: js.UndefOr[Attachment] = js.undefined
   /**
     * Binding Contract
     */
-  var bindingReference: js.UndefOr[Reference] = js.native
+  var bindingReference: js.UndefOr[Reference] = js.undefined
   /**
     * Content derived from the basal information
     */
-  var contentDerivative: js.UndefOr[CodeableConcept] = js.native
+  var contentDerivative: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Decision by Grantor
     */
-  var decisionType: js.UndefOr[CodeableConcept] = js.native
+  var decisionType: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Domain in which this Contract applies
     */
-  var domain: js.UndefOr[js.Array[Reference]] = js.native
+  var domain: js.UndefOr[js.Array[Reference]] = js.undefined
   /**
     * Contract Friendly Language
     */
-  var friendly: js.UndefOr[js.Array[ContractFriendly]] = js.native
+  var friendly: js.UndefOr[js.Array[ContractFriendly]] = js.undefined
   /**
     * Contract number
     */
-  var identifier: js.UndefOr[Identifier] = js.native
+  var identifier: js.UndefOr[Identifier] = js.undefined
   /**
     * When this Contract was issued
     */
-  var issued: js.UndefOr[dateTime] = js.native
+  var issued: js.UndefOr[dateTime] = js.undefined
   /**
     * Contract Legal Language
     */
-  var legal: js.UndefOr[js.Array[ContractLegal]] = js.native
+  var legal: js.UndefOr[js.Array[ContractLegal]] = js.undefined
   /**
     * Computable Contract Language
     */
-  var rule: js.UndefOr[js.Array[ContractRule]] = js.native
+  var rule: js.UndefOr[js.Array[ContractRule]] = js.undefined
   /**
     * Security Labels that define affected resources
     */
-  var securityLabel: js.UndefOr[js.Array[Coding]] = js.native
+  var securityLabel: js.UndefOr[js.Array[Coding]] = js.undefined
   /**
     * Contract Signatory
     */
-  var signer: js.UndefOr[js.Array[ContractSigner]] = js.native
+  var signer: js.UndefOr[js.Array[ContractSigner]] = js.undefined
   /**
     * amended | appended | cancelled | disputed | entered-in-error | executable | executed | negotiable | offered | policy | rejected | renewed | revoked | resolved | terminated
     */
-  var status: js.UndefOr[code] = js.native
+  var status: js.UndefOr[code] = js.undefined
   /**
     * Subtype within the context of type
     */
-  var subType: js.UndefOr[js.Array[CodeableConcept]] = js.native
+  var subType: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
   /**
     * Contract Target Entity
     */
-  var subject: js.UndefOr[js.Array[Reference]] = js.native
+  var subject: js.UndefOr[js.Array[Reference]] = js.undefined
   /**
     * Contract Term List
     */
-  var term: js.UndefOr[js.Array[ContractTerm]] = js.native
+  var term: js.UndefOr[js.Array[ContractTerm]] = js.undefined
   /**
     * Context of the Contract
     */
-  var topic: js.UndefOr[js.Array[Reference]] = js.native
+  var topic: js.UndefOr[js.Array[Reference]] = js.undefined
   /**
     * Type or form
     */
-  var `type`: js.UndefOr[CodeableConcept] = js.native
+  var `type`: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Contract Valued Item List
     */
-  var valuedItem: js.UndefOr[js.Array[ContractValuedItem]] = js.native
+  var valuedItem: js.UndefOr[js.Array[ContractValuedItem]] = js.undefined
 }
 
 object Contract {
   @scala.inline
-  def apply(): Contract = {
+  def apply(
+    _id: Element = null,
+    _implicitRules: Element = null,
+    _issued: Element = null,
+    _language: Element = null,
+    _resourceType: Element = null,
+    _status: Element = null,
+    action: js.Array[CodeableConcept] = null,
+    actionReason: js.Array[CodeableConcept] = null,
+    agent: js.Array[ContractAgent] = null,
+    applies: Period = null,
+    authority: js.Array[Reference] = null,
+    bindingAttachment: Attachment = null,
+    bindingReference: Reference = null,
+    contained: js.Array[Resource] = null,
+    contentDerivative: CodeableConcept = null,
+    decisionType: CodeableConcept = null,
+    domain: js.Array[Reference] = null,
+    extension: js.Array[Extension] = null,
+    friendly: js.Array[ContractFriendly] = null,
+    id: id = null,
+    identifier: Identifier = null,
+    implicitRules: uri = null,
+    issued: dateTime = null,
+    language: code = null,
+    legal: js.Array[ContractLegal] = null,
+    meta: Meta = null,
+    modifierExtension: js.Array[Extension] = null,
+    resourceType: code = null,
+    rule: js.Array[ContractRule] = null,
+    securityLabel: js.Array[Coding] = null,
+    signer: js.Array[ContractSigner] = null,
+    status: code = null,
+    subType: js.Array[CodeableConcept] = null,
+    subject: js.Array[Reference] = null,
+    term: js.Array[ContractTerm] = null,
+    text: Narrative = null,
+    topic: js.Array[Reference] = null,
+    `type`: CodeableConcept = null,
+    valuedItem: js.Array[ContractValuedItem] = null
+  ): Contract = {
     val __obj = js.Dynamic.literal()
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_implicitRules != null) __obj.updateDynamic("_implicitRules")(_implicitRules.asInstanceOf[js.Any])
+    if (_issued != null) __obj.updateDynamic("_issued")(_issued.asInstanceOf[js.Any])
+    if (_language != null) __obj.updateDynamic("_language")(_language.asInstanceOf[js.Any])
+    if (_resourceType != null) __obj.updateDynamic("_resourceType")(_resourceType.asInstanceOf[js.Any])
+    if (_status != null) __obj.updateDynamic("_status")(_status.asInstanceOf[js.Any])
+    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
+    if (actionReason != null) __obj.updateDynamic("actionReason")(actionReason.asInstanceOf[js.Any])
+    if (agent != null) __obj.updateDynamic("agent")(agent.asInstanceOf[js.Any])
+    if (applies != null) __obj.updateDynamic("applies")(applies.asInstanceOf[js.Any])
+    if (authority != null) __obj.updateDynamic("authority")(authority.asInstanceOf[js.Any])
+    if (bindingAttachment != null) __obj.updateDynamic("bindingAttachment")(bindingAttachment.asInstanceOf[js.Any])
+    if (bindingReference != null) __obj.updateDynamic("bindingReference")(bindingReference.asInstanceOf[js.Any])
+    if (contained != null) __obj.updateDynamic("contained")(contained.asInstanceOf[js.Any])
+    if (contentDerivative != null) __obj.updateDynamic("contentDerivative")(contentDerivative.asInstanceOf[js.Any])
+    if (decisionType != null) __obj.updateDynamic("decisionType")(decisionType.asInstanceOf[js.Any])
+    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (friendly != null) __obj.updateDynamic("friendly")(friendly.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (identifier != null) __obj.updateDynamic("identifier")(identifier.asInstanceOf[js.Any])
+    if (implicitRules != null) __obj.updateDynamic("implicitRules")(implicitRules.asInstanceOf[js.Any])
+    if (issued != null) __obj.updateDynamic("issued")(issued.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (legal != null) __obj.updateDynamic("legal")(legal.asInstanceOf[js.Any])
+    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
+    if (rule != null) __obj.updateDynamic("rule")(rule.asInstanceOf[js.Any])
+    if (securityLabel != null) __obj.updateDynamic("securityLabel")(securityLabel.asInstanceOf[js.Any])
+    if (signer != null) __obj.updateDynamic("signer")(signer.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (subType != null) __obj.updateDynamic("subType")(subType.asInstanceOf[js.Any])
+    if (subject != null) __obj.updateDynamic("subject")(subject.asInstanceOf[js.Any])
+    if (term != null) __obj.updateDynamic("term")(term.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (topic != null) __obj.updateDynamic("topic")(topic.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (valuedItem != null) __obj.updateDynamic("valuedItem")(valuedItem.asInstanceOf[js.Any])
     __obj.asInstanceOf[Contract]
   }
-  @scala.inline
-  implicit class ContractOps[Self <: Contract] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_issued(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_issued")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_issued: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_issued")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_status(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_status: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAction(value: js.Array[CodeableConcept]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActionReason(value: js.Array[CodeableConcept]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAgent(value: js.Array[ContractAgent]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApplies(value: Period): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthority(value: js.Array[Reference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authority")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBindingAttachment(value: Attachment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bindingAttachment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBindingAttachment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bindingAttachment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBindingReference(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bindingReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBindingReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bindingReference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentDerivative(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentDerivative")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentDerivative: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentDerivative")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecisionType(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decisionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecisionType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decisionType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomain(value: js.Array[Reference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFriendly(value: js.Array[ContractFriendly]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("friendly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFriendly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("friendly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentifier(value: Identifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIssued(value: dateTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issued")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIssued: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issued")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegal(value: js.Array[ContractLegal]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRule(value: js.Array[ContractRule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurityLabel(value: js.Array[Coding]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSigner(value: js.Array[ContractSigner]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSigner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubType(value: js.Array[CodeableConcept]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubject(value: js.Array[Reference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTerm(value: js.Array[ContractTerm]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("term")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTerm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("term")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopic(value: js.Array[Reference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValuedItem(value: js.Array[ContractValuedItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valuedItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValuedItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valuedItem")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

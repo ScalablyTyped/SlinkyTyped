@@ -26,65 +26,18 @@ trait EcsCluster extends js.Object {
 
 object EcsCluster {
   @scala.inline
-  def apply(): EcsCluster = {
+  def apply(
+    EcsClusterArn: String = null,
+    EcsClusterName: String = null,
+    RegisteredAt: DateTime = null,
+    StackId: String = null
+  ): EcsCluster = {
     val __obj = js.Dynamic.literal()
+    if (EcsClusterArn != null) __obj.updateDynamic("EcsClusterArn")(EcsClusterArn.asInstanceOf[js.Any])
+    if (EcsClusterName != null) __obj.updateDynamic("EcsClusterName")(EcsClusterName.asInstanceOf[js.Any])
+    if (RegisteredAt != null) __obj.updateDynamic("RegisteredAt")(RegisteredAt.asInstanceOf[js.Any])
+    if (StackId != null) __obj.updateDynamic("StackId")(StackId.asInstanceOf[js.Any])
     __obj.asInstanceOf[EcsCluster]
   }
-  @scala.inline
-  implicit class EcsClusterOps[Self <: EcsCluster] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEcsClusterArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EcsClusterArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEcsClusterArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EcsClusterArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEcsClusterName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EcsClusterName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEcsClusterName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EcsClusterName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegisteredAt(value: DateTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegisteredAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegisteredAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegisteredAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

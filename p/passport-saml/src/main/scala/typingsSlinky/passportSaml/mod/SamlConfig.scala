@@ -11,465 +11,119 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SamlConfig extends js.Object {
-  var RACComparison: js.UndefOr[exact | minimum | maximum | better] = js.native
-  var acceptedClockSkewMs: js.UndefOr[Double] = js.native
-  var additionalAuthorizeParams: js.UndefOr[js.Any] = js.native
-  var additionalLogoutParams: js.UndefOr[js.Any] = js.native
+  var RACComparison: js.UndefOr[exact | minimum | maximum | better] = js.undefined
+  var acceptedClockSkewMs: js.UndefOr[Double] = js.undefined
+  var additionalAuthorizeParams: js.UndefOr[js.Any] = js.undefined
+  var additionalLogoutParams: js.UndefOr[js.Any] = js.undefined
   // Additional SAML behaviors
-  var additionalParams: js.UndefOr[js.Any] = js.native
-  var attributeConsumingServiceIndex: js.UndefOr[String] = js.native
-  var audience: js.UndefOr[String] = js.native
-  var authnContext: js.UndefOr[String] = js.native
-  var authnRequestBinding: js.UndefOr[String] = js.native
-  var cacheProvider: js.UndefOr[CacheProvider] = js.native
+  var additionalParams: js.UndefOr[js.Any] = js.undefined
+  var attributeConsumingServiceIndex: js.UndefOr[String] = js.undefined
+  var audience: js.UndefOr[String] = js.undefined
+  var authnContext: js.UndefOr[String] = js.undefined
+  var authnRequestBinding: js.UndefOr[String] = js.undefined
+  var cacheProvider: js.UndefOr[CacheProvider] = js.undefined
   // Core
-  var callbackUrl: js.UndefOr[String] = js.native
-  var cert: js.UndefOr[String | js.Array[String] | CertCallback] = js.native
-  var decryptionPvk: js.UndefOr[String] = js.native
-  var disableRequestedAuthnContext: js.UndefOr[Boolean] = js.native
-  var entryPoint: js.UndefOr[String] = js.native
-  var forceAuthn: js.UndefOr[Boolean] = js.native
-  var host: js.UndefOr[String] = js.native
-  var identifierFormat: js.UndefOr[String] = js.native
-  var idpIssuer: js.UndefOr[String] = js.native
-  var issuer: js.UndefOr[String] = js.native
-  var logoutCallbackUrl: js.UndefOr[String] = js.native
+  var callbackUrl: js.UndefOr[String] = js.undefined
+  var cert: js.UndefOr[String | js.Array[String] | CertCallback] = js.undefined
+  var decryptionPvk: js.UndefOr[String] = js.undefined
+  var disableRequestedAuthnContext: js.UndefOr[Boolean] = js.undefined
+  var entryPoint: js.UndefOr[String] = js.undefined
+  var forceAuthn: js.UndefOr[Boolean] = js.undefined
+  var host: js.UndefOr[String] = js.undefined
+  var identifierFormat: js.UndefOr[String] = js.undefined
+  var idpIssuer: js.UndefOr[String] = js.undefined
+  var issuer: js.UndefOr[String] = js.undefined
+  var logoutCallbackUrl: js.UndefOr[String] = js.undefined
   // Logout
-  var logoutUrl: js.UndefOr[String] = js.native
+  var logoutUrl: js.UndefOr[String] = js.undefined
   // Passport
-  var name: js.UndefOr[String] = js.native
-  var passReqToCallback: js.UndefOr[Boolean] = js.native
-  var passive: js.UndefOr[Boolean] = js.native
-  var path: js.UndefOr[String] = js.native
-  var privateCert: js.UndefOr[String] = js.native
-  var protocol: js.UndefOr[String] = js.native
-  var providerName: js.UndefOr[String] = js.native
-  var requestIdExpirationPeriodMs: js.UndefOr[Double] = js.native
-  var signatureAlgorithm: js.UndefOr[sha1 | sha256 | sha512] = js.native
-  var skipRequestCompression: js.UndefOr[Boolean] = js.native
+  var name: js.UndefOr[String] = js.undefined
+  var passReqToCallback: js.UndefOr[Boolean] = js.undefined
+  var passive: js.UndefOr[Boolean] = js.undefined
+  var path: js.UndefOr[String] = js.undefined
+  var privateCert: js.UndefOr[String] = js.undefined
+  var protocol: js.UndefOr[String] = js.undefined
+  var providerName: js.UndefOr[String] = js.undefined
+  var requestIdExpirationPeriodMs: js.UndefOr[Double] = js.undefined
+  var signatureAlgorithm: js.UndefOr[sha1 | sha256 | sha512] = js.undefined
+  var skipRequestCompression: js.UndefOr[Boolean] = js.undefined
   // InResponseTo Validation
-  var validateInResponseTo: js.UndefOr[Boolean] = js.native
+  var validateInResponseTo: js.UndefOr[Boolean] = js.undefined
 }
 
 object SamlConfig {
   @scala.inline
-  def apply(): SamlConfig = {
+  def apply(
+    RACComparison: exact | minimum | maximum | better = null,
+    acceptedClockSkewMs: js.UndefOr[Double] = js.undefined,
+    additionalAuthorizeParams: js.Any = null,
+    additionalLogoutParams: js.Any = null,
+    additionalParams: js.Any = null,
+    attributeConsumingServiceIndex: String = null,
+    audience: String = null,
+    authnContext: String = null,
+    authnRequestBinding: String = null,
+    cacheProvider: CacheProvider = null,
+    callbackUrl: String = null,
+    cert: String | js.Array[String] | CertCallback = null,
+    decryptionPvk: String = null,
+    disableRequestedAuthnContext: js.UndefOr[Boolean] = js.undefined,
+    entryPoint: String = null,
+    forceAuthn: js.UndefOr[Boolean] = js.undefined,
+    host: String = null,
+    identifierFormat: String = null,
+    idpIssuer: String = null,
+    issuer: String = null,
+    logoutCallbackUrl: String = null,
+    logoutUrl: String = null,
+    name: String = null,
+    passReqToCallback: js.UndefOr[Boolean] = js.undefined,
+    passive: js.UndefOr[Boolean] = js.undefined,
+    path: String = null,
+    privateCert: String = null,
+    protocol: String = null,
+    providerName: String = null,
+    requestIdExpirationPeriodMs: js.UndefOr[Double] = js.undefined,
+    signatureAlgorithm: sha1 | sha256 | sha512 = null,
+    skipRequestCompression: js.UndefOr[Boolean] = js.undefined,
+    validateInResponseTo: js.UndefOr[Boolean] = js.undefined
+  ): SamlConfig = {
     val __obj = js.Dynamic.literal()
+    if (RACComparison != null) __obj.updateDynamic("RACComparison")(RACComparison.asInstanceOf[js.Any])
+    if (!js.isUndefined(acceptedClockSkewMs)) __obj.updateDynamic("acceptedClockSkewMs")(acceptedClockSkewMs.get.asInstanceOf[js.Any])
+    if (additionalAuthorizeParams != null) __obj.updateDynamic("additionalAuthorizeParams")(additionalAuthorizeParams.asInstanceOf[js.Any])
+    if (additionalLogoutParams != null) __obj.updateDynamic("additionalLogoutParams")(additionalLogoutParams.asInstanceOf[js.Any])
+    if (additionalParams != null) __obj.updateDynamic("additionalParams")(additionalParams.asInstanceOf[js.Any])
+    if (attributeConsumingServiceIndex != null) __obj.updateDynamic("attributeConsumingServiceIndex")(attributeConsumingServiceIndex.asInstanceOf[js.Any])
+    if (audience != null) __obj.updateDynamic("audience")(audience.asInstanceOf[js.Any])
+    if (authnContext != null) __obj.updateDynamic("authnContext")(authnContext.asInstanceOf[js.Any])
+    if (authnRequestBinding != null) __obj.updateDynamic("authnRequestBinding")(authnRequestBinding.asInstanceOf[js.Any])
+    if (cacheProvider != null) __obj.updateDynamic("cacheProvider")(cacheProvider.asInstanceOf[js.Any])
+    if (callbackUrl != null) __obj.updateDynamic("callbackUrl")(callbackUrl.asInstanceOf[js.Any])
+    if (cert != null) __obj.updateDynamic("cert")(cert.asInstanceOf[js.Any])
+    if (decryptionPvk != null) __obj.updateDynamic("decryptionPvk")(decryptionPvk.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableRequestedAuthnContext)) __obj.updateDynamic("disableRequestedAuthnContext")(disableRequestedAuthnContext.get.asInstanceOf[js.Any])
+    if (entryPoint != null) __obj.updateDynamic("entryPoint")(entryPoint.asInstanceOf[js.Any])
+    if (!js.isUndefined(forceAuthn)) __obj.updateDynamic("forceAuthn")(forceAuthn.get.asInstanceOf[js.Any])
+    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
+    if (identifierFormat != null) __obj.updateDynamic("identifierFormat")(identifierFormat.asInstanceOf[js.Any])
+    if (idpIssuer != null) __obj.updateDynamic("idpIssuer")(idpIssuer.asInstanceOf[js.Any])
+    if (issuer != null) __obj.updateDynamic("issuer")(issuer.asInstanceOf[js.Any])
+    if (logoutCallbackUrl != null) __obj.updateDynamic("logoutCallbackUrl")(logoutCallbackUrl.asInstanceOf[js.Any])
+    if (logoutUrl != null) __obj.updateDynamic("logoutUrl")(logoutUrl.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(passReqToCallback)) __obj.updateDynamic("passReqToCallback")(passReqToCallback.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passive)) __obj.updateDynamic("passive")(passive.get.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (privateCert != null) __obj.updateDynamic("privateCert")(privateCert.asInstanceOf[js.Any])
+    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
+    if (providerName != null) __obj.updateDynamic("providerName")(providerName.asInstanceOf[js.Any])
+    if (!js.isUndefined(requestIdExpirationPeriodMs)) __obj.updateDynamic("requestIdExpirationPeriodMs")(requestIdExpirationPeriodMs.get.asInstanceOf[js.Any])
+    if (signatureAlgorithm != null) __obj.updateDynamic("signatureAlgorithm")(signatureAlgorithm.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipRequestCompression)) __obj.updateDynamic("skipRequestCompression")(skipRequestCompression.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(validateInResponseTo)) __obj.updateDynamic("validateInResponseTo")(validateInResponseTo.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SamlConfig]
   }
-  @scala.inline
-  implicit class SamlConfigOps[Self <: SamlConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRACComparison(value: exact | minimum | maximum | better): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RACComparison")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRACComparison: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RACComparison")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAcceptedClockSkewMs(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptedClockSkewMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcceptedClockSkewMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptedClockSkewMs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdditionalAuthorizeParams(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalAuthorizeParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalAuthorizeParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalAuthorizeParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdditionalLogoutParams(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalLogoutParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalLogoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalLogoutParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdditionalParams(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttributeConsumingServiceIndex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeConsumingServiceIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributeConsumingServiceIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeConsumingServiceIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAudience(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audience")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudience: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audience")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthnContext(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authnContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthnContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authnContext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthnRequestBinding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authnRequestBinding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthnRequestBinding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authnRequestBinding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCacheProvider(value: CacheProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheProvider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheProvider")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCallbackUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallbackUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCertFunction1(
-      value: /* callback */ js.Function2[/* err */ js.Error | Null, /* cert */ js.UndefOr[String | js.Array[String]], Unit] => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cert")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCert(value: String | js.Array[String] | CertCallback): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cert")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecryptionPvk(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decryptionPvk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecryptionPvk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decryptionPvk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableRequestedAuthnContext(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableRequestedAuthnContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableRequestedAuthnContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableRequestedAuthnContext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntryPoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entryPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntryPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entryPoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForceAuthn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceAuthn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceAuthn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceAuthn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentifierFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifierFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentifierFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifierFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdpIssuer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idpIssuer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdpIssuer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idpIssuer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIssuer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issuer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIssuer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issuer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogoutCallbackUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logoutCallbackUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogoutCallbackUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logoutCallbackUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogoutUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logoutUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logoutUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPassReqToCallback(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passReqToCallback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassReqToCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passReqToCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPassive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateCert(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateCert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateCert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateCert")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtocol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProviderName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("providerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProviderName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("providerName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestIdExpirationPeriodMs(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestIdExpirationPeriodMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestIdExpirationPeriodMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestIdExpirationPeriodMs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSignatureAlgorithm(value: sha1 | sha256 | sha512): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signatureAlgorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignatureAlgorithm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signatureAlgorithm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipRequestCompression(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipRequestCompression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipRequestCompression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipRequestCompression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidateInResponseTo(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validateInResponseTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidateInResponseTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validateInResponseTo")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

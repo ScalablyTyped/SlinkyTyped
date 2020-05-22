@@ -18,51 +18,24 @@ trait ImportKeyPairRequest extends js.Object {
     * The public key. For API calls, the text must be base64-encoded. For command line tools, base64 encoding is performed for you.
     */
   var PublicKeyMaterial: _Blob = js.native
+  /**
+    * The tags to apply to the imported key pair.
+    */
+  var TagSpecifications: js.UndefOr[TagSpecificationList] = js.native
 }
 
 object ImportKeyPairRequest {
   @scala.inline
-  def apply(KeyName: String, PublicKeyMaterial: _Blob): ImportKeyPairRequest = {
+  def apply(
+    KeyName: String,
+    PublicKeyMaterial: _Blob,
+    DryRun: js.UndefOr[Boolean] = js.undefined,
+    TagSpecifications: TagSpecificationList = null
+  ): ImportKeyPairRequest = {
     val __obj = js.Dynamic.literal(KeyName = KeyName.asInstanceOf[js.Any], PublicKeyMaterial = PublicKeyMaterial.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
+    if (TagSpecifications != null) __obj.updateDynamic("TagSpecifications")(TagSpecifications.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImportKeyPairRequest]
   }
-  @scala.inline
-  implicit class ImportKeyPairRequestOps[Self <: ImportKeyPairRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPublicKeyMaterialUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicKeyMaterial")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPublicKeyMaterial(value: _Blob): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicKeyMaterial")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

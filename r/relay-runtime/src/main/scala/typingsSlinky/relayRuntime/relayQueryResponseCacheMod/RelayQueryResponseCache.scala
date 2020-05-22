@@ -6,11 +6,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RelayQueryResponseCache extends js.Object {
-  def clear(): Unit = js.native
-  def get(queryID: String, variables: Variables): GraphQLResponse | Null = js.native
-  def set(queryID: String, variables: Variables, payload: GraphQLResponse): Unit = js.native
+  def clear(): Unit
+  def get(queryID: String, variables: Variables): GraphQLResponse | Null
+  def set(queryID: String, variables: Variables, payload: GraphQLResponse): Unit
 }
 
 object RelayQueryResponseCache {
@@ -23,31 +22,5 @@ object RelayQueryResponseCache {
     val __obj = js.Dynamic.literal(clear = js.Any.fromFunction0(clear), get = js.Any.fromFunction2(get), set = js.Any.fromFunction3(set))
     __obj.asInstanceOf[RelayQueryResponseCache]
   }
-  @scala.inline
-  implicit class RelayQueryResponseCacheOps[Self <: RelayQueryResponseCache] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClear(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: (String, Variables) => GraphQLResponse | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSet(value: (String, Variables, GraphQLResponse) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

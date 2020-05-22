@@ -22,53 +22,12 @@ trait NetworkInterface extends js.Object {
 
 object NetworkInterface {
   @scala.inline
-  def apply(): NetworkInterface = {
+  def apply(attachmentId: String = null, ipv6Address: String = null, privateIpv4Address: String = null): NetworkInterface = {
     val __obj = js.Dynamic.literal()
+    if (attachmentId != null) __obj.updateDynamic("attachmentId")(attachmentId.asInstanceOf[js.Any])
+    if (ipv6Address != null) __obj.updateDynamic("ipv6Address")(ipv6Address.asInstanceOf[js.Any])
+    if (privateIpv4Address != null) __obj.updateDynamic("privateIpv4Address")(privateIpv4Address.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetworkInterface]
   }
-  @scala.inline
-  implicit class NetworkInterfaceOps[Self <: NetworkInterface] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttachmentId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachmentId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpv6Address(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipv6Address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpv6Address: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipv6Address")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateIpv4Address(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateIpv4Address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateIpv4Address: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateIpv4Address")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

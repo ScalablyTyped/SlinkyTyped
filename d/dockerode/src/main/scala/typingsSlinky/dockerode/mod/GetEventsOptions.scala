@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetEventsOptions extends js.Object {
-  var filters: js.UndefOr[String | typingsSlinky.dockerode.anon.Container] = js.native
-  var since: js.UndefOr[Double] = js.native
-  var until: js.UndefOr[Double] = js.native
+  var filters: js.UndefOr[String | typingsSlinky.dockerode.anon.Container] = js.undefined
+  var since: js.UndefOr[Double] = js.undefined
+  var until: js.UndefOr[Double] = js.undefined
 }
 
 object GetEventsOptions {
   @scala.inline
-  def apply(): GetEventsOptions = {
+  def apply(
+    filters: String | typingsSlinky.dockerode.anon.Container = null,
+    since: js.UndefOr[Double] = js.undefined,
+    until: js.UndefOr[Double] = js.undefined
+  ): GetEventsOptions = {
     val __obj = js.Dynamic.literal()
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (!js.isUndefined(since)) __obj.updateDynamic("since")(since.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(until)) __obj.updateDynamic("until")(until.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetEventsOptions]
   }
-  @scala.inline
-  implicit class GetEventsOptionsOps[Self <: GetEventsOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilters(value: String | typingsSlinky.dockerode.anon.Container): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSince(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("since")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSince: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("since")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUntil(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("until")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUntil: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("until")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

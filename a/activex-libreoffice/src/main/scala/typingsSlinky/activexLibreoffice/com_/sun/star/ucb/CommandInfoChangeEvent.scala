@@ -11,22 +11,21 @@ import scala.scalajs.js.annotation._
   *
   * A {@link CommandInfoChangeEvent} object is sent to XCommandInfoChangeListeners.
   */
-@js.native
 trait CommandInfoChangeEvent extends EventObject {
   /**
     * contains the implementation handle for the command.
     *
     * May be `-1` if the implementation has no handle.
     */
-  var Handle: Double = js.native
+  var Handle: Double
   /** contains the name of the command. */
-  var Name: String = js.native
+  var Name: String
   /**
     * contains the reason for the event.
     *
     * The value can be one of the {@link CommandInfoChange} constants.
     */
-  var Reason: Double = js.native
+  var Reason: Double
 }
 
 object CommandInfoChangeEvent {
@@ -35,31 +34,5 @@ object CommandInfoChangeEvent {
     val __obj = js.Dynamic.literal(Handle = Handle.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Reason = Reason.asInstanceOf[js.Any], Source = Source.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommandInfoChangeEvent]
   }
-  @scala.inline
-  implicit class CommandInfoChangeEventOps[Self <: CommandInfoChangeEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHandle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Handle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReason(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,183 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ScalesIndicator extends js.Object {
   /** Specifies the backgroundColor in bar indicators
     * @Default {null}
     */
-  var backgroundColor: js.UndefOr[String] = js.native
+  var backgroundColor: js.UndefOr[String] = js.undefined
   /** Specifies the border in bar indicators
     * @Default {null}
     */
-  var border: js.UndefOr[ScalesIndicatorsBorder] = js.native
+  var border: js.UndefOr[ScalesIndicatorsBorder] = js.undefined
   /** Specifies the font of bar indicators
     * @Default {null}
     */
-  var font: js.UndefOr[ScalesIndicatorsFont] = js.native
+  var font: js.UndefOr[ScalesIndicatorsFont] = js.undefined
   /** Specifies the indicator Height of bar indicators
     * @Default {30}
     */
-  var height: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.undefined
   /** Specifies the opacity in bar indicators
     * @Default {null}
     */
-  var opacity: js.UndefOr[Double] = js.native
+  var opacity: js.UndefOr[Double] = js.undefined
   /** Specifies the position in bar indicators
     * @Default {null}
     */
-  var position: js.UndefOr[ScalesIndicatorsPosition] = js.native
+  var position: js.UndefOr[ScalesIndicatorsPosition] = js.undefined
   /** Specifies the state ranges in bar indicators
     * @Default {Array}
     */
-  var stateRanges: js.UndefOr[js.Array[ScalesIndicatorsStateRange]] = js.native
+  var stateRanges: js.UndefOr[js.Array[ScalesIndicatorsStateRange]] = js.undefined
   /** Specifies the textLocation in bar indicators
     * @Default {null}
     */
-  var textLocation: js.UndefOr[ScalesIndicatorsTextLocation] = js.native
+  var textLocation: js.UndefOr[ScalesIndicatorsTextLocation] = js.undefined
   /** Specifies the indicator Style of font in bar indicators
     * @Default {ej.datavisualization.LinearGauge.IndicatorType.Rectangle}
     */
-  var `type`: js.UndefOr[IndicatorTypes | String] = js.native
+  var `type`: js.UndefOr[IndicatorTypes | String] = js.undefined
   /** Specifies the indicator Width in bar indicators
     * @Default {30}
     */
-  var width: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object ScalesIndicator {
   @scala.inline
-  def apply(): ScalesIndicator = {
+  def apply(
+    backgroundColor: String = null,
+    border: ScalesIndicatorsBorder = null,
+    font: ScalesIndicatorsFont = null,
+    height: js.UndefOr[Double] = js.undefined,
+    opacity: js.UndefOr[Double] = js.undefined,
+    position: ScalesIndicatorsPosition = null,
+    stateRanges: js.Array[ScalesIndicatorsStateRange] = null,
+    textLocation: ScalesIndicatorsTextLocation = null,
+    `type`: IndicatorTypes | String = null,
+    width: js.UndefOr[Double] = js.undefined
+  ): ScalesIndicator = {
     val __obj = js.Dynamic.literal()
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (stateRanges != null) __obj.updateDynamic("stateRanges")(stateRanges.asInstanceOf[js.Any])
+    if (textLocation != null) __obj.updateDynamic("textLocation")(textLocation.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScalesIndicator]
   }
-  @scala.inline
-  implicit class ScalesIndicatorOps[Self <: ScalesIndicator] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackgroundColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorder(value: ScalesIndicatorsBorder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFont(value: ScalesIndicatorsFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: ScalesIndicatorsPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateRanges(value: js.Array[ScalesIndicatorsStateRange]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateRanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStateRanges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateRanges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextLocation(value: ScalesIndicatorsTextLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: IndicatorTypes | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

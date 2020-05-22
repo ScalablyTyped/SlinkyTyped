@@ -11,6 +11,10 @@ trait IndexConfigurationSummary extends js.Object {
     */
   var CreatedAt: js.Date = js.native
   /**
+    * Indicates whether the index is a enterprise edition index or a developer edition index. 
+    */
+  var Edition: js.UndefOr[IndexEdition] = js.native
+  /**
     * A unique identifier for the index. Use this to identify the index when you are using operations such as Query, DescribeIndex, UpdateIndex, and DeleteIndex.
     */
   var Id: js.UndefOr[IndexId] = js.native
@@ -30,59 +34,19 @@ trait IndexConfigurationSummary extends js.Object {
 
 object IndexConfigurationSummary {
   @scala.inline
-  def apply(CreatedAt: js.Date, Status: IndexStatus, UpdatedAt: js.Date): IndexConfigurationSummary = {
+  def apply(
+    CreatedAt: js.Date,
+    Status: IndexStatus,
+    UpdatedAt: js.Date,
+    Edition: IndexEdition = null,
+    Id: IndexId = null,
+    Name: IndexName = null
+  ): IndexConfigurationSummary = {
     val __obj = js.Dynamic.literal(CreatedAt = CreatedAt.asInstanceOf[js.Any], Status = Status.asInstanceOf[js.Any], UpdatedAt = UpdatedAt.asInstanceOf[js.Any])
+    if (Edition != null) __obj.updateDynamic("Edition")(Edition.asInstanceOf[js.Any])
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[IndexConfigurationSummary]
   }
-  @scala.inline
-  implicit class IndexConfigurationSummaryOps[Self <: IndexConfigurationSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreatedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: IndexStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdatedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdatedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: IndexId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: IndexName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

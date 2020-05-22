@@ -1,17 +1,17 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LegendProperties extends WidgetProperties {
   /**
     * Collection of [ActiveLayerInfo](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend-support-ActiveLayerInfo.html) objects used by the legend view to display data in the legend. The legend widget watches this property to hide or display the layer's legend when an [ActiveLayerInfo](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend-support-ActiveLayerInfo.html) is removed from or added to this collection.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html#activeLayerInfos)
     */
-  var activeLayerInfos: js.UndefOr[CollectionProperties[ActiveLayerInfoProperties]] = js.native
+  var activeLayerInfos: js.UndefOr[CollectionProperties[ActiveLayerInfoProperties]] = js.undefined
   /**
     * Indicates whether to show the [Basemap](https://developers.arcgis.com/javascript/latest/api-reference/esri-Basemap.html) layers in the Legend.
     *
@@ -19,19 +19,19 @@ trait LegendProperties extends WidgetProperties {
     *
     * @default false
     */
-  var basemapLegendVisible: js.UndefOr[Boolean] = js.native
+  var basemapLegendVisible: js.UndefOr[Boolean] = js.undefined
   /**
     * The widget's default CSS icon class.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html#iconClass)
     */
-  var iconClass: js.UndefOr[String] = js.native
+  var iconClass: js.UndefOr[String] = js.undefined
   /**
     * Specifies a subset of the layers to display in the legend. If this property is not set, all layers in the map will display in the legend. Objects in this array are defined with the properties listed below.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html#layerInfos)
     */
-  var layerInfos: js.UndefOr[js.Array[LegendLayerInfos]] = js.native
+  var layerInfos: js.UndefOr[js.Array[LegendLayerInfos]] = js.undefined
   /**
     * Determines whether to respect the properties of the layers in the map that control the legend's visibility (`minScale`, `maxScale`, `legendEnabled`). By default, a layer's legend elements **will not render** in the legend given the following conditions:
     *   * The layer's [legendEnabled](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#legendEnabled) property is set to `false`.
@@ -44,7 +44,7 @@ trait LegendProperties extends WidgetProperties {
     *
     * @default true
     */
-  var respectLayerVisibility: js.UndefOr[Boolean] = js.native
+  var respectLayerVisibility: js.UndefOr[Boolean] = js.undefined
   /**
     * Indicates the style of the legend. The style determines the legend's layout and behavior. You can either specify a string or an object to indicate the style. The known string values are the same values listed in the table within the `type` property.
     *
@@ -52,130 +52,51 @@ trait LegendProperties extends WidgetProperties {
     *
     * @default classic
     */
-  var style: js.UndefOr[String | LegendStyle] = js.native
+  var style: js.UndefOr[String | LegendStyle] = js.undefined
   /**
     * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). Set this to link the widget to a specific view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html#view)
     */
-  var view: js.UndefOr[MapViewProperties | SceneViewProperties] = js.native
+  var view: js.UndefOr[MapViewProperties | SceneViewProperties] = js.undefined
   /**
     * The view model for this widget. This is a class that contains all the logic (properties and methods) that controls this widget's behavior. See the [LegendViewModel](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend-LegendViewModel.html) class to access all properties and methods on the widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html#viewModel)
     */
-  var viewModel: js.UndefOr[LegendViewModelProperties] = js.native
+  var viewModel: js.UndefOr[LegendViewModelProperties] = js.undefined
 }
 
 object LegendProperties {
   @scala.inline
-  def apply(): LegendProperties = {
+  def apply(
+    activeLayerInfos: CollectionProperties[ActiveLayerInfoProperties] = null,
+    basemapLegendVisible: js.UndefOr[Boolean] = js.undefined,
+    container: String | HTMLElement = null,
+    destroyed: js.UndefOr[Boolean] = js.undefined,
+    iconClass: String = null,
+    id: String = null,
+    label: String = null,
+    layerInfos: js.Array[LegendLayerInfos] = null,
+    respectLayerVisibility: js.UndefOr[Boolean] = js.undefined,
+    style: String | LegendStyle = null,
+    view: MapViewProperties | SceneViewProperties = null,
+    viewModel: LegendViewModelProperties = null
+  ): LegendProperties = {
     val __obj = js.Dynamic.literal()
+    if (activeLayerInfos != null) __obj.updateDynamic("activeLayerInfos")(activeLayerInfos.asInstanceOf[js.Any])
+    if (!js.isUndefined(basemapLegendVisible)) __obj.updateDynamic("basemapLegendVisible")(basemapLegendVisible.get.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (!js.isUndefined(destroyed)) __obj.updateDynamic("destroyed")(destroyed.get.asInstanceOf[js.Any])
+    if (iconClass != null) __obj.updateDynamic("iconClass")(iconClass.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (layerInfos != null) __obj.updateDynamic("layerInfos")(layerInfos.asInstanceOf[js.Any])
+    if (!js.isUndefined(respectLayerVisibility)) __obj.updateDynamic("respectLayerVisibility")(respectLayerVisibility.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
+    if (viewModel != null) __obj.updateDynamic("viewModel")(viewModel.asInstanceOf[js.Any])
     __obj.asInstanceOf[LegendProperties]
   }
-  @scala.inline
-  implicit class LegendPropertiesOps[Self <: LegendProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveLayerInfos(value: CollectionProperties[ActiveLayerInfoProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeLayerInfos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveLayerInfos: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeLayerInfos")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBasemapLegendVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basemapLegendVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasemapLegendVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basemapLegendVisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayerInfos(value: js.Array[LegendLayerInfos]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layerInfos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayerInfos: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layerInfos")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRespectLayerVisibility(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("respectLayerVisibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRespectLayerVisibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("respectLayerVisibility")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: String | LegendStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withView(value: MapViewProperties | SceneViewProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewModel(value: LegendViewModelProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewModel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

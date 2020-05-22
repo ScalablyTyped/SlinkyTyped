@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BeforeRemoveEvent extends js.Object {
   /**
     * The name of the event.
     */
-  var name: String = js.native
+  var name: String
   /**
     * An array of the object(s) to be removed. May be a single body, constraint, composite or a mixture of these.
     */
-  var `object`: js.Array[_] = js.native
+  var `object`: js.Array[_]
   /**
     * The source object of the event.
     */
-  var source: js.Any = js.native
+  var source: js.Any
 }
 
 object BeforeRemoveEvent {
@@ -27,31 +26,5 @@ object BeforeRemoveEvent {
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BeforeRemoveEvent]
   }
-  @scala.inline
-  implicit class BeforeRemoveEventOps[Self <: BeforeRemoveEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObject(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSource(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

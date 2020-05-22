@@ -5,88 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NumberOfLevelZeroTilesY extends js.Object {
-  var ellipsoid: js.UndefOr[typingsSlinky.cesium.mod.Ellipsoid] = js.native
-  var numberOfLevelZeroTilesX: js.UndefOr[Double] = js.native
-  var numberOfLevelZeroTilesY: js.UndefOr[Double] = js.native
-  var rectangleNortheastInMeters: js.UndefOr[Cartesian2] = js.native
-  var rectangleSouthwestInMeters: js.UndefOr[Cartesian2] = js.native
+  var ellipsoid: js.UndefOr[typingsSlinky.cesium.mod.Ellipsoid] = js.undefined
+  var numberOfLevelZeroTilesX: js.UndefOr[Double] = js.undefined
+  var numberOfLevelZeroTilesY: js.UndefOr[Double] = js.undefined
+  var rectangleNortheastInMeters: js.UndefOr[Cartesian2] = js.undefined
+  var rectangleSouthwestInMeters: js.UndefOr[Cartesian2] = js.undefined
 }
 
 object NumberOfLevelZeroTilesY {
   @scala.inline
-  def apply(): NumberOfLevelZeroTilesY = {
+  def apply(
+    ellipsoid: typingsSlinky.cesium.mod.Ellipsoid = null,
+    numberOfLevelZeroTilesX: js.UndefOr[Double] = js.undefined,
+    numberOfLevelZeroTilesY: js.UndefOr[Double] = js.undefined,
+    rectangleNortheastInMeters: Cartesian2 = null,
+    rectangleSouthwestInMeters: Cartesian2 = null
+  ): NumberOfLevelZeroTilesY = {
     val __obj = js.Dynamic.literal()
+    if (ellipsoid != null) __obj.updateDynamic("ellipsoid")(ellipsoid.asInstanceOf[js.Any])
+    if (!js.isUndefined(numberOfLevelZeroTilesX)) __obj.updateDynamic("numberOfLevelZeroTilesX")(numberOfLevelZeroTilesX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(numberOfLevelZeroTilesY)) __obj.updateDynamic("numberOfLevelZeroTilesY")(numberOfLevelZeroTilesY.get.asInstanceOf[js.Any])
+    if (rectangleNortheastInMeters != null) __obj.updateDynamic("rectangleNortheastInMeters")(rectangleNortheastInMeters.asInstanceOf[js.Any])
+    if (rectangleSouthwestInMeters != null) __obj.updateDynamic("rectangleSouthwestInMeters")(rectangleSouthwestInMeters.asInstanceOf[js.Any])
     __obj.asInstanceOf[NumberOfLevelZeroTilesY]
   }
-  @scala.inline
-  implicit class NumberOfLevelZeroTilesYOps[Self <: NumberOfLevelZeroTilesY] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEllipsoid(value: typingsSlinky.cesium.mod.Ellipsoid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsoid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEllipsoid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsoid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfLevelZeroTilesX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfLevelZeroTilesX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfLevelZeroTilesX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfLevelZeroTilesX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfLevelZeroTilesY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfLevelZeroTilesY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfLevelZeroTilesY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfLevelZeroTilesY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRectangleNortheastInMeters(value: Cartesian2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rectangleNortheastInMeters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRectangleNortheastInMeters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rectangleNortheastInMeters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRectangleSouthwestInMeters(value: Cartesian2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rectangleSouthwestInMeters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRectangleSouthwestInMeters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rectangleSouthwestInMeters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

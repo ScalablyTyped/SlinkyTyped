@@ -6,10 +6,9 @@ import typingsSlinky.maxmind.anon.FnCallPathOptions
 import typingsSlinky.maxmind.maxmindStrings.buffer
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
-import typingsSlinky.node.anon.EncodingFlag
-import typingsSlinky.node.anon.EncodingPersistent
-import typingsSlinky.node.anon.Flag
-import typingsSlinky.node.anon.FlagString
+import typingsSlinky.node.anon.BaseEncodingOptionsflagst
+import typingsSlinky.node.anon.EncodingBufferEncoding
+import typingsSlinky.node.anon.EncodingNull
 import typingsSlinky.node.anon.Persistent
 import typingsSlinky.node.anon.Recursive
 import typingsSlinky.node.fsMod.FSWatcher
@@ -31,32 +30,32 @@ object fsMod extends js.Object {
     var watch_Original: FnCallFilenameOptionsListener = js.native
     def readFile(path: Double): js.Promise[String | Buffer] = js.native
     def readFile(path: Double, options: String): js.Promise[String | Buffer] = js.native
-    def readFile(path: Double, options: EncodingFlag): js.Promise[String] = js.native
-    def readFile(path: Double, options: Flag): js.Promise[Buffer] = js.native
-    def readFile(path: Double, options: FlagString): js.Promise[String | Buffer] = js.native
+    def readFile(path: Double, options: BaseEncodingOptionsflagst): js.Promise[String | Buffer] = js.native
+    def readFile(path: Double, options: EncodingBufferEncoding): js.Promise[String] = js.native
+    def readFile(path: Double, options: EncodingNull): js.Promise[Buffer] = js.native
     def readFile(path: PathLike): js.Promise[String | Buffer] = js.native
     def readFile(path: PathLike, options: String): js.Promise[String | Buffer] = js.native
-    def readFile(path: PathLike, options: EncodingFlag): js.Promise[String] = js.native
-    def readFile(path: PathLike, options: Flag): js.Promise[Buffer] = js.native
-    def readFile(path: PathLike, options: FlagString): js.Promise[String | Buffer] = js.native
+    def readFile(path: PathLike, options: BaseEncodingOptionsflagst): js.Promise[String | Buffer] = js.native
+    def readFile(path: PathLike, options: EncodingBufferEncoding): js.Promise[String] = js.native
+    def readFile(path: PathLike, options: EncodingNull): js.Promise[Buffer] = js.native
     def readFileSync(path: Double): String | Buffer = js.native
-    def readFileSync(path: Double, options: String): String = js.native
-    def readFileSync(path: Double, options: EncodingFlag): String = js.native
-    def readFileSync(path: Double, options: Flag): Buffer = js.native
-    def readFileSync(path: Double, options: FlagString): String | Buffer = js.native
+    def readFileSync(path: Double, options: BufferEncoding): String = js.native
+    def readFileSync(path: Double, options: BaseEncodingOptionsflagst): String | Buffer = js.native
+    def readFileSync(path: Double, options: EncodingBufferEncoding): String = js.native
+    def readFileSync(path: Double, options: EncodingNull): Buffer = js.native
     def readFileSync(path: PathLike): String | Buffer = js.native
-    def readFileSync(path: PathLike, options: String): String = js.native
-    def readFileSync(path: PathLike, options: EncodingFlag): String = js.native
-    def readFileSync(path: PathLike, options: Flag): Buffer = js.native
-    def readFileSync(path: PathLike, options: FlagString): String | Buffer = js.native
+    def readFileSync(path: PathLike, options: BufferEncoding): String = js.native
+    def readFileSync(path: PathLike, options: BaseEncodingOptionsflagst): String | Buffer = js.native
+    def readFileSync(path: PathLike, options: EncodingBufferEncoding): String = js.native
+    def readFileSync(path: PathLike, options: EncodingNull): Buffer = js.native
     @JSName("readFileSync")
     def readFileSync_Buffer(path: Double): Buffer = js.native
     @JSName("readFileSync")
     def readFileSync_Buffer(path: PathLike): Buffer = js.native
     @JSName("readFileSync")
-    def readFileSync_Union(path: Double, options: String): String | Buffer = js.native
+    def readFileSync_Union(path: Double, options: BufferEncoding): String | Buffer = js.native
     @JSName("readFileSync")
-    def readFileSync_Union(path: PathLike, options: String): String | Buffer = js.native
+    def readFileSync_Union(path: PathLike, options: BufferEncoding): String | Buffer = js.native
     def watch(filename: PathLike): FSWatcher = js.native
     def watch(filename: PathLike, listener: js.Function2[/* event */ String, /* filename */ String, _]): FSWatcher = js.native
     def watch(filename: PathLike, options: String): FSWatcher = js.native
@@ -76,17 +75,11 @@ object fsMod extends js.Object {
       options: BufferEncoding,
       listener: js.Function2[/* event */ String, /* filename */ String, Unit]
     ): FSWatcher = js.native
-    def watch(filename: PathLike, options: EncodingPersistent): FSWatcher = js.native
-    def watch(
-      filename: PathLike,
-      options: EncodingPersistent,
-      listener: js.Function2[/* event */ String, /* filename */ String | Buffer, Unit]
-    ): FSWatcher = js.native
     def watch(filename: PathLike, options: Persistent): FSWatcher = js.native
     def watch(
       filename: PathLike,
       options: Persistent,
-      listener: js.Function2[/* event */ String, /* filename */ String, Unit]
+      listener: js.Function2[/* event */ String, Buffer | (/* filename */ String), Unit]
     ): FSWatcher = js.native
     def watch(filename: PathLike, options: Recursive): FSWatcher = js.native
     def watch(

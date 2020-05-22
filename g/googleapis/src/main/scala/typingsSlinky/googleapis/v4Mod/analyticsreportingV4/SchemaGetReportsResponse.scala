@@ -27,53 +27,16 @@ trait SchemaGetReportsResponse extends js.Object {
 
 object SchemaGetReportsResponse {
   @scala.inline
-  def apply(): SchemaGetReportsResponse = {
+  def apply(
+    queryCost: js.UndefOr[Double] = js.undefined,
+    reports: js.Array[SchemaReport] = null,
+    resourceQuotasRemaining: SchemaResourceQuotasRemaining = null
+  ): SchemaGetReportsResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(queryCost)) __obj.updateDynamic("queryCost")(queryCost.get.asInstanceOf[js.Any])
+    if (reports != null) __obj.updateDynamic("reports")(reports.asInstanceOf[js.Any])
+    if (resourceQuotasRemaining != null) __obj.updateDynamic("resourceQuotasRemaining")(resourceQuotasRemaining.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGetReportsResponse]
   }
-  @scala.inline
-  implicit class SchemaGetReportsResponseOps[Self <: SchemaGetReportsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQueryCost(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryCost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryCost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryCost")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReports(value: js.Array[SchemaReport]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reports")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReports: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reports")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceQuotasRemaining(value: SchemaResourceQuotasRemaining): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceQuotasRemaining")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceQuotasRemaining: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceQuotasRemaining")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

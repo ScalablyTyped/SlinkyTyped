@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.`inline`
   - typingsSlinky.csstype.csstypeStrings.`run-in`
 */
-trait DisplayOutside extends DisplayProperty
+trait DisplayOutside extends _DisplayProperty
 
 object DisplayOutside {
   @scala.inline

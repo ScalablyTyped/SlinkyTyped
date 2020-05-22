@@ -4,240 +4,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait CustomTableLayout extends TableLayout {
-  var defaultBorder: js.UndefOr[Boolean] = js.native
-  var fillColor: js.UndefOr[String | DynamicLayout[String]] = js.native
-  var fillOpacity: js.UndefOr[Double | DynamicLayout[Double]] = js.native
-  var hLineColor: js.UndefOr[String | DynamicLayout[String]] = js.native
-  var hLineStyle: js.UndefOr[DynamicLayout[LineStyle]] = js.native
-  var hLineWidth: js.UndefOr[DynamicLayout[Double]] = js.native
-  var paddingBottom: js.UndefOr[DynamicLayout[Double]] = js.native
-  var paddingLeft: js.UndefOr[DynamicLayout[Double]] = js.native
-  var paddingRight: js.UndefOr[DynamicLayout[Double]] = js.native
-  var paddingTop: js.UndefOr[DynamicLayout[Double]] = js.native
-  var vLineColor: js.UndefOr[String | DynamicLayout[String]] = js.native
-  var vLineStyle: js.UndefOr[DynamicLayout[LineStyle]] = js.native
-  var vLineWidth: js.UndefOr[DynamicLayout[Double]] = js.native
+trait CustomTableLayout extends _TableLayout {
+  var defaultBorder: js.UndefOr[Boolean] = js.undefined
+  var fillColor: js.UndefOr[String | DynamicLayout[String]] = js.undefined
+  var fillOpacity: js.UndefOr[Double | DynamicLayout[Double]] = js.undefined
+  var hLineColor: js.UndefOr[String | DynamicLayout[String]] = js.undefined
+  var hLineStyle: js.UndefOr[DynamicLayout[LineStyle]] = js.undefined
+  var hLineWidth: js.UndefOr[DynamicLayout[Double]] = js.undefined
+  var paddingBottom: js.UndefOr[DynamicLayout[Double]] = js.undefined
+  var paddingLeft: js.UndefOr[DynamicLayout[Double]] = js.undefined
+  var paddingRight: js.UndefOr[DynamicLayout[Double]] = js.undefined
+  var paddingTop: js.UndefOr[DynamicLayout[Double]] = js.undefined
+  var vLineColor: js.UndefOr[String | DynamicLayout[String]] = js.undefined
+  var vLineStyle: js.UndefOr[DynamicLayout[LineStyle]] = js.undefined
+  var vLineWidth: js.UndefOr[DynamicLayout[Double]] = js.undefined
 }
 
 object CustomTableLayout {
   @scala.inline
-  def apply(): CustomTableLayout = {
+  def apply(
+    defaultBorder: js.UndefOr[Boolean] = js.undefined,
+    fillColor: String | DynamicLayout[String] = null,
+    fillOpacity: Double | DynamicLayout[Double] = null,
+    hLineColor: String | DynamicLayout[String] = null,
+    hLineStyle: (/* rowIndex */ Double, /* node */ ContentTable, /* columnIndex */ Double) => js.UndefOr[LineStyle | Null] = null,
+    hLineWidth: (/* rowIndex */ Double, /* node */ ContentTable, /* columnIndex */ Double) => js.UndefOr[Double | Null] = null,
+    paddingBottom: (/* rowIndex */ Double, /* node */ ContentTable, /* columnIndex */ Double) => js.UndefOr[Double | Null] = null,
+    paddingLeft: (/* rowIndex */ Double, /* node */ ContentTable, /* columnIndex */ Double) => js.UndefOr[Double | Null] = null,
+    paddingRight: (/* rowIndex */ Double, /* node */ ContentTable, /* columnIndex */ Double) => js.UndefOr[Double | Null] = null,
+    paddingTop: (/* rowIndex */ Double, /* node */ ContentTable, /* columnIndex */ Double) => js.UndefOr[Double | Null] = null,
+    vLineColor: String | DynamicLayout[String] = null,
+    vLineStyle: (/* rowIndex */ Double, /* node */ ContentTable, /* columnIndex */ Double) => js.UndefOr[LineStyle | Null] = null,
+    vLineWidth: (/* rowIndex */ Double, /* node */ ContentTable, /* columnIndex */ Double) => js.UndefOr[Double | Null] = null
+  ): CustomTableLayout = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(defaultBorder)) __obj.updateDynamic("defaultBorder")(defaultBorder.get.asInstanceOf[js.Any])
+    if (fillColor != null) __obj.updateDynamic("fillColor")(fillColor.asInstanceOf[js.Any])
+    if (fillOpacity != null) __obj.updateDynamic("fillOpacity")(fillOpacity.asInstanceOf[js.Any])
+    if (hLineColor != null) __obj.updateDynamic("hLineColor")(hLineColor.asInstanceOf[js.Any])
+    if (hLineStyle != null) __obj.updateDynamic("hLineStyle")(js.Any.fromFunction3(hLineStyle))
+    if (hLineWidth != null) __obj.updateDynamic("hLineWidth")(js.Any.fromFunction3(hLineWidth))
+    if (paddingBottom != null) __obj.updateDynamic("paddingBottom")(js.Any.fromFunction3(paddingBottom))
+    if (paddingLeft != null) __obj.updateDynamic("paddingLeft")(js.Any.fromFunction3(paddingLeft))
+    if (paddingRight != null) __obj.updateDynamic("paddingRight")(js.Any.fromFunction3(paddingRight))
+    if (paddingTop != null) __obj.updateDynamic("paddingTop")(js.Any.fromFunction3(paddingTop))
+    if (vLineColor != null) __obj.updateDynamic("vLineColor")(vLineColor.asInstanceOf[js.Any])
+    if (vLineStyle != null) __obj.updateDynamic("vLineStyle")(js.Any.fromFunction3(vLineStyle))
+    if (vLineWidth != null) __obj.updateDynamic("vLineWidth")(js.Any.fromFunction3(vLineWidth))
     __obj.asInstanceOf[CustomTableLayout]
   }
-  @scala.inline
-  implicit class CustomTableLayoutOps[Self <: CustomTableLayout] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultBorder(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultBorder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultBorder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFillColorFunction3(
-      value: (/* rowIndex */ Double, /* node */ ContentTable, /* columnIndex */ Double) => js.UndefOr[String | Null]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withFillColor(value: String | DynamicLayout[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFillColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFillOpacityFunction3(
-      value: (/* rowIndex */ Double, /* node */ ContentTable, /* columnIndex */ Double) => js.UndefOr[Double | Null]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withFillOpacity(value: Double | DynamicLayout[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFillOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHLineColorFunction3(
-      value: (/* rowIndex */ Double, /* node */ ContentTable, /* columnIndex */ Double) => js.UndefOr[String | Null]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hLineColor")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withHLineColor(value: String | DynamicLayout[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hLineColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHLineColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hLineColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHLineStyle(
-      value: (/* rowIndex */ Double, /* node */ ContentTable, /* columnIndex */ Double) => js.UndefOr[LineStyle | Null]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hLineStyle")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutHLineStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hLineStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHLineWidth(
-      value: (/* rowIndex */ Double, /* node */ ContentTable, /* columnIndex */ Double) => js.UndefOr[Double | Null]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hLineWidth")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutHLineWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hLineWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaddingBottom(
-      value: (/* rowIndex */ Double, /* node */ ContentTable, /* columnIndex */ Double) => js.UndefOr[Double | Null]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingBottom")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutPaddingBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingBottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaddingLeft(
-      value: (/* rowIndex */ Double, /* node */ ContentTable, /* columnIndex */ Double) => js.UndefOr[Double | Null]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingLeft")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutPaddingLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaddingRight(
-      value: (/* rowIndex */ Double, /* node */ ContentTable, /* columnIndex */ Double) => js.UndefOr[Double | Null]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingRight")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutPaddingRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingRight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaddingTop(
-      value: (/* rowIndex */ Double, /* node */ ContentTable, /* columnIndex */ Double) => js.UndefOr[Double | Null]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingTop")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutPaddingTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVLineColorFunction3(
-      value: (/* rowIndex */ Double, /* node */ ContentTable, /* columnIndex */ Double) => js.UndefOr[String | Null]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vLineColor")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withVLineColor(value: String | DynamicLayout[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vLineColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVLineColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vLineColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVLineStyle(
-      value: (/* rowIndex */ Double, /* node */ ContentTable, /* columnIndex */ Double) => js.UndefOr[LineStyle | Null]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vLineStyle")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutVLineStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vLineStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVLineWidth(
-      value: (/* rowIndex */ Double, /* node */ ContentTable, /* columnIndex */ Double) => js.UndefOr[Double | Null]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vLineWidth")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutVLineWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vLineWidth")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

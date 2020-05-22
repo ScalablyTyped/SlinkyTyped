@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 /** module Or Internal Object */
 /**
-	* @brief xml 处理模块
-	* @detail 
-	*/
+  * @brief xml 处理模块
+  * @detail 
+  */
 @JSImport("xml", JSImport.Namespace)
 @js.native
 object xmlMod extends js.Object {

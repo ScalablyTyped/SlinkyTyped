@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Networking.NetworkOperators
 
+import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +9,18 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Networking.NetworkOperators.UssdSession")
 @js.native
 abstract class UssdSession ()
-  extends typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.UssdSession
+  extends typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.UssdSession {
+  /** Closes the USSD session with the network. */
+  /* CompleteClass */
+  override def close(): Unit = js.native
+  /**
+    * Sends a message to a USSD session and returns a handler to retrieve the reply asynchronously.
+    * @param message The message to send to the USSD session.
+    * @return An asynchronous handler to retrieve the USSD response to the sent message.
+    */
+  /* CompleteClass */
+  override def sendMessageAndGetReplyAsync(message: typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.UssdMessage): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.UssdReply] = js.native
+}
 
 /* static members */
 @JSGlobal("Windows.Networking.NetworkOperators.UssdSession")

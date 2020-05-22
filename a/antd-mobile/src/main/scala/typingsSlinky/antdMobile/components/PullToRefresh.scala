@@ -25,9 +25,13 @@ object PullToRefresh {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
+    def damping(value: Double): this.type = set("damping", value.asInstanceOf[js.Any])
+    @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
     def refreshing(value: Boolean): this.type = set("refreshing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scale(value: Double): this.type = set("scale", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
@@ -35,14 +39,13 @@ object PullToRefresh {
   def withProps(p: PropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply(
-    damping: Double,
     direction: down | up,
     distanceToRefresh: Double,
     getScrollContainer: () => TagMod[Any],
     indicator: Indicator,
     onRefresh: () => Unit
   ): Builder = {
-    val __props = js.Dynamic.literal(damping = damping.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], distanceToRefresh = distanceToRefresh.asInstanceOf[js.Any], getScrollContainer = js.Any.fromFunction0(getScrollContainer), indicator = indicator.asInstanceOf[js.Any], onRefresh = js.Any.fromFunction0(onRefresh))
+    val __props = js.Dynamic.literal(direction = direction.asInstanceOf[js.Any], distanceToRefresh = distanceToRefresh.asInstanceOf[js.Any], getScrollContainer = js.Any.fromFunction0(getScrollContainer), indicator = indicator.asInstanceOf[js.Any], onRefresh = js.Any.fromFunction0(onRefresh))
     new Builder(js.Array(this.component, __props.asInstanceOf[PropsType]))
   }
 }

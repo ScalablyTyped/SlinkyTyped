@@ -8,23 +8,22 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<{  hostname  :string,   name  :string,   version  :string,   ip  :string,   swaggerSpec  :std.Record<any, any>,   uriPath  :string,   timelineBucketDuration  :number,   durationBuckets  :std.Array<number>,   requestSizeBuckets  :std.Array<number>,   responseSizeBuckets  :std.Array<number>,   apdexThreshold  :number, onResponseFinish (req : node.http.IncomingMessage, res : node.http.ServerResponse, rrr : swagger-stats.swagger-stats.RequestResponseRecord): void,   authentication  :boolean, onAuthenticate (req : node.http.IncomingMessage, username : string, password : string): boolean,   sessionMaxAge  :number,   elasticsearch  :string,   elasticsearchIndexPrefix  :string,   elasticsearchUsername  :string,   elasticsearchPassword  :string,   swaggerOnly  :boolean,   metricsPrefix  :string,   enableEgress  :boolean}> */
-@js.native
 trait SWStats extends js.Object {
-  var apdexThreshold: js.UndefOr[Double] = js.native
-  var authentication: js.UndefOr[Boolean] = js.native
-  var durationBuckets: js.UndefOr[js.Array[Double]] = js.native
-  var elasticsearch: js.UndefOr[String] = js.native
-  var elasticsearchIndexPrefix: js.UndefOr[String] = js.native
-  var elasticsearchPassword: js.UndefOr[String] = js.native
-  var elasticsearchUsername: js.UndefOr[String] = js.native
-  var enableEgress: js.UndefOr[Boolean] = js.native
-  var hostname: js.UndefOr[String] = js.native
-  var ip: js.UndefOr[String] = js.native
-  var metricsPrefix: js.UndefOr[String] = js.native
-  var name: js.UndefOr[String] = js.native
+  var apdexThreshold: js.UndefOr[Double] = js.undefined
+  var authentication: js.UndefOr[Boolean] = js.undefined
+  var durationBuckets: js.UndefOr[js.Array[Double]] = js.undefined
+  var elasticsearch: js.UndefOr[String] = js.undefined
+  var elasticsearchIndexPrefix: js.UndefOr[String] = js.undefined
+  var elasticsearchPassword: js.UndefOr[String] = js.undefined
+  var elasticsearchUsername: js.UndefOr[String] = js.undefined
+  var enableEgress: js.UndefOr[Boolean] = js.undefined
+  var hostname: js.UndefOr[String] = js.undefined
+  var ip: js.UndefOr[String] = js.undefined
+  var metricsPrefix: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
   var onAuthenticate: js.UndefOr[
     js.Function3[/* req */ IncomingMessage, /* username */ String, /* password */ String, Boolean]
-  ] = js.native
+  ] = js.undefined
   var onResponseFinish: js.UndefOr[
     js.Function3[
       /* req */ IncomingMessage, 
@@ -32,296 +31,67 @@ trait SWStats extends js.Object {
       /* rrr */ RequestResponseRecord, 
       Unit
     ]
-  ] = js.native
-  var requestSizeBuckets: js.UndefOr[js.Array[Double]] = js.native
-  var responseSizeBuckets: js.UndefOr[js.Array[Double]] = js.native
-  var sessionMaxAge: js.UndefOr[Double] = js.native
-  var swaggerOnly: js.UndefOr[Boolean] = js.native
-  var swaggerSpec: js.UndefOr[Record[_, _]] = js.native
-  var timelineBucketDuration: js.UndefOr[Double] = js.native
-  var uriPath: js.UndefOr[String] = js.native
-  var version: js.UndefOr[String] = js.native
+  ] = js.undefined
+  var requestSizeBuckets: js.UndefOr[js.Array[Double]] = js.undefined
+  var responseSizeBuckets: js.UndefOr[js.Array[Double]] = js.undefined
+  var sessionMaxAge: js.UndefOr[Double] = js.undefined
+  var swaggerOnly: js.UndefOr[Boolean] = js.undefined
+  var swaggerSpec: js.UndefOr[Record[_, _]] = js.undefined
+  var timelineBucketDuration: js.UndefOr[Double] = js.undefined
+  var uriPath: js.UndefOr[String] = js.undefined
+  var version: js.UndefOr[String] = js.undefined
 }
 
 object SWStats {
   @scala.inline
-  def apply(): SWStats = {
+  def apply(
+    apdexThreshold: js.UndefOr[Double] = js.undefined,
+    authentication: js.UndefOr[Boolean] = js.undefined,
+    durationBuckets: js.Array[Double] = null,
+    elasticsearch: String = null,
+    elasticsearchIndexPrefix: String = null,
+    elasticsearchPassword: String = null,
+    elasticsearchUsername: String = null,
+    enableEgress: js.UndefOr[Boolean] = js.undefined,
+    hostname: String = null,
+    ip: String = null,
+    metricsPrefix: String = null,
+    name: String = null,
+    onAuthenticate: (/* req */ IncomingMessage, /* username */ String, /* password */ String) => Boolean = null,
+    onResponseFinish: (/* req */ IncomingMessage, /* res */ ServerResponse, /* rrr */ RequestResponseRecord) => Unit = null,
+    requestSizeBuckets: js.Array[Double] = null,
+    responseSizeBuckets: js.Array[Double] = null,
+    sessionMaxAge: js.UndefOr[Double] = js.undefined,
+    swaggerOnly: js.UndefOr[Boolean] = js.undefined,
+    swaggerSpec: Record[_, _] = null,
+    timelineBucketDuration: js.UndefOr[Double] = js.undefined,
+    uriPath: String = null,
+    version: String = null
+  ): SWStats = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(apdexThreshold)) __obj.updateDynamic("apdexThreshold")(apdexThreshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(authentication)) __obj.updateDynamic("authentication")(authentication.get.asInstanceOf[js.Any])
+    if (durationBuckets != null) __obj.updateDynamic("durationBuckets")(durationBuckets.asInstanceOf[js.Any])
+    if (elasticsearch != null) __obj.updateDynamic("elasticsearch")(elasticsearch.asInstanceOf[js.Any])
+    if (elasticsearchIndexPrefix != null) __obj.updateDynamic("elasticsearchIndexPrefix")(elasticsearchIndexPrefix.asInstanceOf[js.Any])
+    if (elasticsearchPassword != null) __obj.updateDynamic("elasticsearchPassword")(elasticsearchPassword.asInstanceOf[js.Any])
+    if (elasticsearchUsername != null) __obj.updateDynamic("elasticsearchUsername")(elasticsearchUsername.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableEgress)) __obj.updateDynamic("enableEgress")(enableEgress.get.asInstanceOf[js.Any])
+    if (hostname != null) __obj.updateDynamic("hostname")(hostname.asInstanceOf[js.Any])
+    if (ip != null) __obj.updateDynamic("ip")(ip.asInstanceOf[js.Any])
+    if (metricsPrefix != null) __obj.updateDynamic("metricsPrefix")(metricsPrefix.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (onAuthenticate != null) __obj.updateDynamic("onAuthenticate")(js.Any.fromFunction3(onAuthenticate))
+    if (onResponseFinish != null) __obj.updateDynamic("onResponseFinish")(js.Any.fromFunction3(onResponseFinish))
+    if (requestSizeBuckets != null) __obj.updateDynamic("requestSizeBuckets")(requestSizeBuckets.asInstanceOf[js.Any])
+    if (responseSizeBuckets != null) __obj.updateDynamic("responseSizeBuckets")(responseSizeBuckets.asInstanceOf[js.Any])
+    if (!js.isUndefined(sessionMaxAge)) __obj.updateDynamic("sessionMaxAge")(sessionMaxAge.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(swaggerOnly)) __obj.updateDynamic("swaggerOnly")(swaggerOnly.get.asInstanceOf[js.Any])
+    if (swaggerSpec != null) __obj.updateDynamic("swaggerSpec")(swaggerSpec.asInstanceOf[js.Any])
+    if (!js.isUndefined(timelineBucketDuration)) __obj.updateDynamic("timelineBucketDuration")(timelineBucketDuration.get.asInstanceOf[js.Any])
+    if (uriPath != null) __obj.updateDynamic("uriPath")(uriPath.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[SWStats]
   }
-  @scala.inline
-  implicit class SWStatsOps[Self <: SWStats] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApdexThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apdexThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApdexThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apdexThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthentication(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authentication")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthentication: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authentication")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDurationBuckets(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durationBuckets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDurationBuckets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durationBuckets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElasticsearch(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elasticsearch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElasticsearch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elasticsearch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElasticsearchIndexPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elasticsearchIndexPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElasticsearchIndexPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elasticsearchIndexPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElasticsearchPassword(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elasticsearchPassword")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElasticsearchPassword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elasticsearchPassword")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElasticsearchUsername(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elasticsearchUsername")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElasticsearchUsername: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elasticsearchUsername")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableEgress(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableEgress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableEgress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableEgress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHostname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHostname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetricsPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricsPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricsPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricsPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAuthenticate(value: (/* req */ IncomingMessage, /* username */ String, /* password */ String) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAuthenticate")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAuthenticate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAuthenticate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnResponseFinish(
-      value: (/* req */ IncomingMessage, /* res */ ServerResponse, /* rrr */ RequestResponseRecord) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResponseFinish")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnResponseFinish: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResponseFinish")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestSizeBuckets(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestSizeBuckets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestSizeBuckets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestSizeBuckets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseSizeBuckets(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseSizeBuckets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseSizeBuckets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseSizeBuckets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionMaxAge(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionMaxAge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionMaxAge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionMaxAge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSwaggerOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swaggerOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSwaggerOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swaggerOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSwaggerSpec(value: Record[_, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swaggerSpec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSwaggerSpec: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swaggerSpec")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimelineBucketDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timelineBucketDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimelineBucketDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timelineBucketDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUriPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uriPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUriPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uriPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

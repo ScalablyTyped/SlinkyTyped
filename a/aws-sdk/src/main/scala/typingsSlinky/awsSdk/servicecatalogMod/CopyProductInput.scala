@@ -38,89 +38,22 @@ trait CopyProductInput extends js.Object {
 
 object CopyProductInput {
   @scala.inline
-  def apply(IdempotencyToken: IdempotencyToken, SourceProductArn: ProductArn): CopyProductInput = {
+  def apply(
+    IdempotencyToken: IdempotencyToken,
+    SourceProductArn: ProductArn,
+    AcceptLanguage: AcceptLanguage = null,
+    CopyOptions: CopyOptions = null,
+    SourceProvisioningArtifactIdentifiers: SourceProvisioningArtifactProperties = null,
+    TargetProductId: Id = null,
+    TargetProductName: ProductViewName = null
+  ): CopyProductInput = {
     val __obj = js.Dynamic.literal(IdempotencyToken = IdempotencyToken.asInstanceOf[js.Any], SourceProductArn = SourceProductArn.asInstanceOf[js.Any])
+    if (AcceptLanguage != null) __obj.updateDynamic("AcceptLanguage")(AcceptLanguage.asInstanceOf[js.Any])
+    if (CopyOptions != null) __obj.updateDynamic("CopyOptions")(CopyOptions.asInstanceOf[js.Any])
+    if (SourceProvisioningArtifactIdentifiers != null) __obj.updateDynamic("SourceProvisioningArtifactIdentifiers")(SourceProvisioningArtifactIdentifiers.asInstanceOf[js.Any])
+    if (TargetProductId != null) __obj.updateDynamic("TargetProductId")(TargetProductId.asInstanceOf[js.Any])
+    if (TargetProductName != null) __obj.updateDynamic("TargetProductName")(TargetProductName.asInstanceOf[js.Any])
     __obj.asInstanceOf[CopyProductInput]
   }
-  @scala.inline
-  implicit class CopyProductInputOps[Self <: CopyProductInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIdempotencyToken(value: IdempotencyToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdempotencyToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceProductArn(value: ProductArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceProductArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAcceptLanguage(value: AcceptLanguage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcceptLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCopyOptions(value: CopyOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CopyOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCopyOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CopyOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceProvisioningArtifactIdentifiers(value: SourceProvisioningArtifactProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceProvisioningArtifactIdentifiers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceProvisioningArtifactIdentifiers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceProvisioningArtifactIdentifiers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetProductId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetProductId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetProductId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetProductId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetProductName(value: ProductViewName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetProductName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetProductName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetProductName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

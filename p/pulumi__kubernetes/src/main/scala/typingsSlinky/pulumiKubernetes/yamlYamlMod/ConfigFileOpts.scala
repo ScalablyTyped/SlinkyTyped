@@ -5,15 +5,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConfigFileOpts extends js.Object {
   /** Path or a URL that uniquely identifies a file. */
-  var file: js.UndefOr[String] = js.native
+  var file: js.UndefOr[String] = js.undefined
   /**
     * An optional prefix for the auto-generated resource names.
     * Example: A resource created with resourcePrefix="foo" would produce a resource named "foo-resourceName".
     */
-  var resourcePrefix: js.UndefOr[String] = js.native
+  var resourcePrefix: js.UndefOr[String] = js.undefined
   /**
     * A set of transformations to apply to Kubernetes resource definitions before registering
     * with engine.
@@ -36,58 +35,21 @@ trait ConfigFileOpts extends js.Object {
     * ]
     * ```
     */
-  var transformations: js.UndefOr[js.Array[js.Function2[/* o */ _, /* opts */ CustomResourceOptions, Unit]]] = js.native
+  var transformations: js.UndefOr[js.Array[js.Function2[/* o */ _, /* opts */ CustomResourceOptions, Unit]]] = js.undefined
 }
 
 object ConfigFileOpts {
   @scala.inline
-  def apply(): ConfigFileOpts = {
+  def apply(
+    file: String = null,
+    resourcePrefix: String = null,
+    transformations: js.Array[js.Function2[/* o */ _, /* opts */ CustomResourceOptions, Unit]] = null
+  ): ConfigFileOpts = {
     val __obj = js.Dynamic.literal()
+    if (file != null) __obj.updateDynamic("file")(file.asInstanceOf[js.Any])
+    if (resourcePrefix != null) __obj.updateDynamic("resourcePrefix")(resourcePrefix.asInstanceOf[js.Any])
+    if (transformations != null) __obj.updateDynamic("transformations")(transformations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigFileOpts]
   }
-  @scala.inline
-  implicit class ConfigFileOptsOps[Self <: ConfigFileOpts] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourcePrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourcePrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourcePrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourcePrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransformations(value: js.Array[js.Function2[/* o */ _, /* opts */ CustomResourceOptions, Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransformations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,63 +6,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of an OpenUrlAction. */
-@js.native
 trait IOpenUrlAction extends js.Object {
   /** OpenUrlAction url */
-  var url: js.UndefOr[String | Null] = js.native
+  var url: js.UndefOr[String | Null] = js.undefined
   /** OpenUrlAction urlTypeHint */
-  var urlTypeHint: js.UndefOr[UrlTypeHint | Null] = js.native
+  var urlTypeHint: js.UndefOr[UrlTypeHint | Null] = js.undefined
 }
 
 object IOpenUrlAction {
   @scala.inline
-  def apply(): IOpenUrlAction = {
+  def apply(
+    url: js.UndefOr[Null | String] = js.undefined,
+    urlTypeHint: js.UndefOr[Null | UrlTypeHint] = js.undefined
+  ): IOpenUrlAction = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(url)) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
+    if (!js.isUndefined(urlTypeHint)) __obj.updateDynamic("urlTypeHint")(urlTypeHint.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOpenUrlAction]
   }
-  @scala.inline
-  implicit class IOpenUrlActionOps[Self <: IOpenUrlAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrlNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(null)
-        ret
-    }
-    @scala.inline
-    def withUrlTypeHint(value: UrlTypeHint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlTypeHint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrlTypeHint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlTypeHint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrlTypeHintNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlTypeHint")(null)
-        ret
-    }
-  }
-  
 }
 

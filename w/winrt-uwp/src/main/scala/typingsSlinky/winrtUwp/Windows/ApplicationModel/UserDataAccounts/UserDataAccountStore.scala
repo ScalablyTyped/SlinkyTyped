@@ -7,25 +7,24 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a data store that contains user accounts. */
-@js.native
 trait UserDataAccountStore extends js.Object {
   /**
     * Asynchronously creates a user data account.
     * @param userDisplayName A string containing the user name that is suitable for display.
     * @return Returns the newly created UserDataAccount .
     */
-  def createAccountAsync(userDisplayName: String): IPromiseWithIAsyncOperation[UserDataAccount] = js.native
+  def createAccountAsync(userDisplayName: String): IPromiseWithIAsyncOperation[UserDataAccount]
   /**
     * Returns a collection of UserDataAccount objects from the store based on the UserDataAccountStoreAccessType value passed into RequestStoreAsync .
     * @return Returns the collection of user data accounts, scoped by access request.
     */
-  def findAccountsAsync(): IPromiseWithIAsyncOperation[IVectorView[_]] = js.native
+  def findAccountsAsync(): IPromiseWithIAsyncOperation[IVectorView[_]]
   /**
     * Asynchronously gets the specified account.
     * @param id The Id string identifying the account.
     * @return Returns the UserDataAccount identified by the id parameter.
     */
-  def getAccountAsync(id: String): IPromiseWithIAsyncOperation[UserDataAccount] = js.native
+  def getAccountAsync(id: String): IPromiseWithIAsyncOperation[UserDataAccount]
 }
 
 object UserDataAccountStore {
@@ -38,31 +37,5 @@ object UserDataAccountStore {
     val __obj = js.Dynamic.literal(createAccountAsync = js.Any.fromFunction1(createAccountAsync), findAccountsAsync = js.Any.fromFunction0(findAccountsAsync), getAccountAsync = js.Any.fromFunction1(getAccountAsync))
     __obj.asInstanceOf[UserDataAccountStore]
   }
-  @scala.inline
-  implicit class UserDataAccountStoreOps[Self <: UserDataAccountStore] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateAccountAsync(value: String => IPromiseWithIAsyncOperation[UserDataAccount]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createAccountAsync")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFindAccountsAsync(value: () => IPromiseWithIAsyncOperation[IVectorView[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findAccountsAsync")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetAccountAsync(value: String => IPromiseWithIAsyncOperation[UserDataAccount]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAccountAsync")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

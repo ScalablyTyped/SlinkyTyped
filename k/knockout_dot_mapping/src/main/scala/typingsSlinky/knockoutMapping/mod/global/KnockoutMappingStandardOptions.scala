@@ -4,103 +4,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait KnockoutMappingStandardOptions
-  extends KnockoutMappingOptions[js.Any] {
-  var copy: js.UndefOr[js.Array[String]] = js.native
+trait KnockoutMappingStandardOptions extends js.Object {
+  var copy: js.UndefOr[js.Array[String]] = js.undefined
    // Undocumented
-  var deferEvaluation: js.UndefOr[Boolean] = js.native
-  var ignore: js.UndefOr[js.Array[String]] = js.native
-  var include: js.UndefOr[js.Array[String]] = js.native
-  var mappedProperties: js.UndefOr[js.Array[String]] = js.native
-  var observe: js.UndefOr[js.Array[String]] = js.native
+  var deferEvaluation: js.UndefOr[Boolean] = js.undefined
+  var ignore: js.UndefOr[js.Array[String]] = js.undefined
+  var include: js.UndefOr[js.Array[String]] = js.undefined
+  var mappedProperties: js.UndefOr[js.Array[String]] = js.undefined
+  var observe: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object KnockoutMappingStandardOptions {
   @scala.inline
-  def apply(): KnockoutMappingStandardOptions = {
+  def apply(
+    copy: js.Array[String] = null,
+    deferEvaluation: js.UndefOr[Boolean] = js.undefined,
+    ignore: js.Array[String] = null,
+    include: js.Array[String] = null,
+    mappedProperties: js.Array[String] = null,
+    observe: js.Array[String] = null
+  ): KnockoutMappingStandardOptions = {
     val __obj = js.Dynamic.literal()
+    if (copy != null) __obj.updateDynamic("copy")(copy.asInstanceOf[js.Any])
+    if (!js.isUndefined(deferEvaluation)) __obj.updateDynamic("deferEvaluation")(deferEvaluation.get.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
+    if (mappedProperties != null) __obj.updateDynamic("mappedProperties")(mappedProperties.asInstanceOf[js.Any])
+    if (observe != null) __obj.updateDynamic("observe")(observe.asInstanceOf[js.Any])
     __obj.asInstanceOf[KnockoutMappingStandardOptions]
   }
-  @scala.inline
-  implicit class KnockoutMappingStandardOptionsOps[Self <: KnockoutMappingStandardOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCopy(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCopy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeferEvaluation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deferEvaluation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeferEvaluation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deferEvaluation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnore(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInclude(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMappedProperties(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mappedProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMappedProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mappedProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObserve(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("observe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObserve: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("observe")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

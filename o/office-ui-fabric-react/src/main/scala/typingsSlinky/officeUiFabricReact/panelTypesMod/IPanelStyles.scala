@@ -5,331 +5,105 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IPanelStyles extends js.Object {
   /**
     * Style for the close button IconButton element.
+    * @deprecated Use `subComponentStyles.closeButton` instead.
     */
-  var closeButton: IStyle = js.native
+  var closeButton: js.UndefOr[IStyle] = js.undefined
   /**
     * Style for the navigation container element.
     */
-  var commands: IStyle = js.native
+  var commands: IStyle
   /**
     * Style for the body div element.
     */
-  var content: IStyle = js.native
+  var content: IStyle
   /**
     * Style for the Body and Footer container element.
     */
-  var contentInner: IStyle = js.native
+  var contentInner: IStyle
   /**
     * Style for the footer div element.
     */
-  var footer: IStyle = js.native
+  var footer: IStyle
   /**
     * Style for the inner footer div element.
     */
-  var footerInner: IStyle = js.native
+  var footerInner: IStyle
   /**
     * Style for the header container div element.
     */
-  var header: IStyle = js.native
+  var header: IStyle
   /**
     * Style for the header text div element.
     */
-  var headerText: IStyle = js.native
+  var headerText: IStyle
   /**
     * Style for the hidden element.
     */
-  var hiddenPanel: IStyle = js.native
+  var hiddenPanel: IStyle
   /**
     * Style for the main section element.
     */
-  var main: IStyle = js.native
+  var main: IStyle
   /**
     * Style for the close button container element.
     */
-  var navigation: IStyle = js.native
+  var navigation: IStyle
   /**
     * Style for the overlay element.
     */
-  var overlay: IStyle = js.native
+  var overlay: IStyle
   /**
     * Style for the root element.
     */
-  var root: IStyle = js.native
+  var root: IStyle
   /**
     * Style for the scrollable content area container element.
     */
-  var scrollableContent: IStyle = js.native
+  var scrollableContent: IStyle
+  /**
+    * Styling for subcomponents.
+    */
+  var subComponentStyles: IPanelSubComponentStyles
 }
 
 object IPanelStyles {
   @scala.inline
-  def apply(): IPanelStyles = {
-    val __obj = js.Dynamic.literal()
+  def apply(
+    subComponentStyles: IPanelSubComponentStyles,
+    closeButton: js.UndefOr[Null | IStyle] = js.undefined,
+    commands: js.UndefOr[Null | IStyle] = js.undefined,
+    content: js.UndefOr[Null | IStyle] = js.undefined,
+    contentInner: js.UndefOr[Null | IStyle] = js.undefined,
+    footer: js.UndefOr[Null | IStyle] = js.undefined,
+    footerInner: js.UndefOr[Null | IStyle] = js.undefined,
+    header: js.UndefOr[Null | IStyle] = js.undefined,
+    headerText: js.UndefOr[Null | IStyle] = js.undefined,
+    hiddenPanel: js.UndefOr[Null | IStyle] = js.undefined,
+    main: js.UndefOr[Null | IStyle] = js.undefined,
+    navigation: js.UndefOr[Null | IStyle] = js.undefined,
+    overlay: js.UndefOr[Null | IStyle] = js.undefined,
+    root: js.UndefOr[Null | IStyle] = js.undefined,
+    scrollableContent: js.UndefOr[Null | IStyle] = js.undefined
+  ): IPanelStyles = {
+    val __obj = js.Dynamic.literal(subComponentStyles = subComponentStyles.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeButton)) __obj.updateDynamic("closeButton")(closeButton.asInstanceOf[js.Any])
+    if (!js.isUndefined(commands)) __obj.updateDynamic("commands")(commands.asInstanceOf[js.Any])
+    if (!js.isUndefined(content)) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (!js.isUndefined(contentInner)) __obj.updateDynamic("contentInner")(contentInner.asInstanceOf[js.Any])
+    if (!js.isUndefined(footer)) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
+    if (!js.isUndefined(footerInner)) __obj.updateDynamic("footerInner")(footerInner.asInstanceOf[js.Any])
+    if (!js.isUndefined(header)) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
+    if (!js.isUndefined(headerText)) __obj.updateDynamic("headerText")(headerText.asInstanceOf[js.Any])
+    if (!js.isUndefined(hiddenPanel)) __obj.updateDynamic("hiddenPanel")(hiddenPanel.asInstanceOf[js.Any])
+    if (!js.isUndefined(main)) __obj.updateDynamic("main")(main.asInstanceOf[js.Any])
+    if (!js.isUndefined(navigation)) __obj.updateDynamic("navigation")(navigation.asInstanceOf[js.Any])
+    if (!js.isUndefined(overlay)) __obj.updateDynamic("overlay")(overlay.asInstanceOf[js.Any])
+    if (!js.isUndefined(root)) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollableContent)) __obj.updateDynamic("scrollableContent")(scrollableContent.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPanelStyles]
   }
-  @scala.inline
-  implicit class IPanelStylesOps[Self <: IPanelStyles] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloseButton(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseButtonNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeButton")(null)
-        ret
-    }
-    @scala.inline
-    def withCommands(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommands: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCommandsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(null)
-        ret
-    }
-    @scala.inline
-    def withContent(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(null)
-        ret
-    }
-    @scala.inline
-    def withContentInner(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentInner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentInner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentInner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentInnerNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentInner")(null)
-        ret
-    }
-    @scala.inline
-    def withFooter(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFooter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFooterNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(null)
-        ret
-    }
-    @scala.inline
-    def withFooterInner(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footerInner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFooterInner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footerInner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFooterInnerNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footerInner")(null)
-        ret
-    }
-    @scala.inline
-    def withHeader(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(null)
-        ret
-    }
-    @scala.inline
-    def withHeaderText(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderTextNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerText")(null)
-        ret
-    }
-    @scala.inline
-    def withHiddenPanel(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenPanel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHiddenPanel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenPanel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHiddenPanelNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenPanel")(null)
-        ret
-    }
-    @scala.inline
-    def withMain(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("main")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("main")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMainNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("main")(null)
-        ret
-    }
-    @scala.inline
-    def withNavigation(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavigation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavigationNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigation")(null)
-        ret
-    }
-    @scala.inline
-    def withOverlay(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverlayNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(null)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(null)
-        ret
-    }
-    @scala.inline
-    def withScrollableContent(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollableContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollableContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollableContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollableContentNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollableContent")(null)
-        ret
-    }
-  }
-  
 }
 

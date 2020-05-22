@@ -5,103 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a Part. */
-@js.native
 trait IPart extends js.Object {
   /** Part alias */
-  var alias: js.UndefOr[String | Null] = js.native
+  var alias: js.UndefOr[String | Null] = js.undefined
   /** Part entityType */
-  var entityType: js.UndefOr[String | Null] = js.native
+  var entityType: js.UndefOr[String | Null] = js.undefined
   /** Part text */
-  var text: js.UndefOr[String | Null] = js.native
+  var text: js.UndefOr[String | Null] = js.undefined
   /** Part userDefined */
-  var userDefined: js.UndefOr[Boolean | Null] = js.native
+  var userDefined: js.UndefOr[Boolean | Null] = js.undefined
 }
 
 object IPart {
   @scala.inline
-  def apply(): IPart = {
+  def apply(
+    alias: js.UndefOr[Null | String] = js.undefined,
+    entityType: js.UndefOr[Null | String] = js.undefined,
+    text: js.UndefOr[Null | String] = js.undefined,
+    userDefined: js.UndefOr[Null | Boolean] = js.undefined
+  ): IPart = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(alias)) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (!js.isUndefined(entityType)) __obj.updateDynamic("entityType")(entityType.asInstanceOf[js.Any])
+    if (!js.isUndefined(text)) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (!js.isUndefined(userDefined)) __obj.updateDynamic("userDefined")(userDefined.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPart]
   }
-  @scala.inline
-  implicit class IPartOps[Self <: IPart] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlias(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlias: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAliasNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(null)
-        ret
-    }
-    @scala.inline
-    def withEntityType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntityType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntityTypeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityType")(null)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(null)
-        ret
-    }
-    @scala.inline
-    def withUserDefined(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userDefined")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserDefined: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userDefined")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserDefinedNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userDefined")(null)
-        ret
-    }
-  }
-  
 }
 

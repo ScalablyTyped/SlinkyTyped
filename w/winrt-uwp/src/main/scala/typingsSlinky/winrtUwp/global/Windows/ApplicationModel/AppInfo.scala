@@ -8,5 +8,18 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.AppInfo")
 @js.native
 abstract class AppInfo ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.AppInfo
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.AppInfo {
+  /** An identifier that uniquely identifies the app. */
+  /* CompleteClass */
+  override var appUserModelId: String = js.native
+  /** Gets information that describes the application. */
+  /* CompleteClass */
+  override var displayInfo: typingsSlinky.winrtUwp.Windows.ApplicationModel.AppDisplayInfo = js.native
+  /** Gets the app identifier. */
+  /* CompleteClass */
+  override var id: String = js.native
+  /** An identifier that uniquely identifies the app's package. */
+  /* CompleteClass */
+  override var packageFamilyName: String = js.native
+}
 

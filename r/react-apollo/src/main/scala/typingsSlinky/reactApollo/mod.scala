@@ -21,7 +21,7 @@ import typingsSlinky.apolloReactHooks.typesMod.LazyQueryHookOptions
 import typingsSlinky.apolloReactHooks.typesMod.MutationHookOptions
 import typingsSlinky.apolloReactHooks.typesMod.MutationTuple
 import typingsSlinky.apolloReactHooks.typesMod.QueryHookOptions
-import typingsSlinky.apolloReactHooks.typesMod.QueryLazyOptions
+import typingsSlinky.apolloReactHooks.typesMod.QueryTuple
 import typingsSlinky.apolloReactHooks.typesMod.SubscriptionHookOptions
 import typingsSlinky.apolloReactSsr.getDataFromTreeMod.GetMarkupFromTreeOptions
 import typingsSlinky.graphql.astMod.DocumentNode
@@ -57,14 +57,8 @@ object mod extends js.Object {
   def renderToStringWithData(component: ReactElement): js.Promise[String] = js.native
   def resetApolloContext(): Unit = js.native
   def useApolloClient(): default[js.Object] = js.native
-  def useLazyQuery[TData, TVariables](query: DocumentNode): js.Tuple2[
-    js.Function1[/* options */ js.UndefOr[QueryLazyOptions[TVariables]], Unit], 
-    QueryResult[TData, TVariables]
-  ] = js.native
-  def useLazyQuery[TData, TVariables](query: DocumentNode, options: LazyQueryHookOptions[TData, TVariables]): js.Tuple2[
-    js.Function1[/* options */ js.UndefOr[QueryLazyOptions[TVariables]], Unit], 
-    QueryResult[TData, TVariables]
-  ] = js.native
+  def useLazyQuery[TData, TVariables](query: DocumentNode): QueryTuple[TData, TVariables] = js.native
+  def useLazyQuery[TData, TVariables](query: DocumentNode, options: LazyQueryHookOptions[TData, TVariables]): QueryTuple[TData, TVariables] = js.native
   def useMutation[TData, TVariables](mutation: DocumentNode): MutationTuple[TData, TVariables] = js.native
   def useMutation[TData, TVariables](mutation: DocumentNode, options: MutationHookOptions[TData, TVariables]): MutationTuple[TData, TVariables] = js.native
   def useQuery[TData, TVariables](query: DocumentNode): QueryResult[TData, TVariables] = js.native

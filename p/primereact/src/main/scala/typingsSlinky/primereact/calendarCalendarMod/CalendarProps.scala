@@ -9,887 +9,213 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CalendarProps extends js.Object {
-  var appendTo: js.UndefOr[js.Any] = js.native
-  var ariaLabelledBy: js.UndefOr[String] = js.native
-  var autoZIndex: js.UndefOr[Boolean] = js.native
-  var baseZIndex: js.UndefOr[Double] = js.native
-  var className: js.UndefOr[String] = js.native
-  var clearButtonStyleClass: js.UndefOr[String] = js.native
-  var dateFormat: js.UndefOr[String] = js.native
-  var dateTemplate: js.UndefOr[js.Function1[/* dateMeta */ DateMetaData, TagMod[Any]]] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var disabledDates: js.UndefOr[js.Array[js.Date]] = js.native
-  var disabledDays: js.UndefOr[js.Array[Double]] = js.native
-  var footerTemplate: js.UndefOr[js.Function0[TagMod[Any]]] = js.native
-  var headerTemplate: js.UndefOr[js.Function0[TagMod[Any]]] = js.native
-  var hideOnDateTimeSelect: js.UndefOr[Boolean] = js.native
-  var hourFormat: js.UndefOr[String] = js.native
-  var icon: js.UndefOr[String] = js.native
-  var id: js.UndefOr[String] = js.native
-  var `inline`: js.UndefOr[Boolean] = js.native
-  var inputClassName: js.UndefOr[String] = js.native
-  var inputId: js.UndefOr[String] = js.native
-  var inputStyle: js.UndefOr[js.Object] = js.native
-  var locale: js.UndefOr[LocaleSettings] = js.native
-  var maxDate: js.UndefOr[js.Date] = js.native
-  var maxDateCount: js.UndefOr[Double] = js.native
-  var minDate: js.UndefOr[js.Date] = js.native
-  var monthNavigator: js.UndefOr[Boolean] = js.native
-  var name: js.UndefOr[String] = js.native
-  var numberOfMonths: js.UndefOr[Double] = js.native
-  var onBlur: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
-  var onChange: js.UndefOr[js.Function1[/* e */ OriginalEventEvent, Unit]] = js.native
-  var onClearButtonClick: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
-  var onFocus: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
-  var onInput: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
-  var onSelect: js.UndefOr[js.Function1[/* e */ OriginalEventValue, Unit]] = js.native
-  var onTodayButtonClick: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
-  var onViewDateChange: js.UndefOr[js.Function1[/* e */ OriginalEventValue, Unit]] = js.native
-  var panelClassName: js.UndefOr[String] = js.native
-  var panelStyle: js.UndefOr[js.Object] = js.native
-  var placeholder: js.UndefOr[String] = js.native
-  var readOnlyInput: js.UndefOr[Boolean] = js.native
-  var required: js.UndefOr[Boolean] = js.native
-  var selectOtherMonths: js.UndefOr[Boolean] = js.native
-  var selectionMode: js.UndefOr[String] = js.native
-  var shortYearCutoff: js.UndefOr[String] = js.native
-  var showButtonBar: js.UndefOr[Boolean] = js.native
-  var showIcon: js.UndefOr[Boolean] = js.native
-  var showOnFocus: js.UndefOr[Boolean] = js.native
-  var showOtherMonths: js.UndefOr[Boolean] = js.native
-  var showSeconds: js.UndefOr[Boolean] = js.native
-  var showTime: js.UndefOr[Boolean] = js.native
-  var showWeek: js.UndefOr[Boolean] = js.native
-  var stepHour: js.UndefOr[Double] = js.native
-  var stepMinute: js.UndefOr[Double] = js.native
-  var stepSecond: js.UndefOr[Double] = js.native
-  var style: js.UndefOr[js.Object] = js.native
-  var tabIndex: js.UndefOr[String] = js.native
-  var timeOnly: js.UndefOr[Boolean] = js.native
-  var todayButtonClassName: js.UndefOr[String] = js.native
-  var tooltip: js.UndefOr[js.Any] = js.native
-  var tooltipOptions: js.UndefOr[TooltipOptions] = js.native
-  var touchUI: js.UndefOr[Boolean] = js.native
-  var value: js.UndefOr[js.Date | js.Array[js.Date]] = js.native
-  var view: js.UndefOr[String] = js.native
-  var viewDate: js.UndefOr[js.Date] = js.native
-  var yearNavigator: js.UndefOr[Boolean] = js.native
-  var yearRange: js.UndefOr[String] = js.native
+  var appendTo: js.UndefOr[js.Any] = js.undefined
+  var ariaLabelledBy: js.UndefOr[String] = js.undefined
+  var autoZIndex: js.UndefOr[Boolean] = js.undefined
+  var baseZIndex: js.UndefOr[Double] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var clearButtonStyleClass: js.UndefOr[String] = js.undefined
+  var dateFormat: js.UndefOr[String] = js.undefined
+  var dateTemplate: js.UndefOr[js.Function1[/* dateMeta */ DateMetaData, TagMod[Any]]] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var disabledDates: js.UndefOr[js.Array[js.Date]] = js.undefined
+  var disabledDays: js.UndefOr[js.Array[Double]] = js.undefined
+  var footerTemplate: js.UndefOr[js.Function0[TagMod[Any]]] = js.undefined
+  var headerTemplate: js.UndefOr[js.Function0[TagMod[Any]]] = js.undefined
+  var hideOnDateTimeSelect: js.UndefOr[Boolean] = js.undefined
+  var hourFormat: js.UndefOr[String] = js.undefined
+  var icon: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var `inline`: js.UndefOr[Boolean] = js.undefined
+  var inputClassName: js.UndefOr[String] = js.undefined
+  var inputId: js.UndefOr[String] = js.undefined
+  var inputStyle: js.UndefOr[js.Object] = js.undefined
+  var locale: js.UndefOr[LocaleSettings] = js.undefined
+  var maxDate: js.UndefOr[js.Date] = js.undefined
+  var maxDateCount: js.UndefOr[Double] = js.undefined
+  var minDate: js.UndefOr[js.Date] = js.undefined
+  var monthNavigator: js.UndefOr[Boolean] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var numberOfMonths: js.UndefOr[Double] = js.undefined
+  var onBlur: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.undefined
+  var onChange: js.UndefOr[js.Function1[/* e */ OriginalEventEvent, Unit]] = js.undefined
+  var onClearButtonClick: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.undefined
+  var onFocus: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.undefined
+  var onInput: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.undefined
+  var onSelect: js.UndefOr[js.Function1[/* e */ OriginalEventValue, Unit]] = js.undefined
+  var onTodayButtonClick: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.undefined
+  var onViewDateChange: js.UndefOr[js.Function1[/* e */ OriginalEventValue, Unit]] = js.undefined
+  var panelClassName: js.UndefOr[String] = js.undefined
+  var panelStyle: js.UndefOr[js.Object] = js.undefined
+  var placeholder: js.UndefOr[String] = js.undefined
+  var readOnlyInput: js.UndefOr[Boolean] = js.undefined
+  var required: js.UndefOr[Boolean] = js.undefined
+  var selectOtherMonths: js.UndefOr[Boolean] = js.undefined
+  var selectionMode: js.UndefOr[String] = js.undefined
+  var shortYearCutoff: js.UndefOr[String] = js.undefined
+  var showButtonBar: js.UndefOr[Boolean] = js.undefined
+  var showIcon: js.UndefOr[Boolean] = js.undefined
+  var showOnFocus: js.UndefOr[Boolean] = js.undefined
+  var showOtherMonths: js.UndefOr[Boolean] = js.undefined
+  var showSeconds: js.UndefOr[Boolean] = js.undefined
+  var showTime: js.UndefOr[Boolean] = js.undefined
+  var showWeek: js.UndefOr[Boolean] = js.undefined
+  var stepHour: js.UndefOr[Double] = js.undefined
+  var stepMinute: js.UndefOr[Double] = js.undefined
+  var stepSecond: js.UndefOr[Double] = js.undefined
+  var style: js.UndefOr[js.Object] = js.undefined
+  var tabIndex: js.UndefOr[String] = js.undefined
+  var timeOnly: js.UndefOr[Boolean] = js.undefined
+  var todayButtonClassName: js.UndefOr[String] = js.undefined
+  var tooltip: js.UndefOr[js.Any] = js.undefined
+  var tooltipOptions: js.UndefOr[TooltipOptions] = js.undefined
+  var touchUI: js.UndefOr[Boolean] = js.undefined
+  var value: js.UndefOr[js.Date | js.Array[js.Date]] = js.undefined
+  var view: js.UndefOr[String] = js.undefined
+  var viewDate: js.UndefOr[js.Date] = js.undefined
+  var yearNavigator: js.UndefOr[Boolean] = js.undefined
+  var yearRange: js.UndefOr[String] = js.undefined
 }
 
 object CalendarProps {
   @scala.inline
-  def apply(): CalendarProps = {
+  def apply(
+    appendTo: js.Any = null,
+    ariaLabelledBy: String = null,
+    autoZIndex: js.UndefOr[Boolean] = js.undefined,
+    baseZIndex: js.UndefOr[Double] = js.undefined,
+    className: String = null,
+    clearButtonStyleClass: String = null,
+    dateFormat: String = null,
+    dateTemplate: /* dateMeta */ DateMetaData => TagMod[Any] = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    disabledDates: js.Array[js.Date] = null,
+    disabledDays: js.Array[Double] = null,
+    footerTemplate: () => TagMod[Any] = null,
+    headerTemplate: () => TagMod[Any] = null,
+    hideOnDateTimeSelect: js.UndefOr[Boolean] = js.undefined,
+    hourFormat: String = null,
+    icon: String = null,
+    id: String = null,
+    `inline`: js.UndefOr[Boolean] = js.undefined,
+    inputClassName: String = null,
+    inputId: String = null,
+    inputStyle: js.Object = null,
+    locale: LocaleSettings = null,
+    maxDate: js.Date = null,
+    maxDateCount: js.UndefOr[Double] = js.undefined,
+    minDate: js.Date = null,
+    monthNavigator: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    numberOfMonths: js.UndefOr[Double] = js.undefined,
+    onBlur: /* event */ Event => Unit = null,
+    onChange: /* e */ OriginalEventEvent => Unit = null,
+    onClearButtonClick: /* event */ Event => Unit = null,
+    onFocus: /* event */ Event => Unit = null,
+    onInput: /* event */ Event => Unit = null,
+    onSelect: /* e */ OriginalEventValue => Unit = null,
+    onTodayButtonClick: /* event */ Event => Unit = null,
+    onViewDateChange: /* e */ OriginalEventValue => Unit = null,
+    panelClassName: String = null,
+    panelStyle: js.Object = null,
+    placeholder: String = null,
+    readOnlyInput: js.UndefOr[Boolean] = js.undefined,
+    required: js.UndefOr[Boolean] = js.undefined,
+    selectOtherMonths: js.UndefOr[Boolean] = js.undefined,
+    selectionMode: String = null,
+    shortYearCutoff: String = null,
+    showButtonBar: js.UndefOr[Boolean] = js.undefined,
+    showIcon: js.UndefOr[Boolean] = js.undefined,
+    showOnFocus: js.UndefOr[Boolean] = js.undefined,
+    showOtherMonths: js.UndefOr[Boolean] = js.undefined,
+    showSeconds: js.UndefOr[Boolean] = js.undefined,
+    showTime: js.UndefOr[Boolean] = js.undefined,
+    showWeek: js.UndefOr[Boolean] = js.undefined,
+    stepHour: js.UndefOr[Double] = js.undefined,
+    stepMinute: js.UndefOr[Double] = js.undefined,
+    stepSecond: js.UndefOr[Double] = js.undefined,
+    style: js.Object = null,
+    tabIndex: String = null,
+    timeOnly: js.UndefOr[Boolean] = js.undefined,
+    todayButtonClassName: String = null,
+    tooltip: js.Any = null,
+    tooltipOptions: TooltipOptions = null,
+    touchUI: js.UndefOr[Boolean] = js.undefined,
+    value: js.Date | js.Array[js.Date] = null,
+    view: String = null,
+    viewDate: js.Date = null,
+    yearNavigator: js.UndefOr[Boolean] = js.undefined,
+    yearRange: String = null
+  ): CalendarProps = {
     val __obj = js.Dynamic.literal()
+    if (appendTo != null) __obj.updateDynamic("appendTo")(appendTo.asInstanceOf[js.Any])
+    if (ariaLabelledBy != null) __obj.updateDynamic("ariaLabelledBy")(ariaLabelledBy.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoZIndex)) __obj.updateDynamic("autoZIndex")(autoZIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(baseZIndex)) __obj.updateDynamic("baseZIndex")(baseZIndex.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (clearButtonStyleClass != null) __obj.updateDynamic("clearButtonStyleClass")(clearButtonStyleClass.asInstanceOf[js.Any])
+    if (dateFormat != null) __obj.updateDynamic("dateFormat")(dateFormat.asInstanceOf[js.Any])
+    if (dateTemplate != null) __obj.updateDynamic("dateTemplate")(js.Any.fromFunction1(dateTemplate))
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (disabledDates != null) __obj.updateDynamic("disabledDates")(disabledDates.asInstanceOf[js.Any])
+    if (disabledDays != null) __obj.updateDynamic("disabledDays")(disabledDays.asInstanceOf[js.Any])
+    if (footerTemplate != null) __obj.updateDynamic("footerTemplate")(js.Any.fromFunction0(footerTemplate))
+    if (headerTemplate != null) __obj.updateDynamic("headerTemplate")(js.Any.fromFunction0(headerTemplate))
+    if (!js.isUndefined(hideOnDateTimeSelect)) __obj.updateDynamic("hideOnDateTimeSelect")(hideOnDateTimeSelect.get.asInstanceOf[js.Any])
+    if (hourFormat != null) __obj.updateDynamic("hourFormat")(hourFormat.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.get.asInstanceOf[js.Any])
+    if (inputClassName != null) __obj.updateDynamic("inputClassName")(inputClassName.asInstanceOf[js.Any])
+    if (inputId != null) __obj.updateDynamic("inputId")(inputId.asInstanceOf[js.Any])
+    if (inputStyle != null) __obj.updateDynamic("inputStyle")(inputStyle.asInstanceOf[js.Any])
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxDateCount)) __obj.updateDynamic("maxDateCount")(maxDateCount.get.asInstanceOf[js.Any])
+    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(monthNavigator)) __obj.updateDynamic("monthNavigator")(monthNavigator.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(numberOfMonths)) __obj.updateDynamic("numberOfMonths")(numberOfMonths.get.asInstanceOf[js.Any])
+    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onClearButtonClick != null) __obj.updateDynamic("onClearButtonClick")(js.Any.fromFunction1(onClearButtonClick))
+    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
+    if (onInput != null) __obj.updateDynamic("onInput")(js.Any.fromFunction1(onInput))
+    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
+    if (onTodayButtonClick != null) __obj.updateDynamic("onTodayButtonClick")(js.Any.fromFunction1(onTodayButtonClick))
+    if (onViewDateChange != null) __obj.updateDynamic("onViewDateChange")(js.Any.fromFunction1(onViewDateChange))
+    if (panelClassName != null) __obj.updateDynamic("panelClassName")(panelClassName.asInstanceOf[js.Any])
+    if (panelStyle != null) __obj.updateDynamic("panelStyle")(panelStyle.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (!js.isUndefined(readOnlyInput)) __obj.updateDynamic("readOnlyInput")(readOnlyInput.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectOtherMonths)) __obj.updateDynamic("selectOtherMonths")(selectOtherMonths.get.asInstanceOf[js.Any])
+    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
+    if (shortYearCutoff != null) __obj.updateDynamic("shortYearCutoff")(shortYearCutoff.asInstanceOf[js.Any])
+    if (!js.isUndefined(showButtonBar)) __obj.updateDynamic("showButtonBar")(showButtonBar.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showIcon)) __obj.updateDynamic("showIcon")(showIcon.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showOnFocus)) __obj.updateDynamic("showOnFocus")(showOnFocus.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showOtherMonths)) __obj.updateDynamic("showOtherMonths")(showOtherMonths.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showSeconds)) __obj.updateDynamic("showSeconds")(showSeconds.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showTime)) __obj.updateDynamic("showTime")(showTime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showWeek)) __obj.updateDynamic("showWeek")(showWeek.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stepHour)) __obj.updateDynamic("stepHour")(stepHour.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stepMinute)) __obj.updateDynamic("stepMinute")(stepMinute.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stepSecond)) __obj.updateDynamic("stepSecond")(stepSecond.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeOnly)) __obj.updateDynamic("timeOnly")(timeOnly.get.asInstanceOf[js.Any])
+    if (todayButtonClassName != null) __obj.updateDynamic("todayButtonClassName")(todayButtonClassName.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    if (tooltipOptions != null) __obj.updateDynamic("tooltipOptions")(tooltipOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(touchUI)) __obj.updateDynamic("touchUI")(touchUI.get.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
+    if (viewDate != null) __obj.updateDynamic("viewDate")(viewDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(yearNavigator)) __obj.updateDynamic("yearNavigator")(yearNavigator.get.asInstanceOf[js.Any])
+    if (yearRange != null) __obj.updateDynamic("yearRange")(yearRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[CalendarProps]
   }
-  @scala.inline
-  implicit class CalendarPropsOps[Self <: CalendarProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppendTo(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppendTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendTo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAriaLabelledBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaLabelledBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAriaLabelledBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaLabelledBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoZIndex(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoZIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoZIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoZIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseZIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseZIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseZIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseZIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClearButtonStyleClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearButtonStyleClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClearButtonStyleClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearButtonStyleClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDateFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDateTemplate(value: /* dateMeta */ DateMetaData => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateTemplate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDateTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabledDates(value: js.Array[js.Date]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledDates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabledDates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledDates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabledDays(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabledDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledDays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFooterTemplate(value: () => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footerTemplate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutFooterTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footerTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderTemplate(value: () => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerTemplate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutHeaderTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideOnDateTimeSelect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideOnDateTimeSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideOnDateTimeSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideOnDateTimeSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHourFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hourFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHourFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hourFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: LocaleSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDateCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDateCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDateCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDateCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonthNavigator(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monthNavigator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonthNavigator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monthNavigator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfMonths(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfMonths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfMonths: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfMonths")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBlur(value: /* event */ Event => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnBlur: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: /* e */ OriginalEventEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClearButtonClick(value: /* event */ Event => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClearButtonClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClearButtonClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClearButtonClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFocus(value: /* event */ Event => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnInput(value: /* event */ Event => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInput")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelect(value: /* e */ OriginalEventValue => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTodayButtonClick(value: /* event */ Event => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTodayButtonClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTodayButtonClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTodayButtonClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnViewDateChange(value: /* e */ OriginalEventValue => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onViewDateChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnViewDateChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onViewDateChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPanelClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panelClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPanelClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panelClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPanelStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panelStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPanelStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panelStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadOnlyInput(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnlyInput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadOnlyInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnlyInput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectOtherMonths(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectOtherMonths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectOtherMonths: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectOtherMonths")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShortYearCutoff(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortYearCutoff")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShortYearCutoff: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortYearCutoff")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowButtonBar(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showButtonBar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowButtonBar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showButtonBar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowIcon(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowOnFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showOnFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowOnFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showOnFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowOtherMonths(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showOtherMonths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowOtherMonths: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showOtherMonths")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowSeconds(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowTime(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowWeek(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showWeek")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowWeek: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showWeek")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStepHour(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepHour")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStepHour: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepHour")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStepMinute(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepMinute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStepMinute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepMinute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStepSecond(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepSecond")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStepSecond: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepSecond")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTabIndex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTabIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTodayButtonClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("todayButtonClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTodayButtonClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("todayButtonClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltipOptions(value: TooltipOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltipOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTouchUI(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchUI")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTouchUI: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchUI")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Date | js.Array[js.Date]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withView(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYearNavigator(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yearNavigator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYearNavigator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yearNavigator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYearRange(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yearRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYearRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yearRange")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

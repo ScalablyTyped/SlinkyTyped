@@ -14,65 +14,18 @@ trait H265ColorSpaceSettings extends js.Object {
 
 object H265ColorSpaceSettings {
   @scala.inline
-  def apply(): H265ColorSpaceSettings = {
+  def apply(
+    ColorSpacePassthroughSettings: ColorSpacePassthroughSettings = null,
+    Hdr10Settings: Hdr10Settings = null,
+    Rec601Settings: Rec601Settings = null,
+    Rec709Settings: Rec709Settings = null
+  ): H265ColorSpaceSettings = {
     val __obj = js.Dynamic.literal()
+    if (ColorSpacePassthroughSettings != null) __obj.updateDynamic("ColorSpacePassthroughSettings")(ColorSpacePassthroughSettings.asInstanceOf[js.Any])
+    if (Hdr10Settings != null) __obj.updateDynamic("Hdr10Settings")(Hdr10Settings.asInstanceOf[js.Any])
+    if (Rec601Settings != null) __obj.updateDynamic("Rec601Settings")(Rec601Settings.asInstanceOf[js.Any])
+    if (Rec709Settings != null) __obj.updateDynamic("Rec709Settings")(Rec709Settings.asInstanceOf[js.Any])
     __obj.asInstanceOf[H265ColorSpaceSettings]
   }
-  @scala.inline
-  implicit class H265ColorSpaceSettingsOps[Self <: H265ColorSpaceSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColorSpacePassthroughSettings(value: ColorSpacePassthroughSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorSpacePassthroughSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorSpacePassthroughSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorSpacePassthroughSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHdr10Settings(value: Hdr10Settings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hdr10Settings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHdr10Settings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hdr10Settings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRec601Settings(value: Rec601Settings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rec601Settings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRec601Settings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rec601Settings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRec709Settings(value: Rec709Settings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rec709Settings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRec709Settings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rec709Settings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

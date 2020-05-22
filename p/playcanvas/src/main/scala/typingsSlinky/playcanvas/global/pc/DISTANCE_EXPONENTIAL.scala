@@ -6,10 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-  * @constant
-  * @type {string}
-  * @name pc.DISTANCE_EXPONENTIAL
-  * @description Exponential distance model.
+  * Exponential distance model.
   */
 @JSGlobal("pc.DISTANCE_EXPONENTIAL")
 @js.native

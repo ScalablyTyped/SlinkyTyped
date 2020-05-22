@@ -1,7 +1,5 @@
 package typingsSlinky.socketIoEmitter.mod
 
-import typingsSlinky.socketIoEmitter.anon.Host
-import typingsSlinky.socketIoEmitter.anon.Socket
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +12,14 @@ trait SocketIORedisOptions extends js.Object
 
 object SocketIORedisOptions {
   @scala.inline
-  implicit def apply(value: Host): SocketIORedisOptions = value.asInstanceOf[SocketIORedisOptions]
+  def Host(host: String, port: Double): SocketIORedisOptions = {
+    val __obj = js.Dynamic.literal(host = host.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SocketIORedisOptions]
+  }
   @scala.inline
-  implicit def apply(value: Socket): SocketIORedisOptions = value.asInstanceOf[SocketIORedisOptions]
+  def Socket(socket: String): SocketIORedisOptions = {
+    val __obj = js.Dynamic.literal(socket = socket.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SocketIORedisOptions]
+  }
 }
 

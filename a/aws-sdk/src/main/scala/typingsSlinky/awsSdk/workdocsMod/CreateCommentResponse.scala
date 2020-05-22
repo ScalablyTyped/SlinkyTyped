@@ -14,29 +14,10 @@ trait CreateCommentResponse extends js.Object {
 
 object CreateCommentResponse {
   @scala.inline
-  def apply(): CreateCommentResponse = {
+  def apply(Comment: Comment = null): CreateCommentResponse = {
     val __obj = js.Dynamic.literal()
+    if (Comment != null) __obj.updateDynamic("Comment")(Comment.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateCommentResponse]
   }
-  @scala.inline
-  implicit class CreateCommentResponseOps[Self <: CreateCommentResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComment(value: Comment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

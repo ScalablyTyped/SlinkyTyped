@@ -8,17 +8,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This service describes the properties that are used when using the {@link XGraphicProvider} interface methods */
-@js.native
 trait MediaProperties extends js.Object {
   /** Additional properties that will be passed to the appropriate filter module. */
-  var FilterData: PropertyValues = js.native
+  var FilterData: PropertyValues
   /**
     * This property is only used for loading graphics or querying graphic descriptors
     *
     * A {@link InputStream} can be used instead of the {@link URL} property
     * @see com.sun.star.io.XInputStream
     */
-  var InputStream: XInputStream = js.native
+  var InputStream: XInputStream
   /**
     * This property is only used for storing graphics and describes the format into which the graphic is to be converted
     *
@@ -26,14 +25,14 @@ trait MediaProperties extends js.Object {
     *
     * sterimage/x-emfimage/x-epsimage/x-metimage/x-pictimage/x-portable-bitmapimage/x-portable-pixmapimage/x-wmfimage/x-svmimage/x-xpixmapimage/x-vclgraphic
     */
-  var MimeType: String = js.native
+  var MimeType: String
   /**
     * This property is only used for storing graphics
     *
     * A {@link OutputStream} can be used instead of the {@link URL} property
     * @see com.sun.star.io.XStream
     */
-  var OutputStream: XStream = js.native
+  var OutputStream: XStream
   /**
     * Property that describes the location of the source or target of the graphic as URL.
     *
@@ -49,7 +48,7 @@ trait MediaProperties extends js.Object {
     * Yet more, you can access graphics in the application-wide image repository by specifying URLs of the form
     * `private:graphicrepository/<path_in_repository>` .
     */
-  var URL: String = js.native
+  var URL: String
 }
 
 object MediaProperties {
@@ -64,43 +63,5 @@ object MediaProperties {
     val __obj = js.Dynamic.literal(FilterData = FilterData.asInstanceOf[js.Any], InputStream = InputStream.asInstanceOf[js.Any], MimeType = MimeType.asInstanceOf[js.Any], OutputStream = OutputStream.asInstanceOf[js.Any], URL = URL.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaProperties]
   }
-  @scala.inline
-  implicit class MediaPropertiesOps[Self <: MediaProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilterData(value: PropertyValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInputStream(value: XInputStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputStream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMimeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MimeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutputStream(value: XStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputStream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("URL")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -166,485 +166,88 @@ trait H265Settings extends js.Object {
 
 object H265Settings {
   @scala.inline
-  def apply(): H265Settings = {
+  def apply(
+    AdaptiveQuantization: H265AdaptiveQuantization = null,
+    AlternateTransferFunctionSei: H265AlternateTransferFunctionSei = null,
+    Bitrate: js.UndefOr[integerMin1000Max1466400000] = js.undefined,
+    CodecLevel: H265CodecLevel = null,
+    CodecProfile: H265CodecProfile = null,
+    DynamicSubGop: H265DynamicSubGop = null,
+    FlickerAdaptiveQuantization: H265FlickerAdaptiveQuantization = null,
+    FramerateControl: H265FramerateControl = null,
+    FramerateConversionAlgorithm: H265FramerateConversionAlgorithm = null,
+    FramerateDenominator: js.UndefOr[integerMin1Max2147483647] = js.undefined,
+    FramerateNumerator: js.UndefOr[integerMin1Max2147483647] = js.undefined,
+    GopBReference: H265GopBReference = null,
+    GopClosedCadence: js.UndefOr[integerMin0Max2147483647] = js.undefined,
+    GopSize: js.UndefOr[doubleMin0] = js.undefined,
+    GopSizeUnits: H265GopSizeUnits = null,
+    HrdBufferInitialFillPercentage: js.UndefOr[integerMin0Max100] = js.undefined,
+    HrdBufferSize: js.UndefOr[integerMin0Max1466400000] = js.undefined,
+    InterlaceMode: H265InterlaceMode = null,
+    MaxBitrate: js.UndefOr[integerMin1000Max1466400000] = js.undefined,
+    MinIInterval: js.UndefOr[integerMin0Max30] = js.undefined,
+    NumberBFramesBetweenReferenceFrames: js.UndefOr[integerMin0Max7] = js.undefined,
+    NumberReferenceFrames: js.UndefOr[integerMin1Max6] = js.undefined,
+    ParControl: H265ParControl = null,
+    ParDenominator: js.UndefOr[integerMin1Max2147483647] = js.undefined,
+    ParNumerator: js.UndefOr[integerMin1Max2147483647] = js.undefined,
+    QualityTuningLevel: H265QualityTuningLevel = null,
+    QvbrSettings: H265QvbrSettings = null,
+    RateControlMode: H265RateControlMode = null,
+    SampleAdaptiveOffsetFilterMode: H265SampleAdaptiveOffsetFilterMode = null,
+    SceneChangeDetect: H265SceneChangeDetect = null,
+    Slices: js.UndefOr[integerMin1Max32] = js.undefined,
+    SlowPal: H265SlowPal = null,
+    SpatialAdaptiveQuantization: H265SpatialAdaptiveQuantization = null,
+    Telecine: H265Telecine = null,
+    TemporalAdaptiveQuantization: H265TemporalAdaptiveQuantization = null,
+    TemporalIds: H265TemporalIds = null,
+    Tiles: H265Tiles = null,
+    UnregisteredSeiTimecode: H265UnregisteredSeiTimecode = null,
+    WriteMp4PackagingType: H265WriteMp4PackagingType = null
+  ): H265Settings = {
     val __obj = js.Dynamic.literal()
+    if (AdaptiveQuantization != null) __obj.updateDynamic("AdaptiveQuantization")(AdaptiveQuantization.asInstanceOf[js.Any])
+    if (AlternateTransferFunctionSei != null) __obj.updateDynamic("AlternateTransferFunctionSei")(AlternateTransferFunctionSei.asInstanceOf[js.Any])
+    if (!js.isUndefined(Bitrate)) __obj.updateDynamic("Bitrate")(Bitrate.get.asInstanceOf[js.Any])
+    if (CodecLevel != null) __obj.updateDynamic("CodecLevel")(CodecLevel.asInstanceOf[js.Any])
+    if (CodecProfile != null) __obj.updateDynamic("CodecProfile")(CodecProfile.asInstanceOf[js.Any])
+    if (DynamicSubGop != null) __obj.updateDynamic("DynamicSubGop")(DynamicSubGop.asInstanceOf[js.Any])
+    if (FlickerAdaptiveQuantization != null) __obj.updateDynamic("FlickerAdaptiveQuantization")(FlickerAdaptiveQuantization.asInstanceOf[js.Any])
+    if (FramerateControl != null) __obj.updateDynamic("FramerateControl")(FramerateControl.asInstanceOf[js.Any])
+    if (FramerateConversionAlgorithm != null) __obj.updateDynamic("FramerateConversionAlgorithm")(FramerateConversionAlgorithm.asInstanceOf[js.Any])
+    if (!js.isUndefined(FramerateDenominator)) __obj.updateDynamic("FramerateDenominator")(FramerateDenominator.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(FramerateNumerator)) __obj.updateDynamic("FramerateNumerator")(FramerateNumerator.get.asInstanceOf[js.Any])
+    if (GopBReference != null) __obj.updateDynamic("GopBReference")(GopBReference.asInstanceOf[js.Any])
+    if (!js.isUndefined(GopClosedCadence)) __obj.updateDynamic("GopClosedCadence")(GopClosedCadence.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(GopSize)) __obj.updateDynamic("GopSize")(GopSize.get.asInstanceOf[js.Any])
+    if (GopSizeUnits != null) __obj.updateDynamic("GopSizeUnits")(GopSizeUnits.asInstanceOf[js.Any])
+    if (!js.isUndefined(HrdBufferInitialFillPercentage)) __obj.updateDynamic("HrdBufferInitialFillPercentage")(HrdBufferInitialFillPercentage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(HrdBufferSize)) __obj.updateDynamic("HrdBufferSize")(HrdBufferSize.get.asInstanceOf[js.Any])
+    if (InterlaceMode != null) __obj.updateDynamic("InterlaceMode")(InterlaceMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxBitrate)) __obj.updateDynamic("MaxBitrate")(MaxBitrate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MinIInterval)) __obj.updateDynamic("MinIInterval")(MinIInterval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(NumberBFramesBetweenReferenceFrames)) __obj.updateDynamic("NumberBFramesBetweenReferenceFrames")(NumberBFramesBetweenReferenceFrames.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(NumberReferenceFrames)) __obj.updateDynamic("NumberReferenceFrames")(NumberReferenceFrames.get.asInstanceOf[js.Any])
+    if (ParControl != null) __obj.updateDynamic("ParControl")(ParControl.asInstanceOf[js.Any])
+    if (!js.isUndefined(ParDenominator)) __obj.updateDynamic("ParDenominator")(ParDenominator.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ParNumerator)) __obj.updateDynamic("ParNumerator")(ParNumerator.get.asInstanceOf[js.Any])
+    if (QualityTuningLevel != null) __obj.updateDynamic("QualityTuningLevel")(QualityTuningLevel.asInstanceOf[js.Any])
+    if (QvbrSettings != null) __obj.updateDynamic("QvbrSettings")(QvbrSettings.asInstanceOf[js.Any])
+    if (RateControlMode != null) __obj.updateDynamic("RateControlMode")(RateControlMode.asInstanceOf[js.Any])
+    if (SampleAdaptiveOffsetFilterMode != null) __obj.updateDynamic("SampleAdaptiveOffsetFilterMode")(SampleAdaptiveOffsetFilterMode.asInstanceOf[js.Any])
+    if (SceneChangeDetect != null) __obj.updateDynamic("SceneChangeDetect")(SceneChangeDetect.asInstanceOf[js.Any])
+    if (!js.isUndefined(Slices)) __obj.updateDynamic("Slices")(Slices.get.asInstanceOf[js.Any])
+    if (SlowPal != null) __obj.updateDynamic("SlowPal")(SlowPal.asInstanceOf[js.Any])
+    if (SpatialAdaptiveQuantization != null) __obj.updateDynamic("SpatialAdaptiveQuantization")(SpatialAdaptiveQuantization.asInstanceOf[js.Any])
+    if (Telecine != null) __obj.updateDynamic("Telecine")(Telecine.asInstanceOf[js.Any])
+    if (TemporalAdaptiveQuantization != null) __obj.updateDynamic("TemporalAdaptiveQuantization")(TemporalAdaptiveQuantization.asInstanceOf[js.Any])
+    if (TemporalIds != null) __obj.updateDynamic("TemporalIds")(TemporalIds.asInstanceOf[js.Any])
+    if (Tiles != null) __obj.updateDynamic("Tiles")(Tiles.asInstanceOf[js.Any])
+    if (UnregisteredSeiTimecode != null) __obj.updateDynamic("UnregisteredSeiTimecode")(UnregisteredSeiTimecode.asInstanceOf[js.Any])
+    if (WriteMp4PackagingType != null) __obj.updateDynamic("WriteMp4PackagingType")(WriteMp4PackagingType.asInstanceOf[js.Any])
     __obj.asInstanceOf[H265Settings]
   }
-  @scala.inline
-  implicit class H265SettingsOps[Self <: H265Settings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdaptiveQuantization(value: H265AdaptiveQuantization): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdaptiveQuantization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdaptiveQuantization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdaptiveQuantization")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlternateTransferFunctionSei(value: H265AlternateTransferFunctionSei): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlternateTransferFunctionSei")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlternateTransferFunctionSei: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlternateTransferFunctionSei")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBitrate(value: integerMin1000Max1466400000): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bitrate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBitrate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bitrate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCodecLevel(value: H265CodecLevel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodecLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodecLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodecLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCodecProfile(value: H265CodecProfile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodecProfile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodecProfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodecProfile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDynamicSubGop(value: H265DynamicSubGop): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DynamicSubGop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDynamicSubGop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DynamicSubGop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlickerAdaptiveQuantization(value: H265FlickerAdaptiveQuantization): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FlickerAdaptiveQuantization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlickerAdaptiveQuantization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FlickerAdaptiveQuantization")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFramerateControl(value: H265FramerateControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFramerateControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFramerateConversionAlgorithm(value: H265FramerateConversionAlgorithm): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateConversionAlgorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFramerateConversionAlgorithm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateConversionAlgorithm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFramerateDenominator(value: integerMin1Max2147483647): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateDenominator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFramerateDenominator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateDenominator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFramerateNumerator(value: integerMin1Max2147483647): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateNumerator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFramerateNumerator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateNumerator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGopBReference(value: H265GopBReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GopBReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGopBReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GopBReference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGopClosedCadence(value: integerMin0Max2147483647): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GopClosedCadence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGopClosedCadence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GopClosedCadence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGopSize(value: doubleMin0): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GopSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGopSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GopSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGopSizeUnits(value: H265GopSizeUnits): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GopSizeUnits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGopSizeUnits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GopSizeUnits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHrdBufferInitialFillPercentage(value: integerMin0Max100): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HrdBufferInitialFillPercentage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHrdBufferInitialFillPercentage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HrdBufferInitialFillPercentage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHrdBufferSize(value: integerMin0Max1466400000): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HrdBufferSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHrdBufferSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HrdBufferSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterlaceMode(value: H265InterlaceMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InterlaceMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterlaceMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InterlaceMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxBitrate(value: integerMin1000Max1466400000): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxBitrate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxBitrate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxBitrate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinIInterval(value: integerMin0Max30): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinIInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinIInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinIInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberBFramesBetweenReferenceFrames(value: integerMin0Max7): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberBFramesBetweenReferenceFrames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberBFramesBetweenReferenceFrames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberBFramesBetweenReferenceFrames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberReferenceFrames(value: integerMin1Max6): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberReferenceFrames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberReferenceFrames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberReferenceFrames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParControl(value: H265ParControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParDenominator(value: integerMin1Max2147483647): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParDenominator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParDenominator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParDenominator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParNumerator(value: integerMin1Max2147483647): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParNumerator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParNumerator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParNumerator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQualityTuningLevel(value: H265QualityTuningLevel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QualityTuningLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQualityTuningLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QualityTuningLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQvbrSettings(value: H265QvbrSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QvbrSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQvbrSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QvbrSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRateControlMode(value: H265RateControlMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RateControlMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRateControlMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RateControlMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSampleAdaptiveOffsetFilterMode(value: H265SampleAdaptiveOffsetFilterMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleAdaptiveOffsetFilterMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSampleAdaptiveOffsetFilterMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleAdaptiveOffsetFilterMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSceneChangeDetect(value: H265SceneChangeDetect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SceneChangeDetect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSceneChangeDetect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SceneChangeDetect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlices(value: integerMin1Max32): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Slices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Slices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlowPal(value: H265SlowPal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SlowPal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlowPal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SlowPal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpatialAdaptiveQuantization(value: H265SpatialAdaptiveQuantization): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpatialAdaptiveQuantization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpatialAdaptiveQuantization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpatialAdaptiveQuantization")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTelecine(value: H265Telecine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Telecine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTelecine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Telecine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemporalAdaptiveQuantization(value: H265TemporalAdaptiveQuantization): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemporalAdaptiveQuantization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemporalAdaptiveQuantization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemporalAdaptiveQuantization")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemporalIds(value: H265TemporalIds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemporalIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemporalIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemporalIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTiles(value: H265Tiles): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnregisteredSeiTimecode(value: H265UnregisteredSeiTimecode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnregisteredSeiTimecode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnregisteredSeiTimecode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnregisteredSeiTimecode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriteMp4PackagingType(value: H265WriteMp4PackagingType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WriteMp4PackagingType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteMp4PackagingType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WriteMp4PackagingType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

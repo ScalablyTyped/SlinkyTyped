@@ -26,9 +26,16 @@ object describeBackupCommandMod extends js.Object {
           Blob
         ] {
     def this(input: DescribeBackupInput) = this()
+    /* CompleteClass */
+    override val input: DescribeBackupInput = js.native
     val middlewareStack: MiddlewareStack[DescribeBackupInput, DescribeBackupOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: DynamoDBResolvedConfiguration
+    ): Handler[DescribeBackupInput, DescribeBackupOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[DescribeBackupInput, DescribeBackupOutput] = js.native
   }

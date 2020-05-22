@@ -4,103 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Http extends js.Object {
   /**
     * <p>The IP address of the requestor.</p>
     */
-  var ClientIp: js.UndefOr[String] = js.native
+  var ClientIp: js.UndefOr[String] = js.undefined
   /**
     * <p>The request method.</p>
     */
-  var HttpMethod: js.UndefOr[String] = js.native
+  var HttpMethod: js.UndefOr[String] = js.undefined
   /**
     * <p>The response status.</p>
     */
-  var HttpStatus: js.UndefOr[Double] = js.native
+  var HttpStatus: js.UndefOr[Double] = js.undefined
   /**
     * <p>The request URL.</p>
     */
-  var HttpURL: js.UndefOr[String] = js.native
+  var HttpURL: js.UndefOr[String] = js.undefined
   /**
     * <p>The request's user agent string.</p>
     */
-  var UserAgent: js.UndefOr[String] = js.native
+  var UserAgent: js.UndefOr[String] = js.undefined
 }
 
 object Http {
   @scala.inline
-  def apply(): Http = {
+  def apply(
+    ClientIp: String = null,
+    HttpMethod: String = null,
+    HttpStatus: js.UndefOr[Double] = js.undefined,
+    HttpURL: String = null,
+    UserAgent: String = null
+  ): Http = {
     val __obj = js.Dynamic.literal()
+    if (ClientIp != null) __obj.updateDynamic("ClientIp")(ClientIp.asInstanceOf[js.Any])
+    if (HttpMethod != null) __obj.updateDynamic("HttpMethod")(HttpMethod.asInstanceOf[js.Any])
+    if (!js.isUndefined(HttpStatus)) __obj.updateDynamic("HttpStatus")(HttpStatus.get.asInstanceOf[js.Any])
+    if (HttpURL != null) __obj.updateDynamic("HttpURL")(HttpURL.asInstanceOf[js.Any])
+    if (UserAgent != null) __obj.updateDynamic("UserAgent")(UserAgent.asInstanceOf[js.Any])
     __obj.asInstanceOf[Http]
   }
-  @scala.inline
-  implicit class HttpOps[Self <: Http] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientIp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientIp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientIp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpStatus(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpURL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserAgent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserAgent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserAgent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserAgent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,118 +6,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DataLabelSettings extends js.Object {
   /** Fill color for the datalabel
     * @Default {null}
     */
-  var fill: js.UndefOr[String] = js.native
+  var fill: js.UndefOr[String] = js.undefined
   /** Options for customizing the data label font.
     */
-  var font: js.UndefOr[DataLabelSettingsFont] = js.native
+  var font: js.UndefOr[DataLabelSettingsFont] = js.undefined
   /** Datalabel overflow mode
     * @Default {Trim. See LabelOverflowMode}
     */
-  var labelOverflowMode: js.UndefOr[SunburstLabelOverflowMode | String] = js.native
+  var labelOverflowMode: js.UndefOr[SunburstLabelOverflowMode | String] = js.undefined
   /** Alignment of sunburst datalabel
     * @Default {Angle. See DatalabelAlignment}
     */
-  var labelRotationMode: js.UndefOr[SunburstLabelRotationMode | String] = js.native
+  var labelRotationMode: js.UndefOr[SunburstLabelRotationMode | String] = js.undefined
   /** Custom template for datalabel
     * @Default {null}
     */
-  var template: js.UndefOr[String] = js.native
+  var template: js.UndefOr[String] = js.undefined
   /** Datalabel visibility of the Sunburst.
     * @Default {false}
     */
-  var visible: js.UndefOr[Boolean] = js.native
+  var visible: js.UndefOr[Boolean] = js.undefined
 }
 
 object DataLabelSettings {
   @scala.inline
-  def apply(): DataLabelSettings = {
+  def apply(
+    fill: String = null,
+    font: DataLabelSettingsFont = null,
+    labelOverflowMode: SunburstLabelOverflowMode | String = null,
+    labelRotationMode: SunburstLabelRotationMode | String = null,
+    template: String = null,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): DataLabelSettings = {
     val __obj = js.Dynamic.literal()
+    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (labelOverflowMode != null) __obj.updateDynamic("labelOverflowMode")(labelOverflowMode.asInstanceOf[js.Any])
+    if (labelRotationMode != null) __obj.updateDynamic("labelRotationMode")(labelRotationMode.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataLabelSettings]
   }
-  @scala.inline
-  implicit class DataLabelSettingsOps[Self <: DataLabelSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFill(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFont(value: DataLabelSettingsFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelOverflowMode(value: SunburstLabelOverflowMode | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelOverflowMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelOverflowMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelOverflowMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelRotationMode(value: SunburstLabelRotationMode | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelRotationMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelRotationMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelRotationMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

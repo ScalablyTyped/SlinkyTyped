@@ -15,14 +15,13 @@ import scala.scalajs.js.annotation._
   * Specifies the service of a set expression field master.
   * @see com.sun.star.text.TextFieldMaster
   */
-@js.native
 trait SetExpression extends TextFieldMaster {
   /** determines the number of the chapter. This values is used if the field master is set as number sequence. */
-  var ChapterNumberingLevel: Double = js.native
+  var ChapterNumberingLevel: Double
   /** determines the numbering separator string if the field master is set as number sequence. */
-  var NumberingSeparator: String = js.native
+  var NumberingSeparator: String
   /** determines the type of the field as {@link com.sun.star.text.SetVariableType} */
-  var SubType: Double = js.native
+  var SubType: Double
 }
 
 object SetExpression {
@@ -49,31 +48,5 @@ object SetExpression {
     val __obj = js.Dynamic.literal(ChapterNumberingLevel = ChapterNumberingLevel.asInstanceOf[js.Any], DependentTextFields = DependentTextFields.asInstanceOf[js.Any], InstanceName = InstanceName.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], NumberingSeparator = NumberingSeparator.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], SubType = SubType.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue))
     __obj.asInstanceOf[SetExpression]
   }
-  @scala.inline
-  implicit class SetExpressionOps[Self <: SetExpression] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChapterNumberingLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChapterNumberingLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberingSeparator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberingSeparator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

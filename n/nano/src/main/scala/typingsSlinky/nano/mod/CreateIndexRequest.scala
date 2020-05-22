@@ -8,87 +8,34 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // http://docs.couchdb.org/en/latest/api/database/find.html#db-index
-@js.native
 trait CreateIndexRequest extends js.Object {
   // Name of the design document in which the index will be created.
-  var ddoc: js.UndefOr[String] = js.native
+  var ddoc: js.UndefOr[String] = js.undefined
   // JSON object describing the index to create
-  var index: Fields = js.native
+  var index: Fields
   // Name of the index. If no name is provided, a name will be generated automatically.
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   // This field sets whether the created index will be a partitioned or global index.
-  var partitioned: js.UndefOr[Boolean] = js.native
+  var partitioned: js.UndefOr[Boolean] = js.undefined
   // Can be "json" or "text". Defaults to json.
-  var `type`: js.UndefOr[json | text] = js.native
+  var `type`: js.UndefOr[json | text] = js.undefined
 }
 
 object CreateIndexRequest {
   @scala.inline
-  def apply(index: Fields): CreateIndexRequest = {
+  def apply(
+    index: Fields,
+    ddoc: String = null,
+    name: String = null,
+    partitioned: js.UndefOr[Boolean] = js.undefined,
+    `type`: json | text = null
+  ): CreateIndexRequest = {
     val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any])
+    if (ddoc != null) __obj.updateDynamic("ddoc")(ddoc.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(partitioned)) __obj.updateDynamic("partitioned")(partitioned.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateIndexRequest]
   }
-  @scala.inline
-  implicit class CreateIndexRequestOps[Self <: CreateIndexRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndex(value: Fields): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDdoc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ddoc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDdoc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ddoc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartitioned(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partitioned")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartitioned: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partitioned")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: json | text): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

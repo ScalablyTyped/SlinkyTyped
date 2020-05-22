@@ -12,10 +12,9 @@ import scala.scalajs.js.annotation._
   * This happens when a user moves or deletes a Java installation after the office has been configured to use that Java installation.
   * @since OOo 1.1.2
   */
-@js.native
 trait MissingJavaRuntimeException extends Exception {
   /** contains the path to the runtime lib as file URL. */
-  var URLRuntimeLib: String = js.native
+  var URLRuntimeLib: String
 }
 
 object MissingJavaRuntimeException {
@@ -24,19 +23,5 @@ object MissingJavaRuntimeException {
     val __obj = js.Dynamic.literal(Context = Context.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any], URLRuntimeLib = URLRuntimeLib.asInstanceOf[js.Any])
     __obj.asInstanceOf[MissingJavaRuntimeException]
   }
-  @scala.inline
-  implicit class MissingJavaRuntimeExceptionOps[Self <: MissingJavaRuntimeException] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withURLRuntimeLib(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("URLRuntimeLib")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

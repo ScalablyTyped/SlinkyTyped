@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StoreWatchMixin[StoreState] extends js.Object {
-  def getStateFromFlux(): StoreState = js.native
+  def getStateFromFlux(): StoreState
 }
 
 @JSImport("fluxxor", "StoreWatchMixin")

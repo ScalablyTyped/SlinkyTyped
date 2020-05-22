@@ -35,37 +35,5 @@ object SignalResourceInput {
     val __obj = js.Dynamic.literal(LogicalResourceId = LogicalResourceId.asInstanceOf[js.Any], StackName = StackName.asInstanceOf[js.Any], Status = Status.asInstanceOf[js.Any], UniqueId = UniqueId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SignalResourceInput]
   }
-  @scala.inline
-  implicit class SignalResourceInputOps[Self <: SignalResourceInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLogicalResourceId(value: LogicalResourceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogicalResourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStackName(value: StackNameOrId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: ResourceSignalStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUniqueId(value: ResourceSignalUniqueId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UniqueId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -7,12 +7,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BillingInfoResource extends js.Object {
   /** Returns the billing information for one account specified by account ID. */
-  def get(request: AccountId): Request[BillingInfo] = js.native
+  def get(request: AccountId): Request[BillingInfo]
   /** Retrieves a list of billing information for all accounts of the authenticated user. */
-  def list(request: Fields): Request[BillingInfoList] = js.native
+  def list(request: Fields): Request[BillingInfoList]
 }
 
 object BillingInfoResource {
@@ -21,25 +20,5 @@ object BillingInfoResource {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[BillingInfoResource]
   }
-  @scala.inline
-  implicit class BillingInfoResourceOps[Self <: BillingInfoResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet(value: AccountId => Request[BillingInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Fields => Request[BillingInfoList]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -13,16 +13,3 @@ import scala.scalajs.js.annotation._
 */
 trait Term extends js.Object
 
-object Term {
-  @scala.inline
-  implicit def apply(value: BlankNode): Term = value.asInstanceOf[Term]
-  @scala.inline
-  implicit def apply(value: DefaultGraph): Term = value.asInstanceOf[Term]
-  @scala.inline
-  implicit def apply(value: Literal): Term = value.asInstanceOf[Term]
-  @scala.inline
-  implicit def apply(value: NamedNode): Term = value.asInstanceOf[Term]
-  @scala.inline
-  implicit def apply(value: Variable): Term = value.asInstanceOf[Term]
-}
-

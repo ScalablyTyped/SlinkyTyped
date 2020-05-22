@@ -26,53 +26,16 @@ trait SchemaIntentFilter extends js.Object {
 
 object SchemaIntentFilter {
   @scala.inline
-  def apply(): SchemaIntentFilter = {
+  def apply(
+    actionNames: js.Array[String] = null,
+    categoryNames: js.Array[String] = null,
+    mimeType: String = null
+  ): SchemaIntentFilter = {
     val __obj = js.Dynamic.literal()
+    if (actionNames != null) __obj.updateDynamic("actionNames")(actionNames.asInstanceOf[js.Any])
+    if (categoryNames != null) __obj.updateDynamic("categoryNames")(categoryNames.asInstanceOf[js.Any])
+    if (mimeType != null) __obj.updateDynamic("mimeType")(mimeType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaIntentFilter]
   }
-  @scala.inline
-  implicit class SchemaIntentFilterOps[Self <: SchemaIntentFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCategoryNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategoryNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMimeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMimeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

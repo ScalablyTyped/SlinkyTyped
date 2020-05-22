@@ -11,7 +11,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This interface extends the base {@link XStorage} interface. */
-@js.native
 trait XStorage2 extends XStorage {
   /**
     * allows to get readonly copy of a child encrypted stream with encryption data.
@@ -30,7 +29,7 @@ trait XStorage2 extends XStorage {
     * @throws com::sun::star::io::IOException in case of io errors during stream opening
     * @throws com::sun::star::embed::StorageWrappedTargetException wraps other exceptions
     */
-  def cloneEncryptedStream(sStreamName: String, aEncryptionData: SeqEquiv[NamedValue]): XStream = js.native
+  def cloneEncryptedStream(sStreamName: String, aEncryptionData: SeqEquiv[NamedValue]): XStream
   /**
     * allows to get access to a child encrypted stream with EncryptionData.
     *
@@ -47,7 +46,7 @@ trait XStorage2 extends XStorage {
     * @throws com::sun::star::io::IOException in case of io errors during stream opening
     * @throws com::sun::star::embed::StorageWrappedTargetException wraps other exceptions
     */
-  def openEncryptedStream(sStreamName: String, nOpenMode: Double, aEncryptionData: SeqEquiv[NamedValue]): XStream = js.native
+  def openEncryptedStream(sStreamName: String, nOpenMode: Double, aEncryptionData: SeqEquiv[NamedValue]): XStream
 }
 
 object XStorage2 {
@@ -86,25 +85,5 @@ object XStorage2 {
     val __obj = js.Dynamic.literal(ElementNames = ElementNames.asInstanceOf[js.Any], ElementType = ElementType.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), cloneEncryptedStream = js.Any.fromFunction2(cloneEncryptedStream), cloneEncryptedStreamElement = js.Any.fromFunction2(cloneEncryptedStreamElement), cloneStreamElement = js.Any.fromFunction1(cloneStreamElement), copyElementTo = js.Any.fromFunction3(copyElementTo), copyLastCommitTo = js.Any.fromFunction1(copyLastCommitTo), copyStorageElementLastCommitTo = js.Any.fromFunction2(copyStorageElementLastCommitTo), copyToStorage = js.Any.fromFunction1(copyToStorage), dispose = js.Any.fromFunction0(dispose), getByName = js.Any.fromFunction1(getByName), getElementNames = js.Any.fromFunction0(getElementNames), getElementType = js.Any.fromFunction0(getElementType), hasByName = js.Any.fromFunction1(hasByName), hasElements = js.Any.fromFunction0(hasElements), isStorageElement = js.Any.fromFunction1(isStorageElement), isStreamElement = js.Any.fromFunction1(isStreamElement), moveElementTo = js.Any.fromFunction3(moveElementTo), openEncryptedStream = js.Any.fromFunction3(openEncryptedStream), openEncryptedStreamElement = js.Any.fromFunction3(openEncryptedStreamElement), openStorageElement = js.Any.fromFunction2(openStorageElement), openStreamElement = js.Any.fromFunction2(openStreamElement), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeElement = js.Any.fromFunction1(removeElement), removeEventListener = js.Any.fromFunction1(removeEventListener), renameElement = js.Any.fromFunction2(renameElement))
     __obj.asInstanceOf[XStorage2]
   }
-  @scala.inline
-  implicit class XStorage2Ops[Self <: XStorage2] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloneEncryptedStream(value: (String, SeqEquiv[NamedValue]) => XStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloneEncryptedStream")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withOpenEncryptedStream(value: (String, Double, SeqEquiv[NamedValue]) => XStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openEncryptedStream")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

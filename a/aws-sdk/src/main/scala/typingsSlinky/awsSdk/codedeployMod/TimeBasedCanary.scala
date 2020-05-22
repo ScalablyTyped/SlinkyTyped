@@ -18,41 +18,14 @@ trait TimeBasedCanary extends js.Object {
 
 object TimeBasedCanary {
   @scala.inline
-  def apply(): TimeBasedCanary = {
+  def apply(
+    canaryInterval: js.UndefOr[WaitTimeInMins] = js.undefined,
+    canaryPercentage: js.UndefOr[Percentage] = js.undefined
+  ): TimeBasedCanary = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(canaryInterval)) __obj.updateDynamic("canaryInterval")(canaryInterval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(canaryPercentage)) __obj.updateDynamic("canaryPercentage")(canaryPercentage.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimeBasedCanary]
   }
-  @scala.inline
-  implicit class TimeBasedCanaryOps[Self <: TimeBasedCanary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCanaryInterval(value: WaitTimeInMins): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canaryInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCanaryInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canaryInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCanaryPercentage(value: Percentage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canaryPercentage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCanaryPercentage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canaryPercentage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

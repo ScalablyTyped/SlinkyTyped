@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HistoryOptions extends js.Object {
-  var disableDotRule: js.UndefOr[Boolean] = js.native
-  var htmlAcceptHeaders: js.UndefOr[js.Array[String]] = js.native
-  var index: js.UndefOr[String] = js.native
-  var rewrites: js.UndefOr[RewritesObject] = js.native
-  var verbose: js.UndefOr[Boolean] = js.native
+  var disableDotRule: js.UndefOr[Boolean] = js.undefined
+  var htmlAcceptHeaders: js.UndefOr[js.Array[String]] = js.undefined
+  var index: js.UndefOr[String] = js.undefined
+  var rewrites: js.UndefOr[RewritesObject] = js.undefined
+  var verbose: js.UndefOr[Boolean] = js.undefined
 }
 
 object HistoryOptions {
   @scala.inline
-  def apply(): HistoryOptions = {
+  def apply(
+    disableDotRule: js.UndefOr[Boolean] = js.undefined,
+    htmlAcceptHeaders: js.Array[String] = null,
+    index: String = null,
+    rewrites: RewritesObject = null,
+    verbose: js.UndefOr[Boolean] = js.undefined
+  ): HistoryOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(disableDotRule)) __obj.updateDynamic("disableDotRule")(disableDotRule.get.asInstanceOf[js.Any])
+    if (htmlAcceptHeaders != null) __obj.updateDynamic("htmlAcceptHeaders")(htmlAcceptHeaders.asInstanceOf[js.Any])
+    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
+    if (rewrites != null) __obj.updateDynamic("rewrites")(rewrites.asInstanceOf[js.Any])
+    if (!js.isUndefined(verbose)) __obj.updateDynamic("verbose")(verbose.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[HistoryOptions]
   }
-  @scala.inline
-  implicit class HistoryOptionsOps[Self <: HistoryOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisableDotRule(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableDotRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableDotRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableDotRule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHtmlAcceptHeaders(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlAcceptHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHtmlAcceptHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlAcceptHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRewrites(value: RewritesObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rewrites")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRewrites: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rewrites")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerbose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerbose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

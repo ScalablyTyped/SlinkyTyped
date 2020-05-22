@@ -6,6 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait BatchDeleteDocumentRequest extends js.Object {
+  var DataSourceSyncJobMetricTarget: js.UndefOr[typingsSlinky.awsSdk.kendraMod.DataSourceSyncJobMetricTarget] = js.native
   /**
     * One or more identifiers for documents to delete from the index.
     */
@@ -18,29 +19,14 @@ trait BatchDeleteDocumentRequest extends js.Object {
 
 object BatchDeleteDocumentRequest {
   @scala.inline
-  def apply(DocumentIdList: DocumentIdList, IndexId: IndexId): BatchDeleteDocumentRequest = {
+  def apply(
+    DocumentIdList: DocumentIdList,
+    IndexId: IndexId,
+    DataSourceSyncJobMetricTarget: DataSourceSyncJobMetricTarget = null
+  ): BatchDeleteDocumentRequest = {
     val __obj = js.Dynamic.literal(DocumentIdList = DocumentIdList.asInstanceOf[js.Any], IndexId = IndexId.asInstanceOf[js.Any])
+    if (DataSourceSyncJobMetricTarget != null) __obj.updateDynamic("DataSourceSyncJobMetricTarget")(DataSourceSyncJobMetricTarget.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchDeleteDocumentRequest]
   }
-  @scala.inline
-  implicit class BatchDeleteDocumentRequestOps[Self <: BatchDeleteDocumentRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocumentIdList(value: DocumentIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentIdList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndexId(value: IndexId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

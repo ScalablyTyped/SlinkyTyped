@@ -7,20 +7,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a web account authentication provider. */
-@js.native
 trait WebAccountProvider extends js.Object {
   /** Gets the authority of the web account provider. Use authority to disambiguate between a single provider with multiple identities (such as a Microsoft account versus Azure Active Directory). */
-  var authority: String = js.native
+  var authority: String
   /** Gets the display name for the web account provider. */
-  var displayName: String = js.native
+  var displayName: String
   /** Gets the display purpose of the web account provider. */
-  var displayPurpose: String = js.native
+  var displayPurpose: String
   /** Gets the Uri of the icon image to display for the web account provider. */
-  var iconUri: Uri = js.native
+  var iconUri: Uri
   /** Gets the web account provider id. */
-  var id: String = js.native
+  var id: String
   /** Gets the user associated with the provider. */
-  var user: User = js.native
+  var user: User
 }
 
 object WebAccountProvider {
@@ -36,49 +35,5 @@ object WebAccountProvider {
     val __obj = js.Dynamic.literal(authority = authority.asInstanceOf[js.Any], displayName = displayName.asInstanceOf[js.Any], displayPurpose = displayPurpose.asInstanceOf[js.Any], iconUri = iconUri.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], user = user.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebAccountProvider]
   }
-  @scala.inline
-  implicit class WebAccountProviderOps[Self <: WebAccountProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthority(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisplayPurpose(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayPurpose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIconUri(value: Uri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUser(value: User): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

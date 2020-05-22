@@ -18,41 +18,11 @@ trait SecurityGroup extends js.Object {
 
 object SecurityGroup {
   @scala.inline
-  def apply(): SecurityGroup = {
+  def apply(groupId: Text = null, groupName: Text = null): SecurityGroup = {
     val __obj = js.Dynamic.literal()
+    if (groupId != null) __obj.updateDynamic("groupId")(groupId.asInstanceOf[js.Any])
+    if (groupName != null) __obj.updateDynamic("groupName")(groupName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecurityGroup]
   }
-  @scala.inline
-  implicit class SecurityGroupOps[Self <: SecurityGroup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroupId(value: Text): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupName(value: Text): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

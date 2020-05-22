@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CurrentVersion extends js.Object {
-  var currentVersion: js.UndefOr[String] = js.native
-  var replacement: js.UndefOr[String] = js.native
-  var versionToRemove: js.UndefOr[String] = js.native
+  var currentVersion: js.UndefOr[String] = js.undefined
+  var replacement: js.UndefOr[String] = js.undefined
+  var versionToRemove: js.UndefOr[String] = js.undefined
 }
 
 object CurrentVersion {
   @scala.inline
-  def apply(): CurrentVersion = {
+  def apply(currentVersion: String = null, replacement: String = null, versionToRemove: String = null): CurrentVersion = {
     val __obj = js.Dynamic.literal()
+    if (currentVersion != null) __obj.updateDynamic("currentVersion")(currentVersion.asInstanceOf[js.Any])
+    if (replacement != null) __obj.updateDynamic("replacement")(replacement.asInstanceOf[js.Any])
+    if (versionToRemove != null) __obj.updateDynamic("versionToRemove")(versionToRemove.asInstanceOf[js.Any])
     __obj.asInstanceOf[CurrentVersion]
   }
-  @scala.inline
-  implicit class CurrentVersionOps[Self <: CurrentVersion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplacement(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replacement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplacement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replacement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionToRemove(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionToRemove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionToRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionToRemove")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

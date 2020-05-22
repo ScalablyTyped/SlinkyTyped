@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.SpeechRecognition.SpeechRecognizerStateChangedEventArgs")
 @js.native
 abstract class SpeechRecognizerStateChangedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Media.SpeechRecognition.SpeechRecognizerStateChangedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.Media.SpeechRecognition.SpeechRecognizerStateChangedEventArgs {
+  /** Gets the audio capture state. */
+  /* CompleteClass */
+  override var state: typingsSlinky.winrtUwp.Windows.Media.SpeechRecognition.SpeechRecognizerState = js.native
+}
 

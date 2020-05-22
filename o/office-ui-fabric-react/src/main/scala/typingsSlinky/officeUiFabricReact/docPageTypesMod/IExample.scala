@@ -3,100 +3,40 @@ package typingsSlinky.officeUiFabricReact.docPageTypesMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.officeUiFabricReact.anon.Root
 import typingsSlinky.officeUiFabricReact.anon.Theme
-import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IExample extends js.Object {
   /** Raw source code of the example */
-  var code: String = js.native
+  var code: String
   /** JS String for codepen of the example */
-  var codepenJS: js.UndefOr[String] = js.native
-  var isScrollable: js.UndefOr[Boolean] = js.native
+  var codepenJS: js.UndefOr[String] = js.undefined
+  var isScrollable: js.UndefOr[Boolean] = js.undefined
   /** Custom styles. Partial version of `IExampleCardProps['styles']`. */
-  var styles: js.UndefOr[IStyleFunctionOrObject[Theme, Root]] = js.native
+  var styles: js.UndefOr[IStyleFunctionOrObject[Theme, Root]] = js.undefined
   /** Title of the example */
-  var title: String = js.native
+  var title: String
   /** Working example of the example */
-  var view: ReactElement = js.native
+  var view: ReactElement
 }
 
 object IExample {
   @scala.inline
-  def apply(code: String, title: String, view: ReactElement): IExample = {
+  def apply(
+    code: String,
+    title: String,
+    view: ReactElement,
+    codepenJS: String = null,
+    isScrollable: js.UndefOr[Boolean] = js.undefined,
+    styles: IStyleFunctionOrObject[Theme, Root] = null
+  ): IExample = {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], view = view.asInstanceOf[js.Any])
+    if (codepenJS != null) __obj.updateDynamic("codepenJS")(codepenJS.asInstanceOf[js.Any])
+    if (!js.isUndefined(isScrollable)) __obj.updateDynamic("isScrollable")(isScrollable.get.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
     __obj.asInstanceOf[IExample]
   }
-  @scala.inline
-  implicit class IExampleOps[Self <: IExample] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withView(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCodepenJS(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("codepenJS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodepenJS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("codepenJS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsScrollable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isScrollable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsScrollable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isScrollable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStylesFunction1(value: Theme => Partial[Root]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStyles(value: IStyleFunctionOrObject[Theme, Root]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

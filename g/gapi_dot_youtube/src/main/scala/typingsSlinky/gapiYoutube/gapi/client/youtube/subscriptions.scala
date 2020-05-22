@@ -10,20 +10,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait subscriptions extends js.Object {
   /**
     * Deletes a subscription.
     */
-  def delete(`object`: Id): HttpRequest[GoogleApiYouTubeSubscriptionResource] = js.native
+  def delete(`object`: Id): HttpRequest[GoogleApiYouTubeSubscriptionResource]
   /**
     * Adds a subscription for the authenticated user's channel.
     */
-  def insert(`object`: PartRequestBody): HttpRequest[GoogleApiYouTubeSubscriptionResource] = js.native
+  def insert(`object`: PartRequestBody): HttpRequest[GoogleApiYouTubeSubscriptionResource]
   /**
     * Returns subscription resources that match the API request criteria.
     */
-  def list(`object`: ForChannelId): HttpRequest[GoogleApiYouTubePaginationInfo[GoogleApiYouTubeSubscriptionResource]] = js.native
+  def list(`object`: ForChannelId): HttpRequest[GoogleApiYouTubePaginationInfo[GoogleApiYouTubeSubscriptionResource]]
 }
 
 object subscriptions {
@@ -36,33 +35,5 @@ object subscriptions {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[subscriptions]
   }
-  @scala.inline
-  implicit class subscriptionsOps[Self <: subscriptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelete(value: Id => HttpRequest[GoogleApiYouTubeSubscriptionResource]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInsert(value: PartRequestBody => HttpRequest[GoogleApiYouTubeSubscriptionResource]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(
-      value: ForChannelId => HttpRequest[GoogleApiYouTubePaginationInfo[GoogleApiYouTubeSubscriptionResource]]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

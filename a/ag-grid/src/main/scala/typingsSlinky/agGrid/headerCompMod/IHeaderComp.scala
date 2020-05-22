@@ -1,20 +1,29 @@
 package typingsSlinky.agGrid.headerCompMod
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.agGrid.iComponentMod.IAfterGuiAttachedParams
 import typingsSlinky.agGrid.iComponentMod.IComponent
+import typingsSlinky.agGrid.utilsMod.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IHeaderComp
   extends IHeader
      with IComponent[IHeaderParams]
 
 object IHeaderComp {
   @scala.inline
-  def apply(getGui: () => HTMLElement): IHeaderComp = {
+  def apply(
+    getGui: () => HTMLElement,
+    afterGuiAttached: /* params */ js.UndefOr[IAfterGuiAttachedParams] => Unit = null,
+    destroy: () => Unit = null,
+    init: IHeaderParams => Promise[Unit] | Unit = null
+  ): IHeaderComp = {
     val __obj = js.Dynamic.literal(getGui = js.Any.fromFunction0(getGui))
+    if (afterGuiAttached != null) __obj.updateDynamic("afterGuiAttached")(js.Any.fromFunction1(afterGuiAttached))
+    if (destroy != null) __obj.updateDynamic("destroy")(js.Any.fromFunction0(destroy))
+    if (init != null) __obj.updateDynamic("init")(js.Any.fromFunction1(init))
     __obj.asInstanceOf[IHeaderComp]
   }
 }

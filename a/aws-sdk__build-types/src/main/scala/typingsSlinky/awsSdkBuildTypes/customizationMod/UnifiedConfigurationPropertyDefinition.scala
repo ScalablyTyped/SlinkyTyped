@@ -6,8 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.awsSdkBuildTypes.customizationMod.ConfigurationPropertyDefinitionRuntimeAttributes because var conflicts: imports. Inlined required, default, normalize, apply */ @js.native
-trait UnifiedConfigurationPropertyDefinition
+- typingsSlinky.awsSdkBuildTypes.customizationMod.ConfigurationPropertyDefinitionRuntimeAttributes because var conflicts: imports. Inlined required, default, normalize, apply */ trait UnifiedConfigurationPropertyDefinition
   extends ConfigurationPropertyDefinitionSharedAttributes
      with ConfigurationPropertyDefinition {
   /**
@@ -23,12 +22,12 @@ trait UnifiedConfigurationPropertyDefinition
     * imported package.
     */
   @JSName("apply")
-  var apply: js.UndefOr[String] = js.native
+  var apply: js.UndefOr[String] = js.undefined
   /**
     * The default (if any) to use should the user not supply a value for this
     * property.
     */
-  var default: js.UndefOr[DefaultValue | DefaultProvider] = js.native
+  var default: js.UndefOr[DefaultValue | DefaultProvider] = js.undefined
   /**
     * A string containing a valid TypeScript expression that evaluates to a
     * function that will normalize user input to a subtype of the allowed input
@@ -43,76 +42,37 @@ trait UnifiedConfigurationPropertyDefinition
     * If an imported type is used, it must be referred to as a property of the
     * imported package.
     */
-  var normalize: js.UndefOr[String] = js.native
+  var normalize: js.UndefOr[String] = js.undefined
   /**
     * Whether the user must supply a value for this property.
     */
-  var required: Boolean = js.native
-  var `type`: unified = js.native
+  var required: Boolean
+  var `type`: unified
 }
 
 object UnifiedConfigurationPropertyDefinition {
   @scala.inline
-  def apply(documentation: String, inputType: String, required: Boolean, `type`: unified): UnifiedConfigurationPropertyDefinition = {
+  def apply(
+    documentation: String,
+    inputType: String,
+    required: Boolean,
+    `type`: unified,
+    apply: String = null,
+    default: DefaultValue | DefaultProvider = null,
+    imports: js.Array[Import] = null,
+    internal: js.UndefOr[Boolean] = js.undefined,
+    normalize: String = null,
+    resolvedType: String = null
+  ): UnifiedConfigurationPropertyDefinition = {
     val __obj = js.Dynamic.literal(documentation = documentation.asInstanceOf[js.Any], inputType = inputType.asInstanceOf[js.Any], required = required.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (apply != null) __obj.updateDynamic("apply")(apply.asInstanceOf[js.Any])
+    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
+    if (imports != null) __obj.updateDynamic("imports")(imports.asInstanceOf[js.Any])
+    if (!js.isUndefined(internal)) __obj.updateDynamic("internal")(internal.get.asInstanceOf[js.Any])
+    if (normalize != null) __obj.updateDynamic("normalize")(normalize.asInstanceOf[js.Any])
+    if (resolvedType != null) __obj.updateDynamic("resolvedType")(resolvedType.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnifiedConfigurationPropertyDefinition]
   }
-  @scala.inline
-  implicit class UnifiedConfigurationPropertyDefinitionOps[Self <: UnifiedConfigurationPropertyDefinition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRequired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: unified): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApply(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apply")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApply: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apply")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefault(value: DefaultValue | DefaultProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNormalize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNormalize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

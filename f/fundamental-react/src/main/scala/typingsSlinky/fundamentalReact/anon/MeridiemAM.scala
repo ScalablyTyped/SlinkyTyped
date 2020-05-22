@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MeridiemAM extends js.Object {
-  var meridiemAM: js.UndefOr[String] = js.native
-  var meridiemPM: js.UndefOr[String] = js.native
+  var meridiemAM: js.UndefOr[String] = js.undefined
+  var meridiemPM: js.UndefOr[String] = js.undefined
 }
 
 object MeridiemAM {
   @scala.inline
-  def apply(): MeridiemAM = {
+  def apply(meridiemAM: String = null, meridiemPM: String = null): MeridiemAM = {
     val __obj = js.Dynamic.literal()
+    if (meridiemAM != null) __obj.updateDynamic("meridiemAM")(meridiemAM.asInstanceOf[js.Any])
+    if (meridiemPM != null) __obj.updateDynamic("meridiemPM")(meridiemPM.asInstanceOf[js.Any])
     __obj.asInstanceOf[MeridiemAM]
   }
-  @scala.inline
-  implicit class MeridiemAMOps[Self <: MeridiemAM] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMeridiemAM(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meridiemAM")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeridiemAM: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meridiemAM")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeridiemPM(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meridiemPM")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeridiemPM: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meridiemPM")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

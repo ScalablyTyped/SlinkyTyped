@@ -11,18 +11,17 @@ import scala.scalajs.js.annotation._
   * @class
   * @memberof PIXI
   */
-@js.native
 trait System extends js.Object {
   /**
     * The renderer this manager works for.
     *
     * @member {PIXI.Renderer} PIXI.System#renderer
     */
-  var renderer: Renderer = js.native
+  var renderer: Renderer
   /**
     * Generic destroy methods to be overridden by the subclass
     */
-  def destroy(): Unit = js.native
+  def destroy(): Unit
 }
 
 object System {
@@ -31,25 +30,5 @@ object System {
     val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy), renderer = renderer.asInstanceOf[js.Any])
     __obj.asInstanceOf[System]
   }
-  @scala.inline
-  implicit class SystemOps[Self <: System] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestroy(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRenderer(value: Renderer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

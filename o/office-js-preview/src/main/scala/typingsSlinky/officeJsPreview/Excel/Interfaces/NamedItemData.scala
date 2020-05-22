@@ -15,179 +15,89 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface describing the data returned by calling `namedItem.toJSON()`. */
-@js.native
 trait NamedItemData extends js.Object {
   /**
     *
-    * Returns an object containing values and types of the named item. Read-only.
+    * Returns an object containing values and types of the named item.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var arrayValues: js.UndefOr[NamedItemArrayValuesData] = js.native
+  var arrayValues: js.UndefOr[NamedItemArrayValuesData] = js.undefined
   /**
     *
-    * Represents the comment associated with this name.
+    * Specifies the comment associated with this name.
     *
     * [Api set: ExcelApi 1.4]
     */
-  var comment: js.UndefOr[String] = js.native
+  var comment: js.UndefOr[String] = js.undefined
   /**
     *
-    * Gets or sets the formula of the named item.  Formula always starts with a '=' sign.
+    * The formula of the named item. Formula always starts with a '=' sign.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var formula: js.UndefOr[js.Any] = js.native
+  var formula: js.UndefOr[js.Any] = js.undefined
   /**
     *
-    * The name of the object. Read-only.
+    * The name of the object.
     *
     * [Api set: ExcelApi 1.1]
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     *
-    * Indicates whether the name is scoped to the workbook or to a specific worksheet. Possible values are: Worksheet, Workbook. Read-only.
+    * Specifies if the name is scoped to the workbook or to a specific worksheet. Possible values are: Worksheet, Workbook.
     *
     * [Api set: ExcelApi 1.4]
     */
-  var scope: js.UndefOr[NamedItemScope | Worksheet | Workbook] = js.native
+  var scope: js.UndefOr[NamedItemScope | Worksheet | Workbook] = js.undefined
   /**
     *
-    * Indicates the type of the value returned by the name's formula. See Excel.NamedItemType for details. Read-only.
+    * Specifies the type of the value returned by the name's formula. See Excel.NamedItemType for details.
     *
     * [Api set: ExcelApi 1.1 for String,Integer,Double,Boolean,Range,Error; 1.7 for Array]
     */
   var `type`: js.UndefOr[
     NamedItemType | typingsSlinky.officeJsPreview.officeJsPreviewStrings.String | Integer | Double | Boolean | Range | Error | Array
-  ] = js.native
+  ] = js.undefined
   /**
     *
-    * Represents the value computed by the name's formula. For a named range, will return the range address. Read-only.
+    * Represents the value computed by the name's formula. For a named range, will return the range address.
     *
     * [Api set: ExcelApi 1.1]
     */
-  var value: js.UndefOr[js.Any] = js.native
+  var value: js.UndefOr[js.Any] = js.undefined
   /**
     *
-    * Specifies whether the object is visible or not.
+    * Specifies if the object is visible.
     *
     * [Api set: ExcelApi 1.1]
     */
-  var visible: js.UndefOr[scala.Boolean] = js.native
+  var visible: js.UndefOr[scala.Boolean] = js.undefined
 }
 
 object NamedItemData {
   @scala.inline
-  def apply(): NamedItemData = {
+  def apply(
+    arrayValues: NamedItemArrayValuesData = null,
+    comment: String = null,
+    formula: js.Any = null,
+    name: String = null,
+    scope: NamedItemScope | Worksheet | Workbook = null,
+    `type`: NamedItemType | typingsSlinky.officeJsPreview.officeJsPreviewStrings.String | Integer | Double | Boolean | Range | Error | Array = null,
+    value: js.Any = null,
+    visible: js.UndefOr[scala.Boolean] = js.undefined
+  ): NamedItemData = {
     val __obj = js.Dynamic.literal()
+    if (arrayValues != null) __obj.updateDynamic("arrayValues")(arrayValues.asInstanceOf[js.Any])
+    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
+    if (formula != null) __obj.updateDynamic("formula")(formula.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[NamedItemData]
   }
-  @scala.inline
-  implicit class NamedItemDataOps[Self <: NamedItemData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArrayValues(value: NamedItemArrayValuesData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArrayValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormula(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formula")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormula: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formula")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScope(value: NamedItemScope | Worksheet | Workbook): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(
-      value: NamedItemType | typingsSlinky.officeJsPreview.officeJsPreviewStrings.String | Integer | Double | Boolean | Range | Error | Array
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

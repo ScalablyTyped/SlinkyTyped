@@ -1,40 +1,33 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
+import typingsSlinky.devextreme.devextremeStrings.bottom
+import typingsSlinky.devextreme.devextremeStrings.center
+import typingsSlinky.devextreme.devextremeStrings.left
+import typingsSlinky.devextreme.devextremeStrings.right
+import typingsSlinky.devextreme.devextremeStrings.top
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxChartValueAxisStripsLabel extends dxChartCommonAxisSettingsStripStyleLabel {
-  /** Specifies the text of the strip label. */
-  var text: js.UndefOr[String] = js.native
+  /** @name dxChart.Options.valueAxis.strips.label.text */
+  var text: js.UndefOr[String] = js.undefined
 }
 
 object dxChartValueAxisStripsLabel {
   @scala.inline
-  def apply(): dxChartValueAxisStripsLabel = {
+  def apply(
+    font: Font = null,
+    horizontalAlignment: center | left | right = null,
+    text: String = null,
+    verticalAlignment: bottom | center | top = null
+  ): dxChartValueAxisStripsLabel = {
     val __obj = js.Dynamic.literal()
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (horizontalAlignment != null) __obj.updateDynamic("horizontalAlignment")(horizontalAlignment.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (verticalAlignment != null) __obj.updateDynamic("verticalAlignment")(verticalAlignment.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxChartValueAxisStripsLabel]
   }
-  @scala.inline
-  implicit class dxChartValueAxisStripsLabelOps[Self <: dxChartValueAxisStripsLabel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

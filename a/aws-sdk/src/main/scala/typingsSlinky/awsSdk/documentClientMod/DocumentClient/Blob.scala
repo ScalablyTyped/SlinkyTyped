@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation._
 
 //<!--auto-generated start-->
 @js.native
-trait Blob extends BinaryAttributeValue
+trait Blob extends js.Object
 

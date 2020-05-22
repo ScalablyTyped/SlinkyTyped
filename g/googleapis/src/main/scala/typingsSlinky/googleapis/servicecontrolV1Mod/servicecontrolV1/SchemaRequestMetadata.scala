@@ -59,77 +59,20 @@ trait SchemaRequestMetadata extends js.Object {
 
 object SchemaRequestMetadata {
   @scala.inline
-  def apply(): SchemaRequestMetadata = {
+  def apply(
+    callerIp: String = null,
+    callerNetwork: String = null,
+    callerSuppliedUserAgent: String = null,
+    destinationAttributes: SchemaPeer = null,
+    requestAttributes: SchemaRequest = null
+  ): SchemaRequestMetadata = {
     val __obj = js.Dynamic.literal()
+    if (callerIp != null) __obj.updateDynamic("callerIp")(callerIp.asInstanceOf[js.Any])
+    if (callerNetwork != null) __obj.updateDynamic("callerNetwork")(callerNetwork.asInstanceOf[js.Any])
+    if (callerSuppliedUserAgent != null) __obj.updateDynamic("callerSuppliedUserAgent")(callerSuppliedUserAgent.asInstanceOf[js.Any])
+    if (destinationAttributes != null) __obj.updateDynamic("destinationAttributes")(destinationAttributes.asInstanceOf[js.Any])
+    if (requestAttributes != null) __obj.updateDynamic("requestAttributes")(requestAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRequestMetadata]
   }
-  @scala.inline
-  implicit class SchemaRequestMetadataOps[Self <: SchemaRequestMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCallerIp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callerIp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallerIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callerIp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCallerNetwork(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callerNetwork")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallerNetwork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callerNetwork")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCallerSuppliedUserAgent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callerSuppliedUserAgent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallerSuppliedUserAgent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callerSuppliedUserAgent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestinationAttributes(value: SchemaPeer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestAttributes(value: SchemaRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestAttributes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

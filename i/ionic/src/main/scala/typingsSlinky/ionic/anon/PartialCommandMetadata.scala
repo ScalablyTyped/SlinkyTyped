@@ -10,140 +10,42 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<ionic.ionic/definitions.CommandMetadata> */
-@js.native
 trait PartialCommandMetadata extends js.Object {
-  var description: js.UndefOr[String] = js.native
-  var exampleCommands: js.UndefOr[js.Array[String]] = js.native
-  var footnotes: js.UndefOr[js.Array[Footnote]] = js.native
-  var groups: js.UndefOr[js.Array[String]] = js.native
-  var inputs: js.UndefOr[js.Array[CommandMetadataInput]] = js.native
-  var name: js.UndefOr[String] = js.native
-  var options: js.UndefOr[js.Array[CommandMetadataOption]] = js.native
-  var summary: js.UndefOr[String] = js.native
-  var `type`: js.UndefOr[global | project] = js.native
+  var description: js.UndefOr[String] = js.undefined
+  var exampleCommands: js.UndefOr[js.Array[String]] = js.undefined
+  var footnotes: js.UndefOr[js.Array[Footnote]] = js.undefined
+  var groups: js.UndefOr[js.Array[String]] = js.undefined
+  var inputs: js.UndefOr[js.Array[CommandMetadataInput]] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var options: js.UndefOr[js.Array[CommandMetadataOption]] = js.undefined
+  var summary: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[global | project] = js.undefined
 }
 
 object PartialCommandMetadata {
   @scala.inline
-  def apply(): PartialCommandMetadata = {
+  def apply(
+    description: String = null,
+    exampleCommands: js.Array[String] = null,
+    footnotes: js.Array[Footnote] = null,
+    groups: js.Array[String] = null,
+    inputs: js.Array[CommandMetadataInput] = null,
+    name: String = null,
+    options: js.Array[CommandMetadataOption] = null,
+    summary: String = null,
+    `type`: global | project = null
+  ): PartialCommandMetadata = {
     val __obj = js.Dynamic.literal()
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (exampleCommands != null) __obj.updateDynamic("exampleCommands")(exampleCommands.asInstanceOf[js.Any])
+    if (footnotes != null) __obj.updateDynamic("footnotes")(footnotes.asInstanceOf[js.Any])
+    if (groups != null) __obj.updateDynamic("groups")(groups.asInstanceOf[js.Any])
+    if (inputs != null) __obj.updateDynamic("inputs")(inputs.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (summary != null) __obj.updateDynamic("summary")(summary.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialCommandMetadata]
   }
-  @scala.inline
-  implicit class PartialCommandMetadataOps[Self <: PartialCommandMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExampleCommands(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exampleCommands")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExampleCommands: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exampleCommands")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFootnotes(value: js.Array[Footnote]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footnotes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFootnotes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footnotes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroups(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputs(value: js.Array[CommandMetadataInput]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: js.Array[CommandMetadataOption]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSummary(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: global | project): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

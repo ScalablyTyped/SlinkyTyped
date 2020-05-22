@@ -7,219 +7,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Data
   extends /* propertyName */ StringDictionary[js.Any] {
-  var data: js.UndefOr[String] = js.native
-  var headers: js.UndefOr[StringDictionary[String]] = js.native
-  var method: js.UndefOr[String] = js.native
-  var onreadystatechange: js.UndefOr[js.Function1[/* ev */ ProgressEvent, _]] = js.native
-  var readyState: js.UndefOr[Double] = js.native
-  var response: js.UndefOr[js.Any] = js.native
-  var responseBody: js.UndefOr[js.Any] = js.native
-  var responseText: js.UndefOr[String] = js.native
-  var responseType: js.UndefOr[String] = js.native
-  var responseXML: js.UndefOr[js.Any] = js.native
-  var status: js.UndefOr[Double] = js.native
-  var statusText: js.UndefOr[String] = js.native
-  var timeout: js.UndefOr[Double] = js.native
-  var upload: js.UndefOr[XMLHttpRequestUpload] = js.native
-  var withCredentials: js.UndefOr[Boolean] = js.native
+  var data: js.UndefOr[String] = js.undefined
+  var headers: js.UndefOr[StringDictionary[String]] = js.undefined
+  var method: js.UndefOr[String] = js.undefined
+  var onreadystatechange: js.UndefOr[js.Function1[/* ev */ ProgressEvent, _]] = js.undefined
+  var readyState: js.UndefOr[Double] = js.undefined
+  var response: js.UndefOr[js.Any] = js.undefined
+  var responseBody: js.UndefOr[js.Any] = js.undefined
+  var responseText: js.UndefOr[String] = js.undefined
+  var responseType: js.UndefOr[String] = js.undefined
+  var responseXML: js.UndefOr[js.Any] = js.undefined
+  var status: js.UndefOr[Double] = js.undefined
+  var statusText: js.UndefOr[String] = js.undefined
+  var timeout: js.UndefOr[Double] = js.undefined
+  var upload: js.UndefOr[XMLHttpRequestUpload] = js.undefined
+  var withCredentials: js.UndefOr[Boolean] = js.undefined
 }
 
 object Data {
   @scala.inline
-  def apply(): Data = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    data: String = null,
+    headers: StringDictionary[String] = null,
+    method: String = null,
+    onreadystatechange: /* ev */ ProgressEvent => _ = null,
+    readyState: js.UndefOr[Double] = js.undefined,
+    response: js.Any = null,
+    responseBody: js.Any = null,
+    responseText: String = null,
+    responseType: String = null,
+    responseXML: js.Any = null,
+    status: js.UndefOr[Double] = js.undefined,
+    statusText: String = null,
+    timeout: js.UndefOr[Double] = js.undefined,
+    upload: XMLHttpRequestUpload = null,
+    withCredentials: js.UndefOr[Boolean] = js.undefined
+  ): Data = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (onreadystatechange != null) __obj.updateDynamic("onreadystatechange")(js.Any.fromFunction1(onreadystatechange))
+    if (!js.isUndefined(readyState)) __obj.updateDynamic("readyState")(readyState.get.asInstanceOf[js.Any])
+    if (response != null) __obj.updateDynamic("response")(response.asInstanceOf[js.Any])
+    if (responseBody != null) __obj.updateDynamic("responseBody")(responseBody.asInstanceOf[js.Any])
+    if (responseText != null) __obj.updateDynamic("responseText")(responseText.asInstanceOf[js.Any])
+    if (responseType != null) __obj.updateDynamic("responseType")(responseType.asInstanceOf[js.Any])
+    if (responseXML != null) __obj.updateDynamic("responseXML")(responseXML.asInstanceOf[js.Any])
+    if (!js.isUndefined(status)) __obj.updateDynamic("status")(status.get.asInstanceOf[js.Any])
+    if (statusText != null) __obj.updateDynamic("statusText")(statusText.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
+    if (upload != null) __obj.updateDynamic("upload")(upload.asInstanceOf[js.Any])
+    if (!js.isUndefined(withCredentials)) __obj.updateDynamic("withCredentials")(withCredentials.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Data]
   }
-  @scala.inline
-  implicit class DataOps[Self <: Data] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnreadystatechange(value: /* ev */ ProgressEvent => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onreadystatechange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnreadystatechange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onreadystatechange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadyState(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readyState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadyState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readyState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponse(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseBody(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseXML(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseXML")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseXML: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseXML")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpload(value: XMLHttpRequestUpload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWithCredentials(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withCredentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWithCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withCredentials")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

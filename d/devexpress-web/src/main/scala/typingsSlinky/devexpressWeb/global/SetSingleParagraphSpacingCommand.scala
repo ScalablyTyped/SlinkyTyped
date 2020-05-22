@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("SetSingleParagraphSpacingCommand")
 @js.native
 class SetSingleParagraphSpacingCommand ()
-  extends typingsSlinky.devexpressWeb.SetSingleParagraphSpacingCommand
+  extends typingsSlinky.devexpressWeb.SetSingleParagraphSpacingCommand {
+  /**
+    * Executes the SetSingleParagraphSpacingCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.CommandState[Boolean] = js.native
+}
 

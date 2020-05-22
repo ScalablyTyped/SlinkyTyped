@@ -4,57 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PrepareDataFunction extends js.Object {
-  var prepareDataFunction: js.UndefOr[js.Function1[/* rawData */ js.Any, _]] = js.native
-  var slice: js.UndefOr[typingsSlinky.flexmonster.mod.Slice] = js.native
-  var `type`: String = js.native
+  var prepareDataFunction: js.UndefOr[js.Function1[/* rawData */ js.Any, _]] = js.undefined
+  var slice: js.UndefOr[typingsSlinky.flexmonster.mod.Slice] = js.undefined
+  var `type`: String
 }
 
 object PrepareDataFunction {
   @scala.inline
-  def apply(`type`: String): PrepareDataFunction = {
+  def apply(
+    `type`: String,
+    prepareDataFunction: /* rawData */ js.Any => _ = null,
+    slice: typingsSlinky.flexmonster.mod.Slice = null
+  ): PrepareDataFunction = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (prepareDataFunction != null) __obj.updateDynamic("prepareDataFunction")(js.Any.fromFunction1(prepareDataFunction))
+    if (slice != null) __obj.updateDynamic("slice")(slice.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrepareDataFunction]
   }
-  @scala.inline
-  implicit class PrepareDataFunctionOps[Self <: PrepareDataFunction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrepareDataFunction(value: /* rawData */ js.Any => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prepareDataFunction")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutPrepareDataFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prepareDataFunction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlice(value: typingsSlinky.flexmonster.mod.Slice): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slice")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

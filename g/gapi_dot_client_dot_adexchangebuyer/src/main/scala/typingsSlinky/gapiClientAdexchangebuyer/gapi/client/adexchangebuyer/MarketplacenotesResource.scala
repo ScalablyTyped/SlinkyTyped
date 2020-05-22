@@ -7,12 +7,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MarketplacenotesResource extends js.Object {
   /** Add notes to the proposal */
-  def insert(request: Oauthtoken): Request[AddOrderNotesResponse] = js.native
+  def insert(request: Oauthtoken): Request[AddOrderNotesResponse]
   /** Get all the notes associated with a proposal */
-  def list(request: PqlQuery): Request[GetOrderNotesResponse] = js.native
+  def list(request: PqlQuery): Request[GetOrderNotesResponse]
 }
 
 object MarketplacenotesResource {
@@ -24,25 +23,5 @@ object MarketplacenotesResource {
     val __obj = js.Dynamic.literal(insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[MarketplacenotesResource]
   }
-  @scala.inline
-  implicit class MarketplacenotesResourceOps[Self <: MarketplacenotesResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInsert(value: Oauthtoken => Request[AddOrderNotesResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: PqlQuery => Request[GetOrderNotesResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

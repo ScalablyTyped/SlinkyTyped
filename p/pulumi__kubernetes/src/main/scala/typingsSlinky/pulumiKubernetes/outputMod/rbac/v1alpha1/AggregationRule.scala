@@ -8,14 +8,13 @@ import scala.scalajs.js.annotation._
 /**
   * AggregationRule describes how to locate ClusterRoles to aggregate into the ClusterRole
   */
-@js.native
 trait AggregationRule extends js.Object {
   /**
     * ClusterRoleSelectors holds a list of selectors which will be used to find ClusterRoles and
     * create the rules. If any of the selectors match, then the ClusterRole's permissions will be
     * added
     */
-  val clusterRoleSelectors: js.Array[LabelSelector] = js.native
+  val clusterRoleSelectors: js.Array[LabelSelector]
 }
 
 object AggregationRule {
@@ -24,19 +23,5 @@ object AggregationRule {
     val __obj = js.Dynamic.literal(clusterRoleSelectors = clusterRoleSelectors.asInstanceOf[js.Any])
     __obj.asInstanceOf[AggregationRule]
   }
-  @scala.inline
-  implicit class AggregationRuleOps[Self <: AggregationRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClusterRoleSelectors(value: js.Array[LabelSelector]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterRoleSelectors")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -1,33 +1,20 @@
 package typingsSlinky.ionicCore.interfaceMod
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RouteNode extends RouteEntry {
-  var children: RouteTree = js.native
+  var children: RouteTree
 }
 
 object RouteNode {
   @scala.inline
-  def apply(children: RouteTree, id: String, path: js.Array[String]): RouteNode = {
+  def apply(children: RouteTree, id: String, path: js.Array[String], params: StringDictionary[js.Any] = null): RouteNode = {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
     __obj.asInstanceOf[RouteNode]
   }
-  @scala.inline
-  implicit class RouteNodeOps[Self <: RouteNode] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildren(value: RouteTree): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

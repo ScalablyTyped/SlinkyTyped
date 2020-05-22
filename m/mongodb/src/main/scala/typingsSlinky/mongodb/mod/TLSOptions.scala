@@ -4,140 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TLSOptions extends js.Object {
   /**
     * Enable TLS connections
     * @default false
     */
-  var tls: js.UndefOr[Boolean] = js.native
+  var tls: js.UndefOr[Boolean] = js.undefined
   /**
     * Specifies whether or not the driver should error when the server’s TLS certificate is invalid
     */
-  var tlsAllowInvalidCertificates: js.UndefOr[Boolean] = js.native
+  var tlsAllowInvalidCertificates: js.UndefOr[Boolean] = js.undefined
   /**
     * Specifies whether or not the driver should error when there is a mismatch between the server’s hostname
     * and the hostname specified by the TLS certificate
     */
-  var tlsAllowInvalidHostnames: js.UndefOr[Boolean] = js.native
+  var tlsAllowInvalidHostnames: js.UndefOr[Boolean] = js.undefined
   /**
     * path to file with either a single or bundle of certificate authorities
     * to be considered trusted when making a TLS connection
     */
-  var tlsCAFile: js.UndefOr[String] = js.native
+  var tlsCAFile: js.UndefOr[String] = js.undefined
   /**
     * path to the client certificate file or the client private key file;
     * in the case that they both are needed, the files should be concatenated
     */
-  var tlsCertificateKeyFile: js.UndefOr[String] = js.native
+  var tlsCertificateKeyFile: js.UndefOr[String] = js.undefined
   /**
     * The password to decrypt the client private key to be used for TLS connections
     */
-  var tlsCertificateKeyFilePassword: js.UndefOr[String] = js.native
+  var tlsCertificateKeyFilePassword: js.UndefOr[String] = js.undefined
   /**
     * Relax TLS constraints, disabling validation
     * @default false
     */
-  var tlsInsecure: js.UndefOr[Boolean] = js.native
+  var tlsInsecure: js.UndefOr[Boolean] = js.undefined
 }
 
 object TLSOptions {
   @scala.inline
-  def apply(): TLSOptions = {
+  def apply(
+    tls: js.UndefOr[Boolean] = js.undefined,
+    tlsAllowInvalidCertificates: js.UndefOr[Boolean] = js.undefined,
+    tlsAllowInvalidHostnames: js.UndefOr[Boolean] = js.undefined,
+    tlsCAFile: String = null,
+    tlsCertificateKeyFile: String = null,
+    tlsCertificateKeyFilePassword: String = null,
+    tlsInsecure: js.UndefOr[Boolean] = js.undefined
+  ): TLSOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(tls)) __obj.updateDynamic("tls")(tls.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tlsAllowInvalidCertificates)) __obj.updateDynamic("tlsAllowInvalidCertificates")(tlsAllowInvalidCertificates.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tlsAllowInvalidHostnames)) __obj.updateDynamic("tlsAllowInvalidHostnames")(tlsAllowInvalidHostnames.get.asInstanceOf[js.Any])
+    if (tlsCAFile != null) __obj.updateDynamic("tlsCAFile")(tlsCAFile.asInstanceOf[js.Any])
+    if (tlsCertificateKeyFile != null) __obj.updateDynamic("tlsCertificateKeyFile")(tlsCertificateKeyFile.asInstanceOf[js.Any])
+    if (tlsCertificateKeyFilePassword != null) __obj.updateDynamic("tlsCertificateKeyFilePassword")(tlsCertificateKeyFilePassword.asInstanceOf[js.Any])
+    if (!js.isUndefined(tlsInsecure)) __obj.updateDynamic("tlsInsecure")(tlsInsecure.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TLSOptions]
   }
-  @scala.inline
-  implicit class TLSOptionsOps[Self <: TLSOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTls(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTlsAllowInvalidCertificates(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsAllowInvalidCertificates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTlsAllowInvalidCertificates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsAllowInvalidCertificates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTlsAllowInvalidHostnames(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsAllowInvalidHostnames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTlsAllowInvalidHostnames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsAllowInvalidHostnames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTlsCAFile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsCAFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTlsCAFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsCAFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTlsCertificateKeyFile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsCertificateKeyFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTlsCertificateKeyFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsCertificateKeyFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTlsCertificateKeyFilePassword(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsCertificateKeyFilePassword")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTlsCertificateKeyFilePassword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsCertificateKeyFilePassword")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTlsInsecure(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsInsecure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTlsInsecure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsInsecure")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

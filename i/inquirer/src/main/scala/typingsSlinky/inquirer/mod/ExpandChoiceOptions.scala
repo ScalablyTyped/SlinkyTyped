@@ -1,5 +1,6 @@
 package typingsSlinky.inquirer.mod
 
+import typingsSlinky.inquirer.inquirerStrings.choice
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,39 +11,31 @@ import scala.scalajs.js.annotation._
   * @template T
   * The type of the answers.
   */
-@js.native
 trait ExpandChoiceOptions[T /* <: Answers */] extends ChoiceOptions[T] {
   /**
     * The key to press for selecting the choice.
     */
-  var key: js.UndefOr[String] = js.native
+  var key: js.UndefOr[String] = js.undefined
 }
 
 object ExpandChoiceOptions {
   @scala.inline
-  def apply[T](): ExpandChoiceOptions[T] = {
+  def apply[T](
+    extra: js.Any = null,
+    key: String = null,
+    name: String = null,
+    short: String = null,
+    `type`: choice = null,
+    value: js.Any = null
+  ): ExpandChoiceOptions[T] = {
     val __obj = js.Dynamic.literal()
+    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (short != null) __obj.updateDynamic("short")(short.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExpandChoiceOptions[T]]
   }
-  @scala.inline
-  implicit class ExpandChoiceOptionsOps[Self[t] <: ExpandChoiceOptions[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withKey(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

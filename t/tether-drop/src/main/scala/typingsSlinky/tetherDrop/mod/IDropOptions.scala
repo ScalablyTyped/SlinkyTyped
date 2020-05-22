@@ -7,243 +7,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IDropOptions extends js.Object {
-  var beforeClose: js.UndefOr[js.Function2[/* event */ Event, /* drop */ Drop, Boolean]] = js.native
-  var blurDelay: js.UndefOr[Double] = js.native
-  var classes: js.UndefOr[String] = js.native
-  var closeDelay: js.UndefOr[Double] = js.native
-  var constrainToScrollParent: js.UndefOr[Boolean] = js.native
-  var constrainToWindow: js.UndefOr[Boolean] = js.native
-  var content: js.UndefOr[Element | String | (js.Function1[js.UndefOr[Drop], Element | String])] = js.native
-  var focusDelay: js.UndefOr[Double] = js.native
-  var hoverCloseDelay: js.UndefOr[Double] = js.native
-  var hoverOpenDelay: js.UndefOr[Double] = js.native
-  var openDelay: js.UndefOr[Double] = js.native
-  var openOn: js.UndefOr[String] = js.native
-  var position: js.UndefOr[String] = js.native
-  var remove: js.UndefOr[Boolean] = js.native
-  var target: js.UndefOr[Element] = js.native
-  var tetherOptions: js.UndefOr[ITetherOptions] = js.native
+  var beforeClose: js.UndefOr[js.Function2[/* event */ Event, /* drop */ Drop, Boolean]] = js.undefined
+  var blurDelay: js.UndefOr[Double] = js.undefined
+  var classes: js.UndefOr[String] = js.undefined
+  var closeDelay: js.UndefOr[Double] = js.undefined
+  var constrainToScrollParent: js.UndefOr[Boolean] = js.undefined
+  var constrainToWindow: js.UndefOr[Boolean] = js.undefined
+  var content: js.UndefOr[Element | String | (js.Function1[js.UndefOr[Drop], Element | String])] = js.undefined
+  var focusDelay: js.UndefOr[Double] = js.undefined
+  var hoverCloseDelay: js.UndefOr[Double] = js.undefined
+  var hoverOpenDelay: js.UndefOr[Double] = js.undefined
+  var openDelay: js.UndefOr[Double] = js.undefined
+  var openOn: js.UndefOr[String] = js.undefined
+  var position: js.UndefOr[String] = js.undefined
+  var remove: js.UndefOr[Boolean] = js.undefined
+  var target: js.UndefOr[Element] = js.undefined
+  var tetherOptions: js.UndefOr[ITetherOptions] = js.undefined
 }
 
 object IDropOptions {
   @scala.inline
-  def apply(): IDropOptions = {
+  def apply(
+    beforeClose: (/* event */ Event, /* drop */ Drop) => Boolean = null,
+    blurDelay: js.UndefOr[Double] = js.undefined,
+    classes: String = null,
+    closeDelay: js.UndefOr[Double] = js.undefined,
+    constrainToScrollParent: js.UndefOr[Boolean] = js.undefined,
+    constrainToWindow: js.UndefOr[Boolean] = js.undefined,
+    content: Element | String | (js.Function1[js.UndefOr[Drop], Element | String]) = null,
+    focusDelay: js.UndefOr[Double] = js.undefined,
+    hoverCloseDelay: js.UndefOr[Double] = js.undefined,
+    hoverOpenDelay: js.UndefOr[Double] = js.undefined,
+    openDelay: js.UndefOr[Double] = js.undefined,
+    openOn: String = null,
+    position: String = null,
+    remove: js.UndefOr[Boolean] = js.undefined,
+    target: Element = null,
+    tetherOptions: ITetherOptions = null
+  ): IDropOptions = {
     val __obj = js.Dynamic.literal()
+    if (beforeClose != null) __obj.updateDynamic("beforeClose")(js.Any.fromFunction2(beforeClose))
+    if (!js.isUndefined(blurDelay)) __obj.updateDynamic("blurDelay")(blurDelay.get.asInstanceOf[js.Any])
+    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeDelay)) __obj.updateDynamic("closeDelay")(closeDelay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(constrainToScrollParent)) __obj.updateDynamic("constrainToScrollParent")(constrainToScrollParent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(constrainToWindow)) __obj.updateDynamic("constrainToWindow")(constrainToWindow.get.asInstanceOf[js.Any])
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (!js.isUndefined(focusDelay)) __obj.updateDynamic("focusDelay")(focusDelay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hoverCloseDelay)) __obj.updateDynamic("hoverCloseDelay")(hoverCloseDelay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hoverOpenDelay)) __obj.updateDynamic("hoverOpenDelay")(hoverOpenDelay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(openDelay)) __obj.updateDynamic("openDelay")(openDelay.get.asInstanceOf[js.Any])
+    if (openOn != null) __obj.updateDynamic("openOn")(openOn.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (!js.isUndefined(remove)) __obj.updateDynamic("remove")(remove.get.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (tetherOptions != null) __obj.updateDynamic("tetherOptions")(tetherOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDropOptions]
   }
-  @scala.inline
-  implicit class IDropOptionsOps[Self <: IDropOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBeforeClose(value: (/* event */ Event, /* drop */ Drop) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeClose")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutBeforeClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlurDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blurDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlurDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blurDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClasses(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClasses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConstrainToScrollParent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constrainToScrollParent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstrainToScrollParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constrainToScrollParent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConstrainToWindow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constrainToWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstrainToWindow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constrainToWindow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentFunction1(value: js.UndefOr[Drop] => Element | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withContentElement(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContent(value: Element | String | (js.Function1[js.UndefOr[Drop], Element | String])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFocusDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFocusDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoverCloseDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverCloseDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverCloseDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverCloseDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoverOpenDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverOpenDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverOpenDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverOpenDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpenDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpenOn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemove(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTetherOptions(value: ITetherOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tetherOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTetherOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tetherOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

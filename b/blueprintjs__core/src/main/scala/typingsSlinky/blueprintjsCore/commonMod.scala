@@ -38,11 +38,12 @@ import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.top
 import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.warning
 import typingsSlinky.blueprintjsCore.compareUtilsMod.IKeyBlacklist
 import typingsSlinky.blueprintjsCore.compareUtilsMod.IKeyWhitelist
+import typingsSlinky.blueprintjsCore.domUtilsMod.IThrottledReactEventOptions
 import typingsSlinky.blueprintjsCore.elevationMod.Elevation
 import typingsSlinky.blueprintjsCore.intentMod.Intent
 import typingsSlinky.blueprintjsCore.positionMod.Position
-import typingsSlinky.blueprintjsCore.utilsMod.INamed
-import typingsSlinky.blueprintjsCore.utilsMod.IThrottledReactEventOptions
+import typingsSlinky.blueprintjsCore.reactUtilsMod.INamed
+import typingsSlinky.blueprintjsCore.refUtilsMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -186,6 +187,7 @@ object commonMod extends js.Object {
     val INPUT_ACTION: String = js.native
     val INPUT_GHOST: String = js.native
     val INPUT_GROUP: String = js.native
+    val INPUT_LEFT_CONTAINER: String = js.native
     val INTENT_DANGER: String = js.native
     val INTENT_PRIMARY: String = js.native
     val INTENT_SUCCESS: String = js.native
@@ -488,6 +490,8 @@ object commonMod extends js.Object {
     def getDeepUnequalKeyValues[T /* <: js.Object */](objA: T, objB: T, keys: js.Array[/* keyof T */ String]): js.Array[Key[T]] = js.native
     def getDisplayName(ComponentClass: INamed): String = js.native
     def getDisplayName(ComponentClass: ReactComponentClass[js.Object]): String = js.native
+    def getRef[T](ref: T): T = js.native
+    def getRef[T](ref: IRefObject[T]): T = js.native
     def isElementOfType[P](element: js.Any, ComponentType: ReactComponentClass[P]): /* is react.react.ReactElement */ Boolean = js.native
     def isFunction(value: js.Any): /* is std.Function */ Boolean = js.native
     def isNodeEnv(env: String): Boolean = js.native

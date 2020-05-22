@@ -100,7 +100,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NormalModeFactory extends IFactory
 
 object NormalModeFactory {

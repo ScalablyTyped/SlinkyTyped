@@ -1,6 +1,10 @@
 package typingsSlinky.officeUiFabricReact.dragDropHelperMod
 
+import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.officeUiFabricReact.anon.Dispose
 import typingsSlinky.officeUiFabricReact.dragdropInterfacesMod.IDragDropHelper
+import typingsSlinky.officeUiFabricReact.dragdropInterfacesMod.IDragDropOptions
+import typingsSlinky.officeUiFabricReact.utilitiesMod.EventGroup
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,5 +50,20 @@ class DragDropHelper protected () extends IDragDropHelper {
     */
   var _onMouseUp: js.Any = js.native
   var _selection: js.Any = js.native
+  /**
+    * Dispose of listeners bound to instance of helper.
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
+  /**
+    * Subscribe to events on a DOM node with drag and drop configuration.
+    */
+  /* CompleteClass */
+  override def subscribe(root: HTMLElement, events: EventGroup, options: IDragDropOptions): Dispose = js.native
+  /**
+    * Unsubscribe to events registered on a DOM node with key.
+    */
+  /* CompleteClass */
+  override def unsubscribe(root: HTMLElement, key: String): Unit = js.native
 }
 

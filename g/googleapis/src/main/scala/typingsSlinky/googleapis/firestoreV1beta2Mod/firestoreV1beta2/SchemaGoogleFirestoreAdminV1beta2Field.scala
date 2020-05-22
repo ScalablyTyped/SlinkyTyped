@@ -44,41 +44,11 @@ trait SchemaGoogleFirestoreAdminV1beta2Field extends js.Object {
 
 object SchemaGoogleFirestoreAdminV1beta2Field {
   @scala.inline
-  def apply(): SchemaGoogleFirestoreAdminV1beta2Field = {
+  def apply(indexConfig: SchemaGoogleFirestoreAdminV1beta2IndexConfig = null, name: String = null): SchemaGoogleFirestoreAdminV1beta2Field = {
     val __obj = js.Dynamic.literal()
+    if (indexConfig != null) __obj.updateDynamic("indexConfig")(indexConfig.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleFirestoreAdminV1beta2Field]
   }
-  @scala.inline
-  implicit class SchemaGoogleFirestoreAdminV1beta2FieldOps[Self <: SchemaGoogleFirestoreAdminV1beta2Field] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndexConfig(value: SchemaGoogleFirestoreAdminV1beta2IndexConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndexConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

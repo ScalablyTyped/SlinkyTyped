@@ -24,7 +24,7 @@ import scala.scalajs.js.annotation._
   * If you do not require animation then you can safely use Arcade Images instead of Arcade Sprites.
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.phaser.Phaser.Types.Physics.Arcade.ArcadeColliderType because Already inherited
+- typingsSlinky.phaser.Phaser.Types.Physics.Arcade._ArcadeColliderType because Already inherited
 - typingsSlinky.phaser.Phaser.GameObjects.Components.Texture because var conflicts: frame, texture. Inlined  */ @js.native
 trait Sprite
   extends typingsSlinky.phaser.Phaser.GameObjects.Sprite

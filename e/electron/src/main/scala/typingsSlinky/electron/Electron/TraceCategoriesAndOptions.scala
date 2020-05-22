@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TraceCategoriesAndOptions extends js.Object {
   // Docs: http://electronjs.org/docs/api/structures/trace-categories-and-options
   /**
@@ -14,7 +13,7 @@ trait TraceCategoriesAndOptions extends js.Object {
     * is not supported. Examples: test_MyTest*, test_MyTest*,test_OtherStuff,
     * -excluded_category1,-excluded_category2.
     */
-  var categoryFilter: String = js.native
+  var categoryFilter: String
   /**
     * Controls what kind of tracing is enabled, it is a comma-delimited sequence of
     * the following strings: record-until-full, record-continuously, trace-to-console,
@@ -27,7 +26,7 @@ trait TraceCategoriesAndOptions extends js.Object {
     * enable_systrace set to false) before options parsed from traceOptions are
     * applied on it.
     */
-  var traceOptions: String = js.native
+  var traceOptions: String
 }
 
 object TraceCategoriesAndOptions {
@@ -36,25 +35,5 @@ object TraceCategoriesAndOptions {
     val __obj = js.Dynamic.literal(categoryFilter = categoryFilter.asInstanceOf[js.Any], traceOptions = traceOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[TraceCategoriesAndOptions]
   }
-  @scala.inline
-  implicit class TraceCategoriesAndOptionsOps[Self <: TraceCategoriesAndOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCategoryFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTraceOptions(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("traceOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -6,20 +6,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a 3D Manufacturing Format (3MF) component. Acts as a container of other components. */
-@js.native
 trait Printing3DComponent extends js.Object {
   /** Gets the other components contained within the component. */
-  var components: IVector[Printing3DComponentWithMatrix] = js.native
+  var components: IVector[Printing3DComponentWithMatrix]
   /** Gets or sets the 3D mesh of the component. */
-  var mesh: Printing3DMesh = js.native
+  var mesh: Printing3DMesh
   /** Gets or sets the name of the 3D Manufacturing Format (3MF) component. */
-  var name: String = js.native
+  var name: String
   /** Gets or sets the part number of the 3D Manufacturing Format (3MF) component. */
-  var partNumber: String = js.native
+  var partNumber: String
   /** Gets or sets the thumbnail image of the 3D Manufacturing Format (3MF) component. */
-  var thumbnail: Printing3DTextureResource = js.native
+  var thumbnail: Printing3DTextureResource
   /** Gets or sets the type of the 3D Manufacturing Format (3MF) component. */
-  var `type`: Printing3DObjectType = js.native
+  var `type`: Printing3DObjectType
 }
 
 object Printing3DComponent {
@@ -36,49 +35,5 @@ object Printing3DComponent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Printing3DComponent]
   }
-  @scala.inline
-  implicit class Printing3DComponentOps[Self <: Printing3DComponent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComponents(value: IVector[Printing3DComponentWithMatrix]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("components")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMesh(value: Printing3DMesh): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mesh")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPartNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThumbnail(value: Printing3DTextureResource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: Printing3DObjectType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

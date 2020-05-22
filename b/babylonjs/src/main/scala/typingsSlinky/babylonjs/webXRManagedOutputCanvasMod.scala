@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs
 
+import typingsSlinky.babylonjs.typesMod.Nullable
 import typingsSlinky.babylonjs.webXRSessionManagerMod.WebXRSessionManager
 import typingsSlinky.babylonjs.webXRTypesMod.WebXRRenderTarget
 import scala.scalajs.js
@@ -24,6 +25,28 @@ object webXRManagedOutputCanvasMod extends js.Object {
     var _options: js.Any = js.native
     var _removeCanvas: js.Any = js.native
     var _setManagedOutputCanvas: js.Any = js.native
+    /**
+      * xrpresent context of the canvas which can be used to display/mirror xr content
+      */
+    /* CompleteClass */
+    override var canvasContext: WebGLRenderingContext = js.native
+    /**
+      * xr layer for the canvas
+      */
+    /* CompleteClass */
+    override var xrLayer: Nullable[XRWebGLLayer] = js.native
+    /**
+      * Releases all held resources
+      */
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
+    /**
+      * Initializes the xr layer for the session
+      * @param xrSession xr session
+      * @returns a promise that will resolve once the XR Layer has been created
+      */
+    /* CompleteClass */
+    override def initializeXRLayerAsync(xrSession: XRSession): js.Promise[XRWebGLLayer] = js.native
   }
   
   @js.native

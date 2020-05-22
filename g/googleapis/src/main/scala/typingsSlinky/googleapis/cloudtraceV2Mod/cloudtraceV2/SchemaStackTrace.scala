@@ -26,41 +26,11 @@ trait SchemaStackTrace extends js.Object {
 
 object SchemaStackTrace {
   @scala.inline
-  def apply(): SchemaStackTrace = {
+  def apply(stackFrames: SchemaStackFrames = null, stackTraceHashId: String = null): SchemaStackTrace = {
     val __obj = js.Dynamic.literal()
+    if (stackFrames != null) __obj.updateDynamic("stackFrames")(stackFrames.asInstanceOf[js.Any])
+    if (stackTraceHashId != null) __obj.updateDynamic("stackTraceHashId")(stackTraceHashId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStackTrace]
   }
-  @scala.inline
-  implicit class SchemaStackTraceOps[Self <: SchemaStackTrace] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStackFrames(value: SchemaStackFrames): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackFrames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackFrames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackFrames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackTraceHashId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackTraceHashId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackTraceHashId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackTraceHashId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

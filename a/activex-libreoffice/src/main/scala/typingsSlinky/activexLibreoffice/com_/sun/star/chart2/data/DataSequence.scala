@@ -22,7 +22,6 @@ import scala.scalajs.js.annotation._
   * With the optional {@link com.sun.star.container.XIndexReplace} it is possible to modify single elements, if the corresponding {@link DataProvider}
   * supports modification of its values.
   */
-@js.native
 trait DataSequence
   extends XIndexReplace
      with XDataSequence
@@ -32,9 +31,9 @@ trait DataSequence
      with XModifyBroadcaster
      with XPropertySet {
   /** a sequence of indexes that identify values that are hidden in the underlying data provider. */
-  var HiddenValues: SafeArray[Double] = js.native
+  var HiddenValues: SafeArray[Double]
   /** If set to false `FALSE` , values from hidden cells are not returned. */
-  var IncludeHiddenCells: Boolean = js.native
+  var IncludeHiddenCells: Boolean
   /**
     * The key (index) of the number format that this sequence should be formatted with.
     *
@@ -44,7 +43,7 @@ trait DataSequence
     * The role of the series inside a data series. This may be any string. However some strings are predefined and should always be used in the same way.
     * @see DataSequenceRole
     */
-  var Role: DataSequenceRole = js.native
+  var Role: DataSequenceRole
 }
 
 object DataSequence {
@@ -88,31 +87,5 @@ object DataSequence {
     val __obj = js.Dynamic.literal(Count = Count.asInstanceOf[js.Any], Data = Data.asInstanceOf[js.Any], ElementType = ElementType.asInstanceOf[js.Any], HiddenValues = HiddenValues.asInstanceOf[js.Any], IncludeHiddenCells = IncludeHiddenCells.asInstanceOf[js.Any], NumericalData = NumericalData.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], Role = Role.asInstanceOf[js.Any], SourceRangeRepresentation = SourceRangeRepresentation.asInstanceOf[js.Any], TextualData = TextualData.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addModifyListener = js.Any.fromFunction1(addModifyListener), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), createClone = js.Any.fromFunction0(createClone), generateLabel = js.Any.fromFunction1(generateLabel), getByIndex = js.Any.fromFunction1(getByIndex), getCount = js.Any.fromFunction0(getCount), getData = js.Any.fromFunction0(getData), getElementType = js.Any.fromFunction0(getElementType), getNumberFormatKeyByIndex = js.Any.fromFunction1(getNumberFormatKeyByIndex), getNumericalData = js.Any.fromFunction0(getNumericalData), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), getSourceRangeRepresentation = js.Any.fromFunction0(getSourceRangeRepresentation), getTextualData = js.Any.fromFunction0(getTextualData), hasElements = js.Any.fromFunction0(hasElements), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeModifyListener = js.Any.fromFunction1(removeModifyListener), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), replaceByIndex = js.Any.fromFunction2(replaceByIndex), setPropertyValue = js.Any.fromFunction2(setPropertyValue))
     __obj.asInstanceOf[DataSequence]
   }
-  @scala.inline
-  implicit class DataSequenceOps[Self <: DataSequence] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHiddenValues(value: SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HiddenValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIncludeHiddenCells(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeHiddenCells")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRole(value: DataSequenceRole): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Role")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

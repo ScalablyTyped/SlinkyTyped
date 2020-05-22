@@ -38,77 +38,20 @@ trait GetInsightRuleReportInput extends js.Object {
 
 object GetInsightRuleReportInput {
   @scala.inline
-  def apply(EndTime: js.Date, Period: Period, RuleName: InsightRuleName, StartTime: js.Date): GetInsightRuleReportInput = {
+  def apply(
+    EndTime: js.Date,
+    Period: Period,
+    RuleName: InsightRuleName,
+    StartTime: js.Date,
+    MaxContributorCount: js.UndefOr[InsightRuleUnboundInteger] = js.undefined,
+    Metrics: InsightRuleMetricList = null,
+    OrderBy: InsightRuleOrderBy = null
+  ): GetInsightRuleReportInput = {
     val __obj = js.Dynamic.literal(EndTime = EndTime.asInstanceOf[js.Any], Period = Period.asInstanceOf[js.Any], RuleName = RuleName.asInstanceOf[js.Any], StartTime = StartTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxContributorCount)) __obj.updateDynamic("MaxContributorCount")(MaxContributorCount.get.asInstanceOf[js.Any])
+    if (Metrics != null) __obj.updateDynamic("Metrics")(Metrics.asInstanceOf[js.Any])
+    if (OrderBy != null) __obj.updateDynamic("OrderBy")(OrderBy.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetInsightRuleReportInput]
   }
-  @scala.inline
-  implicit class GetInsightRuleReportInputOps[Self <: GetInsightRuleReportInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPeriod(value: Period): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Period")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRuleName(value: InsightRuleName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxContributorCount(value: InsightRuleUnboundInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxContributorCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxContributorCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxContributorCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetrics(value: InsightRuleMetricList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrderBy(value: InsightRuleOrderBy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrderBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrderBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrderBy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

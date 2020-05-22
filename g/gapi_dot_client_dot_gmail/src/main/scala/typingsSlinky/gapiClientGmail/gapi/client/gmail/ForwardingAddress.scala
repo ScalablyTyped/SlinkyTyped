@@ -4,51 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ForwardingAddress extends js.Object {
   /** An email address to which messages can be forwarded. */
-  var forwardingEmail: js.UndefOr[String] = js.native
+  var forwardingEmail: js.UndefOr[String] = js.undefined
   /** Indicates whether this address has been verified and is usable for forwarding. Read-only. */
-  var verificationStatus: js.UndefOr[String] = js.native
+  var verificationStatus: js.UndefOr[String] = js.undefined
 }
 
 object ForwardingAddress {
   @scala.inline
-  def apply(): ForwardingAddress = {
+  def apply(forwardingEmail: String = null, verificationStatus: String = null): ForwardingAddress = {
     val __obj = js.Dynamic.literal()
+    if (forwardingEmail != null) __obj.updateDynamic("forwardingEmail")(forwardingEmail.asInstanceOf[js.Any])
+    if (verificationStatus != null) __obj.updateDynamic("verificationStatus")(verificationStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[ForwardingAddress]
   }
-  @scala.inline
-  implicit class ForwardingAddressOps[Self <: ForwardingAddress] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withForwardingEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forwardingEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForwardingEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forwardingEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerificationStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verificationStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerificationStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verificationStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

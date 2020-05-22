@@ -1,24 +1,24 @@
 package typingsSlinky.baidumapWebSdk.BMap
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.baidumapWebSdk.anon.Target
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GroundOverlay extends Overlay {
-  def getBounds(): Bounds = js.native
-  def getDispalyOnMaxLevel(): Double = js.native
-  def getDisplayOnMinLevel(): Double = js.native
-  def getImageURL(): String = js.native
-  def getOpacity(): Double = js.native
-  def onclick(event: Target): Unit = js.native
-  def ondblclick(event: Target): Unit = js.native
-  def setBounds(bounds: Bounds): Unit = js.native
-  def setDispalyOnMaxLevel(level: Double): Unit = js.native
-  def setDisplayOnMinLevel(level: Double): Unit = js.native
-  def setImageURL(url: String): Unit = js.native
-  def setOpacity(opcity: Double): Unit = js.native
+  def getBounds(): Bounds
+  def getDispalyOnMaxLevel(): Double
+  def getDisplayOnMinLevel(): Double
+  def getImageURL(): String
+  def getOpacity(): Double
+  def onclick(event: Target): Unit
+  def ondblclick(event: Target): Unit
+  def setBounds(bounds: Bounds): Unit
+  def setDispalyOnMaxLevel(level: Double): Unit
+  def setDisplayOnMinLevel(level: Double): Unit
+  def setImageURL(url: String): Unit
+  def setOpacity(opcity: Double): Unit
 }
 
 object GroundOverlay {
@@ -35,90 +35,20 @@ object GroundOverlay {
     setDispalyOnMaxLevel: Double => Unit,
     setDisplayOnMinLevel: Double => Unit,
     setImageURL: String => Unit,
-    setOpacity: Double => Unit
+    setOpacity: Double => Unit,
+    draw: () => Unit = null,
+    hide: () => Unit = null,
+    initialize: /* map */ Map => HTMLElement = null,
+    isVisible: () => Boolean = null,
+    show: () => Unit = null
   ): GroundOverlay = {
     val __obj = js.Dynamic.literal(getBounds = js.Any.fromFunction0(getBounds), getDispalyOnMaxLevel = js.Any.fromFunction0(getDispalyOnMaxLevel), getDisplayOnMinLevel = js.Any.fromFunction0(getDisplayOnMinLevel), getImageURL = js.Any.fromFunction0(getImageURL), getOpacity = js.Any.fromFunction0(getOpacity), onclick = js.Any.fromFunction1(onclick), ondblclick = js.Any.fromFunction1(ondblclick), setBounds = js.Any.fromFunction1(setBounds), setDispalyOnMaxLevel = js.Any.fromFunction1(setDispalyOnMaxLevel), setDisplayOnMinLevel = js.Any.fromFunction1(setDisplayOnMinLevel), setImageURL = js.Any.fromFunction1(setImageURL), setOpacity = js.Any.fromFunction1(setOpacity))
+    if (draw != null) __obj.updateDynamic("draw")(js.Any.fromFunction0(draw))
+    if (hide != null) __obj.updateDynamic("hide")(js.Any.fromFunction0(hide))
+    if (initialize != null) __obj.updateDynamic("initialize")(js.Any.fromFunction1(initialize))
+    if (isVisible != null) __obj.updateDynamic("isVisible")(js.Any.fromFunction0(isVisible))
+    if (show != null) __obj.updateDynamic("show")(js.Any.fromFunction0(show))
     __obj.asInstanceOf[GroundOverlay]
   }
-  @scala.inline
-  implicit class GroundOverlayOps[Self <: GroundOverlay] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetBounds(value: () => Bounds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getBounds")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDispalyOnMaxLevel(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDispalyOnMaxLevel")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDisplayOnMinLevel(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDisplayOnMinLevel")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetImageURL(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getImageURL")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetOpacity(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOpacity")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOnclick(value: Target => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onclick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOndblclick(value: Target => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondblclick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetBounds(value: Bounds => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBounds")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetDispalyOnMaxLevel(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDispalyOnMaxLevel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetDisplayOnMinLevel(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDisplayOnMinLevel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetImageURL(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setImageURL")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetOpacity(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setOpacity")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

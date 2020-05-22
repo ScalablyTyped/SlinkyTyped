@@ -4,51 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UploadVoiceConfig extends WxBaseRequestConfig {
-  var isShowProgressTips: js.UndefOr[Double] = js.native
-  var localId: String = js.native
+  var isShowProgressTips: js.UndefOr[Double] = js.undefined
+  var localId: String
   @JSName("success")
-  def success_MUploadVoiceConfig(res: js.Any): Unit = js.native
+  def success_MUploadVoiceConfig(res: js.Any): Unit
 }
 
 object UploadVoiceConfig {
   @scala.inline
-  def apply(localId: String, success: js.Any => Unit): UploadVoiceConfig = {
+  def apply(
+    localId: String,
+    success: js.Any => Unit,
+    cancel: () => Unit = null,
+    complete: /* res */ js.UndefOr[js.Any] => Unit = null,
+    fail: /* error */ js.UndefOr[js.Any] => Unit = null,
+    isShowProgressTips: js.UndefOr[Double] = js.undefined
+  ): UploadVoiceConfig = {
     val __obj = js.Dynamic.literal(localId = localId.asInstanceOf[js.Any], success = js.Any.fromFunction1(success))
+    if (cancel != null) __obj.updateDynamic("cancel")(js.Any.fromFunction0(cancel))
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (!js.isUndefined(isShowProgressTips)) __obj.updateDynamic("isShowProgressTips")(isShowProgressTips.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UploadVoiceConfig]
   }
-  @scala.inline
-  implicit class UploadVoiceConfigOps[Self <: UploadVoiceConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocalId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsShowProgressTips(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isShowProgressTips")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsShowProgressTips: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isShowProgressTips")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

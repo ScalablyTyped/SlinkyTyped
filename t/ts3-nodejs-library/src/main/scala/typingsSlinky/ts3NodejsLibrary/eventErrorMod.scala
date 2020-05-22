@@ -17,6 +17,10 @@ object eventErrorMod extends js.Object {
       */
     def this(message: String, eventName: String) = this()
     val eventName: String = js.native
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
     def toJSON(): EventName = js.native
   }
   

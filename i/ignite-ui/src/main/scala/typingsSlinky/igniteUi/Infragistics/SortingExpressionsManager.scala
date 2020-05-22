@@ -4,19 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SortingExpressionsManager extends js.Object {
   /**
-  	 * Insert expr at the first position of the se (sorting expressions) if there are not any other expressions with flag group by
-  	 *  otherwise if there are such expressions inserts after the last
-  	 *
-  	 * @param se
-  	 * @param expr
-  	 * @param feature
-  	 */
-  def addSortingExpression(se: js.Object, expr: js.Object, feature: js.Object): Unit = js.native
-  def setFormattersForSortingExprs(exprs: js.Object, grid: js.Object): Unit = js.native
-  def setGridInstance(grid: js.Object): Unit = js.native
+    * Insert expr at the first position of the se (sorting expressions) if there are not any other expressions with flag group by
+    *  otherwise if there are such expressions inserts after the last
+    *
+    * @param se
+    * @param expr
+    * @param feature
+    */
+  def addSortingExpression(se: js.Object, expr: js.Object, feature: js.Object): Unit
+  def setFormattersForSortingExprs(exprs: js.Object, grid: js.Object): Unit
+  def setGridInstance(grid: js.Object): Unit
 }
 
 object SortingExpressionsManager {
@@ -29,31 +28,5 @@ object SortingExpressionsManager {
     val __obj = js.Dynamic.literal(addSortingExpression = js.Any.fromFunction3(addSortingExpression), setFormattersForSortingExprs = js.Any.fromFunction2(setFormattersForSortingExprs), setGridInstance = js.Any.fromFunction1(setGridInstance))
     __obj.asInstanceOf[SortingExpressionsManager]
   }
-  @scala.inline
-  implicit class SortingExpressionsManagerOps[Self <: SortingExpressionsManager] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddSortingExpression(value: (js.Object, js.Object, js.Object) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addSortingExpression")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withSetFormattersForSortingExprs(value: (js.Object, js.Object) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFormattersForSortingExprs")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetGridInstance(value: js.Object => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setGridInstance")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

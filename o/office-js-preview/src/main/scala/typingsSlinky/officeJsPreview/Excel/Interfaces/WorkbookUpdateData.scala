@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface for updating data on the Workbook object, for use in `workbook.set({ ... })`. */
-@js.native
 trait WorkbookUpdateData extends js.Object {
   /**
     *
@@ -14,22 +13,30 @@ trait WorkbookUpdateData extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var chartDataPointTrack: js.UndefOr[Boolean] = js.native
+  var chartDataPointTrack: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Specifies whether or not changes have been made since the workbook was last saved.
+    * Specifies if changes have been made since the workbook was last saved.
     You can set this property to true if you want to close a modified workbook without either saving it or being prompted to save it.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var isDirty: js.UndefOr[Boolean] = js.native
+  var isDirty: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Gets the workbook properties.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var properties: js.UndefOr[DocumentPropertiesUpdateData] = js.native
+  var properties: js.UndefOr[DocumentPropertiesUpdateData] = js.undefined
+  /**
+    *
+    * Specifies whether the PivotTable's field list pane is shown at the workbook level.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    */
+  var showPivotFieldList: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * True if the workbook uses the 1904 date system.
@@ -37,7 +44,7 @@ trait WorkbookUpdateData extends js.Object {
     * [Api set: ExcelApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var use1904DateSystem: js.UndefOr[Boolean] = js.native
+  var use1904DateSystem: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * True if calculations in this workbook will be done using only the precision of the numbers as they're displayed.
@@ -45,82 +52,27 @@ trait WorkbookUpdateData extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var usePrecisionAsDisplayed: js.UndefOr[Boolean] = js.native
+  var usePrecisionAsDisplayed: js.UndefOr[Boolean] = js.undefined
 }
 
 object WorkbookUpdateData {
   @scala.inline
-  def apply(): WorkbookUpdateData = {
+  def apply(
+    chartDataPointTrack: js.UndefOr[Boolean] = js.undefined,
+    isDirty: js.UndefOr[Boolean] = js.undefined,
+    properties: DocumentPropertiesUpdateData = null,
+    showPivotFieldList: js.UndefOr[Boolean] = js.undefined,
+    use1904DateSystem: js.UndefOr[Boolean] = js.undefined,
+    usePrecisionAsDisplayed: js.UndefOr[Boolean] = js.undefined
+  ): WorkbookUpdateData = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(chartDataPointTrack)) __obj.updateDynamic("chartDataPointTrack")(chartDataPointTrack.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isDirty)) __obj.updateDynamic("isDirty")(isDirty.get.asInstanceOf[js.Any])
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
+    if (!js.isUndefined(showPivotFieldList)) __obj.updateDynamic("showPivotFieldList")(showPivotFieldList.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(use1904DateSystem)) __obj.updateDynamic("use1904DateSystem")(use1904DateSystem.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(usePrecisionAsDisplayed)) __obj.updateDynamic("usePrecisionAsDisplayed")(usePrecisionAsDisplayed.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkbookUpdateData]
   }
-  @scala.inline
-  implicit class WorkbookUpdateDataOps[Self <: WorkbookUpdateData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChartDataPointTrack(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chartDataPointTrack")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChartDataPointTrack: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chartDataPointTrack")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsDirty(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDirty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDirty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDirty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(value: DocumentPropertiesUpdateData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUse1904DateSystem(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("use1904DateSystem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUse1904DateSystem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("use1904DateSystem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsePrecisionAsDisplayed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usePrecisionAsDisplayed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsePrecisionAsDisplayed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usePrecisionAsDisplayed")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

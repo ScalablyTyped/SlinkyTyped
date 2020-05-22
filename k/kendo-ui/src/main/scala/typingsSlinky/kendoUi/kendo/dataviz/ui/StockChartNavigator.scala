@@ -4,140 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StockChartNavigator extends js.Object {
-  var autoBind: js.UndefOr[Boolean] = js.native
-  var categoryAxis: js.UndefOr[StockChartNavigatorCategoryAxis] = js.native
-  var dataSource: js.UndefOr[js.Any] = js.native
-  var dateField: js.UndefOr[String] = js.native
-  var hint: js.UndefOr[StockChartNavigatorHint] = js.native
-  var pane: js.UndefOr[StockChartNavigatorPane] = js.native
-  var select: js.UndefOr[StockChartNavigatorSelect] = js.native
-  var series: js.UndefOr[js.Array[StockChartNavigatorSeriesItem]] = js.native
-  var visible: js.UndefOr[Boolean] = js.native
+  var autoBind: js.UndefOr[Boolean] = js.undefined
+  var categoryAxis: js.UndefOr[StockChartNavigatorCategoryAxis] = js.undefined
+  var dataSource: js.UndefOr[js.Any] = js.undefined
+  var dateField: js.UndefOr[String] = js.undefined
+  var hint: js.UndefOr[StockChartNavigatorHint] = js.undefined
+  var pane: js.UndefOr[StockChartNavigatorPane] = js.undefined
+  var select: js.UndefOr[StockChartNavigatorSelect] = js.undefined
+  var series: js.UndefOr[js.Array[StockChartNavigatorSeriesItem]] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.undefined
 }
 
 object StockChartNavigator {
   @scala.inline
-  def apply(): StockChartNavigator = {
+  def apply(
+    autoBind: js.UndefOr[Boolean] = js.undefined,
+    categoryAxis: StockChartNavigatorCategoryAxis = null,
+    dataSource: js.Any = null,
+    dateField: String = null,
+    hint: StockChartNavigatorHint = null,
+    pane: StockChartNavigatorPane = null,
+    select: StockChartNavigatorSelect = null,
+    series: js.Array[StockChartNavigatorSeriesItem] = null,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): StockChartNavigator = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoBind)) __obj.updateDynamic("autoBind")(autoBind.get.asInstanceOf[js.Any])
+    if (categoryAxis != null) __obj.updateDynamic("categoryAxis")(categoryAxis.asInstanceOf[js.Any])
+    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
+    if (dateField != null) __obj.updateDynamic("dateField")(dateField.asInstanceOf[js.Any])
+    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
+    if (pane != null) __obj.updateDynamic("pane")(pane.asInstanceOf[js.Any])
+    if (select != null) __obj.updateDynamic("select")(select.asInstanceOf[js.Any])
+    if (series != null) __obj.updateDynamic("series")(series.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StockChartNavigator]
   }
-  @scala.inline
-  implicit class StockChartNavigatorOps[Self <: StockChartNavigator] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoBind(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoBind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCategoryAxis(value: StockChartNavigatorCategoryAxis): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategoryAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryAxis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSource(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDateField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHint(value: StockChartNavigatorHint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPane(value: StockChartNavigatorPane): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pane")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPane: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pane")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelect(value: StockChartNavigatorSelect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeries(value: js.Array[StockChartNavigatorSeriesItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

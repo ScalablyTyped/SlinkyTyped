@@ -16,13 +16,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /**
     * Host that will be used in `server` mode to start HTTP server.
     * Defaults to 127.0.0.1
     */
-  var analyzerHost: js.UndefOr[String] = js.native
+  var analyzerHost: js.UndefOr[String] = js.undefined
   /**
     * Can be "server", "static" or "disabled".
     * Defaults to "server".
@@ -30,18 +29,18 @@ trait Options extends js.Object {
     * In "static" mode single HTML file with bundle report will be generated.
     * In "disabled" mode you can use this plugin to just generate Webpack Stats JSON file by setting "generateStatsFile" to true.
     */
-  var analyzerMode: js.UndefOr[server | static | disabled] = js.native
+  var analyzerMode: js.UndefOr[server | static | disabled] = js.undefined
   /**
     * Port that will be used in `server` mode to start HTTP server.
     * Defaults to 8888
     */
-  var analyzerPort: js.UndefOr[Double | auto] = js.native
+  var analyzerPort: js.UndefOr[Double | auto] = js.undefined
   /**
     * Module sizes to show in report by default.
     * Should be one of "stat", "parsed" or "gzip".
     * Defaults to "parsed"
     */
-  var defaultSizes: js.UndefOr[parsed | stat | gzip] = js.native
+  var defaultSizes: js.UndefOr[parsed | stat | gzip] = js.undefined
   /**
     * Default: `null`.
     * Patterns that will be used to match against asset names to exclude them from the report.
@@ -50,210 +49,69 @@ trait Options extends js.Object {
     * and should return true to exclude matching asset.
     * If multiple patterns are provided asset should match at least one of them to be excluded.
     */
-  var excludeAssets: js.UndefOr[Null | ExcludeAssetsPattern | js.Array[ExcludeAssetsPattern]] = js.native
+  var excludeAssets: js.UndefOr[Null | ExcludeAssetsPattern | js.Array[ExcludeAssetsPattern]] = js.undefined
   /**
     * If true, Webpack Stats JSON file will be generated in bundles output directory.
     * Defaults to false
     */
-  var generateStatsFile: js.UndefOr[Boolean] = js.native
+  var generateStatsFile: js.UndefOr[Boolean] = js.undefined
   /**
     * Log level. Can be "info", "warn", "error" or "silent".
     * Defaults to "info"
     */
-  var logLevel: js.UndefOr[info | warn | error | silent] = js.native
+  var logLevel: js.UndefOr[info | warn | error | silent] = js.undefined
   /**
     * Automatically open report in default browser.
     * Defaults to true
     */
-  var openAnalyzer: js.UndefOr[Boolean] = js.native
+  var openAnalyzer: js.UndefOr[Boolean] = js.undefined
   /**
     * Path to bundle report file that will be generated in "static" mode.
     * Relative to bundles output directory.
     * Defaults to "report.html"
     */
-  var reportFilename: js.UndefOr[String] = js.native
+  var reportFilename: js.UndefOr[String] = js.undefined
   /**
     * Name of Webpack Stats JSON file that will be generated if generateStatsFile is true.
     * Relative to bundles output directory.
     * Defaults to "stats.json"
     */
-  var statsFilename: js.UndefOr[String] = js.native
+  var statsFilename: js.UndefOr[String] = js.undefined
   /**
     * Options for stats.toJson() method.
     * For example you can exclude sources of your modules from stats file with "source: false" option.
     */
-  var statsOptions: js.UndefOr[Null | ToJsonOptionsObject] = js.native
+  var statsOptions: js.UndefOr[Null | ToJsonOptionsObject] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    analyzerHost: String = null,
+    analyzerMode: server | static | disabled = null,
+    analyzerPort: Double | auto = null,
+    defaultSizes: parsed | stat | gzip = null,
+    excludeAssets: js.UndefOr[Null | ExcludeAssetsPattern | js.Array[ExcludeAssetsPattern]] = js.undefined,
+    generateStatsFile: js.UndefOr[Boolean] = js.undefined,
+    logLevel: info | warn | error | silent = null,
+    openAnalyzer: js.UndefOr[Boolean] = js.undefined,
+    reportFilename: String = null,
+    statsFilename: String = null,
+    statsOptions: js.UndefOr[Null | ToJsonOptionsObject] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (analyzerHost != null) __obj.updateDynamic("analyzerHost")(analyzerHost.asInstanceOf[js.Any])
+    if (analyzerMode != null) __obj.updateDynamic("analyzerMode")(analyzerMode.asInstanceOf[js.Any])
+    if (analyzerPort != null) __obj.updateDynamic("analyzerPort")(analyzerPort.asInstanceOf[js.Any])
+    if (defaultSizes != null) __obj.updateDynamic("defaultSizes")(defaultSizes.asInstanceOf[js.Any])
+    if (!js.isUndefined(excludeAssets)) __obj.updateDynamic("excludeAssets")(excludeAssets.asInstanceOf[js.Any])
+    if (!js.isUndefined(generateStatsFile)) __obj.updateDynamic("generateStatsFile")(generateStatsFile.get.asInstanceOf[js.Any])
+    if (logLevel != null) __obj.updateDynamic("logLevel")(logLevel.asInstanceOf[js.Any])
+    if (!js.isUndefined(openAnalyzer)) __obj.updateDynamic("openAnalyzer")(openAnalyzer.get.asInstanceOf[js.Any])
+    if (reportFilename != null) __obj.updateDynamic("reportFilename")(reportFilename.asInstanceOf[js.Any])
+    if (statsFilename != null) __obj.updateDynamic("statsFilename")(statsFilename.asInstanceOf[js.Any])
+    if (!js.isUndefined(statsOptions)) __obj.updateDynamic("statsOptions")(statsOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnalyzerHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyzerHost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnalyzerHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyzerHost")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnalyzerMode(value: server | static | disabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyzerMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnalyzerMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyzerMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnalyzerPort(value: Double | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyzerPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnalyzerPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyzerPort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultSizes(value: parsed | stat | gzip): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSizes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultSizes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSizes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExcludeAssetsFunction1(value: /* assetName */ String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeAssets")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withExcludeAssetsRegExp(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeAssets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExcludeAssets(value: ExcludeAssetsPattern | js.Array[ExcludeAssetsPattern]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeAssets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludeAssets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeAssets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExcludeAssetsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeAssets")(null)
-        ret
-    }
-    @scala.inline
-    def withGenerateStatsFile(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateStatsFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGenerateStatsFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateStatsFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogLevel(value: info | warn | error | silent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpenAnalyzer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openAnalyzer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenAnalyzer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openAnalyzer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportFilename(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportFilename")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReportFilename: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportFilename")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatsFilename(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statsFilename")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatsFilename: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statsFilename")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatsOptions(value: ToJsonOptionsObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statsOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatsOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statsOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatsOptionsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statsOptions")(null)
-        ret
-    }
-  }
-  
 }
 

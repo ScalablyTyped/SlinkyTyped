@@ -4,400 +4,102 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LibraryItem extends js.Object {
-  var album: js.UndefOr[String] = js.native
-  var albumArtRef: js.UndefOr[js.Array[ArtRef]] = js.native
-  var albumArtist: js.UndefOr[String] = js.native
-  var artist: js.UndefOr[String] = js.native
-  var artistArtRef: js.UndefOr[js.Array[ArtRef]] = js.native
-  var artistId: js.UndefOr[js.Array[String]] = js.native
-  var beatsPerMinute: js.UndefOr[Double] = js.native
-  var clientId: js.UndefOr[String] = js.native
-  var comment: js.UndefOr[String] = js.native
-  var composer: js.UndefOr[String] = js.native
-  var creationTimestamp: js.UndefOr[String] = js.native
-  var deleted: js.UndefOr[Boolean] = js.native
-  var discNumber: js.UndefOr[Double] = js.native
-  var durationMillis: js.UndefOr[String] = js.native
-  var estimatedSize: js.UndefOr[String] = js.native
-  var genre: js.UndefOr[String] = js.native
-  var id: js.UndefOr[String] = js.native
-  var kind: js.UndefOr[String] = js.native
-  var lastModifiedTimestamp: js.UndefOr[String] = js.native
-  var nid: js.UndefOr[String] = js.native
-  var playCount: js.UndefOr[Double] = js.native
-  var rating: js.UndefOr[String] = js.native
-  var recentTimestamp: js.UndefOr[String] = js.native
-  var storeId: js.UndefOr[String] = js.native
-  var title: js.UndefOr[String] = js.native
-  var totalDiscCount: js.UndefOr[Double] = js.native
-  var totalTrackCount: js.UndefOr[Double] = js.native
-  var trackNumber: js.UndefOr[Double] = js.native
-  var year: js.UndefOr[Double] = js.native
+  var album: js.UndefOr[String] = js.undefined
+  var albumArtRef: js.UndefOr[js.Array[ArtRef]] = js.undefined
+  var albumArtist: js.UndefOr[String] = js.undefined
+  var artist: js.UndefOr[String] = js.undefined
+  var artistArtRef: js.UndefOr[js.Array[ArtRef]] = js.undefined
+  var artistId: js.UndefOr[js.Array[String]] = js.undefined
+  var beatsPerMinute: js.UndefOr[Double] = js.undefined
+  var clientId: js.UndefOr[String] = js.undefined
+  var comment: js.UndefOr[String] = js.undefined
+  var composer: js.UndefOr[String] = js.undefined
+  var creationTimestamp: js.UndefOr[String] = js.undefined
+  var deleted: js.UndefOr[Boolean] = js.undefined
+  var discNumber: js.UndefOr[Double] = js.undefined
+  var durationMillis: js.UndefOr[String] = js.undefined
+  var estimatedSize: js.UndefOr[String] = js.undefined
+  var genre: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var kind: js.UndefOr[String] = js.undefined
+  var lastModifiedTimestamp: js.UndefOr[String] = js.undefined
+  var nid: js.UndefOr[String] = js.undefined
+  var playCount: js.UndefOr[Double] = js.undefined
+  var rating: js.UndefOr[String] = js.undefined
+  var recentTimestamp: js.UndefOr[String] = js.undefined
+  var storeId: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
+  var totalDiscCount: js.UndefOr[Double] = js.undefined
+  var totalTrackCount: js.UndefOr[Double] = js.undefined
+  var trackNumber: js.UndefOr[Double] = js.undefined
+  var year: js.UndefOr[Double] = js.undefined
 }
 
 object LibraryItem {
   @scala.inline
-  def apply(): LibraryItem = {
+  def apply(
+    album: String = null,
+    albumArtRef: js.Array[ArtRef] = null,
+    albumArtist: String = null,
+    artist: String = null,
+    artistArtRef: js.Array[ArtRef] = null,
+    artistId: js.Array[String] = null,
+    beatsPerMinute: js.UndefOr[Double] = js.undefined,
+    clientId: String = null,
+    comment: String = null,
+    composer: String = null,
+    creationTimestamp: String = null,
+    deleted: js.UndefOr[Boolean] = js.undefined,
+    discNumber: js.UndefOr[Double] = js.undefined,
+    durationMillis: String = null,
+    estimatedSize: String = null,
+    genre: String = null,
+    id: String = null,
+    kind: String = null,
+    lastModifiedTimestamp: String = null,
+    nid: String = null,
+    playCount: js.UndefOr[Double] = js.undefined,
+    rating: String = null,
+    recentTimestamp: String = null,
+    storeId: String = null,
+    title: String = null,
+    totalDiscCount: js.UndefOr[Double] = js.undefined,
+    totalTrackCount: js.UndefOr[Double] = js.undefined,
+    trackNumber: js.UndefOr[Double] = js.undefined,
+    year: js.UndefOr[Double] = js.undefined
+  ): LibraryItem = {
     val __obj = js.Dynamic.literal()
+    if (album != null) __obj.updateDynamic("album")(album.asInstanceOf[js.Any])
+    if (albumArtRef != null) __obj.updateDynamic("albumArtRef")(albumArtRef.asInstanceOf[js.Any])
+    if (albumArtist != null) __obj.updateDynamic("albumArtist")(albumArtist.asInstanceOf[js.Any])
+    if (artist != null) __obj.updateDynamic("artist")(artist.asInstanceOf[js.Any])
+    if (artistArtRef != null) __obj.updateDynamic("artistArtRef")(artistArtRef.asInstanceOf[js.Any])
+    if (artistId != null) __obj.updateDynamic("artistId")(artistId.asInstanceOf[js.Any])
+    if (!js.isUndefined(beatsPerMinute)) __obj.updateDynamic("beatsPerMinute")(beatsPerMinute.get.asInstanceOf[js.Any])
+    if (clientId != null) __obj.updateDynamic("clientId")(clientId.asInstanceOf[js.Any])
+    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
+    if (composer != null) __obj.updateDynamic("composer")(composer.asInstanceOf[js.Any])
+    if (creationTimestamp != null) __obj.updateDynamic("creationTimestamp")(creationTimestamp.asInstanceOf[js.Any])
+    if (!js.isUndefined(deleted)) __obj.updateDynamic("deleted")(deleted.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(discNumber)) __obj.updateDynamic("discNumber")(discNumber.get.asInstanceOf[js.Any])
+    if (durationMillis != null) __obj.updateDynamic("durationMillis")(durationMillis.asInstanceOf[js.Any])
+    if (estimatedSize != null) __obj.updateDynamic("estimatedSize")(estimatedSize.asInstanceOf[js.Any])
+    if (genre != null) __obj.updateDynamic("genre")(genre.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (lastModifiedTimestamp != null) __obj.updateDynamic("lastModifiedTimestamp")(lastModifiedTimestamp.asInstanceOf[js.Any])
+    if (nid != null) __obj.updateDynamic("nid")(nid.asInstanceOf[js.Any])
+    if (!js.isUndefined(playCount)) __obj.updateDynamic("playCount")(playCount.get.asInstanceOf[js.Any])
+    if (rating != null) __obj.updateDynamic("rating")(rating.asInstanceOf[js.Any])
+    if (recentTimestamp != null) __obj.updateDynamic("recentTimestamp")(recentTimestamp.asInstanceOf[js.Any])
+    if (storeId != null) __obj.updateDynamic("storeId")(storeId.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (!js.isUndefined(totalDiscCount)) __obj.updateDynamic("totalDiscCount")(totalDiscCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(totalTrackCount)) __obj.updateDynamic("totalTrackCount")(totalTrackCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(trackNumber)) __obj.updateDynamic("trackNumber")(trackNumber.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(year)) __obj.updateDynamic("year")(year.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[LibraryItem]
   }
-  @scala.inline
-  implicit class LibraryItemOps[Self <: LibraryItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlbum(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("album")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlbum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("album")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlbumArtRef(value: js.Array[ArtRef]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("albumArtRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlbumArtRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("albumArtRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlbumArtist(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("albumArtist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlbumArtist: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("albumArtist")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArtist(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArtist: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artist")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArtistArtRef(value: js.Array[ArtRef]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artistArtRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArtistArtRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artistArtRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArtistId(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artistId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArtistId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artistId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeatsPerMinute(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beatsPerMinute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBeatsPerMinute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beatsPerMinute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComposer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("composer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComposer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("composer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiscNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("discNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiscNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("discNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDurationMillis(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durationMillis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDurationMillis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durationMillis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEstimatedSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEstimatedSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGenre(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("genre")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGenre: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("genre")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifiedTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlayCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlayCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRating(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rating")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRating: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rating")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecentTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recentTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecentTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recentTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStoreId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStoreId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storeId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalDiscCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalDiscCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalDiscCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalDiscCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalTrackCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalTrackCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalTrackCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalTrackCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrackNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrackNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYear(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("year")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("year")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

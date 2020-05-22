@@ -12,8 +12,19 @@ trait ExternalWindowIdentity extends js.Object
 
 object ExternalWindowIdentity {
   @scala.inline
-  implicit def apply(value: NativeIdOptional): ExternalWindowIdentity = value.asInstanceOf[ExternalWindowIdentity]
+  def NativeIdOptional(uuid: String, entityType: js.Any = null, name: String = null, nativeId: String = null): ExternalWindowIdentity = {
+    val __obj = js.Dynamic.literal(uuid = uuid.asInstanceOf[js.Any])
+    if (entityType != null) __obj.updateDynamic("entityType")(entityType.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (nativeId != null) __obj.updateDynamic("nativeId")(nativeId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ExternalWindowIdentity]
+  }
   @scala.inline
-  implicit def apply(value: UuidOptional): ExternalWindowIdentity = value.asInstanceOf[ExternalWindowIdentity]
+  def UuidOptional(nativeId: String, name: String = null, uuid: String = null): ExternalWindowIdentity = {
+    val __obj = js.Dynamic.literal(nativeId = nativeId.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (uuid != null) __obj.updateDynamic("uuid")(uuid.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ExternalWindowIdentity]
+  }
 }
 

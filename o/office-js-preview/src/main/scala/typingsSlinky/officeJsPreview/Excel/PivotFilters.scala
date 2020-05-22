@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * [Api set: ExcelApi BETA (PREVIEW ONLY)]
   * @beta
   */
-@js.native
 trait PivotFilters extends js.Object {
   /**
     *
@@ -20,7 +19,7 @@ trait PivotFilters extends js.Object {
     * [Api set: ExcelApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var dateFilter: js.UndefOr[PivotDateFilter] = js.native
+  var dateFilter: js.UndefOr[PivotDateFilter] = js.undefined
   /**
     *
     * The PivotField's currently applied label filter. Null if none is applied.
@@ -28,7 +27,7 @@ trait PivotFilters extends js.Object {
     * [Api set: ExcelApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var labelFilter: js.UndefOr[PivotLabelFilter] = js.native
+  var labelFilter: js.UndefOr[PivotLabelFilter] = js.undefined
   /**
     *
     * The PivotField's currently applied manual filter. Null if none is applied.
@@ -36,7 +35,7 @@ trait PivotFilters extends js.Object {
     * [Api set: ExcelApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var manualFilter: js.UndefOr[PivotManualFilter] = js.native
+  var manualFilter: js.UndefOr[PivotManualFilter] = js.undefined
   /**
     *
     * The PivotField's currently applied value filter. Null if none is applied.
@@ -44,70 +43,23 @@ trait PivotFilters extends js.Object {
     * [Api set: ExcelApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var valueFilter: js.UndefOr[PivotValueFilter] = js.native
+  var valueFilter: js.UndefOr[PivotValueFilter] = js.undefined
 }
 
 object PivotFilters {
   @scala.inline
-  def apply(): PivotFilters = {
+  def apply(
+    dateFilter: PivotDateFilter = null,
+    labelFilter: PivotLabelFilter = null,
+    manualFilter: PivotManualFilter = null,
+    valueFilter: PivotValueFilter = null
+  ): PivotFilters = {
     val __obj = js.Dynamic.literal()
+    if (dateFilter != null) __obj.updateDynamic("dateFilter")(dateFilter.asInstanceOf[js.Any])
+    if (labelFilter != null) __obj.updateDynamic("labelFilter")(labelFilter.asInstanceOf[js.Any])
+    if (manualFilter != null) __obj.updateDynamic("manualFilter")(manualFilter.asInstanceOf[js.Any])
+    if (valueFilter != null) __obj.updateDynamic("valueFilter")(valueFilter.asInstanceOf[js.Any])
     __obj.asInstanceOf[PivotFilters]
   }
-  @scala.inline
-  implicit class PivotFiltersOps[Self <: PivotFilters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDateFilter(value: PivotDateFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelFilter(value: PivotLabelFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManualFilter(value: PivotManualFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manualFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManualFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manualFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueFilter(value: PivotValueFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueFilter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

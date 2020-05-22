@@ -6,16 +6,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FoldersResource extends js.Object {
   /** Clears a `Policy` from a resource. */
-  def clearOrgPolicy(request: Accesstoken): Request[js.Object] = js.native
+  def clearOrgPolicy(request: Accesstoken): Request[js.Object]
   /**
     * Gets the effective `Policy` on a resource. This is the result of merging
     * `Policies` in the resource hierarchy. The returned `Policy` will not have
     * an `etag`set because it is a computed `Policy` across multiple resources.
     */
-  def getEffectiveOrgPolicy(request: Accesstoken): Request[OrgPolicy] = js.native
+  def getEffectiveOrgPolicy(request: Accesstoken): Request[OrgPolicy]
   /**
     * Gets a `Policy` on a resource.
     *
@@ -24,11 +23,11 @@ trait FoldersResource extends js.Object {
     * `etag` value can be used with `SetOrgPolicy()` to create or update a
     * `Policy` during read-modify-write.
     */
-  def getOrgPolicy(request: Accesstoken): Request[OrgPolicy] = js.native
+  def getOrgPolicy(request: Accesstoken): Request[OrgPolicy]
   /** Lists `Constraints` that could be applied on the specified resource. */
-  def listAvailableOrgPolicyConstraints(request: Accesstoken): Request[ListAvailableOrgPolicyConstraintsResponse] = js.native
+  def listAvailableOrgPolicyConstraints(request: Accesstoken): Request[ListAvailableOrgPolicyConstraintsResponse]
   /** Lists all the `Policies` set for a particular resource. */
-  def listOrgPolicies(request: Accesstoken): Request[ListOrgPoliciesResponse] = js.native
+  def listOrgPolicies(request: Accesstoken): Request[ListOrgPoliciesResponse]
   /**
     * Updates the specified `Policy` on the resource. Creates a new `Policy` for
     * that `Constraint` on the resource if one does not exist.
@@ -36,7 +35,7 @@ trait FoldersResource extends js.Object {
     * Not supplying an `etag` on the request `Policy` results in an unconditional
     * write of the `Policy`.
     */
-  def setOrgPolicy(request: Accesstoken): Request[OrgPolicy] = js.native
+  def setOrgPolicy(request: Accesstoken): Request[OrgPolicy]
 }
 
 object FoldersResource {
@@ -52,49 +51,5 @@ object FoldersResource {
     val __obj = js.Dynamic.literal(clearOrgPolicy = js.Any.fromFunction1(clearOrgPolicy), getEffectiveOrgPolicy = js.Any.fromFunction1(getEffectiveOrgPolicy), getOrgPolicy = js.Any.fromFunction1(getOrgPolicy), listAvailableOrgPolicyConstraints = js.Any.fromFunction1(listAvailableOrgPolicyConstraints), listOrgPolicies = js.Any.fromFunction1(listOrgPolicies), setOrgPolicy = js.Any.fromFunction1(setOrgPolicy))
     __obj.asInstanceOf[FoldersResource]
   }
-  @scala.inline
-  implicit class FoldersResourceOps[Self <: FoldersResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClearOrgPolicy(value: Accesstoken => Request[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearOrgPolicy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetEffectiveOrgPolicy(value: Accesstoken => Request[OrgPolicy]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getEffectiveOrgPolicy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetOrgPolicy(value: Accesstoken => Request[OrgPolicy]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOrgPolicy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withListAvailableOrgPolicyConstraints(value: Accesstoken => Request[ListAvailableOrgPolicyConstraintsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listAvailableOrgPolicyConstraints")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withListOrgPolicies(value: Accesstoken => Request[ListOrgPoliciesResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listOrgPolicies")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetOrgPolicy(value: Accesstoken => Request[OrgPolicy]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setOrgPolicy")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -27,65 +27,18 @@ trait SchemaScreenviewData extends js.Object {
 
 object SchemaScreenviewData {
   @scala.inline
-  def apply(): SchemaScreenviewData = {
+  def apply(
+    appName: String = null,
+    mobileDeviceBranding: String = null,
+    mobileDeviceModel: String = null,
+    screenName: String = null
+  ): SchemaScreenviewData = {
     val __obj = js.Dynamic.literal()
+    if (appName != null) __obj.updateDynamic("appName")(appName.asInstanceOf[js.Any])
+    if (mobileDeviceBranding != null) __obj.updateDynamic("mobileDeviceBranding")(mobileDeviceBranding.asInstanceOf[js.Any])
+    if (mobileDeviceModel != null) __obj.updateDynamic("mobileDeviceModel")(mobileDeviceModel.asInstanceOf[js.Any])
+    if (screenName != null) __obj.updateDynamic("screenName")(screenName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaScreenviewData]
   }
-  @scala.inline
-  implicit class SchemaScreenviewDataOps[Self <: SchemaScreenviewData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMobileDeviceBranding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mobileDeviceBranding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMobileDeviceBranding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mobileDeviceBranding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMobileDeviceModel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mobileDeviceModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMobileDeviceModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mobileDeviceModel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScreenName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScreenName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

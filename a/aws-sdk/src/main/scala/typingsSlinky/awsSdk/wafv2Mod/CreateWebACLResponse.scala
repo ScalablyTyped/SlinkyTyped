@@ -14,29 +14,10 @@ trait CreateWebACLResponse extends js.Object {
 
 object CreateWebACLResponse {
   @scala.inline
-  def apply(): CreateWebACLResponse = {
+  def apply(Summary: WebACLSummary = null): CreateWebACLResponse = {
     val __obj = js.Dynamic.literal()
+    if (Summary != null) __obj.updateDynamic("Summary")(Summary.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateWebACLResponse]
   }
-  @scala.inline
-  implicit class CreateWebACLResponseOps[Self <: CreateWebACLResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSummary(value: WebACLSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Summary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Summary")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

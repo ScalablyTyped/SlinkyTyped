@@ -18,41 +18,11 @@ trait GetReservedNodeExchangeOfferingsOutputMessage extends js.Object {
 
 object GetReservedNodeExchangeOfferingsOutputMessage {
   @scala.inline
-  def apply(): GetReservedNodeExchangeOfferingsOutputMessage = {
+  def apply(Marker: String = null, ReservedNodeOfferings: ReservedNodeOfferingList = null): GetReservedNodeExchangeOfferingsOutputMessage = {
     val __obj = js.Dynamic.literal()
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
+    if (ReservedNodeOfferings != null) __obj.updateDynamic("ReservedNodeOfferings")(ReservedNodeOfferings.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetReservedNodeExchangeOfferingsOutputMessage]
   }
-  @scala.inline
-  implicit class GetReservedNodeExchangeOfferingsOutputMessageOps[Self <: GetReservedNodeExchangeOfferingsOutputMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMarker(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReservedNodeOfferings(value: ReservedNodeOfferingList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedNodeOfferings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReservedNodeOfferings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedNodeOfferings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

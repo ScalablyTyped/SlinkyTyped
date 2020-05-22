@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TimeLocaleObject extends js.Object {
   /**
     * Returns a new formatter for the given string specifier. The specifier string may contain the following directives:
@@ -64,7 +63,7 @@ trait TimeLocaleObject extends js.Object {
     *
     * @param specifier A specifier string for the date format.
     */
-  def format(specifier: String): js.Function1[/* date */ js.Date, String] = js.native
+  def format(specifier: String): js.Function1[/* date */ js.Date, String]
   /**
     * Returns a new parser for the given string specifier. The specifier string may contain the same directives as locale.format (TimeLocaleObject.format).
     * The %d and %e directives are considered equivalent for parsing.
@@ -78,19 +77,19 @@ trait TimeLocaleObject extends js.Object {
     *
     * @param specifier A specifier string for the date format.
     */
-  def parse(specifier: String): js.Function1[/* dateString */ String, js.Date | Null] = js.native
+  def parse(specifier: String): js.Function1[/* dateString */ String, js.Date | Null]
   /**
     * Equivalent to locale.format (TimeLocaleObject.format), except all directives are interpreted as Coordinated Universal Time (UTC) rather than local time.
     *
     * @param specifier A specifier string for the date format.
     */
-  def utcFormat(specifier: String): js.Function1[/* date */ js.Date, String] = js.native
+  def utcFormat(specifier: String): js.Function1[/* date */ js.Date, String]
   /**
     * Equivalent to locale.parse (TimeLocaleObject.parse), except all directives are interpreted as Coordinated Universal Time (UTC) rather than local time.
     *
     * @param specifier A specifier string for the date format.
     */
-  def utcParse(specifier: String): js.Function1[/* dateString */ String, js.Date | Null] = js.native
+  def utcParse(specifier: String): js.Function1[/* dateString */ String, js.Date | Null]
 }
 
 object TimeLocaleObject {
@@ -104,37 +103,5 @@ object TimeLocaleObject {
     val __obj = js.Dynamic.literal(format = js.Any.fromFunction1(format), parse = js.Any.fromFunction1(parse), utcFormat = js.Any.fromFunction1(utcFormat), utcParse = js.Any.fromFunction1(utcParse))
     __obj.asInstanceOf[TimeLocaleObject]
   }
-  @scala.inline
-  implicit class TimeLocaleObjectOps[Self <: TimeLocaleObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormat(value: String => js.Function1[/* date */ js.Date, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withParse(value: String => js.Function1[/* dateString */ String, js.Date | Null]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUtcFormat(value: String => js.Function1[/* date */ js.Date, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utcFormat")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUtcParse(value: String => js.Function1[/* dateString */ String, js.Date | Null]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utcParse")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

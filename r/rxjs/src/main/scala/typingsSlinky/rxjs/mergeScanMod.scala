@@ -6,6 +6,7 @@ import typingsSlinky.rxjs.subscriberMod.Subscriber
 import typingsSlinky.rxjs.subscriptionMod.Subscription
 import typingsSlinky.rxjs.typesMod.ObservableInput
 import typingsSlinky.rxjs.typesMod.OperatorFunction
+import typingsSlinky.rxjs.typesMod.TeardownLogic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,6 +24,8 @@ object mergeScanMod extends js.Object {
     var accumulator: js.Any = js.native
     var concurrent: js.Any = js.native
     var seed: js.Any = js.native
+    /* CompleteClass */
+    override def call(subscriber: Subscriber[R], source: js.Any): TeardownLogic = js.native
   }
   
   @js.native

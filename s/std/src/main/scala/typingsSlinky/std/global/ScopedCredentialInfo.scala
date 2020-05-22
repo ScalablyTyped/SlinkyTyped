@@ -8,7 +8,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ScopedCredentialInfo")
 @js.native
 class ScopedCredentialInfo ()
-  extends typingsSlinky.std.ScopedCredentialInfo
+  extends typingsSlinky.std.ScopedCredentialInfo {
+  /* CompleteClass */
+  override val credential: typingsSlinky.std.ScopedCredential = js.native
+  /* CompleteClass */
+  override val publicKey: org.scalajs.dom.crypto.CryptoKey = js.native
+}
 
 @JSGlobal("ScopedCredentialInfo")
 @js.native

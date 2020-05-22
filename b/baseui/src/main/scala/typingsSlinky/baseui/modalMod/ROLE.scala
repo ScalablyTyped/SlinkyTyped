@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ROLE extends js.Object {
-  var alertdialog: typingsSlinky.baseui.baseuiStrings.alertdialog = js.native
-  var dialog: typingsSlinky.baseui.baseuiStrings.dialog = js.native
+  var alertdialog: typingsSlinky.baseui.baseuiStrings.alertdialog
+  var dialog: typingsSlinky.baseui.baseuiStrings.dialog
 }
 
 @JSImport("baseui/modal", "ROLE")

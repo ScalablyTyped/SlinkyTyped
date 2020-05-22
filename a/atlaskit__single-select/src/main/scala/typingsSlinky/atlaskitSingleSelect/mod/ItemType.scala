@@ -1,7 +1,6 @@
 package typingsSlinky.atlaskitSingleSelect.mod
 
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.atlaskitSingleSelect.atlaskitSingleSelectStrings.bottom
 import typingsSlinky.atlaskitSingleSelect.atlaskitSingleSelectStrings.left
 import typingsSlinky.atlaskitSingleSelect.atlaskitSingleSelectStrings.top
@@ -9,165 +8,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ItemType extends js.Object {
-  var content: js.UndefOr[TagMod[Any]] = js.native
-  var description: js.UndefOr[String] = js.native
-  var elemBefore: js.UndefOr[TagMod[Any]] = js.native
-  var filterValues: js.UndefOr[js.Array[String]] = js.native
-  var isDisabled: js.UndefOr[Boolean] = js.native
-  var isSelected: js.UndefOr[Boolean] = js.native
-  var label: js.UndefOr[String] = js.native
-  var tooltipDescription: js.UndefOr[String] = js.native
-  var tooltipPosition: js.UndefOr[top | bottom | left] = js.native
-  var value: js.UndefOr[String | Double] = js.native
+  var content: js.UndefOr[TagMod[Any]] = js.undefined
+  var description: js.UndefOr[String] = js.undefined
+  var elemBefore: js.UndefOr[TagMod[Any]] = js.undefined
+  var filterValues: js.UndefOr[js.Array[String]] = js.undefined
+  var isDisabled: js.UndefOr[Boolean] = js.undefined
+  var isSelected: js.UndefOr[Boolean] = js.undefined
+  var label: js.UndefOr[String] = js.undefined
+  var tooltipDescription: js.UndefOr[String] = js.undefined
+  var tooltipPosition: js.UndefOr[top | bottom | left] = js.undefined
+  var value: js.UndefOr[String | Double] = js.undefined
 }
 
 object ItemType {
   @scala.inline
-  def apply(): ItemType = {
+  def apply(
+    content: TagMod[Any] = null,
+    description: String = null,
+    elemBefore: TagMod[Any] = null,
+    filterValues: js.Array[String] = null,
+    isDisabled: js.UndefOr[Boolean] = js.undefined,
+    isSelected: js.UndefOr[Boolean] = js.undefined,
+    label: String = null,
+    tooltipDescription: String = null,
+    tooltipPosition: top | bottom | left = null,
+    value: String | Double = null
+  ): ItemType = {
     val __obj = js.Dynamic.literal()
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (elemBefore != null) __obj.updateDynamic("elemBefore")(elemBefore.asInstanceOf[js.Any])
+    if (filterValues != null) __obj.updateDynamic("filterValues")(filterValues.asInstanceOf[js.Any])
+    if (!js.isUndefined(isDisabled)) __obj.updateDynamic("isDisabled")(isDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isSelected)) __obj.updateDynamic("isSelected")(isSelected.get.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (tooltipDescription != null) __obj.updateDynamic("tooltipDescription")(tooltipDescription.asInstanceOf[js.Any])
+    if (tooltipPosition != null) __obj.updateDynamic("tooltipPosition")(tooltipPosition.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ItemType]
   }
-  @scala.inline
-  implicit class ItemTypeOps[Self <: ItemType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContent(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElemBeforeReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elemBefore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withElemBefore(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elemBefore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElemBefore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elemBefore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterValues(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsSelected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltipDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltipDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltipPosition(value: top | bottom | left): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltipPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

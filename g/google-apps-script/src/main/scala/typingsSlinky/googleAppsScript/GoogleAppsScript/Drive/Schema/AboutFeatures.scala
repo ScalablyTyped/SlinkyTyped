@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AboutFeatures extends js.Object {
-  var featureName: js.UndefOr[String] = js.native
-  var featureRate: js.UndefOr[Double] = js.native
+  var featureName: js.UndefOr[String] = js.undefined
+  var featureRate: js.UndefOr[Double] = js.undefined
 }
 
 object AboutFeatures {
   @scala.inline
-  def apply(): AboutFeatures = {
+  def apply(featureName: String = null, featureRate: js.UndefOr[Double] = js.undefined): AboutFeatures = {
     val __obj = js.Dynamic.literal()
+    if (featureName != null) __obj.updateDynamic("featureName")(featureName.asInstanceOf[js.Any])
+    if (!js.isUndefined(featureRate)) __obj.updateDynamic("featureRate")(featureRate.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AboutFeatures]
   }
-  @scala.inline
-  implicit class AboutFeaturesOps[Self <: AboutFeatures] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFeatureName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featureName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeatureName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featureName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeatureRate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featureRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeatureRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featureRate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

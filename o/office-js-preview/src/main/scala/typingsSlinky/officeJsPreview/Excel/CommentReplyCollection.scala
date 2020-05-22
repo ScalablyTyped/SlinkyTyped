@@ -32,8 +32,8 @@ trait CommentReplyCollection extends ClientObject {
     *
     * [Api set: ExcelApi 1.10]
     *
-    * @param content The comment's content. This can be either a string or Interface CommentRichContent (e.g. for comments with mentions). [Api set: ExcelApi 1.10 for string, ExcelApiOnline 1.1 for CommentRichContent object]
-    * @param contentType Optional. The type of content contained within the comment. The default value is enum `ContentType.Plain`. [Api set: ExcelApi 1.10 for Enum ContentType.Plain, ExcelApiOnline 1.1 for Enum ContentType.Mention]
+    * @param content The comment's content. This can be either a string or Interface CommentRichContent (e.g., for comments with mentions). [Api set: ExcelApi 1.10 for string, 1.11 for CommentRichContent object]
+    * @param contentType Optional. The type of content contained within the comment. The default value is enum `ContentType.Plain`. [Api set: ExcelApi 1.10 for Enum ContentType.Plain, 1.11 for Enum ContentType.Mention]
     */
   def add(content: CommentRichContent): CommentReply = js.native
   def add(content: CommentRichContent, contentType: ContentType): CommentReply = js.native
@@ -52,7 +52,7 @@ trait CommentReplyCollection extends ClientObject {
     */
   def getCount(): ClientResult[Double] = js.native
   /**
-    * Returns a comment reply identified by its ID. Read-only.
+    * Returns a comment reply identified by its ID.
     *
     * [Api set: ExcelApi 1.10]
     *

@@ -12,14 +12,13 @@ import scala.scalajs.js.annotation._
   * Input events are delivered to listeners before they are processed normally by the source where they originated.
   * @see WindowEvent
   */
-@js.native
 trait InputEvent extends EventObject {
   /**
     * contains the modifier keys which were pressed while the event occurred.
     *
     * Zero or more constants from the {@link com.sun.star.awt.KeyModifier} group.
     */
-  var Modifiers: Double = js.native
+  var Modifiers: Double
 }
 
 object InputEvent {
@@ -28,19 +27,5 @@ object InputEvent {
     val __obj = js.Dynamic.literal(Modifiers = Modifiers.asInstanceOf[js.Any], Source = Source.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputEvent]
   }
-  @scala.inline
-  implicit class InputEventOps[Self <: InputEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withModifiers(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Modifiers")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -26,65 +26,18 @@ trait RecoveryPointCreator extends js.Object {
 
 object RecoveryPointCreator {
   @scala.inline
-  def apply(): RecoveryPointCreator = {
+  def apply(
+    BackupPlanArn: ARN = null,
+    BackupPlanId: String = null,
+    BackupPlanVersion: String = null,
+    BackupRuleId: String = null
+  ): RecoveryPointCreator = {
     val __obj = js.Dynamic.literal()
+    if (BackupPlanArn != null) __obj.updateDynamic("BackupPlanArn")(BackupPlanArn.asInstanceOf[js.Any])
+    if (BackupPlanId != null) __obj.updateDynamic("BackupPlanId")(BackupPlanId.asInstanceOf[js.Any])
+    if (BackupPlanVersion != null) __obj.updateDynamic("BackupPlanVersion")(BackupPlanVersion.asInstanceOf[js.Any])
+    if (BackupRuleId != null) __obj.updateDynamic("BackupRuleId")(BackupRuleId.asInstanceOf[js.Any])
     __obj.asInstanceOf[RecoveryPointCreator]
   }
-  @scala.inline
-  implicit class RecoveryPointCreatorOps[Self <: RecoveryPointCreator] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackupPlanArn(value: ARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupPlanArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackupPlanArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupPlanArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackupPlanId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupPlanId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackupPlanId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupPlanId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackupPlanVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupPlanVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackupPlanVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupPlanVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackupRuleId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupRuleId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackupRuleId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupRuleId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

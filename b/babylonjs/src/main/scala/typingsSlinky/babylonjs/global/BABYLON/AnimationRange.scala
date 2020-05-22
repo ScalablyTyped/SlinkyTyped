@@ -22,5 +22,14 @@ class AnimationRange protected ()
     /**The ending frame of the animation*/
   to: Double
   ) = this()
+  /**The starting frame of the animation */
+  /* CompleteClass */
+  override var from: Double = js.native
+  /**The name of the animation range**/
+  /* CompleteClass */
+  override var name: String = js.native
+  /**The ending frame of the animation*/
+  /* CompleteClass */
+  override var to: Double = js.native
 }
 

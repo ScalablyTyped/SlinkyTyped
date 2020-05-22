@@ -26,53 +26,16 @@ trait SchemaStreamingComputationTask extends js.Object {
 
 object SchemaStreamingComputationTask {
   @scala.inline
-  def apply(): SchemaStreamingComputationTask = {
+  def apply(
+    computationRanges: js.Array[SchemaStreamingComputationRanges] = null,
+    dataDisks: js.Array[SchemaMountedDataDisk] = null,
+    taskType: String = null
+  ): SchemaStreamingComputationTask = {
     val __obj = js.Dynamic.literal()
+    if (computationRanges != null) __obj.updateDynamic("computationRanges")(computationRanges.asInstanceOf[js.Any])
+    if (dataDisks != null) __obj.updateDynamic("dataDisks")(dataDisks.asInstanceOf[js.Any])
+    if (taskType != null) __obj.updateDynamic("taskType")(taskType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStreamingComputationTask]
   }
-  @scala.inline
-  implicit class SchemaStreamingComputationTaskOps[Self <: SchemaStreamingComputationTask] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComputationRanges(value: js.Array[SchemaStreamingComputationRanges]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computationRanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComputationRanges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computationRanges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataDisks(value: js.Array[SchemaMountedDataDisk]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataDisks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataDisks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataDisks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaskType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

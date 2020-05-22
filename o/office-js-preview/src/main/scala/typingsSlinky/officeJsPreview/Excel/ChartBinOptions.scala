@@ -24,14 +24,14 @@ import scala.scalajs.js.annotation._
 trait ChartBinOptions extends ClientObject {
   /**
     *
-    * Specifies whether or not the bin overflow is enabled in a histogram chart or pareto chart. Read/Write.
+    * Specifies if bin overflow is enabled in a histogram chart or pareto chart.
     *
     * [Api set: ExcelApi 1.9]
     */
   var allowOverflow: Boolean = js.native
   /**
     *
-    * Specifies whether or not the bin underflow is enabled in a histogram chart or pareto chart. Read/Write.
+    * Specifies if bin underflow is enabled in a histogram chart or pareto chart.
     *
     * [Api set: ExcelApi 1.9]
     */
@@ -41,35 +41,35 @@ trait ChartBinOptions extends ClientObject {
   var context_ChartBinOptions: RequestContext = js.native
   /**
     *
-    * Returns or sets the bin count of a histogram chart or pareto chart. Read/Write.
+    * Specifies the bin count of a histogram chart or pareto chart.
     *
     * [Api set: ExcelApi 1.9]
     */
   var count: Double = js.native
   /**
     *
-    * Returns or sets the bin overflow value of a histogram chart or pareto chart. Read/Write.
+    * Specifies the bin overflow value of a histogram chart or pareto chart.
     *
     * [Api set: ExcelApi 1.9]
     */
   var overflowValue: Double = js.native
   /**
     *
-    * Returns or sets the bin's type for a histogram chart or pareto chart. Read/Write.
+    * Specifies the bin's type for a histogram chart or pareto chart.
     *
     * [Api set: ExcelApi 1.9]
     */
   var `type`: ChartBinType | Category | Auto | BinWidth | BinCount = js.native
   /**
     *
-    * Returns or sets the bin underflow value of a histogram chart or pareto chart. Read/Write.
+    * Specifies the bin underflow value of a histogram chart or pareto chart.
     *
     * [Api set: ExcelApi 1.9]
     */
   var underflowValue: Double = js.native
   /**
     *
-    * Returns or sets the bin width value of a histogram chart or pareto chart. Read/Write.
+    * Specifies the bin width value of a histogram chart or pareto chart.
     *
     * [Api set: ExcelApi 1.9]
     */

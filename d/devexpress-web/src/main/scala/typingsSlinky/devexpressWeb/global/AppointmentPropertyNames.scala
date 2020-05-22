@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("AppointmentPropertyNames")
 @js.native
 class AppointmentPropertyNames ()
-  extends typingsSlinky.devexpressWeb.AppointmentPropertyNames
+  extends typingsSlinky.devexpressWeb.AppointmentPropertyNames {
+  /**
+    * Gets the list of properties characteristic for appointments of the ASPxAppointmentType.Normal type.
+    */
+  /* CompleteClass */
+  override var Normal: String = js.native
+  /**
+    * Gets the list of properties characteristic for appointments of the ASPxAppointmentType.Pattern type.
+    */
+  /* CompleteClass */
+  override var Pattern: String = js.native
+}
 

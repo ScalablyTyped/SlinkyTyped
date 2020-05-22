@@ -14,29 +14,10 @@ trait DescribeVpnGatewaysResult extends js.Object {
 
 object DescribeVpnGatewaysResult {
   @scala.inline
-  def apply(): DescribeVpnGatewaysResult = {
+  def apply(VpnGateways: VpnGatewayList = null): DescribeVpnGatewaysResult = {
     val __obj = js.Dynamic.literal()
+    if (VpnGateways != null) __obj.updateDynamic("VpnGateways")(VpnGateways.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeVpnGatewaysResult]
   }
-  @scala.inline
-  implicit class DescribeVpnGatewaysResultOps[Self <: DescribeVpnGatewaysResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVpnGateways(value: VpnGatewayList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnGateways")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpnGateways: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnGateways")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

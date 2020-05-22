@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * @return {nlobjError}
   * @constructor
   */
-@js.native
 trait nlobjError extends js.Object {
   /**
     * return the error code for this system or user-defined error.
@@ -23,7 +22,7 @@ trait nlobjError extends js.Object {
     * @since 2008.2
     * @return
     */
-  def getCode(): String = js.native
+  def getCode(): String
   /**
     * return the error description for this error.
     * @return {string}
@@ -34,7 +33,7 @@ trait nlobjError extends js.Object {
     * @since 2008.2
     * @return
     */
-  def getDetails(): String = js.native
+  def getDetails(): String
   /**
     * return the error db ID for this error (if it was an unhandled unexpected error).
     * @return {string}
@@ -45,7 +44,7 @@ trait nlobjError extends js.Object {
     * @since 2008.2
     * @return
     */
-  def getId(): String = js.native
+  def getId(): String
   /**
     * return the internalid of the record if this error was thrown in an aftersubmit script.
     * @return {int}
@@ -56,7 +55,7 @@ trait nlobjError extends js.Object {
     * @since 2008.2
     * @return
     */
-  def getInternalId(): js.Any = js.native
+  def getInternalId(): js.Any
   /**
     * return a stacktrace containing the location of the error.
     * @return {string[]}
@@ -66,7 +65,7 @@ trait nlobjError extends js.Object {
     *
     * @since 2008.2
     */
-  def getStackTrace(): Unit = js.native
+  def getStackTrace(): Unit
   /**
     * return the userevent script name where this error was thrown.
     * @return {string}
@@ -77,7 +76,7 @@ trait nlobjError extends js.Object {
     * @since 2008.2
     * @return
     */
-  def getUserEvent(): String = js.native
+  def getUserEvent(): String
 }
 
 object nlobjError {
@@ -93,49 +92,5 @@ object nlobjError {
     val __obj = js.Dynamic.literal(getCode = js.Any.fromFunction0(getCode), getDetails = js.Any.fromFunction0(getDetails), getId = js.Any.fromFunction0(getId), getInternalId = js.Any.fromFunction0(getInternalId), getStackTrace = js.Any.fromFunction0(getStackTrace), getUserEvent = js.Any.fromFunction0(getUserEvent))
     __obj.asInstanceOf[nlobjError]
   }
-  @scala.inline
-  implicit class nlobjErrorOps[Self <: nlobjError] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetCode(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCode")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDetails(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDetails")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetId(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getId")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetInternalId(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getInternalId")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetStackTrace(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStackTrace")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetUserEvent(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getUserEvent")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

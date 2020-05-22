@@ -17,29 +17,10 @@ trait SchemaAppContext extends js.Object {
 
 object SchemaAppContext {
   @scala.inline
-  def apply(): SchemaAppContext = {
+  def apply(appTypes: js.Array[String] = null): SchemaAppContext = {
     val __obj = js.Dynamic.literal()
+    if (appTypes != null) __obj.updateDynamic("appTypes")(appTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAppContext]
   }
-  @scala.inline
-  implicit class SchemaAppContextOps[Self <: SchemaAppContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appTypes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

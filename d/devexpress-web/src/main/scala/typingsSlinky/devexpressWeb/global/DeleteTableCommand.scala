@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("DeleteTableCommand")
 @js.native
 class DeleteTableCommand ()
-  extends typingsSlinky.devexpressWeb.DeleteTableCommand
+  extends typingsSlinky.devexpressWeb.DeleteTableCommand {
+  /**
+    * Executes the DeleteTableCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

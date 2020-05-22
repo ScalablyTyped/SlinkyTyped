@@ -16,5 +16,10 @@ class ASPxClientSpreadsheetViewModeChangedEventArgs protected ()
     * @param oldViewMode Specifies the control's current view mode.
     */
   def this(oldViewMode: js.Any) = this()
+  /**
+    * Gets the control's current view mode when the event is triggered.
+    */
+  /* CompleteClass */
+  override var oldViewMode: typingsSlinky.devexpressWeb.ASPxClientSpreadsheetViewMode = js.native
 }
 

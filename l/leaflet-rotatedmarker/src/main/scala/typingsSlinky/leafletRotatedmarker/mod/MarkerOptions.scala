@@ -4,50 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MarkerOptions extends js.Object {
-  var rotationAngle: js.UndefOr[Double] = js.native
+  var rotationAngle: js.UndefOr[Double] = js.undefined
    // Rotation angle, in degrees, clockwise. (Default = 0)
-  var rotationOrigin: js.UndefOr[String] = js.native
+  var rotationOrigin: js.UndefOr[String] = js.undefined
 }
 
 object MarkerOptions {
   @scala.inline
-  def apply(): MarkerOptions = {
+  def apply(rotationAngle: js.UndefOr[Double] = js.undefined, rotationOrigin: String = null): MarkerOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(rotationAngle)) __obj.updateDynamic("rotationAngle")(rotationAngle.get.asInstanceOf[js.Any])
+    if (rotationOrigin != null) __obj.updateDynamic("rotationOrigin")(rotationOrigin.asInstanceOf[js.Any])
     __obj.asInstanceOf[MarkerOptions]
   }
-  @scala.inline
-  implicit class MarkerOptionsOps[Self <: MarkerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRotationAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotationAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotationAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotationAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotationOrigin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotationOrigin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotationOrigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotationOrigin")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,53 +22,16 @@ trait DashConfiguration extends js.Object {
 
 object DashConfiguration {
   @scala.inline
-  def apply(): DashConfiguration = {
+  def apply(
+    ManifestEndpointPrefix: string = null,
+    MpdLocation: string = null,
+    OriginManifestType: OriginManifestType = null
+  ): DashConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (ManifestEndpointPrefix != null) __obj.updateDynamic("ManifestEndpointPrefix")(ManifestEndpointPrefix.asInstanceOf[js.Any])
+    if (MpdLocation != null) __obj.updateDynamic("MpdLocation")(MpdLocation.asInstanceOf[js.Any])
+    if (OriginManifestType != null) __obj.updateDynamic("OriginManifestType")(OriginManifestType.asInstanceOf[js.Any])
     __obj.asInstanceOf[DashConfiguration]
   }
-  @scala.inline
-  implicit class DashConfigurationOps[Self <: DashConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withManifestEndpointPrefix(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ManifestEndpointPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManifestEndpointPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ManifestEndpointPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMpdLocation(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MpdLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMpdLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MpdLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginManifestType(value: OriginManifestType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OriginManifestType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginManifestType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OriginManifestType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

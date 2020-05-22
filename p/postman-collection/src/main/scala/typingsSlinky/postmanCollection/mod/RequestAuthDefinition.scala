@@ -15,170 +15,58 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RequestAuthDefinition extends PropertyDefinition {
-  var apikey: js.UndefOr[js.Array[VariableDefinition]] = js.native
-  var awsv4: js.UndefOr[js.Array[VariableDefinition]] = js.native
-  var basic: js.UndefOr[js.Array[VariableDefinition]] = js.native
-  var bearer: js.UndefOr[js.Array[VariableDefinition]] = js.native
-  var digest: js.UndefOr[js.Array[VariableDefinition]] = js.native
-  var edgegrid: js.UndefOr[js.Array[VariableDefinition]] = js.native
-  var hawk: js.UndefOr[js.Array[VariableDefinition]] = js.native
-  var ntlm: js.UndefOr[js.Array[VariableDefinition]] = js.native
-  var oauth1: js.UndefOr[js.Array[VariableDefinition]] = js.native
-  var oauth2: js.UndefOr[js.Array[VariableDefinition]] = js.native
+  var apikey: js.UndefOr[js.Array[VariableDefinition]] = js.undefined
+  var awsv4: js.UndefOr[js.Array[VariableDefinition]] = js.undefined
+  var basic: js.UndefOr[js.Array[VariableDefinition]] = js.undefined
+  var bearer: js.UndefOr[js.Array[VariableDefinition]] = js.undefined
+  var digest: js.UndefOr[js.Array[VariableDefinition]] = js.undefined
+  var edgegrid: js.UndefOr[js.Array[VariableDefinition]] = js.undefined
+  var hawk: js.UndefOr[js.Array[VariableDefinition]] = js.undefined
+  var ntlm: js.UndefOr[js.Array[VariableDefinition]] = js.undefined
+  var oauth1: js.UndefOr[js.Array[VariableDefinition]] = js.undefined
+  var oauth2: js.UndefOr[js.Array[VariableDefinition]] = js.undefined
   var `type`: js.UndefOr[
     oauth2 | hawk | noauth | basic | oauth1 | apikey | digest | bearer | awsv4 | edgegrid | ntlm
-  ] = js.native
+  ] = js.undefined
 }
 
 object RequestAuthDefinition {
   @scala.inline
-  def apply(): RequestAuthDefinition = {
+  def apply(
+    apikey: js.Array[VariableDefinition] = null,
+    awsv4: js.Array[VariableDefinition] = null,
+    basic: js.Array[VariableDefinition] = null,
+    bearer: js.Array[VariableDefinition] = null,
+    description: String | DescriptionDefinition = null,
+    digest: js.Array[VariableDefinition] = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    edgegrid: js.Array[VariableDefinition] = null,
+    hawk: js.Array[VariableDefinition] = null,
+    id: String = null,
+    name: String = null,
+    ntlm: js.Array[VariableDefinition] = null,
+    oauth1: js.Array[VariableDefinition] = null,
+    oauth2: js.Array[VariableDefinition] = null,
+    `type`: oauth2 | hawk | noauth | basic | oauth1 | apikey | digest | bearer | awsv4 | edgegrid | ntlm = null
+  ): RequestAuthDefinition = {
     val __obj = js.Dynamic.literal()
+    if (apikey != null) __obj.updateDynamic("apikey")(apikey.asInstanceOf[js.Any])
+    if (awsv4 != null) __obj.updateDynamic("awsv4")(awsv4.asInstanceOf[js.Any])
+    if (basic != null) __obj.updateDynamic("basic")(basic.asInstanceOf[js.Any])
+    if (bearer != null) __obj.updateDynamic("bearer")(bearer.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (digest != null) __obj.updateDynamic("digest")(digest.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (edgegrid != null) __obj.updateDynamic("edgegrid")(edgegrid.asInstanceOf[js.Any])
+    if (hawk != null) __obj.updateDynamic("hawk")(hawk.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (ntlm != null) __obj.updateDynamic("ntlm")(ntlm.asInstanceOf[js.Any])
+    if (oauth1 != null) __obj.updateDynamic("oauth1")(oauth1.asInstanceOf[js.Any])
+    if (oauth2 != null) __obj.updateDynamic("oauth2")(oauth2.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestAuthDefinition]
   }
-  @scala.inline
-  implicit class RequestAuthDefinitionOps[Self <: RequestAuthDefinition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApikey(value: js.Array[VariableDefinition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apikey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApikey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apikey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAwsv4(value: js.Array[VariableDefinition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsv4")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwsv4: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsv4")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBasic(value: js.Array[VariableDefinition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBearer(value: js.Array[VariableDefinition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bearer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBearer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bearer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDigest(value: js.Array[VariableDefinition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDigest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgegrid(value: js.Array[VariableDefinition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgegrid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgegrid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgegrid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHawk(value: js.Array[VariableDefinition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hawk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHawk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hawk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNtlm(value: js.Array[VariableDefinition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ntlm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNtlm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ntlm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOauth1(value: js.Array[VariableDefinition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOauth1: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth1")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOauth2(value: js.Array[VariableDefinition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOauth2: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth2")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(
-      value: oauth2 | hawk | noauth | basic | oauth1 | apikey | digest | bearer | awsv4 | edgegrid | ntlm
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

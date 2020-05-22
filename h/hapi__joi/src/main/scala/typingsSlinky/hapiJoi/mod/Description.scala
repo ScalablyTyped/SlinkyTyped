@@ -5,180 +5,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Description
   extends /* key */ StringDictionary[js.Any] {
-  var description: js.UndefOr[String] = js.native
-  var example: js.UndefOr[js.Array[_]] = js.native
-  var flags: js.UndefOr[js.Object] = js.native
-  var invalids: js.UndefOr[js.Array[_]] = js.native
-  var label: js.UndefOr[String] = js.native
-  var meta: js.UndefOr[js.Array[_]] = js.native
-  var notes: js.UndefOr[js.Array[String]] = js.native
-  var options: js.UndefOr[ValidationOptions] = js.native
-  var tags: js.UndefOr[js.Array[String]] = js.native
-  var `type`: js.UndefOr[Types | String] = js.native
-  var unit: js.UndefOr[String] = js.native
-  var valids: js.UndefOr[js.Array[_]] = js.native
+  var description: js.UndefOr[String] = js.undefined
+  var example: js.UndefOr[js.Array[_]] = js.undefined
+  var flags: js.UndefOr[js.Object] = js.undefined
+  var invalids: js.UndefOr[js.Array[_]] = js.undefined
+  var label: js.UndefOr[String] = js.undefined
+  var meta: js.UndefOr[js.Array[_]] = js.undefined
+  var notes: js.UndefOr[js.Array[String]] = js.undefined
+  var options: js.UndefOr[ValidationOptions] = js.undefined
+  var tags: js.UndefOr[js.Array[String]] = js.undefined
+  var `type`: js.UndefOr[Types | String] = js.undefined
+  var unit: js.UndefOr[String] = js.undefined
+  var valids: js.UndefOr[js.Array[_]] = js.undefined
 }
 
 object Description {
   @scala.inline
-  def apply(): Description = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    description: String = null,
+    example: js.Array[_] = null,
+    flags: js.Object = null,
+    invalids: js.Array[_] = null,
+    label: String = null,
+    meta: js.Array[_] = null,
+    notes: js.Array[String] = null,
+    options: ValidationOptions = null,
+    tags: js.Array[String] = null,
+    `type`: Types | String = null,
+    unit: String = null,
+    valids: js.Array[_] = null
+  ): Description = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (example != null) __obj.updateDynamic("example")(example.asInstanceOf[js.Any])
+    if (flags != null) __obj.updateDynamic("flags")(flags.asInstanceOf[js.Any])
+    if (invalids != null) __obj.updateDynamic("invalids")(invalids.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
+    if (notes != null) __obj.updateDynamic("notes")(notes.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
+    if (valids != null) __obj.updateDynamic("valids")(valids.asInstanceOf[js.Any])
     __obj.asInstanceOf[Description]
   }
-  @scala.inline
-  implicit class DescriptionOps[Self <: Description] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExample(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("example")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExample: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("example")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlags(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvalids(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvalids: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalids")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeta(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: ValidationOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: Types | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValids(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValids: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valids")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

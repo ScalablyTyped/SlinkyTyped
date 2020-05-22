@@ -4,110 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PositionSettings extends js.Object {
   // TODO: Unused?
   // The minimum column width
-  var defaultColumnWidth: js.UndefOr[Double | String] = js.native
+  var defaultColumnWidth: js.UndefOr[Double | String] = js.undefined
   // TODO: Unused?
   // Disable pointer events while scrolling to improve performance
-  var disablePointerEvents: js.UndefOr[Boolean] = js.native
+  var disablePointerEvents: js.UndefOr[Boolean] = js.undefined
   // TODO: Unused?
   // Whether or not the header should be fixed
-  var fixedHeader: js.UndefOr[Boolean] = js.native
+  var fixedHeader: js.UndefOr[Boolean] = js.undefined
   // The minimum row height
-  var rowHeight: js.UndefOr[Double | String] = js.native
+  var rowHeight: js.UndefOr[Double | String] = js.undefined
   // The height of the table
-  var tableHeight: js.UndefOr[Double | String] = js.native
+  var tableHeight: js.UndefOr[Double | String] = js.undefined
   // The width of the table
-  var tableWidth: js.UndefOr[Double | String] = js.native
+  var tableWidth: js.UndefOr[Double | String] = js.undefined
 }
 
 object PositionSettings {
   @scala.inline
-  def apply(): PositionSettings = {
+  def apply(
+    defaultColumnWidth: Double | String = null,
+    disablePointerEvents: js.UndefOr[Boolean] = js.undefined,
+    fixedHeader: js.UndefOr[Boolean] = js.undefined,
+    rowHeight: Double | String = null,
+    tableHeight: Double | String = null,
+    tableWidth: Double | String = null
+  ): PositionSettings = {
     val __obj = js.Dynamic.literal()
+    if (defaultColumnWidth != null) __obj.updateDynamic("defaultColumnWidth")(defaultColumnWidth.asInstanceOf[js.Any])
+    if (!js.isUndefined(disablePointerEvents)) __obj.updateDynamic("disablePointerEvents")(disablePointerEvents.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fixedHeader)) __obj.updateDynamic("fixedHeader")(fixedHeader.get.asInstanceOf[js.Any])
+    if (rowHeight != null) __obj.updateDynamic("rowHeight")(rowHeight.asInstanceOf[js.Any])
+    if (tableHeight != null) __obj.updateDynamic("tableHeight")(tableHeight.asInstanceOf[js.Any])
+    if (tableWidth != null) __obj.updateDynamic("tableWidth")(tableWidth.asInstanceOf[js.Any])
     __obj.asInstanceOf[PositionSettings]
   }
-  @scala.inline
-  implicit class PositionSettingsOps[Self <: PositionSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultColumnWidth(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultColumnWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultColumnWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultColumnWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisablePointerEvents(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablePointerEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisablePointerEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablePointerEvents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixedHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixedHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowHeight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableHeight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableWidth(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableWidth")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

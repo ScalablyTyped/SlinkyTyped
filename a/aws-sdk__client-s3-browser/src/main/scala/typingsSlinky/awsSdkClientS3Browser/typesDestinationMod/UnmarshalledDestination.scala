@@ -1,62 +1,43 @@
 package typingsSlinky.awsSdkClientS3Browser.typesDestinationMod
 
+import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.ONEZONE_IA
+import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.REDUCED_REDUNDANCY
+import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.STANDARD
+import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.STANDARD_IA
 import typingsSlinky.awsSdkClientS3Browser.typesAccessControlTranslationMod.UnmarshalledAccessControlTranslation
 import typingsSlinky.awsSdkClientS3Browser.typesEncryptionConfigurationMod.UnmarshalledEncryptionConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnmarshalledDestination extends Destination {
   /**
     * <p> Container for information regarding the access control for replicas. </p> <p> Use only in a cross-account scenario, where source and destination bucket owners are not the same, when you want to change replica ownership to the AWS account that owns the destination bucket. If you don't add this element to the replication configuration, the replicas are owned by same AWS account that owns the source object. </p>
     */
   @JSName("AccessControlTranslation")
-  var AccessControlTranslation_UnmarshalledDestination: js.UndefOr[UnmarshalledAccessControlTranslation] = js.native
+  var AccessControlTranslation_UnmarshalledDestination: js.UndefOr[UnmarshalledAccessControlTranslation] = js.undefined
   /**
     * <p> Container that provides encryption-related information. You must specify this element if the <code>SourceSelectionCriteria</code> is specified. </p>
     */
   @JSName("EncryptionConfiguration")
-  var EncryptionConfiguration_UnmarshalledDestination: js.UndefOr[UnmarshalledEncryptionConfiguration] = js.native
+  var EncryptionConfiguration_UnmarshalledDestination: js.UndefOr[UnmarshalledEncryptionConfiguration] = js.undefined
 }
 
 object UnmarshalledDestination {
   @scala.inline
-  def apply(Bucket: String): UnmarshalledDestination = {
+  def apply(
+    Bucket: String,
+    AccessControlTranslation: UnmarshalledAccessControlTranslation = null,
+    Account: String = null,
+    EncryptionConfiguration: UnmarshalledEncryptionConfiguration = null,
+    StorageClass: STANDARD | REDUCED_REDUNDANCY | STANDARD_IA | ONEZONE_IA | String = null
+  ): UnmarshalledDestination = {
     val __obj = js.Dynamic.literal(Bucket = Bucket.asInstanceOf[js.Any])
+    if (AccessControlTranslation != null) __obj.updateDynamic("AccessControlTranslation")(AccessControlTranslation.asInstanceOf[js.Any])
+    if (Account != null) __obj.updateDynamic("Account")(Account.asInstanceOf[js.Any])
+    if (EncryptionConfiguration != null) __obj.updateDynamic("EncryptionConfiguration")(EncryptionConfiguration.asInstanceOf[js.Any])
+    if (StorageClass != null) __obj.updateDynamic("StorageClass")(StorageClass.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledDestination]
   }
-  @scala.inline
-  implicit class UnmarshalledDestinationOps[Self <: UnmarshalledDestination] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessControlTranslation(value: UnmarshalledAccessControlTranslation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessControlTranslation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessControlTranslation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessControlTranslation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryptionConfiguration(value: UnmarshalledEncryptionConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptionConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionConfiguration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

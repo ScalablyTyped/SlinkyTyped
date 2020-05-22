@@ -62,10 +62,17 @@ package object mod {
   type DirectiveDefList = js.Array[
     typingsSlinky.angularCore.mod.ɵDirectiveDef[js.Any] | typingsSlinky.angularCore.mod.ɵComponentDef[js.Any]
   ]
+  /**
+    * Type used for directiveDefs on component definition.
+    *
+    * The function is necessary to be able to support forward declarations.
+    */
+  type DirectiveDefListOrFactory = js.Function0[typingsSlinky.angularCore.mod.DirectiveDefList] | typingsSlinky.angularCore.mod.DirectiveDefList
   type DirectiveInstance = js.Object
   type DirectiveTypeList = js.Array[
     typingsSlinky.angularCore.mod.ɵDirectiveType[js.Any] | typingsSlinky.angularCore.mod.ɵComponentType[js.Any] | typingsSlinky.angularCore.mod.Type[js.Any]
   ]
+  type DirectiveTypesOrFactory = js.Function0[typingsSlinky.angularCore.mod.DirectiveTypeList] | typingsSlinky.angularCore.mod.DirectiveTypeList
   type DisposableFn = js.Function0[scala.Unit]
   type ElementHandleEventFn = js.Function3[
     /* view */ typingsSlinky.angularCore.mod.ViewData, 
@@ -297,6 +304,7 @@ package object mod {
     /* currentView */ typingsSlinky.angularCore.mod.ɵangularPackagesCoreCoreBj, 
     js.Any
   ]
+  type NgIterable[T] = js.Array[T] | js.Iterable[T]
   /**
     * Function to call console.error at the right source location. This is an indirection
     * via another function as browser will log the location that actually called
@@ -304,9 +312,16 @@ package object mod {
     */
   type NodeLogger = js.Function0[js.Function0[scala.Unit]]
   type PipeDefList = js.Array[typingsSlinky.angularCore.mod.ɵPipeDef[js.Any]]
+  /**
+    * Type used for PipeDefs on component definition.
+    *
+    * The function is necessary to be able to support forward declarations.
+    */
+  type PipeDefListOrFactory = js.Function0[typingsSlinky.angularCore.mod.PipeDefList] | typingsSlinky.angularCore.mod.PipeDefList
   type PipeTypeList = js.Array[
     typingsSlinky.angularCore.mod.PipeType[js.Any] | typingsSlinky.angularCore.mod.Type[js.Any]
   ]
+  type PipeTypesOrFactory = js.Function0[typingsSlinky.angularCore.mod.PipeTypeList] | typingsSlinky.angularCore.mod.PipeTypeList
   type Predicate[T] = js.Function1[/* value */ T, scala.Boolean]
   /**
     * Describes a function that is used to process provider lists (such as provider
@@ -348,6 +363,16 @@ package object mod {
     * on the same node.
     */
   type PropertyAliases = org.scalablytyped.runtime.StringDictionary[typingsSlinky.angularCore.mod.PropertyAliasValue]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.angularCore.mod.TypeProvider
+    - typingsSlinky.angularCore.mod.ValueProvider
+    - typingsSlinky.angularCore.mod.ClassProvider
+    - typingsSlinky.angularCore.mod.ConstructorProvider
+    - typingsSlinky.angularCore.mod.ExistingProvider
+    - typingsSlinky.angularCore.mod.FactoryProvider
+    - js.Array[js.Any]
+  */
+  type Provider = typingsSlinky.angularCore.mod._Provider | js.Array[js.Any] | typingsSlinky.angularCore.mod.TypeProvider
   /**
     * Function used to sanitize the value before writing it into the renderer.
     */
@@ -359,6 +384,15 @@ package object mod {
   ]
   type Scope = js.Function1[/* repeated */ js.Any, js.Any]
   type SimpleChanges = org.scalablytyped.runtime.StringDictionary[typingsSlinky.angularCore.mod.SimpleChange]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.angularCore.mod.ValueProvider
+    - typingsSlinky.angularCore.mod.ExistingProvider
+    - typingsSlinky.angularCore.mod.StaticClassProvider
+    - typingsSlinky.angularCore.mod.ConstructorProvider
+    - typingsSlinky.angularCore.mod.FactoryProvider
+    - js.Array[js.Any]
+  */
+  type StaticProvider = typingsSlinky.angularCore.mod._StaticProvider | js.Array[js.Any]
   /**
     * Used to intercept and sanitize style values before they are written to the renderer.
     *

@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeviceCredential extends js.Object {
   /**
     * [Optional] The time at which this credential becomes invalid. This
     * credential will be ignored for new client authentication requests after
     * this timestamp; however, it will not be automatically deleted.
     */
-  var expirationTime: js.UndefOr[String] = js.native
+  var expirationTime: js.UndefOr[String] = js.undefined
   /**
     * A public key used to verify the signature of JSON Web Tokens (JWTs).
     * When adding a new device credential, either via device creation or via
@@ -25,46 +24,16 @@ trait DeviceCredential extends js.Object {
     * be accepted. New device credentials must be different from every
     * registry-level certificate.
     */
-  var publicKey: js.UndefOr[PublicKeyCredential] = js.native
+  var publicKey: js.UndefOr[PublicKeyCredential] = js.undefined
 }
 
 object DeviceCredential {
   @scala.inline
-  def apply(): DeviceCredential = {
+  def apply(expirationTime: String = null, publicKey: PublicKeyCredential = null): DeviceCredential = {
     val __obj = js.Dynamic.literal()
+    if (expirationTime != null) __obj.updateDynamic("expirationTime")(expirationTime.asInstanceOf[js.Any])
+    if (publicKey != null) __obj.updateDynamic("publicKey")(publicKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeviceCredential]
   }
-  @scala.inline
-  implicit class DeviceCredentialOps[Self <: DeviceCredential] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpirationTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpirationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublicKey(value: PublicKeyCredential): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublicKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

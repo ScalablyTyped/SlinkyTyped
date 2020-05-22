@@ -11,29 +11,10 @@ trait DecreaseNodeGroupsInGlobalReplicationGroupResult extends js.Object {
 
 object DecreaseNodeGroupsInGlobalReplicationGroupResult {
   @scala.inline
-  def apply(): DecreaseNodeGroupsInGlobalReplicationGroupResult = {
+  def apply(GlobalReplicationGroup: GlobalReplicationGroup = null): DecreaseNodeGroupsInGlobalReplicationGroupResult = {
     val __obj = js.Dynamic.literal()
+    if (GlobalReplicationGroup != null) __obj.updateDynamic("GlobalReplicationGroup")(GlobalReplicationGroup.asInstanceOf[js.Any])
     __obj.asInstanceOf[DecreaseNodeGroupsInGlobalReplicationGroupResult]
   }
-  @scala.inline
-  implicit class DecreaseNodeGroupsInGlobalReplicationGroupResultOps[Self <: DecreaseNodeGroupsInGlobalReplicationGroupResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGlobalReplicationGroup(value: GlobalReplicationGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalReplicationGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalReplicationGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalReplicationGroup")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

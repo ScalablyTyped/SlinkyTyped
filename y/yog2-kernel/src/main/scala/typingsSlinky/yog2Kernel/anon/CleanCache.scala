@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CleanCache extends js.Object {
   // 清除viewcache
-  def cleanCache(): Unit = js.native
+  def cleanCache(): Unit
 }
 
 object CleanCache {
@@ -16,19 +15,5 @@ object CleanCache {
     val __obj = js.Dynamic.literal(cleanCache = js.Any.fromFunction0(cleanCache))
     __obj.asInstanceOf[CleanCache]
   }
-  @scala.inline
-  implicit class CleanCacheOps[Self <: CleanCache] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCleanCache(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cleanCache")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

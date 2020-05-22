@@ -9,18 +9,17 @@ import scala.scalajs.js.annotation._
   * provides methods to access information about a cell that is mergeable with other sells.
   * @see com.sun.star.table.Cell
   */
-@js.native
 trait XMergeableCell extends XCell {
   /** returns the number of rows this cell spans. */
-  val ColumnSpan: Double = js.native
+  val ColumnSpan: Double
   /** returns the number of columns this cell spans. */
-  val RowSpan: Double = js.native
+  val RowSpan: Double
   /** returns the number of rows this cell spans. */
-  def getColumnSpan(): Double = js.native
+  def getColumnSpan(): Double
   /** returns the number of columns this cell spans. */
-  def getRowSpan(): Double = js.native
+  def getRowSpan(): Double
   /** returns `TRUE` if this cell is merged with another cell. */
-  def isMerged(): Boolean = js.native
+  def isMerged(): Boolean
 }
 
 object XMergeableCell {
@@ -48,43 +47,5 @@ object XMergeableCell {
     val __obj = js.Dynamic.literal(ColumnSpan = ColumnSpan.asInstanceOf[js.Any], Error = Error.asInstanceOf[js.Any], Formula = Formula.asInstanceOf[js.Any], RowSpan = RowSpan.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any], Value = Value.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getColumnSpan = js.Any.fromFunction0(getColumnSpan), getError = js.Any.fromFunction0(getError), getFormula = js.Any.fromFunction0(getFormula), getRowSpan = js.Any.fromFunction0(getRowSpan), getType = js.Any.fromFunction0(getType), getValue = js.Any.fromFunction0(getValue), isMerged = js.Any.fromFunction0(isMerged), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setFormula = js.Any.fromFunction1(setFormula), setValue = js.Any.fromFunction1(setValue))
     __obj.asInstanceOf[XMergeableCell]
   }
-  @scala.inline
-  implicit class XMergeableCellOps[Self <: XMergeableCell] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumnSpan(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnSpan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowSpan(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RowSpan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetColumnSpan(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getColumnSpan")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetRowSpan(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRowSpan")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsMerged(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMerged")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

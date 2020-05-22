@@ -38,101 +38,24 @@ trait Organization extends js.Object {
 
 object Organization {
   @scala.inline
-  def apply(): Organization = {
+  def apply(
+    Arn: OrganizationArn = null,
+    AvailablePolicyTypes: PolicyTypes = null,
+    FeatureSet: OrganizationFeatureSet = null,
+    Id: OrganizationId = null,
+    MasterAccountArn: AccountArn = null,
+    MasterAccountEmail: Email = null,
+    MasterAccountId: AccountId = null
+  ): Organization = {
     val __obj = js.Dynamic.literal()
+    if (Arn != null) __obj.updateDynamic("Arn")(Arn.asInstanceOf[js.Any])
+    if (AvailablePolicyTypes != null) __obj.updateDynamic("AvailablePolicyTypes")(AvailablePolicyTypes.asInstanceOf[js.Any])
+    if (FeatureSet != null) __obj.updateDynamic("FeatureSet")(FeatureSet.asInstanceOf[js.Any])
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (MasterAccountArn != null) __obj.updateDynamic("MasterAccountArn")(MasterAccountArn.asInstanceOf[js.Any])
+    if (MasterAccountEmail != null) __obj.updateDynamic("MasterAccountEmail")(MasterAccountEmail.asInstanceOf[js.Any])
+    if (MasterAccountId != null) __obj.updateDynamic("MasterAccountId")(MasterAccountId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Organization]
   }
-  @scala.inline
-  implicit class OrganizationOps[Self <: Organization] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArn(value: OrganizationArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAvailablePolicyTypes(value: PolicyTypes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailablePolicyTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailablePolicyTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailablePolicyTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeatureSet(value: OrganizationFeatureSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FeatureSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeatureSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FeatureSet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: OrganizationId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMasterAccountArn(value: AccountArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterAccountArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMasterAccountArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterAccountArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMasterAccountEmail(value: Email): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterAccountEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMasterAccountEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterAccountEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMasterAccountId(value: AccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterAccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMasterAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterAccountId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

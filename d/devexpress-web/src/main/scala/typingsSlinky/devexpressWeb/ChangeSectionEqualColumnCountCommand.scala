@@ -7,17 +7,16 @@ import scala.scalajs.js.annotation._
 /**
   * A command to change the number of section columns having the same width.
   */
-@js.native
 trait ChangeSectionEqualColumnCountCommand extends CommandBase {
   /**
     * Executes the ChangeSectionEqualColumnCountCommand command with the specified parameter. true if the command has been successfully executed; false if the command execution has failed.
     * @param columnCount An interger number specifying the number of section columns having the same width.
     */
-  def execute(columnCount: Double): Boolean = js.native
+  def execute(columnCount: Double): Boolean
   /**
     * Gets information about the command's state.
     */
-  def getState(): CommandState[Double] = js.native
+  def getState(): CommandState[Double]
 }
 
 object ChangeSectionEqualColumnCountCommand {
@@ -26,25 +25,5 @@ object ChangeSectionEqualColumnCountCommand {
     val __obj = js.Dynamic.literal(execute = js.Any.fromFunction1(execute), getState = js.Any.fromFunction0(getState))
     __obj.asInstanceOf[ChangeSectionEqualColumnCountCommand]
   }
-  @scala.inline
-  implicit class ChangeSectionEqualColumnCountCommandOps[Self <: ChangeSectionEqualColumnCountCommand] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecute(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetState(value: () => CommandState[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getState")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

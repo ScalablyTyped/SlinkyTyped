@@ -6,16 +6,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TimePickerAndroidStatic extends js.Object {
   /**
     * The dialog has been dismissed.
     */
-  var dismissedAction: typingsSlinky.reactNative.reactNativeStrings.dismissedAction = js.native
+  var dismissedAction: typingsSlinky.reactNative.reactNativeStrings.dismissedAction
   /**
     * A time has been selected.
     */
-  var timeSetAction: typingsSlinky.reactNative.reactNativeStrings.timeSetAction = js.native
+  var timeSetAction: typingsSlinky.reactNative.reactNativeStrings.timeSetAction
   /**
     * Opens the standard Android time picker dialog.
     *
@@ -35,7 +34,7 @@ trait TimePickerAndroidStatic extends js.Object {
     * still be resolved with action being `TimePickerAndroid.dismissedAction` and all the other keys
     * being undefined. **Always** check whether the `action` before reading the values.
     */
-  def open(options: TimePickerAndroidOpenOptions): js.Promise[TimePickerAndroidOpenReturn] = js.native
+  def open(options: TimePickerAndroidOpenOptions): js.Promise[TimePickerAndroidOpenReturn]
 }
 
 object TimePickerAndroidStatic {
@@ -48,31 +47,5 @@ object TimePickerAndroidStatic {
     val __obj = js.Dynamic.literal(dismissedAction = dismissedAction.asInstanceOf[js.Any], open = js.Any.fromFunction1(open), timeSetAction = timeSetAction.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimePickerAndroidStatic]
   }
-  @scala.inline
-  implicit class TimePickerAndroidStaticOps[Self <: TimePickerAndroidStatic] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDismissedAction(value: dismissedAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dismissedAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpen(value: TimePickerAndroidOpenOptions => js.Promise[TimePickerAndroidOpenReturn]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTimeSetAction(value: timeSetAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeSetAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

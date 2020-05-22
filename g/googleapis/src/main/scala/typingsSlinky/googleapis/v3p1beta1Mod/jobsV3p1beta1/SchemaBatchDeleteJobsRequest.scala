@@ -21,29 +21,10 @@ trait SchemaBatchDeleteJobsRequest extends js.Object {
 
 object SchemaBatchDeleteJobsRequest {
   @scala.inline
-  def apply(): SchemaBatchDeleteJobsRequest = {
+  def apply(filter: String = null): SchemaBatchDeleteJobsRequest = {
     val __obj = js.Dynamic.literal()
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBatchDeleteJobsRequest]
   }
-  @scala.inline
-  implicit class SchemaBatchDeleteJobsRequestOps[Self <: SchemaBatchDeleteJobsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Web.Http.Headers
 
+import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVector
 import typingsSlinky.winrtUwp.anon.MediaTypeWithQualityHeaderValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,6 +22,18 @@ class HttpMediaTypeWithQualityHeaderValue protected ()
     * @param quality The qvalue or quality.
     */
   def this(mediaType: String, quality: Double) = this()
+  /** Gets or sets the character set of the content to accept that is used in the Accept HTTP header. */
+  /* CompleteClass */
+  override var charSet: String = js.native
+  /** Gets or sets the media-type of the content to accept that is used in the Accept HTTP header. */
+  /* CompleteClass */
+  override var mediaType: String = js.native
+  /** Gets a set of parameters included in the Accept HTTP header. */
+  /* CompleteClass */
+  override var parameters: IVector[typingsSlinky.winrtUwp.Windows.Web.Http.Headers.HttpNameValueHeaderValue] = js.native
+  /** Get or set the qvalue or quality used in the Accept HTTP header. */
+  /* CompleteClass */
+  override var quality: Double = js.native
 }
 
 /* static members */

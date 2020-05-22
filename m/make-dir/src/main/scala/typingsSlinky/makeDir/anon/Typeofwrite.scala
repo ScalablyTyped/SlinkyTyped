@@ -1,7 +1,7 @@
 package typingsSlinky.makeDir.anon
 
+import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.ErrnoException
-import typingsSlinky.node.anon.Buffer
 import typingsSlinky.node.anon.BufferBytesWritten
 import typingsSlinky.node.anon.BufferDataView
 import typingsSlinky.node.anon.BufferFloat32Array
@@ -9,9 +9,10 @@ import typingsSlinky.node.anon.BufferFloat64Array
 import typingsSlinky.node.anon.BufferInt16Array
 import typingsSlinky.node.anon.BufferInt32Array
 import typingsSlinky.node.anon.BufferInt8Array
-import typingsSlinky.node.anon.BufferString
+import typingsSlinky.node.anon.BufferUint16Array
 import typingsSlinky.node.anon.BufferUint32Array
-import typingsSlinky.node.anon.BytesWritten
+import typingsSlinky.node.anon.BufferUint8Array
+import typingsSlinky.node.anon.BufferUint8ClampedArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -371,10 +372,6 @@ trait Typeofwrite extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  /**
-    * Asynchronously writes `buffer` to the file referenced by the supplied file descriptor.
-    * @param fd A file descriptor.
-    */
   def apply(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -385,11 +382,6 @@ trait Typeofwrite extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  /**
-    * Asynchronously writes `buffer` to the file referenced by the supplied file descriptor.
-    * @param fd A file descriptor.
-    * @param offset The part of the buffer to be written. If not supplied, defaults to `0`.
-    */
   def apply(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -401,12 +393,6 @@ trait Typeofwrite extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  /**
-    * Asynchronously writes `buffer` to the file referenced by the supplied file descriptor.
-    * @param fd A file descriptor.
-    * @param offset The part of the buffer to be written. If not supplied, defaults to `0`.
-    * @param length The number of bytes to write. If not supplied, defaults to `buffer.length - offset`.
-    */
   def apply(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -419,13 +405,6 @@ trait Typeofwrite extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  /**
-    * Asynchronously writes `buffer` to the file referenced by the supplied file descriptor.
-    * @param fd A file descriptor.
-    * @param offset The part of the buffer to be written. If not supplied, defaults to `0`.
-    * @param length The number of bytes to write. If not supplied, defaults to `buffer.length - offset`.
-    * @param position The offset from the beginning of the file where this data should be written. If not supplied, defaults to the current position.
-    */
   def apply(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -485,40 +464,22 @@ trait Typeofwrite extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  /**
-    * Asynchronously writes `string` to the file referenced by the supplied file descriptor.
-    * @param fd A file descriptor.
-    * @param string A string to write. If something other than a string is supplied it will be coerced to a string.
-    */
   def apply(
     fd: Double,
-    string: js.Any,
+    string: String,
     callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
   ): Unit = js.native
-  /**
-    * Asynchronously writes `string` to the file referenced by the supplied file descriptor.
-    * @param fd A file descriptor.
-    * @param string A string to write. If something other than a string is supplied it will be coerced to a string.
-    * @param position The offset from the beginning of the file where this data should be written. If not supplied, defaults to the current position.
-    */
   def apply(
     fd: Double,
-    string: js.Any,
+    string: String,
     position: js.UndefOr[Double | Null],
     callback: js.Function3[ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
   ): Unit = js.native
-  /**
-    * Asynchronously writes `string` to the file referenced by the supplied file descriptor.
-    * @param fd A file descriptor.
-    * @param string A string to write. If something other than a string is supplied it will be coerced to a string.
-    * @param position The offset from the beginning of the file where this data should be written. If not supplied, defaults to the current position.
-    * @param encoding The expected string encoding.
-    */
   def apply(
     fd: Double,
-    string: js.Any,
+    string: String,
     position: js.UndefOr[Double | Null],
-    encoding: js.UndefOr[Null | String],
+    encoding: js.UndefOr[BufferEncoding | Null],
     callback: js.Function3[ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
   ): Unit = js.native
   /**
@@ -528,7 +489,7 @@ trait Typeofwrite extends js.Object {
     * @param length The number of bytes to write. If not supplied, defaults to `buffer.length - offset`.
     * @param position The offset from the beginning of the file where this data should be written. If not supplied, defaults to the current position.
     */
-  def __promisify__(fd: Double): js.Promise[Buffer] = js.native
+  def __promisify__(fd: Double): js.Promise[BufferUint8Array] = js.native
   def __promisify__(fd: Double, buffer: js.typedarray.DataView): js.Promise[BufferDataView] = js.native
   def __promisify__(fd: Double, buffer: js.typedarray.DataView, offset: Double): js.Promise[BufferDataView] = js.native
   def __promisify__(fd: Double, buffer: js.typedarray.DataView, offset: Double, length: Double): js.Promise[BufferDataView] = js.native
@@ -553,38 +514,38 @@ trait Typeofwrite extends js.Object {
   def __promisify__(fd: Double, buffer: js.typedarray.Int8Array, offset: Double): js.Promise[BufferInt8Array] = js.native
   def __promisify__(fd: Double, buffer: js.typedarray.Int8Array, offset: Double, length: Double): js.Promise[BufferInt8Array] = js.native
   def __promisify__(fd: Double, buffer: js.typedarray.Int8Array, offset: Double, length: Double, position: Double): js.Promise[BufferInt8Array] = js.native
-  def __promisify__(fd: Double, buffer: js.typedarray.Uint16Array): js.Promise[BufferBytesWritten] = js.native
-  def __promisify__(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double): js.Promise[BufferBytesWritten] = js.native
-  def __promisify__(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double): js.Promise[BufferBytesWritten] = js.native
-  def __promisify__(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double, position: Double): js.Promise[BufferBytesWritten] = js.native
+  def __promisify__(fd: Double, buffer: js.typedarray.Uint16Array): js.Promise[BufferUint16Array] = js.native
+  def __promisify__(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double): js.Promise[BufferUint16Array] = js.native
+  def __promisify__(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double): js.Promise[BufferUint16Array] = js.native
+  def __promisify__(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double, position: Double): js.Promise[BufferUint16Array] = js.native
   def __promisify__(fd: Double, buffer: js.typedarray.Uint32Array): js.Promise[BufferUint32Array] = js.native
   def __promisify__(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double): js.Promise[BufferUint32Array] = js.native
   def __promisify__(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double): js.Promise[BufferUint32Array] = js.native
   def __promisify__(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double, position: Double): js.Promise[BufferUint32Array] = js.native
-  def __promisify__(fd: Double, buffer: js.typedarray.Uint8Array): js.Promise[Buffer] = js.native
-  def __promisify__(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double): js.Promise[Buffer] = js.native
-  def __promisify__(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double): js.Promise[Buffer] = js.native
-  def __promisify__(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double, position: Double): js.Promise[Buffer] = js.native
-  def __promisify__(fd: Double, buffer: js.typedarray.Uint8ClampedArray): js.Promise[BytesWritten] = js.native
-  def __promisify__(fd: Double, buffer: js.typedarray.Uint8ClampedArray, offset: Double): js.Promise[BytesWritten] = js.native
-  def __promisify__(fd: Double, buffer: js.typedarray.Uint8ClampedArray, offset: Double, length: Double): js.Promise[BytesWritten] = js.native
+  def __promisify__(fd: Double, buffer: js.typedarray.Uint8Array): js.Promise[BufferUint8Array] = js.native
+  def __promisify__(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double): js.Promise[BufferUint8Array] = js.native
+  def __promisify__(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double): js.Promise[BufferUint8Array] = js.native
+  def __promisify__(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double, position: Double): js.Promise[BufferUint8Array] = js.native
+  def __promisify__(fd: Double, buffer: js.typedarray.Uint8ClampedArray): js.Promise[BufferUint8ClampedArray] = js.native
+  def __promisify__(fd: Double, buffer: js.typedarray.Uint8ClampedArray, offset: Double): js.Promise[BufferUint8ClampedArray] = js.native
+  def __promisify__(fd: Double, buffer: js.typedarray.Uint8ClampedArray, offset: Double, length: Double): js.Promise[BufferUint8ClampedArray] = js.native
   def __promisify__(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
     offset: Double,
     length: Double,
     position: Double
-  ): js.Promise[BytesWritten] = js.native
+  ): js.Promise[BufferUint8ClampedArray] = js.native
   /**
     * Asynchronously writes `string` to the file referenced by the supplied file descriptor.
     * @param fd A file descriptor.
-    * @param string A string to write. If something other than a string is supplied it will be coerced to a string.
+    * @param string A string to write.
     * @param position The offset from the beginning of the file where this data should be written. If not supplied, defaults to the current position.
     * @param encoding The expected string encoding.
     */
-  def __promisify__(fd: Double, string: js.Any): js.Promise[BufferString] = js.native
-  def __promisify__(fd: Double, string: js.Any, position: Double): js.Promise[BufferString] = js.native
-  def __promisify__(fd: Double, string: js.Any, position: Double, encoding: String): js.Promise[BufferString] = js.native
-  def __promisify__(fd: Double, string: js.Any, position: Null, encoding: String): js.Promise[BufferString] = js.native
+  def __promisify__(fd: Double, string: String): js.Promise[BufferBytesWritten] = js.native
+  def __promisify__(fd: Double, string: String, position: Double): js.Promise[BufferBytesWritten] = js.native
+  def __promisify__(fd: Double, string: String, position: Double, encoding: BufferEncoding): js.Promise[BufferBytesWritten] = js.native
+  def __promisify__(fd: Double, string: String, position: Null, encoding: BufferEncoding): js.Promise[BufferBytesWritten] = js.native
 }
 

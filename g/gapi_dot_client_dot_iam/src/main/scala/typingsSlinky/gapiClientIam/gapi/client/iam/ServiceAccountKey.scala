@@ -4,15 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ServiceAccountKey extends js.Object {
   /** Specifies the algorithm (and possibly key size) for the key. */
-  var keyAlgorithm: js.UndefOr[String] = js.native
+  var keyAlgorithm: js.UndefOr[String] = js.undefined
   /**
     * The resource name of the service account key in the following format
     * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * The private key data. Only provided in `CreateServiceAccountKey`
     * responses. Make sure to keep the private key data secure because it
@@ -22,7 +21,7 @@ trait ServiceAccountKey extends js.Object {
     * <a href="/sdk/gcloud/reference/auth/activate-service-account">gcloud
     * auth activate-service-account</a>.
     */
-  var privateKeyData: js.UndefOr[String] = js.native
+  var privateKeyData: js.UndefOr[String] = js.undefined
   /**
     * The output format for the private key.
     * Only provided in `CreateServiceAccountKey` responses, not
@@ -31,112 +30,35 @@ trait ServiceAccountKey extends js.Object {
     * Google never exposes system-managed private keys, and never retains
     * user-managed private keys.
     */
-  var privateKeyType: js.UndefOr[String] = js.native
+  var privateKeyType: js.UndefOr[String] = js.undefined
   /** The public key data. Only provided in `GetServiceAccountKey` responses. */
-  var publicKeyData: js.UndefOr[String] = js.native
+  var publicKeyData: js.UndefOr[String] = js.undefined
   /** The key can be used after this timestamp. */
-  var validAfterTime: js.UndefOr[String] = js.native
+  var validAfterTime: js.UndefOr[String] = js.undefined
   /** The key can be used before this timestamp. */
-  var validBeforeTime: js.UndefOr[String] = js.native
+  var validBeforeTime: js.UndefOr[String] = js.undefined
 }
 
 object ServiceAccountKey {
   @scala.inline
-  def apply(): ServiceAccountKey = {
+  def apply(
+    keyAlgorithm: String = null,
+    name: String = null,
+    privateKeyData: String = null,
+    privateKeyType: String = null,
+    publicKeyData: String = null,
+    validAfterTime: String = null,
+    validBeforeTime: String = null
+  ): ServiceAccountKey = {
     val __obj = js.Dynamic.literal()
+    if (keyAlgorithm != null) __obj.updateDynamic("keyAlgorithm")(keyAlgorithm.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (privateKeyData != null) __obj.updateDynamic("privateKeyData")(privateKeyData.asInstanceOf[js.Any])
+    if (privateKeyType != null) __obj.updateDynamic("privateKeyType")(privateKeyType.asInstanceOf[js.Any])
+    if (publicKeyData != null) __obj.updateDynamic("publicKeyData")(publicKeyData.asInstanceOf[js.Any])
+    if (validAfterTime != null) __obj.updateDynamic("validAfterTime")(validAfterTime.asInstanceOf[js.Any])
+    if (validBeforeTime != null) __obj.updateDynamic("validBeforeTime")(validBeforeTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceAccountKey]
   }
-  @scala.inline
-  implicit class ServiceAccountKeyOps[Self <: ServiceAccountKey] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeyAlgorithm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyAlgorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyAlgorithm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyAlgorithm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateKeyData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateKeyData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateKeyData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateKeyData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateKeyType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateKeyType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateKeyType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateKeyType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublicKeyData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKeyData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublicKeyData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKeyData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidAfterTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validAfterTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidAfterTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validAfterTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidBeforeTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validBeforeTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidBeforeTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validBeforeTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

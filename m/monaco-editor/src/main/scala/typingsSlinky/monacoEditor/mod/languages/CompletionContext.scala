@@ -4,51 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CompletionContext extends js.Object {
   /**
     * Character that triggered the completion item provider.
     *
     * `undefined` if provider was not triggered by a character.
     */
-  var triggerCharacter: js.UndefOr[String] = js.native
+  var triggerCharacter: js.UndefOr[String] = js.undefined
   /**
     * How the completion was triggered.
     */
-  var triggerKind: CompletionTriggerKind = js.native
+  var triggerKind: CompletionTriggerKind
 }
 
 object CompletionContext {
   @scala.inline
-  def apply(triggerKind: CompletionTriggerKind): CompletionContext = {
+  def apply(triggerKind: CompletionTriggerKind, triggerCharacter: String = null): CompletionContext = {
     val __obj = js.Dynamic.literal(triggerKind = triggerKind.asInstanceOf[js.Any])
+    if (triggerCharacter != null) __obj.updateDynamic("triggerCharacter")(triggerCharacter.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompletionContext]
   }
-  @scala.inline
-  implicit class CompletionContextOps[Self <: CompletionContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTriggerKind(value: CompletionTriggerKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerKind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTriggerCharacter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerCharacter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTriggerCharacter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerCharacter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

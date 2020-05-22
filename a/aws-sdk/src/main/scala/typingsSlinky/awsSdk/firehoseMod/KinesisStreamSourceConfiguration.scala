@@ -22,25 +22,5 @@ object KinesisStreamSourceConfiguration {
     val __obj = js.Dynamic.literal(KinesisStreamARN = KinesisStreamARN.asInstanceOf[js.Any], RoleARN = RoleARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[KinesisStreamSourceConfiguration]
   }
-  @scala.inline
-  implicit class KinesisStreamSourceConfigurationOps[Self <: KinesisStreamSourceConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKinesisStreamARN(value: KinesisStreamARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisStreamARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoleARN(value: RoleARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

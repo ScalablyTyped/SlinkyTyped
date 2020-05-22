@@ -22,41 +22,11 @@ trait SchemaGoogleCloudMlV1ListModelsResponse extends js.Object {
 
 object SchemaGoogleCloudMlV1ListModelsResponse {
   @scala.inline
-  def apply(): SchemaGoogleCloudMlV1ListModelsResponse = {
+  def apply(models: js.Array[SchemaGoogleCloudMlV1Model] = null, nextPageToken: String = null): SchemaGoogleCloudMlV1ListModelsResponse = {
     val __obj = js.Dynamic.literal()
+    if (models != null) __obj.updateDynamic("models")(models.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudMlV1ListModelsResponse]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudMlV1ListModelsResponseOps[Self <: SchemaGoogleCloudMlV1ListModelsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withModels(value: js.Array[SchemaGoogleCloudMlV1Model]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("models")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("models")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

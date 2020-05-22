@@ -77,6 +77,11 @@ object GriddleReact {
   }
   
   def withProps[T](p: GriddleProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[GriddleProps[T]]))
+  }
   implicit def make[T](companion: GriddleReact.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -5,10 +5,13 @@ import typingsSlinky.mongodb.mod.FindAndModifyWriteOpResultObject
 import typingsSlinky.mongoose.anon.Coordinates
 import typingsSlinky.mongoose.anon.FnCallOnfulfilledOnrejected
 import typingsSlinky.mongoose.anon.NumberOfRetries
+import typingsSlinky.mongoose.anon.leantrueOmitQueryFindBase
+import typingsSlinky.mongoose.anon.leantrueOmitQueryFindOneA
 import typingsSlinky.mongoose.anon.rawResulttrueQueryFindOne
 import typingsSlinky.mongoose.anon.rawResulttrueQueryFindOneArrayFilters
 import typingsSlinky.mongoose.anon.rawResulttrueupserttruene
 import typingsSlinky.mongoose.anon.upserttruenewtrueQueryFin
+import typingsSlinky.std.NonNullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -202,6 +205,26 @@ trait DocumentQuery[T, DocType /* <: Document */, QueryHelpers] extends mquery {
     criteria: FilterQuery[DocType],
     callback: js.Function2[/* err */ js.Any, /* res */ DocType | Null, Unit]
   ): (DocumentQuery[DocType | Null, DocType, QueryHelpers]) with QueryHelpers = js.native
+  def findOne(criteria: FilterQuery[DocType], projection: js.Any): (DocumentQuery[DocType | Null, DocType, QueryHelpers]) with QueryHelpers = js.native
+  def findOne(
+    criteria: FilterQuery[DocType],
+    projection: js.Any,
+    callback: js.Function2[/* err */ js.Any, /* res */ T | Null, Unit]
+  ): (DocumentQuery[DocType | Null, DocType, QueryHelpers]) with QueryHelpers = js.native
+  def findOne(criteria: FilterQuery[DocType], projection: js.Any, options: leantrueOmitQueryFindBase): Query[DocumentDefinition[DocType]] with QueryHelpers = js.native
+  def findOne(
+    criteria: FilterQuery[DocType],
+    projection: js.Any,
+    options: leantrueOmitQueryFindBase,
+    callback: js.Function2[/* err */ js.Any, /* res */ T | Null, Unit]
+  ): Query[DocumentDefinition[DocType]] with QueryHelpers = js.native
+  def findOne(criteria: FilterQuery[DocType], projection: js.Any, options: QueryFindBaseOptions): (DocumentQuery[DocType | Null, DocType, QueryHelpers]) with QueryHelpers = js.native
+  def findOne(
+    criteria: FilterQuery[DocType],
+    projection: js.Any,
+    options: QueryFindBaseOptions,
+    callback: js.Function2[/* err */ js.Any, /* res */ T | Null, Unit]
+  ): (DocumentQuery[DocType | Null, DocType, QueryHelpers]) with QueryHelpers = js.native
   /**
     * Issues a mongodb findAndModify remove command.
     * Finds a matching document, removes it, passing the found document (if any) to the
@@ -250,6 +273,13 @@ trait DocumentQuery[T, DocType /* <: Document */, QueryHelpers] extends mquery {
     update: UpdateQuery[DocType],
     callback: js.Function3[/* err */ js.Any, /* doc */ DocType | Null, /* res */ js.Any, Unit]
   ): (DocumentQuery[DocType | Null, DocType, QueryHelpers]) with QueryHelpers = js.native
+  def findOneAndUpdate(query: FilterQuery[DocType], update: UpdateQuery[DocType], options: leantrueOmitQueryFindOneA): Query[DocumentDefinition[DocType]] with QueryHelpers = js.native
+  def findOneAndUpdate(
+    query: FilterQuery[DocType],
+    update: UpdateQuery[DocType],
+    options: leantrueOmitQueryFindOneA,
+    callback: js.Function3[/* err */ js.Any, /* doc */ DocumentDefinition[DocType], /* res */ js.Any, Unit]
+  ): Query[DocumentDefinition[DocType]] with QueryHelpers = js.native
   def findOneAndUpdate(
     query: FilterQuery[DocType],
     update: UpdateQuery[DocType],
@@ -447,9 +477,9 @@ trait DocumentQuery[T, DocType /* <: Document */, QueryHelpers] extends mquery {
     *
     * @param err optional error to throw if no docs match `filter`
     */
-  def orFail(): this.type = js.native
-  def orFail(err: js.Function0[Error]): this.type = js.native
-  def orFail(err: Error): this.type = js.native
+  def orFail(): DocumentQuery[NonNullable[T], DocType, QueryHelpers] = js.native
+  def orFail(err: js.Function0[Error]): DocumentQuery[NonNullable[T], DocType, QueryHelpers] = js.native
+  def orFail(err: Error): DocumentQuery[NonNullable[T], DocType, QueryHelpers] = js.native
   /** Specifies a $polygon condition */
   def polygon(coordinatePairs: js.Array[Double]*): this.type = js.native
   def polygon(path: String, coordinatePairs: js.Array[Double]*): this.type = js.native

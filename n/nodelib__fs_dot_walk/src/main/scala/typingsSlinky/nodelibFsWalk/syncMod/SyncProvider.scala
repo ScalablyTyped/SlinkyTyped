@@ -5,12 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SyncProvider extends js.Object {
-  val _reader: typingsSlinky.nodelibFsWalk.readersSyncMod.default = js.native
-  val _root: js.Any = js.native
-  val _settings: js.Any = js.native
-  def read(): js.Array[Entry] = js.native
+  val _reader: typingsSlinky.nodelibFsWalk.readersSyncMod.default
+  val _root: js.Any
+  val _settings: js.Any
+  def read(): js.Array[Entry]
 }
 
 object SyncProvider {
@@ -24,37 +23,5 @@ object SyncProvider {
     val __obj = js.Dynamic.literal(_reader = _reader.asInstanceOf[js.Any], _root = _root.asInstanceOf[js.Any], _settings = _settings.asInstanceOf[js.Any], read = js.Any.fromFunction0(read))
     __obj.asInstanceOf[SyncProvider]
   }
-  @scala.inline
-  implicit class SyncProviderOps[Self <: SyncProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_reader(value: typingsSlinky.nodelibFsWalk.readersSyncMod.default): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_reader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_root(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_settings(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_settings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRead(value: () => js.Array[Entry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

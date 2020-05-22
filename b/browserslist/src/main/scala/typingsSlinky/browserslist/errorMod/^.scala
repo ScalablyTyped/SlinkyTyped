@@ -1,5 +1,6 @@
 package typingsSlinky.browserslist.errorMod
 
+import typingsSlinky.browserslist.browserslistBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +9,11 @@ import scala.scalajs.js.annotation._
 @js.native
 class ^ protected () extends BrowserslistError {
   def this(message: js.Any) = this()
+  /* CompleteClass */
+  override var browserslist: `true` = js.native
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
 }
 

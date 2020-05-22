@@ -9,20 +9,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TransferJobsResource extends js.Object {
   /** Creates a transfer job that runs periodically. */
-  def create(request: Alt): Request[TransferJob] = js.native
+  def create(request: Alt): Request[TransferJob]
   /** Gets a transfer job. */
-  def get(request: Bearertoken): Request[TransferJob] = js.native
+  def get(request: Bearertoken): Request[TransferJob]
   /** Lists transfer jobs. */
-  def list(request: Callback): Request[ListTransferJobsResponse] = js.native
+  def list(request: Callback): Request[ListTransferJobsResponse]
   /**
     * Updates a transfer job. Updating a job's transfer spec does not affect
     * transfer operations that are running already. Updating the scheduling
     * of a job is not allowed.
     */
-  def patch(request: Fields): Request[TransferJob] = js.native
+  def patch(request: Fields): Request[TransferJob]
 }
 
 object TransferJobsResource {
@@ -36,37 +35,5 @@ object TransferJobsResource {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch))
     __obj.asInstanceOf[TransferJobsResource]
   }
-  @scala.inline
-  implicit class TransferJobsResourceOps[Self <: TransferJobsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreate(value: Alt => Request[TransferJob]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: Bearertoken => Request[TransferJob]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Callback => Request[ListTransferJobsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPatch(value: Fields => Request[TransferJob]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

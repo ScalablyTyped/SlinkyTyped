@@ -23,7 +23,7 @@ trait CrawlerArgs extends js.Object {
     */
   val configuration: js.UndefOr[Input[String]] = js.native
   /**
-    * The name of the Glue database to be synchronized.
+    * Glue database where results are written.
     */
   val databaseName: Input[String] = js.native
   /**
@@ -74,185 +74,38 @@ trait CrawlerArgs extends js.Object {
 
 object CrawlerArgs {
   @scala.inline
-  def apply(databaseName: Input[String], role: Input[String]): CrawlerArgs = {
+  def apply(
+    databaseName: Input[String],
+    role: Input[String],
+    catalogTargets: Input[js.Array[Input[CrawlerCatalogTarget]]] = null,
+    classifiers: Input[js.Array[Input[String]]] = null,
+    configuration: Input[String] = null,
+    description: Input[String] = null,
+    dynamodbTargets: Input[js.Array[Input[CrawlerDynamodbTarget]]] = null,
+    jdbcTargets: Input[js.Array[Input[CrawlerJdbcTarget]]] = null,
+    name: Input[String] = null,
+    s3Targets: Input[js.Array[Input[CrawlerS3Target]]] = null,
+    schedule: Input[String] = null,
+    schemaChangePolicy: Input[CrawlerSchemaChangePolicy] = null,
+    securityConfiguration: Input[String] = null,
+    tablePrefix: Input[String] = null,
+    tags: Input[StringDictionary[_]] = null
+  ): CrawlerArgs = {
     val __obj = js.Dynamic.literal(databaseName = databaseName.asInstanceOf[js.Any], role = role.asInstanceOf[js.Any])
+    if (catalogTargets != null) __obj.updateDynamic("catalogTargets")(catalogTargets.asInstanceOf[js.Any])
+    if (classifiers != null) __obj.updateDynamic("classifiers")(classifiers.asInstanceOf[js.Any])
+    if (configuration != null) __obj.updateDynamic("configuration")(configuration.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (dynamodbTargets != null) __obj.updateDynamic("dynamodbTargets")(dynamodbTargets.asInstanceOf[js.Any])
+    if (jdbcTargets != null) __obj.updateDynamic("jdbcTargets")(jdbcTargets.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (s3Targets != null) __obj.updateDynamic("s3Targets")(s3Targets.asInstanceOf[js.Any])
+    if (schedule != null) __obj.updateDynamic("schedule")(schedule.asInstanceOf[js.Any])
+    if (schemaChangePolicy != null) __obj.updateDynamic("schemaChangePolicy")(schemaChangePolicy.asInstanceOf[js.Any])
+    if (securityConfiguration != null) __obj.updateDynamic("securityConfiguration")(securityConfiguration.asInstanceOf[js.Any])
+    if (tablePrefix != null) __obj.updateDynamic("tablePrefix")(tablePrefix.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CrawlerArgs]
   }
-  @scala.inline
-  implicit class CrawlerArgsOps[Self <: CrawlerArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDatabaseName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("databaseName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRole(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCatalogTargets(value: Input[js.Array[Input[CrawlerCatalogTarget]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("catalogTargets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCatalogTargets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("catalogTargets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassifiers(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classifiers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassifiers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classifiers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfiguration(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDynamodbTargets(value: Input[js.Array[Input[CrawlerDynamodbTarget]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamodbTargets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDynamodbTargets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamodbTargets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJdbcTargets(value: Input[js.Array[Input[CrawlerJdbcTarget]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jdbcTargets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJdbcTargets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jdbcTargets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3Targets(value: Input[js.Array[Input[CrawlerS3Target]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3Targets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3Targets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3Targets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchedule(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schedule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchedule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schedule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchemaChangePolicy(value: Input[CrawlerSchemaChangePolicy]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaChangePolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchemaChangePolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaChangePolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurityConfiguration(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTablePrefix(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tablePrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTablePrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tablePrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: Input[StringDictionary[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

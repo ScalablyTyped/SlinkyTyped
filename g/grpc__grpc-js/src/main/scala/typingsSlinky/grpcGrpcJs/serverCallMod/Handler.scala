@@ -12,14 +12,3 @@ import scala.scalajs.js.annotation._
 */
 trait Handler[RequestType, ResponseType] extends js.Object
 
-object Handler {
-  @scala.inline
-  implicit def apply[RequestType, ResponseType](value: BidiStreamingHandler[RequestType, ResponseType]): Handler[RequestType, ResponseType] = value.asInstanceOf[Handler[RequestType, ResponseType]]
-  @scala.inline
-  implicit def apply[RequestType, ResponseType](value: ClientStreamingHandler[RequestType, ResponseType]): Handler[RequestType, ResponseType] = value.asInstanceOf[Handler[RequestType, ResponseType]]
-  @scala.inline
-  implicit def apply[RequestType, ResponseType](value: ServerStreamingHandler[RequestType, ResponseType]): Handler[RequestType, ResponseType] = value.asInstanceOf[Handler[RequestType, ResponseType]]
-  @scala.inline
-  implicit def apply[RequestType, ResponseType](value: UnaryHandler[RequestType, ResponseType]): Handler[RequestType, ResponseType] = value.asInstanceOf[Handler[RequestType, ResponseType]]
-}
-

@@ -14,13 +14,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EnableEnhancedMonitoringOutput extends OutputTypesUnion {
   /**
     * Metadata about the response received, including the HTTP status code, HTTP headers, and any request identifiers recognized by the SDK.
     */
   @JSName("$metadata")
-  var $metadata: ResponseMetadata = js.native
+  var $metadata: ResponseMetadata
   /**
     * <p>Represents the current state of the metrics that are in the enhanced state before the operation.</p>
     */
@@ -28,7 +27,7 @@ trait EnableEnhancedMonitoringOutput extends OutputTypesUnion {
     js.Array[
       IncomingBytes | IncomingRecords | OutgoingBytes | OutgoingRecords | WriteProvisionedThroughputExceeded | ReadProvisionedThroughputExceeded | IteratorAgeMilliseconds | ALL | String
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * <p>Represents the list of all the metrics that would be in the enhanced state after the operation.</p>
     */
@@ -36,76 +35,30 @@ trait EnableEnhancedMonitoringOutput extends OutputTypesUnion {
     js.Array[
       IncomingBytes | IncomingRecords | OutgoingBytes | OutgoingRecords | WriteProvisionedThroughputExceeded | ReadProvisionedThroughputExceeded | IteratorAgeMilliseconds | ALL | String
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * <p>The name of the Kinesis data stream.</p>
     */
-  var StreamName: js.UndefOr[String] = js.native
+  var StreamName: js.UndefOr[String] = js.undefined
 }
 
 object EnableEnhancedMonitoringOutput {
   @scala.inline
-  def apply($metadata: ResponseMetadata): EnableEnhancedMonitoringOutput = {
+  def apply(
+    $metadata: ResponseMetadata,
+    CurrentShardLevelMetrics: js.Array[
+      IncomingBytes | IncomingRecords | OutgoingBytes | OutgoingRecords | WriteProvisionedThroughputExceeded | ReadProvisionedThroughputExceeded | IteratorAgeMilliseconds | ALL | String
+    ] = null,
+    DesiredShardLevelMetrics: js.Array[
+      IncomingBytes | IncomingRecords | OutgoingBytes | OutgoingRecords | WriteProvisionedThroughputExceeded | ReadProvisionedThroughputExceeded | IteratorAgeMilliseconds | ALL | String
+    ] = null,
+    StreamName: String = null
+  ): EnableEnhancedMonitoringOutput = {
     val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any])
+    if (CurrentShardLevelMetrics != null) __obj.updateDynamic("CurrentShardLevelMetrics")(CurrentShardLevelMetrics.asInstanceOf[js.Any])
+    if (DesiredShardLevelMetrics != null) __obj.updateDynamic("DesiredShardLevelMetrics")(DesiredShardLevelMetrics.asInstanceOf[js.Any])
+    if (StreamName != null) __obj.updateDynamic("StreamName")(StreamName.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnableEnhancedMonitoringOutput]
   }
-  @scala.inline
-  implicit class EnableEnhancedMonitoringOutputOps[Self <: EnableEnhancedMonitoringOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$metadata(value: ResponseMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrentShardLevelMetrics(
-      value: js.Array[
-          IncomingBytes | IncomingRecords | OutgoingBytes | OutgoingRecords | WriteProvisionedThroughputExceeded | ReadProvisionedThroughputExceeded | IteratorAgeMilliseconds | ALL | String
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentShardLevelMetrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentShardLevelMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentShardLevelMetrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDesiredShardLevelMetrics(
-      value: js.Array[
-          IncomingBytes | IncomingRecords | OutgoingBytes | OutgoingRecords | WriteProvisionedThroughputExceeded | ReadProvisionedThroughputExceeded | IteratorAgeMilliseconds | ALL | String
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredShardLevelMetrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDesiredShardLevelMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredShardLevelMetrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

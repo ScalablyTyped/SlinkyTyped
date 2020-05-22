@@ -30,71 +30,19 @@ trait PutFunctionEventInvokeConfigRequest extends js.Object {
 
 object PutFunctionEventInvokeConfigRequest {
   @scala.inline
-  def apply(FunctionName: FunctionName): PutFunctionEventInvokeConfigRequest = {
+  def apply(
+    FunctionName: FunctionName,
+    DestinationConfig: DestinationConfig = null,
+    MaximumEventAgeInSeconds: js.UndefOr[MaximumEventAgeInSeconds] = js.undefined,
+    MaximumRetryAttempts: js.UndefOr[MaximumRetryAttempts] = js.undefined,
+    Qualifier: Qualifier = null
+  ): PutFunctionEventInvokeConfigRequest = {
     val __obj = js.Dynamic.literal(FunctionName = FunctionName.asInstanceOf[js.Any])
+    if (DestinationConfig != null) __obj.updateDynamic("DestinationConfig")(DestinationConfig.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaximumEventAgeInSeconds)) __obj.updateDynamic("MaximumEventAgeInSeconds")(MaximumEventAgeInSeconds.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaximumRetryAttempts)) __obj.updateDynamic("MaximumRetryAttempts")(MaximumRetryAttempts.get.asInstanceOf[js.Any])
+    if (Qualifier != null) __obj.updateDynamic("Qualifier")(Qualifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutFunctionEventInvokeConfigRequest]
   }
-  @scala.inline
-  implicit class PutFunctionEventInvokeConfigRequestOps[Self <: PutFunctionEventInvokeConfigRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFunctionName(value: FunctionName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDestinationConfig(value: DestinationConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximumEventAgeInSeconds(value: MaximumEventAgeInSeconds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumEventAgeInSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumEventAgeInSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumEventAgeInSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximumRetryAttempts(value: MaximumRetryAttempts): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumRetryAttempts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumRetryAttempts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumRetryAttempts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQualifier(value: Qualifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Qualifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQualifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Qualifier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

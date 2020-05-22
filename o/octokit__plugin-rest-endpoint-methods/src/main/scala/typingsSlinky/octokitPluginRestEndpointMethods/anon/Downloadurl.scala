@@ -1,27 +1,25 @@
 package typingsSlinky.octokitPluginRestEndpointMethods.anon
 
-import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ReposGetContentsResponse
 import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ReposGetContentsResponseLinks
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait Downloadurl extends ReposGetContentsResponse {
-  var _links: ReposGetContentsResponseLinks = js.native
-  var content: js.UndefOr[String] = js.native
-  var download_url: String | Null = js.native
-  var encoding: js.UndefOr[String] = js.native
-  var git_url: String = js.native
-  var html_url: String = js.native
-  var name: String = js.native
-  var path: String = js.native
-  var sha: String = js.native
-  var size: Double = js.native
-  var submodule_git_url: js.UndefOr[String] = js.native
-  var target: js.UndefOr[String] = js.native
-  var `type`: String = js.native
-  var url: String = js.native
+trait Downloadurl extends js.Object {
+  var _links: ReposGetContentsResponseLinks
+  var content: js.UndefOr[String] = js.undefined
+  var download_url: String | Null
+  var encoding: js.UndefOr[String] = js.undefined
+  var git_url: String
+  var html_url: String
+  var name: String
+  var path: String
+  var sha: String
+  var size: Double
+  var submodule_git_url: js.UndefOr[String] = js.undefined
+  var target: js.UndefOr[String] = js.undefined
+  var `type`: String
+  var url: String
 }
 
 object Downloadurl {
@@ -35,133 +33,20 @@ object Downloadurl {
     sha: String,
     size: Double,
     `type`: String,
-    url: String
+    url: String,
+    content: String = null,
+    download_url: String = null,
+    encoding: String = null,
+    submodule_git_url: String = null,
+    target: String = null
   ): Downloadurl = {
-    val __obj = js.Dynamic.literal(_links = _links.asInstanceOf[js.Any], git_url = git_url.asInstanceOf[js.Any], html_url = html_url.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], sha = sha.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(_links = _links.asInstanceOf[js.Any], git_url = git_url.asInstanceOf[js.Any], html_url = html_url.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], sha = sha.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], download_url = download_url.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
+    if (submodule_git_url != null) __obj.updateDynamic("submodule_git_url")(submodule_git_url.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
     __obj.asInstanceOf[Downloadurl]
   }
-  @scala.inline
-  implicit class DownloadurlOps[Self <: Downloadurl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_links(value: ReposGetContentsResponseLinks): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_links")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGit_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("git_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHtml_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSha(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDownload_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("download_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDownload_urlNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("download_url")(null)
-        ret
-    }
-    @scala.inline
-    def withEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubmodule_git_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submodule_git_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubmodule_git_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submodule_git_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

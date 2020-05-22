@@ -1,7 +1,6 @@
 package typingsSlinky.std
 
 import org.scalablytyped.runtime.NumberDictionary
-import typingsSlinky.std.stdStrings.UInt8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +34,7 @@ trait Uint8Array extends /* index */ NumberDictionary[Double] {
     */
   val length: Double = js.native
   @JSName(js.Symbol.toStringTag)
-  val toStringTag: UInt8Array = js.native
+  val toStringTag: typingsSlinky.std.stdStrings.Uint8Array = js.native
   /**
     * Returns the this object after copying a section of the array identified by start and end
     * to the same array starting at position target

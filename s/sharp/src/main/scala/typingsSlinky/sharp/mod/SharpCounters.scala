@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SharpCounters extends js.Object {
   /** The number of resize tasks currently being processed. */
-  var process: Double = js.native
+  var process: Double
   /** The number of tasks this module has queued waiting for libuv to provide a worker thread from its pool. */
-  var queue: Double = js.native
+  var queue: Double
 }
 
 object SharpCounters {
@@ -18,25 +17,5 @@ object SharpCounters {
     val __obj = js.Dynamic.literal(process = process.asInstanceOf[js.Any], queue = queue.asInstanceOf[js.Any])
     __obj.asInstanceOf[SharpCounters]
   }
-  @scala.inline
-  implicit class SharpCountersOps[Self <: SharpCounters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProcess(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("process")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQueue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queue")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

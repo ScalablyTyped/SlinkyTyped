@@ -4,32 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TextFrame2 extends js.Object {
-  val Application: js.Any = js.native
-  var AutoSize: MsoAutoSize = js.native
-  val Column: TextColumn2 = js.native
-  val Creator: Double = js.native
-  val HasText: MsoTriState = js.native
-  var HorizontalAnchor: MsoHorizontalAnchor = js.native
-  var MarginBottom: Double = js.native
-  var MarginLeft: Double = js.native
-  var MarginRight: Double = js.native
-  var MarginTop: Double = js.native
-  var NoTextRotation: MsoTriState = js.native
+  val Application: js.Any
+  var AutoSize: MsoAutoSize
+  val Column: TextColumn2
+  val Creator: Double
+  val HasText: MsoTriState
+  var HorizontalAnchor: MsoHorizontalAnchor
+  var MarginBottom: Double
+  var MarginLeft: Double
+  var MarginRight: Double
+  var MarginTop: Double
+  var NoTextRotation: MsoTriState
   @JSName("Office.TextFrame2_typekey")
-  var OfficeDotTextFrame2_typekey: TextFrame2 = js.native
-  var Orientation: MsoTextOrientation = js.native
-  val Parent: js.Any = js.native
-  var PathFormat: MsoPathFormat = js.native
-  val Ruler: Ruler2 = js.native
-  val TextRange: TextRange2 = js.native
-  val ThreeD: ThreeDFormat = js.native
-  var VerticalAnchor: MsoVerticalAnchor = js.native
-  var WarpFormat: MsoWarpFormat = js.native
-  var WordArtformat: MsoPresetTextEffect = js.native
-  var WordWrap: MsoTriState = js.native
-  def DeleteText(): Unit = js.native
+  var OfficeDotTextFrame2_typekey: TextFrame2
+  var Orientation: MsoTextOrientation
+  val Parent: js.Any
+  var PathFormat: MsoPathFormat
+  val Ruler: Ruler2
+  val TextRange: TextRange2
+  val ThreeD: ThreeDFormat
+  var VerticalAnchor: MsoVerticalAnchor
+  var WarpFormat: MsoWarpFormat
+  var WordArtformat: MsoPresetTextEffect
+  var WordWrap: MsoTriState
+  def DeleteText(): Unit
 }
 
 object TextFrame2 {
@@ -63,151 +62,5 @@ object TextFrame2 {
     __obj.updateDynamic("Office.TextFrame2_typekey")(OfficeDotTextFrame2_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextFrame2]
   }
-  @scala.inline
-  implicit class TextFrame2Ops[Self <: TextFrame2] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoSize(value: MsoAutoSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColumn(value: TextColumn2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Column")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeleteText(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteText")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHasText(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHorizontalAnchor(value: MsoHorizontalAnchor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HorizontalAnchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarginBottom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MarginBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarginLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MarginLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarginRight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MarginRight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarginTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MarginTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNoTextRotation(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NoTextRotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOfficeDotTextFrame2_typekey(value: TextFrame2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Office.TextFrame2_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: MsoTextOrientation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPathFormat(value: MsoPathFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PathFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRuler(value: Ruler2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ruler")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextRange(value: TextRange2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThreeD(value: ThreeDFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreeD")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerticalAnchor(value: MsoVerticalAnchor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VerticalAnchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWarpFormat(value: MsoWarpFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WarpFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordArtformat(value: MsoPresetTextEffect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WordArtformat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordWrap(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WordWrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

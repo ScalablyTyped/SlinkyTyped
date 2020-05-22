@@ -1,5 +1,6 @@
 package typingsSlinky.i18nJs.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.i18nJs.i18nJsStrings.guess
 import typingsSlinky.i18nJs.i18nJsStrings.message
 import scala.scalajs.js
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation._
 object ^ extends js.Object {
   var defaultLocale: String = js.native
   var defaultSeparator: String = js.native
-  var fallbacks: Boolean = js.native
+  var fallbacks: Boolean | String | (StringDictionary[String | js.Array[String]]) = js.native
   // tslint:disable-next-line prefer-declare-function
   var getFullScope: js.Function2[
     /* scope */ String | js.Array[String], 

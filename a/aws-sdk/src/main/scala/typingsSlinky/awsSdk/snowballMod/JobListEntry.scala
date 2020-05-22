@@ -38,101 +38,24 @@ trait JobListEntry extends js.Object {
 
 object JobListEntry {
   @scala.inline
-  def apply(): JobListEntry = {
+  def apply(
+    CreationDate: js.Date = null,
+    Description: String = null,
+    IsMaster: js.UndefOr[Boolean] = js.undefined,
+    JobId: String = null,
+    JobState: JobState = null,
+    JobType: JobType = null,
+    SnowballType: SnowballType = null
+  ): JobListEntry = {
     val __obj = js.Dynamic.literal()
+    if (CreationDate != null) __obj.updateDynamic("CreationDate")(CreationDate.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (!js.isUndefined(IsMaster)) __obj.updateDynamic("IsMaster")(IsMaster.get.asInstanceOf[js.Any])
+    if (JobId != null) __obj.updateDynamic("JobId")(JobId.asInstanceOf[js.Any])
+    if (JobState != null) __obj.updateDynamic("JobState")(JobState.asInstanceOf[js.Any])
+    if (JobType != null) __obj.updateDynamic("JobType")(JobType.asInstanceOf[js.Any])
+    if (SnowballType != null) __obj.updateDynamic("SnowballType")(SnowballType.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobListEntry]
   }
-  @scala.inline
-  implicit class JobListEntryOps[Self <: JobListEntry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsMaster(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsMaster")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsMaster: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsMaster")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobState(value: JobState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobType(value: JobType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnowballType(value: SnowballType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SnowballType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnowballType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SnowballType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

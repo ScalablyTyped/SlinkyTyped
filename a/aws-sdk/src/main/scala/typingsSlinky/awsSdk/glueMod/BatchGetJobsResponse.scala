@@ -18,41 +18,11 @@ trait BatchGetJobsResponse extends js.Object {
 
 object BatchGetJobsResponse {
   @scala.inline
-  def apply(): BatchGetJobsResponse = {
+  def apply(Jobs: JobList = null, JobsNotFound: JobNameList = null): BatchGetJobsResponse = {
     val __obj = js.Dynamic.literal()
+    if (Jobs != null) __obj.updateDynamic("Jobs")(Jobs.asInstanceOf[js.Any])
+    if (JobsNotFound != null) __obj.updateDynamic("JobsNotFound")(JobsNotFound.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchGetJobsResponse]
   }
-  @scala.inline
-  implicit class BatchGetJobsResponseOps[Self <: BatchGetJobsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJobs(value: JobList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Jobs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Jobs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobsNotFound(value: JobNameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobsNotFound")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobsNotFound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobsNotFound")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

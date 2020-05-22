@@ -8,120 +8,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Structure
   extends ShapeDef
      with ComplexShape
      with Shape {
-  var error: js.UndefOr[Error] = js.native
-  var exception: js.UndefOr[scala.Boolean] = js.native
-  var fault: js.UndefOr[scala.Boolean] = js.native
-  var members: StringDictionary[StructureMember] = js.native
-  var payload: js.UndefOr[java.lang.String] = js.native
-  var required: js.UndefOr[js.Array[java.lang.String]] = js.native
-  var topLevel: js.UndefOr[input | output] = js.native
+  var error: js.UndefOr[Error] = js.undefined
+  var exception: js.UndefOr[scala.Boolean] = js.undefined
+  var fault: js.UndefOr[scala.Boolean] = js.undefined
+  var members: StringDictionary[StructureMember]
+  var payload: js.UndefOr[java.lang.String] = js.undefined
+  var required: js.UndefOr[js.Array[java.lang.String]] = js.undefined
+  var topLevel: js.UndefOr[input | output] = js.undefined
   @JSName("type")
-  val type_Structure: structure = js.native
+  val type_Structure: structure
 }
 
 object Structure {
   @scala.inline
-  def apply(members: StringDictionary[StructureMember], `type`: structure): Structure = {
+  def apply(
+    members: StringDictionary[StructureMember],
+    `type`: structure,
+    deprecated: js.UndefOr[scala.Boolean] = js.undefined,
+    documentation: java.lang.String = null,
+    error: Error = null,
+    exception: js.UndefOr[scala.Boolean] = js.undefined,
+    fault: js.UndefOr[scala.Boolean] = js.undefined,
+    payload: java.lang.String = null,
+    required: js.Array[java.lang.String] = null,
+    sensitive: js.UndefOr[scala.Boolean] = js.undefined,
+    topLevel: input | output = null
+  ): Structure = {
     val __obj = js.Dynamic.literal(members = members.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(deprecated)) __obj.updateDynamic("deprecated")(deprecated.get.asInstanceOf[js.Any])
+    if (documentation != null) __obj.updateDynamic("documentation")(documentation.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (!js.isUndefined(exception)) __obj.updateDynamic("exception")(exception.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fault)) __obj.updateDynamic("fault")(fault.get.asInstanceOf[js.Any])
+    if (payload != null) __obj.updateDynamic("payload")(payload.asInstanceOf[js.Any])
+    if (required != null) __obj.updateDynamic("required")(required.asInstanceOf[js.Any])
+    if (!js.isUndefined(sensitive)) __obj.updateDynamic("sensitive")(sensitive.get.asInstanceOf[js.Any])
+    if (topLevel != null) __obj.updateDynamic("topLevel")(topLevel.asInstanceOf[js.Any])
     __obj.asInstanceOf[Structure]
   }
-  @scala.inline
-  implicit class StructureOps[Self <: Structure] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMembers(value: StringDictionary[StructureMember]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("members")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: structure): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withError(value: Error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withException(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exception")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutException: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exception")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFault(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fault")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayload(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequired(value: js.Array[java.lang.String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopLevel(value: input | output): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topLevel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

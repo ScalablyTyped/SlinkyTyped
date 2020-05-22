@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait G
   extends Container
-     with ParentTypeAlias {
+     with _ParentTypeAlias {
   def gbox(): BBox = js.native
 }
 

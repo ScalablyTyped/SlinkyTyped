@@ -1,16 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "redux-storage-engine-localstorage"
-version := "1.1-dt-20190504Z-c00724"
+version := "1.1-dt-20200515Z-dbe919"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "redux" % "4.0.5-d1b67b",
-  "org.scalablytyped.slinky" %%% "redux-storage" % "4.1.2-dt-20200225Z-4f2948",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb")
+  "org.scalablytyped.slinky" %%% "redux" % "4.0.5-7392f6",
+  "org.scalablytyped.slinky" %%% "redux-storage" % "4.1.2-dt-20200515Z-4b8f25",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

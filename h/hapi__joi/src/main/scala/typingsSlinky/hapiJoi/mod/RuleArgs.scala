@@ -4,91 +4,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RuleArgs extends js.Object {
-  var assert: js.UndefOr[(js.Function1[/* value */ js.Any, Boolean]) | AnySchema] = js.native
-  var message: js.UndefOr[String] = js.native
-  var name: String = js.native
+  var assert: js.UndefOr[(js.Function1[/* value */ js.Any, Boolean]) | AnySchema] = js.undefined
+  var message: js.UndefOr[String] = js.undefined
+  var name: String
   /**
     * Undocumented properties
     */
-  var normalize: js.UndefOr[js.Function1[/* value */ js.Any, _]] = js.native
-  var ref: js.UndefOr[Boolean] = js.native
+  var normalize: js.UndefOr[js.Function1[/* value */ js.Any, _]] = js.undefined
+  var ref: js.UndefOr[Boolean] = js.undefined
 }
 
 object RuleArgs {
   @scala.inline
-  def apply(name: String): RuleArgs = {
+  def apply(
+    name: String,
+    assert: (js.Function1[/* value */ js.Any, Boolean]) | AnySchema = null,
+    message: String = null,
+    normalize: /* value */ js.Any => _ = null,
+    ref: js.UndefOr[Boolean] = js.undefined
+  ): RuleArgs = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (assert != null) __obj.updateDynamic("assert")(assert.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (normalize != null) __obj.updateDynamic("normalize")(js.Any.fromFunction1(normalize))
+    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RuleArgs]
   }
-  @scala.inline
-  implicit class RuleArgsOps[Self <: RuleArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAssertFunction1(value: /* value */ js.Any => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assert")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAssert(value: (js.Function1[/* value */ js.Any, Boolean]) | AnySchema): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assert")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNormalize(value: /* value */ js.Any => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalize")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutNormalize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRef(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AppointmentResizingEventArgs extends EventArgs {
-  var allow: Boolean = js.native
-  val appointmentId: String = js.native
-  val mouseEvent: js.Any = js.native
-  val newInterval: BootstrapTimeInterval = js.native
-  val oldInterval: BootstrapTimeInterval = js.native
+  var allow: Boolean
+  val appointmentId: String
+  val mouseEvent: js.Any
+  val newInterval: BootstrapTimeInterval
+  val oldInterval: BootstrapTimeInterval
 }
 
 object AppointmentResizingEventArgs {
@@ -26,43 +25,5 @@ object AppointmentResizingEventArgs {
     val __obj = js.Dynamic.literal(allow = allow.asInstanceOf[js.Any], appointmentId = appointmentId.asInstanceOf[js.Any], mouseEvent = mouseEvent.asInstanceOf[js.Any], newInterval = newInterval.asInstanceOf[js.Any], oldInterval = oldInterval.asInstanceOf[js.Any], sender = sender.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppointmentResizingEventArgs]
   }
-  @scala.inline
-  implicit class AppointmentResizingEventArgsOps[Self <: AppointmentResizingEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppointmentId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMouseEvent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNewInterval(value: BootstrapTimeInterval): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOldInterval(value: BootstrapTimeInterval): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

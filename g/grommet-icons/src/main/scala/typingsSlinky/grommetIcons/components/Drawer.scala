@@ -12,7 +12,7 @@ object Drawer {
   @js.native
   object component extends js.Object
   
-  def withProps(p: IconProps with SVGProps[SVGSVGElement]): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Drawer] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Drawer](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Drawer.type): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Drawer] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Drawer](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: IconProps with SVGProps[SVGSVGElement]): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Drawer] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Drawer](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Drawer.type): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Drawer] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Drawer](js.Array(this.component, js.Dictionary.empty))()
 }
 

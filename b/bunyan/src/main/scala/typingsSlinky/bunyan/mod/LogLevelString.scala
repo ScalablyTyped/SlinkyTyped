@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.bunyan.bunyanStrings.error
   - typingsSlinky.bunyan.bunyanStrings.fatal
 */
-trait LogLevelString extends LogLevel
+trait LogLevelString extends js.Object
 
 object LogLevelString {
   @scala.inline

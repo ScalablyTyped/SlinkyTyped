@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IMediaExtension extends js.Object {
-  def setProperties(configuration: IPropertySet): Unit = js.native
+  def setProperties(configuration: IPropertySet): Unit
 }
 
 object IMediaExtension {
@@ -16,19 +15,5 @@ object IMediaExtension {
     val __obj = js.Dynamic.literal(setProperties = js.Any.fromFunction1(setProperties))
     __obj.asInstanceOf[IMediaExtension]
   }
-  @scala.inline
-  implicit class IMediaExtensionOps[Self <: IMediaExtension] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSetProperties(value: IPropertySet => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setProperties")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

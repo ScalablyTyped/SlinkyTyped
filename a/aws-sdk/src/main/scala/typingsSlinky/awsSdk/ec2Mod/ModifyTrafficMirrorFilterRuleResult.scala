@@ -14,29 +14,10 @@ trait ModifyTrafficMirrorFilterRuleResult extends js.Object {
 
 object ModifyTrafficMirrorFilterRuleResult {
   @scala.inline
-  def apply(): ModifyTrafficMirrorFilterRuleResult = {
+  def apply(TrafficMirrorFilterRule: TrafficMirrorFilterRule = null): ModifyTrafficMirrorFilterRuleResult = {
     val __obj = js.Dynamic.literal()
+    if (TrafficMirrorFilterRule != null) __obj.updateDynamic("TrafficMirrorFilterRule")(TrafficMirrorFilterRule.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyTrafficMirrorFilterRuleResult]
   }
-  @scala.inline
-  implicit class ModifyTrafficMirrorFilterRuleResultOps[Self <: ModifyTrafficMirrorFilterRuleResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTrafficMirrorFilterRule(value: TrafficMirrorFilterRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficMirrorFilterRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrafficMirrorFilterRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficMirrorFilterRule")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

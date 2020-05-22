@@ -5,51 +5,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AcceptOptions extends js.Object {
   /** If true, accept REFER request and automatically attempt to follow it. */
-  var followRefer: js.UndefOr[Boolean] = js.native
+  var followRefer: js.UndefOr[Boolean] = js.undefined
   /** If followRefer is true, options to following INVITE request. */
-  var inviteOptions: js.UndefOr[Options] = js.native
+  var inviteOptions: js.UndefOr[Options] = js.undefined
 }
 
 object AcceptOptions {
   @scala.inline
-  def apply(): AcceptOptions = {
+  def apply(followRefer: js.UndefOr[Boolean] = js.undefined, inviteOptions: Options = null): AcceptOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(followRefer)) __obj.updateDynamic("followRefer")(followRefer.get.asInstanceOf[js.Any])
+    if (inviteOptions != null) __obj.updateDynamic("inviteOptions")(inviteOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[AcceptOptions]
   }
-  @scala.inline
-  implicit class AcceptOptionsOps[Self <: AcceptOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFollowRefer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followRefer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFollowRefer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followRefer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInviteOptions(value: Options): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inviteOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInviteOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inviteOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

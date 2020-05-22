@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InstanceMoveRequest extends js.Object {
   /**
     * The URL of the destination zone to move the instance. This can be a full or partial URL. For example, the following are all valid URLs to a zone:
@@ -12,53 +11,23 @@ trait InstanceMoveRequest extends js.Object {
     * - projects/project/zones/zone
     * - zones/zone
     */
-  var destinationZone: js.UndefOr[String] = js.native
+  var destinationZone: js.UndefOr[String] = js.undefined
   /**
     * The URL of the target instance to move. This can be a full or partial URL. For example, the following are all valid URLs to an instance:
     * - https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/instance
     * - projects/project/zones/zone/instances/instance
     * - zones/zone/instances/instance
     */
-  var targetInstance: js.UndefOr[String] = js.native
+  var targetInstance: js.UndefOr[String] = js.undefined
 }
 
 object InstanceMoveRequest {
   @scala.inline
-  def apply(): InstanceMoveRequest = {
+  def apply(destinationZone: String = null, targetInstance: String = null): InstanceMoveRequest = {
     val __obj = js.Dynamic.literal()
+    if (destinationZone != null) __obj.updateDynamic("destinationZone")(destinationZone.asInstanceOf[js.Any])
+    if (targetInstance != null) __obj.updateDynamic("targetInstance")(targetInstance.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceMoveRequest]
   }
-  @scala.inline
-  implicit class InstanceMoveRequestOps[Self <: InstanceMoveRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestinationZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationZone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetInstance(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetInstance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetInstance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetInstance")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

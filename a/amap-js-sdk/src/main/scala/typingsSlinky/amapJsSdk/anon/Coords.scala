@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Coords extends js.Object {
   /**
     *
@@ -14,53 +13,23 @@ trait Coords extends js.Object {
     * - rect: coords格式为 [x1, y1, x2, y2]，x1，y1为矩形左上角像素坐标，x2，y2为矩形右下角像素坐标
     * Markshape的像素坐标是指相对于marker的左上角的像素坐标偏移量
     */
-  var coords: js.UndefOr[js.Array[Double]] = js.native
+  var coords: js.UndefOr[js.Array[Double]] = js.undefined
   /**
     * 可点击区域类型，可选值：
     * - circle:圆形
     * - poly:多边形
     * - rect:矩形
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object Coords {
   @scala.inline
-  def apply(): Coords = {
+  def apply(coords: js.Array[Double] = null, `type`: String = null): Coords = {
     val __obj = js.Dynamic.literal()
+    if (coords != null) __obj.updateDynamic("coords")(coords.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Coords]
   }
-  @scala.inline
-  implicit class CoordsOps[Self <: Coords] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCoords(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCoords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

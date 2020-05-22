@@ -1,6 +1,6 @@
 package typingsSlinky.googleapis.doubleclicksearchV2Mod.doubleclicksearchV2
 
-import typingsSlinky.googleapis.AnonByteCount
+import typingsSlinky.googleapis.anon.ByteCount
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait SchemaReport extends js.Object {
     * Asynchronous report only. Contains a list of generated report files once
     * the report has succesfully completed.
     */
-  var files: js.UndefOr[js.Array[AnonByteCount]] = js.native
+  var files: js.UndefOr[js.Array[ByteCount]] = js.native
   /**
     * Asynchronous report only. Id of the report.
     */
@@ -60,125 +60,28 @@ trait SchemaReport extends js.Object {
 
 object SchemaReport {
   @scala.inline
-  def apply(): SchemaReport = {
+  def apply(
+    files: js.Array[ByteCount] = null,
+    id: String = null,
+    isReportReady: js.UndefOr[Boolean] = js.undefined,
+    kind: String = null,
+    request: SchemaReportRequest = null,
+    rowCount: js.UndefOr[Double] = js.undefined,
+    rows: js.Array[SchemaReportRow] = null,
+    statisticsCurrencyCode: String = null,
+    statisticsTimeZone: String = null
+  ): SchemaReport = {
     val __obj = js.Dynamic.literal()
+    if (files != null) __obj.updateDynamic("files")(files.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(isReportReady)) __obj.updateDynamic("isReportReady")(isReportReady.get.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (request != null) __obj.updateDynamic("request")(request.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowCount)) __obj.updateDynamic("rowCount")(rowCount.get.asInstanceOf[js.Any])
+    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
+    if (statisticsCurrencyCode != null) __obj.updateDynamic("statisticsCurrencyCode")(statisticsCurrencyCode.asInstanceOf[js.Any])
+    if (statisticsTimeZone != null) __obj.updateDynamic("statisticsTimeZone")(statisticsTimeZone.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReport]
   }
-  @scala.inline
-  implicit class SchemaReportOps[Self <: SchemaReport] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFiles(value: js.Array[AnonByteCount]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsReportReady(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isReportReady")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsReportReady: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isReportReady")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequest(value: SchemaReportRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRows(value: js.Array[SchemaReportRow]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatisticsCurrencyCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statisticsCurrencyCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatisticsCurrencyCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statisticsCurrencyCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatisticsTimeZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statisticsTimeZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatisticsTimeZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statisticsTimeZone")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

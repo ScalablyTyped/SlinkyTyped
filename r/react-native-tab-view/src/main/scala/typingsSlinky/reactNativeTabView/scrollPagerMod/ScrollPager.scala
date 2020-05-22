@@ -23,6 +23,7 @@ trait ScrollPager[T /* <: Route */]
   var removeListener: js.Any = js.native
   var scrollTo: js.Any = js.native
   var scrollViewRef: js.Any = js.native
+  var wasTouched: js.Any = js.native
   @JSName("componentDidMount")
   def componentDidMount_MScrollPager(): Unit = js.native
   @JSName("componentDidUpdate")

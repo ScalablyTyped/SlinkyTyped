@@ -10,5 +10,21 @@ import scala.scalajs.js.annotation._
 @JSGlobal("TableCell")
 @js.native
 class TableCell ()
-  extends typingsSlinky.devexpressWeb.TableCell
+  extends typingsSlinky.devexpressWeb.TableCell {
+  /**
+    * Gets the text buffer interval occupied by the current table cell element.
+    */
+  /* CompleteClass */
+  override val interval: typingsSlinky.devexpressWeb.Interval = js.native
+  /**
+    * Gets the table cell's character length.
+    */
+  /* CompleteClass */
+  override val length: Double = js.native
+  /**
+    * Gets the table cell's start position in the document.
+    */
+  /* CompleteClass */
+  override val start: Double = js.native
+}
 

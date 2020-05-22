@@ -4,65 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   @JSName("$cache")
-  var $cache: js.UndefOr[Boolean] = js.native
+  var $cache: js.UndefOr[Boolean] = js.undefined
   @JSName("$file")
-  var $file: js.UndefOr[String] = js.native
+  var $file: js.UndefOr[String] = js.undefined
   @JSName("$name")
-  var $name: js.UndefOr[String] = js.native
+  var $name: js.UndefOr[String] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply($cache: js.UndefOr[Boolean] = js.undefined, $file: String = null, $name: String = null): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($cache)) __obj.updateDynamic("$cache")($cache.get.asInstanceOf[js.Any])
+    if ($file != null) __obj.updateDynamic("$file")($file.asInstanceOf[js.Any])
+    if ($name != null) __obj.updateDynamic("$name")($name.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$cache(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$cache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$cache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$cache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$file(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$file")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$file: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$file")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

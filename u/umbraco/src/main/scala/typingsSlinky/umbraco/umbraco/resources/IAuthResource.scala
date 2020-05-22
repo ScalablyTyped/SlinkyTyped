@@ -16,7 +16,6 @@ import scala.scalajs.js.annotation._
   * @requires umbRequestHelper
   * @requires angularHelper
   */
-@js.native
 trait IAuthResource extends js.Object {
   /**
     * @ngdoc method
@@ -36,7 +35,7 @@ trait IAuthResource extends js.Object {
     * @returns {Promise} resourcePromise object
     *
     */
-  def getCurrentUser(): IPromise[IResourcePromise] = js.native
+  def getCurrentUser(): IPromise[IResourcePromise]
   /**
     * @ngdoc method
     * @name umbraco.resources.authResource#getRemainingTimeoutSeconds
@@ -55,7 +54,7 @@ trait IAuthResource extends js.Object {
     * @returns {Promise} resourcePromise object
     *
     */
-  def getRemainingTimeoutSeconds(): IPromise[IResourcePromise] = js.native
+  def getRemainingTimeoutSeconds(): IPromise[IResourcePromise]
   /**
     * @ngdoc method
     * @name umbraco.resources.authResource#isAuthenticated
@@ -74,7 +73,7 @@ trait IAuthResource extends js.Object {
     * @returns {Promise} resourcePromise object
     *
     */
-  def isAuthenticated(): IPromise[IResourcePromise] = js.native
+  def isAuthenticated(): IPromise[IResourcePromise]
   /**
     * @ngdoc method
     * @name umbraco.resources.authResource#performLogin
@@ -95,7 +94,7 @@ trait IAuthResource extends js.Object {
     * @returns {Promise} resourcePromise object
     *
     */
-  def performLogin(username: String, password: String): IPromise[IResourcePromise] = js.native
+  def performLogin(username: String, password: String): IPromise[IResourcePromise]
   /**
     * @ngdoc method
     * @name umbraco.resources.authResource#performLogout
@@ -114,7 +113,7 @@ trait IAuthResource extends js.Object {
     * @returns {Promise} resourcePromise object
     *
     */
-  def performLogout(): IPromise[IResourcePromise] = js.native
+  def performLogout(): IPromise[IResourcePromise]
 }
 
 object IAuthResource {
@@ -129,43 +128,5 @@ object IAuthResource {
     val __obj = js.Dynamic.literal(getCurrentUser = js.Any.fromFunction0(getCurrentUser), getRemainingTimeoutSeconds = js.Any.fromFunction0(getRemainingTimeoutSeconds), isAuthenticated = js.Any.fromFunction0(isAuthenticated), performLogin = js.Any.fromFunction2(performLogin), performLogout = js.Any.fromFunction0(performLogout))
     __obj.asInstanceOf[IAuthResource]
   }
-  @scala.inline
-  implicit class IAuthResourceOps[Self <: IAuthResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetCurrentUser(value: () => IPromise[IResourcePromise]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentUser")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetRemainingTimeoutSeconds(value: () => IPromise[IResourcePromise]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRemainingTimeoutSeconds")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsAuthenticated(value: () => IPromise[IResourcePromise]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAuthenticated")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPerformLogin(value: (String, String) => IPromise[IResourcePromise]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("performLogin")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withPerformLogout(value: () => IPromise[IResourcePromise]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("performLogout")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

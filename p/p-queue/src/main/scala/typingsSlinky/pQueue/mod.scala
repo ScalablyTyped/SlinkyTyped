@@ -4,6 +4,7 @@ import typingsSlinky.eventemitter3.mod.^
 import typingsSlinky.pQueue.optionsMod.Options
 import typingsSlinky.pQueue.optionsMod.QueueAddOptions
 import typingsSlinky.pQueue.pQueueStrings.active
+import typingsSlinky.pQueue.pQueueStrings.idle
 import typingsSlinky.pQueue.queueMod.Queue
 import typingsSlinky.pQueue.queueMod.RunFunction
 import typingsSlinky.std.Partial
@@ -15,7 +16,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   @js.native
-  trait PQueue[QueueType /* <: Queue[RunFunction, EnqueueOptionsType] */, EnqueueOptionsType /* <: QueueAddOptions */] extends ^[active] {
+  trait PQueue[QueueType /* <: Queue[RunFunction, EnqueueOptionsType] */, EnqueueOptionsType /* <: QueueAddOptions */]
+    extends ^[active | idle, js.Any] {
     val _carryoverConcurrencyCount: js.Any = js.native
     var _concurrency: js.Any = js.native
     var _initializeIntervalIfNeeded: js.Any = js.native

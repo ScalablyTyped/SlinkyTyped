@@ -10,6 +10,9 @@ import typingsSlinky.reactNativeSortableList.mod.DataByString
 import typingsSlinky.reactNativeSortableList.mod.RowProps
 import typingsSlinky.reactNativeSortableList.mod.SortableListProps
 import typingsSlinky.reactNativeSortableList.mod.default
+import typingsSlinky.reactNativeSortableList.reactNativeSortableListStrings.always
+import typingsSlinky.reactNativeSortableList.reactNativeSortableListStrings.handled
+import typingsSlinky.reactNativeSortableList.reactNativeSortableListStrings.never
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,6 +38,8 @@ object ReactNativeSortableList {
     def innerContainerStyle(value: StyleProp[ViewStyle]): this.type = set("innerContainerStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def innerContainerStyleNull: this.type = set("innerContainerStyle", null)
+    @scala.inline
+    def keyboardShouldPersistTaps(value: never | always | handled): this.type = set("keyboardShouldPersistTaps", value.asInstanceOf[js.Any])
     @scala.inline
     def manuallyActivateRows(value: Boolean): this.type = set("manuallyActivateRows", value.asInstanceOf[js.Any])
     @scala.inline

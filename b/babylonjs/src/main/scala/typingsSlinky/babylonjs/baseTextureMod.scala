@@ -35,6 +35,11 @@ object baseTextureMod extends js.Object {
     var _texture: Nullable[InternalTexture] = js.native
     var _uid: js.Any = js.native
     /**
+      * Array of animations
+      */
+    /* CompleteClass */
+    override var animations: Nullable[js.Array[Animation]] = js.native
+    /**
       * Define the list of animation attached to the texture.
       */
     @JSName("animations")

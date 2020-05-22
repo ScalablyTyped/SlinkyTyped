@@ -5,53 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Entry extends js.Object {
   /**
     * Returns the un-decoded content of the {@link Entry}.
     *
     * @return the un-decoded content of the {@link Entry}
     */
-  val content: Buffer = js.native
+  val content: Buffer
   /**
     * Returns the MIME type of the entry, if it can be decoded.
     *
     * @return the MIME type of the entry, if it can be decoded, otherwise {@code null}.
     */
-  val mimeType: js.UndefOr[String] = js.native
+  val mimeType: js.UndefOr[String] = js.undefined
 }
 
 object Entry {
   @scala.inline
-  def apply(content: Buffer): Entry = {
+  def apply(content: Buffer, mimeType: String = null): Entry = {
     val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any])
+    if (mimeType != null) __obj.updateDynamic("mimeType")(mimeType.asInstanceOf[js.Any])
     __obj.asInstanceOf[Entry]
   }
-  @scala.inline
-  implicit class EntryOps[Self <: Entry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: Buffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMimeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMimeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

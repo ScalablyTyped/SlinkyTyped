@@ -22,53 +22,16 @@ trait GetReservationPurchaseRecommendationResponse extends js.Object {
 
 object GetReservationPurchaseRecommendationResponse {
   @scala.inline
-  def apply(): GetReservationPurchaseRecommendationResponse = {
+  def apply(
+    Metadata: ReservationPurchaseRecommendationMetadata = null,
+    NextPageToken: NextPageToken = null,
+    Recommendations: ReservationPurchaseRecommendations = null
+  ): GetReservationPurchaseRecommendationResponse = {
     val __obj = js.Dynamic.literal()
+    if (Metadata != null) __obj.updateDynamic("Metadata")(Metadata.asInstanceOf[js.Any])
+    if (NextPageToken != null) __obj.updateDynamic("NextPageToken")(NextPageToken.asInstanceOf[js.Any])
+    if (Recommendations != null) __obj.updateDynamic("Recommendations")(Recommendations.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetReservationPurchaseRecommendationResponse]
   }
-  @scala.inline
-  implicit class GetReservationPurchaseRecommendationResponseOps[Self <: GetReservationPurchaseRecommendationResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMetadata(value: ReservationPurchaseRecommendationMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: NextPageToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecommendations(value: ReservationPurchaseRecommendations): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Recommendations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecommendations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Recommendations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

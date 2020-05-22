@@ -13,6 +13,5 @@ import scala.scalajs.js.annotation._
   * event handlers on destroy. This is handled automatically if using
   * this.addEvent and this.createElement.
   */
-@js.native
 trait AccessibilityComponent extends js.Object
 

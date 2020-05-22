@@ -7,44 +7,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CommitResult extends js.Object {
   /** The commitHash for the commit. */
-  var hash: CommitHash = js.native
-  var status: js.UndefOr[SYNCED | FORKED | CANCELED] = js.native
+  var hash: CommitHash
+  var status: js.UndefOr[SYNCED | FORKED | CANCELED] = js.undefined
 }
 
 object CommitResult {
   @scala.inline
-  def apply(hash: CommitHash): CommitResult = {
+  def apply(hash: CommitHash, status: SYNCED | FORKED | CANCELED = null): CommitResult = {
     val __obj = js.Dynamic.literal(hash = hash.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommitResult]
   }
-  @scala.inline
-  implicit class CommitResultOps[Self <: CommitResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHash(value: CommitHash): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: SYNCED | FORKED | CANCELED): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -21,43 +21,42 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface for updating data on the Style object, for use in `style.set({ ... })`. */
-@js.native
 trait StyleUpdateData extends js.Object {
   /**
     *
-    * Indicates if text is automatically indented when the text alignment in a cell is set to equal distribution.
+    * Specifies if text is automatically indented when the text alignment in a cell is set to equal distribution.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var autoIndent: js.UndefOr[Boolean] = js.native
+  var autoIndent: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * A Border collection of four Border objects that represent the style of the four borders.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var borders: js.UndefOr[RangeBorderCollectionUpdateData] = js.native
+  var borders: js.UndefOr[RangeBorderCollectionUpdateData] = js.undefined
   /**
     *
     * The Fill of the style.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var fill: js.UndefOr[RangeFillUpdateData] = js.native
+  var fill: js.UndefOr[RangeFillUpdateData] = js.undefined
   /**
     *
     * A Font object that represents the font of the style.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var font: js.UndefOr[RangeFontUpdateData] = js.native
+  var font: js.UndefOr[RangeFontUpdateData] = js.undefined
   /**
     *
-    * Indicates if the formula will be hidden when the worksheet is protected.
+    * Specifies if the formula will be hidden when the worksheet is protected.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var formulaHidden: js.UndefOr[Boolean] = js.native
+  var formulaHidden: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Represents the horizontal alignment for the style. See Excel.HorizontalAlignment for details.
@@ -66,381 +65,162 @@ trait StyleUpdateData extends js.Object {
     */
   var horizontalAlignment: js.UndefOr[
     HorizontalAlignment | General | Left | Center | Right | Fill | Justify | CenterAcrossSelection | Distributed
-  ] = js.native
+  ] = js.undefined
   /**
     *
-    * Indicates if the style includes the AutoIndent, HorizontalAlignment, VerticalAlignment, WrapText, IndentLevel, and TextOrientation properties.
+    * Specifies if the style includes the AutoIndent, HorizontalAlignment, VerticalAlignment, WrapText, IndentLevel, and TextOrientation properties.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var includeAlignment: js.UndefOr[Boolean] = js.native
+  var includeAlignment: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Indicates if the style includes the Color, ColorIndex, LineStyle, and Weight border properties.
+    * Specifies if the style includes the Color, ColorIndex, LineStyle, and Weight border properties.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var includeBorder: js.UndefOr[Boolean] = js.native
+  var includeBorder: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Indicates if the style includes the Background, Bold, Color, ColorIndex, FontStyle, Italic, Name, Size, Strikethrough, Subscript, Superscript, and Underline font properties.
+    * Specifies if the style includes the Background, Bold, Color, ColorIndex, FontStyle, Italic, Name, Size, Strikethrough, Subscript, Superscript, and Underline font properties.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var includeFont: js.UndefOr[Boolean] = js.native
+  var includeFont: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Indicates if the style includes the NumberFormat property.
+    * Specifies if the style includes the NumberFormat property.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var includeNumber: js.UndefOr[Boolean] = js.native
+  var includeNumber: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Indicates if the style includes the Color, ColorIndex, InvertIfNegative, Pattern, PatternColor, and PatternColorIndex interior properties.
+    * Specifies if the style includes the Color, ColorIndex, InvertIfNegative, Pattern, PatternColor, and PatternColorIndex interior properties.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var includePatterns: js.UndefOr[Boolean] = js.native
+  var includePatterns: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Indicates if the style includes the FormulaHidden and Locked protection properties.
+    * Specifies if the style includes the FormulaHidden and Locked protection properties.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var includeProtection: js.UndefOr[Boolean] = js.native
+  var includeProtection: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * An integer from 0 to 250 that indicates the indent level for the style.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var indentLevel: js.UndefOr[Double] = js.native
+  var indentLevel: js.UndefOr[Double] = js.undefined
   /**
     *
-    * Indicates if the object is locked when the worksheet is protected.
+    * Specifies if the object is locked when the worksheet is protected.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var locked: js.UndefOr[Boolean] = js.native
+  var locked: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * The format code of the number format for the style.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var numberFormat: js.UndefOr[String] = js.native
+  var numberFormat: js.UndefOr[String] = js.undefined
   /**
     *
     * The localized format code of the number format for the style.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var numberFormatLocal: js.UndefOr[String] = js.native
+  var numberFormatLocal: js.UndefOr[String] = js.undefined
   /**
     *
     * The reading order for the style.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var readingOrder: js.UndefOr[ReadingOrder | Context | LeftToRight | RightToLeft] = js.native
+  var readingOrder: js.UndefOr[ReadingOrder | Context | LeftToRight | RightToLeft] = js.undefined
   /**
     *
-    * Indicates if text automatically shrinks to fit in the available column width.
+    * Specifies if text automatically shrinks to fit in the available column width.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var shrinkToFit: js.UndefOr[Boolean] = js.native
+  var shrinkToFit: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * The text orientation for the style.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var textOrientation: js.UndefOr[Double] = js.native
+  var textOrientation: js.UndefOr[Double] = js.undefined
   /**
     *
-    * Represents the vertical alignment for the style. See Excel.VerticalAlignment for details.
+    * Specifies the vertical alignment for the style. See Excel.VerticalAlignment for details.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var verticalAlignment: js.UndefOr[VerticalAlignment | Top | Center | Bottom | Justify | Distributed] = js.native
+  var verticalAlignment: js.UndefOr[VerticalAlignment | Top | Center | Bottom | Justify | Distributed] = js.undefined
   /**
     *
-    * Indicates if Microsoft Excel wraps the text in the object.
+    * Specifies if Excel wraps the text in the object.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var wrapText: js.UndefOr[Boolean] = js.native
+  var wrapText: js.UndefOr[Boolean] = js.undefined
 }
 
 object StyleUpdateData {
   @scala.inline
-  def apply(): StyleUpdateData = {
+  def apply(
+    autoIndent: js.UndefOr[Boolean] = js.undefined,
+    borders: RangeBorderCollectionUpdateData = null,
+    fill: RangeFillUpdateData = null,
+    font: RangeFontUpdateData = null,
+    formulaHidden: js.UndefOr[Boolean] = js.undefined,
+    horizontalAlignment: HorizontalAlignment | General | Left | Center | Right | Fill | Justify | CenterAcrossSelection | Distributed = null,
+    includeAlignment: js.UndefOr[Boolean] = js.undefined,
+    includeBorder: js.UndefOr[Boolean] = js.undefined,
+    includeFont: js.UndefOr[Boolean] = js.undefined,
+    includeNumber: js.UndefOr[Boolean] = js.undefined,
+    includePatterns: js.UndefOr[Boolean] = js.undefined,
+    includeProtection: js.UndefOr[Boolean] = js.undefined,
+    indentLevel: js.UndefOr[Double] = js.undefined,
+    locked: js.UndefOr[Boolean] = js.undefined,
+    numberFormat: String = null,
+    numberFormatLocal: String = null,
+    readingOrder: ReadingOrder | Context | LeftToRight | RightToLeft = null,
+    shrinkToFit: js.UndefOr[Boolean] = js.undefined,
+    textOrientation: js.UndefOr[Double] = js.undefined,
+    verticalAlignment: VerticalAlignment | Top | Center | Bottom | Justify | Distributed = null,
+    wrapText: js.UndefOr[Boolean] = js.undefined
+  ): StyleUpdateData = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoIndent)) __obj.updateDynamic("autoIndent")(autoIndent.get.asInstanceOf[js.Any])
+    if (borders != null) __obj.updateDynamic("borders")(borders.asInstanceOf[js.Any])
+    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (!js.isUndefined(formulaHidden)) __obj.updateDynamic("formulaHidden")(formulaHidden.get.asInstanceOf[js.Any])
+    if (horizontalAlignment != null) __obj.updateDynamic("horizontalAlignment")(horizontalAlignment.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeAlignment)) __obj.updateDynamic("includeAlignment")(includeAlignment.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeBorder)) __obj.updateDynamic("includeBorder")(includeBorder.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeFont)) __obj.updateDynamic("includeFont")(includeFont.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeNumber)) __obj.updateDynamic("includeNumber")(includeNumber.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includePatterns)) __obj.updateDynamic("includePatterns")(includePatterns.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeProtection)) __obj.updateDynamic("includeProtection")(includeProtection.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(indentLevel)) __obj.updateDynamic("indentLevel")(indentLevel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(locked)) __obj.updateDynamic("locked")(locked.get.asInstanceOf[js.Any])
+    if (numberFormat != null) __obj.updateDynamic("numberFormat")(numberFormat.asInstanceOf[js.Any])
+    if (numberFormatLocal != null) __obj.updateDynamic("numberFormatLocal")(numberFormatLocal.asInstanceOf[js.Any])
+    if (readingOrder != null) __obj.updateDynamic("readingOrder")(readingOrder.asInstanceOf[js.Any])
+    if (!js.isUndefined(shrinkToFit)) __obj.updateDynamic("shrinkToFit")(shrinkToFit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(textOrientation)) __obj.updateDynamic("textOrientation")(textOrientation.get.asInstanceOf[js.Any])
+    if (verticalAlignment != null) __obj.updateDynamic("verticalAlignment")(verticalAlignment.asInstanceOf[js.Any])
+    if (!js.isUndefined(wrapText)) __obj.updateDynamic("wrapText")(wrapText.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StyleUpdateData]
   }
-  @scala.inline
-  implicit class StyleUpdateDataOps[Self <: StyleUpdateData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoIndent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoIndent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoIndent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoIndent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorders(value: RangeBorderCollectionUpdateData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFill(value: RangeFillUpdateData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFont(value: RangeFontUpdateData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormulaHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formulaHidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormulaHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formulaHidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHorizontalAlignment(
-      value: HorizontalAlignment | General | Left | Center | Right | Fill | Justify | CenterAcrossSelection | Distributed
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontalAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeAlignment(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeAlignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeAlignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeBorder(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeBorder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeBorder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeFont(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeFont")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeFont")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeNumber(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludePatterns(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includePatterns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludePatterns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includePatterns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeProtection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeProtection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeProtection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeProtection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndentLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indentLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndentLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indentLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberFormatLocal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormatLocal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberFormatLocal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormatLocal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadingOrder(value: ReadingOrder | Context | LeftToRight | RightToLeft): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readingOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadingOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readingOrder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShrinkToFit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shrinkToFit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShrinkToFit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shrinkToFit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextOrientation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textOrientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textOrientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerticalAlignment(value: VerticalAlignment | Top | Center | Bottom | Justify | Distributed): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrapText(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrapText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapText")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -14,32 +14,31 @@ import scala.scalajs.js.annotation._
   * @interface
   * @property {string} path HTTP path (relative to the model) at which the method is exposed.
   * @property {'get' | 'post' | 'patch' | 'put' | 'del' | 'all'} verb HTTP method (verb) at which the method is available.
-  * @property {number} status	Default HTTP status set when the callback is called without an error.
-  * @property {number} errorStatus	Default HTTP status set when the callback is called with an error.
+  * @property {number} status    Default HTTP status set when the callback is called without an error.
+  * @property {number} errorStatus    Default HTTP status set when the callback is called with an error.
   */
-@js.native
 trait RemoteHttpOptions extends js.Object {
   /**
-    * errorStatus	Default HTTP status set when the callback is called with an error.
+    * errorStatus    Default HTTP status set when the callback is called with an error.
     * ```
     * {errorStatus: 400}
     * ```
     */
-  var errorStatus: js.UndefOr[Double] = js.native
+  var errorStatus: js.UndefOr[Double] = js.undefined
   /**
     * HTTP path (relative to the model) at which the method is exposed.
     * ```
     * http: {path: '/sayhi'}
     * ```
     */
-  var path: String = js.native
+  var path: String
   /**
-    * status	Default HTTP status set when the callback is called without an error.
+    * status    Default HTTP status set when the callback is called without an error.
     * ```
     * {status: 201}
     * ```
     */
-  var status: js.UndefOr[Double] = js.native
+  var status: js.UndefOr[Double] = js.undefined
   /**
     * HTTP method (verb) at which the method is available.
     * ```
@@ -47,58 +46,21 @@ trait RemoteHttpOptions extends js.Object {
     * ```
     * default = post
     */
-  var verb: get | post | patch | put | del | all = js.native
+  var verb: get | post | patch | put | del | all
 }
 
 object RemoteHttpOptions {
   @scala.inline
-  def apply(path: String, verb: get | post | patch | put | del | all): RemoteHttpOptions = {
+  def apply(
+    path: String,
+    verb: get | post | patch | put | del | all,
+    errorStatus: js.UndefOr[Double] = js.undefined,
+    status: js.UndefOr[Double] = js.undefined
+  ): RemoteHttpOptions = {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any], verb = verb.asInstanceOf[js.Any])
+    if (!js.isUndefined(errorStatus)) __obj.updateDynamic("errorStatus")(errorStatus.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(status)) __obj.updateDynamic("status")(status.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RemoteHttpOptions]
   }
-  @scala.inline
-  implicit class RemoteHttpOptionsOps[Self <: RemoteHttpOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerb(value: get | post | patch | put | del | all): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withErrorStatus(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -10,5 +10,9 @@ import scala.scalajs.js.annotation._
 class AuthTokenExpiredError protected () extends Error {
   def this(message: String, expiry: js.Date) = this()
   var expiry: js.Date = js.native
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
 }
 

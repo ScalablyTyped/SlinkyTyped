@@ -4,119 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AxisRangeChangedEventUIParam extends js.Object {
   /**
-  	 * Used to get reference to current chart axis object.
-  	 */
-  var axis: js.UndefOr[js.Any] = js.native
+    * Used to get reference to current chart axis object.
+    */
+  var axis: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Used to get reference to chart object.
-  	 */
-  var chart: js.UndefOr[js.Any] = js.native
+    * Used to get reference to chart object.
+    */
+  var chart: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Used to get new maximum value.
-  	 */
-  var newMaximumValue: js.UndefOr[js.Any] = js.native
+    * Used to get new maximum value.
+    */
+  var newMaximumValue: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Used to get new minimum value.
-  	 */
-  var newMinimumValue: js.UndefOr[js.Any] = js.native
+    * Used to get new minimum value.
+    */
+  var newMinimumValue: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Used to get old maximum value.
-  	 */
-  var oldMaximumValue: js.UndefOr[js.Any] = js.native
+    * Used to get old maximum value.
+    */
+  var oldMaximumValue: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Used to get old minimum value.
-  	 */
-  var oldMinimumValue: js.UndefOr[js.Any] = js.native
+    * Used to get old minimum value.
+    */
+  var oldMinimumValue: js.UndefOr[js.Any] = js.undefined
 }
 
 object AxisRangeChangedEventUIParam {
   @scala.inline
-  def apply(): AxisRangeChangedEventUIParam = {
+  def apply(
+    axis: js.Any = null,
+    chart: js.Any = null,
+    newMaximumValue: js.Any = null,
+    newMinimumValue: js.Any = null,
+    oldMaximumValue: js.Any = null,
+    oldMinimumValue: js.Any = null
+  ): AxisRangeChangedEventUIParam = {
     val __obj = js.Dynamic.literal()
+    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
+    if (chart != null) __obj.updateDynamic("chart")(chart.asInstanceOf[js.Any])
+    if (newMaximumValue != null) __obj.updateDynamic("newMaximumValue")(newMaximumValue.asInstanceOf[js.Any])
+    if (newMinimumValue != null) __obj.updateDynamic("newMinimumValue")(newMinimumValue.asInstanceOf[js.Any])
+    if (oldMaximumValue != null) __obj.updateDynamic("oldMaximumValue")(oldMaximumValue.asInstanceOf[js.Any])
+    if (oldMinimumValue != null) __obj.updateDynamic("oldMinimumValue")(oldMinimumValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[AxisRangeChangedEventUIParam]
   }
-  @scala.inline
-  implicit class AxisRangeChangedEventUIParamOps[Self <: AxisRangeChangedEventUIParam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAxis(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChart(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewMaximumValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newMaximumValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewMaximumValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newMaximumValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewMinimumValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newMinimumValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewMinimumValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newMinimumValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOldMaximumValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldMaximumValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOldMaximumValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldMaximumValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOldMinimumValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldMinimumValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOldMinimumValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldMinimumValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

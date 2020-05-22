@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ServicesResource extends js.Object {
   /**
     * Attempts to allocate quota for the specified consumer. It should be called
@@ -21,7 +20,7 @@ trait ServicesResource extends js.Object {
     * reliability, the server may inject these errors to prohibit any hard
     * dependency on the quota functionality.
     */
-  def allocateQuota(request: Accesstoken): Request[AllocateQuotaResponse] = js.native
+  def allocateQuota(request: Accesstoken): Request[AllocateQuotaResponse]
   /**
     * Checks an operation with Google Service Control to decide whether
     * the given operation should proceed. It should be called before the
@@ -37,7 +36,7 @@ trait ServicesResource extends js.Object {
     * on the specified service. For more information, see
     * [Google Cloud IAM](https://cloud.google.com/iam).
     */
-  def check(request: Accesstoken): Request[CheckResponse] = js.native
+  def check(request: Accesstoken): Request[CheckResponse]
   /**
     * Signals the quota controller that service ends the ongoing usage
     * reconciliation.
@@ -46,7 +45,7 @@ trait ServicesResource extends js.Object {
     * permission on the specified service. For more information, see
     * [Google Cloud IAM](https://cloud.google.com/iam).
     */
-  def endReconciliation(request: Accesstoken): Request[EndReconciliationResponse] = js.native
+  def endReconciliation(request: Accesstoken): Request[EndReconciliationResponse]
   /**
     * Releases previously allocated quota done through AllocateQuota method.
     *
@@ -60,7 +59,7 @@ trait ServicesResource extends js.Object {
     * reliability, the server may inject these errors to prohibit any hard
     * dependency on the quota functionality.
     */
-  def releaseQuota(request: Accesstoken): Request[ReleaseQuotaResponse] = js.native
+  def releaseQuota(request: Accesstoken): Request[ReleaseQuotaResponse]
   /**
     * Reports operation results to Google Service Control, such as logs and
     * metrics. It should be called after an operation is completed.
@@ -77,7 +76,7 @@ trait ServicesResource extends js.Object {
     * on the specified service. For more information, see
     * [Google Cloud IAM](https://cloud.google.com/iam).
     */
-  def report(request: Accesstoken): Request[ReportResponse] = js.native
+  def report(request: Accesstoken): Request[ReportResponse]
   /**
     * Unlike rate quota, allocation quota does not get refilled periodically.
     * So, it is possible that the quota usage as seen by the service differs from
@@ -105,7 +104,7 @@ trait ServicesResource extends js.Object {
     * permission on the specified service. For more information, see
     * [Google Cloud IAM](https://cloud.google.com/iam).
     */
-  def startReconciliation(request: Accesstoken): Request[StartReconciliationResponse] = js.native
+  def startReconciliation(request: Accesstoken): Request[StartReconciliationResponse]
 }
 
 object ServicesResource {
@@ -121,49 +120,5 @@ object ServicesResource {
     val __obj = js.Dynamic.literal(allocateQuota = js.Any.fromFunction1(allocateQuota), check = js.Any.fromFunction1(check), endReconciliation = js.Any.fromFunction1(endReconciliation), releaseQuota = js.Any.fromFunction1(releaseQuota), report = js.Any.fromFunction1(report), startReconciliation = js.Any.fromFunction1(startReconciliation))
     __obj.asInstanceOf[ServicesResource]
   }
-  @scala.inline
-  implicit class ServicesResourceOps[Self <: ServicesResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllocateQuota(value: Accesstoken => Request[AllocateQuotaResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allocateQuota")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCheck(value: Accesstoken => Request[CheckResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("check")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEndReconciliation(value: Accesstoken => Request[EndReconciliationResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endReconciliation")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withReleaseQuota(value: Accesstoken => Request[ReleaseQuotaResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseQuota")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withReport(value: Accesstoken => Request[ReportResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("report")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStartReconciliation(value: Accesstoken => Request[StartReconciliationResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startReconciliation")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

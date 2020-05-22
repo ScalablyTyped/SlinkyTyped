@@ -212,6 +212,11 @@ object Creatable {
   }
   
   def withProps[OptionType <: OptionTypeBase](p: Props[OptionType]): Builder[OptionType] = new Builder[OptionType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[OptionType <: OptionTypeBase](): Builder[OptionType] = {
+    val __props = js.Dynamic.literal()
+    new Builder[OptionType](js.Array(this.component, __props.asInstanceOf[Props[OptionType]]))
+  }
   implicit def make[OptionType <: OptionTypeBase](companion: Creatable.type): Builder[OptionType] = new Builder[OptionType](js.Array(this.component, js.Dictionary.empty))()
 }
 

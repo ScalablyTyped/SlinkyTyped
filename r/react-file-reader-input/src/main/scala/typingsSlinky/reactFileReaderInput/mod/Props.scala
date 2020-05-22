@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Props extends js.Object {
   /**
     * what format the `FileReader` should read the file as
@@ -14,7 +13,7 @@ trait Props extends js.Object {
     *
     * Defaults to `'url'`.
     */
-  var as: js.UndefOr[Format] = js.native
+  var as: js.UndefOr[Format] = js.undefined
   /**
     * Callback function called when the files are choosen by the user.
     *
@@ -33,40 +32,15 @@ trait Props extends js.Object {
     * @param event The event that triggered file changes
     * @param results The array of files
     */
-  def onChange(event: SyntheticEvent[Event, _], results: js.Array[Result]): Unit = js.native
+  def onChange(event: SyntheticEvent[Event, _], results: js.Array[Result]): Unit
 }
 
 object Props {
   @scala.inline
-  def apply(onChange: (SyntheticEvent[Event, _], js.Array[Result]) => Unit): Props = {
+  def apply(onChange: (SyntheticEvent[Event, _], js.Array[Result]) => Unit, as: Format = null): Props = {
     val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction2(onChange))
+    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
     __obj.asInstanceOf[Props]
   }
-  @scala.inline
-  implicit class PropsOps[Self <: Props] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnChange(value: (SyntheticEvent[Event, _], js.Array[Result]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withAs(value: Format): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

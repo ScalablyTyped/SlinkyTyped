@@ -17,29 +17,10 @@ trait SchemaManagedPropertyBundle extends js.Object {
 
 object SchemaManagedPropertyBundle {
   @scala.inline
-  def apply(): SchemaManagedPropertyBundle = {
+  def apply(managedProperty: js.Array[SchemaManagedProperty] = null): SchemaManagedPropertyBundle = {
     val __obj = js.Dynamic.literal()
+    if (managedProperty != null) __obj.updateDynamic("managedProperty")(managedProperty.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaManagedPropertyBundle]
   }
-  @scala.inline
-  implicit class SchemaManagedPropertyBundleOps[Self <: SchemaManagedPropertyBundle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withManagedProperty(value: js.Array[SchemaManagedProperty]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedProperty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManagedProperty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedProperty")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

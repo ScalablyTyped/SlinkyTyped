@@ -16,5 +16,17 @@ class OnRowErrorStateChanged protected ()
     errorId: Double,
     message: String
   ) = this()
+  /* CompleteClass */
+  override var bAddingError: Boolean = js.native
+  /* CompleteClass */
+  override var bErrorCurrentlyInRow: Boolean = js.native
+  /* CompleteClass */
+  override var bRowHadError: Boolean = js.native
+  /* CompleteClass */
+  override var errorId: Double = js.native
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var recordKey: Double = js.native
 }
 

@@ -4,107 +4,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListItem extends BaseItem {
   // Analytics about the view activities that took place on this item.
-  var analytics: js.UndefOr[ItemAnalytics] = js.native
+  var analytics: js.UndefOr[ItemAnalytics] = js.undefined
   // The content type of this list item
-  var contentType: js.UndefOr[ContentTypeInfo] = js.native
+  var contentType: js.UndefOr[ContentTypeInfo] = js.undefined
   // For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
-  var driveItem: js.UndefOr[DriveItem] = js.native
+  var driveItem: js.UndefOr[DriveItem] = js.undefined
   // The values of the columns set on this list item.
-  var fields: js.UndefOr[FieldValueSet] = js.native
+  var fields: js.UndefOr[FieldValueSet] = js.undefined
   // Returns identifiers useful for SharePoint REST compatibility. Read-only.
-  var sharepointIds: js.UndefOr[SharepointIds] = js.native
+  var sharepointIds: js.UndefOr[SharepointIds] = js.undefined
   // The list of previous versions of the list item.
-  var versions: js.UndefOr[js.Array[ListItemVersion]] = js.native
+  var versions: js.UndefOr[js.Array[ListItemVersion]] = js.undefined
 }
 
 object ListItem {
   @scala.inline
-  def apply(): ListItem = {
+  def apply(
+    analytics: ItemAnalytics = null,
+    contentType: ContentTypeInfo = null,
+    createdBy: IdentitySet = null,
+    createdByUser: User = null,
+    createdDateTime: String = null,
+    description: String = null,
+    driveItem: DriveItem = null,
+    eTag: String = null,
+    fields: FieldValueSet = null,
+    id: String = null,
+    lastModifiedBy: IdentitySet = null,
+    lastModifiedByUser: User = null,
+    lastModifiedDateTime: String = null,
+    name: String = null,
+    parentReference: ItemReference = null,
+    sharepointIds: SharepointIds = null,
+    versions: js.Array[ListItemVersion] = null,
+    webUrl: String = null
+  ): ListItem = {
     val __obj = js.Dynamic.literal()
+    if (analytics != null) __obj.updateDynamic("analytics")(analytics.asInstanceOf[js.Any])
+    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
+    if (createdBy != null) __obj.updateDynamic("createdBy")(createdBy.asInstanceOf[js.Any])
+    if (createdByUser != null) __obj.updateDynamic("createdByUser")(createdByUser.asInstanceOf[js.Any])
+    if (createdDateTime != null) __obj.updateDynamic("createdDateTime")(createdDateTime.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (driveItem != null) __obj.updateDynamic("driveItem")(driveItem.asInstanceOf[js.Any])
+    if (eTag != null) __obj.updateDynamic("eTag")(eTag.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (lastModifiedBy != null) __obj.updateDynamic("lastModifiedBy")(lastModifiedBy.asInstanceOf[js.Any])
+    if (lastModifiedByUser != null) __obj.updateDynamic("lastModifiedByUser")(lastModifiedByUser.asInstanceOf[js.Any])
+    if (lastModifiedDateTime != null) __obj.updateDynamic("lastModifiedDateTime")(lastModifiedDateTime.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (parentReference != null) __obj.updateDynamic("parentReference")(parentReference.asInstanceOf[js.Any])
+    if (sharepointIds != null) __obj.updateDynamic("sharepointIds")(sharepointIds.asInstanceOf[js.Any])
+    if (versions != null) __obj.updateDynamic("versions")(versions.asInstanceOf[js.Any])
+    if (webUrl != null) __obj.updateDynamic("webUrl")(webUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListItem]
   }
-  @scala.inline
-  implicit class ListItemOps[Self <: ListItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnalytics(value: ItemAnalytics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analytics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnalytics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analytics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentType(value: ContentTypeInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDriveItem(value: DriveItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driveItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDriveItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driveItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFields(value: FieldValueSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSharepointIds(value: SharepointIds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sharepointIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSharepointIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sharepointIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersions(value: js.Array[ListItemVersion]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

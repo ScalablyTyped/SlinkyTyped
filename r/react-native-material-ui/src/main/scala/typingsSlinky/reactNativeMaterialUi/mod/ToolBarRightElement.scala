@@ -6,49 +6,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ToolBarRightElement extends js.Object {
-  var actions: js.UndefOr[js.Array[ReactElement | String]] = js.native
-  var menu: js.UndefOr[Labels] = js.native
+  var actions: js.UndefOr[js.Array[ReactElement | String]] = js.undefined
+  var menu: js.UndefOr[Labels] = js.undefined
 }
 
 object ToolBarRightElement {
   @scala.inline
-  def apply(): ToolBarRightElement = {
+  def apply(actions: js.Array[ReactElement | String] = null, menu: Labels = null): ToolBarRightElement = {
     val __obj = js.Dynamic.literal()
+    if (actions != null) __obj.updateDynamic("actions")(actions.asInstanceOf[js.Any])
+    if (menu != null) __obj.updateDynamic("menu")(menu.asInstanceOf[js.Any])
     __obj.asInstanceOf[ToolBarRightElement]
   }
-  @scala.inline
-  implicit class ToolBarRightElementOps[Self <: ToolBarRightElement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActions(value: js.Array[ReactElement | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenu(value: Labels): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

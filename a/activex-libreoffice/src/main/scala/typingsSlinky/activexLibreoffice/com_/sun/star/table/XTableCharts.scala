@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * provides methods to access charts via name and to insert and remove charts.
   * @see com.sun.star.table.TableCharts
   */
-@js.native
 trait XTableCharts extends XNameAccess {
   /**
     * creates a chart and adds it to the collection.
@@ -29,12 +28,12 @@ trait XTableCharts extends XNameAccess {
     aRanges: SeqEquiv[CellRangeAddress],
     bColumnHeaders: Boolean,
     bRowHeaders: Boolean
-  ): Unit = js.native
+  ): Unit
   /**
     * removes a chart from the collection.
     * @param aName is the name of the chart to remove.
     */
-  def removeByName(aName: String): Unit = js.native
+  def removeByName(aName: String): Unit
 }
 
 object XTableCharts {
@@ -56,25 +55,5 @@ object XTableCharts {
     val __obj = js.Dynamic.literal(ElementNames = ElementNames.asInstanceOf[js.Any], ElementType = ElementType.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addNewByName = js.Any.fromFunction5(addNewByName), getByName = js.Any.fromFunction1(getByName), getElementNames = js.Any.fromFunction0(getElementNames), getElementType = js.Any.fromFunction0(getElementType), hasByName = js.Any.fromFunction1(hasByName), hasElements = js.Any.fromFunction0(hasElements), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeByName = js.Any.fromFunction1(removeByName))
     __obj.asInstanceOf[XTableCharts]
   }
-  @scala.inline
-  implicit class XTableChartsOps[Self <: XTableCharts] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddNewByName(value: (String, Rectangle, SeqEquiv[CellRangeAddress], Boolean, Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addNewByName")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveByName(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeByName")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -15,140 +15,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ParagraphProps extends js.Object {
-  var a11yTitle: js.UndefOr[A11yTitleType] = js.native
-  var alignSelf: js.UndefOr[AlignSelfType] = js.native
-  var color: js.UndefOr[ColorType] = js.native
-  var fill: js.UndefOr[Boolean] = js.native
-  var gridArea: js.UndefOr[GridAreaType] = js.native
-  var margin: js.UndefOr[MarginType] = js.native
-  var responsive: js.UndefOr[Boolean] = js.native
-  var size: js.UndefOr[small | medium | large | xlarge | xxlarge | String] = js.native
-  var textAlign: js.UndefOr[TextAlignType] = js.native
+  var a11yTitle: js.UndefOr[A11yTitleType] = js.undefined
+  var alignSelf: js.UndefOr[AlignSelfType] = js.undefined
+  var color: js.UndefOr[ColorType] = js.undefined
+  var fill: js.UndefOr[Boolean] = js.undefined
+  var gridArea: js.UndefOr[GridAreaType] = js.undefined
+  var margin: js.UndefOr[MarginType] = js.undefined
+  var responsive: js.UndefOr[Boolean] = js.undefined
+  var size: js.UndefOr[small | medium | large | xlarge | xxlarge | String] = js.undefined
+  var textAlign: js.UndefOr[TextAlignType] = js.undefined
 }
 
 object ParagraphProps {
   @scala.inline
-  def apply(): ParagraphProps = {
+  def apply(
+    a11yTitle: A11yTitleType = null,
+    alignSelf: AlignSelfType = null,
+    color: ColorType = null,
+    fill: js.UndefOr[Boolean] = js.undefined,
+    gridArea: GridAreaType = null,
+    margin: MarginType = null,
+    responsive: js.UndefOr[Boolean] = js.undefined,
+    size: small | medium | large | xlarge | xxlarge | String = null,
+    textAlign: TextAlignType = null
+  ): ParagraphProps = {
     val __obj = js.Dynamic.literal()
+    if (a11yTitle != null) __obj.updateDynamic("a11yTitle")(a11yTitle.asInstanceOf[js.Any])
+    if (alignSelf != null) __obj.updateDynamic("alignSelf")(alignSelf.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(fill)) __obj.updateDynamic("fill")(fill.get.asInstanceOf[js.Any])
+    if (gridArea != null) __obj.updateDynamic("gridArea")(gridArea.asInstanceOf[js.Any])
+    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (!js.isUndefined(responsive)) __obj.updateDynamic("responsive")(responsive.get.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParagraphProps]
   }
-  @scala.inline
-  implicit class ParagraphPropsOps[Self <: ParagraphProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withA11yTitle(value: A11yTitleType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("a11yTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutA11yTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("a11yTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlignSelf(value: AlignSelfType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignSelf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignSelf: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignSelf")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: ColorType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFill(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridArea(value: GridAreaType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMargin(value: MarginType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponsive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponsive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: small | medium | large | xlarge | xxlarge | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextAlign(value: TextAlignType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlign")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

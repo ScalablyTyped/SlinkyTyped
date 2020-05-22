@@ -1,74 +1,89 @@
 package typingsSlinky.pdfmake.interfacesMod
 
+import typingsSlinky.pdfkit.PDFKit.Mixins.OpenTypeFeatures
+import typingsSlinky.pdfmake.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ContentSvg
   extends ContentBase
-     with Content {
-  var fit: js.UndefOr[js.Tuple2[Double, Double]] = js.native
-  var height: js.UndefOr[Double] = js.native
-  var svg: String = js.native
-  var width: js.UndefOr[Double] = js.native
+     with _Content {
+  var fit: js.UndefOr[js.Tuple2[Double, Double]] = js.undefined
+  var height: js.UndefOr[Double] = js.undefined
+  var svg: String
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object ContentSvg {
   @scala.inline
-  def apply(svg: String): ContentSvg = {
+  def apply(
+    svg: String,
+    absolutePosition: X = null,
+    alignment: Alignment = null,
+    background: String = null,
+    bold: js.UndefOr[Boolean] = js.undefined,
+    characterSpacing: js.UndefOr[Double] = js.undefined,
+    color: String = null,
+    columnGap: Size = null,
+    decoration: Decoration = null,
+    decorationColor: String = null,
+    decorationStyle: DecorationStyle = null,
+    fillColor: String = null,
+    fillOpacity: js.UndefOr[Double] = js.undefined,
+    fit: js.Tuple2[Double, Double] = null,
+    font: String = null,
+    fontFeatures: js.Array[OpenTypeFeatures] = null,
+    fontSize: js.UndefOr[Double] = js.undefined,
+    headlineLevel: js.UndefOr[Double] = js.undefined,
+    height: js.UndefOr[Double] = js.undefined,
+    italics: js.UndefOr[Boolean] = js.undefined,
+    leadingIndent: js.UndefOr[Double] = js.undefined,
+    lineHeight: js.UndefOr[Double] = js.undefined,
+    margin: Margins = null,
+    markerColor: String = null,
+    noWrap: js.UndefOr[Boolean] = js.undefined,
+    opacity: js.UndefOr[Double] = js.undefined,
+    pageBreak: PageBreak = null,
+    pageOrientation: PageOrientation = null,
+    preserveLeadingSpaces: js.UndefOr[Boolean] = js.undefined,
+    relativePosition: X = null,
+    style: String | js.Array[String] | Style = null,
+    width: js.UndefOr[Double] = js.undefined
+  ): ContentSvg = {
     val __obj = js.Dynamic.literal(svg = svg.asInstanceOf[js.Any])
+    if (absolutePosition != null) __obj.updateDynamic("absolutePosition")(absolutePosition.asInstanceOf[js.Any])
+    if (alignment != null) __obj.updateDynamic("alignment")(alignment.asInstanceOf[js.Any])
+    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
+    if (!js.isUndefined(bold)) __obj.updateDynamic("bold")(bold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(characterSpacing)) __obj.updateDynamic("characterSpacing")(characterSpacing.get.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (columnGap != null) __obj.updateDynamic("columnGap")(columnGap.asInstanceOf[js.Any])
+    if (decoration != null) __obj.updateDynamic("decoration")(decoration.asInstanceOf[js.Any])
+    if (decorationColor != null) __obj.updateDynamic("decorationColor")(decorationColor.asInstanceOf[js.Any])
+    if (decorationStyle != null) __obj.updateDynamic("decorationStyle")(decorationStyle.asInstanceOf[js.Any])
+    if (fillColor != null) __obj.updateDynamic("fillColor")(fillColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(fillOpacity)) __obj.updateDynamic("fillOpacity")(fillOpacity.get.asInstanceOf[js.Any])
+    if (fit != null) __obj.updateDynamic("fit")(fit.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (fontFeatures != null) __obj.updateDynamic("fontFeatures")(fontFeatures.asInstanceOf[js.Any])
+    if (!js.isUndefined(fontSize)) __obj.updateDynamic("fontSize")(fontSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(headlineLevel)) __obj.updateDynamic("headlineLevel")(headlineLevel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(italics)) __obj.updateDynamic("italics")(italics.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(leadingIndent)) __obj.updateDynamic("leadingIndent")(leadingIndent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineHeight)) __obj.updateDynamic("lineHeight")(lineHeight.get.asInstanceOf[js.Any])
+    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (markerColor != null) __obj.updateDynamic("markerColor")(markerColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(noWrap)) __obj.updateDynamic("noWrap")(noWrap.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (pageBreak != null) __obj.updateDynamic("pageBreak")(pageBreak.asInstanceOf[js.Any])
+    if (pageOrientation != null) __obj.updateDynamic("pageOrientation")(pageOrientation.asInstanceOf[js.Any])
+    if (!js.isUndefined(preserveLeadingSpaces)) __obj.updateDynamic("preserveLeadingSpaces")(preserveLeadingSpaces.get.asInstanceOf[js.Any])
+    if (relativePosition != null) __obj.updateDynamic("relativePosition")(relativePosition.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContentSvg]
   }
-  @scala.inline
-  implicit class ContentSvgOps[Self <: ContentSvg] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSvg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFit(value: js.Tuple2[Double, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

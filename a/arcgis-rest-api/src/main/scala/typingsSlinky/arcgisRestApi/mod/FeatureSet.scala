@@ -4,113 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FeatureSet extends HasZM {
    // optional
-  var displayFieldName: js.UndefOr[String] = js.native
-  var features: js.Array[Feature] = js.native
+  var displayFieldName: js.UndefOr[String] = js.undefined
+  var features: js.Array[Feature]
    // for feature layers only.
-  var fields: js.UndefOr[js.Array[Field]] = js.native
+  var fields: js.UndefOr[js.Array[Field]] = js.undefined
    // optional
-  var geometryType: js.UndefOr[esriGeometryType] = js.native
+  var geometryType: js.UndefOr[esriGeometryType] = js.undefined
    // optional
-  var globalIdFieldName: js.UndefOr[String] = js.native
-  var objectIdFieldName: js.UndefOr[String] = js.native
+  var globalIdFieldName: js.UndefOr[String] = js.undefined
+  var objectIdFieldName: js.UndefOr[String] = js.undefined
    // for feature layers only
-  var spatialReference: js.UndefOr[SpatialReference] = js.native
+  var spatialReference: js.UndefOr[SpatialReference] = js.undefined
 }
 
 object FeatureSet {
   @scala.inline
-  def apply(features: js.Array[Feature]): FeatureSet = {
+  def apply(
+    features: js.Array[Feature],
+    displayFieldName: String = null,
+    fields: js.Array[Field] = null,
+    geometryType: esriGeometryType = null,
+    globalIdFieldName: String = null,
+    hasM: js.UndefOr[Boolean] = js.undefined,
+    hasZ: js.UndefOr[Boolean] = js.undefined,
+    objectIdFieldName: String = null,
+    spatialReference: SpatialReference = null
+  ): FeatureSet = {
     val __obj = js.Dynamic.literal(features = features.asInstanceOf[js.Any])
+    if (displayFieldName != null) __obj.updateDynamic("displayFieldName")(displayFieldName.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (geometryType != null) __obj.updateDynamic("geometryType")(geometryType.asInstanceOf[js.Any])
+    if (globalIdFieldName != null) __obj.updateDynamic("globalIdFieldName")(globalIdFieldName.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasM)) __obj.updateDynamic("hasM")(hasM.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasZ)) __obj.updateDynamic("hasZ")(hasZ.get.asInstanceOf[js.Any])
+    if (objectIdFieldName != null) __obj.updateDynamic("objectIdFieldName")(objectIdFieldName.asInstanceOf[js.Any])
+    if (spatialReference != null) __obj.updateDynamic("spatialReference")(spatialReference.asInstanceOf[js.Any])
     __obj.asInstanceOf[FeatureSet]
   }
-  @scala.inline
-  implicit class FeatureSetOps[Self <: FeatureSet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFeatures(value: js.Array[Feature]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisplayFieldName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayFieldName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayFieldName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayFieldName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFields(value: js.Array[Field]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGeometryType(value: esriGeometryType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geometryType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeometryType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geometryType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobalIdFieldName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globalIdFieldName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalIdFieldName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globalIdFieldName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectIdFieldName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectIdFieldName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectIdFieldName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectIdFieldName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpatialReference(value: SpatialReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spatialReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpatialReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spatialReference")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

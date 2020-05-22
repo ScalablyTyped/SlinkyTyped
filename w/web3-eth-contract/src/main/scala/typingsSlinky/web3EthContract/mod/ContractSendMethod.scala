@@ -7,6 +7,9 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ContractSendMethod extends js.Object {
+  def call(): js.Promise[_] = js.native
+  def call(options: CallOptions): js.Promise[_] = js.native
+  def call(options: CallOptions, callback: js.Function2[/* err */ js.Error, /* result */ js.Any, Unit]): js.Promise[_] = js.native
   def encodeABI(): String = js.native
   def estimateGas(): js.Promise[Double] = js.native
   def estimateGas(callback: js.Function2[/* err */ js.Error, /* gas */ Double, Unit]): js.Promise[Double] = js.native

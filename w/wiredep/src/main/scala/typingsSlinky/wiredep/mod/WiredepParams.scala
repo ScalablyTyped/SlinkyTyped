@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WiredepParams extends js.Object {
   /**
     * your bower.json file contents.
     * Default: require('./bower.json')
     */
-  var bowerJson: js.UndefOr[String] = js.native
+  var bowerJson: js.UndefOr[String] = js.undefined
   // ----- Advanced Configuration -----
   // All of the below settings are for advanced configuration, to
   // give your project support for additional file types and more
@@ -21,36 +20,36 @@ trait WiredepParams extends js.Object {
   /**
     * path to where we are pretending to be
     */
-  var cwd: js.UndefOr[String] = js.native
+  var cwd: js.UndefOr[String] = js.undefined
   /**
     * Default: true
     */
-  var dependencies: js.UndefOr[Boolean] = js.native
+  var dependencies: js.UndefOr[Boolean] = js.undefined
   /**
     * Default: false
     */
-  var devDependencies: js.UndefOr[Boolean] = js.native
+  var devDependencies: js.UndefOr[Boolean] = js.undefined
   /**
     * the directory of your Bower packages.
     * Default: '.bowerrc'.directory || bower_components
     */
-  var directory: js.UndefOr[String] = js.native
+  var directory: js.UndefOr[String] = js.undefined
   /**
     * @example:
     *  [ /jquery/, 'bower_components/modernizr/modernizr.js' ]
     */
-  var exclude: js.UndefOr[js.Array[String | js.RegExp]] = js.native
-  var fileTypes: js.UndefOr[FileTypes] = js.native
+  var exclude: js.UndefOr[js.Array[String | js.RegExp]] = js.undefined
+  var fileTypes: js.UndefOr[FileTypes] = js.undefined
   /**
     * string or regexp to ignore from the injected filepath
     * @example:
     *  [ /jquery/, 'bower_components/modernizr/modernizr.js' ]
     */
-  var ignorePath: js.UndefOr[String | js.RegExp] = js.native
+  var ignorePath: js.UndefOr[String | js.RegExp] = js.undefined
   /**
     * Default: false
     */
-  var includeSelf: js.UndefOr[Boolean] = js.native
+  var includeSelf: js.UndefOr[Boolean] = js.undefined
   /**
     * If not overridden, an error will throw
     *
@@ -58,226 +57,63 @@ trait WiredepParams extends js.Object {
     *  - "PKG_NOT_INSTALLED" (a Bower package was not found)
     *  - "BOWER_COMPONENTS_MISSING" (cannot find the `bower_components` directory)
     */
-  var onError: js.UndefOr[js.Function1[/* err */ js.Error, Unit]] = js.native
+  var onError: js.UndefOr[js.Function1[/* err */ js.Error, Unit]] = js.undefined
   /**
     * @param {string} filePath name of file that was updated
     */
-  var onFileUpdated: js.UndefOr[js.Function1[/* filePath */ String, Unit]] = js.native
+  var onFileUpdated: js.UndefOr[js.Function1[/* filePath */ String, Unit]] = js.undefined
   /**
     * @param {string} pkg name of bower package without main
     */
-  var onMainNotFound: js.UndefOr[js.Function1[/* pkg */ String, Unit]] = js.native
+  var onMainNotFound: js.UndefOr[js.Function1[/* pkg */ String, Unit]] = js.undefined
   /**
     * @param {FileObject} fileObject
     */
-  var onPathInjected: js.UndefOr[js.Function1[/* fileObject */ FileObject, Unit]] = js.native
+  var onPathInjected: js.UndefOr[js.Function1[/* fileObject */ FileObject, Unit]] = js.undefined
   /**
     *  This inline object offers another way to define your overrides if
     *  modifying your project's `bower.json` isn't an option.
     */
-  var overrides: js.UndefOr[js.Object] = js.native
-  var src: js.UndefOr[String | js.Array[String]] = js.native
+  var overrides: js.UndefOr[js.Object] = js.undefined
+  var src: js.UndefOr[String | js.Array[String]] = js.undefined
 }
 
 object WiredepParams {
   @scala.inline
-  def apply(): WiredepParams = {
+  def apply(
+    bowerJson: String = null,
+    cwd: String = null,
+    dependencies: js.UndefOr[Boolean] = js.undefined,
+    devDependencies: js.UndefOr[Boolean] = js.undefined,
+    directory: String = null,
+    exclude: js.Array[String | js.RegExp] = null,
+    fileTypes: FileTypes = null,
+    ignorePath: String | js.RegExp = null,
+    includeSelf: js.UndefOr[Boolean] = js.undefined,
+    onError: /* err */ js.Error => Unit = null,
+    onFileUpdated: /* filePath */ String => Unit = null,
+    onMainNotFound: /* pkg */ String => Unit = null,
+    onPathInjected: /* fileObject */ FileObject => Unit = null,
+    overrides: js.Object = null,
+    src: String | js.Array[String] = null
+  ): WiredepParams = {
     val __obj = js.Dynamic.literal()
+    if (bowerJson != null) __obj.updateDynamic("bowerJson")(bowerJson.asInstanceOf[js.Any])
+    if (cwd != null) __obj.updateDynamic("cwd")(cwd.asInstanceOf[js.Any])
+    if (!js.isUndefined(dependencies)) __obj.updateDynamic("dependencies")(dependencies.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(devDependencies)) __obj.updateDynamic("devDependencies")(devDependencies.get.asInstanceOf[js.Any])
+    if (directory != null) __obj.updateDynamic("directory")(directory.asInstanceOf[js.Any])
+    if (exclude != null) __obj.updateDynamic("exclude")(exclude.asInstanceOf[js.Any])
+    if (fileTypes != null) __obj.updateDynamic("fileTypes")(fileTypes.asInstanceOf[js.Any])
+    if (ignorePath != null) __obj.updateDynamic("ignorePath")(ignorePath.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeSelf)) __obj.updateDynamic("includeSelf")(includeSelf.get.asInstanceOf[js.Any])
+    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
+    if (onFileUpdated != null) __obj.updateDynamic("onFileUpdated")(js.Any.fromFunction1(onFileUpdated))
+    if (onMainNotFound != null) __obj.updateDynamic("onMainNotFound")(js.Any.fromFunction1(onMainNotFound))
+    if (onPathInjected != null) __obj.updateDynamic("onPathInjected")(js.Any.fromFunction1(onPathInjected))
+    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
+    if (src != null) __obj.updateDynamic("src")(src.asInstanceOf[js.Any])
     __obj.asInstanceOf[WiredepParams]
   }
-  @scala.inline
-  implicit class WiredepParamsOps[Self <: WiredepParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBowerJson(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bowerJson")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBowerJson: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bowerJson")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCwd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCwd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDependencies(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDependencies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDevDependencies(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("devDependencies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDevDependencies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("devDependencies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExclude(value: js.Array[String | js.RegExp]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileTypes(value: FileTypes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnorePathRegExp(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignorePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIgnorePath(value: String | js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignorePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnorePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignorePath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeSelf(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeSelf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeSelf: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeSelf")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnError(value: /* err */ js.Error => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFileUpdated(value: /* filePath */ String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFileUpdated")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFileUpdated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFileUpdated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMainNotFound(value: /* pkg */ String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMainNotFound")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMainNotFound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMainNotFound")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPathInjected(value: /* fileObject */ FileObject => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPathInjected")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPathInjected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPathInjected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverrides(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverrides: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSrc(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSrc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

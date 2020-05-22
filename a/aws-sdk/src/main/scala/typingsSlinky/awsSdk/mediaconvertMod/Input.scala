@@ -88,247 +88,48 @@ trait Input extends js.Object {
 
 object Input {
   @scala.inline
-  def apply(): Input = {
+  def apply(
+    AudioSelectorGroups: mapOfAudioSelectorGroup = null,
+    AudioSelectors: mapOfAudioSelector = null,
+    CaptionSelectors: mapOfCaptionSelector = null,
+    Crop: Rectangle = null,
+    DeblockFilter: InputDeblockFilter = null,
+    DecryptionSettings: InputDecryptionSettings = null,
+    DenoiseFilter: InputDenoiseFilter = null,
+    FileInput: stringPatternS3MM2VVMMPPEEGGMMPP3AAVVIIMMPP4FFLLVVMMPPTTMMPPGGMM4VVTTRRPPFF4VVMM2TTSSTTSS264HH264MMKKVVMMOOVVMMTTSSMM2TTWWMMVVAASSFFVVOOBB3GGPP3GGPPPPMMXXFFDDIIVVXXXXVVIIDDRRAAWWDDVVGGXXFFMM1VV3GG2VVMMFFMM3UU8WWEEBBMMLLCCHHGGXXFFMMPPEEGG2MMXXFFMMPPEEGG2MMXXFFHHDDWWAAVVYY4MMXXMMLLHttpsMM2VVMMPPEEGGMMPP3AAVVIIMMPP4FFLLVVMMPPTTMMPPGGMM4VVTTRRPPFF4VVMM2TTSSTTSS264HH264MMKKVVMMOOVVMMTTSSMM2TTWWMMVVAASSFFVVOOBB3GGPP3GGPPPPMMXXFFDDIIVVXXXXVVIIDDRRAAWWDDVVGGXXFFMM1VV3GG2VVMMFFMM3UU8WWEEBBMMLLCCHHGGXXFFM = null,
+    FilterEnable: InputFilterEnable = null,
+    FilterStrength: js.UndefOr[integerMinNegative5Max5] = js.undefined,
+    ImageInserter: ImageInserter = null,
+    InputClippings: listOfInputClipping = null,
+    Position: Rectangle = null,
+    ProgramNumber: js.UndefOr[integerMin1Max2147483647] = js.undefined,
+    PsiControl: InputPsiControl = null,
+    SupplementalImps: listOfStringPatternS3ASSETMAPXml = null,
+    TimecodeSource: InputTimecodeSource = null,
+    TimecodeStart: stringMin11Max11Pattern01D20305D205D = null,
+    VideoSelector: VideoSelector = null
+  ): Input = {
     val __obj = js.Dynamic.literal()
+    if (AudioSelectorGroups != null) __obj.updateDynamic("AudioSelectorGroups")(AudioSelectorGroups.asInstanceOf[js.Any])
+    if (AudioSelectors != null) __obj.updateDynamic("AudioSelectors")(AudioSelectors.asInstanceOf[js.Any])
+    if (CaptionSelectors != null) __obj.updateDynamic("CaptionSelectors")(CaptionSelectors.asInstanceOf[js.Any])
+    if (Crop != null) __obj.updateDynamic("Crop")(Crop.asInstanceOf[js.Any])
+    if (DeblockFilter != null) __obj.updateDynamic("DeblockFilter")(DeblockFilter.asInstanceOf[js.Any])
+    if (DecryptionSettings != null) __obj.updateDynamic("DecryptionSettings")(DecryptionSettings.asInstanceOf[js.Any])
+    if (DenoiseFilter != null) __obj.updateDynamic("DenoiseFilter")(DenoiseFilter.asInstanceOf[js.Any])
+    if (FileInput != null) __obj.updateDynamic("FileInput")(FileInput.asInstanceOf[js.Any])
+    if (FilterEnable != null) __obj.updateDynamic("FilterEnable")(FilterEnable.asInstanceOf[js.Any])
+    if (!js.isUndefined(FilterStrength)) __obj.updateDynamic("FilterStrength")(FilterStrength.get.asInstanceOf[js.Any])
+    if (ImageInserter != null) __obj.updateDynamic("ImageInserter")(ImageInserter.asInstanceOf[js.Any])
+    if (InputClippings != null) __obj.updateDynamic("InputClippings")(InputClippings.asInstanceOf[js.Any])
+    if (Position != null) __obj.updateDynamic("Position")(Position.asInstanceOf[js.Any])
+    if (!js.isUndefined(ProgramNumber)) __obj.updateDynamic("ProgramNumber")(ProgramNumber.get.asInstanceOf[js.Any])
+    if (PsiControl != null) __obj.updateDynamic("PsiControl")(PsiControl.asInstanceOf[js.Any])
+    if (SupplementalImps != null) __obj.updateDynamic("SupplementalImps")(SupplementalImps.asInstanceOf[js.Any])
+    if (TimecodeSource != null) __obj.updateDynamic("TimecodeSource")(TimecodeSource.asInstanceOf[js.Any])
+    if (TimecodeStart != null) __obj.updateDynamic("TimecodeStart")(TimecodeStart.asInstanceOf[js.Any])
+    if (VideoSelector != null) __obj.updateDynamic("VideoSelector")(VideoSelector.asInstanceOf[js.Any])
     __obj.asInstanceOf[Input]
   }
-  @scala.inline
-  implicit class InputOps[Self <: Input] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudioSelectorGroups(value: mapOfAudioSelectorGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioSelectorGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioSelectorGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioSelectorGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAudioSelectors(value: mapOfAudioSelector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioSelectors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioSelectors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioSelectors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCaptionSelectors(value: mapOfCaptionSelector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionSelectors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaptionSelectors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionSelectors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrop(value: Rectangle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Crop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Crop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeblockFilter(value: InputDeblockFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeblockFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeblockFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeblockFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecryptionSettings(value: InputDecryptionSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DecryptionSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecryptionSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DecryptionSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDenoiseFilter(value: InputDenoiseFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DenoiseFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDenoiseFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DenoiseFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileInput(
-      value: stringPatternS3MM2VVMMPPEEGGMMPP3AAVVIIMMPP4FFLLVVMMPPTTMMPPGGMM4VVTTRRPPFF4VVMM2TTSSTTSS264HH264MMKKVVMMOOVVMMTTSSMM2TTWWMMVVAASSFFVVOOBB3GGPP3GGPPPPMMXXFFDDIIVVXXXXVVIIDDRRAAWWDDVVGGXXFFMM1VV3GG2VVMMFFMM3UU8WWEEBBMMLLCCHHGGXXFFMMPPEEGG2MMXXFFMMPPEEGG2MMXXFFHHDDWWAAVVYY4MMXXMMLLHttpsMM2VVMMPPEEGGMMPP3AAVVIIMMPP4FFLLVVMMPPTTMMPPGGMM4VVTTRRPPFF4VVMM2TTSSTTSS264HH264MMKKVVMMOOVVMMTTSSMM2TTWWMMVVAASSFFVVOOBB3GGPP3GGPPPPMMXXFFDDIIVVXXXXVVIIDDRRAAWWDDVVGGXXFFMM1VV3GG2VVMMFFMM3UU8WWEEBBMMLLCCHHGGXXFFM
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileInput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileInput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterEnable(value: InputFilterEnable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterEnable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterEnable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterEnable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterStrength(value: integerMinNegative5Max5): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterStrength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterStrength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterStrength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageInserter(value: ImageInserter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageInserter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageInserter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageInserter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputClippings(value: listOfInputClipping): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputClippings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputClippings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputClippings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Rectangle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgramNumber(value: integerMin1Max2147483647): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgramNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgramNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgramNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPsiControl(value: InputPsiControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PsiControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPsiControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PsiControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupplementalImps(value: listOfStringPatternS3ASSETMAPXml): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupplementalImps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupplementalImps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupplementalImps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimecodeSource(value: InputTimecodeSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimecodeSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimecodeSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimecodeSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimecodeStart(value: stringMin11Max11Pattern01D20305D205D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimecodeStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimecodeStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimecodeStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideoSelector(value: VideoSelector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoSelector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideoSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoSelector")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

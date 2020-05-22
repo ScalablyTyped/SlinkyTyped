@@ -7,114 +7,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TasksList extends Generic {
-  var actions: js.UndefOr[String | js.Array[String]] = js.native
-  var detailed: js.UndefOr[Boolean] = js.native
-  var group_by: js.UndefOr[nodes | parents | none] = js.native
-  var nodes: js.UndefOr[String | js.Array[String]] = js.native
-  var parent_task_id: js.UndefOr[String] = js.native
-  var timeout: js.UndefOr[String] = js.native
-  var wait_for_completion: js.UndefOr[Boolean] = js.native
+  var actions: js.UndefOr[String | js.Array[String]] = js.undefined
+  var detailed: js.UndefOr[Boolean] = js.undefined
+  var group_by: js.UndefOr[nodes | parents | none] = js.undefined
+  var nodes: js.UndefOr[String | js.Array[String]] = js.undefined
+  var parent_task_id: js.UndefOr[String] = js.undefined
+  var timeout: js.UndefOr[String] = js.undefined
+  var wait_for_completion: js.UndefOr[Boolean] = js.undefined
 }
 
 object TasksList {
   @scala.inline
-  def apply(): TasksList = {
+  def apply(
+    actions: String | js.Array[String] = null,
+    detailed: js.UndefOr[Boolean] = js.undefined,
+    error_trace: js.UndefOr[Boolean] = js.undefined,
+    filter_path: String | js.Array[String] = null,
+    group_by: nodes | parents | none = null,
+    human: js.UndefOr[Boolean] = js.undefined,
+    ignore: Double | js.Array[Double] = null,
+    method: String = null,
+    nodes: String | js.Array[String] = null,
+    parent_task_id: String = null,
+    pretty: js.UndefOr[Boolean] = js.undefined,
+    source: String = null,
+    timeout: String = null,
+    wait_for_completion: js.UndefOr[Boolean] = js.undefined
+  ): TasksList = {
     val __obj = js.Dynamic.literal()
+    if (actions != null) __obj.updateDynamic("actions")(actions.asInstanceOf[js.Any])
+    if (!js.isUndefined(detailed)) __obj.updateDynamic("detailed")(detailed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(error_trace)) __obj.updateDynamic("error_trace")(error_trace.get.asInstanceOf[js.Any])
+    if (filter_path != null) __obj.updateDynamic("filter_path")(filter_path.asInstanceOf[js.Any])
+    if (group_by != null) __obj.updateDynamic("group_by")(group_by.asInstanceOf[js.Any])
+    if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.get.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (nodes != null) __obj.updateDynamic("nodes")(nodes.asInstanceOf[js.Any])
+    if (parent_task_id != null) __obj.updateDynamic("parent_task_id")(parent_task_id.asInstanceOf[js.Any])
+    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.get.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
+    if (!js.isUndefined(wait_for_completion)) __obj.updateDynamic("wait_for_completion")(wait_for_completion.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TasksList]
   }
-  @scala.inline
-  implicit class TasksListOps[Self <: TasksList] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActions(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetailed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detailed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetailed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detailed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroup_by(value: nodes | parents | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group_by")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroup_by: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group_by")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodes(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParent_task_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent_task_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParent_task_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent_task_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWait_for_completion(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wait_for_completion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWait_for_completion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wait_for_completion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

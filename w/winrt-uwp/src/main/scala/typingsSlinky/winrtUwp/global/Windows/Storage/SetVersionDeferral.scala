@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Storage.SetVersionDeferral")
 @js.native
 abstract class SetVersionDeferral ()
-  extends typingsSlinky.winrtUwp.Windows.Storage.SetVersionDeferral
+  extends typingsSlinky.winrtUwp.Windows.Storage.SetVersionDeferral {
+  /** Notifies the system that the app has set the version of the application data in its app data store. */
+  /* CompleteClass */
+  override def complete(): Unit = js.native
+}
 

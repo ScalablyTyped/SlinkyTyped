@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Typeofcrypto extends js.Object {
-  def aes_decrypt(ins: String, keys: String, dpv: String): Double = js.native
-  def aes_encrypt(ins: String, keys: String, dpv: String): Double = js.native
+  def aes_decrypt(ins: String, keys: String, dpv: String): Double
+  def aes_encrypt(ins: String, keys: String, dpv: String): Double
 }
 
 object Typeofcrypto {
@@ -16,25 +15,5 @@ object Typeofcrypto {
     val __obj = js.Dynamic.literal(aes_decrypt = js.Any.fromFunction3(aes_decrypt), aes_encrypt = js.Any.fromFunction3(aes_encrypt))
     __obj.asInstanceOf[Typeofcrypto]
   }
-  @scala.inline
-  implicit class TypeofcryptoOps[Self <: Typeofcrypto] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAes_decrypt(value: (String, String, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aes_decrypt")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withAes_encrypt(value: (String, String, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aes_encrypt")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

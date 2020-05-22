@@ -18,41 +18,11 @@ trait WaitTime extends js.Object {
 
 object WaitTime {
   @scala.inline
-  def apply(): WaitTime = {
+  def apply(WaitFor: string = null, WaitUntil: string = null): WaitTime = {
     val __obj = js.Dynamic.literal()
+    if (WaitFor != null) __obj.updateDynamic("WaitFor")(WaitFor.asInstanceOf[js.Any])
+    if (WaitUntil != null) __obj.updateDynamic("WaitUntil")(WaitUntil.asInstanceOf[js.Any])
     __obj.asInstanceOf[WaitTime]
   }
-  @scala.inline
-  implicit class WaitTimeOps[Self <: WaitTime] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWaitFor(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WaitFor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitFor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WaitFor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitUntil(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WaitUntil")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitUntil: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WaitUntil")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

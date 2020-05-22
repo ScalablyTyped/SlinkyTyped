@@ -12,6 +12,7 @@ import typingsSlinky.phaser.Phaser.Types.GameObjects.Graphics.Options
 import typingsSlinky.phaser.Phaser.Types.GameObjects.Group.GroupConfig
 import typingsSlinky.phaser.Phaser.Types.GameObjects.Group.GroupCreateConfig
 import typingsSlinky.phaser.Phaser.Types.GameObjects.Particles.ParticleEmitterConfig
+import typingsSlinky.phaser.Phaser.Types.Math.Vector2Like
 import typingsSlinky.phaser.Phaser.Types.Tweens.TweenBuilderConfig
 import typingsSlinky.phaser.SpineGameObject
 import typingsSlinky.phaser.integer
@@ -712,6 +713,78 @@ trait GameObjectFactory extends js.Object {
   def renderTexture(x: Double, y: Double, width: integer): RenderTexture = js.native
   def renderTexture(x: Double, y: Double, width: integer, height: integer): RenderTexture = js.native
   /**
+    * Creates a new Rope Game Object and adds it to the Scene.
+    * 
+    * Note: This method will only be available if the Rope Game Object and WebGL support have been built into Phaser.
+    * @param x The horizontal position of this Game Object in the world.
+    * @param y The vertical position of this Game Object in the world.
+    * @param texture The key of the Texture this Game Object will use to render with, as stored in the Texture Manager.
+    * @param frame An optional frame from the Texture this Game Object is rendering with.
+    * @param points An array containing the vertices data for this Rope. If none is provided a simple quad is created. See `setPoints` to set this post-creation.
+    * @param horizontal Should the vertices of this Rope be aligned horizontally (`true`), or vertically (`false`)? Default true.
+    * @param colors An optional array containing the color data for this Rope. You should provide one color value per pair of vertices.
+    * @param alphas An optional array containing the alpha data for this Rope. You should provide one alpha value per pair of vertices.
+    */
+  def rope(x: Double, y: Double, texture: String): Rope = js.native
+  def rope(x: Double, y: Double, texture: String, frame: String): Rope = js.native
+  def rope(x: Double, y: Double, texture: String, frame: String, points: js.Array[Vector2Like]): Rope = js.native
+  def rope(
+    x: Double,
+    y: Double,
+    texture: String,
+    frame: String,
+    points: js.Array[Vector2Like],
+    horizontal: Boolean
+  ): Rope = js.native
+  def rope(
+    x: Double,
+    y: Double,
+    texture: String,
+    frame: String,
+    points: js.Array[Vector2Like],
+    horizontal: Boolean,
+    colors: js.Array[Double]
+  ): Rope = js.native
+  def rope(
+    x: Double,
+    y: Double,
+    texture: String,
+    frame: String,
+    points: js.Array[Vector2Like],
+    horizontal: Boolean,
+    colors: js.Array[Double],
+    alphas: js.Array[Double]
+  ): Rope = js.native
+  def rope(x: Double, y: Double, texture: String, frame: integer): Rope = js.native
+  def rope(x: Double, y: Double, texture: String, frame: integer, points: js.Array[Vector2Like]): Rope = js.native
+  def rope(
+    x: Double,
+    y: Double,
+    texture: String,
+    frame: integer,
+    points: js.Array[Vector2Like],
+    horizontal: Boolean
+  ): Rope = js.native
+  def rope(
+    x: Double,
+    y: Double,
+    texture: String,
+    frame: integer,
+    points: js.Array[Vector2Like],
+    horizontal: Boolean,
+    colors: js.Array[Double]
+  ): Rope = js.native
+  def rope(
+    x: Double,
+    y: Double,
+    texture: String,
+    frame: integer,
+    points: js.Array[Vector2Like],
+    horizontal: Boolean,
+    colors: js.Array[Double],
+    alphas: js.Array[Double]
+  ): Rope = js.native
+  /**
     * Creates a new Shader Game Object and adds it to the Scene.
     * 
     * Note: This method will only be available if the Shader Game Object and WebGL support have been built into Phaser.
@@ -922,17 +995,15 @@ trait GameObjectFactory extends js.Object {
     */
   def tween(config: TweenBuilderConfig): Tween = js.native
   /**
-    * Creates a new Image Game Object and adds it to the Scene.
+    * Creates a new Video Game Object and adds it to the Scene.
     * 
-    * Note: This method will only be available if the Image Game Object has been built into Phaser.
+    * Note: This method will only be available if the Video Game Object has been built into Phaser.
     * @param x The horizontal position of this Game Object in the world.
     * @param y The vertical position of this Game Object in the world.
-    * @param texture The key of the Texture this Game Object will use to render with, as stored in the Texture Manager.
-    * @param frame An optional frame from the Texture this Game Object is rendering with.
+    * @param key Optional key of the Video this Game Object will play, as stored in the Video Cache.
     */
-  def video(x: Double, y: Double, texture: String): Image = js.native
-  def video(x: Double, y: Double, texture: String, frame: String): Image = js.native
-  def video(x: Double, y: Double, texture: String, frame: integer): Image = js.native
+  def video(x: Double, y: Double): Video = js.native
+  def video(x: Double, y: Double, key: String): Video = js.native
   /**
     * Creates a new Zone Game Object and adds it to the Scene.
     * 

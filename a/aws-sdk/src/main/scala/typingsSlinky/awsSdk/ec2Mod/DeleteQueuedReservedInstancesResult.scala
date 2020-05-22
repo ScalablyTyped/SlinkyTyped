@@ -18,41 +18,14 @@ trait DeleteQueuedReservedInstancesResult extends js.Object {
 
 object DeleteQueuedReservedInstancesResult {
   @scala.inline
-  def apply(): DeleteQueuedReservedInstancesResult = {
+  def apply(
+    FailedQueuedPurchaseDeletions: FailedQueuedPurchaseDeletionSet = null,
+    SuccessfulQueuedPurchaseDeletions: SuccessfulQueuedPurchaseDeletionSet = null
+  ): DeleteQueuedReservedInstancesResult = {
     val __obj = js.Dynamic.literal()
+    if (FailedQueuedPurchaseDeletions != null) __obj.updateDynamic("FailedQueuedPurchaseDeletions")(FailedQueuedPurchaseDeletions.asInstanceOf[js.Any])
+    if (SuccessfulQueuedPurchaseDeletions != null) __obj.updateDynamic("SuccessfulQueuedPurchaseDeletions")(SuccessfulQueuedPurchaseDeletions.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteQueuedReservedInstancesResult]
   }
-  @scala.inline
-  implicit class DeleteQueuedReservedInstancesResultOps[Self <: DeleteQueuedReservedInstancesResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFailedQueuedPurchaseDeletions(value: FailedQueuedPurchaseDeletionSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedQueuedPurchaseDeletions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailedQueuedPurchaseDeletions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedQueuedPurchaseDeletions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccessfulQueuedPurchaseDeletions(value: SuccessfulQueuedPurchaseDeletionSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuccessfulQueuedPurchaseDeletions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuccessfulQueuedPurchaseDeletions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuccessfulQueuedPurchaseDeletions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

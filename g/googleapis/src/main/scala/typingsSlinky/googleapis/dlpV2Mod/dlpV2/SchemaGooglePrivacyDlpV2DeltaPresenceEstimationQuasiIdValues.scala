@@ -28,41 +28,14 @@ trait SchemaGooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValues extends js.Ob
 
 object SchemaGooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValues {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValues = {
+  def apply(
+    estimatedProbability: js.UndefOr[Double] = js.undefined,
+    quasiIdsValues: js.Array[SchemaGooglePrivacyDlpV2Value] = null
+  ): SchemaGooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValues = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(estimatedProbability)) __obj.updateDynamic("estimatedProbability")(estimatedProbability.get.asInstanceOf[js.Any])
+    if (quasiIdsValues != null) __obj.updateDynamic("quasiIdsValues")(quasiIdsValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValues]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesOps[Self <: SchemaGooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValues] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEstimatedProbability(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedProbability")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEstimatedProbability: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedProbability")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuasiIdsValues(value: js.Array[SchemaGooglePrivacyDlpV2Value]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quasiIdsValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuasiIdsValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quasiIdsValues")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

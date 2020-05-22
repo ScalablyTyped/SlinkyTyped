@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BasePaths extends js.Object {
   /**
     * Array of paths to custom add-ons. 
@@ -15,19 +14,19 @@ trait BasePaths extends js.Object {
     * e.g. C:/SomeAddOns/MyOtherAddOn/MyOtherAddOn.js.
     *    config.addOn.basePaths = ['./src/addon/core'];
     */
-  var basePaths: js.Array[String] = js.native
+  var basePaths: js.Array[String]
   /**
     * If true enables add-ons.
     *    config.addOn.enable = false;
     */
-  var enable: Boolean = js.native
+  var enable: Boolean
   /**
     * In milliseconds, the waiting time before add-ons 
     * (or the monitoring of such) is stopped after 
     * the last client leaves a branch.
     *    config.addOn.monitorTimeout = 5000;
     */
-  var monitorTimeout: Double = js.native
+  var monitorTimeout: Double
 }
 
 object BasePaths {
@@ -36,31 +35,5 @@ object BasePaths {
     val __obj = js.Dynamic.literal(basePaths = basePaths.asInstanceOf[js.Any], enable = enable.asInstanceOf[js.Any], monitorTimeout = monitorTimeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[BasePaths]
   }
-  @scala.inline
-  implicit class BasePathsOps[Self <: BasePaths] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBasePaths(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basePaths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMonitorTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monitorTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -10,127 +10,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<{  background  :string,   axis  :std.Partial<{  domain  :std.Partial<{  line  :std.Partial<react.react.CSSProperties>}>,   ticks  :std.Partial<{  line  :std.Partial<react.react.CSSProperties>,   text  :std.Partial<react.react.CSSProperties>}>,   legend  :std.Partial<{  text  :std.Partial<react.react.CSSProperties>}>}>,   grid  :std.Partial<{  line  :std.Partial<react.react.CSSProperties>}>,   legends  :std.Partial<{  text  :std.Partial<react.react.CSSProperties>}>,   labels  :std.Partial<{  text  :std.Partial<react.react.CSSProperties>}>,   markers  :std.Partial<{  lineColor  :string,   lineStrokeWidth  :number,   textColor  :string,   fontSize  :string | 0}>,   dots  :std.Partial<{  text  :std.Partial<react.react.CSSProperties>}>,   tooltip  :std.Partial<{  container  :std.Partial<react.react.CSSProperties>,   basic  :std.Partial<react.react.CSSProperties>,   chip  :std.Partial<react.react.CSSProperties>,   table  :std.Partial<react.react.CSSProperties>,   tableCell  :std.Partial<react.react.CSSProperties>}>}> */
-@js.native
 trait Theme extends js.Object {
-  var axis: js.UndefOr[PartialdomainPartiallineP] = js.native
-  var background: js.UndefOr[String] = js.native
-  var dots: js.UndefOr[PartialtextPartialCSSProp] = js.native
-  var grid: js.UndefOr[PartiallinePartialCSSProp] = js.native
-  var labels: js.UndefOr[PartialtextPartialCSSProp] = js.native
-  var legends: js.UndefOr[PartialtextPartialCSSProp] = js.native
-  var markers: js.UndefOr[PartiallineColorstringlin] = js.native
-  var tooltip: js.UndefOr[PartialcontainerPartialCS] = js.native
+  var axis: js.UndefOr[PartialdomainPartiallineP] = js.undefined
+  var background: js.UndefOr[String] = js.undefined
+  var dots: js.UndefOr[PartialtextPartialCSSProp] = js.undefined
+  var grid: js.UndefOr[PartiallinePartialCSSProp] = js.undefined
+  var labels: js.UndefOr[PartialtextPartialCSSProp] = js.undefined
+  var legends: js.UndefOr[PartialtextPartialCSSProp] = js.undefined
+  var markers: js.UndefOr[PartiallineColorstringlin] = js.undefined
+  var tooltip: js.UndefOr[PartialcontainerPartialCS] = js.undefined
 }
 
 object Theme {
   @scala.inline
-  def apply(): Theme = {
+  def apply(
+    axis: PartialdomainPartiallineP = null,
+    background: String = null,
+    dots: PartialtextPartialCSSProp = null,
+    grid: PartiallinePartialCSSProp = null,
+    labels: PartialtextPartialCSSProp = null,
+    legends: PartialtextPartialCSSProp = null,
+    markers: PartiallineColorstringlin = null,
+    tooltip: PartialcontainerPartialCS = null
+  ): Theme = {
     val __obj = js.Dynamic.literal()
+    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
+    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
+    if (dots != null) __obj.updateDynamic("dots")(dots.asInstanceOf[js.Any])
+    if (grid != null) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (legends != null) __obj.updateDynamic("legends")(legends.asInstanceOf[js.Any])
+    if (markers != null) __obj.updateDynamic("markers")(markers.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
     __obj.asInstanceOf[Theme]
   }
-  @scala.inline
-  implicit class ThemeOps[Self <: Theme] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAxis(value: PartialdomainPartiallineP): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDots(value: PartialtextPartialCSSProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dots")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrid(value: PartiallinePartialCSSProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: PartialtextPartialCSSProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegends(value: PartialtextPartialCSSProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legends")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegends: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legends")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkers(value: PartiallineColorstringlin): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: PartialcontainerPartialCS): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

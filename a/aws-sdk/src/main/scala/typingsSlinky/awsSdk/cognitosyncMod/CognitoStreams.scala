@@ -22,53 +22,16 @@ trait CognitoStreams extends js.Object {
 
 object CognitoStreams {
   @scala.inline
-  def apply(): CognitoStreams = {
+  def apply(
+    RoleArn: AssumeRoleArn = null,
+    StreamName: StreamName = null,
+    StreamingStatus: StreamingStatus = null
+  ): CognitoStreams = {
     val __obj = js.Dynamic.literal()
+    if (RoleArn != null) __obj.updateDynamic("RoleArn")(RoleArn.asInstanceOf[js.Any])
+    if (StreamName != null) __obj.updateDynamic("StreamName")(StreamName.asInstanceOf[js.Any])
+    if (StreamingStatus != null) __obj.updateDynamic("StreamingStatus")(StreamingStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[CognitoStreams]
   }
-  @scala.inline
-  implicit class CognitoStreamsOps[Self <: CognitoStreams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRoleArn(value: AssumeRoleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamName(value: StreamName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamingStatus(value: StreamingStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamingStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamingStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamingStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

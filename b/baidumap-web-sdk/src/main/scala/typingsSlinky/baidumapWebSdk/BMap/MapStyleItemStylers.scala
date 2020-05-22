@@ -5,115 +5,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MapStyleItemStylers
   extends /* k */ StringDictionary[js.UndefOr[String]] {
-  var color: js.UndefOr[String] = js.native
-  var curZoomRegion: js.UndefOr[String] = js.native
-  var curZoomRegionId: js.UndefOr[String] = js.native
-  var fontsize: js.UndefOr[String] = js.native
-  var level: js.UndefOr[String] = js.native
-  var visibility: js.UndefOr[String] = js.native
-  var weight: js.UndefOr[String] = js.native
+  var color: js.UndefOr[String] = js.undefined
+  var curZoomRegion: js.UndefOr[String] = js.undefined
+  var curZoomRegionId: js.UndefOr[String] = js.undefined
+  var fontsize: js.UndefOr[String] = js.undefined
+  var level: js.UndefOr[String] = js.undefined
+  var visibility: js.UndefOr[String] = js.undefined
+  var weight: js.UndefOr[String] = js.undefined
 }
 
 object MapStyleItemStylers {
   @scala.inline
-  def apply(): MapStyleItemStylers = {
+  def apply(
+    StringDictionary: /* header */ StringDictionary[js.UndefOr[String]] = null,
+    color: String = null,
+    curZoomRegion: String = null,
+    curZoomRegionId: String = null,
+    fontsize: String = null,
+    level: String = null,
+    visibility: String = null,
+    weight: String = null
+  ): MapStyleItemStylers = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (curZoomRegion != null) __obj.updateDynamic("curZoomRegion")(curZoomRegion.asInstanceOf[js.Any])
+    if (curZoomRegionId != null) __obj.updateDynamic("curZoomRegionId")(curZoomRegionId.asInstanceOf[js.Any])
+    if (fontsize != null) __obj.updateDynamic("fontsize")(fontsize.asInstanceOf[js.Any])
+    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
+    if (visibility != null) __obj.updateDynamic("visibility")(visibility.asInstanceOf[js.Any])
+    if (weight != null) __obj.updateDynamic("weight")(weight.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapStyleItemStylers]
   }
-  @scala.inline
-  implicit class MapStyleItemStylersOps[Self <: MapStyleItemStylers] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurZoomRegion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("curZoomRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurZoomRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("curZoomRegion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurZoomRegionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("curZoomRegionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurZoomRegionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("curZoomRegionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontsize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontsize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontsize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontsize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibility(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,82 +5,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DirectThreadBroadcastVoiceOptions extends js.Object {
-  var file: Buffer = js.native
-  var transcodeDelay: js.UndefOr[Double] = js.native
-  var uploadId: js.UndefOr[String] = js.native
-  var waveform: js.UndefOr[js.Array[Double]] = js.native
-  var waveformSamplingFrequencyHz: js.UndefOr[Double] = js.native
+  var file: Buffer
+  var transcodeDelay: js.UndefOr[Double] = js.undefined
+  var uploadId: js.UndefOr[String] = js.undefined
+  var waveform: js.UndefOr[js.Array[Double]] = js.undefined
+  var waveformSamplingFrequencyHz: js.UndefOr[Double] = js.undefined
 }
 
 object DirectThreadBroadcastVoiceOptions {
   @scala.inline
-  def apply(file: Buffer): DirectThreadBroadcastVoiceOptions = {
+  def apply(
+    file: Buffer,
+    transcodeDelay: js.UndefOr[Double] = js.undefined,
+    uploadId: String = null,
+    waveform: js.Array[Double] = null,
+    waveformSamplingFrequencyHz: js.UndefOr[Double] = js.undefined
+  ): DirectThreadBroadcastVoiceOptions = {
     val __obj = js.Dynamic.literal(file = file.asInstanceOf[js.Any])
+    if (!js.isUndefined(transcodeDelay)) __obj.updateDynamic("transcodeDelay")(transcodeDelay.get.asInstanceOf[js.Any])
+    if (uploadId != null) __obj.updateDynamic("uploadId")(uploadId.asInstanceOf[js.Any])
+    if (waveform != null) __obj.updateDynamic("waveform")(waveform.asInstanceOf[js.Any])
+    if (!js.isUndefined(waveformSamplingFrequencyHz)) __obj.updateDynamic("waveformSamplingFrequencyHz")(waveformSamplingFrequencyHz.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectThreadBroadcastVoiceOptions]
   }
-  @scala.inline
-  implicit class DirectThreadBroadcastVoiceOptionsOps[Self <: DirectThreadBroadcastVoiceOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFile(value: Buffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTranscodeDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transcodeDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranscodeDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transcodeDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUploadId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUploadId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaveform(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waveform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaveform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waveform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaveformSamplingFrequencyHz(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waveformSamplingFrequencyHz")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaveformSamplingFrequencyHz: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waveformSamplingFrequencyHz")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

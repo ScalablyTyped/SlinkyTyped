@@ -16,29 +16,10 @@ trait SchemaInstancesSetMachineTypeRequest extends js.Object {
 
 object SchemaInstancesSetMachineTypeRequest {
   @scala.inline
-  def apply(): SchemaInstancesSetMachineTypeRequest = {
+  def apply(machineType: String = null): SchemaInstancesSetMachineTypeRequest = {
     val __obj = js.Dynamic.literal()
+    if (machineType != null) __obj.updateDynamic("machineType")(machineType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstancesSetMachineTypeRequest]
   }
-  @scala.inline
-  implicit class SchemaInstancesSetMachineTypeRequestOps[Self <: SchemaInstancesSetMachineTypeRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMachineType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("machineType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMachineType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("machineType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

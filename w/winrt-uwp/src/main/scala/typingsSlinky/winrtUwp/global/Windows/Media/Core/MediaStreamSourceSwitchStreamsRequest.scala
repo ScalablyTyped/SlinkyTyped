@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Media.Core
 
+import typingsSlinky.winrtUwp.Windows.Media.Core.IMediaStreamDescriptor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +9,18 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.Core.MediaStreamSourceSwitchStreamsRequest")
 @js.native
 abstract class MediaStreamSourceSwitchStreamsRequest ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Core.MediaStreamSourceSwitchStreamsRequest
+  extends typingsSlinky.winrtUwp.Windows.Media.Core.MediaStreamSourceSwitchStreamsRequest {
+  /** Gets the stream descriptor for the stream that is now selected by the MediaStreamSource . */
+  /* CompleteClass */
+  override var newStreamDescriptor: IMediaStreamDescriptor = js.native
+  /** Gets the stream descriptor for the stream which is no longer selected by the MediaStreamSource . */
+  /* CompleteClass */
+  override var oldStreamDescriptor: IMediaStreamDescriptor = js.native
+  /**
+    * Defers completing the MediaStreamSource.SwitchStreamsRequested event.
+    * @return The deferral.
+    */
+  /* CompleteClass */
+  override def getDeferral(): typingsSlinky.winrtUwp.Windows.Media.Core.MediaStreamSourceSwitchStreamsRequestDeferral = js.native
+}
 

@@ -30,77 +30,20 @@ trait InstanceDetails extends js.Object {
 
 object InstanceDetails {
   @scala.inline
-  def apply(): InstanceDetails = {
+  def apply(
+    EC2InstanceDetails: EC2InstanceDetails = null,
+    ESInstanceDetails: ESInstanceDetails = null,
+    ElastiCacheInstanceDetails: ElastiCacheInstanceDetails = null,
+    RDSInstanceDetails: RDSInstanceDetails = null,
+    RedshiftInstanceDetails: RedshiftInstanceDetails = null
+  ): InstanceDetails = {
     val __obj = js.Dynamic.literal()
+    if (EC2InstanceDetails != null) __obj.updateDynamic("EC2InstanceDetails")(EC2InstanceDetails.asInstanceOf[js.Any])
+    if (ESInstanceDetails != null) __obj.updateDynamic("ESInstanceDetails")(ESInstanceDetails.asInstanceOf[js.Any])
+    if (ElastiCacheInstanceDetails != null) __obj.updateDynamic("ElastiCacheInstanceDetails")(ElastiCacheInstanceDetails.asInstanceOf[js.Any])
+    if (RDSInstanceDetails != null) __obj.updateDynamic("RDSInstanceDetails")(RDSInstanceDetails.asInstanceOf[js.Any])
+    if (RedshiftInstanceDetails != null) __obj.updateDynamic("RedshiftInstanceDetails")(RedshiftInstanceDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceDetails]
   }
-  @scala.inline
-  implicit class InstanceDetailsOps[Self <: InstanceDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEC2InstanceDetails(value: EC2InstanceDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EC2InstanceDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEC2InstanceDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EC2InstanceDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withESInstanceDetails(value: ESInstanceDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ESInstanceDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutESInstanceDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ESInstanceDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElastiCacheInstanceDetails(value: ElastiCacheInstanceDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ElastiCacheInstanceDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElastiCacheInstanceDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ElastiCacheInstanceDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRDSInstanceDetails(value: RDSInstanceDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RDSInstanceDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRDSInstanceDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RDSInstanceDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedshiftInstanceDetails(value: RedshiftInstanceDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RedshiftInstanceDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedshiftInstanceDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RedshiftInstanceDetails")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

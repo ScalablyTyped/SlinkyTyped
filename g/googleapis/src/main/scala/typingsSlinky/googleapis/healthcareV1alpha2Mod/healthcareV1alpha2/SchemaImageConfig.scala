@@ -17,29 +17,10 @@ trait SchemaImageConfig extends js.Object {
 
 object SchemaImageConfig {
   @scala.inline
-  def apply(): SchemaImageConfig = {
+  def apply(textRedactionMode: String = null): SchemaImageConfig = {
     val __obj = js.Dynamic.literal()
+    if (textRedactionMode != null) __obj.updateDynamic("textRedactionMode")(textRedactionMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaImageConfig]
   }
-  @scala.inline
-  implicit class SchemaImageConfigOps[Self <: SchemaImageConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTextRedactionMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textRedactionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextRedactionMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textRedactionMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

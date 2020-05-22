@@ -8,16 +8,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Topic extends ExtendedBase {
-  var AccessedAt: DateString = js.native
-  var CountDetails: StringDictionary[String] = js.native
-  var EnableSubscriptionPartitioning: String = js.native
-  var FilteringMessagesBeforePublishing: String = js.native
-  var IsExpress: String = js.native
-  var SubscriptionCount: String = js.native
-  var SupportOrdering: String = js.native
-  var TopicName: String = js.native
+  var AccessedAt: DateString
+  var CountDetails: StringDictionary[String]
+  var EnableSubscriptionPartitioning: String
+  var FilteringMessagesBeforePublishing: String
+  var IsExpress: String
+  var SubscriptionCount: String
+  var SupportOrdering: String
+  var TopicName: String
 }
 
 object Topic {
@@ -52,61 +51,5 @@ object Topic {
     __obj.updateDynamic("_")(_underscore.asInstanceOf[js.Any])
     __obj.asInstanceOf[Topic]
   }
-  @scala.inline
-  implicit class TopicOps[Self <: Topic] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessedAt(value: DateString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCountDetails(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CountDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnableSubscriptionPartitioning(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableSubscriptionPartitioning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilteringMessagesBeforePublishing(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FilteringMessagesBeforePublishing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsExpress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsExpress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubscriptionCount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportOrdering(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportOrdering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTopicName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

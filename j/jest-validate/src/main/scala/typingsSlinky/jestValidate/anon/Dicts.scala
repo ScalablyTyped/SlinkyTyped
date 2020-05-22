@@ -7,30 +7,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Dicts extends /* s */ StringDictionary[Options] {
-  var deprecationEntries: DeprecatedOptions = js.native
+  var deprecationEntries: DeprecatedOptions
 }
 
 object Dicts {
   @scala.inline
-  def apply(deprecationEntries: DeprecatedOptions): Dicts = {
+  def apply(deprecationEntries: DeprecatedOptions, StringDictionary: /* s */ StringDictionary[Options] = null): Dicts = {
     val __obj = js.Dynamic.literal(deprecationEntries = deprecationEntries.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[Dicts]
   }
-  @scala.inline
-  implicit class DictsOps[Self <: Dicts] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeprecationEntries(value: DeprecatedOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecationEntries")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

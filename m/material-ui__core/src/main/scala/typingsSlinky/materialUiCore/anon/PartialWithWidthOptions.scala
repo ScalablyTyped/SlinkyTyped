@@ -16,65 +16,18 @@ trait PartialWithWidthOptions extends js.Object {
 
 object PartialWithWidthOptions {
   @scala.inline
-  def apply(): PartialWithWidthOptions = {
+  def apply(
+    initialWidth: Breakpoint = null,
+    noSSR: js.UndefOr[Boolean] = js.undefined,
+    resizeInterval: js.UndefOr[Double] = js.undefined,
+    withTheme: js.UndefOr[Boolean] = js.undefined
+  ): PartialWithWidthOptions = {
     val __obj = js.Dynamic.literal()
+    if (initialWidth != null) __obj.updateDynamic("initialWidth")(initialWidth.asInstanceOf[js.Any])
+    if (!js.isUndefined(noSSR)) __obj.updateDynamic("noSSR")(noSSR.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(resizeInterval)) __obj.updateDynamic("resizeInterval")(resizeInterval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(withTheme)) __obj.updateDynamic("withTheme")(withTheme.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialWithWidthOptions]
   }
-  @scala.inline
-  implicit class PartialWithWidthOptionsOps[Self <: PartialWithWidthOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInitialWidth(value: Breakpoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoSSR(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noSSR")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoSSR: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noSSR")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResizeInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResizeInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWithTheme(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withTheme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWithTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withTheme")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

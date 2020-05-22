@@ -4,65 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ApproximateProgress extends js.Object {
   /** Obsolete. */
-  var percentComplete: js.UndefOr[Double] = js.native
+  var percentComplete: js.UndefOr[Double] = js.undefined
   /** Obsolete. */
-  var position: js.UndefOr[Position] = js.native
+  var position: js.UndefOr[Position] = js.undefined
   /** Obsolete. */
-  var remainingTime: js.UndefOr[String] = js.native
+  var remainingTime: js.UndefOr[String] = js.undefined
 }
 
 object ApproximateProgress {
   @scala.inline
-  def apply(): ApproximateProgress = {
+  def apply(
+    percentComplete: js.UndefOr[Double] = js.undefined,
+    position: Position = null,
+    remainingTime: String = null
+  ): ApproximateProgress = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(percentComplete)) __obj.updateDynamic("percentComplete")(percentComplete.get.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (remainingTime != null) __obj.updateDynamic("remainingTime")(remainingTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApproximateProgress]
   }
-  @scala.inline
-  implicit class ApproximateProgressOps[Self <: ApproximateProgress] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPercentComplete(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percentComplete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPercentComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percentComplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Position): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemainingTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remainingTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemainingTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remainingTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

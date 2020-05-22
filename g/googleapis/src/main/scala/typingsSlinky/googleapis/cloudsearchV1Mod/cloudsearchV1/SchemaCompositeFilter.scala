@@ -18,41 +18,11 @@ trait SchemaCompositeFilter extends js.Object {
 
 object SchemaCompositeFilter {
   @scala.inline
-  def apply(): SchemaCompositeFilter = {
+  def apply(logicOperator: String = null, subFilters: js.Array[SchemaFilter] = null): SchemaCompositeFilter = {
     val __obj = js.Dynamic.literal()
+    if (logicOperator != null) __obj.updateDynamic("logicOperator")(logicOperator.asInstanceOf[js.Any])
+    if (subFilters != null) __obj.updateDynamic("subFilters")(subFilters.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCompositeFilter]
   }
-  @scala.inline
-  implicit class SchemaCompositeFilterOps[Self <: SchemaCompositeFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLogicOperator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logicOperator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogicOperator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logicOperator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubFilters(value: js.Array[SchemaFilter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subFilters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,17 +1,17 @@
 package typingsSlinky.sugar
 
-import typingsSlinky.sugar.sugarjs.NativeConstructor
 import typingsSlinky.sugar.sugarjs.Object.ObjectMergeOptions
 import typingsSlinky.sugar.sugarjs.Object.QueryStringOptions
 import typingsSlinky.sugar.sugarjs.Object.QueryStringParseOptions
 import typingsSlinky.sugar.sugarjs.Object.mapFn
 import typingsSlinky.sugar.sugarjs.Object.searchFn
+import typingsSlinky.sugar.sugarjs._NativeConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ObjectConstructor extends NativeConstructor {
+trait ObjectConstructor extends _NativeConstructor {
   def add[T](instance: js.Object, obj: js.Object): js.Object = js.native
   def add[T](instance: js.Object, obj: js.Object, options: ObjectMergeOptions[T]): js.Object = js.native
   def addAll[T](instance: js.Object, sources: Array[js.Object]): js.Object = js.native

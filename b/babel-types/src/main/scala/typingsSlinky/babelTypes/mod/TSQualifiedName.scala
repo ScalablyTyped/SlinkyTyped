@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TSQualifiedName
   extends Node
      with TSEntityName {
-  var left: TSEntityName = js.native
-  var right: Identifier_ = js.native
+  var left: TSEntityName
+  var right: Identifier_
   @JSName("type")
-  var type_TSQualifiedName: typingsSlinky.babelTypes.babelTypesStrings.TSQualifiedName = js.native
+  var type_TSQualifiedName: typingsSlinky.babelTypes.babelTypesStrings.TSQualifiedName
 }
 
 @JSImport("babel-types", "TSQualifiedName")

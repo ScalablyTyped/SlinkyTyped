@@ -29,41 +29,11 @@ trait SchemaHistogramQueryResult extends js.Object {
 
 object SchemaHistogramQueryResult {
   @scala.inline
-  def apply(): SchemaHistogramQueryResult = {
+  def apply(histogram: StringDictionary[String] = null, histogramQuery: String = null): SchemaHistogramQueryResult = {
     val __obj = js.Dynamic.literal()
+    if (histogram != null) __obj.updateDynamic("histogram")(histogram.asInstanceOf[js.Any])
+    if (histogramQuery != null) __obj.updateDynamic("histogramQuery")(histogramQuery.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHistogramQueryResult]
   }
-  @scala.inline
-  implicit class SchemaHistogramQueryResultOps[Self <: SchemaHistogramQueryResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHistogram(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("histogram")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHistogram: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("histogram")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHistogramQuery(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("histogramQuery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHistogramQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("histogramQuery")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

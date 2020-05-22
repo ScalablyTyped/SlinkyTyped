@@ -8,16 +8,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Specifies the user actions that are allowed for the attachment object. */
-@js.native
 trait SocialAttachmentAction extends ClientValueObject {
   /** Specifies whether the action is to navigate to a URI or an action that is dependent on the context in which the object is presented to the user. */
-  def get_actionKind(): SocialAttachmentActionKind = js.native
+  def get_actionKind(): SocialAttachmentActionKind
   /** Specifies the URI associated with the action. */
-  def get_actionUri(): String = js.native
+  def get_actionUri(): String
   /** Specifies whether the action is to navigate to a URI or an action that is dependent on the context in which the object is presented to the user. */
-  def set_actionKind(value: SocialAttachmentActionKind): SocialAttachmentActionKind = js.native
+  def set_actionKind(value: SocialAttachmentActionKind): SocialAttachmentActionKind
   /** Specifies the URI associated with the action. */
-  def set_actionUri(value: String): String = js.native
+  def set_actionUri(value: String): String
 }
 
 object SocialAttachmentAction {
@@ -36,37 +35,5 @@ object SocialAttachmentAction {
     val __obj = js.Dynamic.literal(customFromJson = js.Any.fromFunction1(customFromJson), customWriteToXml = js.Any.fromFunction2(customWriteToXml), fromJson = js.Any.fromFunction1(fromJson), get_actionKind = js.Any.fromFunction0(get_actionKind), get_actionUri = js.Any.fromFunction0(get_actionUri), get_typeId = js.Any.fromFunction0(get_typeId), set_actionKind = js.Any.fromFunction1(set_actionKind), set_actionUri = js.Any.fromFunction1(set_actionUri), writeToXml = js.Any.fromFunction2(writeToXml))
     __obj.asInstanceOf[SocialAttachmentAction]
   }
-  @scala.inline
-  implicit class SocialAttachmentActionOps[Self <: SocialAttachmentAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet_actionKind(value: () => SocialAttachmentActionKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_actionKind")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_actionUri(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_actionUri")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSet_actionKind(value: SocialAttachmentActionKind => SocialAttachmentActionKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_actionKind")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_actionUri(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_actionUri")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

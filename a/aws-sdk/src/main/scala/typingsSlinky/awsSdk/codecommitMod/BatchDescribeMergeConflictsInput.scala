@@ -54,114 +54,22 @@ object BatchDescribeMergeConflictsInput {
     destinationCommitSpecifier: CommitName,
     mergeOption: MergeOptionTypeEnum,
     repositoryName: RepositoryName,
-    sourceCommitSpecifier: CommitName
+    sourceCommitSpecifier: CommitName,
+    conflictDetailLevel: ConflictDetailLevelTypeEnum = null,
+    conflictResolutionStrategy: ConflictResolutionStrategyTypeEnum = null,
+    filePaths: FilePaths = null,
+    maxConflictFiles: js.UndefOr[MaxResults] = js.undefined,
+    maxMergeHunks: js.UndefOr[MaxResults] = js.undefined,
+    nextToken: NextToken = null
   ): BatchDescribeMergeConflictsInput = {
     val __obj = js.Dynamic.literal(destinationCommitSpecifier = destinationCommitSpecifier.asInstanceOf[js.Any], mergeOption = mergeOption.asInstanceOf[js.Any], repositoryName = repositoryName.asInstanceOf[js.Any], sourceCommitSpecifier = sourceCommitSpecifier.asInstanceOf[js.Any])
+    if (conflictDetailLevel != null) __obj.updateDynamic("conflictDetailLevel")(conflictDetailLevel.asInstanceOf[js.Any])
+    if (conflictResolutionStrategy != null) __obj.updateDynamic("conflictResolutionStrategy")(conflictResolutionStrategy.asInstanceOf[js.Any])
+    if (filePaths != null) __obj.updateDynamic("filePaths")(filePaths.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxConflictFiles)) __obj.updateDynamic("maxConflictFiles")(maxConflictFiles.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxMergeHunks)) __obj.updateDynamic("maxMergeHunks")(maxMergeHunks.get.asInstanceOf[js.Any])
+    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchDescribeMergeConflictsInput]
   }
-  @scala.inline
-  implicit class BatchDescribeMergeConflictsInputOps[Self <: BatchDescribeMergeConflictsInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestinationCommitSpecifier(value: CommitName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationCommitSpecifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMergeOption(value: MergeOptionTypeEnum): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepositoryName(value: RepositoryName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceCommitSpecifier(value: CommitName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceCommitSpecifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConflictDetailLevel(value: ConflictDetailLevelTypeEnum): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conflictDetailLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConflictDetailLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conflictDetailLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConflictResolutionStrategy(value: ConflictResolutionStrategyTypeEnum): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conflictResolutionStrategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConflictResolutionStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conflictResolutionStrategy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilePaths(value: FilePaths): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filePaths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilePaths: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filePaths")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxConflictFiles(value: MaxResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConflictFiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxConflictFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConflictFiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxMergeHunks(value: MaxResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMergeHunks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxMergeHunks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMergeHunks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

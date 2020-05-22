@@ -7,21 +7,20 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Supports the ability to identify the connected pointer devices and determine their capabilities. */
-@js.native
 trait PointerDevice extends js.Object {
   /** Gets a value indicating whether the pointer device is an integrated device. For example, a video display with an integrated touch digitizer compared to an external pen/stylus digitizer. */
-  var isIntegrated: Boolean = js.native
+  var isIntegrated: Boolean
   /** Gets a value indicating the maximum number of contacts supported by the input device. */
-  var maxContacts: Double = js.native
-  var maxPointersWithZDistance: js.Any = js.native
+  var maxContacts: Double
+  var maxPointersWithZDistance: js.Any
    /* unmapped type */ /** Gets the coordinates of the bounding rectangle supported by the input device. */
-  var physicalDeviceRect: Rect = js.native
+  var physicalDeviceRect: Rect
   /** Gets the pointer device type. */
-  var pointerDeviceType: PointerDeviceType = js.native
+  var pointerDeviceType: PointerDeviceType
   /** Gets the screen coordinates that are mapped to the bounding rectangle supported by the input device. */
-  var screenRect: Rect = js.native
+  var screenRect: Rect
   /** Gets a collection containing the supported pointer device usages . */
-  var supportedUsages: IVectorView[PointerDeviceUsage] = js.native
+  var supportedUsages: IVectorView[PointerDeviceUsage]
 }
 
 object PointerDevice {
@@ -38,55 +37,5 @@ object PointerDevice {
     val __obj = js.Dynamic.literal(isIntegrated = isIntegrated.asInstanceOf[js.Any], maxContacts = maxContacts.asInstanceOf[js.Any], maxPointersWithZDistance = maxPointersWithZDistance.asInstanceOf[js.Any], physicalDeviceRect = physicalDeviceRect.asInstanceOf[js.Any], pointerDeviceType = pointerDeviceType.asInstanceOf[js.Any], screenRect = screenRect.asInstanceOf[js.Any], supportedUsages = supportedUsages.asInstanceOf[js.Any])
     __obj.asInstanceOf[PointerDevice]
   }
-  @scala.inline
-  implicit class PointerDeviceOps[Self <: PointerDevice] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsIntegrated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isIntegrated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxContacts(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxContacts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxPointersWithZDistance(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPointersWithZDistance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPhysicalDeviceRect(value: Rect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("physicalDeviceRect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPointerDeviceType(value: PointerDeviceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerDeviceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScreenRect(value: Rect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenRect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportedUsages(value: IVectorView[PointerDeviceUsage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedUsages")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

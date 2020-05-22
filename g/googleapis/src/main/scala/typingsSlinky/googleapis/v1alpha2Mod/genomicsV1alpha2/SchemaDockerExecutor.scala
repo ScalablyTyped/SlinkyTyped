@@ -26,41 +26,11 @@ trait SchemaDockerExecutor extends js.Object {
 
 object SchemaDockerExecutor {
   @scala.inline
-  def apply(): SchemaDockerExecutor = {
+  def apply(cmd: String = null, imageName: String = null): SchemaDockerExecutor = {
     val __obj = js.Dynamic.literal()
+    if (cmd != null) __obj.updateDynamic("cmd")(cmd.asInstanceOf[js.Any])
+    if (imageName != null) __obj.updateDynamic("imageName")(imageName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDockerExecutor]
   }
-  @scala.inline
-  implicit class SchemaDockerExecutorOps[Self <: SchemaDockerExecutor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCmd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCmd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

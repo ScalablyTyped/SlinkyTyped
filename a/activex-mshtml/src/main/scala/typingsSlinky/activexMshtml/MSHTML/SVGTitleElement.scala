@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SVGTitleElement extends js.Object {
   @JSName("MSHTML.SVGTitleElement_typekey")
-  var MSHTMLDotSVGTitleElement_typekey: SVGTitleElement = js.native
-  val className: SVGAnimatedString = js.native
-  var focusable: SVGAnimatedEnumeration = js.native
-  var ownerSVGElement: ISVGSVGElement = js.native
-  var viewportElement: ISVGElement = js.native
-  var xmlbase: String = js.native
-  var xmllang: String = js.native
-  var xmlspace: String = js.native
+  var MSHTMLDotSVGTitleElement_typekey: SVGTitleElement
+  val className: SVGAnimatedString
+  var focusable: SVGAnimatedEnumeration
+  var ownerSVGElement: ISVGSVGElement
+  var viewportElement: ISVGElement
+  var xmlbase: String
+  var xmllang: String
+  var xmlspace: String
 }
 
 object SVGTitleElement {
@@ -33,61 +32,5 @@ object SVGTitleElement {
     __obj.updateDynamic("MSHTML.SVGTitleElement_typekey")(MSHTMLDotSVGTitleElement_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SVGTitleElement]
   }
-  @scala.inline
-  implicit class SVGTitleElementOps[Self <: SVGTitleElement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSHTMLDotSVGTitleElement_typekey(value: SVGTitleElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.SVGTitleElement_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClassName(value: SVGAnimatedString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFocusable(value: SVGAnimatedEnumeration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOwnerSVGElement(value: ISVGSVGElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerSVGElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withViewportElement(value: ISVGElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewportElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withXmlbase(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlbase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withXmllang(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xmllang")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withXmlspace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlspace")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

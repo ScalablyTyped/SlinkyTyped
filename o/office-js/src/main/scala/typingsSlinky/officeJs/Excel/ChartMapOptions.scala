@@ -38,21 +38,21 @@ trait ChartMapOptions extends ClientObject {
   var context_ChartMapOptions: RequestContext = js.native
   /**
     *
-    * Returns or sets the series map labels strategy of a region map chart. Read/Write.
+    * Specifies the series map labels strategy of a region map chart.
     *
     * [Api set: ExcelApi 1.9]
     */
   var labelStrategy: ChartMapLabelStrategy | None | BestFit | ShowAll = js.native
   /**
     *
-    * Returns or sets the series mapping level of a region map chart. Read/Write.
+    * Specifies the series mapping level of a region map chart.
     *
     * [Api set: ExcelApi 1.9]
     */
   var level: ChartMapAreaLevel | Automatic | DataOnly | City | County | State | Country | Continent | World = js.native
   /**
     *
-    * Returns or sets the series projection type of a region map chart. Read/Write.
+    * Specifies the series projection type of a region map chart.
     *
     * [Api set: ExcelApi 1.9]
     */

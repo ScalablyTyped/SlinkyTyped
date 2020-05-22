@@ -7,187 +7,91 @@ import scala.scalajs.js.annotation._
 /**
   * Vaccine administration recommendations
   */
-@js.native
 trait ImmunizationRecommendationRecommendation extends BackboneElement {
   /**
     * Contains extended information for property 'date'.
     */
-  var _date: js.UndefOr[Element] = js.native
+  var _date: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'doseNumber'.
     */
-  var _doseNumber: js.UndefOr[Element] = js.native
+  var _doseNumber: js.UndefOr[Element] = js.undefined
   /**
     * Date recommendation created
     */
-  var date: dateTime = js.native
+  var date: dateTime
   /**
     * Dates governing proposed immunization
     */
-  var dateCriterion: js.UndefOr[js.Array[ImmunizationRecommendationRecommendationDateCriterion]] = js.native
+  var dateCriterion: js.UndefOr[js.Array[ImmunizationRecommendationRecommendationDateCriterion]] = js.undefined
   /**
     * Recommended dose number
     */
-  var doseNumber: js.UndefOr[positiveInt] = js.native
+  var doseNumber: js.UndefOr[positiveInt] = js.undefined
   /**
     * Vaccine administration status
     */
-  var forecastStatus: CodeableConcept = js.native
+  var forecastStatus: CodeableConcept
   /**
     * Protocol used by recommendation
     */
-  var protocol: js.UndefOr[ImmunizationRecommendationRecommendationProtocol] = js.native
+  var protocol: js.UndefOr[ImmunizationRecommendationRecommendationProtocol] = js.undefined
   /**
     * Past immunizations supporting recommendation
     */
-  var supportingImmunization: js.UndefOr[js.Array[Reference]] = js.native
+  var supportingImmunization: js.UndefOr[js.Array[Reference]] = js.undefined
   /**
     * Patient observations supporting recommendation
     */
-  var supportingPatientInformation: js.UndefOr[js.Array[Reference]] = js.native
+  var supportingPatientInformation: js.UndefOr[js.Array[Reference]] = js.undefined
   /**
     * Disease to be immunized against
     */
-  var targetDisease: js.UndefOr[CodeableConcept] = js.native
+  var targetDisease: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Vaccine recommendation applies to
     */
-  var vaccineCode: js.UndefOr[CodeableConcept] = js.native
+  var vaccineCode: js.UndefOr[CodeableConcept] = js.undefined
 }
 
 object ImmunizationRecommendationRecommendation {
   @scala.inline
-  def apply(date: dateTime, forecastStatus: CodeableConcept): ImmunizationRecommendationRecommendation = {
+  def apply(
+    date: dateTime,
+    forecastStatus: CodeableConcept,
+    _date: Element = null,
+    _doseNumber: Element = null,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    dateCriterion: js.Array[ImmunizationRecommendationRecommendationDateCriterion] = null,
+    doseNumber: js.UndefOr[positiveInt] = js.undefined,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null,
+    protocol: ImmunizationRecommendationRecommendationProtocol = null,
+    supportingImmunization: js.Array[Reference] = null,
+    supportingPatientInformation: js.Array[Reference] = null,
+    targetDisease: CodeableConcept = null,
+    vaccineCode: CodeableConcept = null
+  ): ImmunizationRecommendationRecommendation = {
     val __obj = js.Dynamic.literal(date = date.asInstanceOf[js.Any], forecastStatus = forecastStatus.asInstanceOf[js.Any])
+    if (_date != null) __obj.updateDynamic("_date")(_date.asInstanceOf[js.Any])
+    if (_doseNumber != null) __obj.updateDynamic("_doseNumber")(_doseNumber.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (dateCriterion != null) __obj.updateDynamic("dateCriterion")(dateCriterion.asInstanceOf[js.Any])
+    if (!js.isUndefined(doseNumber)) __obj.updateDynamic("doseNumber")(doseNumber.get.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
+    if (supportingImmunization != null) __obj.updateDynamic("supportingImmunization")(supportingImmunization.asInstanceOf[js.Any])
+    if (supportingPatientInformation != null) __obj.updateDynamic("supportingPatientInformation")(supportingPatientInformation.asInstanceOf[js.Any])
+    if (targetDisease != null) __obj.updateDynamic("targetDisease")(targetDisease.asInstanceOf[js.Any])
+    if (vaccineCode != null) __obj.updateDynamic("vaccineCode")(vaccineCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImmunizationRecommendationRecommendation]
   }
-  @scala.inline
-  implicit class ImmunizationRecommendationRecommendationOps[Self <: ImmunizationRecommendationRecommendation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDate(value: dateTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForecastStatus(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forecastStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_date(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_date: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_doseNumber(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_doseNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_doseNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_doseNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDateCriterion(value: js.Array[ImmunizationRecommendationRecommendationDateCriterion]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateCriterion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateCriterion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateCriterion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDoseNumber(value: positiveInt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doseNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDoseNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doseNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtocol(value: ImmunizationRecommendationRecommendationProtocol): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportingImmunization(value: js.Array[Reference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportingImmunization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportingImmunization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportingImmunization")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportingPatientInformation(value: js.Array[Reference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportingPatientInformation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportingPatientInformation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportingPatientInformation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetDisease(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetDisease")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetDisease: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetDisease")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVaccineCode(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vaccineCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVaccineCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vaccineCode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

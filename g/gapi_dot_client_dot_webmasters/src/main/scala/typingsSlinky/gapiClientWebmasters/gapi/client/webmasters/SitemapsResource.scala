@@ -7,16 +7,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SitemapsResource extends js.Object {
   /** Deletes a sitemap from this site. */
-  def delete(request: Feedpath): Request[Unit] = js.native
+  def delete(request: Feedpath): Request[Unit]
   /** Retrieves information about a specific sitemap. */
-  def get(request: Feedpath): Request[WmxSitemap] = js.native
+  def get(request: Feedpath): Request[WmxSitemap]
   /** Lists the sitemaps-entries submitted for this site, or included in the sitemap index file (if sitemapIndex is specified in the request). */
-  def list(request: Fields): Request[SitemapsListResponse] = js.native
+  def list(request: Fields): Request[SitemapsListResponse]
   /** Submits a sitemap for a site. */
-  def submit(request: Feedpath): Request[Unit] = js.native
+  def submit(request: Feedpath): Request[Unit]
 }
 
 object SitemapsResource {
@@ -30,37 +29,5 @@ object SitemapsResource {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), submit = js.Any.fromFunction1(submit))
     __obj.asInstanceOf[SitemapsResource]
   }
-  @scala.inline
-  implicit class SitemapsResourceOps[Self <: SitemapsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelete(value: Feedpath => Request[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: Feedpath => Request[WmxSitemap]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Fields => Request[SitemapsListResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSubmit(value: Feedpath => Request[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submit")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

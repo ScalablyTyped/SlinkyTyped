@@ -23,47 +23,15 @@ trait GraphQLApiAdditionalAuthenticationProvider extends js.Object {
 
 object GraphQLApiAdditionalAuthenticationProvider {
   @scala.inline
-  def apply(authenticationType: Input[String]): GraphQLApiAdditionalAuthenticationProvider = {
+  def apply(
+    authenticationType: Input[String],
+    openidConnectConfig: Input[GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig] = null,
+    userPoolConfig: Input[GraphQLApiAdditionalAuthenticationProviderUserPoolConfig] = null
+  ): GraphQLApiAdditionalAuthenticationProvider = {
     val __obj = js.Dynamic.literal(authenticationType = authenticationType.asInstanceOf[js.Any])
+    if (openidConnectConfig != null) __obj.updateDynamic("openidConnectConfig")(openidConnectConfig.asInstanceOf[js.Any])
+    if (userPoolConfig != null) __obj.updateDynamic("userPoolConfig")(userPoolConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[GraphQLApiAdditionalAuthenticationProvider]
   }
-  @scala.inline
-  implicit class GraphQLApiAdditionalAuthenticationProviderOps[Self <: GraphQLApiAdditionalAuthenticationProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthenticationType(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpenidConnectConfig(value: Input[GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openidConnectConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenidConnectConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openidConnectConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserPoolConfig(value: Input[GraphQLApiAdditionalAuthenticationProviderUserPoolConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userPoolConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserPoolConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userPoolConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,441 +5,81 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BaseModel extends js.Object {
-  var alias: js.UndefOr[String | Null] = js.native
-  var custom_role_id: js.UndefOr[Double | Null] = js.native
-  var default_group_id: js.UndefOr[Double | Null] = js.native
-  var details: js.UndefOr[String | Null] = js.native
-  var email: js.UndefOr[String | Null] = js.native
-  var external_id: js.UndefOr[String | Null] = js.native
-  var locale_id: js.UndefOr[Double | Null] = js.native
-  var moderator: js.UndefOr[Boolean | Null] = js.native
-  var notes: js.UndefOr[String | Null] = js.native
-  var only_private_comments: js.UndefOr[Boolean | Null] = js.native
-  var organization_id: js.UndefOr[Double | Null] = js.native
-  var phone: js.UndefOr[String | Null] = js.native
-  var photo: js.UndefOr[Model | Null] = js.native
-  var restricted_agent: js.UndefOr[Boolean | Null] = js.native
-  var role: js.UndefOr[Role | Null] = js.native
-  var signature: js.UndefOr[String | Null] = js.native
-  var suspended: js.UndefOr[Boolean | Null] = js.native
-  var tags: js.UndefOr[js.Array[_] | Null] = js.native
-  var ticket_restriction: js.UndefOr[TicketRestriction | Null] = js.native
-  var time_zone: js.UndefOr[String | Null] = js.native
-  var user_fields: js.UndefOr[js.Object | Null] = js.native
-  var verified: js.UndefOr[Boolean | Null] = js.native
+  var alias: js.UndefOr[String | Null] = js.undefined
+  var custom_role_id: js.UndefOr[Double | Null] = js.undefined
+  var default_group_id: js.UndefOr[Double | Null] = js.undefined
+  var details: js.UndefOr[String | Null] = js.undefined
+  var email: js.UndefOr[String | Null] = js.undefined
+  var external_id: js.UndefOr[String | Null] = js.undefined
+  var locale_id: js.UndefOr[Double | Null] = js.undefined
+  var moderator: js.UndefOr[Boolean | Null] = js.undefined
+  var notes: js.UndefOr[String | Null] = js.undefined
+  var only_private_comments: js.UndefOr[Boolean | Null] = js.undefined
+  var organization_id: js.UndefOr[Double | Null] = js.undefined
+  var phone: js.UndefOr[String | Null] = js.undefined
+  var photo: js.UndefOr[Model | Null] = js.undefined
+  var restricted_agent: js.UndefOr[Boolean | Null] = js.undefined
+  var role: js.UndefOr[Role | Null] = js.undefined
+  var signature: js.UndefOr[String | Null] = js.undefined
+  var suspended: js.UndefOr[Boolean | Null] = js.undefined
+  var tags: js.UndefOr[js.Array[_] | Null] = js.undefined
+  var ticket_restriction: js.UndefOr[TicketRestriction | Null] = js.undefined
+  var time_zone: js.UndefOr[String | Null] = js.undefined
+  var user_fields: js.UndefOr[js.Object | Null] = js.undefined
+  var verified: js.UndefOr[Boolean | Null] = js.undefined
 }
 
 object BaseModel {
   @scala.inline
-  def apply(): BaseModel = {
+  def apply(
+    alias: js.UndefOr[Null | String] = js.undefined,
+    custom_role_id: js.UndefOr[Null | Double] = js.undefined,
+    default_group_id: js.UndefOr[Null | Double] = js.undefined,
+    details: js.UndefOr[Null | String] = js.undefined,
+    email: js.UndefOr[Null | String] = js.undefined,
+    external_id: js.UndefOr[Null | String] = js.undefined,
+    locale_id: js.UndefOr[Null | Double] = js.undefined,
+    moderator: js.UndefOr[Null | Boolean] = js.undefined,
+    notes: js.UndefOr[Null | String] = js.undefined,
+    only_private_comments: js.UndefOr[Null | Boolean] = js.undefined,
+    organization_id: js.UndefOr[Null | Double] = js.undefined,
+    phone: js.UndefOr[Null | String] = js.undefined,
+    photo: js.UndefOr[Null | Model] = js.undefined,
+    restricted_agent: js.UndefOr[Null | Boolean] = js.undefined,
+    role: js.UndefOr[Null | Role] = js.undefined,
+    signature: js.UndefOr[Null | String] = js.undefined,
+    suspended: js.UndefOr[Null | Boolean] = js.undefined,
+    tags: js.UndefOr[Null | js.Array[_]] = js.undefined,
+    ticket_restriction: js.UndefOr[Null | TicketRestriction] = js.undefined,
+    time_zone: js.UndefOr[Null | String] = js.undefined,
+    user_fields: js.UndefOr[Null | js.Object] = js.undefined,
+    verified: js.UndefOr[Null | Boolean] = js.undefined
+  ): BaseModel = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(alias)) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (!js.isUndefined(custom_role_id)) __obj.updateDynamic("custom_role_id")(custom_role_id.asInstanceOf[js.Any])
+    if (!js.isUndefined(default_group_id)) __obj.updateDynamic("default_group_id")(default_group_id.asInstanceOf[js.Any])
+    if (!js.isUndefined(details)) __obj.updateDynamic("details")(details.asInstanceOf[js.Any])
+    if (!js.isUndefined(email)) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
+    if (!js.isUndefined(external_id)) __obj.updateDynamic("external_id")(external_id.asInstanceOf[js.Any])
+    if (!js.isUndefined(locale_id)) __obj.updateDynamic("locale_id")(locale_id.asInstanceOf[js.Any])
+    if (!js.isUndefined(moderator)) __obj.updateDynamic("moderator")(moderator.asInstanceOf[js.Any])
+    if (!js.isUndefined(notes)) __obj.updateDynamic("notes")(notes.asInstanceOf[js.Any])
+    if (!js.isUndefined(only_private_comments)) __obj.updateDynamic("only_private_comments")(only_private_comments.asInstanceOf[js.Any])
+    if (!js.isUndefined(organization_id)) __obj.updateDynamic("organization_id")(organization_id.asInstanceOf[js.Any])
+    if (!js.isUndefined(phone)) __obj.updateDynamic("phone")(phone.asInstanceOf[js.Any])
+    if (!js.isUndefined(photo)) __obj.updateDynamic("photo")(photo.asInstanceOf[js.Any])
+    if (!js.isUndefined(restricted_agent)) __obj.updateDynamic("restricted_agent")(restricted_agent.asInstanceOf[js.Any])
+    if (!js.isUndefined(role)) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
+    if (!js.isUndefined(signature)) __obj.updateDynamic("signature")(signature.asInstanceOf[js.Any])
+    if (!js.isUndefined(suspended)) __obj.updateDynamic("suspended")(suspended.asInstanceOf[js.Any])
+    if (!js.isUndefined(tags)) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (!js.isUndefined(ticket_restriction)) __obj.updateDynamic("ticket_restriction")(ticket_restriction.asInstanceOf[js.Any])
+    if (!js.isUndefined(time_zone)) __obj.updateDynamic("time_zone")(time_zone.asInstanceOf[js.Any])
+    if (!js.isUndefined(user_fields)) __obj.updateDynamic("user_fields")(user_fields.asInstanceOf[js.Any])
+    if (!js.isUndefined(verified)) __obj.updateDynamic("verified")(verified.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseModel]
   }
-  @scala.inline
-  implicit class BaseModelOps[Self <: BaseModel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlias(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlias: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAliasNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(null)
-        ret
-    }
-    @scala.inline
-    def withCustom_role_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom_role_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustom_role_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom_role_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustom_role_idNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom_role_id")(null)
-        ret
-    }
-    @scala.inline
-    def withDefault_group_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_group_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefault_group_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_group_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefault_group_idNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_group_id")(null)
-        ret
-    }
-    @scala.inline
-    def withDetails(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetailsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(null)
-        ret
-    }
-    @scala.inline
-    def withEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmailNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(null)
-        ret
-    }
-    @scala.inline
-    def withExternal_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("external_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExternal_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("external_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExternal_idNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("external_id")(null)
-        ret
-    }
-    @scala.inline
-    def withLocale_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale_idNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale_id")(null)
-        ret
-    }
-    @scala.inline
-    def withModerator(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moderator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModerator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moderator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModeratorNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moderator")(null)
-        ret
-    }
-    @scala.inline
-    def withNotes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(null)
-        ret
-    }
-    @scala.inline
-    def withOnly_private_comments(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("only_private_comments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnly_private_comments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("only_private_comments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnly_private_commentsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("only_private_comments")(null)
-        ret
-    }
-    @scala.inline
-    def withOrganization_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("organization_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrganization_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("organization_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrganization_idNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("organization_id")(null)
-        ret
-    }
-    @scala.inline
-    def withPhone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhoneNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phone")(null)
-        ret
-    }
-    @scala.inline
-    def withPhoto(value: Model): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhoto: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhotoNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photo")(null)
-        ret
-    }
-    @scala.inline
-    def withRestricted_agent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restricted_agent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestricted_agent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restricted_agent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestricted_agentNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restricted_agent")(null)
-        ret
-    }
-    @scala.inline
-    def withRole(value: Role): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(null)
-        ret
-    }
-    @scala.inline
-    def withSignature(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignature: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSignatureNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(null)
-        ret
-    }
-    @scala.inline
-    def withSuspended(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suspended")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuspended: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suspended")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuspendedNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suspended")(null)
-        ret
-    }
-    @scala.inline
-    def withTags(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(null)
-        ret
-    }
-    @scala.inline
-    def withTicket_restriction(value: TicketRestriction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticket_restriction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTicket_restriction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticket_restriction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTicket_restrictionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticket_restriction")(null)
-        ret
-    }
-    @scala.inline
-    def withTime_zone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time_zone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTime_zone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time_zone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTime_zoneNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time_zone")(null)
-        ret
-    }
-    @scala.inline
-    def withUser_fields(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user_fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser_fields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user_fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser_fieldsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user_fields")(null)
-        ret
-    }
-    @scala.inline
-    def withVerified(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verified")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerified: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verified")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerifiedNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verified")(null)
-        ret
-    }
-  }
-  
 }
 

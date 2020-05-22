@@ -10,5 +10,11 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ASPxClientDashboardBeginUpdateEventArgs")
 @js.native
 class ASPxClientDashboardBeginUpdateEventArgs ()
-  extends typingsSlinky.devexpressWeb.ASPxClientDashboardBeginUpdateEventArgs
+  extends typingsSlinky.devexpressWeb.ASPxClientDashboardBeginUpdateEventArgs {
+  /**
+    * Gets the identifier of the dashboard for which the event was raised.
+    */
+  /* CompleteClass */
+  override var DashboardId: String = js.native
+}
 

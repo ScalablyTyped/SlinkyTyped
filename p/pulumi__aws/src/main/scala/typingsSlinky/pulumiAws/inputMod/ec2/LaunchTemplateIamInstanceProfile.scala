@@ -8,52 +8,22 @@ import scala.scalajs.js.annotation._
 @js.native
 trait LaunchTemplateIamInstanceProfile extends js.Object {
   /**
-    * Amazon Resource Name (ARN) of the launch template.
+    * The Amazon Resource Name (ARN) of the instance profile.
     */
   var arn: js.UndefOr[Input[String]] = js.native
   /**
-    * The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
+    * The name of the instance profile.
     */
   var name: js.UndefOr[Input[String]] = js.native
 }
 
 object LaunchTemplateIamInstanceProfile {
   @scala.inline
-  def apply(): LaunchTemplateIamInstanceProfile = {
+  def apply(arn: Input[String] = null, name: Input[String] = null): LaunchTemplateIamInstanceProfile = {
     val __obj = js.Dynamic.literal()
+    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[LaunchTemplateIamInstanceProfile]
   }
-  @scala.inline
-  implicit class LaunchTemplateIamInstanceProfileOps[Self <: LaunchTemplateIamInstanceProfile] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

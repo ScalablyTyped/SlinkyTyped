@@ -27,6 +27,11 @@ object Global {
   }
   
   def withProps[Theme](p: GlobalProps[Theme]): Builder[Theme] = new Builder[Theme](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[Theme](): Builder[Theme] = {
+    val __props = js.Dynamic.literal()
+    new Builder[Theme](js.Array(this.component, __props.asInstanceOf[GlobalProps[Theme]]))
+  }
   implicit def make[Theme](companion: Global.type): Builder[Theme] = new Builder[Theme](js.Array(this.component, js.Dictionary.empty))()
 }
 

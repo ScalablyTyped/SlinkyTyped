@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AzureSignatureOptions extends js.Object {
   /**
     * Additional headers sent along with each signature request.
@@ -13,7 +12,7 @@ trait AzureSignatureOptions extends js.Object {
     *
     * @default `{}`
     */
-  var customHeaders: js.UndefOr[js.Any | AzureCustomHeaderFunction] = js.native
+  var customHeaders: js.UndefOr[js.Any | AzureCustomHeaderFunction] = js.undefined
   /**
     * The endpoint that Fine Uploader can use to send GET for a SAS before sending requests off to Azure.
     *
@@ -21,52 +20,16 @@ trait AzureSignatureOptions extends js.Object {
     *
     * @default `null`
     */
-  var endpoint: js.UndefOr[String] = js.native
+  var endpoint: js.UndefOr[String] = js.undefined
 }
 
 object AzureSignatureOptions {
   @scala.inline
-  def apply(): AzureSignatureOptions = {
+  def apply(customHeaders: js.Any | AzureCustomHeaderFunction = null, endpoint: String = null): AzureSignatureOptions = {
     val __obj = js.Dynamic.literal()
+    if (customHeaders != null) __obj.updateDynamic("customHeaders")(customHeaders.asInstanceOf[js.Any])
+    if (endpoint != null) __obj.updateDynamic("endpoint")(endpoint.asInstanceOf[js.Any])
     __obj.asInstanceOf[AzureSignatureOptions]
   }
-  @scala.inline
-  implicit class AzureSignatureOptionsOps[Self <: AzureSignatureOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomHeadersFunction1(value: /* id */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customHeaders")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCustomHeaders(value: js.Any | AzureCustomHeaderFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndpoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

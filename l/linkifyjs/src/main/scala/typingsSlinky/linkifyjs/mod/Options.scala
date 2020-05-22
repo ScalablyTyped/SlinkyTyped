@@ -13,7 +13,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /**
     * Object of attributes to add to each new link. Note: the class and target
@@ -26,7 +25,7 @@ trait Options extends js.Object {
     */
   var attributes: js.UndefOr[
     (Record[String, String]) | (js.Function2[/* href */ String, /* type */ LinkEntityType, Record[String, String]]) | Null
-  ] = js.native
+  ] = js.undefined
   /**
     * class attribute to use for newly created links.
     *
@@ -38,14 +37,14 @@ trait Options extends js.Object {
     */
   var className: js.UndefOr[
     String | PartialRecordLinkEntityTy | (js.Function2[/* href */ String, /* type */ LinkEntityType, String])
-  ] = js.native
+  ] = js.undefined
   /**
     * Protocol that should be used in href attributes for URLs without a
     * protocol (e.g., github.com).
     *
     * @default 'http'
     */
-  var defaultProtocol: js.UndefOr[http | https | ftp | ftps | String] = js.native
+  var defaultProtocol: js.UndefOr[http | https | ftp | ftps | String] = js.undefined
   /**
     * Format the text displayed by a linkified entity. e.g., truncate a long URL.
     *
@@ -56,7 +55,7 @@ trait Options extends js.Object {
     */
   var format: js.UndefOr[
     (js.Function2[/* value */ String, /* type */ LinkEntityType, String]) | PartialRecordLinkEntityTyEmail | Null
-  ] = js.native
+  ] = js.undefined
   /**
     * Similar to format, except the result of this function will be used as the
     * href attribute of the new link.
@@ -71,13 +70,13 @@ trait Options extends js.Object {
     */
   var formatHref: js.UndefOr[
     (js.Function2[/* href */ String, /* type */ LinkEntityType, String]) | PartialRecordLinkEntityTyEmail | Null
-  ] = js.native
+  ] = js.undefined
   /**
     * If `true`, \n line breaks will automatically be converted to `<br>` tags.
     *
     * @default false
     */
-  var nl2br: js.UndefOr[Boolean] = js.native
+  var nl2br: js.UndefOr[Boolean] = js.undefined
   /**
     * The tag name to use for each link.
     * For cases where you can’t use anchor tags.
@@ -92,7 +91,7 @@ trait Options extends js.Object {
     */
   var tagName: js.UndefOr[
     String | (js.Function2[/* href */ String, /* type */ LinkEntityType, String]) | PartialRecordLinkEntityTyHashtag
-  ] = js.native
+  ] = js.undefined
   /**
     * target attribute for generated link.
     *
@@ -106,7 +105,7 @@ trait Options extends js.Object {
     */
   var target: js.UndefOr[
     String | (js.Function2[/* href */ String, /* type */ LinkEntityType, String]) | PartialRecordLinkEntityTyHashtag
-  ] = js.native
+  ] = js.undefined
   /**
     * validate
     * - Type: Boolean | Function (String value, String type) | Object
@@ -126,210 +125,41 @@ trait Options extends js.Object {
     */
   var validate: js.UndefOr[
     Boolean | (js.Function2[/* href */ String, /* type */ LinkEntityType, Boolean]) | PartialRecordLinkEntityTyMention | Null
-  ] = js.native
+  ] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    attributes: js.UndefOr[
+      Null | (Record[String, String]) | (js.Function2[/* href */ String, /* type */ LinkEntityType, Record[String, String]])
+    ] = js.undefined,
+    className: String | PartialRecordLinkEntityTy | (js.Function2[/* href */ String, /* type */ LinkEntityType, String]) = null,
+    defaultProtocol: http | https | ftp | ftps | String = null,
+    format: js.UndefOr[
+      Null | (js.Function2[/* value */ String, /* type */ LinkEntityType, String]) | PartialRecordLinkEntityTyEmail
+    ] = js.undefined,
+    formatHref: js.UndefOr[
+      Null | (js.Function2[/* href */ String, /* type */ LinkEntityType, String]) | PartialRecordLinkEntityTyEmail
+    ] = js.undefined,
+    nl2br: js.UndefOr[Boolean] = js.undefined,
+    tagName: String | (js.Function2[/* href */ String, /* type */ LinkEntityType, String]) | PartialRecordLinkEntityTyHashtag = null,
+    target: String | (js.Function2[/* href */ String, /* type */ LinkEntityType, String]) | PartialRecordLinkEntityTyHashtag = null,
+    validate: js.UndefOr[
+      Null | Boolean | (js.Function2[/* href */ String, /* type */ LinkEntityType, Boolean]) | PartialRecordLinkEntityTyMention
+    ] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(attributes)) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (defaultProtocol != null) __obj.updateDynamic("defaultProtocol")(defaultProtocol.asInstanceOf[js.Any])
+    if (!js.isUndefined(format)) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (!js.isUndefined(formatHref)) __obj.updateDynamic("formatHref")(formatHref.asInstanceOf[js.Any])
+    if (!js.isUndefined(nl2br)) __obj.updateDynamic("nl2br")(nl2br.get.asInstanceOf[js.Any])
+    if (tagName != null) __obj.updateDynamic("tagName")(tagName.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (!js.isUndefined(validate)) __obj.updateDynamic("validate")(validate.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributesFunction2(value: (/* href */ String, /* type */ LinkEntityType) => Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withAttributes(
-      value: (Record[String, String]) | (js.Function2[/* href */ String, /* type */ LinkEntityType, Record[String, String]])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttributesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(null)
-        ret
-    }
-    @scala.inline
-    def withClassNameFunction2(value: (/* href */ String, /* type */ LinkEntityType) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withClassName(
-      value: String | PartialRecordLinkEntityTy | (js.Function2[/* href */ String, /* type */ LinkEntityType, String])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultProtocol(value: http | https | ftp | ftps | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultProtocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultProtocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatFunction2(value: (/* value */ String, /* type */ LinkEntityType) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withFormat(
-      value: (js.Function2[/* value */ String, /* type */ LinkEntityType, String]) | PartialRecordLinkEntityTyEmail
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(null)
-        ret
-    }
-    @scala.inline
-    def withFormatHrefFunction2(value: (/* href */ String, /* type */ LinkEntityType) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatHref")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withFormatHref(
-      value: (js.Function2[/* href */ String, /* type */ LinkEntityType, String]) | PartialRecordLinkEntityTyEmail
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatHref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormatHref: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatHref")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatHrefNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatHref")(null)
-        ret
-    }
-    @scala.inline
-    def withNl2br(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nl2br")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNl2br: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nl2br")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagNameFunction2(value: (/* href */ String, /* type */ LinkEntityType) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagName")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withTagName(
-      value: String | (js.Function2[/* href */ String, /* type */ LinkEntityType, String]) | PartialRecordLinkEntityTyHashtag
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetFunction2(value: (/* href */ String, /* type */ LinkEntityType) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withTarget(
-      value: String | (js.Function2[/* href */ String, /* type */ LinkEntityType, String]) | PartialRecordLinkEntityTyHashtag
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidateFunction2(value: (/* href */ String, /* type */ LinkEntityType) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withValidate(
-      value: Boolean | (js.Function2[/* href */ String, /* type */ LinkEntityType, Boolean]) | PartialRecordLinkEntityTyMention
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidateNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(null)
-        ret
-    }
-  }
-  
 }
 

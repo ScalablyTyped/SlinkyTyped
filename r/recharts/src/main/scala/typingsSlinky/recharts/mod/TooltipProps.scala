@@ -7,315 +7,91 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TooltipProps extends Animatable {
-  var active: js.UndefOr[Boolean] = js.native
-  var allowEscapeViewBox: js.UndefOr[AllowEscapeViewBox] = js.native
-  var content: js.UndefOr[ReactElement | ReactComponentClass[_] | ContentRenderer[TooltipProps]] = js.native
-  var contentStyle: js.UndefOr[js.Object] = js.native
-  var coordinate: js.UndefOr[Coordinate] = js.native
-  var cursor: js.UndefOr[Boolean | js.Object | ReactElement | ReactComponentClass[_]] = js.native
-  var filterNull: js.UndefOr[Boolean] = js.native
-  var formatter: js.UndefOr[TooltipFormatter] = js.native
-  var itemSorter: js.UndefOr[ItemSorter[TooltipPayload]] = js.native
-  var itemStyle: js.UndefOr[js.Object] = js.native
-  var label: js.UndefOr[String | Double] = js.native
-  var labelFormatter: js.UndefOr[LabelFormatter] = js.native
-  var labelStyle: js.UndefOr[js.Object] = js.native
-  var offset: js.UndefOr[Double] = js.native
-  var payload: js.UndefOr[js.Array[TooltipPayload]] = js.native
-  var position: js.UndefOr[Coordinate] = js.native
-  var separator: js.UndefOr[String] = js.native
-  var useTranslate3d: js.UndefOr[Boolean] = js.native
-  var viewBox: js.UndefOr[ViewBox] = js.native
-  var wrapperStyle: js.UndefOr[js.Object] = js.native
+  var active: js.UndefOr[Boolean] = js.undefined
+  var allowEscapeViewBox: js.UndefOr[AllowEscapeViewBox] = js.undefined
+  var content: js.UndefOr[ReactElement | ReactComponentClass[_] | ContentRenderer[TooltipProps]] = js.undefined
+  var contentStyle: js.UndefOr[js.Object] = js.undefined
+  var coordinate: js.UndefOr[Coordinate] = js.undefined
+  var cursor: js.UndefOr[Boolean | js.Object | ReactElement | ReactComponentClass[_]] = js.undefined
+  var filterNull: js.UndefOr[Boolean] = js.undefined
+  var formatter: js.UndefOr[TooltipFormatter] = js.undefined
+  var itemSorter: js.UndefOr[ItemSorter[TooltipPayload]] = js.undefined
+  var itemStyle: js.UndefOr[js.Object] = js.undefined
+  var label: js.UndefOr[String | Double] = js.undefined
+  var labelFormatter: js.UndefOr[LabelFormatter] = js.undefined
+  var labelStyle: js.UndefOr[js.Object] = js.undefined
+  var offset: js.UndefOr[Double] = js.undefined
+  var payload: js.UndefOr[js.Array[TooltipPayload]] = js.undefined
+  var position: js.UndefOr[Coordinate] = js.undefined
+  var separator: js.UndefOr[String] = js.undefined
+  var useTranslate3d: js.UndefOr[Boolean] = js.undefined
+  var viewBox: js.UndefOr[ViewBox] = js.undefined
+  var wrapperStyle: js.UndefOr[js.Object] = js.undefined
 }
 
 object TooltipProps {
   @scala.inline
-  def apply(): TooltipProps = {
+  def apply(
+    active: js.UndefOr[Boolean] = js.undefined,
+    allowEscapeViewBox: AllowEscapeViewBox = null,
+    animationBegin: js.UndefOr[Double] = js.undefined,
+    animationDuration: js.UndefOr[Double] = js.undefined,
+    animationEasing: AnimationEasingType = null,
+    animationId: js.UndefOr[Double] = js.undefined,
+    content: ReactElement | ReactComponentClass[_] | ContentRenderer[TooltipProps] = null,
+    contentStyle: js.Object = null,
+    coordinate: Coordinate = null,
+    cursor: Boolean | js.Object | ReactElement | ReactComponentClass[_] = null,
+    filterNull: js.UndefOr[Boolean] = js.undefined,
+    formatter: (/* value */ String | Double | (js.Array[String | Double]), /* name */ String, /* entry */ TooltipPayload, /* index */ Double) => TagMod[Any] = null,
+    isAnimationActive: js.UndefOr[Boolean] = js.undefined,
+    isUpdateAnimationActive: js.UndefOr[Boolean] = js.undefined,
+    itemSorter: (TooltipPayload, TooltipPayload) => Double = null,
+    itemStyle: js.Object = null,
+    label: String | Double = null,
+    labelFormatter: /* label */ String | Double => TagMod[Any] = null,
+    labelStyle: js.Object = null,
+    offset: js.UndefOr[Double] = js.undefined,
+    onAnimationEnd: /* repeated */ js.Any => Unit = null,
+    onAnimationStart: /* repeated */ js.Any => Unit = null,
+    payload: js.Array[TooltipPayload] = null,
+    position: Coordinate = null,
+    separator: String = null,
+    useTranslate3d: js.UndefOr[Boolean] = js.undefined,
+    viewBox: ViewBox = null,
+    wrapperStyle: js.Object = null
+  ): TooltipProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
+    if (allowEscapeViewBox != null) __obj.updateDynamic("allowEscapeViewBox")(allowEscapeViewBox.asInstanceOf[js.Any])
+    if (!js.isUndefined(animationBegin)) __obj.updateDynamic("animationBegin")(animationBegin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(animationDuration)) __obj.updateDynamic("animationDuration")(animationDuration.get.asInstanceOf[js.Any])
+    if (animationEasing != null) __obj.updateDynamic("animationEasing")(animationEasing.asInstanceOf[js.Any])
+    if (!js.isUndefined(animationId)) __obj.updateDynamic("animationId")(animationId.get.asInstanceOf[js.Any])
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (contentStyle != null) __obj.updateDynamic("contentStyle")(contentStyle.asInstanceOf[js.Any])
+    if (coordinate != null) __obj.updateDynamic("coordinate")(coordinate.asInstanceOf[js.Any])
+    if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
+    if (!js.isUndefined(filterNull)) __obj.updateDynamic("filterNull")(filterNull.get.asInstanceOf[js.Any])
+    if (formatter != null) __obj.updateDynamic("formatter")(js.Any.fromFunction4(formatter))
+    if (!js.isUndefined(isAnimationActive)) __obj.updateDynamic("isAnimationActive")(isAnimationActive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isUpdateAnimationActive)) __obj.updateDynamic("isUpdateAnimationActive")(isUpdateAnimationActive.get.asInstanceOf[js.Any])
+    if (itemSorter != null) __obj.updateDynamic("itemSorter")(js.Any.fromFunction2(itemSorter))
+    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (labelFormatter != null) __obj.updateDynamic("labelFormatter")(js.Any.fromFunction1(labelFormatter))
+    if (labelStyle != null) __obj.updateDynamic("labelStyle")(labelStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
+    if (onAnimationEnd != null) __obj.updateDynamic("onAnimationEnd")(js.Any.fromFunction1(onAnimationEnd))
+    if (onAnimationStart != null) __obj.updateDynamic("onAnimationStart")(js.Any.fromFunction1(onAnimationStart))
+    if (payload != null) __obj.updateDynamic("payload")(payload.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (separator != null) __obj.updateDynamic("separator")(separator.asInstanceOf[js.Any])
+    if (!js.isUndefined(useTranslate3d)) __obj.updateDynamic("useTranslate3d")(useTranslate3d.get.asInstanceOf[js.Any])
+    if (viewBox != null) __obj.updateDynamic("viewBox")(viewBox.asInstanceOf[js.Any])
+    if (wrapperStyle != null) __obj.updateDynamic("wrapperStyle")(wrapperStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[TooltipProps]
   }
-  @scala.inline
-  implicit class TooltipPropsOps[Self <: TooltipProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowEscapeViewBox(value: AllowEscapeViewBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowEscapeViewBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowEscapeViewBox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowEscapeViewBox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContentFunction1(value: TooltipProps => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withContentFunctionComponent(value: ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContent(value: ReactElement | ReactComponentClass[_] | ContentRenderer[TooltipProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCoordinate(value: Coordinate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coordinate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCoordinate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coordinate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCursorReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCursorFunctionComponent(value: ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCursor(value: Boolean | js.Object | ReactElement | ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCursor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterNull(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterNull")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterNull")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatter(
-      value: (/* value */ String | Double | (js.Array[String | Double]), /* name */ String, /* entry */ TooltipPayload, /* index */ Double) => TagMod[Any]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemSorter(value: (TooltipPayload, TooltipPayload) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemSorter")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutItemSorter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemSorter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelFormatter(value: /* label */ String | Double => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFormatter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutLabelFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFormatter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayload(value: js.Array[TooltipPayload]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Coordinate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeparator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseTranslate3d(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useTranslate3d")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseTranslate3d: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useTranslate3d")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewBox(value: ViewBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewBox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewBox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrapperStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapperStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrapperStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapperStyle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -23,41 +23,11 @@ trait SchemaListHl7V2StoresResponse extends js.Object {
 
 object SchemaListHl7V2StoresResponse {
   @scala.inline
-  def apply(): SchemaListHl7V2StoresResponse = {
+  def apply(hl7V2Stores: js.Array[SchemaHl7V2Store] = null, nextPageToken: String = null): SchemaListHl7V2StoresResponse = {
     val __obj = js.Dynamic.literal()
+    if (hl7V2Stores != null) __obj.updateDynamic("hl7V2Stores")(hl7V2Stores.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListHl7V2StoresResponse]
   }
-  @scala.inline
-  implicit class SchemaListHl7V2StoresResponseOps[Self <: SchemaListHl7V2StoresResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHl7V2Stores(value: js.Array[SchemaHl7V2Store]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hl7V2Stores")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHl7V2Stores: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hl7V2Stores")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -19,41 +19,11 @@ trait SchemaColorDefinition extends js.Object {
 
 object SchemaColorDefinition {
   @scala.inline
-  def apply(): SchemaColorDefinition = {
+  def apply(background: String = null, foreground: String = null): SchemaColorDefinition = {
     val __obj = js.Dynamic.literal()
+    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
+    if (foreground != null) __obj.updateDynamic("foreground")(foreground.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaColorDefinition]
   }
-  @scala.inline
-  implicit class SchemaColorDefinitionOps[Self <: SchemaColorDefinition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForeground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("foreground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForeground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("foreground")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

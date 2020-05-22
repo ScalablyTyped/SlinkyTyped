@@ -12,11 +12,11 @@ object DialogButton {
   @js.native
   object component extends js.Object
   
-  def withProps(p: ButtonProps with ViewProps with TextProps): `SharedBuilder_<intersection>_620818419`[typingsSlinky.reactNativeDialog.mod.Dialog.Button] = new `SharedBuilder_<intersection>_620818419`[typingsSlinky.reactNativeDialog.mod.Dialog.Button](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: ButtonProps with ViewProps with TextProps): SharedBuilder_ButtonPropsViewPropsTextProps_620818419[typingsSlinky.reactNativeDialog.mod.Dialog.Button] = new SharedBuilder_ButtonPropsViewPropsTextProps_620818419[typingsSlinky.reactNativeDialog.mod.Dialog.Button](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(label: String, onPress: () => Unit): `SharedBuilder_<intersection>_620818419`[typingsSlinky.reactNativeDialog.mod.Dialog.Button] = {
+  def apply(label: String, onPress: () => Unit): SharedBuilder_ButtonPropsViewPropsTextProps_620818419[typingsSlinky.reactNativeDialog.mod.Dialog.Button] = {
     val __props = js.Dynamic.literal(label = label.asInstanceOf[js.Any], onPress = js.Any.fromFunction0(onPress))
-    new `SharedBuilder_<intersection>_620818419`[typingsSlinky.reactNativeDialog.mod.Dialog.Button](js.Array(this.component, __props.asInstanceOf[ButtonProps with ViewProps with TextProps]))
+    new SharedBuilder_ButtonPropsViewPropsTextProps_620818419[typingsSlinky.reactNativeDialog.mod.Dialog.Button](js.Array(this.component, __props.asInstanceOf[ButtonProps with ViewProps with TextProps]))
   }
 }
 

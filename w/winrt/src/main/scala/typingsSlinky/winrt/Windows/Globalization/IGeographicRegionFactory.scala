@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IGeographicRegionFactory extends js.Object {
-  def createGeographicRegion(geographicRegionCode: String): GeographicRegion = js.native
+  def createGeographicRegion(geographicRegionCode: String): GeographicRegion
 }
 
 object IGeographicRegionFactory {
@@ -15,19 +14,5 @@ object IGeographicRegionFactory {
     val __obj = js.Dynamic.literal(createGeographicRegion = js.Any.fromFunction1(createGeographicRegion))
     __obj.asInstanceOf[IGeographicRegionFactory]
   }
-  @scala.inline
-  implicit class IGeographicRegionFactoryOps[Self <: IGeographicRegionFactory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateGeographicRegion(value: String => GeographicRegion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createGeographicRegion")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

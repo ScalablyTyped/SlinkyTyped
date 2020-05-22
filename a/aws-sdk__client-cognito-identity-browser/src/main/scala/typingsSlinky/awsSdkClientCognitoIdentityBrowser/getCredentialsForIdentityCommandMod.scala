@@ -26,9 +26,16 @@ object getCredentialsForIdentityCommandMod extends js.Object {
           Blob
         ] {
     def this(input: GetCredentialsForIdentityInput) = this()
+    /* CompleteClass */
+    override val input: GetCredentialsForIdentityInput = js.native
     val middlewareStack: MiddlewareStack[GetCredentialsForIdentityInput, GetCredentialsForIdentityOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: CognitoIdentityResolvedConfiguration
+    ): Handler[GetCredentialsForIdentityInput, GetCredentialsForIdentityOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: CognitoIdentityResolvedConfiguration
     ): Handler[GetCredentialsForIdentityInput, GetCredentialsForIdentityOutput] = js.native
   }

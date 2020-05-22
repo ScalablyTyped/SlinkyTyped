@@ -11,12 +11,3 @@ import scala.scalajs.js.annotation._
 */
 trait LocalTrack extends js.Object
 
-object LocalTrack {
-  @scala.inline
-  implicit def apply(value: LocalAudioTrack): LocalTrack = value.asInstanceOf[LocalTrack]
-  @scala.inline
-  implicit def apply(value: LocalDataTrack): LocalTrack = value.asInstanceOf[LocalTrack]
-  @scala.inline
-  implicit def apply(value: LocalVideoTrack): LocalTrack = value.asInstanceOf[LocalTrack]
-}
-

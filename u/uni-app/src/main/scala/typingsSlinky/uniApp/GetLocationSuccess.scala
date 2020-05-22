@@ -4,151 +4,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetLocationSuccess extends js.Object {
   /**
     * 位置的精确度
     */
-  var accuracy: js.UndefOr[String] = js.native
+  var accuracy: js.UndefOr[String] = js.undefined
   /**
     * 地址信息
     */
-  var address: js.UndefOr[js.Any] = js.native
+  var address: js.UndefOr[js.Any] = js.undefined
   /**
     * 高度，单位 m
     */
-  var altitude: js.UndefOr[Double] = js.native
+  var altitude: js.UndefOr[Double] = js.undefined
   /**
     * 水平精度，单位 m
     */
-  var horizontalAccuracy: js.UndefOr[Double] = js.native
+  var horizontalAccuracy: js.UndefOr[Double] = js.undefined
   /**
     * 纬度，浮点数，范围为-90~90，负数表示南纬
     */
-  var latitude: js.UndefOr[Double] = js.native
+  var latitude: js.UndefOr[Double] = js.undefined
   /**
     * 经度，范围为-180~180，负数表示西经
     */
-  var longitude: js.UndefOr[Double] = js.native
+  var longitude: js.UndefOr[Double] = js.undefined
   /**
     * 速度，浮点数，单位m/s
     */
-  var speed: js.UndefOr[Double] = js.native
+  var speed: js.UndefOr[Double] = js.undefined
   /**
     * 垂直精度，单位 m（Android 无法获取，返回 0）
     */
-  var verticalAccuracy: js.UndefOr[Double] = js.native
+  var verticalAccuracy: js.UndefOr[Double] = js.undefined
 }
 
 object GetLocationSuccess {
   @scala.inline
-  def apply(): GetLocationSuccess = {
+  def apply(
+    accuracy: String = null,
+    address: js.Any = null,
+    altitude: js.UndefOr[Double] = js.undefined,
+    horizontalAccuracy: js.UndefOr[Double] = js.undefined,
+    latitude: js.UndefOr[Double] = js.undefined,
+    longitude: js.UndefOr[Double] = js.undefined,
+    speed: js.UndefOr[Double] = js.undefined,
+    verticalAccuracy: js.UndefOr[Double] = js.undefined
+  ): GetLocationSuccess = {
     val __obj = js.Dynamic.literal()
+    if (accuracy != null) __obj.updateDynamic("accuracy")(accuracy.asInstanceOf[js.Any])
+    if (address != null) __obj.updateDynamic("address")(address.asInstanceOf[js.Any])
+    if (!js.isUndefined(altitude)) __obj.updateDynamic("altitude")(altitude.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(horizontalAccuracy)) __obj.updateDynamic("horizontalAccuracy")(horizontalAccuracy.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(latitude)) __obj.updateDynamic("latitude")(latitude.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(longitude)) __obj.updateDynamic("longitude")(longitude.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(speed)) __obj.updateDynamic("speed")(speed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(verticalAccuracy)) __obj.updateDynamic("verticalAccuracy")(verticalAccuracy.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetLocationSuccess]
   }
-  @scala.inline
-  implicit class GetLocationSuccessOps[Self <: GetLocationSuccess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccuracy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accuracy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccuracy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accuracy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAddress(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAltitude(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altitude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAltitude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altitude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHorizontalAccuracy(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAccuracy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontalAccuracy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAccuracy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLatitude(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latitude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatitude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latitude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLongitude(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("longitude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLongitude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("longitude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpeed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerticalAccuracy(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAccuracy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalAccuracy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAccuracy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

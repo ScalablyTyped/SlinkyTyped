@@ -26,59 +26,17 @@ trait AssignPrivateIpAddressesRequest extends js.Object {
 
 object AssignPrivateIpAddressesRequest {
   @scala.inline
-  def apply(NetworkInterfaceId: NetworkInterfaceId): AssignPrivateIpAddressesRequest = {
+  def apply(
+    NetworkInterfaceId: NetworkInterfaceId,
+    AllowReassignment: js.UndefOr[Boolean] = js.undefined,
+    PrivateIpAddresses: PrivateIpAddressStringList = null,
+    SecondaryPrivateIpAddressCount: js.UndefOr[Integer] = js.undefined
+  ): AssignPrivateIpAddressesRequest = {
     val __obj = js.Dynamic.literal(NetworkInterfaceId = NetworkInterfaceId.asInstanceOf[js.Any])
+    if (!js.isUndefined(AllowReassignment)) __obj.updateDynamic("AllowReassignment")(AllowReassignment.get.asInstanceOf[js.Any])
+    if (PrivateIpAddresses != null) __obj.updateDynamic("PrivateIpAddresses")(PrivateIpAddresses.asInstanceOf[js.Any])
+    if (!js.isUndefined(SecondaryPrivateIpAddressCount)) __obj.updateDynamic("SecondaryPrivateIpAddressCount")(SecondaryPrivateIpAddressCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssignPrivateIpAddressesRequest]
   }
-  @scala.inline
-  implicit class AssignPrivateIpAddressesRequestOps[Self <: AssignPrivateIpAddressesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNetworkInterfaceId(value: NetworkInterfaceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkInterfaceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAllowReassignment(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowReassignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowReassignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowReassignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateIpAddresses(value: PrivateIpAddressStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateIpAddresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateIpAddresses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateIpAddresses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecondaryPrivateIpAddressCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecondaryPrivateIpAddressCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecondaryPrivateIpAddressCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecondaryPrivateIpAddressCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

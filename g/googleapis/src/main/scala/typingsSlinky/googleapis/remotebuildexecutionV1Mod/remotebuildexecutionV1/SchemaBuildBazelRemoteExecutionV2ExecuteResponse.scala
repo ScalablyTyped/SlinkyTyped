@@ -51,77 +51,20 @@ trait SchemaBuildBazelRemoteExecutionV2ExecuteResponse extends js.Object {
 
 object SchemaBuildBazelRemoteExecutionV2ExecuteResponse {
   @scala.inline
-  def apply(): SchemaBuildBazelRemoteExecutionV2ExecuteResponse = {
+  def apply(
+    cachedResult: js.UndefOr[Boolean] = js.undefined,
+    message: String = null,
+    result: SchemaBuildBazelRemoteExecutionV2ActionResult = null,
+    serverLogs: StringDictionary[SchemaBuildBazelRemoteExecutionV2LogFile] = null,
+    status: SchemaGoogleRpcStatus = null
+  ): SchemaBuildBazelRemoteExecutionV2ExecuteResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cachedResult)) __obj.updateDynamic("cachedResult")(cachedResult.get.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (result != null) __obj.updateDynamic("result")(result.asInstanceOf[js.Any])
+    if (serverLogs != null) __obj.updateDynamic("serverLogs")(serverLogs.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBuildBazelRemoteExecutionV2ExecuteResponse]
   }
-  @scala.inline
-  implicit class SchemaBuildBazelRemoteExecutionV2ExecuteResponseOps[Self <: SchemaBuildBazelRemoteExecutionV2ExecuteResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCachedResult(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cachedResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCachedResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cachedResult")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResult(value: SchemaBuildBazelRemoteExecutionV2ActionResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerLogs(value: StringDictionary[SchemaBuildBazelRemoteExecutionV2LogFile]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverLogs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerLogs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverLogs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: SchemaGoogleRpcStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -15,10 +15,7 @@ object CalendarButtonExample {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[
-          tag.type, 
-          typingsSlinky.officeUiFabricReact.calendarButtonExampleMod.CalendarButtonExample
-        ] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def buttonString(value: String): this.type = set("buttonString", value.asInstanceOf[js.Any])
     @scala.inline

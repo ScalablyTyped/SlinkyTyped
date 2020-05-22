@@ -25,41 +25,14 @@ trait SchemaGoogleDevtoolsRemoteexecutionV1testLogFile extends js.Object {
 
 object SchemaGoogleDevtoolsRemoteexecutionV1testLogFile {
   @scala.inline
-  def apply(): SchemaGoogleDevtoolsRemoteexecutionV1testLogFile = {
+  def apply(
+    digest: SchemaGoogleDevtoolsRemoteexecutionV1testDigest = null,
+    humanReadable: js.UndefOr[Boolean] = js.undefined
+  ): SchemaGoogleDevtoolsRemoteexecutionV1testLogFile = {
     val __obj = js.Dynamic.literal()
+    if (digest != null) __obj.updateDynamic("digest")(digest.asInstanceOf[js.Any])
+    if (!js.isUndefined(humanReadable)) __obj.updateDynamic("humanReadable")(humanReadable.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDevtoolsRemoteexecutionV1testLogFile]
   }
-  @scala.inline
-  implicit class SchemaGoogleDevtoolsRemoteexecutionV1testLogFileOps[Self <: SchemaGoogleDevtoolsRemoteexecutionV1testLogFile] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDigest(value: SchemaGoogleDevtoolsRemoteexecutionV1testDigest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDigest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHumanReadable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("humanReadable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHumanReadable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("humanReadable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

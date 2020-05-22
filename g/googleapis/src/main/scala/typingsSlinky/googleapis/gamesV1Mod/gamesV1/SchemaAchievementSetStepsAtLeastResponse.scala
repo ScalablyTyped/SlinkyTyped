@@ -27,53 +27,16 @@ trait SchemaAchievementSetStepsAtLeastResponse extends js.Object {
 
 object SchemaAchievementSetStepsAtLeastResponse {
   @scala.inline
-  def apply(): SchemaAchievementSetStepsAtLeastResponse = {
+  def apply(
+    currentSteps: js.UndefOr[Double] = js.undefined,
+    kind: String = null,
+    newlyUnlocked: js.UndefOr[Boolean] = js.undefined
+  ): SchemaAchievementSetStepsAtLeastResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(currentSteps)) __obj.updateDynamic("currentSteps")(currentSteps.get.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (!js.isUndefined(newlyUnlocked)) __obj.updateDynamic("newlyUnlocked")(newlyUnlocked.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAchievementSetStepsAtLeastResponse]
   }
-  @scala.inline
-  implicit class SchemaAchievementSetStepsAtLeastResponseOps[Self <: SchemaAchievementSetStepsAtLeastResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentSteps(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentSteps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentSteps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentSteps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewlyUnlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newlyUnlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewlyUnlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newlyUnlocked")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

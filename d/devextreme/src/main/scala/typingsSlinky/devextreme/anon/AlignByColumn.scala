@@ -11,159 +11,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AlignByColumn extends js.Object {
-  var alignByColumn: js.UndefOr[Boolean] = js.native
-  var column: js.UndefOr[String] = js.native
-  var customizeText: js.UndefOr[js.Function1[/* itemInfo */ Value, String]] = js.native
-  var displayFormat: js.UndefOr[String] = js.native
-  var name: js.UndefOr[String] = js.native
-  var showInColumn: js.UndefOr[String] = js.native
-  var showInGroupFooter: js.UndefOr[Boolean] = js.native
-  var skipEmptyValues: js.UndefOr[Boolean] = js.native
-  var summaryType: js.UndefOr[avg | count | custom | max | min | sum | String] = js.native
-  var valueFormat: js.UndefOr[format] = js.native
+  var alignByColumn: js.UndefOr[Boolean] = js.undefined
+  var column: js.UndefOr[String] = js.undefined
+  var customizeText: js.UndefOr[js.Function1[/* itemInfo */ Value, String]] = js.undefined
+  var displayFormat: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var showInColumn: js.UndefOr[String] = js.undefined
+  var showInGroupFooter: js.UndefOr[Boolean] = js.undefined
+  var skipEmptyValues: js.UndefOr[Boolean] = js.undefined
+  var summaryType: js.UndefOr[avg | count | custom | max | min | sum | String] = js.undefined
+  var valueFormat: js.UndefOr[format] = js.undefined
 }
 
 object AlignByColumn {
   @scala.inline
-  def apply(): AlignByColumn = {
+  def apply(
+    alignByColumn: js.UndefOr[Boolean] = js.undefined,
+    column: String = null,
+    customizeText: /* itemInfo */ Value => String = null,
+    displayFormat: String = null,
+    name: String = null,
+    showInColumn: String = null,
+    showInGroupFooter: js.UndefOr[Boolean] = js.undefined,
+    skipEmptyValues: js.UndefOr[Boolean] = js.undefined,
+    summaryType: avg | count | custom | max | min | sum | String = null,
+    valueFormat: format = null
+  ): AlignByColumn = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(alignByColumn)) __obj.updateDynamic("alignByColumn")(alignByColumn.get.asInstanceOf[js.Any])
+    if (column != null) __obj.updateDynamic("column")(column.asInstanceOf[js.Any])
+    if (customizeText != null) __obj.updateDynamic("customizeText")(js.Any.fromFunction1(customizeText))
+    if (displayFormat != null) __obj.updateDynamic("displayFormat")(displayFormat.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (showInColumn != null) __obj.updateDynamic("showInColumn")(showInColumn.asInstanceOf[js.Any])
+    if (!js.isUndefined(showInGroupFooter)) __obj.updateDynamic("showInGroupFooter")(showInGroupFooter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipEmptyValues)) __obj.updateDynamic("skipEmptyValues")(skipEmptyValues.get.asInstanceOf[js.Any])
+    if (summaryType != null) __obj.updateDynamic("summaryType")(summaryType.asInstanceOf[js.Any])
+    if (valueFormat != null) __obj.updateDynamic("valueFormat")(valueFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[AlignByColumn]
   }
-  @scala.inline
-  implicit class AlignByColumnOps[Self <: AlignByColumn] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignByColumn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignByColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignByColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignByColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomizeText(value: /* itemInfo */ Value => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeText")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCustomizeText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowInColumn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showInColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowInColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showInColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowInGroupFooter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showInGroupFooter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowInGroupFooter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showInGroupFooter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipEmptyValues(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipEmptyValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipEmptyValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipEmptyValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSummaryType(value: avg | count | custom | max | min | sum | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summaryType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSummaryType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summaryType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueFormatFunction1(value: /* value */ Double | js.Date => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueFormat")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withValueFormat(value: format): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueFormat")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -38,95 +38,23 @@ trait ListCandidatesForAutoMLJobRequest extends js.Object {
 
 object ListCandidatesForAutoMLJobRequest {
   @scala.inline
-  def apply(AutoMLJobName: AutoMLJobName): ListCandidatesForAutoMLJobRequest = {
+  def apply(
+    AutoMLJobName: AutoMLJobName,
+    CandidateNameEquals: CandidateName = null,
+    MaxResults: js.UndefOr[AutoMLMaxResults] = js.undefined,
+    NextToken: NextToken = null,
+    SortBy: CandidateSortBy = null,
+    SortOrder: AutoMLSortOrder = null,
+    StatusEquals: CandidateStatus = null
+  ): ListCandidatesForAutoMLJobRequest = {
     val __obj = js.Dynamic.literal(AutoMLJobName = AutoMLJobName.asInstanceOf[js.Any])
+    if (CandidateNameEquals != null) __obj.updateDynamic("CandidateNameEquals")(CandidateNameEquals.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxResults)) __obj.updateDynamic("MaxResults")(MaxResults.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (SortBy != null) __obj.updateDynamic("SortBy")(SortBy.asInstanceOf[js.Any])
+    if (SortOrder != null) __obj.updateDynamic("SortOrder")(SortOrder.asInstanceOf[js.Any])
+    if (StatusEquals != null) __obj.updateDynamic("StatusEquals")(StatusEquals.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListCandidatesForAutoMLJobRequest]
   }
-  @scala.inline
-  implicit class ListCandidatesForAutoMLJobRequestOps[Self <: ListCandidatesForAutoMLJobRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoMLJobName(value: AutoMLJobName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoMLJobName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCandidateNameEquals(value: CandidateName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CandidateNameEquals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCandidateNameEquals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CandidateNameEquals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: AutoMLMaxResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortBy(value: CandidateSortBy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SortBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SortBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortOrder(value: AutoMLSortOrder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SortOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SortOrder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusEquals(value: CandidateStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusEquals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusEquals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusEquals")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

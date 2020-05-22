@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Item extends js.Object {
-  def setEnabled(isEnable: String): Unit = js.native
-  def setImagePath(imagePath: String): Unit = js.native
-  def setTitle(title: String): Unit = js.native
+  def setEnabled(isEnable: String): Unit
+  def setImagePath(imagePath: String): Unit
+  def setTitle(title: String): Unit
 }
 
 object Item {
@@ -17,31 +16,5 @@ object Item {
     val __obj = js.Dynamic.literal(setEnabled = js.Any.fromFunction1(setEnabled), setImagePath = js.Any.fromFunction1(setImagePath), setTitle = js.Any.fromFunction1(setTitle))
     __obj.asInstanceOf[Item]
   }
-  @scala.inline
-  implicit class ItemOps[Self <: Item] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSetEnabled(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setEnabled")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetImagePath(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setImagePath")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetTitle(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTitle")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

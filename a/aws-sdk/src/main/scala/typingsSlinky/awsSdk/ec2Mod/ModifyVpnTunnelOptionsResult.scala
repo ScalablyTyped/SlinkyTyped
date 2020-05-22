@@ -11,29 +11,10 @@ trait ModifyVpnTunnelOptionsResult extends js.Object {
 
 object ModifyVpnTunnelOptionsResult {
   @scala.inline
-  def apply(): ModifyVpnTunnelOptionsResult = {
+  def apply(VpnConnection: VpnConnection = null): ModifyVpnTunnelOptionsResult = {
     val __obj = js.Dynamic.literal()
+    if (VpnConnection != null) __obj.updateDynamic("VpnConnection")(VpnConnection.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyVpnTunnelOptionsResult]
   }
-  @scala.inline
-  implicit class ModifyVpnTunnelOptionsResultOps[Self <: ModifyVpnTunnelOptionsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVpnConnection(value: VpnConnection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnConnection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpnConnection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnConnection")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

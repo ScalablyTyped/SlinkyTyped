@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Xchacha20poly1305State extends js.Object {
-  var _pad: Buffer = js.native
-  var k: Buffer = js.native
-  var nonce: Buffer = js.native
+  var _pad: Buffer
+  var k: Buffer
+  var nonce: Buffer
 }
 
 object Xchacha20poly1305State {
@@ -18,31 +17,5 @@ object Xchacha20poly1305State {
     val __obj = js.Dynamic.literal(_pad = _pad.asInstanceOf[js.Any], k = k.asInstanceOf[js.Any], nonce = nonce.asInstanceOf[js.Any])
     __obj.asInstanceOf[Xchacha20poly1305State]
   }
-  @scala.inline
-  implicit class Xchacha20poly1305StateOps[Self <: Xchacha20poly1305State] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_pad(value: Buffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_pad")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withK(value: Buffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("k")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNonce(value: Buffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonce")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

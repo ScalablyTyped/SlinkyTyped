@@ -22,47 +22,15 @@ trait HealthCheckConfig extends js.Object {
 
 object HealthCheckConfig {
   @scala.inline
-  def apply(Type: HealthCheckType): HealthCheckConfig = {
+  def apply(
+    Type: HealthCheckType,
+    FailureThreshold: js.UndefOr[FailureThreshold] = js.undefined,
+    ResourcePath: ResourcePath = null
+  ): HealthCheckConfig = {
     val __obj = js.Dynamic.literal(Type = Type.asInstanceOf[js.Any])
+    if (!js.isUndefined(FailureThreshold)) __obj.updateDynamic("FailureThreshold")(FailureThreshold.get.asInstanceOf[js.Any])
+    if (ResourcePath != null) __obj.updateDynamic("ResourcePath")(ResourcePath.asInstanceOf[js.Any])
     __obj.asInstanceOf[HealthCheckConfig]
   }
-  @scala.inline
-  implicit class HealthCheckConfigOps[Self <: HealthCheckConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: HealthCheckType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFailureThreshold(value: FailureThreshold): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourcePath(value: ResourcePath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourcePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourcePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourcePath")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,103 +6,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a RbmCardContent. */
-@js.native
 trait IRbmCardContent extends js.Object {
   /** RbmCardContent description */
-  var description: js.UndefOr[String | Null] = js.native
+  var description: js.UndefOr[String | Null] = js.undefined
   /** RbmCardContent media */
-  var media: js.UndefOr[IRbmMedia | Null] = js.native
+  var media: js.UndefOr[IRbmMedia | Null] = js.undefined
   /** RbmCardContent suggestions */
-  var suggestions: js.UndefOr[js.Array[IRbmSuggestion] | Null] = js.native
+  var suggestions: js.UndefOr[js.Array[IRbmSuggestion] | Null] = js.undefined
   /** RbmCardContent title */
-  var title: js.UndefOr[String | Null] = js.native
+  var title: js.UndefOr[String | Null] = js.undefined
 }
 
 object IRbmCardContent {
   @scala.inline
-  def apply(): IRbmCardContent = {
+  def apply(
+    description: js.UndefOr[Null | String] = js.undefined,
+    media: js.UndefOr[Null | IRbmMedia] = js.undefined,
+    suggestions: js.UndefOr[Null | js.Array[IRbmSuggestion]] = js.undefined,
+    title: js.UndefOr[Null | String] = js.undefined
+  ): IRbmCardContent = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(description)) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(media)) __obj.updateDynamic("media")(media.asInstanceOf[js.Any])
+    if (!js.isUndefined(suggestions)) __obj.updateDynamic("suggestions")(suggestions.asInstanceOf[js.Any])
+    if (!js.isUndefined(title)) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[IRbmCardContent]
   }
-  @scala.inline
-  implicit class IRbmCardContentOps[Self <: IRbmCardContent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescriptionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(null)
-        ret
-    }
-    @scala.inline
-    def withMedia(value: IRbmMedia): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMedia: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMediaNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(null)
-        ret
-    }
-    @scala.inline
-    def withSuggestions(value: js.Array[IRbmSuggestion]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuggestions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuggestionsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestions")(null)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(null)
-        ret
-    }
-  }
-  
 }
 

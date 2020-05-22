@@ -21,7 +21,7 @@ class PolygonGraphics () extends js.Object {
   var height: Property = js.native
   var heightReference: Property = js.native
   var hierarchy: Property = js.native
-  var material: MaterialProperty | Color = js.native
+  var material: MaterialProperty = js.native
   var outline: Property = js.native
   var outlineColor: Color = js.native
   var outlineWidth: Property = js.native

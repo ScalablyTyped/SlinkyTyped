@@ -42,113 +42,26 @@ trait Thumbnails extends js.Object {
 
 object Thumbnails {
   @scala.inline
-  def apply(): Thumbnails = {
+  def apply(
+    AspectRatio: AspectRatio = null,
+    Format: JpgOrPng = null,
+    Interval: Digits = null,
+    MaxHeight: DigitsOrAuto = null,
+    MaxWidth: DigitsOrAuto = null,
+    PaddingPolicy: PaddingPolicy = null,
+    Resolution: ThumbnailResolution = null,
+    SizingPolicy: SizingPolicy = null
+  ): Thumbnails = {
     val __obj = js.Dynamic.literal()
+    if (AspectRatio != null) __obj.updateDynamic("AspectRatio")(AspectRatio.asInstanceOf[js.Any])
+    if (Format != null) __obj.updateDynamic("Format")(Format.asInstanceOf[js.Any])
+    if (Interval != null) __obj.updateDynamic("Interval")(Interval.asInstanceOf[js.Any])
+    if (MaxHeight != null) __obj.updateDynamic("MaxHeight")(MaxHeight.asInstanceOf[js.Any])
+    if (MaxWidth != null) __obj.updateDynamic("MaxWidth")(MaxWidth.asInstanceOf[js.Any])
+    if (PaddingPolicy != null) __obj.updateDynamic("PaddingPolicy")(PaddingPolicy.asInstanceOf[js.Any])
+    if (Resolution != null) __obj.updateDynamic("Resolution")(Resolution.asInstanceOf[js.Any])
+    if (SizingPolicy != null) __obj.updateDynamic("SizingPolicy")(SizingPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[Thumbnails]
   }
-  @scala.inline
-  implicit class ThumbnailsOps[Self <: Thumbnails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAspectRatio(value: AspectRatio): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AspectRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAspectRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AspectRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: JpgOrPng): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterval(value: Digits): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Interval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxHeight(value: DigitsOrAuto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxWidth(value: DigitsOrAuto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaddingPolicy(value: PaddingPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaddingPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaddingPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaddingPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResolution(value: ThumbnailResolution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Resolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Resolution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizingPolicy(value: SizingPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SizingPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizingPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SizingPolicy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

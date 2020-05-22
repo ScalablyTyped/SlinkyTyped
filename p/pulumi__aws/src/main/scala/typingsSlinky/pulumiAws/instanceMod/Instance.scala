@@ -5,6 +5,7 @@ import typingsSlinky.pulumiAws.instanceTypeMod.InstanceType
 import typingsSlinky.pulumiAws.outputMod.ec2.InstanceCreditSpecification
 import typingsSlinky.pulumiAws.outputMod.ec2.InstanceEbsBlockDevice
 import typingsSlinky.pulumiAws.outputMod.ec2.InstanceEphemeralBlockDevice
+import typingsSlinky.pulumiAws.outputMod.ec2.InstanceMetadataOptions
 import typingsSlinky.pulumiAws.outputMod.ec2.InstanceNetworkInterface
 import typingsSlinky.pulumiAws.outputMod.ec2.InstanceRootBlockDevice
 import typingsSlinky.pulumiPulumi.mod.CustomResource
@@ -123,6 +124,10 @@ class Instance protected () extends CustomResource {
     * The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
     */
   val keyName: Output_[String] = js.native
+  /**
+    * Customize the metadata options of the instance. See Metadata Options below for more details.
+    */
+  val metadataOptions: Output_[InstanceMetadataOptions] = js.native
   /**
     * If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
     */

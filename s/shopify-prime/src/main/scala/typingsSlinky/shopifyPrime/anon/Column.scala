@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Column extends js.Object {
-  var column: String = js.native
-  var condition: String = js.native
-  var relation: String = js.native
+  var column: String
+  var condition: String
+  var relation: String
 }
 
 object Column {
@@ -17,31 +16,5 @@ object Column {
     val __obj = js.Dynamic.literal(column = column.asInstanceOf[js.Any], condition = condition.asInstanceOf[js.Any], relation = relation.asInstanceOf[js.Any])
     __obj.asInstanceOf[Column]
   }
-  @scala.inline
-  implicit class ColumnOps[Self <: Column] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCondition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRelation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relation")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

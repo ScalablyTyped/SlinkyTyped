@@ -15,59 +15,14 @@ trait StyledComponentProps[ClassKey /* <: String */] extends js.Object {
 
 object StyledComponentProps {
   @scala.inline
-  def apply[ClassKey](): StyledComponentProps[ClassKey] = {
+  def apply[ClassKey](
+    classes: Partial[ClassNameMap[ClassKey]] = null,
+    innerRef: js.UndefOr[Null | Ref[_] | ReactRef[_]] = js.undefined
+  ): StyledComponentProps[ClassKey] = {
     val __obj = js.Dynamic.literal()
+    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
+    if (!js.isUndefined(innerRef)) __obj.updateDynamic("innerRef")(innerRef.asInstanceOf[js.Any])
     __obj.asInstanceOf[StyledComponentProps[ClassKey]]
   }
-  @scala.inline
-  implicit class StyledComponentPropsOps[Self[classkey] <: StyledComponentProps[classkey], ClassKey] (val x: Self[ClassKey]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[ClassKey] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[ClassKey]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[ClassKey] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[ClassKey] with Other]
-    @scala.inline
-    def withClasses(value: Partial[ClassNameMap[ClassKey]]): Self[ClassKey] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClasses: Self[ClassKey] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInnerRefRefObject(value: ReactRef[_]): Self[ClassKey] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInnerRefFunction1(value: /* instance */ _ | Null => Unit): Self[ClassKey] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInnerRef(value: Ref[_] | ReactRef[_]): Self[ClassKey] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInnerRef: Self[ClassKey] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInnerRefNull: Self[ClassKey] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(null)
-        ret
-    }
-  }
-  
 }
 

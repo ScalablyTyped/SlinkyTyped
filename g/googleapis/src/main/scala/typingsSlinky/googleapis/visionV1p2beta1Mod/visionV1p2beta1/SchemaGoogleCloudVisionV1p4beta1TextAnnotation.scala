@@ -27,41 +27,11 @@ trait SchemaGoogleCloudVisionV1p4beta1TextAnnotation extends js.Object {
 
 object SchemaGoogleCloudVisionV1p4beta1TextAnnotation {
   @scala.inline
-  def apply(): SchemaGoogleCloudVisionV1p4beta1TextAnnotation = {
+  def apply(pages: js.Array[SchemaGoogleCloudVisionV1p4beta1Page] = null, text: String = null): SchemaGoogleCloudVisionV1p4beta1TextAnnotation = {
     val __obj = js.Dynamic.literal()
+    if (pages != null) __obj.updateDynamic("pages")(pages.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p4beta1TextAnnotation]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudVisionV1p4beta1TextAnnotationOps[Self <: SchemaGoogleCloudVisionV1p4beta1TextAnnotation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPages(value: js.Array[SchemaGoogleCloudVisionV1p4beta1Page]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

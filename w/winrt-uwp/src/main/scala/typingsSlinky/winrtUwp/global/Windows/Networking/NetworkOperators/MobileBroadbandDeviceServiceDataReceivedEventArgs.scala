@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Networking.NetworkOperators
 
+import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +9,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataReceivedEventArgs")
 @js.native
 abstract class MobileBroadbandDeviceServiceDataReceivedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataReceivedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataReceivedEventArgs {
+  /** Gets the data received on the MobileBroadbandDeviceServiceDataSession . */
+  /* CompleteClass */
+  override var receivedData: IBuffer = js.native
+}
 

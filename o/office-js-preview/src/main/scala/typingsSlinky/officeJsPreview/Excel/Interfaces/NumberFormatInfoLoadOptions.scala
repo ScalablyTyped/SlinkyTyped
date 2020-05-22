@@ -8,83 +8,42 @@ import scala.scalajs.js.annotation._
   *
   * Defines the culturally appropriate format of displaying numbers. This is based on current system culture settings.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.11]
   */
-@js.native
 trait NumberFormatInfoLoadOptions extends js.Object {
   /**
     Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`) but not the navigational properties (e.g.: `Range.format.fill.color`).
     */
   @JSName("$all")
-  var $all: js.UndefOr[Boolean] = js.native
+  var $all: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Gets the string used as the decimal separator for numeric values. This is based on current system settings.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.11]
     */
-  var numberDecimalSeparator: js.UndefOr[Boolean] = js.native
+  var numberDecimalSeparator: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Gets the string used to separate groups of digits to the left of the decimal for numeric values. This is based on current system settings.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.11]
     */
-  var numberGroupSeparator: js.UndefOr[Boolean] = js.native
+  var numberGroupSeparator: js.UndefOr[Boolean] = js.undefined
 }
 
 object NumberFormatInfoLoadOptions {
   @scala.inline
-  def apply(): NumberFormatInfoLoadOptions = {
+  def apply(
+    $all: js.UndefOr[Boolean] = js.undefined,
+    numberDecimalSeparator: js.UndefOr[Boolean] = js.undefined,
+    numberGroupSeparator: js.UndefOr[Boolean] = js.undefined
+  ): NumberFormatInfoLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($all)) __obj.updateDynamic("$all")($all.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(numberDecimalSeparator)) __obj.updateDynamic("numberDecimalSeparator")(numberDecimalSeparator.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(numberGroupSeparator)) __obj.updateDynamic("numberGroupSeparator")(numberGroupSeparator.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[NumberFormatInfoLoadOptions]
   }
-  @scala.inline
-  implicit class NumberFormatInfoLoadOptionsOps[Self <: NumberFormatInfoLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$all: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberDecimalSeparator(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberDecimalSeparator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberDecimalSeparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberDecimalSeparator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberGroupSeparator(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberGroupSeparator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberGroupSeparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberGroupSeparator")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,9 +7,65 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Observation extends js.Object {
   /**
+    *  The detail type of the CloudWatch Event-based observation, for example, EC2 Instance State-change Notification. 
+    */
+  var CloudWatchEventDetailType: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.CloudWatchEventDetailType] = js.native
+  /**
+    *  The ID of the CloudWatch Event-based observation related to the detected problem. 
+    */
+  var CloudWatchEventId: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.CloudWatchEventId] = js.native
+  /**
+    *  The source of the CloudWatch Event. 
+    */
+  var CloudWatchEventSource: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.CloudWatchEventSource] = js.native
+  /**
+    *  The CodeDeploy application to which the deployment belongs. 
+    */
+  var CodeDeployApplication: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.CodeDeployApplication] = js.native
+  /**
+    *  The deployment group to which the CodeDeploy deployment belongs. 
+    */
+  var CodeDeployDeploymentGroup: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.CodeDeployDeploymentGroup] = js.native
+  /**
+    *  The deployment ID of the CodeDeploy-based observation related to the detected problem. 
+    */
+  var CodeDeployDeploymentId: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.CodeDeployDeploymentId] = js.native
+  /**
+    *  The instance group to which the CodeDeploy instance belongs. 
+    */
+  var CodeDeployInstanceGroupId: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.CodeDeployInstanceGroupId] = js.native
+  /**
+    *  The status of the CodeDeploy deployment, for example SUCCESS or  FAILURE. 
+    */
+  var CodeDeployState: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.CodeDeployState] = js.native
+  /**
+    *  The state of the instance, such as STOPPING or TERMINATING. 
+    */
+  var Ec2State: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.Ec2State] = js.native
+  /**
     * The time when the observation ended, in epoch seconds.
     */
   var EndTime: js.UndefOr[js.Date] = js.native
+  /**
+    *  The Amazon Resource Name (ARN) of the AWS Health Event-based observation.
+    */
+  var HealthEventArn: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.HealthEventArn] = js.native
+  /**
+    *  The description of the AWS Health event provided by the service, such as Amazon EC2. 
+    */
+  var HealthEventDescription: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.HealthEventDescription] = js.native
+  /**
+    *  The category of the AWS Health event, such as issue. 
+    */
+  var HealthEventTypeCategory: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.HealthEventTypeCategory] = js.native
+  /**
+    *  The type of the AWS Health event, for example, AWS_EC2_POWER_CONNECTIVITY_ISSUE. 
+    */
+  var HealthEventTypeCode: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.HealthEventTypeCode] = js.native
+  /**
+    *  The service to which the AWS Health Event belongs, such as EC2. 
+    */
+  var HealthService: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.HealthService] = js.native
   /**
     * The ID of the observation type.
     */
@@ -58,177 +114,110 @@ trait Observation extends js.Object {
     * The value of the source observation metric.
     */
   var Value: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.Value] = js.native
+  /**
+    *  The X-Ray request error percentage for this node. 
+    */
+  var XRayErrorPercent: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.XRayErrorPercent] = js.native
+  /**
+    *  The X-Ray request fault percentage for this node. 
+    */
+  var XRayFaultPercent: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.XRayFaultPercent] = js.native
+  /**
+    *  The name of the X-Ray node. 
+    */
+  var XRayNodeName: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.XRayNodeName] = js.native
+  /**
+    *  The type of the X-Ray node. 
+    */
+  var XRayNodeType: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.XRayNodeType] = js.native
+  /**
+    *  The X-Ray node request average latency for this node. 
+    */
+  var XRayRequestAverageLatency: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.XRayRequestAverageLatency] = js.native
+  /**
+    *  The X-Ray request count for this node. 
+    */
+  var XRayRequestCount: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.XRayRequestCount] = js.native
+  /**
+    *  The X-Ray request throttle percentage for this node. 
+    */
+  var XRayThrottlePercent: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.XRayThrottlePercent] = js.native
 }
 
 object Observation {
   @scala.inline
-  def apply(): Observation = {
+  def apply(
+    CloudWatchEventDetailType: CloudWatchEventDetailType = null,
+    CloudWatchEventId: CloudWatchEventId = null,
+    CloudWatchEventSource: CloudWatchEventSource = null,
+    CodeDeployApplication: CodeDeployApplication = null,
+    CodeDeployDeploymentGroup: CodeDeployDeploymentGroup = null,
+    CodeDeployDeploymentId: CodeDeployDeploymentId = null,
+    CodeDeployInstanceGroupId: CodeDeployInstanceGroupId = null,
+    CodeDeployState: CodeDeployState = null,
+    Ec2State: Ec2State = null,
+    EndTime: js.Date = null,
+    HealthEventArn: HealthEventArn = null,
+    HealthEventDescription: HealthEventDescription = null,
+    HealthEventTypeCategory: HealthEventTypeCategory = null,
+    HealthEventTypeCode: HealthEventTypeCode = null,
+    HealthService: HealthService = null,
+    Id: ObservationId = null,
+    LineTime: js.Date = null,
+    LogFilter: LogFilter = null,
+    LogGroup: LogGroup = null,
+    LogText: LogText = null,
+    MetricName: MetricName = null,
+    MetricNamespace: MetricNamespace = null,
+    SourceARN: SourceARN = null,
+    SourceType: SourceType = null,
+    StartTime: js.Date = null,
+    Unit: Unit = null,
+    Value: js.UndefOr[Value] = js.undefined,
+    XRayErrorPercent: js.UndefOr[XRayErrorPercent] = js.undefined,
+    XRayFaultPercent: js.UndefOr[XRayFaultPercent] = js.undefined,
+    XRayNodeName: XRayNodeName = null,
+    XRayNodeType: XRayNodeType = null,
+    XRayRequestAverageLatency: js.UndefOr[XRayRequestAverageLatency] = js.undefined,
+    XRayRequestCount: js.UndefOr[XRayRequestCount] = js.undefined,
+    XRayThrottlePercent: js.UndefOr[XRayThrottlePercent] = js.undefined
+  ): Observation = {
     val __obj = js.Dynamic.literal()
+    if (CloudWatchEventDetailType != null) __obj.updateDynamic("CloudWatchEventDetailType")(CloudWatchEventDetailType.asInstanceOf[js.Any])
+    if (CloudWatchEventId != null) __obj.updateDynamic("CloudWatchEventId")(CloudWatchEventId.asInstanceOf[js.Any])
+    if (CloudWatchEventSource != null) __obj.updateDynamic("CloudWatchEventSource")(CloudWatchEventSource.asInstanceOf[js.Any])
+    if (CodeDeployApplication != null) __obj.updateDynamic("CodeDeployApplication")(CodeDeployApplication.asInstanceOf[js.Any])
+    if (CodeDeployDeploymentGroup != null) __obj.updateDynamic("CodeDeployDeploymentGroup")(CodeDeployDeploymentGroup.asInstanceOf[js.Any])
+    if (CodeDeployDeploymentId != null) __obj.updateDynamic("CodeDeployDeploymentId")(CodeDeployDeploymentId.asInstanceOf[js.Any])
+    if (CodeDeployInstanceGroupId != null) __obj.updateDynamic("CodeDeployInstanceGroupId")(CodeDeployInstanceGroupId.asInstanceOf[js.Any])
+    if (CodeDeployState != null) __obj.updateDynamic("CodeDeployState")(CodeDeployState.asInstanceOf[js.Any])
+    if (Ec2State != null) __obj.updateDynamic("Ec2State")(Ec2State.asInstanceOf[js.Any])
+    if (EndTime != null) __obj.updateDynamic("EndTime")(EndTime.asInstanceOf[js.Any])
+    if (HealthEventArn != null) __obj.updateDynamic("HealthEventArn")(HealthEventArn.asInstanceOf[js.Any])
+    if (HealthEventDescription != null) __obj.updateDynamic("HealthEventDescription")(HealthEventDescription.asInstanceOf[js.Any])
+    if (HealthEventTypeCategory != null) __obj.updateDynamic("HealthEventTypeCategory")(HealthEventTypeCategory.asInstanceOf[js.Any])
+    if (HealthEventTypeCode != null) __obj.updateDynamic("HealthEventTypeCode")(HealthEventTypeCode.asInstanceOf[js.Any])
+    if (HealthService != null) __obj.updateDynamic("HealthService")(HealthService.asInstanceOf[js.Any])
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (LineTime != null) __obj.updateDynamic("LineTime")(LineTime.asInstanceOf[js.Any])
+    if (LogFilter != null) __obj.updateDynamic("LogFilter")(LogFilter.asInstanceOf[js.Any])
+    if (LogGroup != null) __obj.updateDynamic("LogGroup")(LogGroup.asInstanceOf[js.Any])
+    if (LogText != null) __obj.updateDynamic("LogText")(LogText.asInstanceOf[js.Any])
+    if (MetricName != null) __obj.updateDynamic("MetricName")(MetricName.asInstanceOf[js.Any])
+    if (MetricNamespace != null) __obj.updateDynamic("MetricNamespace")(MetricNamespace.asInstanceOf[js.Any])
+    if (SourceARN != null) __obj.updateDynamic("SourceARN")(SourceARN.asInstanceOf[js.Any])
+    if (SourceType != null) __obj.updateDynamic("SourceType")(SourceType.asInstanceOf[js.Any])
+    if (StartTime != null) __obj.updateDynamic("StartTime")(StartTime.asInstanceOf[js.Any])
+    if (Unit != null) __obj.updateDynamic("Unit")(Unit.asInstanceOf[js.Any])
+    if (!js.isUndefined(Value)) __obj.updateDynamic("Value")(Value.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(XRayErrorPercent)) __obj.updateDynamic("XRayErrorPercent")(XRayErrorPercent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(XRayFaultPercent)) __obj.updateDynamic("XRayFaultPercent")(XRayFaultPercent.get.asInstanceOf[js.Any])
+    if (XRayNodeName != null) __obj.updateDynamic("XRayNodeName")(XRayNodeName.asInstanceOf[js.Any])
+    if (XRayNodeType != null) __obj.updateDynamic("XRayNodeType")(XRayNodeType.asInstanceOf[js.Any])
+    if (!js.isUndefined(XRayRequestAverageLatency)) __obj.updateDynamic("XRayRequestAverageLatency")(XRayRequestAverageLatency.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(XRayRequestCount)) __obj.updateDynamic("XRayRequestCount")(XRayRequestCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(XRayThrottlePercent)) __obj.updateDynamic("XRayThrottlePercent")(XRayThrottlePercent.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Observation]
   }
-  @scala.inline
-  implicit class ObservationOps[Self <: Observation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: ObservationId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LineTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LineTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogFilter(value: LogFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogGroup(value: LogGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogText(value: LogText): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetricName(value: MetricName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetricNamespace(value: MetricNamespace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricNamespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricNamespace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceARN(value: SourceARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceARN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceType(value: SourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnit(value: Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Unit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Value): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

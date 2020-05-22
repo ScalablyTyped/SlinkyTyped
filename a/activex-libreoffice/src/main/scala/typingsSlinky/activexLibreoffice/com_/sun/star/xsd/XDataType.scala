@@ -10,35 +10,34 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** specifies an [XSD compliant simple data type]{@link url="http://www.w3.org/TR/xmlschema-2/#built-in-datatypes"} */
-@js.native
 trait XDataType extends XPropertySet {
   /**
     * specifies whether the type is a basic type
     *
     * Basic types are built into the type system, and cannot be changed by the user.
     */
-  var IsBasic: scala.Boolean = js.native
+  var IsBasic: scala.Boolean
   /** provides access to the name of the type */
-  var Name: java.lang.String = js.native
+  var Name: java.lang.String
   /**
     * specifies the pattern which strings conforming to this type comply to
     *
     * See [http://www.w3.org/TR/xmlschema-2/#rf-pattern]{@link url="http://www.w3.org/TR/xmlschema-2/#rf-pattern"}
     */
-  var Pattern: java.lang.String = js.native
+  var Pattern: java.lang.String
   /**
     * class of the type
     * @see DataTypeClass
     */
-  var TypeClass: Double = js.native
+  var TypeClass: Double
   /**
     * specifies how strings of this data type are to be processed, with respect to white spaces
     *
     * See [http://www.w3.org/TR/xmlschema-2/#rf-whiteSpace]{@link url="http://www.w3.org/TR/xmlschema-2/#rf-whiteSpace"}
     */
-  var WhiteSpaceTreatment: Double = js.native
-  def explainInvalid(value: java.lang.String): java.lang.String = js.native
-  def validate(value: java.lang.String): scala.Boolean = js.native
+  var WhiteSpaceTreatment: Double
+  def explainInvalid(value: java.lang.String): java.lang.String
+  def validate(value: java.lang.String): scala.Boolean
 }
 
 object XDataType {
@@ -66,55 +65,5 @@ object XDataType {
     val __obj = js.Dynamic.literal(IsBasic = IsBasic.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Pattern = Pattern.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], TypeClass = TypeClass.asInstanceOf[js.Any], WhiteSpaceTreatment = WhiteSpaceTreatment.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), explainInvalid = js.Any.fromFunction1(explainInvalid), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue), validate = js.Any.fromFunction1(validate))
     __obj.asInstanceOf[XDataType]
   }
-  @scala.inline
-  implicit class XDataTypeOps[Self <: XDataType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsBasic(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsBasic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPattern(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Pattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeClass(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWhiteSpaceTreatment(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WhiteSpaceTreatment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExplainInvalid(value: java.lang.String => java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("explainInvalid")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withValidate(value: java.lang.String => scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

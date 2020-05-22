@@ -4,140 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WalkOptionsListeners extends js.Object {
-  var directories: js.UndefOr[WalkStatArrayEventCallback] = js.native
-  var directory: js.UndefOr[WalkStatEventCallback] = js.native
-  var directoryError: js.UndefOr[WalkStatArrayEventCallback] = js.native
-  var end: js.UndefOr[WalkStatArrayEventCallback] = js.native
-  var errors: js.UndefOr[WalkStatArrayEventCallback] = js.native
-  var file: js.UndefOr[WalkStatEventCallback] = js.native
-  var files: js.UndefOr[WalkStatArrayEventCallback] = js.native
-  var names: js.UndefOr[WalkNamesEventCallback] = js.native
-  var nodeError: js.UndefOr[WalkStatArrayEventCallback] = js.native
+  var directories: js.UndefOr[WalkStatArrayEventCallback] = js.undefined
+  var directory: js.UndefOr[WalkStatEventCallback] = js.undefined
+  var directoryError: js.UndefOr[WalkStatArrayEventCallback] = js.undefined
+  var end: js.UndefOr[WalkStatArrayEventCallback] = js.undefined
+  var errors: js.UndefOr[WalkStatArrayEventCallback] = js.undefined
+  var file: js.UndefOr[WalkStatEventCallback] = js.undefined
+  var files: js.UndefOr[WalkStatArrayEventCallback] = js.undefined
+  var names: js.UndefOr[WalkNamesEventCallback] = js.undefined
+  var nodeError: js.UndefOr[WalkStatArrayEventCallback] = js.undefined
 }
 
 object WalkOptionsListeners {
   @scala.inline
-  def apply(): WalkOptionsListeners = {
+  def apply(
+    directories: (/* base */ String, /* names */ js.Array[WalkStats], /* next */ WalkNext) => Unit = null,
+    directory: (/* base */ String, /* names */ WalkStats, /* next */ WalkNext) => Unit = null,
+    directoryError: (/* base */ String, /* names */ js.Array[WalkStats], /* next */ WalkNext) => Unit = null,
+    end: (/* base */ String, /* names */ js.Array[WalkStats], /* next */ WalkNext) => Unit = null,
+    errors: (/* base */ String, /* names */ js.Array[WalkStats], /* next */ WalkNext) => Unit = null,
+    file: (/* base */ String, /* names */ WalkStats, /* next */ WalkNext) => Unit = null,
+    files: (/* base */ String, /* names */ js.Array[WalkStats], /* next */ WalkNext) => Unit = null,
+    names: (/* base */ String, /* names */ js.Array[String], /* next */ WalkNext) => Unit = null,
+    nodeError: (/* base */ String, /* names */ js.Array[WalkStats], /* next */ WalkNext) => Unit = null
+  ): WalkOptionsListeners = {
     val __obj = js.Dynamic.literal()
+    if (directories != null) __obj.updateDynamic("directories")(js.Any.fromFunction3(directories))
+    if (directory != null) __obj.updateDynamic("directory")(js.Any.fromFunction3(directory))
+    if (directoryError != null) __obj.updateDynamic("directoryError")(js.Any.fromFunction3(directoryError))
+    if (end != null) __obj.updateDynamic("end")(js.Any.fromFunction3(end))
+    if (errors != null) __obj.updateDynamic("errors")(js.Any.fromFunction3(errors))
+    if (file != null) __obj.updateDynamic("file")(js.Any.fromFunction3(file))
+    if (files != null) __obj.updateDynamic("files")(js.Any.fromFunction3(files))
+    if (names != null) __obj.updateDynamic("names")(js.Any.fromFunction3(names))
+    if (nodeError != null) __obj.updateDynamic("nodeError")(js.Any.fromFunction3(nodeError))
     __obj.asInstanceOf[WalkOptionsListeners]
   }
-  @scala.inline
-  implicit class WalkOptionsListenersOps[Self <: WalkOptionsListeners] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirectories(value: (/* base */ String, /* names */ js.Array[WalkStats], /* next */ WalkNext) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directories")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutDirectories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectory(value: (/* base */ String, /* names */ WalkStats, /* next */ WalkNext) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directory")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutDirectory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectoryError(value: (/* base */ String, /* names */ js.Array[WalkStats], /* next */ WalkNext) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directoryError")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutDirectoryError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directoryError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnd(value: (/* base */ String, /* names */ js.Array[WalkStats], /* next */ WalkNext) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrors(value: (/* base */ String, /* names */ js.Array[WalkStats], /* next */ WalkNext) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFile(value: (/* base */ String, /* names */ WalkStats, /* next */ WalkNext) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFiles(value: (/* base */ String, /* names */ js.Array[WalkStats], /* next */ WalkNext) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNames(value: (/* base */ String, /* names */ js.Array[String], /* next */ WalkNext) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("names")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("names")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeError(value: (/* base */ String, /* names */ js.Array[WalkStats], /* next */ WalkNext) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeError")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutNodeError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeError")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

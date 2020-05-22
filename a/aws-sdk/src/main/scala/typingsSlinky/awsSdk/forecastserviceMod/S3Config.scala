@@ -22,41 +22,10 @@ trait S3Config extends js.Object {
 
 object S3Config {
   @scala.inline
-  def apply(Path: S3Path, RoleArn: Arn): S3Config = {
+  def apply(Path: S3Path, RoleArn: Arn, KMSKeyArn: KMSKeyArn = null): S3Config = {
     val __obj = js.Dynamic.literal(Path = Path.asInstanceOf[js.Any], RoleArn = RoleArn.asInstanceOf[js.Any])
+    if (KMSKeyArn != null) __obj.updateDynamic("KMSKeyArn")(KMSKeyArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3Config]
   }
-  @scala.inline
-  implicit class S3ConfigOps[Self <: S3Config] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPath(value: S3Path): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKMSKeyArn(value: KMSKeyArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSKeyArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKMSKeyArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSKeyArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -12,16 +12,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WiredTigerData extends js.Object {
-  var LSM: Bloomfilterfalsepositives = js.native
-  var `block-manager`: Allocationsrequiringfileextension = js.native
-  var btree: Btreecheckpointgeneration = js.native
-  var cache: Bytescurrentlyinthecache = js.native
-  var cache_walk: Averagedifferencebetweencurrentevictiongenerationwhenthepagewaslastconsidered = js.native
-  var compression: Compressedpagesread = js.native
-  var cursor: Bulkloadedcursorinsertcalls = js.native
-  var reconciliation: Dictionarymatches = js.native
+  var LSM: Bloomfilterfalsepositives
+  var `block-manager`: Allocationsrequiringfileextension
+  var btree: Btreecheckpointgeneration
+  var cache: Bytescurrentlyinthecache
+  var cache_walk: Averagedifferencebetweencurrentevictiongenerationwhenthepagewaslastconsidered
+  var compression: Compressedpagesread
+  var cursor: Bulkloadedcursorinsertcalls
+  var reconciliation: Dictionarymatches
 }
 
 object WiredTigerData {
@@ -40,61 +39,5 @@ object WiredTigerData {
     __obj.updateDynamic("block-manager")(`block-manager`.asInstanceOf[js.Any])
     __obj.asInstanceOf[WiredTigerData]
   }
-  @scala.inline
-  implicit class WiredTigerDataOps[Self <: WiredTigerData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLSM(value: Bloomfilterfalsepositives): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LSM")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withBlock-manager`(value: Allocationsrequiringfileextension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("block-manager")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBtree(value: Btreecheckpointgeneration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("btree")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCache(value: Bytescurrentlyinthecache): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCache_walk(value: Averagedifferencebetweencurrentevictiongenerationwhenthepagewaslastconsidered): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache_walk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCompression(value: Compressedpagesread): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCursor(value: Bulkloadedcursorinsertcalls): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReconciliation(value: Dictionarymatches): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reconciliation")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

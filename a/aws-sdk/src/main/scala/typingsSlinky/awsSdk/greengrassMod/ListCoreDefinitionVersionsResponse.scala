@@ -18,41 +18,11 @@ trait ListCoreDefinitionVersionsResponse extends js.Object {
 
 object ListCoreDefinitionVersionsResponse {
   @scala.inline
-  def apply(): ListCoreDefinitionVersionsResponse = {
+  def apply(NextToken: string = null, Versions: listOfVersionInformation = null): ListCoreDefinitionVersionsResponse = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (Versions != null) __obj.updateDynamic("Versions")(Versions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListCoreDefinitionVersionsResponse]
   }
-  @scala.inline
-  implicit class ListCoreDefinitionVersionsResponseOps[Self <: ListCoreDefinitionVersionsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersions(value: listOfVersionInformation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Versions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Versions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

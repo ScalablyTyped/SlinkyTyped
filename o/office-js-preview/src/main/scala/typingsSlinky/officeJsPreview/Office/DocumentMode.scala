@@ -9,9 +9,9 @@ sealed trait DocumentMode extends js.Object
 
 /**
   * Specifies whether the document in the associated application is read-only or read-write.
-  * 
+  *
   * @remarks
-  *  
+  *
   * Returned by the mode property of the {@link Office.Document | Document} object.
   */
 @JSGlobal("Office.DocumentMode")

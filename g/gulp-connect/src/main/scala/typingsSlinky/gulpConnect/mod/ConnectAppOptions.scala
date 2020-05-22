@@ -8,197 +8,67 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConnectAppOptions extends js.Object {
   /** Whether or not to log debug messages. Defaults to false. */
-  var debug: js.UndefOr[Boolean] = js.native
+  var debug: js.UndefOr[Boolean] = js.undefined
   /** File to serve if url results in a 404. Defaults to undefined */
-  var fallback: js.UndefOr[String] = js.native
+  var fallback: js.UndefOr[String] = js.undefined
   /** Host to bind server to. Defaults to localhost. */
-  var host: js.UndefOr[String] = js.native
+  var host: js.UndefOr[String] = js.undefined
   /**
     * Options to pass to http.createServer (or false to disable https).
     * Defaults to false. When https is just set to true, then internally
     * some defaults will be used.
     */
-  var https: js.UndefOr[Boolean | ServerOptions] = js.native
+  var https: js.UndefOr[Boolean | ServerOptions] = js.undefined
   /** Value to pass into the serve-static's index option. See serve-static documentation for details. Defaults to true. */
-  var index: js.UndefOr[Boolean | String | js.Array[String]] = js.native
+  var index: js.UndefOr[Boolean | String | js.Array[String]] = js.undefined
   /** Enable/disable livereload or set live reload options. Defaults to false. */
-  var livereload: js.UndefOr[Boolean | LiveReloadOptions] = js.native
+  var livereload: js.UndefOr[Boolean | LiveReloadOptions] = js.undefined
   /** Middleware factory function which should return a list of connect handler functions . Defaults to () => []; */
-  var middleware: js.UndefOr[MiddlewareFactory] = js.native
+  var middleware: js.UndefOr[MiddlewareFactory] = js.undefined
   /** The name of this server. Used in logs. Defaults to "Server". */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /** The connect webserver port. Defaults to 8080 */
-  var port: js.UndefOr[Double] = js.native
+  var port: js.UndefOr[Double] = js.undefined
   /** The root path. Defaults to directory with gulpfile */
-  var root: js.UndefOr[String | js.Array[String]] = js.native
+  var root: js.UndefOr[String | js.Array[String]] = js.undefined
   /** A function to run custom initialization on the underlying http or https server */
-  var serverInit: js.UndefOr[js.Function1[/* server */ Server | typingsSlinky.node.httpsMod.Server, Unit]] = js.native
+  var serverInit: js.UndefOr[js.Function1[/* server */ Server | typingsSlinky.node.httpsMod.Server, Unit]] = js.undefined
   /** Don't log any messages. Defaults to false. */
-  var silent: js.UndefOr[Boolean] = js.native
+  var silent: js.UndefOr[Boolean] = js.undefined
 }
 
 object ConnectAppOptions {
   @scala.inline
-  def apply(): ConnectAppOptions = {
+  def apply(
+    debug: js.UndefOr[Boolean] = js.undefined,
+    fallback: String = null,
+    host: String = null,
+    https: Boolean | ServerOptions = null,
+    index: Boolean | String | js.Array[String] = null,
+    livereload: Boolean | LiveReloadOptions = null,
+    middleware: (/* connect */ js.Function0[typingsSlinky.connect.mod.Server] with TypeofconnectModule, /* options */ ConnectAppOptions) => js.Array[HandleFunction | ConnectRouteHandler] = null,
+    name: String = null,
+    port: js.UndefOr[Double] = js.undefined,
+    root: String | js.Array[String] = null,
+    serverInit: /* server */ Server | typingsSlinky.node.httpsMod.Server => Unit = null,
+    silent: js.UndefOr[Boolean] = js.undefined
+  ): ConnectAppOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.get.asInstanceOf[js.Any])
+    if (fallback != null) __obj.updateDynamic("fallback")(fallback.asInstanceOf[js.Any])
+    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
+    if (https != null) __obj.updateDynamic("https")(https.asInstanceOf[js.Any])
+    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
+    if (livereload != null) __obj.updateDynamic("livereload")(livereload.asInstanceOf[js.Any])
+    if (middleware != null) __obj.updateDynamic("middleware")(js.Any.fromFunction2(middleware))
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(port)) __obj.updateDynamic("port")(port.get.asInstanceOf[js.Any])
+    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
+    if (serverInit != null) __obj.updateDynamic("serverInit")(js.Any.fromFunction1(serverInit))
+    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectAppOptions]
   }
-  @scala.inline
-  implicit class ConnectAppOptionsOps[Self <: ConnectAppOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDebug(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFallback(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttps(value: Boolean | ServerOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("https")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("https")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndex(value: Boolean | String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLivereload(value: Boolean | LiveReloadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("livereload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLivereload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("livereload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMiddleware(
-      value: (/* connect */ js.Function0[typingsSlinky.connect.mod.Server] with TypeofconnectModule, /* options */ ConnectAppOptions) => js.Array[HandleFunction | ConnectRouteHandler]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("middleware")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutMiddleware: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("middleware")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerInit(value: /* server */ Server | typingsSlinky.node.httpsMod.Server => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverInit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutServerInit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverInit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSilent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSilent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

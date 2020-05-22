@@ -8,14 +8,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Navigate[TEntity] extends js.Object {
   /**
     * raised when the active cell is changed
     * @param {ng.IScope} scope The grid scope
     * @param {navigateHandler} handler Callback
     */
-  def navigate(scope: IScope, handler: navigateHandler[TEntity]): Unit = js.native
+  def navigate(scope: IScope, handler: navigateHandler[TEntity]): Unit
   /**
     * viewPortKeyDown is raised when the viewPort receives a keyDown event.
     * Cells never get focus in uiGrid due to the difficulties of setting focus on a cell that is
@@ -23,7 +22,7 @@ trait Navigate[TEntity] extends js.Object {
     * @param {ng.IScope} scope The grid scope
     * @param {viewportKeyDownHandler} handler Callback
     */
-  def viewPortKeyDown(scope: IScope, handler: viewportKeyDownHandler[TEntity]): Unit = js.native
+  def viewPortKeyDown(scope: IScope, handler: viewportKeyDownHandler[TEntity]): Unit
   /**
     * viewPortKeyPress is raised when the viewPort receives a keyPress event.
     * Cells never get focus in uiGrid due to the difficulties of setting focus on a cell that is
@@ -31,7 +30,7 @@ trait Navigate[TEntity] extends js.Object {
     * @param {ng.IScope} scope The grid scope
     * @param {viewportKeyPressHandler} handler Callback
     */
-  def viewPortKeyPress(scope: IScope, handler: viewportKeyPressHandler[TEntity]): Unit = js.native
+  def viewPortKeyPress(scope: IScope, handler: viewportKeyPressHandler[TEntity]): Unit
 }
 
 object Navigate {
@@ -44,31 +43,5 @@ object Navigate {
     val __obj = js.Dynamic.literal(navigate = js.Any.fromFunction2(navigate), viewPortKeyDown = js.Any.fromFunction2(viewPortKeyDown), viewPortKeyPress = js.Any.fromFunction2(viewPortKeyPress))
     __obj.asInstanceOf[Navigate[TEntity]]
   }
-  @scala.inline
-  implicit class NavigateOps[Self[tentity] <: Navigate[tentity], TEntity] (val x: Self[TEntity]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TEntity] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TEntity]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[TEntity] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TEntity] with Other]
-    @scala.inline
-    def withNavigate(value: (IScope, navigateHandler[TEntity]) => Unit): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigate")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withViewPortKeyDown(value: (IScope, viewportKeyDownHandler[TEntity]) => Unit): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewPortKeyDown")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withViewPortKeyPress(value: (IScope, viewportKeyPressHandler[TEntity]) => Unit): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewPortKeyPress")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

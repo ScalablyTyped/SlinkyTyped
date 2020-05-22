@@ -14,29 +14,10 @@ trait DescribeDeploymentsResult extends js.Object {
 
 object DescribeDeploymentsResult {
   @scala.inline
-  def apply(): DescribeDeploymentsResult = {
+  def apply(Deployments: Deployments = null): DescribeDeploymentsResult = {
     val __obj = js.Dynamic.literal()
+    if (Deployments != null) __obj.updateDynamic("Deployments")(Deployments.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeDeploymentsResult]
   }
-  @scala.inline
-  implicit class DescribeDeploymentsResultOps[Self <: DescribeDeploymentsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeployments(value: Deployments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Deployments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeployments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Deployments")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

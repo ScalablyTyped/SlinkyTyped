@@ -35,37 +35,5 @@ object CreateCustomKeyStoreRequest {
     val __obj = js.Dynamic.literal(CloudHsmClusterId = CloudHsmClusterId.asInstanceOf[js.Any], CustomKeyStoreName = CustomKeyStoreName.asInstanceOf[js.Any], KeyStorePassword = KeyStorePassword.asInstanceOf[js.Any], TrustAnchorCertificate = TrustAnchorCertificate.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateCustomKeyStoreRequest]
   }
-  @scala.inline
-  implicit class CreateCustomKeyStoreRequestOps[Self <: CreateCustomKeyStoreRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloudHsmClusterId(value: CloudHsmClusterIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudHsmClusterId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustomKeyStoreName(value: CustomKeyStoreNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomKeyStoreName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeyStorePassword(value: KeyStorePasswordType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyStorePassword")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrustAnchorCertificate(value: TrustAnchorCertificateType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrustAnchorCertificate")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

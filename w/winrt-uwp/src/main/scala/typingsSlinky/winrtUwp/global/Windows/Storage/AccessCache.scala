@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Storage
 
+import typingsSlinky.winrtUwp.Windows.Storage.AccessCache.AccessListEntry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +17,11 @@ object AccessCache extends js.Object {
   /** Provides data about an ItemRemoved event. */
   @js.native
   abstract class ItemRemovedEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.Storage.AccessCache.ItemRemovedEventArgs
+    extends typingsSlinky.winrtUwp.Windows.Storage.AccessCache.ItemRemovedEventArgs {
+    /** Gets information about the StorageFile or StorageFolder that was removed from the StorageItemMostRecentlyUsedList . */
+    /* CompleteClass */
+    override var removedEntry: AccessListEntry = js.native
+  }
   
   /** Provides static properties for you to get your app's most recently used list (MRU) (use StorageApplicationPermissions.MostRecentlyUsedList ) and future-access list (use StorageApplicationPermissions.FutureAccessList . */
   @js.native

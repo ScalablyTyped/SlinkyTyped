@@ -5,22 +5,21 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** store the type and value of an XML attribute inside a XNameContainer */
-@js.native
 trait AttributeData extends js.Object {
   /**
     * the namespace of this XML attribute.
     *
     * This string can be empty if you are not using namespaces.
     */
-  var Namespace: String = js.native
+  var Namespace: String
   /**
     * the type of this XML attribute.
     *
     * For non validating parsers this must be CDATA.
     */
-  var Type: String = js.native
+  var Type: String
   /** the string value of this XML attribute. */
-  var Value: String = js.native
+  var Value: String
 }
 
 object AttributeData {
@@ -29,31 +28,5 @@ object AttributeData {
     val __obj = js.Dynamic.literal(Namespace = Namespace.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any], Value = Value.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttributeData]
   }
-  @scala.inline
-  implicit class AttributeDataOps[Self <: AttributeData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNamespace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Namespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,65 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PointDistributionBucket extends js.Object {
   /** The number of events whose values are in the interval defined by this bucket. */
-  var count: js.UndefOr[String] = js.native
+  var count: js.UndefOr[String] = js.undefined
   /** The lower bound of the value interval of this bucket (inclusive). */
-  var lowerBound: js.UndefOr[Double] = js.native
+  var lowerBound: js.UndefOr[Double] = js.undefined
   /** The upper bound of the value interval of this bucket (exclusive). */
-  var upperBound: js.UndefOr[Double] = js.native
+  var upperBound: js.UndefOr[Double] = js.undefined
 }
 
 object PointDistributionBucket {
   @scala.inline
-  def apply(): PointDistributionBucket = {
+  def apply(
+    count: String = null,
+    lowerBound: js.UndefOr[Double] = js.undefined,
+    upperBound: js.UndefOr[Double] = js.undefined
+  ): PointDistributionBucket = {
     val __obj = js.Dynamic.literal()
+    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
+    if (!js.isUndefined(lowerBound)) __obj.updateDynamic("lowerBound")(lowerBound.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(upperBound)) __obj.updateDynamic("upperBound")(upperBound.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PointDistributionBucket]
   }
-  @scala.inline
-  implicit class PointDistributionBucketOps[Self <: PointDistributionBucket] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLowerBound(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerBound")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLowerBound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerBound")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpperBound(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upperBound")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpperBound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upperBound")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

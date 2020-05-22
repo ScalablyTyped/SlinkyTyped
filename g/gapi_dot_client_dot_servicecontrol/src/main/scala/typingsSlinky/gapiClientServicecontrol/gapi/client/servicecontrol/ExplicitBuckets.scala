@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExplicitBuckets extends js.Object {
   /**
     * 'bound' is a list of strictly increasing boundaries between
@@ -23,34 +22,15 @@ trait ExplicitBuckets extends js.Object {
     * 0 < i < bound_size()            bound[i-1]     bound[i]
     * i == bound_size() (overflow)    bound[i-1]     +inf
     */
-  var bounds: js.UndefOr[js.Array[Double]] = js.native
+  var bounds: js.UndefOr[js.Array[Double]] = js.undefined
 }
 
 object ExplicitBuckets {
   @scala.inline
-  def apply(): ExplicitBuckets = {
+  def apply(bounds: js.Array[Double] = null): ExplicitBuckets = {
     val __obj = js.Dynamic.literal()
+    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExplicitBuckets]
   }
-  @scala.inline
-  implicit class ExplicitBucketsOps[Self <: ExplicitBuckets] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBounds(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBounds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

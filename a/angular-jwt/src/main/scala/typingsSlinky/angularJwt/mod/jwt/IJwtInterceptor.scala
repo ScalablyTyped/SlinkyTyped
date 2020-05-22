@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IJwtInterceptor extends js.Object {
-  def tokenGetter(params: js.Any*): String = js.native
+  def tokenGetter(params: js.Any*): String
 }
 
 object IJwtInterceptor {
@@ -15,19 +14,5 @@ object IJwtInterceptor {
     val __obj = js.Dynamic.literal(tokenGetter = js.Any.fromFunction1(tokenGetter))
     __obj.asInstanceOf[IJwtInterceptor]
   }
-  @scala.inline
-  implicit class IJwtInterceptorOps[Self <: IJwtInterceptor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTokenGetter(value: /* repeated */ js.Any => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenGetter")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

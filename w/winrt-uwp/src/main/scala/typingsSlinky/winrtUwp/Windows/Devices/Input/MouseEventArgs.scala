@@ -5,10 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Contains event data for the MouseMoved event. */
-@js.native
 trait MouseEventArgs extends js.Object {
   /** Gets a value that indicates the change in the screen location of the mouse pointer since the last mouse event. */
-  var mouseDelta: MouseDelta = js.native
+  var mouseDelta: MouseDelta
 }
 
 object MouseEventArgs {
@@ -17,19 +16,5 @@ object MouseEventArgs {
     val __obj = js.Dynamic.literal(mouseDelta = mouseDelta.asInstanceOf[js.Any])
     __obj.asInstanceOf[MouseEventArgs]
   }
-  @scala.inline
-  implicit class MouseEventArgsOps[Self <: MouseEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMouseDelta(value: MouseDelta): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseDelta")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -25,17 +25,17 @@ object dds extends js.Object {
   class DataCache protected ()
     extends typingsSlinky.vortexWebClient.DDS.DataCache {
     /**
-    		 * Constructs a `DataCache` with a given `depth`. If the `cache` parameter
-    		 * is present, then the current cache is initialized with this parameter.
-    		 *
-    		 * Provides a way of storing and flexibly accessing the
-    		 * data received through a `DataReader`. A `DataCache` is organized as
-    		 * a map of queues. The depth of the queues is specified at construction
-    		 * time.
-    		 *
-    		 * @param depth - cache size
-    		 * @param cache - cache data structure
-    		 */
+      * Constructs a `DataCache` with a given `depth`. If the `cache` parameter
+      * is present, then the current cache is initialized with this parameter.
+      *
+      * Provides a way of storing and flexibly accessing the
+      * data received through a `DataReader`. A `DataCache` is organized as
+      * a map of queues. The depth of the queues is specified at construction
+      * time.
+      *
+      * @param depth - cache size
+      * @param cache - cache data structure
+      */
     def this(depth: Double, cache: js.Any) = this()
   }
   
@@ -43,57 +43,99 @@ object dds extends js.Object {
   class DataReader protected ()
     extends typingsSlinky.vortexWebClient.DDS.DataReader {
     /**
-    		 * Creates a `DataReader` for a given topic and a specific in a specific DDS runtime.
-    		 *
-    		 * A `DataReader` allows to read data for a given topic with a specific QoS. A `DataReader`
-    		 * * goes through different states, it is intially disconnected and changes to the connected state
-    		 * when the underlying transport connection is successfully established with the server. At this point
-    		 * a `DataReader` can be explicitely closed or disconnected. A disconnection can happen as the result
-    		 * of a network failure or server failure. Disconnection and reconnections are managed by the runtime.
-    		 *
-    		 * @param runtime - DDS Runtime
-    		 * @param topic - DDS Topic
-    		 * @param qos - DataReader quality of service
-    		 */
+      * Creates a `DataReader` for a given topic and a specific in a specific DDS runtime.
+      *
+      * A `DataReader` allows to read data for a given topic with a specific QoS. A `DataReader`
+      * * goes through different states, it is intially disconnected and changes to the connected state
+      * when the underlying transport connection is successfully established with the server. At this point
+      * a `DataReader` can be explicitely closed or disconnected. A disconnection can happen as the result
+      * of a network failure or server failure. Disconnection and reconnections are managed by the runtime.
+      *
+      * @param runtime - DDS Runtime
+      * @param topic - DDS Topic
+      * @param qos - DataReader quality of service
+      */
     def this(runtime: Runtime, topic: typingsSlinky.vortexWebClient.DDS.Topic, qos: EntityQos) = this()
+    /**
+      * Attaches the  listener `l` to this data reader and returns
+      * the id associated to the listener.
+      * @param l - listener code
+      * @returns listener handle
+      */
+    /* CompleteClass */
+    override def addListener(l: js.Function1[/* msg */ js.Any, Unit]): Double = js.native
+    /**
+      * closes the DataReader
+      */
+    /* CompleteClass */
+    override def close(): Unit = js.native
+    /**
+      * removes a listener from this data reader.
+      * @param idx - listener id
+      */
+    /* CompleteClass */
+    override def removeListener(idx: Double): Unit = js.native
+    /* CompleteClass */
+    override def resetStats(): Unit = js.native
   }
   
   @js.native
   class DataWriter protected ()
     extends typingsSlinky.vortexWebClient.DDS.DataWriter {
     /**
-    		 * Creates a `DataWriter` for a given topic and a specific in a specific DDS runtime
-    		 *
-    		 * defines a DDS data writer. This type
-    		 * is used to write data for a specific topic with a given QoS.
-    		 * A `DataWriter` goes through different states, it is intially disconnected and changes to the connected
-    		 * state when the underlying transport connection is successfully established with the server.
-    		 * At this point a `DataWriter` can be explicitely closed or disconnected. A disconnection can happen
-    		 * as the result of a network failure or server failure. Disconnection and reconnections are managed by the
-    		 * runtime.
-    		 *
-    		 * @param runtime - DDS Runtime
-    		 * @param topic - DDS Topic
-    		 * @param qos - DataWriter quality of service
-    		 */
+      * Creates a `DataWriter` for a given topic and a specific in a specific DDS runtime
+      *
+      * defines a DDS data writer. This type
+      * is used to write data for a specific topic with a given QoS.
+      * A `DataWriter` goes through different states, it is intially disconnected and changes to the connected
+      * state when the underlying transport connection is successfully established with the server.
+      * At this point a `DataWriter` can be explicitely closed or disconnected. A disconnection can happen
+      * as the result of a network failure or server failure. Disconnection and reconnections are managed by the
+      * runtime.
+      *
+      * @param runtime - DDS Runtime
+      * @param topic - DDS Topic
+      * @param qos - DataWriter quality of service
+      */
     def this(runtime: Runtime, topic: typingsSlinky.vortexWebClient.DDS.Topic, qos: EntityQos) = this()
+    /**
+      * Closes the DataWriter
+      */
+    /* CompleteClass */
+    override def close(): Unit = js.native
+    /**
+      * Writes one or more samples.
+      * @param ds - data sample
+      */
+    /* CompleteClass */
+    override def write(ds: js.Any*): Unit = js.native
   }
   
   @js.native
   class Topic protected ()
     extends typingsSlinky.vortexWebClient.DDS.Topic {
     /**
-    		 * Creates a `Topic` in the domain `did`, named `tname`, having `qos` Qos,
-    		 * for the type `ttype` whose registered name is `tregtype`
-    		 * @param {number} did - DDS domain ID
-    		 * @param {string} tname - topic name
-    		 * @param {TopicQos} qos - topic Qos
-    		 * @param {string} ttype - topic type. If not specified, a generic type is used.
-    		 * @param {string} tregtype - topic registered type name. If not specified, 'ttype' is used.
-    		 */
+      * Creates a `Topic` in the domain `did`, named `tname`, having `qos` Qos,
+      * for the type `ttype` whose registered name is `tregtype`
+      * @param {number} did - DDS domain ID
+      * @param {string} tname - topic name
+      * @param {TopicQos} qos - topic Qos
+      * @param {string} ttype - topic type. If not specified, a generic type is used.
+      * @param {string} tregtype - topic registered type name. If not specified, 'ttype' is used.
+      */
     def this(did: Double, tname: String, qos: EntityQos) = this()
     def this(did: Double, tname: String, qos: EntityQos, ttype: String) = this()
     def this(did: Double, tname: String, qos: EntityQos, ttype: String, tregtype: String) = this()
+    /**
+      * Called when topic gets registered in the runtime
+      */
+    /* CompleteClass */
+    override def onregistered(): Unit = js.native
+    /**
+      * Called when topic gets unregistered in the runtime
+      */
+    /* CompleteClass */
+    override def onunregistered(): Unit = js.native
   }
   
   var DataReaderQos: EntityQos = js.native

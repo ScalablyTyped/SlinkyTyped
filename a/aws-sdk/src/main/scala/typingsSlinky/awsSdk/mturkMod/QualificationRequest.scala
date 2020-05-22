@@ -34,89 +34,22 @@ trait QualificationRequest extends js.Object {
 
 object QualificationRequest {
   @scala.inline
-  def apply(): QualificationRequest = {
+  def apply(
+    Answer: String = null,
+    QualificationRequestId: String = null,
+    QualificationTypeId: EntityId = null,
+    SubmitTime: js.Date = null,
+    Test: String = null,
+    WorkerId: CustomerId = null
+  ): QualificationRequest = {
     val __obj = js.Dynamic.literal()
+    if (Answer != null) __obj.updateDynamic("Answer")(Answer.asInstanceOf[js.Any])
+    if (QualificationRequestId != null) __obj.updateDynamic("QualificationRequestId")(QualificationRequestId.asInstanceOf[js.Any])
+    if (QualificationTypeId != null) __obj.updateDynamic("QualificationTypeId")(QualificationTypeId.asInstanceOf[js.Any])
+    if (SubmitTime != null) __obj.updateDynamic("SubmitTime")(SubmitTime.asInstanceOf[js.Any])
+    if (Test != null) __obj.updateDynamic("Test")(Test.asInstanceOf[js.Any])
+    if (WorkerId != null) __obj.updateDynamic("WorkerId")(WorkerId.asInstanceOf[js.Any])
     __obj.asInstanceOf[QualificationRequest]
   }
-  @scala.inline
-  implicit class QualificationRequestOps[Self <: QualificationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnswer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Answer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnswer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Answer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQualificationRequestId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QualificationRequestId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQualificationRequestId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QualificationRequestId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQualificationTypeId(value: EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QualificationTypeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQualificationTypeId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QualificationTypeId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubmitTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubmitTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubmitTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubmitTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTest(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Test")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Test")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkerId(value: CustomerId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkerId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

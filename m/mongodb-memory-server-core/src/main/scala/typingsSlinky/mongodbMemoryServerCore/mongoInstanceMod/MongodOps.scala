@@ -7,56 +7,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MongodOps extends js.Object {
-  var binary: js.UndefOr[MongoBinaryOpts] = js.native
-  var instance: Args = js.native
-  var spawn: js.UndefOr[SpawnOptions] = js.native
+  var binary: js.UndefOr[MongoBinaryOpts] = js.undefined
+  var instance: Args
+  var spawn: js.UndefOr[SpawnOptions] = js.undefined
 }
 
 object MongodOps {
   @scala.inline
-  def apply(instance: Args): MongodOps = {
+  def apply(instance: Args, binary: MongoBinaryOpts = null, spawn: SpawnOptions = null): MongodOps = {
     val __obj = js.Dynamic.literal(instance = instance.asInstanceOf[js.Any])
+    if (binary != null) __obj.updateDynamic("binary")(binary.asInstanceOf[js.Any])
+    if (spawn != null) __obj.updateDynamic("spawn")(spawn.asInstanceOf[js.Any])
     __obj.asInstanceOf[MongodOps]
   }
-  @scala.inline
-  implicit class MongodOpsOps[Self <: MongodOps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstance(value: Args): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBinary(value: MongoBinaryOpts): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBinary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpawn(value: SpawnOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spawn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpawn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spawn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

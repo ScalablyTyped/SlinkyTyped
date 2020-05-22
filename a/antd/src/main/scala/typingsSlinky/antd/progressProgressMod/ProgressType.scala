@@ -11,12 +11,3 @@ import scala.scalajs.js.annotation._
 */
 trait ProgressType extends js.Object
 
-object ProgressType {
-  @scala.inline
-  def line: typingsSlinky.antd.antdStrings.line = "line".asInstanceOf[typingsSlinky.antd.antdStrings.line]
-  @scala.inline
-  def circle: typingsSlinky.antd.antdStrings.circle = "circle".asInstanceOf[typingsSlinky.antd.antdStrings.circle]
-  @scala.inline
-  def dashboard: typingsSlinky.antd.antdStrings.dashboard = "dashboard".asInstanceOf[typingsSlinky.antd.antdStrings.dashboard]
-}
-

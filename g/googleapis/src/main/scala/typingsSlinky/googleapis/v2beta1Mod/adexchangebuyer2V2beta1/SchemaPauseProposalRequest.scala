@@ -19,29 +19,10 @@ trait SchemaPauseProposalRequest extends js.Object {
 
 object SchemaPauseProposalRequest {
   @scala.inline
-  def apply(): SchemaPauseProposalRequest = {
+  def apply(reason: String = null): SchemaPauseProposalRequest = {
     val __obj = js.Dynamic.literal()
+    if (reason != null) __obj.updateDynamic("reason")(reason.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPauseProposalRequest]
   }
-  @scala.inline
-  implicit class SchemaPauseProposalRequestOps[Self <: SchemaPauseProposalRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

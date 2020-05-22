@@ -34,77 +34,20 @@ trait CopySnapshotRequest extends js.Object {
 
 object CopySnapshotRequest {
   @scala.inline
-  def apply(sourceRegion: RegionName, targetSnapshotName: ResourceName): CopySnapshotRequest = {
+  def apply(
+    sourceRegion: RegionName,
+    targetSnapshotName: ResourceName,
+    restoreDate: String = null,
+    sourceResourceName: String = null,
+    sourceSnapshotName: ResourceName = null,
+    useLatestRestorableAutoSnapshot: js.UndefOr[Boolean] = js.undefined
+  ): CopySnapshotRequest = {
     val __obj = js.Dynamic.literal(sourceRegion = sourceRegion.asInstanceOf[js.Any], targetSnapshotName = targetSnapshotName.asInstanceOf[js.Any])
+    if (restoreDate != null) __obj.updateDynamic("restoreDate")(restoreDate.asInstanceOf[js.Any])
+    if (sourceResourceName != null) __obj.updateDynamic("sourceResourceName")(sourceResourceName.asInstanceOf[js.Any])
+    if (sourceSnapshotName != null) __obj.updateDynamic("sourceSnapshotName")(sourceSnapshotName.asInstanceOf[js.Any])
+    if (!js.isUndefined(useLatestRestorableAutoSnapshot)) __obj.updateDynamic("useLatestRestorableAutoSnapshot")(useLatestRestorableAutoSnapshot.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CopySnapshotRequest]
   }
-  @scala.inline
-  implicit class CopySnapshotRequestOps[Self <: CopySnapshotRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSourceRegion(value: RegionName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetSnapshotName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetSnapshotName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRestoreDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restoreDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestoreDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restoreDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceResourceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceResourceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceResourceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceResourceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceSnapshotName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceSnapshotName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceSnapshotName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceSnapshotName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseLatestRestorableAutoSnapshot(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useLatestRestorableAutoSnapshot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseLatestRestorableAutoSnapshot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useLatestRestorableAutoSnapshot")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

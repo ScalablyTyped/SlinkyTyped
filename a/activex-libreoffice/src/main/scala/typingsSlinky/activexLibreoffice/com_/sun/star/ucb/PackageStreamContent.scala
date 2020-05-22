@@ -22,7 +22,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.ucb.PackageContentProvider
   * @see com.sun.star.ucb.PackageFolderContent
   */
-@js.native
 trait PackageStreamContent
   extends XCommandProcessor2
      with XComponent

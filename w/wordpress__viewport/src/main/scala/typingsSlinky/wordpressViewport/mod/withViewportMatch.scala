@@ -1,5 +1,7 @@
 package typingsSlinky.wordpressViewport.mod
 
+import slinky.core.ReactComponentClass
+import typingsSlinky.std.Omit
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,9 +21,9 @@ object withViewportMatch extends js.Object {
     *
     * ```jsx
     * function MyComponent( { isMobile } ) {
-    * 	return (
-    * 		<div>Currently: { isMobile ? 'Mobile' : 'Not Mobile' }</div>
-    * 	);
+    *     return (
+    *         <div>Currently: { isMobile ? 'Mobile' : 'Not Mobile' }</div>
+    *     );
     * }
     *
     * MyComponent = withViewportMatch( { isMobile: '< small' } )( MyComponent );
@@ -29,8 +31,8 @@ object withViewportMatch extends js.Object {
     */
   // prettier-ignore
   def apply[T /* <: Record[String, String] */](queries: T): js.Function1[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ComponentType<any> */ /* component */ js.Any, 
-    _
+    /* component */ ReactComponentClass[_], 
+    ReactComponentClass[Omit[_, /* keyof T */ String]]
   ] = js.native
 }
 

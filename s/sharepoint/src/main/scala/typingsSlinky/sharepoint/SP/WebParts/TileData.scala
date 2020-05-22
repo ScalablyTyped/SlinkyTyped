@@ -7,20 +7,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TileData extends ClientValueObject {
-  def get_backgroundImageLocation(): String = js.native
-  def get_description(): String = js.native
-  def get_iD(): Double = js.native
-  def get_linkLocation(): String = js.native
-  def get_tileOrder(): Double = js.native
-  def get_title(): String = js.native
-  def set_backgroundImageLocation(value: String): Unit = js.native
-  def set_description(value: String): Unit = js.native
-  def set_iD(value: Double): Unit = js.native
-  def set_linkLocation(value: String): Unit = js.native
-  def set_tileOrder(value: Double): Unit = js.native
-  def set_title(value: String): Unit = js.native
+  def get_backgroundImageLocation(): String
+  def get_description(): String
+  def get_iD(): Double
+  def get_linkLocation(): String
+  def get_tileOrder(): Double
+  def get_title(): String
+  def set_backgroundImageLocation(value: String): Unit
+  def set_description(value: String): Unit
+  def set_iD(value: Double): Unit
+  def set_linkLocation(value: String): Unit
+  def set_tileOrder(value: Double): Unit
+  def set_title(value: String): Unit
 }
 
 object TileData {
@@ -47,85 +46,5 @@ object TileData {
     val __obj = js.Dynamic.literal(customFromJson = js.Any.fromFunction1(customFromJson), customWriteToXml = js.Any.fromFunction2(customWriteToXml), fromJson = js.Any.fromFunction1(fromJson), get_backgroundImageLocation = js.Any.fromFunction0(get_backgroundImageLocation), get_description = js.Any.fromFunction0(get_description), get_iD = js.Any.fromFunction0(get_iD), get_linkLocation = js.Any.fromFunction0(get_linkLocation), get_tileOrder = js.Any.fromFunction0(get_tileOrder), get_title = js.Any.fromFunction0(get_title), get_typeId = js.Any.fromFunction0(get_typeId), set_backgroundImageLocation = js.Any.fromFunction1(set_backgroundImageLocation), set_description = js.Any.fromFunction1(set_description), set_iD = js.Any.fromFunction1(set_iD), set_linkLocation = js.Any.fromFunction1(set_linkLocation), set_tileOrder = js.Any.fromFunction1(set_tileOrder), set_title = js.Any.fromFunction1(set_title), writeToXml = js.Any.fromFunction2(writeToXml))
     __obj.asInstanceOf[TileData]
   }
-  @scala.inline
-  implicit class TileDataOps[Self <: TileData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet_backgroundImageLocation(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_backgroundImageLocation")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_description(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_description")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_iD(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_iD")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_linkLocation(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_linkLocation")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_tileOrder(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_tileOrder")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_title(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_title")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSet_backgroundImageLocation(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_backgroundImageLocation")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_description(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_description")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_iD(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_iD")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_linkLocation(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_linkLocation")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_tileOrder(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_tileOrder")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_title(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_title")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

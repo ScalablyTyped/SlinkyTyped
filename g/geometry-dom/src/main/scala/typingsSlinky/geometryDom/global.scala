@@ -35,12 +35,64 @@ object global extends js.Object {
     def this(x: Double, y: Double) = this()
     def this(x: Double, y: Double, z: Double) = this()
     def this(x: Double, y: Double, z: Double, w: Double) = this()
+    /**
+      * w coordinate / readonly
+      */
+    /* CompleteClass */
+    override var w: Double = js.native
+    /**
+      * x coordinate / readonly
+      */
+    /* CompleteClass */
+    override var x: Double = js.native
+    /**
+      * y coordinate / readonly
+      */
+    /* CompleteClass */
+    override var y: Double = js.native
+    /**
+      * z coordinate / readonly
+      */
+    /* CompleteClass */
+    override var z: Double = js.native
+    /**
+      * Post-multiply point with matrix.
+      * @param matrix
+      */
+    /* CompleteClass */
+    override def matrixTransform(matrix: typingsSlinky.geometryDom.GeometryDom.DOMMatrixReadOnly): typingsSlinky.geometryDom.GeometryDom.DOMPoint = js.native
   }
   
   @js.native
   class DOMPointReadOnly protected ()
     extends typingsSlinky.geometryDom.GeometryDom.DOMPointReadOnly {
     def this(x: Double, y: Double, z: Double, w: Double) = this()
+    /**
+      * w coordinate / readonly
+      */
+    /* CompleteClass */
+    override var w: Double = js.native
+    /**
+      * x coordinate / readonly
+      */
+    /* CompleteClass */
+    override var x: Double = js.native
+    /**
+      * y coordinate / readonly
+      */
+    /* CompleteClass */
+    override var y: Double = js.native
+    /**
+      * z coordinate / readonly
+      */
+    /* CompleteClass */
+    override var z: Double = js.native
+    /**
+      * Post-multiply point with matrix.
+      * @param matrix
+      */
+    /* CompleteClass */
+    override def matrixTransform(matrix: typingsSlinky.geometryDom.GeometryDom.DOMMatrixReadOnly): typingsSlinky.geometryDom.GeometryDom.DOMPoint = js.native
   }
   
   @js.native
@@ -51,18 +103,123 @@ object global extends js.Object {
     def this(p1: DOMPointInit, p2: DOMPointInit) = this()
     def this(p1: DOMPointInit, p2: DOMPointInit, p3: DOMPointInit) = this()
     def this(p1: DOMPointInit, p2: DOMPointInit, p3: DOMPointInit, p4: DOMPointInit) = this()
+    /**
+      * the associated bounding rectangle of the quadrilateral
+      */
+    /* CompleteClass */
+    override var bounds: typingsSlinky.geometryDom.GeometryDom.DOMRectReadOnly = js.native
+    /**
+      * a DOMPoint that represents p1 of the quadrilateral
+      */
+    /* CompleteClass */
+    override var p1: typingsSlinky.geometryDom.GeometryDom.DOMPoint = js.native
+    /**
+      * a DOMPoint that represents p2 of the quadrilateral
+      */
+    /* CompleteClass */
+    override var p2: typingsSlinky.geometryDom.GeometryDom.DOMPoint = js.native
+    /**
+      * a DOMPoint that represents p3 of the quadrilateral
+      */
+    /* CompleteClass */
+    override var p3: typingsSlinky.geometryDom.GeometryDom.DOMPoint = js.native
+    /**
+      * a DOMPoint that represents p4 of the quadrilateral
+      */
+    /* CompleteClass */
+    override var p4: typingsSlinky.geometryDom.GeometryDom.DOMPoint = js.native
   }
   
   @js.native
   class DOMRect protected ()
     extends typingsSlinky.geometryDom.GeometryDom.DOMRect {
     def this(x: Double, y: Double, width: Double, height: Double) = this()
+    /**
+      * max(y coordinate, y coordinate + height dimension)
+      */
+    /* CompleteClass */
+    override var bottom: Double = js.native
+    /**
+      * height value
+      */
+    /* CompleteClass */
+    override var height: Double = js.native
+    /**
+      * min(x coordinate, x coordinate + width dimension)
+      */
+    /* CompleteClass */
+    override var left: Double = js.native
+    /**
+      * max(x coordinate, x coordinate + width dimension)
+      */
+    /* CompleteClass */
+    override var right: Double = js.native
+    /**
+      * min(y coordinate, y coordinate + height dimension)
+      */
+    /* CompleteClass */
+    override var top: Double = js.native
+    /**
+      * width value
+      */
+    /* CompleteClass */
+    override var width: Double = js.native
+    /**
+      * x coordinate
+      */
+    /* CompleteClass */
+    override var x: Double = js.native
+    /**
+      * y coordinate
+      */
+    /* CompleteClass */
+    override var y: Double = js.native
   }
   
   @js.native
   class DOMRectReadOnly protected ()
     extends typingsSlinky.geometryDom.GeometryDom.DOMRectReadOnly {
     def this(x: Double, y: Double, width: Double, height: Double) = this()
+    /**
+      * max(y coordinate, y coordinate + height dimension)
+      */
+    /* CompleteClass */
+    override var bottom: Double = js.native
+    /**
+      * height value
+      */
+    /* CompleteClass */
+    override var height: Double = js.native
+    /**
+      * min(x coordinate, x coordinate + width dimension)
+      */
+    /* CompleteClass */
+    override var left: Double = js.native
+    /**
+      * max(x coordinate, x coordinate + width dimension)
+      */
+    /* CompleteClass */
+    override var right: Double = js.native
+    /**
+      * min(y coordinate, y coordinate + height dimension)
+      */
+    /* CompleteClass */
+    override var top: Double = js.native
+    /**
+      * width value
+      */
+    /* CompleteClass */
+    override var width: Double = js.native
+    /**
+      * x coordinate
+      */
+    /* CompleteClass */
+    override var x: Double = js.native
+    /**
+      * y coordinate
+      */
+    /* CompleteClass */
+    override var y: Double = js.native
   }
   
   @js.native

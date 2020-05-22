@@ -6,75 +6,27 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<office-ui-fabric-react.office-ui-fabric-react/lib/components/FloatingPicker/Suggestions/Suggestions.types.ISuggestionsControlProps<any>, 'shouldSelectFirstItem' | 'headerItemsProps' | 'footerItemsProps' | 'showRemoveButtons'> */
-@js.native
 trait IBaseFloatingPickerSuggestionProps extends js.Object {
-  var footerItemsProps: js.UndefOr[js.Array[ISuggestionsHeaderFooterProps]] = js.native
-  var headerItemsProps: js.UndefOr[js.Array[ISuggestionsHeaderFooterProps]] = js.native
-  var shouldSelectFirstItem: js.UndefOr[js.Function0[Boolean]] = js.native
-  var showRemoveButtons: js.UndefOr[Boolean] = js.native
+  var footerItemsProps: js.UndefOr[js.Array[ISuggestionsHeaderFooterProps]] = js.undefined
+  var headerItemsProps: js.UndefOr[js.Array[ISuggestionsHeaderFooterProps]] = js.undefined
+  var shouldSelectFirstItem: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var showRemoveButtons: js.UndefOr[Boolean] = js.undefined
 }
 
 object IBaseFloatingPickerSuggestionProps {
   @scala.inline
-  def apply(): IBaseFloatingPickerSuggestionProps = {
+  def apply(
+    footerItemsProps: js.Array[ISuggestionsHeaderFooterProps] = null,
+    headerItemsProps: js.Array[ISuggestionsHeaderFooterProps] = null,
+    shouldSelectFirstItem: () => Boolean = null,
+    showRemoveButtons: js.UndefOr[Boolean] = js.undefined
+  ): IBaseFloatingPickerSuggestionProps = {
     val __obj = js.Dynamic.literal()
+    if (footerItemsProps != null) __obj.updateDynamic("footerItemsProps")(footerItemsProps.asInstanceOf[js.Any])
+    if (headerItemsProps != null) __obj.updateDynamic("headerItemsProps")(headerItemsProps.asInstanceOf[js.Any])
+    if (shouldSelectFirstItem != null) __obj.updateDynamic("shouldSelectFirstItem")(js.Any.fromFunction0(shouldSelectFirstItem))
+    if (!js.isUndefined(showRemoveButtons)) __obj.updateDynamic("showRemoveButtons")(showRemoveButtons.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IBaseFloatingPickerSuggestionProps]
   }
-  @scala.inline
-  implicit class IBaseFloatingPickerSuggestionPropsOps[Self <: IBaseFloatingPickerSuggestionProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFooterItemsProps(value: js.Array[ISuggestionsHeaderFooterProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footerItemsProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFooterItemsProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footerItemsProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderItemsProps(value: js.Array[ISuggestionsHeaderFooterProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerItemsProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderItemsProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerItemsProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShouldSelectFirstItem(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldSelectFirstItem")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutShouldSelectFirstItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldSelectFirstItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowRemoveButtons(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showRemoveButtons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowRemoveButtons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showRemoveButtons")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

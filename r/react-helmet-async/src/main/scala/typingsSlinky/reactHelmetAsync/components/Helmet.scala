@@ -2,12 +2,12 @@ package typingsSlinky.reactHelmetAsync.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactHelmet.mod.BodyProps
-import typingsSlinky.reactHelmet.mod.HelmetProps
-import typingsSlinky.reactHelmet.mod.HelmetTags
-import typingsSlinky.reactHelmet.mod.HtmlProps
-import typingsSlinky.reactHelmet.mod.LinkProps
-import typingsSlinky.reactHelmet.mod.MetaProps
+import typingsSlinky.reactHelmetAsync.mod.BodyProps
+import typingsSlinky.reactHelmetAsync.mod.HelmetProps
+import typingsSlinky.reactHelmetAsync.mod.HelmetTags
+import typingsSlinky.reactHelmetAsync.mod.HtmlProps
+import typingsSlinky.reactHelmetAsync.mod.LinkProps
+import typingsSlinky.reactHelmetAsync.mod.MetaProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

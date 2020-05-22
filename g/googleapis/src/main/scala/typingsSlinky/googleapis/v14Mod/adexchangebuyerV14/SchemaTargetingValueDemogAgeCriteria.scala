@@ -11,29 +11,10 @@ trait SchemaTargetingValueDemogAgeCriteria extends js.Object {
 
 object SchemaTargetingValueDemogAgeCriteria {
   @scala.inline
-  def apply(): SchemaTargetingValueDemogAgeCriteria = {
+  def apply(demogAgeCriteriaIds: js.Array[String] = null): SchemaTargetingValueDemogAgeCriteria = {
     val __obj = js.Dynamic.literal()
+    if (demogAgeCriteriaIds != null) __obj.updateDynamic("demogAgeCriteriaIds")(demogAgeCriteriaIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTargetingValueDemogAgeCriteria]
   }
-  @scala.inline
-  implicit class SchemaTargetingValueDemogAgeCriteriaOps[Self <: SchemaTargetingValueDemogAgeCriteria] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDemogAgeCriteriaIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("demogAgeCriteriaIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDemogAgeCriteriaIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("demogAgeCriteriaIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

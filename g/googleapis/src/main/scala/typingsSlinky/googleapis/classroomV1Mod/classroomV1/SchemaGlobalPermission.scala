@@ -17,29 +17,10 @@ trait SchemaGlobalPermission extends js.Object {
 
 object SchemaGlobalPermission {
   @scala.inline
-  def apply(): SchemaGlobalPermission = {
+  def apply(permission: String = null): SchemaGlobalPermission = {
     val __obj = js.Dynamic.literal()
+    if (permission != null) __obj.updateDynamic("permission")(permission.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGlobalPermission]
   }
-  @scala.inline
-  implicit class SchemaGlobalPermissionOps[Self <: SchemaGlobalPermission] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPermission(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permission")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermission: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permission")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OnMemoryWarningCallbackResult extends js.Object {
   /** 内存告警等级，只有 Android 才有，对应系统宏定义
     *
@@ -15,7 +14,7 @@ trait OnMemoryWarningCallbackResult extends js.Object {
     * - 5: TRIM_MEMORY_RUNNING_MODERATE;
     * - 10: TRIM_MEMORY_RUNNING_LOW;
     * - 15: TRIM_MEMORY_RUNNING_CRITICAL; */
-  var level: `5` | `10` | `15` = js.native
+  var level: `5` | `10` | `15`
 }
 
 object OnMemoryWarningCallbackResult {
@@ -24,19 +23,5 @@ object OnMemoryWarningCallbackResult {
     val __obj = js.Dynamic.literal(level = level.asInstanceOf[js.Any])
     __obj.asInstanceOf[OnMemoryWarningCallbackResult]
   }
-  @scala.inline
-  implicit class OnMemoryWarningCallbackResultOps[Self <: OnMemoryWarningCallbackResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLevel(value: `5` | `10` | `15`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

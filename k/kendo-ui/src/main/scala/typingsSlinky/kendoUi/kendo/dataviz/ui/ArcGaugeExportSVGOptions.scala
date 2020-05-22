@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ArcGaugeExportSVGOptions extends js.Object {
-  var raw: js.UndefOr[Boolean] = js.native
+  var raw: js.UndefOr[Boolean] = js.undefined
 }
 
 object ArcGaugeExportSVGOptions {
   @scala.inline
-  def apply(): ArcGaugeExportSVGOptions = {
+  def apply(raw: js.UndefOr[Boolean] = js.undefined): ArcGaugeExportSVGOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(raw)) __obj.updateDynamic("raw")(raw.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArcGaugeExportSVGOptions]
   }
-  @scala.inline
-  implicit class ArcGaugeExportSVGOptionsOps[Self <: ArcGaugeExportSVGOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRaw(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRaw: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

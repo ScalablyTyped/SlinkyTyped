@@ -1,7 +1,6 @@
 package typingsSlinky.gestalt.mod
 
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.gestalt.anon.EventSyntheticEvent
 import typingsSlinky.gestalt.gestaltNumbers.`0`
 import typingsSlinky.gestalt.gestaltNumbers.`1`
@@ -26,127 +25,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TouchableProps extends js.Object {
-  var children: js.UndefOr[TagMod[Any]] = js.native
-  var fullHeight: js.UndefOr[Boolean] = js.native
-  var fullWidth: js.UndefOr[Boolean] = js.native
-  var mouseCursor: js.UndefOr[copy | grab | grabbing | move | noDrop | pointer | zoomIn | zoomOut] = js.native
-  var onMouseEnter: js.UndefOr[js.Function1[/* args */ EventSyntheticEvent, Unit]] = js.native
-  var onMouseLeave: js.UndefOr[js.Function1[/* args */ EventSyntheticEvent, Unit]] = js.native
-  var rounding: js.UndefOr[pill | circle | `0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8`] = js.native
-  def onTouch(args: typingsSlinky.gestalt.anon.`3`): Unit = js.native
+  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var fullHeight: js.UndefOr[Boolean] = js.undefined
+  var fullWidth: js.UndefOr[Boolean] = js.undefined
+  var mouseCursor: js.UndefOr[copy | grab | grabbing | move | noDrop | pointer | zoomIn | zoomOut] = js.undefined
+  var onMouseEnter: js.UndefOr[js.Function1[/* args */ EventSyntheticEvent, Unit]] = js.undefined
+  var onMouseLeave: js.UndefOr[js.Function1[/* args */ EventSyntheticEvent, Unit]] = js.undefined
+  var rounding: js.UndefOr[pill | circle | `0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8`] = js.undefined
+  def onTouch(args: typingsSlinky.gestalt.anon.`3`): Unit
 }
 
 object TouchableProps {
   @scala.inline
-  def apply(onTouch: typingsSlinky.gestalt.anon.`3` => Unit): TouchableProps = {
+  def apply(
+    onTouch: typingsSlinky.gestalt.anon.`3` => Unit,
+    children: TagMod[Any] = null,
+    fullHeight: js.UndefOr[Boolean] = js.undefined,
+    fullWidth: js.UndefOr[Boolean] = js.undefined,
+    mouseCursor: copy | grab | grabbing | move | noDrop | pointer | zoomIn | zoomOut = null,
+    onMouseEnter: /* args */ EventSyntheticEvent => Unit = null,
+    onMouseLeave: /* args */ EventSyntheticEvent => Unit = null,
+    rounding: pill | circle | `0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8` = null
+  ): TouchableProps = {
     val __obj = js.Dynamic.literal(onTouch = js.Any.fromFunction1(onTouch))
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (!js.isUndefined(fullHeight)) __obj.updateDynamic("fullHeight")(fullHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fullWidth)) __obj.updateDynamic("fullWidth")(fullWidth.get.asInstanceOf[js.Any])
+    if (mouseCursor != null) __obj.updateDynamic("mouseCursor")(mouseCursor.asInstanceOf[js.Any])
+    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
+    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
+    if (rounding != null) __obj.updateDynamic("rounding")(rounding.asInstanceOf[js.Any])
     __obj.asInstanceOf[TouchableProps]
   }
-  @scala.inline
-  implicit class TouchablePropsOps[Self <: TouchableProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnTouch(value: typingsSlinky.gestalt.anon.`3` => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullHeight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullWidth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseCursor(value: copy | grab | grabbing | move | noDrop | pointer | zoomIn | zoomOut): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseCursor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMouseCursor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseCursor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseEnter(value: /* args */ EventSyntheticEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseLeave(value: /* args */ EventSyntheticEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRounding(value: pill | circle | `0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rounding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRounding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rounding")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

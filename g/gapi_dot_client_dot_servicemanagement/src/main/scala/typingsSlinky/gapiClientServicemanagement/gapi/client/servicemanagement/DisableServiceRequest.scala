@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DisableServiceRequest extends js.Object {
   /**
     * The identity of consumer resource which service disablement will be
@@ -17,34 +16,15 @@ trait DisableServiceRequest extends js.Object {
     * Note: this is made compatible with
     * google.api.servicecontrol.v1.Operation.consumer_id.
     */
-  var consumerId: js.UndefOr[String] = js.native
+  var consumerId: js.UndefOr[String] = js.undefined
 }
 
 object DisableServiceRequest {
   @scala.inline
-  def apply(): DisableServiceRequest = {
+  def apply(consumerId: String = null): DisableServiceRequest = {
     val __obj = js.Dynamic.literal()
+    if (consumerId != null) __obj.updateDynamic("consumerId")(consumerId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisableServiceRequest]
   }
-  @scala.inline
-  implicit class DisableServiceRequestOps[Self <: DisableServiceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConsumerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsumerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumerId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

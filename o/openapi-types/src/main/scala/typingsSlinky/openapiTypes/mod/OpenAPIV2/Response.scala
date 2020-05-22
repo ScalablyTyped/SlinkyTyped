@@ -12,8 +12,22 @@ trait Response extends js.Object
 
 object Response {
   @scala.inline
-  implicit def apply(value: ReferenceObject): Response = value.asInstanceOf[Response]
+  def ResponseObject(
+    description: String,
+    examples: ExampleObject = null,
+    headers: HeadersObject = null,
+    schema: Schema = null
+  ): Response = {
+    val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any])
+    if (examples != null) __obj.updateDynamic("examples")(examples.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (schema != null) __obj.updateDynamic("schema")(schema.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Response]
+  }
   @scala.inline
-  implicit def apply(value: ResponseObject): Response = value.asInstanceOf[Response]
+  def ReferenceObject($ref: String): Response = {
+    val __obj = js.Dynamic.literal($ref = $ref.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Response]
+  }
 }
 

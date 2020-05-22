@@ -1,7 +1,6 @@
 package typingsSlinky.googleGax
 
 import typingsSlinky.googleGax.apitypesMod.APICallback
-import typingsSlinky.googleGax.apitypesMod.GaxCallResult
 import typingsSlinky.googleGax.apitypesMod.NextPageRequestType
 import typingsSlinky.googleGax.apitypesMod.RawResponseType
 import typingsSlinky.googleGax.apitypesMod.RequestType
@@ -19,9 +18,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object callMod extends js.Object {
   @js.native
-  trait CancellablePromise[T]
-    extends Promise[T]
-       with GaxCallResult {
+  trait CancellablePromise[T] extends Promise[T] {
     def cancel(): Unit = js.native
   }
   

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Dayjs extends js.Object {
-  def localeData(): js.Any = js.native
+  def localeData(): js.Any
 }
 
 object Dayjs {
@@ -15,19 +14,5 @@ object Dayjs {
     val __obj = js.Dynamic.literal(localeData = js.Any.fromFunction0(localeData))
     __obj.asInstanceOf[Dayjs]
   }
-  @scala.inline
-  implicit class DayjsOps[Self <: Dayjs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocaleData(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localeData")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

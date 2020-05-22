@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.assessmentTemplateMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,6 +21,10 @@ trait AssessmentTemplateArgs extends js.Object {
     */
   val rulesPackageArns: Input[js.Array[Input[String]]] = js.native
   /**
+    * Key-value mapping of tags for the Inspector assessment template.
+    */
+  val tags: js.UndefOr[Input[StringDictionary[_]]] = js.native
+  /**
     * The assessment target ARN to attach the template to.
     */
   val targetArn: Input[String] = js.native
@@ -30,48 +35,14 @@ object AssessmentTemplateArgs {
   def apply(
     duration: Input[Double],
     rulesPackageArns: Input[js.Array[Input[String]]],
-    targetArn: Input[String]
+    targetArn: Input[String],
+    name: Input[String] = null,
+    tags: Input[StringDictionary[_]] = null
   ): AssessmentTemplateArgs = {
     val __obj = js.Dynamic.literal(duration = duration.asInstanceOf[js.Any], rulesPackageArns = rulesPackageArns.asInstanceOf[js.Any], targetArn = targetArn.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssessmentTemplateArgs]
   }
-  @scala.inline
-  implicit class AssessmentTemplateArgsOps[Self <: AssessmentTemplateArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDuration(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRulesPackageArns(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rulesPackageArns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

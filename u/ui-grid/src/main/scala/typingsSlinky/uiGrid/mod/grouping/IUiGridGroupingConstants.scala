@@ -11,9 +11,8 @@ import scala.scalajs.js.annotation._
   * These are manually copied as there isn't an easy way to include constants in another constants file, and we
   * don't want to make users include treeBase.
   */
-@js.native
 trait IUiGridGroupingConstants extends ISharedTreeConstants {
-  var featureName: String = js.native
+  var featureName: String
 }
 
 object IUiGridGroupingConstants {
@@ -28,19 +27,5 @@ object IUiGridGroupingConstants {
     val __obj = js.Dynamic.literal(COLLAPSED = COLLAPSED.asInstanceOf[js.Any], EXPANDED = EXPANDED.asInstanceOf[js.Any], aggregation = aggregation.asInstanceOf[js.Any], featureName = featureName.asInstanceOf[js.Any], rowHeaderColName = rowHeaderColName.asInstanceOf[js.Any])
     __obj.asInstanceOf[IUiGridGroupingConstants]
   }
-  @scala.inline
-  implicit class IUiGridGroupingConstantsOps[Self <: IUiGridGroupingConstants] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFeatureName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featureName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

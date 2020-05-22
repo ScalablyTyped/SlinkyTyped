@@ -4,91 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IStringOptions extends js.Object {
   /**
     * Whether double quotes or single quotes should be used in XML attributes.
     * By default, single quotes are used.
     */
-  var doubleQuotes: js.UndefOr[Boolean] = js.native
+  var doubleQuotes: js.UndefOr[Boolean] = js.undefined
   /**
     * The indent string used for pretty-printing. The default indent string is
     * four spaces.
     */
-  var indent: js.UndefOr[String] = js.native
+  var indent: js.UndefOr[String] = js.undefined
   /**
     * The newline string used for pretty-printing. The default newline string
     * is "\n".
     */
-  var newline: js.UndefOr[String] = js.native
+  var newline: js.UndefOr[String] = js.undefined
   /**
     * Whether pretty-printing is enabled. By default, pretty-printing is
     * enabled.
     */
-  var pretty: js.UndefOr[Boolean] = js.native
+  var pretty: js.UndefOr[Boolean] = js.undefined
 }
 
 object IStringOptions {
   @scala.inline
-  def apply(): IStringOptions = {
+  def apply(
+    doubleQuotes: js.UndefOr[Boolean] = js.undefined,
+    indent: String = null,
+    newline: String = null,
+    pretty: js.UndefOr[Boolean] = js.undefined
+  ): IStringOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(doubleQuotes)) __obj.updateDynamic("doubleQuotes")(doubleQuotes.get.asInstanceOf[js.Any])
+    if (indent != null) __obj.updateDynamic("indent")(indent.asInstanceOf[js.Any])
+    if (newline != null) __obj.updateDynamic("newline")(newline.asInstanceOf[js.Any])
+    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IStringOptions]
   }
-  @scala.inline
-  implicit class IStringOptionsOps[Self <: IStringOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDoubleQuotes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleQuotes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDoubleQuotes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleQuotes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewline(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPretty(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pretty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPretty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pretty")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

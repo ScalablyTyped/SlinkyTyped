@@ -10,6 +10,7 @@ package object mod {
     /* selectorInputs */ typingsSlinky.reReselect.anon.InputSelectors[D, C, S], 
     typingsSlinky.reReselect.mod.KeySelector[S]
   ]
+  type ObjectCacheKey = java.lang.String | scala.Double
   type OutputCachedSelector[S, R, C, D] = js.Function2[
     /* options */ typingsSlinky.reReselect.mod.KeySelector[S] | (typingsSlinky.reReselect.mod.Options[S, C, D]), 
     /* legacyOptions */ js.UndefOr[

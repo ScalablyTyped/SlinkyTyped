@@ -7,40 +7,20 @@ import scala.scalajs.js.annotation._
 /**
   * Options which may be specified when getting an instance of the Advanced Queue class.
   */
-@js.native
 trait GetAdvancedQueueOptions extends js.Object {
   /**
     * Name of an Oracle Database object type, or a DbObject Class earlier acquired from connection.getDbObjectClass().
     * If the name of an object type is used, it is recommended that a fully qualified name be used.
     */
-  var payloadType: js.UndefOr[String] = js.native
+  var payloadType: js.UndefOr[String] = js.undefined
 }
 
 object GetAdvancedQueueOptions {
   @scala.inline
-  def apply(): GetAdvancedQueueOptions = {
+  def apply(payloadType: String = null): GetAdvancedQueueOptions = {
     val __obj = js.Dynamic.literal()
+    if (payloadType != null) __obj.updateDynamic("payloadType")(payloadType.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAdvancedQueueOptions]
   }
-  @scala.inline
-  implicit class GetAdvancedQueueOptionsOps[Self <: GetAdvancedQueueOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPayloadType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayloadType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

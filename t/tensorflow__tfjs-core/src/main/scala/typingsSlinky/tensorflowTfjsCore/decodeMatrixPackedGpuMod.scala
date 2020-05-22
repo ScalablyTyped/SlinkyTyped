@@ -14,12 +14,18 @@ object decodeMatrixPackedGpuMod extends js.Object {
     def this(outputShape: js.Tuple3[Double, Double, Double]) = this()
     @JSName("outPackingScheme")
     var outPackingScheme_DecodeMatrixPackedProgram: PackingScheme = js.native
+    /* CompleteClass */
+    override var outputShape: js.Array[Double] = js.native
     @JSName("outputShape")
     var outputShape_DecodeMatrixPackedProgram: js.Tuple3[Double, Double, Double] = js.native
     @JSName("packedInputs")
     var packedInputs_DecodeMatrixPackedProgram: Boolean = js.native
     @JSName("packedOutput")
     var packedOutput_DecodeMatrixPackedProgram: Boolean = js.native
+    /* CompleteClass */
+    override var userCode: String = js.native
+    /* CompleteClass */
+    override var variableNames: js.Array[String] = js.native
   }
   
 }

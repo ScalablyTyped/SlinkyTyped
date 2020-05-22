@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SidebarWorker extends js.Object {
-  var port: Port = js.native
+  var port: Port
 }
 
 object SidebarWorker {
@@ -16,19 +15,5 @@ object SidebarWorker {
     val __obj = js.Dynamic.literal(port = port.asInstanceOf[js.Any])
     __obj.asInstanceOf[SidebarWorker]
   }
-  @scala.inline
-  implicit class SidebarWorkerOps[Self <: SidebarWorker] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPort(value: Port): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

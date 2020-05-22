@@ -5,16 +5,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ErrorObject extends js.Object {
-  val ConditionName: js.Any = js.native
-  var DetailedErrorMessage: String = js.native
-  var ErrorCode: Double = js.native
+  val ConditionName: js.Any
+  var DetailedErrorMessage: String
+  var ErrorCode: Double
   @JSName("InfoPath.ErrorObject_typekey")
-  var InfoPathDotErrorObject_typekey: ErrorObject = js.native
-  val Node: IXMLDOMNode = js.native
-  var ShortErrorMessage: String = js.native
-  val Type: String = js.native
+  var InfoPathDotErrorObject_typekey: ErrorObject
+  val Node: IXMLDOMNode
+  var ShortErrorMessage: String
+  val Type: String
 }
 
 object ErrorObject {
@@ -32,55 +31,5 @@ object ErrorObject {
     __obj.updateDynamic("InfoPath.ErrorObject_typekey")(InfoPathDotErrorObject_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ErrorObject]
   }
-  @scala.inline
-  implicit class ErrorObjectOps[Self <: ErrorObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConditionName(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConditionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDetailedErrorMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DetailedErrorMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withErrorCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInfoPathDotErrorObject_typekey(value: ErrorObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InfoPath.ErrorObject_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNode(value: IXMLDOMNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Node")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShortErrorMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShortErrorMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

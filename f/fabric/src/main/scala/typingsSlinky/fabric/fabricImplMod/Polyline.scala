@@ -13,27 +13,27 @@ import scala.scalajs.js.annotation._
 @js.native
 class Polyline protected () extends Object {
   /**
-  	 * Constructor
-  	 * @param points Array of points (where each point is an object with x and y)
-  	 * @param [options] Options object
-  	 * @param [skipOffset] Whether points offsetting should be skipped
-  	 */
+    * Constructor
+    * @param points Array of points (where each point is an object with x and y)
+    * @param [options] Options object
+    * @param [skipOffset] Whether points offsetting should be skipped
+    */
   def this(points: js.Array[X]) = this()
   def this(points: js.Array[X], options: IPolylineOptions) = this()
   var pathOffset: Point = js.native
   /**
-  	 * Points array
-  	 */
+    * Points array
+    */
   var points: js.UndefOr[js.Array[Point]] = js.native
   /**
-  	 * Calculate the polygon min and max point from points array,
-  	 * returning an object with left, top, width, height to measure the polygon size
-  	 * @private
-  	 * @return {Object} object.left X coordinate of the polygon leftmost point
-  	 * @return {Object} object.top Y coordinate of the polygon topmost point
-  	 * @return {Object} object.width distance between X coordinates of the polygon leftmost and rightmost point
-  	 * @return {Object} object.height distance between Y coordinates of the polygon topmost and bottommost point
-  	 */
+    * Calculate the polygon min and max point from points array,
+    * returning an object with left, top, width, height to measure the polygon size
+    * @private
+    * @return {Object} object.left X coordinate of the polygon leftmost point
+    * @return {Object} object.top Y coordinate of the polygon topmost point
+    * @return {Object} object.width distance between X coordinates of the polygon leftmost and rightmost point
+    * @return {Object} object.height distance between Y coordinates of the polygon topmost and bottommost point
+    */
   def _calcDimensions(): Top = js.native
 }
 
@@ -42,20 +42,20 @@ class Polyline protected () extends Object {
 @js.native
 object Polyline extends js.Object {
   /**
-  	 * List of attribute names to account for when parsing SVG element (used by `fabric.Polygon.fromElement`)
-  	 */
+    * List of attribute names to account for when parsing SVG element (used by `fabric.Polygon.fromElement`)
+    */
   var ATTRIBUTE_NAMES: js.Array[String] = js.native
   /**
-  	 * Returns Polyline  instance from an SVG element
-  	 * @param element Element to parse
-  	 * @param [options] Options object
-  	 */
+    * Returns Polyline  instance from an SVG element
+    * @param element Element to parse
+    * @param [options] Options object
+    */
   def fromElement(element: SVGElement): Polyline = js.native
   def fromElement(element: SVGElement, options: IPolylineOptions): Polyline = js.native
   /**
-  	 * Returns fabric.Polyline instance from an object representation
-  	 * @param object Object to create an instance from
-  	 */
+    * Returns fabric.Polyline instance from an object representation
+    * @param object Object to create an instance from
+    */
   def fromObject(`object`: js.Any): Polyline = js.native
 }
 

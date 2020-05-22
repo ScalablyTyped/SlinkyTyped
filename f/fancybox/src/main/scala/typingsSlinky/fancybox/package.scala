@@ -10,6 +10,7 @@ package object fancybox {
     /* event */ js.UndefOr[typingsSlinky.jquery.JQuery.Event], 
     typingsSlinky.fancybox.FancyBoxInteractionTypes
   ]
+  type FancyBoxInteractions = typingsSlinky.fancybox.FancyBoxInteractionTypes | typingsSlinky.fancybox.FancyBoxInteractionMethod
   type FancyBoxInternationalizationOptions = org.scalablytyped.runtime.StringDictionary[typingsSlinky.fancybox.FancyBoxInternationalizatioObject]
   type FancyBoxPlainObject = org.scalablytyped.runtime.StringDictionary[java.lang.String | scala.Double | scala.Boolean | js.Function0[scala.Unit]]
 }

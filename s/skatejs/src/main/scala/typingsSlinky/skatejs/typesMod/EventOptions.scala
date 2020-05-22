@@ -5,14 +5,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EventOptions
   extends CustomEventInit[js.Any]
 
 object EventOptions {
   @scala.inline
-  def apply(): EventOptions = {
+  def apply(
+    bubbles: js.UndefOr[Boolean] = js.undefined,
+    cancelable: js.UndefOr[Boolean] = js.undefined,
+    composed: js.UndefOr[Boolean] = js.undefined,
+    detail: js.Any = null
+  ): EventOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(bubbles)) __obj.updateDynamic("bubbles")(bubbles.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cancelable)) __obj.updateDynamic("cancelable")(cancelable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(composed)) __obj.updateDynamic("composed")(composed.get.asInstanceOf[js.Any])
+    if (detail != null) __obj.updateDynamic("detail")(detail.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventOptions]
   }
 }

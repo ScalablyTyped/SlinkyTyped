@@ -4,56 +4,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Hotel extends js.Object {
   /**
     * 特色服务
     */
-  var addition: String = js.native
+  var addition: String
   /**
     * 信息来源
     */
-  var deep_src: String = js.native
+  var deep_src: String
   /**
     * 环境评分
     */
-  var environment_rating: String = js.native
+  var environment_rating: String
   /**
     * 设施评分
     */
-  var faci_rating: String = js.native
+  var faci_rating: String
   /**
     * 卫生评分
     */
-  var health_rating: String = js.native
+  var health_rating: String
   /**
     * 简介
     */
-  var intro: String = js.native
+  var intro: String
   /**
     * 最低房价
     */
-  var lowest_price: String = js.native
+  var lowest_price: String
   /**
     * 图片信息列表
     */
-  var photos: js.Array[PoiPhoto] = js.native
+  var photos: js.Array[PoiPhoto]
   /**
     * 综合评分
     */
-  var rating: String = js.native
+  var rating: String
   /**
     * 服务评分
     */
-  var service_rating: String = js.native
+  var service_rating: String
   /**
     * 星级
     */
-  var star: String = js.native
+  var star: String
   /**
     * 交通提示
     */
-  var traffic: String = js.native
+  var traffic: String
 }
 
 object Hotel {
@@ -75,85 +74,5 @@ object Hotel {
     val __obj = js.Dynamic.literal(addition = addition.asInstanceOf[js.Any], deep_src = deep_src.asInstanceOf[js.Any], environment_rating = environment_rating.asInstanceOf[js.Any], faci_rating = faci_rating.asInstanceOf[js.Any], health_rating = health_rating.asInstanceOf[js.Any], intro = intro.asInstanceOf[js.Any], lowest_price = lowest_price.asInstanceOf[js.Any], photos = photos.asInstanceOf[js.Any], rating = rating.asInstanceOf[js.Any], service_rating = service_rating.asInstanceOf[js.Any], star = star.asInstanceOf[js.Any], traffic = traffic.asInstanceOf[js.Any])
     __obj.asInstanceOf[Hotel]
   }
-  @scala.inline
-  implicit class HotelOps[Self <: Hotel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeep_src(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deep_src")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnvironment_rating(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environment_rating")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFaci_rating(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("faci_rating")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHealth_rating(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("health_rating")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIntro(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intro")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLowest_price(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowest_price")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPhotos(value: js.Array[PoiPhoto]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRating(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rating")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withService_rating(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service_rating")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStar(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("star")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTraffic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("traffic")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

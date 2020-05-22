@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ServiceUIFrameContext extends js.Object {
-  def getCachedFrameMessage(key: java.lang.String): java.lang.String = js.native
-  def postFrameMessage(key: java.lang.String, data: java.lang.String): Unit = js.native
+  def getCachedFrameMessage(key: java.lang.String): java.lang.String
+  def postFrameMessage(key: java.lang.String, data: java.lang.String): Unit
 }
 
 object ServiceUIFrameContext {
@@ -19,25 +18,5 @@ object ServiceUIFrameContext {
     val __obj = js.Dynamic.literal(getCachedFrameMessage = js.Any.fromFunction1(getCachedFrameMessage), postFrameMessage = js.Any.fromFunction2(postFrameMessage))
     __obj.asInstanceOf[ServiceUIFrameContext]
   }
-  @scala.inline
-  implicit class ServiceUIFrameContextOps[Self <: ServiceUIFrameContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetCachedFrameMessage(value: java.lang.String => java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCachedFrameMessage")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPostFrameMessage(value: (java.lang.String, java.lang.String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postFrameMessage")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

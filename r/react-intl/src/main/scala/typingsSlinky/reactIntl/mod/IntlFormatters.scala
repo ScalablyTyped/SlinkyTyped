@@ -6,6 +6,7 @@ import typingsSlinky.intlMessageformat.mod.FormatXMLElementFn
 import typingsSlinky.intlMessageformat.mod.PrimitiveType
 import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.std.Intl.DateTimeFormatPart
+import typingsSlinky.std.Intl.LDMLPluralRule
 import typingsSlinky.std.Intl.NumberFormatPart
 import typingsSlinky.std.Record
 import typingsSlinky.std.ReturnType
@@ -81,13 +82,13 @@ trait IntlFormatters extends js.Object {
   ): String = js.native
   @JSName("formatPlural")
   def formatPlural_0(
-    value: /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<(n : number): string>[0] */ js.Any
-  ): ReturnType[js.Function1[/* n */ Double, String]] = js.native
+    value: /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<(n : number): std.Intl.LDMLPluralRule>[0] */ js.Any
+  ): ReturnType[js.Function1[/* n */ Double, LDMLPluralRule]] = js.native
   @JSName("formatPlural")
   def formatPlural_0(
-    value: /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<(n : number): string>[0] */ js.Any,
+    value: /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<(n : number): std.Intl.LDMLPluralRule>[0] */ js.Any,
     opts: FormatPluralOptions
-  ): ReturnType[js.Function1[/* n */ Double, String]] = js.native
+  ): ReturnType[js.Function1[/* n */ Double, LDMLPluralRule]] = js.native
   def formatRelativeTime(
     value: /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<(value : number, unit : @formatjs/intl-relativetimeformat.@formatjs/intl-relativetimeformat.FormattableUnit): string>[0] */ js.Any,
     unit: /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<(value : number, unit : @formatjs/intl-relativetimeformat.@formatjs/intl-relativetimeformat.FormattableUnit): string>[1] */ js.Any

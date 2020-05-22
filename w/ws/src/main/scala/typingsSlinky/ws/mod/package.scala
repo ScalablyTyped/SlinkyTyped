@@ -6,6 +6,14 @@ import scala.scalajs.js.annotation._
 
 package object mod {
   /**
+    * CertMeta represents the accepted types for certificate & key data.
+    */
+  type CertMeta = java.lang.String | (js.Array[typingsSlinky.node.Buffer | java.lang.String]) | typingsSlinky.node.Buffer
+  /**
+    * Data represents the message payload received over the WebSocket.
+    */
+  type Data = java.lang.String | typingsSlinky.node.Buffer | js.typedarray.ArrayBuffer | js.Array[typingsSlinky.node.Buffer]
+  /**
     * VerifyClientCallbackAsync is an asynchronous callback used to inspect the
     * incoming message. The return value (boolean) of the function determines
     * whether or not to accept the handshake.

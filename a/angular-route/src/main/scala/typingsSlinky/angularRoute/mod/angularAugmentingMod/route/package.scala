@@ -10,4 +10,5 @@ package object route {
   // see http://docs.angularjs.org/api/ngRoute.$routeParams
   ///////////////////////////////////////////////////////////////////////////
   type IRouteParamsService = org.scalablytyped.runtime.StringDictionary[js.Any]
+  type InlineAnnotatedFunction = typingsSlinky.angular.mod.global.Function | (js.Array[java.lang.String | typingsSlinky.angular.mod.global.Function])
 }

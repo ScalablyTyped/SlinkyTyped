@@ -26,47 +26,15 @@ trait GetRevisionRequest extends js.Object {
 
 object GetRevisionRequest {
   @scala.inline
-  def apply(BlockAddress: ValueHolder, DocumentId: UniqueId, Name: LedgerName): GetRevisionRequest = {
+  def apply(
+    BlockAddress: ValueHolder,
+    DocumentId: UniqueId,
+    Name: LedgerName,
+    DigestTipAddress: ValueHolder = null
+  ): GetRevisionRequest = {
     val __obj = js.Dynamic.literal(BlockAddress = BlockAddress.asInstanceOf[js.Any], DocumentId = DocumentId.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
+    if (DigestTipAddress != null) __obj.updateDynamic("DigestTipAddress")(DigestTipAddress.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRevisionRequest]
   }
-  @scala.inline
-  implicit class GetRevisionRequestOps[Self <: GetRevisionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlockAddress(value: ValueHolder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDocumentId(value: UniqueId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: LedgerName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDigestTipAddress(value: ValueHolder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DigestTipAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDigestTipAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DigestTipAddress")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,40 +5,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Record<es-feature-detection.es-feature-detection.ES2015Syntax | es-feature-detection.es-feature-detection.ES2016Syntax | es-feature-detection.es-feature-detection.ES2017Syntax, boolean> & {  es2015  :std.Record<es-feature-detection.es-feature-detection.ES2015Syntax, boolean>,   es2016  :std.Record<es-feature-detection.es-feature-detection.ES2016Syntax, boolean>,   es2017  :std.Record<es-feature-detection.es-feature-detection.ES2017Syntax, boolean>} */
-@js.native
 trait RecordES2015SyntaxES2016S extends js.Object {
-  var `Arrow function`: Boolean = js.native
-  var `Binary literals`: Boolean = js.native
-  var `Block level function declaration`: Boolean = js.native
-  var `Computed property`: Boolean = js.native
-  var `Default parameters`: Boolean = js.native
-  var Destructuring: Boolean = js.native
-  var `Exponentiation operator`: Boolean = js.native
-  var `Generator function`: Boolean = js.native
-  var `Octal literals`: Boolean = js.native
+  var `Arrow function`: Boolean
+  var `Binary literals`: Boolean
+  var `Block level function declaration`: Boolean
+  var `Computed property`: Boolean
+  var `Default parameters`: Boolean
+  var Destructuring: Boolean
+  var `Exponentiation operator`: Boolean
+  var `Generator function`: Boolean
+  var `Octal literals`: Boolean
   @JSName("RegExp.prototype.sticky")
-  var RegExpDotprototypeDotsticky: Boolean = js.native
+  var RegExpDotprototypeDotsticky: Boolean
   @JSName("RegExp.prototype.unicode")
-  var RegExpDotprototypeDotunicode: Boolean = js.native
-  var `Rest destructuring`: Boolean = js.native
-  var `Rest parameters`: Boolean = js.native
-  var `Shorthand method`: Boolean = js.native
-  var `Shorthand property`: Boolean = js.native
-  var `Spread Array`: Boolean = js.native
-  var `Spread Function call`: Boolean = js.native
-  var `Template Strings`: Boolean = js.native
-  var `Trailing parameter commas`: Boolean = js.native
-  var __all: Boolean = js.native
+  var RegExpDotprototypeDotunicode: Boolean
+  var `Rest destructuring`: Boolean
+  var `Rest parameters`: Boolean
+  var `Shorthand method`: Boolean
+  var `Shorthand property`: Boolean
+  var `Spread Array`: Boolean
+  var `Spread Function call`: Boolean
+  var `Template Strings`: Boolean
+  var `Trailing parameter commas`: Boolean
+  var __all: Boolean
   @JSName("async/await")
-  var asyncSlashawait: Boolean = js.native
-  var `class`: Boolean = js.native
-  var const: Boolean = js.native
-  var es2015: RecordES2015Syntaxboolean = js.native
-  var es2016: RecordES2016Syntaxboolean = js.native
-  var es2017: RecordES2017Syntaxboolean = js.native
+  var asyncSlashawait: Boolean
+  var `class`: Boolean
+  var const: Boolean
+  var es2015: RecordES2015Syntaxboolean
+  var es2016: RecordES2016Syntaxboolean
+  var es2017: RecordES2017Syntaxboolean
   @JSName("for...of")
-  var forDotDotDotof: Boolean = js.native
-  var let: Boolean = js.native
+  var forDotDotDotof: Boolean
+  var let: Boolean
 }
 
 object RecordES2015SyntaxES2016S {
@@ -97,181 +96,5 @@ object RecordES2015SyntaxES2016S {
     __obj.updateDynamic("for...of")(forDotDotDotof.asInstanceOf[js.Any])
     __obj.asInstanceOf[RecordES2015SyntaxES2016S]
   }
-  @scala.inline
-  implicit class RecordES2015SyntaxES2016SOps[Self <: RecordES2015SyntaxES2016S] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withArrow function`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arrow function")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withBinary literals`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Binary literals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withBlock level function declaration`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Block level function declaration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withComputed property`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Computed property")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withDefault parameters`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Default parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDestructuring(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Destructuring")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withExponentiation operator`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Exponentiation operator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withGenerator function`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Generator function")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withOctal literals`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Octal literals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRegExpDotprototypeDotsticky(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegExp.prototype.sticky")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRegExpDotprototypeDotunicode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegExp.prototype.unicode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withRest destructuring`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rest destructuring")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withRest parameters`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rest parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withShorthand method`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Shorthand method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withShorthand property`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Shorthand property")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withSpread Array`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Spread Array")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withSpread Function call`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Spread Function call")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withTemplate Strings`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Template Strings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withTrailing parameter commas`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Trailing parameter commas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with__all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("__all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAsyncSlashawait(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("async/await")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClass(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("class")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConst(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("const")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEs2015(value: RecordES2015Syntaxboolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("es2015")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEs2016(value: RecordES2016Syntaxboolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("es2016")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEs2017(value: RecordES2017Syntaxboolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("es2017")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForDotDotDotof(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("for...of")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLet(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("let")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

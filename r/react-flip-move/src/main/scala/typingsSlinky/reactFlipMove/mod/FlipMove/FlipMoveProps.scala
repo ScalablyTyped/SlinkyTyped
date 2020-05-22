@@ -7,39 +7,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FlipMoveProps extends js.Object {
   /**
     * Control the appear animation that runs when the component mounts. Works identically to enterAnimation below, but
     * only fires on the initial children.
     */
-  var appearAnimation: js.UndefOr[AnimationProp] = js.native
-  var className: js.UndefOr[String] = js.native
+  var appearAnimation: js.UndefOr[AnimationProp] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
   /**
     * The length, in milliseconds, to wait before the animation begins.
     *
     * @default 0
     */
-  var delay: js.UndefOr[Double | String] = js.native
+  var delay: js.UndefOr[Double | String] = js.undefined
   /**
     * Sometimes, you may wish to temporarily disable the animations and have the normal behaviour resumed. Setting this
     * flag to true skips all animations.
     *
     * @default false
     */
-  var disableAllAnimations: js.UndefOr[Boolean] = js.native
+  var disableAllAnimations: js.UndefOr[Boolean] = js.undefined
   /**
     * The length, in milliseconds, that the transition ought to take.
     *
     * @default 350
     */
-  var duration: js.UndefOr[Double | String] = js.native
+  var duration: js.UndefOr[Double | String] = js.undefined
   /**
     * Any valid CSS3 timing function (eg. "linear", "ease-in", "cubic-bezier(1, 0, 0, 1)").
     *
     * @default "ease-in-out"
     */
-  var easing: js.UndefOr[String] = js.native
+  var easing: js.UndefOr[String] = js.undefined
   /**
     * Control the onEnter animation that runs when new items are added to the DOM.
     *
@@ -74,7 +73,7 @@ trait FlipMoveProps extends js.Object {
     *
     * @default "elevator"
     */
-  var enterAnimation: js.UndefOr[AnimationProp] = js.native
+  var enterAnimation: js.UndefOr[AnimationProp] = js.undefined
   /**
     * This function is called with a DOM node as the only argument. It should return an object as specified by the
     * getBoundingClientRect() spec.
@@ -82,7 +81,7 @@ trait FlipMoveProps extends js.Object {
     * For normal usage of FlipMove you won't need this. An example of usage is when FlipMove is used in a container
     * that is scaled using CSS. You can correct the values from getBoundingClientRect by using this prop.
     */
-  var getPosition: js.UndefOr[js.Function1[/* node */ HTMLElement, ClientRect]] = js.native
+  var getPosition: js.UndefOr[js.Function1[/* node */ HTMLElement, ClientRect]] = js.undefined
   /**
     * Control the onLeave animation that runs when new items are removed from the DOM.
     *
@@ -90,7 +89,7 @@ trait FlipMoveProps extends js.Object {
     *
     * @default "elevator"
     */
-  var leaveAnimation: js.UndefOr[AnimationProp] = js.native
+  var leaveAnimation: js.UndefOr[AnimationProp] = js.undefined
   /**
     * Do not collapse container height until after leaving animations complete.
     *
@@ -99,7 +98,7 @@ trait FlipMoveProps extends js.Object {
     *
     * @default false
     */
-  var maintainContainerHeight: js.UndefOr[Boolean] = js.native
+  var maintainContainerHeight: js.UndefOr[Boolean] = js.undefined
   /**
     * A callback to be invoked **once per child element** at the end of the animation.
     *
@@ -109,7 +108,7 @@ trait FlipMoveProps extends js.Object {
     * @param childElement  A reference to the React Element being animated.
     * @param domNode       A reference to the unadulterated DOM node being animated.
     */
-  var onFinish: js.UndefOr[js.Function2[/* childElement */ ReactElement, /* domNode */ HTMLElement, Unit]] = js.native
+  var onFinish: js.UndefOr[js.Function2[/* childElement */ ReactElement, /* domNode */ HTMLElement, Unit]] = js.undefined
   /**
     * A callback to be invoked **once per group** at the end of the animation.
     *
@@ -129,7 +128,7 @@ trait FlipMoveProps extends js.Object {
       /* domNodes */ js.Array[HTMLElement], 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * A callback to be invoked **once per child element** at the start of the animation.
     *
@@ -139,7 +138,7 @@ trait FlipMoveProps extends js.Object {
     * @param childElement  A reference to the React Element being animated.
     * @param domNode       A reference to the unadulterated DOM node being animated.
     */
-  var onStart: js.UndefOr[js.Function2[/* childElement */ ReactElement, /* domNode */ HTMLElement, Unit]] = js.native
+  var onStart: js.UndefOr[js.Function2[/* childElement */ ReactElement, /* domNode */ HTMLElement, Unit]] = js.undefined
   /**
     * A callback to be invoked **once per group** at the start of the animation.
     *
@@ -160,7 +159,7 @@ trait FlipMoveProps extends js.Object {
       /* domNodes */ js.Array[HTMLElement], 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * The length, in milliseconds, to be added to the delay of each subsequent element.
     *
@@ -178,7 +177,7 @@ trait FlipMoveProps extends js.Object {
     *
     * @default 0
     */
-  var staggerDelayBy: js.UndefOr[Double | String] = js.native
+  var staggerDelayBy: js.UndefOr[Double | String] = js.undefined
   /**
     * The length, in milliseconds, to be added to the duration of each subsequent element.
     *
@@ -193,8 +192,8 @@ trait FlipMoveProps extends js.Object {
     *
     * @default 0
     */
-  var staggerDurationBy: js.UndefOr[Double | String] = js.native
-  var style: js.UndefOr[Styles] = js.native
+  var staggerDurationBy: js.UndefOr[Double | String] = js.undefined
+  var style: js.UndefOr[Styles] = js.undefined
   /**
     * Flip Move wraps your children in a container element. By default, this element is a div, but you may wish to
     * provide a custom HTML element (for example, if your children are list items, you may wish to set this to ul).
@@ -203,260 +202,57 @@ trait FlipMoveProps extends js.Object {
     *
     * @default "div"
     */
-  var typeName: js.UndefOr[String | Null] = js.native
+  var typeName: js.UndefOr[String | Null] = js.undefined
   /**
     * @default "top"
     */
-  var verticalAlignment: js.UndefOr[String] = js.native
+  var verticalAlignment: js.UndefOr[String] = js.undefined
 }
 
 object FlipMoveProps {
   @scala.inline
-  def apply(): FlipMoveProps = {
+  def apply(
+    appearAnimation: AnimationProp = null,
+    className: String = null,
+    delay: Double | String = null,
+    disableAllAnimations: js.UndefOr[Boolean] = js.undefined,
+    duration: Double | String = null,
+    easing: String = null,
+    enterAnimation: AnimationProp = null,
+    getPosition: /* node */ HTMLElement => ClientRect = null,
+    leaveAnimation: AnimationProp = null,
+    maintainContainerHeight: js.UndefOr[Boolean] = js.undefined,
+    onFinish: (/* childElement */ ReactElement, /* domNode */ HTMLElement) => Unit = null,
+    onFinishAll: (/* childElements */ js.Array[ReactElement], /* domNodes */ js.Array[HTMLElement]) => Unit = null,
+    onStart: (/* childElement */ ReactElement, /* domNode */ HTMLElement) => Unit = null,
+    onStartAll: (/* childElements */ js.Array[ReactElement], /* domNodes */ js.Array[HTMLElement]) => Unit = null,
+    staggerDelayBy: Double | String = null,
+    staggerDurationBy: Double | String = null,
+    style: Styles = null,
+    typeName: js.UndefOr[Null | String] = js.undefined,
+    verticalAlignment: String = null
+  ): FlipMoveProps = {
     val __obj = js.Dynamic.literal()
+    if (appearAnimation != null) __obj.updateDynamic("appearAnimation")(appearAnimation.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableAllAnimations)) __obj.updateDynamic("disableAllAnimations")(disableAllAnimations.get.asInstanceOf[js.Any])
+    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
+    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
+    if (enterAnimation != null) __obj.updateDynamic("enterAnimation")(enterAnimation.asInstanceOf[js.Any])
+    if (getPosition != null) __obj.updateDynamic("getPosition")(js.Any.fromFunction1(getPosition))
+    if (leaveAnimation != null) __obj.updateDynamic("leaveAnimation")(leaveAnimation.asInstanceOf[js.Any])
+    if (!js.isUndefined(maintainContainerHeight)) __obj.updateDynamic("maintainContainerHeight")(maintainContainerHeight.get.asInstanceOf[js.Any])
+    if (onFinish != null) __obj.updateDynamic("onFinish")(js.Any.fromFunction2(onFinish))
+    if (onFinishAll != null) __obj.updateDynamic("onFinishAll")(js.Any.fromFunction2(onFinishAll))
+    if (onStart != null) __obj.updateDynamic("onStart")(js.Any.fromFunction2(onStart))
+    if (onStartAll != null) __obj.updateDynamic("onStartAll")(js.Any.fromFunction2(onStartAll))
+    if (staggerDelayBy != null) __obj.updateDynamic("staggerDelayBy")(staggerDelayBy.asInstanceOf[js.Any])
+    if (staggerDurationBy != null) __obj.updateDynamic("staggerDurationBy")(staggerDurationBy.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(typeName)) __obj.updateDynamic("typeName")(typeName.asInstanceOf[js.Any])
+    if (verticalAlignment != null) __obj.updateDynamic("verticalAlignment")(verticalAlignment.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlipMoveProps]
   }
-  @scala.inline
-  implicit class FlipMovePropsOps[Self <: FlipMoveProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppearAnimation(value: AnimationProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appearAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppearAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appearAnimation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelay(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableAllAnimations(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAllAnimations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableAllAnimations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAllAnimations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEasing(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEasing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnterAnimation(value: AnimationProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnterAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterAnimation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetPosition(value: /* node */ HTMLElement => ClientRect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPosition")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeaveAnimation(value: AnimationProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leaveAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeaveAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leaveAnimation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaintainContainerHeight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maintainContainerHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaintainContainerHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maintainContainerHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFinish(value: (/* childElement */ ReactElement, /* domNode */ HTMLElement) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFinish")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFinish: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFinish")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFinishAll(value: (/* childElements */ js.Array[ReactElement], /* domNodes */ js.Array[HTMLElement]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFinishAll")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFinishAll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFinishAll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnStart(value: (/* childElement */ ReactElement, /* domNode */ HTMLElement) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStart")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnStartAll(value: (/* childElements */ js.Array[ReactElement], /* domNodes */ js.Array[HTMLElement]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStartAll")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnStartAll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStartAll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStaggerDelayBy(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staggerDelayBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStaggerDelayBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staggerDelayBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStaggerDurationBy(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staggerDurationBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStaggerDurationBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staggerDurationBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: Styles): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeName")(null)
-        ret
-    }
-    @scala.inline
-    def withVerticalAlignment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlignment")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

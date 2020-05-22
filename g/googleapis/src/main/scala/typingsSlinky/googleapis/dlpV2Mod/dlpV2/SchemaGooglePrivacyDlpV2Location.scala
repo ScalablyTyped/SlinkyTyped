@@ -30,53 +30,16 @@ trait SchemaGooglePrivacyDlpV2Location extends js.Object {
 
 object SchemaGooglePrivacyDlpV2Location {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2Location = {
+  def apply(
+    byteRange: SchemaGooglePrivacyDlpV2Range = null,
+    codepointRange: SchemaGooglePrivacyDlpV2Range = null,
+    contentLocations: js.Array[SchemaGooglePrivacyDlpV2ContentLocation] = null
+  ): SchemaGooglePrivacyDlpV2Location = {
     val __obj = js.Dynamic.literal()
+    if (byteRange != null) __obj.updateDynamic("byteRange")(byteRange.asInstanceOf[js.Any])
+    if (codepointRange != null) __obj.updateDynamic("codepointRange")(codepointRange.asInstanceOf[js.Any])
+    if (contentLocations != null) __obj.updateDynamic("contentLocations")(contentLocations.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2Location]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2LocationOps[Self <: SchemaGooglePrivacyDlpV2Location] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withByteRange(value: SchemaGooglePrivacyDlpV2Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("byteRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutByteRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("byteRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCodepointRange(value: SchemaGooglePrivacyDlpV2Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("codepointRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodepointRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("codepointRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentLocations(value: js.Array[SchemaGooglePrivacyDlpV2ContentLocation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentLocations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentLocations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentLocations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -10,4 +10,5 @@ package object Base {
     typingsSlinky.draftJs.mod.Draft.Model.ImmutableData.DraftBlockRenderConfig
   ]
   type DraftStyleMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.react.mod.CSSProperties]
+  type EditorCommand = typingsSlinky.draftJs.mod.Draft.Model.Constants.DraftEditorCommand | java.lang.String
 }

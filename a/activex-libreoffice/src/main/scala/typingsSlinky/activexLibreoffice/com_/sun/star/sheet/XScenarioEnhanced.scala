@@ -15,12 +15,11 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.sheet.XScenario
   * @since OOo 2.0
   */
-@js.native
 trait XScenarioEnhanced extends XInterface {
   /** gets the ranges to the scenario. */
-  val Ranges: SafeArray[CellRangeAddress] = js.native
+  val Ranges: SafeArray[CellRangeAddress]
   /** gets the ranges to the scenario. */
-  def getRanges(): SafeArray[CellRangeAddress] = js.native
+  def getRanges(): SafeArray[CellRangeAddress]
 }
 
 object XScenarioEnhanced {
@@ -35,25 +34,5 @@ object XScenarioEnhanced {
     val __obj = js.Dynamic.literal(Ranges = Ranges.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getRanges = js.Any.fromFunction0(getRanges), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XScenarioEnhanced]
   }
-  @scala.inline
-  implicit class XScenarioEnhancedOps[Self <: XScenarioEnhanced] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRanges(value: SafeArray[CellRangeAddress]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ranges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetRanges(value: () => SafeArray[CellRangeAddress]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRanges")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -36,14 +36,14 @@ trait ChartPoint extends ClientObject {
   var context_ChartPoint: RequestContext = js.native
   /**
     *
-    * Returns the data label of a chart point. Read-only.
+    * Returns the data label of a chart point.
     *
     * [Api set: ExcelApi 1.7]
     */
   val dataLabel: ChartDataLabel = js.native
   /**
     *
-    * Encapsulates the format properties chart point. Read-only.
+    * Encapsulates the format properties chart point.
     *
     * [Api set: ExcelApi 1.1]
     */
@@ -57,14 +57,14 @@ trait ChartPoint extends ClientObject {
   var hasDataLabel: Boolean = js.native
   /**
     *
-    * HTML color code representation of the marker background color of data point. E.g. #FF0000 represents Red.
+    * HTML color code representation of the marker background color of data point (e.g., #FF0000 represents Red).
     *
     * [Api set: ExcelApi 1.7]
     */
   var markerBackgroundColor: String = js.native
   /**
     *
-    * HTML color code representation of the marker foreground color of data point. E.g. #FF0000 represents Red.
+    * HTML color code representation of the marker foreground color of data point (e.g., #FF0000 represents Red).
     *
     * [Api set: ExcelApi 1.7]
     */
@@ -85,7 +85,7 @@ trait ChartPoint extends ClientObject {
   var markerStyle: ChartMarkerStyle | Invalid | Automatic | None | Square | Diamond | Triangle | X | Star | Dot | Dash | Circle | Plus | Picture = js.native
   /**
     *
-    * Returns the value of a chart point. Read-only.
+    * Returns the value of a chart point.
     *
     * [Api set: ExcelApi 1.1]
     */

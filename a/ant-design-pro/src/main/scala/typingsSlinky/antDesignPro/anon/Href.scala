@@ -7,69 +7,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Href extends js.Object {
-  var href: js.UndefOr[LocationDescriptor[LocationState]] = js.native
-  var innerRef: js.UndefOr[js.Function1[/* node */ HTMLAnchorElement | Null, Unit]] = js.native
-  var replace: js.UndefOr[Boolean] = js.native
-  var to: LocationDescriptor[LocationState] = js.native
+  var href: js.UndefOr[LocationDescriptor[LocationState]] = js.undefined
+  var innerRef: js.UndefOr[js.Function1[/* node */ HTMLAnchorElement | Null, Unit]] = js.undefined
+  var replace: js.UndefOr[Boolean] = js.undefined
+  var to: LocationDescriptor[LocationState]
 }
 
 object Href {
   @scala.inline
-  def apply(to: LocationDescriptor[LocationState]): Href = {
+  def apply(
+    to: LocationDescriptor[LocationState],
+    href: LocationDescriptor[LocationState] = null,
+    innerRef: /* node */ HTMLAnchorElement | Null => Unit = null,
+    replace: js.UndefOr[Boolean] = js.undefined
+  ): Href = {
     val __obj = js.Dynamic.literal(to = to.asInstanceOf[js.Any])
+    if (href != null) __obj.updateDynamic("href")(href.asInstanceOf[js.Any])
+    if (innerRef != null) __obj.updateDynamic("innerRef")(js.Any.fromFunction1(innerRef))
+    if (!js.isUndefined(replace)) __obj.updateDynamic("replace")(replace.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Href]
   }
-  @scala.inline
-  implicit class HrefOps[Self <: Href] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTo(value: LocationDescriptor[LocationState]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHref(value: LocationDescriptor[LocationState]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHref: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInnerRef(value: /* node */ HTMLAnchorElement | Null => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutInnerRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplace(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replace")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

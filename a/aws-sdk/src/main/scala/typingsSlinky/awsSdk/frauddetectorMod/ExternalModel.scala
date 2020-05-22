@@ -42,113 +42,26 @@ trait ExternalModel extends js.Object {
 
 object ExternalModel {
   @scala.inline
-  def apply(): ExternalModel = {
+  def apply(
+    createdTime: time = null,
+    inputConfiguration: ModelInputConfiguration = null,
+    lastUpdatedTime: time = null,
+    modelEndpoint: String = null,
+    modelEndpointStatus: ModelEndpointStatus = null,
+    modelSource: ModelSource = null,
+    outputConfiguration: ModelOutputConfiguration = null,
+    role: Role = null
+  ): ExternalModel = {
     val __obj = js.Dynamic.literal()
+    if (createdTime != null) __obj.updateDynamic("createdTime")(createdTime.asInstanceOf[js.Any])
+    if (inputConfiguration != null) __obj.updateDynamic("inputConfiguration")(inputConfiguration.asInstanceOf[js.Any])
+    if (lastUpdatedTime != null) __obj.updateDynamic("lastUpdatedTime")(lastUpdatedTime.asInstanceOf[js.Any])
+    if (modelEndpoint != null) __obj.updateDynamic("modelEndpoint")(modelEndpoint.asInstanceOf[js.Any])
+    if (modelEndpointStatus != null) __obj.updateDynamic("modelEndpointStatus")(modelEndpointStatus.asInstanceOf[js.Any])
+    if (modelSource != null) __obj.updateDynamic("modelSource")(modelSource.asInstanceOf[js.Any])
+    if (outputConfiguration != null) __obj.updateDynamic("outputConfiguration")(outputConfiguration.asInstanceOf[js.Any])
+    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExternalModel]
   }
-  @scala.inline
-  implicit class ExternalModelOps[Self <: ExternalModel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreatedTime(value: time): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputConfiguration(value: ModelInputConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdatedTime(value: time): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdatedTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModelEndpoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModelEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModelEndpointStatus(value: ModelEndpointStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelEndpointStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModelEndpointStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelEndpointStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModelSource(value: ModelSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModelSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputConfiguration(value: ModelOutputConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRole(value: Role): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait YAxisDateTimeLabelFormatsDayOptions extends js.Object {
-  var main: js.UndefOr[String] = js.native
+  var main: js.UndefOr[String] = js.undefined
 }
 
 object YAxisDateTimeLabelFormatsDayOptions {
   @scala.inline
-  def apply(): YAxisDateTimeLabelFormatsDayOptions = {
+  def apply(main: String = null): YAxisDateTimeLabelFormatsDayOptions = {
     val __obj = js.Dynamic.literal()
+    if (main != null) __obj.updateDynamic("main")(main.asInstanceOf[js.Any])
     __obj.asInstanceOf[YAxisDateTimeLabelFormatsDayOptions]
   }
-  @scala.inline
-  implicit class YAxisDateTimeLabelFormatsDayOptionsOps[Self <: YAxisDateTimeLabelFormatsDayOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMain(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("main")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("main")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -14,7 +14,8 @@ import typingsSlinky.officeUiFabricReact.navTypesMod.INavLinkGroup
 import typingsSlinky.officeUiFabricReact.navTypesMod.INavProps
 import typingsSlinky.officeUiFabricReact.navTypesMod.INavStyleProps
 import typingsSlinky.officeUiFabricReact.navTypesMod.INavStyles
-import typingsSlinky.std.Partial
+import typingsSlinky.officeUiFabricReact.navTypesMod.IRenderGroupHeaderProps
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -69,7 +70,9 @@ object NavBase {
     ): this.type = set("onLinkExpandClick", js.Any.fromFunction2(value))
     @scala.inline
     def onRenderGroupHeader(
-      value: (/* props */ js.UndefOr[INavLinkGroup], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[INavLinkGroup], ReactElement | Null]]) => ReactElement | Null
+      value: (/* props */ js.UndefOr[IRenderGroupHeaderProps], /* defaultRender */ js.UndefOr[
+          js.Function1[/* props */ js.UndefOr[IRenderGroupHeaderProps], ReactElement | Null]
+        ]) => ReactElement | Null
     ): this.type = set("onRenderGroupHeader", js.Any.fromFunction2(value))
     @scala.inline
     def onRenderLink(
@@ -80,7 +83,7 @@ object NavBase {
     @scala.inline
     def selectedKey(value: String): this.type = set("selectedKey", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: INavStyleProps => Partial[INavStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: INavStyleProps => DeepPartial[INavStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[INavStyleProps, INavStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

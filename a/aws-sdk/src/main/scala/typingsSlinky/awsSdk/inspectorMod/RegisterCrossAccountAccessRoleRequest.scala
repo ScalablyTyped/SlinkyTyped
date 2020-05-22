@@ -18,19 +18,5 @@ object RegisterCrossAccountAccessRoleRequest {
     val __obj = js.Dynamic.literal(roleArn = roleArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterCrossAccountAccessRoleRequest]
   }
-  @scala.inline
-  implicit class RegisterCrossAccountAccessRoleRequestOps[Self <: RegisterCrossAccountAccessRoleRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRoleArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

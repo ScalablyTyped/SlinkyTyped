@@ -18,35 +18,10 @@ trait FailoverDBClusterMessage extends js.Object {
 
 object FailoverDBClusterMessage {
   @scala.inline
-  def apply(DBClusterIdentifier: String): FailoverDBClusterMessage = {
+  def apply(DBClusterIdentifier: String, TargetDBInstanceIdentifier: String = null): FailoverDBClusterMessage = {
     val __obj = js.Dynamic.literal(DBClusterIdentifier = DBClusterIdentifier.asInstanceOf[js.Any])
+    if (TargetDBInstanceIdentifier != null) __obj.updateDynamic("TargetDBInstanceIdentifier")(TargetDBInstanceIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[FailoverDBClusterMessage]
   }
-  @scala.inline
-  implicit class FailoverDBClusterMessageOps[Self <: FailoverDBClusterMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDBClusterIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetDBInstanceIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetDBInstanceIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetDBInstanceIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetDBInstanceIdentifier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StandardShorthandProperties[TLength] extends js.Object {
   /**
     * The `**all**` CSS shorthand property sets all of an element's properties (other than `unicode-bidi` and `direction`) to their initial or inherited values, or to the values specified in another stylesheet origin.
@@ -17,7 +16,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/all
     */
-  var all: js.UndefOr[Globals] = js.native
+  var all: js.UndefOr[Globals] = js.undefined
   /**
     * The **`animation`** shorthand CSS property sets an animated transition between styles. It is a shorthand for `animation-name`, `animation-duration`, `animation-timing-function`, `animation-delay`, `animation-iteration-count`, `animation-direction`, `animation-fill-mode`, and `animation-play-state`.
     *
@@ -28,7 +27,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/animation
     */
-  var animation: js.UndefOr[AnimationProperty] = js.native
+  var animation: js.UndefOr[AnimationProperty] = js.undefined
   /**
     * The **`background`** shorthand CSS property sets all background style properties at once, such as color, image, origin and size, or repeat method.
     *
@@ -38,7 +37,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/background
     */
-  var background: js.UndefOr[BackgroundProperty[TLength]] = js.native
+  var background: js.UndefOr[BackgroundProperty[TLength]] = js.undefined
   /**
     * The **`border`** CSS property sets an element's border. It's a shorthand for `border-width`, `border-style`, and `border-color`.
     *
@@ -48,7 +47,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border
     */
-  var border: js.UndefOr[BorderProperty[TLength]] = js.native
+  var border: js.UndefOr[BorderProperty[TLength]] = js.undefined
   /**
     * The **`border-block`** CSS property is a shorthand property for setting the individual logical block border property values in a single place in the style sheet.
     *
@@ -58,7 +57,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-block
     */
-  var borderBlock: js.UndefOr[BorderBlockProperty[TLength]] = js.native
+  var borderBlock: js.UndefOr[BorderBlockProperty[TLength]] = js.undefined
   /**
     * The **`border-block-end`** CSS property is a shorthand property for setting the individual logical block-end border property values in a single place in the style sheet.
     *
@@ -68,7 +67,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-block-end
     */
-  var borderBlockEnd: js.UndefOr[BorderBlockEndProperty[TLength]] = js.native
+  var borderBlockEnd: js.UndefOr[BorderBlockEndProperty[TLength]] = js.undefined
   /**
     * The **`border-block-start`** CSS property is a shorthand property for setting the individual logical block-start border property values in a single place in the style sheet.
     *
@@ -78,7 +77,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-block-start
     */
-  var borderBlockStart: js.UndefOr[BorderBlockStartProperty[TLength]] = js.native
+  var borderBlockStart: js.UndefOr[BorderBlockStartProperty[TLength]] = js.undefined
   /**
     * The **`border-bottom`** CSS property is a shorthand that sets the values of `border-bottom-width`, `border-bottom-style` and `border-bottom-color`. These properties set an element's bottom border.
     *
@@ -88,7 +87,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-bottom
     */
-  var borderBottom: js.UndefOr[BorderBottomProperty[TLength]] = js.native
+  var borderBottom: js.UndefOr[BorderBottomProperty[TLength]] = js.undefined
   /**
     * The **`border-color`** shorthand CSS property sets the color of all sides of an element's border.
     *
@@ -98,7 +97,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-color
     */
-  var borderColor: js.UndefOr[BorderColorProperty] = js.native
+  var borderColor: js.UndefOr[BorderColorProperty] = js.undefined
   /**
     * The **`border-image`** CSS property draws an image in place of an element's `border-style`.
     *
@@ -109,7 +108,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-image
     */
-  var borderImage: js.UndefOr[BorderImageProperty] = js.native
+  var borderImage: js.UndefOr[BorderImageProperty] = js.undefined
   /**
     * The **`border-inline`** CSS property is a shorthand property for setting the individual logical inline border property values in a single place in the style sheet.
     *
@@ -119,7 +118,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-inline
     */
-  var borderInline: js.UndefOr[BorderInlineProperty[TLength]] = js.native
+  var borderInline: js.UndefOr[BorderInlineProperty[TLength]] = js.undefined
   /**
     * The **`border-inline-end`** CSS property is a shorthand property for setting the individual logical inline-end border property values in a single place in the style sheet.
     *
@@ -129,7 +128,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-inline-end
     */
-  var borderInlineEnd: js.UndefOr[BorderInlineEndProperty[TLength]] = js.native
+  var borderInlineEnd: js.UndefOr[BorderInlineEndProperty[TLength]] = js.undefined
   /**
     * The **`border-inline-start`** CSS property is a shorthand property for setting the individual logical inline-start border property values in a single place in the style sheet.
     *
@@ -139,7 +138,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-inline-start
     */
-  var borderInlineStart: js.UndefOr[BorderInlineStartProperty[TLength]] = js.native
+  var borderInlineStart: js.UndefOr[BorderInlineStartProperty[TLength]] = js.undefined
   /**
     * The **`border-left`** CSS property is a shorthand that sets the values of `border-left-width`, `border-left-style` and `border-left-color`. These properties set an element's left border.
     *
@@ -149,7 +148,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-left
     */
-  var borderLeft: js.UndefOr[BorderLeftProperty[TLength]] = js.native
+  var borderLeft: js.UndefOr[BorderLeftProperty[TLength]] = js.undefined
   /**
     * The **`border-radius`** CSS property rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners.
     *
@@ -160,7 +159,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-radius
     */
-  var borderRadius: js.UndefOr[BorderRadiusProperty[TLength]] = js.native
+  var borderRadius: js.UndefOr[BorderRadiusProperty[TLength]] = js.undefined
   /**
     * The **`border-right`** CSS property is a shorthand that sets the values of `border-right-width`, `border-right-style` and `border-right-color`. These properties set an element's right border.
     *
@@ -170,7 +169,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-right
     */
-  var borderRight: js.UndefOr[BorderRightProperty[TLength]] = js.native
+  var borderRight: js.UndefOr[BorderRightProperty[TLength]] = js.undefined
   /**
     * The **`border-style`** CSS property is a shorthand property that sets the line style for all four sides of an element's border.
     *
@@ -180,7 +179,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-style
     */
-  var borderStyle: js.UndefOr[BorderStyleProperty] = js.native
+  var borderStyle: js.UndefOr[BorderStyleProperty] = js.undefined
   /**
     * The **`border-top`** CSS property is a shorthand that sets the values of `border-top-width`, `border-top-style` and `border-top-color`. These properties set an element's top border.
     *
@@ -190,7 +189,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-top
     */
-  var borderTop: js.UndefOr[BorderTopProperty[TLength]] = js.native
+  var borderTop: js.UndefOr[BorderTopProperty[TLength]] = js.undefined
   /**
     * The **`border-width`** shorthand CSS property sets the widths of all four sides of an element's border.
     *
@@ -200,7 +199,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-width
     */
-  var borderWidth: js.UndefOr[BorderWidthProperty[TLength]] = js.native
+  var borderWidth: js.UndefOr[BorderWidthProperty[TLength]] = js.undefined
   /**
     * The **`column-rule`** CSS property sets the width, style, and color of the rule (line) drawn between columns in a multi-column layout.
     *
@@ -211,7 +210,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/column-rule
     */
-  var columnRule: js.UndefOr[ColumnRuleProperty[TLength]] = js.native
+  var columnRule: js.UndefOr[ColumnRuleProperty[TLength]] = js.undefined
   /**
     * The **`columns`** CSS property sets the column width and column count of an element.
     *
@@ -222,7 +221,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/columns
     */
-  var columns: js.UndefOr[ColumnsProperty[TLength]] = js.native
+  var columns: js.UndefOr[ColumnsProperty[TLength]] = js.undefined
   /**
     * The **`flex`** CSS property sets how a flex item will grow or shrink to fit the space available in its flex container. It is a shorthand for `flex-grow`, `flex-shrink`, and `flex-basis`.
     *
@@ -233,7 +232,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/flex
     */
-  var flex: js.UndefOr[FlexProperty[TLength]] = js.native
+  var flex: js.UndefOr[FlexProperty[TLength]] = js.undefined
   /**
     * The **`flex-flow`** CSS property is a shorthand property for `flex-direction` and `flex-wrap` properties.
     *
@@ -244,7 +243,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/flex-flow
     */
-  var flexFlow: js.UndefOr[FlexFlowProperty] = js.native
+  var flexFlow: js.UndefOr[FlexFlowProperty] = js.undefined
   /**
     * The **`font`** CSS property is a shorthand for `font-style`, `font-variant`, `font-weight`, `font-size`, `line-height`, and `font-family`. Alternatively, it sets an element's font to a system font.
     *
@@ -254,7 +253,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/font
     */
-  var font: js.UndefOr[FontProperty] = js.native
+  var font: js.UndefOr[FontProperty] = js.undefined
   /**
     * The **`gap`** CSS property sets the gaps (gutters) between rows and columns. It is a shorthand for `row-gap` and `column-gap`.
     *
@@ -287,7 +286,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/gap
     */
-  var gap: js.UndefOr[GapProperty[TLength]] = js.native
+  var gap: js.UndefOr[GapProperty[TLength]] = js.undefined
   /**
     * The **`grid`** CSS property is a shorthand property that sets all of the explicit grid properties (`grid-template-rows`, `grid-template-columns`, and `grid-template-areas`), and all the implicit grid properties (`grid-auto-rows`, `grid-auto-columns`, and `grid-auto-flow`), in a single declaration.
     *
@@ -297,7 +296,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/grid
     */
-  var grid: js.UndefOr[GridProperty] = js.native
+  var grid: js.UndefOr[GridProperty] = js.undefined
   /**
     * The **`grid-area`** CSS property is a shorthand property for `grid-row-start`, `grid-column-start`, `grid-row-end` and `grid-column-end`, specifying a grid item’s size and location within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the edges of its grid area.
     *
@@ -307,7 +306,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/grid-area
     */
-  var gridArea: js.UndefOr[GridAreaProperty] = js.native
+  var gridArea: js.UndefOr[GridAreaProperty] = js.undefined
   /**
     * The **`grid-column`** CSS property is a shorthand property for `grid-column-start` and `grid-column-end` specifying a grid item's size and location within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its grid area.
     *
@@ -317,7 +316,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/grid-column
     */
-  var gridColumn: js.UndefOr[GridColumnProperty] = js.native
+  var gridColumn: js.UndefOr[GridColumnProperty] = js.undefined
   /**
     * The **`grid-row`** CSS property is a shorthand property for `grid-row-start` and `grid-row-end` specifying a grid item’s size and location within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its grid area.
     *
@@ -327,7 +326,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/grid-row
     */
-  var gridRow: js.UndefOr[GridRowProperty] = js.native
+  var gridRow: js.UndefOr[GridRowProperty] = js.undefined
   /**
     * The **`grid-template`** CSS property is a shorthand property for defining grid columns, rows, and areas.
     *
@@ -337,9 +336,9 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/grid-template
     */
-  var gridTemplate: js.UndefOr[GridTemplateProperty] = js.native
+  var gridTemplate: js.UndefOr[GridTemplateProperty] = js.undefined
   /** **Initial value**: `none` */
-  var lineClamp: js.UndefOr[LineClampProperty] = js.native
+  var lineClamp: js.UndefOr[LineClampProperty] = js.undefined
   /**
     * The **`list-style`** CSS property is a shorthand to set list style properties `list-style-type`, `list-style-image`, and `list-style-position`.
     *
@@ -349,7 +348,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/list-style
     */
-  var listStyle: js.UndefOr[ListStyleProperty] = js.native
+  var listStyle: js.UndefOr[ListStyleProperty] = js.undefined
   /**
     * The **`margin`** CSS property sets the margin area on all four sides of an element. It is a shorthand for `margin-top`, `margin-right`, `margin-bottom`, and `margin-left`.
     *
@@ -359,7 +358,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/margin
     */
-  var margin: js.UndefOr[MarginProperty[TLength]] = js.native
+  var margin: js.UndefOr[MarginProperty[TLength]] = js.undefined
   /**
     * The **`mask`** CSS property hides an element (partially or fully) by masking or clipping the image at specific points.
     *
@@ -369,9 +368,9 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/mask
     */
-  var mask: js.UndefOr[MaskProperty[TLength]] = js.native
+  var mask: js.UndefOr[MaskProperty[TLength]] = js.undefined
   /** The **`mask-border`** CSS property lets you create a mask along the edge of an element's border. */
-  var maskBorder: js.UndefOr[MaskBorderProperty] = js.native
+  var maskBorder: js.UndefOr[MaskBorderProperty] = js.undefined
   /**
     * The **`offset`** CSS property is a shorthand property for animating an element along a defined path.
     *
@@ -382,7 +381,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/offset
     */
-  var motion: js.UndefOr[OffsetProperty[TLength]] = js.native
+  var motion: js.UndefOr[OffsetProperty[TLength]] = js.undefined
   /**
     * The **`offset`** CSS property is a shorthand property for animating an element along a defined path.
     *
@@ -393,7 +392,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/offset
     */
-  var offset: js.UndefOr[OffsetProperty[TLength]] = js.native
+  var offset: js.UndefOr[OffsetProperty[TLength]] = js.undefined
   /**
     * The **`outline`** CSS property is a shorthand to set various outline properties in a single declaration: `outline-style`, `outline-width`, and `outline-color`.
     *
@@ -403,7 +402,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/outline
     */
-  var outline: js.UndefOr[OutlineProperty[TLength]] = js.native
+  var outline: js.UndefOr[OutlineProperty[TLength]] = js.undefined
   /**
     * The **`padding`** CSS property sets the padding area on all four sides of an element. It is a shorthand for `padding-top`, `padding-right`, `padding-bottom`, and `padding-left`.
     *
@@ -413,7 +412,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/padding
     */
-  var padding: js.UndefOr[PaddingProperty[TLength]] = js.native
+  var padding: js.UndefOr[PaddingProperty[TLength]] = js.undefined
   /**
     * The CSS **`place-items`** shorthand property sets the `align-items` and `justify-items` properties, respectively. If the second value is not set, the first value is also used for it.
     *
@@ -437,7 +436,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/place-items
     */
-  var placeItems: js.UndefOr[PlaceItemsProperty] = js.native
+  var placeItems: js.UndefOr[PlaceItemsProperty] = js.undefined
   /**
     * The **`place-self`** CSS property is a shorthand property sets both the `align-self` and `justify-self` properties. The first value is the `align-self` property value, the second the `justify-self` one. If the second value is not present, the first value is also used for it.
     *
@@ -461,7 +460,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/place-self
     */
-  var placeSelf: js.UndefOr[PlaceSelfProperty] = js.native
+  var placeSelf: js.UndefOr[PlaceSelfProperty] = js.undefined
   /**
     * The **`text-decoration`** CSS property sets the appearance of decorative lines on text. It is a shorthand for `text-decoration-line`, `text-decoration-color`, and `text-decoration-style`.
     *
@@ -471,7 +470,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/text-decoration
     */
-  var textDecoration: js.UndefOr[TextDecorationProperty] = js.native
+  var textDecoration: js.UndefOr[TextDecorationProperty] = js.undefined
   /**
     * The **`text-emphasis`** CSS property applies emphasis marks to text (except spaces and control characters). It is a shorthand for `text-emphasis-style` and `text-emphasis-color`.
     *
@@ -481,7 +480,7 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/text-emphasis
     */
-  var textEmphasis: js.UndefOr[TextEmphasisProperty] = js.native
+  var textEmphasis: js.UndefOr[TextEmphasisProperty] = js.undefined
   /**
     * The **`transition`** CSS property is a shorthand property for `transition-property`, `transition-duration`, `transition-timing-function`, and `transition-delay`.
     *
@@ -492,550 +491,103 @@ trait StandardShorthandProperties[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/transition
     */
-  var transition: js.UndefOr[TransitionProperty] = js.native
+  var transition: js.UndefOr[TransitionProperty] = js.undefined
 }
 
 object StandardShorthandProperties {
   @scala.inline
-  def apply[TLength](): StandardShorthandProperties[TLength] = {
+  def apply[TLength](
+    all: Globals = null,
+    animation: AnimationProperty = null,
+    background: BackgroundProperty[TLength] = null,
+    border: BorderProperty[TLength] = null,
+    borderBlock: BorderBlockProperty[TLength] = null,
+    borderBlockEnd: BorderBlockEndProperty[TLength] = null,
+    borderBlockStart: BorderBlockStartProperty[TLength] = null,
+    borderBottom: BorderBottomProperty[TLength] = null,
+    borderColor: BorderColorProperty = null,
+    borderImage: BorderImageProperty = null,
+    borderInline: BorderInlineProperty[TLength] = null,
+    borderInlineEnd: BorderInlineEndProperty[TLength] = null,
+    borderInlineStart: BorderInlineStartProperty[TLength] = null,
+    borderLeft: BorderLeftProperty[TLength] = null,
+    borderRadius: BorderRadiusProperty[TLength] = null,
+    borderRight: BorderRightProperty[TLength] = null,
+    borderStyle: BorderStyleProperty = null,
+    borderTop: BorderTopProperty[TLength] = null,
+    borderWidth: BorderWidthProperty[TLength] = null,
+    columnRule: ColumnRuleProperty[TLength] = null,
+    columns: ColumnsProperty[TLength] = null,
+    flex: FlexProperty[TLength] = null,
+    flexFlow: FlexFlowProperty = null,
+    font: FontProperty = null,
+    gap: GapProperty[TLength] = null,
+    grid: GridProperty = null,
+    gridArea: GridAreaProperty = null,
+    gridColumn: GridColumnProperty = null,
+    gridRow: GridRowProperty = null,
+    gridTemplate: GridTemplateProperty = null,
+    lineClamp: LineClampProperty = null,
+    listStyle: ListStyleProperty = null,
+    margin: MarginProperty[TLength] = null,
+    mask: MaskProperty[TLength] = null,
+    maskBorder: MaskBorderProperty = null,
+    motion: OffsetProperty[TLength] = null,
+    offset: OffsetProperty[TLength] = null,
+    outline: OutlineProperty[TLength] = null,
+    padding: PaddingProperty[TLength] = null,
+    placeItems: PlaceItemsProperty = null,
+    placeSelf: PlaceSelfProperty = null,
+    textDecoration: TextDecorationProperty = null,
+    textEmphasis: TextEmphasisProperty = null,
+    transition: TransitionProperty = null
+  ): StandardShorthandProperties[TLength] = {
     val __obj = js.Dynamic.literal()
+    if (all != null) __obj.updateDynamic("all")(all.asInstanceOf[js.Any])
+    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
+    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (borderBlock != null) __obj.updateDynamic("borderBlock")(borderBlock.asInstanceOf[js.Any])
+    if (borderBlockEnd != null) __obj.updateDynamic("borderBlockEnd")(borderBlockEnd.asInstanceOf[js.Any])
+    if (borderBlockStart != null) __obj.updateDynamic("borderBlockStart")(borderBlockStart.asInstanceOf[js.Any])
+    if (borderBottom != null) __obj.updateDynamic("borderBottom")(borderBottom.asInstanceOf[js.Any])
+    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
+    if (borderImage != null) __obj.updateDynamic("borderImage")(borderImage.asInstanceOf[js.Any])
+    if (borderInline != null) __obj.updateDynamic("borderInline")(borderInline.asInstanceOf[js.Any])
+    if (borderInlineEnd != null) __obj.updateDynamic("borderInlineEnd")(borderInlineEnd.asInstanceOf[js.Any])
+    if (borderInlineStart != null) __obj.updateDynamic("borderInlineStart")(borderInlineStart.asInstanceOf[js.Any])
+    if (borderLeft != null) __obj.updateDynamic("borderLeft")(borderLeft.asInstanceOf[js.Any])
+    if (borderRadius != null) __obj.updateDynamic("borderRadius")(borderRadius.asInstanceOf[js.Any])
+    if (borderRight != null) __obj.updateDynamic("borderRight")(borderRight.asInstanceOf[js.Any])
+    if (borderStyle != null) __obj.updateDynamic("borderStyle")(borderStyle.asInstanceOf[js.Any])
+    if (borderTop != null) __obj.updateDynamic("borderTop")(borderTop.asInstanceOf[js.Any])
+    if (borderWidth != null) __obj.updateDynamic("borderWidth")(borderWidth.asInstanceOf[js.Any])
+    if (columnRule != null) __obj.updateDynamic("columnRule")(columnRule.asInstanceOf[js.Any])
+    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
+    if (flex != null) __obj.updateDynamic("flex")(flex.asInstanceOf[js.Any])
+    if (flexFlow != null) __obj.updateDynamic("flexFlow")(flexFlow.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (gap != null) __obj.updateDynamic("gap")(gap.asInstanceOf[js.Any])
+    if (grid != null) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
+    if (gridArea != null) __obj.updateDynamic("gridArea")(gridArea.asInstanceOf[js.Any])
+    if (gridColumn != null) __obj.updateDynamic("gridColumn")(gridColumn.asInstanceOf[js.Any])
+    if (gridRow != null) __obj.updateDynamic("gridRow")(gridRow.asInstanceOf[js.Any])
+    if (gridTemplate != null) __obj.updateDynamic("gridTemplate")(gridTemplate.asInstanceOf[js.Any])
+    if (lineClamp != null) __obj.updateDynamic("lineClamp")(lineClamp.asInstanceOf[js.Any])
+    if (listStyle != null) __obj.updateDynamic("listStyle")(listStyle.asInstanceOf[js.Any])
+    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (mask != null) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
+    if (maskBorder != null) __obj.updateDynamic("maskBorder")(maskBorder.asInstanceOf[js.Any])
+    if (motion != null) __obj.updateDynamic("motion")(motion.asInstanceOf[js.Any])
+    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
+    if (outline != null) __obj.updateDynamic("outline")(outline.asInstanceOf[js.Any])
+    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
+    if (placeItems != null) __obj.updateDynamic("placeItems")(placeItems.asInstanceOf[js.Any])
+    if (placeSelf != null) __obj.updateDynamic("placeSelf")(placeSelf.asInstanceOf[js.Any])
+    if (textDecoration != null) __obj.updateDynamic("textDecoration")(textDecoration.asInstanceOf[js.Any])
+    if (textEmphasis != null) __obj.updateDynamic("textEmphasis")(textEmphasis.asInstanceOf[js.Any])
+    if (transition != null) __obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
     __obj.asInstanceOf[StandardShorthandProperties[TLength]]
   }
-  @scala.inline
-  implicit class StandardShorthandPropertiesOps[Self[tlength] <: StandardShorthandProperties[tlength], TLength] (val x: Self[TLength]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TLength] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TLength]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[TLength] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TLength] with Other]
-    @scala.inline
-    def withAll(value: Globals): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAll: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimation(value: AnimationProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimation: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackground(value: BackgroundProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackground: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorder(value: BorderProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorder: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderBlock(value: BorderBlockProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderBlock: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderBlockEnd(value: BorderBlockEndProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlockEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderBlockEnd: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlockEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderBlockStart(value: BorderBlockStartProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlockStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderBlockStart: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlockStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderBottom(value: BorderBottomProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderBottom: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderColor(value: BorderColorProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderColor: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderImage(value: BorderImageProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderImage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderImage: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderImage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderInline(value: BorderInlineProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderInline: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderInlineEnd(value: BorderInlineEndProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInlineEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderInlineEnd: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInlineEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderInlineStart(value: BorderInlineStartProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInlineStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderInlineStart: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInlineStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderLeft(value: BorderLeftProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderLeft: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderRadius(value: BorderRadiusProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderRadius: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderRight(value: BorderRightProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderRight: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderStyle(value: BorderStyleProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderStyle: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderTop(value: BorderTopProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderTop: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderWidth(value: BorderWidthProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderWidth: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnRule(value: ColumnRuleProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnRule: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnRule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumns(value: ColumnsProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumns: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlex(value: FlexProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlex: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlexFlow(value: FlexFlowProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flexFlow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlexFlow: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flexFlow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFont(value: FontProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGap(value: GapProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGap: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrid(value: GridProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrid: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridArea(value: GridAreaProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridArea: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridColumn(value: GridColumnProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridColumn: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridRow(value: GridRowProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridRow: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridTemplate(value: GridTemplateProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridTemplate: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineClamp(value: LineClampProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineClamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineClamp: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineClamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListStyle(value: ListStyleProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListStyle: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMargin(value: MarginProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMargin: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMask(value: MaskProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMask: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaskBorder(value: MaskBorderProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maskBorder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaskBorder: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maskBorder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMotion(value: OffsetProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("motion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMotion: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("motion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: OffsetProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutline(value: OutlineProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutline: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(value: PaddingProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceItems(value: PlaceItemsProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceItems: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceSelf(value: PlaceSelfProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeSelf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceSelf: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeSelf")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextDecoration(value: TextDecorationProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textDecoration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextDecoration: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textDecoration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextEmphasis(value: TextEmphasisProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textEmphasis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextEmphasis: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textEmphasis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransition(value: TransitionProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransition: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

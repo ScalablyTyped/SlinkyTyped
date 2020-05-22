@@ -14,29 +14,10 @@ trait ParameterConstraints extends js.Object {
 
 object ParameterConstraints {
   @scala.inline
-  def apply(): ParameterConstraints = {
+  def apply(Required: js.UndefOr[boolean] = js.undefined): ParameterConstraints = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Required)) __obj.updateDynamic("Required")(Required.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParameterConstraints]
   }
-  @scala.inline
-  implicit class ParameterConstraintsOps[Self <: ParameterConstraints] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRequired(value: boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Required")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

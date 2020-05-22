@@ -10,114 +10,36 @@ import scala.scalajs.js.annotation._
 /**
   * Options available to be specified for IWebSocketProvider.
   */
-@js.native
 trait IWebSocketConfigOptions extends js.Object {
-  var binaryType: js.UndefOr[blob | arraybuffer] = js.native
-  var initialTimeout: js.UndefOr[Double] = js.native
-  var maxTimeout: js.UndefOr[Double] = js.native
-  var reconnectIfNotNormalClose: js.UndefOr[Boolean] = js.native
-  var rootScopeFailOver: js.UndefOr[Boolean] = js.native
-  var scope: js.UndefOr[IScope] = js.native
-  var useApplyAsync: js.UndefOr[Boolean] = js.native
+  var binaryType: js.UndefOr[blob | arraybuffer] = js.undefined
+  var initialTimeout: js.UndefOr[Double] = js.undefined
+  var maxTimeout: js.UndefOr[Double] = js.undefined
+  var reconnectIfNotNormalClose: js.UndefOr[Boolean] = js.undefined
+  var rootScopeFailOver: js.UndefOr[Boolean] = js.undefined
+  var scope: js.UndefOr[IScope] = js.undefined
+  var useApplyAsync: js.UndefOr[Boolean] = js.undefined
 }
 
 object IWebSocketConfigOptions {
   @scala.inline
-  def apply(): IWebSocketConfigOptions = {
+  def apply(
+    binaryType: blob | arraybuffer = null,
+    initialTimeout: js.UndefOr[Double] = js.undefined,
+    maxTimeout: js.UndefOr[Double] = js.undefined,
+    reconnectIfNotNormalClose: js.UndefOr[Boolean] = js.undefined,
+    rootScopeFailOver: js.UndefOr[Boolean] = js.undefined,
+    scope: IScope = null,
+    useApplyAsync: js.UndefOr[Boolean] = js.undefined
+  ): IWebSocketConfigOptions = {
     val __obj = js.Dynamic.literal()
+    if (binaryType != null) __obj.updateDynamic("binaryType")(binaryType.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialTimeout)) __obj.updateDynamic("initialTimeout")(initialTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxTimeout)) __obj.updateDynamic("maxTimeout")(maxTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(reconnectIfNotNormalClose)) __obj.updateDynamic("reconnectIfNotNormalClose")(reconnectIfNotNormalClose.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rootScopeFailOver)) __obj.updateDynamic("rootScopeFailOver")(rootScopeFailOver.get.asInstanceOf[js.Any])
+    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
+    if (!js.isUndefined(useApplyAsync)) __obj.updateDynamic("useApplyAsync")(useApplyAsync.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IWebSocketConfigOptions]
   }
-  @scala.inline
-  implicit class IWebSocketConfigOptionsOps[Self <: IWebSocketConfigOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBinaryType(value: blob | arraybuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binaryType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBinaryType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binaryType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReconnectIfNotNormalClose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reconnectIfNotNormalClose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReconnectIfNotNormalClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reconnectIfNotNormalClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootScopeFailOver(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootScopeFailOver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRootScopeFailOver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootScopeFailOver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScope(value: IScope): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseApplyAsync(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useApplyAsync")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseApplyAsync: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useApplyAsync")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -12,7 +12,12 @@ object DialogInput {
   @js.native
   object component extends js.Object
   
-  def withProps[T](p: InputProps[T] with ViewProps with TextInputProps): `SharedBuilder_<intersection>_70886183`[typingsSlinky.reactNativeDialog.mod.Dialog.Input[js.Any], T] = new `SharedBuilder_<intersection>_70886183`[typingsSlinky.reactNativeDialog.mod.Dialog.Input[js.Any], T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make[T](companion: DialogInput.type): `SharedBuilder_<intersection>_70886183`[typingsSlinky.reactNativeDialog.mod.Dialog.Input[js.Any], T] = new `SharedBuilder_<intersection>_70886183`[typingsSlinky.reactNativeDialog.mod.Dialog.Input[js.Any], T](js.Array(this.component, js.Dictionary.empty))()
+  def withProps[T](p: InputProps[T] with ViewProps with TextInputProps): SharedBuilder_InputPropsViewPropsTextInputProps_70886183[typingsSlinky.reactNativeDialog.mod.Dialog.Input[js.Any], T] = new SharedBuilder_InputPropsViewPropsTextInputProps_70886183[typingsSlinky.reactNativeDialog.mod.Dialog.Input[js.Any], T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](): SharedBuilder_InputPropsViewPropsTextInputProps_70886183[typingsSlinky.reactNativeDialog.mod.Dialog.Input[js.Any], T] = {
+    val __props = js.Dynamic.literal()
+    new SharedBuilder_InputPropsViewPropsTextInputProps_70886183[typingsSlinky.reactNativeDialog.mod.Dialog.Input[js.Any], T](js.Array(this.component, __props.asInstanceOf[InputProps[T] with ViewProps with TextInputProps]))
+  }
+  implicit def make[T](companion: DialogInput.type): SharedBuilder_InputPropsViewPropsTextInputProps_70886183[typingsSlinky.reactNativeDialog.mod.Dialog.Input[js.Any], T] = new SharedBuilder_InputPropsViewPropsTextInputProps_70886183[typingsSlinky.reactNativeDialog.mod.Dialog.Input[js.Any], T](js.Array(this.component, js.Dictionary.empty))()
 }
 

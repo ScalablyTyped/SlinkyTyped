@@ -5,15 +5,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SketchMSSymbolInstanceLayer extends SketchMSLayer {
   @JSName("_class")
-  var _class_SketchMSSymbolInstanceLayer: symbolInstance = js.native
-  var horizontalSpacing: Double = js.native
-  var overrideValues: js.Array[_] = js.native
-  var scale: Double = js.native
-  var symbolID: String = js.native
-  var verticalSpacing: Double = js.native
+  var _class_SketchMSSymbolInstanceLayer: symbolInstance
+  var horizontalSpacing: Double
+  var overrideValues: js.Array[_]
+  var scale: Double
+  var symbolID: String
+  var verticalSpacing: Double
 }
 
 object SketchMSSymbolInstanceLayer {
@@ -43,54 +42,14 @@ object SketchMSSymbolInstanceLayer {
     shouldBreakMaskChain: Boolean,
     style: SketchMSStyle,
     symbolID: String,
-    verticalSpacing: Double
+    verticalSpacing: Double,
+    css: String = null,
+    layers: js.Array[SketchMSLayer] = null
   ): SketchMSSymbolInstanceLayer = {
     val __obj = js.Dynamic.literal(_class = _class.asInstanceOf[js.Any], booleanOperation = booleanOperation.asInstanceOf[js.Any], clippingMaskMode = clippingMaskMode.asInstanceOf[js.Any], do_objectID = do_objectID.asInstanceOf[js.Any], exportOptions = exportOptions.asInstanceOf[js.Any], frame = frame.asInstanceOf[js.Any], hasClippingMask = hasClippingMask.asInstanceOf[js.Any], horizontalSpacing = horizontalSpacing.asInstanceOf[js.Any], isFixedToViewport = isFixedToViewport.asInstanceOf[js.Any], isFlippedHorizontal = isFlippedHorizontal.asInstanceOf[js.Any], isFlippedVertical = isFlippedVertical.asInstanceOf[js.Any], isLocked = isLocked.asInstanceOf[js.Any], isVisible = isVisible.asInstanceOf[js.Any], layerListExpandedType = layerListExpandedType.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], nameIsFixed = nameIsFixed.asInstanceOf[js.Any], overrideValues = overrideValues.asInstanceOf[js.Any], resizingConstraint = resizingConstraint.asInstanceOf[js.Any], resizingType = resizingType.asInstanceOf[js.Any], rotation = rotation.asInstanceOf[js.Any], scale = scale.asInstanceOf[js.Any], shouldBreakMaskChain = shouldBreakMaskChain.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any], symbolID = symbolID.asInstanceOf[js.Any], verticalSpacing = verticalSpacing.asInstanceOf[js.Any])
+    if (css != null) __obj.updateDynamic("css")(css.asInstanceOf[js.Any])
+    if (layers != null) __obj.updateDynamic("layers")(layers.asInstanceOf[js.Any])
     __obj.asInstanceOf[SketchMSSymbolInstanceLayer]
   }
-  @scala.inline
-  implicit class SketchMSSymbolInstanceLayerOps[Self <: SketchMSSymbolInstanceLayer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_class(value: symbolInstance): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_class")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHorizontalSpacing(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalSpacing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOverrideValues(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSymbolID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerticalSpacing(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalSpacing")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

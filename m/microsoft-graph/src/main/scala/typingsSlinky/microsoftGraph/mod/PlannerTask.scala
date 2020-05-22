@@ -4,379 +4,133 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PlannerTask extends Entity {
   // Number of checklist items with value set to false, representing incomplete items.
-  var activeChecklistItemCount: js.UndefOr[Double] = js.native
+  var activeChecklistItemCount: js.UndefOr[Double] = js.undefined
   // The categories to which the task has been applied. See applied Categories for possible values.
-  var appliedCategories: js.UndefOr[PlannerAppliedCategories] = js.native
+  var appliedCategories: js.UndefOr[PlannerAppliedCategories] = js.undefined
   // Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
-  var assignedToTaskBoardFormat: js.UndefOr[PlannerAssignedToTaskBoardTaskFormat] = js.native
+  var assignedToTaskBoardFormat: js.UndefOr[PlannerAssignedToTaskBoardTaskFormat] = js.undefined
   // Hint used to order items of this type in a list view. The format is defined as outlined here.
-  var assigneePriority: js.UndefOr[String] = js.native
+  var assigneePriority: js.UndefOr[String] = js.undefined
   // The set of assignees the task is assigned to.
-  var assignments: js.UndefOr[PlannerAssignments] = js.native
+  var assignments: js.UndefOr[PlannerAssignments] = js.undefined
   /**
     * Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long
     * and case-sensitive. Format validation is done on the service.
     */
-  var bucketId: js.UndefOr[String] = js.native
+  var bucketId: js.UndefOr[String] = js.undefined
   // Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
-  var bucketTaskBoardFormat: js.UndefOr[PlannerBucketTaskBoardTaskFormat] = js.native
+  var bucketTaskBoardFormat: js.UndefOr[PlannerBucketTaskBoardTaskFormat] = js.undefined
   // Number of checklist items that are present on the task.
-  var checklistItemCount: js.UndefOr[Double] = js.native
+  var checklistItemCount: js.UndefOr[Double] = js.undefined
   // Identity of the user that completed the task.
-  var completedBy: js.UndefOr[IdentitySet] = js.native
+  var completedBy: js.UndefOr[IdentitySet] = js.undefined
   /**
     * Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date
     * and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would
     * look like this: '2014-01-01T00:00:00Z'
     */
-  var completedDateTime: js.UndefOr[String] = js.native
+  var completedDateTime: js.UndefOr[String] = js.undefined
   // Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group.
-  var conversationThreadId: js.UndefOr[String] = js.native
+  var conversationThreadId: js.UndefOr[String] = js.undefined
   // Identity of the user that created the task.
-  var createdBy: js.UndefOr[IdentitySet] = js.native
+  var createdBy: js.UndefOr[IdentitySet] = js.undefined
   /**
     * Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using
     * ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this:
     * '2014-01-01T00:00:00Z'
     */
-  var createdDateTime: js.UndefOr[String] = js.native
+  var createdDateTime: js.UndefOr[String] = js.undefined
   // Read-only. Nullable. Additional details about the task.
-  var details: js.UndefOr[PlannerTaskDetails] = js.native
+  var details: js.UndefOr[PlannerTaskDetails] = js.undefined
   /**
     * Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format
     * and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     */
-  var dueDateTime: js.UndefOr[String] = js.native
+  var dueDateTime: js.UndefOr[String] = js.undefined
   // Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.
-  var hasDescription: js.UndefOr[Boolean] = js.native
+  var hasDescription: js.UndefOr[Boolean] = js.undefined
   // Hint used to order items of this type in a list view. The format is defined as outlined here.
-  var orderHint: js.UndefOr[String] = js.native
+  var orderHint: js.UndefOr[String] = js.undefined
   // Percentage of task completion. When set to 100, the task is considered completed.
-  var percentComplete: js.UndefOr[Double] = js.native
+  var percentComplete: js.UndefOr[Double] = js.undefined
   // Plan ID to which the task belongs.
-  var planId: js.UndefOr[String] = js.native
+  var planId: js.UndefOr[String] = js.undefined
   /**
     * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist,
     * description, reference.
     */
-  var previewType: js.UndefOr[PlannerPreviewType] = js.native
+  var previewType: js.UndefOr[PlannerPreviewType] = js.undefined
   // Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
-  var progressTaskBoardFormat: js.UndefOr[PlannerProgressTaskBoardTaskFormat] = js.native
+  var progressTaskBoardFormat: js.UndefOr[PlannerProgressTaskBoardTaskFormat] = js.undefined
   // Number of external references that exist on the task.
-  var referenceCount: js.UndefOr[Double] = js.native
+  var referenceCount: js.UndefOr[Double] = js.undefined
   /**
     * Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format
     * and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     */
-  var startDateTime: js.UndefOr[String] = js.native
+  var startDateTime: js.UndefOr[String] = js.undefined
   // Title of the task.
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
 }
 
 object PlannerTask {
   @scala.inline
-  def apply(): PlannerTask = {
+  def apply(
+    activeChecklistItemCount: js.UndefOr[Double] = js.undefined,
+    appliedCategories: PlannerAppliedCategories = null,
+    assignedToTaskBoardFormat: PlannerAssignedToTaskBoardTaskFormat = null,
+    assigneePriority: String = null,
+    assignments: PlannerAssignments = null,
+    bucketId: String = null,
+    bucketTaskBoardFormat: PlannerBucketTaskBoardTaskFormat = null,
+    checklistItemCount: js.UndefOr[Double] = js.undefined,
+    completedBy: IdentitySet = null,
+    completedDateTime: String = null,
+    conversationThreadId: String = null,
+    createdBy: IdentitySet = null,
+    createdDateTime: String = null,
+    details: PlannerTaskDetails = null,
+    dueDateTime: String = null,
+    hasDescription: js.UndefOr[Boolean] = js.undefined,
+    id: String = null,
+    orderHint: String = null,
+    percentComplete: js.UndefOr[Double] = js.undefined,
+    planId: String = null,
+    previewType: PlannerPreviewType = null,
+    progressTaskBoardFormat: PlannerProgressTaskBoardTaskFormat = null,
+    referenceCount: js.UndefOr[Double] = js.undefined,
+    startDateTime: String = null,
+    title: String = null
+  ): PlannerTask = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(activeChecklistItemCount)) __obj.updateDynamic("activeChecklistItemCount")(activeChecklistItemCount.get.asInstanceOf[js.Any])
+    if (appliedCategories != null) __obj.updateDynamic("appliedCategories")(appliedCategories.asInstanceOf[js.Any])
+    if (assignedToTaskBoardFormat != null) __obj.updateDynamic("assignedToTaskBoardFormat")(assignedToTaskBoardFormat.asInstanceOf[js.Any])
+    if (assigneePriority != null) __obj.updateDynamic("assigneePriority")(assigneePriority.asInstanceOf[js.Any])
+    if (assignments != null) __obj.updateDynamic("assignments")(assignments.asInstanceOf[js.Any])
+    if (bucketId != null) __obj.updateDynamic("bucketId")(bucketId.asInstanceOf[js.Any])
+    if (bucketTaskBoardFormat != null) __obj.updateDynamic("bucketTaskBoardFormat")(bucketTaskBoardFormat.asInstanceOf[js.Any])
+    if (!js.isUndefined(checklistItemCount)) __obj.updateDynamic("checklistItemCount")(checklistItemCount.get.asInstanceOf[js.Any])
+    if (completedBy != null) __obj.updateDynamic("completedBy")(completedBy.asInstanceOf[js.Any])
+    if (completedDateTime != null) __obj.updateDynamic("completedDateTime")(completedDateTime.asInstanceOf[js.Any])
+    if (conversationThreadId != null) __obj.updateDynamic("conversationThreadId")(conversationThreadId.asInstanceOf[js.Any])
+    if (createdBy != null) __obj.updateDynamic("createdBy")(createdBy.asInstanceOf[js.Any])
+    if (createdDateTime != null) __obj.updateDynamic("createdDateTime")(createdDateTime.asInstanceOf[js.Any])
+    if (details != null) __obj.updateDynamic("details")(details.asInstanceOf[js.Any])
+    if (dueDateTime != null) __obj.updateDynamic("dueDateTime")(dueDateTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasDescription)) __obj.updateDynamic("hasDescription")(hasDescription.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (orderHint != null) __obj.updateDynamic("orderHint")(orderHint.asInstanceOf[js.Any])
+    if (!js.isUndefined(percentComplete)) __obj.updateDynamic("percentComplete")(percentComplete.get.asInstanceOf[js.Any])
+    if (planId != null) __obj.updateDynamic("planId")(planId.asInstanceOf[js.Any])
+    if (previewType != null) __obj.updateDynamic("previewType")(previewType.asInstanceOf[js.Any])
+    if (progressTaskBoardFormat != null) __obj.updateDynamic("progressTaskBoardFormat")(progressTaskBoardFormat.asInstanceOf[js.Any])
+    if (!js.isUndefined(referenceCount)) __obj.updateDynamic("referenceCount")(referenceCount.get.asInstanceOf[js.Any])
+    if (startDateTime != null) __obj.updateDynamic("startDateTime")(startDateTime.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlannerTask]
   }
-  @scala.inline
-  implicit class PlannerTaskOps[Self <: PlannerTask] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveChecklistItemCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeChecklistItemCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveChecklistItemCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeChecklistItemCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppliedCategories(value: PlannerAppliedCategories): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appliedCategories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppliedCategories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appliedCategories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssignedToTaskBoardFormat(value: PlannerAssignedToTaskBoardTaskFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assignedToTaskBoardFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssignedToTaskBoardFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assignedToTaskBoardFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssigneePriority(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assigneePriority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssigneePriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assigneePriority")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssignments(value: PlannerAssignments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assignments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssignments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assignments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBucketId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucketId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBucketTaskBoardFormat(value: PlannerBucketTaskBoardTaskFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketTaskBoardFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucketTaskBoardFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketTaskBoardFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChecklistItemCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checklistItemCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChecklistItemCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checklistItemCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompletedBy(value: IdentitySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completedBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompletedBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completedBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompletedDateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completedDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompletedDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completedDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConversationThreadId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conversationThreadId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConversationThreadId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conversationThreadId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedBy(value: IdentitySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedDateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetails(value: PlannerTaskDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDueDateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dueDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDueDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dueDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasDescription(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrderHint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderHint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrderHint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderHint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPercentComplete(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percentComplete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPercentComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percentComplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlanId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("planId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlanId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("planId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviewType(value: PlannerPreviewType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previewType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviewType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previewType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgressTaskBoardFormat(value: PlannerProgressTaskBoardTaskFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progressTaskBoardFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgressTaskBoardFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progressTaskBoardFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReferenceCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReferenceCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartDateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

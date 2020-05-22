@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HttpData extends js.Object {
   /**
     * The URL that points to the file that stores the object list entries.
@@ -12,34 +11,15 @@ trait HttpData extends js.Object {
     * HTTPS schemes are supported.
     * Required.
     */
-  var listUrl: js.UndefOr[String] = js.native
+  var listUrl: js.UndefOr[String] = js.undefined
 }
 
 object HttpData {
   @scala.inline
-  def apply(): HttpData = {
+  def apply(listUrl: String = null): HttpData = {
     val __obj = js.Dynamic.literal()
+    if (listUrl != null) __obj.updateDynamic("listUrl")(listUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[HttpData]
   }
-  @scala.inline
-  implicit class HttpDataOps[Self <: HttpData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withListUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

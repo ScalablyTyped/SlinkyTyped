@@ -14,29 +14,10 @@ trait UpdateVTLDeviceTypeOutput extends js.Object {
 
 object UpdateVTLDeviceTypeOutput {
   @scala.inline
-  def apply(): UpdateVTLDeviceTypeOutput = {
+  def apply(VTLDeviceARN: VTLDeviceARN = null): UpdateVTLDeviceTypeOutput = {
     val __obj = js.Dynamic.literal()
+    if (VTLDeviceARN != null) __obj.updateDynamic("VTLDeviceARN")(VTLDeviceARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateVTLDeviceTypeOutput]
   }
-  @scala.inline
-  implicit class UpdateVTLDeviceTypeOutputOps[Self <: UpdateVTLDeviceTypeOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVTLDeviceARN(value: VTLDeviceARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VTLDeviceARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVTLDeviceARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VTLDeviceARN")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

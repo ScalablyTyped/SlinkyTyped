@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnmergeTableCellsRequest extends js.Object {
-  var objectId: js.UndefOr[String] = js.native
-  var tableRange: js.UndefOr[TableRange] = js.native
+  var objectId: js.UndefOr[String] = js.undefined
+  var tableRange: js.UndefOr[TableRange] = js.undefined
 }
 
 object UnmergeTableCellsRequest {
   @scala.inline
-  def apply(): UnmergeTableCellsRequest = {
+  def apply(objectId: String = null, tableRange: TableRange = null): UnmergeTableCellsRequest = {
     val __obj = js.Dynamic.literal()
+    if (objectId != null) __obj.updateDynamic("objectId")(objectId.asInstanceOf[js.Any])
+    if (tableRange != null) __obj.updateDynamic("tableRange")(tableRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmergeTableCellsRequest]
   }
-  @scala.inline
-  implicit class UnmergeTableCellsRequestOps[Self <: UnmergeTableCellsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withObjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableRange(value: TableRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableRange")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,12 +1,12 @@
 {
   "compile-dependencies" : [
     {
-      "@jupyterlab/docmanager" : "1.2.1"
+      "@jupyterlab/docmanager" : "1.2.8"
     }
   ],
   "test-dependencies" : [
     {
-      "@jupyterlab/docmanager" : "1.2.1"
+      "@jupyterlab/docmanager" : "1.2.8"
     }
   ],
   "compile-devDependencies" : [

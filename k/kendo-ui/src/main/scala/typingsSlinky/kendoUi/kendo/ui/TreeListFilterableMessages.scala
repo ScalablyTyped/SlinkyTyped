@@ -4,127 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TreeListFilterableMessages extends js.Object {
-  var and: js.UndefOr[String] = js.native
-  var clear: js.UndefOr[String] = js.native
-  var filter: js.UndefOr[String] = js.native
-  var info: js.UndefOr[String] = js.native
-  var isFalse: js.UndefOr[String] = js.native
-  var isTrue: js.UndefOr[String] = js.native
-  var or: js.UndefOr[String] = js.native
-  var title: js.UndefOr[String] = js.native
+  var and: js.UndefOr[String] = js.undefined
+  var clear: js.UndefOr[String] = js.undefined
+  var filter: js.UndefOr[String] = js.undefined
+  var info: js.UndefOr[String] = js.undefined
+  var isFalse: js.UndefOr[String] = js.undefined
+  var isTrue: js.UndefOr[String] = js.undefined
+  var or: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
 }
 
 object TreeListFilterableMessages {
   @scala.inline
-  def apply(): TreeListFilterableMessages = {
+  def apply(
+    and: String = null,
+    clear: String = null,
+    filter: String = null,
+    info: String = null,
+    isFalse: String = null,
+    isTrue: String = null,
+    or: String = null,
+    title: String = null
+  ): TreeListFilterableMessages = {
     val __obj = js.Dynamic.literal()
+    if (and != null) __obj.updateDynamic("and")(and.asInstanceOf[js.Any])
+    if (clear != null) __obj.updateDynamic("clear")(clear.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+    if (info != null) __obj.updateDynamic("info")(info.asInstanceOf[js.Any])
+    if (isFalse != null) __obj.updateDynamic("isFalse")(isFalse.asInstanceOf[js.Any])
+    if (isTrue != null) __obj.updateDynamic("isTrue")(isTrue.asInstanceOf[js.Any])
+    if (or != null) __obj.updateDynamic("or")(or.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[TreeListFilterableMessages]
   }
-  @scala.inline
-  implicit class TreeListFilterableMessagesOps[Self <: TreeListFilterableMessages] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("and")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("and")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClear(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInfo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsFalse(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFalse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsFalse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFalse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsTrue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isTrue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsTrue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isTrue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOr(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("or")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("or")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -11,16 +11,15 @@ import scala.scalajs.js.annotation._
   * provides access to the collection of subtotal fields in a subtotal descriptor.
   * @see com.sun.star.sheet.SubTotalDescriptor
   */
-@js.native
 trait XSubTotalDescriptor extends XInterface {
   /**
     * adds a subtotal field definition to the descriptor.
     * @param aSubTotalColumns a sequence of all columns used to calculate subtotal values.
     * @param nGroupColumn specifies which column of the source range is used to group the contents of the source data.
     */
-  def addNew(aSubTotalColumns: SeqEquiv[SubTotalColumn], nGroupColumn: Double): Unit = js.native
+  def addNew(aSubTotalColumns: SeqEquiv[SubTotalColumn], nGroupColumn: Double): Unit
   /** removes all subtotal field definitions from the descriptor. */
-  def clear(): Unit = js.native
+  def clear(): Unit
 }
 
 object XSubTotalDescriptor {
@@ -35,25 +34,5 @@ object XSubTotalDescriptor {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addNew = js.Any.fromFunction2(addNew), clear = js.Any.fromFunction0(clear), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XSubTotalDescriptor]
   }
-  @scala.inline
-  implicit class XSubTotalDescriptorOps[Self <: XSubTotalDescriptor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddNew(value: (SeqEquiv[SubTotalColumn], Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addNew")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withClear(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

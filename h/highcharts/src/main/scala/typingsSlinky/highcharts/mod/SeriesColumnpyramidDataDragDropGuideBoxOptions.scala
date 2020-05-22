@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SeriesColumnpyramidDataDragDropGuideBoxOptions extends js.Object {
   /**
     * (Highcharts, Highstock) Style options for the guide box default state.
     */
-  var default: js.UndefOr[SeriesColumnpyramidDataDragDropGuideBoxDefaultOptions] = js.native
+  var default: js.UndefOr[SeriesColumnpyramidDataDragDropGuideBoxDefaultOptions] = js.undefined
 }
 
 object SeriesColumnpyramidDataDragDropGuideBoxOptions {
   @scala.inline
-  def apply(): SeriesColumnpyramidDataDragDropGuideBoxOptions = {
+  def apply(default: SeriesColumnpyramidDataDragDropGuideBoxDefaultOptions = null): SeriesColumnpyramidDataDragDropGuideBoxOptions = {
     val __obj = js.Dynamic.literal()
+    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesColumnpyramidDataDragDropGuideBoxOptions]
   }
-  @scala.inline
-  implicit class SeriesColumnpyramidDataDragDropGuideBoxOptionsOps[Self <: SeriesColumnpyramidDataDragDropGuideBoxOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefault(value: SeriesColumnpyramidDataDragDropGuideBoxDefaultOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,101 +7,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {[ B in rbx.rbx/base/helpers/variables.Variables['breakpointsLimited'] ]:? rbx.rbx/base/helpers/responsive.LimitedResponsiveBreakpointProps} & {[ B in std.Exclude<rbx.rbx/base/helpers/variables.Variables['breakpoints'], rbx.rbx/base/helpers/variables.Variables['breakpointsLimited']> ]:? rbx.rbx/base/helpers/responsive.ResponsiveBreakpointProps} */
-@js.native
 trait BinVariablesbreakpointsLi extends js.Object {
-  var desktop: js.UndefOr[ResponsiveBreakpointProps] = js.native
-  var fullhd: js.UndefOr[LimitedResponsiveBreakpointProps] = js.native
-  var mobile: js.UndefOr[LimitedResponsiveBreakpointProps] = js.native
-  var tablet: js.UndefOr[ResponsiveBreakpointProps] = js.native
-  var touch: js.UndefOr[LimitedResponsiveBreakpointProps] = js.native
-  var widescreen: js.UndefOr[ResponsiveBreakpointProps] = js.native
+  var desktop: js.UndefOr[ResponsiveBreakpointProps] = js.undefined
+  var fullhd: js.UndefOr[LimitedResponsiveBreakpointProps] = js.undefined
+  var mobile: js.UndefOr[LimitedResponsiveBreakpointProps] = js.undefined
+  var tablet: js.UndefOr[ResponsiveBreakpointProps] = js.undefined
+  var touch: js.UndefOr[LimitedResponsiveBreakpointProps] = js.undefined
+  var widescreen: js.UndefOr[ResponsiveBreakpointProps] = js.undefined
 }
 
 object BinVariablesbreakpointsLi {
   @scala.inline
-  def apply(): BinVariablesbreakpointsLi = {
+  def apply(
+    desktop: ResponsiveBreakpointProps = null,
+    fullhd: LimitedResponsiveBreakpointProps = null,
+    mobile: LimitedResponsiveBreakpointProps = null,
+    tablet: ResponsiveBreakpointProps = null,
+    touch: LimitedResponsiveBreakpointProps = null,
+    widescreen: ResponsiveBreakpointProps = null
+  ): BinVariablesbreakpointsLi = {
     val __obj = js.Dynamic.literal()
+    if (desktop != null) __obj.updateDynamic("desktop")(desktop.asInstanceOf[js.Any])
+    if (fullhd != null) __obj.updateDynamic("fullhd")(fullhd.asInstanceOf[js.Any])
+    if (mobile != null) __obj.updateDynamic("mobile")(mobile.asInstanceOf[js.Any])
+    if (tablet != null) __obj.updateDynamic("tablet")(tablet.asInstanceOf[js.Any])
+    if (touch != null) __obj.updateDynamic("touch")(touch.asInstanceOf[js.Any])
+    if (widescreen != null) __obj.updateDynamic("widescreen")(widescreen.asInstanceOf[js.Any])
     __obj.asInstanceOf[BinVariablesbreakpointsLi]
   }
-  @scala.inline
-  implicit class BinVariablesbreakpointsLiOps[Self <: BinVariablesbreakpointsLi] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDesktop(value: ResponsiveBreakpointProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desktop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDesktop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desktop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullhd(value: LimitedResponsiveBreakpointProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullhd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullhd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullhd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMobile(value: LimitedResponsiveBreakpointProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mobile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMobile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mobile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTablet(value: ResponsiveBreakpointProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tablet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTablet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tablet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTouch(value: LimitedResponsiveBreakpointProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTouch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidescreen(value: ResponsiveBreakpointProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("widescreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidescreen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("widescreen")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

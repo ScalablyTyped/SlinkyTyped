@@ -9,26 +9,25 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** specifies an [XSD compliant string type]{@link url="http://www.w3.org/TR/xmlschema-2/#string"} */
-@js.native
 trait String extends XDataType {
   /**
     * specifies the length of the string
     *
     * Note that you cannot specify {@link Length} together with {@link MinLength} or {@link MaxLength} .
     */
-  var Length: Double = js.native
+  var Length: Double
   /**
     * specifies the maximum length of the string
     *
     * Note that you cannot specify {@link MaxLength} together with {@link Length} .
     */
-  var MaxLength: Double = js.native
+  var MaxLength: Double
   /**
     * specifies the minimum length of the string
     *
     * Note that you cannot specify {@link MinLength} together with {@link Length} .
     */
-  var MinLength: Double = js.native
+  var MinLength: Double
 }
 
 object String {
@@ -59,31 +58,5 @@ object String {
     val __obj = js.Dynamic.literal(IsBasic = IsBasic.asInstanceOf[js.Any], Length = Length.asInstanceOf[js.Any], MaxLength = MaxLength.asInstanceOf[js.Any], MinLength = MinLength.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Pattern = Pattern.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], TypeClass = TypeClass.asInstanceOf[js.Any], WhiteSpaceTreatment = WhiteSpaceTreatment.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), explainInvalid = js.Any.fromFunction1(explainInvalid), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue), validate = js.Any.fromFunction1(validate))
     __obj.asInstanceOf[String]
   }
-  @scala.inline
-  implicit class StringOps[Self <: String] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

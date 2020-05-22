@@ -1,5 +1,6 @@
 package typingsSlinky.vsoNodeApi
 
+import typingsSlinky.vsoNodeApi.vsoBaseInterfacesMod.IHttpResponse
 import typingsSlinky.vsoNodeApi.vsoBaseInterfacesMod.IRequestHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,6 +14,12 @@ object mod extends js.Object {
     def this(username: String, password: String) = this()
     var password: String = js.native
     var username: String = js.native
+    /* CompleteClass */
+    override def canHandleAuthentication(res: IHttpResponse): Boolean = js.native
+    /* CompleteClass */
+    override def handleAuthentication(httpClient: js.Any, protocol: js.Any, options: js.Any, objs: js.Any, finalCallback: js.Any): Unit = js.native
+    /* CompleteClass */
+    override def prepareRequest(options: js.Any): Unit = js.native
   }
   
 }

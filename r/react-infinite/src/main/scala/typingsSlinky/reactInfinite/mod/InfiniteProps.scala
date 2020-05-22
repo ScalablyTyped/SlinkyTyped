@@ -1,204 +1,70 @@
 package typingsSlinky.reactInfinite.mod
 
+import slinky.core.TagMod
 import slinky.core.facade.ReactElement
+import typingsSlinky.react.mod.Key
+import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.mod.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InfiniteProps extends Props[Infinite] {
-  var className: js.UndefOr[String] = js.native
-  var containerHeight: js.UndefOr[Double] = js.native
-  var displayBottomUpwards: js.UndefOr[Boolean] = js.native
-  var elementHeight: Double | js.Array[Double] = js.native
-  var handleScroll: js.UndefOr[js.Function1[/* node */ ReactElement, Unit]] = js.native
-  var infiniteLoadBeginBottomOffset: js.UndefOr[Double] = js.native
-  var infiniteLoadBeginEdgeOffset: js.UndefOr[Double] = js.native
-  var isInfiniteLoading: js.UndefOr[Boolean] = js.native
-  var loadingSpinnerDelegate: js.UndefOr[ReactElement] = js.native
-  var onInfiniteLoad: js.UndefOr[js.Function0[Unit]] = js.native
-  var preloadAdditionalHeight: js.UndefOr[Double | js.Object] = js.native
-  var preloadBatchSize: js.UndefOr[Double | js.Object] = js.native
-  var timeScrollStateLastsForAfterUserScrolls: js.UndefOr[Double] = js.native
-  var useWindowAsScrollContainer: js.UndefOr[Boolean] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var containerHeight: js.UndefOr[Double] = js.undefined
+  var displayBottomUpwards: js.UndefOr[Boolean] = js.undefined
+  var elementHeight: Double | js.Array[Double]
+  var handleScroll: js.UndefOr[js.Function1[/* node */ ReactElement, Unit]] = js.undefined
+  var infiniteLoadBeginBottomOffset: js.UndefOr[Double] = js.undefined
+  var infiniteLoadBeginEdgeOffset: js.UndefOr[Double] = js.undefined
+  var isInfiniteLoading: js.UndefOr[Boolean] = js.undefined
+  var loadingSpinnerDelegate: js.UndefOr[ReactElement] = js.undefined
+  var onInfiniteLoad: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var preloadAdditionalHeight: js.UndefOr[Double | js.Object] = js.undefined
+  var preloadBatchSize: js.UndefOr[Double | js.Object] = js.undefined
+  var timeScrollStateLastsForAfterUserScrolls: js.UndefOr[Double] = js.undefined
+  var useWindowAsScrollContainer: js.UndefOr[Boolean] = js.undefined
 }
 
 object InfiniteProps {
   @scala.inline
-  def apply(elementHeight: Double | js.Array[Double]): InfiniteProps = {
+  def apply(
+    elementHeight: Double | js.Array[Double],
+    children: TagMod[Any] = null,
+    className: String = null,
+    containerHeight: js.UndefOr[Double] = js.undefined,
+    displayBottomUpwards: js.UndefOr[Boolean] = js.undefined,
+    handleScroll: /* node */ ReactElement => Unit = null,
+    infiniteLoadBeginBottomOffset: js.UndefOr[Double] = js.undefined,
+    infiniteLoadBeginEdgeOffset: js.UndefOr[Double] = js.undefined,
+    isInfiniteLoading: js.UndefOr[Boolean] = js.undefined,
+    key: Key = null,
+    loadingSpinnerDelegate: ReactElement = null,
+    onInfiniteLoad: () => Unit = null,
+    preloadAdditionalHeight: Double | js.Object = null,
+    preloadBatchSize: Double | js.Object = null,
+    ref: js.UndefOr[Null | LegacyRef[Infinite]] = js.undefined,
+    timeScrollStateLastsForAfterUserScrolls: js.UndefOr[Double] = js.undefined,
+    useWindowAsScrollContainer: js.UndefOr[Boolean] = js.undefined
+  ): InfiniteProps = {
     val __obj = js.Dynamic.literal(elementHeight = elementHeight.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(containerHeight)) __obj.updateDynamic("containerHeight")(containerHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(displayBottomUpwards)) __obj.updateDynamic("displayBottomUpwards")(displayBottomUpwards.get.asInstanceOf[js.Any])
+    if (handleScroll != null) __obj.updateDynamic("handleScroll")(js.Any.fromFunction1(handleScroll))
+    if (!js.isUndefined(infiniteLoadBeginBottomOffset)) __obj.updateDynamic("infiniteLoadBeginBottomOffset")(infiniteLoadBeginBottomOffset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(infiniteLoadBeginEdgeOffset)) __obj.updateDynamic("infiniteLoadBeginEdgeOffset")(infiniteLoadBeginEdgeOffset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isInfiniteLoading)) __obj.updateDynamic("isInfiniteLoading")(isInfiniteLoading.get.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (loadingSpinnerDelegate != null) __obj.updateDynamic("loadingSpinnerDelegate")(loadingSpinnerDelegate.asInstanceOf[js.Any])
+    if (onInfiniteLoad != null) __obj.updateDynamic("onInfiniteLoad")(js.Any.fromFunction0(onInfiniteLoad))
+    if (preloadAdditionalHeight != null) __obj.updateDynamic("preloadAdditionalHeight")(preloadAdditionalHeight.asInstanceOf[js.Any])
+    if (preloadBatchSize != null) __obj.updateDynamic("preloadBatchSize")(preloadBatchSize.asInstanceOf[js.Any])
+    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeScrollStateLastsForAfterUserScrolls)) __obj.updateDynamic("timeScrollStateLastsForAfterUserScrolls")(timeScrollStateLastsForAfterUserScrolls.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useWindowAsScrollContainer)) __obj.updateDynamic("useWindowAsScrollContainer")(useWindowAsScrollContainer.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[InfiniteProps]
   }
-  @scala.inline
-  implicit class InfinitePropsOps[Self <: InfiniteProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withElementHeight(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayBottomUpwards(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayBottomUpwards")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayBottomUpwards: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayBottomUpwards")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHandleScroll(value: /* node */ ReactElement => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleScroll")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutHandleScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInfiniteLoadBeginBottomOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("infiniteLoadBeginBottomOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInfiniteLoadBeginBottomOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("infiniteLoadBeginBottomOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInfiniteLoadBeginEdgeOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("infiniteLoadBeginEdgeOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInfiniteLoadBeginEdgeOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("infiniteLoadBeginEdgeOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsInfiniteLoading(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isInfiniteLoading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsInfiniteLoading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isInfiniteLoading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadingSpinnerDelegate(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingSpinnerDelegate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadingSpinnerDelegate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingSpinnerDelegate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnInfiniteLoad(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInfiniteLoad")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnInfiniteLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInfiniteLoad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreloadAdditionalHeight(value: Double | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preloadAdditionalHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreloadAdditionalHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preloadAdditionalHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreloadBatchSize(value: Double | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preloadBatchSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreloadBatchSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preloadBatchSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeScrollStateLastsForAfterUserScrolls(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeScrollStateLastsForAfterUserScrolls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeScrollStateLastsForAfterUserScrolls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeScrollStateLastsForAfterUserScrolls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseWindowAsScrollContainer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useWindowAsScrollContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseWindowAsScrollContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useWindowAsScrollContainer")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

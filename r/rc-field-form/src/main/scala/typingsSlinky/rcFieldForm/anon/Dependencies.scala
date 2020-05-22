@@ -6,62 +6,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Dependencies extends js.Object {
-  var dependencies: js.UndefOr[js.Array[NamePath]] = js.native
-  var name: js.UndefOr[NamePath] = js.native
-  var rules: js.UndefOr[js.Array[Rule]] = js.native
+  var dependencies: js.UndefOr[js.Array[NamePath]] = js.undefined
+  var initialValue: js.UndefOr[js.Any] = js.undefined
+  var name: js.UndefOr[NamePath] = js.undefined
+  var rules: js.UndefOr[js.Array[Rule]] = js.undefined
 }
 
 object Dependencies {
   @scala.inline
-  def apply(): Dependencies = {
+  def apply(
+    dependencies: js.Array[NamePath] = null,
+    initialValue: js.Any = null,
+    name: NamePath = null,
+    rules: js.Array[Rule] = null
+  ): Dependencies = {
     val __obj = js.Dynamic.literal()
+    if (dependencies != null) __obj.updateDynamic("dependencies")(dependencies.asInstanceOf[js.Any])
+    if (initialValue != null) __obj.updateDynamic("initialValue")(initialValue.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (rules != null) __obj.updateDynamic("rules")(rules.asInstanceOf[js.Any])
     __obj.asInstanceOf[Dependencies]
   }
-  @scala.inline
-  implicit class DependenciesOps[Self <: Dependencies] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDependencies(value: js.Array[NamePath]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDependencies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: NamePath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRules(value: js.Array[Rule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

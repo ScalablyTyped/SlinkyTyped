@@ -1,19 +1,19 @@
 organization := "org.scalablytyped.slinky"
 name := "googleapis"
-version := "39.2.0-45dbf0"
-scalaVersion := "2.13.1"
+version := "39.2.0-77b54e"
+scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "gaxios" % "2.0.1-5cac52",
-  "org.scalablytyped.slinky" %%% "google-auth-library" % "5.3.0-4482ef",
-  "org.scalablytyped.slinky" %%% "googleapis-common" % "0.7.2-85f9a3",
-  "org.scalablytyped.slinky" %%% "gtoken" % "4.1.0-8bc924",
-  "org.scalablytyped.slinky" %%% "node" % "13.13-dt-20200426Z-6c3110",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
+  "org.scalablytyped.slinky" %%% "gaxios" % "2.0.1-a9f797",
+  "org.scalablytyped.slinky" %%% "google-auth-library" % "5.3.0-181e58",
+  "org.scalablytyped.slinky" %%% "googleapis-common" % "0.7.2-c16172",
+  "org.scalablytyped.slinky" %%% "gtoken" % "4.1.0-b1b091",
+  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200519Z-fa178d",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
+scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

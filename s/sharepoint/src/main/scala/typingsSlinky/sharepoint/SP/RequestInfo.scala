@@ -5,13 +5,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RequestInfo extends js.Object {
-  var binaryStringRequestBody: js.UndefOr[Boolean] = js.native
+  var binaryStringRequestBody: js.UndefOr[Boolean] = js.undefined
   /** Currently need fix to get ginary response. Details: http:// techmikael.blogspot.ru/2013/07/how-to-copy-files-between-sites-using.html */
-  var binaryStringResponseBody: js.UndefOr[Boolean] = js.native
+  var binaryStringResponseBody: js.UndefOr[Boolean] = js.undefined
   /** Can be string or bytearray depending on binaryStringRequestBody field */
-  var body: js.UndefOr[String | js.typedarray.Uint8Array] = js.native
+  var body: js.UndefOr[String | js.typedarray.Uint8Array] = js.undefined
   var error: js.UndefOr[
     js.Function3[
       /* response */ ResponseInfo, 
@@ -19,150 +18,40 @@ trait RequestInfo extends js.Object {
       /* statusText */ String, 
       Unit
     ]
-  ] = js.native
-  var headers: js.UndefOr[StringDictionary[String]] = js.native
-  var method: js.UndefOr[String] = js.native
-  var state: js.UndefOr[js.Any] = js.native
-  var success: js.UndefOr[js.Function1[/* response */ ResponseInfo, Unit]] = js.native
-  var timeout: js.UndefOr[Double] = js.native
-  var url: String = js.native
+  ] = js.undefined
+  var headers: js.UndefOr[StringDictionary[String]] = js.undefined
+  var method: js.UndefOr[String] = js.undefined
+  var state: js.UndefOr[js.Any] = js.undefined
+  var success: js.UndefOr[js.Function1[/* response */ ResponseInfo, Unit]] = js.undefined
+  var timeout: js.UndefOr[Double] = js.undefined
+  var url: String
 }
 
 object RequestInfo {
   @scala.inline
-  def apply(url: String): RequestInfo = {
+  def apply(
+    url: String,
+    binaryStringRequestBody: js.UndefOr[Boolean] = js.undefined,
+    binaryStringResponseBody: js.UndefOr[Boolean] = js.undefined,
+    body: String | js.typedarray.Uint8Array = null,
+    error: (/* response */ ResponseInfo, /* error */ RequestExecutorErrors, /* statusText */ String) => Unit = null,
+    headers: StringDictionary[String] = null,
+    method: String = null,
+    state: js.Any = null,
+    success: /* response */ ResponseInfo => Unit = null,
+    timeout: js.UndefOr[Double] = js.undefined
+  ): RequestInfo = {
     val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    if (!js.isUndefined(binaryStringRequestBody)) __obj.updateDynamic("binaryStringRequestBody")(binaryStringRequestBody.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(binaryStringResponseBody)) __obj.updateDynamic("binaryStringResponseBody")(binaryStringResponseBody.get.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(js.Any.fromFunction3(error))
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestInfo]
   }
-  @scala.inline
-  implicit class RequestInfoOps[Self <: RequestInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBinaryStringRequestBody(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binaryStringRequestBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBinaryStringRequestBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binaryStringRequestBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBinaryStringResponseBody(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binaryStringResponseBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBinaryStringResponseBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binaryStringResponseBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBodyUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBody(value: String | js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(
-      value: (/* response */ ResponseInfo, /* error */ RequestExecutorErrors, /* statusText */ String) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: /* response */ ResponseInfo => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

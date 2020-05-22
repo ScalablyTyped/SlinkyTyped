@@ -10,8 +10,8 @@ import typingsSlinky.officeUiFabricReact.positioningContainerTypesMod.IPositioni
 import typingsSlinky.officeUiFabricReact.positioningContainerTypesMod.IPositioningContainerProps
 import typingsSlinky.officeUiFabricReact.positioningTypesMod.IPositionedData
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
-import typingsSlinky.uifabricUtilities.ipointMod.IPoint
 import typingsSlinky.uifabricUtilities.irectangleMod.IRectangle
+import typingsSlinky.uifabricUtilities.pointMod.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -83,11 +83,11 @@ object PositioningContainer {
     @scala.inline
     def targetHTMLElement(value: HTMLElement): this.type = set("target", value.asInstanceOf[js.Any])
     @scala.inline
-    def target(value: HTMLElement | String | MouseEvent | IPoint): this.type = set("target", value.asInstanceOf[js.Any])
+    def target(value: HTMLElement | String | MouseEvent | Point): this.type = set("target", value.asInstanceOf[js.Any])
     @scala.inline
     def targetNull: this.type = set("target", null)
     @scala.inline
-    def targetPoint(value: IPoint): this.type = set("targetPoint", value.asInstanceOf[js.Any])
+    def targetPoint(value: Point): this.type = set("targetPoint", value.asInstanceOf[js.Any])
     @scala.inline
     def useTargetPoint(value: Boolean): this.type = set("useTargetPoint", value.asInstanceOf[js.Any])
   }

@@ -8,5 +8,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.UI.WebUI.WebUINavigatedOperation")
 @js.native
 abstract class WebUINavigatedOperation ()
-  extends typingsSlinky.winrtUwp.Windows.UI.WebUI.WebUINavigatedOperation
+  extends typingsSlinky.winrtUwp.Windows.UI.WebUI.WebUINavigatedOperation {
+  /**
+    * Requests that the completion of app navigation be delayed.
+    * @return The navigated deferral object.
+    */
+  /* CompleteClass */
+  override def getDeferral(): typingsSlinky.winrtUwp.Windows.UI.WebUI.WebUINavigatedDeferral = js.native
+}
 

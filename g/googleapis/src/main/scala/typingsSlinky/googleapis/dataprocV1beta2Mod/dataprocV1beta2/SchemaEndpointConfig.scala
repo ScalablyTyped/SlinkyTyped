@@ -24,41 +24,14 @@ trait SchemaEndpointConfig extends js.Object {
 
 object SchemaEndpointConfig {
   @scala.inline
-  def apply(): SchemaEndpointConfig = {
+  def apply(
+    enableHttpPortAccess: js.UndefOr[Boolean] = js.undefined,
+    httpPorts: StringDictionary[String] = null
+  ): SchemaEndpointConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(enableHttpPortAccess)) __obj.updateDynamic("enableHttpPortAccess")(enableHttpPortAccess.get.asInstanceOf[js.Any])
+    if (httpPorts != null) __obj.updateDynamic("httpPorts")(httpPorts.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaEndpointConfig]
   }
-  @scala.inline
-  implicit class SchemaEndpointConfigOps[Self <: SchemaEndpointConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnableHttpPortAccess(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableHttpPortAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableHttpPortAccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableHttpPortAccess")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpPorts(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpPorts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpPorts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpPorts")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

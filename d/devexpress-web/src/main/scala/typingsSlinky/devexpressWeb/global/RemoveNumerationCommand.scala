@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("RemoveNumerationCommand")
 @js.native
 class RemoveNumerationCommand ()
-  extends typingsSlinky.devexpressWeb.RemoveNumerationCommand
+  extends typingsSlinky.devexpressWeb.RemoveNumerationCommand {
+  /**
+    * Executes the RemoveNumerationCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

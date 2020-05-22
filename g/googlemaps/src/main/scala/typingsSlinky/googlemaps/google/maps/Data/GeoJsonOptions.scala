@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GeoJsonOptions extends js.Object {
-  var idPropertyName: js.UndefOr[String] = js.native
+  var idPropertyName: js.UndefOr[String] = js.undefined
 }
 
 object GeoJsonOptions {
   @scala.inline
-  def apply(): GeoJsonOptions = {
+  def apply(idPropertyName: String = null): GeoJsonOptions = {
     val __obj = js.Dynamic.literal()
+    if (idPropertyName != null) __obj.updateDynamic("idPropertyName")(idPropertyName.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeoJsonOptions]
   }
-  @scala.inline
-  implicit class GeoJsonOptionsOps[Self <: GeoJsonOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIdPropertyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idPropertyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdPropertyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idPropertyName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

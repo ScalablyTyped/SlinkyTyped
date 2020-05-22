@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Checked extends js.Object {
-  var checked: js.UndefOr[Boolean] = js.native
-  var event: js.UndefOr[js.Any] = js.native
-  var toggleEvent: js.UndefOr[String] = js.native
-  var tpl: js.UndefOr[js.Any] = js.native
+  var checked: js.UndefOr[Boolean] = js.undefined
+  var event: js.UndefOr[js.Any] = js.undefined
+  var toggleEvent: js.UndefOr[String] = js.undefined
+  var tpl: js.UndefOr[js.Any] = js.undefined
 }
 
 object Checked {
   @scala.inline
-  def apply(): Checked = {
+  def apply(
+    checked: js.UndefOr[Boolean] = js.undefined,
+    event: js.Any = null,
+    toggleEvent: String = null,
+    tpl: js.Any = null
+  ): Checked = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(checked)) __obj.updateDynamic("checked")(checked.get.asInstanceOf[js.Any])
+    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
+    if (toggleEvent != null) __obj.updateDynamic("toggleEvent")(toggleEvent.asInstanceOf[js.Any])
+    if (tpl != null) __obj.updateDynamic("tpl")(tpl.asInstanceOf[js.Any])
     __obj.asInstanceOf[Checked]
   }
-  @scala.inline
-  implicit class CheckedOps[Self <: Checked] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChecked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChecked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToggleEvent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToggleEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTpl(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tpl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTpl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tpl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

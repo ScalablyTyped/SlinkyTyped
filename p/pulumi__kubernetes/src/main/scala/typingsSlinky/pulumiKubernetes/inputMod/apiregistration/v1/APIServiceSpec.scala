@@ -9,17 +9,16 @@ import scala.scalajs.js.annotation._
   * APIServiceSpec contains information for locating and communicating with a server. Only https
   * is supported, though you are able to disable certificate verification.
   */
-@js.native
 trait APIServiceSpec extends js.Object {
   /**
     * CABundle is a PEM encoded CA bundle which will be used to validate an API server's serving
     * certificate. If unspecified, system trust roots on the apiserver are used.
     */
-  var caBundle: js.UndefOr[Input[String]] = js.native
+  var caBundle: js.UndefOr[Input[String]] = js.undefined
   /**
     * Group is the API group name this server hosts
     */
-  var group: js.UndefOr[Input[String]] = js.native
+  var group: js.UndefOr[Input[String]] = js.undefined
   /**
     * GroupPriorityMininum is the priority this group should have at least. Higher priority means
     * that the group is preferred by clients over lower priority ones. Note that other versions
@@ -30,22 +29,22 @@ trait APIServiceSpec extends js.Object {
     * like: *.k8s.io (except extensions) at 18000 and PaaSes (OpenShift, Deis) are recommended to
     * be in the 2000s
     */
-  var groupPriorityMinimum: Input[Double] = js.native
+  var groupPriorityMinimum: Input[Double]
   /**
     * InsecureSkipTLSVerify disables TLS certificate verification when communicating with this
     * server. This is strongly discouraged.  You should use the CABundle instead.
     */
-  var insecureSkipTLSVerify: js.UndefOr[Input[Boolean]] = js.native
+  var insecureSkipTLSVerify: js.UndefOr[Input[Boolean]] = js.undefined
   /**
     * Service is a reference to the service for this API server.  It must communicate on port 443
     * If the Service is nil, that means the handling for the API groupversion is handled locally
     * on this server. The call will simply delegate to the normal handler chain to be fulfilled.
     */
-  var service: Input[ServiceReference] = js.native
+  var service: js.UndefOr[Input[ServiceReference]] = js.undefined
   /**
     * Version is the API version this server hosts.  For example, "v1"
     */
-  var version: js.UndefOr[Input[String]] = js.native
+  var version: js.UndefOr[Input[String]] = js.undefined
   /**
     * VersionPriority controls the ordering of this API version inside of its group.  Must be
     * greater than zero. The primary sort is based on VersionPriority, ordered highest to lowest
@@ -59,92 +58,27 @@ trait APIServiceSpec extends js.Object {
     * major version, then minor version. An example sorted list of versions: v10, v2, v1,
     * v11beta2, v10beta3, v3beta1, v12alpha1, v11alpha2, foo1, foo10.
     */
-  var versionPriority: Input[Double] = js.native
+  var versionPriority: Input[Double]
 }
 
 object APIServiceSpec {
   @scala.inline
   def apply(
     groupPriorityMinimum: Input[Double],
-    service: Input[ServiceReference],
-    versionPriority: Input[Double]
+    versionPriority: Input[Double],
+    caBundle: Input[String] = null,
+    group: Input[String] = null,
+    insecureSkipTLSVerify: Input[Boolean] = null,
+    service: Input[ServiceReference] = null,
+    version: Input[String] = null
   ): APIServiceSpec = {
-    val __obj = js.Dynamic.literal(groupPriorityMinimum = groupPriorityMinimum.asInstanceOf[js.Any], service = service.asInstanceOf[js.Any], versionPriority = versionPriority.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(groupPriorityMinimum = groupPriorityMinimum.asInstanceOf[js.Any], versionPriority = versionPriority.asInstanceOf[js.Any])
+    if (caBundle != null) __obj.updateDynamic("caBundle")(caBundle.asInstanceOf[js.Any])
+    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
+    if (insecureSkipTLSVerify != null) __obj.updateDynamic("insecureSkipTLSVerify")(insecureSkipTLSVerify.asInstanceOf[js.Any])
+    if (service != null) __obj.updateDynamic("service")(service.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[APIServiceSpec]
   }
-  @scala.inline
-  implicit class APIServiceSpecOps[Self <: APIServiceSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroupPriorityMinimum(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupPriorityMinimum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withService(value: Input[ServiceReference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVersionPriority(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionPriority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaBundle(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caBundle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaBundle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caBundle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroup(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsecureSkipTLSVerify(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insecureSkipTLSVerify")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsecureSkipTLSVerify: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insecureSkipTLSVerify")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

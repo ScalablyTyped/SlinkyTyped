@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait S3EventRecordGlacierRestoreEventData extends js.Object {
-  var lifecycleRestorationExpiryTime: String = js.native
-  var lifecycleRestoreStorageClass: String = js.native
+  var lifecycleRestorationExpiryTime: String
+  var lifecycleRestoreStorageClass: String
 }
 
 object S3EventRecordGlacierRestoreEventData {
@@ -16,25 +15,5 @@ object S3EventRecordGlacierRestoreEventData {
     val __obj = js.Dynamic.literal(lifecycleRestorationExpiryTime = lifecycleRestorationExpiryTime.asInstanceOf[js.Any], lifecycleRestoreStorageClass = lifecycleRestoreStorageClass.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3EventRecordGlacierRestoreEventData]
   }
-  @scala.inline
-  implicit class S3EventRecordGlacierRestoreEventDataOps[Self <: S3EventRecordGlacierRestoreEventData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLifecycleRestorationExpiryTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycleRestorationExpiryTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLifecycleRestoreStorageClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycleRestoreStorageClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

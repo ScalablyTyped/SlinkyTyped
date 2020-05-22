@@ -11,145 +11,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Charge extends ShopifyObject {
   /**
     * The URL that the customer should be sent to, to accept or decline the application charge.
     */
-  var confirmation_url: js.UndefOr[String] = js.native
+  var confirmation_url: js.UndefOr[String] = js.undefined
   /**
     * The date and time when the application charge was created.
     */
-  var created_at: js.UndefOr[String] = js.native
+  var created_at: js.UndefOr[String] = js.undefined
   /**
     * The name of the application charge, e.g. "Super Expensive One-time Charge".
     */
-  var name: String = js.native
+  var name: String
   /**
     * The price of the application charge. Note: Shopify returns this value as a string.
     */
-  var price: js.UndefOr[String | Double] = js.native
+  var price: js.UndefOr[String | Double] = js.undefined
   /**
     * The URL the customer is sent to once they accept/decline a charge.
     */
-  var return_url: js.UndefOr[String] = js.native
+  var return_url: js.UndefOr[String] = js.undefined
   /**
     * The status of the charge.
     */
-  var status: js.UndefOr[pending | accepted | active | cancelled | declined | expired] = js.native
+  var status: js.UndefOr[pending | accepted | active | cancelled | declined | expired] = js.undefined
   /**
     * Whether or not the application charge is a test transaction.
     */
-  var test: js.UndefOr[Boolean] = js.native
+  var test: js.UndefOr[Boolean] = js.undefined
   /**
     * The date and time when the recurring application charge was last updated.
     */
-  var updated_at: js.UndefOr[String] = js.native
+  var updated_at: js.UndefOr[String] = js.undefined
 }
 
 object Charge {
   @scala.inline
-  def apply(name: String): Charge = {
+  def apply(
+    name: String,
+    admin_graphql_api_id: String = null,
+    confirmation_url: String = null,
+    created_at: String = null,
+    id: js.UndefOr[Double] = js.undefined,
+    price: String | Double = null,
+    return_url: String = null,
+    status: pending | accepted | active | cancelled | declined | expired = null,
+    test: js.UndefOr[Boolean] = js.undefined,
+    updated_at: String = null
+  ): Charge = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (admin_graphql_api_id != null) __obj.updateDynamic("admin_graphql_api_id")(admin_graphql_api_id.asInstanceOf[js.Any])
+    if (confirmation_url != null) __obj.updateDynamic("confirmation_url")(confirmation_url.asInstanceOf[js.Any])
+    if (created_at != null) __obj.updateDynamic("created_at")(created_at.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    if (price != null) __obj.updateDynamic("price")(price.asInstanceOf[js.Any])
+    if (return_url != null) __obj.updateDynamic("return_url")(return_url.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (!js.isUndefined(test)) __obj.updateDynamic("test")(test.get.asInstanceOf[js.Any])
+    if (updated_at != null) __obj.updateDynamic("updated_at")(updated_at.asInstanceOf[js.Any])
     __obj.asInstanceOf[Charge]
   }
-  @scala.inline
-  implicit class ChargeOps[Self <: Charge] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConfirmation_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("confirmation_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfirmation_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("confirmation_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreated_at(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreated_at: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrice(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("price")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("price")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturn_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("return_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturn_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("return_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: pending | accepted | active | cancelled | declined | expired): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTest(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdated_at(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdated_at: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated_at")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

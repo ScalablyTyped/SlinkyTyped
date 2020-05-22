@@ -10,42 +10,41 @@ import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Readonly<globby.globby.GlobbyOptions> */
 /* Inlined parent cp-file.cp-file.Options */
-@js.native
 trait Options extends js.Object {
-  val absolute: js.UndefOr[Boolean] = js.native
-  val brace: js.UndefOr[Boolean] = js.native
-  val `case`: js.UndefOr[Boolean] = js.native
+  val absolute: js.UndefOr[Boolean] = js.undefined
+  val brace: js.UndefOr[Boolean] = js.undefined
+  val `case`: js.UndefOr[Boolean] = js.undefined
   /**
   		Working directory to find source files.
   		@default process.cwd()
   		*/
-  val cwd: js.UndefOr[String] = js.native
-  val deep: js.UndefOr[Double | Boolean] = js.native
-  val dot: js.UndefOr[Boolean] = js.native
-  val expandDirectories: js.UndefOr[ExpandDirectoriesOption] = js.native
-  val extension: js.UndefOr[Boolean] = js.native
-  val followSymlinkedDirectories: js.UndefOr[Boolean] = js.native
-  val gitignore: js.UndefOr[Boolean] = js.native
-  val globstar: js.UndefOr[Boolean] = js.native
-  val ignore: js.UndefOr[js.Array[Pattern]] = js.native
-  val markDirectories: js.UndefOr[Boolean] = js.native
-  val matchBase: js.UndefOr[Boolean] = js.native
-  val nobrace: js.UndefOr[Boolean] = js.native
-  val nocase: js.UndefOr[Boolean] = js.native
-  val noext: js.UndefOr[Boolean] = js.native
-  val noglobstar: js.UndefOr[Boolean] = js.native
-  val onlyDirectories: js.UndefOr[Boolean] = js.native
-  val onlyFiles: js.UndefOr[Boolean] = js.native
+  val cwd: js.UndefOr[String] = js.undefined
+  val deep: js.UndefOr[Double | Boolean] = js.undefined
+  val dot: js.UndefOr[Boolean] = js.undefined
+  val expandDirectories: js.UndefOr[ExpandDirectoriesOption] = js.undefined
+  val extension: js.UndefOr[Boolean] = js.undefined
+  val followSymlinkedDirectories: js.UndefOr[Boolean] = js.undefined
+  val gitignore: js.UndefOr[Boolean] = js.undefined
+  val globstar: js.UndefOr[Boolean] = js.undefined
+  val ignore: js.UndefOr[js.Array[Pattern]] = js.undefined
+  val markDirectories: js.UndefOr[Boolean] = js.undefined
+  val matchBase: js.UndefOr[Boolean] = js.undefined
+  val nobrace: js.UndefOr[Boolean] = js.undefined
+  val nocase: js.UndefOr[Boolean] = js.undefined
+  val noext: js.UndefOr[Boolean] = js.undefined
+  val noglobstar: js.UndefOr[Boolean] = js.undefined
+  val onlyDirectories: js.UndefOr[Boolean] = js.undefined
+  val onlyFiles: js.UndefOr[Boolean] = js.undefined
   /**
   		Overwrite existing file.
   		@default true
   		*/
-  val overwrite: js.UndefOr[Boolean] = js.native
+  val overwrite: js.UndefOr[Boolean] = js.undefined
   /**
   		Preserve path structure.
   		@default false
   		*/
-  val parents: js.UndefOr[Boolean] = js.native
+  val parents: js.UndefOr[Boolean] = js.undefined
   /**
   		Filename or function returning a filename used to rename every file in `source`.
   		@example
@@ -55,343 +54,70 @@ trait Options extends js.Object {
   		});
   		```
   		*/
-  val rename: js.UndefOr[String | (js.Function1[/* basename */ String, String])] = js.native
-  val stats: js.UndefOr[Boolean] = js.native
-  val transform: js.UndefOr[TransformFunction[EntryItem]] = js.native
-  val unique: js.UndefOr[Boolean] = js.native
+  val rename: js.UndefOr[String | (js.Function1[/* basename */ String, String])] = js.undefined
+  val stats: js.UndefOr[Boolean] = js.undefined
+  val transform: js.UndefOr[TransformFunction[EntryItem]] = js.undefined
+  val unique: js.UndefOr[Boolean] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    absolute: js.UndefOr[Boolean] = js.undefined,
+    brace: js.UndefOr[Boolean] = js.undefined,
+    `case`: js.UndefOr[Boolean] = js.undefined,
+    cwd: String = null,
+    deep: Double | Boolean = null,
+    dot: js.UndefOr[Boolean] = js.undefined,
+    expandDirectories: ExpandDirectoriesOption = null,
+    extension: js.UndefOr[Boolean] = js.undefined,
+    followSymlinkedDirectories: js.UndefOr[Boolean] = js.undefined,
+    gitignore: js.UndefOr[Boolean] = js.undefined,
+    globstar: js.UndefOr[Boolean] = js.undefined,
+    ignore: js.Array[Pattern] = null,
+    markDirectories: js.UndefOr[Boolean] = js.undefined,
+    matchBase: js.UndefOr[Boolean] = js.undefined,
+    nobrace: js.UndefOr[Boolean] = js.undefined,
+    nocase: js.UndefOr[Boolean] = js.undefined,
+    noext: js.UndefOr[Boolean] = js.undefined,
+    noglobstar: js.UndefOr[Boolean] = js.undefined,
+    onlyDirectories: js.UndefOr[Boolean] = js.undefined,
+    onlyFiles: js.UndefOr[Boolean] = js.undefined,
+    overwrite: js.UndefOr[Boolean] = js.undefined,
+    parents: js.UndefOr[Boolean] = js.undefined,
+    rename: String | (js.Function1[/* basename */ String, String]) = null,
+    stats: js.UndefOr[Boolean] = js.undefined,
+    transform: /* entry */ EntryItem => EntryItem = null,
+    unique: js.UndefOr[Boolean] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(absolute)) __obj.updateDynamic("absolute")(absolute.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(brace)) __obj.updateDynamic("brace")(brace.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`case`)) __obj.updateDynamic("case")(`case`.get.asInstanceOf[js.Any])
+    if (cwd != null) __obj.updateDynamic("cwd")(cwd.asInstanceOf[js.Any])
+    if (deep != null) __obj.updateDynamic("deep")(deep.asInstanceOf[js.Any])
+    if (!js.isUndefined(dot)) __obj.updateDynamic("dot")(dot.get.asInstanceOf[js.Any])
+    if (expandDirectories != null) __obj.updateDynamic("expandDirectories")(expandDirectories.asInstanceOf[js.Any])
+    if (!js.isUndefined(extension)) __obj.updateDynamic("extension")(extension.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(followSymlinkedDirectories)) __obj.updateDynamic("followSymlinkedDirectories")(followSymlinkedDirectories.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(gitignore)) __obj.updateDynamic("gitignore")(gitignore.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(globstar)) __obj.updateDynamic("globstar")(globstar.get.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (!js.isUndefined(markDirectories)) __obj.updateDynamic("markDirectories")(markDirectories.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(matchBase)) __obj.updateDynamic("matchBase")(matchBase.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(nobrace)) __obj.updateDynamic("nobrace")(nobrace.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(nocase)) __obj.updateDynamic("nocase")(nocase.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noext)) __obj.updateDynamic("noext")(noext.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noglobstar)) __obj.updateDynamic("noglobstar")(noglobstar.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(onlyDirectories)) __obj.updateDynamic("onlyDirectories")(onlyDirectories.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(onlyFiles)) __obj.updateDynamic("onlyFiles")(onlyFiles.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(overwrite)) __obj.updateDynamic("overwrite")(overwrite.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(parents)) __obj.updateDynamic("parents")(parents.get.asInstanceOf[js.Any])
+    if (rename != null) __obj.updateDynamic("rename")(rename.asInstanceOf[js.Any])
+    if (!js.isUndefined(stats)) __obj.updateDynamic("stats")(stats.get.asInstanceOf[js.Any])
+    if (transform != null) __obj.updateDynamic("transform")(js.Any.fromFunction1(transform))
+    if (!js.isUndefined(unique)) __obj.updateDynamic("unique")(unique.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbsolute(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("absolute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbsolute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("absolute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrace(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCase(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("case")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("case")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCwd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCwd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeep(value: Double | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDot(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpandDirectories(value: ExpandDirectoriesOption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandDirectories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpandDirectories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandDirectories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtension(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtension: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extension")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFollowSymlinkedDirectories(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followSymlinkedDirectories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFollowSymlinkedDirectories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followSymlinkedDirectories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGitignore(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gitignore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGitignore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gitignore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobstar(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globstar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobstar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globstar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnore(value: js.Array[Pattern]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkDirectories(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markDirectories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkDirectories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markDirectories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatchBase(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchBase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatchBase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchBase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNobrace(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nobrace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNobrace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nobrace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNocase(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nocase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNocase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nocase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoext(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoglobstar(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noglobstar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoglobstar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noglobstar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnlyDirectories(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyDirectories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnlyDirectories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyDirectories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnlyFiles(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyFiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnlyFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyFiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverwrite(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overwrite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverwrite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overwrite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParents(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenameFunction1(value: /* basename */ String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rename")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRename(value: String | (js.Function1[/* basename */ String, String])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rename")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRename: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rename")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStats(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransform(value: /* entry */ EntryItem => EntryItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutTransform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnique(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unique")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnique: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unique")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

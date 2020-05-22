@@ -9,6 +9,10 @@ import scala.scalajs.js.annotation._
 @js.native
 class default () extends FLACTagContents {
   def this(blocks: js.Array[MetadataBlock]) = this()
+  /* CompleteClass */
+  override var blocks: js.Array[MetadataBlock] = js.native
+  /* CompleteClass */
+  override def toArray(): ByteArray = js.native
 }
 
 /* static members */

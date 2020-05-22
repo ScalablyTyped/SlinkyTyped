@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SkMaskFilter extends SkObject[SkMaskFilter]
 
 object SkMaskFilter {

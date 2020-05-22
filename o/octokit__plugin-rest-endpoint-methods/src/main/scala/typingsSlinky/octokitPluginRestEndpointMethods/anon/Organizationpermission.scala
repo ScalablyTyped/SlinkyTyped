@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Organizationpermission extends js.Object {
-  var body: Type = js.native
-  var name: Type = js.native
-  var organization_permission: Type = js.native
-  var `private`: Type = js.native
-  var project_id: Required = js.native
-  var state: Enum = js.native
+  var body: Type
+  var name: Type
+  var organization_permission: Type
+  var `private`: Type
+  var project_id: Required
+  var state: Enum
 }
 
 object Organizationpermission {
@@ -28,49 +27,5 @@ object Organizationpermission {
     __obj.updateDynamic("private")(`private`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Organizationpermission]
   }
-  @scala.inline
-  implicit class OrganizationpermissionOps[Self <: Organizationpermission] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBody(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrganization_permission(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("organization_permission")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrivate(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("private")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProject_id(value: Required): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("project_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withState(value: Enum): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

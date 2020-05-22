@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * The options used to create a file.
   */
-@js.native
 trait ICreateOptions extends js.Object {
   /**
     * The optional file extension for the new file (e.g. `".txt"`).
@@ -15,66 +14,25 @@ trait ICreateOptions extends js.Object {
     * #### Notes
     * This ignored if `type` is `'notebook'`.
     */
-  var ext: js.UndefOr[String] = js.native
+  var ext: js.UndefOr[String] = js.undefined
   /**
     * The directory in which to create the file.
     */
-  var path: js.UndefOr[String] = js.native
+  var path: js.UndefOr[String] = js.undefined
   /**
     * The file type.
     */
-  var `type`: js.UndefOr[ContentType] = js.native
+  var `type`: js.UndefOr[ContentType] = js.undefined
 }
 
 object ICreateOptions {
   @scala.inline
-  def apply(): ICreateOptions = {
+  def apply(ext: String = null, path: String = null, `type`: ContentType = null): ICreateOptions = {
     val __obj = js.Dynamic.literal()
+    if (ext != null) __obj.updateDynamic("ext")(ext.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICreateOptions]
   }
-  @scala.inline
-  implicit class ICreateOptionsOps[Self <: ICreateOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: ContentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

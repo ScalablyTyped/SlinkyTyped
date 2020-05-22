@@ -14,29 +14,10 @@ trait TracingConfig extends js.Object {
 
 object TracingConfig {
   @scala.inline
-  def apply(): TracingConfig = {
+  def apply(Mode: TracingMode = null): TracingConfig = {
     val __obj = js.Dynamic.literal()
+    if (Mode != null) __obj.updateDynamic("Mode")(Mode.asInstanceOf[js.Any])
     __obj.asInstanceOf[TracingConfig]
   }
-  @scala.inline
-  implicit class TracingConfigOps[Self <: TracingConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMode(value: TracingMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

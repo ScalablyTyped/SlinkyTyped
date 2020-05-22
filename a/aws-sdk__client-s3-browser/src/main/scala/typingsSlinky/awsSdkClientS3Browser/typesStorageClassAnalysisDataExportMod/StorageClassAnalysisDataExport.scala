@@ -6,16 +6,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StorageClassAnalysisDataExport extends js.Object {
   /**
     * <p>The place to store the data for an analysis.</p>
     */
-  var Destination: AnalyticsExportDestination = js.native
+  var Destination: AnalyticsExportDestination
   /**
     * <p>The version of the output schema to use when exporting data. Must be V_1.</p>
     */
-  var OutputSchemaVersion: V_1 | String = js.native
+  var OutputSchemaVersion: V_1 | String
 }
 
 object StorageClassAnalysisDataExport {
@@ -24,25 +23,5 @@ object StorageClassAnalysisDataExport {
     val __obj = js.Dynamic.literal(Destination = Destination.asInstanceOf[js.Any], OutputSchemaVersion = OutputSchemaVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[StorageClassAnalysisDataExport]
   }
-  @scala.inline
-  implicit class StorageClassAnalysisDataExportOps[Self <: StorageClassAnalysisDataExport] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestination(value: AnalyticsExportDestination): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutputSchemaVersion(value: V_1 | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputSchemaVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

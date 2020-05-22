@@ -33,77 +33,20 @@ trait SchemaTrafficRule extends js.Object {
 
 object SchemaTrafficRule {
   @scala.inline
-  def apply(): SchemaTrafficRule = {
+  def apply(
+    bandwidth: js.UndefOr[Double] = js.undefined,
+    burst: js.UndefOr[Double] = js.undefined,
+    delay: String = null,
+    packetDuplicationRatio: js.UndefOr[Double] = js.undefined,
+    packetLossRatio: js.UndefOr[Double] = js.undefined
+  ): SchemaTrafficRule = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(bandwidth)) __obj.updateDynamic("bandwidth")(bandwidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(burst)) __obj.updateDynamic("burst")(burst.get.asInstanceOf[js.Any])
+    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
+    if (!js.isUndefined(packetDuplicationRatio)) __obj.updateDynamic("packetDuplicationRatio")(packetDuplicationRatio.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(packetLossRatio)) __obj.updateDynamic("packetLossRatio")(packetLossRatio.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTrafficRule]
   }
-  @scala.inline
-  implicit class SchemaTrafficRuleOps[Self <: SchemaTrafficRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBandwidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bandwidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBandwidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bandwidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBurst(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("burst")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBurst: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("burst")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelay(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPacketDuplicationRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packetDuplicationRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPacketDuplicationRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packetDuplicationRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPacketLossRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packetLossRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPacketLossRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packetLossRatio")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

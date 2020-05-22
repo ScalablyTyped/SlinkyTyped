@@ -33,7 +33,7 @@ object NukaCarousel {
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
     @scala.inline
-    def afterSlide(value: /* prevSlide */ Double => Unit): this.type = set("afterSlide", js.Any.fromFunction1(value))
+    def afterSlide(value: /* index */ Double => Unit): this.type = set("afterSlide", js.Any.fromFunction1(value))
     @scala.inline
     def animation(value: zoom): this.type = set("animation", value.asInstanceOf[js.Any])
     @scala.inline
@@ -71,7 +71,7 @@ object NukaCarousel {
     @scala.inline
     def framePadding(value: String): this.type = set("framePadding", value.asInstanceOf[js.Any])
     @scala.inline
-    def getControlsContainerStyle(value: /* key */ CarouselControlContainerProp => CSSProperties): this.type = set("getControlsContainerStyle", js.Any.fromFunction1(value))
+    def getControlsContainerStyles(value: /* key */ CarouselControlContainerProp => CSSProperties): this.type = set("getControlsContainerStyles", js.Any.fromFunction1(value))
     @scala.inline
     def height(value: String): this.type = set("height", value.asInstanceOf[js.Any])
     @scala.inline

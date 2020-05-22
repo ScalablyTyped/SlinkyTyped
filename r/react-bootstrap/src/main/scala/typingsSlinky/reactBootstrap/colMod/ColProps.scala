@@ -7,310 +7,84 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ColProps
   extends AllHTMLAttributes[Col]
      with ClassAttributes[Col] {
-  var componentClass: js.UndefOr[ReactComponentClass[_]] = js.native
-  var lg: js.UndefOr[Double] = js.native
-  var lgHidden: js.UndefOr[Boolean] = js.native
-  var lgOffset: js.UndefOr[Double] = js.native
-  var lgPull: js.UndefOr[Double] = js.native
-  var lgPush: js.UndefOr[Double] = js.native
-  var md: js.UndefOr[Double] = js.native
-  var mdHidden: js.UndefOr[Boolean] = js.native
-  var mdOffset: js.UndefOr[Double] = js.native
-  var mdPull: js.UndefOr[Double] = js.native
-  var mdPush: js.UndefOr[Double] = js.native
-  var sm: js.UndefOr[Double] = js.native
-  var smHidden: js.UndefOr[Boolean] = js.native
-  var smOffset: js.UndefOr[Double] = js.native
-  var smPull: js.UndefOr[Double] = js.native
-  var smPush: js.UndefOr[Double] = js.native
-  var xs: js.UndefOr[Double] = js.native
-  var xsHidden: js.UndefOr[Boolean] = js.native
-  var xsOffset: js.UndefOr[Double] = js.native
-  var xsPull: js.UndefOr[Double] = js.native
-  var xsPush: js.UndefOr[Double] = js.native
+  var componentClass: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var lg: js.UndefOr[Double] = js.undefined
+  var lgHidden: js.UndefOr[Boolean] = js.undefined
+  var lgOffset: js.UndefOr[Double] = js.undefined
+  var lgPull: js.UndefOr[Double] = js.undefined
+  var lgPush: js.UndefOr[Double] = js.undefined
+  var md: js.UndefOr[Double] = js.undefined
+  var mdHidden: js.UndefOr[Boolean] = js.undefined
+  var mdOffset: js.UndefOr[Double] = js.undefined
+  var mdPull: js.UndefOr[Double] = js.undefined
+  var mdPush: js.UndefOr[Double] = js.undefined
+  var sm: js.UndefOr[Double] = js.undefined
+  var smHidden: js.UndefOr[Boolean] = js.undefined
+  var smOffset: js.UndefOr[Double] = js.undefined
+  var smPull: js.UndefOr[Double] = js.undefined
+  var smPush: js.UndefOr[Double] = js.undefined
+  var xs: js.UndefOr[Double] = js.undefined
+  var xsHidden: js.UndefOr[Boolean] = js.undefined
+  var xsOffset: js.UndefOr[Double] = js.undefined
+  var xsPull: js.UndefOr[Double] = js.undefined
+  var xsPush: js.UndefOr[Double] = js.undefined
 }
 
 object ColProps {
   @scala.inline
-  def apply(): ColProps = {
+  def apply(
+    AllHTMLAttributes: AllHTMLAttributes[Col] = null,
+    ClassAttributes: ClassAttributes[Col] = null,
+    componentClass: ReactComponentClass[_] = null,
+    lg: js.UndefOr[Double] = js.undefined,
+    lgHidden: js.UndefOr[Boolean] = js.undefined,
+    lgOffset: js.UndefOr[Double] = js.undefined,
+    lgPull: js.UndefOr[Double] = js.undefined,
+    lgPush: js.UndefOr[Double] = js.undefined,
+    md: js.UndefOr[Double] = js.undefined,
+    mdHidden: js.UndefOr[Boolean] = js.undefined,
+    mdOffset: js.UndefOr[Double] = js.undefined,
+    mdPull: js.UndefOr[Double] = js.undefined,
+    mdPush: js.UndefOr[Double] = js.undefined,
+    sm: js.UndefOr[Double] = js.undefined,
+    smHidden: js.UndefOr[Boolean] = js.undefined,
+    smOffset: js.UndefOr[Double] = js.undefined,
+    smPull: js.UndefOr[Double] = js.undefined,
+    smPush: js.UndefOr[Double] = js.undefined,
+    xs: js.UndefOr[Double] = js.undefined,
+    xsHidden: js.UndefOr[Boolean] = js.undefined,
+    xsOffset: js.UndefOr[Double] = js.undefined,
+    xsPull: js.UndefOr[Double] = js.undefined,
+    xsPush: js.UndefOr[Double] = js.undefined
+  ): ColProps = {
     val __obj = js.Dynamic.literal()
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (componentClass != null) __obj.updateDynamic("componentClass")(componentClass.asInstanceOf[js.Any])
+    if (!js.isUndefined(lg)) __obj.updateDynamic("lg")(lg.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lgHidden)) __obj.updateDynamic("lgHidden")(lgHidden.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lgOffset)) __obj.updateDynamic("lgOffset")(lgOffset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lgPull)) __obj.updateDynamic("lgPull")(lgPull.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lgPush)) __obj.updateDynamic("lgPush")(lgPush.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(md)) __obj.updateDynamic("md")(md.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mdHidden)) __obj.updateDynamic("mdHidden")(mdHidden.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mdOffset)) __obj.updateDynamic("mdOffset")(mdOffset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mdPull)) __obj.updateDynamic("mdPull")(mdPull.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mdPush)) __obj.updateDynamic("mdPush")(mdPush.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sm)) __obj.updateDynamic("sm")(sm.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(smHidden)) __obj.updateDynamic("smHidden")(smHidden.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(smOffset)) __obj.updateDynamic("smOffset")(smOffset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(smPull)) __obj.updateDynamic("smPull")(smPull.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(smPush)) __obj.updateDynamic("smPush")(smPush.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(xs)) __obj.updateDynamic("xs")(xs.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(xsHidden)) __obj.updateDynamic("xsHidden")(xsHidden.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(xsOffset)) __obj.updateDynamic("xsOffset")(xsOffset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(xsPull)) __obj.updateDynamic("xsPull")(xsPull.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(xsPush)) __obj.updateDynamic("xsPush")(xsPush.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColProps]
   }
-  @scala.inline
-  implicit class ColPropsOps[Self <: ColProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComponentClassFunctionComponent(value: ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponentClassComponentClass(value: ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponentClass(value: ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponentClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLg(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLgHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lgHidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLgHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lgHidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLgOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lgOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLgOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lgOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLgPull(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lgPull")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLgPull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lgPull")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLgPush(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lgPush")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLgPush: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lgPush")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMd(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("md")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("md")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMdHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mdHidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMdHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mdHidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMdOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mdOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMdOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mdOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMdPull(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mdPull")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMdPull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mdPull")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMdPush(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mdPush")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMdPush: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mdPush")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSm(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smHidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smHidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmPull(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smPull")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmPull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smPull")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmPush(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smPush")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmPush: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smPush")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXs(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXsHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xsHidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXsHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xsHidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXsOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xsOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXsOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xsOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXsPull(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xsPull")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXsPull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xsPull")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXsPush(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xsPush")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXsPush: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xsPush")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

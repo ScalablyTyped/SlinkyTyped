@@ -7,5 +7,8 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Graphics.Printing.PrintTaskRequestedDeferral")
 @js.native
 class PrintTaskRequestedDeferral ()
-  extends typingsSlinky.winrt.Windows.Graphics.Printing.PrintTaskRequestedDeferral
+  extends typingsSlinky.winrt.Windows.Graphics.Printing.PrintTaskRequestedDeferral {
+  /* CompleteClass */
+  override def complete(): Unit = js.native
+}
 

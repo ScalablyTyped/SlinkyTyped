@@ -7,36 +7,22 @@ import scala.scalajs.js.annotation._
 @js.native
 trait EnableSecurityHubRequest extends js.Object {
   /**
-    * The tags to add to the Hub resource when you enable Security Hub.
+    * Whether to enable the security standards that Security Hub has designated as automatically enabled. If you do not provide a value for EnableDefaultStandards, it is set to true. To not enable the automatically enabled standards, set EnableDefaultStandards to false.
+    */
+  var EnableDefaultStandards: js.UndefOr[Boolean] = js.native
+  /**
+    * The tags to add to the hub resource when you enable Security Hub.
     */
   var Tags: js.UndefOr[TagMap] = js.native
 }
 
 object EnableSecurityHubRequest {
   @scala.inline
-  def apply(): EnableSecurityHubRequest = {
+  def apply(EnableDefaultStandards: js.UndefOr[Boolean] = js.undefined, Tags: TagMap = null): EnableSecurityHubRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(EnableDefaultStandards)) __obj.updateDynamic("EnableDefaultStandards")(EnableDefaultStandards.get.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnableSecurityHubRequest]
   }
-  @scala.inline
-  implicit class EnableSecurityHubRequestOps[Self <: EnableSecurityHubRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTags(value: TagMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

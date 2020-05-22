@@ -7,12 +7,11 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the cancelable events of a client ASPxCardView column.
   */
-@js.native
 trait ASPxClientCardViewColumnCancelEventArgs extends ASPxClientCancelEventArgs {
   /**
     * Gets the processed client column.
     */
-  var column: ASPxClientCardViewColumn = js.native
+  var column: ASPxClientCardViewColumn
 }
 
 object ASPxClientCardViewColumnCancelEventArgs {
@@ -21,19 +20,5 @@ object ASPxClientCardViewColumnCancelEventArgs {
     val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], column = column.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientCardViewColumnCancelEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientCardViewColumnCancelEventArgsOps[Self <: ASPxClientCardViewColumnCancelEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumn(value: ASPxClientCardViewColumn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -5,12 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a display request. */
-@js.native
 trait DisplayRequest extends js.Object {
   /** Activates a display request. */
-  def requestActive(): Unit = js.native
+  def requestActive(): Unit
   /** Deactivates a display request. */
-  def requestRelease(): Unit = js.native
+  def requestRelease(): Unit
 }
 
 object DisplayRequest {
@@ -19,25 +18,5 @@ object DisplayRequest {
     val __obj = js.Dynamic.literal(requestActive = js.Any.fromFunction0(requestActive), requestRelease = js.Any.fromFunction0(requestRelease))
     __obj.asInstanceOf[DisplayRequest]
   }
-  @scala.inline
-  implicit class DisplayRequestOps[Self <: DisplayRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRequestActive(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestActive")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRequestRelease(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestRelease")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

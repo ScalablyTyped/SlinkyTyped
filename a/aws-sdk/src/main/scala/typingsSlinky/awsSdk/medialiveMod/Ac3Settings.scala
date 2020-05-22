@@ -38,101 +38,24 @@ trait Ac3Settings extends js.Object {
 
 object Ac3Settings {
   @scala.inline
-  def apply(): Ac3Settings = {
+  def apply(
+    Bitrate: js.UndefOr[double] = js.undefined,
+    BitstreamMode: Ac3BitstreamMode = null,
+    CodingMode: Ac3CodingMode = null,
+    Dialnorm: js.UndefOr[integerMin1Max31] = js.undefined,
+    DrcProfile: Ac3DrcProfile = null,
+    LfeFilter: Ac3LfeFilter = null,
+    MetadataControl: Ac3MetadataControl = null
+  ): Ac3Settings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Bitrate)) __obj.updateDynamic("Bitrate")(Bitrate.get.asInstanceOf[js.Any])
+    if (BitstreamMode != null) __obj.updateDynamic("BitstreamMode")(BitstreamMode.asInstanceOf[js.Any])
+    if (CodingMode != null) __obj.updateDynamic("CodingMode")(CodingMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(Dialnorm)) __obj.updateDynamic("Dialnorm")(Dialnorm.get.asInstanceOf[js.Any])
+    if (DrcProfile != null) __obj.updateDynamic("DrcProfile")(DrcProfile.asInstanceOf[js.Any])
+    if (LfeFilter != null) __obj.updateDynamic("LfeFilter")(LfeFilter.asInstanceOf[js.Any])
+    if (MetadataControl != null) __obj.updateDynamic("MetadataControl")(MetadataControl.asInstanceOf[js.Any])
     __obj.asInstanceOf[Ac3Settings]
   }
-  @scala.inline
-  implicit class Ac3SettingsOps[Self <: Ac3Settings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBitrate(value: double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bitrate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBitrate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bitrate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBitstreamMode(value: Ac3BitstreamMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BitstreamMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBitstreamMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BitstreamMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCodingMode(value: Ac3CodingMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodingMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodingMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodingMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDialnorm(value: integerMin1Max31): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Dialnorm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDialnorm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Dialnorm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrcProfile(value: Ac3DrcProfile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DrcProfile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDrcProfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DrcProfile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLfeFilter(value: Ac3LfeFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LfeFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLfeFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LfeFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadataControl(value: Ac3MetadataControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetadataControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadataControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetadataControl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

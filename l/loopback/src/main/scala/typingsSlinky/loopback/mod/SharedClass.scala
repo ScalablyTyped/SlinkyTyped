@@ -37,7 +37,7 @@ class SharedClass protected () extends js.Object {
   def disableMethod(fn: String, isStatic: Boolean): Unit = js.native
   /**
     * Disable a sharedMethod with the given static or prototype method name.
-    * @param {string} methodName	The method name
+    * @param {string} methodName    The method name
     */
   def disableMethodByName(methodName: String): Unit = js.native
   /**

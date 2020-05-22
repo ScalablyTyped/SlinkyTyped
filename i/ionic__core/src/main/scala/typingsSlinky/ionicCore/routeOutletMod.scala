@@ -2,8 +2,12 @@ package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.interfaceMod.NavOutlet
+import typingsSlinky.ionicCore.interfaceMod.RouteID
+import typingsSlinky.ionicCore.interfaceMod.RouteWrite
+import typingsSlinky.ionicCore.interfaceMod.RouterDirection
 import typingsSlinky.ionicCore.ionicCoreStrings.ios
 import typingsSlinky.ionicCore.ionicCoreStrings.md
+import typingsSlinky.ionicCore.mod.ComponentProps
 import typingsSlinky.ionicCore.mod.FrameworkDelegate
 import typingsSlinky.ionicCore.navInterfaceMod.RouterOutletOptions
 import typingsSlinky.ionicCore.navInterfaceMod.SwipeGestureHandler
@@ -64,8 +68,12 @@ object routeOutletMod extends js.Object {
     def connectedCallback_MRouterOutlet(): js.Promise[Unit] = js.native
     @JSName("disconnectedCallback")
     def disconnectedCallback_MRouterOutlet(): Unit = js.native
+    /* CompleteClass */
+    override def getRouteId(): js.Promise[js.UndefOr[RouteID]] = js.native
     @JSName("render")
     def render_MRouterOutlet(): js.Any = js.native
+    /* CompleteClass */
+    override def setRouteId(id: String, params: js.UndefOr[ComponentProps[Null]], direction: RouterDirection): js.Promise[RouteWrite] = js.native
     def swipeHandlerChanged(): Unit = js.native
   }
   

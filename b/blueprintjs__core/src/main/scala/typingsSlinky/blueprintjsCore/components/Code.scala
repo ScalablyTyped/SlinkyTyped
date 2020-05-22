@@ -13,7 +13,7 @@ object Code {
   @js.native
   object component extends js.Object
   
-  def withProps(p: HTMLProps[HTMLElement] with IElementRefProps[HTMLElement]): `SharedBuilder_<intersection>_1717983003`[LegacyRef[js.Any]] = new `SharedBuilder_<intersection>_1717983003`[LegacyRef[js.Any]](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Code.type): `SharedBuilder_<intersection>_1717983003`[LegacyRef[js.Any]] = new `SharedBuilder_<intersection>_1717983003`[LegacyRef[js.Any]](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: HTMLProps[HTMLElement] with IElementRefProps[HTMLElement]): SharedBuilder_HTMLPropsIElementRefProps_1717983003[LegacyRef[js.Any] with js.Object] = new SharedBuilder_HTMLPropsIElementRefProps_1717983003[LegacyRef[js.Any] with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Code.type): SharedBuilder_HTMLPropsIElementRefProps_1717983003[LegacyRef[js.Any] with js.Object] = new SharedBuilder_HTMLPropsIElementRefProps_1717983003[LegacyRef[js.Any] with js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

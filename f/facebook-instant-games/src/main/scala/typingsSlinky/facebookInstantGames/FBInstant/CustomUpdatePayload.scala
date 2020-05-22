@@ -7,33 +7,32 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a custom update for FBInstant.updateAsync.
   */
-@js.native
 trait CustomUpdatePayload extends js.Object {
   /**
     * For custom updates, this should be 'CUSTOM'.
     */
-  var action: UpdateAction = js.native
+  var action: UpdateAction
   /**
     * Optional call-to-action button text. By default we will use a localized 'Play' as the button text. To provide localized
     * versions of your own call to action, pass an object with the default cta as the value of 'default' and another object mapping
     * locale keys to translations as the value of 'localizations'.
     */
-  var cta: js.UndefOr[String | LocalizableContent] = js.native
+  var cta: js.UndefOr[String | LocalizableContent] = js.undefined
   /**
     * A blob of data to attach to the update. All game sessions launched from the update will be able to access this blob
     * through FBInstant.getEntryPointData(). Must be less than or equal to 1000 characters when stringified.
     */
-  var data: js.UndefOr[js.Any] = js.native
+  var data: js.UndefOr[js.Any] = js.undefined
   /**
     * Data URL of a base64 encoded image.
     */
-  var image: String = js.native
+  var image: String
   /**
     * Specifies notification setting for the custom update. This can be 'NO_PUSH' or 'PUSH', and defaults to 'NO_PUSH'.
     * Use push notification only for updates that are high-signal and immediately actionable for the recipients.
     * Also note that push notification is not always guaranteed, depending on user setting and platform policies.
     */
-  var notification: js.UndefOr[String] = js.native
+  var notification: js.UndefOr[String] = js.undefined
   /**
     * Specifies how the update should be delivered. This can be one of the following:
     *
@@ -45,105 +44,38 @@ trait CustomUpdatePayload extends js.Object {
     *
     * If no strategy is specified, we default to 'IMMEDIATE'.
     */
-  var strategy: js.UndefOr[String] = js.native
+  var strategy: js.UndefOr[String] = js.undefined
   /**
     * ID of the template this custom update is using. Templates should be predefined in fbapp-config.json.
     * See the [Bundle Config documentation]https://developers.facebook.com/docs/games/instant-games/bundle-config
     * or documentation about fbapp-config.json.
     */
-  var template: String = js.native
+  var template: String
   /**
     * A text message, or an object with the default text as the value of 'default' and another object mapping locale keys to
     * translations as the value of 'localizations'.
     */
-  var text: String | LocalizableContent = js.native
+  var text: String | LocalizableContent
 }
 
 object CustomUpdatePayload {
   @scala.inline
-  def apply(action: UpdateAction, image: String, template: String, text: String | LocalizableContent): CustomUpdatePayload = {
+  def apply(
+    action: UpdateAction,
+    image: String,
+    template: String,
+    text: String | LocalizableContent,
+    cta: String | LocalizableContent = null,
+    data: js.Any = null,
+    notification: String = null,
+    strategy: String = null
+  ): CustomUpdatePayload = {
     val __obj = js.Dynamic.literal(action = action.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], template = template.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any])
+    if (cta != null) __obj.updateDynamic("cta")(cta.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (notification != null) __obj.updateDynamic("notification")(notification.asInstanceOf[js.Any])
+    if (strategy != null) __obj.updateDynamic("strategy")(strategy.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomUpdatePayload]
   }
-  @scala.inline
-  implicit class CustomUpdatePayloadOps[Self <: CustomUpdatePayload] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAction(value: UpdateAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withText(value: String | LocalizableContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCta(value: String | LocalizableContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cta")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotification(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotification: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notification")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrategy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strategy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

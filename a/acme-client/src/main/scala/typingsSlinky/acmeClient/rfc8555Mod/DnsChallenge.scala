@@ -9,41 +9,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DnsChallenge
   extends ChallengeAbstract
      with Challenge {
-  var token: String = js.native
+  var token: String
   @JSName("type")
-  var type_DnsChallenge: `dns-01` = js.native
+  var type_DnsChallenge: `dns-01`
 }
 
 object DnsChallenge {
   @scala.inline
-  def apply(status: pending | processing | valid | invalid, token: String, `type`: `dns-01`, url: String): DnsChallenge = {
+  def apply(
+    status: pending | processing | valid | invalid,
+    token: String,
+    `type`: `dns-01`,
+    url: String,
+    error: js.Object = null,
+    validated: String = null
+  ): DnsChallenge = {
     val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any], token = token.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (validated != null) __obj.updateDynamic("validated")(validated.asInstanceOf[js.Any])
     __obj.asInstanceOf[DnsChallenge]
   }
-  @scala.inline
-  implicit class DnsChallengeOps[Self <: DnsChallenge] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: `dns-01`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

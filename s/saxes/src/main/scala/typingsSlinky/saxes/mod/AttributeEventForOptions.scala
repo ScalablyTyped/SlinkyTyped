@@ -11,12 +11,3 @@ import scala.scalajs.js.annotation._
 */
 trait AttributeEventForOptions[O /* <: SaxesOptions */] extends js.Object
 
-object AttributeEventForOptions {
-  @scala.inline
-  implicit def apply[O](value: SaxesAttribute): AttributeEventForOptions[O] = value.asInstanceOf[AttributeEventForOptions[O]]
-  @scala.inline
-  implicit def apply[O](value: SaxesAttributeNSIncomplete): AttributeEventForOptions[O] = value.asInstanceOf[AttributeEventForOptions[O]]
-  @scala.inline
-  implicit def apply[O](value: SaxesAttributePlain): AttributeEventForOptions[O] = value.asInstanceOf[AttributeEventForOptions[O]]
-}
-

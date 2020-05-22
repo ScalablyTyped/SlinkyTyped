@@ -4,36 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AccessConditionsOptions extends TimeoutIntervalOptions {
-  var accessConditions: js.UndefOr[StorageAccessCondition] = js.native
+  var accessConditions: js.UndefOr[StorageAccessCondition] = js.undefined
 }
 
 object AccessConditionsOptions {
   @scala.inline
-  def apply(): AccessConditionsOptions = {
+  def apply(
+    accessConditions: StorageAccessCondition = null,
+    locationMode: String = null,
+    maximumExecutionTimeInMs: js.UndefOr[Double] = js.undefined,
+    timeoutIntervalInMs: js.UndefOr[Double] = js.undefined
+  ): AccessConditionsOptions = {
     val __obj = js.Dynamic.literal()
+    if (accessConditions != null) __obj.updateDynamic("accessConditions")(accessConditions.asInstanceOf[js.Any])
+    if (locationMode != null) __obj.updateDynamic("locationMode")(locationMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximumExecutionTimeInMs)) __obj.updateDynamic("maximumExecutionTimeInMs")(maximumExecutionTimeInMs.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeoutIntervalInMs)) __obj.updateDynamic("timeoutIntervalInMs")(timeoutIntervalInMs.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccessConditionsOptions]
   }
-  @scala.inline
-  implicit class AccessConditionsOptionsOps[Self <: AccessConditionsOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessConditions(value: StorageAccessCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessConditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessConditions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessConditions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

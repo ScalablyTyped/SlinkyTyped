@@ -7,16 +7,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ImageRendition extends ClientValueObject {
-  def get_height(): Double = js.native
-  def get_id(): Double = js.native
-  def get_name(): String = js.native
-  def get_version(): Double = js.native
-  def get_width(): Double = js.native
-  def set_height(value: Double): Double = js.native
-  def set_name(value: String): String = js.native
-  def set_width(value: Double): Double = js.native
+  def get_height(): Double
+  def get_id(): Double
+  def get_name(): String
+  def get_version(): Double
+  def get_width(): Double
+  def set_height(value: Double): Double
+  def set_name(value: String): String
+  def set_width(value: Double): Double
 }
 
 object ImageRendition {
@@ -39,61 +38,5 @@ object ImageRendition {
     val __obj = js.Dynamic.literal(customFromJson = js.Any.fromFunction1(customFromJson), customWriteToXml = js.Any.fromFunction2(customWriteToXml), fromJson = js.Any.fromFunction1(fromJson), get_height = js.Any.fromFunction0(get_height), get_id = js.Any.fromFunction0(get_id), get_name = js.Any.fromFunction0(get_name), get_typeId = js.Any.fromFunction0(get_typeId), get_version = js.Any.fromFunction0(get_version), get_width = js.Any.fromFunction0(get_width), set_height = js.Any.fromFunction1(set_height), set_name = js.Any.fromFunction1(set_name), set_width = js.Any.fromFunction1(set_width), writeToXml = js.Any.fromFunction2(writeToXml))
     __obj.asInstanceOf[ImageRendition]
   }
-  @scala.inline
-  implicit class ImageRenditionOps[Self <: ImageRendition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet_height(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_height")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_id(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_id")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_name(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_name")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_version(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_version")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_width(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_width")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSet_height(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_height")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_name(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_name")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_width(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_width")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

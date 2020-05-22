@@ -20,22 +20,21 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Declaration, 'type'> */
-@js.native
 trait MethodDefinition
   extends ASTNode
      with DeclarationKind
      with NodeKind
      with PrintableKind
      with StatementKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var computed: js.UndefOr[Boolean] = js.native
-  var decorators: js.UndefOr[js.Array[DecoratorKind] | Null] = js.native
-  var key: ExpressionKind = js.native
-  var kind: constructor | method | get | set = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var static: js.UndefOr[Boolean] = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.MethodDefinition = js.native
-  var value: FunctionKind = js.native
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var computed: js.UndefOr[Boolean] = js.undefined
+  var decorators: js.UndefOr[js.Array[DecoratorKind] | Null] = js.undefined
+  var key: ExpressionKind
+  var kind: constructor | method | get | set
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var static: js.UndefOr[Boolean] = js.undefined
+  var `type`: typingsSlinky.astTypes.astTypesStrings.MethodDefinition
+  var value: FunctionKind
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.MethodDefinition")

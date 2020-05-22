@@ -18,41 +18,11 @@ trait GetUserDefinedFunctionsResponse extends js.Object {
 
 object GetUserDefinedFunctionsResponse {
   @scala.inline
-  def apply(): GetUserDefinedFunctionsResponse = {
+  def apply(NextToken: Token = null, UserDefinedFunctions: UserDefinedFunctionList = null): GetUserDefinedFunctionsResponse = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (UserDefinedFunctions != null) __obj.updateDynamic("UserDefinedFunctions")(UserDefinedFunctions.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetUserDefinedFunctionsResponse]
   }
-  @scala.inline
-  implicit class GetUserDefinedFunctionsResponseOps[Self <: GetUserDefinedFunctionsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: Token): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserDefinedFunctions(value: UserDefinedFunctionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserDefinedFunctions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserDefinedFunctions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserDefinedFunctions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

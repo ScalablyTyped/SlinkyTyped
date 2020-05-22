@@ -1,7 +1,7 @@
 package typingsSlinky.figma.mod.global
 
-import typingsSlinky.figma.anon.Color
-import typingsSlinky.figma.anon.`2`
+import typingsSlinky.figma.figmaStrings.NONE
+import typingsSlinky.figma.figmaStrings.SOLID_COLOR
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +14,16 @@ trait OverlayBackground extends js.Object
 
 object OverlayBackground {
   @scala.inline
-  implicit def apply(value: `2`): OverlayBackground = value.asInstanceOf[OverlayBackground]
+  def `2`(`type`: NONE): OverlayBackground = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OverlayBackground]
+  }
   @scala.inline
-  implicit def apply(value: Color): OverlayBackground = value.asInstanceOf[OverlayBackground]
+  def Color(color: RGBA, `type`: SOLID_COLOR): OverlayBackground = {
+    val __obj = js.Dynamic.literal(color = color.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OverlayBackground]
+  }
 }
 

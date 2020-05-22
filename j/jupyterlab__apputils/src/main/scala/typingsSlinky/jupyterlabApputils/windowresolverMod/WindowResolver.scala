@@ -9,6 +9,11 @@ import scala.scalajs.js.annotation._
 class WindowResolver () extends IWindowResolver {
   var _name: js.Any = js.native
   /**
+    * A window name to use as a handle among shared resources.
+    */
+  /* CompleteClass */
+  override val name: String = js.native
+  /**
     * Resolve a window name to use as a handle among shared resources.
     *
     * @param candidate - The potential window name being resolved.

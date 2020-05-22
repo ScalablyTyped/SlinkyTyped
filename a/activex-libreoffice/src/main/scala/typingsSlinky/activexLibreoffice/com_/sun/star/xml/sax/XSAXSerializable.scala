@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * serializes a DOM tree by generating SAX events.
   * @since OOo 3.0
   */
-@js.native
 trait XSAXSerializable extends js.Object {
   /**
     * serializes an object (e.g. a DOM tree) that represents an XML document by generating SAX events.
@@ -18,7 +17,7 @@ trait XSAXSerializable extends js.Object {
     * @param namespaces a list of namespace declarations that will be added to the root element node of the XML document This is necessary mostly because the
     * @throws com::sun::star::xml::sax::SAXException if serializing the XML document fails
     */
-  def serialize(handler: XDocumentHandler, namespaces: SeqEquiv[StringPair]): Unit = js.native
+  def serialize(handler: XDocumentHandler, namespaces: SeqEquiv[StringPair]): Unit
 }
 
 object XSAXSerializable {
@@ -27,19 +26,5 @@ object XSAXSerializable {
     val __obj = js.Dynamic.literal(serialize = js.Any.fromFunction2(serialize))
     __obj.asInstanceOf[XSAXSerializable]
   }
-  @scala.inline
-  implicit class XSAXSerializableOps[Self <: XSAXSerializable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSerialize(value: (XDocumentHandler, SeqEquiv[StringPair]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serialize")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

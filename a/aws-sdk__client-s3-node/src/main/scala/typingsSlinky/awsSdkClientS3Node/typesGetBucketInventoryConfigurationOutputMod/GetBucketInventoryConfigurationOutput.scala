@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkClientS3Node.typesGetBucketInventoryConfigurationOutputMod
 
-import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod.OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod._OutputTypesUnion
 import typingsSlinky.awsSdkClientS3Node.typesInventoryConfigurationMod.UnmarshalledInventoryConfiguration
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
@@ -8,41 +8,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetBucketInventoryConfigurationOutput
   extends MetadataBearer
-     with OutputTypesUnion {
+     with _OutputTypesUnion {
   /**
     * <p>Specifies the inventory configuration.</p>
     */
-  var InventoryConfiguration: js.UndefOr[UnmarshalledInventoryConfiguration] = js.native
+  var InventoryConfiguration: js.UndefOr[UnmarshalledInventoryConfiguration] = js.undefined
 }
 
 object GetBucketInventoryConfigurationOutput {
   @scala.inline
-  def apply($metadata: ResponseMetadata): GetBucketInventoryConfigurationOutput = {
+  def apply($metadata: ResponseMetadata, InventoryConfiguration: UnmarshalledInventoryConfiguration = null): GetBucketInventoryConfigurationOutput = {
     val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any])
+    if (InventoryConfiguration != null) __obj.updateDynamic("InventoryConfiguration")(InventoryConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetBucketInventoryConfigurationOutput]
   }
-  @scala.inline
-  implicit class GetBucketInventoryConfigurationOutputOps[Self <: GetBucketInventoryConfigurationOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInventoryConfiguration(value: UnmarshalledInventoryConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InventoryConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInventoryConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InventoryConfiguration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

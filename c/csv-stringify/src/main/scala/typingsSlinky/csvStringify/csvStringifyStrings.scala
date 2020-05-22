@@ -1,6 +1,6 @@
 package typingsSlinky.csvStringify
 
-import typingsSlinky.csvStringify.es5Mod.RecordDelimiter
+import typingsSlinky.csvStringify.es5Mod._RecordDelimiter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,33 +8,33 @@ import scala.scalajs.js.annotation._
 object csvStringifyStrings {
   @js.native
   sealed trait ascii
-    extends RecordDelimiter
-       with typingsSlinky.csvStringify.mod.RecordDelimiter
+    extends _RecordDelimiter
+       with typingsSlinky.csvStringify.mod._RecordDelimiter
   
   @js.native
   sealed trait auto
-    extends RecordDelimiter
-       with typingsSlinky.csvStringify.mod.RecordDelimiter
+    extends _RecordDelimiter
+       with typingsSlinky.csvStringify.mod._RecordDelimiter
   
   @js.native
   sealed trait mac
-    extends RecordDelimiter
-       with typingsSlinky.csvStringify.mod.RecordDelimiter
+    extends _RecordDelimiter
+       with typingsSlinky.csvStringify.mod._RecordDelimiter
   
   @js.native
   sealed trait unicode
-    extends RecordDelimiter
-       with typingsSlinky.csvStringify.mod.RecordDelimiter
+    extends _RecordDelimiter
+       with typingsSlinky.csvStringify.mod._RecordDelimiter
   
   @js.native
   sealed trait unix
-    extends RecordDelimiter
-       with typingsSlinky.csvStringify.mod.RecordDelimiter
+    extends _RecordDelimiter
+       with typingsSlinky.csvStringify.mod._RecordDelimiter
   
   @js.native
   sealed trait windows
-    extends RecordDelimiter
-       with typingsSlinky.csvStringify.mod.RecordDelimiter
+    extends _RecordDelimiter
+       with typingsSlinky.csvStringify.mod._RecordDelimiter
   
   @scala.inline
   def ascii: ascii = "ascii".asInstanceOf[ascii]

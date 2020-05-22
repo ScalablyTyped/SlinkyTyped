@@ -7,18 +7,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** identifies the object with a service name which can be used to create such an object by a factory. */
-@js.native
 trait XServiceName extends XInterface {
   /**
     * @returns the service name that can be used to create such an object by a factory.
     * @see com.sun.star.io.XPersistObject.getServiceName
     */
-  val ServiceName: String = js.native
+  val ServiceName: String
   /**
     * @returns the service name that can be used to create such an object by a factory.
     * @see com.sun.star.io.XPersistObject.getServiceName
     */
-  def getServiceName(): String = js.native
+  def getServiceName(): String
 }
 
 object XServiceName {
@@ -33,25 +32,5 @@ object XServiceName {
     val __obj = js.Dynamic.literal(ServiceName = ServiceName.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getServiceName = js.Any.fromFunction0(getServiceName), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XServiceName]
   }
-  @scala.inline
-  implicit class XServiceNameOps[Self <: XServiceName] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withServiceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetServiceName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getServiceName")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

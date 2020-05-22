@@ -4,140 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TextProps extends js.Object {
-  var className: js.UndefOr[String] = js.native
-  var ellipsis: js.UndefOr[Boolean] = js.native
-  var light: js.UndefOr[Boolean] = js.native
-  var secondary: js.UndefOr[Boolean] = js.native
-  var showTooltip: js.UndefOr[Boolean] = js.native
-  var size: js.UndefOr[TextSize] = js.native
-  var skin: js.UndefOr[TextSkin] = js.native
-  var tagName: js.UndefOr[String] = js.native
-  var weight: js.UndefOr[TextWeight] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var ellipsis: js.UndefOr[Boolean] = js.undefined
+  var light: js.UndefOr[Boolean] = js.undefined
+  var secondary: js.UndefOr[Boolean] = js.undefined
+  var showTooltip: js.UndefOr[Boolean] = js.undefined
+  var size: js.UndefOr[TextSize] = js.undefined
+  var skin: js.UndefOr[TextSkin] = js.undefined
+  var tagName: js.UndefOr[String] = js.undefined
+  var weight: js.UndefOr[TextWeight] = js.undefined
 }
 
 object TextProps {
   @scala.inline
-  def apply(): TextProps = {
+  def apply(
+    className: String = null,
+    ellipsis: js.UndefOr[Boolean] = js.undefined,
+    light: js.UndefOr[Boolean] = js.undefined,
+    secondary: js.UndefOr[Boolean] = js.undefined,
+    showTooltip: js.UndefOr[Boolean] = js.undefined,
+    size: TextSize = null,
+    skin: TextSkin = null,
+    tagName: String = null,
+    weight: TextWeight = null
+  ): TextProps = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(ellipsis)) __obj.updateDynamic("ellipsis")(ellipsis.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(light)) __obj.updateDynamic("light")(light.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(secondary)) __obj.updateDynamic("secondary")(secondary.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showTooltip)) __obj.updateDynamic("showTooltip")(showTooltip.get.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (skin != null) __obj.updateDynamic("skin")(skin.asInstanceOf[js.Any])
+    if (tagName != null) __obj.updateDynamic("tagName")(tagName.asInstanceOf[js.Any])
+    if (weight != null) __obj.updateDynamic("weight")(weight.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextProps]
   }
-  @scala.inline
-  implicit class TextPropsOps[Self <: TextProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEllipsis(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEllipsis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("light")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("light")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecondary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecondary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowTooltip(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: TextSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkin(value: TextSkin): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeight(value: TextWeight): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

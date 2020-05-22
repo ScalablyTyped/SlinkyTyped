@@ -7,272 +7,74 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EdgeOptions extends js.Object {
-  var arrowStrikethrough: js.UndefOr[Boolean] = js.native
-  var arrows: js.UndefOr[String | From] = js.native
-  var color: js.UndefOr[String | typingsSlinky.vis.anon.Color] = js.native
-  var dashes: js.UndefOr[Boolean | js.Array[Double]] = js.native
-  var font: js.UndefOr[String | Align] = js.native
-  var hidden: js.UndefOr[Boolean] = js.native
-  var hoverWidth: js.UndefOr[Double] = js.native
+  var arrowStrikethrough: js.UndefOr[Boolean] = js.undefined
+  var arrows: js.UndefOr[String | From] = js.undefined
+  var color: js.UndefOr[String | typingsSlinky.vis.anon.Color] = js.undefined
+  var dashes: js.UndefOr[Boolean | js.Array[Double]] = js.undefined
+  var font: js.UndefOr[String | Align] = js.undefined
+  var hidden: js.UndefOr[Boolean] = js.undefined
+  var hoverWidth: js.UndefOr[Double] = js.undefined
    // please note, hoverWidth could be also a function. This case is not represented here
-  var label: js.UndefOr[String] = js.native
-  var labelHighlightBold: js.UndefOr[Boolean] = js.native
-  var length: js.UndefOr[Double] = js.native
-  var physics: js.UndefOr[Boolean] = js.native
-  var scaling: js.UndefOr[OptionsScaling] = js.native
-  var selectionWidth: js.UndefOr[Double] = js.native
+  var label: js.UndefOr[String] = js.undefined
+  var labelHighlightBold: js.UndefOr[Boolean] = js.undefined
+  var length: js.UndefOr[Double] = js.undefined
+  var physics: js.UndefOr[Boolean] = js.undefined
+  var scaling: js.UndefOr[OptionsScaling] = js.undefined
+  var selectionWidth: js.UndefOr[Double] = js.undefined
    // please note, selectionWidth could be also a function. This case is not represented here
-  var selfReferenceSize: js.UndefOr[Double] = js.native
-  var shadow: js.UndefOr[Boolean | OptionsShadow] = js.native
-  var smooth: js.UndefOr[Boolean | ForceDirection] = js.native
-  var title: js.UndefOr[String] = js.native
-  var value: js.UndefOr[Double] = js.native
-  var width: js.UndefOr[Double] = js.native
+  var selfReferenceSize: js.UndefOr[Double] = js.undefined
+  var shadow: js.UndefOr[Boolean | OptionsShadow] = js.undefined
+  var smooth: js.UndefOr[Boolean | ForceDirection] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
+  var value: js.UndefOr[Double] = js.undefined
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object EdgeOptions {
   @scala.inline
-  def apply(): EdgeOptions = {
+  def apply(
+    arrowStrikethrough: js.UndefOr[Boolean] = js.undefined,
+    arrows: String | From = null,
+    color: String | typingsSlinky.vis.anon.Color = null,
+    dashes: Boolean | js.Array[Double] = null,
+    font: String | Align = null,
+    hidden: js.UndefOr[Boolean] = js.undefined,
+    hoverWidth: js.UndefOr[Double] = js.undefined,
+    label: String = null,
+    labelHighlightBold: js.UndefOr[Boolean] = js.undefined,
+    length: js.UndefOr[Double] = js.undefined,
+    physics: js.UndefOr[Boolean] = js.undefined,
+    scaling: OptionsScaling = null,
+    selectionWidth: js.UndefOr[Double] = js.undefined,
+    selfReferenceSize: js.UndefOr[Double] = js.undefined,
+    shadow: Boolean | OptionsShadow = null,
+    smooth: Boolean | ForceDirection = null,
+    title: String = null,
+    value: js.UndefOr[Double] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): EdgeOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(arrowStrikethrough)) __obj.updateDynamic("arrowStrikethrough")(arrowStrikethrough.get.asInstanceOf[js.Any])
+    if (arrows != null) __obj.updateDynamic("arrows")(arrows.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (dashes != null) __obj.updateDynamic("dashes")(dashes.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hoverWidth)) __obj.updateDynamic("hoverWidth")(hoverWidth.get.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (!js.isUndefined(labelHighlightBold)) __obj.updateDynamic("labelHighlightBold")(labelHighlightBold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(length)) __obj.updateDynamic("length")(length.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(physics)) __obj.updateDynamic("physics")(physics.get.asInstanceOf[js.Any])
+    if (scaling != null) __obj.updateDynamic("scaling")(scaling.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectionWidth)) __obj.updateDynamic("selectionWidth")(selectionWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(selfReferenceSize)) __obj.updateDynamic("selfReferenceSize")(selfReferenceSize.get.asInstanceOf[js.Any])
+    if (shadow != null) __obj.updateDynamic("shadow")(shadow.asInstanceOf[js.Any])
+    if (smooth != null) __obj.updateDynamic("smooth")(smooth.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[EdgeOptions]
   }
-  @scala.inline
-  implicit class EdgeOptionsOps[Self <: EdgeOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArrowStrikethrough(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowStrikethrough")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArrowStrikethrough: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowStrikethrough")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArrows(value: String | From): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArrows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: String | typingsSlinky.vis.anon.Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDashes(value: Boolean | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dashes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDashes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dashes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFont(value: String | Align): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoverWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelHighlightBold(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelHighlightBold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelHighlightBold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelHighlightBold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhysics(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("physics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhysics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("physics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaling(value: OptionsScaling): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelfReferenceSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfReferenceSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelfReferenceSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfReferenceSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadow(value: Boolean | OptionsShadow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmooth(value: Boolean | ForceDirection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smooth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmooth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smooth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

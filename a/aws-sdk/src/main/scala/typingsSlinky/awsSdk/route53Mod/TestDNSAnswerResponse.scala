@@ -45,49 +45,5 @@ object TestDNSAnswerResponse {
     val __obj = js.Dynamic.literal(Nameserver = Nameserver.asInstanceOf[js.Any], Protocol = Protocol.asInstanceOf[js.Any], RecordData = RecordData.asInstanceOf[js.Any], RecordName = RecordName.asInstanceOf[js.Any], RecordType = RecordType.asInstanceOf[js.Any], ResponseCode = ResponseCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestDNSAnswerResponse]
   }
-  @scala.inline
-  implicit class TestDNSAnswerResponseOps[Self <: TestDNSAnswerResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNameserver(value: Nameserver): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Nameserver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProtocol(value: TransportProtocol): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRecordData(value: RecordData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRecordName(value: DNSName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRecordType(value: RRType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResponseCode(value: DNSRCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

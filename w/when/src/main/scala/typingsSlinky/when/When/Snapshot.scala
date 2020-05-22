@@ -1,5 +1,8 @@
 package typingsSlinky.when.When
 
+import typingsSlinky.when.whenStrings.fulfilled
+import typingsSlinky.when.whenStrings.pending
+import typingsSlinky.when.whenStrings.rejected
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,10 +23,19 @@ trait Snapshot[T] extends js.Object
 
 object Snapshot {
   @scala.inline
-  implicit def apply[T](value: FulfilledDescriptor[T]): Snapshot[T] = value.asInstanceOf[Snapshot[T]]
+  def FulfilledDescriptor[T](state: fulfilled, value: T): Snapshot[T] = {
+    val __obj = js.Dynamic.literal(state = state.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Snapshot[T]]
+  }
   @scala.inline
-  implicit def apply[T](value: PendingDescriptor): Snapshot[T] = value.asInstanceOf[Snapshot[T]]
+  def RejectedDescriptor[T](reason: js.Any, state: rejected): Snapshot[T] = {
+    val __obj = js.Dynamic.literal(reason = reason.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Snapshot[T]]
+  }
   @scala.inline
-  implicit def apply[T](value: RejectedDescriptor): Snapshot[T] = value.asInstanceOf[Snapshot[T]]
+  def PendingDescriptor[T](state: pending): Snapshot[T] = {
+    val __obj = js.Dynamic.literal(state = state.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Snapshot[T]]
+  }
 }
 

@@ -18,41 +18,11 @@ trait DBClusterEndpointMessage extends js.Object {
 
 object DBClusterEndpointMessage {
   @scala.inline
-  def apply(): DBClusterEndpointMessage = {
+  def apply(DBClusterEndpoints: DBClusterEndpointList = null, Marker: String = null): DBClusterEndpointMessage = {
     val __obj = js.Dynamic.literal()
+    if (DBClusterEndpoints != null) __obj.updateDynamic("DBClusterEndpoints")(DBClusterEndpoints.asInstanceOf[js.Any])
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
     __obj.asInstanceOf[DBClusterEndpointMessage]
   }
-  @scala.inline
-  implicit class DBClusterEndpointMessageOps[Self <: DBClusterEndpointMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDBClusterEndpoints(value: DBClusterEndpointList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterEndpoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDBClusterEndpoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterEndpoints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarker(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

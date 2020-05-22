@@ -10,4 +10,13 @@ package object cloudfrontRequestMod {
     typingsSlinky.awsLambda.cloudfrontRequestMod.CloudFrontRequestEvent, 
     typingsSlinky.awsLambda.cloudfrontRequestMod.CloudFrontRequestResult
   ]
+  /* Rewritten from type alias, can be one of: 
+    - js.UndefOr[scala.Nothing]
+    - scala.Null
+    - typingsSlinky.awsLambda.cloudfrontMod.CloudFrontResultResponse
+    - typingsSlinky.awsLambda.cloudfrontMod.CloudFrontRequest
+  */
+  type CloudFrontRequestResult = js.UndefOr[
+    typingsSlinky.awsLambda.cloudfrontRequestMod._CloudFrontRequestResult | scala.Null
+  ]
 }

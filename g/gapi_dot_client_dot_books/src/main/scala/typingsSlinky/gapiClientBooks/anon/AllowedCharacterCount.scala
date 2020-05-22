@@ -4,65 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AllowedCharacterCount extends js.Object {
   /** Maximum allowed characters on this layer, especially for the "copy" layer. */
-  var allowedCharacterCount: js.UndefOr[Double] = js.native
+  var allowedCharacterCount: js.UndefOr[Double] = js.undefined
   /** Type of limitation on this layer. "limited" or "unlimited" for the "copy" layer. */
-  var limitType: js.UndefOr[String] = js.native
+  var limitType: js.UndefOr[String] = js.undefined
   /** Remaining allowed characters on this layer, especially for the "copy" layer. */
-  var remainingCharacterCount: js.UndefOr[Double] = js.native
+  var remainingCharacterCount: js.UndefOr[Double] = js.undefined
 }
 
 object AllowedCharacterCount {
   @scala.inline
-  def apply(): AllowedCharacterCount = {
+  def apply(
+    allowedCharacterCount: js.UndefOr[Double] = js.undefined,
+    limitType: String = null,
+    remainingCharacterCount: js.UndefOr[Double] = js.undefined
+  ): AllowedCharacterCount = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowedCharacterCount)) __obj.updateDynamic("allowedCharacterCount")(allowedCharacterCount.get.asInstanceOf[js.Any])
+    if (limitType != null) __obj.updateDynamic("limitType")(limitType.asInstanceOf[js.Any])
+    if (!js.isUndefined(remainingCharacterCount)) __obj.updateDynamic("remainingCharacterCount")(remainingCharacterCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AllowedCharacterCount]
   }
-  @scala.inline
-  implicit class AllowedCharacterCountOps[Self <: AllowedCharacterCount] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowedCharacterCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedCharacterCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowedCharacterCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedCharacterCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimitType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limitType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimitType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limitType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemainingCharacterCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remainingCharacterCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemainingCharacterCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remainingCharacterCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

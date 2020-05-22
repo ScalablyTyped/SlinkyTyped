@@ -14,7 +14,6 @@ import scala.scalajs.js.annotation._
   * language or the dictionary may hold entries of all languages.
   * @see com.sun.star.linguistic2.XDictionaryList
   */
-@js.native
 trait XSearchableDictionaryList extends XDictionaryList {
   /**
     * looks for an entry for a given word in the list of dictionaries.
@@ -24,7 +23,7 @@ trait XSearchableDictionaryList extends XDictionaryList {
     * @param bSpellEntry `TRUE` if entries for purposes of spell checking are required. `FALSE` if only entries for hyphenation purposes are required.
     * @returns the dictionary entry that was found, `NULL` otherwise.
     */
-  def queryDictionaryEntry(aWord: String, aLocale: Locale, bSearchPosDics: Boolean, bSpellEntry: Boolean): XDictionaryEntry = js.native
+  def queryDictionaryEntry(aWord: String, aLocale: Locale, bSearchPosDics: Boolean, bSpellEntry: Boolean): XDictionaryEntry
 }
 
 object XSearchableDictionaryList {
@@ -51,19 +50,5 @@ object XSearchableDictionaryList {
     val __obj = js.Dynamic.literal(Count = Count.asInstanceOf[js.Any], Dictionaries = Dictionaries.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addDictionary = js.Any.fromFunction1(addDictionary), addDictionaryListEventListener = js.Any.fromFunction2(addDictionaryListEventListener), beginCollectEvents = js.Any.fromFunction0(beginCollectEvents), createDictionary = js.Any.fromFunction4(createDictionary), endCollectEvents = js.Any.fromFunction0(endCollectEvents), flushEvents = js.Any.fromFunction0(flushEvents), getCount = js.Any.fromFunction0(getCount), getDictionaries = js.Any.fromFunction0(getDictionaries), getDictionaryByName = js.Any.fromFunction1(getDictionaryByName), queryDictionaryEntry = js.Any.fromFunction4(queryDictionaryEntry), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeDictionary = js.Any.fromFunction1(removeDictionary), removeDictionaryListEventListener = js.Any.fromFunction1(removeDictionaryListEventListener))
     __obj.asInstanceOf[XSearchableDictionaryList]
   }
-  @scala.inline
-  implicit class XSearchableDictionaryListOps[Self <: XSearchableDictionaryList] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQueryDictionaryEntry(value: (String, Locale, Boolean, Boolean) => XDictionaryEntry): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryDictionaryEntry")(js.Any.fromFunction4(value))
-        ret
-    }
-  }
-  
 }
 

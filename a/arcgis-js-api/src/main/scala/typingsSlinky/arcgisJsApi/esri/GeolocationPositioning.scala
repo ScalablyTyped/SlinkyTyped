@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GeolocationPositioning extends js.Object {
   /**
     * The HTML5 Geolocation Position options for locating. Refer to [Geolocation API Specification](http://www.w3.org/TR/geolocation-API/#position-options) for details.
@@ -13,7 +12,7 @@ trait GeolocationPositioning extends js.Object {
     *
     * @default { maximumAge: 0, timeout: 15000, enableHighAccuracy: true }
     */
-  var geolocationOptions: js.Any = js.native
+  var geolocationOptions: js.Any
   /**
     * Indicates whether to navigate the view to the position and scale of the geolocated result.
     *
@@ -21,13 +20,13 @@ trait GeolocationPositioning extends js.Object {
     *
     * @default true
     */
-  var goToLocationEnabled: Boolean = js.native
+  var goToLocationEnabled: Boolean
   /**
     * The graphic used to show the user's location on the map.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-support-GeolocationPositioning.html#graphic)
     */
-  var graphic: Graphic = js.native
+  var graphic: Graphic
   /**
     * The scale to set on the view when navigating to the position of the geolocated result. If a scale value is not explicitly set, then the view will navigate to a default scale of `2500`.
     *
@@ -35,13 +34,13 @@ trait GeolocationPositioning extends js.Object {
     *
     * @default null
     */
-  var scale: Double = js.native
+  var scale: Double
   /**
     * The view associated with the widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-support-GeolocationPositioning.html#view)
     */
-  var view: MapView | SceneView = js.native
+  var view: MapView | SceneView
 }
 
 object GeolocationPositioning {
@@ -56,43 +55,5 @@ object GeolocationPositioning {
     val __obj = js.Dynamic.literal(geolocationOptions = geolocationOptions.asInstanceOf[js.Any], goToLocationEnabled = goToLocationEnabled.asInstanceOf[js.Any], graphic = graphic.asInstanceOf[js.Any], scale = scale.asInstanceOf[js.Any], view = view.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeolocationPositioning]
   }
-  @scala.inline
-  implicit class GeolocationPositioningOps[Self <: GeolocationPositioning] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGeolocationOptions(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geolocationOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGoToLocationEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("goToLocationEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGraphic(value: Graphic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("graphic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withView(value: MapView | SceneView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

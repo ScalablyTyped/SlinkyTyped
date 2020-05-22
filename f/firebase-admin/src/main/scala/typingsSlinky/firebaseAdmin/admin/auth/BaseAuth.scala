@@ -1,5 +1,8 @@
 package typingsSlinky.firebaseAdmin.admin.auth
 
+import typingsSlinky.firebaseAdmin.authMod.admin.auth.DeleteUsersResult
+import typingsSlinky.firebaseAdmin.authMod.admin.auth.GetUsersResult
+import typingsSlinky.firebaseAdmin.authMod.admin.auth.UserIdentifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +38,7 @@ trait BaseAuth extends js.Object {
     * @param config The provider configuration to create.
     * @return A promise that resolves with the created provider configuration.
     */
-  def createProviderConfig(config: AuthProviderConfig): js.Promise[AuthProviderConfig] = js.native
+  def createProviderConfig(config: typingsSlinky.firebaseAdmin.authMod.admin.auth.AuthProviderConfig): js.Promise[typingsSlinky.firebaseAdmin.authMod.admin.auth.AuthProviderConfig] = js.native
   /**
     * Creates a new Firebase session cookie with the specified options. The created
     * JWT string can be set as a server-side session cookie with a custom cookie
@@ -53,7 +56,10 @@ trait BaseAuth extends js.Object {
     * @return A promise that resolves on success with the
     *   created session cookie.
     */
-  def createSessionCookie(idToken: String, sessionCookieOptions: SessionCookieOptions): js.Promise[String] = js.native
+  def createSessionCookie(
+    idToken: String,
+    sessionCookieOptions: typingsSlinky.firebaseAdmin.authMod.admin.auth.SessionCookieOptions
+  ): js.Promise[String] = js.native
   /**
     * Creates a new user.
     *
@@ -66,7 +72,7 @@ trait BaseAuth extends js.Object {
     * @return A promise fulfilled with the user
     *   data corresponding to the newly created user.
     */
-  def createUser(properties: CreateRequest): js.Promise[UserRecord] = js.native
+  def createUser(properties: typingsSlinky.firebaseAdmin.authMod.admin.auth.CreateRequest): js.Promise[typingsSlinky.firebaseAdmin.authMod.admin.auth.UserRecord] = js.native
   /**
     * Deletes the provider configuration corresponding to the provider ID passed.
     * If the specified ID does not exist, an `auth/configuration-not-found` error
@@ -93,6 +99,29 @@ trait BaseAuth extends js.Object {
     *   deleted.
     */
   def deleteUser(uid: String): js.Promise[Unit] = js.native
+  /**
+    * Deletes the users specified by the given uids.
+    *
+    * Deleting a non-existing user won't generate an error (i.e. this method
+    * is idempotent.) Non-existing users are considered to be successfully
+    * deleted, and are therefore counted in the
+    * `DeleteUsersResult.successCount` value.
+    *
+    * Only a maximum of 1000 identifiers may be supplied. If more than 1000
+    * identifiers are supplied, this method throws a FirebaseAuthError.
+    *
+    * This API is currently rate limited at the server to 1 QPS. If you exceed
+    * this, you may get a quota exceeded error. Therefore, if you want to
+    * delete more than 1000 users, you may need to add a delay to ensure you
+    * don't go over this limit.
+    *
+    * @param uids The `uids` corresponding to the users to delete.
+    *
+    * @return A Promise that resolves to the total number of successful/failed
+    *     deletions, as well as the array of errors that corresponds to the
+    *     failed deletions.
+    */
+  def deleteUsers(uids: js.Array[String]): js.Promise[DeleteUsersResult] = js.native
   /**
     * Generates the out of band email action link to verify the user's ownership
     * of the specified email. The
@@ -143,7 +172,10 @@ trait BaseAuth extends js.Object {
     * @return A promise that resolves with the generated link.
     */
   def generateEmailVerificationLink(email: String): js.Promise[String] = js.native
-  def generateEmailVerificationLink(email: String, actionCodeSettings: ActionCodeSettings): js.Promise[String] = js.native
+  def generateEmailVerificationLink(
+    email: String,
+    actionCodeSettings: typingsSlinky.firebaseAdmin.authMod.admin.auth.ActionCodeSettings
+  ): js.Promise[String] = js.native
   /**
     * Generates the out of band email action link to reset a user's password.
     * The link is generated for the user with the specified email address. The
@@ -194,7 +226,10 @@ trait BaseAuth extends js.Object {
     * @return A promise that resolves with the generated link.
     */
   def generatePasswordResetLink(email: String): js.Promise[String] = js.native
-  def generatePasswordResetLink(email: String, actionCodeSettings: ActionCodeSettings): js.Promise[String] = js.native
+  def generatePasswordResetLink(
+    email: String,
+    actionCodeSettings: typingsSlinky.firebaseAdmin.authMod.admin.auth.ActionCodeSettings
+  ): js.Promise[String] = js.native
   /**
     * Generates the out of band email action link to sign in or sign up the owner
     * of the specified email. The
@@ -244,7 +279,10 @@ trait BaseAuth extends js.Object {
     *     are configured in the same Firebase Auth project.
     * @return A promise that resolves with the generated link.
     */
-  def generateSignInWithEmailLink(email: String, actionCodeSettings: ActionCodeSettings): js.Promise[String] = js.native
+  def generateSignInWithEmailLink(
+    email: String,
+    actionCodeSettings: typingsSlinky.firebaseAdmin.authMod.admin.auth.ActionCodeSettings
+  ): js.Promise[String] = js.native
   /**
     * Looks up an Auth provider configuration by the provided ID.
     * Returns a promise that resolves with the provider configuration
@@ -260,7 +298,7 @@ trait BaseAuth extends js.Object {
     * @return A promise that resolves
     *     with the configuration corresponding to the provided ID.
     */
-  def getProviderConfig(providerId: String): js.Promise[AuthProviderConfig] = js.native
+  def getProviderConfig(providerId: String): js.Promise[typingsSlinky.firebaseAdmin.authMod.admin.auth.AuthProviderConfig] = js.native
   /**
     * Gets the user data for the user corresponding to a given `uid`.
     *
@@ -272,7 +310,7 @@ trait BaseAuth extends js.Object {
     * @return A promise fulfilled with the user
     *   data corresponding to the provided `uid`.
     */
-  def getUser(uid: String): js.Promise[UserRecord] = js.native
+  def getUser(uid: String): js.Promise[typingsSlinky.firebaseAdmin.authMod.admin.auth.UserRecord] = js.native
   /**
     * Gets the user data for the user corresponding to a given email.
     *
@@ -285,7 +323,7 @@ trait BaseAuth extends js.Object {
     * @return A promise fulfilled with the user
     *   data corresponding to the provided email.
     */
-  def getUserByEmail(email: String): js.Promise[UserRecord] = js.native
+  def getUserByEmail(email: String): js.Promise[typingsSlinky.firebaseAdmin.authMod.admin.auth.UserRecord] = js.native
   /**
     * Gets the user data for the user corresponding to a given phone number. The
     * phone number has to conform to the E.164 specification.
@@ -299,7 +337,23 @@ trait BaseAuth extends js.Object {
     * @return A promise fulfilled with the user
     *   data corresponding to the provided phone number.
     */
-  def getUserByPhoneNumber(phoneNumber: String): js.Promise[UserRecord] = js.native
+  def getUserByPhoneNumber(phoneNumber: String): js.Promise[typingsSlinky.firebaseAdmin.authMod.admin.auth.UserRecord] = js.native
+  /**
+    * Gets the user data corresponding to the specified identifiers.
+    *
+    * There are no ordering guarantees; in particular, the nth entry in the result list is not
+    * guaranteed to correspond to the nth entry in the input parameters list.
+    *
+    * Only a maximum of 100 identifiers may be supplied. If more than 100 identifiers are supplied,
+    * this method throws a FirebaseAuthError.
+    *
+    * @param identifiers The identifiers used to indicate which user records should be returned.
+    *     Must have <= 100 entries.
+    * @return {Promise<GetUsersResult>} A promise that resolves to the corresponding user records.
+    * @throws FirebaseAuthError If any of the identifiers are invalid or if more than 100
+    *     identifiers are specified.
+    */
+  def getUsers(identifiers: js.Array[UserIdentifier]): js.Promise[GetUsersResult] = js.native
   /**
     * Imports the provided list of users into Firebase Auth.
     * A maximum of 1000 users are allowed to be imported one at a time.
@@ -317,8 +371,11 @@ trait BaseAuth extends js.Object {
     *   number of successful imports, the number of failed imports and their
     *   corresponding errors.
     */
-  def importUsers(users: js.Array[UserImportRecord]): js.Promise[UserImportResult] = js.native
-  def importUsers(users: js.Array[UserImportRecord], options: UserImportOptions): js.Promise[UserImportResult] = js.native
+  def importUsers(users: js.Array[typingsSlinky.firebaseAdmin.authMod.admin.auth.UserImportRecord]): js.Promise[typingsSlinky.firebaseAdmin.authMod.admin.auth.UserImportResult] = js.native
+  def importUsers(
+    users: js.Array[typingsSlinky.firebaseAdmin.authMod.admin.auth.UserImportRecord],
+    options: typingsSlinky.firebaseAdmin.authMod.admin.auth.UserImportOptions
+  ): js.Promise[typingsSlinky.firebaseAdmin.authMod.admin.auth.UserImportResult] = js.native
   /**
     * Returns the list of existing provider configurations matching the filter
     * provided. At most, 100 provider configs can be listed at a time.
@@ -331,7 +388,7 @@ trait BaseAuth extends js.Object {
     * @return A promise that resolves with the list of provider configs meeting the
     *   filter requirements.
     */
-  def listProviderConfigs(options: AuthProviderConfigFilter): js.Promise[ListProviderConfigResults] = js.native
+  def listProviderConfigs(options: typingsSlinky.firebaseAdmin.authMod.admin.auth.AuthProviderConfigFilter): js.Promise[typingsSlinky.firebaseAdmin.authMod.admin.auth.ListProviderConfigResults] = js.native
   /**
     * Retrieves a list of users (single batch only) with a size of `maxResults`
     * starting from the offset as specified by `pageToken`. This is used to
@@ -347,9 +404,9 @@ trait BaseAuth extends js.Object {
     * @return A promise that resolves with
     *   the current batch of downloaded users and the next page token.
     */
-  def listUsers(): js.Promise[ListUsersResult] = js.native
-  def listUsers(maxResults: Double): js.Promise[ListUsersResult] = js.native
-  def listUsers(maxResults: Double, pageToken: String): js.Promise[ListUsersResult] = js.native
+  def listUsers(): js.Promise[typingsSlinky.firebaseAdmin.authMod.admin.auth.ListUsersResult] = js.native
+  def listUsers(maxResults: Double): js.Promise[typingsSlinky.firebaseAdmin.authMod.admin.auth.ListUsersResult] = js.native
+  def listUsers(maxResults: Double, pageToken: String): js.Promise[typingsSlinky.firebaseAdmin.authMod.admin.auth.ListUsersResult] = js.native
   /**
     * Revokes all refresh tokens for an existing user.
     *
@@ -412,7 +469,10 @@ trait BaseAuth extends js.Object {
     * @param updatedConfig The updated configuration.
     * @return A promise that resolves with the updated provider configuration.
     */
-  def updateProviderConfig(providerId: String, updatedConfig: UpdateAuthProviderRequest): js.Promise[AuthProviderConfig] = js.native
+  def updateProviderConfig(
+    providerId: String,
+    updatedConfig: typingsSlinky.firebaseAdmin.authMod.admin.auth.UpdateAuthProviderRequest
+  ): js.Promise[typingsSlinky.firebaseAdmin.authMod.admin.auth.AuthProviderConfig] = js.native
   /**
     * Updates an existing user.
     *
@@ -426,7 +486,7 @@ trait BaseAuth extends js.Object {
     * @return A promise fulfilled with the
     *   updated user data.
     */
-  def updateUser(uid: String, properties: UpdateRequest): js.Promise[UserRecord] = js.native
+  def updateUser(uid: String, properties: typingsSlinky.firebaseAdmin.authMod.admin.auth.UpdateRequest): js.Promise[typingsSlinky.firebaseAdmin.authMod.admin.auth.UserRecord] = js.native
   /**
     * Verifies a Firebase ID token (JWT). If the token is valid, the promise is
     * fulfilled with the token's decoded claims; otherwise, the promise is
@@ -447,8 +507,8 @@ trait BaseAuth extends js.Object {
     *   token's decoded claims if the ID token is valid; otherwise, a rejected
     *   promise.
     */
-  def verifyIdToken(idToken: String): js.Promise[DecodedIdToken] = js.native
-  def verifyIdToken(idToken: String, checkRevoked: Boolean): js.Promise[DecodedIdToken] = js.native
+  def verifyIdToken(idToken: String): js.Promise[typingsSlinky.firebaseAdmin.authMod.admin.auth.DecodedIdToken] = js.native
+  def verifyIdToken(idToken: String, checkRevoked: Boolean): js.Promise[typingsSlinky.firebaseAdmin.authMod.admin.auth.DecodedIdToken] = js.native
   /**
     * Verifies a Firebase session cookie. Returns a Promise with the cookie claims.
     * Rejects the promise if the cookie could not be verified. If `checkRevoked` is
@@ -470,7 +530,7 @@ trait BaseAuth extends js.Object {
     *   session cookie's decoded claims if the session cookie is valid; otherwise,
     *   a rejected promise.
     */
-  def verifySessionCookie(sessionCookie: String): js.Promise[DecodedIdToken] = js.native
-  def verifySessionCookie(sessionCookie: String, checkForRevocation: Boolean): js.Promise[DecodedIdToken] = js.native
+  def verifySessionCookie(sessionCookie: String): js.Promise[typingsSlinky.firebaseAdmin.authMod.admin.auth.DecodedIdToken] = js.native
+  def verifySessionCookie(sessionCookie: String, checkForRevocation: Boolean): js.Promise[typingsSlinky.firebaseAdmin.authMod.admin.auth.DecodedIdToken] = js.native
 }
 

@@ -4,24 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Udp extends js.Object {
-  var drops: String = js.native
-  var inode: String = js.native
-  var local_address: String = js.native
-  var pointer: String = js.native
-  var ref: String = js.native
-  var rem_address: String = js.native
-  var retrnsmt: String = js.native
-  var rx_queue: String = js.native
-  var sl: String = js.native
-  var st: String = js.native
-  var timeout: String = js.native
+  var drops: String
+  var inode: String
+  var local_address: String
+  var pointer: String
+  var ref: String
+  var rem_address: String
+  var retrnsmt: String
+  var rx_queue: String
+  var sl: String
+  var st: String
+  var timeout: String
   @JSName("tm->when")
-  var `tm-Greaterthansignwhen`: String = js.native
-  var tr: String = js.native
-  var tx_queue: String = js.native
-  var uid: String = js.native
+  var `tm-Greaterthansignwhen`: String
+  var tr: String
+  var tx_queue: String
+  var uid: String
 }
 
 object Udp {
@@ -47,103 +46,5 @@ object Udp {
     __obj.updateDynamic("tm->when")(`tm-Greaterthansignwhen`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Udp]
   }
-  @scala.inline
-  implicit class UdpOps[Self <: Udp] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDrops(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drops")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocal_address(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("local_address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPointer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRef(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRem_address(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rem_address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRetrnsmt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retrnsmt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRx_queue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rx_queue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("st")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withTm-Greaterthansignwhen`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tm->when")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTr(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTx_queue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tx_queue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

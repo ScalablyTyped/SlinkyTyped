@@ -6,51 +6,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait b2RevoluteJointDef extends b2JointDef {
   /**
-  		* A flag to enable joint limits.
-  		**/
-  var enableLimit: Boolean = js.native
+    * A flag to enable joint limits.
+    **/
+  var enableLimit: Boolean
   /**
-  		* A flag to enable the joint motor.
-  		**/
-  var enableMotor: Boolean = js.native
+    * A flag to enable the joint motor.
+    **/
+  var enableMotor: Boolean
   /**
-  		* The local anchor point relative to body1's origin.
-  		**/
-  var localAnchorA: b2Vec2 = js.native
+    * The local anchor point relative to body1's origin.
+    **/
+  var localAnchorA: b2Vec2
   /**
-  		* The local anchor point relative to body2's origin.
-  		**/
-  var localAnchorB: b2Vec2 = js.native
+    * The local anchor point relative to body2's origin.
+    **/
+  var localAnchorB: b2Vec2
   /**
-  		* The lower angle for the joint limit (radians).
-  		**/
-  var lowerAngle: Double = js.native
+    * The lower angle for the joint limit (radians).
+    **/
+  var lowerAngle: Double
   /**
-  		* The maximum motor torque used to achieve the desired motor speed. Usually in N-m.
-  		**/
-  var maxMotorTorque: Double = js.native
+    * The maximum motor torque used to achieve the desired motor speed. Usually in N-m.
+    **/
+  var maxMotorTorque: Double
   /**
-  		* The desired motor speed. Usually in radians per second.
-  		**/
-  var motorSpeed: Double = js.native
+    * The desired motor speed. Usually in radians per second.
+    **/
+  var motorSpeed: Double
   /**
-  		* The bodyB angle minus bodyA angle in the reference state (radians).
-  		**/
-  var referenceAngle: Double = js.native
+    * The bodyB angle minus bodyA angle in the reference state (radians).
+    **/
+  var referenceAngle: Double
   /**
-  		* The upper angle for the joint limit (radians).
-  		**/
-  var upperAngle: Double = js.native
+    * The upper angle for the joint limit (radians).
+    **/
+  var upperAngle: Double
   /**
-  		* Initialize the bodies, achors, and reference angle using the world anchor.
-  		* @param bA Body A.
-  		* @param bB Body B.
-  		* @param anchor Anchor.
-  		**/
-  def Initialize(bA: b2Body, bB: b2Body, anchor: b2Vec2): Unit = js.native
+    * Initialize the bodies, achors, and reference angle using the world anchor.
+    * @param bA Body A.
+    * @param bB Body B.
+    * @param anchor Anchor.
+    **/
+  def Initialize(bA: b2Body, bB: b2Body, anchor: b2Vec2): Unit
 }
 
 object b2RevoluteJointDef {
@@ -76,73 +75,5 @@ object b2RevoluteJointDef {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[b2RevoluteJointDef]
   }
-  @scala.inline
-  implicit class b2RevoluteJointDefOps[Self <: b2RevoluteJointDef] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInitialize(value: (b2Body, b2Body, b2Vec2) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Initialize")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withEnableLimit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnableMotor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableMotor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocalAnchorA(value: b2Vec2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localAnchorA")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocalAnchorB(value: b2Vec2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localAnchorB")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLowerAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxMotorTorque(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMotorTorque")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMotorSpeed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("motorSpeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReferenceAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpperAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upperAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

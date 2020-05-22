@@ -18,41 +18,11 @@ trait SchemaAmount extends js.Object {
 
 object SchemaAmount {
   @scala.inline
-  def apply(): SchemaAmount = {
+  def apply(pretax: SchemaPrice = null, tax: SchemaPrice = null): SchemaAmount = {
     val __obj = js.Dynamic.literal()
+    if (pretax != null) __obj.updateDynamic("pretax")(pretax.asInstanceOf[js.Any])
+    if (tax != null) __obj.updateDynamic("tax")(tax.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAmount]
   }
-  @scala.inline
-  implicit class SchemaAmountOps[Self <: SchemaAmount] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPretax(value: SchemaPrice): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pretax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPretax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pretax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTax(value: SchemaPrice): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tax")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -17,29 +17,10 @@ trait SchemaAsymmetricSignResponse extends js.Object {
 
 object SchemaAsymmetricSignResponse {
   @scala.inline
-  def apply(): SchemaAsymmetricSignResponse = {
+  def apply(signature: String = null): SchemaAsymmetricSignResponse = {
     val __obj = js.Dynamic.literal()
+    if (signature != null) __obj.updateDynamic("signature")(signature.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAsymmetricSignResponse]
   }
-  @scala.inline
-  implicit class SchemaAsymmetricSignResponseOps[Self <: SchemaAsymmetricSignResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSignature(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignature: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

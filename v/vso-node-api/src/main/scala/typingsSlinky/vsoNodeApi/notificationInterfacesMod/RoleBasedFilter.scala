@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RoleBasedFilter extends ExpressionFilter {
-  var exclusions: js.Array[String] = js.native
-  var inclusions: js.Array[String] = js.native
+  var exclusions: js.Array[String]
+  var inclusions: js.Array[String]
 }
 
 object RoleBasedFilter {
@@ -23,25 +22,5 @@ object RoleBasedFilter {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[RoleBasedFilter]
   }
-  @scala.inline
-  implicit class RoleBasedFilterOps[Self <: RoleBasedFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExclusions(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInclusions(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inclusions")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

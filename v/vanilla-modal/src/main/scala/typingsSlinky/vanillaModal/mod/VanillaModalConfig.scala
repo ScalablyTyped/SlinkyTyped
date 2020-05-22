@@ -5,237 +5,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VanillaModalConfig extends js.Object {
-  var `class`: js.UndefOr[String] = js.native
-  var clickOutside: js.UndefOr[Boolean] = js.native
-  var close: js.UndefOr[String] = js.native
-  var closeKeys: js.UndefOr[js.Array[js.UndefOr[Double]] | Boolean] = js.native
-  var loadClass: js.UndefOr[String] = js.native
-  var modal: js.UndefOr[String | HTMLElement] = js.native
-  var modalContent: js.UndefOr[String] = js.native
-  var modalInner: js.UndefOr[String] = js.native
-  var onBeforeClose: js.UndefOr[js.Function0[js.UndefOr[scala.Nothing]]] = js.native
-  var onBeforeOpen: js.UndefOr[js.Function0[js.UndefOr[scala.Nothing]]] = js.native
-  var onClose: js.UndefOr[js.Function0[js.UndefOr[scala.Nothing]]] = js.native
-  var onOpen: js.UndefOr[js.Function0[js.UndefOr[scala.Nothing]]] = js.native
-  var open: js.UndefOr[String] = js.native
-  var page: js.UndefOr[String] = js.native
-  var transitionEnd: js.UndefOr[js.Function0[js.UndefOr[scala.Nothing]]] = js.native
-  var transitions: js.UndefOr[String] = js.native
+  var `class`: js.UndefOr[String] = js.undefined
+  var clickOutside: js.UndefOr[Boolean] = js.undefined
+  var close: js.UndefOr[String] = js.undefined
+  var closeKeys: js.UndefOr[js.Array[js.UndefOr[Double]] | Boolean] = js.undefined
+  var loadClass: js.UndefOr[String] = js.undefined
+  var modal: js.UndefOr[String | HTMLElement] = js.undefined
+  var modalContent: js.UndefOr[String] = js.undefined
+  var modalInner: js.UndefOr[String] = js.undefined
+  var onBeforeClose: js.UndefOr[js.Function0[js.UndefOr[scala.Nothing]]] = js.undefined
+  var onBeforeOpen: js.UndefOr[js.Function0[js.UndefOr[scala.Nothing]]] = js.undefined
+  var onClose: js.UndefOr[js.Function0[js.UndefOr[scala.Nothing]]] = js.undefined
+  var onOpen: js.UndefOr[js.Function0[js.UndefOr[scala.Nothing]]] = js.undefined
+  var open: js.UndefOr[String] = js.undefined
+  var page: js.UndefOr[String] = js.undefined
+  var transitionEnd: js.UndefOr[js.Function0[js.UndefOr[scala.Nothing]]] = js.undefined
+  var transitions: js.UndefOr[String] = js.undefined
 }
 
 object VanillaModalConfig {
   @scala.inline
-  def apply(): VanillaModalConfig = {
+  def apply(
+    `class`: String = null,
+    clickOutside: js.UndefOr[Boolean] = js.undefined,
+    close: String = null,
+    closeKeys: js.Array[js.UndefOr[Double]] | Boolean = null,
+    loadClass: String = null,
+    modal: String | HTMLElement = null,
+    modalContent: String = null,
+    modalInner: String = null,
+    onBeforeClose: () => js.UndefOr[scala.Nothing] = null,
+    onBeforeOpen: () => js.UndefOr[scala.Nothing] = null,
+    onClose: () => js.UndefOr[scala.Nothing] = null,
+    onOpen: () => js.UndefOr[scala.Nothing] = null,
+    open: String = null,
+    page: String = null,
+    transitionEnd: () => js.UndefOr[scala.Nothing] = null,
+    transitions: String = null
+  ): VanillaModalConfig = {
     val __obj = js.Dynamic.literal()
+    if (`class` != null) __obj.updateDynamic("class")(`class`.asInstanceOf[js.Any])
+    if (!js.isUndefined(clickOutside)) __obj.updateDynamic("clickOutside")(clickOutside.get.asInstanceOf[js.Any])
+    if (close != null) __obj.updateDynamic("close")(close.asInstanceOf[js.Any])
+    if (closeKeys != null) __obj.updateDynamic("closeKeys")(closeKeys.asInstanceOf[js.Any])
+    if (loadClass != null) __obj.updateDynamic("loadClass")(loadClass.asInstanceOf[js.Any])
+    if (modal != null) __obj.updateDynamic("modal")(modal.asInstanceOf[js.Any])
+    if (modalContent != null) __obj.updateDynamic("modalContent")(modalContent.asInstanceOf[js.Any])
+    if (modalInner != null) __obj.updateDynamic("modalInner")(modalInner.asInstanceOf[js.Any])
+    if (onBeforeClose != null) __obj.updateDynamic("onBeforeClose")(js.Any.fromFunction0(onBeforeClose))
+    if (onBeforeOpen != null) __obj.updateDynamic("onBeforeOpen")(js.Any.fromFunction0(onBeforeOpen))
+    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction0(onClose))
+    if (onOpen != null) __obj.updateDynamic("onOpen")(js.Any.fromFunction0(onOpen))
+    if (open != null) __obj.updateDynamic("open")(open.asInstanceOf[js.Any])
+    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
+    if (transitionEnd != null) __obj.updateDynamic("transitionEnd")(js.Any.fromFunction0(transitionEnd))
+    if (transitions != null) __obj.updateDynamic("transitions")(transitions.asInstanceOf[js.Any])
     __obj.asInstanceOf[VanillaModalConfig]
   }
-  @scala.inline
-  implicit class VanillaModalConfigOps[Self <: VanillaModalConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("class")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("class")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClickOutside(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickOutside")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickOutside: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickOutside")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClose(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseKeys(value: js.Array[js.UndefOr[Double]] | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModalHTMLElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModal(value: String | HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModalContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modalContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModalContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modalContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModalInner(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modalInner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModalInner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modalInner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBeforeClose(value: () => js.UndefOr[scala.Nothing]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeClose")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnBeforeClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBeforeOpen(value: () => js.UndefOr[scala.Nothing]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeOpen")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnBeforeOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClose(value: () => js.UndefOr[scala.Nothing]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnOpen(value: () => js.UndefOr[scala.Nothing]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpen(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransitionEnd(value: () => js.UndefOr[scala.Nothing]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionEnd")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutTransitionEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransitions(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransitions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

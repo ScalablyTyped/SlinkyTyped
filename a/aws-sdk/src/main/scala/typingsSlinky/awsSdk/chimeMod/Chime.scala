@@ -243,6 +243,19 @@ trait Chime extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ CreatePhoneNumberOrderResponse, Unit]
   ): Request[CreatePhoneNumberOrderResponse, AWSError] = js.native
   /**
+    * Creates a proxy session on the specified Amazon Chime Voice Connector for the specified participant phone numbers.
+    */
+  def createProxySession(): Request[CreateProxySessionResponse, AWSError] = js.native
+  def createProxySession(callback: js.Function2[/* err */ AWSError, /* data */ CreateProxySessionResponse, Unit]): Request[CreateProxySessionResponse, AWSError] = js.native
+  /**
+    * Creates a proxy session on the specified Amazon Chime Voice Connector for the specified participant phone numbers.
+    */
+  def createProxySession(params: CreateProxySessionRequest): Request[CreateProxySessionResponse, AWSError] = js.native
+  def createProxySession(
+    params: CreateProxySessionRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateProxySessionResponse, Unit]
+  ): Request[CreateProxySessionResponse, AWSError] = js.native
+  /**
     * Creates a chat room for the specified Amazon Chime Enterprise account.
     */
   def createRoom(): Request[CreateRoomResponse, AWSError] = js.native
@@ -373,6 +386,19 @@ trait Chime extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
   /**
+    * Deletes the specified proxy session from the specified Amazon Chime Voice Connector.
+    */
+  def deleteProxySession(): Request[js.Object, AWSError] = js.native
+  def deleteProxySession(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  /**
+    * Deletes the specified proxy session from the specified Amazon Chime Voice Connector.
+    */
+  def deleteProxySession(params: DeleteProxySessionRequest): Request[js.Object, AWSError] = js.native
+  def deleteProxySession(
+    params: DeleteProxySessionRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
+  ): Request[js.Object, AWSError] = js.native
+  /**
     * Deletes a chat room in an Amazon Chime Enterprise account.
     */
   def deleteRoom(): Request[js.Object, AWSError] = js.native
@@ -432,6 +458,19 @@ trait Chime extends Service {
   def deleteVoiceConnectorOrigination(params: DeleteVoiceConnectorOriginationRequest): Request[js.Object, AWSError] = js.native
   def deleteVoiceConnectorOrigination(
     params: DeleteVoiceConnectorOriginationRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
+  ): Request[js.Object, AWSError] = js.native
+  /**
+    * Deletes the proxy configuration from the specified Amazon Chime Voice Connector.
+    */
+  def deleteVoiceConnectorProxy(): Request[js.Object, AWSError] = js.native
+  def deleteVoiceConnectorProxy(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  /**
+    * Deletes the proxy configuration from the specified Amazon Chime Voice Connector.
+    */
+  def deleteVoiceConnectorProxy(params: DeleteVoiceConnectorProxyRequest): Request[js.Object, AWSError] = js.native
+  def deleteVoiceConnectorProxy(
+    params: DeleteVoiceConnectorProxyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
   /**
@@ -669,6 +708,32 @@ trait Chime extends Service {
   def getPhoneNumberSettings(): Request[GetPhoneNumberSettingsResponse, AWSError] = js.native
   def getPhoneNumberSettings(callback: js.Function2[/* err */ AWSError, /* data */ GetPhoneNumberSettingsResponse, Unit]): Request[GetPhoneNumberSettingsResponse, AWSError] = js.native
   /**
+    * Gets the specified proxy session details for the specified Amazon Chime Voice Connector.
+    */
+  def getProxySession(): Request[GetProxySessionResponse, AWSError] = js.native
+  def getProxySession(callback: js.Function2[/* err */ AWSError, /* data */ GetProxySessionResponse, Unit]): Request[GetProxySessionResponse, AWSError] = js.native
+  /**
+    * Gets the specified proxy session details for the specified Amazon Chime Voice Connector.
+    */
+  def getProxySession(params: GetProxySessionRequest): Request[GetProxySessionResponse, AWSError] = js.native
+  def getProxySession(
+    params: GetProxySessionRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetProxySessionResponse, Unit]
+  ): Request[GetProxySessionResponse, AWSError] = js.native
+  /**
+    * Gets the retention settings for the specified Amazon Chime Enterprise account. For more information about retention settings, see Managing Chat Retention Policies in the Amazon Chime Administration Guide.
+    */
+  def getRetentionSettings(): Request[GetRetentionSettingsResponse, AWSError] = js.native
+  def getRetentionSettings(callback: js.Function2[/* err */ AWSError, /* data */ GetRetentionSettingsResponse, Unit]): Request[GetRetentionSettingsResponse, AWSError] = js.native
+  /**
+    * Gets the retention settings for the specified Amazon Chime Enterprise account. For more information about retention settings, see Managing Chat Retention Policies in the Amazon Chime Administration Guide.
+    */
+  def getRetentionSettings(params: GetRetentionSettingsRequest): Request[GetRetentionSettingsResponse, AWSError] = js.native
+  def getRetentionSettings(
+    params: GetRetentionSettingsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetRetentionSettingsResponse, Unit]
+  ): Request[GetRetentionSettingsResponse, AWSError] = js.native
+  /**
     * Retrieves room details, such as the room name, for a room in an Amazon Chime Enterprise account.
     */
   def getRoom(): Request[GetRoomResponse, AWSError] = js.native
@@ -762,6 +827,19 @@ trait Chime extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ GetVoiceConnectorOriginationResponse, Unit]
   ): Request[GetVoiceConnectorOriginationResponse, AWSError] = js.native
   /**
+    * Gets the proxy configuration details for the specified Amazon Chime Voice Connector.
+    */
+  def getVoiceConnectorProxy(): Request[GetVoiceConnectorProxyResponse, AWSError] = js.native
+  def getVoiceConnectorProxy(callback: js.Function2[/* err */ AWSError, /* data */ GetVoiceConnectorProxyResponse, Unit]): Request[GetVoiceConnectorProxyResponse, AWSError] = js.native
+  /**
+    * Gets the proxy configuration details for the specified Amazon Chime Voice Connector.
+    */
+  def getVoiceConnectorProxy(params: GetVoiceConnectorProxyRequest): Request[GetVoiceConnectorProxyResponse, AWSError] = js.native
+  def getVoiceConnectorProxy(
+    params: GetVoiceConnectorProxyRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetVoiceConnectorProxyResponse, Unit]
+  ): Request[GetVoiceConnectorProxyResponse, AWSError] = js.native
+  /**
     * Retrieves the streaming configuration details for the specified Amazon Chime Voice Connector. Shows whether media streaming is enabled for sending to Amazon Kinesis. It also shows the retention period, in hours, for the Amazon Kinesis data.
     */
   def getVoiceConnectorStreamingConfiguration(): Request[GetVoiceConnectorStreamingConfigurationResponse, AWSError] = js.native
@@ -831,6 +909,19 @@ trait Chime extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ ListAccountsResponse, Unit]
   ): Request[ListAccountsResponse, AWSError] = js.native
   /**
+    * Lists the tags applied to an Amazon Chime SDK attendee resource.
+    */
+  def listAttendeeTags(): Request[ListAttendeeTagsResponse, AWSError] = js.native
+  def listAttendeeTags(callback: js.Function2[/* err */ AWSError, /* data */ ListAttendeeTagsResponse, Unit]): Request[ListAttendeeTagsResponse, AWSError] = js.native
+  /**
+    * Lists the tags applied to an Amazon Chime SDK attendee resource.
+    */
+  def listAttendeeTags(params: ListAttendeeTagsRequest): Request[ListAttendeeTagsResponse, AWSError] = js.native
+  def listAttendeeTags(
+    params: ListAttendeeTagsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListAttendeeTagsResponse, Unit]
+  ): Request[ListAttendeeTagsResponse, AWSError] = js.native
+  /**
     * Lists the attendees for the specified Amazon Chime SDK meeting. For more information about the Amazon Chime SDK, see Using the Amazon Chime SDK in the Amazon Chime Developer Guide.
     */
   def listAttendees(): Request[ListAttendeesResponse, AWSError] = js.native
@@ -856,6 +947,19 @@ trait Chime extends Service {
     params: ListBotsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListBotsResponse, Unit]
   ): Request[ListBotsResponse, AWSError] = js.native
+  /**
+    * Lists the tags applied to an Amazon Chime SDK meeting resource.
+    */
+  def listMeetingTags(): Request[ListMeetingTagsResponse, AWSError] = js.native
+  def listMeetingTags(callback: js.Function2[/* err */ AWSError, /* data */ ListMeetingTagsResponse, Unit]): Request[ListMeetingTagsResponse, AWSError] = js.native
+  /**
+    * Lists the tags applied to an Amazon Chime SDK meeting resource.
+    */
+  def listMeetingTags(params: ListMeetingTagsRequest): Request[ListMeetingTagsResponse, AWSError] = js.native
+  def listMeetingTags(
+    params: ListMeetingTagsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListMeetingTagsResponse, Unit]
+  ): Request[ListMeetingTagsResponse, AWSError] = js.native
   /**
     * Lists up to 100 active Amazon Chime SDK meetings. For more information about the Amazon Chime SDK, see Using the Amazon Chime SDK in the Amazon Chime Developer Guide.
     */
@@ -896,6 +1000,19 @@ trait Chime extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ ListPhoneNumbersResponse, Unit]
   ): Request[ListPhoneNumbersResponse, AWSError] = js.native
   /**
+    * Lists the proxy sessions for the specified Amazon Chime Voice Connector.
+    */
+  def listProxySessions(): Request[ListProxySessionsResponse, AWSError] = js.native
+  def listProxySessions(callback: js.Function2[/* err */ AWSError, /* data */ ListProxySessionsResponse, Unit]): Request[ListProxySessionsResponse, AWSError] = js.native
+  /**
+    * Lists the proxy sessions for the specified Amazon Chime Voice Connector.
+    */
+  def listProxySessions(params: ListProxySessionsRequest): Request[ListProxySessionsResponse, AWSError] = js.native
+  def listProxySessions(
+    params: ListProxySessionsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListProxySessionsResponse, Unit]
+  ): Request[ListProxySessionsResponse, AWSError] = js.native
+  /**
     * Lists the membership details for the specified room in an Amazon Chime Enterprise account, such as the members' IDs, email addresses, and names.
     */
   def listRoomMemberships(): Request[ListRoomMembershipsResponse, AWSError] = js.native
@@ -921,6 +1038,19 @@ trait Chime extends Service {
     params: ListRoomsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListRoomsResponse, Unit]
   ): Request[ListRoomsResponse, AWSError] = js.native
+  /**
+    * Lists the tags applied to an Amazon Chime SDK meeting resource.
+    */
+  def listTagsForResource(): Request[ListTagsForResourceResponse, AWSError] = js.native
+  def listTagsForResource(callback: js.Function2[/* err */ AWSError, /* data */ ListTagsForResourceResponse, Unit]): Request[ListTagsForResourceResponse, AWSError] = js.native
+  /**
+    * Lists the tags applied to an Amazon Chime SDK meeting resource.
+    */
+  def listTagsForResource(params: ListTagsForResourceRequest): Request[ListTagsForResourceResponse, AWSError] = js.native
+  def listTagsForResource(
+    params: ListTagsForResourceRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListTagsForResourceResponse, Unit]
+  ): Request[ListTagsForResourceResponse, AWSError] = js.native
   /**
     * Lists the users that belong to the specified Amazon Chime account. You can specify an email address to list only the user that the email address belongs to.
     */
@@ -1010,6 +1140,19 @@ trait Chime extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ PutEventsConfigurationResponse, Unit]
   ): Request[PutEventsConfigurationResponse, AWSError] = js.native
   /**
+    * Puts retention settings for the specified Amazon Chime Enterprise account. We recommend using AWS CloudTrail to monitor usage of this API for your account. For more information, see Logging Amazon Chime API Calls with AWS CloudTrail in the Amazon Chime Administration Guide. To turn off existing retention settings, remove the number of days from the corresponding RetentionDays field in the RetentionSettings object. For more information about retention settings, see Managing Chat Retention Policies in the Amazon Chime Administration Guide.
+    */
+  def putRetentionSettings(): Request[PutRetentionSettingsResponse, AWSError] = js.native
+  def putRetentionSettings(callback: js.Function2[/* err */ AWSError, /* data */ PutRetentionSettingsResponse, Unit]): Request[PutRetentionSettingsResponse, AWSError] = js.native
+  /**
+    * Puts retention settings for the specified Amazon Chime Enterprise account. We recommend using AWS CloudTrail to monitor usage of this API for your account. For more information, see Logging Amazon Chime API Calls with AWS CloudTrail in the Amazon Chime Administration Guide. To turn off existing retention settings, remove the number of days from the corresponding RetentionDays field in the RetentionSettings object. For more information about retention settings, see Managing Chat Retention Policies in the Amazon Chime Administration Guide.
+    */
+  def putRetentionSettings(params: PutRetentionSettingsRequest): Request[PutRetentionSettingsResponse, AWSError] = js.native
+  def putRetentionSettings(
+    params: PutRetentionSettingsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ PutRetentionSettingsResponse, Unit]
+  ): Request[PutRetentionSettingsResponse, AWSError] = js.native
+  /**
     * Adds a logging configuration for the specified Amazon Chime Voice Connector. The logging configuration specifies whether SIP message logs are enabled for sending to Amazon CloudWatch Logs.
     */
   def putVoiceConnectorLoggingConfiguration(): Request[PutVoiceConnectorLoggingConfigurationResponse, AWSError] = js.native
@@ -1037,6 +1180,19 @@ trait Chime extends Service {
     params: PutVoiceConnectorOriginationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ PutVoiceConnectorOriginationResponse, Unit]
   ): Request[PutVoiceConnectorOriginationResponse, AWSError] = js.native
+  /**
+    * Puts the specified proxy configuration to the specified Amazon Chime Voice Connector.
+    */
+  def putVoiceConnectorProxy(): Request[PutVoiceConnectorProxyResponse, AWSError] = js.native
+  def putVoiceConnectorProxy(callback: js.Function2[/* err */ AWSError, /* data */ PutVoiceConnectorProxyResponse, Unit]): Request[PutVoiceConnectorProxyResponse, AWSError] = js.native
+  /**
+    * Puts the specified proxy configuration to the specified Amazon Chime Voice Connector.
+    */
+  def putVoiceConnectorProxy(params: PutVoiceConnectorProxyRequest): Request[PutVoiceConnectorProxyResponse, AWSError] = js.native
+  def putVoiceConnectorProxy(
+    params: PutVoiceConnectorProxyRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ PutVoiceConnectorProxyResponse, Unit]
+  ): Request[PutVoiceConnectorProxyResponse, AWSError] = js.native
   /**
     * Adds a streaming configuration for the specified Amazon Chime Voice Connector. The streaming configuration specifies whether media streaming is enabled for sending to Amazon Kinesis. It also sets the retention period, in hours, for the Amazon Kinesis data.
     */
@@ -1078,6 +1234,32 @@ trait Chime extends Service {
     params: PutVoiceConnectorTerminationCredentialsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  /**
+    * Redacts the specified message from the specified Amazon Chime conversation.
+    */
+  def redactConversationMessage(): Request[RedactConversationMessageResponse, AWSError] = js.native
+  def redactConversationMessage(callback: js.Function2[/* err */ AWSError, /* data */ RedactConversationMessageResponse, Unit]): Request[RedactConversationMessageResponse, AWSError] = js.native
+  /**
+    * Redacts the specified message from the specified Amazon Chime conversation.
+    */
+  def redactConversationMessage(params: RedactConversationMessageRequest): Request[RedactConversationMessageResponse, AWSError] = js.native
+  def redactConversationMessage(
+    params: RedactConversationMessageRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ RedactConversationMessageResponse, Unit]
+  ): Request[RedactConversationMessageResponse, AWSError] = js.native
+  /**
+    * Redacts the specified message from the specified Amazon Chime chat room.
+    */
+  def redactRoomMessage(): Request[RedactRoomMessageResponse, AWSError] = js.native
+  def redactRoomMessage(callback: js.Function2[/* err */ AWSError, /* data */ RedactRoomMessageResponse, Unit]): Request[RedactRoomMessageResponse, AWSError] = js.native
+  /**
+    * Redacts the specified message from the specified Amazon Chime chat room.
+    */
+  def redactRoomMessage(params: RedactRoomMessageRequest): Request[RedactRoomMessageResponse, AWSError] = js.native
+  def redactRoomMessage(
+    params: RedactRoomMessageRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ RedactRoomMessageResponse, Unit]
+  ): Request[RedactRoomMessageResponse, AWSError] = js.native
   /**
     * Regenerates the security token for a bot.
     */
@@ -1130,6 +1312,75 @@ trait Chime extends Service {
     params: SearchAvailablePhoneNumbersRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ SearchAvailablePhoneNumbersResponse, Unit]
   ): Request[SearchAvailablePhoneNumbersResponse, AWSError] = js.native
+  /**
+    * Applies the specified tags to the specified Amazon Chime SDK attendee.
+    */
+  def tagAttendee(): Request[js.Object, AWSError] = js.native
+  def tagAttendee(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  /**
+    * Applies the specified tags to the specified Amazon Chime SDK attendee.
+    */
+  def tagAttendee(params: TagAttendeeRequest): Request[js.Object, AWSError] = js.native
+  def tagAttendee(params: TagAttendeeRequest, callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  /**
+    * Applies the specified tags to the specified Amazon Chime SDK meeting.
+    */
+  def tagMeeting(): Request[js.Object, AWSError] = js.native
+  def tagMeeting(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  /**
+    * Applies the specified tags to the specified Amazon Chime SDK meeting.
+    */
+  def tagMeeting(params: TagMeetingRequest): Request[js.Object, AWSError] = js.native
+  def tagMeeting(params: TagMeetingRequest, callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  /**
+    * Applies the specified tags to the specified Amazon Chime SDK meeting resource.
+    */
+  def tagResource(): Request[js.Object, AWSError] = js.native
+  def tagResource(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  /**
+    * Applies the specified tags to the specified Amazon Chime SDK meeting resource.
+    */
+  def tagResource(params: TagResourceRequest): Request[js.Object, AWSError] = js.native
+  def tagResource(params: TagResourceRequest, callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  /**
+    * Untags the specified tags from the specified Amazon Chime SDK attendee.
+    */
+  def untagAttendee(): Request[js.Object, AWSError] = js.native
+  def untagAttendee(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  /**
+    * Untags the specified tags from the specified Amazon Chime SDK attendee.
+    */
+  def untagAttendee(params: UntagAttendeeRequest): Request[js.Object, AWSError] = js.native
+  def untagAttendee(
+    params: UntagAttendeeRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
+  ): Request[js.Object, AWSError] = js.native
+  /**
+    * Untags the specified tags from the specified Amazon Chime SDK meeting.
+    */
+  def untagMeeting(): Request[js.Object, AWSError] = js.native
+  def untagMeeting(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  /**
+    * Untags the specified tags from the specified Amazon Chime SDK meeting.
+    */
+  def untagMeeting(params: UntagMeetingRequest): Request[js.Object, AWSError] = js.native
+  def untagMeeting(
+    params: UntagMeetingRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
+  ): Request[js.Object, AWSError] = js.native
+  /**
+    * Untags the specified tags from the specified Amazon Chime SDK meeting resource.
+    */
+  def untagResource(): Request[js.Object, AWSError] = js.native
+  def untagResource(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  /**
+    * Untags the specified tags from the specified Amazon Chime SDK meeting resource.
+    */
+  def untagResource(params: UntagResourceRequest): Request[js.Object, AWSError] = js.native
+  def untagResource(
+    params: UntagResourceRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
+  ): Request[js.Object, AWSError] = js.native
   /**
     * Updates account details for the specified Amazon Chime account. Currently, only account name updates are supported for this action.
     */
@@ -1208,6 +1459,19 @@ trait Chime extends Service {
     params: UpdatePhoneNumberSettingsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  /**
+    * Updates the specified proxy session details, such as voice or SMS capabilities.
+    */
+  def updateProxySession(): Request[UpdateProxySessionResponse, AWSError] = js.native
+  def updateProxySession(callback: js.Function2[/* err */ AWSError, /* data */ UpdateProxySessionResponse, Unit]): Request[UpdateProxySessionResponse, AWSError] = js.native
+  /**
+    * Updates the specified proxy session details, such as voice or SMS capabilities.
+    */
+  def updateProxySession(params: UpdateProxySessionRequest): Request[UpdateProxySessionResponse, AWSError] = js.native
+  def updateProxySession(
+    params: UpdateProxySessionRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ UpdateProxySessionResponse, Unit]
+  ): Request[UpdateProxySessionResponse, AWSError] = js.native
   /**
     * Updates room details, such as the room name, for a room in an Amazon Chime Enterprise account.
     */

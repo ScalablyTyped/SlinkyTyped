@@ -4,114 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ContactMaterialOptions extends js.Object {
-  var friction: js.UndefOr[Double] = js.native
-  var frictionRelaxation: js.UndefOr[Double] = js.native
-  var frictionStiffness: js.UndefOr[Double] = js.native
-  var relaxation: js.UndefOr[Double] = js.native
-  var restitution: js.UndefOr[Double] = js.native
-  var stiffness: js.UndefOr[Double] = js.native
-  var surfaceVelocity: js.UndefOr[Double] = js.native
+  var friction: js.UndefOr[Double] = js.undefined
+  var frictionRelaxation: js.UndefOr[Double] = js.undefined
+  var frictionStiffness: js.UndefOr[Double] = js.undefined
+  var relaxation: js.UndefOr[Double] = js.undefined
+  var restitution: js.UndefOr[Double] = js.undefined
+  var stiffness: js.UndefOr[Double] = js.undefined
+  var surfaceVelocity: js.UndefOr[Double] = js.undefined
 }
 
 object ContactMaterialOptions {
   @scala.inline
-  def apply(): ContactMaterialOptions = {
+  def apply(
+    friction: js.UndefOr[Double] = js.undefined,
+    frictionRelaxation: js.UndefOr[Double] = js.undefined,
+    frictionStiffness: js.UndefOr[Double] = js.undefined,
+    relaxation: js.UndefOr[Double] = js.undefined,
+    restitution: js.UndefOr[Double] = js.undefined,
+    stiffness: js.UndefOr[Double] = js.undefined,
+    surfaceVelocity: js.UndefOr[Double] = js.undefined
+  ): ContactMaterialOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(friction)) __obj.updateDynamic("friction")(friction.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(frictionRelaxation)) __obj.updateDynamic("frictionRelaxation")(frictionRelaxation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(frictionStiffness)) __obj.updateDynamic("frictionStiffness")(frictionStiffness.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(relaxation)) __obj.updateDynamic("relaxation")(relaxation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(restitution)) __obj.updateDynamic("restitution")(restitution.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stiffness)) __obj.updateDynamic("stiffness")(stiffness.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(surfaceVelocity)) __obj.updateDynamic("surfaceVelocity")(surfaceVelocity.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContactMaterialOptions]
   }
-  @scala.inline
-  implicit class ContactMaterialOptionsOps[Self <: ContactMaterialOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFriction(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("friction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFriction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("friction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrictionRelaxation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frictionRelaxation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrictionRelaxation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frictionRelaxation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrictionStiffness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frictionStiffness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrictionStiffness: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frictionStiffness")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelaxation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relaxation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelaxation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relaxation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestitution(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restitution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestitution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restitution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStiffness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stiffness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStiffness: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stiffness")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSurfaceVelocity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("surfaceVelocity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSurfaceVelocity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("surfaceVelocity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

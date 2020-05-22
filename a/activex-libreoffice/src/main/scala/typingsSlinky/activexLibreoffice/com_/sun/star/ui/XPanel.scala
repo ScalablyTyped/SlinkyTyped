@@ -9,48 +9,47 @@ import scala.scalajs.js.annotation._
   * provides access to Panel
   * @since LibreOffice 5.1
   */
-@js.native
 trait XPanel extends js.Object {
   /** Get the panel dialog element */
-  val Dialog: XWindow = js.native
+  val Dialog: XWindow
   /** The panel identifier */
-  val Id: String = js.native
+  val Id: String
   /** Get the ordering index of the panel in the deck */
-  var OrderIndex: Double = js.native
+  var OrderIndex: Double
   /** Get the panel title string */
-  var Title: String = js.native
+  var Title: String
   /** Collapse the panel to only show its title bar */
-  def collapse(): Unit = js.native
+  def collapse(): Unit
   /**
     * Expand and display the panel
     * @param bCollapseOther TRUE collapse all other panels of the deckFALSE do not change other panels state
     */
-  def expand(bCollapseOther: Boolean): Unit = js.native
+  def expand(bCollapseOther: Boolean): Unit
   /** Get the panel dialog element */
-  def getDialog(): XWindow = js.native
+  def getDialog(): XWindow
   /** The panel identifier */
-  def getId(): String = js.native
+  def getId(): String
   /** Get the ordering index of the panel in the deck */
-  def getOrderIndex(): Double = js.native
+  def getOrderIndex(): Double
   /** Get the panel title string */
-  def getTitle(): String = js.native
+  def getTitle(): String
   /** Is the panel expanded */
-  def isExpanded(): Boolean = js.native
+  def isExpanded(): Boolean
   /** Move the panel one step down in the deck */
-  def moveDown(): Unit = js.native
+  def moveDown(): Unit
   /** Move panel as first item of the deck */
-  def moveFirst(): Unit = js.native
+  def moveFirst(): Unit
   /** Move panel as last item of the deck */
-  def moveLast(): Unit = js.native
+  def moveLast(): Unit
   /** Move panel one step up in the deck */
-  def moveUp(): Unit = js.native
+  def moveUp(): Unit
   /** Set the ordering index of the panel in the deck */
-  def setOrderIndex(newOrderIndex: Double): Unit = js.native
+  def setOrderIndex(newOrderIndex: Double): Unit
   /**
     * Set the panel title string
     * @param newTitle The new title string
     */
-  def setTitle(newTitle: String): Unit = js.native
+  def setTitle(newTitle: String): Unit
 }
 
 object XPanel {
@@ -77,115 +76,5 @@ object XPanel {
     val __obj = js.Dynamic.literal(Dialog = Dialog.asInstanceOf[js.Any], Id = Id.asInstanceOf[js.Any], OrderIndex = OrderIndex.asInstanceOf[js.Any], Title = Title.asInstanceOf[js.Any], collapse = js.Any.fromFunction0(collapse), expand = js.Any.fromFunction1(expand), getDialog = js.Any.fromFunction0(getDialog), getId = js.Any.fromFunction0(getId), getOrderIndex = js.Any.fromFunction0(getOrderIndex), getTitle = js.Any.fromFunction0(getTitle), isExpanded = js.Any.fromFunction0(isExpanded), moveDown = js.Any.fromFunction0(moveDown), moveFirst = js.Any.fromFunction0(moveFirst), moveLast = js.Any.fromFunction0(moveLast), moveUp = js.Any.fromFunction0(moveUp), setOrderIndex = js.Any.fromFunction1(setOrderIndex), setTitle = js.Any.fromFunction1(setTitle))
     __obj.asInstanceOf[XPanel]
   }
-  @scala.inline
-  implicit class XPanelOps[Self <: XPanel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDialog(value: XWindow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Dialog")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrderIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrderIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCollapse(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapse")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withExpand(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expand")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetDialog(value: () => XWindow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDialog")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetId(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getId")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetOrderIndex(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOrderIndex")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTitle(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTitle")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsExpanded(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isExpanded")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withMoveDown(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moveDown")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withMoveFirst(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moveFirst")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withMoveLast(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moveLast")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withMoveUp(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moveUp")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetOrderIndex(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setOrderIndex")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetTitle(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTitle")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

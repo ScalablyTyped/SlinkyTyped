@@ -17,8 +17,22 @@ class NoCompleteChildSource () extends CompleteChildSource {
   def getChildAfterChild(index: Index): NamedNode | Null = js.native
   def getChildAfterChild(index: Index, child: NamedNode): NamedNode | Null = js.native
   /**
+    * @param {!Index} index
+    * @param {!NamedNode} child
+    * @param {boolean} reverse
+    * @return {?NamedNode}
+    */
+  /* CompleteClass */
+  override def getChildAfterChild(index: Index, child: NamedNode, reverse: Boolean): NamedNode | Null = js.native
+  /**
     * @inheritDoc
     */
   def getCompleteChild(): Node | Null = js.native
+  /**
+    * @param {!string} childKey
+    * @return {?Node}
+    */
+  /* CompleteClass */
+  override def getCompleteChild(childKey: String): Node | Null = js.native
 }
 

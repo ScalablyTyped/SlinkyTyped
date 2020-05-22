@@ -70,197 +70,40 @@ trait VideoDescription extends js.Object {
 
 object VideoDescription {
   @scala.inline
-  def apply(): VideoDescription = {
+  def apply(
+    AfdSignaling: AfdSignaling = null,
+    AntiAlias: AntiAlias = null,
+    CodecSettings: VideoCodecSettings = null,
+    ColorMetadata: ColorMetadata = null,
+    Crop: Rectangle = null,
+    DropFrameTimecode: DropFrameTimecode = null,
+    FixedAfd: js.UndefOr[integerMin0Max15] = js.undefined,
+    Height: js.UndefOr[integerMin32Max8192] = js.undefined,
+    Position: Rectangle = null,
+    RespondToAfd: RespondToAfd = null,
+    ScalingBehavior: ScalingBehavior = null,
+    Sharpness: js.UndefOr[integerMin0Max100] = js.undefined,
+    TimecodeInsertion: VideoTimecodeInsertion = null,
+    VideoPreprocessors: VideoPreprocessor = null,
+    Width: js.UndefOr[integerMin32Max8192] = js.undefined
+  ): VideoDescription = {
     val __obj = js.Dynamic.literal()
+    if (AfdSignaling != null) __obj.updateDynamic("AfdSignaling")(AfdSignaling.asInstanceOf[js.Any])
+    if (AntiAlias != null) __obj.updateDynamic("AntiAlias")(AntiAlias.asInstanceOf[js.Any])
+    if (CodecSettings != null) __obj.updateDynamic("CodecSettings")(CodecSettings.asInstanceOf[js.Any])
+    if (ColorMetadata != null) __obj.updateDynamic("ColorMetadata")(ColorMetadata.asInstanceOf[js.Any])
+    if (Crop != null) __obj.updateDynamic("Crop")(Crop.asInstanceOf[js.Any])
+    if (DropFrameTimecode != null) __obj.updateDynamic("DropFrameTimecode")(DropFrameTimecode.asInstanceOf[js.Any])
+    if (!js.isUndefined(FixedAfd)) __obj.updateDynamic("FixedAfd")(FixedAfd.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Height)) __obj.updateDynamic("Height")(Height.get.asInstanceOf[js.Any])
+    if (Position != null) __obj.updateDynamic("Position")(Position.asInstanceOf[js.Any])
+    if (RespondToAfd != null) __obj.updateDynamic("RespondToAfd")(RespondToAfd.asInstanceOf[js.Any])
+    if (ScalingBehavior != null) __obj.updateDynamic("ScalingBehavior")(ScalingBehavior.asInstanceOf[js.Any])
+    if (!js.isUndefined(Sharpness)) __obj.updateDynamic("Sharpness")(Sharpness.get.asInstanceOf[js.Any])
+    if (TimecodeInsertion != null) __obj.updateDynamic("TimecodeInsertion")(TimecodeInsertion.asInstanceOf[js.Any])
+    if (VideoPreprocessors != null) __obj.updateDynamic("VideoPreprocessors")(VideoPreprocessors.asInstanceOf[js.Any])
+    if (!js.isUndefined(Width)) __obj.updateDynamic("Width")(Width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[VideoDescription]
   }
-  @scala.inline
-  implicit class VideoDescriptionOps[Self <: VideoDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAfdSignaling(value: AfdSignaling): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AfdSignaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAfdSignaling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AfdSignaling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAntiAlias(value: AntiAlias): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AntiAlias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAntiAlias: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AntiAlias")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCodecSettings(value: VideoCodecSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodecSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodecSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodecSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorMetadata(value: ColorMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrop(value: Rectangle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Crop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Crop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropFrameTimecode(value: DropFrameTimecode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DropFrameTimecode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropFrameTimecode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DropFrameTimecode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixedAfd(value: integerMin0Max15): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FixedAfd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixedAfd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FixedAfd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: integerMin32Max8192): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Rectangle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRespondToAfd(value: RespondToAfd): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RespondToAfd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRespondToAfd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RespondToAfd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScalingBehavior(value: ScalingBehavior): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingBehavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScalingBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingBehavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSharpness(value: integerMin0Max100): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sharpness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSharpness: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sharpness")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimecodeInsertion(value: VideoTimecodeInsertion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimecodeInsertion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimecodeInsertion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimecodeInsertion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideoPreprocessors(value: VideoPreprocessor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoPreprocessors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideoPreprocessors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoPreprocessors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: integerMin32Max8192): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

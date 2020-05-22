@@ -11,4 +11,5 @@ package object mod {
     /* details */ js.UndefOr[typingsSlinky.amplitudeJs.anon.Reason], 
     scala.Unit
   ]
+  type LogReturn = js.UndefOr[scala.Double]
 }

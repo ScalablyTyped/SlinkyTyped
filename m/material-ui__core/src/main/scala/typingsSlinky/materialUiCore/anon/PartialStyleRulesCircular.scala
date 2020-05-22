@@ -22,137 +22,30 @@ trait PartialStyleRulesCircular extends js.Object {
 
 object PartialStyleRulesCircular {
   @scala.inline
-  def apply(): PartialStyleRulesCircular = {
+  def apply(
+    circle: CSSProperties = null,
+    circleDisableShrink: CSSProperties = null,
+    circleIndeterminate: CSSProperties = null,
+    circleStatic: CSSProperties = null,
+    colorPrimary: CSSProperties = null,
+    colorSecondary: CSSProperties = null,
+    indeterminate: CSSProperties = null,
+    root: CSSProperties = null,
+    static: CSSProperties = null,
+    svg: CSSProperties = null
+  ): PartialStyleRulesCircular = {
     val __obj = js.Dynamic.literal()
+    if (circle != null) __obj.updateDynamic("circle")(circle.asInstanceOf[js.Any])
+    if (circleDisableShrink != null) __obj.updateDynamic("circleDisableShrink")(circleDisableShrink.asInstanceOf[js.Any])
+    if (circleIndeterminate != null) __obj.updateDynamic("circleIndeterminate")(circleIndeterminate.asInstanceOf[js.Any])
+    if (circleStatic != null) __obj.updateDynamic("circleStatic")(circleStatic.asInstanceOf[js.Any])
+    if (colorPrimary != null) __obj.updateDynamic("colorPrimary")(colorPrimary.asInstanceOf[js.Any])
+    if (colorSecondary != null) __obj.updateDynamic("colorSecondary")(colorSecondary.asInstanceOf[js.Any])
+    if (indeterminate != null) __obj.updateDynamic("indeterminate")(indeterminate.asInstanceOf[js.Any])
+    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
+    if (static != null) __obj.updateDynamic("static")(static.asInstanceOf[js.Any])
+    if (svg != null) __obj.updateDynamic("svg")(svg.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialStyleRulesCircular]
   }
-  @scala.inline
-  implicit class PartialStyleRulesCircularOps[Self <: PartialStyleRulesCircular] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCircle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCircle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCircleDisableShrink(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circleDisableShrink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCircleDisableShrink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circleDisableShrink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCircleIndeterminate(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circleIndeterminate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCircleIndeterminate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circleIndeterminate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCircleStatic(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circleStatic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCircleStatic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circleStatic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorPrimary(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorPrimary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorPrimary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorPrimary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorSecondary(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorSecondary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorSecondary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorSecondary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndeterminate(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indeterminate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndeterminate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indeterminate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatic(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("static")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("static")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSvg(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSvg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svg")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

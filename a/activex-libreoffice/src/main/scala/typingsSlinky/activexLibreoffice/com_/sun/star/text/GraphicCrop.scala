@@ -12,16 +12,15 @@ import scala.scalajs.js.annotation._
   *
   * If this property is applied to a graphic object, then this object will correct these values if necessary.
   */
-@js.native
 trait GraphicCrop extends js.Object {
   /** contains the bottom value to cut (if negative) or to extend (if positive) */
-  var Bottom: Double = js.native
+  var Bottom: Double
   /** contains the left value to cut (if negative) or to extend (if positive) */
-  var Left: Double = js.native
+  var Left: Double
   /** contains the right value to cut (if negative) or to extend (if positive) */
-  var Right: Double = js.native
+  var Right: Double
   /** contains the top value to cut (if negative) or to extend (if positive) */
-  var Top: Double = js.native
+  var Top: Double
 }
 
 object GraphicCrop {
@@ -30,37 +29,5 @@ object GraphicCrop {
     val __obj = js.Dynamic.literal(Bottom = Bottom.asInstanceOf[js.Any], Left = Left.asInstanceOf[js.Any], Right = Right.asInstanceOf[js.Any], Top = Top.asInstanceOf[js.Any])
     __obj.asInstanceOf[GraphicCrop]
   }
-  @scala.inline
-  implicit class GraphicCropOps[Self <: GraphicCrop] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBottom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Right")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Top")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

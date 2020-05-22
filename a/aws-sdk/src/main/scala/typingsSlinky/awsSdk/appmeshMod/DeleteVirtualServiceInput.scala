@@ -23,41 +23,10 @@ trait DeleteVirtualServiceInput extends js.Object {
 
 object DeleteVirtualServiceInput {
   @scala.inline
-  def apply(meshName: ResourceName, virtualServiceName: ServiceName): DeleteVirtualServiceInput = {
+  def apply(meshName: ResourceName, virtualServiceName: ServiceName, meshOwner: AccountId = null): DeleteVirtualServiceInput = {
     val __obj = js.Dynamic.literal(meshName = meshName.asInstanceOf[js.Any], virtualServiceName = virtualServiceName.asInstanceOf[js.Any])
+    if (meshOwner != null) __obj.updateDynamic("meshOwner")(meshOwner.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteVirtualServiceInput]
   }
-  @scala.inline
-  implicit class DeleteVirtualServiceInputOps[Self <: DeleteVirtualServiceInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMeshName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meshName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVirtualServiceName(value: ServiceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualServiceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMeshOwner(value: AccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meshOwner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeshOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meshOwner")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

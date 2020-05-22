@@ -1,16 +1,16 @@
 package typingsSlinky.papaparse
 
-import typingsSlinky.papaparse.mod.GuessableDelimiters
+import typingsSlinky.papaparse.mod._GuessableDelimiters
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object papaparseStrings {
   @js.native
-  sealed trait Charactertabulation extends GuessableDelimiters
+  sealed trait Charactertabulation extends _GuessableDelimiters
   
   @js.native
-  sealed trait Comma extends GuessableDelimiters
+  sealed trait Comma extends _GuessableDelimiters
   
   @js.native
   sealed trait Informationseparatorone extends js.Object
@@ -19,10 +19,10 @@ object papaparseStrings {
   sealed trait Informationseparatortwo extends js.Object
   
   @js.native
-  sealed trait Semicolon extends GuessableDelimiters
+  sealed trait Semicolon extends _GuessableDelimiters
   
   @js.native
-  sealed trait Verticalline extends GuessableDelimiters
+  sealed trait Verticalline extends _GuessableDelimiters
   
   @js.native
   sealed trait greedy extends js.Object

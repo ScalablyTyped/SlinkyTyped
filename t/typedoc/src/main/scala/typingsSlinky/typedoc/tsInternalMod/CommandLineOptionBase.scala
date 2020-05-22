@@ -11,116 +11,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CommandLineOptionBase extends js.Object {
-  var description: js.UndefOr[DiagnosticMessage] = js.native
-  var experimental: js.UndefOr[Boolean] = js.native
-  var isFilePath: js.UndefOr[Boolean] = js.native
-  var isTSConfigOnly: js.UndefOr[Boolean] = js.native
-  var name: String = js.native
-  var paramType: js.UndefOr[DiagnosticMessage] = js.native
-  var shortName: js.UndefOr[String] = js.native
-  var `type`: string | number | boolean | object_ | list | (Map[Double | String, _]) = js.native
+  var description: js.UndefOr[DiagnosticMessage] = js.undefined
+  var experimental: js.UndefOr[Boolean] = js.undefined
+  var isFilePath: js.UndefOr[Boolean] = js.undefined
+  var isTSConfigOnly: js.UndefOr[Boolean] = js.undefined
+  var name: String
+  var paramType: js.UndefOr[DiagnosticMessage] = js.undefined
+  var shortName: js.UndefOr[String] = js.undefined
+  var `type`: string | number | boolean | object_ | list | (Map[Double | String, _])
 }
 
 object CommandLineOptionBase {
   @scala.inline
-  def apply(name: String, `type`: string | number | boolean | object_ | list | (Map[Double | String, _])): CommandLineOptionBase = {
+  def apply(
+    name: String,
+    `type`: string | number | boolean | object_ | list | (Map[Double | String, _]),
+    description: DiagnosticMessage = null,
+    experimental: js.UndefOr[Boolean] = js.undefined,
+    isFilePath: js.UndefOr[Boolean] = js.undefined,
+    isTSConfigOnly: js.UndefOr[Boolean] = js.undefined,
+    paramType: DiagnosticMessage = null,
+    shortName: String = null
+  ): CommandLineOptionBase = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(experimental)) __obj.updateDynamic("experimental")(experimental.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isFilePath)) __obj.updateDynamic("isFilePath")(isFilePath.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isTSConfigOnly)) __obj.updateDynamic("isTSConfigOnly")(isTSConfigOnly.get.asInstanceOf[js.Any])
+    if (paramType != null) __obj.updateDynamic("paramType")(paramType.asInstanceOf[js.Any])
+    if (shortName != null) __obj.updateDynamic("shortName")(shortName.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommandLineOptionBase]
   }
-  @scala.inline
-  implicit class CommandLineOptionBaseOps[Self <: CommandLineOptionBase] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: string | number | boolean | object_ | list | (Map[Double | String, _])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: DiagnosticMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExperimental(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experimental")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExperimental: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experimental")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsFilePath(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFilePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsFilePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFilePath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsTSConfigOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isTSConfigOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsTSConfigOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isTSConfigOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParamType(value: DiagnosticMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paramType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParamType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paramType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShortName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShortName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

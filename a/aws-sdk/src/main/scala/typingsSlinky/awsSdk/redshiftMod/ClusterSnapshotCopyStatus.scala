@@ -26,65 +26,18 @@ trait ClusterSnapshotCopyStatus extends js.Object {
 
 object ClusterSnapshotCopyStatus {
   @scala.inline
-  def apply(): ClusterSnapshotCopyStatus = {
+  def apply(
+    DestinationRegion: String = null,
+    ManualSnapshotRetentionPeriod: js.UndefOr[Integer] = js.undefined,
+    RetentionPeriod: js.UndefOr[Long] = js.undefined,
+    SnapshotCopyGrantName: String = null
+  ): ClusterSnapshotCopyStatus = {
     val __obj = js.Dynamic.literal()
+    if (DestinationRegion != null) __obj.updateDynamic("DestinationRegion")(DestinationRegion.asInstanceOf[js.Any])
+    if (!js.isUndefined(ManualSnapshotRetentionPeriod)) __obj.updateDynamic("ManualSnapshotRetentionPeriod")(ManualSnapshotRetentionPeriod.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(RetentionPeriod)) __obj.updateDynamic("RetentionPeriod")(RetentionPeriod.get.asInstanceOf[js.Any])
+    if (SnapshotCopyGrantName != null) __obj.updateDynamic("SnapshotCopyGrantName")(SnapshotCopyGrantName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterSnapshotCopyStatus]
   }
-  @scala.inline
-  implicit class ClusterSnapshotCopyStatusOps[Self <: ClusterSnapshotCopyStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestinationRegion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationRegion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManualSnapshotRetentionPeriod(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ManualSnapshotRetentionPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManualSnapshotRetentionPeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ManualSnapshotRetentionPeriod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetentionPeriod(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RetentionPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetentionPeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RetentionPeriod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnapshotCopyGrantName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotCopyGrantName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnapshotCopyGrantName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotCopyGrantName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -26,41 +26,11 @@ trait SchemaServiceAccountConfig extends js.Object {
 
 object SchemaServiceAccountConfig {
   @scala.inline
-  def apply(): SchemaServiceAccountConfig = {
+  def apply(accountId: String = null, tenantProjectRoles: js.Array[String] = null): SchemaServiceAccountConfig = {
     val __obj = js.Dynamic.literal()
+    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
+    if (tenantProjectRoles != null) __obj.updateDynamic("tenantProjectRoles")(tenantProjectRoles.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaServiceAccountConfig]
   }
-  @scala.inline
-  implicit class SchemaServiceAccountConfigOps[Self <: SchemaServiceAccountConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTenantProjectRoles(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tenantProjectRoles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTenantProjectRoles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tenantProjectRoles")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

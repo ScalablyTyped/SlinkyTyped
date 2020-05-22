@@ -18,41 +18,11 @@ trait AccountUsage extends js.Object {
 
 object AccountUsage {
   @scala.inline
-  def apply(): AccountUsage = {
+  def apply(FunctionCount: js.UndefOr[Long] = js.undefined, TotalCodeSize: js.UndefOr[Long] = js.undefined): AccountUsage = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(FunctionCount)) __obj.updateDynamic("FunctionCount")(FunctionCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(TotalCodeSize)) __obj.updateDynamic("TotalCodeSize")(TotalCodeSize.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccountUsage]
   }
-  @scala.inline
-  implicit class AccountUsageOps[Self <: AccountUsage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFunctionCount(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFunctionCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalCodeSize(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalCodeSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalCodeSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalCodeSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

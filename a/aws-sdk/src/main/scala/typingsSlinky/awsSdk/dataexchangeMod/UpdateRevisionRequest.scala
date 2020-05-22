@@ -26,53 +26,16 @@ trait UpdateRevisionRequest extends js.Object {
 
 object UpdateRevisionRequest {
   @scala.inline
-  def apply(DataSetId: string, RevisionId: string): UpdateRevisionRequest = {
+  def apply(
+    DataSetId: string,
+    RevisionId: string,
+    Comment: stringMin0Max16384 = null,
+    Finalized: js.UndefOr[boolean] = js.undefined
+  ): UpdateRevisionRequest = {
     val __obj = js.Dynamic.literal(DataSetId = DataSetId.asInstanceOf[js.Any], RevisionId = RevisionId.asInstanceOf[js.Any])
+    if (Comment != null) __obj.updateDynamic("Comment")(Comment.asInstanceOf[js.Any])
+    if (!js.isUndefined(Finalized)) __obj.updateDynamic("Finalized")(Finalized.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateRevisionRequest]
   }
-  @scala.inline
-  implicit class UpdateRevisionRequestOps[Self <: UpdateRevisionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataSetId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRevisionId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RevisionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComment(value: stringMin0Max16384): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFinalized(value: boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Finalized")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFinalized: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Finalized")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

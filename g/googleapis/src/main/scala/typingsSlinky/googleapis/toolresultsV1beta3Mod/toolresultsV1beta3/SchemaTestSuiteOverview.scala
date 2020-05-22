@@ -50,89 +50,22 @@ trait SchemaTestSuiteOverview extends js.Object {
 
 object SchemaTestSuiteOverview {
   @scala.inline
-  def apply(): SchemaTestSuiteOverview = {
+  def apply(
+    errorCount: js.UndefOr[Double] = js.undefined,
+    failureCount: js.UndefOr[Double] = js.undefined,
+    name: String = null,
+    skippedCount: js.UndefOr[Double] = js.undefined,
+    totalCount: js.UndefOr[Double] = js.undefined,
+    xmlSource: SchemaFileReference = null
+  ): SchemaTestSuiteOverview = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(errorCount)) __obj.updateDynamic("errorCount")(errorCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(failureCount)) __obj.updateDynamic("failureCount")(failureCount.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(skippedCount)) __obj.updateDynamic("skippedCount")(skippedCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(totalCount)) __obj.updateDynamic("totalCount")(totalCount.get.asInstanceOf[js.Any])
+    if (xmlSource != null) __obj.updateDynamic("xmlSource")(xmlSource.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTestSuiteOverview]
   }
-  @scala.inline
-  implicit class SchemaTestSuiteOverviewOps[Self <: SchemaTestSuiteOverview] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrorCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailureCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkippedCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skippedCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkippedCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skippedCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXmlSource(value: SchemaFileReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXmlSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlSource")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

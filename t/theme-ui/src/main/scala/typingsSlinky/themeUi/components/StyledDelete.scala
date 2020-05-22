@@ -15,7 +15,7 @@ object StyledDelete {
   @js.native
   object component extends js.Object
   
-  def withProps(p: (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]) with SxProps with As): `SharedBuilder_<intersection>_1810236765`[LegacyRef[js.Any]] = new `SharedBuilder_<intersection>_1810236765`[LegacyRef[js.Any]](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: StyledDelete.type): `SharedBuilder_<intersection>_1810236765`[LegacyRef[js.Any]] = new `SharedBuilder_<intersection>_1810236765`[LegacyRef[js.Any]](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]) with SxProps with As): SharedBuilder_DetailedHTMLPropsSxPropsAs_1810236765[LegacyRef[js.Any] with js.Object] = new SharedBuilder_DetailedHTMLPropsSxPropsAs_1810236765[LegacyRef[js.Any] with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: StyledDelete.type): SharedBuilder_DetailedHTMLPropsSxPropsAs_1810236765[LegacyRef[js.Any] with js.Object] = new SharedBuilder_DetailedHTMLPropsSxPropsAs_1810236765[LegacyRef[js.Any] with js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -22,25 +22,5 @@ object DeleteNotificationSubscriptionRequest {
     val __obj = js.Dynamic.literal(OrganizationId = OrganizationId.asInstanceOf[js.Any], SubscriptionId = SubscriptionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteNotificationSubscriptionRequest]
   }
-  @scala.inline
-  implicit class DeleteNotificationSubscriptionRequestOps[Self <: DeleteNotificationSubscriptionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOrganizationId(value: IdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubscriptionId(value: IdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

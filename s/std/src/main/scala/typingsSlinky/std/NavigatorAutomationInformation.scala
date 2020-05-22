@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NavigatorAutomationInformation extends js.Object {
-  val webdriver: scala.Boolean = js.native
+  val webdriver: scala.Boolean
 }
 
 object NavigatorAutomationInformation {
@@ -15,19 +14,5 @@ object NavigatorAutomationInformation {
     val __obj = js.Dynamic.literal(webdriver = webdriver.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavigatorAutomationInformation]
   }
-  @scala.inline
-  implicit class NavigatorAutomationInformationOps[Self <: NavigatorAutomationInformation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWebdriver(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webdriver")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

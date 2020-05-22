@@ -6,103 +6,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of an UpdateIntentRequest. */
-@js.native
 trait IUpdateIntentRequest extends js.Object {
   /** UpdateIntentRequest intent */
-  var intent: js.UndefOr[IIntent | Null] = js.native
+  var intent: js.UndefOr[IIntent | Null] = js.undefined
   /** UpdateIntentRequest intentView */
-  var intentView: js.UndefOr[IntentView | Null] = js.native
+  var intentView: js.UndefOr[IntentView | Null] = js.undefined
   /** UpdateIntentRequest languageCode */
-  var languageCode: js.UndefOr[String | Null] = js.native
+  var languageCode: js.UndefOr[String | Null] = js.undefined
   /** UpdateIntentRequest updateMask */
-  var updateMask: js.UndefOr[IFieldMask | Null] = js.native
+  var updateMask: js.UndefOr[IFieldMask | Null] = js.undefined
 }
 
 object IUpdateIntentRequest {
   @scala.inline
-  def apply(): IUpdateIntentRequest = {
+  def apply(
+    intent: js.UndefOr[Null | IIntent] = js.undefined,
+    intentView: js.UndefOr[Null | IntentView] = js.undefined,
+    languageCode: js.UndefOr[Null | String] = js.undefined,
+    updateMask: js.UndefOr[Null | IFieldMask] = js.undefined
+  ): IUpdateIntentRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(intent)) __obj.updateDynamic("intent")(intent.asInstanceOf[js.Any])
+    if (!js.isUndefined(intentView)) __obj.updateDynamic("intentView")(intentView.asInstanceOf[js.Any])
+    if (!js.isUndefined(languageCode)) __obj.updateDynamic("languageCode")(languageCode.asInstanceOf[js.Any])
+    if (!js.isUndefined(updateMask)) __obj.updateDynamic("updateMask")(updateMask.asInstanceOf[js.Any])
     __obj.asInstanceOf[IUpdateIntentRequest]
   }
-  @scala.inline
-  implicit class IUpdateIntentRequestOps[Self <: IUpdateIntentRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIntent(value: IIntent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntentNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intent")(null)
-        ret
-    }
-    @scala.inline
-    def withIntentView(value: IntentView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intentView")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntentView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intentView")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntentViewNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intentView")(null)
-        ret
-    }
-    @scala.inline
-    def withLanguageCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguageCodeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(null)
-        ret
-    }
-    @scala.inline
-    def withUpdateMask(value: IFieldMask): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateMask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateMaskNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(null)
-        ret
-    }
-  }
-  
 }
 

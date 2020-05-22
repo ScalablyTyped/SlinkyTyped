@@ -1,7 +1,5 @@
 package typingsSlinky.geolib.typesMod
 
-import typingsSlinky.geolib.anon.Lat
-import typingsSlinky.geolib.anon.LatitudeGeolibLatitudeInputValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +12,14 @@ trait GeolibInputLatitude extends js.Object
 
 object GeolibInputLatitude {
   @scala.inline
-  implicit def apply(value: Lat): GeolibInputLatitude = value.asInstanceOf[GeolibInputLatitude]
+  def Lat(lat: GeolibLatitudeInputValue): GeolibInputLatitude = {
+    val __obj = js.Dynamic.literal(lat = lat.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GeolibInputLatitude]
+  }
   @scala.inline
-  implicit def apply(value: LatitudeGeolibLatitudeInputValue): GeolibInputLatitude = value.asInstanceOf[GeolibInputLatitude]
+  def LatitudeGeolibLatitudeInputValue(latitude: GeolibLatitudeInputValue): GeolibInputLatitude = {
+    val __obj = js.Dynamic.literal(latitude = latitude.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GeolibInputLatitude]
+  }
 }
 

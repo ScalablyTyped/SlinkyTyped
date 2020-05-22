@@ -5,20 +5,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait b2RayCastInput extends js.Object {
   /**
-  		* Truncate the ray to reach up to this fraction from p1 to p2
-  		**/
-  var maxFraction: Double = js.native
+    * Truncate the ray to reach up to this fraction from p1 to p2
+    **/
+  var maxFraction: Double
   /**
-  		* The start point of the ray.
-  		**/
-  var p1: b2Vec2 = js.native
+    * The start point of the ray.
+    **/
+  var p1: b2Vec2
   /**
-  		* The end point of the ray.
-  		**/
-  var p2: b2Vec2 = js.native
+    * The end point of the ray.
+    **/
+  var p2: b2Vec2
 }
 
 object b2RayCastInput {
@@ -27,31 +26,5 @@ object b2RayCastInput {
     val __obj = js.Dynamic.literal(maxFraction = maxFraction.asInstanceOf[js.Any], p1 = p1.asInstanceOf[js.Any], p2 = p2.asInstanceOf[js.Any])
     __obj.asInstanceOf[b2RayCastInput]
   }
-  @scala.inline
-  implicit class b2RayCastInputOps[Self <: b2RayCastInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxFraction(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFraction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withP1(value: b2Vec2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withP2(value: b2Vec2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p2")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

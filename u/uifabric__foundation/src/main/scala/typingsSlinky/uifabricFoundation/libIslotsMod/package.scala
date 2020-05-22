@@ -6,16 +6,19 @@ import scala.scalajs.js.annotation._
 
 package object libIslotsMod {
   type ExtractProps[TUnion] = js.Any
+  type ExtractShorthand[TUnion] = java.lang.String | scala.Double | scala.Boolean
   type ISlotDefinition[TSlots] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ slot in keyof TSlots ]: react.react.ElementType<@uifabric/foundation.@uifabric/foundation/lib/ISlots.ExtractProps<TSlots[slot]>>}
     */ typingsSlinky.uifabricFoundation.uifabricFoundationStrings.ISlotDefinition with org.scalablytyped.runtime.TopLevel[TSlots]
-  type ISlotFactory[TProps /* <: typingsSlinky.uifabricFoundation.libIslotsMod.ValidProps */, TShorthandProp /* <: typingsSlinky.uifabricFoundation.libIslotsMod.ValidShorthand */] = js.Function4[
+  type ISlotFactory[TProps /* <: typingsSlinky.uifabricFoundation.libIslotsMod.ValidProps */, TShorthandProp /* <: typingsSlinky.uifabricFoundation.libIslotsMod.ValidShorthand */] = js.Function5[
     /* componentProps */ TProps with typingsSlinky.uifabricFoundation.libIslotsMod.IProcessedSlotProps, 
     /* userProps */ typingsSlinky.uifabricFoundation.libIslotsMod.ISlotProp[TProps, TShorthandProp], 
     /* slotOptions */ js.UndefOr[typingsSlinky.uifabricFoundation.libIslotsMod.ISlotOptions[TProps]], 
     /* defaultStyles */ typingsSlinky.uifabricMergeStyles.istyleMod.IStyle, 
+    /* theme */ js.UndefOr[typingsSlinky.uifabricStyling.ithemeMod.ITheme], 
     typingsSlinky.std.ReturnType[slinky.core.ReactComponentClass[TProps]]
   ]
+  type ISlotProp[TProps /* <: typingsSlinky.uifabricFoundation.libIslotsMod.ValidProps */, TShorthandProp /* <: typingsSlinky.uifabricFoundation.libIslotsMod.ValidShorthand */] = TShorthandProp | TProps
   type ISlotRender[TProps] = js.Function2[
     /* props */ typingsSlinky.react.mod.PropsWithChildren[TProps], 
     /* defaultComponent */ slinky.core.ReactComponentClass[TProps], 
@@ -28,4 +31,5 @@ package object libIslotsMod {
   type ISlottableProps[TSlots] = TSlots with typingsSlinky.uifabricFoundation.anon.Slots[TSlots]
   type ISlottableReactType[TProps /* <: typingsSlinky.uifabricFoundation.libIslotsMod.ValidProps */, TShorthandProp /* <: typingsSlinky.uifabricFoundation.libIslotsMod.ValidShorthand */] = slinky.core.facade.ReactElement with (typingsSlinky.uifabricFoundation.libIslotsMod.ISlotCreator[TProps, TShorthandProp])
   type ValidProps = js.Object
+  type ValidShorthand = java.lang.String | scala.Double | scala.Boolean
 }

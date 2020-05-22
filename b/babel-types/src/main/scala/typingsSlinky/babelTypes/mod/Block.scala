@@ -1,5 +1,9 @@
 package typingsSlinky.babelTypes.mod
 
+import typingsSlinky.babelTypes.babelTypesStrings.BlockStatement
+import typingsSlinky.babelTypes.babelTypesStrings.Program
+import typingsSlinky.babelTypes.babelTypesStrings.module
+import typingsSlinky.babelTypes.babelTypesStrings.script
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +16,45 @@ trait Block extends js.Object
 
 object Block {
   @scala.inline
-  implicit def apply(value: BlockStatement_): Block = value.asInstanceOf[Block]
+  def BlockStatement_(
+    body: js.Array[Statement],
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: BlockStatement,
+    directives: js.Array[Directive_] = null,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): Block = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Block]
+  }
   @scala.inline
-  implicit def apply(value: Program_): Block = value.asInstanceOf[Block]
+  def Program_(
+    body: js.Array[Statement | ModuleDeclaration],
+    end: Double,
+    loc: SourceLocation,
+    sourceType: script | module,
+    start: Double,
+    `type`: Program,
+    directives: js.Array[Directive_] = null,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): Block = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], sourceType = sourceType.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Block]
+  }
 }
 

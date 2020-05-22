@@ -5,20 +5,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** FaxOutgoingMessageIterator Class */
-@js.native
 trait FaxOutgoingMessageIterator extends js.Object {
   /** End of archive marker */
-  val AtEOF: Boolean = js.native
+  val AtEOF: Boolean
   @JSName("FAXCOMEXLib.FaxOutgoingMessageIterator_typekey")
-  var FAXCOMEXLibDotFaxOutgoingMessageIterator_typekey: FaxOutgoingMessageIterator = js.native
+  var FAXCOMEXLibDotFaxOutgoingMessageIterator_typekey: FaxOutgoingMessageIterator
   /** Current message */
-  val Message: IFaxOutgoingMessage = js.native
+  val Message: IFaxOutgoingMessage
   /** Size of prefetch buffer */
-  var PrefetchSize: Double = js.native
+  var PrefetchSize: Double
   /** Move to the first message */
-  def MoveFirst(): Unit = js.native
+  def MoveFirst(): Unit
   /** Move to the next message */
-  def MoveNext(): Unit = js.native
+  def MoveNext(): Unit
 }
 
 object FaxOutgoingMessageIterator {
@@ -35,49 +34,5 @@ object FaxOutgoingMessageIterator {
     __obj.updateDynamic("FAXCOMEXLib.FaxOutgoingMessageIterator_typekey")(FAXCOMEXLibDotFaxOutgoingMessageIterator_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[FaxOutgoingMessageIterator]
   }
-  @scala.inline
-  implicit class FaxOutgoingMessageIteratorOps[Self <: FaxOutgoingMessageIterator] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAtEOF(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AtEOF")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFAXCOMEXLibDotFaxOutgoingMessageIterator_typekey(value: FaxOutgoingMessageIterator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FAXCOMEXLib.FaxOutgoingMessageIterator_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessage(value: IFaxOutgoingMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMoveFirst(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MoveFirst")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withMoveNext(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MoveNext")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPrefetchSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrefetchSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

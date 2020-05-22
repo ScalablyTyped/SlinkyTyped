@@ -1,11 +1,11 @@
 package typingsSlinky.actionsOnGoogle.actionssdkActionssdkMod
 
 import typingsSlinky.actionsOnGoogle.conversationConversationMod.ConversationAppOptions
+import typingsSlinky.actionsOnGoogle.conversationConversationMod.ConversationOptionsInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ActionsSdkOptions[TConvData, TUserStorage] extends ConversationAppOptions[TConvData, TUserStorage] {
   /**
     * Validates whether request is from Google through signature verification.
@@ -22,34 +22,25 @@ trait ActionsSdkOptions[TConvData, TUserStorage] extends ConversationAppOptions[
     *
     * @public
     */
-  var verification: js.UndefOr[ActionsSdkVerification | String] = js.native
+  var verification: js.UndefOr[ActionsSdkVerification | String] = js.undefined
 }
 
 object ActionsSdkOptions {
   @scala.inline
-  def apply[TConvData, TUserStorage](): ActionsSdkOptions[TConvData, TUserStorage] = {
+  def apply[TConvData, TUserStorage](
+    clientId: String = null,
+    debug: js.UndefOr[Boolean] = js.undefined,
+    init: () => ConversationOptionsInit[TConvData, TUserStorage] = null,
+    ordersv3: js.UndefOr[Boolean] = js.undefined,
+    verification: ActionsSdkVerification | String = null
+  ): ActionsSdkOptions[TConvData, TUserStorage] = {
     val __obj = js.Dynamic.literal()
+    if (clientId != null) __obj.updateDynamic("clientId")(clientId.asInstanceOf[js.Any])
+    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.get.asInstanceOf[js.Any])
+    if (init != null) __obj.updateDynamic("init")(js.Any.fromFunction0(init))
+    if (!js.isUndefined(ordersv3)) __obj.updateDynamic("ordersv3")(ordersv3.get.asInstanceOf[js.Any])
+    if (verification != null) __obj.updateDynamic("verification")(verification.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActionsSdkOptions[TConvData, TUserStorage]]
   }
-  @scala.inline
-  implicit class ActionsSdkOptionsOps[Self[tconvdata, tuserstorage] <: ActionsSdkOptions[tconvdata, tuserstorage], TConvData, TUserStorage] (val x: Self[TConvData, TUserStorage]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TConvData, TUserStorage] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TConvData, TUserStorage]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[TConvData, TUserStorage]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[TConvData, TUserStorage]) with Other]
-    @scala.inline
-    def withVerification(value: ActionsSdkVerification | String): Self[TConvData, TUserStorage] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerification: Self[TConvData, TUserStorage] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verification")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

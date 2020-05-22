@@ -71,8 +71,8 @@ object Data extends js.Object {
       * @param context Value to use as `this` when executing callback.
       * @param args Additional arguments that will be passed to the callback, after the game object, key, and data.
       */
-    def each(callback: DataEachCallback): DataManager = js.native
-    def each(callback: DataEachCallback, context: js.Any, args: js.Any*): DataManager = js.native
+    def each(callback: DataEachCallback): this.type = js.native
+    def each(callback: DataEachCallback, context: js.Any, args: js.Any*): this.type = js.native
     /**
       * Retrieves the value for the given key, or undefined if it doesn't exist.
       * 
@@ -112,6 +112,17 @@ object Data extends js.Object {
       */
     def has(key: String): Boolean = js.native
     /**
+      * Increase a value for the given key. If the key doesn't already exist in the Data Manager then it is increased from 0.
+      * 
+      * When the value is first set, a `setdata` event is emitted.
+      * @param key The key to increase the value for.
+      * @param data The value to increase for the given key.
+      */
+    def inc(key: String): DataManager = js.native
+    def inc(key: String, data: js.Any): DataManager = js.native
+    def inc(key: js.Object): DataManager = js.native
+    def inc(key: js.Object, data: js.Any): DataManager = js.native
+    /**
       * Merge the given object of key value pairs into this DataManager.
       * 
       * Any newly created values will emit a `setdata` event. Any updated values (see the `overwrite` argument)
@@ -119,8 +130,8 @@ object Data extends js.Object {
       * @param data The data to merge.
       * @param overwrite Whether to overwrite existing data. Defaults to true. Default true.
       */
-    def merge(data: StringDictionary[js.Any]): DataManager = js.native
-    def merge(data: StringDictionary[js.Any], overwrite: Boolean): DataManager = js.native
+    def merge(data: StringDictionary[js.Any]): this.type = js.native
+    def merge(data: StringDictionary[js.Any], overwrite: Boolean): this.type = js.native
     /**
       * Retrieves the data associated with the given 'key', deletes it from this Data Manager, then returns it.
       * @param key The key of the value to retrieve and delete.
@@ -144,12 +155,12 @@ object Data extends js.Object {
       * ```
       * @param key The key to remove, or an array of keys to remove.
       */
-    def remove(key: String): DataManager = js.native
-    def remove(key: js.Array[String]): DataManager = js.native
+    def remove(key: String): this.type = js.native
+    def remove(key: js.Array[String]): this.type = js.native
     /**
       * Delete all data in this Data Manager and unfreeze it.
       */
-    def reset(): DataManager = js.native
+    def reset(): this.type = js.native
     /**
       * Sets a value for the given key. If the key doesn't already exist in the Data Manager then it is created.
       * 
@@ -186,14 +197,22 @@ object Data extends js.Object {
       * @param key The key to set the value for. Or an object or key value pairs. If an object the `data` argument is ignored.
       * @param data The value to set for the given key. If an object is provided as the key this argument is ignored.
       */
-    def set(key: String, data: js.Any): DataManager = js.native
-    def set(key: js.Object, data: js.Any): DataManager = js.native
+    def set(key: String, data: js.Any): this.type = js.native
+    def set(key: js.Object, data: js.Any): this.type = js.native
     /**
       * Freeze or unfreeze this Data Manager. A frozen Data Manager will block all attempts
       * to create new values or update existing ones.
       * @param value Whether to freeze or unfreeze the Data Manager.
       */
-    def setFreeze(value: Boolean): DataManager = js.native
+    def setFreeze(value: Boolean): this.type = js.native
+    /**
+      * Toggle a boolean value for the given key. If the key doesn't already exist in the Data Manager then it is toggled from false.
+      * 
+      * When the value is first set, a `setdata` event is emitted.
+      * @param key The key to toggle the value for.
+      */
+    def toggle(key: String): DataManager = js.native
+    def toggle(key: js.Object): DataManager = js.native
   }
   
   /**

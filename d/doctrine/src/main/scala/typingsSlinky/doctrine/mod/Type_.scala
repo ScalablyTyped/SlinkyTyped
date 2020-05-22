@@ -1,22 +1,5 @@
 package typingsSlinky.doctrine.mod
 
-import typingsSlinky.doctrine.mod.`type`.AllLiteral
-import typingsSlinky.doctrine.mod.`type`.ArrayType
-import typingsSlinky.doctrine.mod.`type`.FieldType
-import typingsSlinky.doctrine.mod.`type`.FunctionType
-import typingsSlinky.doctrine.mod.`type`.NameExpression
-import typingsSlinky.doctrine.mod.`type`.NonNullableType
-import typingsSlinky.doctrine.mod.`type`.NullLiteral
-import typingsSlinky.doctrine.mod.`type`.NullableLiteral
-import typingsSlinky.doctrine.mod.`type`.NullableType
-import typingsSlinky.doctrine.mod.`type`.OptionalType
-import typingsSlinky.doctrine.mod.`type`.ParameterType
-import typingsSlinky.doctrine.mod.`type`.RecordType
-import typingsSlinky.doctrine.mod.`type`.RestType
-import typingsSlinky.doctrine.mod.`type`.TypeApplication
-import typingsSlinky.doctrine.mod.`type`.UndefinedLiteral
-import typingsSlinky.doctrine.mod.`type`.UnionType
-import typingsSlinky.doctrine.mod.`type`.VoidLiteral
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,38 +27,120 @@ trait Type_ extends js.Object
 
 object Type_ {
   @scala.inline
-  implicit def apply(value: AllLiteral): Type_ = value.asInstanceOf[Type_]
+  def TypeApplication(
+    applications: js.Array[Type_],
+    expression: Type_,
+    `type`: typingsSlinky.doctrine.doctrineStrings.TypeApplication
+  ): Type_ = {
+    val __obj = js.Dynamic.literal(applications = applications.asInstanceOf[js.Any], expression = expression.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Type_]
+  }
   @scala.inline
-  implicit def apply(value: ArrayType): Type_ = value.asInstanceOf[Type_]
+  def ParameterType(expression: Type_, name: String, `type`: typingsSlinky.doctrine.doctrineStrings.ParameterType): Type_ = {
+    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Type_]
+  }
   @scala.inline
-  implicit def apply(value: FieldType): Type_ = value.asInstanceOf[Type_]
+  def NullableType(expression: Type_, prefix: Boolean, `type`: typingsSlinky.doctrine.doctrineStrings.NullableType): Type_ = {
+    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any], prefix = prefix.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Type_]
+  }
   @scala.inline
-  implicit def apply(value: FunctionType): Type_ = value.asInstanceOf[Type_]
+  def RecordType(fields: js.Array[Type_], `type`: typingsSlinky.doctrine.doctrineStrings.RecordType): Type_ = {
+    val __obj = js.Dynamic.literal(fields = fields.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Type_]
+  }
   @scala.inline
-  implicit def apply(value: NameExpression): Type_ = value.asInstanceOf[Type_]
+  def NullLiteral(`type`: typingsSlinky.doctrine.doctrineStrings.NullLiteral): Type_ = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Type_]
+  }
   @scala.inline
-  implicit def apply(value: NonNullableType): Type_ = value.asInstanceOf[Type_]
+  def AllLiteral(`type`: typingsSlinky.doctrine.doctrineStrings.AllLiteral): Type_ = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Type_]
+  }
   @scala.inline
-  implicit def apply(value: NullLiteral): Type_ = value.asInstanceOf[Type_]
+  def FunctionType(
+    `new`: Type_,
+    params: js.Array[Type_],
+    result: js.Array[Type_],
+    `this`: Type_,
+    `type`: typingsSlinky.doctrine.doctrineStrings.FunctionType
+  ): Type_ = {
+    val __obj = js.Dynamic.literal(params = params.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any])
+    __obj.updateDynamic("new")(`new`.asInstanceOf[js.Any])
+    __obj.updateDynamic("this")(`this`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Type_]
+  }
   @scala.inline
-  implicit def apply(value: NullableLiteral): Type_ = value.asInstanceOf[Type_]
+  def NonNullableType(expression: Type_, prefix: Boolean, `type`: typingsSlinky.doctrine.doctrineStrings.NonNullableType): Type_ = {
+    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any], prefix = prefix.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Type_]
+  }
   @scala.inline
-  implicit def apply(value: NullableType): Type_ = value.asInstanceOf[Type_]
+  def RestType(`type`: typingsSlinky.doctrine.doctrineStrings.RestType, expression: Type_ = null): Type_ = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (expression != null) __obj.updateDynamic("expression")(expression.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Type_]
+  }
   @scala.inline
-  implicit def apply(value: OptionalType): Type_ = value.asInstanceOf[Type_]
+  def ArrayType(elements: js.Array[Type_], `type`: typingsSlinky.doctrine.doctrineStrings.ArrayType): Type_ = {
+    val __obj = js.Dynamic.literal(elements = elements.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Type_]
+  }
   @scala.inline
-  implicit def apply(value: ParameterType): Type_ = value.asInstanceOf[Type_]
+  def FieldType(key: String, `type`: typingsSlinky.doctrine.doctrineStrings.FieldType, value: Type_ = null): Type_ = {
+    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Type_]
+  }
   @scala.inline
-  implicit def apply(value: RecordType): Type_ = value.asInstanceOf[Type_]
+  def OptionalType(expression: Type_, `type`: typingsSlinky.doctrine.doctrineStrings.OptionalType): Type_ = {
+    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Type_]
+  }
   @scala.inline
-  implicit def apply(value: RestType): Type_ = value.asInstanceOf[Type_]
+  def NullableLiteral(`type`: typingsSlinky.doctrine.doctrineStrings.NullableLiteral): Type_ = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Type_]
+  }
   @scala.inline
-  implicit def apply(value: TypeApplication): Type_ = value.asInstanceOf[Type_]
+  def NameExpression(name: String, `type`: typingsSlinky.doctrine.doctrineStrings.NameExpression): Type_ = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Type_]
+  }
   @scala.inline
-  implicit def apply(value: UndefinedLiteral): Type_ = value.asInstanceOf[Type_]
+  def VoidLiteral(`type`: typingsSlinky.doctrine.doctrineStrings.VoidLiteral): Type_ = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Type_]
+  }
   @scala.inline
-  implicit def apply(value: UnionType): Type_ = value.asInstanceOf[Type_]
+  def UndefinedLiteral(`type`: typingsSlinky.doctrine.doctrineStrings.UndefinedLiteral): Type_ = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Type_]
+  }
   @scala.inline
-  implicit def apply(value: VoidLiteral): Type_ = value.asInstanceOf[Type_]
+  def UnionType(elements: js.Array[Type_], `type`: typingsSlinky.doctrine.doctrineStrings.UnionType): Type_ = {
+    val __obj = js.Dynamic.literal(elements = elements.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Type_]
+  }
 }
 

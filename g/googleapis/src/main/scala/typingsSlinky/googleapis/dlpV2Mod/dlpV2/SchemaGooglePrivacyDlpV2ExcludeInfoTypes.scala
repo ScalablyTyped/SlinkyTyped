@@ -24,29 +24,10 @@ trait SchemaGooglePrivacyDlpV2ExcludeInfoTypes extends js.Object {
 
 object SchemaGooglePrivacyDlpV2ExcludeInfoTypes {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2ExcludeInfoTypes = {
+  def apply(infoTypes: js.Array[SchemaGooglePrivacyDlpV2InfoType] = null): SchemaGooglePrivacyDlpV2ExcludeInfoTypes = {
     val __obj = js.Dynamic.literal()
+    if (infoTypes != null) __obj.updateDynamic("infoTypes")(infoTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2ExcludeInfoTypes]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2ExcludeInfoTypesOps[Self <: SchemaGooglePrivacyDlpV2ExcludeInfoTypes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInfoTypes(value: js.Array[SchemaGooglePrivacyDlpV2InfoType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("infoTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInfoTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("infoTypes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

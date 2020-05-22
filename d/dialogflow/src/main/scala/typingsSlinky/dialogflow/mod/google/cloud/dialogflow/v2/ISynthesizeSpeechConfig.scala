@@ -5,123 +5,35 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a SynthesizeSpeechConfig. */
-@js.native
 trait ISynthesizeSpeechConfig extends js.Object {
   /** SynthesizeSpeechConfig effectsProfileId */
-  var effectsProfileId: js.UndefOr[js.Array[String] | Null] = js.native
+  var effectsProfileId: js.UndefOr[js.Array[String] | Null] = js.undefined
   /** SynthesizeSpeechConfig pitch */
-  var pitch: js.UndefOr[Double | Null] = js.native
+  var pitch: js.UndefOr[Double | Null] = js.undefined
   /** SynthesizeSpeechConfig speakingRate */
-  var speakingRate: js.UndefOr[Double | Null] = js.native
+  var speakingRate: js.UndefOr[Double | Null] = js.undefined
   /** SynthesizeSpeechConfig voice */
-  var voice: js.UndefOr[IVoiceSelectionParams | Null] = js.native
+  var voice: js.UndefOr[IVoiceSelectionParams | Null] = js.undefined
   /** SynthesizeSpeechConfig volumeGainDb */
-  var volumeGainDb: js.UndefOr[Double | Null] = js.native
+  var volumeGainDb: js.UndefOr[Double | Null] = js.undefined
 }
 
 object ISynthesizeSpeechConfig {
   @scala.inline
-  def apply(): ISynthesizeSpeechConfig = {
+  def apply(
+    effectsProfileId: js.UndefOr[Null | js.Array[String]] = js.undefined,
+    pitch: js.UndefOr[Null | Double] = js.undefined,
+    speakingRate: js.UndefOr[Null | Double] = js.undefined,
+    voice: js.UndefOr[Null | IVoiceSelectionParams] = js.undefined,
+    volumeGainDb: js.UndefOr[Null | Double] = js.undefined
+  ): ISynthesizeSpeechConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(effectsProfileId)) __obj.updateDynamic("effectsProfileId")(effectsProfileId.asInstanceOf[js.Any])
+    if (!js.isUndefined(pitch)) __obj.updateDynamic("pitch")(pitch.asInstanceOf[js.Any])
+    if (!js.isUndefined(speakingRate)) __obj.updateDynamic("speakingRate")(speakingRate.asInstanceOf[js.Any])
+    if (!js.isUndefined(voice)) __obj.updateDynamic("voice")(voice.asInstanceOf[js.Any])
+    if (!js.isUndefined(volumeGainDb)) __obj.updateDynamic("volumeGainDb")(volumeGainDb.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISynthesizeSpeechConfig]
   }
-  @scala.inline
-  implicit class ISynthesizeSpeechConfigOps[Self <: ISynthesizeSpeechConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEffectsProfileId(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effectsProfileId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEffectsProfileId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effectsProfileId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEffectsProfileIdNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effectsProfileId")(null)
-        ret
-    }
-    @scala.inline
-    def withPitch(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pitch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPitch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pitch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPitchNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pitch")(null)
-        ret
-    }
-    @scala.inline
-    def withSpeakingRate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speakingRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpeakingRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speakingRate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpeakingRateNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speakingRate")(null)
-        ret
-    }
-    @scala.inline
-    def withVoice(value: IVoiceSelectionParams): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("voice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVoice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("voice")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVoiceNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("voice")(null)
-        ret
-    }
-    @scala.inline
-    def withVolumeGainDb(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeGainDb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolumeGainDb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeGainDb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolumeGainDbNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeGainDb")(null)
-        ret
-    }
-  }
-  
 }
 

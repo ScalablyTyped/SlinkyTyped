@@ -14,29 +14,10 @@ trait CreateDirectConnectGatewayResult extends js.Object {
 
 object CreateDirectConnectGatewayResult {
   @scala.inline
-  def apply(): CreateDirectConnectGatewayResult = {
+  def apply(directConnectGateway: DirectConnectGateway = null): CreateDirectConnectGatewayResult = {
     val __obj = js.Dynamic.literal()
+    if (directConnectGateway != null) __obj.updateDynamic("directConnectGateway")(directConnectGateway.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDirectConnectGatewayResult]
   }
-  @scala.inline
-  implicit class CreateDirectConnectGatewayResultOps[Self <: CreateDirectConnectGatewayResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirectConnectGateway(value: DirectConnectGateway): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directConnectGateway")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectConnectGateway: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directConnectGateway")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

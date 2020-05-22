@@ -1,6 +1,5 @@
 package typingsSlinky.firebaseFirestore
 
-import typingsSlinky.firebaseFirestore.utilSortedMapMod.SortedMap
 import typingsSlinky.firebaseFirestore.utilSortedMapMod.SortedMapIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -49,16 +48,6 @@ object utilSortedSetMod extends js.Object {
     var iter: js.Any = js.native
     def getNext(): T = js.native
     def hasNext(): Boolean = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object SortedSet extends js.Object {
-    /**
-      * Creates a SortedSet from the keys of the map.
-      * This is currently implemented as an O(n) copy.
-      */
-    def fromMapKeys[K, V](map: SortedMap[K, V]): SortedSet[K] = js.native
   }
   
 }

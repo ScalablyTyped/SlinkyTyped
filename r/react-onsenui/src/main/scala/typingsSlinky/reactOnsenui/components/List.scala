@@ -38,6 +38,11 @@ object List {
   }
   
   def withProps[T](p: HTMLAttributesidclassName with DataSource[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[HTMLAttributesidclassName with DataSource[T]]))
+  }
   implicit def make[T](companion: List.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

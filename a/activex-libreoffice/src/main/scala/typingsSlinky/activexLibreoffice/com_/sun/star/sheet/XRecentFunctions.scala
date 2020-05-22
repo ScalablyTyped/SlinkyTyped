@@ -12,33 +12,32 @@ import scala.scalajs.js.annotation._
   * provides access to a list of recently used functions.
   * @see com.sun.star.sheet.RecentFunctions
   */
-@js.native
 trait XRecentFunctions extends XInterface {
   /** returns the maximum number of entries that will be stored as recently used functions. */
-  val MaxRecentFunctions: Double = js.native
+  val MaxRecentFunctions: Double
   /**
     * returns a sequence of those functions that were most recently used.
     *
     * The functions are represented by their identifiers.
     * @returns the sequence of function identifiers most recently used.
     */
-  var RecentFunctionIds: SafeArray[Double] = js.native
+  var RecentFunctionIds: SafeArray[Double]
   /** returns the maximum number of entries that will be stored as recently used functions. */
-  def getMaxRecentFunctions(): Double = js.native
+  def getMaxRecentFunctions(): Double
   /**
     * returns a sequence of those functions that were most recently used.
     *
     * The functions are represented by their identifiers.
     * @returns the sequence of function identifiers most recently used.
     */
-  def getRecentFunctionIds(): SafeArray[Double] = js.native
+  def getRecentFunctionIds(): SafeArray[Double]
   /**
     * sets the list of those functions that were most recently used.
     *
     * The functions are represented by their identifiers.
     * @param aRecentFunctionIds the sequence of function identifiers most recently used.
     */
-  def setRecentFunctionIds(aRecentFunctionIds: SeqEquiv[Double]): Unit = js.native
+  def setRecentFunctionIds(aRecentFunctionIds: SeqEquiv[Double]): Unit
 }
 
 object XRecentFunctions {
@@ -56,43 +55,5 @@ object XRecentFunctions {
     val __obj = js.Dynamic.literal(MaxRecentFunctions = MaxRecentFunctions.asInstanceOf[js.Any], RecentFunctionIds = RecentFunctionIds.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getMaxRecentFunctions = js.Any.fromFunction0(getMaxRecentFunctions), getRecentFunctionIds = js.Any.fromFunction0(getRecentFunctionIds), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setRecentFunctionIds = js.Any.fromFunction1(setRecentFunctionIds))
     __obj.asInstanceOf[XRecentFunctions]
   }
-  @scala.inline
-  implicit class XRecentFunctionsOps[Self <: XRecentFunctions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxRecentFunctions(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxRecentFunctions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRecentFunctionIds(value: SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecentFunctionIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetMaxRecentFunctions(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxRecentFunctions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetRecentFunctionIds(value: () => SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRecentFunctionIds")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetRecentFunctionIds(value: SeqEquiv[Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setRecentFunctionIds")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -168,6 +168,11 @@ object sceneOptimizerMod extends js.Object {
       */
     def currentPriorityLevel: Double = js.native
     /**
+      * Releases all held resources
+      */
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
+    /**
       * Gets a boolean indicating if the optimizer is in improvement mode
       */
     def isInImprovementMode: Boolean = js.native

@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait NamedImportsOrExports extends js.Object
 
-object NamedImportsOrExports {
-  @scala.inline
-  implicit def apply(value: NamedExports): NamedImportsOrExports = value.asInstanceOf[NamedImportsOrExports]
-  @scala.inline
-  implicit def apply(value: NamedImports): NamedImportsOrExports = value.asInstanceOf[NamedImportsOrExports]
-}
-

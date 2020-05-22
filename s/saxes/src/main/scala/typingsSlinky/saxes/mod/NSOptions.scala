@@ -5,72 +5,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NSOptions extends js.Object {
   /**
     * A plain object whose key, value pairs define namespaces known before
     * parsing the XML file. It is not legal to pass bindings for the namespaces
     * ``"xml"`` or ``"xmlns"``.
     */
-  var additionalNamespaces: js.UndefOr[Record[String, String]] = js.native
+  var additionalNamespaces: js.UndefOr[Record[String, String]] = js.undefined
   /**
     * A function that will be used if the parser cannot resolve a namespace
     * prefix on its own.
     */
-  var resolvePrefix: js.UndefOr[ResolvePrefix] = js.native
+  var resolvePrefix: js.UndefOr[ResolvePrefix] = js.undefined
   /** Whether to track namespaces. Unset means ``false``. */
-  var xmlns: js.UndefOr[Boolean] = js.native
+  var xmlns: js.UndefOr[Boolean] = js.undefined
 }
 
 object NSOptions {
   @scala.inline
-  def apply(): NSOptions = {
+  def apply(
+    additionalNamespaces: Record[String, String] = null,
+    resolvePrefix: /* prefix */ String => js.UndefOr[String] = null,
+    xmlns: js.UndefOr[Boolean] = js.undefined
+  ): NSOptions = {
     val __obj = js.Dynamic.literal()
+    if (additionalNamespaces != null) __obj.updateDynamic("additionalNamespaces")(additionalNamespaces.asInstanceOf[js.Any])
+    if (resolvePrefix != null) __obj.updateDynamic("resolvePrefix")(js.Any.fromFunction1(resolvePrefix))
+    if (!js.isUndefined(xmlns)) __obj.updateDynamic("xmlns")(xmlns.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[NSOptions]
   }
-  @scala.inline
-  implicit class NSOptionsOps[Self <: NSOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdditionalNamespaces(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalNamespaces")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalNamespaces: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalNamespaces")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResolvePrefix(value: /* prefix */ String => js.UndefOr[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvePrefix")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutResolvePrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvePrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXmlns(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXmlns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlns")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

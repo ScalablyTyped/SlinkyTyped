@@ -16,88 +16,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RandomColorOptionsSingle extends js.Object {
-  var alpha: js.UndefOr[Double] = js.native
-  var format: js.UndefOr[hsvArray | hslArray | hsl | hsla | rgbArray | rgb | rgba | hex] = js.native
-  var hue: js.UndefOr[Double | String] = js.native
-  var luminosity: js.UndefOr[bright | light | dark | random] = js.native
-  var seed: js.UndefOr[Double | String] = js.native
+  var alpha: js.UndefOr[Double] = js.undefined
+  var format: js.UndefOr[hsvArray | hslArray | hsl | hsla | rgbArray | rgb | rgba | hex] = js.undefined
+  var hue: js.UndefOr[Double | String] = js.undefined
+  var luminosity: js.UndefOr[bright | light | dark | random] = js.undefined
+  var seed: js.UndefOr[Double | String] = js.undefined
 }
 
 object RandomColorOptionsSingle {
   @scala.inline
-  def apply(): RandomColorOptionsSingle = {
+  def apply(
+    alpha: js.UndefOr[Double] = js.undefined,
+    format: hsvArray | hslArray | hsl | hsla | rgbArray | rgb | rgba | hex = null,
+    hue: Double | String = null,
+    luminosity: bright | light | dark | random = null,
+    seed: Double | String = null
+  ): RandomColorOptionsSingle = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(alpha)) __obj.updateDynamic("alpha")(alpha.get.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (hue != null) __obj.updateDynamic("hue")(hue.asInstanceOf[js.Any])
+    if (luminosity != null) __obj.updateDynamic("luminosity")(luminosity.asInstanceOf[js.Any])
+    if (seed != null) __obj.updateDynamic("seed")(seed.asInstanceOf[js.Any])
     __obj.asInstanceOf[RandomColorOptionsSingle]
   }
-  @scala.inline
-  implicit class RandomColorOptionsSingleOps[Self <: RandomColorOptionsSingle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlpha: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: hsvArray | hslArray | hsl | hsla | rgbArray | rgb | rgba | hex): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHue(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLuminosity(value: bright | light | dark | random): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("luminosity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLuminosity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("luminosity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeed(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

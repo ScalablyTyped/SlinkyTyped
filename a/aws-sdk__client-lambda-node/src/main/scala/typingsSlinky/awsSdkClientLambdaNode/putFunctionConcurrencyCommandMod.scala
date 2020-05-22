@@ -26,9 +26,16 @@ object putFunctionConcurrencyCommandMod extends js.Object {
           Readable
         ] {
     def this(input: PutFunctionConcurrencyInput) = this()
+    /* CompleteClass */
+    override val input: PutFunctionConcurrencyInput = js.native
     val middlewareStack: MiddlewareStack[PutFunctionConcurrencyInput, PutFunctionConcurrencyOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: LambdaResolvedConfiguration
+    ): Handler[PutFunctionConcurrencyInput, PutFunctionConcurrencyOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: LambdaResolvedConfiguration
     ): Handler[PutFunctionConcurrencyInput, PutFunctionConcurrencyOutput] = js.native
   }

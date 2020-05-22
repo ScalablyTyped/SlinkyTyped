@@ -6,108 +6,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DashSize extends js.Object {
-  var dashNb: js.UndefOr[Double] = js.native
-  var dashSize: js.UndefOr[Double] = js.native
-  var gapSize: js.UndefOr[Double] = js.native
-  var instance: js.UndefOr[LinesMesh] = js.native
-  var points: js.Array[Vector3] = js.native
-  var updatable: js.UndefOr[Boolean] = js.native
-  var useVertexAlpha: js.UndefOr[Boolean] = js.native
+  var dashNb: js.UndefOr[Double] = js.undefined
+  var dashSize: js.UndefOr[Double] = js.undefined
+  var gapSize: js.UndefOr[Double] = js.undefined
+  var instance: js.UndefOr[LinesMesh] = js.undefined
+  var points: js.Array[Vector3]
+  var updatable: js.UndefOr[Boolean] = js.undefined
+  var useVertexAlpha: js.UndefOr[Boolean] = js.undefined
 }
 
 object DashSize {
   @scala.inline
-  def apply(points: js.Array[Vector3]): DashSize = {
+  def apply(
+    points: js.Array[Vector3],
+    dashNb: js.UndefOr[Double] = js.undefined,
+    dashSize: js.UndefOr[Double] = js.undefined,
+    gapSize: js.UndefOr[Double] = js.undefined,
+    instance: LinesMesh = null,
+    updatable: js.UndefOr[Boolean] = js.undefined,
+    useVertexAlpha: js.UndefOr[Boolean] = js.undefined
+  ): DashSize = {
     val __obj = js.Dynamic.literal(points = points.asInstanceOf[js.Any])
+    if (!js.isUndefined(dashNb)) __obj.updateDynamic("dashNb")(dashNb.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dashSize)) __obj.updateDynamic("dashSize")(dashSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(gapSize)) __obj.updateDynamic("gapSize")(gapSize.get.asInstanceOf[js.Any])
+    if (instance != null) __obj.updateDynamic("instance")(instance.asInstanceOf[js.Any])
+    if (!js.isUndefined(updatable)) __obj.updateDynamic("updatable")(updatable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useVertexAlpha)) __obj.updateDynamic("useVertexAlpha")(useVertexAlpha.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DashSize]
   }
-  @scala.inline
-  implicit class DashSizeOps[Self <: DashSize] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPoints(value: js.Array[Vector3]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("points")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDashNb(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dashNb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDashNb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dashNb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDashSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dashSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDashSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dashSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGapSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gapSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGapSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gapSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstance(value: LinesMesh): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseVertexAlpha(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useVertexAlpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseVertexAlpha: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useVertexAlpha")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

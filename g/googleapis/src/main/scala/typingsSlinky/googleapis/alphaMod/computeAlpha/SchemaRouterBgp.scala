@@ -48,77 +48,20 @@ trait SchemaRouterBgp extends js.Object {
 
 object SchemaRouterBgp {
   @scala.inline
-  def apply(): SchemaRouterBgp = {
+  def apply(
+    advertiseMode: String = null,
+    advertisedGroups: js.Array[String] = null,
+    advertisedIpRanges: js.Array[SchemaRouterAdvertisedIpRange] = null,
+    asn: js.UndefOr[Double] = js.undefined,
+    keepaliveInterval: js.UndefOr[Double] = js.undefined
+  ): SchemaRouterBgp = {
     val __obj = js.Dynamic.literal()
+    if (advertiseMode != null) __obj.updateDynamic("advertiseMode")(advertiseMode.asInstanceOf[js.Any])
+    if (advertisedGroups != null) __obj.updateDynamic("advertisedGroups")(advertisedGroups.asInstanceOf[js.Any])
+    if (advertisedIpRanges != null) __obj.updateDynamic("advertisedIpRanges")(advertisedIpRanges.asInstanceOf[js.Any])
+    if (!js.isUndefined(asn)) __obj.updateDynamic("asn")(asn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(keepaliveInterval)) __obj.updateDynamic("keepaliveInterval")(keepaliveInterval.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRouterBgp]
   }
-  @scala.inline
-  implicit class SchemaRouterBgpOps[Self <: SchemaRouterBgp] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdvertiseMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiseMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdvertiseMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiseMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdvertisedGroups(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertisedGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdvertisedGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertisedGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdvertisedIpRanges(value: js.Array[SchemaRouterAdvertisedIpRange]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertisedIpRanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdvertisedIpRanges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertisedIpRanges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAsn(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAsn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeepaliveInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepaliveInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeepaliveInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepaliveInterval")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

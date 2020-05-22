@@ -4,69 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Mute extends js.Object {
-  var absorbDTMF: js.UndefOr[Boolean] = js.native
-  var channel: String | js.Array[String] = js.native
-  var mute: js.UndefOr[Boolean] = js.native
-  var role: js.UndefOr[String] = js.native
+  var absorbDTMF: js.UndefOr[Boolean] = js.undefined
+  var channel: String | js.Array[String]
+  var mute: js.UndefOr[Boolean] = js.undefined
+  var role: js.UndefOr[String] = js.undefined
 }
 
 object Mute {
   @scala.inline
-  def apply(channel: String | js.Array[String]): Mute = {
+  def apply(
+    channel: String | js.Array[String],
+    absorbDTMF: js.UndefOr[Boolean] = js.undefined,
+    mute: js.UndefOr[Boolean] = js.undefined,
+    role: String = null
+  ): Mute = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any])
+    if (!js.isUndefined(absorbDTMF)) __obj.updateDynamic("absorbDTMF")(absorbDTMF.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mute)) __obj.updateDynamic("mute")(mute.get.asInstanceOf[js.Any])
+    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
     __obj.asInstanceOf[Mute]
   }
-  @scala.inline
-  implicit class MuteOps[Self <: Mute] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChannel(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAbsorbDTMF(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("absorbDTMF")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbsorbDTMF: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("absorbDTMF")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMute(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRole(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

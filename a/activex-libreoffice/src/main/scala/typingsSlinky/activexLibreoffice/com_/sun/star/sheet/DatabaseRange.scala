@@ -22,7 +22,6 @@ import scala.scalajs.js.annotation._
   * A database range is a name for a cell range that also stores filtering, sorting, subtotal and data import settings and options.
   * @see com.sun.star.sheet.DatabaseRanges
   */
-@js.native
 trait DatabaseRange
   extends XDatabaseRange
      with XCellRangeReferrer
@@ -33,35 +32,35 @@ trait DatabaseRange
     * specifies whether the AutoFilter is enabled or not.
     * @since OOo 1.1.2
     */
-  var AutoFilter: Boolean = js.native
+  var AutoFilter: Boolean
   /**
     * specifies whether this range includes a top row of headers.
     * @since LibreOffice 5.0
     */
-  var ContainsHeader: Boolean = js.native
+  var ContainsHeader: Boolean
   /**
     * specifies the range where the filter can find the filter criteria.
     *
     * This is only used if SheetFilterDescriptor::UseFilterCriteriaSource is `TRUE` .
     * @since OOo 1.1.2
     */
-  var FilterCriteriaSource: CellRangeAddress = js.native
+  var FilterCriteriaSource: CellRangeAddress
   /**
     * specifies whether the imported data is only a selection of the database.
     * @since OOo 2.0
     */
-  var FromSelection: Boolean = js.native
+  var FromSelection: Boolean
   /** if this property is set, cell formats are extended when the size of the range is changed by an update operation. */
-  var KeepFormats: Boolean = js.native
+  var KeepFormats: Boolean
   /** if this property is set, columns or rows are inserted or deleted when the size of the range is changed by an update operation. */
-  var MoveCells: Boolean = js.native
+  var MoveCells: Boolean
   /**
     * specifies the time between two refresh actions in seconds.
     * @since OOo 2.0
     */
-  var RefreshPeriod: Double = js.native
+  var RefreshPeriod: Double
   /** if this property is set, the cell contents within the database range are left out when the document is saved. */
-  var StripData: Boolean = js.native
+  var StripData: Boolean
   /**
     * returns the index used to refer to this range in token arrays.
     *
@@ -71,20 +70,20 @@ trait DatabaseRange
     * @see com.sun.star.sheet.FormulaMapGroupSpecialOffset.DB_AREA
     * @since OOo 3.0
     */
-  var TokenIndex: Double = js.native
+  var TokenIndex: Double
   /**
     * specifies whether this range includes a bottom row of totals.
     * @since LibreOffice 5.0
     */
-  var TotalsRow: Boolean = js.native
+  var TotalsRow: Boolean
   /**
     * specifies whether the filter criteria should be taken from a CellRange.
     * @since OOo 1.1.2
     */
-  var UseFilterCriteriaSource: Boolean = js.native
+  var UseFilterCriteriaSource: Boolean
   /** executes the stored import, filter, sorting, and subtotals descriptors again. */
   /* InferMemberOverrides */
-  override def refresh(): Unit = js.native
+  override def refresh(): Unit
 }
 
 object DatabaseRange {
@@ -135,85 +134,5 @@ object DatabaseRange {
     val __obj = js.Dynamic.literal(AutoFilter = AutoFilter.asInstanceOf[js.Any], ContainsHeader = ContainsHeader.asInstanceOf[js.Any], DataArea = DataArea.asInstanceOf[js.Any], FilterCriteriaSource = FilterCriteriaSource.asInstanceOf[js.Any], FilterDescriptor = FilterDescriptor.asInstanceOf[js.Any], FromSelection = FromSelection.asInstanceOf[js.Any], ImportDescriptor = ImportDescriptor.asInstanceOf[js.Any], KeepFormats = KeepFormats.asInstanceOf[js.Any], MoveCells = MoveCells.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], ReferredCells = ReferredCells.asInstanceOf[js.Any], RefreshPeriod = RefreshPeriod.asInstanceOf[js.Any], SortDescriptor = SortDescriptor.asInstanceOf[js.Any], StripData = StripData.asInstanceOf[js.Any], SubTotalDescriptor = SubTotalDescriptor.asInstanceOf[js.Any], TokenIndex = TokenIndex.asInstanceOf[js.Any], TotalsRow = TotalsRow.asInstanceOf[js.Any], UseFilterCriteriaSource = UseFilterCriteriaSource.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addRefreshListener = js.Any.fromFunction1(addRefreshListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), getDataArea = js.Any.fromFunction0(getDataArea), getFilterDescriptor = js.Any.fromFunction0(getFilterDescriptor), getImportDescriptor = js.Any.fromFunction0(getImportDescriptor), getName = js.Any.fromFunction0(getName), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), getReferredCells = js.Any.fromFunction0(getReferredCells), getSortDescriptor = js.Any.fromFunction0(getSortDescriptor), getSubTotalDescriptor = js.Any.fromFunction0(getSubTotalDescriptor), queryInterface = js.Any.fromFunction1(queryInterface), refresh = js.Any.fromFunction0(refresh), release = js.Any.fromFunction0(release), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeRefreshListener = js.Any.fromFunction1(removeRefreshListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setDataArea = js.Any.fromFunction1(setDataArea), setName = js.Any.fromFunction1(setName), setPropertyValue = js.Any.fromFunction2(setPropertyValue))
     __obj.asInstanceOf[DatabaseRange]
   }
-  @scala.inline
-  implicit class DatabaseRangeOps[Self <: DatabaseRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoFilter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainsHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainsHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilterCriteriaSource(value: CellRangeAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterCriteriaSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFromSelection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FromSelection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeepFormats(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeepFormats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMoveCells(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MoveCells")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRefreshPeriod(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RefreshPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStripData(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StripData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTokenIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TokenIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotalsRow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalsRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUseFilterCriteriaSource(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseFilterCriteriaSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRefresh(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refresh")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

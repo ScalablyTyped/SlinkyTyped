@@ -5,6 +5,7 @@ import typingsSlinky.officeUiFabricReact.anon.ReadonlyIColorRectanglePr
 import typingsSlinky.officeUiFabricReact.anon.ReadonlyIColorRectangleSt
 import typingsSlinky.officeUiFabricReact.colorRectangleTypesMod.IColorRectangle
 import typingsSlinky.officeUiFabricReact.colorRectangleTypesMod.IColorRectangleProps
+import typingsSlinky.officeUiFabricReact.interfacesMod.IColor
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,14 +18,17 @@ class ColorRectangleBase protected ()
      with IColorRectangle {
   def this(props: IColorRectangleProps) = this()
   var _descriptionId: js.Any = js.native
-  var _disableEvents: js.Any = js.native
-  var _events: js.Any = js.native
+  var _disposables: js.Any = js.native
+  var _disposeListeners: js.Any = js.native
   var _isAdjustingSaturation: js.Any = js.native
   var _onKeyDown: js.Any = js.native
   var _onMouseDown: js.Any = js.native
   var _onMouseMove: js.Any = js.native
   var _root: js.Any = js.native
   var _updateColor: js.Any = js.native
+  /** Currently selected color. */
+  /* CompleteClass */
+  override var color: IColor = js.native
   @JSName("componentDidUpdate")
   def componentDidUpdate_MColorRectangleBase(prevProps: ReadonlyIColorRectanglePr, prevState: ReadonlyIColorRectangleSt): Unit = js.native
   @JSName("componentWillUnmount")

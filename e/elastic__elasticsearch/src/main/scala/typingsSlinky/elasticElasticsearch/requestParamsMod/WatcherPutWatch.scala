@@ -4,95 +4,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WatcherPutWatch[T] extends Generic {
-  var active: js.UndefOr[Boolean] = js.native
-  var body: js.UndefOr[T] = js.native
-  var id: String = js.native
-  var if_primary_term: js.UndefOr[Double] = js.native
-  var if_seq_no: js.UndefOr[Double] = js.native
-  var version: js.UndefOr[Double] = js.native
+  var active: js.UndefOr[Boolean] = js.undefined
+  var body: js.UndefOr[T] = js.undefined
+  var id: String
+  var if_primary_term: js.UndefOr[Double] = js.undefined
+  var if_seq_no: js.UndefOr[Double] = js.undefined
+  var version: js.UndefOr[Double] = js.undefined
 }
 
 object WatcherPutWatch {
   @scala.inline
-  def apply[T](id: String): WatcherPutWatch[T] = {
+  def apply[T](
+    id: String,
+    active: js.UndefOr[Boolean] = js.undefined,
+    body: T = null,
+    error_trace: js.UndefOr[Boolean] = js.undefined,
+    filter_path: String | js.Array[String] = null,
+    human: js.UndefOr[Boolean] = js.undefined,
+    if_primary_term: js.UndefOr[Double] = js.undefined,
+    if_seq_no: js.UndefOr[Double] = js.undefined,
+    ignore: Double | js.Array[Double] = null,
+    method: String = null,
+    pretty: js.UndefOr[Boolean] = js.undefined,
+    source: String = null,
+    version: js.UndefOr[Double] = js.undefined
+  ): WatcherPutWatch[T] = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (!js.isUndefined(error_trace)) __obj.updateDynamic("error_trace")(error_trace.get.asInstanceOf[js.Any])
+    if (filter_path != null) __obj.updateDynamic("filter_path")(filter_path.asInstanceOf[js.Any])
+    if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(if_primary_term)) __obj.updateDynamic("if_primary_term")(if_primary_term.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(if_seq_no)) __obj.updateDynamic("if_seq_no")(if_seq_no.get.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.get.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (!js.isUndefined(version)) __obj.updateDynamic("version")(version.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WatcherPutWatch[T]]
   }
-  @scala.inline
-  implicit class WatcherPutWatchOps[Self[t] <: WatcherPutWatch[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withId(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withActive(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActive: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBody(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIf_primary_term(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("if_primary_term")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIf_primary_term: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("if_primary_term")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIf_seq_no(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("if_seq_no")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIf_seq_no: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("if_seq_no")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

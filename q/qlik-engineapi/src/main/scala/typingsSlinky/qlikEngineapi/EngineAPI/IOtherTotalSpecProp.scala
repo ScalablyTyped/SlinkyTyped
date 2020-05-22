@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * OtherTotalSpecProp...
   */
-@js.native
 trait IOtherTotalSpecProp extends js.Object {
   /**
     * Set this parameter to true to allow the calculation of Others even if the engine detects some potential mistakes.
@@ -16,7 +15,7 @@ trait IOtherTotalSpecProp extends js.Object {
     * the engine can detect that the population of Russia is included in both the continent Asia and Europe.
     * >> The default value is true.
     */
-  var qApplyEvenWhenPossiblyWrongResult: Boolean = js.native
+  var qApplyEvenWhenPossiblyWrongResult: Boolean
   /**
     * This parameter is used when qOtherMode is set to:
     *
@@ -29,25 +28,25 @@ trait IOtherTotalSpecProp extends js.Object {
     * Set this parameter to true to include text values in the returned values.
     * >> The default value is true.
     */
-  var qForceBadValueKeeping: Boolean = js.native
+  var qForceBadValueKeeping: Boolean
   /**
     * This parameter applies to inner dimensions.
     * If this parameter is set to true, the restrictions are calculated on the selected dimension only.
     * All previous dimensions are ignored.
     * >> The default value is false.
     */
-  var qGlobalOtherGrouping: Boolean = js.native
+  var qGlobalOtherGrouping: Boolean
   /**
     * If set to true, it collapses the inner dimensions (if any) in the group Others.
     * >> The default value is false.
     */
-  var qOtherCollapseInnerDimensions: Boolean = js.native
+  var qOtherCollapseInnerDimensions: Boolean
   /**
     * Number of values to display.
     * The number of values can be entered as a calculated formula.
     * This parameter is used when qOtherMode is set to OTHER_COUNTED.
     */
-  var qOtherCounted: String = js.native
+  var qOtherCounted: String
   /**
     * Value used to limit the dimension values.
     * The limit can be entered as a calculated formula.
@@ -58,7 +57,7 @@ trait IOtherTotalSpecProp extends js.Object {
     * - OTHER_ABS_ACC_TARGET
     * - OTHER_REL_ACC_TARGET
     */
-  var qOtherLimit: String = js.native
+  var qOtherLimit: String
   /**
     * Sets the limit for the Others mode.
     * This parameter is used when qOtherMode is set to:
@@ -68,7 +67,7 @@ trait IOtherTotalSpecProp extends js.Object {
     * - OTHER_ABS_ACC_TARGET
     * - OTHER_REL_ACC_TARGET
     */
-  var qOtherLimitMode: OtherLimitModeType = js.native
+  var qOtherLimitMode: OtherLimitModeType
   /**
     * Determines how many dimension values are displayed.
     * >> default value is OTHER_OFF
@@ -86,27 +85,27 @@ trait IOtherTotalSpecProp extends js.Object {
     *   All rows up to the current row are accumulated and the result is compared to the total of the dimension values.
     *   A percentage is calculated. This percentage is compared to the specified percentage, defined in OtherTotalSpecProp.
     */
-  var qOtherMode: OtherModeType = js.native
+  var qOtherMode: OtherModeType
   /**
     * Defines the sort order of the dimension values.
     * >> The default value is OTHER_SORT_DESCENDING.
     */
-  var qOtherSortMode: OtherSortModeType = js.native
+  var qOtherSortMode: OtherSortModeType
   /**
     * This parameter applies when there are several measures.
     * Name of the measure to use for the calculation of Others for a specific dimension.
     */
-  var qReferencedExpression: String = js.native
+  var qReferencedExpression: String
   /**
     * If set to true, the group Others is not displayed as a dimension value.
     * >> The default value is false.
     */
-  var qSuppressOther: Boolean = js.native
+  var qSuppressOther: Boolean
   /**
     * If set to TOTAL_EXPR, the total of the dimension values is returned.
     * >> The default value is TOTAL_OFF.
     */
-  var qTotalMode: TotalModeType = js.native
+  var qTotalMode: TotalModeType
 }
 
 object IOtherTotalSpecProp {
@@ -128,85 +127,5 @@ object IOtherTotalSpecProp {
     val __obj = js.Dynamic.literal(qApplyEvenWhenPossiblyWrongResult = qApplyEvenWhenPossiblyWrongResult.asInstanceOf[js.Any], qForceBadValueKeeping = qForceBadValueKeeping.asInstanceOf[js.Any], qGlobalOtherGrouping = qGlobalOtherGrouping.asInstanceOf[js.Any], qOtherCollapseInnerDimensions = qOtherCollapseInnerDimensions.asInstanceOf[js.Any], qOtherCounted = qOtherCounted.asInstanceOf[js.Any], qOtherLimit = qOtherLimit.asInstanceOf[js.Any], qOtherLimitMode = qOtherLimitMode.asInstanceOf[js.Any], qOtherMode = qOtherMode.asInstanceOf[js.Any], qOtherSortMode = qOtherSortMode.asInstanceOf[js.Any], qReferencedExpression = qReferencedExpression.asInstanceOf[js.Any], qSuppressOther = qSuppressOther.asInstanceOf[js.Any], qTotalMode = qTotalMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOtherTotalSpecProp]
   }
-  @scala.inline
-  implicit class IOtherTotalSpecPropOps[Self <: IOtherTotalSpecProp] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQApplyEvenWhenPossiblyWrongResult(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qApplyEvenWhenPossiblyWrongResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQForceBadValueKeeping(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qForceBadValueKeeping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQGlobalOtherGrouping(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qGlobalOtherGrouping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQOtherCollapseInnerDimensions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qOtherCollapseInnerDimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQOtherCounted(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qOtherCounted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQOtherLimit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qOtherLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQOtherLimitMode(value: OtherLimitModeType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qOtherLimitMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQOtherMode(value: OtherModeType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qOtherMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQOtherSortMode(value: OtherSortModeType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qOtherSortMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQReferencedExpression(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qReferencedExpression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQSuppressOther(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qSuppressOther")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQTotalMode(value: TotalModeType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qTotalMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -14,29 +14,10 @@ trait DescribeDatasetResponse extends js.Object {
 
 object DescribeDatasetResponse {
   @scala.inline
-  def apply(): DescribeDatasetResponse = {
+  def apply(dataset: Dataset = null): DescribeDatasetResponse = {
     val __obj = js.Dynamic.literal()
+    if (dataset != null) __obj.updateDynamic("dataset")(dataset.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeDatasetResponse]
   }
-  @scala.inline
-  implicit class DescribeDatasetResponseOps[Self <: DescribeDatasetResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataset(value: Dataset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

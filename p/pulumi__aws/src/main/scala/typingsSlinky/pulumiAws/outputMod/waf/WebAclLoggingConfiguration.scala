@@ -18,35 +18,10 @@ trait WebAclLoggingConfiguration extends js.Object {
 
 object WebAclLoggingConfiguration {
   @scala.inline
-  def apply(logDestination: String): WebAclLoggingConfiguration = {
+  def apply(logDestination: String, redactedFields: WebAclLoggingConfigurationRedactedFields = null): WebAclLoggingConfiguration = {
     val __obj = js.Dynamic.literal(logDestination = logDestination.asInstanceOf[js.Any])
+    if (redactedFields != null) __obj.updateDynamic("redactedFields")(redactedFields.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebAclLoggingConfiguration]
   }
-  @scala.inline
-  implicit class WebAclLoggingConfigurationOps[Self <: WebAclLoggingConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLogDestination(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logDestination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRedactedFields(value: WebAclLoggingConfigurationRedactedFields): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redactedFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedactedFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redactedFields")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -20,7 +20,6 @@ import scala.scalajs.js.annotation._
   * for more information on how to perform signature
   * verification and decryption of a payment response.
   */
-@js.native
 trait DirectTokenizationParameters extends js.Object {
   /**
     * The version of the encryption/signature protocol being used.
@@ -30,7 +29,7 @@ trait DirectTokenizationParameters extends js.Object {
     * should be using the latest version defined in
     * https://developers.google.com/pay/api/web/payment-data-cryptography.
     */
-  var protocolVersion: String = js.native
+  var protocolVersion: String
   /**
     * Elliptic Curve public key suitable for using with the NIST P-126
     * curve. This public key will used to encrypt the sensitive payment
@@ -38,7 +37,7 @@ trait DirectTokenizationParameters extends js.Object {
     *
     * This field is required when the payment method requires encryption.
     */
-  var publicKey: String = js.native
+  var publicKey: String
 }
 
 object DirectTokenizationParameters {
@@ -47,25 +46,5 @@ object DirectTokenizationParameters {
     val __obj = js.Dynamic.literal(protocolVersion = protocolVersion.asInstanceOf[js.Any], publicKey = publicKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectTokenizationParameters]
   }
-  @scala.inline
-  implicit class DirectTokenizationParametersOps[Self <: DirectTokenizationParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProtocolVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocolVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPublicKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

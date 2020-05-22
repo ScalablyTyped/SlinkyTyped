@@ -5,14 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** @since LibreOffice 3.5 */
-@js.native
 trait FilterFieldValue extends js.Object {
   /** selects whether the TableFilterFieldValue::NumericValue or the TableFilterFieldValue::StringValue is used. */
-  var IsNumeric: Boolean = js.native
+  var IsNumeric: Boolean
   /** specifies a numeric value for the condition. */
-  var NumericValue: Double = js.native
+  var NumericValue: Double
   /** specifies a string value for the condition. */
-  var StringValue: String = js.native
+  var StringValue: String
 }
 
 object FilterFieldValue {
@@ -21,31 +20,5 @@ object FilterFieldValue {
     val __obj = js.Dynamic.literal(IsNumeric = IsNumeric.asInstanceOf[js.Any], NumericValue = NumericValue.asInstanceOf[js.Any], StringValue = StringValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[FilterFieldValue]
   }
-  @scala.inline
-  implicit class FilterFieldValueOps[Self <: FilterFieldValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsNumeric(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsNumeric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumericValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumericValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStringValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

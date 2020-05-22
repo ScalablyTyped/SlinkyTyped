@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options_ extends js.Object {
-  var broaderLeft: js.Any = js.native
-  var broaderRight: js.Any = js.native
-  var equal: js.Any = js.native
-  var mismatch: js.Any = js.native
+  var broaderLeft: js.Any
+  var broaderRight: js.Any
+  var equal: js.Any
+  var mismatch: js.Any
 }
 
 object Options_ {
@@ -18,37 +17,5 @@ object Options_ {
     val __obj = js.Dynamic.literal(broaderLeft = broaderLeft.asInstanceOf[js.Any], broaderRight = broaderRight.asInstanceOf[js.Any], equal = equal.asInstanceOf[js.Any], mismatch = mismatch.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options_]
   }
-  @scala.inline
-  implicit class Options_Ops[Self <: Options_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBroaderLeft(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("broaderLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBroaderRight(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("broaderRight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEqual(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMismatch(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mismatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

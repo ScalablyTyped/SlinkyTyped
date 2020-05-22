@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ShareMessageToFriendScene extends js.Object {
   /**
     * 需要传递的代表场景的数字，需要在 0 - 50 之间
     */
-  var shareMessageToFriendScene: Double = js.native
+  var shareMessageToFriendScene: Double
 }
 
 object ShareMessageToFriendScene {
@@ -18,19 +17,5 @@ object ShareMessageToFriendScene {
     val __obj = js.Dynamic.literal(shareMessageToFriendScene = shareMessageToFriendScene.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShareMessageToFriendScene]
   }
-  @scala.inline
-  implicit class ShareMessageToFriendSceneOps[Self <: ShareMessageToFriendScene] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withShareMessageToFriendScene(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shareMessageToFriendScene")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

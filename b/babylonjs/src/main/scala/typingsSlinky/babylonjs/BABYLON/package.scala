@@ -27,6 +27,8 @@ package object BABYLON {
   org.scalablytyped.runtime.NumberDictionary[typingsSlinky.babylonjs.BABYLON.ICameraInput[TCamera]])
   type CameraStageAction = js.Function1[/* camera */ typingsSlinky.babylonjs.BABYLON.Camera, scala.Unit]
   type CameraStageFrameBufferAction = js.Function1[/* camera */ typingsSlinky.babylonjs.BABYLON.Camera, scala.Boolean]
+  type DataArray = js.Array[scala.Double] | js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView
+  type DeepImmutable[T] = typingsSlinky.babylonjs.BABYLON.DeepImmutableObject[T] | typingsSlinky.babylonjs.BABYLON.DeepImmutableArray[js.Any] | T
   type DeepImmutableObject[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {readonly [ K in keyof T ]: babylonjs.BABYLON.DeepImmutable<T[K]>}
     */ typingsSlinky.babylonjs.babylonjsStrings.DeepImmutableObject with org.scalablytyped.runtime.TopLevel[T]
@@ -36,6 +38,7 @@ package object BABYLON {
     /* subMesh */ typingsSlinky.babylonjs.BABYLON.SubMesh, 
     scala.Unit
   ]
+  type FloatArray = js.Array[scala.Double] | js.typedarray.Float32Array
   type HighlightsPostProcess = typingsSlinky.babylonjs.BABYLON.PostProcess
   type IMotionControllerLayoutMap = /**
     * Layouts with handness type as a key
@@ -45,6 +48,8 @@ package object BABYLON {
     * Defines the list of supported extensions
     */
   org.scalablytyped.runtime.StringDictionary[typingsSlinky.babylonjs.anon.IsBinary]
+  type Immutable[T] = typingsSlinky.babylonjs.BABYLON.DeepImmutable[T] | js.Array[js.Any] | T
+  type IndicesArray = js.Array[scala.Double] | js.typedarray.Int32Array | js.typedarray.Uint32Array | js.typedarray.Uint16Array
   type IndividualBabylonFileParser = js.Function3[
     /* parsedData */ js.Any, 
     /* scene */ typingsSlinky.babylonjs.BABYLON.Scene, 
@@ -68,6 +73,7 @@ package object BABYLON {
     /* options */ js.UndefOr[js.Any], 
     js.Function0[typingsSlinky.babylonjs.BABYLON.Node]
   ]
+  type Nullable[T] = T | scala.Null
   type PassPostProcess = typingsSlinky.babylonjs.BABYLON.PostProcess
   type PointerMoveStageAction = js.Function5[
     /* unTranslatedPointerX */ scala.Double, 
@@ -84,6 +90,11 @@ package object BABYLON {
     /* evt */ org.scalajs.dom.raw.PointerEvent, 
     typingsSlinky.babylonjs.BABYLON.Nullable[typingsSlinky.babylonjs.BABYLON.PickingInfo]
   ]
+  /**
+    * Alias type for primitive types
+    * @ignorenaming
+    */
+  type Primitive = js.UndefOr[scala.Null | scala.Boolean | java.lang.String | scala.Double | js.Function]
   type RenderTargetStageAction = js.Function1[/* renderTarget */ typingsSlinky.babylonjs.BABYLON.RenderTargetTexture, scala.Unit]
   type RenderTargetsStageAction = js.Function1[
     /* renderTargets */ typingsSlinky.babylonjs.BABYLON.SmartArrayNoDuplicate[typingsSlinky.babylonjs.BABYLON.RenderTargetTexture], 

@@ -4,153 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PsbtInputUpdate extends js.Object {
-  var bip32Derivation: js.UndefOr[js.Array[Bip32Derivation]] = js.native
-  var finalScriptSig: js.UndefOr[FinalScriptSig] = js.native
-  var finalScriptWitness: js.UndefOr[FinalScriptWitness] = js.native
-  var nonWitnessUtxo: js.UndefOr[NonWitnessUtxo] = js.native
-  var partialSig: js.UndefOr[js.Array[PartialSig]] = js.native
-  var porCommitment: js.UndefOr[PorCommitment] = js.native
-  var redeemScript: js.UndefOr[RedeemScript] = js.native
-  var sighashType: js.UndefOr[SighashType] = js.native
-  var witnessScript: js.UndefOr[WitnessScript] = js.native
-  var witnessUtxo: js.UndefOr[WitnessUtxo] = js.native
+  var bip32Derivation: js.UndefOr[js.Array[Bip32Derivation]] = js.undefined
+  var finalScriptSig: js.UndefOr[FinalScriptSig] = js.undefined
+  var finalScriptWitness: js.UndefOr[FinalScriptWitness] = js.undefined
+  var nonWitnessUtxo: js.UndefOr[NonWitnessUtxo] = js.undefined
+  var partialSig: js.UndefOr[js.Array[PartialSig]] = js.undefined
+  var porCommitment: js.UndefOr[PorCommitment] = js.undefined
+  var redeemScript: js.UndefOr[RedeemScript] = js.undefined
+  var sighashType: js.UndefOr[SighashType] = js.undefined
+  var witnessScript: js.UndefOr[WitnessScript] = js.undefined
+  var witnessUtxo: js.UndefOr[WitnessUtxo] = js.undefined
 }
 
 object PsbtInputUpdate {
   @scala.inline
-  def apply(): PsbtInputUpdate = {
+  def apply(
+    bip32Derivation: js.Array[Bip32Derivation] = null,
+    finalScriptSig: FinalScriptSig = null,
+    finalScriptWitness: FinalScriptWitness = null,
+    nonWitnessUtxo: NonWitnessUtxo = null,
+    partialSig: js.Array[PartialSig] = null,
+    porCommitment: PorCommitment = null,
+    redeemScript: RedeemScript = null,
+    sighashType: js.UndefOr[SighashType] = js.undefined,
+    witnessScript: WitnessScript = null,
+    witnessUtxo: WitnessUtxo = null
+  ): PsbtInputUpdate = {
     val __obj = js.Dynamic.literal()
+    if (bip32Derivation != null) __obj.updateDynamic("bip32Derivation")(bip32Derivation.asInstanceOf[js.Any])
+    if (finalScriptSig != null) __obj.updateDynamic("finalScriptSig")(finalScriptSig.asInstanceOf[js.Any])
+    if (finalScriptWitness != null) __obj.updateDynamic("finalScriptWitness")(finalScriptWitness.asInstanceOf[js.Any])
+    if (nonWitnessUtxo != null) __obj.updateDynamic("nonWitnessUtxo")(nonWitnessUtxo.asInstanceOf[js.Any])
+    if (partialSig != null) __obj.updateDynamic("partialSig")(partialSig.asInstanceOf[js.Any])
+    if (porCommitment != null) __obj.updateDynamic("porCommitment")(porCommitment.asInstanceOf[js.Any])
+    if (redeemScript != null) __obj.updateDynamic("redeemScript")(redeemScript.asInstanceOf[js.Any])
+    if (!js.isUndefined(sighashType)) __obj.updateDynamic("sighashType")(sighashType.get.asInstanceOf[js.Any])
+    if (witnessScript != null) __obj.updateDynamic("witnessScript")(witnessScript.asInstanceOf[js.Any])
+    if (witnessUtxo != null) __obj.updateDynamic("witnessUtxo")(witnessUtxo.asInstanceOf[js.Any])
     __obj.asInstanceOf[PsbtInputUpdate]
   }
-  @scala.inline
-  implicit class PsbtInputUpdateOps[Self <: PsbtInputUpdate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBip32Derivation(value: js.Array[Bip32Derivation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bip32Derivation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBip32Derivation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bip32Derivation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFinalScriptSig(value: FinalScriptSig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalScriptSig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFinalScriptSig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalScriptSig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFinalScriptWitness(value: FinalScriptWitness): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalScriptWitness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFinalScriptWitness: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalScriptWitness")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNonWitnessUtxo(value: NonWitnessUtxo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonWitnessUtxo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNonWitnessUtxo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonWitnessUtxo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartialSig(value: js.Array[PartialSig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partialSig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartialSig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partialSig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPorCommitment(value: PorCommitment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("porCommitment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPorCommitment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("porCommitment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedeemScript(value: RedeemScript): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redeemScript")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedeemScript: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redeemScript")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSighashType(value: SighashType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sighashType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSighashType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sighashType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWitnessScript(value: WitnessScript): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("witnessScript")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWitnessScript: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("witnessScript")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWitnessUtxo(value: WitnessUtxo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("witnessUtxo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWitnessUtxo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("witnessUtxo")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,140 +6,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GridsterResizable extends js.Object {
-  var axes: js.UndefOr[js.Array[String]] = js.native
-  var enabled: js.UndefOr[Boolean] = js.native
-  var handle_append_to: js.UndefOr[String] = js.native
-  var handle_class: js.UndefOr[String] = js.native
-  var max_size: js.UndefOr[js.Array[Double]] = js.native
-  var min_size: js.UndefOr[js.Array[Double]] = js.native
-  var resize: js.UndefOr[js.Function3[/* event */ Event, /* ui */ GridsterUi, /* $el */ JQuery, Unit]] = js.native
-  var start: js.UndefOr[js.Function3[/* event */ Event, /* ui */ Helper, /* $el */ JQuery, Unit]] = js.native
-  var stop: js.UndefOr[js.Function3[/* event */ Event, /* ui */ Helper, /* $el */ JQuery, Unit]] = js.native
+  var axes: js.UndefOr[js.Array[String]] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.undefined
+  var handle_append_to: js.UndefOr[String] = js.undefined
+  var handle_class: js.UndefOr[String] = js.undefined
+  var max_size: js.UndefOr[js.Array[Double]] = js.undefined
+  var min_size: js.UndefOr[js.Array[Double]] = js.undefined
+  var resize: js.UndefOr[js.Function3[/* event */ Event, /* ui */ GridsterUi, /* $el */ JQuery, Unit]] = js.undefined
+  var start: js.UndefOr[js.Function3[/* event */ Event, /* ui */ Helper, /* $el */ JQuery, Unit]] = js.undefined
+  var stop: js.UndefOr[js.Function3[/* event */ Event, /* ui */ Helper, /* $el */ JQuery, Unit]] = js.undefined
 }
 
 object GridsterResizable {
   @scala.inline
-  def apply(): GridsterResizable = {
+  def apply(
+    axes: js.Array[String] = null,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    handle_append_to: String = null,
+    handle_class: String = null,
+    max_size: js.Array[Double] = null,
+    min_size: js.Array[Double] = null,
+    resize: (/* event */ Event, /* ui */ GridsterUi, /* $el */ JQuery) => Unit = null,
+    start: (/* event */ Event, /* ui */ Helper, /* $el */ JQuery) => Unit = null,
+    stop: (/* event */ Event, /* ui */ Helper, /* $el */ JQuery) => Unit = null
+  ): GridsterResizable = {
     val __obj = js.Dynamic.literal()
+    if (axes != null) __obj.updateDynamic("axes")(axes.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (handle_append_to != null) __obj.updateDynamic("handle_append_to")(handle_append_to.asInstanceOf[js.Any])
+    if (handle_class != null) __obj.updateDynamic("handle_class")(handle_class.asInstanceOf[js.Any])
+    if (max_size != null) __obj.updateDynamic("max_size")(max_size.asInstanceOf[js.Any])
+    if (min_size != null) __obj.updateDynamic("min_size")(min_size.asInstanceOf[js.Any])
+    if (resize != null) __obj.updateDynamic("resize")(js.Any.fromFunction3(resize))
+    if (start != null) __obj.updateDynamic("start")(js.Any.fromFunction3(start))
+    if (stop != null) __obj.updateDynamic("stop")(js.Any.fromFunction3(stop))
     __obj.asInstanceOf[GridsterResizable]
   }
-  @scala.inline
-  implicit class GridsterResizableOps[Self <: GridsterResizable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAxes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHandle_append_to(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handle_append_to")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandle_append_to: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handle_append_to")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHandle_class(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handle_class")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandle_class: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handle_class")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax_size(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max_size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax_size: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max_size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin_size(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min_size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin_size: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min_size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResize(value: (/* event */ Event, /* ui */ GridsterUi, /* $el */ JQuery) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resize")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutResize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: (/* event */ Event, /* ui */ Helper, /* $el */ JQuery) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStop(value: (/* event */ Event, /* ui */ Helper, /* $el */ JQuery) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutStop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

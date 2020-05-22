@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("yup", "date")
 @js.native
 class date ()
-  extends DateSchema[js.Date]
+  extends DateSchema[js.UndefOr[js.Date]]
 
 @JSImport("yup", "date")
 @js.native

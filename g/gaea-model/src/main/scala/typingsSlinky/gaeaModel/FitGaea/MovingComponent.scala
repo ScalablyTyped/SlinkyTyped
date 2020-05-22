@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MovingComponent extends js.Object {
   // 是否是新拖拽的
-  var isNew: Boolean = js.native
+  var isNew: Boolean
   // 在编辑区域的组件信息
-  var mapUniqueKey: String = js.native
+  var mapUniqueKey: String
   // 直接给 source 就直接用
-  var source: String = js.native
+  var source: String
   // 组件的唯一标识, 新建的时候采用
-  var uniqueKey: String = js.native
+  var uniqueKey: String
 }
 
 object MovingComponent {
@@ -22,37 +21,5 @@ object MovingComponent {
     val __obj = js.Dynamic.literal(isNew = isNew.asInstanceOf[js.Any], mapUniqueKey = mapUniqueKey.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], uniqueKey = uniqueKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[MovingComponent]
   }
-  @scala.inline
-  implicit class MovingComponentOps[Self <: MovingComponent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsNew(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isNew")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMapUniqueKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapUniqueKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUniqueKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

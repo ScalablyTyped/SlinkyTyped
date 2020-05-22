@@ -7,18 +7,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides socket control data on a StreamWebSocket object. */
-@js.native
 trait StreamWebSocketControl extends js.Object {
   /** A value that indicates whether the Nagle algorithm is used on a StreamWebSocket object. */
-  var noDelay: Boolean = js.native
+  var noDelay: Boolean
   /** The size, in bytes, of the send buffer to be used for sending data on a StreamWebSocket object. */
-  var outboundBufferSizeInBytes: Double = js.native
+  var outboundBufferSizeInBytes: Double
   /** The credential to use to authenticate to the proxy server through HTTP header authentication using a StreamWebSocket object. */
-  var proxyCredential: PasswordCredential = js.native
+  var proxyCredential: PasswordCredential
   /** The credential to use to authenticate to the WebSocket server through HTTP header authentication using a StreamWebSocket object. */
-  var serverCredential: PasswordCredential = js.native
+  var serverCredential: PasswordCredential
   /** Gets a collection that can be used to add a list of supported sub-protocols that will be advertised to the server during the connect handshake. */
-  var supportedProtocols: IVector[String] = js.native
+  var supportedProtocols: IVector[String]
 }
 
 object StreamWebSocketControl {
@@ -33,43 +32,5 @@ object StreamWebSocketControl {
     val __obj = js.Dynamic.literal(noDelay = noDelay.asInstanceOf[js.Any], outboundBufferSizeInBytes = outboundBufferSizeInBytes.asInstanceOf[js.Any], proxyCredential = proxyCredential.asInstanceOf[js.Any], serverCredential = serverCredential.asInstanceOf[js.Any], supportedProtocols = supportedProtocols.asInstanceOf[js.Any])
     __obj.asInstanceOf[StreamWebSocketControl]
   }
-  @scala.inline
-  implicit class StreamWebSocketControlOps[Self <: StreamWebSocketControl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNoDelay(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutboundBufferSizeInBytes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outboundBufferSizeInBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProxyCredential(value: PasswordCredential): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyCredential")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServerCredential(value: PasswordCredential): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverCredential")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportedProtocols(value: IVector[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedProtocols")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

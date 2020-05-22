@@ -43,89 +43,22 @@ trait SchemaRewriteResponse extends js.Object {
 
 object SchemaRewriteResponse {
   @scala.inline
-  def apply(): SchemaRewriteResponse = {
+  def apply(
+    done: js.UndefOr[Boolean] = js.undefined,
+    kind: String = null,
+    objectSize: String = null,
+    resource: SchemaObject = null,
+    rewriteToken: String = null,
+    totalBytesRewritten: String = null
+  ): SchemaRewriteResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(done)) __obj.updateDynamic("done")(done.get.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (objectSize != null) __obj.updateDynamic("objectSize")(objectSize.asInstanceOf[js.Any])
+    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
+    if (rewriteToken != null) __obj.updateDynamic("rewriteToken")(rewriteToken.asInstanceOf[js.Any])
+    if (totalBytesRewritten != null) __obj.updateDynamic("totalBytesRewritten")(totalBytesRewritten.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRewriteResponse]
   }
-  @scala.inline
-  implicit class SchemaRewriteResponseOps[Self <: SchemaRewriteResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDone(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("done")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("done")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResource(value: SchemaObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRewriteToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rewriteToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRewriteToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rewriteToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalBytesRewritten(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalBytesRewritten")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalBytesRewritten: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalBytesRewritten")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

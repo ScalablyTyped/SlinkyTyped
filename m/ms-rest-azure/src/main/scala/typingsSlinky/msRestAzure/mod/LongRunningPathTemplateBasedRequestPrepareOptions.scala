@@ -1,41 +1,47 @@
 package typingsSlinky.msRestAzure.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.msRest.mod.Mapper
 import typingsSlinky.msRest.mod.PathTemplateBasedRequestPrepareOptions
+import typingsSlinky.msRest.mod.UrlParameterValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LongRunningPathTemplateBasedRequestPrepareOptions extends PathTemplateBasedRequestPrepareOptions {
-  var deserializationMapperForTerminalResponse: js.UndefOr[Mapper] = js.native
+  var deserializationMapperForTerminalResponse: js.UndefOr[Mapper] = js.undefined
 }
 
 object LongRunningPathTemplateBasedRequestPrepareOptions {
   @scala.inline
-  def apply(deserializationMapper: Mapper, method: String, pathTemplate: String, serializationMapper: Mapper): LongRunningPathTemplateBasedRequestPrepareOptions = {
+  def apply(
+    deserializationMapper: Mapper,
+    method: String,
+    pathTemplate: String,
+    serializationMapper: Mapper,
+    baseUrl: String = null,
+    body: js.Any = null,
+    bodyIsStream: js.UndefOr[Boolean] = js.undefined,
+    deserializationMapperForTerminalResponse: Mapper = null,
+    disableClientRequestId: js.UndefOr[Boolean] = js.undefined,
+    disableJsonStringifyOnBody: js.UndefOr[Boolean] = js.undefined,
+    formData: StringDictionary[js.Any] = null,
+    headers: StringDictionary[js.Any] = null,
+    pathParameters: StringDictionary[js.Any | UrlParameterValue] = null,
+    queryParameters: StringDictionary[js.Any | UrlParameterValue] = null
+  ): LongRunningPathTemplateBasedRequestPrepareOptions = {
     val __obj = js.Dynamic.literal(deserializationMapper = deserializationMapper.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], pathTemplate = pathTemplate.asInstanceOf[js.Any], serializationMapper = serializationMapper.asInstanceOf[js.Any])
+    if (baseUrl != null) __obj.updateDynamic("baseUrl")(baseUrl.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (!js.isUndefined(bodyIsStream)) __obj.updateDynamic("bodyIsStream")(bodyIsStream.get.asInstanceOf[js.Any])
+    if (deserializationMapperForTerminalResponse != null) __obj.updateDynamic("deserializationMapperForTerminalResponse")(deserializationMapperForTerminalResponse.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableClientRequestId)) __obj.updateDynamic("disableClientRequestId")(disableClientRequestId.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableJsonStringifyOnBody)) __obj.updateDynamic("disableJsonStringifyOnBody")(disableJsonStringifyOnBody.get.asInstanceOf[js.Any])
+    if (formData != null) __obj.updateDynamic("formData")(formData.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (pathParameters != null) __obj.updateDynamic("pathParameters")(pathParameters.asInstanceOf[js.Any])
+    if (queryParameters != null) __obj.updateDynamic("queryParameters")(queryParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[LongRunningPathTemplateBasedRequestPrepareOptions]
   }
-  @scala.inline
-  implicit class LongRunningPathTemplateBasedRequestPrepareOptionsOps[Self <: LongRunningPathTemplateBasedRequestPrepareOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeserializationMapperForTerminalResponse(value: Mapper): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deserializationMapperForTerminalResponse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeserializationMapperForTerminalResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deserializationMapperForTerminalResponse")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

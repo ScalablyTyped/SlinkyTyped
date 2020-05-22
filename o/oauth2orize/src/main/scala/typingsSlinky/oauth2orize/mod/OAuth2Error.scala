@@ -17,6 +17,10 @@ class OAuth2Error () extends Error {
   def this(message: String, code: String, uri: String) = this()
   def this(message: String, code: String, uri: String, status: Double) = this()
   var code: String = js.native
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
   var status: Double = js.native
   var uri: js.UndefOr[String] = js.native
 }

@@ -22,549 +22,135 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<react-virtualized.react-virtualized.ListProps> */
-@js.native
 trait PartialListProps extends js.Object {
-  var `aria-label`: js.UndefOr[String] = js.native
-  var `aria-readonly`: js.UndefOr[Boolean] = js.native
-  var autoContainerWidth: js.UndefOr[Boolean] = js.native
-  var autoHeight: js.UndefOr[Boolean] = js.native
-  var autoWidth: js.UndefOr[Boolean] = js.native
-  var cellRangeRenderer: js.UndefOr[GridCellRangeRenderer] = js.native
-  var className: js.UndefOr[String] = js.native
-  var containerProps: js.UndefOr[js.Object] = js.native
-  var containerRole: js.UndefOr[String] = js.native
-  var containerStyle: js.UndefOr[CSSProperties] = js.native
-  var deferredMeasurementCache: js.UndefOr[CellMeasurerCache] = js.native
-  var estimatedColumnSize: js.UndefOr[Double] = js.native
-  var estimatedRowSize: js.UndefOr[Double] = js.native
-  var getScrollbarSize: js.UndefOr[js.Function0[Double]] = js.native
-  var height: js.UndefOr[Double] = js.native
-  var id: js.UndefOr[String] = js.native
-  var isScrolling: js.UndefOr[Boolean] = js.native
-  var noContentRenderer: js.UndefOr[js.Function0[TagMod[Any]]] = js.native
-  var noRowsRenderer: js.UndefOr[js.Function0[ReactElement]] = js.native
-  var onRowsRendered: js.UndefOr[js.Function1[/* info */ RenderedRows, Unit]] = js.native
-  var onScroll: js.UndefOr[js.Function1[/* params */ ScrollParams, _]] = js.native
-  var onScrollbarPresenceChange: js.UndefOr[js.Function1[/* params */ ScrollbarPresenceParams, _]] = js.native
-  var onSectionRendered: js.UndefOr[js.Function1[/* params */ SectionRenderedParams, _]] = js.native
-  var overscanColumnCount: js.UndefOr[Double] = js.native
-  var overscanIndicesGetter: js.UndefOr[OverscanIndicesGetter] = js.native
-  var overscanRowCount: js.UndefOr[Double] = js.native
-  var role: js.UndefOr[String] = js.native
-  var rowCount: js.UndefOr[Double] = js.native
-  var rowHeight: js.UndefOr[Double | (js.Function1[/* params */ Index, Double])] = js.native
-  var rowRenderer: js.UndefOr[ListRowRenderer] = js.native
-  var scrollLeft: js.UndefOr[Double] = js.native
-  var scrollToAlignment: js.UndefOr[Alignment with String] = js.native
-  var scrollToColumn: js.UndefOr[Double] = js.native
-  var scrollToIndex: js.UndefOr[Double] = js.native
-  var scrollToRow: js.UndefOr[Double] = js.native
-  var scrollTop: js.UndefOr[Double] = js.native
-  var scrollingResetTimeInterval: js.UndefOr[Double] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
-  var tabIndex: js.UndefOr[Double] = js.native
-  var width: js.UndefOr[Double] = js.native
+  var `aria-label`: js.UndefOr[String] = js.undefined
+  var `aria-readonly`: js.UndefOr[Boolean] = js.undefined
+  var autoContainerWidth: js.UndefOr[Boolean] = js.undefined
+  var autoHeight: js.UndefOr[Boolean] = js.undefined
+  var autoWidth: js.UndefOr[Boolean] = js.undefined
+  var cellRangeRenderer: js.UndefOr[GridCellRangeRenderer] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var containerProps: js.UndefOr[js.Object] = js.undefined
+  var containerRole: js.UndefOr[String] = js.undefined
+  var containerStyle: js.UndefOr[CSSProperties] = js.undefined
+  var deferredMeasurementCache: js.UndefOr[CellMeasurerCache] = js.undefined
+  var estimatedColumnSize: js.UndefOr[Double] = js.undefined
+  var estimatedRowSize: js.UndefOr[Double] = js.undefined
+  var getScrollbarSize: js.UndefOr[js.Function0[Double]] = js.undefined
+  var height: js.UndefOr[Double] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var isScrolling: js.UndefOr[Boolean] = js.undefined
+  var noContentRenderer: js.UndefOr[js.Function0[TagMod[Any]]] = js.undefined
+  var noRowsRenderer: js.UndefOr[js.Function0[ReactElement]] = js.undefined
+  var onRowsRendered: js.UndefOr[js.Function1[/* info */ RenderedRows, Unit]] = js.undefined
+  var onScroll: js.UndefOr[js.Function1[/* params */ ScrollParams, _]] = js.undefined
+  var onScrollbarPresenceChange: js.UndefOr[js.Function1[/* params */ ScrollbarPresenceParams, _]] = js.undefined
+  var onSectionRendered: js.UndefOr[js.Function1[/* params */ SectionRenderedParams, _]] = js.undefined
+  var overscanColumnCount: js.UndefOr[Double] = js.undefined
+  var overscanIndicesGetter: js.UndefOr[OverscanIndicesGetter] = js.undefined
+  var overscanRowCount: js.UndefOr[Double] = js.undefined
+  var role: js.UndefOr[String] = js.undefined
+  var rowCount: js.UndefOr[Double] = js.undefined
+  var rowHeight: js.UndefOr[Double | (js.Function1[/* params */ Index, Double])] = js.undefined
+  var rowRenderer: js.UndefOr[ListRowRenderer] = js.undefined
+  var scrollLeft: js.UndefOr[Double] = js.undefined
+  var scrollToAlignment: js.UndefOr[Alignment with String] = js.undefined
+  var scrollToColumn: js.UndefOr[Double] = js.undefined
+  var scrollToIndex: js.UndefOr[Double] = js.undefined
+  var scrollToRow: js.UndefOr[Double] = js.undefined
+  var scrollTop: js.UndefOr[Double] = js.undefined
+  var scrollingResetTimeInterval: js.UndefOr[Double] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
+  var tabIndex: js.UndefOr[Double] = js.undefined
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object PartialListProps {
   @scala.inline
-  def apply(): PartialListProps = {
+  def apply(
+    `aria-label`: String = null,
+    `aria-readonly`: js.UndefOr[Boolean] = js.undefined,
+    autoContainerWidth: js.UndefOr[Boolean] = js.undefined,
+    autoHeight: js.UndefOr[Boolean] = js.undefined,
+    autoWidth: js.UndefOr[Boolean] = js.undefined,
+    cellRangeRenderer: /* params */ GridCellRangeProps => js.Array[TagMod[Any]] = null,
+    className: String = null,
+    containerProps: js.Object = null,
+    containerRole: String = null,
+    containerStyle: CSSProperties = null,
+    deferredMeasurementCache: CellMeasurerCache = null,
+    estimatedColumnSize: js.UndefOr[Double] = js.undefined,
+    estimatedRowSize: js.UndefOr[Double] = js.undefined,
+    getScrollbarSize: () => Double = null,
+    height: js.UndefOr[Double] = js.undefined,
+    id: String = null,
+    isScrolling: js.UndefOr[Boolean] = js.undefined,
+    noContentRenderer: () => TagMod[Any] = null,
+    noRowsRenderer: () => ReactElement = null,
+    onRowsRendered: /* info */ RenderedRows => Unit = null,
+    onScroll: /* params */ ScrollParams => _ = null,
+    onScrollbarPresenceChange: /* params */ ScrollbarPresenceParams => _ = null,
+    onSectionRendered: /* params */ SectionRenderedParams => _ = null,
+    overscanColumnCount: js.UndefOr[Double] = js.undefined,
+    overscanIndicesGetter: /* params */ OverscanIndicesGetterParams => OverscanIndices = null,
+    overscanRowCount: js.UndefOr[Double] = js.undefined,
+    role: String = null,
+    rowCount: js.UndefOr[Double] = js.undefined,
+    rowHeight: Double | (js.Function1[/* params */ Index, Double]) = null,
+    rowRenderer: /* props */ ListRowProps => TagMod[Any] = null,
+    scrollLeft: js.UndefOr[Double] = js.undefined,
+    scrollToAlignment: Alignment with String = null,
+    scrollToColumn: js.UndefOr[Double] = js.undefined,
+    scrollToIndex: js.UndefOr[Double] = js.undefined,
+    scrollToRow: js.UndefOr[Double] = js.undefined,
+    scrollTop: js.UndefOr[Double] = js.undefined,
+    scrollingResetTimeInterval: js.UndefOr[Double] = js.undefined,
+    style: CSSProperties = null,
+    tabIndex: js.UndefOr[Double] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): PartialListProps = {
     val __obj = js.Dynamic.literal()
+    if (`aria-label` != null) __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-readonly`)) __obj.updateDynamic("aria-readonly")(`aria-readonly`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoContainerWidth)) __obj.updateDynamic("autoContainerWidth")(autoContainerWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoHeight)) __obj.updateDynamic("autoHeight")(autoHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoWidth)) __obj.updateDynamic("autoWidth")(autoWidth.get.asInstanceOf[js.Any])
+    if (cellRangeRenderer != null) __obj.updateDynamic("cellRangeRenderer")(js.Any.fromFunction1(cellRangeRenderer))
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (containerProps != null) __obj.updateDynamic("containerProps")(containerProps.asInstanceOf[js.Any])
+    if (containerRole != null) __obj.updateDynamic("containerRole")(containerRole.asInstanceOf[js.Any])
+    if (containerStyle != null) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
+    if (deferredMeasurementCache != null) __obj.updateDynamic("deferredMeasurementCache")(deferredMeasurementCache.asInstanceOf[js.Any])
+    if (!js.isUndefined(estimatedColumnSize)) __obj.updateDynamic("estimatedColumnSize")(estimatedColumnSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(estimatedRowSize)) __obj.updateDynamic("estimatedRowSize")(estimatedRowSize.get.asInstanceOf[js.Any])
+    if (getScrollbarSize != null) __obj.updateDynamic("getScrollbarSize")(js.Any.fromFunction0(getScrollbarSize))
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(isScrolling)) __obj.updateDynamic("isScrolling")(isScrolling.get.asInstanceOf[js.Any])
+    if (noContentRenderer != null) __obj.updateDynamic("noContentRenderer")(js.Any.fromFunction0(noContentRenderer))
+    if (noRowsRenderer != null) __obj.updateDynamic("noRowsRenderer")(js.Any.fromFunction0(noRowsRenderer))
+    if (onRowsRendered != null) __obj.updateDynamic("onRowsRendered")(js.Any.fromFunction1(onRowsRendered))
+    if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction1(onScroll))
+    if (onScrollbarPresenceChange != null) __obj.updateDynamic("onScrollbarPresenceChange")(js.Any.fromFunction1(onScrollbarPresenceChange))
+    if (onSectionRendered != null) __obj.updateDynamic("onSectionRendered")(js.Any.fromFunction1(onSectionRendered))
+    if (!js.isUndefined(overscanColumnCount)) __obj.updateDynamic("overscanColumnCount")(overscanColumnCount.get.asInstanceOf[js.Any])
+    if (overscanIndicesGetter != null) __obj.updateDynamic("overscanIndicesGetter")(js.Any.fromFunction1(overscanIndicesGetter))
+    if (!js.isUndefined(overscanRowCount)) __obj.updateDynamic("overscanRowCount")(overscanRowCount.get.asInstanceOf[js.Any])
+    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowCount)) __obj.updateDynamic("rowCount")(rowCount.get.asInstanceOf[js.Any])
+    if (rowHeight != null) __obj.updateDynamic("rowHeight")(rowHeight.asInstanceOf[js.Any])
+    if (rowRenderer != null) __obj.updateDynamic("rowRenderer")(js.Any.fromFunction1(rowRenderer))
+    if (!js.isUndefined(scrollLeft)) __obj.updateDynamic("scrollLeft")(scrollLeft.get.asInstanceOf[js.Any])
+    if (scrollToAlignment != null) __obj.updateDynamic("scrollToAlignment")(scrollToAlignment.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollToColumn)) __obj.updateDynamic("scrollToColumn")(scrollToColumn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollToIndex)) __obj.updateDynamic("scrollToIndex")(scrollToIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollToRow)) __obj.updateDynamic("scrollToRow")(scrollToRow.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollTop)) __obj.updateDynamic("scrollTop")(scrollTop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollingResetTimeInterval)) __obj.updateDynamic("scrollingResetTimeInterval")(scrollingResetTimeInterval.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(tabIndex)) __obj.updateDynamic("tabIndex")(tabIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialListProps]
   }
-  @scala.inline
-  implicit class PartialListPropsOps[Self <: PartialListProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withAria-label`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-label`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-readonly`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-readonly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-readonly`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-readonly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoContainerWidth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoContainerWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoContainerWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoContainerWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoHeight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoWidth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellRangeRenderer(value: /* params */ GridCellRangeProps => js.Array[TagMod[Any]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellRangeRenderer")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCellRangeRenderer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellRangeRenderer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerProps(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerRole(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerRole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeferredMeasurementCache(value: CellMeasurerCache): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deferredMeasurementCache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeferredMeasurementCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deferredMeasurementCache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEstimatedColumnSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedColumnSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEstimatedColumnSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedColumnSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEstimatedRowSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedRowSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEstimatedRowSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedRowSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetScrollbarSize(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScrollbarSize")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetScrollbarSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScrollbarSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsScrolling(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isScrolling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsScrolling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isScrolling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoContentRenderer(value: () => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noContentRenderer")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutNoContentRenderer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noContentRenderer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoRowsRenderer(value: () => ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noRowsRenderer")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutNoRowsRenderer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noRowsRenderer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRowsRendered(value: /* info */ RenderedRows => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowsRendered")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRowsRendered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowsRendered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnScroll(value: /* params */ ScrollParams => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnScrollbarPresenceChange(value: /* params */ ScrollbarPresenceParams => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScrollbarPresenceChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnScrollbarPresenceChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScrollbarPresenceChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSectionRendered(value: /* params */ SectionRenderedParams => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSectionRendered")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSectionRendered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSectionRendered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverscanColumnCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overscanColumnCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverscanColumnCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overscanColumnCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverscanIndicesGetter(value: /* params */ OverscanIndicesGetterParams => OverscanIndices): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overscanIndicesGetter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOverscanIndicesGetter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overscanIndicesGetter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverscanRowCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overscanRowCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverscanRowCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overscanRowCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRole(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowHeightFunction1(value: /* params */ Index => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeight")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRowHeight(value: Double | (js.Function1[/* params */ Index, Double])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowRenderer(value: /* props */ ListRowProps => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowRenderer")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRowRenderer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowRenderer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollToAlignment(value: Alignment with String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToAlignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollToAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToAlignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollToColumn(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollToColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollToIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollToIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollToRow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollToRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollingResetTimeInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollingResetTimeInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollingResetTimeInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollingResetTimeInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTabIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTabIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

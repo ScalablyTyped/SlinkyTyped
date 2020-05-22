@@ -11,22 +11,21 @@ import scala.scalajs.js.annotation._
   * gives access to a file dialog.
   * @deprecated Deprecated
   */
-@js.native
 trait XFileDialog extends XInterface {
   /** returns the currently selected filter. */
-  var CurrentFilter: String = js.native
+  var CurrentFilter: String
   /** returns the path. */
-  var Path: String = js.native
+  var Path: String
   /** returns the currently selected filter. */
-  def getCurrentFilter(): String = js.native
+  def getCurrentFilter(): String
   /** returns the path. */
-  def getPath(): String = js.native
+  def getPath(): String
   /** sets the current filter. */
-  def setCurrentFilter(Filter: String): Unit = js.native
+  def setCurrentFilter(Filter: String): Unit
   /** sets the filters. */
-  def setFilters(rFilterNames: SeqEquiv[String], rMasks: SeqEquiv[String]): Unit = js.native
+  def setFilters(rFilterNames: SeqEquiv[String], rMasks: SeqEquiv[String]): Unit
   /** sets the path. */
-  def setPath(Path: String): Unit = js.native
+  def setPath(Path: String): Unit
 }
 
 object XFileDialog {
@@ -46,55 +45,5 @@ object XFileDialog {
     val __obj = js.Dynamic.literal(CurrentFilter = CurrentFilter.asInstanceOf[js.Any], Path = Path.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getCurrentFilter = js.Any.fromFunction0(getCurrentFilter), getPath = js.Any.fromFunction0(getPath), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setCurrentFilter = js.Any.fromFunction1(setCurrentFilter), setFilters = js.Any.fromFunction2(setFilters), setPath = js.Any.fromFunction1(setPath))
     __obj.asInstanceOf[XFileDialog]
   }
-  @scala.inline
-  implicit class XFileDialogOps[Self <: XFileDialog] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetCurrentFilter(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentFilter")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetPath(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPath")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetCurrentFilter(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setCurrentFilter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetFilters(value: (SeqEquiv[String], SeqEquiv[String]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFilters")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetPath(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPath")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

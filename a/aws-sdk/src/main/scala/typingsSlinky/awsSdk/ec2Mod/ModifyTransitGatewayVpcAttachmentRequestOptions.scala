@@ -18,41 +18,11 @@ trait ModifyTransitGatewayVpcAttachmentRequestOptions extends js.Object {
 
 object ModifyTransitGatewayVpcAttachmentRequestOptions {
   @scala.inline
-  def apply(): ModifyTransitGatewayVpcAttachmentRequestOptions = {
+  def apply(DnsSupport: DnsSupportValue = null, Ipv6Support: Ipv6SupportValue = null): ModifyTransitGatewayVpcAttachmentRequestOptions = {
     val __obj = js.Dynamic.literal()
+    if (DnsSupport != null) __obj.updateDynamic("DnsSupport")(DnsSupport.asInstanceOf[js.Any])
+    if (Ipv6Support != null) __obj.updateDynamic("Ipv6Support")(Ipv6Support.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyTransitGatewayVpcAttachmentRequestOptions]
   }
-  @scala.inline
-  implicit class ModifyTransitGatewayVpcAttachmentRequestOptionsOps[Self <: ModifyTransitGatewayVpcAttachmentRequestOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDnsSupport(value: DnsSupportValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsSupport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDnsSupport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsSupport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpv6Support(value: Ipv6SupportValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6Support")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpv6Support: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6Support")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

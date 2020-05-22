@@ -9,231 +9,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AccessType extends js.Object {
-  var accessType: js.UndefOr[RelatedContentAccess] = js.native
-  var authors: js.UndefOr[js.Array[String]] = js.native
-  var clipUrl: js.UndefOr[String] = js.native
-  var contact: js.UndefOr[Contact] = js.native
-  var contentId: js.UndefOr[String] = js.native
-  var contentType: js.UndefOr[RelatedContentType] = js.native
-  var date: js.UndefOr[Timestamp] = js.native
-  var sourceFaviconUrl: js.UndefOr[String] = js.native
-  var sourceId: js.UndefOr[String] = js.native
-  var sourceName: js.UndefOr[String] = js.native
-  var sourceUrl: js.UndefOr[String] = js.native
-  var teaser: js.UndefOr[String] = js.native
-  var thumbnails: js.UndefOr[js.Array[RelatedContentImage]] = js.native
-  var title: js.UndefOr[String] = js.native
-  var url: js.UndefOr[String] = js.native
-  var visibleUrl: js.UndefOr[String] = js.native
+  var accessType: js.UndefOr[RelatedContentAccess] = js.undefined
+  var authors: js.UndefOr[js.Array[String]] = js.undefined
+  var clipUrl: js.UndefOr[String] = js.undefined
+  var contact: js.UndefOr[Contact] = js.undefined
+  var contentId: js.UndefOr[String] = js.undefined
+  var contentType: js.UndefOr[RelatedContentType] = js.undefined
+  var date: js.UndefOr[Timestamp] = js.undefined
+  var sourceFaviconUrl: js.UndefOr[String] = js.undefined
+  var sourceId: js.UndefOr[String] = js.undefined
+  var sourceName: js.UndefOr[String] = js.undefined
+  var sourceUrl: js.UndefOr[String] = js.undefined
+  var teaser: js.UndefOr[String] = js.undefined
+  var thumbnails: js.UndefOr[js.Array[RelatedContentImage]] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
+  var url: js.UndefOr[String] = js.undefined
+  var visibleUrl: js.UndefOr[String] = js.undefined
 }
 
 object AccessType {
   @scala.inline
-  def apply(): AccessType = {
+  def apply(
+    accessType: RelatedContentAccess = null,
+    authors: js.Array[String] = null,
+    clipUrl: String = null,
+    contact: Contact = null,
+    contentId: String = null,
+    contentType: RelatedContentType = null,
+    date: js.UndefOr[Timestamp] = js.undefined,
+    sourceFaviconUrl: String = null,
+    sourceId: String = null,
+    sourceName: String = null,
+    sourceUrl: String = null,
+    teaser: String = null,
+    thumbnails: js.Array[RelatedContentImage] = null,
+    title: String = null,
+    url: String = null,
+    visibleUrl: String = null
+  ): AccessType = {
     val __obj = js.Dynamic.literal()
+    if (accessType != null) __obj.updateDynamic("accessType")(accessType.asInstanceOf[js.Any])
+    if (authors != null) __obj.updateDynamic("authors")(authors.asInstanceOf[js.Any])
+    if (clipUrl != null) __obj.updateDynamic("clipUrl")(clipUrl.asInstanceOf[js.Any])
+    if (contact != null) __obj.updateDynamic("contact")(contact.asInstanceOf[js.Any])
+    if (contentId != null) __obj.updateDynamic("contentId")(contentId.asInstanceOf[js.Any])
+    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
+    if (!js.isUndefined(date)) __obj.updateDynamic("date")(date.get.asInstanceOf[js.Any])
+    if (sourceFaviconUrl != null) __obj.updateDynamic("sourceFaviconUrl")(sourceFaviconUrl.asInstanceOf[js.Any])
+    if (sourceId != null) __obj.updateDynamic("sourceId")(sourceId.asInstanceOf[js.Any])
+    if (sourceName != null) __obj.updateDynamic("sourceName")(sourceName.asInstanceOf[js.Any])
+    if (sourceUrl != null) __obj.updateDynamic("sourceUrl")(sourceUrl.asInstanceOf[js.Any])
+    if (teaser != null) __obj.updateDynamic("teaser")(teaser.asInstanceOf[js.Any])
+    if (thumbnails != null) __obj.updateDynamic("thumbnails")(thumbnails.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
+    if (visibleUrl != null) __obj.updateDynamic("visibleUrl")(visibleUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccessType]
   }
-  @scala.inline
-  implicit class AccessTypeOps[Self <: AccessType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessType(value: RelatedContentAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthors(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClipUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clipUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClipUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clipUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContact(value: Contact): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentType(value: RelatedContentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDate(value: Timestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceFaviconUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceFaviconUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceFaviconUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceFaviconUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTeaser(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("teaser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTeaser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("teaser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbnails(value: js.Array[RelatedContentImage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbnails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibleUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibleUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

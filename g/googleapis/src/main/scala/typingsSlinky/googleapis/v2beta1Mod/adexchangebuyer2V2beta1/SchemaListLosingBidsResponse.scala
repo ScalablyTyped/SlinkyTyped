@@ -24,41 +24,11 @@ trait SchemaListLosingBidsResponse extends js.Object {
 
 object SchemaListLosingBidsResponse {
   @scala.inline
-  def apply(): SchemaListLosingBidsResponse = {
+  def apply(creativeStatusRows: js.Array[SchemaCreativeStatusRow] = null, nextPageToken: String = null): SchemaListLosingBidsResponse = {
     val __obj = js.Dynamic.literal()
+    if (creativeStatusRows != null) __obj.updateDynamic("creativeStatusRows")(creativeStatusRows.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListLosingBidsResponse]
   }
-  @scala.inline
-  implicit class SchemaListLosingBidsResponseOps[Self <: SchemaListLosingBidsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreativeStatusRows(value: js.Array[SchemaCreativeStatusRow]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeStatusRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreativeStatusRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeStatusRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

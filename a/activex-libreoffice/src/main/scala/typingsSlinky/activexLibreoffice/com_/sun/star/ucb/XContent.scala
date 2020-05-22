@@ -13,40 +13,39 @@ import scala.scalajs.js.annotation._
   * @see XContentEventListener
   * @version 1.0
   */
-@js.native
 trait XContent extends XInterface {
   /**
     * returns a type string, which is unique for that type of content (e.g. "application/vnd.sun.star.hierarchy-folder").
     * @returns the content type string.
     */
-  val ContentType: String = js.native
+  val ContentType: String
   /**
     * returns the identifier of the content.
     * @returns the identifier.
     */
-  val Identifier: XContentIdentifier = js.native
+  val Identifier: XContentIdentifier
   /**
     * adds a listener for content events.
     * @param Listener the listener to add.
     * @see ContentEvent
     */
-  def addContentEventListener(Listener: XContentEventListener): Unit = js.native
+  def addContentEventListener(Listener: XContentEventListener): Unit
   /**
     * returns a type string, which is unique for that type of content (e.g. "application/vnd.sun.star.hierarchy-folder").
     * @returns the content type string.
     */
-  def getContentType(): String = js.native
+  def getContentType(): String
   /**
     * returns the identifier of the content.
     * @returns the identifier.
     */
-  def getIdentifier(): XContentIdentifier = js.native
+  def getIdentifier(): XContentIdentifier
   /**
     * removes a listener for content events.
     * @param Listener the listener to remove.
     * @see ContentEvent
     */
-  def removeContentEventListener(Listener: XContentEventListener): Unit = js.native
+  def removeContentEventListener(Listener: XContentEventListener): Unit
 }
 
 object XContent {
@@ -65,49 +64,5 @@ object XContent {
     val __obj = js.Dynamic.literal(ContentType = ContentType.asInstanceOf[js.Any], Identifier = Identifier.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addContentEventListener = js.Any.fromFunction1(addContentEventListener), getContentType = js.Any.fromFunction0(getContentType), getIdentifier = js.Any.fromFunction0(getIdentifier), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeContentEventListener = js.Any.fromFunction1(removeContentEventListener))
     __obj.asInstanceOf[XContent]
   }
-  @scala.inline
-  implicit class XContentOps[Self <: XContent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIdentifier(value: XContentIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Identifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddContentEventListener(value: XContentEventListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addContentEventListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetContentType(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContentType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetIdentifier(value: () => XContentIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getIdentifier")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveContentEventListener(value: XContentEventListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeContentEventListener")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

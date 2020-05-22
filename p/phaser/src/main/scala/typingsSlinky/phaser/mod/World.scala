@@ -3,6 +3,7 @@ package typingsSlinky.phaser.mod
 import typingsSlinky.phaser.MatterJS.BodyType
 import typingsSlinky.phaser.MatterJS.CompositeType
 import typingsSlinky.phaser.MatterJS.ConstraintType
+import typingsSlinky.phaser.MatterJS.Gravity
 import typingsSlinky.phaser.MatterJS.IWorldDefinition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +24,12 @@ import scala.scalajs.js.annotation._
 @JSImport("matter", "World")
 @js.native
 class World ()
-  extends typingsSlinky.phaser.MatterJS.World
+  extends typingsSlinky.phaser.MatterJS.World {
+  /* CompleteClass */
+  override var bounds: typingsSlinky.phaser.MatterJS.Bounds = js.native
+  /* CompleteClass */
+  override var gravity: Gravity = js.native
+}
 
 /* static members */
 @JSImport("matter", "World")

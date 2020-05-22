@@ -4,35 +4,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FileSystemInfo extends js.Object {
   /** A human-readable name for the file system. */
-  var displayName: String = js.native
+  var displayName: String
   /** The identifier of the file system. */
-  var fileSystemId: String = js.native
+  var fileSystemId: String
   /**
     * List of currently opened files.
     * @since Since Chrome 42.
     */
-  var openedFiles: js.Array[OpenedFileInfo] = js.native
+  var openedFiles: js.Array[OpenedFileInfo]
   /**
     * The maximum number of files that can be opened at once. If 0, then not limited.
     * @since Since Chrome 42.
     */
-  var openedFilesLimit: Double = js.native
+  var openedFilesLimit: Double
   /**
     * Optional.
     * Whether the file system supports the tag field for observing directories.
     * @since Since Chrome 45. Warning: this is the current Beta channel.
     */
-  var supportsNotifyTag: js.UndefOr[Boolean] = js.native
+  var supportsNotifyTag: js.UndefOr[Boolean] = js.undefined
   /**
     * List of watchers.
     * @since Since Chrome 45. Warning: this is the current Beta channel.
     */
-  var watchers: js.Array[FileWatchersInfo] = js.native
+  var watchers: js.Array[FileWatchersInfo]
   /** Whether the file system supports operations which may change contents of the file system (such as creating, deleting or writing to files). */
-  var writable: Boolean = js.native
+  var writable: Boolean
 }
 
 object FileSystemInfo {
@@ -43,66 +42,12 @@ object FileSystemInfo {
     openedFiles: js.Array[OpenedFileInfo],
     openedFilesLimit: Double,
     watchers: js.Array[FileWatchersInfo],
-    writable: Boolean
+    writable: Boolean,
+    supportsNotifyTag: js.UndefOr[Boolean] = js.undefined
   ): FileSystemInfo = {
     val __obj = js.Dynamic.literal(displayName = displayName.asInstanceOf[js.Any], fileSystemId = fileSystemId.asInstanceOf[js.Any], openedFiles = openedFiles.asInstanceOf[js.Any], openedFilesLimit = openedFilesLimit.asInstanceOf[js.Any], watchers = watchers.asInstanceOf[js.Any], writable = writable.asInstanceOf[js.Any])
+    if (!js.isUndefined(supportsNotifyTag)) __obj.updateDynamic("supportsNotifyTag")(supportsNotifyTag.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileSystemInfo]
   }
-  @scala.inline
-  implicit class FileSystemInfoOps[Self <: FileSystemInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFileSystemId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSystemId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpenedFiles(value: js.Array[OpenedFileInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openedFiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpenedFilesLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openedFilesLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWatchers(value: js.Array[FileWatchersInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("watchers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWritable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportsNotifyTag(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsNotifyTag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportsNotifyTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsNotifyTag")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * A table view is used to present information, organized in sections and rows, in a
-		 * vertically-scrolling view.
-		 */
+  * A table view is used to present information, organized in sections and rows, in a
+  * vertically-scrolling view.
+  */
 @JSGlobal("Titanium.UI.TableView")
 @js.native
 class TableView ()

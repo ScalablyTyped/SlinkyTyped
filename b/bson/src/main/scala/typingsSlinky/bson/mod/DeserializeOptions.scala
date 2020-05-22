@@ -5,149 +5,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeserializeOptions extends js.Object {
   /** {default:false}, allows the buffer to be larger than the parsed BSON object. */
-  var allowObjectSmallerThanBufferSize: js.UndefOr[Boolean] = js.native
+  var allowObjectSmallerThanBufferSize: js.UndefOr[Boolean] = js.undefined
   /** {default:false}, return BSON regular expressions as BSONRegExp instances. */
-  var bsonRegExp: js.UndefOr[Boolean] = js.native
+  var bsonRegExp: js.UndefOr[Boolean] = js.undefined
   /** {default:false}, cache evaluated functions for reuse. */
-  var cacheFunctions: js.UndefOr[Boolean] = js.native
+  var cacheFunctions: js.UndefOr[Boolean] = js.undefined
   /** {default:false}, use a crc32 code for caching, otherwise use the string of the function. */
-  var cacheFunctionsCrc32: js.UndefOr[Boolean] = js.native
+  var cacheFunctionsCrc32: js.UndefOr[Boolean] = js.undefined
   /** {default:false}, evaluate functions in the BSON document scoped to the object deserialized. */
-  var evalFunctions: js.UndefOr[Boolean] = js.native
+  var evalFunctions: js.UndefOr[Boolean] = js.undefined
   /** {default:null}, allow to specify if there what fields we wish to return as unserialized raw buffer. */
-  var fieldsAsRaw: js.UndefOr[StringDictionary[Boolean]] = js.native
+  var fieldsAsRaw: js.UndefOr[StringDictionary[Boolean]] = js.undefined
   /** {default:false}, deserialize Binary data directly into node.js Buffer object. */
-  var promoteBuffers: js.UndefOr[Boolean] = js.native
+  var promoteBuffers: js.UndefOr[Boolean] = js.undefined
   /** {default:true}, when deserializing a Long will fit it into a Number if it's smaller than 53 bits. */
-  var promoteLongs: js.UndefOr[Boolean] = js.native
+  var promoteLongs: js.UndefOr[Boolean] = js.undefined
   /** {default:false}, when deserializing will promote BSON values to their Node.js closest equivalent types. */
-  var promoteValues: js.UndefOr[Boolean] = js.native
+  var promoteValues: js.UndefOr[Boolean] = js.undefined
 }
 
 object DeserializeOptions {
   @scala.inline
-  def apply(): DeserializeOptions = {
+  def apply(
+    allowObjectSmallerThanBufferSize: js.UndefOr[Boolean] = js.undefined,
+    bsonRegExp: js.UndefOr[Boolean] = js.undefined,
+    cacheFunctions: js.UndefOr[Boolean] = js.undefined,
+    cacheFunctionsCrc32: js.UndefOr[Boolean] = js.undefined,
+    evalFunctions: js.UndefOr[Boolean] = js.undefined,
+    fieldsAsRaw: StringDictionary[Boolean] = null,
+    promoteBuffers: js.UndefOr[Boolean] = js.undefined,
+    promoteLongs: js.UndefOr[Boolean] = js.undefined,
+    promoteValues: js.UndefOr[Boolean] = js.undefined
+  ): DeserializeOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowObjectSmallerThanBufferSize)) __obj.updateDynamic("allowObjectSmallerThanBufferSize")(allowObjectSmallerThanBufferSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bsonRegExp)) __obj.updateDynamic("bsonRegExp")(bsonRegExp.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cacheFunctions)) __obj.updateDynamic("cacheFunctions")(cacheFunctions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cacheFunctionsCrc32)) __obj.updateDynamic("cacheFunctionsCrc32")(cacheFunctionsCrc32.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(evalFunctions)) __obj.updateDynamic("evalFunctions")(evalFunctions.get.asInstanceOf[js.Any])
+    if (fieldsAsRaw != null) __obj.updateDynamic("fieldsAsRaw")(fieldsAsRaw.asInstanceOf[js.Any])
+    if (!js.isUndefined(promoteBuffers)) __obj.updateDynamic("promoteBuffers")(promoteBuffers.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(promoteLongs)) __obj.updateDynamic("promoteLongs")(promoteLongs.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(promoteValues)) __obj.updateDynamic("promoteValues")(promoteValues.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeserializeOptions]
   }
-  @scala.inline
-  implicit class DeserializeOptionsOps[Self <: DeserializeOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowObjectSmallerThanBufferSize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowObjectSmallerThanBufferSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowObjectSmallerThanBufferSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowObjectSmallerThanBufferSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBsonRegExp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsonRegExp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBsonRegExp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bsonRegExp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCacheFunctions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheFunctions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheFunctions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheFunctions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCacheFunctionsCrc32(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheFunctionsCrc32")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheFunctionsCrc32: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheFunctionsCrc32")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvalFunctions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evalFunctions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvalFunctions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evalFunctions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFieldsAsRaw(value: StringDictionary[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldsAsRaw")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldsAsRaw: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldsAsRaw")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPromoteBuffers(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promoteBuffers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPromoteBuffers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promoteBuffers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPromoteLongs(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promoteLongs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPromoteLongs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promoteLongs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPromoteValues(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promoteValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPromoteValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promoteValues")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

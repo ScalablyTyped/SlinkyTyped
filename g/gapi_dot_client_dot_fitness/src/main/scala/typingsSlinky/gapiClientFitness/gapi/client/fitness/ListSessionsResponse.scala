@@ -4,82 +4,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListSessionsResponse extends js.Object {
   /**
     * If includeDeleted is set to true in the request, this list will contain sessions deleted with original end times that are within the startTime and
     * endTime frame.
     */
-  var deletedSession: js.UndefOr[js.Array[Session]] = js.native
+  var deletedSession: js.UndefOr[js.Array[Session]] = js.undefined
   /** Flag to indicate server has more data to transfer */
-  var hasMoreData: js.UndefOr[Boolean] = js.native
+  var hasMoreData: js.UndefOr[Boolean] = js.undefined
   /** The continuation token, which is used to page through large result sets. Provide this value in a subsequent request to return the next page of results. */
-  var nextPageToken: js.UndefOr[String] = js.native
+  var nextPageToken: js.UndefOr[String] = js.undefined
   /** Sessions with an end time that is between startTime and endTime of the request. */
-  var session: js.UndefOr[js.Array[Session]] = js.native
+  var session: js.UndefOr[js.Array[Session]] = js.undefined
 }
 
 object ListSessionsResponse {
   @scala.inline
-  def apply(): ListSessionsResponse = {
+  def apply(
+    deletedSession: js.Array[Session] = null,
+    hasMoreData: js.UndefOr[Boolean] = js.undefined,
+    nextPageToken: String = null,
+    session: js.Array[Session] = null
+  ): ListSessionsResponse = {
     val __obj = js.Dynamic.literal()
+    if (deletedSession != null) __obj.updateDynamic("deletedSession")(deletedSession.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasMoreData)) __obj.updateDynamic("hasMoreData")(hasMoreData.get.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
+    if (session != null) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListSessionsResponse]
   }
-  @scala.inline
-  implicit class ListSessionsResponseOps[Self <: ListSessionsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeletedSession(value: js.Array[Session]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletedSession")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeletedSession: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletedSession")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasMoreData(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasMoreData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasMoreData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasMoreData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSession(value: js.Array[Session]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSession: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

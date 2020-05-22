@@ -4,149 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OfferCustomer extends js.Object {
   /** URL to the customer's AdWords page. */
-  var adwordsUrl: js.UndefOr[String] = js.native
+  var adwordsUrl: js.UndefOr[String] = js.undefined
   /** Country code of the customer. */
-  var countryCode: js.UndefOr[String] = js.native
+  var countryCode: js.UndefOr[String] = js.undefined
   /** Time the customer was created. */
-  var creationTime: js.UndefOr[String] = js.native
+  var creationTime: js.UndefOr[String] = js.undefined
   /** Days the customer is still eligible. */
-  var eligibilityDaysLeft: js.UndefOr[Double] = js.native
+  var eligibilityDaysLeft: js.UndefOr[Double] = js.undefined
   /** External CID for the customer. */
-  var externalCid: js.UndefOr[String] = js.native
+  var externalCid: js.UndefOr[String] = js.undefined
   /** Formatted Get Y amount with currency code. */
-  var getYAmount: js.UndefOr[String] = js.native
+  var getYAmount: js.UndefOr[String] = js.undefined
   /** Name of the customer. */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /** Type of the offer */
-  var offerType: js.UndefOr[String] = js.native
+  var offerType: js.UndefOr[String] = js.undefined
   /** Formatted Spend X amount with currency code. */
-  var spendXAmount: js.UndefOr[String] = js.native
+  var spendXAmount: js.UndefOr[String] = js.undefined
 }
 
 object OfferCustomer {
   @scala.inline
-  def apply(): OfferCustomer = {
+  def apply(
+    adwordsUrl: String = null,
+    countryCode: String = null,
+    creationTime: String = null,
+    eligibilityDaysLeft: js.UndefOr[Double] = js.undefined,
+    externalCid: String = null,
+    getYAmount: String = null,
+    name: String = null,
+    offerType: String = null,
+    spendXAmount: String = null
+  ): OfferCustomer = {
     val __obj = js.Dynamic.literal()
+    if (adwordsUrl != null) __obj.updateDynamic("adwordsUrl")(adwordsUrl.asInstanceOf[js.Any])
+    if (countryCode != null) __obj.updateDynamic("countryCode")(countryCode.asInstanceOf[js.Any])
+    if (creationTime != null) __obj.updateDynamic("creationTime")(creationTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(eligibilityDaysLeft)) __obj.updateDynamic("eligibilityDaysLeft")(eligibilityDaysLeft.get.asInstanceOf[js.Any])
+    if (externalCid != null) __obj.updateDynamic("externalCid")(externalCid.asInstanceOf[js.Any])
+    if (getYAmount != null) __obj.updateDynamic("getYAmount")(getYAmount.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (offerType != null) __obj.updateDynamic("offerType")(offerType.asInstanceOf[js.Any])
+    if (spendXAmount != null) __obj.updateDynamic("spendXAmount")(spendXAmount.asInstanceOf[js.Any])
     __obj.asInstanceOf[OfferCustomer]
   }
-  @scala.inline
-  implicit class OfferCustomerOps[Self <: OfferCustomer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdwordsUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adwordsUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdwordsUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adwordsUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCountryCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countryCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCountryCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countryCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEligibilityDaysLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eligibilityDaysLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEligibilityDaysLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eligibilityDaysLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExternalCid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalCid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExternalCid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalCid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetYAmount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getYAmount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGetYAmount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getYAmount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOfferType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offerType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOfferType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offerType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpendXAmount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spendXAmount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpendXAmount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spendXAmount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait DownloadDefaultKeyPairResult extends js.Object {
 
 object DownloadDefaultKeyPairResult {
   @scala.inline
-  def apply(): DownloadDefaultKeyPairResult = {
+  def apply(privateKeyBase64: Base64 = null, publicKeyBase64: Base64 = null): DownloadDefaultKeyPairResult = {
     val __obj = js.Dynamic.literal()
+    if (privateKeyBase64 != null) __obj.updateDynamic("privateKeyBase64")(privateKeyBase64.asInstanceOf[js.Any])
+    if (publicKeyBase64 != null) __obj.updateDynamic("publicKeyBase64")(publicKeyBase64.asInstanceOf[js.Any])
     __obj.asInstanceOf[DownloadDefaultKeyPairResult]
   }
-  @scala.inline
-  implicit class DownloadDefaultKeyPairResultOps[Self <: DownloadDefaultKeyPairResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrivateKeyBase64(value: Base64): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateKeyBase64")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateKeyBase64: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateKeyBase64")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublicKeyBase64(value: Base64): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKeyBase64")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublicKeyBase64: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKeyBase64")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

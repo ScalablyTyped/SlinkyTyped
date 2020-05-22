@@ -11,5 +11,6 @@ package object storeMod {
     /* s */ typingsSlinky.storybookApi.mod.State, 
     typingsSlinky.storybookApi.storeMod.Patch
   ]
+  type InputPatch = typingsSlinky.storybookApi.storeMod.Patch | typingsSlinky.storybookApi.storeMod.InputFnPatch
   type SetState = js.Function2[/* a */ js.Any, /* b */ js.Any, js.Any]
 }

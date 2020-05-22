@@ -6,310 +6,133 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TiledObject extends js.Object {
   /**
     * Only set, and set to `true`, if a ellipse object.
     */
-  var ellipse: js.UndefOr[Boolean] = js.native
+  var ellipse: js.UndefOr[Boolean] = js.undefined
   /**
     * Only set if a tile object. The diagonal flip value.
     */
-  var flippedAntiDiagonal: js.UndefOr[Boolean] = js.native
+  var flippedAntiDiagonal: js.UndefOr[Boolean] = js.undefined
   /**
     * Only set if a tile object. The horizontal flip value.
     */
-  var flippedHorizontal: js.UndefOr[Boolean] = js.native
+  var flippedHorizontal: js.UndefOr[Boolean] = js.undefined
   /**
     * Only set if a tile object. The vertical flip value.
     */
-  var flippedVertical: js.UndefOr[Boolean] = js.native
+  var flippedVertical: js.UndefOr[Boolean] = js.undefined
   /**
     * Only set if of type 'tile'.
     */
-  var gid: js.UndefOr[integer] = js.native
+  var gid: js.UndefOr[integer] = js.undefined
   /**
     * The height of this object, in pixels.
     */
-  var height: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.undefined
   /**
     * The unique object ID.
     */
-  var id: integer = js.native
+  var id: integer
   /**
     * The name this object was assigned in Tiled.
     */
-  var name: String = js.native
+  var name: String
+  /**
+    * Only set, and set to `true`, if a point object.
+    */
+  var point: js.UndefOr[Boolean] = js.undefined
   /**
     * Only set if a polygon object. An array of objects corresponding to points, where each point has an `x` property and a `y` property.
     */
-  var polygon: js.UndefOr[js.Array[Vector2Like]] = js.native
+  var polygon: js.UndefOr[js.Array[Vector2Like]] = js.undefined
   /**
     * Only set if a polyline object. An array of objects corresponding to points, where each point has an `x` property and a `y` property.
     */
-  var polyline: js.UndefOr[js.Array[Vector2Like]] = js.native
+  var polyline: js.UndefOr[js.Array[Vector2Like]] = js.undefined
   /**
     * Custom properties object.
     */
-  var properties: js.UndefOr[js.Any] = js.native
+  var properties: js.UndefOr[js.Any] = js.undefined
   /**
     * Only set, and set to `true`, if a rectangle object.
     */
-  var rectangle: js.UndefOr[Boolean] = js.native
+  var rectangle: js.UndefOr[Boolean] = js.undefined
   /**
     * The rotation of the object in clockwise degrees.
     */
-  var rotation: js.UndefOr[Double] = js.native
+  var rotation: js.UndefOr[Double] = js.undefined
   /**
     * Only set if a text object. Contains the text objects properties.
     */
-  var text: js.UndefOr[js.Any] = js.native
+  var text: js.UndefOr[js.Any] = js.undefined
   /**
     * The type, as assigned in Tiled.
     */
-  var `type`: String = js.native
+  var `type`: String
   /**
     * The visible state of this object.
     */
-  var visible: js.UndefOr[Boolean] = js.native
+  var visible: js.UndefOr[Boolean] = js.undefined
   /**
     * The width of this object, in pixels.
     */
-  var width: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.undefined
   /**
     * The horizontal position of this object, in pixels, relative to the tilemap.
     */
-  var x: js.UndefOr[Double] = js.native
+  var x: js.UndefOr[Double] = js.undefined
   /**
     * The vertical position of this object, in pixels, relative to the tilemap.
     */
-  var y: js.UndefOr[Double] = js.native
+  var y: js.UndefOr[Double] = js.undefined
 }
 
 object TiledObject {
   @scala.inline
-  def apply(id: integer, name: String, `type`: String): TiledObject = {
+  def apply(
+    id: integer,
+    name: String,
+    `type`: String,
+    ellipse: js.UndefOr[Boolean] = js.undefined,
+    flippedAntiDiagonal: js.UndefOr[Boolean] = js.undefined,
+    flippedHorizontal: js.UndefOr[Boolean] = js.undefined,
+    flippedVertical: js.UndefOr[Boolean] = js.undefined,
+    gid: js.UndefOr[integer] = js.undefined,
+    height: js.UndefOr[Double] = js.undefined,
+    point: js.UndefOr[Boolean] = js.undefined,
+    polygon: js.Array[Vector2Like] = null,
+    polyline: js.Array[Vector2Like] = null,
+    properties: js.Any = null,
+    rectangle: js.UndefOr[Boolean] = js.undefined,
+    rotation: js.UndefOr[Double] = js.undefined,
+    text: js.Any = null,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined,
+    x: js.UndefOr[Double] = js.undefined,
+    y: js.UndefOr[Double] = js.undefined
+  ): TiledObject = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(ellipse)) __obj.updateDynamic("ellipse")(ellipse.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(flippedAntiDiagonal)) __obj.updateDynamic("flippedAntiDiagonal")(flippedAntiDiagonal.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(flippedHorizontal)) __obj.updateDynamic("flippedHorizontal")(flippedHorizontal.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(flippedVertical)) __obj.updateDynamic("flippedVertical")(flippedVertical.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(gid)) __obj.updateDynamic("gid")(gid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(point)) __obj.updateDynamic("point")(point.get.asInstanceOf[js.Any])
+    if (polygon != null) __obj.updateDynamic("polygon")(polygon.asInstanceOf[js.Any])
+    if (polyline != null) __obj.updateDynamic("polyline")(polyline.asInstanceOf[js.Any])
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
+    if (!js.isUndefined(rectangle)) __obj.updateDynamic("rectangle")(rectangle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rotation)) __obj.updateDynamic("rotation")(rotation.get.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(x)) __obj.updateDynamic("x")(x.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(y)) __obj.updateDynamic("y")(y.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TiledObject]
   }
-  @scala.inline
-  implicit class TiledObjectOps[Self <: TiledObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEllipse(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEllipse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlippedAntiDiagonal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flippedAntiDiagonal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlippedAntiDiagonal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flippedAntiDiagonal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlippedHorizontal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flippedHorizontal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlippedHorizontal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flippedHorizontal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlippedVertical(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flippedVertical")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlippedVertical: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flippedVertical")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGid(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolygon(value: js.Array[Vector2Like]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polygon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolygon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polygon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolyline(value: js.Array[Vector2Like]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polyline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolyline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polyline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRectangle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rectangle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRectangle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rectangle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,16 +5,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-	 * An event signaling the start of a task execution.
-	 *
-	 * This interface is not intended to be implemented.
-	 */
-@js.native
+  * An event signaling the start of a task execution.
+  *
+  * This interface is not intended to be implemented.
+  */
 trait TaskStartEvent extends js.Object {
   /**
-  		 * The task item representing the task that got started.
-  		 */
-  val execution: TaskExecution = js.native
+    * The task item representing the task that got started.
+    */
+  val execution: TaskExecution
 }
 
 object TaskStartEvent {
@@ -23,19 +22,5 @@ object TaskStartEvent {
     val __obj = js.Dynamic.literal(execution = execution.asInstanceOf[js.Any])
     __obj.asInstanceOf[TaskStartEvent]
   }
-  @scala.inline
-  implicit class TaskStartEventOps[Self <: TaskStartEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecution(value: TaskExecution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execution")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

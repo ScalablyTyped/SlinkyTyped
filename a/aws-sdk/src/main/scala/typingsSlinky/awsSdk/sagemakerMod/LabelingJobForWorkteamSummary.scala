@@ -34,71 +34,19 @@ trait LabelingJobForWorkteamSummary extends js.Object {
 
 object LabelingJobForWorkteamSummary {
   @scala.inline
-  def apply(CreationTime: js.Date, JobReferenceCode: JobReferenceCode, WorkRequesterAccountId: AccountId): LabelingJobForWorkteamSummary = {
+  def apply(
+    CreationTime: js.Date,
+    JobReferenceCode: JobReferenceCode,
+    WorkRequesterAccountId: AccountId,
+    LabelCounters: LabelCountersForWorkteam = null,
+    LabelingJobName: LabelingJobName = null,
+    NumberOfHumanWorkersPerDataObject: js.UndefOr[NumberOfHumanWorkersPerDataObject] = js.undefined
+  ): LabelingJobForWorkteamSummary = {
     val __obj = js.Dynamic.literal(CreationTime = CreationTime.asInstanceOf[js.Any], JobReferenceCode = JobReferenceCode.asInstanceOf[js.Any], WorkRequesterAccountId = WorkRequesterAccountId.asInstanceOf[js.Any])
+    if (LabelCounters != null) __obj.updateDynamic("LabelCounters")(LabelCounters.asInstanceOf[js.Any])
+    if (LabelingJobName != null) __obj.updateDynamic("LabelingJobName")(LabelingJobName.asInstanceOf[js.Any])
+    if (!js.isUndefined(NumberOfHumanWorkersPerDataObject)) __obj.updateDynamic("NumberOfHumanWorkersPerDataObject")(NumberOfHumanWorkersPerDataObject.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[LabelingJobForWorkteamSummary]
   }
-  @scala.inline
-  implicit class LabelingJobForWorkteamSummaryOps[Self <: LabelingJobForWorkteamSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJobReferenceCode(value: JobReferenceCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobReferenceCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorkRequesterAccountId(value: AccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkRequesterAccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabelCounters(value: LabelCountersForWorkteam): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelCounters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelCounters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelCounters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelingJobName(value: LabelingJobName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelingJobName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelingJobName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelingJobName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfHumanWorkersPerDataObject(value: NumberOfHumanWorkersPerDataObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfHumanWorkersPerDataObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfHumanWorkersPerDataObject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfHumanWorkersPerDataObject")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

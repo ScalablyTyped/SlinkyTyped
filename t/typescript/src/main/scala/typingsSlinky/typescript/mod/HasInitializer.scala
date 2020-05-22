@@ -13,16 +13,3 @@ import scala.scalajs.js.annotation._
 */
 trait HasInitializer extends js.Object
 
-object HasInitializer {
-  @scala.inline
-  implicit def apply(value: ForInStatement): HasInitializer = value.asInstanceOf[HasInitializer]
-  @scala.inline
-  implicit def apply(value: ForOfStatement): HasInitializer = value.asInstanceOf[HasInitializer]
-  @scala.inline
-  implicit def apply(value: ForStatement): HasInitializer = value.asInstanceOf[HasInitializer]
-  @scala.inline
-  implicit def apply(value: HasExpressionInitializer): HasInitializer = value.asInstanceOf[HasInitializer]
-  @scala.inline
-  implicit def apply(value: JsxAttribute): HasInitializer = value.asInstanceOf[HasInitializer]
-}
-

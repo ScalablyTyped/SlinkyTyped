@@ -18,41 +18,14 @@ trait GetRegionsRequest extends js.Object {
 
 object GetRegionsRequest {
   @scala.inline
-  def apply(): GetRegionsRequest = {
+  def apply(
+    includeAvailabilityZones: js.UndefOr[Boolean] = js.undefined,
+    includeRelationalDatabaseAvailabilityZones: js.UndefOr[Boolean] = js.undefined
+  ): GetRegionsRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(includeAvailabilityZones)) __obj.updateDynamic("includeAvailabilityZones")(includeAvailabilityZones.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeRelationalDatabaseAvailabilityZones)) __obj.updateDynamic("includeRelationalDatabaseAvailabilityZones")(includeRelationalDatabaseAvailabilityZones.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRegionsRequest]
   }
-  @scala.inline
-  implicit class GetRegionsRequestOps[Self <: GetRegionsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIncludeAvailabilityZones(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeAvailabilityZones")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeAvailabilityZones: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeAvailabilityZones")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeRelationalDatabaseAvailabilityZones(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeRelationalDatabaseAvailabilityZones")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeRelationalDatabaseAvailabilityZones: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeRelationalDatabaseAvailabilityZones")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

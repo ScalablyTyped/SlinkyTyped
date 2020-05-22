@@ -38,77 +38,20 @@ trait SchemaCustomMetric extends js.Object {
 
 object SchemaCustomMetric {
   @scala.inline
-  def apply(): SchemaCustomMetric = {
+  def apply(
+    filter: String = null,
+    metricName: String = null,
+    singleInstanceAssignment: js.UndefOr[Double] = js.undefined,
+    targetType: String = null,
+    targetUtilization: js.UndefOr[Double] = js.undefined
+  ): SchemaCustomMetric = {
     val __obj = js.Dynamic.literal()
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+    if (metricName != null) __obj.updateDynamic("metricName")(metricName.asInstanceOf[js.Any])
+    if (!js.isUndefined(singleInstanceAssignment)) __obj.updateDynamic("singleInstanceAssignment")(singleInstanceAssignment.get.asInstanceOf[js.Any])
+    if (targetType != null) __obj.updateDynamic("targetType")(targetType.asInstanceOf[js.Any])
+    if (!js.isUndefined(targetUtilization)) __obj.updateDynamic("targetUtilization")(targetUtilization.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCustomMetric]
   }
-  @scala.inline
-  implicit class SchemaCustomMetricOps[Self <: SchemaCustomMetric] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetricName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSingleInstanceAssignment(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleInstanceAssignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSingleInstanceAssignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleInstanceAssignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetUtilization(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetUtilization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetUtilization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetUtilization")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

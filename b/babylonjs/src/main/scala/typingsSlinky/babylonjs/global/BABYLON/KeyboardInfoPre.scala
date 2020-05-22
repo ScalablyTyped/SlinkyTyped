@@ -25,5 +25,20 @@ class KeyboardInfoPre protected ()
     */
   event: KeyboardEvent
   ) = this()
+  /**
+    * Defines the related dom event
+    */
+  /* CompleteClass */
+  override var event: KeyboardEvent = js.native
+  /**
+    * Defines whether the engine should skip the next onKeyboardObservable associated to this pre.
+    */
+  /* CompleteClass */
+  override var skipOnPointerObservable: Boolean = js.native
+  /**
+    * Defines the type of event (KeyboardEventTypes)
+    */
+  /* CompleteClass */
+  override var `type`: Double = js.native
 }
 

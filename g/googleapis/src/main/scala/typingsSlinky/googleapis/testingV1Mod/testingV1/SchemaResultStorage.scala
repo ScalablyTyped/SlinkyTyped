@@ -27,53 +27,16 @@ trait SchemaResultStorage extends js.Object {
 
 object SchemaResultStorage {
   @scala.inline
-  def apply(): SchemaResultStorage = {
+  def apply(
+    googleCloudStorage: SchemaGoogleCloudStorage = null,
+    toolResultsExecution: SchemaToolResultsExecution = null,
+    toolResultsHistory: SchemaToolResultsHistory = null
+  ): SchemaResultStorage = {
     val __obj = js.Dynamic.literal()
+    if (googleCloudStorage != null) __obj.updateDynamic("googleCloudStorage")(googleCloudStorage.asInstanceOf[js.Any])
+    if (toolResultsExecution != null) __obj.updateDynamic("toolResultsExecution")(toolResultsExecution.asInstanceOf[js.Any])
+    if (toolResultsHistory != null) __obj.updateDynamic("toolResultsHistory")(toolResultsHistory.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaResultStorage]
   }
-  @scala.inline
-  implicit class SchemaResultStorageOps[Self <: SchemaResultStorage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGoogleCloudStorage(value: SchemaGoogleCloudStorage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googleCloudStorage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGoogleCloudStorage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googleCloudStorage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToolResultsExecution(value: SchemaToolResultsExecution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolResultsExecution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolResultsExecution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolResultsExecution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToolResultsHistory(value: SchemaToolResultsHistory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolResultsHistory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolResultsHistory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolResultsHistory")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

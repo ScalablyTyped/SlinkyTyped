@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-sealed trait InternalSymbolName extends String
+sealed trait InternalSymbolName extends js.Object
 
 @JSImport("typescript", "InternalSymbolName")
 @js.native

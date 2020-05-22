@@ -7,18 +7,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Interface to be implemented in order to support listener management. */
-@js.native
 trait XFilePickerNotifier extends XInterface {
   /**
     * Interface for clients to register as {@link XFilePickerListener}
     * @param xListener The {@link XFilePickerListener} interface of the listener that wants to receive events of type {@link FilePickerEvent} . Invalid interf
     */
-  def addFilePickerListener(xListener: XFilePickerListener): Unit = js.native
+  def addFilePickerListener(xListener: XFilePickerListener): Unit
   /**
     * Interface for clients to unregister as {@link XFilePickerListener} .
     * @param xListener The {@link XFilePickerListener} interface of the listener that wants to receive events of type {@link FilePickerEvent} . Invalid interf
     */
-  def removeFilePickerListener(xListener: XFilePickerListener): Unit = js.native
+  def removeFilePickerListener(xListener: XFilePickerListener): Unit
 }
 
 object XFilePickerNotifier {
@@ -33,25 +32,5 @@ object XFilePickerNotifier {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addFilePickerListener = js.Any.fromFunction1(addFilePickerListener), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeFilePickerListener = js.Any.fromFunction1(removeFilePickerListener))
     __obj.asInstanceOf[XFilePickerNotifier]
   }
-  @scala.inline
-  implicit class XFilePickerNotifierOps[Self <: XFilePickerNotifier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddFilePickerListener(value: XFilePickerListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addFilePickerListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveFilePickerListener(value: XFilePickerListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeFilePickerListener")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -6,15 +6,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KIND extends js.Object {
-  var accent: typingsSlinky.baseui.baseuiStrings.accent = js.native
-  var custom: custom_ = js.native
-  var negative: typingsSlinky.baseui.baseuiStrings.negative = js.native
-  var neutral: typingsSlinky.baseui.baseuiStrings.neutral = js.native
-  var positive: typingsSlinky.baseui.baseuiStrings.positive = js.native
-  var primary: typingsSlinky.baseui.baseuiStrings.primary = js.native
-  var warning: typingsSlinky.baseui.baseuiStrings.warning = js.native
+  var accent: typingsSlinky.baseui.baseuiStrings.accent
+  var custom: custom_
+  var negative: typingsSlinky.baseui.baseuiStrings.negative
+  var neutral: typingsSlinky.baseui.baseuiStrings.neutral
+  var positive: typingsSlinky.baseui.baseuiStrings.positive
+  var primary: typingsSlinky.baseui.baseuiStrings.primary
+  var warning: typingsSlinky.baseui.baseuiStrings.warning
 }
 
 @JSImport("baseui/tag", "KIND")

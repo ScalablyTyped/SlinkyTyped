@@ -1,62 +1,73 @@
 package typingsSlinky.fineUploader.mod
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.fineUploader.coreMod.BlobsOptions
+import typingsSlinky.fineUploader.coreMod.CameraOptions
+import typingsSlinky.fineUploader.coreMod.ChunkingOptions
+import typingsSlinky.fineUploader.coreMod.CoreEvents
 import typingsSlinky.fineUploader.coreMod.CoreOptions
+import typingsSlinky.fineUploader.coreMod.CorsOptions
+import typingsSlinky.fineUploader.coreMod.ExtraButtonsOptions
+import typingsSlinky.fineUploader.coreMod.FormOptions
 import typingsSlinky.fineUploader.coreMod.PromiseOptions
+import typingsSlinky.fineUploader.coreMod.RequestOptions
+import typingsSlinky.fineUploader.coreMod.ResumeOptions
+import typingsSlinky.fineUploader.coreMod.SessionOptions
+import typingsSlinky.fineUploader.coreMod.ValidationOptions
+import typingsSlinky.fineUploader.coreMod.WorkArounds
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UIOptions extends CoreOptions {
   /**
     * UIDeleteFileOptions
     */
   @JSName("deleteFile")
-  var deleteFile_UIOptions: js.UndefOr[UIDeleteFileOptions] = js.native
+  var deleteFile_UIOptions: js.UndefOr[UIDeleteFileOptions] = js.undefined
   /**
     * display options
     */
-  var display: js.UndefOr[UIDisplayOptions] = js.native
+  var display: js.UndefOr[UIDisplayOptions] = js.undefined
   /**
     * dragAndDrop options
     */
-  var dragAndDrop: js.UndefOr[UIDragAndDropOptions] = js.native
+  var dragAndDrop: js.UndefOr[UIDragAndDropOptions] = js.undefined
   /**
     * Container element for the default drop zone
     *
     * @default `null`
     */
-  var element: js.UndefOr[HTMLElement] = js.native
+  var element: js.UndefOr[HTMLElement] = js.undefined
   /**
     * failedUploadTextDisplay options
     */
-  var failedUploadTextDisplay: js.UndefOr[UIFailedUploadTextDisplay] = js.native
+  var failedUploadTextDisplay: js.UndefOr[UIFailedUploadTextDisplay] = js.undefined
   /**
     * Container element for the item list
     *
     * @default `null`
     */
-  var listElement: js.UndefOr[HTMLElement] = js.native
+  var listElement: js.UndefOr[HTMLElement] = js.undefined
   /**
     * messages
     */
   @JSName("messages")
-  var messages_UIOptions: js.UndefOr[UIMessages] = js.native
+  var messages_UIOptions: js.UndefOr[UIMessages] = js.undefined
   /**
     * paste UI options
     */
   @JSName("paste")
-  var paste_UIOptions: js.UndefOr[UIPasteOptions] = js.native
+  var paste_UIOptions: js.UndefOr[UIPasteOptions] = js.undefined
   /**
     * retry options
     */
-  var retry: js.UndefOr[UIRetryOptions] = js.native
+  var retry: js.UndefOr[UIRetryOptions] = js.undefined
   /**
     * UI scaling options
     */
   @JSName("scaling")
-  var scaling_UIOptions: js.UndefOr[UIScalingOptions] = js.native
+  var scaling_UIOptions: js.UndefOr[UIScalingOptions] = js.undefined
   /**
     * Provide a function here to prompt the user to confirm deletion of a file.
     *
@@ -64,7 +75,7 @@ trait UIOptions extends CoreOptions {
     *
     * @default `function(message) { window.confirm(message); }`
     */
-  var showConfirm: js.UndefOr[ShowConfirmFunction] = js.native
+  var showConfirm: js.UndefOr[ShowConfirmFunction] = js.undefined
   /**
     * Provide a function here to display a message to the user when the uploader receives an error or the user attempts to leave the page.
     *
@@ -72,7 +83,7 @@ trait UIOptions extends CoreOptions {
     *
     * @default `function(message) { window.alert(message); }`
     */
-  var showMessage: js.UndefOr[ShowMessageFunction] = js.native
+  var showMessage: js.UndefOr[ShowMessageFunction] = js.undefined
   /**
     * Provide a function here to prompt the user for a filename when pasting file(s).
     *
@@ -80,7 +91,7 @@ trait UIOptions extends CoreOptions {
     *
     * @default `function(message, defaultValue) { window.prompt(message, defaultValue); }`
     */
-  var showPrompt: js.UndefOr[ShowPromptFunction] = js.native
+  var showPrompt: js.UndefOr[ShowPromptFunction] = js.undefined
   /**
     * This points to the container element that contains the template to use for one or more Fine Uploader UI instances.
     *
@@ -88,229 +99,96 @@ trait UIOptions extends CoreOptions {
     *
     * @default `'qq-template'`
     */
-  var template: js.UndefOr[String | HTMLElement] = js.native
+  var template: js.UndefOr[String | HTMLElement] = js.undefined
   /**
     * UI text options
     */
   @JSName("text")
-  var text_UIOptions: js.UndefOr[UITextOptions] = js.native
+  var text_UIOptions: js.UndefOr[UITextOptions] = js.undefined
   /**
     * thumbnail options
     */
-  var thumbnails: js.UndefOr[UIThumbnailsOptions] = js.native
+  var thumbnails: js.UndefOr[UIThumbnailsOptions] = js.undefined
 }
 
 object UIOptions {
   @scala.inline
-  def apply(): UIOptions = {
+  def apply(
+    autoUpload: js.UndefOr[Boolean] = js.undefined,
+    blobs: BlobsOptions = null,
+    button: HTMLElement = null,
+    callbacks: CoreEvents = null,
+    camera: CameraOptions = null,
+    chunking: ChunkingOptions = null,
+    cors: CorsOptions = null,
+    debug: js.UndefOr[Boolean] = js.undefined,
+    deleteFile: UIDeleteFileOptions = null,
+    disableCancelForFormUploads: js.UndefOr[Boolean] = js.undefined,
+    display: UIDisplayOptions = null,
+    dragAndDrop: UIDragAndDropOptions = null,
+    element: HTMLElement = null,
+    extraButtons: js.Array[ExtraButtonsOptions] = null,
+    failedUploadTextDisplay: UIFailedUploadTextDisplay = null,
+    form: FormOptions = null,
+    formatFileName: /* fileOrBlobName */ String => String = null,
+    listElement: HTMLElement = null,
+    maxConnections: js.UndefOr[Double] = js.undefined,
+    messages: UIMessages = null,
+    multiple: js.UndefOr[Boolean] = js.undefined,
+    paste: UIPasteOptions = null,
+    request: RequestOptions = null,
+    resume: ResumeOptions = null,
+    retry: UIRetryOptions = null,
+    scaling: UIScalingOptions = null,
+    session: SessionOptions = null,
+    showConfirm: /* message */ String => PromiseOptions | Unit = null,
+    showMessage: /* message */ String => PromiseOptions | Unit = null,
+    showPrompt: (/* message */ String, /* defaultValue */ String) => PromiseOptions | Unit = null,
+    template: String | HTMLElement = null,
+    text: UITextOptions = null,
+    thumbnails: UIThumbnailsOptions = null,
+    validation: ValidationOptions = null,
+    warnBeforeUnload: js.UndefOr[Boolean] = js.undefined,
+    workarounds: WorkArounds = null
+  ): UIOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoUpload)) __obj.updateDynamic("autoUpload")(autoUpload.get.asInstanceOf[js.Any])
+    if (blobs != null) __obj.updateDynamic("blobs")(blobs.asInstanceOf[js.Any])
+    if (button != null) __obj.updateDynamic("button")(button.asInstanceOf[js.Any])
+    if (callbacks != null) __obj.updateDynamic("callbacks")(callbacks.asInstanceOf[js.Any])
+    if (camera != null) __obj.updateDynamic("camera")(camera.asInstanceOf[js.Any])
+    if (chunking != null) __obj.updateDynamic("chunking")(chunking.asInstanceOf[js.Any])
+    if (cors != null) __obj.updateDynamic("cors")(cors.asInstanceOf[js.Any])
+    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.get.asInstanceOf[js.Any])
+    if (deleteFile != null) __obj.updateDynamic("deleteFile")(deleteFile.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableCancelForFormUploads)) __obj.updateDynamic("disableCancelForFormUploads")(disableCancelForFormUploads.get.asInstanceOf[js.Any])
+    if (display != null) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
+    if (dragAndDrop != null) __obj.updateDynamic("dragAndDrop")(dragAndDrop.asInstanceOf[js.Any])
+    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
+    if (extraButtons != null) __obj.updateDynamic("extraButtons")(extraButtons.asInstanceOf[js.Any])
+    if (failedUploadTextDisplay != null) __obj.updateDynamic("failedUploadTextDisplay")(failedUploadTextDisplay.asInstanceOf[js.Any])
+    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
+    if (formatFileName != null) __obj.updateDynamic("formatFileName")(js.Any.fromFunction1(formatFileName))
+    if (listElement != null) __obj.updateDynamic("listElement")(listElement.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxConnections)) __obj.updateDynamic("maxConnections")(maxConnections.get.asInstanceOf[js.Any])
+    if (messages != null) __obj.updateDynamic("messages")(messages.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiple)) __obj.updateDynamic("multiple")(multiple.get.asInstanceOf[js.Any])
+    if (paste != null) __obj.updateDynamic("paste")(paste.asInstanceOf[js.Any])
+    if (request != null) __obj.updateDynamic("request")(request.asInstanceOf[js.Any])
+    if (resume != null) __obj.updateDynamic("resume")(resume.asInstanceOf[js.Any])
+    if (retry != null) __obj.updateDynamic("retry")(retry.asInstanceOf[js.Any])
+    if (scaling != null) __obj.updateDynamic("scaling")(scaling.asInstanceOf[js.Any])
+    if (session != null) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
+    if (showConfirm != null) __obj.updateDynamic("showConfirm")(js.Any.fromFunction1(showConfirm))
+    if (showMessage != null) __obj.updateDynamic("showMessage")(js.Any.fromFunction1(showMessage))
+    if (showPrompt != null) __obj.updateDynamic("showPrompt")(js.Any.fromFunction2(showPrompt))
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (thumbnails != null) __obj.updateDynamic("thumbnails")(thumbnails.asInstanceOf[js.Any])
+    if (validation != null) __obj.updateDynamic("validation")(validation.asInstanceOf[js.Any])
+    if (!js.isUndefined(warnBeforeUnload)) __obj.updateDynamic("warnBeforeUnload")(warnBeforeUnload.get.asInstanceOf[js.Any])
+    if (workarounds != null) __obj.updateDynamic("workarounds")(workarounds.asInstanceOf[js.Any])
     __obj.asInstanceOf[UIOptions]
   }
-  @scala.inline
-  implicit class UIOptionsOps[Self <: UIOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeleteFile(value: UIDeleteFileOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplay(value: UIDisplayOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragAndDrop(value: UIDragAndDropOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragAndDrop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragAndDrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragAndDrop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailedUploadTextDisplay(value: UIFailedUploadTextDisplay): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failedUploadTextDisplay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailedUploadTextDisplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failedUploadTextDisplay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessages(value: UIMessages): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaste(value: UIPasteOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paste")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaste: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paste")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetry(value: UIRetryOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retry")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaling(value: UIScalingOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowConfirm(value: /* message */ String => PromiseOptions | Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showConfirm")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutShowConfirm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showConfirm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowMessage(value: /* message */ String => PromiseOptions | Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMessage")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutShowMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowPrompt(value: (/* message */ String, /* defaultValue */ String) => PromiseOptions | Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showPrompt")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutShowPrompt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showPrompt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateHTMLElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: String | HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: UITextOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbnails(value: UIThumbnailsOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbnails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnails")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -30,77 +30,20 @@ trait VmServer extends js.Object {
 
 object VmServer {
   @scala.inline
-  def apply(): VmServer = {
+  def apply(
+    vmManagerName: VmManagerName = null,
+    vmManagerType: VmManagerType = null,
+    vmName: VmName = null,
+    vmPath: VmPath = null,
+    vmServerAddress: VmServerAddress = null
+  ): VmServer = {
     val __obj = js.Dynamic.literal()
+    if (vmManagerName != null) __obj.updateDynamic("vmManagerName")(vmManagerName.asInstanceOf[js.Any])
+    if (vmManagerType != null) __obj.updateDynamic("vmManagerType")(vmManagerType.asInstanceOf[js.Any])
+    if (vmName != null) __obj.updateDynamic("vmName")(vmName.asInstanceOf[js.Any])
+    if (vmPath != null) __obj.updateDynamic("vmPath")(vmPath.asInstanceOf[js.Any])
+    if (vmServerAddress != null) __obj.updateDynamic("vmServerAddress")(vmServerAddress.asInstanceOf[js.Any])
     __obj.asInstanceOf[VmServer]
   }
-  @scala.inline
-  implicit class VmServerOps[Self <: VmServer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVmManagerName(value: VmManagerName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vmManagerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVmManagerName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vmManagerName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVmManagerType(value: VmManagerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vmManagerType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVmManagerType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vmManagerType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVmName(value: VmName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vmName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVmName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vmName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVmPath(value: VmPath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vmPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVmPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vmPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVmServerAddress(value: VmServerAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vmServerAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVmServerAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vmServerAddress")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

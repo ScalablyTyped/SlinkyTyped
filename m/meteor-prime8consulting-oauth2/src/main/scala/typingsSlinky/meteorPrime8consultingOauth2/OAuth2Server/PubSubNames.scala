@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PubSubNames extends js.Object {
   /**
     * Constant string representing the auth codes pub/sub.
     */
-  var authCodes: String = js.native
+  var authCodes: String
   /**
     * Constant string representing the refresh token pub/sub.
     */
-  var refreshTokens: String = js.native
+  var refreshTokens: String
 }
 
 object PubSubNames {
@@ -22,25 +21,5 @@ object PubSubNames {
     val __obj = js.Dynamic.literal(authCodes = authCodes.asInstanceOf[js.Any], refreshTokens = refreshTokens.asInstanceOf[js.Any])
     __obj.asInstanceOf[PubSubNames]
   }
-  @scala.inline
-  implicit class PubSubNamesOps[Self <: PubSubNames] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthCodes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authCodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRefreshTokens(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshTokens")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

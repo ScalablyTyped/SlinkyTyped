@@ -34,83 +34,21 @@ trait ProductionVariantSummary extends js.Object {
 
 object ProductionVariantSummary {
   @scala.inline
-  def apply(VariantName: VariantName): ProductionVariantSummary = {
+  def apply(
+    VariantName: VariantName,
+    CurrentInstanceCount: js.UndefOr[TaskCount] = js.undefined,
+    CurrentWeight: js.UndefOr[VariantWeight] = js.undefined,
+    DeployedImages: DeployedImages = null,
+    DesiredInstanceCount: js.UndefOr[TaskCount] = js.undefined,
+    DesiredWeight: js.UndefOr[VariantWeight] = js.undefined
+  ): ProductionVariantSummary = {
     val __obj = js.Dynamic.literal(VariantName = VariantName.asInstanceOf[js.Any])
+    if (!js.isUndefined(CurrentInstanceCount)) __obj.updateDynamic("CurrentInstanceCount")(CurrentInstanceCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(CurrentWeight)) __obj.updateDynamic("CurrentWeight")(CurrentWeight.get.asInstanceOf[js.Any])
+    if (DeployedImages != null) __obj.updateDynamic("DeployedImages")(DeployedImages.asInstanceOf[js.Any])
+    if (!js.isUndefined(DesiredInstanceCount)) __obj.updateDynamic("DesiredInstanceCount")(DesiredInstanceCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DesiredWeight)) __obj.updateDynamic("DesiredWeight")(DesiredWeight.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProductionVariantSummary]
   }
-  @scala.inline
-  implicit class ProductionVariantSummaryOps[Self <: ProductionVariantSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVariantName(value: VariantName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VariantName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrentInstanceCount(value: TaskCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentInstanceCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentInstanceCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentInstanceCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentWeight(value: VariantWeight): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentWeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentWeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeployedImages(value: DeployedImages): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeployedImages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeployedImages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeployedImages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDesiredInstanceCount(value: TaskCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredInstanceCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDesiredInstanceCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredInstanceCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDesiredWeight(value: VariantWeight): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredWeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDesiredWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredWeight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

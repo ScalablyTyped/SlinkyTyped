@@ -12,6 +12,7 @@ package object mod {
     typingsSlinky.wouter.mod.LocationTuple
   ]
   type LocationTuple = js.Tuple2[typingsSlinky.wouter.mod.Path, typingsSlinky.wouter.mod.PushCallback]
+  type Match[T /* <: typingsSlinky.wouter.mod.DefaultParams */] = typingsSlinky.wouter.mod.MatchWithParams[T] | typingsSlinky.wouter.mod.NoMatch
   type MatchWithParams[T /* <: typingsSlinky.wouter.mod.DefaultParams */] = js.Tuple2[typingsSlinky.wouter.wouterBooleans.`true`, typingsSlinky.wouter.mod.Params[T]]
   type MatcherFn = js.Function2[
     /* pattern */ typingsSlinky.wouter.mod.Path, 

@@ -6,114 +6,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TasksListParams extends GenericParams {
-  var actions: js.UndefOr[NameList] = js.native
-  var detailed: js.UndefOr[Boolean] = js.native
-  var groupBy: js.UndefOr[nodes | parents] = js.native
-  var nodeId: js.UndefOr[NameList] = js.native
-  var parentNode: js.UndefOr[String] = js.native
-  var parentTask: js.UndefOr[String] = js.native
-  var waitForCompletion: js.UndefOr[Boolean] = js.native
+  var actions: js.UndefOr[NameList] = js.undefined
+  var detailed: js.UndefOr[Boolean] = js.undefined
+  var groupBy: js.UndefOr[nodes | parents] = js.undefined
+  var nodeId: js.UndefOr[NameList] = js.undefined
+  var parentNode: js.UndefOr[String] = js.undefined
+  var parentTask: js.UndefOr[String] = js.undefined
+  var waitForCompletion: js.UndefOr[Boolean] = js.undefined
 }
 
 object TasksListParams {
   @scala.inline
-  def apply(): TasksListParams = {
+  def apply(
+    actions: NameList = null,
+    body: js.Any = null,
+    detailed: js.UndefOr[Boolean] = js.undefined,
+    filterPath: String | js.Array[String] = null,
+    groupBy: nodes | parents = null,
+    ignore: Double | js.Array[Double] = null,
+    maxRetries: js.UndefOr[Double] = js.undefined,
+    method: String = null,
+    nodeId: NameList = null,
+    parentNode: String = null,
+    parentTask: String = null,
+    requestTimeout: js.UndefOr[Double] = js.undefined,
+    waitForCompletion: js.UndefOr[Boolean] = js.undefined
+  ): TasksListParams = {
     val __obj = js.Dynamic.literal()
+    if (actions != null) __obj.updateDynamic("actions")(actions.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (!js.isUndefined(detailed)) __obj.updateDynamic("detailed")(detailed.get.asInstanceOf[js.Any])
+    if (filterPath != null) __obj.updateDynamic("filterPath")(filterPath.asInstanceOf[js.Any])
+    if (groupBy != null) __obj.updateDynamic("groupBy")(groupBy.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxRetries)) __obj.updateDynamic("maxRetries")(maxRetries.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (nodeId != null) __obj.updateDynamic("nodeId")(nodeId.asInstanceOf[js.Any])
+    if (parentNode != null) __obj.updateDynamic("parentNode")(parentNode.asInstanceOf[js.Any])
+    if (parentTask != null) __obj.updateDynamic("parentTask")(parentTask.asInstanceOf[js.Any])
+    if (!js.isUndefined(requestTimeout)) __obj.updateDynamic("requestTimeout")(requestTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(waitForCompletion)) __obj.updateDynamic("waitForCompletion")(waitForCompletion.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TasksListParams]
   }
-  @scala.inline
-  implicit class TasksListParamsOps[Self <: TasksListParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActions(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetailed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detailed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetailed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detailed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupBy(value: nodes | parents): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeId(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentNode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentNode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentTask(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentTask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentTask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitForCompletion(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForCompletion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitForCompletion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForCompletion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

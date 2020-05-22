@@ -7,49 +7,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ScaleControlProps extends BaseControlProps {
-  var maxWidth: js.UndefOr[Double] = js.native
-  var unit: js.UndefOr[imperial | metric | nautical] = js.native
+  var maxWidth: js.UndefOr[Double] = js.undefined
+  var unit: js.UndefOr[imperial | metric | nautical] = js.undefined
 }
 
 object ScaleControlProps {
   @scala.inline
-  def apply(): ScaleControlProps = {
+  def apply(
+    captureClick: js.UndefOr[Boolean] = js.undefined,
+    captureDoubleClick: js.UndefOr[Boolean] = js.undefined,
+    captureDrag: js.UndefOr[Boolean] = js.undefined,
+    captureScroll: js.UndefOr[Boolean] = js.undefined,
+    maxWidth: js.UndefOr[Double] = js.undefined,
+    unit: imperial | metric | nautical = null
+  ): ScaleControlProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(captureClick)) __obj.updateDynamic("captureClick")(captureClick.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(captureDoubleClick)) __obj.updateDynamic("captureDoubleClick")(captureDoubleClick.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(captureDrag)) __obj.updateDynamic("captureDrag")(captureDrag.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(captureScroll)) __obj.updateDynamic("captureScroll")(captureScroll.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxWidth)) __obj.updateDynamic("maxWidth")(maxWidth.get.asInstanceOf[js.Any])
+    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScaleControlProps]
   }
-  @scala.inline
-  implicit class ScaleControlPropsOps[Self <: ScaleControlProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnit(value: imperial | metric | nautical): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

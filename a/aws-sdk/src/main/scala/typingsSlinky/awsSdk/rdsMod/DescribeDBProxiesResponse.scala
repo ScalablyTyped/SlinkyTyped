@@ -18,41 +18,11 @@ trait DescribeDBProxiesResponse extends js.Object {
 
 object DescribeDBProxiesResponse {
   @scala.inline
-  def apply(): DescribeDBProxiesResponse = {
+  def apply(DBProxies: DBProxyList = null, Marker: String = null): DescribeDBProxiesResponse = {
     val __obj = js.Dynamic.literal()
+    if (DBProxies != null) __obj.updateDynamic("DBProxies")(DBProxies.asInstanceOf[js.Any])
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeDBProxiesResponse]
   }
-  @scala.inline
-  implicit class DescribeDBProxiesResponseOps[Self <: DescribeDBProxiesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDBProxies(value: DBProxyList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBProxies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDBProxies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBProxies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarker(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

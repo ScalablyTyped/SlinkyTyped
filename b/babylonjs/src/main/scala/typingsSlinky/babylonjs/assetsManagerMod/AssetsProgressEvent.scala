@@ -14,5 +14,20 @@ class AssetsProgressEvent protected () extends IAssetsProgressEvent {
     * @param task defines the task that was just processed
     */
   def this(remainingCount: Double, totalCount: Double, task: AbstractAssetTask) = this()
+  /**
+    * Defines the number of remaining tasks to process
+    */
+  /* CompleteClass */
+  override var remainingCount: Double = js.native
+  /**
+    * Defines the task that was just processed
+    */
+  /* CompleteClass */
+  override var task: AbstractAssetTask = js.native
+  /**
+    * Defines the total number of tasks
+    */
+  /* CompleteClass */
+  override var totalCount: Double = js.native
 }
 

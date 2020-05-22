@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Networking
 
+import typingsSlinky.winrtUwp.Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationStatus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +15,17 @@ object ServiceDiscovery extends js.Object {
     @js.native
     /** Constructor. */
     class DnssdRegistrationResult ()
-      extends typingsSlinky.winrtUwp.Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult
+      extends typingsSlinky.winrtUwp.Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult {
+      /** Indicates whether the instance name was changed in the course of the registration process. */
+      /* CompleteClass */
+      override var hasInstanceNameChanged: Boolean = js.native
+      /** The IP address of the successfully-created service instance. */
+      /* CompleteClass */
+      override var ipAddress: typingsSlinky.winrtUwp.Windows.Networking.HostName = js.native
+      /** An enumeration value indicating the result of a service instance registration attempt. */
+      /* CompleteClass */
+      override var status: DnssdRegistrationStatus = js.native
+    }
     
     /** Encapsulates an instance of a service that uses DNS Service Discovery (DNS-SD). */
     @js.native

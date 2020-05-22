@@ -29,53 +29,16 @@ trait PeeringConnectionOptionsState extends js.Object {
 
 object PeeringConnectionOptionsState {
   @scala.inline
-  def apply(): PeeringConnectionOptionsState = {
+  def apply(
+    accepter: Input[PeeringConnectionOptionsAccepter] = null,
+    requester: Input[PeeringConnectionOptionsRequester] = null,
+    vpcPeeringConnectionId: Input[String] = null
+  ): PeeringConnectionOptionsState = {
     val __obj = js.Dynamic.literal()
+    if (accepter != null) __obj.updateDynamic("accepter")(accepter.asInstanceOf[js.Any])
+    if (requester != null) __obj.updateDynamic("requester")(requester.asInstanceOf[js.Any])
+    if (vpcPeeringConnectionId != null) __obj.updateDynamic("vpcPeeringConnectionId")(vpcPeeringConnectionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[PeeringConnectionOptionsState]
   }
-  @scala.inline
-  implicit class PeeringConnectionOptionsStateOps[Self <: PeeringConnectionOptionsState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccepter(value: Input[PeeringConnectionOptionsAccepter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accepter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccepter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accepter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequester(value: Input[PeeringConnectionOptionsRequester]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requester")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequester: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requester")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcPeeringConnectionId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcPeeringConnectionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcPeeringConnectionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcPeeringConnectionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

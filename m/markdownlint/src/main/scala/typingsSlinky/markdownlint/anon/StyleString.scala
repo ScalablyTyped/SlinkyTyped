@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StyleString extends js.Object {
   /**
     * @default consistent
     */
-  var style: String = js.native
+  var style: String
 }
 
 object StyleString {
@@ -18,19 +17,5 @@ object StyleString {
     val __obj = js.Dynamic.literal(style = style.asInstanceOf[js.Any])
     __obj.asInstanceOf[StyleString]
   }
-  @scala.inline
-  implicit class StyleStringOps[Self <: StyleString] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

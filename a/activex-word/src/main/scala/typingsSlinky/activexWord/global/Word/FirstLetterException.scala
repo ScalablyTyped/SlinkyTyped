@@ -7,5 +7,21 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Word.FirstLetterException")
 @js.native
 class FirstLetterException protected ()
-  extends typingsSlinky.activexWord.Word.FirstLetterException
+  extends typingsSlinky.activexWord.Word.FirstLetterException {
+  /* CompleteClass */
+  override val Application: typingsSlinky.activexWord.Word.Application = js.native
+  /* CompleteClass */
+  override val Creator: Double = js.native
+  /* CompleteClass */
+  override val Index: Double = js.native
+  /* CompleteClass */
+  override val Name: String = js.native
+  /* CompleteClass */
+  override val Parent: js.Any = js.native
+  /* CompleteClass */
+  @JSName("Word.FirstLetterException_typekey")
+  override var WordDotFirstLetterException_typekey: typingsSlinky.activexWord.Word.FirstLetterException = js.native
+  /* CompleteClass */
+  override def Delete(): Unit = js.native
+}
 

@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * Defines an interface for creating enumerations for type descriptions.
   * @since OOo 1.1.2
   */
-@js.native
 trait XTypeDescriptionEnumerationAccess extends XInterface {
   /**
     * Creates an enumeration for type descriptions.
@@ -27,7 +26,7 @@ trait XTypeDescriptionEnumerationAccess extends XInterface {
     * @throws NoSuchTypeNameException in case that the given module name does not exist. This exception will never be thrown in case moduleName is the empty string.
     * @throws InvalidTypeNameException in case that the given module name does exist, but does not specify an UNOIDL module. This exception will never be throw
     */
-  def createTypeDescriptionEnumeration(moduleName: String, types: SeqEquiv[TypeClass], depth: TypeDescriptionSearchDepth): XTypeDescriptionEnumeration = js.native
+  def createTypeDescriptionEnumeration(moduleName: String, types: SeqEquiv[TypeClass], depth: TypeDescriptionSearchDepth): XTypeDescriptionEnumeration
 }
 
 object XTypeDescriptionEnumerationAccess {
@@ -41,19 +40,5 @@ object XTypeDescriptionEnumerationAccess {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), createTypeDescriptionEnumeration = js.Any.fromFunction3(createTypeDescriptionEnumeration), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XTypeDescriptionEnumerationAccess]
   }
-  @scala.inline
-  implicit class XTypeDescriptionEnumerationAccessOps[Self <: XTypeDescriptionEnumerationAccess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateTypeDescriptionEnumeration(value: (String, SeqEquiv[TypeClass], TypeDescriptionSearchDepth) => XTypeDescriptionEnumeration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTypeDescriptionEnumeration")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

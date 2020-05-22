@@ -9,75 +9,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExchangeConfig extends js.Object {
-  var assert: js.UndefOr[Boolean] = js.native
-  var check: js.UndefOr[Boolean] = js.native
-  var options: js.UndefOr[AssertExchange] = js.native
-  var `type`: js.UndefOr[direct | fanout | headers | topic] = js.native
+  var assert: js.UndefOr[Boolean] = js.undefined
+  var check: js.UndefOr[Boolean] = js.undefined
+  var options: js.UndefOr[AssertExchange] = js.undefined
+  var `type`: js.UndefOr[direct | fanout | headers | topic] = js.undefined
 }
 
 object ExchangeConfig {
   @scala.inline
-  def apply(): ExchangeConfig = {
+  def apply(
+    assert: js.UndefOr[Boolean] = js.undefined,
+    check: js.UndefOr[Boolean] = js.undefined,
+    options: AssertExchange = null,
+    `type`: direct | fanout | headers | topic = null
+  ): ExchangeConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(assert)) __obj.updateDynamic("assert")(assert.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(check)) __obj.updateDynamic("check")(check.get.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExchangeConfig]
   }
-  @scala.inline
-  implicit class ExchangeConfigOps[Self <: ExchangeConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssert(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assert")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheck(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("check")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("check")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: AssertExchange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: direct | fanout | headers | topic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

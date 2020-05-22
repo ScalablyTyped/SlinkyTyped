@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Required extends js.Object {
-  var required: js.UndefOr[Boolean] = js.native
-  var shortcut: js.UndefOr[String] = js.native
-  var usage: js.UndefOr[String] = js.native
+  var required: js.UndefOr[Boolean] = js.undefined
+  var shortcut: js.UndefOr[String] = js.undefined
+  var usage: js.UndefOr[String] = js.undefined
 }
 
 object Required {
   @scala.inline
-  def apply(): Required = {
+  def apply(required: js.UndefOr[Boolean] = js.undefined, shortcut: String = null, usage: String = null): Required = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.get.asInstanceOf[js.Any])
+    if (shortcut != null) __obj.updateDynamic("shortcut")(shortcut.asInstanceOf[js.Any])
+    if (usage != null) __obj.updateDynamic("usage")(usage.asInstanceOf[js.Any])
     __obj.asInstanceOf[Required]
   }
-  @scala.inline
-  implicit class RequiredOps[Self <: Required] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRequired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShortcut(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortcut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShortcut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortcut")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -3,7 +3,10 @@ package typingsSlinky.devexpressWeb.global
 import typingsSlinky.devexpressWeb.ASPxClientCallbackErrorEventHandler
 import typingsSlinky.devexpressWeb.ASPxClientControlsInitializedEventHandler
 import typingsSlinky.devexpressWeb.ASPxClientEndCallbackEventHandler
+import typingsSlinky.devexpressWeb.ASPxClientGlobalCallbackErrorEventHandler
+import typingsSlinky.devexpressWeb.ASPxClientGlobalEndCallbackEventHandler
 import typingsSlinky.devexpressWeb.MVCxClientBeginCallbackEventHandler
+import typingsSlinky.devexpressWeb.MVCxClientGlobalBeginCallbackEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +17,36 @@ import scala.scalajs.js.annotation._
 @JSGlobal("MVCxClientGlobalEvents")
 @js.native
 class MVCxClientGlobalEvents ()
-  extends typingsSlinky.devexpressWeb.MVCxClientGlobalEvents
+  extends typingsSlinky.devexpressWeb.MVCxClientGlobalEvents {
+  /**
+    * Occurs on the client when a callback for server-side processing is initiated.
+    */
+  /* CompleteClass */
+  override var BeginCallback: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    MVCxClientGlobalBeginCallbackEventHandler[typingsSlinky.devexpressWeb.MVCxClientGlobalEvents]
+  ] = js.native
+  /**
+    * Fires on the client if any server error occurs during server-side processing of a callback sent by a DevExpress MVC extension.
+    */
+  /* CompleteClass */
+  override var CallbackError: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    ASPxClientGlobalCallbackErrorEventHandler[typingsSlinky.devexpressWeb.MVCxClientGlobalEvents]
+  ] = js.native
+  /**
+    * Occurs on the client side after client object models of all DevExpress MVC extensions contained within the page have been initialized.
+    */
+  /* CompleteClass */
+  override var ControlsInitialized: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    ASPxClientControlsInitializedEventHandler[typingsSlinky.devexpressWeb.MVCxClientGlobalEvents]
+  ] = js.native
+  /**
+    * Occurs on the client after a callback's server-side processing has been completed.
+    */
+  /* CompleteClass */
+  override var EndCallback: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    ASPxClientGlobalEndCallbackEventHandler[typingsSlinky.devexpressWeb.MVCxClientGlobalEvents]
+  ] = js.native
+}
 
 /* static members */
 @JSGlobal("MVCxClientGlobalEvents")

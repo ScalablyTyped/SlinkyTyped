@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Add extends js.Object {
-  var add: js.UndefOr[js.Any] = js.native
-  var load: js.UndefOr[js.Any] = js.native
-  var remove: js.UndefOr[js.Any] = js.native
+  var add: js.UndefOr[js.Any] = js.undefined
+  var load: js.UndefOr[js.Any] = js.undefined
+  var remove: js.UndefOr[js.Any] = js.undefined
 }
 
 object Add {
   @scala.inline
-  def apply(): Add = {
+  def apply(add: js.Any = null, load: js.Any = null, remove: js.Any = null): Add = {
     val __obj = js.Dynamic.literal()
+    if (add != null) __obj.updateDynamic("add")(add.asInstanceOf[js.Any])
+    if (load != null) __obj.updateDynamic("load")(load.asInstanceOf[js.Any])
+    if (remove != null) __obj.updateDynamic("remove")(remove.asInstanceOf[js.Any])
     __obj.asInstanceOf[Add]
   }
-  @scala.inline
-  implicit class AddOps[Self <: Add] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdd(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoad(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemove(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -11,8 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ElementHandle[E /* <: Element */]
   extends JSHandle[E]
-     with Evalable
-     with WrapElementHandle[E] {
+     with Evalable {
   /**
     * The method runs element.querySelector within the page.
     * If no element matches the selector, the return value resolve to null.

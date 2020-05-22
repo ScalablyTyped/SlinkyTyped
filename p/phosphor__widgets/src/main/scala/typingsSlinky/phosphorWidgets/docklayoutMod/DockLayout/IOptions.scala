@@ -7,51 +7,25 @@ import scala.scalajs.js.annotation._
 /**
   * An options object for creating a dock layout.
   */
-@js.native
 trait IOptions extends js.Object {
   /**
     * The renderer to use for the dock layout.
     */
-  var renderer: IRenderer = js.native
+  var renderer: IRenderer
   /**
     * The spacing between items in the layout.
     *
     * The default is `4`.
     */
-  var spacing: js.UndefOr[Double] = js.native
+  var spacing: js.UndefOr[Double] = js.undefined
 }
 
 object IOptions {
   @scala.inline
-  def apply(renderer: IRenderer): IOptions = {
+  def apply(renderer: IRenderer, spacing: js.UndefOr[Double] = js.undefined): IOptions = {
     val __obj = js.Dynamic.literal(renderer = renderer.asInstanceOf[js.Any])
+    if (!js.isUndefined(spacing)) __obj.updateDynamic("spacing")(spacing.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOptions]
   }
-  @scala.inline
-  implicit class IOptionsOps[Self <: IOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRenderer(value: IRenderer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpacing(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpacing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacing")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

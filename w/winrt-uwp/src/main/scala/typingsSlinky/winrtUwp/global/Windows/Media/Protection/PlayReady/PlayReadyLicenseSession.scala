@@ -1,6 +1,8 @@
 package typingsSlinky.winrtUwp.global.Windows.Media.Protection.PlayReady
 
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IPropertySet
+import typingsSlinky.winrtUwp.Windows.Media.Protection.MediaProtectionManager
+import typingsSlinky.winrtUwp.Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,5 +17,17 @@ class PlayReadyLicenseSession protected ()
     * @param configuration The configuration data for the license session.
     */
   def this(configuration: IPropertySet) = this()
+  /**
+    * Updates the media protection manger with the appropriate settings so the media foundation can be used for playback.
+    * @param mpm The media protection manager to be updated.
+    */
+  /* CompleteClass */
+  override def configureMediaProtectionManager(mpm: MediaProtectionManager): Unit = js.native
+  /**
+    * Creates a license acquisition service request whose license will be tied to the media session.
+    * @return The license acquisition service request.
+    */
+  /* CompleteClass */
+  override def createLAServiceRequest(): IPlayReadyLicenseAcquisitionServiceRequest = js.native
 }
 

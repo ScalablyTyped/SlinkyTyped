@@ -43,65 +43,18 @@ trait SchemaDiskInstantiationConfig extends js.Object {
 
 object SchemaDiskInstantiationConfig {
   @scala.inline
-  def apply(): SchemaDiskInstantiationConfig = {
+  def apply(
+    autoDelete: js.UndefOr[Boolean] = js.undefined,
+    customImage: String = null,
+    deviceName: String = null,
+    instantiateFrom: String = null
+  ): SchemaDiskInstantiationConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoDelete)) __obj.updateDynamic("autoDelete")(autoDelete.get.asInstanceOf[js.Any])
+    if (customImage != null) __obj.updateDynamic("customImage")(customImage.asInstanceOf[js.Any])
+    if (deviceName != null) __obj.updateDynamic("deviceName")(deviceName.asInstanceOf[js.Any])
+    if (instantiateFrom != null) __obj.updateDynamic("instantiateFrom")(instantiateFrom.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDiskInstantiationConfig]
   }
-  @scala.inline
-  implicit class SchemaDiskInstantiationConfigOps[Self <: SchemaDiskInstantiationConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoDelete(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDelete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoDelete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDelete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomImage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customImage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customImage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstantiateFrom(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instantiateFrom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstantiateFrom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instantiateFrom")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

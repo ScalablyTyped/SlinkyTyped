@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * must be implemented by the user of the {@link XJavaVM} .
   * @deprecated DeprecatedA UNO interface seems to be at the wrong abstraction level for this functionality (also, the C++ classes jvmaccess::VirtualMachine and
   */
-@js.native
 trait XJavaVM extends XInterface {
   /**
     * returns the address of the Java Virtual Machine.
@@ -40,15 +39,15 @@ trait XJavaVM extends XInterface {
     * @param processID The process ID of the caller's process, possibly extended by a 17th byte of value `0` or  `1` .
     * @returns On success, the `any` contains a pointer represented as `long` or `hyper` , otherwise the `any` is `VOID` .
     */
-  def getJavaVM(processID: SeqEquiv[Double]): js.Any = js.native
+  def getJavaVM(processID: SeqEquiv[Double]): js.Any
   /**
     * Returns `TRUE` if the VM is enabled.
     *
     * It is only possible to get the VM, if this method return 0.
     */
-  def isVMEnabled(): Boolean = js.native
+  def isVMEnabled(): Boolean
   /** returns `TRUE` if the VM is started successfully, otherwise `FALSE` . */
-  def isVMStarted(): Boolean = js.native
+  def isVMStarted(): Boolean
 }
 
 object XJavaVM {
@@ -64,31 +63,5 @@ object XJavaVM {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), getJavaVM = js.Any.fromFunction1(getJavaVM), isVMEnabled = js.Any.fromFunction0(isVMEnabled), isVMStarted = js.Any.fromFunction0(isVMStarted), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XJavaVM]
   }
-  @scala.inline
-  implicit class XJavaVMOps[Self <: XJavaVM] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetJavaVM(value: SeqEquiv[Double] => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getJavaVM")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsVMEnabled(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVMEnabled")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsVMStarted(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVMStarted")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

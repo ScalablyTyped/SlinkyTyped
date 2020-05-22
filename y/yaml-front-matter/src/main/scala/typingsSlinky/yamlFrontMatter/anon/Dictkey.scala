@@ -5,31 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Dictkey
   extends /* key */ StringDictionary[js.Any] {
-  val __content: String = js.native
+  val __content: String
 }
 
 object Dictkey {
   @scala.inline
-  def apply(__content: String): Dictkey = {
+  def apply(__content: String, StringDictionary: /* name */ StringDictionary[js.Any] = null): Dictkey = {
     val __obj = js.Dynamic.literal(__content = __content.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[Dictkey]
   }
-  @scala.inline
-  implicit class DictkeyOps[Self <: Dictkey] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with__content(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("__content")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

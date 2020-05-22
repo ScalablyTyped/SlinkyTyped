@@ -14,29 +14,10 @@ trait UpdateTestGridProjectResult extends js.Object {
 
 object UpdateTestGridProjectResult {
   @scala.inline
-  def apply(): UpdateTestGridProjectResult = {
+  def apply(testGridProject: TestGridProject = null): UpdateTestGridProjectResult = {
     val __obj = js.Dynamic.literal()
+    if (testGridProject != null) __obj.updateDynamic("testGridProject")(testGridProject.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateTestGridProjectResult]
   }
-  @scala.inline
-  implicit class UpdateTestGridProjectResultOps[Self <: UpdateTestGridProjectResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTestGridProject(value: TestGridProject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testGridProject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestGridProject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testGridProject")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

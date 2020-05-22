@@ -7,59 +7,28 @@ import scala.scalajs.js.annotation._
 /**
   * The options for creating an exponential format function.
   */
-@js.native
 trait IOptions extends js.Object {
   /**
     * The number of digits to include after the decimal point.
     *
     * The default is determined by the user agent.
     */
-  var digits: js.UndefOr[Double] = js.native
+  var digits: js.UndefOr[Double] = js.undefined
   /**
     * The text to use for a `null` or `undefined` data value.
     *
     * The default is `''`.
     */
-  var missing: js.UndefOr[String] = js.native
+  var missing: js.UndefOr[String] = js.undefined
 }
 
 object IOptions {
   @scala.inline
-  def apply(): IOptions = {
+  def apply(digits: js.UndefOr[Double] = js.undefined, missing: String = null): IOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(digits)) __obj.updateDynamic("digits")(digits.get.asInstanceOf[js.Any])
+    if (missing != null) __obj.updateDynamic("missing")(missing.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOptions]
   }
-  @scala.inline
-  implicit class IOptionsOps[Self <: IOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDigits(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDigits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMissing(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("missing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMissing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("missing")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

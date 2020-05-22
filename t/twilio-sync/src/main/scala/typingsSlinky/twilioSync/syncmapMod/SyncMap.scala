@@ -27,16 +27,9 @@ import scala.scalajs.js.annotation._
 @js.native
 class SyncMap protected () extends Closeable {
   def this(syncMapImpl: SyncMapImpl) = this()
-  val dateExpires: String = js.native
-  val dateUpdated: js.Date = js.native
-  val lastEventId: Double = js.native
-  val links: js.Any = js.native
-  val revision: String = js.native
-  val sid: String = js.native
   val syncMapImpl: js.Any = js.native
-  val `type`: String = js.native
-  val uniqueName: String = js.native
-  val uri: String = js.native
+  def dateExpires: String = js.native
+  def dateUpdated: js.Date = js.native
   /**
     * Retrieve an item by key.
     * @param {String} key Identifies the desired item.
@@ -77,6 +70,8 @@ class SyncMap protected () extends Closeable {
     */
   def getItems(): js.Promise[Paginator[MapItem]] = js.native
   def getItems(args: js.Any): js.Promise[Paginator[MapItem]] = js.native
+  def lastEventId: Double = js.native
+  def links: js.Any = js.native
   /**
     * Schedules a modification to this Map Item that will apply a mutation function.
     * If no Item with the given key exists, it will first be created, having the default value (<code>{}</code>).
@@ -134,6 +129,7 @@ class SyncMap protected () extends Closeable {
     *   });
     */
   def removeMap(): js.Promise[Unit] = js.native
+  def revision: String = js.native
   /**
     * Add a new item to the map with the given key:value pair. Overwrites any value that might already exist at that key.
     * @param {String} key Unique item identifier.
@@ -183,6 +179,9 @@ class SyncMap protected () extends Closeable {
     *   });
     */
   def setTtl(ttl: Double): js.Promise[Unit] = js.native
+  def sid: String = js.native
+  def `type`: String = js.native
+  def uniqueName: String = js.native
   /**
     * Modify a map item by appending new fields (or by overwriting existing ones) with the values from
     * the provided Object. Creates a new item if no item by this key exists, copying all given fields and values
@@ -211,12 +210,13 @@ class SyncMap protected () extends Closeable {
     */
   def update(key: String, obj: js.Object): js.Promise[MapItem] = js.native
   def update(key: String, obj: js.Object, itemMetadataUpdates: ItemMetadata): js.Promise[MapItem] = js.native
+  def uri: String = js.native
 }
 
 /* static members */
 @JSImport("twilio-sync/lib/syncmap", "SyncMap")
 @js.native
 object SyncMap extends js.Object {
-  val `type`: String = js.native
+  def `type`: String = js.native
 }
 

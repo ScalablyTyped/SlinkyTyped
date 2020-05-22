@@ -18,35 +18,10 @@ trait PutEmailIdentityFeedbackAttributesRequest extends js.Object {
 
 object PutEmailIdentityFeedbackAttributesRequest {
   @scala.inline
-  def apply(EmailIdentity: Identity): PutEmailIdentityFeedbackAttributesRequest = {
+  def apply(EmailIdentity: Identity, EmailForwardingEnabled: js.UndefOr[Enabled] = js.undefined): PutEmailIdentityFeedbackAttributesRequest = {
     val __obj = js.Dynamic.literal(EmailIdentity = EmailIdentity.asInstanceOf[js.Any])
+    if (!js.isUndefined(EmailForwardingEnabled)) __obj.updateDynamic("EmailForwardingEnabled")(EmailForwardingEnabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutEmailIdentityFeedbackAttributesRequest]
   }
-  @scala.inline
-  implicit class PutEmailIdentityFeedbackAttributesRequestOps[Self <: PutEmailIdentityFeedbackAttributesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmailIdentity(value: Identity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmailIdentity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEmailForwardingEnabled(value: Enabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmailForwardingEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmailForwardingEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmailForwardingEnabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,52 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ParameterName extends js.Object {
   /** Schema ID for the request schema. */
   @JSName("$ref")
-  var $ref: js.UndefOr[String] = js.native
+  var $ref: js.UndefOr[String] = js.undefined
   /** parameter name. */
-  var parameterName: js.UndefOr[String] = js.native
+  var parameterName: js.UndefOr[String] = js.undefined
 }
 
 object ParameterName {
   @scala.inline
-  def apply(): ParameterName = {
+  def apply($ref: String = null, parameterName: String = null): ParameterName = {
     val __obj = js.Dynamic.literal()
+    if ($ref != null) __obj.updateDynamic("$ref")($ref.asInstanceOf[js.Any])
+    if (parameterName != null) __obj.updateDynamic("parameterName")(parameterName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParameterName]
   }
-  @scala.inline
-  implicit class ParameterNameOps[Self <: ParameterName] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$ref(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$ref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$ref: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$ref")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameterName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameterName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

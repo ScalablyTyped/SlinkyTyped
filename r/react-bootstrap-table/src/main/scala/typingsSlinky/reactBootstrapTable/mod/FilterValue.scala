@@ -1,5 +1,6 @@
 package typingsSlinky.reactBootstrapTable.mod
 
+import typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.ArrayFilter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,16 +17,46 @@ trait FilterValue extends js.Object
 
 object FilterValue {
   @scala.inline
-  implicit def apply(value: ArrayFilterData): FilterValue = value.asInstanceOf[FilterValue]
+  def RegexFilterData(`type`: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.RegexFilter, value: String): FilterValue = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FilterValue]
+  }
   @scala.inline
-  implicit def apply(value: DateFilterData): FilterValue = value.asInstanceOf[FilterValue]
+  def NumberFilterData(
+    `type`: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.NumberFilter,
+    value: NumberFilterValue
+  ): FilterValue = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FilterValue]
+  }
   @scala.inline
-  implicit def apply(value: NumberFilterData): FilterValue = value.asInstanceOf[FilterValue]
+  def TextFilterData(`type`: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.TextFilter, value: String): FilterValue = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FilterValue]
+  }
   @scala.inline
-  implicit def apply(value: RegexFilterData): FilterValue = value.asInstanceOf[FilterValue]
+  def SelectFilterData(`type`: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.SelectFilter, value: String): FilterValue = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FilterValue]
+  }
   @scala.inline
-  implicit def apply(value: SelectFilterData): FilterValue = value.asInstanceOf[FilterValue]
+  def DateFilterData(
+    `type`: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.DateFilter,
+    value: DateFilterValue
+  ): FilterValue = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FilterValue]
+  }
   @scala.inline
-  implicit def apply(value: TextFilterData): FilterValue = value.asInstanceOf[FilterValue]
+  def ArrayFilterData(`type`: ArrayFilter, value: js.Array[Double | String]): FilterValue = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FilterValue]
+  }
 }
 

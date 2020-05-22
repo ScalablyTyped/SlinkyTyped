@@ -4,127 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListGridType extends js.Object {
-  var column: js.UndefOr[ColumnCount] = js.native
-  var gutter: js.UndefOr[Double] = js.native
-  var lg: js.UndefOr[ColumnCount] = js.native
-  var md: js.UndefOr[ColumnCount] = js.native
-  var sm: js.UndefOr[ColumnCount] = js.native
-  var xl: js.UndefOr[ColumnCount] = js.native
-  var xs: js.UndefOr[ColumnCount] = js.native
-  var xxl: js.UndefOr[ColumnCount] = js.native
+  var column: js.UndefOr[ColumnCount] = js.undefined
+  var gutter: js.UndefOr[Double] = js.undefined
+  var lg: js.UndefOr[ColumnCount] = js.undefined
+  var md: js.UndefOr[ColumnCount] = js.undefined
+  var sm: js.UndefOr[ColumnCount] = js.undefined
+  var xl: js.UndefOr[ColumnCount] = js.undefined
+  var xs: js.UndefOr[ColumnCount] = js.undefined
+  var xxl: js.UndefOr[ColumnCount] = js.undefined
 }
 
 object ListGridType {
   @scala.inline
-  def apply(): ListGridType = {
+  def apply(
+    column: js.UndefOr[ColumnCount] = js.undefined,
+    gutter: js.UndefOr[Double] = js.undefined,
+    lg: js.UndefOr[ColumnCount] = js.undefined,
+    md: js.UndefOr[ColumnCount] = js.undefined,
+    sm: js.UndefOr[ColumnCount] = js.undefined,
+    xl: js.UndefOr[ColumnCount] = js.undefined,
+    xs: js.UndefOr[ColumnCount] = js.undefined,
+    xxl: js.UndefOr[ColumnCount] = js.undefined
+  ): ListGridType = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(column)) __obj.updateDynamic("column")(column.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(gutter)) __obj.updateDynamic("gutter")(gutter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lg)) __obj.updateDynamic("lg")(lg.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(md)) __obj.updateDynamic("md")(md.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sm)) __obj.updateDynamic("sm")(sm.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(xl)) __obj.updateDynamic("xl")(xl.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(xs)) __obj.updateDynamic("xs")(xs.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(xxl)) __obj.updateDynamic("xxl")(xxl.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListGridType]
   }
-  @scala.inline
-  implicit class ListGridTypeOps[Self <: ListGridType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumn(value: ColumnCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGutter(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gutter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGutter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gutter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLg(value: ColumnCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMd(value: ColumnCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("md")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("md")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSm(value: ColumnCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXl(value: ColumnCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXs(value: ColumnCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXxl(value: ColumnCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xxl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXxl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xxl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

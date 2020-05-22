@@ -46,125 +46,28 @@ trait TrialComponentMetricSummary extends js.Object {
 
 object TrialComponentMetricSummary {
   @scala.inline
-  def apply(): TrialComponentMetricSummary = {
+  def apply(
+    Avg: js.UndefOr[OptionalDouble] = js.undefined,
+    Count: js.UndefOr[OptionalInteger] = js.undefined,
+    Last: js.UndefOr[OptionalDouble] = js.undefined,
+    Max: js.UndefOr[OptionalDouble] = js.undefined,
+    MetricName: MetricName = null,
+    Min: js.UndefOr[OptionalDouble] = js.undefined,
+    SourceArn: TrialComponentSourceArn = null,
+    StdDev: js.UndefOr[OptionalDouble] = js.undefined,
+    TimeStamp: js.Date = null
+  ): TrialComponentMetricSummary = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Avg)) __obj.updateDynamic("Avg")(Avg.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Count)) __obj.updateDynamic("Count")(Count.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Last)) __obj.updateDynamic("Last")(Last.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Max)) __obj.updateDynamic("Max")(Max.get.asInstanceOf[js.Any])
+    if (MetricName != null) __obj.updateDynamic("MetricName")(MetricName.asInstanceOf[js.Any])
+    if (!js.isUndefined(Min)) __obj.updateDynamic("Min")(Min.get.asInstanceOf[js.Any])
+    if (SourceArn != null) __obj.updateDynamic("SourceArn")(SourceArn.asInstanceOf[js.Any])
+    if (!js.isUndefined(StdDev)) __obj.updateDynamic("StdDev")(StdDev.get.asInstanceOf[js.Any])
+    if (TimeStamp != null) __obj.updateDynamic("TimeStamp")(TimeStamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrialComponentMetricSummary]
   }
-  @scala.inline
-  implicit class TrialComponentMetricSummaryOps[Self <: TrialComponentMetricSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvg(value: OptionalDouble): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Avg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Avg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCount(value: OptionalInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLast(value: OptionalDouble): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Last")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLast: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Last")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: OptionalDouble): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetricName(value: MetricName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: OptionalDouble): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceArn(value: TrialComponentSourceArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStdDev(value: OptionalDouble): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StdDev")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStdDev: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StdDev")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeStamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeStamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeStamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeStamp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

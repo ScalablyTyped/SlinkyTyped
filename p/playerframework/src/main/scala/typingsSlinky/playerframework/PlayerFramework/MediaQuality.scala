@@ -11,14 +11,14 @@ sealed trait MediaQuality extends js.Object
 @js.native
 object MediaQuality extends js.Object {
   /**
-  		* Typically indicates greater than or equal to 720p media quality.
-  		**/
+    * Typically indicates greater than or equal to 720p media quality.
+    **/
   @js.native
   sealed trait highDefinition extends MediaQuality
   
   /**
-  		* Typically indicates less than 720p media quality.
-  		**/
+    * Typically indicates less than 720p media quality.
+    **/
   @js.native
   sealed trait standardDefinition extends MediaQuality
   

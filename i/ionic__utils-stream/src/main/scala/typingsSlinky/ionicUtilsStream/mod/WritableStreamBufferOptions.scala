@@ -1,53 +1,68 @@
 package typingsSlinky.ionicUtilsStream.mod
 
+import typingsSlinky.node.BufferEncoding
+import typingsSlinky.node.anon.Chunk
+import typingsSlinky.node.streamMod.Writable
 import typingsSlinky.node.streamMod.WritableOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WritableStreamBufferOptions extends WritableOptions {
-  var allocSize: js.UndefOr[Double] = js.native
-  var growSize: js.UndefOr[Double] = js.native
+  var allocSize: js.UndefOr[Double] = js.undefined
+  var growSize: js.UndefOr[Double] = js.undefined
 }
 
 object WritableStreamBufferOptions {
   @scala.inline
-  def apply(): WritableStreamBufferOptions = {
+  def apply(
+    allocSize: js.UndefOr[Double] = js.undefined,
+    autoDestroy: js.UndefOr[Boolean] = js.undefined,
+    decodeStrings: js.UndefOr[Boolean] = js.undefined,
+    defaultencoding: BufferEncoding = null,
+    destroy: js.ThisFunction2[
+      /* this */ Writable, 
+      /* error */ js.Error | Null, 
+      /* callback */ js.Function1[/* error */ js.Error | Null, Unit], 
+      Unit
+    ] = null,
+    emitClose: js.UndefOr[Boolean] = js.undefined,
+    `final`: js.ThisFunction1[
+      /* this */ Writable, 
+      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
+      Unit
+    ] = null,
+    growSize: js.UndefOr[Double] = js.undefined,
+    highWaterMark: js.UndefOr[Double] = js.undefined,
+    objectMode: js.UndefOr[Boolean] = js.undefined,
+    write: js.ThisFunction3[
+      /* this */ Writable, 
+      /* chunk */ js.Any, 
+      /* encoding */ BufferEncoding, 
+      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
+      Unit
+    ] = null,
+    writev: js.ThisFunction2[
+      /* this */ Writable, 
+      /* chunks */ js.Array[Chunk], 
+      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
+      Unit
+    ] = null
+  ): WritableStreamBufferOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allocSize)) __obj.updateDynamic("allocSize")(allocSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoDestroy)) __obj.updateDynamic("autoDestroy")(autoDestroy.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(decodeStrings)) __obj.updateDynamic("decodeStrings")(decodeStrings.get.asInstanceOf[js.Any])
+    if (defaultencoding != null) __obj.updateDynamic("defaultencoding")(defaultencoding.asInstanceOf[js.Any])
+    if (destroy != null) __obj.updateDynamic("destroy")(destroy.asInstanceOf[js.Any])
+    if (!js.isUndefined(emitClose)) __obj.updateDynamic("emitClose")(emitClose.get.asInstanceOf[js.Any])
+    if (`final` != null) __obj.updateDynamic("final")(`final`.asInstanceOf[js.Any])
+    if (!js.isUndefined(growSize)) __obj.updateDynamic("growSize")(growSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(highWaterMark)) __obj.updateDynamic("highWaterMark")(highWaterMark.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(objectMode)) __obj.updateDynamic("objectMode")(objectMode.get.asInstanceOf[js.Any])
+    if (write != null) __obj.updateDynamic("write")(write.asInstanceOf[js.Any])
+    if (writev != null) __obj.updateDynamic("writev")(writev.asInstanceOf[js.Any])
     __obj.asInstanceOf[WritableStreamBufferOptions]
   }
-  @scala.inline
-  implicit class WritableStreamBufferOptionsOps[Self <: WritableStreamBufferOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllocSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allocSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllocSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allocSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrowSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("growSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrowSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("growSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

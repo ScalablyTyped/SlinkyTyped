@@ -5,7 +5,6 @@ import typingsSlinky.leaflet.mod.Direction
 import typingsSlinky.leaflet.mod.FillRule
 import typingsSlinky.leaflet.mod.LineCapShape
 import typingsSlinky.leaflet.mod.LineJoinShape
-import typingsSlinky.leaflet.mod.Zoom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,9 +38,7 @@ object leafletStrings {
   sealed trait butt extends LineCapShape
   
   @js.native
-  sealed trait center
-    extends Direction
-       with Zoom
+  sealed trait center extends Direction
   
   @js.native
   sealed trait click extends js.Object

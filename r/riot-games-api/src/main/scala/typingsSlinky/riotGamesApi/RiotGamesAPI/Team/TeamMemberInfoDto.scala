@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TeamMemberInfoDto extends js.Object {
-  var inviteDate: Double = js.native
-  var joinDate: Double = js.native
-  var playerId: Double = js.native
-  var status: String = js.native
+  var inviteDate: Double
+  var joinDate: Double
+  var playerId: Double
+  var status: String
 }
 
 object TeamMemberInfoDto {
@@ -18,37 +17,5 @@ object TeamMemberInfoDto {
     val __obj = js.Dynamic.literal(inviteDate = inviteDate.asInstanceOf[js.Any], joinDate = joinDate.asInstanceOf[js.Any], playerId = playerId.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
     __obj.asInstanceOf[TeamMemberInfoDto]
   }
-  @scala.inline
-  implicit class TeamMemberInfoDtoOps[Self <: TeamMemberInfoDto] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInviteDate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inviteDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJoinDate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("joinDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlayerId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

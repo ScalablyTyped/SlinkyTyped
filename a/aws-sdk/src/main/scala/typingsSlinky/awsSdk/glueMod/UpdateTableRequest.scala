@@ -26,53 +26,16 @@ trait UpdateTableRequest extends js.Object {
 
 object UpdateTableRequest {
   @scala.inline
-  def apply(DatabaseName: NameString, TableInput: TableInput): UpdateTableRequest = {
+  def apply(
+    DatabaseName: NameString,
+    TableInput: TableInput,
+    CatalogId: CatalogIdString = null,
+    SkipArchive: js.UndefOr[BooleanNullable] = js.undefined
+  ): UpdateTableRequest = {
     val __obj = js.Dynamic.literal(DatabaseName = DatabaseName.asInstanceOf[js.Any], TableInput = TableInput.asInstanceOf[js.Any])
+    if (CatalogId != null) __obj.updateDynamic("CatalogId")(CatalogId.asInstanceOf[js.Any])
+    if (!js.isUndefined(SkipArchive)) __obj.updateDynamic("SkipArchive")(SkipArchive.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateTableRequest]
   }
-  @scala.inline
-  implicit class UpdateTableRequestOps[Self <: UpdateTableRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDatabaseName(value: NameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTableInput(value: TableInput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableInput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCatalogId(value: CatalogIdString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCatalogId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipArchive(value: BooleanNullable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SkipArchive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipArchive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SkipArchive")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

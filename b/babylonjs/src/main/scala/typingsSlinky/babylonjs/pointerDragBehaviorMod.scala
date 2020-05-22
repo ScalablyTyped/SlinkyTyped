@@ -89,6 +89,9 @@ object pointerDragBehaviorMod extends js.Object {
       *  If the attached mesh should be moved when dragged
       */
     var moveAttached: Boolean = js.native
+    /** gets or sets behavior's name */
+    /* CompleteClass */
+    override var name: String = js.native
     /**
       *  Fires each time a drag ends (eg. mouse release after drag)
       */
@@ -118,6 +121,22 @@ object pointerDragBehaviorMod extends js.Object {
       */
     var useObjectOrientationForDragging: Boolean = js.native
     def attach(ownerNode: AbstractMesh, predicate: js.Function1[/* m */ AbstractMesh, Boolean]): Unit = js.native
+    /**
+      * Called when the behavior is attached to a target
+      * @param target defines the target where the behavior is attached to
+      */
+    /* CompleteClass */
+    override def attach(target: AbstractMesh): Unit = js.native
+    /**
+      * Called when the behavior is detached from its target
+      */
+    /* CompleteClass */
+    override def detach(): Unit = js.native
+    /**
+      * Function called when the behavior needs to be initialized (after attaching it to a target)
+      */
+    /* CompleteClass */
+    override def init(): Unit = js.native
     /**
       *  The name of the behavior
       */

@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * take place.
   * @since OOo 1.1.2
   */
-@js.native
 trait XKeyHandler extends XEventListener {
   /**
     * This function is called by the broadcaster, an {@link com.sun.star.awt.XExtendedToolkit} for instance, after a key has been pressed but before it is
@@ -26,7 +25,7 @@ trait XKeyHandler extends XEventListener {
     * @param aEvent The key event informs about the pressed key.
     * @returns When `FALSE` is returned the other handlers are called and a following handling of the event by the broadcaster takes place. Otherwise, when `TRU
     */
-  def keyPressed(aEvent: KeyEvent): Boolean = js.native
+  def keyPressed(aEvent: KeyEvent): Boolean
   /**
     * This function is called by the broadcaster, an {@link com.sun.star.awt.XExtendedToolkit} for instance, after a key has been pressed and released. The
     * return value decides about whether other handlers will be called and a handling by the broadcaster will take place.
@@ -36,7 +35,7 @@ trait XKeyHandler extends XEventListener {
     * @param aEvent The key event informs about the pressed key.
     * @returns When `FALSE` is returned the other handlers are called and a following handling of the event by the broadcaster takes place. Otherwise, when `TRU
     */
-  def keyReleased(aEvent: KeyEvent): Boolean = js.native
+  def keyReleased(aEvent: KeyEvent): Boolean
 }
 
 object XKeyHandler {
@@ -52,25 +51,5 @@ object XKeyHandler {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), disposing = js.Any.fromFunction1(disposing), keyPressed = js.Any.fromFunction1(keyPressed), keyReleased = js.Any.fromFunction1(keyReleased), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XKeyHandler]
   }
-  @scala.inline
-  implicit class XKeyHandlerOps[Self <: XKeyHandler] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeyPressed(value: KeyEvent => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyPressed")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withKeyReleased(value: KeyEvent => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyReleased")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

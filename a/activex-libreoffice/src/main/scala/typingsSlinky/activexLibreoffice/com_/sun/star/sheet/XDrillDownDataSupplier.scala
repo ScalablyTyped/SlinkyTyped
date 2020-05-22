@@ -17,7 +17,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.sheet.DataPilotSource
   * @since OOo 3.0
   */
-@js.native
 trait XDrillDownDataSupplier extends XInterface {
   /**
     * This method returns filtered subset of the original source data based on a given set of filtering criteria.
@@ -26,7 +25,7 @@ trait XDrillDownDataSupplier extends XInterface {
     * @see com.sun.star.sheet.DataPilotFieldFilter
     * @see com.sun.star.sheet.XDataPilotTable2
     */
-  def getDrillDownData(aFilters: SeqEquiv[DataPilotFieldFilter]): SafeArray[SafeArray[_]] = js.native
+  def getDrillDownData(aFilters: SeqEquiv[DataPilotFieldFilter]): SafeArray[SafeArray[_]]
 }
 
 object XDrillDownDataSupplier {
@@ -40,19 +39,5 @@ object XDrillDownDataSupplier {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), getDrillDownData = js.Any.fromFunction1(getDrillDownData), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XDrillDownDataSupplier]
   }
-  @scala.inline
-  implicit class XDrillDownDataSupplierOps[Self <: XDrillDownDataSupplier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetDrillDownData(value: SeqEquiv[DataPilotFieldFilter] => SafeArray[SafeArray[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDrillDownData")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

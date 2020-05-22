@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UseResizeColumnsOptions[D /* <: js.Object */] extends js.Object {
-  var disableResizing: js.UndefOr[Boolean] = js.native
+  var disableResizing: js.UndefOr[Boolean] = js.undefined
 }
 
 object UseResizeColumnsOptions {
   @scala.inline
-  def apply[D](): UseResizeColumnsOptions[D] = {
+  def apply[D](disableResizing: js.UndefOr[Boolean] = js.undefined): UseResizeColumnsOptions[D] = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(disableResizing)) __obj.updateDynamic("disableResizing")(disableResizing.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UseResizeColumnsOptions[D]]
   }
-  @scala.inline
-  implicit class UseResizeColumnsOptionsOps[Self[d] <: UseResizeColumnsOptions[d], D] (val x: Self[D]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[D] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[D]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[D] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[D] with Other]
-    @scala.inline
-    def withDisableResizing(value: Boolean): Self[D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableResizing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableResizing: Self[D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableResizing")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

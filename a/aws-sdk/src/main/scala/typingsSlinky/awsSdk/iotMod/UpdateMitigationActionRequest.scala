@@ -22,47 +22,15 @@ trait UpdateMitigationActionRequest extends js.Object {
 
 object UpdateMitigationActionRequest {
   @scala.inline
-  def apply(actionName: MitigationActionName): UpdateMitigationActionRequest = {
+  def apply(
+    actionName: MitigationActionName,
+    actionParams: MitigationActionParams = null,
+    roleArn: RoleArn = null
+  ): UpdateMitigationActionRequest = {
     val __obj = js.Dynamic.literal(actionName = actionName.asInstanceOf[js.Any])
+    if (actionParams != null) __obj.updateDynamic("actionParams")(actionParams.asInstanceOf[js.Any])
+    if (roleArn != null) __obj.updateDynamic("roleArn")(roleArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateMitigationActionRequest]
   }
-  @scala.inline
-  implicit class UpdateMitigationActionRequestOps[Self <: UpdateMitigationActionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionName(value: MitigationActionName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withActionParams(value: MitigationActionParams): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: RoleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

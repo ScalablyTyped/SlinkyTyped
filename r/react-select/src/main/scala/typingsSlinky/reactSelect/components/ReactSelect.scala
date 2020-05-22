@@ -15,7 +15,12 @@ object ReactSelect {
   
   def withProps[OptionType <: OptionTypeBase, T <: default[OptionType]](
     p: StateProps[Props[OptionType]] with typingsSlinky.reactSelect.stateManagerMod.Props[OptionType] with Props[OptionType]
-  ): `SharedBuilder_<intersection>_1462585424`[typingsSlinky.reactSelect.mod.default[js.Any, js.Any], OptionType, T] = new `SharedBuilder_<intersection>_1462585424`[typingsSlinky.reactSelect.mod.default[js.Any, js.Any], OptionType, T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make[OptionType <: OptionTypeBase, T <: default[OptionType]](companion: ReactSelect.type): `SharedBuilder_<intersection>_1462585424`[typingsSlinky.reactSelect.mod.default[js.Any, js.Any], OptionType, T] = new `SharedBuilder_<intersection>_1462585424`[typingsSlinky.reactSelect.mod.default[js.Any, js.Any], OptionType, T](js.Array(this.component, js.Dictionary.empty))()
+  ): SharedBuilder_StatePropsPropsProps_1462585424[typingsSlinky.reactSelect.mod.default[js.Any, js.Any], OptionType, T] = new SharedBuilder_StatePropsPropsProps_1462585424[typingsSlinky.reactSelect.mod.default[js.Any, js.Any], OptionType, T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[OptionType <: OptionTypeBase, T <: default[OptionType]](): SharedBuilder_StatePropsPropsProps_1462585424[typingsSlinky.reactSelect.mod.default[js.Any, js.Any], OptionType, T] = {
+    val __props = js.Dynamic.literal()
+    new SharedBuilder_StatePropsPropsProps_1462585424[typingsSlinky.reactSelect.mod.default[js.Any, js.Any], OptionType, T](js.Array(this.component, __props.asInstanceOf[StateProps[Props[OptionType]] with typingsSlinky.reactSelect.stateManagerMod.Props[OptionType] with Props[OptionType]]))
+  }
+  implicit def make[OptionType <: OptionTypeBase, T <: default[OptionType]](companion: ReactSelect.type): SharedBuilder_StatePropsPropsProps_1462585424[typingsSlinky.reactSelect.mod.default[js.Any, js.Any], OptionType, T] = new SharedBuilder_StatePropsPropsProps_1462585424[typingsSlinky.reactSelect.mod.default[js.Any, js.Any], OptionType, T](js.Array(this.component, js.Dictionary.empty))()
 }
 

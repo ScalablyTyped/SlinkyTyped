@@ -10,68 +10,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DayProp[TEvent /* <: js.Object */] extends js.Object {
-  var dayProp: js.UndefOr[DayPropGetter] = js.native
-  var eventProp: js.UndefOr[EventPropGetter[TEvent]] = js.native
-  var slotProp: js.UndefOr[SlotPropGetter] = js.native
+  var dayProp: js.UndefOr[DayPropGetter] = js.undefined
+  var eventProp: js.UndefOr[EventPropGetter[TEvent]] = js.undefined
+  var slotProp: js.UndefOr[SlotPropGetter] = js.undefined
 }
 
 object DayProp {
   @scala.inline
-  def apply[TEvent](): DayProp[TEvent] = {
+  def apply[TEvent](
+    dayProp: (/* date */ js.Date, /* resourceId */ js.UndefOr[Double | String]) => HTMLAttributes[HTMLDivElement] = null,
+    eventProp: (TEvent, /* start */ stringOrDate, /* end */ stringOrDate, /* isSelected */ Boolean) => HTMLAttributes[HTMLDivElement] = null,
+    slotProp: (/* date */ js.Date, /* resourceId */ js.UndefOr[Double | String]) => HTMLAttributes[HTMLDivElement] = null
+  ): DayProp[TEvent] = {
     val __obj = js.Dynamic.literal()
+    if (dayProp != null) __obj.updateDynamic("dayProp")(js.Any.fromFunction2(dayProp))
+    if (eventProp != null) __obj.updateDynamic("eventProp")(js.Any.fromFunction4(eventProp))
+    if (slotProp != null) __obj.updateDynamic("slotProp")(js.Any.fromFunction2(slotProp))
     __obj.asInstanceOf[DayProp[TEvent]]
   }
-  @scala.inline
-  implicit class DayPropOps[Self[tevent] <: DayProp[tevent], TEvent] (val x: Self[TEvent]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TEvent] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TEvent]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[TEvent] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TEvent] with Other]
-    @scala.inline
-    def withDayProp(
-      value: (/* date */ js.Date, /* resourceId */ js.UndefOr[Double | String]) => HTMLAttributes[HTMLDivElement]
-    ): Self[TEvent] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayProp")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutDayProp: Self[TEvent] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayProp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventProp(
-      value: (TEvent, /* start */ stringOrDate, /* end */ stringOrDate, /* isSelected */ Boolean) => HTMLAttributes[HTMLDivElement]
-    ): Self[TEvent] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventProp")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutEventProp: Self[TEvent] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventProp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlotProp(
-      value: (/* date */ js.Date, /* resourceId */ js.UndefOr[Double | String]) => HTMLAttributes[HTMLDivElement]
-    ): Self[TEvent] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slotProp")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutSlotProp: Self[TEvent] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slotProp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

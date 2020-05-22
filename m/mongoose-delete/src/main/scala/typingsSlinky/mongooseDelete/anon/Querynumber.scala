@@ -6,23 +6,28 @@ import typingsSlinky.mongodb.mod.FindAndModifyWriteOpResultObject
 import typingsSlinky.mongoose.anon.Coordinates
 import typingsSlinky.mongoose.anon.FnCallOnfulfilledOnrejected
 import typingsSlinky.mongoose.anon.NumberOfRetries
+import typingsSlinky.mongoose.anon.leantrueOmitQueryFindBase
+import typingsSlinky.mongoose.anon.leantrueOmitQueryFindOneA
 import typingsSlinky.mongoose.anon.rawResulttrueQueryFindOne
 import typingsSlinky.mongoose.anon.rawResulttrueQueryFindOneArrayFilters
 import typingsSlinky.mongoose.anon.rawResulttrueupserttruene
 import typingsSlinky.mongoose.anon.upserttruenewtrueQueryFin
 import typingsSlinky.mongoose.mod.CollationOptions
 import typingsSlinky.mongoose.mod.Document
+import typingsSlinky.mongoose.mod.DocumentDefinition
 import typingsSlinky.mongoose.mod.DocumentQuery
 import typingsSlinky.mongoose.mod.Error
 import typingsSlinky.mongoose.mod.FilterQuery
 import typingsSlinky.mongoose.mod.NativeError
 import typingsSlinky.mongoose.mod.Query
 import typingsSlinky.mongoose.mod.QueryCursor
+import typingsSlinky.mongoose.mod.QueryFindBaseOptions
 import typingsSlinky.mongoose.mod.QueryFindOneAndRemoveOptions
 import typingsSlinky.mongoose.mod.QueryFindOneAndUpdateOptions
 import typingsSlinky.mongoose.mod.QueryPopulateOptions
 import typingsSlinky.mongoose.mod.QueryUpdateOptions
 import typingsSlinky.mongoose.mod.UpdateQuery
+import typingsSlinky.std.NonNullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -211,6 +216,26 @@ trait Querynumber extends js.Object {
   def findOne(callback: js.Function2[/* err */ js.Any, /* res */ js.Any | Null, Unit]): DocumentQueryanynullany = js.native
   def findOne(criteria: FilterQuery[_]): DocumentQueryanynullany = js.native
   def findOne(criteria: FilterQuery[_], callback: js.Function2[/* err */ js.Any, /* res */ js.Any | Null, Unit]): DocumentQueryanynullany = js.native
+  def findOne(criteria: FilterQuery[_], projection: js.Any): DocumentQueryanynullany = js.native
+  def findOne(
+    criteria: FilterQuery[_],
+    projection: js.Any,
+    callback: js.Function2[/* err */ js.Any, /* res */ Double | Null, Unit]
+  ): DocumentQueryanynullany = js.native
+  def findOne(criteria: FilterQuery[_], projection: js.Any, options: leantrueOmitQueryFindBase): QueryDocumentDefinitionan = js.native
+  def findOne(
+    criteria: FilterQuery[_],
+    projection: js.Any,
+    options: leantrueOmitQueryFindBase,
+    callback: js.Function2[/* err */ js.Any, /* res */ Double | Null, Unit]
+  ): QueryDocumentDefinitionan = js.native
+  def findOne(criteria: FilterQuery[_], projection: js.Any, options: QueryFindBaseOptions): DocumentQueryanynullany = js.native
+  def findOne(
+    criteria: FilterQuery[_],
+    projection: js.Any,
+    options: QueryFindBaseOptions,
+    callback: js.Function2[/* err */ js.Any, /* res */ Double | Null, Unit]
+  ): DocumentQueryanynullany = js.native
   /**
     * Issues a mongodb findAndModify remove command.
     * Finds a matching document, removes it, passing the found document (if any) to the
@@ -259,6 +284,13 @@ trait Querynumber extends js.Object {
     update: UpdateQuery[_],
     callback: js.Function3[/* err */ js.Any, /* doc */ js.Any | Null, /* res */ js.Any, Unit]
   ): DocumentQueryanynullany = js.native
+  def findOneAndUpdate(query: FilterQuery[_], update: UpdateQuery[_], options: leantrueOmitQueryFindOneA): QueryDocumentDefinitionan = js.native
+  def findOneAndUpdate(
+    query: FilterQuery[_],
+    update: UpdateQuery[_],
+    options: leantrueOmitQueryFindOneA,
+    callback: js.Function3[/* err */ js.Any, /* doc */ DocumentDefinition[_], /* res */ js.Any, Unit]
+  ): QueryDocumentDefinitionan = js.native
   def findOneAndUpdate(query: FilterQuery[_], update: UpdateQuery[_], options: rawResulttrueQueryFindOneArrayFilters): QueryFindAndModifyWriteOp = js.native
   def findOneAndUpdate(
     query: FilterQuery[_],
@@ -452,9 +484,9 @@ trait Querynumber extends js.Object {
     *
     * @param err optional error to throw if no docs match `filter`
     */
-  def orFail(): this.type = js.native
-  def orFail(err: js.Function0[Error]): this.type = js.native
-  def orFail(err: Error): this.type = js.native
+  def orFail(): DocumentQuery[NonNullable[Double], _, js.Object] = js.native
+  def orFail(err: js.Function0[Error]): DocumentQuery[NonNullable[Double], _, js.Object] = js.native
+  def orFail(err: Error): DocumentQuery[NonNullable[Double], _, js.Object] = js.native
   /** Specifies a $polygon condition */
   def polygon(coordinatePairs: js.Array[Double]*): this.type = js.native
   def polygon(path: String, coordinatePairs: js.Array[Double]*): this.type = js.native

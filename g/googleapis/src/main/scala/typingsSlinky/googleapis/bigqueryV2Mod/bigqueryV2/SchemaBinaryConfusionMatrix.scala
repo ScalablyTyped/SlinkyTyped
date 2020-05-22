@@ -41,101 +41,24 @@ trait SchemaBinaryConfusionMatrix extends js.Object {
 
 object SchemaBinaryConfusionMatrix {
   @scala.inline
-  def apply(): SchemaBinaryConfusionMatrix = {
+  def apply(
+    falseNegatives: String = null,
+    falsePositives: String = null,
+    positiveClassThreshold: js.UndefOr[Double] = js.undefined,
+    precision: js.UndefOr[Double] = js.undefined,
+    recall: js.UndefOr[Double] = js.undefined,
+    trueNegatives: String = null,
+    truePositives: String = null
+  ): SchemaBinaryConfusionMatrix = {
     val __obj = js.Dynamic.literal()
+    if (falseNegatives != null) __obj.updateDynamic("falseNegatives")(falseNegatives.asInstanceOf[js.Any])
+    if (falsePositives != null) __obj.updateDynamic("falsePositives")(falsePositives.asInstanceOf[js.Any])
+    if (!js.isUndefined(positiveClassThreshold)) __obj.updateDynamic("positiveClassThreshold")(positiveClassThreshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(precision)) __obj.updateDynamic("precision")(precision.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(recall)) __obj.updateDynamic("recall")(recall.get.asInstanceOf[js.Any])
+    if (trueNegatives != null) __obj.updateDynamic("trueNegatives")(trueNegatives.asInstanceOf[js.Any])
+    if (truePositives != null) __obj.updateDynamic("truePositives")(truePositives.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBinaryConfusionMatrix]
   }
-  @scala.inline
-  implicit class SchemaBinaryConfusionMatrixOps[Self <: SchemaBinaryConfusionMatrix] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFalseNegatives(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("falseNegatives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFalseNegatives: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("falseNegatives")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFalsePositives(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("falsePositives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFalsePositives: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("falsePositives")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositiveClassThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positiveClassThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPositiveClassThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positiveClassThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrecision(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrecision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecall(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recall")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecall: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recall")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrueNegatives(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trueNegatives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrueNegatives: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trueNegatives")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTruePositives(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("truePositives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTruePositives: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("truePositives")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * @see XLogger
   * @since OOo 2.3
   */
-@js.native
 trait XLogHandler extends XComponent {
   /**
     * specifies MIME charset name for the encoding to be used by this handler
@@ -20,27 +19,27 @@ trait XLogHandler extends XComponent {
     * It depends on the concrete handler implementation whether or not this parameter is needed.
     * @see http://www.iana.org/assignments/character-sets
     */
-  var Encoding: String = js.native
+  var Encoding: String
   /** specifies the formatter to be used by this handler. */
-  var Formatter: XLogFormatter = js.native
+  var Formatter: XLogFormatter
   /**
     * specifies the log level of this handler
     *
     * Different handlers can have different log levels, which again might be different from the log level of the {@link XLogger} for which the handlers are
     * used.
     */
-  var Level: Double = js.native
+  var Level: Double
   /**
     * flushes all buffered output of the handler
     *
     * Log handlers are allowed to buffer their output. Upon `flush` being called, they must flush all their buffers.
     */
-  def flush(): Unit = js.native
+  def flush(): Unit
   /**
     * publish the given log record at the handler's output channel.
     * @returns `TRUE` if and only if the record was actually published. A handler will not publish a record if its log level doesn't meet the handler's log leve
     */
-  def publish(Record: LogRecord): Boolean = js.native
+  def publish(Record: LogRecord): Boolean
 }
 
 object XLogHandler {
@@ -61,43 +60,5 @@ object XLogHandler {
     val __obj = js.Dynamic.literal(Encoding = Encoding.asInstanceOf[js.Any], Formatter = Formatter.asInstanceOf[js.Any], Level = Level.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), dispose = js.Any.fromFunction0(dispose), flush = js.Any.fromFunction0(flush), publish = js.Any.fromFunction1(publish), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener))
     __obj.asInstanceOf[XLogHandler]
   }
-  @scala.inline
-  implicit class XLogHandlerOps[Self <: XLogHandler] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormatter(value: XLogFormatter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Formatter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFlush(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flush")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPublish(value: LogRecord => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publish")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

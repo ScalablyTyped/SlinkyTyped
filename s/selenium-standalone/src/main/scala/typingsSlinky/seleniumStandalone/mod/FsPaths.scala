@@ -6,89 +6,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FsPaths
   extends /* x */ StringDictionary[js.Any] {
-  var chrome: js.UndefOr[Dictx] = js.native
-  var edge: js.UndefOr[Dictx] = js.native
-  var firefox: js.UndefOr[Dictx] = js.native
-  var ie: js.UndefOr[Dictx] = js.native
-  var selenium: js.UndefOr[Dictx] = js.native
+  var chrome: js.UndefOr[Dictx] = js.undefined
+  var edge: js.UndefOr[Dictx] = js.undefined
+  var firefox: js.UndefOr[Dictx] = js.undefined
+  var ie: js.UndefOr[Dictx] = js.undefined
+  var selenium: js.UndefOr[Dictx] = js.undefined
 }
 
 object FsPaths {
   @scala.inline
-  def apply(): FsPaths = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    chrome: Dictx = null,
+    edge: Dictx = null,
+    firefox: Dictx = null,
+    ie: Dictx = null,
+    selenium: Dictx = null
+  ): FsPaths = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (chrome != null) __obj.updateDynamic("chrome")(chrome.asInstanceOf[js.Any])
+    if (edge != null) __obj.updateDynamic("edge")(edge.asInstanceOf[js.Any])
+    if (firefox != null) __obj.updateDynamic("firefox")(firefox.asInstanceOf[js.Any])
+    if (ie != null) __obj.updateDynamic("ie")(ie.asInstanceOf[js.Any])
+    if (selenium != null) __obj.updateDynamic("selenium")(selenium.asInstanceOf[js.Any])
     __obj.asInstanceOf[FsPaths]
   }
-  @scala.inline
-  implicit class FsPathsOps[Self <: FsPaths] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChrome(value: Dictx): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chrome")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChrome: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chrome")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdge(value: Dictx): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirefox(value: Dictx): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firefox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirefox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firefox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIe(value: Dictx): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ie")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIe: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ie")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelenium(value: Dictx): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selenium")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelenium: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selenium")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

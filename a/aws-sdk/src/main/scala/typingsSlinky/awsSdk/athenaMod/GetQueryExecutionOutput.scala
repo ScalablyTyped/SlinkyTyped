@@ -14,29 +14,10 @@ trait GetQueryExecutionOutput extends js.Object {
 
 object GetQueryExecutionOutput {
   @scala.inline
-  def apply(): GetQueryExecutionOutput = {
+  def apply(QueryExecution: QueryExecution = null): GetQueryExecutionOutput = {
     val __obj = js.Dynamic.literal()
+    if (QueryExecution != null) __obj.updateDynamic("QueryExecution")(QueryExecution.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetQueryExecutionOutput]
   }
-  @scala.inline
-  implicit class GetQueryExecutionOutputOps[Self <: GetQueryExecutionOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQueryExecution(value: QueryExecution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryExecution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryExecution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryExecution")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

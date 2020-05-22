@@ -41,6 +41,14 @@ class AppServiceAction protected ()
   @JSName("parameters")
   val parameters_FAppServiceAction: IList[IAppServiceActionParameter] = js.native
   /**
+    * Returns the qualified name of this element, or
+    * null if this element is not a part of the model,
+    * or if it or one of its namespace containers does not have a
+    * valid name.
+    */
+  /* CompleteClass */
+  override val qualifiedName: String | Null = js.native
+  /**
     * In version 7.9.0: introduced
     */
   def actionReturnType: DataType = js.native

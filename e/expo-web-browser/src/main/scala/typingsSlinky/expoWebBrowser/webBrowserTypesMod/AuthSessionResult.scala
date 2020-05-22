@@ -1,5 +1,9 @@
 package typingsSlinky.expoWebBrowser.webBrowserTypesMod
 
+import typingsSlinky.expoWebBrowser.expoWebBrowserStrings.cancel
+import typingsSlinky.expoWebBrowser.expoWebBrowserStrings.dismiss
+import typingsSlinky.expoWebBrowser.expoWebBrowserStrings.opened
+import typingsSlinky.expoWebBrowser.expoWebBrowserStrings.success
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +16,16 @@ trait AuthSessionResult extends js.Object
 
 object AuthSessionResult {
   @scala.inline
-  implicit def apply(value: BrowserResult): AuthSessionResult = value.asInstanceOf[AuthSessionResult]
+  def RedirectResult(`type`: success, url: String): AuthSessionResult = {
+    val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AuthSessionResult]
+  }
   @scala.inline
-  implicit def apply(value: RedirectResult): AuthSessionResult = value.asInstanceOf[AuthSessionResult]
+  def BrowserResult(`type`: cancel | dismiss | opened): AuthSessionResult = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AuthSessionResult]
+  }
 }
 

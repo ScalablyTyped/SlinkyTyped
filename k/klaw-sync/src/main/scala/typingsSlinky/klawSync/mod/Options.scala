@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /**
     * @description The number of times to recurse before stopping.
@@ -13,31 +12,31 @@ trait Options extends js.Object {
     * @default -1
     * @since v5.0.0
     */
-  var depthLimit: js.UndefOr[Double] = js.native
+  var depthLimit: js.UndefOr[Double] = js.undefined
   /**
     * @description function that gets one argument fn({path: '', stats: {}}) and returns true to include
     *              or false to exclude the item
     * @since v2.0.0
     */
-  var filter: js.UndefOr[Filter] = js.native
+  var filter: js.UndefOr[Filter] = js.undefined
   /**
     * @description Custom fs, useful when mocking fs object.
     * @default graceful-fs
     * @since v4.0.0
     */
-  var fs: js.UndefOr[ReaddirSync] = js.native
+  var fs: js.UndefOr[ReaddirSync] = js.undefined
   /**
     * @description True to only return files (ignore directories).
     *              Defaults to false if not specified.
     * @default false
     */
-  var nodir: js.UndefOr[Boolean] = js.native
+  var nodir: js.UndefOr[Boolean] = js.undefined
   /**
     * @description True to only return directories (ignore files).
     *              Defaults to false if not specified.
     * @default false
     */
-  var nofile: js.UndefOr[Boolean] = js.native
+  var nofile: js.UndefOr[Boolean] = js.undefined
   /**
     * @description traverse all subdirectories, regardless of `filter` option.
     *
@@ -47,94 +46,27 @@ trait Options extends js.Object {
     *
     * @since v6.0.0
     */
-  var traverseAll: js.UndefOr[Boolean] = js.native
+  var traverseAll: js.UndefOr[Boolean] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    depthLimit: js.UndefOr[Double] = js.undefined,
+    filter: /* item */ Item => Boolean = null,
+    fs: ReaddirSync = null,
+    nodir: js.UndefOr[Boolean] = js.undefined,
+    nofile: js.UndefOr[Boolean] = js.undefined,
+    traverseAll: js.UndefOr[Boolean] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(depthLimit)) __obj.updateDynamic("depthLimit")(depthLimit.get.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction1(filter))
+    if (fs != null) __obj.updateDynamic("fs")(fs.asInstanceOf[js.Any])
+    if (!js.isUndefined(nodir)) __obj.updateDynamic("nodir")(nodir.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(nofile)) __obj.updateDynamic("nofile")(nofile.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(traverseAll)) __obj.updateDynamic("traverseAll")(traverseAll.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDepthLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depthLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDepthLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depthLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter(value: /* item */ Item => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFs(value: ReaddirSync): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodir(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNofile(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nofile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNofile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nofile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTraverseAll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("traverseAll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTraverseAll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("traverseAll")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

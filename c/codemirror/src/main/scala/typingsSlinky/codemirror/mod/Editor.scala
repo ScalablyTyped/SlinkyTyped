@@ -6,7 +6,6 @@ import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.codemirror.anon.Anchor
 import typingsSlinky.codemirror.anon.BgClass
 import typingsSlinky.codemirror.anon.Bottom
 import typingsSlinky.codemirror.anon.Ch
@@ -30,11 +29,13 @@ import typingsSlinky.codemirror.codemirrorStrings.beforeSelectionChange
 import typingsSlinky.codemirror.codemirrorStrings.blur
 import typingsSlinky.codemirror.codemirrorStrings.change
 import typingsSlinky.codemirror.codemirrorStrings.changes
+import typingsSlinky.codemirror.codemirrorStrings.copy
 import typingsSlinky.codemirror.codemirrorStrings.coverGutterNextToScrollbar
 import typingsSlinky.codemirror.codemirrorStrings.cursorActivity
 import typingsSlinky.codemirror.codemirrorStrings.cursorBlinkRate
 import typingsSlinky.codemirror.codemirrorStrings.cursorHeight
 import typingsSlinky.codemirror.codemirrorStrings.cursorScrollMargin
+import typingsSlinky.codemirror.codemirrorStrings.cut
 import typingsSlinky.codemirror.codemirrorStrings.dragDrop
 import typingsSlinky.codemirror.codemirrorStrings.electricChars
 import typingsSlinky.codemirror.codemirrorStrings.electricInput
@@ -66,6 +67,8 @@ import typingsSlinky.codemirror.codemirrorStrings.maxHighlightLength
 import typingsSlinky.codemirror.codemirrorStrings.mode
 import typingsSlinky.codemirror.codemirrorStrings.optionChange
 import typingsSlinky.codemirror.codemirrorStrings.overwriteToggle
+import typingsSlinky.codemirror.codemirrorStrings.paste
+import typingsSlinky.codemirror.codemirrorStrings.pasteLinesPerSelection
 import typingsSlinky.codemirror.codemirrorStrings.placeholder
 import typingsSlinky.codemirror.codemirrorStrings.pollInterval
 import typingsSlinky.codemirror.codemirrorStrings.readOnly
@@ -73,10 +76,12 @@ import typingsSlinky.codemirror.codemirrorStrings.refresh
 import typingsSlinky.codemirror.codemirrorStrings.renderLine
 import typingsSlinky.codemirror.codemirrorStrings.resetSelectionOnContextMenu
 import typingsSlinky.codemirror.codemirrorStrings.rtlMoveVisually
+import typingsSlinky.codemirror.codemirrorStrings.screenReaderLabel
 import typingsSlinky.codemirror.codemirrorStrings.scroll
 import typingsSlinky.codemirror.codemirrorStrings.scrollCursorIntoView
 import typingsSlinky.codemirror.codemirrorStrings.scrollPastEnd
 import typingsSlinky.codemirror.codemirrorStrings.scrollbarStyle
+import typingsSlinky.codemirror.codemirrorStrings.selectionsMayTouch
 import typingsSlinky.codemirror.codemirrorStrings.showCursorWhenSelecting
 import typingsSlinky.codemirror.codemirrorStrings.showHint
 import typingsSlinky.codemirror.codemirrorStrings.smartIndent
@@ -265,6 +270,8 @@ trait Editor extends Doc {
   @JSName("getOption")
   def getOption_mode(option: mode): js.Any = js.native
   @JSName("getOption")
+  def getOption_pasteLinesPerSelection(option: pasteLinesPerSelection): Boolean = js.native
+  @JSName("getOption")
   def getOption_placeholder(option: placeholder): String = js.native
   @JSName("getOption")
   def getOption_pollInterval(option: pollInterval): Double = js.native
@@ -275,9 +282,13 @@ trait Editor extends Doc {
   @JSName("getOption")
   def getOption_rtlMoveVisually(option: rtlMoveVisually): Boolean = js.native
   @JSName("getOption")
+  def getOption_screenReaderLabel(option: screenReaderLabel): String = js.native
+  @JSName("getOption")
   def getOption_scrollPastEnd(option: scrollPastEnd): Boolean = js.native
   @JSName("getOption")
   def getOption_scrollbarStyle(option: scrollbarStyle): String = js.native
+  @JSName("getOption")
+  def getOption_selectionsMayTouch(option: selectionsMayTouch): Boolean = js.native
   @JSName("getOption")
   def getOption_showCursorWhenSelecting(option: showCursorWhenSelecting): Boolean = js.native
   @JSName("getOption")
@@ -345,6 +356,8 @@ trait Editor extends Doc {
     "subtract" Reduce the indentation of the line. */
   def indentLine(line: Double): Unit = js.native
   def indentLine(line: Double, dir: String): Unit = js.native
+  /** Indent a selection */
+  def indentSelection(how: String): Unit = js.native
   /** Tells you whether the editor's content can be edited by the user. */
   def isReadOnly(): Boolean = js.native
   /** Compute the line at the given pixel height. mode is the relative element
@@ -356,6 +369,8 @@ trait Editor extends Doc {
   def lineComment(from: Position, to: Position, options: CommentOptions): Unit = js.native
   /** Returns the line number, text content, and marker status of the given line, which can be either a number or a line handle. */
   def lineInfo(line: js.Any): BgClass = js.native
+  /** Returns the preferred line separator string for this document, as per the option by the same name. When that option is null, the string "\n" is returned. */
+  def lineSeparator(): String = js.native
   def off(eventName: String, handler: js.Function1[/* instance */ this.type, Unit]): Unit = js.native
   def off(eventName: String, handler: js.Function2[/* doc */ Doc, /* event */ js.Any, Unit]): Unit = js.native
   def off[K /* <: DOMEvent with (/* import warning: LimitUnionLength.leaveTypeRef Was union type with length 87 */ js.Any) */](
@@ -367,6 +382,15 @@ trait Editor extends Doc {
     ]
   ): Unit = js.native
   @JSName("off")
+  def off_K_IntersectionDOMEventUnioncopycutpaste[K /* <: DOMEvent with (copy | cut | paste) */](
+    eventName: K,
+    handler: js.Function2[
+      /* instance */ this.type, 
+      /* import warning: importer.ImportType#apply Failed type conversion: std.DocumentAndElementEventHandlersEventMap[K] */ /* event */ js.Any, 
+      Unit
+    ]
+  ): Unit = js.native
+  @JSName("off")
   def off_beforeChange(
     eventName: beforeChange,
     handler: js.Function2[/* instance */ this.type, /* changeObj */ EditorChangeCancellable, Unit]
@@ -374,7 +398,7 @@ trait Editor extends Doc {
   @JSName("off")
   def off_beforeSelectionChange(
     eventName: beforeSelectionChange,
-    handler: js.Function2[/* instance */ this.type, /* selection */ Anchor, Unit]
+    handler: js.Function2[/* instance */ this.type, /* obj */ EditorSelectionChange, Unit]
   ): Unit = js.native
   @JSName("off")
   def off_blur(eventName: blur, handler: js.Function2[/* instance */ this.type, /* event */ FocusEvent, Unit]): Unit = js.native
@@ -460,12 +484,22 @@ trait Editor extends Doc {
   def on(eventName: String, handler: js.Function1[/* instance */ this.type, Unit]): Unit = js.native
   /** An extension of the existing CodeMirror typings for the Editor.on("keyup", func) syntax */
   def on(eventName: String, handler: js.Function2[/* doc */ Doc, /* event */ js.Any, Unit]): Unit = js.native
-  /** Fires when one of the DOM events fires. */
+  /** Fires when one of the global DOM events fires. */
   def on[K /* <: DOMEvent with (/* import warning: LimitUnionLength.leaveTypeRef Was union type with length 87 */ js.Any) */](
     eventName: K,
     handler: js.Function2[
       /* instance */ this.type, 
       /* import warning: importer.ImportType#apply Failed type conversion: std.GlobalEventHandlersEventMap[K] */ /* event */ js.Any, 
+      Unit
+    ]
+  ): Unit = js.native
+  /** Fires when one of the clipboard DOM events fires. */
+  @JSName("on")
+  def on_K_IntersectionDOMEventUnioncopycutpaste[K /* <: DOMEvent with (copy | cut | paste) */](
+    eventName: K,
+    handler: js.Function2[
+      /* instance */ this.type, 
+      /* import warning: importer.ImportType#apply Failed type conversion: std.DocumentAndElementEventHandlersEventMap[K] */ /* event */ js.Any, 
       Unit
     ]
   ): Unit = js.native
@@ -484,7 +518,7 @@ trait Editor extends Doc {
   @JSName("on")
   def on_beforeSelectionChange(
     eventName: beforeSelectionChange,
-    handler: js.Function2[/* instance */ this.type, /* selection */ Anchor, Unit]
+    handler: js.Function2[/* instance */ this.type, /* obj */ EditorSelectionChange, Unit]
   ): Unit = js.native
   /** Fires whenever the editor is unfocused. */
   @JSName("on")
@@ -733,6 +767,8 @@ trait Editor extends Doc {
   @JSName("setOption")
   def setOption_mode(option: mode, value: js.Any): Unit = js.native
   @JSName("setOption")
+  def setOption_pasteLinesPerSelection(option: pasteLinesPerSelection, value: Boolean): Unit = js.native
+  @JSName("setOption")
   def setOption_placeholder(option: placeholder, value: String): Unit = js.native
   @JSName("setOption")
   def setOption_pollInterval(option: pollInterval, value: Double): Unit = js.native
@@ -743,9 +779,13 @@ trait Editor extends Doc {
   @JSName("setOption")
   def setOption_rtlMoveVisually(option: rtlMoveVisually, value: Boolean): Unit = js.native
   @JSName("setOption")
+  def setOption_screenReaderLabel(option: screenReaderLabel, value: String): Unit = js.native
+  @JSName("setOption")
   def setOption_scrollPastEnd(option: scrollPastEnd, value: Boolean): Unit = js.native
   @JSName("setOption")
   def setOption_scrollbarStyle(option: scrollbarStyle, value: String): Unit = js.native
+  @JSName("setOption")
+  def setOption_selectionsMayTouch(option: selectionsMayTouch, value: Boolean): Unit = js.native
   @JSName("setOption")
   def setOption_showCursorWhenSelecting(option: showCursorWhenSelecting, value: Boolean): Unit = js.native
   @JSName("setOption")

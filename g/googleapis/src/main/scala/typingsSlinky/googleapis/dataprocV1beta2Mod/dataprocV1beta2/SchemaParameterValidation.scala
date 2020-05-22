@@ -21,41 +21,11 @@ trait SchemaParameterValidation extends js.Object {
 
 object SchemaParameterValidation {
   @scala.inline
-  def apply(): SchemaParameterValidation = {
+  def apply(regex: SchemaRegexValidation = null, values: SchemaValueValidation = null): SchemaParameterValidation = {
     val __obj = js.Dynamic.literal()
+    if (regex != null) __obj.updateDynamic("regex")(regex.asInstanceOf[js.Any])
+    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaParameterValidation]
   }
-  @scala.inline
-  implicit class SchemaParameterValidationOps[Self <: SchemaParameterValidation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRegex(value: SchemaRegexValidation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValues(value: SchemaValueValidation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -8,10 +8,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SetFieldsOnGraphQLNodeTypeArgs extends ParentSpanPluginArgs {
-  var traceId: `initial-setFieldsOnGraphQLNodeType` = js.native
-  var `type`: Name = js.native
+  var traceId: `initial-setFieldsOnGraphQLNodeType`
+  var `type`: Name
 }
 
 object SetFieldsOnGraphQLNodeTypeArgs {
@@ -42,25 +41,5 @@ object SetFieldsOnGraphQLNodeTypeArgs {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetFieldsOnGraphQLNodeTypeArgs]
   }
-  @scala.inline
-  implicit class SetFieldsOnGraphQLNodeTypeArgsOps[Self <: SetFieldsOnGraphQLNodeTypeArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTraceId(value: `initial-setFieldsOnGraphQLNodeType`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("traceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: Name): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

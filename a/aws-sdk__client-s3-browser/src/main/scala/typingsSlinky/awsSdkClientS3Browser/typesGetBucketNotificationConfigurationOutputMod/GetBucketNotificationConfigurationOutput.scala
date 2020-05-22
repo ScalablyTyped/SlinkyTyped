@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkClientS3Browser.typesGetBucketNotificationConfigurationOutputMod
 
-import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod.OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod._OutputTypesUnion
 import typingsSlinky.awsSdkClientS3Browser.typesLambdaFunctionConfigurationMod.UnmarshalledLambdaFunctionConfiguration
 import typingsSlinky.awsSdkClientS3Browser.typesQueueConfigurationMod.UnmarshalledQueueConfiguration
 import typingsSlinky.awsSdkClientS3Browser.typesTopicConfigurationMod.UnmarshalledTopicConfiguration
@@ -10,73 +10,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetBucketNotificationConfigurationOutput
   extends MetadataBearer
-     with OutputTypesUnion {
+     with _OutputTypesUnion {
   /**
     * _LambdaFunctionConfigurationList shape
     */
-  var LambdaFunctionConfigurations: js.UndefOr[js.Array[UnmarshalledLambdaFunctionConfiguration]] = js.native
+  var LambdaFunctionConfigurations: js.UndefOr[js.Array[UnmarshalledLambdaFunctionConfiguration]] = js.undefined
   /**
     * _QueueConfigurationList shape
     */
-  var QueueConfigurations: js.UndefOr[js.Array[UnmarshalledQueueConfiguration]] = js.native
+  var QueueConfigurations: js.UndefOr[js.Array[UnmarshalledQueueConfiguration]] = js.undefined
   /**
     * _TopicConfigurationList shape
     */
-  var TopicConfigurations: js.UndefOr[js.Array[UnmarshalledTopicConfiguration]] = js.native
+  var TopicConfigurations: js.UndefOr[js.Array[UnmarshalledTopicConfiguration]] = js.undefined
 }
 
 object GetBucketNotificationConfigurationOutput {
   @scala.inline
-  def apply($metadata: ResponseMetadata): GetBucketNotificationConfigurationOutput = {
+  def apply(
+    $metadata: ResponseMetadata,
+    LambdaFunctionConfigurations: js.Array[UnmarshalledLambdaFunctionConfiguration] = null,
+    QueueConfigurations: js.Array[UnmarshalledQueueConfiguration] = null,
+    TopicConfigurations: js.Array[UnmarshalledTopicConfiguration] = null
+  ): GetBucketNotificationConfigurationOutput = {
     val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any])
+    if (LambdaFunctionConfigurations != null) __obj.updateDynamic("LambdaFunctionConfigurations")(LambdaFunctionConfigurations.asInstanceOf[js.Any])
+    if (QueueConfigurations != null) __obj.updateDynamic("QueueConfigurations")(QueueConfigurations.asInstanceOf[js.Any])
+    if (TopicConfigurations != null) __obj.updateDynamic("TopicConfigurations")(TopicConfigurations.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetBucketNotificationConfigurationOutput]
   }
-  @scala.inline
-  implicit class GetBucketNotificationConfigurationOutputOps[Self <: GetBucketNotificationConfigurationOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLambdaFunctionConfigurations(value: js.Array[UnmarshalledLambdaFunctionConfiguration]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LambdaFunctionConfigurations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLambdaFunctionConfigurations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LambdaFunctionConfigurations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueueConfigurations(value: js.Array[UnmarshalledQueueConfiguration]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueueConfigurations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueueConfigurations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueueConfigurations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopicConfigurations(value: js.Array[UnmarshalledTopicConfiguration]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicConfigurations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopicConfigurations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicConfigurations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

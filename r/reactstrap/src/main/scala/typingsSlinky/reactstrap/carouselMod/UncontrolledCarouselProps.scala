@@ -12,202 +12,65 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UncontrolledCarouselProps
   extends AllHTMLAttributes[HTMLElement]
      with ClassAttributes[HTMLElement]
      with /* key */ StringDictionary[js.Any] {
-  var activeIndex: js.UndefOr[Double] = js.native
-  var cssModule: js.UndefOr[CSSModule] = js.native
-  var enableTouch: js.UndefOr[Boolean] = js.native
-  var indicators: js.UndefOr[Boolean] = js.native
-  var interval: js.UndefOr[Double | String | Boolean] = js.native
-  var items: js.Array[_] = js.native
-  var keyboard: js.UndefOr[Boolean] = js.native
-  var mouseEnter: js.UndefOr[js.Function0[Unit]] = js.native
-  var mouseExit: js.UndefOr[js.Function0[Unit]] = js.native
-  var next: js.UndefOr[js.Function0[Unit]] = js.native
-  var pause: js.UndefOr[hover | `false`] = js.native
-  var previous: js.UndefOr[js.Function0[Unit]] = js.native
-  var ride: js.UndefOr[carousel] = js.native
-  var slide: js.UndefOr[Boolean] = js.native
+  var activeIndex: js.UndefOr[Double] = js.undefined
+  var cssModule: js.UndefOr[CSSModule] = js.undefined
+  var enableTouch: js.UndefOr[Boolean] = js.undefined
+  var indicators: js.UndefOr[Boolean] = js.undefined
+  var interval: js.UndefOr[Double | String | Boolean] = js.undefined
+  var items: js.Array[_]
+  var keyboard: js.UndefOr[Boolean] = js.undefined
+  var mouseEnter: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var mouseExit: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var next: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var pause: js.UndefOr[hover | `false`] = js.undefined
+  var previous: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var ride: js.UndefOr[carousel] = js.undefined
+  var slide: js.UndefOr[Boolean] = js.undefined
 }
 
 object UncontrolledCarouselProps {
   @scala.inline
-  def apply(items: js.Array[_]): UncontrolledCarouselProps = {
+  def apply(
+    items: js.Array[_],
+    AllHTMLAttributes: AllHTMLAttributes[HTMLElement] = null,
+    ClassAttributes: ClassAttributes[HTMLElement] = null,
+    StringDictionary: /* key */ StringDictionary[js.Any] = null,
+    activeIndex: js.UndefOr[Double] = js.undefined,
+    cssModule: CSSModule = null,
+    enableTouch: js.UndefOr[Boolean] = js.undefined,
+    indicators: js.UndefOr[Boolean] = js.undefined,
+    interval: Double | String | Boolean = null,
+    keyboard: js.UndefOr[Boolean] = js.undefined,
+    mouseEnter: () => Unit = null,
+    mouseExit: () => Unit = null,
+    next: () => Unit = null,
+    pause: hover | `false` = null,
+    previous: () => Unit = null,
+    ride: carousel = null,
+    slide: js.UndefOr[Boolean] = js.undefined
+  ): UncontrolledCarouselProps = {
     val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(activeIndex)) __obj.updateDynamic("activeIndex")(activeIndex.get.asInstanceOf[js.Any])
+    if (cssModule != null) __obj.updateDynamic("cssModule")(cssModule.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableTouch)) __obj.updateDynamic("enableTouch")(enableTouch.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(indicators)) __obj.updateDynamic("indicators")(indicators.get.asInstanceOf[js.Any])
+    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
+    if (!js.isUndefined(keyboard)) __obj.updateDynamic("keyboard")(keyboard.get.asInstanceOf[js.Any])
+    if (mouseEnter != null) __obj.updateDynamic("mouseEnter")(js.Any.fromFunction0(mouseEnter))
+    if (mouseExit != null) __obj.updateDynamic("mouseExit")(js.Any.fromFunction0(mouseExit))
+    if (next != null) __obj.updateDynamic("next")(js.Any.fromFunction0(next))
+    if (pause != null) __obj.updateDynamic("pause")(pause.asInstanceOf[js.Any])
+    if (previous != null) __obj.updateDynamic("previous")(js.Any.fromFunction0(previous))
+    if (ride != null) __obj.updateDynamic("ride")(ride.asInstanceOf[js.Any])
+    if (!js.isUndefined(slide)) __obj.updateDynamic("slide")(slide.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UncontrolledCarouselProps]
   }
-  @scala.inline
-  implicit class UncontrolledCarouselPropsOps[Self <: UncontrolledCarouselProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItems(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withActiveIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCssModule(value: CSSModule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssModule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCssModule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssModule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableTouch(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableTouch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableTouch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableTouch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndicators(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indicators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndicators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indicators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterval(value: Double | String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyboard(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyboard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseEnter(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseEnter")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutMouseEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseExit(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseExit")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutMouseExit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseExit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNext(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutNext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPause(value: hover | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pause")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPause: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pause")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrevious(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previous")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutPrevious: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previous")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRide(value: carousel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ride")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ride")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlide(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slide")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

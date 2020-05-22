@@ -5,49 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SetupIntentResponse extends js.Object {
-  var error: js.UndefOr[Error] = js.native
-  var setupIntent: js.UndefOr[SetupIntent] = js.native
+  var error: js.UndefOr[Error] = js.undefined
+  var setupIntent: js.UndefOr[SetupIntent] = js.undefined
 }
 
 object SetupIntentResponse {
   @scala.inline
-  def apply(): SetupIntentResponse = {
+  def apply(error: Error = null, setupIntent: SetupIntent = null): SetupIntentResponse = {
     val __obj = js.Dynamic.literal()
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (setupIntent != null) __obj.updateDynamic("setupIntent")(setupIntent.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetupIntentResponse]
   }
-  @scala.inline
-  implicit class SetupIntentResponseOps[Self <: SetupIntentResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withError(value: Error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetupIntent(value: SetupIntent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setupIntent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetupIntent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setupIntent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

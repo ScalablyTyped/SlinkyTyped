@@ -1,54 +1,33 @@
 package typingsSlinky.next.mod
 
 import typingsSlinky.next.anon.BodyParser
+import typingsSlinky.next.nextBooleans.`false`
 import typingsSlinky.next.nextStrings.hybrid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PageConfig extends js.Object {
-  var amp: js.UndefOr[Boolean | hybrid] = js.native
-  var api: js.UndefOr[BodyParser] = js.native
+  var amp: js.UndefOr[Boolean | hybrid] = js.undefined
+  var api: js.UndefOr[BodyParser] = js.undefined
+  var env: js.UndefOr[js.Array[String]] = js.undefined
+  var unstable_runtimeJS: js.UndefOr[`false`] = js.undefined
 }
 
 object PageConfig {
   @scala.inline
-  def apply(): PageConfig = {
+  def apply(
+    amp: Boolean | hybrid = null,
+    api: BodyParser = null,
+    env: js.Array[String] = null,
+    unstable_runtimeJS: `false` = null
+  ): PageConfig = {
     val __obj = js.Dynamic.literal()
+    if (amp != null) __obj.updateDynamic("amp")(amp.asInstanceOf[js.Any])
+    if (api != null) __obj.updateDynamic("api")(api.asInstanceOf[js.Any])
+    if (env != null) __obj.updateDynamic("env")(env.asInstanceOf[js.Any])
+    if (unstable_runtimeJS != null) __obj.updateDynamic("unstable_runtimeJS")(unstable_runtimeJS.asInstanceOf[js.Any])
     __obj.asInstanceOf[PageConfig]
   }
-  @scala.inline
-  implicit class PageConfigOps[Self <: PageConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmp(value: Boolean | hybrid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApi(value: BodyParser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("api")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApi: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("api")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

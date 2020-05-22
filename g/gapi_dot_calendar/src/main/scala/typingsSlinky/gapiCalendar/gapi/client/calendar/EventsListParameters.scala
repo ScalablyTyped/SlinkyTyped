@@ -4,251 +4,68 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EventsListParameters extends js.Object {
-  var alwaysIncludeEmail: js.UndefOr[Boolean] = js.native
-  var calendarId: String = js.native
-  var iCalUID: js.UndefOr[String] = js.native
-  var maxAttendees: js.UndefOr[integer] = js.native
-  var maxResults: js.UndefOr[integer] = js.native
-  var orderBy: js.UndefOr[EventsOrder] = js.native
-  var pageToken: js.UndefOr[String] = js.native
-  var privateExtendedProperty: js.UndefOr[String] = js.native
-  var q: js.UndefOr[String] = js.native
-  var sharedExtendedProperty: js.UndefOr[String] = js.native
-  var showDeleted: js.UndefOr[Boolean] = js.native
-  var showHiddenInvitations: js.UndefOr[Boolean] = js.native
-  var singleEvents: js.UndefOr[Boolean] = js.native
-  var syncToken: js.UndefOr[SyncToken] = js.native
-  var timeMax: js.UndefOr[datetime] = js.native
-  var timeMin: js.UndefOr[datetime] = js.native
-  var timeZone: js.UndefOr[String] = js.native
-  var updatedMin: js.UndefOr[datetime] = js.native
+  var alwaysIncludeEmail: js.UndefOr[Boolean] = js.undefined
+  var calendarId: String
+  var iCalUID: js.UndefOr[String] = js.undefined
+  var maxAttendees: js.UndefOr[integer] = js.undefined
+  var maxResults: js.UndefOr[integer] = js.undefined
+  var orderBy: js.UndefOr[EventsOrder] = js.undefined
+  var pageToken: js.UndefOr[String] = js.undefined
+  var privateExtendedProperty: js.UndefOr[String] = js.undefined
+  var q: js.UndefOr[String] = js.undefined
+  var sharedExtendedProperty: js.UndefOr[String] = js.undefined
+  var showDeleted: js.UndefOr[Boolean] = js.undefined
+  var showHiddenInvitations: js.UndefOr[Boolean] = js.undefined
+  var singleEvents: js.UndefOr[Boolean] = js.undefined
+  var syncToken: js.UndefOr[SyncToken] = js.undefined
+  var timeMax: js.UndefOr[datetime] = js.undefined
+  var timeMin: js.UndefOr[datetime] = js.undefined
+  var timeZone: js.UndefOr[String] = js.undefined
+  var updatedMin: js.UndefOr[datetime] = js.undefined
 }
 
 object EventsListParameters {
   @scala.inline
-  def apply(calendarId: String): EventsListParameters = {
+  def apply(
+    calendarId: String,
+    alwaysIncludeEmail: js.UndefOr[Boolean] = js.undefined,
+    iCalUID: String = null,
+    maxAttendees: js.UndefOr[integer] = js.undefined,
+    maxResults: js.UndefOr[integer] = js.undefined,
+    orderBy: EventsOrder = null,
+    pageToken: String = null,
+    privateExtendedProperty: String = null,
+    q: String = null,
+    sharedExtendedProperty: String = null,
+    showDeleted: js.UndefOr[Boolean] = js.undefined,
+    showHiddenInvitations: js.UndefOr[Boolean] = js.undefined,
+    singleEvents: js.UndefOr[Boolean] = js.undefined,
+    syncToken: SyncToken = null,
+    timeMax: datetime = null,
+    timeMin: datetime = null,
+    timeZone: String = null,
+    updatedMin: datetime = null
+  ): EventsListParameters = {
     val __obj = js.Dynamic.literal(calendarId = calendarId.asInstanceOf[js.Any])
+    if (!js.isUndefined(alwaysIncludeEmail)) __obj.updateDynamic("alwaysIncludeEmail")(alwaysIncludeEmail.get.asInstanceOf[js.Any])
+    if (iCalUID != null) __obj.updateDynamic("iCalUID")(iCalUID.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxAttendees)) __obj.updateDynamic("maxAttendees")(maxAttendees.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxResults)) __obj.updateDynamic("maxResults")(maxResults.get.asInstanceOf[js.Any])
+    if (orderBy != null) __obj.updateDynamic("orderBy")(orderBy.asInstanceOf[js.Any])
+    if (pageToken != null) __obj.updateDynamic("pageToken")(pageToken.asInstanceOf[js.Any])
+    if (privateExtendedProperty != null) __obj.updateDynamic("privateExtendedProperty")(privateExtendedProperty.asInstanceOf[js.Any])
+    if (q != null) __obj.updateDynamic("q")(q.asInstanceOf[js.Any])
+    if (sharedExtendedProperty != null) __obj.updateDynamic("sharedExtendedProperty")(sharedExtendedProperty.asInstanceOf[js.Any])
+    if (!js.isUndefined(showDeleted)) __obj.updateDynamic("showDeleted")(showDeleted.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showHiddenInvitations)) __obj.updateDynamic("showHiddenInvitations")(showHiddenInvitations.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(singleEvents)) __obj.updateDynamic("singleEvents")(singleEvents.get.asInstanceOf[js.Any])
+    if (syncToken != null) __obj.updateDynamic("syncToken")(syncToken.asInstanceOf[js.Any])
+    if (timeMax != null) __obj.updateDynamic("timeMax")(timeMax.asInstanceOf[js.Any])
+    if (timeMin != null) __obj.updateDynamic("timeMin")(timeMin.asInstanceOf[js.Any])
+    if (timeZone != null) __obj.updateDynamic("timeZone")(timeZone.asInstanceOf[js.Any])
+    if (updatedMin != null) __obj.updateDynamic("updatedMin")(updatedMin.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventsListParameters]
   }
-  @scala.inline
-  implicit class EventsListParametersOps[Self <: EventsListParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCalendarId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAlwaysIncludeEmail(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysIncludeEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlwaysIncludeEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysIncludeEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withICalUID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iCalUID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutICalUID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iCalUID")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxAttendees(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAttendees")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxAttendees: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAttendees")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrderBy(value: EventsOrder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrderBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateExtendedProperty(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateExtendedProperty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateExtendedProperty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateExtendedProperty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQ(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSharedExtendedProperty(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sharedExtendedProperty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSharedExtendedProperty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sharedExtendedProperty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowDeleted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showDeleted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowDeleted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showDeleted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowHiddenInvitations(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showHiddenInvitations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowHiddenInvitations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showHiddenInvitations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSingleEvents(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSingleEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleEvents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSyncToken(value: SyncToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSyncToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeMax(value: datetime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeMax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeMin(value: datetime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeMin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeMin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeZone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatedMin(value: datetime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedMin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatedMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedMin")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

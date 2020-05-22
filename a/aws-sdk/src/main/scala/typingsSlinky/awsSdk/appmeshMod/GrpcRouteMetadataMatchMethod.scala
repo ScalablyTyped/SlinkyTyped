@@ -30,77 +30,20 @@ trait GrpcRouteMetadataMatchMethod extends js.Object {
 
 object GrpcRouteMetadataMatchMethod {
   @scala.inline
-  def apply(): GrpcRouteMetadataMatchMethod = {
+  def apply(
+    exact: HeaderMatch = null,
+    prefix: HeaderMatch = null,
+    range: MatchRange = null,
+    regex: HeaderMatch = null,
+    suffix: HeaderMatch = null
+  ): GrpcRouteMetadataMatchMethod = {
     val __obj = js.Dynamic.literal()
+    if (exact != null) __obj.updateDynamic("exact")(exact.asInstanceOf[js.Any])
+    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (regex != null) __obj.updateDynamic("regex")(regex.asInstanceOf[js.Any])
+    if (suffix != null) __obj.updateDynamic("suffix")(suffix.asInstanceOf[js.Any])
     __obj.asInstanceOf[GrpcRouteMetadataMatchMethod]
   }
-  @scala.inline
-  implicit class GrpcRouteMetadataMatchMethodOps[Self <: GrpcRouteMetadataMatchMethod] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExact(value: HeaderMatch): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: HeaderMatch): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRange(value: MatchRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegex(value: HeaderMatch): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuffix(value: HeaderMatch): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,13 +5,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ShapeA extends js.Object {
-  var bodyA: typingsSlinky.p2.mod.Body = js.native
-  var bodyB: typingsSlinky.p2.mod.Body = js.native
-  var shapeA: Shape = js.native
-  var shapeB: Shape = js.native
-  var `type`: String = js.native
+  var bodyA: typingsSlinky.p2.mod.Body
+  var bodyB: typingsSlinky.p2.mod.Body
+  var shapeA: Shape
+  var shapeB: Shape
+  var `type`: String
 }
 
 object ShapeA {
@@ -27,43 +26,5 @@ object ShapeA {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShapeA]
   }
-  @scala.inline
-  implicit class ShapeAOps[Self <: ShapeA] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBodyA(value: typingsSlinky.p2.mod.Body): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyA")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBodyB(value: typingsSlinky.p2.mod.Body): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyB")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShapeA(value: Shape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shapeA")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShapeB(value: Shape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shapeB")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

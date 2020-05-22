@@ -7,5 +7,15 @@ import scala.scalajs.js.annotation._
 @JSGlobal("MSHTML.IHTMLPerformanceNavigation")
 @js.native
 class IHTMLPerformanceNavigation protected ()
-  extends typingsSlinky.activexMshtml.MSHTML.IHTMLPerformanceNavigation
+  extends typingsSlinky.activexMshtml.MSHTML.IHTMLPerformanceNavigation {
+  /* CompleteClass */
+  @JSName("MSHTML.IHTMLPerformanceNavigation_typekey")
+  override var MSHTMLDotIHTMLPerformanceNavigation_typekey: typingsSlinky.activexMshtml.MSHTML.IHTMLPerformanceNavigation = js.native
+  /* CompleteClass */
+  override val redirectCount: Double = js.native
+  /* CompleteClass */
+  override val `type`: Double = js.native
+  /* CompleteClass */
+  override def toJSON(): js.Any = js.native
+}
 

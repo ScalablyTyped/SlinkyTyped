@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // tslint:disable-next-line:interface-name
-@js.native
 trait InsertDimensionRequest extends js.Object {
   /**
     * Whether dimension properties should be extended from the dimensions
@@ -21,48 +20,18 @@ trait InsertDimensionRequest extends js.Object {
     * was red), whereas if `inheritFromBefore` is false, the two new rows will
     * be green (because the row after the insertion point was green).
     */
-  var inheritFromBefore: js.UndefOr[Boolean] = js.native
+  var inheritFromBefore: js.UndefOr[Boolean] = js.undefined
   /** The dimensions to insert.  Both the start and end indexes must be bounded. */
-  var range: js.UndefOr[DimensionRange] = js.native
+  var range: js.UndefOr[DimensionRange] = js.undefined
 }
 
 object InsertDimensionRequest {
   @scala.inline
-  def apply(): InsertDimensionRequest = {
+  def apply(inheritFromBefore: js.UndefOr[Boolean] = js.undefined, range: DimensionRange = null): InsertDimensionRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(inheritFromBefore)) __obj.updateDynamic("inheritFromBefore")(inheritFromBefore.get.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
     __obj.asInstanceOf[InsertDimensionRequest]
   }
-  @scala.inline
-  implicit class InsertDimensionRequestOps[Self <: InsertDimensionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInheritFromBefore(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inheritFromBefore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInheritFromBefore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inheritFromBefore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRange(value: DimensionRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

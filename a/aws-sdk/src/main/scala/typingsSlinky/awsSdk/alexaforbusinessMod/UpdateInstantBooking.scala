@@ -18,41 +18,11 @@ trait UpdateInstantBooking extends js.Object {
 
 object UpdateInstantBooking {
   @scala.inline
-  def apply(): UpdateInstantBooking = {
+  def apply(DurationInMinutes: js.UndefOr[Minutes] = js.undefined, Enabled: js.UndefOr[Boolean] = js.undefined): UpdateInstantBooking = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(DurationInMinutes)) __obj.updateDynamic("DurationInMinutes")(DurationInMinutes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Enabled)) __obj.updateDynamic("Enabled")(Enabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateInstantBooking]
   }
-  @scala.inline
-  implicit class UpdateInstantBookingOps[Self <: UpdateInstantBooking] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDurationInMinutes(value: Minutes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DurationInMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDurationInMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DurationInMinutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

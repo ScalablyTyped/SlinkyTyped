@@ -17,5 +17,10 @@ class BootstrapClientMenuItemMouseEventArgs protected ()
     * @param htmlElement An HTML object that contains the processed item.
     */
   def this(item: typingsSlinky.devexpressWeb.BootstrapClientMenuItem, htmlElement: js.Any) = this()
+  /**
+    * Gets the menu item object related to the event.
+    */
+  /* CompleteClass */
+  override var item: typingsSlinky.devexpressWeb.BootstrapClientMenuItem = js.native
 }
 

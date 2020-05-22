@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TwoColorTimeline extends CurveTimeline {
-  var frames: ArrayLike[Double] = js.native
-  var slotIndex: Double = js.native
+  var frames: ArrayLike[Double]
+  var slotIndex: Double
   def setFrame(
     frameIndex: Double,
     time: Double,
@@ -18,7 +17,7 @@ trait TwoColorTimeline extends CurveTimeline {
     r2: Double,
     g2: Double,
     b2: Double
-  ): Unit = js.native
+  ): Unit
 }
 
 object TwoColorTimeline {
@@ -40,31 +39,5 @@ object TwoColorTimeline {
     val __obj = js.Dynamic.literal(apply = js.Any.fromFunction7(apply), curves = curves.asInstanceOf[js.Any], frames = frames.asInstanceOf[js.Any], getCurvePercent = js.Any.fromFunction2(getCurvePercent), getCurveType = js.Any.fromFunction1(getCurveType), getFrameCount = js.Any.fromFunction0(getFrameCount), getPropertyId = js.Any.fromFunction0(getPropertyId), setCurve = js.Any.fromFunction5(setCurve), setFrame = js.Any.fromFunction9(setFrame), setLinear = js.Any.fromFunction1(setLinear), setStepped = js.Any.fromFunction1(setStepped), slotIndex = slotIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[TwoColorTimeline]
   }
-  @scala.inline
-  implicit class TwoColorTimelineOps[Self <: TwoColorTimeline] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFrames(value: ArrayLike[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetFrame(value: (Double, Double, Double, Double, Double, Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFrame")(js.Any.fromFunction9(value))
-        ret
-    }
-    @scala.inline
-    def withSlotIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slotIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

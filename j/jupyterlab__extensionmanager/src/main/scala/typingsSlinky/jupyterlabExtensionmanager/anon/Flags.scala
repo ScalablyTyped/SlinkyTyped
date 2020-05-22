@@ -4,25 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Flags extends js.Object {
   /**
     * Metadata about the found package.
     */
   @JSName("package")
-  var _package: Date = js.native
+  var _package: Date
   /**
     * Flags about the package.
     */
-  var flags: Insecure = js.native
+  var flags: Insecure
   /**
     * Object detailing the normalized search score.
     */
-  var score: Detail = js.native
+  var score: Detail
   /**
     * The search score.
     */
-  var searchScore: Double = js.native
+  var searchScore: Double
 }
 
 object Flags {
@@ -32,37 +31,5 @@ object Flags {
     __obj.updateDynamic("package")(_package.asInstanceOf[js.Any])
     __obj.asInstanceOf[Flags]
   }
-  @scala.inline
-  implicit class FlagsOps[Self <: Flags] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_package(value: Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("package")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFlags(value: Insecure): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScore(value: Detail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSearchScore(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchScore")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

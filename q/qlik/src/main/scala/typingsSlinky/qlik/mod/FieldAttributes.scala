@@ -30,15 +30,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FieldAttributes extends js.Object {
-  var qDec: String = js.native
-  var qFmt: String = js.native
-  var qSAFEARRAY: js.Array[_] = js.native
-  var qThou: String = js.native
-  var qType: U | A | I | R | F | M | D | T | TS | IV = js.native
-  var qUseThou: `0` | `1` = js.native
-  var qnDec: `0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8` | `9` | `10` | `11` | `12` | `13` | `14` | `15` = js.native
+  var qDec: String
+  var qFmt: String
+  var qSAFEARRAY: js.Array[_]
+  var qThou: String
+  var qType: U | A | I | R | F | M | D | T | TS | IV
+  var qUseThou: `0` | `1`
+  var qnDec: `0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8` | `9` | `10` | `11` | `12` | `13` | `14` | `15`
 }
 
 object FieldAttributes {
@@ -55,57 +54,5 @@ object FieldAttributes {
     val __obj = js.Dynamic.literal(qDec = qDec.asInstanceOf[js.Any], qFmt = qFmt.asInstanceOf[js.Any], qSAFEARRAY = qSAFEARRAY.asInstanceOf[js.Any], qThou = qThou.asInstanceOf[js.Any], qType = qType.asInstanceOf[js.Any], qUseThou = qUseThou.asInstanceOf[js.Any], qnDec = qnDec.asInstanceOf[js.Any])
     __obj.asInstanceOf[FieldAttributes]
   }
-  @scala.inline
-  implicit class FieldAttributesOps[Self <: FieldAttributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQDec(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qDec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQFmt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qFmt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQSAFEARRAY(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qSAFEARRAY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQThou(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qThou")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQType(value: U | A | I | R | F | M | D | T | TS | IV): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQUseThou(value: `0` | `1`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qUseThou")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQnDec(
-      value: `0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8` | `9` | `10` | `11` | `12` | `13` | `14` | `15`
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qnDec")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

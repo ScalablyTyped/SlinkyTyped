@@ -8,5 +8,15 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.Chat.RemoteParticipantComposingChangedEventArgs")
 @js.native
 abstract class RemoteParticipantComposingChangedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Chat.RemoteParticipantComposingChangedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Chat.RemoteParticipantComposingChangedEventArgs {
+  /** Gets a Boolean value indicating if the remote participant is currently composing a message. */
+  /* CompleteClass */
+  override var isComposing: Boolean = js.native
+  /** Gets the address of the remote chat participant. */
+  /* CompleteClass */
+  override var participantAddress: String = js.native
+  /** Gets the ID for the message transport. */
+  /* CompleteClass */
+  override var transportId: String = js.native
+}
 

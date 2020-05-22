@@ -30,77 +30,20 @@ trait Mp4Settings extends js.Object {
 
 object Mp4Settings {
   @scala.inline
-  def apply(): Mp4Settings = {
+  def apply(
+    CslgAtom: Mp4CslgAtom = null,
+    CttsVersion: js.UndefOr[integerMin0Max1] = js.undefined,
+    FreeSpaceBox: Mp4FreeSpaceBox = null,
+    MoovPlacement: Mp4MoovPlacement = null,
+    Mp4MajorBrand: string = null
+  ): Mp4Settings = {
     val __obj = js.Dynamic.literal()
+    if (CslgAtom != null) __obj.updateDynamic("CslgAtom")(CslgAtom.asInstanceOf[js.Any])
+    if (!js.isUndefined(CttsVersion)) __obj.updateDynamic("CttsVersion")(CttsVersion.get.asInstanceOf[js.Any])
+    if (FreeSpaceBox != null) __obj.updateDynamic("FreeSpaceBox")(FreeSpaceBox.asInstanceOf[js.Any])
+    if (MoovPlacement != null) __obj.updateDynamic("MoovPlacement")(MoovPlacement.asInstanceOf[js.Any])
+    if (Mp4MajorBrand != null) __obj.updateDynamic("Mp4MajorBrand")(Mp4MajorBrand.asInstanceOf[js.Any])
     __obj.asInstanceOf[Mp4Settings]
   }
-  @scala.inline
-  implicit class Mp4SettingsOps[Self <: Mp4Settings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCslgAtom(value: Mp4CslgAtom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CslgAtom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCslgAtom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CslgAtom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCttsVersion(value: integerMin0Max1): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CttsVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCttsVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CttsVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFreeSpaceBox(value: Mp4FreeSpaceBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FreeSpaceBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFreeSpaceBox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FreeSpaceBox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMoovPlacement(value: Mp4MoovPlacement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MoovPlacement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMoovPlacement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MoovPlacement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMp4MajorBrand(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mp4MajorBrand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMp4MajorBrand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mp4MajorBrand")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

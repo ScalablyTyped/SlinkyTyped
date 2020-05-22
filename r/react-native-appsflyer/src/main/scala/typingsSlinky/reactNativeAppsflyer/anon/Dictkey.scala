@@ -7,71 +7,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Dictkey
   extends /* key */ StringDictionary[js.Any] {
-  var af_referrer_customer_id: js.UndefOr[String] = js.native
-  var af_referrer_uid: js.UndefOr[String] = js.native
-  var af_status: Organic | `Non-organic` = js.native
-  var is_first_launch: Boolean = js.native
-  var media_source: String = js.native
+  var af_referrer_customer_id: js.UndefOr[String] = js.undefined
+  var af_referrer_uid: js.UndefOr[String] = js.undefined
+  var af_status: Organic | `Non-organic`
+  var is_first_launch: Boolean
+  var media_source: String
 }
 
 object Dictkey {
   @scala.inline
-  def apply(af_status: Organic | `Non-organic`, is_first_launch: Boolean, media_source: String): Dictkey = {
+  def apply(
+    af_status: Organic | `Non-organic`,
+    is_first_launch: Boolean,
+    media_source: String,
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    af_referrer_customer_id: String = null,
+    af_referrer_uid: String = null
+  ): Dictkey = {
     val __obj = js.Dynamic.literal(af_status = af_status.asInstanceOf[js.Any], is_first_launch = is_first_launch.asInstanceOf[js.Any], media_source = media_source.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (af_referrer_customer_id != null) __obj.updateDynamic("af_referrer_customer_id")(af_referrer_customer_id.asInstanceOf[js.Any])
+    if (af_referrer_uid != null) __obj.updateDynamic("af_referrer_uid")(af_referrer_uid.asInstanceOf[js.Any])
     __obj.asInstanceOf[Dictkey]
   }
-  @scala.inline
-  implicit class DictkeyOps[Self <: Dictkey] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAf_status(value: Organic | `Non-organic`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("af_status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIs_first_launch(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_first_launch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMedia_source(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media_source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAf_referrer_customer_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("af_referrer_customer_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAf_referrer_customer_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("af_referrer_customer_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAf_referrer_uid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("af_referrer_uid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAf_referrer_uid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("af_referrer_uid")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

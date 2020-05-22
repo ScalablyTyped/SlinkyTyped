@@ -18,41 +18,11 @@ trait DescribeAggregationAuthorizationsResponse extends js.Object {
 
 object DescribeAggregationAuthorizationsResponse {
   @scala.inline
-  def apply(): DescribeAggregationAuthorizationsResponse = {
+  def apply(AggregationAuthorizations: AggregationAuthorizationList = null, NextToken: String = null): DescribeAggregationAuthorizationsResponse = {
     val __obj = js.Dynamic.literal()
+    if (AggregationAuthorizations != null) __obj.updateDynamic("AggregationAuthorizations")(AggregationAuthorizations.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAggregationAuthorizationsResponse]
   }
-  @scala.inline
-  implicit class DescribeAggregationAuthorizationsResponseOps[Self <: DescribeAggregationAuthorizationsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAggregationAuthorizations(value: AggregationAuthorizationList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AggregationAuthorizations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAggregationAuthorizations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AggregationAuthorizations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

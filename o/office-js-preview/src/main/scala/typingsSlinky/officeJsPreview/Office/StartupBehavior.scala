@@ -9,7 +9,7 @@ sealed trait StartupBehavior extends js.Object
 
 // Enumerations
 /**
-  * Provides options to determine the startup behavior of the add-in upon next start-up. 
+  * Provides options to determine the startup behavior of the add-in upon next start-up.
   */
 @JSGlobal("Office.StartupBehavior")
 @js.native

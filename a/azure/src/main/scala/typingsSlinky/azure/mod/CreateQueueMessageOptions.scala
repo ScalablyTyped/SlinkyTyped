@@ -4,49 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CreateQueueMessageOptions extends TimeoutIntervalOptions {
-  var messagettl: js.UndefOr[Double] = js.native
-  var visibilitytimeout: js.UndefOr[Double] = js.native
+  var messagettl: js.UndefOr[Double] = js.undefined
+  var visibilitytimeout: js.UndefOr[Double] = js.undefined
 }
 
 object CreateQueueMessageOptions {
   @scala.inline
-  def apply(): CreateQueueMessageOptions = {
+  def apply(
+    locationMode: String = null,
+    maximumExecutionTimeInMs: js.UndefOr[Double] = js.undefined,
+    messagettl: js.UndefOr[Double] = js.undefined,
+    timeoutIntervalInMs: js.UndefOr[Double] = js.undefined,
+    visibilitytimeout: js.UndefOr[Double] = js.undefined
+  ): CreateQueueMessageOptions = {
     val __obj = js.Dynamic.literal()
+    if (locationMode != null) __obj.updateDynamic("locationMode")(locationMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximumExecutionTimeInMs)) __obj.updateDynamic("maximumExecutionTimeInMs")(maximumExecutionTimeInMs.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(messagettl)) __obj.updateDynamic("messagettl")(messagettl.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeoutIntervalInMs)) __obj.updateDynamic("timeoutIntervalInMs")(timeoutIntervalInMs.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visibilitytimeout)) __obj.updateDynamic("visibilitytimeout")(visibilitytimeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateQueueMessageOptions]
   }
-  @scala.inline
-  implicit class CreateQueueMessageOptionsOps[Self <: CreateQueueMessageOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessagettl(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messagettl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessagettl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messagettl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibilitytimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibilitytimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibilitytimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibilitytimeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -32,12 +32,11 @@ import scala.scalajs.js.annotation._
   * In some situations, the high level applications do not want to know anything about crypto devices (maybe it must, because the lower level do not know
   * what the key is). If it gives the key value, it can get EncryptedKey by setting the key template and key value target.
   */
-@js.native
 trait XXMLEncryptionTemplate extends XXMLSecurityTemplate {
   /** Get the target XML element, i.e. the element to be encrypted */
-  val Target: XXMLElementWrapper = js.native
+  val Target: XXMLElementWrapper
   /** Get the target XML element, i.e. the element to be encrypted */
-  def getTarget(): XXMLElementWrapper = js.native
+  def getTarget(): XXMLElementWrapper
 }
 
 object XXMLEncryptionTemplate {
@@ -59,25 +58,5 @@ object XXMLEncryptionTemplate {
     val __obj = js.Dynamic.literal(Status = Status.asInstanceOf[js.Any], Target = Target.asInstanceOf[js.Any], Template = Template.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getStatus = js.Any.fromFunction0(getStatus), getTarget = js.Any.fromFunction0(getTarget), getTemplate = js.Any.fromFunction0(getTemplate), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setStatus = js.Any.fromFunction1(setStatus), setTarget = js.Any.fromFunction1(setTarget), setTemplate = js.Any.fromFunction1(setTemplate))
     __obj.asInstanceOf[XXMLEncryptionTemplate]
   }
-  @scala.inline
-  implicit class XXMLEncryptionTemplateOps[Self <: XXMLEncryptionTemplate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTarget(value: XXMLElementWrapper): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetTarget(value: () => XXMLElementWrapper): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTarget")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

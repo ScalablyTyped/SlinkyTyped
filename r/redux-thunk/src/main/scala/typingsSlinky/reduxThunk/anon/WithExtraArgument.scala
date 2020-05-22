@@ -6,9 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WithExtraArgument extends js.Object {
-  def withExtraArgument[E](extraArgument: E): ThunkMiddleware[js.Object, AnyAction, E] = js.native
+  def withExtraArgument[E](extraArgument: E): ThunkMiddleware[js.Object, AnyAction, E]
 }
 
 object WithExtraArgument {
@@ -17,19 +16,5 @@ object WithExtraArgument {
     val __obj = js.Dynamic.literal(withExtraArgument = js.Any.fromFunction1(withExtraArgument))
     __obj.asInstanceOf[WithExtraArgument]
   }
-  @scala.inline
-  implicit class WithExtraArgumentOps[Self <: WithExtraArgument] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWithExtraArgument(value: js.Any => ThunkMiddleware[js.Object, AnyAction, js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withExtraArgument")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

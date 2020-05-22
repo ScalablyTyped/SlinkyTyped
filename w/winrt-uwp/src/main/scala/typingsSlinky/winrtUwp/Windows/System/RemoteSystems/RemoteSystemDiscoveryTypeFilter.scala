@@ -6,10 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An IRemoteSystemFilter that limits the set of discoverable remote systems by allowing only those of a specific discovery type. */
-@js.native
 trait RemoteSystemDiscoveryTypeFilter extends IRemoteSystemFilter {
   /** String representation(s) of the device type(s) that the containing RemoteSystemKindFilter object targets. */
-  var remoteSystemKinds: IVectorView[String] = js.native
+  var remoteSystemKinds: IVectorView[String]
 }
 
 object RemoteSystemDiscoveryTypeFilter {
@@ -18,19 +17,5 @@ object RemoteSystemDiscoveryTypeFilter {
     val __obj = js.Dynamic.literal(remoteSystemKinds = remoteSystemKinds.asInstanceOf[js.Any])
     __obj.asInstanceOf[RemoteSystemDiscoveryTypeFilter]
   }
-  @scala.inline
-  implicit class RemoteSystemDiscoveryTypeFilterOps[Self <: RemoteSystemDiscoveryTypeFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRemoteSystemKinds(value: IVectorView[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteSystemKinds")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

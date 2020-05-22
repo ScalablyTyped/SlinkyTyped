@@ -62,161 +62,34 @@ trait SchemaPartOfSpeech extends js.Object {
 
 object SchemaPartOfSpeech {
   @scala.inline
-  def apply(): SchemaPartOfSpeech = {
+  def apply(
+    aspect: String = null,
+    `case`: String = null,
+    form: String = null,
+    gender: String = null,
+    mood: String = null,
+    number: String = null,
+    person: String = null,
+    proper: String = null,
+    reciprocity: String = null,
+    tag: String = null,
+    tense: String = null,
+    voice: String = null
+  ): SchemaPartOfSpeech = {
     val __obj = js.Dynamic.literal()
+    if (aspect != null) __obj.updateDynamic("aspect")(aspect.asInstanceOf[js.Any])
+    if (`case` != null) __obj.updateDynamic("case")(`case`.asInstanceOf[js.Any])
+    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
+    if (gender != null) __obj.updateDynamic("gender")(gender.asInstanceOf[js.Any])
+    if (mood != null) __obj.updateDynamic("mood")(mood.asInstanceOf[js.Any])
+    if (number != null) __obj.updateDynamic("number")(number.asInstanceOf[js.Any])
+    if (person != null) __obj.updateDynamic("person")(person.asInstanceOf[js.Any])
+    if (proper != null) __obj.updateDynamic("proper")(proper.asInstanceOf[js.Any])
+    if (reciprocity != null) __obj.updateDynamic("reciprocity")(reciprocity.asInstanceOf[js.Any])
+    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
+    if (tense != null) __obj.updateDynamic("tense")(tense.asInstanceOf[js.Any])
+    if (voice != null) __obj.updateDynamic("voice")(voice.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPartOfSpeech]
   }
-  @scala.inline
-  implicit class SchemaPartOfSpeechOps[Self <: SchemaPartOfSpeech] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAspect(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aspect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAspect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aspect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCase(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("case")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("case")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGender(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMood(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mood")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMood: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mood")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPerson(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("person")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerson: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("person")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProper(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proper")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReciprocity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reciprocity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReciprocity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reciprocity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTense(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tense")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTense: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tense")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVoice(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("voice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVoice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("voice")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

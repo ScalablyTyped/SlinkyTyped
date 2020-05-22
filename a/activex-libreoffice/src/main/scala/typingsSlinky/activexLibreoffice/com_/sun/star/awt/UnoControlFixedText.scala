@@ -10,7 +10,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** specifies a control for displaying fixed text. */
-@js.native
 trait UnoControlFixedText
   extends XControl
      with XWindow

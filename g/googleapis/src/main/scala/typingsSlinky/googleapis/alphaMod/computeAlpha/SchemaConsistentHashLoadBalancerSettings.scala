@@ -32,53 +32,16 @@ trait SchemaConsistentHashLoadBalancerSettings extends js.Object {
 
 object SchemaConsistentHashLoadBalancerSettings {
   @scala.inline
-  def apply(): SchemaConsistentHashLoadBalancerSettings = {
+  def apply(
+    httpCookie: SchemaConsistentHashLoadBalancerSettingsHttpCookie = null,
+    httpHeaderName: String = null,
+    minimumRingSize: String = null
+  ): SchemaConsistentHashLoadBalancerSettings = {
     val __obj = js.Dynamic.literal()
+    if (httpCookie != null) __obj.updateDynamic("httpCookie")(httpCookie.asInstanceOf[js.Any])
+    if (httpHeaderName != null) __obj.updateDynamic("httpHeaderName")(httpHeaderName.asInstanceOf[js.Any])
+    if (minimumRingSize != null) __obj.updateDynamic("minimumRingSize")(minimumRingSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaConsistentHashLoadBalancerSettings]
   }
-  @scala.inline
-  implicit class SchemaConsistentHashLoadBalancerSettingsOps[Self <: SchemaConsistentHashLoadBalancerSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHttpCookie(value: SchemaConsistentHashLoadBalancerSettingsHttpCookie): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpCookie")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpCookie: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpCookie")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpHeaderName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpHeaderName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpHeaderName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpHeaderName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumRingSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumRingSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumRingSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumRingSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ICommitToTeamServerOptions extends js.Object {
-  var commitMessage: String = js.native
-  var isWebModelerCommit: js.UndefOr[Boolean] = js.native
-  var targetBranch: String = js.native
-  var targetRevision: Double = js.native
-  var teamServerPassword: String = js.native
-  var teamServerUsername: String = js.native
+  var commitMessage: String
+  var isWebModelerCommit: js.UndefOr[Boolean] = js.undefined
+  var targetBranch: String
+  var targetRevision: Double
+  var teamServerPassword: String
+  var teamServerUsername: String
 }
 
 object ICommitToTeamServerOptions {
@@ -21,60 +20,12 @@ object ICommitToTeamServerOptions {
     targetBranch: String,
     targetRevision: Double,
     teamServerPassword: String,
-    teamServerUsername: String
+    teamServerUsername: String,
+    isWebModelerCommit: js.UndefOr[Boolean] = js.undefined
   ): ICommitToTeamServerOptions = {
     val __obj = js.Dynamic.literal(commitMessage = commitMessage.asInstanceOf[js.Any], targetBranch = targetBranch.asInstanceOf[js.Any], targetRevision = targetRevision.asInstanceOf[js.Any], teamServerPassword = teamServerPassword.asInstanceOf[js.Any], teamServerUsername = teamServerUsername.asInstanceOf[js.Any])
+    if (!js.isUndefined(isWebModelerCommit)) __obj.updateDynamic("isWebModelerCommit")(isWebModelerCommit.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICommitToTeamServerOptions]
   }
-  @scala.inline
-  implicit class ICommitToTeamServerOptionsOps[Self <: ICommitToTeamServerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommitMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetBranch(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetBranch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetRevision(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetRevision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTeamServerPassword(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("teamServerPassword")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTeamServerUsername(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("teamServerUsername")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsWebModelerCommit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isWebModelerCommit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsWebModelerCommit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isWebModelerCommit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,25 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WorkbookWriterOptions extends js.Object {
   /**
   			 * 	If stream not specified, this field specifies the path to a file to write the XLSX workbook to.
   			 */
-  var filename: String = js.native
+  var filename: String
   /**
   			 * Specifies a writable stream to write the XLSX workbook to.
   			 */
-  var stream: Stream = js.native
+  var stream: Stream
   /**
   			 * 	Specifies whether to use shared strings in the workbook. Default is false
   			 */
-  var useSharedStrings: Boolean = js.native
+  var useSharedStrings: Boolean
   /**
   			 * Specifies whether to add style information to the workbook.
   			 * Styles can add some performance overhead. Default is false
   			 */
-  var useStyles: Boolean = js.native
+  var useStyles: Boolean
 }
 
 object WorkbookWriterOptions {
@@ -32,37 +31,5 @@ object WorkbookWriterOptions {
     val __obj = js.Dynamic.literal(filename = filename.asInstanceOf[js.Any], stream = stream.asInstanceOf[js.Any], useSharedStrings = useSharedStrings.asInstanceOf[js.Any], useStyles = useStyles.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkbookWriterOptions]
   }
-  @scala.inline
-  implicit class WorkbookWriterOptionsOps[Self <: WorkbookWriterOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilename(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStream(value: Stream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUseSharedStrings(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useSharedStrings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUseStyles(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useStyles")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

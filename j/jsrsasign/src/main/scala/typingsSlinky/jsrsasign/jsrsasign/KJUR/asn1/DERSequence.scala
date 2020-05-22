@@ -15,9 +15,8 @@ import scala.scalajs.js.annotation._
   *
   * NOTE: 'params' can be omitted.
   */
-@js.native
 trait DERSequence extends DERAbstractStructured {
-  def getFreshValueHex(): String = js.native
+  def getFreshValueHex(): String
 }
 
 object DERSequence {
@@ -31,19 +30,5 @@ object DERSequence {
     val __obj = js.Dynamic.literal(appendASN1Object = js.Any.fromFunction1(appendASN1Object), asn1Array = asn1Array.asInstanceOf[js.Any], getFreshValueHex = js.Any.fromFunction0(getFreshValueHex), setByASN1ObjectArray = js.Any.fromFunction1(setByASN1ObjectArray))
     __obj.asInstanceOf[DERSequence]
   }
-  @scala.inline
-  implicit class DERSequenceOps[Self <: DERSequence] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetFreshValueHex(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFreshValueHex")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

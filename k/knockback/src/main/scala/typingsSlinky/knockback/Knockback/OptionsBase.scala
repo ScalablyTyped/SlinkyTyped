@@ -4,78 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OptionsBase extends js.Object {
                  // a store used to cache and share view models.
-  var factory: js.UndefOr[Factory] = js.native
+  var factory: js.UndefOr[Factory] = js.undefined
              // a factory used to create view models.
-  var options: js.UndefOr[js.Any] = js.native
-  var path: js.UndefOr[String] = js.native
+  var options: js.UndefOr[js.Any] = js.undefined
+  var path: js.UndefOr[String] = js.undefined
                  // the path to the value (used to create related observables from the factory).
-  var store: js.UndefOr[Store] = js.native
+  var store: js.UndefOr[Store] = js.undefined
 }
 
 object OptionsBase {
   @scala.inline
-  def apply(): OptionsBase = {
+  def apply(factory: Factory = null, options: js.Any = null, path: String = null, store: Store = null): OptionsBase = {
     val __obj = js.Dynamic.literal()
+    if (factory != null) __obj.updateDynamic("factory")(factory.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (store != null) __obj.updateDynamic("store")(store.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionsBase]
   }
-  @scala.inline
-  implicit class OptionsBaseOps[Self <: OptionsBase] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFactory(value: Factory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("factory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFactory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("factory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStore(value: Store): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

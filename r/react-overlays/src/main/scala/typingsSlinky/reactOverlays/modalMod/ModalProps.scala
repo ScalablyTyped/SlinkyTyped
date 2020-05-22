@@ -1,5 +1,6 @@
 package typingsSlinky.reactOverlays.modalMod
 
+import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import typingsSlinky.reactOverlays.mod.TransitionCallbacks
@@ -10,7 +11,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ModalProps
   extends TransitionCallbacks
      with PortalProps {
@@ -22,57 +22,57 @@ trait ModalProps
     * Generally this should never be set to `false` as it makes the Modal less
     * accessible to assistive technologies, like screen readers.
     */
-  var autoFocus: js.UndefOr[Boolean] = js.native
+  var autoFocus: js.UndefOr[Boolean] = js.undefined
   /**
     * Include a backdrop component.
     */
-  var backdrop: js.UndefOr[Boolean | static] = js.native
+  var backdrop: js.UndefOr[Boolean | static] = js.undefined
   /**
     * A `react-transition-group@2.0.0` `<Transition/>` component used
     * to control animations for the backdrop components.
     */
-  var backdropTransition: js.UndefOr[ReactComponentClass[TransitionProps]] = js.native
-  var className: js.UndefOr[String] = js.native
+  var backdropTransition: js.UndefOr[ReactComponentClass[TransitionProps]] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
   /**
     * A css class or set of classes applied to the modal container when the modal is open,
     * and removed when it is closed.
     */
-  var containerClassName: js.UndefOr[String] = js.native
+  var containerClassName: js.UndefOr[String] = js.undefined
   /**
     * When `true` The modal will prevent focus from leaving the Modal while open.
     *
     * Generally this should never be set to `false` as it makes the Modal less
     * accessible to assistive technologies, like screen readers.
     */
-  var enforceFocus: js.UndefOr[Boolean] = js.native
+  var enforceFocus: js.UndefOr[Boolean] = js.undefined
   /**
     * Close the modal when escape key is pressed
     */
-  var keyboard: js.UndefOr[Boolean] = js.native
+  var keyboard: js.UndefOr[Boolean] = js.undefined
   /**
     * A ModalManager instance used to track and manage the state of open
     * Modals. Useful when customizing how modals interact within a container
     */
-  var manager: js.UndefOr[typingsSlinky.reactOverlays.modalManagerMod.^] = js.native
+  var manager: js.UndefOr[typingsSlinky.reactOverlays.modalManagerMod.^] = js.undefined
   /**
     * A callback fired when the backdrop, if specified, is clicked.
     */
-  var onBackdropClick: js.UndefOr[js.Function] = js.native
+  var onBackdropClick: js.UndefOr[js.Function] = js.undefined
   /**
     * A callback fired when the escape key, if specified in `keyboard`, is pressed.
     */
-  var onEscapeKeyDown: js.UndefOr[js.Function] = js.native
+  var onEscapeKeyDown: js.UndefOr[js.Function] = js.undefined
   /**
     * A callback fired when either the backdrop is clicked, or the escape key is pressed.
     *
     * The `onHide` callback only signals intent from the Modal,
     * you must actually set the `show` prop to `false` for the Modal to close.
     */
-  var onHide: js.UndefOr[js.Function] = js.native
+  var onHide: js.UndefOr[js.Function] = js.undefined
   /**
     * A callback fired when the Modal is opening.
     */
-  var onShow: js.UndefOr[js.Function] = js.native
+  var onShow: js.UndefOr[js.Function] = js.undefined
   /**
     * A function that returns a backdrop component. Useful for custom
     * backdrop rendering.
@@ -81,7 +81,7 @@ trait ModalProps
     *  renderBackdrop={props => <MyBackdrop {...props} />}
     * ```
     */
-  var renderBackdrop: js.UndefOr[js.Function1[/* props */ js.Any, TagMod[Any]]] = js.native
+  var renderBackdrop: js.UndefOr[js.Function1[/* props */ js.Any, TagMod[Any]]] = js.undefined
   /**
     * A function that returns the dialog component. Useful for custom
     * rendering. **Note:** the component should make sure to apply the provided ref.
@@ -90,264 +90,79 @@ trait ModalProps
     *  renderDialog={props => <MyDialog {...props} />}
     * ```
     */
-  var renderDialog: js.UndefOr[js.Function1[/* props */ js.Any, TagMod[Any]]] = js.native
+  var renderDialog: js.UndefOr[js.Function1[/* props */ js.Any, TagMod[Any]]] = js.undefined
   /**
     * When `true` The modal will restore focus to previously focused element once
     * modal is hidden
     */
-  var restoreFocus: js.UndefOr[Boolean] = js.native
+  var restoreFocus: js.UndefOr[Boolean] = js.undefined
   /**
     * Set the visibility of the Modal
     */
-  var show: js.UndefOr[Boolean] = js.native
+  var show: js.UndefOr[Boolean] = js.undefined
   /**
     * A `react-transition-group@2.0.0` `<Transition/>` component used
     * to control animations for the dialog component.
     */
-  var transition: js.UndefOr[ReactComponentClass[TransitionProps]] = js.native
+  var transition: js.UndefOr[ReactComponentClass[TransitionProps]] = js.undefined
 }
 
 object ModalProps {
   @scala.inline
-  def apply(): ModalProps = {
+  def apply(
+    autoFocus: js.UndefOr[Boolean] = js.undefined,
+    backdrop: Boolean | static = null,
+    backdropTransition: ReactComponentClass[TransitionProps] = null,
+    className: String = null,
+    container: TagMod[Any] | js.Function = null,
+    containerClassName: String = null,
+    enforceFocus: js.UndefOr[Boolean] = js.undefined,
+    keyboard: js.UndefOr[Boolean] = js.undefined,
+    manager: typingsSlinky.reactOverlays.modalManagerMod.^ = null,
+    onBackdropClick: js.Function = null,
+    onEnter: /* node */ HTMLElement => _ = null,
+    onEntered: /* node */ HTMLElement => _ = null,
+    onEntering: /* node */ HTMLElement => _ = null,
+    onEscapeKeyDown: js.Function = null,
+    onExit: /* node */ HTMLElement => _ = null,
+    onExited: /* node */ HTMLElement => _ = null,
+    onExiting: /* node */ HTMLElement => _ = null,
+    onHide: js.Function = null,
+    onRendered: js.Function = null,
+    onShow: js.Function = null,
+    renderBackdrop: /* props */ js.Any => TagMod[Any] = null,
+    renderDialog: /* props */ js.Any => TagMod[Any] = null,
+    restoreFocus: js.UndefOr[Boolean] = js.undefined,
+    show: js.UndefOr[Boolean] = js.undefined,
+    transition: ReactComponentClass[TransitionProps] = null
+  ): ModalProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.get.asInstanceOf[js.Any])
+    if (backdrop != null) __obj.updateDynamic("backdrop")(backdrop.asInstanceOf[js.Any])
+    if (backdropTransition != null) __obj.updateDynamic("backdropTransition")(backdropTransition.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (containerClassName != null) __obj.updateDynamic("containerClassName")(containerClassName.asInstanceOf[js.Any])
+    if (!js.isUndefined(enforceFocus)) __obj.updateDynamic("enforceFocus")(enforceFocus.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(keyboard)) __obj.updateDynamic("keyboard")(keyboard.get.asInstanceOf[js.Any])
+    if (manager != null) __obj.updateDynamic("manager")(manager.asInstanceOf[js.Any])
+    if (onBackdropClick != null) __obj.updateDynamic("onBackdropClick")(onBackdropClick.asInstanceOf[js.Any])
+    if (onEnter != null) __obj.updateDynamic("onEnter")(js.Any.fromFunction1(onEnter))
+    if (onEntered != null) __obj.updateDynamic("onEntered")(js.Any.fromFunction1(onEntered))
+    if (onEntering != null) __obj.updateDynamic("onEntering")(js.Any.fromFunction1(onEntering))
+    if (onEscapeKeyDown != null) __obj.updateDynamic("onEscapeKeyDown")(onEscapeKeyDown.asInstanceOf[js.Any])
+    if (onExit != null) __obj.updateDynamic("onExit")(js.Any.fromFunction1(onExit))
+    if (onExited != null) __obj.updateDynamic("onExited")(js.Any.fromFunction1(onExited))
+    if (onExiting != null) __obj.updateDynamic("onExiting")(js.Any.fromFunction1(onExiting))
+    if (onHide != null) __obj.updateDynamic("onHide")(onHide.asInstanceOf[js.Any])
+    if (onRendered != null) __obj.updateDynamic("onRendered")(onRendered.asInstanceOf[js.Any])
+    if (onShow != null) __obj.updateDynamic("onShow")(onShow.asInstanceOf[js.Any])
+    if (renderBackdrop != null) __obj.updateDynamic("renderBackdrop")(js.Any.fromFunction1(renderBackdrop))
+    if (renderDialog != null) __obj.updateDynamic("renderDialog")(js.Any.fromFunction1(renderDialog))
+    if (!js.isUndefined(restoreFocus)) __obj.updateDynamic("restoreFocus")(restoreFocus.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.get.asInstanceOf[js.Any])
+    if (transition != null) __obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModalProps]
   }
-  @scala.inline
-  implicit class ModalPropsOps[Self <: ModalProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackdrop(value: Boolean | static): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backdrop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackdrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backdrop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackdropTransitionFunctionComponent(value: ReactComponentClass[TransitionProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropTransition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackdropTransitionComponentClass(value: ReactComponentClass[TransitionProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropTransition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackdropTransition(value: ReactComponentClass[TransitionProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropTransition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackdropTransition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropTransition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnforceFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enforceFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnforceFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enforceFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyboard(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyboard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManager(value: typingsSlinky.reactOverlays.modalManagerMod.^): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manager")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManager: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manager")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBackdropClick(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBackdropClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnBackdropClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBackdropClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEscapeKeyDown(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEscapeKeyDown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnEscapeKeyDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEscapeKeyDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnHide(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnHide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnShow(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderBackdrop(value: /* props */ js.Any => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderBackdrop")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderBackdrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderBackdrop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderDialog(value: /* props */ js.Any => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderDialog")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderDialog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderDialog")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestoreFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restoreFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestoreFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restoreFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransitionFunctionComponent(value: ReactComponentClass[TransitionProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTransitionComponentClass(value: ReactComponentClass[TransitionProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTransition(value: ReactComponentClass[TransitionProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

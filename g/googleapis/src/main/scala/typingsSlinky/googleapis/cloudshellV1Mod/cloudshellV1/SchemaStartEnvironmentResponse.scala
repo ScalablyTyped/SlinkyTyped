@@ -18,29 +18,10 @@ trait SchemaStartEnvironmentResponse extends js.Object {
 
 object SchemaStartEnvironmentResponse {
   @scala.inline
-  def apply(): SchemaStartEnvironmentResponse = {
+  def apply(environment: SchemaEnvironment = null): SchemaStartEnvironmentResponse = {
     val __obj = js.Dynamic.literal()
+    if (environment != null) __obj.updateDynamic("environment")(environment.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStartEnvironmentResponse]
   }
-  @scala.inline
-  implicit class SchemaStartEnvironmentResponseOps[Self <: SchemaStartEnvironmentResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnvironment(value: SchemaEnvironment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

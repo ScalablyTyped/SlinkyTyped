@@ -20,90 +20,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SelectContainerModifierProps extends js.Object {
   var color: js.UndefOr[
     primary | success | info | warning | danger | light | dark | white | black | link
-  ] = js.native
-  var fullwidth: js.UndefOr[Boolean] = js.native
-  var rounded: js.UndefOr[Boolean] = js.native
-  var size: js.UndefOr[small | medium | large] = js.native
-  var state: js.UndefOr[focused | hovered | loading] = js.native
+  ] = js.undefined
+  var fullwidth: js.UndefOr[Boolean] = js.undefined
+  var rounded: js.UndefOr[Boolean] = js.undefined
+  var size: js.UndefOr[small | medium | large] = js.undefined
+  var state: js.UndefOr[focused | hovered | loading] = js.undefined
 }
 
 object SelectContainerModifierProps {
   @scala.inline
-  def apply(): SelectContainerModifierProps = {
+  def apply(
+    color: primary | success | info | warning | danger | light | dark | white | black | link = null,
+    fullwidth: js.UndefOr[Boolean] = js.undefined,
+    rounded: js.UndefOr[Boolean] = js.undefined,
+    size: small | medium | large = null,
+    state: focused | hovered | loading = null
+  ): SelectContainerModifierProps = {
     val __obj = js.Dynamic.literal()
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(fullwidth)) __obj.updateDynamic("fullwidth")(fullwidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rounded)) __obj.updateDynamic("rounded")(rounded.get.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[SelectContainerModifierProps]
   }
-  @scala.inline
-  implicit class SelectContainerModifierPropsOps[Self <: SelectContainerModifierProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColor(value: primary | success | info | warning | danger | light | dark | white | black | link): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullwidth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullwidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullwidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullwidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRounded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rounded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRounded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rounded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: small | medium | large): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: focused | hovered | loading): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

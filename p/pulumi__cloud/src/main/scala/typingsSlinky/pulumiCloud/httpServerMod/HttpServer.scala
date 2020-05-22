@@ -6,9 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HttpServer extends js.Object {
-  val url: Output_[String] = js.native
+  val url: Output_[String]
 }
 
 @JSImport("@pulumi/cloud/httpServer", "HttpServer")

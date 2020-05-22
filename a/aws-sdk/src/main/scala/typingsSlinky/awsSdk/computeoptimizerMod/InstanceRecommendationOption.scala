@@ -26,65 +26,18 @@ trait InstanceRecommendationOption extends js.Object {
 
 object InstanceRecommendationOption {
   @scala.inline
-  def apply(): InstanceRecommendationOption = {
+  def apply(
+    instanceType: InstanceType = null,
+    performanceRisk: js.UndefOr[PerformanceRisk] = js.undefined,
+    projectedUtilizationMetrics: ProjectedUtilizationMetrics = null,
+    rank: js.UndefOr[Rank] = js.undefined
+  ): InstanceRecommendationOption = {
     val __obj = js.Dynamic.literal()
+    if (instanceType != null) __obj.updateDynamic("instanceType")(instanceType.asInstanceOf[js.Any])
+    if (!js.isUndefined(performanceRisk)) __obj.updateDynamic("performanceRisk")(performanceRisk.get.asInstanceOf[js.Any])
+    if (projectedUtilizationMetrics != null) __obj.updateDynamic("projectedUtilizationMetrics")(projectedUtilizationMetrics.asInstanceOf[js.Any])
+    if (!js.isUndefined(rank)) __obj.updateDynamic("rank")(rank.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceRecommendationOption]
   }
-  @scala.inline
-  implicit class InstanceRecommendationOptionOps[Self <: InstanceRecommendationOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceType(value: InstanceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPerformanceRisk(value: PerformanceRisk): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("performanceRisk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerformanceRisk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("performanceRisk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjectedUtilizationMetrics(value: ProjectedUtilizationMetrics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectedUtilizationMetrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectedUtilizationMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectedUtilizationMetrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRank(value: Rank): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rank")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRank: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rank")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

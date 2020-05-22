@@ -111,167 +111,167 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IntrinsicElements extends js.Object {
   // HTML
-  var a: HTMLAttributes[HTMLAnchorElement] = js.native
-  var abbr: HTMLAttributes[HTMLElement] = js.native
-  var address: HTMLAttributes[HTMLElement] = js.native
-  var animate: SVGAttributes[SVGAnimateElement] = js.native
-  var area: HTMLAttributes[HTMLAreaElement] = js.native
-  var article: HTMLAttributes[HTMLElement] = js.native
-  var aside: HTMLAttributes[HTMLElement] = js.native
-  var audio: HTMLAttributes[HTMLAudioElement] = js.native
-  var b: HTMLAttributes[HTMLElement] = js.native
-  var base: HTMLAttributes[HTMLBaseElement] = js.native
-  var bdi: HTMLAttributes[HTMLElement] = js.native
-  var bdo: HTMLAttributes[HTMLElement] = js.native
-  var big: HTMLAttributes[HTMLElement] = js.native
-  var blockquote: HTMLAttributes[HTMLQuoteElement] = js.native
-  var body: HTMLAttributes[HTMLBodyElement] = js.native
-  var br: HTMLAttributes[HTMLBRElement] = js.native
-  var button: HTMLAttributes[HTMLButtonElement] = js.native
-  var canvas: HTMLAttributes[HTMLCanvasElement] = js.native
-  var caption: HTMLAttributes[HTMLTableCaptionElement] = js.native
-  var circle: SVGAttributes[SVGCircleElement] = js.native
-  var cite: HTMLAttributes[HTMLElement] = js.native
-  var clipPath: SVGAttributes[SVGClipPathElement] = js.native
-  var code: HTMLAttributes[HTMLElement] = js.native
-  var col: HTMLAttributes[HTMLTableColElement] = js.native
-  var colgroup: HTMLAttributes[HTMLTableColElement] = js.native
-  var data: HTMLAttributes[HTMLDataElement] = js.native
-  var datalist: HTMLAttributes[HTMLDataListElement] = js.native
-  var dd: HTMLAttributes[HTMLElement] = js.native
-  var defs: SVGAttributes[SVGDefsElement] = js.native
-  var del: HTMLAttributes[HTMLModElement] = js.native
-  var desc: SVGAttributes[SVGDescElement] = js.native
-  var details: HTMLAttributes[HTMLDetailsElement] = js.native
-  var dfn: HTMLAttributes[HTMLElement] = js.native
-  var dialog: HTMLAttributes[HTMLDialogElement] = js.native
-  var div: HTMLAttributes[HTMLDivElement] = js.native
-  var dl: HTMLAttributes[HTMLDListElement] = js.native
-  var dt: HTMLAttributes[HTMLElement] = js.native
-  var ellipse: SVGAttributes[SVGEllipseElement] = js.native
-  var em: HTMLAttributes[HTMLElement] = js.native
-  var embed: HTMLAttributes[HTMLEmbedElement] = js.native
-  var feBlend: SVGAttributes[SVGFEBlendElement] = js.native
-  var feColorMatrix: SVGAttributes[SVGFEColorMatrixElement] = js.native
-  var feComponentTransfer: SVGAttributes[SVGFEComponentTransferElement] = js.native
-  var feComposite: SVGAttributes[SVGFECompositeElement] = js.native
-  var feConvolveMatrix: SVGAttributes[SVGFEConvolveMatrixElement] = js.native
-  var feDiffuseLighting: SVGAttributes[SVGFEDiffuseLightingElement] = js.native
-  var feDisplacementMap: SVGAttributes[SVGFEDisplacementMapElement] = js.native
-  var feFlood: SVGAttributes[SVGFEFloodElement] = js.native
-  var feGaussianBlur: SVGAttributes[SVGFEGaussianBlurElement] = js.native
-  var feImage: SVGAttributes[SVGFEImageElement] = js.native
-  var feMerge: SVGAttributes[SVGFEMergeElement] = js.native
-  var feMergeNode: SVGAttributes[SVGFEMergeNodeElement] = js.native
-  var feMorphology: SVGAttributes[SVGFEMorphologyElement] = js.native
-  var feOffset: SVGAttributes[SVGFEOffsetElement] = js.native
-  var feSpecularLighting: SVGAttributes[SVGFESpecularLightingElement] = js.native
-  var feTile: SVGAttributes[SVGFETileElement] = js.native
-  var feTurbulence: SVGAttributes[SVGFETurbulenceElement] = js.native
-  var fieldset: HTMLAttributes[HTMLFieldSetElement] = js.native
-  var figcaption: HTMLAttributes[HTMLElement] = js.native
-  var figure: HTMLAttributes[HTMLElement] = js.native
-  var filter: SVGAttributes[SVGFilterElement] = js.native
-  var footer: HTMLAttributes[HTMLElement] = js.native
-  var foreignObject: SVGAttributes[SVGForeignObjectElement] = js.native
-  var form: HTMLAttributes[HTMLFormElement] = js.native
-  var g: SVGAttributes[SVGGElement] = js.native
-  var h1: HTMLAttributes[HTMLHeadingElement] = js.native
-  var h2: HTMLAttributes[HTMLHeadingElement] = js.native
-  var h3: HTMLAttributes[HTMLHeadingElement] = js.native
-  var h4: HTMLAttributes[HTMLHeadingElement] = js.native
-  var h5: HTMLAttributes[HTMLHeadingElement] = js.native
-  var h6: HTMLAttributes[HTMLHeadingElement] = js.native
-  var head: HTMLAttributes[HTMLHeadElement] = js.native
-  var header: HTMLAttributes[HTMLElement] = js.native
-  var hgroup: HTMLAttributes[HTMLElement] = js.native
-  var hr: HTMLAttributes[HTMLHRElement] = js.native
-  var html: HTMLAttributes[HTMLHtmlElement] = js.native
-  var i: HTMLAttributes[HTMLElement] = js.native
-  var iframe: HTMLAttributes[HTMLIFrameElement] = js.native
-  var image: SVGAttributes[SVGImageElement] = js.native
-  var img: HTMLAttributes[HTMLImageElement] = js.native
-  var input: HTMLAttributes[HTMLInputElement] = js.native
-  var ins: HTMLAttributes[HTMLModElement] = js.native
-  var kbd: HTMLAttributes[HTMLElement] = js.native
-  var keygen: HTMLAttributes[HTMLUnknownElement] = js.native
-  var label: HTMLAttributes[HTMLLabelElement] = js.native
-  var legend: HTMLAttributes[HTMLLegendElement] = js.native
-  var li: HTMLAttributes[HTMLLIElement] = js.native
-  var line: SVGAttributes[SVGLineElement] = js.native
-  var linearGradient: SVGAttributes[SVGLinearGradientElement] = js.native
-  var link: HTMLAttributes[HTMLLinkElement] = js.native
-  var main: HTMLAttributes[HTMLElement] = js.native
-  var map: HTMLAttributes[HTMLMapElement] = js.native
-  var mark: HTMLAttributes[HTMLElement] = js.native
-  var marker: SVGAttributes[SVGMarkerElement] = js.native
-  var mask: SVGAttributes[SVGMaskElement] = js.native
-  var menu: HTMLAttributes[HTMLMenuElement] = js.native
-  var menuitem: HTMLAttributes[HTMLUnknownElement] = js.native
-  var meta: HTMLAttributes[HTMLMetaElement] = js.native
-  var meter: HTMLAttributes[HTMLMeterElement] = js.native
-  var nav: HTMLAttributes[HTMLElement] = js.native
-  var noscript: HTMLAttributes[HTMLElement] = js.native
-  var `object`: HTMLAttributes[HTMLObjectElement] = js.native
-  var ol: HTMLAttributes[HTMLOListElement] = js.native
-  var optgroup: HTMLAttributes[HTMLOptGroupElement] = js.native
-  var option: HTMLAttributes[HTMLOptionElement] = js.native
-  var output: HTMLAttributes[HTMLOutputElement] = js.native
-  var p: HTMLAttributes[HTMLParagraphElement] = js.native
-  var param: HTMLAttributes[HTMLParamElement] = js.native
-  var path: SVGAttributes[SVGPathElement] = js.native
-  var pattern: SVGAttributes[SVGPatternElement] = js.native
-  var picture: HTMLAttributes[HTMLPictureElement] = js.native
-  var polygon: SVGAttributes[SVGPolygonElement] = js.native
-  var polyline: SVGAttributes[SVGPolylineElement] = js.native
-  var pre: HTMLAttributes[HTMLPreElement] = js.native
-  var progress: HTMLAttributes[HTMLProgressElement] = js.native
-  var q: HTMLAttributes[HTMLQuoteElement] = js.native
-  var radialGradient: SVGAttributes[SVGRadialGradientElement] = js.native
-  var rect: SVGAttributes[SVGRectElement] = js.native
-  var rp: HTMLAttributes[HTMLElement] = js.native
-  var rt: HTMLAttributes[HTMLElement] = js.native
-  var ruby: HTMLAttributes[HTMLElement] = js.native
-  var s: HTMLAttributes[HTMLElement] = js.native
-  var samp: HTMLAttributes[HTMLElement] = js.native
-  var script: HTMLAttributes[HTMLScriptElement] = js.native
-  var section: HTMLAttributes[HTMLElement] = js.native
-  var select: HTMLAttributes[HTMLSelectElement] = js.native
-  var slot: HTMLAttributes[HTMLSlotElement] = js.native
-  var small: HTMLAttributes[HTMLElement] = js.native
-  var source: HTMLAttributes[HTMLSourceElement] = js.native
-  var span: HTMLAttributes[HTMLSpanElement] = js.native
-  var stop: SVGAttributes[SVGStopElement] = js.native
-  var strong: HTMLAttributes[HTMLElement] = js.native
-  var style: HTMLAttributes[HTMLStyleElement] = js.native
-  var sub: HTMLAttributes[HTMLElement] = js.native
-  var summary: HTMLAttributes[HTMLElement] = js.native
-  var sup: HTMLAttributes[HTMLElement] = js.native
+  var a: HTMLAttributes[HTMLAnchorElement]
+  var abbr: HTMLAttributes[HTMLElement]
+  var address: HTMLAttributes[HTMLElement]
+  var animate: SVGAttributes[SVGAnimateElement]
+  var area: HTMLAttributes[HTMLAreaElement]
+  var article: HTMLAttributes[HTMLElement]
+  var aside: HTMLAttributes[HTMLElement]
+  var audio: HTMLAttributes[HTMLAudioElement]
+  var b: HTMLAttributes[HTMLElement]
+  var base: HTMLAttributes[HTMLBaseElement]
+  var bdi: HTMLAttributes[HTMLElement]
+  var bdo: HTMLAttributes[HTMLElement]
+  var big: HTMLAttributes[HTMLElement]
+  var blockquote: HTMLAttributes[HTMLQuoteElement]
+  var body: HTMLAttributes[HTMLBodyElement]
+  var br: HTMLAttributes[HTMLBRElement]
+  var button: HTMLAttributes[HTMLButtonElement]
+  var canvas: HTMLAttributes[HTMLCanvasElement]
+  var caption: HTMLAttributes[HTMLTableCaptionElement]
+  var circle: SVGAttributes[SVGCircleElement]
+  var cite: HTMLAttributes[HTMLElement]
+  var clipPath: SVGAttributes[SVGClipPathElement]
+  var code: HTMLAttributes[HTMLElement]
+  var col: HTMLAttributes[HTMLTableColElement]
+  var colgroup: HTMLAttributes[HTMLTableColElement]
+  var data: HTMLAttributes[HTMLDataElement]
+  var datalist: HTMLAttributes[HTMLDataListElement]
+  var dd: HTMLAttributes[HTMLElement]
+  var defs: SVGAttributes[SVGDefsElement]
+  var del: HTMLAttributes[HTMLModElement]
+  var desc: SVGAttributes[SVGDescElement]
+  var details: HTMLAttributes[HTMLDetailsElement]
+  var dfn: HTMLAttributes[HTMLElement]
+  var dialog: HTMLAttributes[HTMLDialogElement]
+  var div: HTMLAttributes[HTMLDivElement]
+  var dl: HTMLAttributes[HTMLDListElement]
+  var dt: HTMLAttributes[HTMLElement]
+  var ellipse: SVGAttributes[SVGEllipseElement]
+  var em: HTMLAttributes[HTMLElement]
+  var embed: HTMLAttributes[HTMLEmbedElement]
+  var feBlend: SVGAttributes[SVGFEBlendElement]
+  var feColorMatrix: SVGAttributes[SVGFEColorMatrixElement]
+  var feComponentTransfer: SVGAttributes[SVGFEComponentTransferElement]
+  var feComposite: SVGAttributes[SVGFECompositeElement]
+  var feConvolveMatrix: SVGAttributes[SVGFEConvolveMatrixElement]
+  var feDiffuseLighting: SVGAttributes[SVGFEDiffuseLightingElement]
+  var feDisplacementMap: SVGAttributes[SVGFEDisplacementMapElement]
+  var feFlood: SVGAttributes[SVGFEFloodElement]
+  var feGaussianBlur: SVGAttributes[SVGFEGaussianBlurElement]
+  var feImage: SVGAttributes[SVGFEImageElement]
+  var feMerge: SVGAttributes[SVGFEMergeElement]
+  var feMergeNode: SVGAttributes[SVGFEMergeNodeElement]
+  var feMorphology: SVGAttributes[SVGFEMorphologyElement]
+  var feOffset: SVGAttributes[SVGFEOffsetElement]
+  var feSpecularLighting: SVGAttributes[SVGFESpecularLightingElement]
+  var feTile: SVGAttributes[SVGFETileElement]
+  var feTurbulence: SVGAttributes[SVGFETurbulenceElement]
+  var fieldset: HTMLAttributes[HTMLFieldSetElement]
+  var figcaption: HTMLAttributes[HTMLElement]
+  var figure: HTMLAttributes[HTMLElement]
+  var filter: SVGAttributes[SVGFilterElement]
+  var footer: HTMLAttributes[HTMLElement]
+  var foreignObject: SVGAttributes[SVGForeignObjectElement]
+  var form: HTMLAttributes[HTMLFormElement]
+  var g: SVGAttributes[SVGGElement]
+  var h1: HTMLAttributes[HTMLHeadingElement]
+  var h2: HTMLAttributes[HTMLHeadingElement]
+  var h3: HTMLAttributes[HTMLHeadingElement]
+  var h4: HTMLAttributes[HTMLHeadingElement]
+  var h5: HTMLAttributes[HTMLHeadingElement]
+  var h6: HTMLAttributes[HTMLHeadingElement]
+  var head: HTMLAttributes[HTMLHeadElement]
+  var header: HTMLAttributes[HTMLElement]
+  var hgroup: HTMLAttributes[HTMLElement]
+  var hr: HTMLAttributes[HTMLHRElement]
+  var html: HTMLAttributes[HTMLHtmlElement]
+  var i: HTMLAttributes[HTMLElement]
+  var iframe: HTMLAttributes[HTMLIFrameElement]
+  var image: SVGAttributes[SVGImageElement]
+  var img: HTMLAttributes[HTMLImageElement]
+  var input: HTMLAttributes[HTMLInputElement]
+  var ins: HTMLAttributes[HTMLModElement]
+  var kbd: HTMLAttributes[HTMLElement]
+  var keygen: HTMLAttributes[HTMLUnknownElement]
+  var label: HTMLAttributes[HTMLLabelElement]
+  var legend: HTMLAttributes[HTMLLegendElement]
+  var li: HTMLAttributes[HTMLLIElement]
+  var line: SVGAttributes[SVGLineElement]
+  var linearGradient: SVGAttributes[SVGLinearGradientElement]
+  var link: HTMLAttributes[HTMLLinkElement]
+  var main: HTMLAttributes[HTMLElement]
+  var map: HTMLAttributes[HTMLMapElement]
+  var mark: HTMLAttributes[HTMLElement]
+  var marker: SVGAttributes[SVGMarkerElement]
+  var marquee: HTMLAttributes[HTMLMarqueeElement]
+  var mask: SVGAttributes[SVGMaskElement]
+  var menu: HTMLAttributes[HTMLMenuElement]
+  var menuitem: HTMLAttributes[HTMLUnknownElement]
+  var meta: HTMLAttributes[HTMLMetaElement]
+  var meter: HTMLAttributes[HTMLMeterElement]
+  var nav: HTMLAttributes[HTMLElement]
+  var noscript: HTMLAttributes[HTMLElement]
+  var `object`: HTMLAttributes[HTMLObjectElement]
+  var ol: HTMLAttributes[HTMLOListElement]
+  var optgroup: HTMLAttributes[HTMLOptGroupElement]
+  var option: HTMLAttributes[HTMLOptionElement]
+  var output: HTMLAttributes[HTMLOutputElement]
+  var p: HTMLAttributes[HTMLParagraphElement]
+  var param: HTMLAttributes[HTMLParamElement]
+  var path: SVGAttributes[SVGPathElement]
+  var pattern: SVGAttributes[SVGPatternElement]
+  var picture: HTMLAttributes[HTMLPictureElement]
+  var polygon: SVGAttributes[SVGPolygonElement]
+  var polyline: SVGAttributes[SVGPolylineElement]
+  var pre: HTMLAttributes[HTMLPreElement]
+  var progress: HTMLAttributes[HTMLProgressElement]
+  var q: HTMLAttributes[HTMLQuoteElement]
+  var radialGradient: SVGAttributes[SVGRadialGradientElement]
+  var rect: SVGAttributes[SVGRectElement]
+  var rp: HTMLAttributes[HTMLElement]
+  var rt: HTMLAttributes[HTMLElement]
+  var ruby: HTMLAttributes[HTMLElement]
+  var s: HTMLAttributes[HTMLElement]
+  var samp: HTMLAttributes[HTMLElement]
+  var script: HTMLAttributes[HTMLScriptElement]
+  var section: HTMLAttributes[HTMLElement]
+  var select: HTMLAttributes[HTMLSelectElement]
+  var slot: HTMLAttributes[HTMLSlotElement]
+  var small: HTMLAttributes[HTMLElement]
+  var source: HTMLAttributes[HTMLSourceElement]
+  var span: HTMLAttributes[HTMLSpanElement]
+  var stop: SVGAttributes[SVGStopElement]
+  var strong: HTMLAttributes[HTMLElement]
+  var style: HTMLAttributes[HTMLStyleElement]
+  var sub: HTMLAttributes[HTMLElement]
+  var summary: HTMLAttributes[HTMLElement]
+  var sup: HTMLAttributes[HTMLElement]
   //SVG
-  var svg: SVGAttributes[SVGSVGElement] = js.native
-  var symbol: SVGAttributes[SVGSymbolElement] = js.native
-  var table: HTMLAttributes[HTMLTableElement] = js.native
-  var tbody: HTMLAttributes[HTMLTableSectionElement] = js.native
-  var td: HTMLAttributes[HTMLTableCellElement] = js.native
-  var text: SVGAttributes[SVGTextElement] = js.native
-  var textarea: HTMLAttributes[HTMLTextAreaElement] = js.native
-  var tfoot: HTMLAttributes[HTMLTableSectionElement] = js.native
-  var th: HTMLAttributes[HTMLTableCellElement] = js.native
-  var thead: HTMLAttributes[HTMLTableSectionElement] = js.native
-  var time: HTMLAttributes[HTMLTimeElement] = js.native
-  var title: HTMLAttributes[HTMLTitleElement] = js.native
-  var tr: HTMLAttributes[HTMLTableRowElement] = js.native
-  var track: HTMLAttributes[HTMLTrackElement] = js.native
-  var tspan: SVGAttributes[SVGTSpanElement] = js.native
-  var u: HTMLAttributes[HTMLElement] = js.native
-  var ul: HTMLAttributes[HTMLUListElement] = js.native
-  var use: SVGAttributes[SVGUseElement] = js.native
-  var `var`: HTMLAttributes[HTMLElement] = js.native
-  var video: HTMLAttributes[HTMLVideoElement] = js.native
-  var wbr: HTMLAttributes[HTMLElement] = js.native
+  var svg: SVGAttributes[SVGSVGElement]
+  var symbol: SVGAttributes[SVGSymbolElement]
+  var table: HTMLAttributes[HTMLTableElement]
+  var tbody: HTMLAttributes[HTMLTableSectionElement]
+  var td: HTMLAttributes[HTMLTableCellElement]
+  var text: SVGAttributes[SVGTextElement]
+  var textarea: HTMLAttributes[HTMLTextAreaElement]
+  var tfoot: HTMLAttributes[HTMLTableSectionElement]
+  var th: HTMLAttributes[HTMLTableCellElement]
+  var thead: HTMLAttributes[HTMLTableSectionElement]
+  var time: HTMLAttributes[HTMLTimeElement]
+  var title: HTMLAttributes[HTMLTitleElement]
+  var tr: HTMLAttributes[HTMLTableRowElement]
+  var track: HTMLAttributes[HTMLTrackElement]
+  var tspan: SVGAttributes[SVGTSpanElement]
+  var u: HTMLAttributes[HTMLElement]
+  var ul: HTMLAttributes[HTMLUListElement]
+  var use: SVGAttributes[SVGUseElement]
+  var `var`: HTMLAttributes[HTMLElement]
+  var video: HTMLAttributes[HTMLVideoElement]
+  var wbr: HTMLAttributes[HTMLElement]
 }
 
 object IntrinsicElements {
@@ -371,6 +371,7 @@ object IntrinsicElements {
     map: HTMLAttributes[HTMLMapElement],
     mark: HTMLAttributes[HTMLElement],
     marker: SVGAttributes[SVGMarkerElement],
+    marquee: HTMLAttributes[HTMLMarqueeElement],
     mask: SVGAttributes[SVGMaskElement],
     menu: HTMLAttributes[HTMLMenuElement],
     menuitem: HTMLAttributes[HTMLUnknownElement],
@@ -435,960 +436,10 @@ object IntrinsicElements {
     video: HTMLAttributes[HTMLVideoElement],
     wbr: HTMLAttributes[HTMLElement]
   ): IntrinsicElements = {
-    val __obj = js.Dynamic.literal(a = a.asInstanceOf[js.Any], abbr = abbr.asInstanceOf[js.Any], address = address.asInstanceOf[js.Any], animate = animate.asInstanceOf[js.Any], area = area.asInstanceOf[js.Any], article = article.asInstanceOf[js.Any], aside = aside.asInstanceOf[js.Any], audio = audio.asInstanceOf[js.Any], b = b.asInstanceOf[js.Any], base = base.asInstanceOf[js.Any], bdi = bdi.asInstanceOf[js.Any], bdo = bdo.asInstanceOf[js.Any], big = big.asInstanceOf[js.Any], blockquote = blockquote.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], br = br.asInstanceOf[js.Any], button = button.asInstanceOf[js.Any], canvas = canvas.asInstanceOf[js.Any], caption = caption.asInstanceOf[js.Any], circle = circle.asInstanceOf[js.Any], cite = cite.asInstanceOf[js.Any], clipPath = clipPath.asInstanceOf[js.Any], code = code.asInstanceOf[js.Any], col = col.asInstanceOf[js.Any], colgroup = colgroup.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], datalist = datalist.asInstanceOf[js.Any], dd = dd.asInstanceOf[js.Any], defs = defs.asInstanceOf[js.Any], del = del.asInstanceOf[js.Any], desc = desc.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], dfn = dfn.asInstanceOf[js.Any], dialog = dialog.asInstanceOf[js.Any], div = div.asInstanceOf[js.Any], dl = dl.asInstanceOf[js.Any], dt = dt.asInstanceOf[js.Any], ellipse = ellipse.asInstanceOf[js.Any], em = em.asInstanceOf[js.Any], embed = embed.asInstanceOf[js.Any], feBlend = feBlend.asInstanceOf[js.Any], feColorMatrix = feColorMatrix.asInstanceOf[js.Any], feComponentTransfer = feComponentTransfer.asInstanceOf[js.Any], feComposite = feComposite.asInstanceOf[js.Any], feConvolveMatrix = feConvolveMatrix.asInstanceOf[js.Any], feDiffuseLighting = feDiffuseLighting.asInstanceOf[js.Any], feDisplacementMap = feDisplacementMap.asInstanceOf[js.Any], feFlood = feFlood.asInstanceOf[js.Any], feGaussianBlur = feGaussianBlur.asInstanceOf[js.Any], feImage = feImage.asInstanceOf[js.Any], feMerge = feMerge.asInstanceOf[js.Any], feMergeNode = feMergeNode.asInstanceOf[js.Any], feMorphology = feMorphology.asInstanceOf[js.Any], feOffset = feOffset.asInstanceOf[js.Any], feSpecularLighting = feSpecularLighting.asInstanceOf[js.Any], feTile = feTile.asInstanceOf[js.Any], feTurbulence = feTurbulence.asInstanceOf[js.Any], fieldset = fieldset.asInstanceOf[js.Any], figcaption = figcaption.asInstanceOf[js.Any], figure = figure.asInstanceOf[js.Any], filter = filter.asInstanceOf[js.Any], footer = footer.asInstanceOf[js.Any], foreignObject = foreignObject.asInstanceOf[js.Any], form = form.asInstanceOf[js.Any], g = g.asInstanceOf[js.Any], h1 = h1.asInstanceOf[js.Any], h2 = h2.asInstanceOf[js.Any], h3 = h3.asInstanceOf[js.Any], h4 = h4.asInstanceOf[js.Any], h5 = h5.asInstanceOf[js.Any], h6 = h6.asInstanceOf[js.Any], head = head.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], hgroup = hgroup.asInstanceOf[js.Any], hr = hr.asInstanceOf[js.Any], html = html.asInstanceOf[js.Any], i = i.asInstanceOf[js.Any], iframe = iframe.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], img = img.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], ins = ins.asInstanceOf[js.Any], kbd = kbd.asInstanceOf[js.Any], keygen = keygen.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], legend = legend.asInstanceOf[js.Any], li = li.asInstanceOf[js.Any], line = line.asInstanceOf[js.Any], linearGradient = linearGradient.asInstanceOf[js.Any], link = link.asInstanceOf[js.Any], main = main.asInstanceOf[js.Any], map = map.asInstanceOf[js.Any], mark = mark.asInstanceOf[js.Any], marker = marker.asInstanceOf[js.Any], mask = mask.asInstanceOf[js.Any], menu = menu.asInstanceOf[js.Any], menuitem = menuitem.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any], meter = meter.asInstanceOf[js.Any], nav = nav.asInstanceOf[js.Any], noscript = noscript.asInstanceOf[js.Any], ol = ol.asInstanceOf[js.Any], optgroup = optgroup.asInstanceOf[js.Any], option = option.asInstanceOf[js.Any], output = output.asInstanceOf[js.Any], p = p.asInstanceOf[js.Any], param = param.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], pattern = pattern.asInstanceOf[js.Any], picture = picture.asInstanceOf[js.Any], polygon = polygon.asInstanceOf[js.Any], polyline = polyline.asInstanceOf[js.Any], pre = pre.asInstanceOf[js.Any], progress = progress.asInstanceOf[js.Any], q = q.asInstanceOf[js.Any], radialGradient = radialGradient.asInstanceOf[js.Any], rect = rect.asInstanceOf[js.Any], rp = rp.asInstanceOf[js.Any], rt = rt.asInstanceOf[js.Any], ruby = ruby.asInstanceOf[js.Any], s = s.asInstanceOf[js.Any], samp = samp.asInstanceOf[js.Any], script = script.asInstanceOf[js.Any], section = section.asInstanceOf[js.Any], select = select.asInstanceOf[js.Any], slot = slot.asInstanceOf[js.Any], small = small.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], span = span.asInstanceOf[js.Any], stop = stop.asInstanceOf[js.Any], strong = strong.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any], sub = sub.asInstanceOf[js.Any], summary = summary.asInstanceOf[js.Any], sup = sup.asInstanceOf[js.Any], svg = svg.asInstanceOf[js.Any], symbol = symbol.asInstanceOf[js.Any], table = table.asInstanceOf[js.Any], tbody = tbody.asInstanceOf[js.Any], td = td.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any], textarea = textarea.asInstanceOf[js.Any], tfoot = tfoot.asInstanceOf[js.Any], th = th.asInstanceOf[js.Any], thead = thead.asInstanceOf[js.Any], time = time.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], tr = tr.asInstanceOf[js.Any], track = track.asInstanceOf[js.Any], tspan = tspan.asInstanceOf[js.Any], u = u.asInstanceOf[js.Any], ul = ul.asInstanceOf[js.Any], use = use.asInstanceOf[js.Any], video = video.asInstanceOf[js.Any], wbr = wbr.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(a = a.asInstanceOf[js.Any], abbr = abbr.asInstanceOf[js.Any], address = address.asInstanceOf[js.Any], animate = animate.asInstanceOf[js.Any], area = area.asInstanceOf[js.Any], article = article.asInstanceOf[js.Any], aside = aside.asInstanceOf[js.Any], audio = audio.asInstanceOf[js.Any], b = b.asInstanceOf[js.Any], base = base.asInstanceOf[js.Any], bdi = bdi.asInstanceOf[js.Any], bdo = bdo.asInstanceOf[js.Any], big = big.asInstanceOf[js.Any], blockquote = blockquote.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], br = br.asInstanceOf[js.Any], button = button.asInstanceOf[js.Any], canvas = canvas.asInstanceOf[js.Any], caption = caption.asInstanceOf[js.Any], circle = circle.asInstanceOf[js.Any], cite = cite.asInstanceOf[js.Any], clipPath = clipPath.asInstanceOf[js.Any], code = code.asInstanceOf[js.Any], col = col.asInstanceOf[js.Any], colgroup = colgroup.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], datalist = datalist.asInstanceOf[js.Any], dd = dd.asInstanceOf[js.Any], defs = defs.asInstanceOf[js.Any], del = del.asInstanceOf[js.Any], desc = desc.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], dfn = dfn.asInstanceOf[js.Any], dialog = dialog.asInstanceOf[js.Any], div = div.asInstanceOf[js.Any], dl = dl.asInstanceOf[js.Any], dt = dt.asInstanceOf[js.Any], ellipse = ellipse.asInstanceOf[js.Any], em = em.asInstanceOf[js.Any], embed = embed.asInstanceOf[js.Any], feBlend = feBlend.asInstanceOf[js.Any], feColorMatrix = feColorMatrix.asInstanceOf[js.Any], feComponentTransfer = feComponentTransfer.asInstanceOf[js.Any], feComposite = feComposite.asInstanceOf[js.Any], feConvolveMatrix = feConvolveMatrix.asInstanceOf[js.Any], feDiffuseLighting = feDiffuseLighting.asInstanceOf[js.Any], feDisplacementMap = feDisplacementMap.asInstanceOf[js.Any], feFlood = feFlood.asInstanceOf[js.Any], feGaussianBlur = feGaussianBlur.asInstanceOf[js.Any], feImage = feImage.asInstanceOf[js.Any], feMerge = feMerge.asInstanceOf[js.Any], feMergeNode = feMergeNode.asInstanceOf[js.Any], feMorphology = feMorphology.asInstanceOf[js.Any], feOffset = feOffset.asInstanceOf[js.Any], feSpecularLighting = feSpecularLighting.asInstanceOf[js.Any], feTile = feTile.asInstanceOf[js.Any], feTurbulence = feTurbulence.asInstanceOf[js.Any], fieldset = fieldset.asInstanceOf[js.Any], figcaption = figcaption.asInstanceOf[js.Any], figure = figure.asInstanceOf[js.Any], filter = filter.asInstanceOf[js.Any], footer = footer.asInstanceOf[js.Any], foreignObject = foreignObject.asInstanceOf[js.Any], form = form.asInstanceOf[js.Any], g = g.asInstanceOf[js.Any], h1 = h1.asInstanceOf[js.Any], h2 = h2.asInstanceOf[js.Any], h3 = h3.asInstanceOf[js.Any], h4 = h4.asInstanceOf[js.Any], h5 = h5.asInstanceOf[js.Any], h6 = h6.asInstanceOf[js.Any], head = head.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], hgroup = hgroup.asInstanceOf[js.Any], hr = hr.asInstanceOf[js.Any], html = html.asInstanceOf[js.Any], i = i.asInstanceOf[js.Any], iframe = iframe.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], img = img.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], ins = ins.asInstanceOf[js.Any], kbd = kbd.asInstanceOf[js.Any], keygen = keygen.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], legend = legend.asInstanceOf[js.Any], li = li.asInstanceOf[js.Any], line = line.asInstanceOf[js.Any], linearGradient = linearGradient.asInstanceOf[js.Any], link = link.asInstanceOf[js.Any], main = main.asInstanceOf[js.Any], map = map.asInstanceOf[js.Any], mark = mark.asInstanceOf[js.Any], marker = marker.asInstanceOf[js.Any], marquee = marquee.asInstanceOf[js.Any], mask = mask.asInstanceOf[js.Any], menu = menu.asInstanceOf[js.Any], menuitem = menuitem.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any], meter = meter.asInstanceOf[js.Any], nav = nav.asInstanceOf[js.Any], noscript = noscript.asInstanceOf[js.Any], ol = ol.asInstanceOf[js.Any], optgroup = optgroup.asInstanceOf[js.Any], option = option.asInstanceOf[js.Any], output = output.asInstanceOf[js.Any], p = p.asInstanceOf[js.Any], param = param.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], pattern = pattern.asInstanceOf[js.Any], picture = picture.asInstanceOf[js.Any], polygon = polygon.asInstanceOf[js.Any], polyline = polyline.asInstanceOf[js.Any], pre = pre.asInstanceOf[js.Any], progress = progress.asInstanceOf[js.Any], q = q.asInstanceOf[js.Any], radialGradient = radialGradient.asInstanceOf[js.Any], rect = rect.asInstanceOf[js.Any], rp = rp.asInstanceOf[js.Any], rt = rt.asInstanceOf[js.Any], ruby = ruby.asInstanceOf[js.Any], s = s.asInstanceOf[js.Any], samp = samp.asInstanceOf[js.Any], script = script.asInstanceOf[js.Any], section = section.asInstanceOf[js.Any], select = select.asInstanceOf[js.Any], slot = slot.asInstanceOf[js.Any], small = small.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], span = span.asInstanceOf[js.Any], stop = stop.asInstanceOf[js.Any], strong = strong.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any], sub = sub.asInstanceOf[js.Any], summary = summary.asInstanceOf[js.Any], sup = sup.asInstanceOf[js.Any], svg = svg.asInstanceOf[js.Any], symbol = symbol.asInstanceOf[js.Any], table = table.asInstanceOf[js.Any], tbody = tbody.asInstanceOf[js.Any], td = td.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any], textarea = textarea.asInstanceOf[js.Any], tfoot = tfoot.asInstanceOf[js.Any], th = th.asInstanceOf[js.Any], thead = thead.asInstanceOf[js.Any], time = time.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], tr = tr.asInstanceOf[js.Any], track = track.asInstanceOf[js.Any], tspan = tspan.asInstanceOf[js.Any], u = u.asInstanceOf[js.Any], ul = ul.asInstanceOf[js.Any], use = use.asInstanceOf[js.Any], video = video.asInstanceOf[js.Any], wbr = wbr.asInstanceOf[js.Any])
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
     __obj.updateDynamic("var")(`var`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntrinsicElements]
   }
-  @scala.inline
-  implicit class IntrinsicElementsOps[Self <: IntrinsicElements] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withA(value: HTMLAttributes[HTMLAnchorElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("a")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAbbr(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abbr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddress(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnimate(value: SVGAttributes[SVGAnimateElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArea(value: HTMLAttributes[HTMLAreaElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArticle(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("article")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAside(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aside")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAudio(value: HTMLAttributes[HTMLAudioElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withB(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("b")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBase(value: HTMLAttributes[HTMLBaseElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBdi(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bdi")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBdo(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bdo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBig(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("big")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBlockquote(value: HTMLAttributes[HTMLQuoteElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockquote")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBody(value: HTMLAttributes[HTMLBodyElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBr(value: HTMLAttributes[HTMLBRElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("br")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withButton(value: HTMLAttributes[HTMLButtonElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCanvas(value: HTMLAttributes[HTMLCanvasElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canvas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaption(value: HTMLAttributes[HTMLTableCaptionElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCircle(value: SVGAttributes[SVGCircleElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCite(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClipPath(value: SVGAttributes[SVGClipPathElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clipPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCode(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCol(value: HTMLAttributes[HTMLTableColElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("col")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColgroup(value: HTMLAttributes[HTMLTableColElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colgroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withData(value: HTMLAttributes[HTMLDataElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDatalist(value: HTMLAttributes[HTMLDataListElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datalist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDd(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefs(value: SVGAttributes[SVGDefsElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDel(value: HTMLAttributes[HTMLModElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("del")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDesc(value: SVGAttributes[SVGDescElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDetails(value: HTMLAttributes[HTMLDetailsElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDfn(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dfn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDialog(value: HTMLAttributes[HTMLDialogElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDiv(value: HTMLAttributes[HTMLDivElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("div")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDl(value: HTMLAttributes[HTMLDListElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDt(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEllipse(value: SVGAttributes[SVGEllipseElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEm(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("em")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEmbed(value: HTMLAttributes[HTMLEmbedElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("embed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeBlend(value: SVGAttributes[SVGFEBlendElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feBlend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeColorMatrix(value: SVGAttributes[SVGFEColorMatrixElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feColorMatrix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeComponentTransfer(value: SVGAttributes[SVGFEComponentTransferElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feComponentTransfer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeComposite(value: SVGAttributes[SVGFECompositeElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feComposite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeConvolveMatrix(value: SVGAttributes[SVGFEConvolveMatrixElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feConvolveMatrix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeDiffuseLighting(value: SVGAttributes[SVGFEDiffuseLightingElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feDiffuseLighting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeDisplacementMap(value: SVGAttributes[SVGFEDisplacementMapElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feDisplacementMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeFlood(value: SVGAttributes[SVGFEFloodElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feFlood")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeGaussianBlur(value: SVGAttributes[SVGFEGaussianBlurElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feGaussianBlur")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeImage(value: SVGAttributes[SVGFEImageElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feImage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeMerge(value: SVGAttributes[SVGFEMergeElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feMerge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeMergeNode(value: SVGAttributes[SVGFEMergeNodeElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feMergeNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeMorphology(value: SVGAttributes[SVGFEMorphologyElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feMorphology")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeOffset(value: SVGAttributes[SVGFEOffsetElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeSpecularLighting(value: SVGAttributes[SVGFESpecularLightingElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feSpecularLighting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeTile(value: SVGAttributes[SVGFETileElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feTile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeTurbulence(value: SVGAttributes[SVGFETurbulenceElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feTurbulence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFieldset(value: HTMLAttributes[HTMLFieldSetElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFigcaption(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("figcaption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFigure(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("figure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilter(value: SVGAttributes[SVGFilterElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFooter(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForeignObject(value: SVGAttributes[SVGForeignObjectElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("foreignObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForm(value: HTMLAttributes[HTMLFormElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withG(value: SVGAttributes[SVGGElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("g")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withH1(value: HTMLAttributes[HTMLHeadingElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withH2(value: HTMLAttributes[HTMLHeadingElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withH3(value: HTMLAttributes[HTMLHeadingElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withH4(value: HTMLAttributes[HTMLHeadingElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h4")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withH5(value: HTMLAttributes[HTMLHeadingElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h5")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withH6(value: HTMLAttributes[HTMLHeadingElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h6")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHead(value: HTMLAttributes[HTMLHeadElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("head")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeader(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHgroup(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hgroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHr(value: HTMLAttributes[HTMLHRElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHtml(value: HTMLAttributes[HTMLHtmlElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withI(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("i")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIframe(value: HTMLAttributes[HTMLIFrameElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iframe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImage(value: SVGAttributes[SVGImageElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImg(value: HTMLAttributes[HTMLImageElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("img")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInput(value: HTMLAttributes[HTMLInputElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIns(value: HTMLAttributes[HTMLModElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKbd(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kbd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeygen(value: HTMLAttributes[HTMLUnknownElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keygen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabel(value: HTMLAttributes[HTMLLabelElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLegend(value: HTMLAttributes[HTMLLegendElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLi(value: HTMLAttributes[HTMLLIElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("li")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLine(value: SVGAttributes[SVGLineElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLinearGradient(value: SVGAttributes[SVGLinearGradientElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linearGradient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLink(value: HTMLAttributes[HTMLLinkElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMain(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("main")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMap(value: HTMLAttributes[HTMLMapElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMark(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarker(value: SVGAttributes[SVGMarkerElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMask(value: SVGAttributes[SVGMaskElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMenu(value: HTMLAttributes[HTMLMenuElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMenuitem(value: HTMLAttributes[HTMLUnknownElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuitem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMeta(value: HTMLAttributes[HTMLMetaElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMeter(value: HTMLAttributes[HTMLMeterElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNav(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nav")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNoscript(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noscript")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObject(value: HTMLAttributes[HTMLObjectElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOl(value: HTMLAttributes[HTMLOListElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptgroup(value: HTMLAttributes[HTMLOptGroupElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optgroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOption(value: HTMLAttributes[HTMLOptionElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("option")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutput(value: HTMLAttributes[HTMLOutputElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withP(value: HTMLAttributes[HTMLParagraphElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParam(value: HTMLAttributes[HTMLParamElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("param")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPath(value: SVGAttributes[SVGPathElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPattern(value: SVGAttributes[SVGPatternElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPicture(value: HTMLAttributes[HTMLPictureElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("picture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPolygon(value: SVGAttributes[SVGPolygonElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polygon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPolyline(value: SVGAttributes[SVGPolylineElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polyline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPre(value: HTMLAttributes[HTMLPreElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pre")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProgress(value: HTMLAttributes[HTMLProgressElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQ(value: HTMLAttributes[HTMLQuoteElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRadialGradient(value: SVGAttributes[SVGRadialGradientElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialGradient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRect(value: SVGAttributes[SVGRectElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRp(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRt(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRuby(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ruby")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withS(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSamp(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("samp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScript(value: HTMLAttributes[HTMLScriptElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("script")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSection(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("section")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelect(value: HTMLAttributes[HTMLSelectElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSlot(value: HTMLAttributes[HTMLSlotElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSmall(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("small")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSource(value: HTMLAttributes[HTMLSourceElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpan(value: HTMLAttributes[HTMLSpanElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("span")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStop(value: SVGAttributes[SVGStopElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStrong(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strong")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStyle(value: HTMLAttributes[HTMLStyleElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSub(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sub")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSummary(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSup(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSvg(value: SVGAttributes[SVGSVGElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSymbol(value: SVGAttributes[SVGSymbolElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTable(value: HTMLAttributes[HTMLTableElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTbody(value: HTMLAttributes[HTMLTableSectionElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tbody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTd(value: HTMLAttributes[HTMLTableCellElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("td")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withText(value: SVGAttributes[SVGTextElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextarea(value: HTMLAttributes[HTMLTextAreaElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textarea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTfoot(value: HTMLAttributes[HTMLTableSectionElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tfoot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTh(value: HTMLAttributes[HTMLTableCellElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("th")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThead(value: HTMLAttributes[HTMLTableSectionElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTime(value: HTMLAttributes[HTMLTimeElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: HTMLAttributes[HTMLTitleElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTr(value: HTMLAttributes[HTMLTableRowElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrack(value: HTMLAttributes[HTMLTrackElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTspan(value: SVGAttributes[SVGTSpanElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tspan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withU(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("u")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUl(value: HTMLAttributes[HTMLUListElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ul")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUse(value: SVGAttributes[SVGUseElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("use")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVar(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("var")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVideo(value: HTMLAttributes[HTMLVideoElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWbr(value: HTMLAttributes[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wbr")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

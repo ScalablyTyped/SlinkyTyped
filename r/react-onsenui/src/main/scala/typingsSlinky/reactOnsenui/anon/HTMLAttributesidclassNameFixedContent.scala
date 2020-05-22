@@ -7,153 +7,45 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined react-onsenui.react-onsenui.HTMLAttributes<'id' | 'className' | 'style'> & {  onChange ? :(e : react-onsenui.react-onsenui.PullHookChangeEvent): void,   onLoad ? :(done : (): void): void,   onPull ? :(): void,   disabled ? :boolean,   height ? :number,   thresholdHeight ? :number,   fixedContent ? :boolean} */
-@js.native
 trait HTMLAttributesidclassNameFixedContent extends js.Object {
-  var className: js.UndefOr[String] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var fixedContent: js.UndefOr[Boolean] = js.native
-  var height: js.UndefOr[Double] = js.native
-  var id: js.UndefOr[String] = js.native
-  var onChange: js.UndefOr[js.Function1[/* e */ PullHookChangeEvent, Unit]] = js.native
-  var onLoad: js.UndefOr[js.Function1[/* done */ js.Function0[Unit], Unit]] = js.native
-  var onPull: js.UndefOr[js.Function0[Unit]] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
-  var thresholdHeight: js.UndefOr[Double] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var fixedContent: js.UndefOr[Boolean] = js.undefined
+  var height: js.UndefOr[Double] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var onChange: js.UndefOr[js.Function1[/* e */ PullHookChangeEvent, Unit]] = js.undefined
+  var onLoad: js.UndefOr[js.Function1[/* done */ js.Function0[Unit], Unit]] = js.undefined
+  var onPull: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
+  var thresholdHeight: js.UndefOr[Double] = js.undefined
 }
 
 object HTMLAttributesidclassNameFixedContent {
   @scala.inline
-  def apply(): HTMLAttributesidclassNameFixedContent = {
+  def apply(
+    className: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    fixedContent: js.UndefOr[Boolean] = js.undefined,
+    height: js.UndefOr[Double] = js.undefined,
+    id: String = null,
+    onChange: /* e */ PullHookChangeEvent => Unit = null,
+    onLoad: /* done */ js.Function0[Unit] => Unit = null,
+    onPull: () => Unit = null,
+    style: CSSProperties = null,
+    thresholdHeight: js.UndefOr[Double] = js.undefined
+  ): HTMLAttributesidclassNameFixedContent = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fixedContent)) __obj.updateDynamic("fixedContent")(fixedContent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction1(onLoad))
+    if (onPull != null) __obj.updateDynamic("onPull")(js.Any.fromFunction0(onPull))
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(thresholdHeight)) __obj.updateDynamic("thresholdHeight")(thresholdHeight.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[HTMLAttributesidclassNameFixedContent]
   }
-  @scala.inline
-  implicit class HTMLAttributesidclassNameFixedContentOps[Self <: HTMLAttributesidclassNameFixedContent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixedContent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixedContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: /* e */ PullHookChangeEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLoad(value: /* done */ js.Function0[Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPull(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPull")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPull")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThresholdHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thresholdHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThresholdHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thresholdHeight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

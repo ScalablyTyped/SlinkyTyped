@@ -8,204 +8,64 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined react.react.WeakValidationMap<fundamental-react.fundamental-react/lib/Table/Table.TableProps> */
-@js.native
 trait WeakValidationMapTablePro extends js.Object {
-  var className: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var disableStyles: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
-  var headers: js.UndefOr[Validator[js.UndefOr[(js.Array[TagMod[Any] | String]) | Null]]] = js.native
-  var tableBodyClassName: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var tableBodyProps: js.UndefOr[Validator[js.UndefOr[_ | Null]]] = js.native
+  var className: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var disableStyles: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var headers: js.UndefOr[Validator[js.UndefOr[(js.Array[TagMod[Any] | String]) | Null]]] = js.undefined
+  var tableBodyClassName: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var tableBodyProps: js.UndefOr[Validator[js.UndefOr[_ | Null]]] = js.undefined
   var tableBodyRowProps: js.UndefOr[
     Validator[
       js.UndefOr[
         (js.Function2[/* rowData */ js.Array[String], /* index */ Double, Unit]) | Null | StringDictionary[_]
       ]
     ]
-  ] = js.native
-  var tableCellClassName: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var tableData: js.UndefOr[Validator[js.UndefOr[js.Array[RowData] | Null]]] = js.native
-  var tableHeaderClassName: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var tableHeaderProps: js.UndefOr[Validator[js.UndefOr[_ | Null]]] = js.native
-  var tableHeaderRowClassName: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  var tableHeaderRowProps: js.UndefOr[Validator[js.UndefOr[_ | Null]]] = js.native
-  var tableRowClassName: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
+  ] = js.undefined
+  var tableCellClassName: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var tableData: js.UndefOr[Validator[js.UndefOr[js.Array[RowData] | Null]]] = js.undefined
+  var tableHeaderClassName: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var tableHeaderProps: js.UndefOr[Validator[js.UndefOr[_ | Null]]] = js.undefined
+  var tableHeaderRowClassName: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
+  var tableHeaderRowProps: js.UndefOr[Validator[js.UndefOr[_ | Null]]] = js.undefined
+  var tableRowClassName: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
 }
 
 object WeakValidationMapTablePro {
   @scala.inline
-  def apply(): WeakValidationMapTablePro = {
+  def apply(
+    className: Validator[js.UndefOr[Null | String]] = null,
+    disableStyles: Validator[js.UndefOr[Boolean | Null]] = null,
+    headers: Validator[js.UndefOr[(js.Array[TagMod[Any] | String]) | Null]] = null,
+    tableBodyClassName: Validator[js.UndefOr[Null | String]] = null,
+    tableBodyProps: Validator[js.UndefOr[_ | Null]] = null,
+    tableBodyRowProps: Validator[
+      js.UndefOr[
+        (js.Function2[/* rowData */ js.Array[String], /* index */ Double, Unit]) | Null | StringDictionary[_]
+      ]
+    ] = null,
+    tableCellClassName: Validator[js.UndefOr[Null | String]] = null,
+    tableData: Validator[js.UndefOr[js.Array[RowData] | Null]] = null,
+    tableHeaderClassName: Validator[js.UndefOr[Null | String]] = null,
+    tableHeaderProps: Validator[js.UndefOr[_ | Null]] = null,
+    tableHeaderRowClassName: Validator[js.UndefOr[Null | String]] = null,
+    tableHeaderRowProps: Validator[js.UndefOr[_ | Null]] = null,
+    tableRowClassName: Validator[js.UndefOr[Null | String]] = null
+  ): WeakValidationMapTablePro = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (disableStyles != null) __obj.updateDynamic("disableStyles")(disableStyles.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (tableBodyClassName != null) __obj.updateDynamic("tableBodyClassName")(tableBodyClassName.asInstanceOf[js.Any])
+    if (tableBodyProps != null) __obj.updateDynamic("tableBodyProps")(tableBodyProps.asInstanceOf[js.Any])
+    if (tableBodyRowProps != null) __obj.updateDynamic("tableBodyRowProps")(tableBodyRowProps.asInstanceOf[js.Any])
+    if (tableCellClassName != null) __obj.updateDynamic("tableCellClassName")(tableCellClassName.asInstanceOf[js.Any])
+    if (tableData != null) __obj.updateDynamic("tableData")(tableData.asInstanceOf[js.Any])
+    if (tableHeaderClassName != null) __obj.updateDynamic("tableHeaderClassName")(tableHeaderClassName.asInstanceOf[js.Any])
+    if (tableHeaderProps != null) __obj.updateDynamic("tableHeaderProps")(tableHeaderProps.asInstanceOf[js.Any])
+    if (tableHeaderRowClassName != null) __obj.updateDynamic("tableHeaderRowClassName")(tableHeaderRowClassName.asInstanceOf[js.Any])
+    if (tableHeaderRowProps != null) __obj.updateDynamic("tableHeaderRowProps")(tableHeaderRowProps.asInstanceOf[js.Any])
+    if (tableRowClassName != null) __obj.updateDynamic("tableRowClassName")(tableRowClassName.asInstanceOf[js.Any])
     __obj.asInstanceOf[WeakValidationMapTablePro]
   }
-  @scala.inline
-  implicit class WeakValidationMapTableProOps[Self <: WeakValidationMapTablePro] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableStyles(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStyles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStyles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: Validator[js.UndefOr[(js.Array[TagMod[Any] | String]) | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableBodyClassName(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableBodyClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableBodyClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableBodyClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableBodyProps(value: Validator[js.UndefOr[_ | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableBodyProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableBodyProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableBodyProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableBodyRowProps(
-      value: Validator[
-          js.UndefOr[
-            (js.Function2[/* rowData */ js.Array[String], /* index */ Double, Unit]) | Null | StringDictionary[_]
-          ]
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableBodyRowProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableBodyRowProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableBodyRowProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableCellClassName(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCellClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableCellClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCellClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableData(value: Validator[js.UndefOr[js.Array[RowData] | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableHeaderClassName(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeaderClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableHeaderClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeaderClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableHeaderProps(value: Validator[js.UndefOr[_ | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeaderProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableHeaderProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeaderProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableHeaderRowClassName(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeaderRowClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableHeaderRowClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeaderRowClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableHeaderRowProps(value: Validator[js.UndefOr[_ | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeaderRowProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableHeaderRowProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeaderRowProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableRowClassName(value: Validator[js.UndefOr[Null | String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableRowClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableRowClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableRowClassName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

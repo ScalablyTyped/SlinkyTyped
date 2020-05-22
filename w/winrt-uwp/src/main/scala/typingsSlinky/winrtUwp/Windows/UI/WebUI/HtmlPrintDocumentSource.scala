@@ -5,34 +5,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Manages the document source for app printing. */
-@js.native
 trait HtmlPrintDocumentSource extends js.Object {
   /** Gets and sets the bottom margin of the document source. */
-  var bottomMargin: Double = js.native
+  var bottomMargin: Double
   /** Gets and sets the content of the document source to print. */
-  var content: PrintContent = js.native
+  var content: PrintContent
   /** Gets and sets a value that controls whether header and footer are enabled in the document source. */
-  var enableHeaderFooter: Boolean = js.native
+  var enableHeaderFooter: Boolean
   /** Gets and sets the left margin of the document source. */
-  var leftMargin: Double = js.native
+  var leftMargin: Double
   /** Gets the range of pages that prints. */
-  var pageRange: String = js.native
+  var pageRange: String
   /** Gets and sets the size of the document source by percentage. */
-  var percentScale: Double = js.native
+  var percentScale: Double
   /** Gets and sets the right margin of the document source. */
-  var rightMargin: Double = js.native
+  var rightMargin: Double
   /** Gets and sets a value that controls whether content shrinks to fit the document source. */
-  var shrinkToFit: Boolean = js.native
+  var shrinkToFit: Boolean
   /** Gets and sets the top margin of the document source. */
-  var topMargin: Double = js.native
+  var topMargin: Double
   /** Performs app-defined tasks that are associated with freeing, releasing, or resetting resources that were allocated for the document source. */
-  def close(): Unit = js.native
+  def close(): Unit
   /**
     * Tries to set the page range of the document source.
     * @param strPageRange The page range to set.
     * @return A Boolean value that indicates whether trySetPageRange set the page range in strPageRange. TRUE indicates the page range was set and FALSE otherwise.
     */
-  def trySetPageRange(strPageRange: String): Boolean = js.native
+  def trySetPageRange(strPageRange: String): Boolean
 }
 
 object HtmlPrintDocumentSource {
@@ -53,79 +52,5 @@ object HtmlPrintDocumentSource {
     val __obj = js.Dynamic.literal(bottomMargin = bottomMargin.asInstanceOf[js.Any], close = js.Any.fromFunction0(close), content = content.asInstanceOf[js.Any], enableHeaderFooter = enableHeaderFooter.asInstanceOf[js.Any], leftMargin = leftMargin.asInstanceOf[js.Any], pageRange = pageRange.asInstanceOf[js.Any], percentScale = percentScale.asInstanceOf[js.Any], rightMargin = rightMargin.asInstanceOf[js.Any], shrinkToFit = shrinkToFit.asInstanceOf[js.Any], topMargin = topMargin.asInstanceOf[js.Any], trySetPageRange = js.Any.fromFunction1(trySetPageRange))
     __obj.asInstanceOf[HtmlPrintDocumentSource]
   }
-  @scala.inline
-  implicit class HtmlPrintDocumentSourceOps[Self <: HtmlPrintDocumentSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBottomMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withContent(value: PrintContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnableHeaderFooter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableHeaderFooter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLeftMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPageRange(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPercentScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percentScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRightMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShrinkToFit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shrinkToFit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTopMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrySetPageRange(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trySetPageRange")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

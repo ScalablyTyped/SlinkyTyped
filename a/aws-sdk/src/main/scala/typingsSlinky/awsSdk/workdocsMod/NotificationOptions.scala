@@ -18,41 +18,11 @@ trait NotificationOptions extends js.Object {
 
 object NotificationOptions {
   @scala.inline
-  def apply(): NotificationOptions = {
+  def apply(EmailMessage: MessageType = null, SendEmail: js.UndefOr[BooleanType] = js.undefined): NotificationOptions = {
     val __obj = js.Dynamic.literal()
+    if (EmailMessage != null) __obj.updateDynamic("EmailMessage")(EmailMessage.asInstanceOf[js.Any])
+    if (!js.isUndefined(SendEmail)) __obj.updateDynamic("SendEmail")(SendEmail.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotificationOptions]
   }
-  @scala.inline
-  implicit class NotificationOptionsOps[Self <: NotificationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmailMessage(value: MessageType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmailMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmailMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmailMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSendEmail(value: BooleanType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SendEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSendEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SendEmail")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -17,29 +17,10 @@ trait SchemaMultipleChoiceQuestion extends js.Object {
 
 object SchemaMultipleChoiceQuestion {
   @scala.inline
-  def apply(): SchemaMultipleChoiceQuestion = {
+  def apply(choices: js.Array[String] = null): SchemaMultipleChoiceQuestion = {
     val __obj = js.Dynamic.literal()
+    if (choices != null) __obj.updateDynamic("choices")(choices.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMultipleChoiceQuestion]
   }
-  @scala.inline
-  implicit class SchemaMultipleChoiceQuestionOps[Self <: SchemaMultipleChoiceQuestion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChoices(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("choices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChoices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("choices")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

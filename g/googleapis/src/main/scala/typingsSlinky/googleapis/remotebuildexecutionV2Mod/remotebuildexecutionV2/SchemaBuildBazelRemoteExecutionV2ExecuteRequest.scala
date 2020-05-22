@@ -34,65 +34,18 @@ trait SchemaBuildBazelRemoteExecutionV2ExecuteRequest extends js.Object {
 
 object SchemaBuildBazelRemoteExecutionV2ExecuteRequest {
   @scala.inline
-  def apply(): SchemaBuildBazelRemoteExecutionV2ExecuteRequest = {
+  def apply(
+    actionDigest: SchemaBuildBazelRemoteExecutionV2Digest = null,
+    executionPolicy: SchemaBuildBazelRemoteExecutionV2ExecutionPolicy = null,
+    resultsCachePolicy: SchemaBuildBazelRemoteExecutionV2ResultsCachePolicy = null,
+    skipCacheLookup: js.UndefOr[Boolean] = js.undefined
+  ): SchemaBuildBazelRemoteExecutionV2ExecuteRequest = {
     val __obj = js.Dynamic.literal()
+    if (actionDigest != null) __obj.updateDynamic("actionDigest")(actionDigest.asInstanceOf[js.Any])
+    if (executionPolicy != null) __obj.updateDynamic("executionPolicy")(executionPolicy.asInstanceOf[js.Any])
+    if (resultsCachePolicy != null) __obj.updateDynamic("resultsCachePolicy")(resultsCachePolicy.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipCacheLookup)) __obj.updateDynamic("skipCacheLookup")(skipCacheLookup.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBuildBazelRemoteExecutionV2ExecuteRequest]
   }
-  @scala.inline
-  implicit class SchemaBuildBazelRemoteExecutionV2ExecuteRequestOps[Self <: SchemaBuildBazelRemoteExecutionV2ExecuteRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionDigest(value: SchemaBuildBazelRemoteExecutionV2Digest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionDigest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionDigest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionDigest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecutionPolicy(value: SchemaBuildBazelRemoteExecutionV2ExecutionPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResultsCachePolicy(value: SchemaBuildBazelRemoteExecutionV2ResultsCachePolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resultsCachePolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResultsCachePolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resultsCachePolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipCacheLookup(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipCacheLookup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipCacheLookup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipCacheLookup")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

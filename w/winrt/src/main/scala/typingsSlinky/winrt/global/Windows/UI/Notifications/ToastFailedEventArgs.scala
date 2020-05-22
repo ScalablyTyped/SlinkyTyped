@@ -7,5 +7,8 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.UI.Notifications.ToastFailedEventArgs")
 @js.native
 class ToastFailedEventArgs ()
-  extends typingsSlinky.winrt.Windows.UI.Notifications.ToastFailedEventArgs
+  extends typingsSlinky.winrt.Windows.UI.Notifications.ToastFailedEventArgs {
+  /* CompleteClass */
+  override var errorCode: Double = js.native
+}
 

@@ -26,41 +26,11 @@ trait SchemaSendCommandToDeviceRequest extends js.Object {
 
 object SchemaSendCommandToDeviceRequest {
   @scala.inline
-  def apply(): SchemaSendCommandToDeviceRequest = {
+  def apply(binaryData: String = null, subfolder: String = null): SchemaSendCommandToDeviceRequest = {
     val __obj = js.Dynamic.literal()
+    if (binaryData != null) __obj.updateDynamic("binaryData")(binaryData.asInstanceOf[js.Any])
+    if (subfolder != null) __obj.updateDynamic("subfolder")(subfolder.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSendCommandToDeviceRequest]
   }
-  @scala.inline
-  implicit class SchemaSendCommandToDeviceRequestOps[Self <: SchemaSendCommandToDeviceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBinaryData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binaryData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBinaryData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binaryData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubfolder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subfolder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubfolder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subfolder")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

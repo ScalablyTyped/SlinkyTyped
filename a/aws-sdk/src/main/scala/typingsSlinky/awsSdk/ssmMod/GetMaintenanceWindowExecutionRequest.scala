@@ -18,19 +18,5 @@ object GetMaintenanceWindowExecutionRequest {
     val __obj = js.Dynamic.literal(WindowExecutionId = WindowExecutionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetMaintenanceWindowExecutionRequest]
   }
-  @scala.inline
-  implicit class GetMaintenanceWindowExecutionRequestOps[Self <: GetMaintenanceWindowExecutionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWindowExecutionId(value: MaintenanceWindowExecutionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WindowExecutionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -26,65 +26,18 @@ trait HlsCaptionLanguageMapping extends js.Object {
 
 object HlsCaptionLanguageMapping {
   @scala.inline
-  def apply(): HlsCaptionLanguageMapping = {
+  def apply(
+    CaptionChannel: js.UndefOr[integerMinNegative2147483648Max2147483647] = js.undefined,
+    CustomLanguageCode: stringMin3Max3PatternAZaZ3 = null,
+    LanguageCode: LanguageCode = null,
+    LanguageDescription: string = null
+  ): HlsCaptionLanguageMapping = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(CaptionChannel)) __obj.updateDynamic("CaptionChannel")(CaptionChannel.get.asInstanceOf[js.Any])
+    if (CustomLanguageCode != null) __obj.updateDynamic("CustomLanguageCode")(CustomLanguageCode.asInstanceOf[js.Any])
+    if (LanguageCode != null) __obj.updateDynamic("LanguageCode")(LanguageCode.asInstanceOf[js.Any])
+    if (LanguageDescription != null) __obj.updateDynamic("LanguageDescription")(LanguageDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[HlsCaptionLanguageMapping]
   }
-  @scala.inline
-  implicit class HlsCaptionLanguageMappingOps[Self <: HlsCaptionLanguageMapping] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaptionChannel(value: integerMinNegative2147483648Max2147483647): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionChannel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaptionChannel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionChannel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomLanguageCode(value: stringMin3Max3PatternAZaZ3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomLanguageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomLanguageCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguageCode(value: LanguageCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguageDescription(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageDescription")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

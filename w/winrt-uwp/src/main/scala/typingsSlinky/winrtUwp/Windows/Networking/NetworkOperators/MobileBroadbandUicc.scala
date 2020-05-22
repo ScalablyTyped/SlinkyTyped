@@ -6,15 +6,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a Universal Integrated Circuit Card (UICC), normally called a SIM Card on a mobile broadband device. */
-@js.native
 trait MobileBroadbandUicc extends js.Object {
   /** Gets the unique SIM Card identity on a mobile broadband device. */
-  var simIccId: String = js.native
+  var simIccId: String
   /**
     * Asynchronously retrieves a list of mobile broadband UICC (SIM card) applications.
     * @return An asynchronous retrieval operation. On successful completion, returns an object with the results of the retrieval operation.
     */
-  def getUiccAppsAsync(): IPromiseWithIAsyncOperation[MobileBroadbandUiccAppsResult] = js.native
+  def getUiccAppsAsync(): IPromiseWithIAsyncOperation[MobileBroadbandUiccAppsResult]
 }
 
 object MobileBroadbandUicc {
@@ -26,25 +25,5 @@ object MobileBroadbandUicc {
     val __obj = js.Dynamic.literal(getUiccAppsAsync = js.Any.fromFunction0(getUiccAppsAsync), simIccId = simIccId.asInstanceOf[js.Any])
     __obj.asInstanceOf[MobileBroadbandUicc]
   }
-  @scala.inline
-  implicit class MobileBroadbandUiccOps[Self <: MobileBroadbandUicc] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetUiccAppsAsync(value: () => IPromiseWithIAsyncOperation[MobileBroadbandUiccAppsResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getUiccAppsAsync")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSimIccId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("simIccId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

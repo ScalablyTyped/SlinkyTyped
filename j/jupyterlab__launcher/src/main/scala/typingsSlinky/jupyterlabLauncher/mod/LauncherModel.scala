@@ -27,6 +27,19 @@ class LauncherModel ()
   /* InferMemberOverrides */
   override def add(options: IItemOptions): IDisposable = js.native
   /**
+    * Dispose of the resources held by the object.
+    *
+    * #### Notes
+    * If the object's `dispose` method is called more than once, all
+    * calls made after the first will be a no-op.
+    *
+    * #### Undefined Behavior
+    * It is undefined behavior to use any functionality of the object
+    * after it has been disposed unless otherwise explicitly noted.
+    */
+  /* InferMemberOverrides */
+  override def dispose(): Unit = js.native
+  /**
     * Return an iterator of launcher items.
     */
   def items(): IIterator[IItemOptions] = js.native

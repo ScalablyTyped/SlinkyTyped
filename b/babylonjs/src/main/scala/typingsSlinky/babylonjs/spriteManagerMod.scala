@@ -177,6 +177,11 @@ object spriteManagerMod extends js.Object {
     def blendMode: Double = js.native
     def blendMode(blendMode: Double): js.Any = js.native
     /**
+      * Releases all held resources
+      */
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
+    /**
       * Callback called when the manager is disposed
       */
     def onDispose(callback: js.Function0[Unit]): js.Any = js.native

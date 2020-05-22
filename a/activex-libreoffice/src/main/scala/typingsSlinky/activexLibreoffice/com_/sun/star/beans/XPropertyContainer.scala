@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * Some scripting engines cannot access properties directly when the property set is changed. Please use {@link XPropertySet.getPropertyValue()} etc. in
   * this case.
   */
-@js.native
 trait XPropertyContainer extends XInterface {
   /**
     * adds a property to the object.
@@ -22,13 +21,13 @@ trait XPropertyContainer extends XInterface {
     * @throws PropertyExistException if a property with the same name already exists.
     * @throws IllegalTypeException if the specified type is not allowed.
     */
-  def addProperty(Name: String, Attributes: Double, DefaultValue: js.Any): Unit = js.native
+  def addProperty(Name: String, Attributes: Double, DefaultValue: js.Any): Unit
   /**
     * removes a property from the object.
     * @param Name specified the name of the property.
     * @throws UnknownPropertyException if the property does not exist.
     */
-  def removeProperty(Name: String): Unit = js.native
+  def removeProperty(Name: String): Unit
 }
 
 object XPropertyContainer {
@@ -43,25 +42,5 @@ object XPropertyContainer {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addProperty = js.Any.fromFunction3(addProperty), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeProperty = js.Any.fromFunction1(removeProperty))
     __obj.asInstanceOf[XPropertyContainer]
   }
-  @scala.inline
-  implicit class XPropertyContainerOps[Self <: XPropertyContainer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddProperty(value: (String, Double, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addProperty")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveProperty(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeProperty")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

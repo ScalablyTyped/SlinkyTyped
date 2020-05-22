@@ -1,6 +1,8 @@
 package typingsSlinky.heremaps.global.H
 
 import typingsSlinky.heremaps.H.clustering.Provider.Options
+import typingsSlinky.heremaps.H.geo.Altitude
+import typingsSlinky.heremaps.H.geo.AltitudeContext
 import typingsSlinky.heremaps.H.geo.Latitude
 import typingsSlinky.heremaps.H.geo.Longitude
 import scala.scalajs.js
@@ -31,6 +33,20 @@ object clustering extends js.Object {
     def this(lat: Latitude, lng: Longitude) = this()
     def this(lat: Latitude, lng: Longitude, opt_weight: Double) = this()
     def this(lat: Latitude, lng: Longitude, opt_weight: Double, opt_data: js.Any) = this()
+    /* CompleteClass */
+    @JSName("alt")
+    override var alt_DataPoint: Altitude = js.native
+    /* CompleteClass */
+    @JSName("ctx")
+    override var ctx_DataPoint: AltitudeContext = js.native
+    /* CompleteClass */
+    override var data: js.Any = js.native
+    /* CompleteClass */
+    override var lat: Latitude = js.native
+    /* CompleteClass */
+    override var lng: Longitude = js.native
+    /* CompleteClass */
+    override var wt: Double = js.native
   }
   
   /**

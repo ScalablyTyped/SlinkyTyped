@@ -33,53 +33,16 @@ trait SchemaGooglePrivacyDlpV2LargeCustomDictionaryConfig extends js.Object {
 
 object SchemaGooglePrivacyDlpV2LargeCustomDictionaryConfig {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2LargeCustomDictionaryConfig = {
+  def apply(
+    bigQueryField: SchemaGooglePrivacyDlpV2BigQueryField = null,
+    cloudStorageFileSet: SchemaGooglePrivacyDlpV2CloudStorageFileSet = null,
+    outputPath: SchemaGooglePrivacyDlpV2CloudStoragePath = null
+  ): SchemaGooglePrivacyDlpV2LargeCustomDictionaryConfig = {
     val __obj = js.Dynamic.literal()
+    if (bigQueryField != null) __obj.updateDynamic("bigQueryField")(bigQueryField.asInstanceOf[js.Any])
+    if (cloudStorageFileSet != null) __obj.updateDynamic("cloudStorageFileSet")(cloudStorageFileSet.asInstanceOf[js.Any])
+    if (outputPath != null) __obj.updateDynamic("outputPath")(outputPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2LargeCustomDictionaryConfig]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2LargeCustomDictionaryConfigOps[Self <: SchemaGooglePrivacyDlpV2LargeCustomDictionaryConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBigQueryField(value: SchemaGooglePrivacyDlpV2BigQueryField): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bigQueryField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBigQueryField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bigQueryField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloudStorageFileSet(value: SchemaGooglePrivacyDlpV2CloudStorageFileSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudStorageFileSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudStorageFileSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudStorageFileSet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputPath(value: SchemaGooglePrivacyDlpV2CloudStoragePath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputPath")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

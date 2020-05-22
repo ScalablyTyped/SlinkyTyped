@@ -1,7 +1,8 @@
 package typingsSlinky.antd.localeReceiverMod
 
-import typingsSlinky.antd.anon.AntLocale
 import typingsSlinky.antd.anon.ComponentName
+import typingsSlinky.antd.anon.PartialLocaleexistboolean
+import typingsSlinky.react.mod.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +15,7 @@ class default () extends LocaleReceiver
 @JSImport("antd/lib/locale-provider/LocaleReceiver", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var contextTypes: AntLocale = js.native
+  var contextType: Context[js.UndefOr[PartialLocaleexistboolean]] = js.native
   var defaultProps: ComponentName = js.native
 }
 

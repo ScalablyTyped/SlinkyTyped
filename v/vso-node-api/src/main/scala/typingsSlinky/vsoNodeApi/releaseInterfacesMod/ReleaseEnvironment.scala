@@ -7,138 +7,137 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReleaseEnvironment extends js.Object {
   /**
     * Gets list of conditions.
     */
-  var conditions: js.Array[ReleaseCondition] = js.native
+  var conditions: js.Array[ReleaseCondition]
   /**
     * Gets date on which it got created.
     */
-  var createdOn: js.Date = js.native
+  var createdOn: js.Date
   /**
     * Gets definition environment id.
     */
-  var definitionEnvironmentId: Double = js.native
+  var definitionEnvironmentId: Double
   /**
     * Gets demands.
     */
-  var demands: js.Array[_] = js.native
+  var demands: js.Array[_]
   /**
     * Gets list of deploy phases snapshot.
     */
-  var deployPhasesSnapshot: js.Array[DeployPhase] = js.native
+  var deployPhasesSnapshot: js.Array[DeployPhase]
   /**
     * Gets deploy steps.
     */
-  var deploySteps: js.Array[DeploymentAttempt] = js.native
+  var deploySteps: js.Array[DeploymentAttempt]
   /**
     * Gets environment options.
     */
-  var environmentOptions: EnvironmentOptions = js.native
+  var environmentOptions: EnvironmentOptions
   /**
     * Gets the unique identifier of this field.
     */
-  var id: Double = js.native
+  var id: Double
   /**
     * Gets date on which it got modified.
     */
-  var modifiedOn: js.Date = js.native
+  var modifiedOn: js.Date
   /**
     * Gets name.
     */
-  var name: String = js.native
+  var name: String
   /**
     * Gets next scheduled UTC time.
     */
-  var nextScheduledUtcTime: js.Date = js.native
+  var nextScheduledUtcTime: js.Date
   /**
     * Gets the identity who is owner for release environment.
     */
-  var owner: IdentityRef = js.native
+  var owner: IdentityRef
   /**
     * Gets list of post deploy approvals snapshot.
     */
-  var postApprovalsSnapshot: ReleaseDefinitionApprovals = js.native
+  var postApprovalsSnapshot: ReleaseDefinitionApprovals
   /**
     * Gets list of post deploy approvals.
     */
-  var postDeployApprovals: js.Array[ReleaseApproval] = js.native
-  var postDeploymentGatesSnapshot: ReleaseDefinitionGatesStep = js.native
+  var postDeployApprovals: js.Array[ReleaseApproval]
+  var postDeploymentGatesSnapshot: ReleaseDefinitionGatesStep
   /**
     * Gets list of pre deploy approvals snapshot.
     */
-  var preApprovalsSnapshot: ReleaseDefinitionApprovals = js.native
+  var preApprovalsSnapshot: ReleaseDefinitionApprovals
   /**
     * Gets list of pre deploy approvals.
     */
-  var preDeployApprovals: js.Array[ReleaseApproval] = js.native
-  var preDeploymentGatesSnapshot: ReleaseDefinitionGatesStep = js.native
+  var preDeployApprovals: js.Array[ReleaseApproval]
+  var preDeploymentGatesSnapshot: ReleaseDefinitionGatesStep
   /**
     * Gets process parameters.
     */
-  var processParameters: ProcessParameters = js.native
+  var processParameters: ProcessParameters
   /**
     * Gets queue id.
     */
-  var queueId: Double = js.native
+  var queueId: Double
   /**
     * Gets rank.
     */
-  var rank: Double = js.native
+  var rank: Double
   /**
     * Gets release reference which specifies the reference of the release to which this release environment is associated.
     */
-  var release: ReleaseShallowReference = js.native
+  var release: ReleaseShallowReference
   /**
     * Gets the identity who created release.
     */
-  var releaseCreatedBy: IdentityRef = js.native
+  var releaseCreatedBy: IdentityRef
   /**
     * Gets releaseDefinitionReference which specifies the reference of the release definition to which this release environment is associated.
     */
-  var releaseDefinition: ReleaseDefinitionShallowReference = js.native
+  var releaseDefinition: ReleaseDefinitionShallowReference
   /**
     * Gets release description.
     */
-  var releaseDescription: String = js.native
+  var releaseDescription: String
   /**
     * Gets release id.
     */
-  var releaseId: Double = js.native
+  var releaseId: Double
   /**
     * Gets schedule deployment time of release environment.
     */
-  var scheduledDeploymentTime: js.Date = js.native
+  var scheduledDeploymentTime: js.Date
   /**
     * Gets list of schedules.
     */
-  var schedules: js.Array[ReleaseSchedule] = js.native
+  var schedules: js.Array[ReleaseSchedule]
   /**
     * Gets environment status.
     */
-  var status: EnvironmentStatus = js.native
+  var status: EnvironmentStatus
   /**
     * Gets time to deploy.
     */
-  var timeToDeploy: Double = js.native
+  var timeToDeploy: Double
   /**
     * Gets trigger reason.
     */
-  var triggerReason: String = js.native
+  var triggerReason: String
   /**
     * Gets the list of variable groups.
     */
-  var variableGroups: js.Array[VariableGroup] = js.native
+  var variableGroups: js.Array[VariableGroup]
   /**
     * Gets the dictionary of variables.
     */
-  var variables: StringDictionary[ConfigurationVariableValue] = js.native
+  var variables: StringDictionary[ConfigurationVariableValue]
   /**
     * Gets list of workflow tasks.
     */
-  var workflowTasks: js.Array[WorkflowTask] = js.native
+  var workflowTasks: js.Array[WorkflowTask]
 }
 
 object ReleaseEnvironment {
@@ -182,217 +181,5 @@ object ReleaseEnvironment {
     val __obj = js.Dynamic.literal(conditions = conditions.asInstanceOf[js.Any], createdOn = createdOn.asInstanceOf[js.Any], definitionEnvironmentId = definitionEnvironmentId.asInstanceOf[js.Any], demands = demands.asInstanceOf[js.Any], deployPhasesSnapshot = deployPhasesSnapshot.asInstanceOf[js.Any], deploySteps = deploySteps.asInstanceOf[js.Any], environmentOptions = environmentOptions.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], modifiedOn = modifiedOn.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], nextScheduledUtcTime = nextScheduledUtcTime.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any], postApprovalsSnapshot = postApprovalsSnapshot.asInstanceOf[js.Any], postDeployApprovals = postDeployApprovals.asInstanceOf[js.Any], postDeploymentGatesSnapshot = postDeploymentGatesSnapshot.asInstanceOf[js.Any], preApprovalsSnapshot = preApprovalsSnapshot.asInstanceOf[js.Any], preDeployApprovals = preDeployApprovals.asInstanceOf[js.Any], preDeploymentGatesSnapshot = preDeploymentGatesSnapshot.asInstanceOf[js.Any], processParameters = processParameters.asInstanceOf[js.Any], queueId = queueId.asInstanceOf[js.Any], rank = rank.asInstanceOf[js.Any], release = release.asInstanceOf[js.Any], releaseCreatedBy = releaseCreatedBy.asInstanceOf[js.Any], releaseDefinition = releaseDefinition.asInstanceOf[js.Any], releaseDescription = releaseDescription.asInstanceOf[js.Any], releaseId = releaseId.asInstanceOf[js.Any], scheduledDeploymentTime = scheduledDeploymentTime.asInstanceOf[js.Any], schedules = schedules.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], timeToDeploy = timeToDeploy.asInstanceOf[js.Any], triggerReason = triggerReason.asInstanceOf[js.Any], variableGroups = variableGroups.asInstanceOf[js.Any], variables = variables.asInstanceOf[js.Any], workflowTasks = workflowTasks.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReleaseEnvironment]
   }
-  @scala.inline
-  implicit class ReleaseEnvironmentOps[Self <: ReleaseEnvironment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConditions(value: js.Array[ReleaseCondition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreatedOn(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefinitionEnvironmentId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("definitionEnvironmentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDemands(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("demands")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeployPhasesSnapshot(value: js.Array[DeployPhase]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deployPhasesSnapshot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeploySteps(value: js.Array[DeploymentAttempt]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploySteps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnvironmentOptions(value: EnvironmentOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModifiedOn(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifiedOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNextScheduledUtcTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextScheduledUtcTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOwner(value: IdentityRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPostApprovalsSnapshot(value: ReleaseDefinitionApprovals): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postApprovalsSnapshot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPostDeployApprovals(value: js.Array[ReleaseApproval]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postDeployApprovals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPostDeploymentGatesSnapshot(value: ReleaseDefinitionGatesStep): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postDeploymentGatesSnapshot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreApprovalsSnapshot(value: ReleaseDefinitionApprovals): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preApprovalsSnapshot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreDeployApprovals(value: js.Array[ReleaseApproval]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preDeployApprovals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreDeploymentGatesSnapshot(value: ReleaseDefinitionGatesStep): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preDeploymentGatesSnapshot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProcessParameters(value: ProcessParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQueueId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queueId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRank(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rank")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRelease(value: ReleaseShallowReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("release")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReleaseCreatedBy(value: IdentityRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseCreatedBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReleaseDefinition(value: ReleaseDefinitionShallowReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReleaseDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReleaseId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScheduledDeploymentTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledDeploymentTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSchedules(value: js.Array[ReleaseSchedule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schedules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: EnvironmentStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeToDeploy(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeToDeploy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTriggerReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVariableGroups(value: js.Array[VariableGroup]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variableGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVariables(value: StringDictionary[ConfigurationVariableValue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorkflowTasks(value: js.Array[WorkflowTask]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowTasks")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

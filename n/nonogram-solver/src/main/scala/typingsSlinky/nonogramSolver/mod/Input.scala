@@ -4,50 +4,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Input extends js.Object {
-  var columns: js.Array[js.Array[Double]] = js.native
-  var content: js.UndefOr[js.Array[State]] = js.native
-  var rows: js.Array[js.Array[Double]] = js.native
+  var columns: js.Array[js.Array[Double]]
+  var content: js.UndefOr[js.Array[State]] = js.undefined
+  var rows: js.Array[js.Array[Double]]
 }
 
 object Input {
   @scala.inline
-  def apply(columns: js.Array[js.Array[Double]], rows: js.Array[js.Array[Double]]): Input = {
+  def apply(
+    columns: js.Array[js.Array[Double]],
+    rows: js.Array[js.Array[Double]],
+    content: js.Array[State] = null
+  ): Input = {
     val __obj = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any], rows = rows.asInstanceOf[js.Any])
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
     __obj.asInstanceOf[Input]
   }
-  @scala.inline
-  implicit class InputOps[Self <: Input] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumns(value: js.Array[js.Array[Double]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRows(value: js.Array[js.Array[Double]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContent(value: js.Array[State]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Description extends js.Object {
   /**
     * Appends text to this description.
@@ -12,14 +11,14 @@ trait Description extends js.Object {
     * @param text Text to append to this description
     * @return {Description} Itself for method chaining
     */
-  def append(text: js.Any): Description = js.native
+  def append(text: js.Any): Description
   /**
     * Appends the description of a self describing object to this description.
     *
     * @param selfDescribingObject Any object that has a describeTo() function that accepts a JsHamcrest.Description object as argument
     * @return {Description} Itself for method chaining
     */
-  def appendDescriptionOf(selfDescribingObject: SelfDescribing): Description = js.native
+  def appendDescriptionOf(selfDescribingObject: SelfDescribing): Description
   /**
     * Appends the description of several self describing objects to this description.
     *
@@ -29,14 +28,14 @@ trait Description extends js.Object {
     * @param list Array of self describing objects. These objects must have a describeTo() function that accepts a JsHamcrest.Description object as argument
     * @return {Description} Itself for method chaining
     */
-  def appendList(start: String, separator: String, end: String, list: js.Array[_]): Description = js.native
+  def appendList(start: String, separator: String, end: String, list: js.Array[_]): Description
   /**
     * Appends a JavaScript language’s literal to this description.
     *
     * @param literal Literal to append to this description
     * @return {Description} Itself for method chaining
     */
-  def appendLiteral(literal: js.Any): Description = js.native
+  def appendLiteral(literal: js.Any): Description
   /**
     * Appends an array of values to this description.
     *
@@ -46,13 +45,13 @@ trait Description extends js.Object {
     * @param list Array of values to be described to this description
     * @return {Description} Itself for method chaining
     */
-  def appendValueList(start: String, separator: String, end: String, list: js.Array[SelfDescribing]): Description = js.native
+  def appendValueList(start: String, separator: String, end: String, list: js.Array[SelfDescribing]): Description
   /**
     * Gets the current content of this description.
     *
     * @return {string} Current content of this description
     */
-  def get(): String = js.native
+  def get(): String
 }
 
 object Description {
@@ -68,49 +67,5 @@ object Description {
     val __obj = js.Dynamic.literal(append = js.Any.fromFunction1(append), appendDescriptionOf = js.Any.fromFunction1(appendDescriptionOf), appendList = js.Any.fromFunction4(appendList), appendLiteral = js.Any.fromFunction1(appendLiteral), appendValueList = js.Any.fromFunction4(appendValueList), get = js.Any.fromFunction0(get))
     __obj.asInstanceOf[Description]
   }
-  @scala.inline
-  implicit class DescriptionOps[Self <: Description] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppend(value: js.Any => Description): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("append")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAppendDescriptionOf(value: SelfDescribing => Description): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendDescriptionOf")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAppendList(value: (String, String, String, js.Array[_]) => Description): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendList")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withAppendLiteral(value: js.Any => Description): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendLiteral")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAppendValueList(value: (String, String, String, js.Array[SelfDescribing]) => Description): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendValueList")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

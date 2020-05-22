@@ -18,41 +18,14 @@ trait Av1QvbrSettings extends js.Object {
 
 object Av1QvbrSettings {
   @scala.inline
-  def apply(): Av1QvbrSettings = {
+  def apply(
+    QvbrQualityLevel: js.UndefOr[integerMin1Max10] = js.undefined,
+    QvbrQualityLevelFineTune: js.UndefOr[doubleMin0Max1] = js.undefined
+  ): Av1QvbrSettings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(QvbrQualityLevel)) __obj.updateDynamic("QvbrQualityLevel")(QvbrQualityLevel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(QvbrQualityLevelFineTune)) __obj.updateDynamic("QvbrQualityLevelFineTune")(QvbrQualityLevelFineTune.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Av1QvbrSettings]
   }
-  @scala.inline
-  implicit class Av1QvbrSettingsOps[Self <: Av1QvbrSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQvbrQualityLevel(value: integerMin1Max10): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QvbrQualityLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQvbrQualityLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QvbrQualityLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQvbrQualityLevelFineTune(value: doubleMin0Max1): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QvbrQualityLevelFineTune")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQvbrQualityLevelFineTune: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QvbrQualityLevelFineTune")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

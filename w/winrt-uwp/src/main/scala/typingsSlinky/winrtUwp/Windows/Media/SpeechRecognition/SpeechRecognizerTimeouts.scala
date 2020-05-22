@@ -5,14 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** The timespan that a speech recognizer ignores silence or unrecognizable sounds (babble) and continues listening for speech input. */
-@js.native
 trait SpeechRecognizerTimeouts extends js.Object {
   /** Gets and sets the length of time that a SpeechRecognizer continues to listen while receiving unrecognizable sounds (babble) before it assumes speech input has ended and finalizes the recognition operation. */
-  var babbleTimeout: Double = js.native
+  var babbleTimeout: Double
   /** Gets and sets the length of time, after recognition results have been generated, that a SpeechRecognizer detects silence and assumes speech input has ended. */
-  var endSilenceTimeout: Double = js.native
+  var endSilenceTimeout: Double
   /** Gets and sets the length of time, before any recognition results have been generated, that a SpeechRecognizer detects silence and assumes speech input has ended. */
-  var initialSilenceTimeout: Double = js.native
+  var initialSilenceTimeout: Double
 }
 
 object SpeechRecognizerTimeouts {
@@ -21,31 +20,5 @@ object SpeechRecognizerTimeouts {
     val __obj = js.Dynamic.literal(babbleTimeout = babbleTimeout.asInstanceOf[js.Any], endSilenceTimeout = endSilenceTimeout.asInstanceOf[js.Any], initialSilenceTimeout = initialSilenceTimeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpeechRecognizerTimeouts]
   }
-  @scala.inline
-  implicit class SpeechRecognizerTimeoutsOps[Self <: SpeechRecognizerTimeouts] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBabbleTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("babbleTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndSilenceTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endSilenceTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInitialSilenceTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialSilenceTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -42,113 +42,26 @@ trait FindingFilter extends js.Object {
 
 object FindingFilter {
   @scala.inline
-  def apply(): FindingFilter = {
+  def apply(
+    agentIds: AgentIdList = null,
+    attributes: AttributeList = null,
+    autoScalingGroups: AutoScalingGroupList = null,
+    creationTimeRange: TimestampRange = null,
+    ruleNames: RuleNameList = null,
+    rulesPackageArns: FilterRulesPackageArnList = null,
+    severities: SeverityList = null,
+    userAttributes: AttributeList = null
+  ): FindingFilter = {
     val __obj = js.Dynamic.literal()
+    if (agentIds != null) __obj.updateDynamic("agentIds")(agentIds.asInstanceOf[js.Any])
+    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
+    if (autoScalingGroups != null) __obj.updateDynamic("autoScalingGroups")(autoScalingGroups.asInstanceOf[js.Any])
+    if (creationTimeRange != null) __obj.updateDynamic("creationTimeRange")(creationTimeRange.asInstanceOf[js.Any])
+    if (ruleNames != null) __obj.updateDynamic("ruleNames")(ruleNames.asInstanceOf[js.Any])
+    if (rulesPackageArns != null) __obj.updateDynamic("rulesPackageArns")(rulesPackageArns.asInstanceOf[js.Any])
+    if (severities != null) __obj.updateDynamic("severities")(severities.asInstanceOf[js.Any])
+    if (userAttributes != null) __obj.updateDynamic("userAttributes")(userAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[FindingFilter]
   }
-  @scala.inline
-  implicit class FindingFilterOps[Self <: FindingFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAgentIds(value: AgentIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgentIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttributes(value: AttributeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoScalingGroups(value: AutoScalingGroupList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoScalingGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoScalingGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoScalingGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationTimeRange(value: TimestampRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimeRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTimeRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimeRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuleNames(value: RuleNameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuleNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRulesPackageArns(value: FilterRulesPackageArnList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rulesPackageArns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRulesPackageArns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rulesPackageArns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeverities(value: SeverityList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("severities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeverities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("severities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserAttributes(value: AttributeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAttributes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

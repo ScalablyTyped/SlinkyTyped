@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AddTileOptions extends js.Object {
   /**
     *  A DOM element, a jQuery object, or a model object for which a view provider
     *  has been registered in the the view registry.
     */
-  var item: js.Object = js.native
+  var item: js.Object
   /**
     *  Determines the placement of the tile within the status bar. Lower priority
     *  will result in closer placement to the anchor.
     */
-  var priority: Double = js.native
+  var priority: Double
 }
 
 object AddTileOptions {
@@ -24,25 +23,5 @@ object AddTileOptions {
     val __obj = js.Dynamic.literal(item = item.asInstanceOf[js.Any], priority = priority.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddTileOptions]
   }
-  @scala.inline
-  implicit class AddTileOptionsOps[Self <: AddTileOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItem(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPriority(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

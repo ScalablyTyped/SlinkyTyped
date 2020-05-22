@@ -23,65 +23,13 @@ trait TopicConfigurationDeprecated extends js.Object {
 
 object TopicConfigurationDeprecated {
   @scala.inline
-  def apply(): TopicConfigurationDeprecated = {
+  def apply(Event: Event = null, Events: EventList = null, Id: NotificationId = null, Topic: TopicArn = null): TopicConfigurationDeprecated = {
     val __obj = js.Dynamic.literal()
+    if (Event != null) __obj.updateDynamic("Event")(Event.asInstanceOf[js.Any])
+    if (Events != null) __obj.updateDynamic("Events")(Events.asInstanceOf[js.Any])
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (Topic != null) __obj.updateDynamic("Topic")(Topic.asInstanceOf[js.Any])
     __obj.asInstanceOf[TopicConfigurationDeprecated]
   }
-  @scala.inline
-  implicit class TopicConfigurationDeprecatedOps[Self <: TopicConfigurationDeprecated] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEvent(value: Event): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Event")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Event")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvents(value: EventList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Events")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: NotificationId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopic(value: TopicArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Topic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Topic")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

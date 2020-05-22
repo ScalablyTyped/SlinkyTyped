@@ -12,11 +12,10 @@ import scala.scalajs.js.annotation._
   * @see XDatabaseRegistrationsListener
   * @since LibreOffice 3.3
   */
-@js.native
 trait DatabaseRegistrationEvent extends EventObject {
-  var Name: String = js.native
-  var NewLocation: String = js.native
-  var OldLocation: String = js.native
+  var Name: String
+  var NewLocation: String
+  var OldLocation: String
 }
 
 object DatabaseRegistrationEvent {
@@ -25,31 +24,5 @@ object DatabaseRegistrationEvent {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], NewLocation = NewLocation.asInstanceOf[js.Any], OldLocation = OldLocation.asInstanceOf[js.Any], Source = Source.asInstanceOf[js.Any])
     __obj.asInstanceOf[DatabaseRegistrationEvent]
   }
-  @scala.inline
-  implicit class DatabaseRegistrationEventOps[Self <: DatabaseRegistrationEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNewLocation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOldLocation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OldLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

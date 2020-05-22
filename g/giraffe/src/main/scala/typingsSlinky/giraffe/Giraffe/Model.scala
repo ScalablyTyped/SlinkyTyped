@@ -1,5 +1,6 @@
 package typingsSlinky.giraffe.Giraffe
 
+import typingsSlinky.backbone.mod.ModelSetOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,7 +8,7 @@ import scala.scalajs.js.annotation._
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.giraffe.Giraffe.GiraffeObject because var conflicts: initialize. Inlined app, appEvents, dataEvents, defaultOptions, beforeInitialize, afterInitialize, dispose, beforeDispose, afterDispose */ @js.native
 trait Model
-  extends typingsSlinky.backbone.mod.Model {
+  extends typingsSlinky.backbone.mod.Model[js.Any, ModelSetOptions] {
   var afterDispose: js.UndefOr[js.Function0[js.Any]] = js.native
   var afterInitialize: js.UndefOr[js.Function0[js.Any]] = js.native
   var app: App = js.native

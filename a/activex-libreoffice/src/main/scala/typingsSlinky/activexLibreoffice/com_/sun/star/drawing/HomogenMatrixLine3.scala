@@ -5,11 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** specifies a single line for a {@link HomogenMatrix3} . */
-@js.native
 trait HomogenMatrixLine3 extends js.Object {
-  var Column1: Double = js.native
-  var Column2: Double = js.native
-  var Column3: Double = js.native
+  var Column1: Double
+  var Column2: Double
+  var Column3: Double
 }
 
 object HomogenMatrixLine3 {
@@ -18,31 +17,5 @@ object HomogenMatrixLine3 {
     val __obj = js.Dynamic.literal(Column1 = Column1.asInstanceOf[js.Any], Column2 = Column2.asInstanceOf[js.Any], Column3 = Column3.asInstanceOf[js.Any])
     __obj.asInstanceOf[HomogenMatrixLine3]
   }
-  @scala.inline
-  implicit class HomogenMatrixLine3Ops[Self <: HomogenMatrixLine3] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumn1(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Column1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColumn2(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Column2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColumn3(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Column3")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ShareAppMessageOption extends js.Object {
   /**
     * 转发事件来源。
@@ -14,54 +13,23 @@ trait ShareAppMessageOption extends js.Object {
     * - `button`：页面内转发按钮；
     * - `menu`：右上角转发菜单。
     */
-  var from: button | menu = js.native
+  var from: button | menu
   /**
     * 如果 `from` 值是 `button`，则 `target` 是触发这次转发事件的 `button`，否则为 `undefined`
     */
-  var target: js.Any = js.native
+  var target: js.Any
   /**
     * 页面中包含 `<web-view>` 组件时，返回当前 `<web-view>` 的url
     */
-  var webViewUrl: js.UndefOr[String] = js.native
+  var webViewUrl: js.UndefOr[String] = js.undefined
 }
 
 object ShareAppMessageOption {
   @scala.inline
-  def apply(from: button | menu, target: js.Any): ShareAppMessageOption = {
+  def apply(from: button | menu, target: js.Any, webViewUrl: String = null): ShareAppMessageOption = {
     val __obj = js.Dynamic.literal(from = from.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
+    if (webViewUrl != null) __obj.updateDynamic("webViewUrl")(webViewUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShareAppMessageOption]
   }
-  @scala.inline
-  implicit class ShareAppMessageOptionOps[Self <: ShareAppMessageOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFrom(value: button | menu): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTarget(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWebViewUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webViewUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebViewUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webViewUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

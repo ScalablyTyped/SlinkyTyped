@@ -22,41 +22,10 @@ trait RepublishAction extends js.Object {
 
 object RepublishAction {
   @scala.inline
-  def apply(roleArn: AwsArn, topic: TopicPattern): RepublishAction = {
+  def apply(roleArn: AwsArn, topic: TopicPattern, qos: js.UndefOr[Qos] = js.undefined): RepublishAction = {
     val __obj = js.Dynamic.literal(roleArn = roleArn.asInstanceOf[js.Any], topic = topic.asInstanceOf[js.Any])
+    if (!js.isUndefined(qos)) __obj.updateDynamic("qos")(qos.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RepublishAction]
   }
-  @scala.inline
-  implicit class RepublishActionOps[Self <: RepublishAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRoleArn(value: AwsArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTopic(value: TopicPattern): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQos(value: Qos): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQos: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qos")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

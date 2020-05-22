@@ -28,41 +28,14 @@ trait SchemaHttp extends js.Object {
 
 object SchemaHttp {
   @scala.inline
-  def apply(): SchemaHttp = {
+  def apply(
+    fullyDecodeReservedExpansion: js.UndefOr[Boolean] = js.undefined,
+    rules: js.Array[SchemaHttpRule] = null
+  ): SchemaHttp = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(fullyDecodeReservedExpansion)) __obj.updateDynamic("fullyDecodeReservedExpansion")(fullyDecodeReservedExpansion.get.asInstanceOf[js.Any])
+    if (rules != null) __obj.updateDynamic("rules")(rules.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHttp]
   }
-  @scala.inline
-  implicit class SchemaHttpOps[Self <: SchemaHttp] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFullyDecodeReservedExpansion(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullyDecodeReservedExpansion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullyDecodeReservedExpansion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullyDecodeReservedExpansion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRules(value: js.Array[SchemaHttpRule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

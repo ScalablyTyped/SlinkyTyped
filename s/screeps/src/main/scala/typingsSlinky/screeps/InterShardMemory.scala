@@ -14,24 +14,23 @@ import scala.scalajs.js.annotation._
   *
   * This data has nothing to do with `Memory` contents, it's a separate data container.
   */
-@js.native
 trait InterShardMemory extends js.Object {
   /**
     * Returns the string contents of the current shard's data.
     */
-  def getLocal(): String = js.native
+  def getLocal(): String
   /**
     * Returns the string contents of another shard's data, null if shard exists but data is not set.
     *
     * @param shard Shard name.
     * @throws Error if shard name is invalid
     */
-  def getRemote(shard: String): String | Null = js.native
+  def getRemote(shard: String): String | Null
   /**
     * Replace the current shard's data with the new value
     * @param value New data value in string format.
     */
-  def setLocal(value: String): Unit = js.native
+  def setLocal(value: String): Unit
 }
 
 object InterShardMemory {
@@ -40,31 +39,5 @@ object InterShardMemory {
     val __obj = js.Dynamic.literal(getLocal = js.Any.fromFunction0(getLocal), getRemote = js.Any.fromFunction1(getRemote), setLocal = js.Any.fromFunction1(setLocal))
     __obj.asInstanceOf[InterShardMemory]
   }
-  @scala.inline
-  implicit class InterShardMemoryOps[Self <: InterShardMemory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetLocal(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLocal")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetRemote(value: String => String | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRemote")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetLocal(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLocal")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

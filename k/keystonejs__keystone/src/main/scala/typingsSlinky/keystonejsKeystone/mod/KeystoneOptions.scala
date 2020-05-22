@@ -7,168 +7,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KeystoneOptions extends js.Object {
-  var adapter: BaseKeystoneAdapter = js.native
-  var adapters: js.UndefOr[StringDictionary[BaseKeystoneAdapter]] = js.native
-  var cookieMaxAge: js.UndefOr[Double] = js.native
-  var cookieSecret: js.UndefOr[String] = js.native
-  var defaultAcces: js.UndefOr[Field] = js.native
-  var defaultAdapter: js.UndefOr[String] = js.native
-  var name: String = js.native
-  var onConnect: js.UndefOr[js.Function0[Unit]] = js.native
-  var queryLimits: js.UndefOr[MaxTotalResults] = js.native
+  var adapter: BaseKeystoneAdapter
+  var adapters: js.UndefOr[StringDictionary[BaseKeystoneAdapter]] = js.undefined
+  var cookieMaxAge: js.UndefOr[Double] = js.undefined
+  var cookieSecret: js.UndefOr[String] = js.undefined
+  var defaultAcces: js.UndefOr[Field] = js.undefined
+  var defaultAdapter: js.UndefOr[String] = js.undefined
+  var name: String
+  var onConnect: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var queryLimits: js.UndefOr[MaxTotalResults] = js.undefined
    // TODO: bring in express session types
-  var schemaNames: js.UndefOr[js.Array[String]] = js.native
-  var secureCookies: js.UndefOr[Boolean] = js.native
-  var sessionStore: js.UndefOr[js.Any] = js.native
+  var schemaNames: js.UndefOr[js.Array[String]] = js.undefined
+  var secureCookies: js.UndefOr[Boolean] = js.undefined
+  var sessionStore: js.UndefOr[js.Any] = js.undefined
 }
 
 object KeystoneOptions {
   @scala.inline
-  def apply(adapter: BaseKeystoneAdapter, name: String): KeystoneOptions = {
+  def apply(
+    adapter: BaseKeystoneAdapter,
+    name: String,
+    adapters: StringDictionary[BaseKeystoneAdapter] = null,
+    cookieMaxAge: js.UndefOr[Double] = js.undefined,
+    cookieSecret: String = null,
+    defaultAcces: Field = null,
+    defaultAdapter: String = null,
+    onConnect: () => Unit = null,
+    queryLimits: MaxTotalResults = null,
+    schemaNames: js.Array[String] = null,
+    secureCookies: js.UndefOr[Boolean] = js.undefined,
+    sessionStore: js.Any = null
+  ): KeystoneOptions = {
     val __obj = js.Dynamic.literal(adapter = adapter.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (adapters != null) __obj.updateDynamic("adapters")(adapters.asInstanceOf[js.Any])
+    if (!js.isUndefined(cookieMaxAge)) __obj.updateDynamic("cookieMaxAge")(cookieMaxAge.get.asInstanceOf[js.Any])
+    if (cookieSecret != null) __obj.updateDynamic("cookieSecret")(cookieSecret.asInstanceOf[js.Any])
+    if (defaultAcces != null) __obj.updateDynamic("defaultAcces")(defaultAcces.asInstanceOf[js.Any])
+    if (defaultAdapter != null) __obj.updateDynamic("defaultAdapter")(defaultAdapter.asInstanceOf[js.Any])
+    if (onConnect != null) __obj.updateDynamic("onConnect")(js.Any.fromFunction0(onConnect))
+    if (queryLimits != null) __obj.updateDynamic("queryLimits")(queryLimits.asInstanceOf[js.Any])
+    if (schemaNames != null) __obj.updateDynamic("schemaNames")(schemaNames.asInstanceOf[js.Any])
+    if (!js.isUndefined(secureCookies)) __obj.updateDynamic("secureCookies")(secureCookies.get.asInstanceOf[js.Any])
+    if (sessionStore != null) __obj.updateDynamic("sessionStore")(sessionStore.asInstanceOf[js.Any])
     __obj.asInstanceOf[KeystoneOptions]
   }
-  @scala.inline
-  implicit class KeystoneOptionsOps[Self <: KeystoneOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdapter(value: BaseKeystoneAdapter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adapter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAdapters(value: StringDictionary[BaseKeystoneAdapter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adapters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdapters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adapters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCookieMaxAge(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieMaxAge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCookieMaxAge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieMaxAge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCookieSecret(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieSecret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCookieSecret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieSecret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultAcces(value: Field): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAcces")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultAcces: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAcces")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultAdapter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAdapter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultAdapter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAdapter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnConnect(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onConnect")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnConnect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onConnect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryLimits(value: MaxTotalResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryLimits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryLimits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryLimits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchemaNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchemaNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecureCookies(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secureCookies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecureCookies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secureCookies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionStore(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionStore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionStore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionStore")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

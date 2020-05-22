@@ -36,65 +36,18 @@ trait SchemaListResponse extends js.Object {
 
 object SchemaListResponse {
   @scala.inline
-  def apply(): SchemaListResponse = {
+  def apply(
+    debugString: String = null,
+    errorCode: js.Array[String] = null,
+    maxAge: String = null,
+    statements: js.Array[SchemaStatement] = null
+  ): SchemaListResponse = {
     val __obj = js.Dynamic.literal()
+    if (debugString != null) __obj.updateDynamic("debugString")(debugString.asInstanceOf[js.Any])
+    if (errorCode != null) __obj.updateDynamic("errorCode")(errorCode.asInstanceOf[js.Any])
+    if (maxAge != null) __obj.updateDynamic("maxAge")(maxAge.asInstanceOf[js.Any])
+    if (statements != null) __obj.updateDynamic("statements")(statements.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListResponse]
   }
-  @scala.inline
-  implicit class SchemaListResponseOps[Self <: SchemaListResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDebugString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebugString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorCode(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxAge(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxAge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatements(value: js.Array[SchemaStatement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statements")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

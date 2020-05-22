@@ -32,65 +32,18 @@ trait SchemaRegistration extends js.Object {
 
 object SchemaRegistration {
   @scala.inline
-  def apply(): SchemaRegistration = {
+  def apply(
+    cloudPubsubTopic: SchemaCloudPubsubTopic = null,
+    expiryTime: String = null,
+    feed: SchemaFeed = null,
+    registrationId: String = null
+  ): SchemaRegistration = {
     val __obj = js.Dynamic.literal()
+    if (cloudPubsubTopic != null) __obj.updateDynamic("cloudPubsubTopic")(cloudPubsubTopic.asInstanceOf[js.Any])
+    if (expiryTime != null) __obj.updateDynamic("expiryTime")(expiryTime.asInstanceOf[js.Any])
+    if (feed != null) __obj.updateDynamic("feed")(feed.asInstanceOf[js.Any])
+    if (registrationId != null) __obj.updateDynamic("registrationId")(registrationId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRegistration]
   }
-  @scala.inline
-  implicit class SchemaRegistrationOps[Self <: SchemaRegistration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloudPubsubTopic(value: SchemaCloudPubsubTopic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudPubsubTopic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudPubsubTopic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudPubsubTopic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpiryTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiryTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpiryTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiryTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeed(value: SchemaFeed): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegistrationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registrationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegistrationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registrationId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

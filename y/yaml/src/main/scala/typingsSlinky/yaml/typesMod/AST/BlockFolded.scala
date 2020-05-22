@@ -7,14 +7,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait BlockFolded
-  extends Scalar
-     with ScalarNode {
+trait BlockFolded extends Scalar {
   @JSName("cstNode")
   var cstNode_BlockFolded: js.UndefOr[typingsSlinky.yaml.parseCstMod.CST.BlockFolded] = js.native
   @JSName("type")
   var type_BlockFolded: BLOCK_FOLDED = js.native
-  /* InferMemberOverrides */
-  override def toJSON(arg: js.Any, ctx: NodeToJsonContext): js.Any = js.native
 }
 

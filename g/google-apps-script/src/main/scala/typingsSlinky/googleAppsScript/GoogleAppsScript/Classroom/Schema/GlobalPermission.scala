@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GlobalPermission extends js.Object {
-  var permission: js.UndefOr[String] = js.native
+  var permission: js.UndefOr[String] = js.undefined
 }
 
 object GlobalPermission {
   @scala.inline
-  def apply(): GlobalPermission = {
+  def apply(permission: String = null): GlobalPermission = {
     val __obj = js.Dynamic.literal()
+    if (permission != null) __obj.updateDynamic("permission")(permission.asInstanceOf[js.Any])
     __obj.asInstanceOf[GlobalPermission]
   }
-  @scala.inline
-  implicit class GlobalPermissionOps[Self <: GlobalPermission] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPermission(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permission")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermission: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permission")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

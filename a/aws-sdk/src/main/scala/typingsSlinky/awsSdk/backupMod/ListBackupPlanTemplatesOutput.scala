@@ -18,41 +18,11 @@ trait ListBackupPlanTemplatesOutput extends js.Object {
 
 object ListBackupPlanTemplatesOutput {
   @scala.inline
-  def apply(): ListBackupPlanTemplatesOutput = {
+  def apply(BackupPlanTemplatesList: BackupPlanTemplatesList = null, NextToken: String = null): ListBackupPlanTemplatesOutput = {
     val __obj = js.Dynamic.literal()
+    if (BackupPlanTemplatesList != null) __obj.updateDynamic("BackupPlanTemplatesList")(BackupPlanTemplatesList.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListBackupPlanTemplatesOutput]
   }
-  @scala.inline
-  implicit class ListBackupPlanTemplatesOutputOps[Self <: ListBackupPlanTemplatesOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackupPlanTemplatesList(value: BackupPlanTemplatesList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupPlanTemplatesList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackupPlanTemplatesList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupPlanTemplatesList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

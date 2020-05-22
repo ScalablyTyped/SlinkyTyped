@@ -20,5 +20,20 @@ class ASPxClientPopupWindowCancelEventArgs protected ()
     window: typingsSlinky.devexpressWeb.ASPxClientPopupWindow,
     closeReason: typingsSlinky.devexpressWeb.ASPxClientPopupControlCloseReason
   ) = this()
+  /**
+    * Gets or sets a value indicating whether the action which raised the event should be canceled.
+    */
+  /* CompleteClass */
+  override var cancel: Boolean = js.native
+  /**
+    * Gets the value that identifies the reason the popup window is about to close.
+    */
+  /* CompleteClass */
+  override var closeReason: typingsSlinky.devexpressWeb.ASPxClientPopupControlCloseReason = js.native
+  /**
+    * Gets the popup window object related to the event.
+    */
+  /* CompleteClass */
+  override var window: typingsSlinky.devexpressWeb.ASPxClientPopupWindow = js.native
 }
 

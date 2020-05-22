@@ -5,24 +5,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents an SMS message in raw PDU format. The data format differs depending on whether the message format (indicated by the value of the Format property) is GSM or CDMA. */
-@js.native
 trait SmsBinaryMessage extends js.Object {
   /** Retrieves the detected protocol description unit (PDU) format of this message. */
-  var format: SmsDataFormat = js.native
+  var format: SmsDataFormat
   /** Indicates the ID of the asynchronous message operation. */
-  var id: Double = js.native
+  var id: Double
   /** Returns the message class, as determined by the operator's message network. The two most common classes are None (normal message) or Class0 (special operator message, such as a roaming warning that must be shown immediately to the user). A typical client for end-user messages ignores Class0 messages. */
-  var messageClass: SmsMessageClass = js.native
+  var messageClass: SmsMessageClass
   /**
     * Returns the raw buffer of the message in binary protocol description unit (PDU) format as a byte array.
     * @return A byte array representing message data. If there is no message data, the returned array is empty.
     */
-  def getData(): js.Array[Double] = js.native
+  def getData(): js.Array[Double]
   /**
     * Specifies the raw binary payload of the SMS message. It should be formatted according to the protocol description unit (PDU) standard.
     * @param value A byte array representing message data. If there is no message data, the returned array is empty.
     */
-  def setData(value: js.Array[Double]): Unit = js.native
+  def setData(value: js.Array[Double]): Unit
 }
 
 object SmsBinaryMessage {
@@ -37,43 +36,5 @@ object SmsBinaryMessage {
     val __obj = js.Dynamic.literal(format = format.asInstanceOf[js.Any], getData = js.Any.fromFunction0(getData), id = id.asInstanceOf[js.Any], messageClass = messageClass.asInstanceOf[js.Any], setData = js.Any.fromFunction1(setData))
     __obj.asInstanceOf[SmsBinaryMessage]
   }
-  @scala.inline
-  implicit class SmsBinaryMessageOps[Self <: SmsBinaryMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormat(value: SmsDataFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetData(value: () => js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getData")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessageClass(value: SmsMessageClass): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetData(value: js.Array[Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setData")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

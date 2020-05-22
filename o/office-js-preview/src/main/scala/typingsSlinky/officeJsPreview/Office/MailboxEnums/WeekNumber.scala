@@ -9,11 +9,11 @@ sealed trait WeekNumber extends js.Object
 
 /**
   * Specifies the week of the month.
-  * 
+  *
   * [Api set: Mailbox 1.7]
   *
   * @remarks
-  * 
+  *
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
   */
 @JSGlobal("Office.MailboxEnums.WeekNumber")

@@ -34,6 +34,11 @@ object TableBuilderColumn {
   }
   
   def withProps[RowT](p: TableBuilderColumnProps[RowT]): Builder[RowT] = new Builder[RowT](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[RowT](): Builder[RowT] = {
+    val __props = js.Dynamic.literal()
+    new Builder[RowT](js.Array(this.component, __props.asInstanceOf[TableBuilderColumnProps[RowT]]))
+  }
   implicit def make[RowT](companion: TableBuilderColumn.type): Builder[RowT] = new Builder[RowT](js.Array(this.component, js.Dictionary.empty))()
 }
 

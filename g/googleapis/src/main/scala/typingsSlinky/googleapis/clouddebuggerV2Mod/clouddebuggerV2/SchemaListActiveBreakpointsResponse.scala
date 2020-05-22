@@ -29,53 +29,16 @@ trait SchemaListActiveBreakpointsResponse extends js.Object {
 
 object SchemaListActiveBreakpointsResponse {
   @scala.inline
-  def apply(): SchemaListActiveBreakpointsResponse = {
+  def apply(
+    breakpoints: js.Array[SchemaBreakpoint] = null,
+    nextWaitToken: String = null,
+    waitExpired: js.UndefOr[Boolean] = js.undefined
+  ): SchemaListActiveBreakpointsResponse = {
     val __obj = js.Dynamic.literal()
+    if (breakpoints != null) __obj.updateDynamic("breakpoints")(breakpoints.asInstanceOf[js.Any])
+    if (nextWaitToken != null) __obj.updateDynamic("nextWaitToken")(nextWaitToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(waitExpired)) __obj.updateDynamic("waitExpired")(waitExpired.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListActiveBreakpointsResponse]
   }
-  @scala.inline
-  implicit class SchemaListActiveBreakpointsResponseOps[Self <: SchemaListActiveBreakpointsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBreakpoints(value: js.Array[SchemaBreakpoint]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breakpoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBreakpoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breakpoints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextWaitToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextWaitToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextWaitToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextWaitToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitExpired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitExpired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitExpired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitExpired")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

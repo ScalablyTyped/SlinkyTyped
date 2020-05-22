@@ -28,53 +28,16 @@ trait SchemaBasicFilter extends js.Object {
 
 object SchemaBasicFilter {
   @scala.inline
-  def apply(): SchemaBasicFilter = {
+  def apply(
+    criteria: StringDictionary[SchemaFilterCriteria] = null,
+    range: SchemaGridRange = null,
+    sortSpecs: js.Array[SchemaSortSpec] = null
+  ): SchemaBasicFilter = {
     val __obj = js.Dynamic.literal()
+    if (criteria != null) __obj.updateDynamic("criteria")(criteria.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (sortSpecs != null) __obj.updateDynamic("sortSpecs")(sortSpecs.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBasicFilter]
   }
-  @scala.inline
-  implicit class SchemaBasicFilterOps[Self <: SchemaBasicFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCriteria(value: StringDictionary[SchemaFilterCriteria]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("criteria")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCriteria: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("criteria")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRange(value: SchemaGridRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortSpecs(value: js.Array[SchemaSortSpec]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortSpecs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortSpecs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortSpecs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

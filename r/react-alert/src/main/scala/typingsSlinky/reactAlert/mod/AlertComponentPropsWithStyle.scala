@@ -1,34 +1,27 @@
 package typingsSlinky.reactAlert.mod
 
+import slinky.core.TagMod
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AlertComponentPropsWithStyle extends AlertComponentProps {
-  var style: CSSProperties = js.native
+  var style: CSSProperties
 }
 
 object AlertComponentPropsWithStyle {
   @scala.inline
-  def apply(close: () => Unit, id: String, options: AlertCustomOptionsWithType, style: CSSProperties): AlertComponentPropsWithStyle = {
+  def apply(
+    close: () => Unit,
+    id: String,
+    options: AlertCustomOptionsWithType,
+    style: CSSProperties,
+    message: TagMod[Any] = null
+  ): AlertComponentPropsWithStyle = {
     val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), id = id.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
     __obj.asInstanceOf[AlertComponentPropsWithStyle]
   }
-  @scala.inline
-  implicit class AlertComponentPropsWithStyleOps[Self <: AlertComponentPropsWithStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

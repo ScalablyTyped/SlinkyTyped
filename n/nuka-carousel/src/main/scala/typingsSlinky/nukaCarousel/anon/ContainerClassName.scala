@@ -5,153 +5,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ContainerClassName extends js.Object {
-  var containerClassName: js.UndefOr[String] = js.native
-  var nextButtonClassName: js.UndefOr[String] = js.native
-  var nextButtonStyle: js.UndefOr[CSSProperties] = js.native
-  var nextButtonText: js.UndefOr[String] = js.native
-  var pagingDotsClassName: js.UndefOr[String] = js.native
-  var pagingDotsContainerClassName: js.UndefOr[String] = js.native
-  var pagingDotsStyle: js.UndefOr[CSSProperties] = js.native
-  var prevButtonClassName: js.UndefOr[String] = js.native
-  var prevButtonStyle: js.UndefOr[CSSProperties] = js.native
-  var prevButtonText: js.UndefOr[String] = js.native
+  var containerClassName: js.UndefOr[String] = js.undefined
+  var nextButtonClassName: js.UndefOr[String] = js.undefined
+  var nextButtonStyle: js.UndefOr[CSSProperties] = js.undefined
+  var nextButtonText: js.UndefOr[String] = js.undefined
+  var pagingDotsClassName: js.UndefOr[String] = js.undefined
+  var pagingDotsContainerClassName: js.UndefOr[String] = js.undefined
+  var pagingDotsStyle: js.UndefOr[CSSProperties] = js.undefined
+  var prevButtonClassName: js.UndefOr[String] = js.undefined
+  var prevButtonStyle: js.UndefOr[CSSProperties] = js.undefined
+  var prevButtonText: js.UndefOr[String] = js.undefined
 }
 
 object ContainerClassName {
   @scala.inline
-  def apply(): ContainerClassName = {
+  def apply(
+    containerClassName: String = null,
+    nextButtonClassName: String = null,
+    nextButtonStyle: CSSProperties = null,
+    nextButtonText: String = null,
+    pagingDotsClassName: String = null,
+    pagingDotsContainerClassName: String = null,
+    pagingDotsStyle: CSSProperties = null,
+    prevButtonClassName: String = null,
+    prevButtonStyle: CSSProperties = null,
+    prevButtonText: String = null
+  ): ContainerClassName = {
     val __obj = js.Dynamic.literal()
+    if (containerClassName != null) __obj.updateDynamic("containerClassName")(containerClassName.asInstanceOf[js.Any])
+    if (nextButtonClassName != null) __obj.updateDynamic("nextButtonClassName")(nextButtonClassName.asInstanceOf[js.Any])
+    if (nextButtonStyle != null) __obj.updateDynamic("nextButtonStyle")(nextButtonStyle.asInstanceOf[js.Any])
+    if (nextButtonText != null) __obj.updateDynamic("nextButtonText")(nextButtonText.asInstanceOf[js.Any])
+    if (pagingDotsClassName != null) __obj.updateDynamic("pagingDotsClassName")(pagingDotsClassName.asInstanceOf[js.Any])
+    if (pagingDotsContainerClassName != null) __obj.updateDynamic("pagingDotsContainerClassName")(pagingDotsContainerClassName.asInstanceOf[js.Any])
+    if (pagingDotsStyle != null) __obj.updateDynamic("pagingDotsStyle")(pagingDotsStyle.asInstanceOf[js.Any])
+    if (prevButtonClassName != null) __obj.updateDynamic("prevButtonClassName")(prevButtonClassName.asInstanceOf[js.Any])
+    if (prevButtonStyle != null) __obj.updateDynamic("prevButtonStyle")(prevButtonStyle.asInstanceOf[js.Any])
+    if (prevButtonText != null) __obj.updateDynamic("prevButtonText")(prevButtonText.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContainerClassName]
   }
-  @scala.inline
-  implicit class ContainerClassNameOps[Self <: ContainerClassName] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainerClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextButtonClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextButtonClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextButtonClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextButtonClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextButtonStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextButtonStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextButtonStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextButtonStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextButtonText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextButtonText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextButtonText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextButtonText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPagingDotsClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pagingDotsClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPagingDotsClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pagingDotsClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPagingDotsContainerClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pagingDotsContainerClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPagingDotsContainerClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pagingDotsContainerClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPagingDotsStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pagingDotsStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPagingDotsStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pagingDotsStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrevButtonClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevButtonClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrevButtonClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevButtonClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrevButtonStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevButtonStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrevButtonStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevButtonStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrevButtonText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevButtonText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrevButtonText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevButtonText")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

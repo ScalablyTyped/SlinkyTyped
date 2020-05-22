@@ -4,34 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChartFillFormat extends js.Object {
-  val Application: js.Any = js.native
-  val BackColor: ChartColorFormat = js.native
-  val Creator: Double = js.native
-  val ForeColor: ChartColorFormat = js.native
-  val GradientColorType: Double = js.native
-  val GradientDegree: Double = js.native
-  val GradientStyle: Double = js.native
-  val GradientVariant: Double = js.native
+  val Application: js.Any
+  val BackColor: ChartColorFormat
+  val Creator: Double
+  val ForeColor: ChartColorFormat
+  val GradientColorType: Double
+  val GradientDegree: Double
+  val GradientStyle: Double
+  val GradientVariant: Double
   @JSName("Office.ChartFillFormat_typekey")
-  var OfficeDotChartFillFormat_typekey: ChartFillFormat = js.native
-  val Parent: js.Any = js.native
-  val Pattern: Double = js.native
-  val PresetGradientType: Double = js.native
-  val PresetTexture: Double = js.native
-  val TextureName: String = js.native
-  val TextureType: Double = js.native
-  val Type: Double = js.native
-  var Visible: Double = js.native
-  def OneColorGradient(Style: Double, Variant: Double, Degree: Double): Unit = js.native
-  def Patterned(Pattern: Double): Unit = js.native
-  def PresetGradient(Style: Double, Variant: Double, PresetGradientType: Double): Unit = js.native
-  def PresetTextured(PresetTexture: Double): Unit = js.native
-  def Solid(): Unit = js.native
-  def TwoColorGradient(Style: Double, Variant: Double): Unit = js.native
-  def UserPicture(PictureFile: String, PictureFormat: js.Any, PictureStackUnit: js.Any, PicturePlacement: js.Any): Unit = js.native
-  def UserTextured(TextureFile: String): Unit = js.native
+  var OfficeDotChartFillFormat_typekey: ChartFillFormat
+  val Parent: js.Any
+  val Pattern: Double
+  val PresetGradientType: Double
+  val PresetTexture: Double
+  val TextureName: String
+  val TextureType: Double
+  val Type: Double
+  var Visible: Double
+  def OneColorGradient(Style: Double, Variant: Double, Degree: Double): Unit
+  def Patterned(Pattern: Double): Unit
+  def PresetGradient(Style: Double, Variant: Double, PresetGradientType: Double): Unit
+  def PresetTextured(PresetTexture: Double): Unit
+  def Solid(): Unit
+  def TwoColorGradient(Style: Double, Variant: Double): Unit
+  def UserPicture(PictureFile: String, PictureFormat: js.Any, PictureStackUnit: js.Any, PicturePlacement: js.Any): Unit
+  def UserTextured(TextureFile: String): Unit
 }
 
 object ChartFillFormat {
@@ -67,163 +66,5 @@ object ChartFillFormat {
     __obj.updateDynamic("Office.ChartFillFormat_typekey")(OfficeDotChartFillFormat_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartFillFormat]
   }
-  @scala.inline
-  implicit class ChartFillFormatOps[Self <: ChartFillFormat] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackColor(value: ChartColorFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForeColor(value: ChartColorFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForeColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGradientColorType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GradientColorType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGradientDegree(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GradientDegree")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGradientStyle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GradientStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGradientVariant(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GradientVariant")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOfficeDotChartFillFormat_typekey(value: ChartFillFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Office.ChartFillFormat_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOneColorGradient(value: (Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OneColorGradient")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPattern(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Pattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPatterned(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Patterned")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPresetGradient(value: (Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PresetGradient")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withPresetGradientType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PresetGradientType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPresetTexture(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PresetTexture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPresetTextured(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PresetTextured")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSolid(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Solid")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withTextureName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextureName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextureType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextureType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTwoColorGradient(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TwoColorGradient")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserPicture(value: (String, js.Any, js.Any, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserPicture")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withUserTextured(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserTextured")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

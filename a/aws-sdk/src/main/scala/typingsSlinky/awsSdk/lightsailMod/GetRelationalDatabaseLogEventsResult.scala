@@ -22,53 +22,16 @@ trait GetRelationalDatabaseLogEventsResult extends js.Object {
 
 object GetRelationalDatabaseLogEventsResult {
   @scala.inline
-  def apply(): GetRelationalDatabaseLogEventsResult = {
+  def apply(
+    nextBackwardToken: String = null,
+    nextForwardToken: String = null,
+    resourceLogEvents: LogEventList = null
+  ): GetRelationalDatabaseLogEventsResult = {
     val __obj = js.Dynamic.literal()
+    if (nextBackwardToken != null) __obj.updateDynamic("nextBackwardToken")(nextBackwardToken.asInstanceOf[js.Any])
+    if (nextForwardToken != null) __obj.updateDynamic("nextForwardToken")(nextForwardToken.asInstanceOf[js.Any])
+    if (resourceLogEvents != null) __obj.updateDynamic("resourceLogEvents")(resourceLogEvents.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRelationalDatabaseLogEventsResult]
   }
-  @scala.inline
-  implicit class GetRelationalDatabaseLogEventsResultOps[Self <: GetRelationalDatabaseLogEventsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextBackwardToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextBackwardToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextBackwardToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextBackwardToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextForwardToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextForwardToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextForwardToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextForwardToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceLogEvents(value: LogEventList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceLogEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceLogEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceLogEvents")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ParamDeclaration extends js.Object {
   /**
     * The parameter's `array` mode
@@ -40,7 +39,7 @@ trait ParamDeclaration extends js.Object {
     * @default `auto` for query parameters, such as `url: '/foo?queryParam'`
     * @default `true` if the parameter name ends in `[]`, such as `url: '/foo/{implicitArrayParam:int[]}'`
     */
-  var array: js.UndefOr[Boolean] = js.native
+  var array: js.UndefOr[Boolean] = js.undefined
   /**
     * Dynamic flag
     *
@@ -61,7 +60,7 @@ trait ParamDeclaration extends js.Object {
     *
     * Default: `false`
     */
-  var dynamic: js.UndefOr[Boolean] = js.native
+  var dynamic: js.UndefOr[Boolean] = js.undefined
   /**
     * Enables/disables inheriting of this parameter's value
     *
@@ -98,14 +97,14 @@ trait ParamDeclaration extends js.Object {
     *
     * Default: `true`
     */
-  var inherit: js.UndefOr[Boolean] = js.native
+  var inherit: js.UndefOr[Boolean] = js.undefined
   /**
     * @hidden
     * @internalapi
     *
     * This is not part of the declaration; it is a calculated value depending on if a default value was specified or not.
     */
-  var isOptional: js.UndefOr[Boolean] = js.native
+  var isOptional: js.UndefOr[Boolean] = js.undefined
   /**
     * Disables url-encoding of parameter values
     *
@@ -142,7 +141,7 @@ trait ParamDeclaration extends js.Object {
     *
     * Default: `false`
     */
-  var raw: js.UndefOr[Boolean] = js.native
+  var raw: js.UndefOr[Boolean] = js.undefined
   /**
     * @internalapi
     *
@@ -160,7 +159,7 @@ trait ParamDeclaration extends js.Object {
     * ]
     * ```
     */
-  var replace: js.UndefOr[js.Array[Replace]] = js.native
+  var replace: js.UndefOr[js.Array[Replace]] = js.undefined
   /**
     * Squash mode: omit default parameter values in URL
     *
@@ -214,7 +213,7 @@ trait ParamDeclaration extends js.Object {
     *
     * Default: If squash is not set, it uses the configured default squash policy. (See [[defaultSquashPolicy]]())
     */
-  var squash: js.UndefOr[Boolean | String] = js.native
+  var squash: js.UndefOr[Boolean | String] = js.undefined
   /**
     * The parameter's type
     *
@@ -234,7 +233,7 @@ trait ParamDeclaration extends js.Object {
     * - Non-url parameters (`param: { foo: null }`): `any`
     *
     */
-  var `type`: js.UndefOr[String | ParamType] = js.native
+  var `type`: js.UndefOr[String | ParamType] = js.undefined
   /**
     * The default value for this parameter.
     *
@@ -290,130 +289,33 @@ trait ParamDeclaration extends js.Object {
     *
     * Default: `undefined`
     */
-  var value: js.UndefOr[js.Any] = js.native
+  var value: js.UndefOr[js.Any] = js.undefined
 }
 
 object ParamDeclaration {
   @scala.inline
-  def apply(): ParamDeclaration = {
+  def apply(
+    array: js.UndefOr[Boolean] = js.undefined,
+    dynamic: js.UndefOr[Boolean] = js.undefined,
+    inherit: js.UndefOr[Boolean] = js.undefined,
+    isOptional: js.UndefOr[Boolean] = js.undefined,
+    raw: js.UndefOr[Boolean] = js.undefined,
+    replace: js.Array[Replace] = null,
+    squash: Boolean | String = null,
+    `type`: String | ParamType = null,
+    value: js.Any = null
+  ): ParamDeclaration = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(array)) __obj.updateDynamic("array")(array.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dynamic)) __obj.updateDynamic("dynamic")(dynamic.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(inherit)) __obj.updateDynamic("inherit")(inherit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isOptional)) __obj.updateDynamic("isOptional")(isOptional.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(raw)) __obj.updateDynamic("raw")(raw.get.asInstanceOf[js.Any])
+    if (replace != null) __obj.updateDynamic("replace")(replace.asInstanceOf[js.Any])
+    if (squash != null) __obj.updateDynamic("squash")(squash.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParamDeclaration]
   }
-  @scala.inline
-  implicit class ParamDeclarationOps[Self <: ParamDeclaration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArray(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("array")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArray: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("array")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDynamic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDynamic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInherit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inherit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInherit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inherit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsOptional(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOptional")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsOptional: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOptional")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRaw(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRaw: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplace(value: js.Array[Replace]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSquash(value: Boolean | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("squash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSquash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("squash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String | ParamType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -9,7 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   @js.native
-  class InvalidAddressError () extends Error
+  class InvalidAddressError () extends Error {
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+  }
   
   def detectAddressFormat(address: String): String = js.native
   def detectAddressNetwork(address: String): String = js.native

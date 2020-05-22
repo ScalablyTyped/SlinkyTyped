@@ -21,41 +21,11 @@ trait SchemaGoogleCloudMlV1HyperparameterOutputHyperparameterMetric extends js.O
 
 object SchemaGoogleCloudMlV1HyperparameterOutputHyperparameterMetric {
   @scala.inline
-  def apply(): SchemaGoogleCloudMlV1HyperparameterOutputHyperparameterMetric = {
+  def apply(objectiveValue: js.UndefOr[Double] = js.undefined, trainingStep: String = null): SchemaGoogleCloudMlV1HyperparameterOutputHyperparameterMetric = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(objectiveValue)) __obj.updateDynamic("objectiveValue")(objectiveValue.get.asInstanceOf[js.Any])
+    if (trainingStep != null) __obj.updateDynamic("trainingStep")(trainingStep.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudMlV1HyperparameterOutputHyperparameterMetric]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudMlV1HyperparameterOutputHyperparameterMetricOps[Self <: SchemaGoogleCloudMlV1HyperparameterOutputHyperparameterMetric] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withObjectiveValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectiveValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectiveValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectiveValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrainingStep(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingStep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrainingStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingStep")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

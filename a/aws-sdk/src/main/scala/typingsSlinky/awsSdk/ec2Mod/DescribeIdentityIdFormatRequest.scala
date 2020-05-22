@@ -18,35 +18,10 @@ trait DescribeIdentityIdFormatRequest extends js.Object {
 
 object DescribeIdentityIdFormatRequest {
   @scala.inline
-  def apply(PrincipalArn: String): DescribeIdentityIdFormatRequest = {
+  def apply(PrincipalArn: String, Resource: String = null): DescribeIdentityIdFormatRequest = {
     val __obj = js.Dynamic.literal(PrincipalArn = PrincipalArn.asInstanceOf[js.Any])
+    if (Resource != null) __obj.updateDynamic("Resource")(Resource.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeIdentityIdFormatRequest]
   }
-  @scala.inline
-  implicit class DescribeIdentityIdFormatRequestOps[Self <: DescribeIdentityIdFormatRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrincipalArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrincipalArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Resource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Resource")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

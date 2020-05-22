@@ -1,13 +1,12 @@
 package typingsSlinky.formstate
 
-import typingsSlinky.formstate.typesMod.ValidationResponse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object formstateBooleans {
   @js.native
-  sealed trait `false` extends ValidationResponse
+  sealed trait `false` extends js.Object
   
   @js.native
   sealed trait `true` extends js.Object

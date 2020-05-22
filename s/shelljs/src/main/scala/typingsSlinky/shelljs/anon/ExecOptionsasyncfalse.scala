@@ -8,223 +8,85 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined shelljs.shelljs.ExecOptions & {  async ? :false} */
-@js.native
 trait ExecOptionsasyncfalse extends js.Object {
   /**
-  	 * Asynchronous execution.
-  	 *
-  	 * If a callback is provided, it will be set to `true`, regardless of the passed value.
-  	 *
-  	 * @default false
-  	 */
-  var async: js.UndefOr[Boolean with `false`] = js.native
-  var cwd: js.UndefOr[String] = js.native
+    * Asynchronous execution.
+    *
+    * If a callback is provided, it will be set to `true`, regardless of the passed value.
+    *
+    * @default false
+    */
+  var async: js.UndefOr[Boolean with `false`] = js.undefined
+  var cwd: js.UndefOr[String] = js.undefined
   /**
-  	 * Character encoding to use.
-  	 *
-  	 * Affects the values returned by `stdout` and `stderr`,
-  	 * and what is written to `stdout` and `stderr` when not in silent mode
-  	 *
-  	 * @default "utf8"
-  	 */
-  var encoding: js.UndefOr[String] = js.native
-  var env: js.UndefOr[ProcessEnv] = js.native
+    * Character encoding to use.
+    *
+    * Affects the values returned by `stdout` and `stderr`,
+    * and what is written to `stdout` and `stderr` when not in silent mode
+    *
+    * @default "utf8"
+    */
+  var encoding: js.UndefOr[String] = js.undefined
+  var env: js.UndefOr[ProcessEnv] = js.undefined
   /**
-  	 * Exit when command return code is non-zero.
-  	 *
-  	 * @default false
-  	 */
-  var fatal: js.UndefOr[Boolean] = js.native
-  var gid: js.UndefOr[Double] = js.native
-  var killSignal: js.UndefOr[Signals | Double] = js.native
-  var maxBuffer: js.UndefOr[Double] = js.native
-  var shell: js.UndefOr[String] = js.native
+    * Exit when command return code is non-zero.
+    *
+    * @default false
+    */
+  var fatal: js.UndefOr[Boolean] = js.undefined
+  var gid: js.UndefOr[Double] = js.undefined
+  var killSignal: js.UndefOr[Signals | Double] = js.undefined
+  var maxBuffer: js.UndefOr[Double] = js.undefined
+  var shell: js.UndefOr[String] = js.undefined
   /**
-  	 * Do not echo program output to the console.
-  	 *
-  	 * @default false
-  	 */
-  var silent: js.UndefOr[Boolean] = js.native
+    * Do not echo program output to the console.
+    *
+    * @default false
+    */
+  var silent: js.UndefOr[Boolean] = js.undefined
   /**
     * @default 0
     */
-  var timeout: js.UndefOr[Double] = js.native
-  var uid: js.UndefOr[Double] = js.native
+  var timeout: js.UndefOr[Double] = js.undefined
+  var uid: js.UndefOr[Double] = js.undefined
   /**
     * @default true
     */
-  var windowsHide: js.UndefOr[Boolean] = js.native
+  var windowsHide: js.UndefOr[Boolean] = js.undefined
 }
 
 object ExecOptionsasyncfalse {
   @scala.inline
-  def apply(): ExecOptionsasyncfalse = {
+  def apply(
+    async: js.UndefOr[Boolean with `false`] = js.undefined,
+    cwd: String = null,
+    encoding: String = null,
+    env: ProcessEnv = null,
+    fatal: js.UndefOr[Boolean] = js.undefined,
+    gid: js.UndefOr[Double] = js.undefined,
+    killSignal: Signals | Double = null,
+    maxBuffer: js.UndefOr[Double] = js.undefined,
+    shell: String = null,
+    silent: js.UndefOr[Boolean] = js.undefined,
+    timeout: js.UndefOr[Double] = js.undefined,
+    uid: js.UndefOr[Double] = js.undefined,
+    windowsHide: js.UndefOr[Boolean] = js.undefined
+  ): ExecOptionsasyncfalse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(async)) __obj.updateDynamic("async")(async.get.asInstanceOf[js.Any])
+    if (cwd != null) __obj.updateDynamic("cwd")(cwd.asInstanceOf[js.Any])
+    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
+    if (env != null) __obj.updateDynamic("env")(env.asInstanceOf[js.Any])
+    if (!js.isUndefined(fatal)) __obj.updateDynamic("fatal")(fatal.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(gid)) __obj.updateDynamic("gid")(gid.get.asInstanceOf[js.Any])
+    if (killSignal != null) __obj.updateDynamic("killSignal")(killSignal.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxBuffer)) __obj.updateDynamic("maxBuffer")(maxBuffer.get.asInstanceOf[js.Any])
+    if (shell != null) __obj.updateDynamic("shell")(shell.asInstanceOf[js.Any])
+    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(uid)) __obj.updateDynamic("uid")(uid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(windowsHide)) __obj.updateDynamic("windowsHide")(windowsHide.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecOptionsasyncfalse]
   }
-  @scala.inline
-  implicit class ExecOptionsasyncfalseOps[Self <: ExecOptionsasyncfalse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAsync(value: Boolean with `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("async")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAsync: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("async")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCwd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCwd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnv(value: ProcessEnv): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFatal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fatal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFatal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fatal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKillSignal(value: Signals | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("killSignal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKillSignal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("killSignal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxBuffer(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBuffer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxBuffer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBuffer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShell(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shell")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShell: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shell")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSilent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSilent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowsHide(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsHide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowsHide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsHide")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

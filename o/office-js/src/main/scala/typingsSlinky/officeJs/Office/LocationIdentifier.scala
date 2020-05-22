@@ -16,7 +16,6 @@ import scala.scalajs.js.annotation._
   * 
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
   */
-@js.native
 trait LocationIdentifier extends js.Object {
   /**
     * The location's unique ID.
@@ -25,11 +24,11 @@ trait LocationIdentifier extends js.Object {
     * 
     * For `Custom` type, it's the `displayName`.
     */
-  var id: String = js.native
+  var id: String
   /**
     * The location's type.
     */
-  var `type`: LocationType | String = js.native
+  var `type`: LocationType | String
 }
 
 object LocationIdentifier {
@@ -39,25 +38,5 @@ object LocationIdentifier {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[LocationIdentifier]
   }
-  @scala.inline
-  implicit class LocationIdentifierOps[Self <: LocationIdentifier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: LocationType | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

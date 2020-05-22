@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/maps.html](http://www.html5plus.org/doc/zh_cn/maps.html)
   */
-@js.native
 trait PlusMapsSearchPoiResult extends js.Object {
   /**
     * 当前页的POI检索结果数
@@ -17,123 +16,61 @@ trait PlusMapsSearchPoiResult extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/maps.html](http://www.html5plus.org/doc/zh_cn/maps.html)
     */
-  var currentNumber: js.UndefOr[Double] = js.native
+  var currentNumber: js.UndefOr[Double] = js.undefined
   /**
     * 获取当前页的索引
     * 当前页的索引值，从0开始，即0表示第一页。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/maps.html](http://www.html5plus.org/doc/zh_cn/maps.html)
     */
-  var pageIndex: js.UndefOr[Double] = js.native
+  var pageIndex: js.UndefOr[Double] = js.undefined
   /**
     * 本次POI检索的总页数
     * 本次POI检索的总页数，若没有检索到则返回0。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/maps.html](http://www.html5plus.org/doc/zh_cn/maps.html)
     */
-  var pageNumber: js.UndefOr[Double] = js.native
+  var pageNumber: js.UndefOr[Double] = js.undefined
   /**
     * 本次POI检索结果数组
     * POI检索结果数组，Array数组对象，数组内容为Position对象。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/maps.html](http://www.html5plus.org/doc/zh_cn/maps.html)
     */
-  var poiList: js.UndefOr[js.Array[_]] = js.native
+  var poiList: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * POI检索总结果数
     * POI检索总结果数，若没有检索到则返回0。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/maps.html](http://www.html5plus.org/doc/zh_cn/maps.html)
     */
-  var totalNumber: js.UndefOr[Double] = js.native
+  var totalNumber: js.UndefOr[Double] = js.undefined
   /**
     * 获取指定索引的检索结果
     * 如果index值超出范围则返回null对象。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/maps.html](http://www.html5plus.org/doc/zh_cn/maps.html)
     */
-  def getPosition(): PlusMapsPosition = js.native
+  def getPosition(): PlusMapsPosition
 }
 
 object PlusMapsSearchPoiResult {
   @scala.inline
-  def apply(getPosition: () => PlusMapsPosition): PlusMapsSearchPoiResult = {
+  def apply(
+    getPosition: () => PlusMapsPosition,
+    currentNumber: js.UndefOr[Double] = js.undefined,
+    pageIndex: js.UndefOr[Double] = js.undefined,
+    pageNumber: js.UndefOr[Double] = js.undefined,
+    poiList: js.Array[_] = null,
+    totalNumber: js.UndefOr[Double] = js.undefined
+  ): PlusMapsSearchPoiResult = {
     val __obj = js.Dynamic.literal(getPosition = js.Any.fromFunction0(getPosition))
+    if (!js.isUndefined(currentNumber)) __obj.updateDynamic("currentNumber")(currentNumber.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pageIndex)) __obj.updateDynamic("pageIndex")(pageIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pageNumber)) __obj.updateDynamic("pageNumber")(pageNumber.get.asInstanceOf[js.Any])
+    if (poiList != null) __obj.updateDynamic("poiList")(poiList.asInstanceOf[js.Any])
+    if (!js.isUndefined(totalNumber)) __obj.updateDynamic("totalNumber")(totalNumber.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusMapsSearchPoiResult]
   }
-  @scala.inline
-  implicit class PlusMapsSearchPoiResultOps[Self <: PlusMapsSearchPoiResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetPosition(value: () => PlusMapsPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPosition")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCurrentNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPoiList(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("poiList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPoiList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("poiList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalNumber")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

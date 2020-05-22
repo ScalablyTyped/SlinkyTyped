@@ -1,7 +1,7 @@
 
 # Scala.js typings for babel__parser
 
-Typings are for version 7.9.3
+Typings are for version 7.9.6
 
 ## Library description:
 A JavaScript parser

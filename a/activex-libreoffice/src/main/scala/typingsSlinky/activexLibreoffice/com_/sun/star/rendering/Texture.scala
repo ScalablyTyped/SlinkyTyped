@@ -15,7 +15,6 @@ import scala.scalajs.js.annotation._
   * gradient. The transformation member can then be used to scale the complete texture as it fits suit.
   * @since OOo 2.0
   */
-@js.native
 trait Texture extends js.Object {
   /**
     * {@link Texture} transformation from texture to primitive space.
@@ -24,13 +23,13 @@ trait Texture extends js.Object {
     * texture space to the device coordinate space is the concatenation of texture, render state, and view state transformation (with only render state and
     * view state transformation being applied to the textured primitive).
     */
-  var AffineTransform: AffineMatrix2D = js.native
+  var AffineTransform: AffineMatrix2D
   /**
     * Overall transparency of the texturing.
     *
     * The valid range for this value is [0,1], where 0 denotes complete transparency, and 1 denotes fully opaque.
     */
-  var Alpha: Double = js.native
+  var Alpha: Double
   /**
     * {@link Texture} bitmap.
     *
@@ -38,25 +37,25 @@ trait Texture extends js.Object {
     *
     * The bitmap is scaled to a one-by-one rectangle, to cover the same area as both the gradient and the hatching.
     */
-  var Bitmap: XBitmap = js.native
+  var Bitmap: XBitmap
   /**
     * {@link Texture} gradient.
     *
     * This member can be used together with bitmap and hatching. The parametric polygons color value is used to fill the returned polygonal outlines.
     */
-  var Gradient: XParametricPolyPolygon2D = js.native
+  var Gradient: XParametricPolyPolygon2D
   /**
     * Specifies the stroke attributes used for hatching.
     *
     * Use 0.0 as the strokeWidth here to indicate hair lines.
     */
-  var HatchAttributes: StrokeAttributes = js.native
+  var HatchAttributes: StrokeAttributes
   /**
     * {@link Texture} hatching.
     *
     * This member can be used together with bitmap and gradient. The parametric polygons color value is used to stroke the returned polygonal outlines.
     */
-  var Hatching: XParametricPolyPolygon2D = js.native
+  var Hatching: XParametricPolyPolygon2D
   /**
     * Specifies the number of parameterized polygons used for the texture.
     *
@@ -65,19 +64,19 @@ trait Texture extends js.Object {
     * interval is plugged into the getOutline method. For example, if numberOfHatchPolygons is 2, then getOutline is called twice, once with 0.0 and once
     * with 0.5. Use this parameter to control the density of the hatching.
     */
-  var NumberOfHatchPolygons: Double = js.native
+  var NumberOfHatchPolygons: Double
   /**
     * Repeat mode of the texture, x direction.
     *
     * The repeat mode is separated into x and y direction, this is the x direction part. Permissible values are from the {@link TexturingMode} constants.
     */
-  var RepeatModeX: Double = js.native
+  var RepeatModeX: Double
   /**
     * Repeat mode of the texture, y direction.
     *
     * The repeat mode is separated into x and y direction, this is the y direction part. Permissible values are from the {@link TexturingMode} constants.
     */
-  var RepeatModeY: Double = js.native
+  var RepeatModeY: Double
 }
 
 object Texture {
@@ -96,67 +95,5 @@ object Texture {
     val __obj = js.Dynamic.literal(AffineTransform = AffineTransform.asInstanceOf[js.Any], Alpha = Alpha.asInstanceOf[js.Any], Bitmap = Bitmap.asInstanceOf[js.Any], Gradient = Gradient.asInstanceOf[js.Any], HatchAttributes = HatchAttributes.asInstanceOf[js.Any], Hatching = Hatching.asInstanceOf[js.Any], NumberOfHatchPolygons = NumberOfHatchPolygons.asInstanceOf[js.Any], RepeatModeX = RepeatModeX.asInstanceOf[js.Any], RepeatModeY = RepeatModeY.asInstanceOf[js.Any])
     __obj.asInstanceOf[Texture]
   }
-  @scala.inline
-  implicit class TextureOps[Self <: Texture] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAffineTransform(value: AffineMatrix2D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AffineTransform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Alpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBitmap(value: XBitmap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bitmap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGradient(value: XParametricPolyPolygon2D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Gradient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHatchAttributes(value: StrokeAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HatchAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHatching(value: XParametricPolyPolygon2D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hatching")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberOfHatchPolygons(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfHatchPolygons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepeatModeX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RepeatModeX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepeatModeY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RepeatModeY")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -12,9 +12,9 @@ trait InstantiableITintFilter
   extends Instantiable0[ITintFilter]
      with Instantiable1[/* options */ Opacity, ITintFilter] {
   /**
-  		 * Returns filter instance from an object representation
-  		 * @param object Object to create an instance from
-  		 */
+    * Returns filter instance from an object representation
+    * @param object Object to create an instance from
+    */
   def fromObject(`object`: js.Any): ITintFilter = js.native
 }
 

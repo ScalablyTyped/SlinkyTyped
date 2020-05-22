@@ -37,65 +37,18 @@ trait SchemaRunQueryResponse extends js.Object {
 
 object SchemaRunQueryResponse {
   @scala.inline
-  def apply(): SchemaRunQueryResponse = {
+  def apply(
+    document: SchemaDocument = null,
+    readTime: String = null,
+    skippedResults: js.UndefOr[Double] = js.undefined,
+    transaction: String = null
+  ): SchemaRunQueryResponse = {
     val __obj = js.Dynamic.literal()
+    if (document != null) __obj.updateDynamic("document")(document.asInstanceOf[js.Any])
+    if (readTime != null) __obj.updateDynamic("readTime")(readTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(skippedResults)) __obj.updateDynamic("skippedResults")(skippedResults.get.asInstanceOf[js.Any])
+    if (transaction != null) __obj.updateDynamic("transaction")(transaction.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRunQueryResponse]
   }
-  @scala.inline
-  implicit class SchemaRunQueryResponseOps[Self <: SchemaRunQueryResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocument(value: SchemaDocument): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocument: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkippedResults(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skippedResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkippedResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skippedResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransaction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transaction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransaction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transaction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

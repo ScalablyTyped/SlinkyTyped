@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExtendedProfile extends js.Object {
-  var extendedProfile: js.UndefOr[Boolean] = js.native
-  var getMethod: js.UndefOr[String] = js.native
+  var extendedProfile: js.UndefOr[Boolean] = js.undefined
+  var getMethod: js.UndefOr[String] = js.undefined
 }
 
 object ExtendedProfile {
   @scala.inline
-  def apply(): ExtendedProfile = {
+  def apply(extendedProfile: js.UndefOr[Boolean] = js.undefined, getMethod: String = null): ExtendedProfile = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(extendedProfile)) __obj.updateDynamic("extendedProfile")(extendedProfile.get.asInstanceOf[js.Any])
+    if (getMethod != null) __obj.updateDynamic("getMethod")(getMethod.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExtendedProfile]
   }
-  @scala.inline
-  implicit class ExtendedProfileOps[Self <: ExtendedProfile] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtendedProfile(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedProfile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtendedProfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedProfile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGetMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMethod")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

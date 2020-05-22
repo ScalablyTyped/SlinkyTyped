@@ -7,54 +7,43 @@ import scala.scalajs.js.annotation._
 /**
   * Contract Signatory
   */
-@js.native
 trait ContractSigner extends BackboneElement {
   /**
     * Contract Signatory Party
     */
-  var party: Reference = js.native
+  var party: Reference
   /**
     * Contract Documentation Signature
     */
-  var signature: js.Array[Signature] = js.native
+  var signature: js.Array[Signature]
   /**
     * Contract Signatory Role
     */
-  var `type`: Coding = js.native
+  var `type`: Coding
 }
 
 object ContractSigner {
   @scala.inline
-  def apply(party: Reference, signature: js.Array[Signature], `type`: Coding): ContractSigner = {
+  def apply(
+    party: Reference,
+    signature: js.Array[Signature],
+    `type`: Coding,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null
+  ): ContractSigner = {
     val __obj = js.Dynamic.literal(party = party.asInstanceOf[js.Any], signature = signature.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContractSigner]
   }
-  @scala.inline
-  implicit class ContractSignerOps[Self <: ContractSigner] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParty(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("party")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSignature(value: js.Array[Signature]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: Coding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

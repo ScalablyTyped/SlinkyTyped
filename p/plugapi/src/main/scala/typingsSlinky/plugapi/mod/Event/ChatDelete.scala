@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChatDelete extends js.Object {
-  var chatID: String = js.native
-  var mi: Double = js.native
+  var chatID: String
+  var mi: Double
 }
 
 object ChatDelete {
@@ -16,25 +15,5 @@ object ChatDelete {
     val __obj = js.Dynamic.literal(chatID = chatID.asInstanceOf[js.Any], mi = mi.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChatDelete]
   }
-  @scala.inline
-  implicit class ChatDeleteOps[Self <: ChatDelete] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChatID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chatID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMi(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mi")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

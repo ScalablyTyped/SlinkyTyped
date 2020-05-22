@@ -22,53 +22,16 @@ trait AssumeRoleResponse extends js.Object {
 
 object AssumeRoleResponse {
   @scala.inline
-  def apply(): AssumeRoleResponse = {
+  def apply(
+    AssumedRoleUser: AssumedRoleUser = null,
+    Credentials: Credentials = null,
+    PackedPolicySize: js.UndefOr[nonNegativeIntegerType] = js.undefined
+  ): AssumeRoleResponse = {
     val __obj = js.Dynamic.literal()
+    if (AssumedRoleUser != null) __obj.updateDynamic("AssumedRoleUser")(AssumedRoleUser.asInstanceOf[js.Any])
+    if (Credentials != null) __obj.updateDynamic("Credentials")(Credentials.asInstanceOf[js.Any])
+    if (!js.isUndefined(PackedPolicySize)) __obj.updateDynamic("PackedPolicySize")(PackedPolicySize.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssumeRoleResponse]
   }
-  @scala.inline
-  implicit class AssumeRoleResponseOps[Self <: AssumeRoleResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssumedRoleUser(value: AssumedRoleUser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssumedRoleUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssumedRoleUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssumedRoleUser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCredentials(value: Credentials): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Credentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Credentials")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPackedPolicySize(value: nonNegativeIntegerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PackedPolicySize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPackedPolicySize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PackedPolicySize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TagsFeedResponseSectionsItem extends js.Object {
-  var explore_item_info: TagsFeedResponseExploreItemInfo = js.native
-  var feed_type: String = js.native
-  var layout_content: TagsFeedResponseLayoutContent = js.native
-  var layout_type: String = js.native
+  var explore_item_info: TagsFeedResponseExploreItemInfo
+  var feed_type: String
+  var layout_content: TagsFeedResponseLayoutContent
+  var layout_type: String
 }
 
 object TagsFeedResponseSectionsItem {
@@ -23,37 +22,5 @@ object TagsFeedResponseSectionsItem {
     val __obj = js.Dynamic.literal(explore_item_info = explore_item_info.asInstanceOf[js.Any], feed_type = feed_type.asInstanceOf[js.Any], layout_content = layout_content.asInstanceOf[js.Any], layout_type = layout_type.asInstanceOf[js.Any])
     __obj.asInstanceOf[TagsFeedResponseSectionsItem]
   }
-  @scala.inline
-  implicit class TagsFeedResponseSectionsItemOps[Self <: TagsFeedResponseSectionsItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExplore_item_info(value: TagsFeedResponseExploreItemInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("explore_item_info")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeed_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feed_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLayout_content(value: TagsFeedResponseLayoutContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout_content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLayout_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

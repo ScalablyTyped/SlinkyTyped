@@ -1,5 +1,6 @@
 package typingsSlinky.winrt.global.Windows.ApplicationModel
 
+import typingsSlinky.winrt.Windows.Foundation.Collections.IMapView
 import typingsSlinky.winrt.Windows.Foundation.IAsyncAction
 import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
 import typingsSlinky.winrt.Windows.Foundation.Uri
@@ -21,19 +22,57 @@ object Store extends js.Object {
   
   @js.native
   class LicenseInformation ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Store.LicenseInformation
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Store.LicenseInformation {
+    /* CompleteClass */
+    override var expirationDate: js.Date = js.native
+    /* CompleteClass */
+    override var isActive: Boolean = js.native
+    /* CompleteClass */
+    override var isTrial: Boolean = js.native
+    /* CompleteClass */
+    override var onlicensechanged: js.Any = js.native
+    /* CompleteClass */
+    override var productLicenses: IMapView[String, typingsSlinky.winrt.Windows.ApplicationModel.Store.ProductLicense] = js.native
+  }
   
   @js.native
   class ListingInformation ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Store.ListingInformation
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Store.ListingInformation {
+    /* CompleteClass */
+    override var ageRating: Double = js.native
+    /* CompleteClass */
+    override var currentMarket: String = js.native
+    /* CompleteClass */
+    override var description: String = js.native
+    /* CompleteClass */
+    override var formattedPrice: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+    /* CompleteClass */
+    override var productListings: IMapView[String, typingsSlinky.winrt.Windows.ApplicationModel.Store.ProductListing] = js.native
+  }
   
   @js.native
   class ProductLicense ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Store.ProductLicense
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Store.ProductLicense {
+    /* CompleteClass */
+    override var expirationDate: js.Date = js.native
+    /* CompleteClass */
+    override var isActive: Boolean = js.native
+    /* CompleteClass */
+    override var productId: String = js.native
+  }
   
   @js.native
   class ProductListing ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Store.ProductListing
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Store.ProductListing {
+    /* CompleteClass */
+    override var formattedPrice: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+    /* CompleteClass */
+    override var productId: String = js.native
+  }
   
   /* static members */
   @js.native

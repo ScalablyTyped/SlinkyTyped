@@ -8,19 +8,18 @@ import scala.scalajs.js.annotation._
   * specifies an interface for components to observer certain aspects of an {@link XPropertyControl} .
   * @since OOo 2.2
   */
-@js.native
 trait XPropertyControlObserver extends js.Object {
   /**
     * notifies the observer that a certain {@link XPropertyControl} 's UI representation gained the focus.
     * @param Control denotes the control whose UI representation gained the focus
     */
-  def focusGained(Control: XPropertyControl): Unit = js.native
+  def focusGained(Control: XPropertyControl): Unit
   /**
     * notifies the observer that a certain {@link XPropertyControl} 's value changed.
     * @param Control denotes the control whose value changed.
     * @see XPropertyControl.Value
     */
-  def valueChanged(Control: XPropertyControl): Unit = js.native
+  def valueChanged(Control: XPropertyControl): Unit
 }
 
 object XPropertyControlObserver {
@@ -29,25 +28,5 @@ object XPropertyControlObserver {
     val __obj = js.Dynamic.literal(focusGained = js.Any.fromFunction1(focusGained), valueChanged = js.Any.fromFunction1(valueChanged))
     __obj.asInstanceOf[XPropertyControlObserver]
   }
-  @scala.inline
-  implicit class XPropertyControlObserverOps[Self <: XPropertyControlObserver] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFocusGained(value: XPropertyControl => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusGained")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withValueChanged(value: XPropertyControl => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

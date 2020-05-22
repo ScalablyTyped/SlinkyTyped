@@ -4,26 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Averagedifferencebetweencurrentevictiongenerationwhenthepagewaslastconsidered extends js.Object {
-  var `Average difference between current eviction generation when the page was last considered`: Double = js.native
-  var `Average on-disk page image size seen`: Double = js.native
-  var `Clean pages currently in cache`: Double = js.native
-  var `Current eviction generation`: Double = js.native
-  var `Dirty pages currently in cache`: Double = js.native
-  var `Entries in the root page`: Double = js.native
-  var `Internal pages currently in cache`: Double = js.native
-  var `Leaf pages currently in cache`: Double = js.native
-  var `Maximum difference between current eviction generation when the page was last considered`: Double = js.native
-  var `Maximum page size seen`: Double = js.native
-  var `Minimum on-disk page image size seen`: Double = js.native
-  var `On-disk page image sizes smaller than a single allocation unit`: Double = js.native
-  var `Pages created in memory and never written`: Double = js.native
-  var `Pages currently queued for eviction`: Double = js.native
-  var `Pages that could not be queued for eviction`: Double = js.native
-  var `Refs skipped during cache traversal`: Double = js.native
-  var `Size of the root page`: Double = js.native
-  var `Total number of pages currently in cache`: Double = js.native
+  var `Average difference between current eviction generation when the page was last considered`: Double
+  var `Average on-disk page image size seen`: Double
+  var `Clean pages currently in cache`: Double
+  var `Current eviction generation`: Double
+  var `Dirty pages currently in cache`: Double
+  var `Entries in the root page`: Double
+  var `Internal pages currently in cache`: Double
+  var `Leaf pages currently in cache`: Double
+  var `Maximum difference between current eviction generation when the page was last considered`: Double
+  var `Maximum page size seen`: Double
+  var `Minimum on-disk page image size seen`: Double
+  var `On-disk page image sizes smaller than a single allocation unit`: Double
+  var `Pages created in memory and never written`: Double
+  var `Pages currently queued for eviction`: Double
+  var `Pages that could not be queued for eviction`: Double
+  var `Refs skipped during cache traversal`: Double
+  var `Size of the root page`: Double
+  var `Total number of pages currently in cache`: Double
 }
 
 object Averagedifferencebetweencurrentevictiongenerationwhenthepagewaslastconsidered {
@@ -69,121 +68,5 @@ object Averagedifferencebetweencurrentevictiongenerationwhenthepagewaslastconsid
     __obj.updateDynamic("Total number of pages currently in cache")((`Total number of pages currently in cache`).asInstanceOf[js.Any])
     __obj.asInstanceOf[Averagedifferencebetweencurrentevictiongenerationwhenthepagewaslastconsidered]
   }
-  @scala.inline
-  implicit class AveragedifferencebetweencurrentevictiongenerationwhenthepagewaslastconsideredOps[Self <: Averagedifferencebetweencurrentevictiongenerationwhenthepagewaslastconsidered] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withAverage difference between current eviction generation when the page was last considered`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Average difference between current eviction generation when the page was last considered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withAverage on-disk page image size seen`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Average on-disk page image size seen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withClean pages currently in cache`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Clean pages currently in cache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCurrent eviction generation`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Current eviction generation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withDirty pages currently in cache`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Dirty pages currently in cache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withEntries in the root page`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Entries in the root page")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withInternal pages currently in cache`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Internal pages currently in cache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withLeaf pages currently in cache`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Leaf pages currently in cache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withMaximum difference between current eviction generation when the page was last considered`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Maximum difference between current eviction generation when the page was last considered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withMaximum page size seen`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Maximum page size seen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withMinimum on-disk page image size seen`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Minimum on-disk page image size seen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withOn-disk page image sizes smaller than a single allocation unit`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("On-disk page image sizes smaller than a single allocation unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withPages created in memory and never written`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Pages created in memory and never written")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withPages currently queued for eviction`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Pages currently queued for eviction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withPages that could not be queued for eviction`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Pages that could not be queued for eviction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withRefs skipped during cache traversal`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Refs skipped during cache traversal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withSize of the root page`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Size of the root page")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withTotal number of pages currently in cache`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Total number of pages currently in cache")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

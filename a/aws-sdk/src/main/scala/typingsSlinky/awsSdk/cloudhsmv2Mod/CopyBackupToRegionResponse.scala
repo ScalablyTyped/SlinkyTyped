@@ -14,29 +14,10 @@ trait CopyBackupToRegionResponse extends js.Object {
 
 object CopyBackupToRegionResponse {
   @scala.inline
-  def apply(): CopyBackupToRegionResponse = {
+  def apply(DestinationBackup: DestinationBackup = null): CopyBackupToRegionResponse = {
     val __obj = js.Dynamic.literal()
+    if (DestinationBackup != null) __obj.updateDynamic("DestinationBackup")(DestinationBackup.asInstanceOf[js.Any])
     __obj.asInstanceOf[CopyBackupToRegionResponse]
   }
-  @scala.inline
-  implicit class CopyBackupToRegionResponseOps[Self <: CopyBackupToRegionResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestinationBackup(value: DestinationBackup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationBackup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationBackup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationBackup")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

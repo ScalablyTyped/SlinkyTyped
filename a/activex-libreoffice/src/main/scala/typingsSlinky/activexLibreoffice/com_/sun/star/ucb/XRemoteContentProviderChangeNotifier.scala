@@ -11,18 +11,17 @@ import scala.scalajs.js.annotation._
   * @author Stephan Bergmann
   * @version 1.0
   */
-@js.native
 trait XRemoteContentProviderChangeNotifier extends XInterface {
   /**
     * Add a listener.
     * @param Listener Some listener.
     */
-  def addRemoteContentProviderChangeListener(Listener: XRemoteContentProviderChangeListener): Unit = js.native
+  def addRemoteContentProviderChangeListener(Listener: XRemoteContentProviderChangeListener): Unit
   /**
     * Remove a listener.
     * @param Listener Some listener previously added via {@link XRemoteContentProviderChangeNotifier.addRemoteContentProviderChangeListener()} .
     */
-  def removeRemoteContentProviderChangeListener(Listener: XRemoteContentProviderChangeListener): Unit = js.native
+  def removeRemoteContentProviderChangeListener(Listener: XRemoteContentProviderChangeListener): Unit
 }
 
 object XRemoteContentProviderChangeNotifier {
@@ -37,25 +36,5 @@ object XRemoteContentProviderChangeNotifier {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addRemoteContentProviderChangeListener = js.Any.fromFunction1(addRemoteContentProviderChangeListener), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeRemoteContentProviderChangeListener = js.Any.fromFunction1(removeRemoteContentProviderChangeListener))
     __obj.asInstanceOf[XRemoteContentProviderChangeNotifier]
   }
-  @scala.inline
-  implicit class XRemoteContentProviderChangeNotifierOps[Self <: XRemoteContentProviderChangeNotifier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddRemoteContentProviderChangeListener(value: XRemoteContentProviderChangeListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addRemoteContentProviderChangeListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveRemoteContentProviderChangeListener(value: XRemoteContentProviderChangeListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeRemoteContentProviderChangeListener")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

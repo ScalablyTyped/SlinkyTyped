@@ -5,89 +5,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISwatchColorPickerStyles extends js.Object {
   /**
     * Style for the FocusZone container for the grid.
     */
-  var focusedContainer: js.UndefOr[IStyle] = js.native
+  var focusedContainer: js.UndefOr[IStyle] = js.undefined
   /**
     * Style applied to the container grid.
     */
-  var root: IStyle = js.native
+  var root: IStyle
   /**
     * Style for the table cells of the grid.
     */
-  var tableCell: IStyle = js.native
+  var tableCell: IStyle
 }
 
 object ISwatchColorPickerStyles {
   @scala.inline
-  def apply(): ISwatchColorPickerStyles = {
+  def apply(
+    focusedContainer: js.UndefOr[Null | IStyle] = js.undefined,
+    root: js.UndefOr[Null | IStyle] = js.undefined,
+    tableCell: js.UndefOr[Null | IStyle] = js.undefined
+  ): ISwatchColorPickerStyles = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(focusedContainer)) __obj.updateDynamic("focusedContainer")(focusedContainer.asInstanceOf[js.Any])
+    if (!js.isUndefined(root)) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
+    if (!js.isUndefined(tableCell)) __obj.updateDynamic("tableCell")(tableCell.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISwatchColorPickerStyles]
   }
-  @scala.inline
-  implicit class ISwatchColorPickerStylesOps[Self <: ISwatchColorPickerStyles] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFocusedContainer(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusedContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFocusedContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusedContainer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFocusedContainerNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusedContainer")(null)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(null)
-        ret
-    }
-    @scala.inline
-    def withTableCell(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCell")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableCell: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCell")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableCellNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCell")(null)
-        ret
-    }
-  }
-  
 }
 

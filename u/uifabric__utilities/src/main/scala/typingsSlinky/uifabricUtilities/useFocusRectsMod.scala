@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object useFocusRectsMod extends js.Object {
   val FocusRects: ReactComponentClass[RootRef] = js.native
-  val IsFocusVisibleClassName: /* "ms-Fabric--isFocusVisible" */ String = js.native
   def useFocusRects(): Unit = js.native
   def useFocusRects(rootRef: ReactRef[HTMLElement]): Unit = js.native
 }

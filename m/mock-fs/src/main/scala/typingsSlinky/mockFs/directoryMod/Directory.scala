@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Directory extends Item {
   /**
     * Add an item to the directory.
@@ -14,18 +13,18 @@ trait Directory extends Item {
     * @param item The item to add.
     * @return The added item.
     */
-  def addItem[T /* <: typingsSlinky.mockFs.itemMod.^ */](name: String, item: T): T = js.native
+  def addItem[T /* <: typingsSlinky.mockFs.itemMod.^ */](name: String, item: T): T
   /** Get a named item (or null if none). */
-  def getItem(name: String): typingsSlinky.mockFs.itemMod.^  | Null = js.native
+  def getItem(name: String): typingsSlinky.mockFs.itemMod.^  | Null
   /** Get sorted list of item names in this directory. */
-  def list(): js.Array[String] = js.native
+  def list(): js.Array[String]
   /**
     * Remove an item. Will throw an error if not present.
     *
     * @param name Name of the item to remove.
     * @return The orphan item.
     */
-  def removeItem(name: String): typingsSlinky.mockFs.itemMod.^ = js.native
+  def removeItem(name: String): typingsSlinky.mockFs.itemMod.^
 }
 
 object Directory {
@@ -57,37 +56,5 @@ object Directory {
     val __obj = js.Dynamic.literal(addItem = js.Any.fromFunction2(addItem), canExecute = js.Any.fromFunction0(canExecute), canRead = js.Any.fromFunction0(canRead), canWrite = js.Any.fromFunction0(canWrite), getATime = js.Any.fromFunction0(getATime), getBirthtime = js.Any.fromFunction0(getBirthtime), getCTime = js.Any.fromFunction0(getCTime), getGid = js.Any.fromFunction0(getGid), getItem = js.Any.fromFunction1(getItem), getMTime = js.Any.fromFunction0(getMTime), getMode = js.Any.fromFunction0(getMode), getStats = js.Any.fromFunction0(getStats), getUid = js.Any.fromFunction0(getUid), list = js.Any.fromFunction0(list), removeItem = js.Any.fromFunction1(removeItem), setATime = js.Any.fromFunction1(setATime), setBirthtime = js.Any.fromFunction1(setBirthtime), setCTime = js.Any.fromFunction1(setCTime), setGid = js.Any.fromFunction1(setGid), setMTime = js.Any.fromFunction1(setMTime), setMode = js.Any.fromFunction1(setMode), setUid = js.Any.fromFunction1(setUid))
     __obj.asInstanceOf[Directory]
   }
-  @scala.inline
-  implicit class DirectoryOps[Self <: Directory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddItem(value: (String, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addItem")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetItem(value: String => typingsSlinky.mockFs.itemMod.^  | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: () => js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveItem(value: String => typingsSlinky.mockFs.itemMod.^): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeItem")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

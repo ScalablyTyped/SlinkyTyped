@@ -7,62 +7,20 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<react-lazylog.react-lazylog/build/LinePart.LinePartProps> */
-@js.native
 trait PartialLinePartProps extends js.Object {
-  var format: js.UndefOr[js.Function1[/* text */ String, TagMod[Any]]] = js.native
-  var part: js.UndefOr[Text] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
+  var format: js.UndefOr[js.Function1[/* text */ String, TagMod[Any]]] = js.undefined
+  var part: js.UndefOr[Text] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
 }
 
 object PartialLinePartProps {
   @scala.inline
-  def apply(): PartialLinePartProps = {
+  def apply(format: /* text */ String => TagMod[Any] = null, part: Text = null, style: CSSProperties = null): PartialLinePartProps = {
     val __obj = js.Dynamic.literal()
+    if (format != null) __obj.updateDynamic("format")(js.Any.fromFunction1(format))
+    if (part != null) __obj.updateDynamic("part")(part.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialLinePartProps]
   }
-  @scala.inline
-  implicit class PartialLinePartPropsOps[Self <: PartialLinePartProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormat(value: /* text */ String => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPart(value: Text): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("part")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("part")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

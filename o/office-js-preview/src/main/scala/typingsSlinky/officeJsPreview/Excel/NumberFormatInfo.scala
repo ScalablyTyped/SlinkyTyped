@@ -12,8 +12,7 @@ import scala.scalajs.js.annotation._
   *
   * Defines the culturally appropriate format of displaying numbers. This is based on current system culture settings.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.11]
   */
 @js.native
 trait NumberFormatInfo extends ClientObject {
@@ -24,16 +23,14 @@ trait NumberFormatInfo extends ClientObject {
     *
     * Gets the string used as the decimal separator for numeric values. This is based on current system settings.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.11]
     */
   val numberDecimalSeparator: String = js.native
   /**
     *
     * Gets the string used to separate groups of digits to the left of the decimal for numeric values. This is based on current system settings.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.11]
     */
   val numberGroupSeparator: String = js.native
   /**

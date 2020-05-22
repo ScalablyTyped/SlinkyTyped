@@ -20,6 +20,11 @@ class UtilityLayerRenderer protected ()
   originalScene: typingsSlinky.babylonjs.BABYLON.Scene,
     handleEvents: Boolean
   ) = this()
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 
 /* static members */

@@ -6,12 +6,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the result of an asynchronous read operation of a GATT Characteristic or Descriptor value. */
-@js.native
 trait GattReadResult extends js.Object {
   /** Gets the status of an asynchronous operation. */
-  var status: GattCommunicationStatus = js.native
+  var status: GattCommunicationStatus
   /** Gets the value read from the device. */
-  var value: IBuffer = js.native
+  var value: IBuffer
 }
 
 object GattReadResult {
@@ -20,25 +19,5 @@ object GattReadResult {
     val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[GattReadResult]
   }
-  @scala.inline
-  implicit class GattReadResultOps[Self <: GattReadResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStatus(value: GattCommunicationStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: IBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

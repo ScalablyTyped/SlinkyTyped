@@ -4,76 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FileNames extends js.Object {
-  var css: js.UndefOr[String] = js.native
-  var font: js.UndefOr[String] = js.native
-  var image: js.UndefOr[String] = js.native
+  var css: js.UndefOr[String] = js.undefined
+  var font: js.UndefOr[String] = js.undefined
+  var image: js.UndefOr[String] = js.undefined
   @JSName("js")
-  var js_ : js.UndefOr[String] = js.native
+  var js_ : js.UndefOr[String] = js.undefined
 }
 
 object FileNames {
   @scala.inline
-  def apply(): FileNames = {
+  def apply(css: String = null, font: String = null, image: String = null, js_ : String = null): FileNames = {
     val __obj = js.Dynamic.literal()
+    if (css != null) __obj.updateDynamic("css")(css.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (js_ != null) __obj.updateDynamic("js")(js_.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileNames]
   }
-  @scala.inline
-  implicit class FileNamesOps[Self <: FileNames] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCss(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFont(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJs_(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("js")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJs_ : Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("js")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

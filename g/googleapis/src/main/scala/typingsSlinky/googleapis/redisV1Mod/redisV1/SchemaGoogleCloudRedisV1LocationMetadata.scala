@@ -24,29 +24,10 @@ trait SchemaGoogleCloudRedisV1LocationMetadata extends js.Object {
 
 object SchemaGoogleCloudRedisV1LocationMetadata {
   @scala.inline
-  def apply(): SchemaGoogleCloudRedisV1LocationMetadata = {
+  def apply(availableZones: StringDictionary[SchemaGoogleCloudRedisV1ZoneMetadata] = null): SchemaGoogleCloudRedisV1LocationMetadata = {
     val __obj = js.Dynamic.literal()
+    if (availableZones != null) __obj.updateDynamic("availableZones")(availableZones.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudRedisV1LocationMetadata]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudRedisV1LocationMetadataOps[Self <: SchemaGoogleCloudRedisV1LocationMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvailableZones(value: StringDictionary[SchemaGoogleCloudRedisV1ZoneMetadata]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availableZones")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailableZones: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availableZones")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

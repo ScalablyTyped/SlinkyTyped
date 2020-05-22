@@ -4,127 +4,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PivotSchema extends DataSourceSchema {
-  var axes: js.UndefOr[js.Any] = js.native
-  var catalogs: js.UndefOr[js.Any] = js.native
-  var cube: js.UndefOr[js.Any] = js.native
-  var cubes: js.UndefOr[js.Any] = js.native
-  var dimensions: js.UndefOr[js.Any] = js.native
-  var hierarchies: js.UndefOr[js.Any] = js.native
-  var levels: js.UndefOr[js.Any] = js.native
-  var measures: js.UndefOr[js.Any] = js.native
+  var axes: js.UndefOr[js.Any] = js.undefined
+  var catalogs: js.UndefOr[js.Any] = js.undefined
+  var cube: js.UndefOr[js.Any] = js.undefined
+  var cubes: js.UndefOr[js.Any] = js.undefined
+  var dimensions: js.UndefOr[js.Any] = js.undefined
+  var hierarchies: js.UndefOr[js.Any] = js.undefined
+  var levels: js.UndefOr[js.Any] = js.undefined
+  var measures: js.UndefOr[js.Any] = js.undefined
 }
 
 object PivotSchema {
   @scala.inline
-  def apply(): PivotSchema = {
+  def apply(
+    aggregates: js.Any = null,
+    axes: js.Any = null,
+    catalogs: js.Any = null,
+    cube: js.Any = null,
+    cubes: js.Any = null,
+    data: js.Any = null,
+    dimensions: js.Any = null,
+    errors: js.Any = null,
+    groups: js.Any = null,
+    hierarchies: js.Any = null,
+    levels: js.Any = null,
+    measures: js.Any = null,
+    model: js.Any = null,
+    parse: js.Function = null,
+    total: js.Any = null,
+    `type`: String = null
+  ): PivotSchema = {
     val __obj = js.Dynamic.literal()
+    if (aggregates != null) __obj.updateDynamic("aggregates")(aggregates.asInstanceOf[js.Any])
+    if (axes != null) __obj.updateDynamic("axes")(axes.asInstanceOf[js.Any])
+    if (catalogs != null) __obj.updateDynamic("catalogs")(catalogs.asInstanceOf[js.Any])
+    if (cube != null) __obj.updateDynamic("cube")(cube.asInstanceOf[js.Any])
+    if (cubes != null) __obj.updateDynamic("cubes")(cubes.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (dimensions != null) __obj.updateDynamic("dimensions")(dimensions.asInstanceOf[js.Any])
+    if (errors != null) __obj.updateDynamic("errors")(errors.asInstanceOf[js.Any])
+    if (groups != null) __obj.updateDynamic("groups")(groups.asInstanceOf[js.Any])
+    if (hierarchies != null) __obj.updateDynamic("hierarchies")(hierarchies.asInstanceOf[js.Any])
+    if (levels != null) __obj.updateDynamic("levels")(levels.asInstanceOf[js.Any])
+    if (measures != null) __obj.updateDynamic("measures")(measures.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (parse != null) __obj.updateDynamic("parse")(parse.asInstanceOf[js.Any])
+    if (total != null) __obj.updateDynamic("total")(total.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PivotSchema]
   }
-  @scala.inline
-  implicit class PivotSchemaOps[Self <: PivotSchema] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAxes(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCatalogs(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("catalogs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCatalogs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("catalogs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCube(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cube")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCube: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cube")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCubes(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cubes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCubes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cubes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDimensions(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHierarchies(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hierarchies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHierarchies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hierarchies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevels(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("levels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("levels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeasures(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeasures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measures")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

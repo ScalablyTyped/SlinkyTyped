@@ -6,26 +6,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PortalItemApplicationProxies extends Object {
   /**
     * The proxy ID registered in ArcGIS Online or ArcGIS Enterprise Portal.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#applicationProxies)
     */
-  var proxyId: String = js.native
+  var proxyId: String
   /**
     * The proxy URL for the source URL.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#applicationProxies)
     */
-  var proxyUrl: String = js.native
+  var proxyUrl: String
   /**
     * The URL of the premium map service layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#applicationProxies)
     */
-  var sourceUrl: String = js.native
+  var sourceUrl: String
 }
 
 object PortalItemApplicationProxies {
@@ -41,31 +40,5 @@ object PortalItemApplicationProxies {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), proxyId = proxyId.asInstanceOf[js.Any], proxyUrl = proxyUrl.asInstanceOf[js.Any], sourceUrl = sourceUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[PortalItemApplicationProxies]
   }
-  @scala.inline
-  implicit class PortalItemApplicationProxiesOps[Self <: PortalItemApplicationProxies] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProxyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProxyUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

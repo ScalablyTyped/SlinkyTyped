@@ -4,49 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IShallowRendererProps extends js.Object {
-  var disableLifecycleMethods: js.UndefOr[Boolean] = js.native
-  var lifecycleExperimental: js.UndefOr[Boolean] = js.native
+  var disableLifecycleMethods: js.UndefOr[Boolean] = js.undefined
+  var lifecycleExperimental: js.UndefOr[Boolean] = js.undefined
 }
 
 object IShallowRendererProps {
   @scala.inline
-  def apply(): IShallowRendererProps = {
+  def apply(
+    disableLifecycleMethods: js.UndefOr[Boolean] = js.undefined,
+    lifecycleExperimental: js.UndefOr[Boolean] = js.undefined
+  ): IShallowRendererProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(disableLifecycleMethods)) __obj.updateDynamic("disableLifecycleMethods")(disableLifecycleMethods.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lifecycleExperimental)) __obj.updateDynamic("lifecycleExperimental")(lifecycleExperimental.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IShallowRendererProps]
   }
-  @scala.inline
-  implicit class IShallowRendererPropsOps[Self <: IShallowRendererProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisableLifecycleMethods(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableLifecycleMethods")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableLifecycleMethods: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableLifecycleMethods")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLifecycleExperimental(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycleExperimental")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLifecycleExperimental: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycleExperimental")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

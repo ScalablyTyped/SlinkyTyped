@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RouteOptionsAccess extends js.Object {
   /**
     * @default none.
@@ -15,7 +14,7 @@ trait RouteOptionsAccess extends js.Object {
     * must include at least one of scope or entity.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsauthaccess)
     */
-  var access: js.UndefOr[RouteOptionsAccessObject | js.Array[RouteOptionsAccessObject]] = js.native
+  var access: js.UndefOr[RouteOptionsAccessObject | js.Array[RouteOptionsAccessObject]] = js.undefined
   /**
     * @default 'any'.
     * The required authenticated entity type. If set, must match the entity value of the request authenticated credentials. Available values:
@@ -25,7 +24,7 @@ trait RouteOptionsAccess extends js.Object {
     * strategy.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsauthaccessentity)
     */
-  var entity: js.UndefOr[AccessEntity] = js.native
+  var entity: js.UndefOr[AccessEntity] = js.undefined
   /**
     * @default 'required'.
     * The authentication mode. Available values:
@@ -34,7 +33,7 @@ trait RouteOptionsAccess extends js.Object {
     * * 'try' - similar to 'optional', any request credentials are attempted authentication, but if the credentials are invalid, the request proceeds regardless of the authentication error.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsauthmode)
     */
-  var mode: js.UndefOr[AuthMode] = js.native
+  var mode: js.UndefOr[AuthMode] = js.undefined
   /**
     * @default false, unless the scheme requires payload authentication.
     * If set, the incoming request payload is authenticated after it is processed. Requires a strategy with payload authentication support (e.g. Hawk). Cannot be set to a value other than 'required'
@@ -44,7 +43,7 @@ trait RouteOptionsAccess extends js.Object {
     * * 'optional' - payload authentication performed only when the client includes payload authentication information (e.g. hash attribute in Hawk).
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsauthpayload)
     */
-  var payload: js.UndefOr[`false` | required | optional] = js.native
+  var payload: js.UndefOr[`false` | required | optional] = js.undefined
   /**
     * @default false (no scope requirements).
     * The application scope required to access the route. Value can be a scope string or an array of scope strings. When authenticated, the credentials object scope property must contain at least
@@ -53,118 +52,41 @@ trait RouteOptionsAccess extends js.Object {
     * properties on the request object (query, params, payload, and credentials) to populate a dynamic scope by using the '{' and '}' characters around the property name, such as 'user-{params.id}'.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsauthaccessscope)
     */
-  var scope: js.UndefOr[RouteOptionsAccessScope] = js.native
+  var scope: js.UndefOr[RouteOptionsAccessScope] = js.undefined
   /**
     * @default the default strategy set via server.auth.default().
     * An array of string strategy names in the order they should be attempted. Cannot be used together with strategy.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsauthstrategies)
     */
-  var strategies: js.UndefOr[js.Array[String]] = js.native
+  var strategies: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * @default the default strategy set via server.auth.default().
     * A string strategy names. Cannot be used together with strategies.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsauthstrategy)
     */
-  var strategy: js.UndefOr[String] = js.native
+  var strategy: js.UndefOr[String] = js.undefined
 }
 
 object RouteOptionsAccess {
   @scala.inline
-  def apply(): RouteOptionsAccess = {
+  def apply(
+    access: RouteOptionsAccessObject | js.Array[RouteOptionsAccessObject] = null,
+    entity: AccessEntity = null,
+    mode: AuthMode = null,
+    payload: `false` | required | optional = null,
+    scope: RouteOptionsAccessScope = null,
+    strategies: js.Array[String] = null,
+    strategy: String = null
+  ): RouteOptionsAccess = {
     val __obj = js.Dynamic.literal()
+    if (access != null) __obj.updateDynamic("access")(access.asInstanceOf[js.Any])
+    if (entity != null) __obj.updateDynamic("entity")(entity.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (payload != null) __obj.updateDynamic("payload")(payload.asInstanceOf[js.Any])
+    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
+    if (strategies != null) __obj.updateDynamic("strategies")(strategies.asInstanceOf[js.Any])
+    if (strategy != null) __obj.updateDynamic("strategy")(strategy.asInstanceOf[js.Any])
     __obj.asInstanceOf[RouteOptionsAccess]
   }
-  @scala.inline
-  implicit class RouteOptionsAccessOps[Self <: RouteOptionsAccess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccess(value: RouteOptionsAccessObject | js.Array[RouteOptionsAccessObject]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntity(value: AccessEntity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: AuthMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayload(value: `false` | required | optional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScope(value: RouteOptionsAccessScope): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrategies(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strategies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrategies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strategies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrategy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strategy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

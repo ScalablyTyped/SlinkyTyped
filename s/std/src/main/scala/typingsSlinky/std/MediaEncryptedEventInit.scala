@@ -4,55 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MediaEncryptedEventInit extends EventInit {
-  var initData: js.UndefOr[js.typedarray.ArrayBuffer | Null] = js.native
-  var initDataType: js.UndefOr[java.lang.String] = js.native
+  var initData: js.UndefOr[js.typedarray.ArrayBuffer | Null] = js.undefined
+  var initDataType: js.UndefOr[java.lang.String] = js.undefined
 }
 
 object MediaEncryptedEventInit {
   @scala.inline
-  def apply(): MediaEncryptedEventInit = {
+  def apply(
+    bubbles: js.UndefOr[scala.Boolean] = js.undefined,
+    cancelable: js.UndefOr[scala.Boolean] = js.undefined,
+    composed: js.UndefOr[scala.Boolean] = js.undefined,
+    initData: js.UndefOr[Null | js.typedarray.ArrayBuffer] = js.undefined,
+    initDataType: java.lang.String = null
+  ): MediaEncryptedEventInit = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(bubbles)) __obj.updateDynamic("bubbles")(bubbles.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cancelable)) __obj.updateDynamic("cancelable")(cancelable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(composed)) __obj.updateDynamic("composed")(composed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(initData)) __obj.updateDynamic("initData")(initData.asInstanceOf[js.Any])
+    if (initDataType != null) __obj.updateDynamic("initDataType")(initDataType.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaEncryptedEventInit]
   }
-  @scala.inline
-  implicit class MediaEncryptedEventInitOps[Self <: MediaEncryptedEventInit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInitData(value: js.typedarray.ArrayBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitDataNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initData")(null)
-        ret
-    }
-    @scala.inline
-    def withInitDataType(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initDataType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitDataType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initDataType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

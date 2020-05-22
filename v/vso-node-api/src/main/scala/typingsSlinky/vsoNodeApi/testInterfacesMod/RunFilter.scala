@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RunFilter extends js.Object {
   /**
     * filter for the test case sources (test containers)
     */
-  var sourceFilter: String = js.native
+  var sourceFilter: String
   /**
     * filter for the test cases
     */
-  var testCaseFilter: String = js.native
+  var testCaseFilter: String
 }
 
 object RunFilter {
@@ -22,25 +21,5 @@ object RunFilter {
     val __obj = js.Dynamic.literal(sourceFilter = sourceFilter.asInstanceOf[js.Any], testCaseFilter = testCaseFilter.asInstanceOf[js.Any])
     __obj.asInstanceOf[RunFilter]
   }
-  @scala.inline
-  implicit class RunFilterOps[Self <: RunFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSourceFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTestCaseFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testCaseFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

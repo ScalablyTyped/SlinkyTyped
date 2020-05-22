@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IValueListItemsWithPermissions extends js.Object {
-  val Permissions: IAccessControlLists = js.native
-  val ValueListItems: IValueListItems = js.native
+  val Permissions: IAccessControlLists
+  val ValueListItems: IValueListItems
 }
 
 object IValueListItemsWithPermissions {
@@ -16,25 +15,5 @@ object IValueListItemsWithPermissions {
     val __obj = js.Dynamic.literal(Permissions = Permissions.asInstanceOf[js.Any], ValueListItems = ValueListItems.asInstanceOf[js.Any])
     __obj.asInstanceOf[IValueListItemsWithPermissions]
   }
-  @scala.inline
-  implicit class IValueListItemsWithPermissionsOps[Self <: IValueListItemsWithPermissions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPermissions(value: IAccessControlLists): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Permissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValueListItems(value: IValueListItems): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValueListItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

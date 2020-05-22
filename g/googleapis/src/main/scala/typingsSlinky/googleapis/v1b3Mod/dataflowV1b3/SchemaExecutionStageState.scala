@@ -25,53 +25,16 @@ trait SchemaExecutionStageState extends js.Object {
 
 object SchemaExecutionStageState {
   @scala.inline
-  def apply(): SchemaExecutionStageState = {
+  def apply(
+    currentStateTime: String = null,
+    executionStageName: String = null,
+    executionStageState: String = null
+  ): SchemaExecutionStageState = {
     val __obj = js.Dynamic.literal()
+    if (currentStateTime != null) __obj.updateDynamic("currentStateTime")(currentStateTime.asInstanceOf[js.Any])
+    if (executionStageName != null) __obj.updateDynamic("executionStageName")(executionStageName.asInstanceOf[js.Any])
+    if (executionStageState != null) __obj.updateDynamic("executionStageState")(executionStageState.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaExecutionStageState]
   }
-  @scala.inline
-  implicit class SchemaExecutionStageStateOps[Self <: SchemaExecutionStageState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentStateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentStateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentStateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentStateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecutionStageName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionStageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionStageName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionStageName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecutionStageState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionStageState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionStageState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionStageState")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

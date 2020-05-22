@@ -1081,20 +1081,20 @@ package object igniteUi {
     scala.Unit
   ]
   type HierarchicalDataSourceSettingsFiltering = /**
-  	 * Option for HierarchicalDataSourceSettingsFiltering
-  	 */
+    * Option for HierarchicalDataSourceSettingsFiltering
+    */
   org.scalablytyped.runtime.StringDictionary[js.Any]
   type HierarchicalDataSourceSettingsPaging = /**
-  	 * Option for HierarchicalDataSourceSettingsPaging
-  	 */
+    * Option for HierarchicalDataSourceSettingsPaging
+    */
   org.scalablytyped.runtime.StringDictionary[js.Any]
   type HierarchicalDataSourceSettingsSchema = /**
-  	 * Option for HierarchicalDataSourceSettingsSchema
-  	 */
+    * Option for HierarchicalDataSourceSettingsSchema
+    */
   org.scalablytyped.runtime.StringDictionary[js.Any]
   type HierarchicalDataSourceSettingsSorting = /**
-  	 * Option for HierarchicalDataSourceSettingsSorting
-  	 */
+    * Option for HierarchicalDataSourceSettingsSorting
+    */
   org.scalablytyped.runtime.StringDictionary[js.Any]
   type HoleDimensionsChangedEvent = js.Function2[
     /* event */ org.scalajs.dom.raw.Event, 
@@ -1117,8 +1117,8 @@ package object igniteUi {
     scala.Unit
   ]
   type IgEditorFilter = /**
-  	 * Option for igEditorFilter
-  	 */
+    * Option for igEditorFilter
+    */
   org.scalablytyped.runtime.StringDictionary[js.Any]
   type IgFocusEvent = js.Function2[
     /* event */ org.scalajs.dom.raw.Event, 
@@ -1126,20 +1126,20 @@ package object igniteUi {
     scala.Unit
   ]
   type IgGridFilteringColumnSettingDefaultExpressions = /**
-  	 * Option for IgGridFilteringColumnSettingDefaultExpressions
-  	 */
+    * Option for IgGridFilteringColumnSettingDefaultExpressions
+    */
   org.scalablytyped.runtime.StringDictionary[js.Any]
   type IgPivotGridGridOptionsFeatures = /**
-  	 * Option for IgPivotGridGridOptionsFeatures
-  	 */
+    * Option for IgPivotGridGridOptionsFeatures
+    */
   org.scalablytyped.runtime.StringDictionary[js.Any]
   type IgPivotViewPivotGridOptionsGridOptionsFeatures = /**
-  	 * Option for IgPivotViewPivotGridOptionsGridOptionsFeatures
-  	 */
+    * Option for IgPivotViewPivotGridOptionsGridOptionsFeatures
+    */
   org.scalablytyped.runtime.StringDictionary[js.Any]
   type IgSpreadsheetBrushes = /**
-  	 * Option for IgSpreadsheetBrushes
-  	 */
+    * Option for IgSpreadsheetBrushes
+    */
   org.scalablytyped.runtime.StringDictionary[js.Any]
   type IgSpreadsheetSelectionChangedEvent = js.Function2[
     /* event */ org.scalajs.dom.raw.Event, 
@@ -1147,16 +1147,16 @@ package object igniteUi {
     scala.Unit
   ]
   type IgTemplatingRegExp = /**
-  	 * Option for IgTemplatingRegExp
-  	 */
+    * Option for IgTemplatingRegExp
+    */
   org.scalablytyped.runtime.StringDictionary[js.Any]
   type IgTreeBindingsBindings = /**
-  	 * Option for IgTreeBindingsBindings
-  	 */
+    * Option for IgTreeBindingsBindings
+    */
   org.scalablytyped.runtime.StringDictionary[js.Any]
   type IgTreeGridRestSettings = /**
-  	 * Option for IgTreeGridRestSettings
-  	 */
+    * Option for IgTreeGridRestSettings
+    */
   org.scalablytyped.runtime.StringDictionary[js.Any]
   type IgTreeSelectionChangedEvent = js.Function2[
     /* event */ org.scalajs.dom.raw.Event, 
@@ -1829,8 +1829,8 @@ package object igniteUi {
     scala.Unit
   ]
   type SelectionCollectionSettingsSubscribers = /**
-  	 * Option for SelectionCollectionSettingsSubscribers
-  	 */
+    * Option for SelectionCollectionSettingsSubscribers
+    */
   org.scalablytyped.runtime.StringDictionary[js.Any]
   type SeriesAddedEvent = js.Function2[
     /* event */ org.scalajs.dom.raw.Event, 

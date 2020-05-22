@@ -17,18 +17,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Pattern, 'type'> */
-@js.native
 trait TSParameterProperty
   extends ASTNode
      with NodeKind
      with PatternKind
      with PrintableKind {
-  var accessibility: js.UndefOr[public | `private` | `protected`] = js.native
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var parameter: IdentifierKind | AssignmentPatternKind = js.native
-  var readonly: js.UndefOr[Boolean] = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSParameterProperty = js.native
+  var accessibility: js.UndefOr[public | `private` | `protected`] = js.undefined
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var parameter: IdentifierKind | AssignmentPatternKind
+  var readonly: js.UndefOr[Boolean] = js.undefined
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSParameterProperty
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TSParameterProperty")

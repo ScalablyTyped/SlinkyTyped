@@ -18,52 +18,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClassName extends js.Object {
-  var `aria-label`: Requireable[String] = js.native
-  var autoHeight: Requireable[Boolean] = js.native
-  var children: Validator[Column] = js.native
-  var className: Requireable[String] = js.native
-  var disableHeader: Requireable[Boolean] = js.native
-  var estimatedRowSize: Validator[Double] = js.native
-  var gridClassName: Requireable[String] = js.native
-  var gridStyle: Requireable[CSSProperties] = js.native
-  var headerClassName: Requireable[String] = js.native
-  var headerHeight: Validator[Double] = js.native
-  var headerRowRenderer: Requireable[TableHeaderRowRenderer] = js.native
-  var headerStyle: Requireable[CSSProperties] = js.native
-  var height: Validator[Double] = js.native
-  var id: Requireable[String] = js.native
-  var noRowsRenderer: Requireable[js.Function0[ReactElement]] = js.native
-  var onHeaderClick: Requireable[js.Function1[/* params */ HeaderMouseEventHandlerParams, Unit]] = js.native
-  var onRowClick: Requireable[js.Function1[/* params */ RowMouseEventHandlerParams, Unit]] = js.native
-  var onRowDoubleClick: Requireable[js.Function1[/* params */ RowMouseEventHandlerParams, Unit]] = js.native
-  var onRowMouseOut: Requireable[js.Function1[/* params */ RowMouseEventHandlerParams, Unit]] = js.native
-  var onRowMouseOver: Requireable[js.Function1[/* params */ RowMouseEventHandlerParams, Unit]] = js.native
-  var onRowsRendered: Requireable[js.Function1[/* params */ IndexRange with OverscanIndexRange, Unit]] = js.native
-  var onScroll: Requireable[js.Function1[/* params */ ScrollEventData, Unit]] = js.native
-  var overscanRowCount: Validator[Double] = js.native
+  var `aria-label`: Requireable[String]
+  var autoHeight: Requireable[Boolean]
+  var children: Validator[Column]
+  var className: Requireable[String]
+  var disableHeader: Requireable[Boolean]
+  var estimatedRowSize: Validator[Double]
+  var gridClassName: Requireable[String]
+  var gridStyle: Requireable[CSSProperties]
+  var headerClassName: Requireable[String]
+  var headerHeight: Validator[Double]
+  var headerRowRenderer: Requireable[TableHeaderRowRenderer]
+  var headerStyle: Requireable[CSSProperties]
+  var height: Validator[Double]
+  var id: Requireable[String]
+  var noRowsRenderer: Requireable[js.Function0[ReactElement]]
+  var onHeaderClick: Requireable[js.Function1[/* params */ HeaderMouseEventHandlerParams, Unit]]
+  var onRowClick: Requireable[js.Function1[/* params */ RowMouseEventHandlerParams, Unit]]
+  var onRowDoubleClick: Requireable[js.Function1[/* params */ RowMouseEventHandlerParams, Unit]]
+  var onRowMouseOut: Requireable[js.Function1[/* params */ RowMouseEventHandlerParams, Unit]]
+  var onRowMouseOver: Requireable[js.Function1[/* params */ RowMouseEventHandlerParams, Unit]]
+  var onRowsRendered: Requireable[js.Function1[/* params */ IndexRange with OverscanIndexRange, Unit]]
+  var onScroll: Requireable[js.Function1[/* params */ ScrollEventData, Unit]]
+  var overscanRowCount: Validator[Double]
   var rowClassName: Requireable[
     String | (js.Function1[/* params */ typingsSlinky.reactVirtualized.mod.Index, String])
-  ] = js.native
-  var rowCount: Validator[Double] = js.native
-  var rowGetter: Validator[js.Function1[/* params */ typingsSlinky.reactVirtualized.mod.Index, _]] = js.native
+  ]
+  var rowCount: Validator[Double]
+  var rowGetter: Validator[js.Function1[/* params */ typingsSlinky.reactVirtualized.mod.Index, _]]
   var rowHeight: Validator[
     Double | (js.Function1[/* params */ typingsSlinky.reactVirtualized.mod.Index, Double])
-  ] = js.native
-  var rowRenderer: Requireable[js.Function1[/* props */ TableRowProps, TagMod[Any]]] = js.native
+  ]
+  var rowRenderer: Requireable[js.Function1[/* props */ TableRowProps, TagMod[Any]]]
   var rowStyle: Validator[
     CSSProperties | (js.Function1[/* params */ typingsSlinky.reactVirtualized.mod.Index, CSSProperties])
-  ] = js.native
-  var scrollToAlignment: Validator[typingsSlinky.reactVirtualized.mod.Alignment] = js.native
-  var scrollToIndex: Validator[Double] = js.native
-  var scrollTop: Requireable[Double] = js.native
-  var sort: Requireable[js.Function1[/* params */ SortBy, Unit]] = js.native
-  var sortBy: Requireable[String] = js.native
-  var sortDirection: Validator[SortDirectionType] = js.native
-  var style: Requireable[CSSProperties] = js.native
-  var tabIndex: Requireable[Double] = js.native
-  var width: Validator[Double] = js.native
+  ]
+  var scrollToAlignment: Validator[typingsSlinky.reactVirtualized.mod.Alignment]
+  var scrollToIndex: Validator[Double]
+  var scrollTop: Requireable[Double]
+  var sort: Requireable[js.Function1[/* params */ SortBy, Unit]]
+  var sortBy: Requireable[String]
+  var sortDirection: Validator[SortDirectionType]
+  var style: Requireable[CSSProperties]
+  var tabIndex: Requireable[Double]
+  var width: Validator[Double]
 }
 
 object ClassName {
@@ -118,253 +117,5 @@ object ClassName {
     __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClassName]
   }
-  @scala.inline
-  implicit class ClassNameOps[Self <: ClassName] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withAria-label`(value: Requireable[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoHeight(value: Requireable[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: Validator[Column]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClassName(value: Requireable[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisableHeader(value: Requireable[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEstimatedRowSize(value: Validator[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedRowSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGridClassName(value: Requireable[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGridStyle(value: Requireable[CSSProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeaderClassName(value: Requireable[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeaderHeight(value: Validator[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeaderRowRenderer(value: Requireable[TableHeaderRowRenderer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerRowRenderer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeaderStyle(value: Requireable[CSSProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Validator[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: Requireable[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNoRowsRenderer(value: Requireable[js.Function0[ReactElement]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noRowsRenderer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnHeaderClick(value: Requireable[js.Function1[/* params */ HeaderMouseEventHandlerParams, Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHeaderClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnRowClick(value: Requireable[js.Function1[/* params */ RowMouseEventHandlerParams, Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnRowDoubleClick(value: Requireable[js.Function1[/* params */ RowMouseEventHandlerParams, Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowDoubleClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnRowMouseOut(value: Requireable[js.Function1[/* params */ RowMouseEventHandlerParams, Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowMouseOut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnRowMouseOver(value: Requireable[js.Function1[/* params */ RowMouseEventHandlerParams, Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowMouseOver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnRowsRendered(value: Requireable[js.Function1[/* params */ IndexRange with OverscanIndexRange, Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowsRendered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnScroll(value: Requireable[js.Function1[/* params */ ScrollEventData, Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOverscanRowCount(value: Validator[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overscanRowCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowClassName(
-      value: Requireable[
-          String | (js.Function1[/* params */ typingsSlinky.reactVirtualized.mod.Index, String])
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowCount(value: Validator[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowGetter(value: Validator[js.Function1[/* params */ typingsSlinky.reactVirtualized.mod.Index, _]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowGetter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowHeight(
-      value: Validator[
-          Double | (js.Function1[/* params */ typingsSlinky.reactVirtualized.mod.Index, Double])
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowRenderer(value: Requireable[js.Function1[/* props */ TableRowProps, TagMod[Any]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowRenderer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowStyle(
-      value: Validator[
-          CSSProperties | (js.Function1[/* params */ typingsSlinky.reactVirtualized.mod.Index, CSSProperties])
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScrollToAlignment(value: Validator[typingsSlinky.reactVirtualized.mod.Alignment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToAlignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScrollToIndex(value: Validator[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScrollTop(value: Requireable[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSort(value: Requireable[js.Function1[/* params */ SortBy, Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSortBy(value: Requireable[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSortDirection(value: Validator[SortDirectionType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStyle(value: Requireable[CSSProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTabIndex(value: Requireable[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Validator[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

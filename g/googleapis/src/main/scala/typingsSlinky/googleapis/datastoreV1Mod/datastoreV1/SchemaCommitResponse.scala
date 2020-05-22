@@ -23,41 +23,14 @@ trait SchemaCommitResponse extends js.Object {
 
 object SchemaCommitResponse {
   @scala.inline
-  def apply(): SchemaCommitResponse = {
+  def apply(
+    indexUpdates: js.UndefOr[Double] = js.undefined,
+    mutationResults: js.Array[SchemaMutationResult] = null
+  ): SchemaCommitResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(indexUpdates)) __obj.updateDynamic("indexUpdates")(indexUpdates.get.asInstanceOf[js.Any])
+    if (mutationResults != null) __obj.updateDynamic("mutationResults")(mutationResults.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCommitResponse]
   }
-  @scala.inline
-  implicit class SchemaCommitResponseOps[Self <: SchemaCommitResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndexUpdates(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexUpdates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndexUpdates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexUpdates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMutationResults(value: js.Array[SchemaMutationResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mutationResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMutationResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mutationResults")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

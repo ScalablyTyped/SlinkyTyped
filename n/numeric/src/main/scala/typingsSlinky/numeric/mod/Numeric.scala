@@ -2068,7 +2068,7 @@ trait Numeric extends js.Object {
   def addeq(x: Vector, y: Vector): Vector = js.native
   def addeqS(x: Vector, y: Scalar): Vector = js.native
   def addeqV(x: Vector, y: Vector): Vector = js.native
-  // 	All the components of x are true
+  //     All the components of x are true
   def all(x: js.Any): Boolean = js.native
   def allV(x: js.Array[_]): Boolean = js.native
   def and(x: Scalar, y: Scalar, args: (Scalar | Vector)*): Vector = js.native
@@ -2444,7 +2444,7 @@ trait Numeric extends js.Object {
       ]
     ]) | Scalar)*
   ): js.Array[js.Array[Double]] = js.native
-  // Pointwise	arc-tangent (two parameters)
+  // Pointwise    arc-tangent (two parameters)
   @JSName("atan2")
   def atan2_Scalar(x: Scalar, y: Scalar, args: Scalar*): Scalar = js.native
   def atan2eq(x: Vector, y: Scalar): Vector = js.native
@@ -3453,7 +3453,7 @@ trait Numeric extends js.Object {
     maxit: Double,
     event: js.Function2[/* x */ Vector | Scalar, /* y */ Vector | Scalar, Vector | Scalar]
   ): Dopri = js.native
-  // 	Matrix-Matrix, Matrix-Vector, Vector-Matrix and Vector-Vector product
+  //     Matrix-Matrix, Matrix-Vector, Vector-Matrix and Vector-Vector product
   def dot(x: Matrix | Vector, y: Matrix | Vector): Vector | Matrix | Scalar = js.native
   def dot(x: Matrix | Vector, y: Scalar): Vector | Matrix | Scalar = js.native
   def dot(x: Scalar, y: Matrix | Vector): Vector | Matrix | Scalar = js.native
@@ -3540,7 +3540,7 @@ trait Numeric extends js.Object {
     ]
   ): js.Array[Double] = js.native
   def expeqV(x: Vector): Vector = js.native
-  // 	Poinwise Math.floor(x)
+  //     Poinwise Math.floor(x)
   def floor(
     x: js.Array[
       (js.Array[
@@ -4757,7 +4757,7 @@ trait Numeric extends js.Object {
       ]
     ]) | Scalar)*
   ): js.Array[js.Array[Double]] = js.native
-  // 	Pointwise logical or x||y
+  //     Pointwise logical or x||y
   @JSName("or")
   def or_Scalar(x: Scalar, y: Scalar, args: Scalar*): Scalar = js.native
   def oreq(x: Vector, y: Scalar): Vector = js.native
@@ -4923,10 +4923,10 @@ trait Numeric extends js.Object {
   def prodV(x: Vector): Double = js.native
   // Create an Array of random numbers
   def random(s: Vector): Vector | MultidimensionalMatrix = js.native
-  // 	Create an Array by duplicating values
+  //     Create an Array by duplicating values
   def rep[T](scale: Vector, value: T): MultidimensionalArray[T] = js.native
   def rep[T](scale: Vector, value: T, key: Double): MultidimensionalArray[T] = js.native
-  // 	Pointwise Math.round(x)
+  //     Pointwise Math.round(x)
   def round(
     x: js.Array[
       (js.Array[
@@ -5275,7 +5275,7 @@ trait Numeric extends js.Object {
   def rshifteq(x: Vector, y: Vector): Vector = js.native
   def rshifteqS(x: Vector, y: Scalar): Vector = js.native
   def rshifteqV(x: Vector, y: Vector): Vector = js.native
-  // 	x and y are entrywise identical
+  //     x and y are entrywise identical
   def same(x: js.Any, y: js.Any): Boolean = js.native
   /** @deprecated */
   def sclone[T](matrix: T): T = js.native
@@ -5651,7 +5651,7 @@ trait Numeric extends js.Object {
   def subeqS(x: Vector, y: Scalar): Vector = js.native
   def subeqV(x: Vector, y: Vector): Vector = js.native
   def sum(x: MultidimensionalMatrix | Vector): Double = js.native
-  // 	Sum all the entries of x
+  //     Sum all the entries of x
   def sum(x: Scalar): Double = js.native
   def sumV(x: Vector): Double = js.native
   def sup(x: MultidimensionalMatrix | Vector): Double = js.native
@@ -5721,7 +5721,7 @@ trait Numeric extends js.Object {
   def taneqV(x: Vector): Vector = js.native
   // x * y
   def tensor(x: Scalar, y: Scalar): Scalar = js.native
-  // 	TensorValue product ret[i][j] = x[i]*y[j]
+  //     TensorValue product ret[i][j] = x[i]*y[j]
   def tensor(x: Vector, y: Vector): Matrix = js.native
   // toCSV is buggy.
   // https://github.com/sloisel/numeric/pull/51

@@ -16,29 +16,10 @@ trait SchemaPoolsDeleteRequest extends js.Object {
 
 object SchemaPoolsDeleteRequest {
   @scala.inline
-  def apply(): SchemaPoolsDeleteRequest = {
+  def apply(abandonInstances: js.Array[String] = null): SchemaPoolsDeleteRequest = {
     val __obj = js.Dynamic.literal()
+    if (abandonInstances != null) __obj.updateDynamic("abandonInstances")(abandonInstances.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPoolsDeleteRequest]
   }
-  @scala.inline
-  implicit class SchemaPoolsDeleteRequestOps[Self <: SchemaPoolsDeleteRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbandonInstances(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abandonInstances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbandonInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abandonInstances")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

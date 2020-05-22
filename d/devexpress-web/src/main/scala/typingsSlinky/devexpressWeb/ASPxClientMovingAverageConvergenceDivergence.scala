@@ -7,20 +7,19 @@ import scala.scalajs.js.annotation._
 /**
   * Represents the client-side equivalent of the MovingAverageConvergenceDivergence class.
   */
-@js.native
 trait ASPxClientMovingAverageConvergenceDivergence extends ASPxSeparatePaneIndicator {
   /**
     * Returns the long period value required to calculate the indicator.
     */
-  var longPeriod: Double = js.native
+  var longPeriod: Double
   /**
     * Returns the short period value required to calculate the indicator.
     */
-  var shortPeriod: Double = js.native
+  var shortPeriod: Double
   /**
     * Returns the smoothing period value required to calculate the indicator.
     */
-  var signalSmoothingPeriod: Double = js.native
+  var signalSmoothingPeriod: Double
 }
 
 object ASPxClientMovingAverageConvergenceDivergence {
@@ -38,31 +37,5 @@ object ASPxClientMovingAverageConvergenceDivergence {
     val __obj = js.Dynamic.literal(axisY = axisY.asInstanceOf[js.Any], chart = chart.asInstanceOf[js.Any], longPeriod = longPeriod.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], pane = pane.asInstanceOf[js.Any], series = series.asInstanceOf[js.Any], shortPeriod = shortPeriod.asInstanceOf[js.Any], signalSmoothingPeriod = signalSmoothingPeriod.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientMovingAverageConvergenceDivergence]
   }
-  @scala.inline
-  implicit class ASPxClientMovingAverageConvergenceDivergenceOps[Self <: ASPxClientMovingAverageConvergenceDivergence] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLongPeriod(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("longPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShortPeriod(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSignalSmoothingPeriod(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signalSmoothingPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

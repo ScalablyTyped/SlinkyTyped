@@ -4,64 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RawSourceMap extends StartOfSourceMap {
-  var mappings: String = js.native
-  var names: js.Array[String] = js.native
-  var sources: js.Array[String] = js.native
-  var sourcesContent: js.UndefOr[js.Array[String]] = js.native
-  var version: String = js.native
+  var mappings: String
+  var names: js.Array[String]
+  var sources: js.Array[String]
+  var sourcesContent: js.UndefOr[js.Array[String]] = js.undefined
+  var version: String
 }
 
 object RawSourceMap {
   @scala.inline
-  def apply(mappings: String, names: js.Array[String], sources: js.Array[String], version: String): RawSourceMap = {
+  def apply(
+    mappings: String,
+    names: js.Array[String],
+    sources: js.Array[String],
+    version: String,
+    file: String = null,
+    sourceRoot: String = null,
+    sourcesContent: js.Array[String] = null
+  ): RawSourceMap = {
     val __obj = js.Dynamic.literal(mappings = mappings.asInstanceOf[js.Any], names = names.asInstanceOf[js.Any], sources = sources.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
+    if (file != null) __obj.updateDynamic("file")(file.asInstanceOf[js.Any])
+    if (sourceRoot != null) __obj.updateDynamic("sourceRoot")(sourceRoot.asInstanceOf[js.Any])
+    if (sourcesContent != null) __obj.updateDynamic("sourcesContent")(sourcesContent.asInstanceOf[js.Any])
     __obj.asInstanceOf[RawSourceMap]
   }
-  @scala.inline
-  implicit class RawSourceMapOps[Self <: RawSourceMap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMappings(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mappings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("names")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSources(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourcesContent(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourcesContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourcesContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourcesContent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

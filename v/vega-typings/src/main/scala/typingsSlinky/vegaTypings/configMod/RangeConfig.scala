@@ -7,120 +7,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RangeConfig
   extends /* name */ StringDictionary[RangeScheme | (js.Array[Boolean | Double | String | SymbolShape])] {
   /**
     * Default [color scheme](https://vega.github.io/vega/docs/schemes/) for categorical data.
     */
-  var category: js.UndefOr[RangeScheme | js.Array[String]] = js.native
+  var category: js.UndefOr[RangeScheme | js.Array[String]] = js.undefined
   /**
     * Default [color scheme](https://vega.github.io/vega/docs/schemes/) for diverging quantitative ramps.
     */
-  var diverging: js.UndefOr[RangeScheme | js.Array[String]] = js.native
+  var diverging: js.UndefOr[RangeScheme | js.Array[String]] = js.undefined
   /**
     * Default [color scheme](https://vega.github.io/vega/docs/schemes/) for quantitative heatmaps.
     */
-  var heatmap: js.UndefOr[RangeScheme | js.Array[String]] = js.native
+  var heatmap: js.UndefOr[RangeScheme | js.Array[String]] = js.undefined
   /**
     * Default [color scheme](https://vega.github.io/vega/docs/schemes/) for rank-ordered data.
     */
-  var ordinal: js.UndefOr[RangeScheme | js.Array[String]] = js.native
+  var ordinal: js.UndefOr[RangeScheme | js.Array[String]] = js.undefined
   /**
     * Default [color scheme](https://vega.github.io/vega/docs/schemes/) for sequential quantitative ramps.
     */
-  var ramp: js.UndefOr[RangeScheme | js.Array[String]] = js.native
+  var ramp: js.UndefOr[RangeScheme | js.Array[String]] = js.undefined
   /**
     * Array of [symbol](https://vega.github.io/vega/docs/marks/symbol/) names or paths for the default shape palette.
     */
-  var symbol: js.UndefOr[js.Array[SymbolShape]] = js.native
+  var symbol: js.UndefOr[js.Array[SymbolShape]] = js.undefined
 }
 
 object RangeConfig {
   @scala.inline
-  def apply(): RangeConfig = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[RangeScheme | (js.Array[Boolean | Double | String | SymbolShape])] = null,
+    category: RangeScheme | js.Array[String] = null,
+    diverging: RangeScheme | js.Array[String] = null,
+    heatmap: RangeScheme | js.Array[String] = null,
+    ordinal: RangeScheme | js.Array[String] = null,
+    ramp: RangeScheme | js.Array[String] = null,
+    symbol: js.Array[SymbolShape] = null
+  ): RangeConfig = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (category != null) __obj.updateDynamic("category")(category.asInstanceOf[js.Any])
+    if (diverging != null) __obj.updateDynamic("diverging")(diverging.asInstanceOf[js.Any])
+    if (heatmap != null) __obj.updateDynamic("heatmap")(heatmap.asInstanceOf[js.Any])
+    if (ordinal != null) __obj.updateDynamic("ordinal")(ordinal.asInstanceOf[js.Any])
+    if (ramp != null) __obj.updateDynamic("ramp")(ramp.asInstanceOf[js.Any])
+    if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
     __obj.asInstanceOf[RangeConfig]
   }
-  @scala.inline
-  implicit class RangeConfigOps[Self <: RangeConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCategory(value: RangeScheme | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiverging(value: RangeScheme | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diverging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiverging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diverging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeatmap(value: RangeScheme | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heatmap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeatmap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heatmap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrdinal(value: RangeScheme | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ordinal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrdinal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ordinal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRamp(value: RangeScheme | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ramp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ramp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbol(value: js.Array[SymbolShape]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

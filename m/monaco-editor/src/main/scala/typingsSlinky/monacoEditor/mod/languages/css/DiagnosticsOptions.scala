@@ -5,49 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DiagnosticsOptions extends js.Object {
-  val lint: js.UndefOr[ArgumentsInColorFunction] = js.native
-  val validate: js.UndefOr[Boolean] = js.native
+  val lint: js.UndefOr[ArgumentsInColorFunction] = js.undefined
+  val validate: js.UndefOr[Boolean] = js.undefined
 }
 
 object DiagnosticsOptions {
   @scala.inline
-  def apply(): DiagnosticsOptions = {
+  def apply(lint: ArgumentsInColorFunction = null, validate: js.UndefOr[Boolean] = js.undefined): DiagnosticsOptions = {
     val __obj = js.Dynamic.literal()
+    if (lint != null) __obj.updateDynamic("lint")(lint.asInstanceOf[js.Any])
+    if (!js.isUndefined(validate)) __obj.updateDynamic("validate")(validate.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DiagnosticsOptions]
   }
-  @scala.inline
-  implicit class DiagnosticsOptionsOps[Self <: DiagnosticsOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLint(value: ArgumentsInColorFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

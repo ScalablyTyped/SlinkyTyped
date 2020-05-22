@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.sheet.TableConditionalFormat
   * @see com.sun.star.sheet.TableConditionalEntry
   */
-@js.native
 trait XSheetConditionalEntries extends XIndexAccess {
   /**
     * adds a conditional entry to the format.
@@ -32,11 +31,11 @@ trait XSheetConditionalEntries extends XIndexAccess {
     * **string StyleName **: contains the name of the cell style used by this condition.
     * @see com.sun.star.sheet.TableConditionalFormat
     */
-  def addNew(aConditionalEntry: SeqEquiv[PropertyValue]): Unit = js.native
+  def addNew(aConditionalEntry: SeqEquiv[PropertyValue]): Unit
   /** clears all condition entries. */
-  def clear(): Unit = js.native
+  def clear(): Unit
   /** removes a conditional entry from the format. */
-  def removeByIndex(nIndex: Double): Unit = js.native
+  def removeByIndex(nIndex: Double): Unit
 }
 
 object XSheetConditionalEntries {
@@ -58,31 +57,5 @@ object XSheetConditionalEntries {
     val __obj = js.Dynamic.literal(Count = Count.asInstanceOf[js.Any], ElementType = ElementType.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addNew = js.Any.fromFunction1(addNew), clear = js.Any.fromFunction0(clear), getByIndex = js.Any.fromFunction1(getByIndex), getCount = js.Any.fromFunction0(getCount), getElementType = js.Any.fromFunction0(getElementType), hasElements = js.Any.fromFunction0(hasElements), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeByIndex = js.Any.fromFunction1(removeByIndex))
     __obj.asInstanceOf[XSheetConditionalEntries]
   }
-  @scala.inline
-  implicit class XSheetConditionalEntriesOps[Self <: XSheetConditionalEntries] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddNew(value: SeqEquiv[PropertyValue] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addNew")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withClear(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveByIndex(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeByIndex")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

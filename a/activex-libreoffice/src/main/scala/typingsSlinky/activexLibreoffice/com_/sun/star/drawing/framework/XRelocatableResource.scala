@@ -5,14 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An optional interface that is implemented by resources that are relocatable to different anchors. */
-@js.native
 trait XRelocatableResource extends js.Object {
   /**
     * Replace the current anchor of the called resource with the given one.
     * @param xNewAnchor The new anchor.
     * @returns Returns `TRUE` when the relocation was successful.
     */
-  def relocateToAnchor(xNewAnchor: XResource): Boolean = js.native
+  def relocateToAnchor(xNewAnchor: XResource): Boolean
 }
 
 object XRelocatableResource {
@@ -21,19 +20,5 @@ object XRelocatableResource {
     val __obj = js.Dynamic.literal(relocateToAnchor = js.Any.fromFunction1(relocateToAnchor))
     __obj.asInstanceOf[XRelocatableResource]
   }
-  @scala.inline
-  implicit class XRelocatableResourceOps[Self <: XRelocatableResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRelocateToAnchor(value: XResource => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relocateToAnchor")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

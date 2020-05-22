@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ScheduledToastNotification extends IScheduledToastNotification
 
 object ScheduledToastNotification {

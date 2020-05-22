@@ -6,51 +6,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Array extends js.Object {
-  var array: js.Array[Datum] = js.native
-  var arrayminus: js.UndefOr[js.Array[Datum]] = js.native
-  var `type`: data = js.native
+  var array: js.Array[Datum]
+  var arrayminus: js.UndefOr[js.Array[Datum]] = js.undefined
+  var `type`: data
 }
 
 object Array {
   @scala.inline
-  def apply(array: js.Array[Datum], `type`: data): Array = {
+  def apply(array: js.Array[Datum], `type`: data, arrayminus: js.Array[Datum] = null): Array = {
     val __obj = js.Dynamic.literal(array = array.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (arrayminus != null) __obj.updateDynamic("arrayminus")(arrayminus.asInstanceOf[js.Any])
     __obj.asInstanceOf[Array]
   }
-  @scala.inline
-  implicit class ArrayOps[Self <: Array] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArray(value: js.Array[Datum]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("array")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: data): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArrayminus(value: js.Array[Datum]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayminus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArrayminus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayminus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

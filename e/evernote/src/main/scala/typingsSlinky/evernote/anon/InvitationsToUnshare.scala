@@ -7,88 +7,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InvitationsToUnshare extends js.Object {
-  var invitationsToUnshare: js.UndefOr[js.Array[typingsSlinky.evernote.mod.Types.IdentityID]] = js.native
-  var invitationsToUpdate: js.UndefOr[js.Array[NoteInvitationShareRelationship]] = js.native
-  var membershipsToUnshare: js.UndefOr[js.Array[UserID]] = js.native
-  var membershipsToUpdate: js.UndefOr[js.Array[NoteMemberShareRelationship]] = js.native
-  var noteGuid: js.UndefOr[String] = js.native
+  var invitationsToUnshare: js.UndefOr[js.Array[typingsSlinky.evernote.mod.Types.IdentityID]] = js.undefined
+  var invitationsToUpdate: js.UndefOr[js.Array[NoteInvitationShareRelationship]] = js.undefined
+  var membershipsToUnshare: js.UndefOr[js.Array[UserID]] = js.undefined
+  var membershipsToUpdate: js.UndefOr[js.Array[NoteMemberShareRelationship]] = js.undefined
+  var noteGuid: js.UndefOr[String] = js.undefined
 }
 
 object InvitationsToUnshare {
   @scala.inline
-  def apply(): InvitationsToUnshare = {
+  def apply(
+    invitationsToUnshare: js.Array[typingsSlinky.evernote.mod.Types.IdentityID] = null,
+    invitationsToUpdate: js.Array[NoteInvitationShareRelationship] = null,
+    membershipsToUnshare: js.Array[UserID] = null,
+    membershipsToUpdate: js.Array[NoteMemberShareRelationship] = null,
+    noteGuid: String = null
+  ): InvitationsToUnshare = {
     val __obj = js.Dynamic.literal()
+    if (invitationsToUnshare != null) __obj.updateDynamic("invitationsToUnshare")(invitationsToUnshare.asInstanceOf[js.Any])
+    if (invitationsToUpdate != null) __obj.updateDynamic("invitationsToUpdate")(invitationsToUpdate.asInstanceOf[js.Any])
+    if (membershipsToUnshare != null) __obj.updateDynamic("membershipsToUnshare")(membershipsToUnshare.asInstanceOf[js.Any])
+    if (membershipsToUpdate != null) __obj.updateDynamic("membershipsToUpdate")(membershipsToUpdate.asInstanceOf[js.Any])
+    if (noteGuid != null) __obj.updateDynamic("noteGuid")(noteGuid.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvitationsToUnshare]
   }
-  @scala.inline
-  implicit class InvitationsToUnshareOps[Self <: InvitationsToUnshare] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInvitationsToUnshare(value: js.Array[typingsSlinky.evernote.mod.Types.IdentityID]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invitationsToUnshare")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvitationsToUnshare: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invitationsToUnshare")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvitationsToUpdate(value: js.Array[NoteInvitationShareRelationship]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invitationsToUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvitationsToUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invitationsToUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMembershipsToUnshare(value: js.Array[UserID]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("membershipsToUnshare")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMembershipsToUnshare: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("membershipsToUnshare")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMembershipsToUpdate(value: js.Array[NoteMemberShareRelationship]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("membershipsToUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMembershipsToUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("membershipsToUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoteGuid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noteGuid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoteGuid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noteGuid")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

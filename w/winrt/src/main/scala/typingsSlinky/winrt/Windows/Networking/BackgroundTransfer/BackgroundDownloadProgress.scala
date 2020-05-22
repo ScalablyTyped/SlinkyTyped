@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BackgroundDownloadProgress extends js.Object {
-  var bytesReceived: Double = js.native
-  var hasResponseChanged: Boolean = js.native
-  var hasRestarted: Boolean = js.native
-  var status: BackgroundTransferStatus = js.native
-  var totalBytesToReceive: Double = js.native
+  var bytesReceived: Double
+  var hasResponseChanged: Boolean
+  var hasRestarted: Boolean
+  var status: BackgroundTransferStatus
+  var totalBytesToReceive: Double
 }
 
 object BackgroundDownloadProgress {
@@ -25,43 +24,5 @@ object BackgroundDownloadProgress {
     val __obj = js.Dynamic.literal(bytesReceived = bytesReceived.asInstanceOf[js.Any], hasResponseChanged = hasResponseChanged.asInstanceOf[js.Any], hasRestarted = hasRestarted.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], totalBytesToReceive = totalBytesToReceive.asInstanceOf[js.Any])
     __obj.asInstanceOf[BackgroundDownloadProgress]
   }
-  @scala.inline
-  implicit class BackgroundDownloadProgressOps[Self <: BackgroundDownloadProgress] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBytesReceived(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesReceived")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHasResponseChanged(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasResponseChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHasRestarted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasRestarted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: BackgroundTransferStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotalBytesToReceive(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalBytesToReceive")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

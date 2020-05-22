@@ -14,24 +14,23 @@ import scala.scalajs.js.annotation._
   * @see XGridDataListener
   * @since OOo 3.3
   */
-@js.native
 trait GridDataEvent extends EventObject {
   /**
     * denotes the first column affected by a change.
     *
     * If `FirstColumn` is -1, the listener should assume that all rows of a grid's data model are affected.
     */
-  var FirstColumn: Double = js.native
+  var FirstColumn: Double
   /**
     * denotes the first row affected by a change.
     *
     * If `FirstRow` is -1, the listener should assume that all rows of a grid's data model are affected.
     */
-  var FirstRow: Double = js.native
+  var FirstRow: Double
   /** denotes the last column affected by a change */
-  var LastColumn: Double = js.native
+  var LastColumn: Double
   /** denotes the last row affected by a change */
-  var LastRow: Double = js.native
+  var LastRow: Double
 }
 
 object GridDataEvent {
@@ -40,37 +39,5 @@ object GridDataEvent {
     val __obj = js.Dynamic.literal(FirstColumn = FirstColumn.asInstanceOf[js.Any], FirstRow = FirstRow.asInstanceOf[js.Any], LastColumn = LastColumn.asInstanceOf[js.Any], LastRow = LastRow.asInstanceOf[js.Any], Source = Source.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridDataEvent]
   }
-  @scala.inline
-  implicit class GridDataEventOps[Self <: GridDataEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFirstColumn(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFirstRow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastColumn(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastRow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

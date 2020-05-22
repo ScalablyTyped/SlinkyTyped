@@ -6,127 +6,85 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OptionsV2 extends Options {
-  var cdata: js.UndefOr[Boolean] = js.native
-  var chunkSize: js.UndefOr[Double] = js.native
-  var doctype: js.UndefOr[js.Any] = js.native
-  var headless: js.UndefOr[Boolean] = js.native
-  var preserveChildrenOrder: js.UndefOr[Boolean] = js.native
-  var renderOpts: js.UndefOr[Indent] = js.native
-  var rootName: js.UndefOr[String] = js.native
-  var xmldec: js.UndefOr[Encoding] = js.native
+  var cdata: js.UndefOr[Boolean] = js.undefined
+  var chunkSize: js.UndefOr[Double] = js.undefined
+  var doctype: js.UndefOr[js.Any] = js.undefined
+  var headless: js.UndefOr[Boolean] = js.undefined
+  var preserveChildrenOrder: js.UndefOr[Boolean] = js.undefined
+  var renderOpts: js.UndefOr[Indent] = js.undefined
+  var rootName: js.UndefOr[String] = js.undefined
+  var xmldec: js.UndefOr[Encoding] = js.undefined
 }
 
 object OptionsV2 {
   @scala.inline
-  def apply(): OptionsV2 = {
+  def apply(
+    async: js.UndefOr[Boolean] = js.undefined,
+    attrNameProcessors: js.Array[js.Function1[/* name */ String, _]] = null,
+    attrValueProcessors: js.Array[js.Function2[/* value */ String, /* name */ String, _]] = null,
+    attrkey: String = null,
+    cdata: js.UndefOr[Boolean] = js.undefined,
+    charkey: String = null,
+    charsAsChildren: js.UndefOr[Boolean] = js.undefined,
+    childkey: String = null,
+    chunkSize: js.UndefOr[Double] = js.undefined,
+    doctype: js.Any = null,
+    emptyTag: js.Any = null,
+    explicitArray: js.UndefOr[Boolean] = js.undefined,
+    explicitCharkey: js.UndefOr[Boolean] = js.undefined,
+    explicitChildren: js.UndefOr[Boolean] = js.undefined,
+    explicitRoot: js.UndefOr[Boolean] = js.undefined,
+    headless: js.UndefOr[Boolean] = js.undefined,
+    ignoreAttrs: js.UndefOr[Boolean] = js.undefined,
+    includeWhiteChars: js.UndefOr[Boolean] = js.undefined,
+    mergeAttrs: js.UndefOr[Boolean] = js.undefined,
+    normalize: js.UndefOr[Boolean] = js.undefined,
+    normalizeTags: js.UndefOr[Boolean] = js.undefined,
+    preserveChildrenOrder: js.UndefOr[Boolean] = js.undefined,
+    renderOpts: Indent = null,
+    rootName: String = null,
+    strict: js.UndefOr[Boolean] = js.undefined,
+    tagNameProcessors: js.Array[js.Function1[/* name */ String, _]] = null,
+    trim: js.UndefOr[Boolean] = js.undefined,
+    validator: js.Function = null,
+    valueProcessors: js.Array[js.Function2[/* value */ String, /* name */ String, _]] = null,
+    xmldec: Encoding = null,
+    xmlns: js.UndefOr[Boolean] = js.undefined
+  ): OptionsV2 = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(async)) __obj.updateDynamic("async")(async.get.asInstanceOf[js.Any])
+    if (attrNameProcessors != null) __obj.updateDynamic("attrNameProcessors")(attrNameProcessors.asInstanceOf[js.Any])
+    if (attrValueProcessors != null) __obj.updateDynamic("attrValueProcessors")(attrValueProcessors.asInstanceOf[js.Any])
+    if (attrkey != null) __obj.updateDynamic("attrkey")(attrkey.asInstanceOf[js.Any])
+    if (!js.isUndefined(cdata)) __obj.updateDynamic("cdata")(cdata.get.asInstanceOf[js.Any])
+    if (charkey != null) __obj.updateDynamic("charkey")(charkey.asInstanceOf[js.Any])
+    if (!js.isUndefined(charsAsChildren)) __obj.updateDynamic("charsAsChildren")(charsAsChildren.get.asInstanceOf[js.Any])
+    if (childkey != null) __obj.updateDynamic("childkey")(childkey.asInstanceOf[js.Any])
+    if (!js.isUndefined(chunkSize)) __obj.updateDynamic("chunkSize")(chunkSize.get.asInstanceOf[js.Any])
+    if (doctype != null) __obj.updateDynamic("doctype")(doctype.asInstanceOf[js.Any])
+    if (emptyTag != null) __obj.updateDynamic("emptyTag")(emptyTag.asInstanceOf[js.Any])
+    if (!js.isUndefined(explicitArray)) __obj.updateDynamic("explicitArray")(explicitArray.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(explicitCharkey)) __obj.updateDynamic("explicitCharkey")(explicitCharkey.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(explicitChildren)) __obj.updateDynamic("explicitChildren")(explicitChildren.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(explicitRoot)) __obj.updateDynamic("explicitRoot")(explicitRoot.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(headless)) __obj.updateDynamic("headless")(headless.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreAttrs)) __obj.updateDynamic("ignoreAttrs")(ignoreAttrs.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeWhiteChars)) __obj.updateDynamic("includeWhiteChars")(includeWhiteChars.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mergeAttrs)) __obj.updateDynamic("mergeAttrs")(mergeAttrs.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(normalize)) __obj.updateDynamic("normalize")(normalize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(normalizeTags)) __obj.updateDynamic("normalizeTags")(normalizeTags.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preserveChildrenOrder)) __obj.updateDynamic("preserveChildrenOrder")(preserveChildrenOrder.get.asInstanceOf[js.Any])
+    if (renderOpts != null) __obj.updateDynamic("renderOpts")(renderOpts.asInstanceOf[js.Any])
+    if (rootName != null) __obj.updateDynamic("rootName")(rootName.asInstanceOf[js.Any])
+    if (!js.isUndefined(strict)) __obj.updateDynamic("strict")(strict.get.asInstanceOf[js.Any])
+    if (tagNameProcessors != null) __obj.updateDynamic("tagNameProcessors")(tagNameProcessors.asInstanceOf[js.Any])
+    if (!js.isUndefined(trim)) __obj.updateDynamic("trim")(trim.get.asInstanceOf[js.Any])
+    if (validator != null) __obj.updateDynamic("validator")(validator.asInstanceOf[js.Any])
+    if (valueProcessors != null) __obj.updateDynamic("valueProcessors")(valueProcessors.asInstanceOf[js.Any])
+    if (xmldec != null) __obj.updateDynamic("xmldec")(xmldec.asInstanceOf[js.Any])
+    if (!js.isUndefined(xmlns)) __obj.updateDynamic("xmlns")(xmlns.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionsV2]
   }
-  @scala.inline
-  implicit class OptionsV2Ops[Self <: OptionsV2] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCdata(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cdata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCdata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cdata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChunkSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChunkSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDoctype(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doctype")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDoctype: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doctype")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeadless(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headless")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeadless: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headless")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreserveChildrenOrder(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveChildrenOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreserveChildrenOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveChildrenOrder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderOpts(value: Indent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderOpts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderOpts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderOpts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRootName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXmldec(value: Encoding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xmldec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXmldec: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xmldec")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

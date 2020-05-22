@@ -26,59 +26,17 @@ trait DeleteLabelsRequest extends js.Object {
 
 object DeleteLabelsRequest {
   @scala.inline
-  def apply(ResourceId: ResourceIdType): DeleteLabelsRequest = {
+  def apply(
+    ResourceId: ResourceIdType,
+    AuthenticationToken: AuthenticationHeaderType = null,
+    DeleteAll: js.UndefOr[BooleanType] = js.undefined,
+    Labels: SharedLabels = null
+  ): DeleteLabelsRequest = {
     val __obj = js.Dynamic.literal(ResourceId = ResourceId.asInstanceOf[js.Any])
+    if (AuthenticationToken != null) __obj.updateDynamic("AuthenticationToken")(AuthenticationToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(DeleteAll)) __obj.updateDynamic("DeleteAll")(DeleteAll.get.asInstanceOf[js.Any])
+    if (Labels != null) __obj.updateDynamic("Labels")(Labels.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteLabelsRequest]
   }
-  @scala.inline
-  implicit class DeleteLabelsRequestOps[Self <: DeleteLabelsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResourceId(value: ResourceIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuthenticationToken(value: AuthenticationHeaderType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthenticationToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteAll(value: BooleanType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteAll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteAll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteAll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: SharedLabels): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Labels")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

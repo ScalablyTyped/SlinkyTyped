@@ -9,9 +9,9 @@ sealed trait AsyncResultStatus extends js.Object
 
 /**
   * Specifies the result of an asynchronous call.
-  * 
+  *
   * @remarks
-  * 
+  *
   * Returned by the `status` property of the {@link Office.AsyncResult | AsyncResult} object.
   */
 @JSGlobal("Office.AsyncResultStatus")

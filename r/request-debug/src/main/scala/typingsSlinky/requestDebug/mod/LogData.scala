@@ -1,5 +1,6 @@
 package typingsSlinky.requestDebug.mod
 
+import typingsSlinky.request.mod.Headers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,10 +14,21 @@ trait LogData extends js.Object
 
 object LogData {
   @scala.inline
-  implicit def apply(value: RedirectData): LogData = value.asInstanceOf[LogData]
+  def RequestData(debugId: Double, headers: Headers, method: String, uri: String, body: js.Any = null): LogData = {
+    val __obj = js.Dynamic.literal(debugId = debugId.asInstanceOf[js.Any], headers = headers.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], uri = uri.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LogData]
+  }
   @scala.inline
-  implicit def apply(value: RequestData): LogData = value.asInstanceOf[LogData]
+  def ResponseData(debugId: Double, headers: Headers, statusCode: Double, body: js.Any = null): LogData = {
+    val __obj = js.Dynamic.literal(debugId = debugId.asInstanceOf[js.Any], headers = headers.asInstanceOf[js.Any], statusCode = statusCode.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LogData]
+  }
   @scala.inline
-  implicit def apply(value: ResponseData): LogData = value.asInstanceOf[LogData]
+  def RedirectData(debugId: Double, headers: Headers, statusCode: Double, uri: String): LogData = {
+    val __obj = js.Dynamic.literal(debugId = debugId.asInstanceOf[js.Any], headers = headers.asInstanceOf[js.Any], statusCode = statusCode.asInstanceOf[js.Any], uri = uri.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LogData]
+  }
 }
 

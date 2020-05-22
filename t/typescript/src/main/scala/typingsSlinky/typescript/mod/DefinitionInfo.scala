@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DefinitionInfo extends DocumentSpan {
-  var containerKind: ScriptElementKind = js.native
-  var containerName: java.lang.String = js.native
-  var kind: ScriptElementKind = js.native
-  var name: java.lang.String = js.native
+  var containerKind: ScriptElementKind
+  var containerName: java.lang.String
+  var kind: ScriptElementKind
+  var name: java.lang.String
 }
 
 object DefinitionInfo {
@@ -20,42 +19,18 @@ object DefinitionInfo {
     fileName: java.lang.String,
     kind: ScriptElementKind,
     name: java.lang.String,
-    textSpan: TextSpan
+    textSpan: TextSpan,
+    contextSpan: TextSpan = null,
+    originalContextSpan: TextSpan = null,
+    originalFileName: java.lang.String = null,
+    originalTextSpan: TextSpan = null
   ): DefinitionInfo = {
     val __obj = js.Dynamic.literal(containerKind = containerKind.asInstanceOf[js.Any], containerName = containerName.asInstanceOf[js.Any], fileName = fileName.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], textSpan = textSpan.asInstanceOf[js.Any])
+    if (contextSpan != null) __obj.updateDynamic("contextSpan")(contextSpan.asInstanceOf[js.Any])
+    if (originalContextSpan != null) __obj.updateDynamic("originalContextSpan")(originalContextSpan.asInstanceOf[js.Any])
+    if (originalFileName != null) __obj.updateDynamic("originalFileName")(originalFileName.asInstanceOf[js.Any])
+    if (originalTextSpan != null) __obj.updateDynamic("originalTextSpan")(originalTextSpan.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefinitionInfo]
   }
-  @scala.inline
-  implicit class DefinitionInfoOps[Self <: DefinitionInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainerKind(value: ScriptElementKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerKind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainerName(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKind(value: ScriptElementKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

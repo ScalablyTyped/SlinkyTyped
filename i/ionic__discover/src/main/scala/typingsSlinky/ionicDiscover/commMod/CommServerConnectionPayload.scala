@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CommServerConnectionPayload extends js.Object {
-  var device: String = js.native
-  var event: connect = js.native
+  var device: String
+  var event: connect
 }
 
 object CommServerConnectionPayload {
@@ -17,25 +16,5 @@ object CommServerConnectionPayload {
     val __obj = js.Dynamic.literal(device = device.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommServerConnectionPayload]
   }
-  @scala.inline
-  implicit class CommServerConnectionPayloadOps[Self <: CommServerConnectionPayload] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDevice(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEvent(value: connect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

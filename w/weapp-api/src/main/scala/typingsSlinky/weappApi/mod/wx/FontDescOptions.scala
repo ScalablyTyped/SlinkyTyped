@@ -4,65 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FontDescOptions extends js.Object {
   //  字体样式，可选值为 normal / italic / oblique
-  var style: js.UndefOr[String] = js.native
+  var style: js.UndefOr[String] = js.undefined
   //  设置小型大写字母的字体显示文本，可选值为 normal / small-caps / inherit
-  var variant: js.UndefOr[String] = js.native
+  var variant: js.UndefOr[String] = js.undefined
   //  字体粗细，可选值为 normal / bold / 100 / 200../ 900
-  var weight: js.UndefOr[String] = js.native
+  var weight: js.UndefOr[String] = js.undefined
 }
 
 object FontDescOptions {
   @scala.inline
-  def apply(): FontDescOptions = {
+  def apply(style: String = null, variant: String = null, weight: String = null): FontDescOptions = {
     val __obj = js.Dynamic.literal()
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (variant != null) __obj.updateDynamic("variant")(variant.asInstanceOf[js.Any])
+    if (weight != null) __obj.updateDynamic("weight")(weight.asInstanceOf[js.Any])
     __obj.asInstanceOf[FontDescOptions]
   }
-  @scala.inline
-  implicit class FontDescOptionsOps[Self <: FontDescOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariant(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variant")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariant: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variant")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

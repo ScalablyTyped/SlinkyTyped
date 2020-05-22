@@ -7,7 +7,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("GlideLocale")
 @js.native
 class GlideLocale ()
-  extends typingsSlinky.servicenow.GlideLocale
+  extends typingsSlinky.servicenow.GlideLocale {
+  /* CompleteClass */
+  override def getDecimalSeparator(): String = js.native
+  /* CompleteClass */
+  override def getGroupingSeparator(): String = js.native
+}
 
 /* static members */
 @JSGlobal("GlideLocale")

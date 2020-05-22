@@ -1,43 +1,39 @@
 package typingsSlinky.qlik.mod
 
+import typingsSlinky.qlik.qlikStrings.array
+import typingsSlinky.qlik.qlikStrings.boolean
 import typingsSlinky.qlik.qlikStrings.button
+import typingsSlinky.qlik.qlikStrings.integer
+import typingsSlinky.qlik.qlikStrings.items
+import typingsSlinky.qlik.qlikStrings.number
+import typingsSlinky.qlik.qlikStrings.string
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CustomPropertyButton
   extends CustomPropertyCommon
      with CustomProperty {
-  var component: button = js.native
-  def action(data: VisualizationOptions): Unit = js.native
+  var component: button
+  def action(data: VisualizationOptions): Unit
 }
 
 object CustomPropertyButton {
   @scala.inline
-  def apply(action: VisualizationOptions => Unit, component: button): CustomPropertyButton = {
+  def apply(
+    action: VisualizationOptions => Unit,
+    component: button,
+    label: String = null,
+    ref: String = null,
+    show: Boolean | ShowFunction = null,
+    `type`: string | integer | number | array | boolean | items = null
+  ): CustomPropertyButton = {
     val __obj = js.Dynamic.literal(action = js.Any.fromFunction1(action), component = component.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+    if (show != null) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomPropertyButton]
   }
-  @scala.inline
-  implicit class CustomPropertyButtonOps[Self <: CustomPropertyButton] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAction(value: VisualizationOptions => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withComponent(value: button): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,31 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RepresentedCountryRecord extends RegisteredCountryRecord {
-  val `type`: String = js.native
+  val `type`: String
 }
 
 object RepresentedCountryRecord {
   @scala.inline
-  def apply(geoname_id: Double, iso_code: String, names: Names, `type`: String): RepresentedCountryRecord = {
+  def apply(
+    geoname_id: Double,
+    iso_code: String,
+    names: Names,
+    `type`: String,
+    is_in_european_union: js.UndefOr[Boolean] = js.undefined
+  ): RepresentedCountryRecord = {
     val __obj = js.Dynamic.literal(geoname_id = geoname_id.asInstanceOf[js.Any], iso_code = iso_code.asInstanceOf[js.Any], names = names.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(is_in_european_union)) __obj.updateDynamic("is_in_european_union")(is_in_european_union.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RepresentedCountryRecord]
   }
-  @scala.inline
-  implicit class RepresentedCountryRecordOps[Self <: RepresentedCountryRecord] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

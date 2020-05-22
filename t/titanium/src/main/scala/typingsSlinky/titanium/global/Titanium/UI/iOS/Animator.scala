@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-			 * Provides support for the built-in iOS dynamic animations
-			 */
+  * Provides support for the built-in iOS dynamic animations
+  */
 @JSGlobal("Titanium.UI.iOS.Animator")
 @js.native
 class Animator ()

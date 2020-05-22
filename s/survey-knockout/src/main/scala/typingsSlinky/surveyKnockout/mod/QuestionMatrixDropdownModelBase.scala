@@ -1,5 +1,6 @@
 package typingsSlinky.surveyKnockout.mod
 
+import typingsSlinky.surveyKnockout.anon.Calculations
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -82,9 +83,11 @@ class QuestionMatrixDropdownModelBase protected () extends QuestionMatrixBaseMod
   def getColumnWidth(column: MatrixDropdownColumn): String = js.native
   /* protected */ def getFirstCellQuestion(onError: Boolean): Question = js.native
   def getFooterText(): LocalizableString = js.native
+  def getPlainData(options: Calculations): js.Any = js.native
   def getRequiredText(): String = js.native
   /* protected */ def getRowDisplayValue(row: MatrixDropdownRowModelBase, rowValue: js.Any): js.Any = js.native
   def getRowIndex(row: MatrixDropdownRowModelBase): Double = js.native
+  def getRowTitleWidth(): String = js.native
   /**
     * Returns the row value. If the row value is empty, the object is empty: {}.
     * @param rowIndex row index from 0 to visible row count - 1.
@@ -97,7 +100,9 @@ class QuestionMatrixDropdownModelBase protected () extends QuestionMatrixBaseMod
   /* protected */ def getVisibleTotalRow(): MatrixDropdownRowModelBase = js.native
   /* protected */ def isObject(value: js.Any): Boolean = js.native
   /* protected */ def onBeforeValueChanged(`val`: js.Any): Unit = js.native
+  def onCellCreatedCallback(options: js.Any): Unit = js.native
   /* protected */ def onCellValueChanged(row: MatrixDropdownRowModelBase, columnName: String, rowValue: js.Any): Unit = js.native
+  def onCellValueChangedCallback(options: js.Any): Unit = js.native
   def onColumnCellTypeChanged(column: MatrixDropdownColumn): Unit = js.native
   def onColumnPropertiesChanged(column: MatrixDropdownColumn): Unit = js.native
   /* protected */ def onEndRowAdding(): Unit = js.native
@@ -107,6 +112,7 @@ class QuestionMatrixDropdownModelBase protected () extends QuestionMatrixBaseMod
   def onRenderedTableResetCallback(): Unit = js.native
   def onRowChanged(row: MatrixDropdownRowModelBase, columnName: String, newRowValue: js.Any, isDeletingValue: Boolean): Unit = js.native
   def onRowChanging(row: MatrixDropdownRowModelBase, columnName: String, rowValue: js.Any): js.Any = js.native
+  def onShowInMultipleColumnsChanged(column: MatrixDropdownColumn): Unit = js.native
   /* protected */ def onStartRowAddingRemoving(): Unit = js.native
   def onTotalValueChanged(): js.Any = js.native
   /* protected */ def resetRenderedTable(): Unit = js.native

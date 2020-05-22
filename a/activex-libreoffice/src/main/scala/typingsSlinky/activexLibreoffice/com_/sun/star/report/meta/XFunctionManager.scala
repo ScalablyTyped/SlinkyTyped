@@ -9,7 +9,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** identifies a {@link XFunctionManager} which allows to retrieve the meta data of all supported functions. */
-@js.native
 trait XFunctionManager
   extends XIndexAccess
      with XComponent {
@@ -18,12 +17,12 @@ trait XFunctionManager
     * @param position The position.
     * @see com.sun.star.container.XIndexAccess
     */
-  def getCategory(position: Double): XFunctionCategory = js.native
+  def getCategory(position: Double): XFunctionCategory
   /**
     * get the function description by name
     * @param name the name of the function
     */
-  def getFunctionByName(name: String): XFunctionDescription = js.native
+  def getFunctionByName(name: String): XFunctionDescription
 }
 
 object XFunctionManager {
@@ -47,25 +46,5 @@ object XFunctionManager {
     val __obj = js.Dynamic.literal(Count = Count.asInstanceOf[js.Any], ElementType = ElementType.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), dispose = js.Any.fromFunction0(dispose), getByIndex = js.Any.fromFunction1(getByIndex), getCategory = js.Any.fromFunction1(getCategory), getCount = js.Any.fromFunction0(getCount), getElementType = js.Any.fromFunction0(getElementType), getFunctionByName = js.Any.fromFunction1(getFunctionByName), hasElements = js.Any.fromFunction0(hasElements), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener))
     __obj.asInstanceOf[XFunctionManager]
   }
-  @scala.inline
-  implicit class XFunctionManagerOps[Self <: XFunctionManager] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetCategory(value: Double => XFunctionCategory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCategory")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetFunctionByName(value: String => XFunctionDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFunctionByName")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -50,137 +50,30 @@ trait PresetWatermark extends js.Object {
 
 object PresetWatermark {
   @scala.inline
-  def apply(): PresetWatermark = {
+  def apply(
+    HorizontalAlign: HorizontalAlign = null,
+    HorizontalOffset: PixelsOrPercent = null,
+    Id: PresetWatermarkId = null,
+    MaxHeight: PixelsOrPercent = null,
+    MaxWidth: PixelsOrPercent = null,
+    Opacity: Opacity = null,
+    SizingPolicy: WatermarkSizingPolicy = null,
+    Target: Target = null,
+    VerticalAlign: VerticalAlign = null,
+    VerticalOffset: PixelsOrPercent = null
+  ): PresetWatermark = {
     val __obj = js.Dynamic.literal()
+    if (HorizontalAlign != null) __obj.updateDynamic("HorizontalAlign")(HorizontalAlign.asInstanceOf[js.Any])
+    if (HorizontalOffset != null) __obj.updateDynamic("HorizontalOffset")(HorizontalOffset.asInstanceOf[js.Any])
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (MaxHeight != null) __obj.updateDynamic("MaxHeight")(MaxHeight.asInstanceOf[js.Any])
+    if (MaxWidth != null) __obj.updateDynamic("MaxWidth")(MaxWidth.asInstanceOf[js.Any])
+    if (Opacity != null) __obj.updateDynamic("Opacity")(Opacity.asInstanceOf[js.Any])
+    if (SizingPolicy != null) __obj.updateDynamic("SizingPolicy")(SizingPolicy.asInstanceOf[js.Any])
+    if (Target != null) __obj.updateDynamic("Target")(Target.asInstanceOf[js.Any])
+    if (VerticalAlign != null) __obj.updateDynamic("VerticalAlign")(VerticalAlign.asInstanceOf[js.Any])
+    if (VerticalOffset != null) __obj.updateDynamic("VerticalOffset")(VerticalOffset.asInstanceOf[js.Any])
     __obj.asInstanceOf[PresetWatermark]
   }
-  @scala.inline
-  implicit class PresetWatermarkOps[Self <: PresetWatermark] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHorizontalAlign(value: HorizontalAlign): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HorizontalAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontalAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HorizontalAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHorizontalOffset(value: PixelsOrPercent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HorizontalOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontalOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HorizontalOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: PresetWatermarkId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxHeight(value: PixelsOrPercent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxWidth(value: PixelsOrPercent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Opacity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizingPolicy(value: WatermarkSizingPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SizingPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizingPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SizingPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: Target): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerticalAlign(value: VerticalAlign): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VerticalAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VerticalAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerticalOffset(value: PixelsOrPercent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VerticalOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VerticalOffset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

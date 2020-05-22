@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LengthLineStyle extends js.Object {
   /**
     * The length of split line, can be a pecentage value relative
@@ -15,11 +14,11 @@ trait LengthLineStyle extends js.Object {
     * 30
     * @see https://echarts.apache.org/en/option.html#series-gauge.splitLine.length
     */
-  var length: js.UndefOr[Double | String] = js.native
+  var length: js.UndefOr[Double | String] = js.undefined
   /**
     * @see https://echarts.apache.org/en/option.html#series-gauge.splitLine.lineStyle
     */
-  var lineStyle: js.UndefOr[ShadowBlur] = js.native
+  var lineStyle: js.UndefOr[ShadowBlur] = js.undefined
   /**
     * Whether to show the split line.
     *
@@ -28,58 +27,21 @@ trait LengthLineStyle extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-gauge.splitLine.show
     */
-  var show: js.UndefOr[Boolean] = js.native
+  var show: js.UndefOr[Boolean] = js.undefined
 }
 
 object LengthLineStyle {
   @scala.inline
-  def apply(): LengthLineStyle = {
+  def apply(
+    length: Double | String = null,
+    lineStyle: ShadowBlur = null,
+    show: js.UndefOr[Boolean] = js.undefined
+  ): LengthLineStyle = {
     val __obj = js.Dynamic.literal()
+    if (length != null) __obj.updateDynamic("length")(length.asInstanceOf[js.Any])
+    if (lineStyle != null) __obj.updateDynamic("lineStyle")(lineStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[LengthLineStyle]
   }
-  @scala.inline
-  implicit class LengthLineStyleOps[Self <: LengthLineStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLength(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineStyle(value: ShadowBlur): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

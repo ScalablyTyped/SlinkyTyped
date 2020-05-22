@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ICacheConfig extends js.Object {
-  var expiresAt: js.UndefOr[Double] = js.native
-  var expiresIn: js.UndefOr[Double] = js.native
-  var privacy: js.UndefOr[String] = js.native
+  var expiresAt: js.UndefOr[Double] = js.undefined
+  var expiresIn: js.UndefOr[Double] = js.undefined
+  var privacy: js.UndefOr[String] = js.undefined
 }
 
 object ICacheConfig {
   @scala.inline
-  def apply(): ICacheConfig = {
+  def apply(
+    expiresAt: js.UndefOr[Double] = js.undefined,
+    expiresIn: js.UndefOr[Double] = js.undefined,
+    privacy: String = null
+  ): ICacheConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(expiresAt)) __obj.updateDynamic("expiresAt")(expiresAt.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(expiresIn)) __obj.updateDynamic("expiresIn")(expiresIn.get.asInstanceOf[js.Any])
+    if (privacy != null) __obj.updateDynamic("privacy")(privacy.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICacheConfig]
   }
-  @scala.inline
-  implicit class ICacheConfigOps[Self <: ICacheConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpiresAt(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiresAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpiresAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiresAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpiresIn(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiresIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpiresIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiresIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivacy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privacy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivacy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privacy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

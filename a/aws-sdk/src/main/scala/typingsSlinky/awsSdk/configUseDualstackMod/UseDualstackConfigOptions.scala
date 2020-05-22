@@ -16,29 +16,10 @@ trait UseDualstackConfigOptions extends js.Object {
 
 object UseDualstackConfigOptions {
   @scala.inline
-  def apply(): UseDualstackConfigOptions = {
+  def apply(useDualstack: js.UndefOr[Boolean] = js.undefined): UseDualstackConfigOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(useDualstack)) __obj.updateDynamic("useDualstack")(useDualstack.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UseDualstackConfigOptions]
   }
-  @scala.inline
-  implicit class UseDualstackConfigOptionsOps[Self <: UseDualstackConfigOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUseDualstack(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useDualstack")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseDualstack: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useDualstack")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

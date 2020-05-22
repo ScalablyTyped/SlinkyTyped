@@ -12,331 +12,98 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SendData extends js.Object {
-  var `amp-html`: js.UndefOr[String] = js.native
-  var attachment: js.UndefOr[AttachmentData | js.Array[AttachmentData]] = js.native
-  var bcc: js.UndefOr[String | js.Array[String]] = js.native
-  var cc: js.UndefOr[String | js.Array[String]] = js.native
-  var from: js.UndefOr[String] = js.native
+  var `amp-html`: js.UndefOr[String] = js.undefined
+  var attachment: js.UndefOr[AttachmentData | js.Array[AttachmentData]] = js.undefined
+  var bcc: js.UndefOr[String | js.Array[String]] = js.undefined
+  var cc: js.UndefOr[String | js.Array[String]] = js.undefined
+  var from: js.UndefOr[String] = js.undefined
   @JSName("h:Importance")
-  var hColonImportance: js.UndefOr[String] = js.native
+  var hColonImportance: js.UndefOr[String] = js.undefined
   @JSName("h:In-Reply-To")
-  var `hColonIn-Reply-To`: js.UndefOr[String] = js.native
+  var `hColonIn-Reply-To`: js.UndefOr[String] = js.undefined
   @JSName("h:References")
-  var hColonReferences: js.UndefOr[String] = js.native
+  var hColonReferences: js.UndefOr[String] = js.undefined
   // Standard email headers
   @JSName("h:Reply-To")
-  var `hColonReply-To`: js.UndefOr[String] = js.native
-  var html: js.UndefOr[String] = js.native
-  var `inline`: js.UndefOr[AttachmentData | js.Array[AttachmentData]] = js.native
+  var `hColonReply-To`: js.UndefOr[String] = js.undefined
+  var html: js.UndefOr[String] = js.undefined
+  var `inline`: js.UndefOr[AttachmentData | js.Array[AttachmentData]] = js.undefined
   @JSName("o:deliverytime")
-  var oColondeliverytime: js.UndefOr[String] = js.native
+  var oColondeliverytime: js.UndefOr[String] = js.undefined
   @JSName("o:dkim")
-  var oColondkim: js.UndefOr[yes | no | Boolean] = js.native
+  var oColondkim: js.UndefOr[yes | no | Boolean] = js.undefined
   @JSName("o:require-tls")
-  var `oColonrequire-tls`: js.UndefOr[yes | no | True | False] = js.native
+  var `oColonrequire-tls`: js.UndefOr[yes | no | True | False] = js.undefined
   @JSName("o:skip-verification")
-  var `oColonskip-verification`: js.UndefOr[yes | no | True | False] = js.native
+  var `oColonskip-verification`: js.UndefOr[yes | no | True | False] = js.undefined
   @JSName("o:tag")
-  var oColontag: js.UndefOr[String | js.Array[String]] = js.native
+  var oColontag: js.UndefOr[String | js.Array[String]] = js.undefined
   // Mailgun options
   @JSName("o:testmode")
-  var oColontestmode: js.UndefOr[yes | no | true_ | false_ | True | False] = js.native
+  var oColontestmode: js.UndefOr[yes | no | true_ | false_ | True | False] = js.undefined
   @JSName("o:tracking")
-  var oColontracking: js.UndefOr[yes | no | Boolean] = js.native
+  var oColontracking: js.UndefOr[yes | no | Boolean] = js.undefined
   @JSName("o:tracking-clicks")
-  var `oColontracking-clicks`: js.UndefOr[yes | no | htmlonly | Boolean] = js.native
+  var `oColontracking-clicks`: js.UndefOr[yes | no | htmlonly | Boolean] = js.undefined
   @JSName("o:tracking-opens")
-  var `oColontracking-opens`: js.UndefOr[yes | no | Boolean] = js.native
-  var subject: js.UndefOr[String] = js.native
-  var text: js.UndefOr[String] = js.native
-  var to: String | js.Array[String] = js.native
+  var `oColontracking-opens`: js.UndefOr[yes | no | Boolean] = js.undefined
+  var subject: js.UndefOr[String] = js.undefined
+  var text: js.UndefOr[String] = js.undefined
+  var to: String | js.Array[String]
 }
 
 object SendData {
   @scala.inline
-  def apply(to: String | js.Array[String]): SendData = {
+  def apply(
+    to: String | js.Array[String],
+    `amp-html`: String = null,
+    attachment: AttachmentData | js.Array[AttachmentData] = null,
+    bcc: String | js.Array[String] = null,
+    cc: String | js.Array[String] = null,
+    from: String = null,
+    hColonImportance: String = null,
+    `hColonIn-Reply-To`: String = null,
+    hColonReferences: String = null,
+    `hColonReply-To`: String = null,
+    html: String = null,
+    `inline`: AttachmentData | js.Array[AttachmentData] = null,
+    oColondeliverytime: String = null,
+    oColondkim: yes | no | Boolean = null,
+    `oColonrequire-tls`: yes | no | True | False = null,
+    `oColonskip-verification`: yes | no | True | False = null,
+    oColontag: String | js.Array[String] = null,
+    oColontestmode: yes | no | true_ | false_ | True | False = null,
+    oColontracking: yes | no | Boolean = null,
+    `oColontracking-clicks`: yes | no | htmlonly | Boolean = null,
+    `oColontracking-opens`: yes | no | Boolean = null,
+    subject: String = null,
+    text: String = null
+  ): SendData = {
     val __obj = js.Dynamic.literal(to = to.asInstanceOf[js.Any])
+    if (`amp-html` != null) __obj.updateDynamic("amp-html")(`amp-html`.asInstanceOf[js.Any])
+    if (attachment != null) __obj.updateDynamic("attachment")(attachment.asInstanceOf[js.Any])
+    if (bcc != null) __obj.updateDynamic("bcc")(bcc.asInstanceOf[js.Any])
+    if (cc != null) __obj.updateDynamic("cc")(cc.asInstanceOf[js.Any])
+    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
+    if (hColonImportance != null) __obj.updateDynamic("h:Importance")(hColonImportance.asInstanceOf[js.Any])
+    if (`hColonIn-Reply-To` != null) __obj.updateDynamic("h:In-Reply-To")(`hColonIn-Reply-To`.asInstanceOf[js.Any])
+    if (hColonReferences != null) __obj.updateDynamic("h:References")(hColonReferences.asInstanceOf[js.Any])
+    if (`hColonReply-To` != null) __obj.updateDynamic("h:Reply-To")(`hColonReply-To`.asInstanceOf[js.Any])
+    if (html != null) __obj.updateDynamic("html")(html.asInstanceOf[js.Any])
+    if (`inline` != null) __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
+    if (oColondeliverytime != null) __obj.updateDynamic("o:deliverytime")(oColondeliverytime.asInstanceOf[js.Any])
+    if (oColondkim != null) __obj.updateDynamic("o:dkim")(oColondkim.asInstanceOf[js.Any])
+    if (`oColonrequire-tls` != null) __obj.updateDynamic("o:require-tls")(`oColonrequire-tls`.asInstanceOf[js.Any])
+    if (`oColonskip-verification` != null) __obj.updateDynamic("o:skip-verification")(`oColonskip-verification`.asInstanceOf[js.Any])
+    if (oColontag != null) __obj.updateDynamic("o:tag")(oColontag.asInstanceOf[js.Any])
+    if (oColontestmode != null) __obj.updateDynamic("o:testmode")(oColontestmode.asInstanceOf[js.Any])
+    if (oColontracking != null) __obj.updateDynamic("o:tracking")(oColontracking.asInstanceOf[js.Any])
+    if (`oColontracking-clicks` != null) __obj.updateDynamic("o:tracking-clicks")(`oColontracking-clicks`.asInstanceOf[js.Any])
+    if (`oColontracking-opens` != null) __obj.updateDynamic("o:tracking-opens")(`oColontracking-opens`.asInstanceOf[js.Any])
+    if (subject != null) __obj.updateDynamic("subject")(subject.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendData]
   }
-  @scala.inline
-  implicit class SendDataOps[Self <: SendData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTo(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withAmp-html`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amp-html")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAmp-html`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amp-html")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttachment(value: AttachmentData | js.Array[AttachmentData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBcc(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bcc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBcc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bcc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCc(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrom(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHColonImportance(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h:Importance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHColonImportance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h:Importance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withHColonIn-Reply-To`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h:In-Reply-To")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutHColonIn-Reply-To`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h:In-Reply-To")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHColonReferences(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h:References")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHColonReferences: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h:References")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withHColonReply-To`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h:Reply-To")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutHColonReply-To`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h:Reply-To")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHtml(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHtml: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInline(value: AttachmentData | js.Array[AttachmentData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOColondeliverytime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("o:deliverytime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOColondeliverytime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("o:deliverytime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOColondkim(value: yes | no | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("o:dkim")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOColondkim: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("o:dkim")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withOColonrequire-tls`(value: yes | no | True | False): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("o:require-tls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutOColonrequire-tls`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("o:require-tls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withOColonskip-verification`(value: yes | no | True | False): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("o:skip-verification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutOColonskip-verification`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("o:skip-verification")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOColontag(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("o:tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOColontag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("o:tag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOColontestmode(value: yes | no | true_ | false_ | True | False): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("o:testmode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOColontestmode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("o:testmode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOColontracking(value: yes | no | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("o:tracking")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOColontracking: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("o:tracking")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withOColontracking-clicks`(value: yes | no | htmlonly | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("o:tracking-clicks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutOColontracking-clicks`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("o:tracking-clicks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withOColontracking-opens`(value: yes | no | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("o:tracking-opens")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutOColontracking-opens`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("o:tracking-opens")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubject(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

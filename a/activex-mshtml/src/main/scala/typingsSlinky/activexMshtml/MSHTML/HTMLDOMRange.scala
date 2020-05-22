@@ -4,35 +4,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HTMLDOMRange extends js.Object {
   @JSName("MSHTML.HTMLDOMRange_typekey")
-  var MSHTMLDotHTMLDOMRange_typekey: HTMLDOMRange = js.native
-  val collapsed: Boolean = js.native
-  val commonAncestorContainer: IHTMLDOMNode = js.native
-  val endContainer: IHTMLDOMNode = js.native
-  val endOffset: Double = js.native
-  val startContainer: IHTMLDOMNode = js.native
-  val startOffset: Double = js.native
-  def Detach(): Unit = js.native
-  def cloneContents(): js.Any = js.native
-  def cloneRange(): IHTMLDOMRange = js.native
-  def collapse(toStart: Boolean): Unit = js.native
-  def compareBoundaryPoints(how: Double, sourceRange: js.Any): Double = js.native
-  def deleteContents(): Unit = js.native
-  def extractContents(): js.Any = js.native
-  def getBoundingClientRect(): IHTMLRect = js.native
-  def getClientRects(): IHTMLRectCollection = js.native
-  def insertNode(newNode: js.Any): Unit = js.native
-  def selectNode(refNode: js.Any): Unit = js.native
-  def selectNodeContents(refNode: js.Any): Unit = js.native
-  def setEnd(refNode: js.Any, offset: Double): Unit = js.native
-  def setEndAfter(refNode: js.Any): Unit = js.native
-  def setEndBefore(refNode: js.Any): Unit = js.native
-  def setStart(refNode: js.Any, offset: Double): Unit = js.native
-  def setStartAfter(refNode: js.Any): Unit = js.native
-  def setStartBefore(refNode: js.Any): Unit = js.native
-  def surroundContents(newParent: js.Any): Unit = js.native
+  var MSHTMLDotHTMLDOMRange_typekey: HTMLDOMRange
+  val collapsed: Boolean
+  val commonAncestorContainer: IHTMLDOMNode
+  val endContainer: IHTMLDOMNode
+  val endOffset: Double
+  val startContainer: IHTMLDOMNode
+  val startOffset: Double
+  def Detach(): Unit
+  def cloneContents(): js.Any
+  def cloneRange(): IHTMLDOMRange
+  def collapse(toStart: Boolean): Unit
+  def compareBoundaryPoints(how: Double, sourceRange: js.Any): Double
+  def deleteContents(): Unit
+  def extractContents(): js.Any
+  def getBoundingClientRect(): IHTMLRect
+  def getClientRects(): IHTMLRectCollection
+  def insertNode(newNode: js.Any): Unit
+  def selectNode(refNode: js.Any): Unit
+  def selectNodeContents(refNode: js.Any): Unit
+  def setEnd(refNode: js.Any, offset: Double): Unit
+  def setEndAfter(refNode: js.Any): Unit
+  def setEndBefore(refNode: js.Any): Unit
+  def setStart(refNode: js.Any, offset: Double): Unit
+  def setStartAfter(refNode: js.Any): Unit
+  def setStartBefore(refNode: js.Any): Unit
+  def surroundContents(newParent: js.Any): Unit
 }
 
 object HTMLDOMRange {
@@ -69,169 +68,5 @@ object HTMLDOMRange {
     __obj.updateDynamic("MSHTML.HTMLDOMRange_typekey")(MSHTMLDotHTMLDOMRange_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[HTMLDOMRange]
   }
-  @scala.inline
-  implicit class HTMLDOMRangeOps[Self <: HTMLDOMRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDetach(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Detach")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withMSHTMLDotHTMLDOMRange_typekey(value: HTMLDOMRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.HTMLDOMRange_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCloneContents(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloneContents")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCloneRange(value: () => IHTMLDOMRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloneRange")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCollapse(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapse")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCollapsed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommonAncestorContainer(value: IHTMLDOMNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commonAncestorContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCompareBoundaryPoints(value: (Double, js.Any) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compareBoundaryPoints")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withDeleteContents(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteContents")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withEndContainer(value: IHTMLDOMNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExtractContents(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extractContents")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetBoundingClientRect(value: () => IHTMLRect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getBoundingClientRect")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetClientRects(value: () => IHTMLRectCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getClientRects")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withInsertNode(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSelectNode(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSelectNodeContents(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectNodeContents")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetEnd(value: (js.Any, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setEnd")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetEndAfter(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setEndAfter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetEndBefore(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setEndBefore")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetStart(value: (js.Any, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setStart")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetStartAfter(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setStartAfter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetStartBefore(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setStartBefore")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStartContainer(value: IHTMLDOMNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSurroundContents(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("surroundContents")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

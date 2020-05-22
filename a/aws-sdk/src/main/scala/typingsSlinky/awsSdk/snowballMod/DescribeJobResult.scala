@@ -18,41 +18,11 @@ trait DescribeJobResult extends js.Object {
 
 object DescribeJobResult {
   @scala.inline
-  def apply(): DescribeJobResult = {
+  def apply(JobMetadata: JobMetadata = null, SubJobMetadata: JobMetadataList = null): DescribeJobResult = {
     val __obj = js.Dynamic.literal()
+    if (JobMetadata != null) __obj.updateDynamic("JobMetadata")(JobMetadata.asInstanceOf[js.Any])
+    if (SubJobMetadata != null) __obj.updateDynamic("SubJobMetadata")(SubJobMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeJobResult]
   }
-  @scala.inline
-  implicit class DescribeJobResultOps[Self <: DescribeJobResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJobMetadata(value: JobMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubJobMetadata(value: JobMetadataList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubJobMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubJobMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubJobMetadata")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

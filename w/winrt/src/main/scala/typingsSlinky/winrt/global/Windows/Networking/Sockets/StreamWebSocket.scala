@@ -7,5 +7,8 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Networking.Sockets.StreamWebSocket")
 @js.native
 class StreamWebSocket ()
-  extends typingsSlinky.winrt.Windows.Networking.Sockets.StreamWebSocket
+  extends typingsSlinky.winrt.Windows.Networking.Sockets.StreamWebSocket {
+  /* CompleteClass */
+  override def close(): Unit = js.native
+}
 

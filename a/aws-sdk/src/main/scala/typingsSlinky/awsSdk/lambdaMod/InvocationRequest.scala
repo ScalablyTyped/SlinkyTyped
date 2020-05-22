@@ -34,89 +34,21 @@ trait InvocationRequest extends js.Object {
 
 object InvocationRequest {
   @scala.inline
-  def apply(FunctionName: NamespacedFunctionName): InvocationRequest = {
+  def apply(
+    FunctionName: NamespacedFunctionName,
+    ClientContext: String = null,
+    InvocationType: InvocationType = null,
+    LogType: LogType = null,
+    Payload: _Blob = null,
+    Qualifier: Qualifier = null
+  ): InvocationRequest = {
     val __obj = js.Dynamic.literal(FunctionName = FunctionName.asInstanceOf[js.Any])
+    if (ClientContext != null) __obj.updateDynamic("ClientContext")(ClientContext.asInstanceOf[js.Any])
+    if (InvocationType != null) __obj.updateDynamic("InvocationType")(InvocationType.asInstanceOf[js.Any])
+    if (LogType != null) __obj.updateDynamic("LogType")(LogType.asInstanceOf[js.Any])
+    if (Payload != null) __obj.updateDynamic("Payload")(Payload.asInstanceOf[js.Any])
+    if (Qualifier != null) __obj.updateDynamic("Qualifier")(Qualifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvocationRequest]
   }
-  @scala.inline
-  implicit class InvocationRequestOps[Self <: InvocationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFunctionName(value: NamespacedFunctionName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientContext(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientContext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvocationType(value: InvocationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvocationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvocationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvocationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogType(value: LogType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayloadUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Payload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPayload(value: _Blob): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Payload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Payload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQualifier(value: Qualifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Qualifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQualifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Qualifier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

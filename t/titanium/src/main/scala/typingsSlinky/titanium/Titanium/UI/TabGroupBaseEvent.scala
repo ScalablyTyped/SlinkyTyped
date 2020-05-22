@@ -5,15 +5,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * Base event for class Titanium.UI.TabGroup
-		 */
+  * Base event for class Titanium.UI.TabGroup
+  */
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Ti.Event * / any */ @js.native
-trait TabGroupBaseEvent extends js.Object {
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Ti.Event * / any */ trait TabGroupBaseEvent extends js.Object {
   /**
-  			 * Source object that fired the event.
-  			 */
-  var source: TabGroup = js.native
+    * Source object that fired the event.
+    */
+  var source: TabGroup
 }
 
 object TabGroupBaseEvent {
@@ -22,19 +21,5 @@ object TabGroupBaseEvent {
     val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any])
     __obj.asInstanceOf[TabGroupBaseEvent]
   }
-  @scala.inline
-  implicit class TabGroupBaseEventOps[Self <: TabGroupBaseEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSource(value: TabGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

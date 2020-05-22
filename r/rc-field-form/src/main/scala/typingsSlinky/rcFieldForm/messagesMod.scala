@@ -8,7 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("rc-field-form/lib/utils/messages", JSImport.Namespace)
+@JSImport("rc-field-form/es/utils/messages", JSImport.Namespace)
 @js.native
 object messagesMod extends js.Object {
   @js.native

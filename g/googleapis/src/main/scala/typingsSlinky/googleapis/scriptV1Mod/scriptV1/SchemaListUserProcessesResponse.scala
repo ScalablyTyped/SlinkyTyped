@@ -22,41 +22,11 @@ trait SchemaListUserProcessesResponse extends js.Object {
 
 object SchemaListUserProcessesResponse {
   @scala.inline
-  def apply(): SchemaListUserProcessesResponse = {
+  def apply(nextPageToken: String = null, processes: js.Array[SchemaGoogleAppsScriptTypeProcess] = null): SchemaListUserProcessesResponse = {
     val __obj = js.Dynamic.literal()
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
+    if (processes != null) __obj.updateDynamic("processes")(processes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListUserProcessesResponse]
   }
-  @scala.inline
-  implicit class SchemaListUserProcessesResponseOps[Self <: SchemaListUserProcessesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProcesses(value: js.Array[SchemaGoogleAppsScriptTypeProcess]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProcesses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

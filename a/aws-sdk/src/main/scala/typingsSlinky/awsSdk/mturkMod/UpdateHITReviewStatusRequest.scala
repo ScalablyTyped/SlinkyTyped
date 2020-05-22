@@ -18,35 +18,10 @@ trait UpdateHITReviewStatusRequest extends js.Object {
 
 object UpdateHITReviewStatusRequest {
   @scala.inline
-  def apply(HITId: EntityId): UpdateHITReviewStatusRequest = {
+  def apply(HITId: EntityId, Revert: js.UndefOr[Boolean] = js.undefined): UpdateHITReviewStatusRequest = {
     val __obj = js.Dynamic.literal(HITId = HITId.asInstanceOf[js.Any])
+    if (!js.isUndefined(Revert)) __obj.updateDynamic("Revert")(Revert.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateHITReviewStatusRequest]
   }
-  @scala.inline
-  implicit class UpdateHITReviewStatusRequestOps[Self <: UpdateHITReviewStatusRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHITId(value: EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HITId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRevert(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Revert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRevert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Revert")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

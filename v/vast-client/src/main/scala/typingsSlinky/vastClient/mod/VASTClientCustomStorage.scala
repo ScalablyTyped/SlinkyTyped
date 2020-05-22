@@ -5,38 +5,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VASTClientCustomStorage
   extends /* key */ StringDictionary[js.Any | js.Function0[_]] {
-  def getItem(key: String): String | Null = js.native
-  def setItem(key: String, `val`: String): Unit = js.native
+  def getItem(key: String): String | Null
+  def setItem(key: String, `val`: String): Unit
 }
 
 object VASTClientCustomStorage {
   @scala.inline
-  def apply(getItem: String => String | Null, setItem: (String, String) => Unit): VASTClientCustomStorage = {
+  def apply(
+    getItem: String => String | Null,
+    setItem: (String, String) => Unit,
+    StringDictionary: /* key */ StringDictionary[js.Any | js.Function0[_]] = null
+  ): VASTClientCustomStorage = {
     val __obj = js.Dynamic.literal(getItem = js.Any.fromFunction1(getItem), setItem = js.Any.fromFunction2(setItem))
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[VASTClientCustomStorage]
   }
-  @scala.inline
-  implicit class VASTClientCustomStorageOps[Self <: VASTClientCustomStorage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetItem(value: String => String | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetItem(value: (String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setItem")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

@@ -9,58 +9,32 @@ import scala.scalajs.js.annotation._
 /**
   * Represents displayed item data.
   */
-@js.native
 trait ListDataItem
   extends /* index */ StringDictionary[js.Any] {
   /**
-  	 * Contains key-value pairs of view properties and their values that are applied to the
-  	 * `ListItem`.
-  	 */
-  var properties: js.UndefOr[Dictionary[ListItem]] = js.native
+    * Contains key-value pairs of view properties and their values that are applied to the
+    * `ListItem`.
+    */
+  var properties: js.UndefOr[Dictionary[ListItem]] = js.undefined
   /**
-  	 * Template ID configured with the <Titanium.UI.ListView.templates> property or
-  	 * <Titanium.UI.LIST_ITEM_TEMPLATE_DEFAULT>.
-  	 */
-  var template: js.UndefOr[java.lang.String | Double] = js.native
+    * Template ID configured with the <Titanium.UI.ListView.templates> property or
+    * <Titanium.UI.LIST_ITEM_TEMPLATE_DEFAULT>.
+    */
+  var template: js.UndefOr[java.lang.String | Double] = js.undefined
 }
 
 object ListDataItem {
   @scala.inline
-  def apply(): ListDataItem = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    properties: Dictionary[ListItem] = null,
+    template: java.lang.String | Double = null
+  ): ListDataItem = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListDataItem]
   }
-  @scala.inline
-  implicit class ListDataItemOps[Self <: ListDataItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProperties(value: Dictionary[ListItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: java.lang.String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

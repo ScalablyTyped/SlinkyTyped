@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Escape extends js.Object {
-  def escape(str: String): String = js.native
+  def escape(str: String): String
 }
 
 object Escape {
@@ -15,19 +14,5 @@ object Escape {
     val __obj = js.Dynamic.literal(escape = js.Any.fromFunction1(escape))
     __obj.asInstanceOf[Escape]
   }
-  @scala.inline
-  implicit class EscapeOps[Self <: Escape] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEscape(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("escape")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

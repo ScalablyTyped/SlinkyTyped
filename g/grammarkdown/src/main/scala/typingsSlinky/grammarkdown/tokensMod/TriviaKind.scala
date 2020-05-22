@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait TriviaKind extends js.Object
 
-object TriviaKind {
-  @scala.inline
-  implicit def apply(value: CommentTriviaKind): TriviaKind = value.asInstanceOf[TriviaKind]
-  @scala.inline
-  implicit def apply(value: HtmlTriviaKind): TriviaKind = value.asInstanceOf[TriviaKind]
-}
-

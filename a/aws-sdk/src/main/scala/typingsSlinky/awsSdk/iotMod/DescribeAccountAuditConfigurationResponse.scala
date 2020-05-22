@@ -22,53 +22,16 @@ trait DescribeAccountAuditConfigurationResponse extends js.Object {
 
 object DescribeAccountAuditConfigurationResponse {
   @scala.inline
-  def apply(): DescribeAccountAuditConfigurationResponse = {
+  def apply(
+    auditCheckConfigurations: AuditCheckConfigurations = null,
+    auditNotificationTargetConfigurations: AuditNotificationTargetConfigurations = null,
+    roleArn: RoleArn = null
+  ): DescribeAccountAuditConfigurationResponse = {
     val __obj = js.Dynamic.literal()
+    if (auditCheckConfigurations != null) __obj.updateDynamic("auditCheckConfigurations")(auditCheckConfigurations.asInstanceOf[js.Any])
+    if (auditNotificationTargetConfigurations != null) __obj.updateDynamic("auditNotificationTargetConfigurations")(auditNotificationTargetConfigurations.asInstanceOf[js.Any])
+    if (roleArn != null) __obj.updateDynamic("roleArn")(roleArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAccountAuditConfigurationResponse]
   }
-  @scala.inline
-  implicit class DescribeAccountAuditConfigurationResponseOps[Self <: DescribeAccountAuditConfigurationResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuditCheckConfigurations(value: AuditCheckConfigurations): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auditCheckConfigurations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuditCheckConfigurations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auditCheckConfigurations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuditNotificationTargetConfigurations(value: AuditNotificationTargetConfigurations): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auditNotificationTargetConfigurations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuditNotificationTargetConfigurations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auditNotificationTargetConfigurations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: RoleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

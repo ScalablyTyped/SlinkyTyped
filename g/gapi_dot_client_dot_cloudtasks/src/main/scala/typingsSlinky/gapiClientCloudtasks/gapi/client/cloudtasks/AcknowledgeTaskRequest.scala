@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AcknowledgeTaskRequest extends js.Object {
   /**
     * Required.
@@ -14,34 +13,15 @@ trait AcknowledgeTaskRequest extends js.Object {
     * CloudTasks.RenewLease. This restriction is to check that
     * the caller is acknowledging the correct task.
     */
-  var scheduleTime: js.UndefOr[String] = js.native
+  var scheduleTime: js.UndefOr[String] = js.undefined
 }
 
 object AcknowledgeTaskRequest {
   @scala.inline
-  def apply(): AcknowledgeTaskRequest = {
+  def apply(scheduleTime: String = null): AcknowledgeTaskRequest = {
     val __obj = js.Dynamic.literal()
+    if (scheduleTime != null) __obj.updateDynamic("scheduleTime")(scheduleTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[AcknowledgeTaskRequest]
   }
-  @scala.inline
-  implicit class AcknowledgeTaskRequestOps[Self <: AcknowledgeTaskRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withScheduleTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheduleTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

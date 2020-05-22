@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AnnotationsOptions extends js.Object {
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Options for annotation's control
@@ -12,319 +11,132 @@ trait AnnotationsOptions extends js.Object {
     * object. Options from the controlPointOptions can be overwritten by
     * options in a specific control point.
     */
-  var controlPointOptions: js.UndefOr[js.Object | AnnotationsControlPointOptions] = js.native
+  var controlPointOptions: js.UndefOr[js.Object | AnnotationsControlPointOptions] = js.undefined
   /**
     * (Highstock) A crooked line annotation.
     */
-  var crookedLine: js.UndefOr[AnnotationsCrookedLineOptions] = js.native
+  var crookedLine: js.UndefOr[AnnotationsCrookedLineOptions] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Allow an annotation to be
     * draggable by a user. Possible values are `"x"`, `"xy"`, `"y"` and `""`
     * (disabled).
     */
-  var draggable: js.UndefOr[OptionsDraggableValue] = js.native
+  var draggable: js.UndefOr[OptionsDraggableValue] = js.undefined
   /**
     * (Highstock) An elliott wave annotation.
     */
-  var elliottWave: js.UndefOr[AnnotationsElliottWaveOptions] = js.native
+  var elliottWave: js.UndefOr[AnnotationsElliottWaveOptions] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Events available in annotations.
     */
-  var events: js.UndefOr[AnnotationsEventsOptions] = js.native
+  var events: js.UndefOr[AnnotationsEventsOptions] = js.undefined
   /**
     * (Highstock) A fibonacci annotation.
     */
-  var fibonacci: js.UndefOr[AnnotationsFibonacciOptions] = js.native
+  var fibonacci: js.UndefOr[AnnotationsFibonacciOptions] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Sets an ID for an annotation.
     * Can be user later when removing an annotation in
     * Chart.removeAnnotation(id) method.
     */
-  var id: js.UndefOr[Double | String] = js.native
+  var id: js.UndefOr[Double | String] = js.undefined
   /**
     * (Highstock) An infinity line annotation.
     */
-  var infinityLine: js.UndefOr[AnnotationsInfinityLineOptions] = js.native
+  var infinityLine: js.UndefOr[AnnotationsInfinityLineOptions] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Options for annotation's labels.
     * Each label inherits options from the labelOptions object. An option from
     * the labelOptions can be overwritten by config for a specific label.
     */
-  var labelOptions: js.UndefOr[AnnotationsLabelOptions] = js.native
+  var labelOptions: js.UndefOr[AnnotationsLabelOptions] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) An array of labels for the
     * annotation. For options that apply to multiple labels, they can be added
     * to the labelOptions.
     */
-  var labels: js.UndefOr[js.Array[AnnotationsLabelsOptions]] = js.native
+  var labels: js.UndefOr[js.Array[AnnotationsLabelsOptions]] = js.undefined
   /**
     * (Highstock) A measure annotation.
     */
-  var measure: js.UndefOr[AnnotationsMeasureOptions] = js.native
+  var measure: js.UndefOr[AnnotationsMeasureOptions] = js.undefined
   /**
     * (Highstock) A pitchfork annotation.
     */
-  var pitchfork: js.UndefOr[AnnotationsPitchforkOptions] = js.native
+  var pitchfork: js.UndefOr[AnnotationsPitchforkOptions] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Options for annotation's shapes.
     * Each shape inherits options from the shapeOptions object. An option from
     * the shapeOptions can be overwritten by config for a specific shape.
     */
-  var shapeOptions: js.UndefOr[AnnotationsShapeOptions] = js.native
+  var shapeOptions: js.UndefOr[AnnotationsShapeOptions] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) An array of shapes for the
     * annotation. For options that apply to multiple shapes, then can be added
     * to the shapeOptions.
     */
-  var shapes: js.UndefOr[js.Array[AnnotationsShapesOptions]] = js.native
+  var shapes: js.UndefOr[js.Array[AnnotationsShapesOptions]] = js.undefined
   /**
     * (Highstock) A tunnel annotation.
     */
-  var tunnel: js.UndefOr[AnnotationsTunnelOptions] = js.native
+  var tunnel: js.UndefOr[AnnotationsTunnelOptions] = js.undefined
   /**
     * (Highstock) A vertical line annotation.
     */
-  var verticalLine: js.UndefOr[AnnotationsVerticalLineOptions] = js.native
+  var verticalLine: js.UndefOr[AnnotationsVerticalLineOptions] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Whether the annotation is
     * visible.
     */
-  var visible: js.UndefOr[Boolean] = js.native
+  var visible: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The Z index of the annotation.
     */
-  var zIndex: js.UndefOr[Double] = js.native
+  var zIndex: js.UndefOr[Double] = js.undefined
 }
 
 object AnnotationsOptions {
   @scala.inline
-  def apply(): AnnotationsOptions = {
+  def apply(
+    controlPointOptions: js.Object | AnnotationsControlPointOptions = null,
+    crookedLine: AnnotationsCrookedLineOptions = null,
+    draggable: OptionsDraggableValue = null,
+    elliottWave: AnnotationsElliottWaveOptions = null,
+    events: AnnotationsEventsOptions = null,
+    fibonacci: AnnotationsFibonacciOptions = null,
+    id: Double | String = null,
+    infinityLine: AnnotationsInfinityLineOptions = null,
+    labelOptions: AnnotationsLabelOptions = null,
+    labels: js.Array[AnnotationsLabelsOptions] = null,
+    measure: AnnotationsMeasureOptions = null,
+    pitchfork: AnnotationsPitchforkOptions = null,
+    shapeOptions: AnnotationsShapeOptions = null,
+    shapes: js.Array[AnnotationsShapesOptions] = null,
+    tunnel: AnnotationsTunnelOptions = null,
+    verticalLine: AnnotationsVerticalLineOptions = null,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    zIndex: js.UndefOr[Double] = js.undefined
+  ): AnnotationsOptions = {
     val __obj = js.Dynamic.literal()
+    if (controlPointOptions != null) __obj.updateDynamic("controlPointOptions")(controlPointOptions.asInstanceOf[js.Any])
+    if (crookedLine != null) __obj.updateDynamic("crookedLine")(crookedLine.asInstanceOf[js.Any])
+    if (draggable != null) __obj.updateDynamic("draggable")(draggable.asInstanceOf[js.Any])
+    if (elliottWave != null) __obj.updateDynamic("elliottWave")(elliottWave.asInstanceOf[js.Any])
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
+    if (fibonacci != null) __obj.updateDynamic("fibonacci")(fibonacci.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (infinityLine != null) __obj.updateDynamic("infinityLine")(infinityLine.asInstanceOf[js.Any])
+    if (labelOptions != null) __obj.updateDynamic("labelOptions")(labelOptions.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (measure != null) __obj.updateDynamic("measure")(measure.asInstanceOf[js.Any])
+    if (pitchfork != null) __obj.updateDynamic("pitchfork")(pitchfork.asInstanceOf[js.Any])
+    if (shapeOptions != null) __obj.updateDynamic("shapeOptions")(shapeOptions.asInstanceOf[js.Any])
+    if (shapes != null) __obj.updateDynamic("shapes")(shapes.asInstanceOf[js.Any])
+    if (tunnel != null) __obj.updateDynamic("tunnel")(tunnel.asInstanceOf[js.Any])
+    if (verticalLine != null) __obj.updateDynamic("verticalLine")(verticalLine.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zIndex)) __obj.updateDynamic("zIndex")(zIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnnotationsOptions]
   }
-  @scala.inline
-  implicit class AnnotationsOptionsOps[Self <: AnnotationsOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withControlPointOptions(value: js.Object | AnnotationsControlPointOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlPointOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControlPointOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlPointOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrookedLine(value: AnnotationsCrookedLineOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crookedLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrookedLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crookedLine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDraggable(value: OptionsDraggableValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraggable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElliottWave(value: AnnotationsElliottWaveOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elliottWave")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElliottWave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elliottWave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvents(value: AnnotationsEventsOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFibonacci(value: AnnotationsFibonacciOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fibonacci")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFibonacci: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fibonacci")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInfinityLine(value: AnnotationsInfinityLineOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("infinityLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInfinityLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("infinityLine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelOptions(value: AnnotationsLabelOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: js.Array[AnnotationsLabelsOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeasure(value: AnnotationsMeasureOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeasure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPitchfork(value: AnnotationsPitchforkOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pitchfork")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPitchfork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pitchfork")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShapeOptions(value: AnnotationsShapeOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shapeOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShapeOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shapeOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShapes(value: js.Array[AnnotationsShapesOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shapes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShapes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shapes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTunnel(value: AnnotationsTunnelOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTunnel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerticalLine(value: AnnotationsVerticalLineOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalLine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

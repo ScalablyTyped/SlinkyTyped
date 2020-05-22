@@ -1,6 +1,7 @@
 package typingsSlinky.rxLiteTesting.mod
 
 import typingsSlinky.rxCore.Rx.IScheduler
+import typingsSlinky.rxCore.Rx.Observer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,5 +11,9 @@ import scala.scalajs.js.annotation._
 class MockObserverCls[T] protected ()
   extends typingsSlinky.rxLiteTesting.Rx.MockObserver[T] {
   def this(scheduler: IScheduler) = this()
+  /* CompleteClass */
+  override var messages: js.Array[typingsSlinky.rxLiteTesting.Rx.Recorded] = js.native
+  /* CompleteClass */
+  override def checked(): Observer[_] = js.native
 }
 

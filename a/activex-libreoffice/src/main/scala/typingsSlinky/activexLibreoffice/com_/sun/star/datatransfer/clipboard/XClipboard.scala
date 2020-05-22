@@ -7,30 +7,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XClipboard extends XInterface {
   /**
     * To get the current content of the clipboard.
     * @returns The transferable object representing the current content of this clipboard.
     * @see com.sun.star.datatransfer.XTransferable
     */
-  val Contents: XTransferable = js.native
+  val Contents: XTransferable
   /**
     * To get the name of the clipboard instance.
     * @returns The name of this clipboard object. If the returned string is empty the clipboard instance is the system clipboard.
     */
-  val Name: String = js.native
+  val Name: String
   /**
     * To get the current content of the clipboard.
     * @returns The transferable object representing the current content of this clipboard.
     * @see com.sun.star.datatransfer.XTransferable
     */
-  def getContents(): XTransferable = js.native
+  def getContents(): XTransferable
   /**
     * To get the name of the clipboard instance.
     * @returns The name of this clipboard object. If the returned string is empty the clipboard instance is the system clipboard.
     */
-  def getName(): String = js.native
+  def getName(): String
   /**
     * Sets the current contents of the clipboard to the specified transferable object and registers the specified clipboard owner as the owner of the new
     * contents.
@@ -39,7 +38,7 @@ trait XClipboard extends XInterface {
     * @see com.sun.star.datatransfer.XTransferable
     * @see com.sun.star.datatransfer.clipboard.XClipboardOwner
     */
-  def setContents(xTrans: XTransferable, xClipboardOwner: XClipboardOwner): Unit = js.native
+  def setContents(xTrans: XTransferable, xClipboardOwner: XClipboardOwner): Unit
 }
 
 object XClipboard {
@@ -57,43 +56,5 @@ object XClipboard {
     val __obj = js.Dynamic.literal(Contents = Contents.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getContents = js.Any.fromFunction0(getContents), getName = js.Any.fromFunction0(getName), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setContents = js.Any.fromFunction2(setContents))
     __obj.asInstanceOf[XClipboard]
   }
-  @scala.inline
-  implicit class XClipboardOps[Self <: XClipboard] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContents(value: XTransferable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Contents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetContents(value: () => XTransferable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContents")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetContents(value: (XTransferable, XClipboardOwner) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setContents")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

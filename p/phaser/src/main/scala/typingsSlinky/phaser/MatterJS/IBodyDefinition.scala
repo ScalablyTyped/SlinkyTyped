@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IBodyDefinition extends js.Object {
   /**
     * A `Number` specifying the angle of the body, in radians.
@@ -13,7 +12,7 @@ trait IBodyDefinition extends js.Object {
     * @type number
     * @default 0
     */
-  var angle: js.UndefOr[Double] = js.native
+  var angle: js.UndefOr[Double] = js.undefined
   /**
     * A `Number` that _measures_ the current angular speed of the body after the last `Body.update`. It is read-only and always positive (it's the magnitude of `body.angularVelocity`).
     *
@@ -22,7 +21,7 @@ trait IBodyDefinition extends js.Object {
     * @type number
     * @default 0
     */
-  var angularSpeed: js.UndefOr[Double] = js.native
+  var angularSpeed: js.UndefOr[Double] = js.undefined
   /**
     * A `Number` that _measures_ the current angular velocity of the body after the last `Body.update`. It is read-only.
     * If you need to modify a body's angular velocity directly, you should apply a torque or simply change the body's `angle` (as the engine uses position-Verlet integration).
@@ -32,7 +31,7 @@ trait IBodyDefinition extends js.Object {
     * @type number
     * @default 0
     */
-  var angularVelocity: js.UndefOr[Double] = js.native
+  var angularVelocity: js.UndefOr[Double] = js.undefined
   /**
     * A `Number` that _measures_ the area of the body's convex hull, calculated at creation by `Body.create`.
     *
@@ -40,7 +39,7 @@ trait IBodyDefinition extends js.Object {
     * @type string
     * @default
     */
-  var area: js.UndefOr[Double] = js.native
+  var area: js.UndefOr[Double] = js.undefined
   /**
     * An array of unique axis vectors (edge normals) used for collision detection.
     * These are automatically calculated from the given convex hull (`vertices` array) in `Body.create`.
@@ -49,7 +48,7 @@ trait IBodyDefinition extends js.Object {
     * @property axes
     * @type vector[]
     */
-  var axes: js.UndefOr[js.Array[Vector]] = js.native
+  var axes: js.UndefOr[js.Array[Vector]] = js.undefined
   /**
     * A `Bounds` object that defines the AABB region for the body.
     * It is automatically calculated from the given convex hull (`vertices` array) in `Body.create` and constantly updated by `Body.update` during simulation.
@@ -57,7 +56,7 @@ trait IBodyDefinition extends js.Object {
     * @property bounds
     * @type bounds
     */
-  var bounds: js.UndefOr[IBound] = js.native
+  var bounds: js.UndefOr[IBound] = js.undefined
   /**
     * An `Object` that specifies the collision filtering properties of this body.
     *
@@ -83,7 +82,7 @@ trait IBodyDefinition extends js.Object {
     * @property collisionFilter
     * @type object
     */
-  var collisionFilter: js.UndefOr[ICollisionFilter] = js.native
+  var collisionFilter: js.UndefOr[ICollisionFilter] = js.undefined
   /**
     * A `Number` that defines the density of the body, that is its mass per unit area.
     * If you pass the density via `Body.create` the `mass` property is automatically calculated for you based on the size (area) of the object.
@@ -93,7 +92,7 @@ trait IBodyDefinition extends js.Object {
     * @type number
     * @default 0.001
     */
-  var density: js.UndefOr[Double] = js.native
+  var density: js.UndefOr[Double] = js.undefined
   /**
     * A `Vector` that specifies the force to apply in the current step. It is zeroed after every `Body.update`. See also `Body.applyForce`.
     *
@@ -101,7 +100,7 @@ trait IBodyDefinition extends js.Object {
     * @type vector
     * @default { x: 0, y: 0 }
     */
-  var force: js.UndefOr[Vector] = js.native
+  var force: js.UndefOr[Vector] = js.undefined
   /**
     * A `Number` that defines the friction of the body. The value is always positive and is in the range `(0, 1)`.
     * A value of `0` means that the body may slide indefinitely.
@@ -118,7 +117,7 @@ trait IBodyDefinition extends js.Object {
     * @type number
     * @default 0.1
     */
-  var friction: js.UndefOr[Double] = js.native
+  var friction: js.UndefOr[Double] = js.undefined
   /**
     * A `Number` that defines the air friction of the body (air resistance).
     * A value of `0` means the body will never slow as it moves through space.
@@ -129,7 +128,7 @@ trait IBodyDefinition extends js.Object {
     * @type number
     * @default 0.01
     */
-  var frictionAir: js.UndefOr[Double] = js.native
+  var frictionAir: js.UndefOr[Double] = js.undefined
   /**
     * A `Number` that defines the static friction of the body (in the Coulomb friction model).
     * A value of `0` means the body will never 'stick' when it is nearly stationary and only dynamic `friction` is used.
@@ -140,14 +139,14 @@ trait IBodyDefinition extends js.Object {
     * @type number
     * @default 0.5
     */
-  var frictionStatic: js.UndefOr[Double] = js.native
+  var frictionStatic: js.UndefOr[Double] = js.undefined
   /**
     * A reference to the Phaser Game Object this body belongs to, if any.
     *
     * @property gameObject
     * @type Phaser.GameObjects.GameObject
     */
-  var gameObject: js.UndefOr[js.Any] = js.native
+  var gameObject: js.UndefOr[js.Any] = js.undefined
   /**
     * Scale the influence of World gravity when applied to this body.
     *
@@ -155,7 +154,7 @@ trait IBodyDefinition extends js.Object {
     * @type vector
     * @default { x: 1, y: 1 }
     */
-  var gravityScale: js.UndefOr[Vector] = js.native
+  var gravityScale: js.UndefOr[Vector] = js.undefined
   /**
     * Will this Body ignore World gravity during the Engine update?
     *
@@ -163,7 +162,7 @@ trait IBodyDefinition extends js.Object {
     * @type boolean
     * @default false
     */
-  var ignoreGravity: js.UndefOr[Boolean] = js.native
+  var ignoreGravity: js.UndefOr[Boolean] = js.undefined
   /**
     * Will this Body ignore Phaser Pointer input events?
     *
@@ -171,7 +170,7 @@ trait IBodyDefinition extends js.Object {
     * @type boolean
     * @default false
     */
-  var ignorePointer: js.UndefOr[Boolean] = js.native
+  var ignorePointer: js.UndefOr[Boolean] = js.undefined
   /**
     * A `Number` that defines the moment of inertia (i.e. second moment of area) of the body.
     * It is automatically calculated from the given convex hull (`vertices` array) and density in `Body.create`.
@@ -180,7 +179,7 @@ trait IBodyDefinition extends js.Object {
     * @property inertia
     * @type number
     */
-  var inertia: js.UndefOr[Double] = js.native
+  var inertia: js.UndefOr[Double] = js.undefined
   /**
     * A `Number` that defines the inverse moment of inertia of the body (`1 / inertia`).
     * If you modify this value, you must also modify the `body.inertia` property.
@@ -188,7 +187,7 @@ trait IBodyDefinition extends js.Object {
     * @property inverseInertia
     * @type number
     */
-  var inverseInertia: js.UndefOr[Double] = js.native
+  var inverseInertia: js.UndefOr[Double] = js.undefined
   /**
     * A `Number` that defines the inverse mass of the body (`1 / mass`).
     * If you modify this value, you must also modify the `body.mass` property.
@@ -196,7 +195,7 @@ trait IBodyDefinition extends js.Object {
     * @property inverseMass
     * @type number
     */
-  var inverseMass: js.UndefOr[Double] = js.native
+  var inverseMass: js.UndefOr[Double] = js.undefined
   /**
     * A flag that indicates whether a body is a sensor. Sensor triggers collision events, but doesn't react with colliding body physically.
     *
@@ -204,7 +203,7 @@ trait IBodyDefinition extends js.Object {
     * @type boolean
     * @default false
     */
-  var isSensor: js.UndefOr[Boolean] = js.native
+  var isSensor: js.UndefOr[Boolean] = js.undefined
   /**
     * A flag that indicates whether the body is considered sleeping. A sleeping body acts similar to a static body, except it is only temporary and can be awoken.
     * If you need to set a body as sleeping, you should use `Sleeping.set` as this requires more than just setting this flag.
@@ -213,7 +212,7 @@ trait IBodyDefinition extends js.Object {
     * @type boolean
     * @default false
     */
-  var isSleeping: js.UndefOr[Boolean] = js.native
+  var isSleeping: js.UndefOr[Boolean] = js.undefined
   /**
     * A flag that indicates whether a body is considered static. A static body can never change position or angle and is completely fixed.
     * If you need to set a body as static after its creation, you should use `Body.setStatic` as this requires more than just setting this flag.
@@ -222,7 +221,7 @@ trait IBodyDefinition extends js.Object {
     * @type boolean
     * @default false
     */
-  var isStatic: js.UndefOr[Boolean] = js.native
+  var isStatic: js.UndefOr[Boolean] = js.undefined
   /**
     * An arbitrary `String` name to help the user identify and manage bodies.
     *
@@ -230,7 +229,7 @@ trait IBodyDefinition extends js.Object {
     * @type string
     * @default "Body"
     */
-  var label: js.UndefOr[String] = js.native
+  var label: js.UndefOr[String] = js.undefined
   /**
     * A `Number` that defines the mass of the body, although it may be more appropriate to specify the `density` property instead.
     * If you modify this value, you must also modify the `body.inverseMass` property (`1 / mass`).
@@ -238,7 +237,7 @@ trait IBodyDefinition extends js.Object {
     * @property mass
     * @type number
     */
-  var mass: js.UndefOr[Double] = js.native
+  var mass: js.UndefOr[Double] = js.undefined
   /**
     * A `Number` that _measures_ the amount of movement a body currently has (a combination of `speed` and `angularSpeed`). It is read-only and always positive.
     * It is used and updated by the `Matter.Sleeping` module during simulation to decide if a body has come to rest.
@@ -248,7 +247,7 @@ trait IBodyDefinition extends js.Object {
     * @type number
     * @default 0
     */
-  var motion: js.UndefOr[Double] = js.native
+  var motion: js.UndefOr[Double] = js.undefined
   /**
     * A callback that is invoked for the duration that this Body is colliding with any other Body.
     * 
@@ -258,7 +257,7 @@ trait IBodyDefinition extends js.Object {
     * @type function
     * @default null
     */
-  var onCollideActiveCallback: js.UndefOr[js.Function] = js.native
+  var onCollideActiveCallback: js.UndefOr[js.Function] = js.undefined
   /**
     * A callback that is invoked when this Body starts colliding with any other Body.
     * 
@@ -268,7 +267,7 @@ trait IBodyDefinition extends js.Object {
     * @type function
     * @default null
     */
-  var onCollideCallback: js.UndefOr[js.Function] = js.native
+  var onCollideCallback: js.UndefOr[js.Function] = js.undefined
   /**
     * A callback that is invoked when this Body stops colliding with any other Body.
     * 
@@ -278,7 +277,7 @@ trait IBodyDefinition extends js.Object {
     * @type function
     * @default null
     */
-  var onCollideEndCallback: js.UndefOr[js.Function] = js.native
+  var onCollideEndCallback: js.UndefOr[js.Function] = js.undefined
   /**
     * A collision callback dictionary used by the `Body.setOnCollideWith` function.
     *
@@ -286,7 +285,7 @@ trait IBodyDefinition extends js.Object {
     * @type object
     * @default null
     */
-  var onCollideWith: js.UndefOr[js.Any] = js.native
+  var onCollideWith: js.UndefOr[js.Any] = js.undefined
   /**
     * A self reference if the body is _not_ a part of another body.
     * Otherwise this is a reference to the body that this is a part of.
@@ -295,7 +294,7 @@ trait IBodyDefinition extends js.Object {
     * @property parent
     * @type body
     */
-  var parent: js.UndefOr[BodyType] = js.native
+  var parent: js.UndefOr[BodyType] = js.undefined
   /**
     * An array of bodies that make up this body.
     * The first body in the array must always be a self reference to the current body instance.
@@ -307,21 +306,21 @@ trait IBodyDefinition extends js.Object {
     * @property parts
     * @type body[]
     */
-  var parts: js.UndefOr[js.Array[BodyType]] = js.native
+  var parts: js.UndefOr[js.Array[BodyType]] = js.undefined
   /**
     * A `Vector` that specifies the current world-space position of the body.
     *
     * @property position
     * @type vector
     */
-  var position: js.UndefOr[Vector] = js.native
+  var position: js.UndefOr[Vector] = js.undefined
   /**
     * An `Object` that defines the rendering properties to be consumed by the module `Matter.Render`.
     *
     * @property render
     * @type object
     */
-  var render: js.UndefOr[IBodyRenderOptions] = js.native
+  var render: js.UndefOr[IBodyRenderOptions] = js.undefined
   /**
     * A `Number` that defines the restitution (elasticity) of the body. The value is always positive and is in the range `(0, 1)`.
     * A value of `0` means collisions may be perfectly inelastic and no bouncing may occur.
@@ -334,7 +333,7 @@ trait IBodyDefinition extends js.Object {
     * @type number
     * @default 0
     */
-  var restitution: js.UndefOr[Double] = js.native
+  var restitution: js.UndefOr[Double] = js.undefined
   /**
     * A `Number` that defines the number of updates in which this body must have near-zero velocity before it is set as sleeping by the `Matter.Sleeping` module (if sleeping is enabled by the engine).
     *
@@ -342,7 +341,7 @@ trait IBodyDefinition extends js.Object {
     * @type number
     * @default 60
     */
-  var sleepThreshold: js.UndefOr[Double] = js.native
+  var sleepThreshold: js.UndefOr[Double] = js.undefined
   /**
     * A `Number` that specifies a tolerance on how far a body is allowed to 'sink' or rotate into other bodies.
     * Avoid changing this value unless you understand the purpose of `slop` in physics engines.
@@ -352,7 +351,7 @@ trait IBodyDefinition extends js.Object {
     * @type number
     * @default 0.05
     */
-  var slop: js.UndefOr[Double] = js.native
+  var slop: js.UndefOr[Double] = js.undefined
   /**
     * A `Number` that _measures_ the current speed of the body after the last `Body.update`. It is read-only and always positive (it's the magnitude of `body.velocity`).
     *
@@ -361,7 +360,7 @@ trait IBodyDefinition extends js.Object {
     * @type number
     * @default 0
     */
-  var speed: js.UndefOr[Double] = js.native
+  var speed: js.UndefOr[Double] = js.undefined
   /**
     * A `Number` that allows per-body time scaling, e.g. a force-field where bodies inside are in slow-motion, while others are at full speed.
     *
@@ -369,7 +368,7 @@ trait IBodyDefinition extends js.Object {
     * @type number
     * @default 1
     */
-  var timeScale: js.UndefOr[Double] = js.native
+  var timeScale: js.UndefOr[Double] = js.undefined
   /**
     * A `Number` that specifies the torque (turning force) to apply in the current step. It is zeroed after every `Body.update`.
     *
@@ -377,7 +376,7 @@ trait IBodyDefinition extends js.Object {
     * @type number
     * @default 0
     */
-  var torque: js.UndefOr[Double] = js.native
+  var torque: js.UndefOr[Double] = js.undefined
   /**
     * A `String` denoting the type of object.
     *
@@ -385,7 +384,7 @@ trait IBodyDefinition extends js.Object {
     * @type string
     * @default "body"
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
   /**
     * A `Vector` that _measures_ the current velocity of the body after the last `Body.update`. It is read-only.
     * If you need to modify a body's velocity directly, you should either apply a force or simply change the body's `position` (as the engine uses position-Verlet integration).
@@ -395,7 +394,7 @@ trait IBodyDefinition extends js.Object {
     * @type vector
     * @default { x: 0, y: 0 }
     */
-  var velocity: js.UndefOr[Vector] = js.native
+  var velocity: js.UndefOr[Vector] = js.undefined
   /**
     * An array of `Vector` objects that specify the convex hull of the rigid body.
     * These should be provided about the origin `(0, 0)`. E.g.
@@ -411,526 +410,99 @@ trait IBodyDefinition extends js.Object {
     * @property vertices
     * @type vector[]
     */
-  var vertices: js.UndefOr[js.Array[Vector]] = js.native
+  var vertices: js.UndefOr[js.Array[Vector]] = js.undefined
 }
 
 object IBodyDefinition {
   @scala.inline
-  def apply(): IBodyDefinition = {
+  def apply(
+    angle: js.UndefOr[Double] = js.undefined,
+    angularSpeed: js.UndefOr[Double] = js.undefined,
+    angularVelocity: js.UndefOr[Double] = js.undefined,
+    area: js.UndefOr[Double] = js.undefined,
+    axes: js.Array[Vector] = null,
+    bounds: IBound = null,
+    collisionFilter: ICollisionFilter = null,
+    density: js.UndefOr[Double] = js.undefined,
+    force: Vector = null,
+    friction: js.UndefOr[Double] = js.undefined,
+    frictionAir: js.UndefOr[Double] = js.undefined,
+    frictionStatic: js.UndefOr[Double] = js.undefined,
+    gameObject: js.Any = null,
+    gravityScale: Vector = null,
+    ignoreGravity: js.UndefOr[Boolean] = js.undefined,
+    ignorePointer: js.UndefOr[Boolean] = js.undefined,
+    inertia: js.UndefOr[Double] = js.undefined,
+    inverseInertia: js.UndefOr[Double] = js.undefined,
+    inverseMass: js.UndefOr[Double] = js.undefined,
+    isSensor: js.UndefOr[Boolean] = js.undefined,
+    isSleeping: js.UndefOr[Boolean] = js.undefined,
+    isStatic: js.UndefOr[Boolean] = js.undefined,
+    label: String = null,
+    mass: js.UndefOr[Double] = js.undefined,
+    motion: js.UndefOr[Double] = js.undefined,
+    onCollideActiveCallback: js.Function = null,
+    onCollideCallback: js.Function = null,
+    onCollideEndCallback: js.Function = null,
+    onCollideWith: js.Any = null,
+    parent: BodyType = null,
+    parts: js.Array[BodyType] = null,
+    position: Vector = null,
+    render: IBodyRenderOptions = null,
+    restitution: js.UndefOr[Double] = js.undefined,
+    sleepThreshold: js.UndefOr[Double] = js.undefined,
+    slop: js.UndefOr[Double] = js.undefined,
+    speed: js.UndefOr[Double] = js.undefined,
+    timeScale: js.UndefOr[Double] = js.undefined,
+    torque: js.UndefOr[Double] = js.undefined,
+    `type`: String = null,
+    velocity: Vector = null,
+    vertices: js.Array[Vector] = null
+  ): IBodyDefinition = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(angle)) __obj.updateDynamic("angle")(angle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(angularSpeed)) __obj.updateDynamic("angularSpeed")(angularSpeed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(angularVelocity)) __obj.updateDynamic("angularVelocity")(angularVelocity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(area)) __obj.updateDynamic("area")(area.get.asInstanceOf[js.Any])
+    if (axes != null) __obj.updateDynamic("axes")(axes.asInstanceOf[js.Any])
+    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
+    if (collisionFilter != null) __obj.updateDynamic("collisionFilter")(collisionFilter.asInstanceOf[js.Any])
+    if (!js.isUndefined(density)) __obj.updateDynamic("density")(density.get.asInstanceOf[js.Any])
+    if (force != null) __obj.updateDynamic("force")(force.asInstanceOf[js.Any])
+    if (!js.isUndefined(friction)) __obj.updateDynamic("friction")(friction.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(frictionAir)) __obj.updateDynamic("frictionAir")(frictionAir.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(frictionStatic)) __obj.updateDynamic("frictionStatic")(frictionStatic.get.asInstanceOf[js.Any])
+    if (gameObject != null) __obj.updateDynamic("gameObject")(gameObject.asInstanceOf[js.Any])
+    if (gravityScale != null) __obj.updateDynamic("gravityScale")(gravityScale.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreGravity)) __obj.updateDynamic("ignoreGravity")(ignoreGravity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignorePointer)) __obj.updateDynamic("ignorePointer")(ignorePointer.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(inertia)) __obj.updateDynamic("inertia")(inertia.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(inverseInertia)) __obj.updateDynamic("inverseInertia")(inverseInertia.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(inverseMass)) __obj.updateDynamic("inverseMass")(inverseMass.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isSensor)) __obj.updateDynamic("isSensor")(isSensor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isSleeping)) __obj.updateDynamic("isSleeping")(isSleeping.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isStatic)) __obj.updateDynamic("isStatic")(isStatic.get.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (!js.isUndefined(mass)) __obj.updateDynamic("mass")(mass.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(motion)) __obj.updateDynamic("motion")(motion.get.asInstanceOf[js.Any])
+    if (onCollideActiveCallback != null) __obj.updateDynamic("onCollideActiveCallback")(onCollideActiveCallback.asInstanceOf[js.Any])
+    if (onCollideCallback != null) __obj.updateDynamic("onCollideCallback")(onCollideCallback.asInstanceOf[js.Any])
+    if (onCollideEndCallback != null) __obj.updateDynamic("onCollideEndCallback")(onCollideEndCallback.asInstanceOf[js.Any])
+    if (onCollideWith != null) __obj.updateDynamic("onCollideWith")(onCollideWith.asInstanceOf[js.Any])
+    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
+    if (parts != null) __obj.updateDynamic("parts")(parts.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (render != null) __obj.updateDynamic("render")(render.asInstanceOf[js.Any])
+    if (!js.isUndefined(restitution)) __obj.updateDynamic("restitution")(restitution.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sleepThreshold)) __obj.updateDynamic("sleepThreshold")(sleepThreshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(slop)) __obj.updateDynamic("slop")(slop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(speed)) __obj.updateDynamic("speed")(speed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeScale)) __obj.updateDynamic("timeScale")(timeScale.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(torque)) __obj.updateDynamic("torque")(torque.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (velocity != null) __obj.updateDynamic("velocity")(velocity.asInstanceOf[js.Any])
+    if (vertices != null) __obj.updateDynamic("vertices")(vertices.asInstanceOf[js.Any])
     __obj.asInstanceOf[IBodyDefinition]
   }
-  @scala.inline
-  implicit class IBodyDefinitionOps[Self <: IBodyDefinition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAngularSpeed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angularSpeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAngularSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angularSpeed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAngularVelocity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angularVelocity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAngularVelocity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angularVelocity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArea(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxes(value: js.Array[Vector]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBounds(value: IBound): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBounds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollisionFilter(value: ICollisionFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collisionFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollisionFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collisionFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDensity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("density")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDensity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("density")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForce(value: Vector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFriction(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("friction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFriction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("friction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrictionAir(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frictionAir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrictionAir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frictionAir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrictionStatic(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frictionStatic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrictionStatic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frictionStatic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGameObject(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gameObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGameObject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gameObject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGravityScale(value: Vector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gravityScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGravityScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gravityScale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreGravity(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreGravity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreGravity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreGravity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnorePointer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignorePointer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnorePointer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignorePointer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInertia(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inertia")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInertia: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inertia")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInverseInertia(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inverseInertia")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInverseInertia: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inverseInertia")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInverseMass(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inverseMass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInverseMass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inverseMass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsSensor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSensor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsSensor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSensor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsSleeping(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSleeping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsSleeping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSleeping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsStatic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isStatic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsStatic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isStatic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMass(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMotion(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("motion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMotion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("motion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCollideActiveCallback(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCollideActiveCallback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnCollideActiveCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCollideActiveCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCollideCallback(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCollideCallback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnCollideCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCollideCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCollideEndCallback(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCollideEndCallback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnCollideEndCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCollideEndCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCollideWith(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCollideWith")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnCollideWith: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCollideWith")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParent(value: BodyType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParts(value: js.Array[BodyType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Vector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRender(value: IBodyRenderOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("render")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("render")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestitution(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restitution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestitution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restitution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSleepThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sleepThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSleepThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sleepThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpeed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeScale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTorque(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("torque")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTorque: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("torque")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVelocity(value: Vector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("velocity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVelocity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("velocity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVertices(value: js.Array[Vector]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVertices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertices")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

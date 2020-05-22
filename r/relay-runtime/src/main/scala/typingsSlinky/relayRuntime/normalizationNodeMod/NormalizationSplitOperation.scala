@@ -6,66 +6,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NormalizationSplitOperation
   extends GeneratedNode
      with NormalizationSelectableNode {
-  val kind: String = js.native
-  val metadata: js.UndefOr[StringDictionary[js.Any] | Null] = js.native
+  val kind: String
+  val metadata: js.UndefOr[StringDictionary[js.Any] | Null] = js.undefined
    // 'SplitOperation';
-  val name: String = js.native
-  val selections: js.Array[NormalizationSelection] = js.native
+  val name: String
+  val selections: js.Array[NormalizationSelection]
 }
 
 object NormalizationSplitOperation {
   @scala.inline
-  def apply(kind: String, name: String, selections: js.Array[NormalizationSelection]): NormalizationSplitOperation = {
+  def apply(
+    kind: String,
+    name: String,
+    selections: js.Array[NormalizationSelection],
+    metadata: js.UndefOr[Null | StringDictionary[js.Any]] = js.undefined
+  ): NormalizationSplitOperation = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
+    if (!js.isUndefined(metadata)) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[NormalizationSplitOperation]
   }
-  @scala.inline
-  implicit class NormalizationSplitOperationOps[Self <: NormalizationSplitOperation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelections(value: js.Array[NormalizationSelection]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadataNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(null)
-        ret
-    }
-  }
-  
 }
 

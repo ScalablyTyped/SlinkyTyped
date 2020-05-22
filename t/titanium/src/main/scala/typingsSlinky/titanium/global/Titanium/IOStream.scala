@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-	 * IOStream is the interface that all stream types implement.
-	 */
+  * IOStream is the interface that all stream types implement.
+  */
 // tslint:disable-next-line:interface-name
 @JSGlobal("Titanium.IOStream")
 @js.native

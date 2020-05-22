@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FetchInfo extends js.Object {
   /**
-  	 * Total number of rows that match the current table filter/search properties.
-  	 */
-  var dataTotalSize: Double = js.native
+    * Total number of rows that match the current table filter/search properties.
+    */
+  var dataTotalSize: Double
 }
 
 object FetchInfo {
@@ -18,19 +17,5 @@ object FetchInfo {
     val __obj = js.Dynamic.literal(dataTotalSize = dataTotalSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[FetchInfo]
   }
-  @scala.inline
-  implicit class FetchInfoOps[Self <: FetchInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataTotalSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataTotalSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

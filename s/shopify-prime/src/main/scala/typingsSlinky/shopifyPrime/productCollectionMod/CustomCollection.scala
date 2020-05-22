@@ -1,11 +1,11 @@
 package typingsSlinky.shopifyPrime.productCollectionMod
 
+import typingsSlinky.shopifyPrime.anon.Attachment
 import typingsSlinky.shopifyPrime.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CustomCollection extends ProductCollection {
   /**
     * Array of products in the collection
@@ -14,7 +14,7 @@ trait CustomCollection extends ProductCollection {
     * product_id - Required when adding a new item
     * id - Required when shifting the position of a product that was previously added to the collection
     */
-  var collects: js.Array[Id] = js.native
+  var collects: js.Array[Id]
   /**
     * "key": "new"
     * "value": "newvalue"
@@ -29,56 +29,46 @@ trait CustomCollection extends ProductCollection {
     * - value_type (required): States whether the information in the value is stored as a 'string' or 'integer.'
     * - description (optional): Additional information about the metafield.
     */
-  var metafield: js.UndefOr[String] = js.native
+  var metafield: js.UndefOr[String] = js.undefined
   /**
     * States whether the custom collection is visible. Valid values are "true" for visible and "false" for hidden.
     */
-  var published: js.UndefOr[Boolean] = js.native
+  var published: js.UndefOr[Boolean] = js.undefined
 }
 
 object CustomCollection {
   @scala.inline
-  def apply(collects: js.Array[Id]): CustomCollection = {
+  def apply(
+    collects: js.Array[Id],
+    admin_graphql_api_id: String = null,
+    body_html: String = null,
+    handle: String = null,
+    id: js.UndefOr[Double] = js.undefined,
+    image: Attachment = null,
+    metafield: String = null,
+    published: js.UndefOr[Boolean] = js.undefined,
+    published_at: String = null,
+    published_scope: String = null,
+    sort_order: String = null,
+    template_suffix: String = null,
+    title: String = null,
+    updated_at: String = null
+  ): CustomCollection = {
     val __obj = js.Dynamic.literal(collects = collects.asInstanceOf[js.Any])
+    if (admin_graphql_api_id != null) __obj.updateDynamic("admin_graphql_api_id")(admin_graphql_api_id.asInstanceOf[js.Any])
+    if (body_html != null) __obj.updateDynamic("body_html")(body_html.asInstanceOf[js.Any])
+    if (handle != null) __obj.updateDynamic("handle")(handle.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (metafield != null) __obj.updateDynamic("metafield")(metafield.asInstanceOf[js.Any])
+    if (!js.isUndefined(published)) __obj.updateDynamic("published")(published.get.asInstanceOf[js.Any])
+    if (published_at != null) __obj.updateDynamic("published_at")(published_at.asInstanceOf[js.Any])
+    if (published_scope != null) __obj.updateDynamic("published_scope")(published_scope.asInstanceOf[js.Any])
+    if (sort_order != null) __obj.updateDynamic("sort_order")(sort_order.asInstanceOf[js.Any])
+    if (template_suffix != null) __obj.updateDynamic("template_suffix")(template_suffix.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (updated_at != null) __obj.updateDynamic("updated_at")(updated_at.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomCollection]
   }
-  @scala.inline
-  implicit class CustomCollectionOps[Self <: CustomCollection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCollects(value: js.Array[Id]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetafield(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metafield")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetafield: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metafield")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublished(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("published")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublished: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("published")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

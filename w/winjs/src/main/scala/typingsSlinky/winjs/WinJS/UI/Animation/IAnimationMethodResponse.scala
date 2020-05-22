@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 
 //#endregion Functions
 //#region Interfaces
-@js.native
 trait IAnimationMethodResponse extends js.Object {
-  def execute(): Promise[_] = js.native
+  def execute(): Promise[_]
 }
 
 object IAnimationMethodResponse {
@@ -18,19 +17,5 @@ object IAnimationMethodResponse {
     val __obj = js.Dynamic.literal(execute = js.Any.fromFunction0(execute))
     __obj.asInstanceOf[IAnimationMethodResponse]
   }
-  @scala.inline
-  implicit class IAnimationMethodResponseOps[Self <: IAnimationMethodResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecute(value: () => Promise[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

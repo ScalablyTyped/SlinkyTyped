@@ -18,7 +18,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** represents a singe cell within a table. */
-@js.native
 trait Cell
   extends XText
      with CellProperties

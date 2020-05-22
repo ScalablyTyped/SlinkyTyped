@@ -1,568 +1,386 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import org.scalajs.dom.raw.Element
 import typingsSlinky.devextreme.anon.AllowCollapsing
 import typingsSlinky.devextreme.anon.AllowColumnDragging
+import typingsSlinky.devextreme.anon.AllowDropInsideItem
 import typingsSlinky.devextreme.anon.AllowExportSelectedData
+import typingsSlinky.devextreme.anon.AllowedPageSizes
+import typingsSlinky.devextreme.anon.ApplyFilter
+import typingsSlinky.devextreme.anon.AscendingText
 import typingsSlinky.devextreme.anon.AutoExpandAll
+import typingsSlinky.devextreme.anon.BrokenRules
 import typingsSlinky.devextreme.anon.CalculateCustomSummary
 import typingsSlinky.devextreme.anon.CancelColumn
+import typingsSlinky.devextreme.anon.CancelComponent
 import typingsSlinky.devextreme.anon.CellElement
 import typingsSlinky.devextreme.anon.ColumnIndex
 import typingsSlinky.devextreme.anon.Columns
+import typingsSlinky.devextreme.anon.ComponentData
 import typingsSlinky.devextreme.anon.ComponentDxDataGrid
+import typingsSlinky.devextreme.anon.ComponentElement
+import typingsSlinky.devextreme.anon.CurrentDeselectedRowKeys
+import typingsSlinky.devextreme.anon.CustomLoad
+import typingsSlinky.devextreme.anon.CustomizeText
+import typingsSlinky.devextreme.anon.DataElement
 import typingsSlinky.devextreme.anon.DataField
 import typingsSlinky.devextreme.anon.Disabled
 import typingsSlinky.devextreme.anon.DisplayValue
+import typingsSlinky.devextreme.anon.EditOnKeyPress
+import typingsSlinky.devextreme.anon.Element
 import typingsSlinky.devextreme.anon.ElementFileName
+import typingsSlinky.devextreme.anon.ElementKey
+import typingsSlinky.devextreme.anon.EmptyPanelText
+import typingsSlinky.devextreme.anon.Enabled
+import typingsSlinky.devextreme.anon.Error
 import typingsSlinky.devextreme.anon.Filtering
+import typingsSlinky.devextreme.anon.FormOptions
 import typingsSlinky.devextreme.anon.Format
 import typingsSlinky.devextreme.anon.GroupColumn
 import typingsSlinky.devextreme.anon.GroupIndex
+import typingsSlinky.devextreme.anon.Handled
+import typingsSlinky.devextreme.anon.Height
+import typingsSlinky.devextreme.anon.HighlightCaseSensitive
+import typingsSlinky.devextreme.anon.IndicatorSrc
 import typingsSlinky.devextreme.anon.IsExpanded
 import typingsSlinky.devextreme.anon.IsNewRow
 import typingsSlinky.devextreme.anon.IsSelected
 import typingsSlinky.devextreme.anon.Items
+import typingsSlinky.devextreme.anon.Key
+import typingsSlinky.devextreme.anon.Model
+import typingsSlinky.devextreme.anon.Name
+import typingsSlinky.devextreme.anon.NewData
 import typingsSlinky.devextreme.anon.NewRowIndex
+import typingsSlinky.devextreme.anon.Promise
 import typingsSlinky.devextreme.anon.Row
 import typingsSlinky.devextreme.anon.RowElement
+import typingsSlinky.devextreme.anon.ToolbarOptions
 import typingsSlinky.devextreme.devextremeStrings.auto
+import typingsSlinky.devextreme.devextremeStrings.nextColumn
+import typingsSlinky.devextreme.devextremeStrings.widget
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
+import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
+import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxDataGridOptions extends GridBaseOptions[dxDataGrid] {
-  /** An array of grid columns. */
+  /** @name dxDataGrid.Options.columns */
   @JSName("columns")
-  var columns_dxDataGridOptions: js.UndefOr[js.Array[dxDataGridColumn | String]] = js.native
-  /** Customizes columns after they are created. */
-  var customizeColumns: js.UndefOr[js.Function1[/* columns */ js.Array[dxDataGridColumn], _]] = js.native
-  /** Customizes data before export. You can use the export.customizeExcelCell function instead. */
+  var columns_dxDataGridOptions: js.UndefOr[js.Array[dxDataGridColumn | String]] = js.undefined
+  /** @name dxDataGrid.Options.customizeColumns */
+  var customizeColumns: js.UndefOr[js.Function1[/* columns */ js.Array[dxDataGridColumn], _]] = js.undefined
+  /** @name dxDataGrid.Options.customizeExportData */
   var customizeExportData: js.UndefOr[
     js.Function2[
       /* columns */ js.Array[dxDataGridColumn], 
       /* rows */ js.Array[dxDataGridRowObject], 
       _
     ]
-  ] = js.native
-  /** Configures editing. */
+  ] = js.undefined
+  /** @name dxDataGrid.Options.editing */
   @JSName("editing")
-  var editing_dxDataGridOptions: js.UndefOr[dxDataGridEditing] = js.native
-  /** Configures client-side exporting. */
-  var export: js.UndefOr[AllowExportSelectedData] = js.native
-  /** Configures the group panel. */
-  var groupPanel: js.UndefOr[AllowColumnDragging] = js.native
-  /** Configures grouping. */
-  var grouping: js.UndefOr[AllowCollapsing] = js.native
-  /** Specifies which data field provides keys for data items. Applies only if data is a simple array. */
-  var keyExpr: js.UndefOr[String | js.Array[String]] = js.native
-  /** Allows you to build a master-detail interface in the grid. */
-  var masterDetail: js.UndefOr[AutoExpandAll] = js.native
-  /** A function that is executed when a cell is clicked or tapped. Executed before onRowClick. */
-  var onCellClick: js.UndefOr[(js.Function1[/* e */ CellElement, _]) | String] = js.native
-  /** A function that is executed when a cell is double-clicked or double-tapped. Executed before onRowDblClick. */
-  var onCellDblClick: js.UndefOr[js.Function1[/* e */ ColumnIndex, _]] = js.native
-  /** A function that is executed after the pointer enters or leaves a cell. */
-  var onCellHoverChanged: js.UndefOr[js.Function1[/* e */ DisplayValue, _]] = js.native
-  /** A function that is executed after a cell is created. */
-  var onCellPrepared: js.UndefOr[js.Function1[/* e */ IsExpanded, _]] = js.native
-  /** A function that is executed before the context menu is rendered. */
-  var onContextMenuPreparing: js.UndefOr[js.Function1[/* e */ Items, _]] = js.native
-  /** A function that is executed before a cell or row switches to the editing state. */
-  var onEditingStart: js.UndefOr[js.Function1[/* e */ CancelColumn, _]] = js.native
-  /** A function that is executed after an editor is created. Not executed for cells with an editCellTemplate. */
-  var onEditorPrepared: js.UndefOr[js.Function1[/* options */ DataField, _]] = js.native
-  /** A function used to customize or replace default editors. Not executed for cells with an editCellTemplate. */
-  var onEditorPreparing: js.UndefOr[js.Function1[/* e */ Disabled, _]] = js.native
-  /** A function that is executed after data is exported. */
-  var onExported: js.UndefOr[js.Function1[/* e */ ComponentDxDataGrid, _]] = js.native
-  /** A function that is executed before data is exported. */
-  var onExporting: js.UndefOr[js.Function1[/* e */ ElementFileName, _]] = js.native
-  /** A function that is executed before a file with exported data is saved to the user's local storage. */
-  var onFileSaving: js.UndefOr[js.Function1[/* e */ Format, _]] = js.native
-  /** A function that is executed after the focused cell changes. */
-  var onFocusedCellChanged: js.UndefOr[js.Function1[/* e */ Row, _]] = js.native
-  /** A function that is executed before the focused cell changes. */
-  var onFocusedCellChanging: js.UndefOr[js.Function1[/* e */ Columns, _]] = js.native
-  /** A function that is executed after the focused row changes. Applies only when focusedRowEnabled is true. */
-  var onFocusedRowChanged: js.UndefOr[js.Function1[/* e */ RowElement, _]] = js.native
-  /** A function that is executed before the focused row changes. Applies only when focusedRowEnabled is true. */
-  var onFocusedRowChanging: js.UndefOr[js.Function1[/* e */ NewRowIndex, _]] = js.native
-  /** A function that is executed when a row is clicked or tapped. */
-  var onRowClick: js.UndefOr[(js.Function1[/* e */ GroupIndex, _]) | String] = js.native
-  /** A function that is executed when a row is double-clicked or double-tapped. Executed after onCellDblClick. */
-  var onRowDblClick: js.UndefOr[js.Function1[/* e */ IsNewRow, _]] = js.native
-  /** A function that is executed after a row is created. */
-  var onRowPrepared: js.UndefOr[js.Function1[/* e */ IsSelected, _]] = js.native
-  /** Notifies the DataGrid of the server's data processing operations. */
-  var remoteOperations: js.UndefOr[Boolean | Filtering | auto] = js.native
-  /** Specifies a custom template for rows. */
+  var editing_dxDataGridOptions: js.UndefOr[dxDataGridEditing] = js.undefined
+  /** @name dxDataGrid.Options.export */
+  var export: js.UndefOr[AllowExportSelectedData] = js.undefined
+  /** @name dxDataGrid.Options.groupPanel */
+  var groupPanel: js.UndefOr[AllowColumnDragging] = js.undefined
+  /** @name dxDataGrid.Options.grouping */
+  var grouping: js.UndefOr[AllowCollapsing] = js.undefined
+  /** @name dxDataGrid.Options.keyExpr */
+  var keyExpr: js.UndefOr[String | js.Array[String]] = js.undefined
+  /** @name dxDataGrid.Options.masterDetail */
+  var masterDetail: js.UndefOr[AutoExpandAll] = js.undefined
+  /** @name dxDataGrid.Options.onCellClick */
+  var onCellClick: js.UndefOr[(js.Function1[/* e */ CellElement, _]) | String] = js.undefined
+  /** @name dxDataGrid.Options.onCellDblClick */
+  var onCellDblClick: js.UndefOr[js.Function1[/* e */ ColumnIndex, _]] = js.undefined
+  /** @name dxDataGrid.Options.onCellHoverChanged */
+  var onCellHoverChanged: js.UndefOr[js.Function1[/* e */ DisplayValue, _]] = js.undefined
+  /** @name dxDataGrid.Options.onCellPrepared */
+  var onCellPrepared: js.UndefOr[js.Function1[/* e */ IsExpanded, _]] = js.undefined
+  /** @name dxDataGrid.Options.onContextMenuPreparing */
+  var onContextMenuPreparing: js.UndefOr[js.Function1[/* e */ Items, _]] = js.undefined
+  /** @name dxDataGrid.Options.onEditingStart */
+  var onEditingStart: js.UndefOr[js.Function1[/* e */ CancelColumn, _]] = js.undefined
+  /** @name dxDataGrid.Options.onEditorPrepared */
+  var onEditorPrepared: js.UndefOr[js.Function1[/* options */ DataField, _]] = js.undefined
+  /** @name dxDataGrid.Options.onEditorPreparing */
+  var onEditorPreparing: js.UndefOr[js.Function1[/* e */ Disabled, _]] = js.undefined
+  /** @name dxDataGrid.Options.onExported */
+  var onExported: js.UndefOr[js.Function1[/* e */ ComponentDxDataGrid, _]] = js.undefined
+  /** @name dxDataGrid.Options.onExporting */
+  var onExporting: js.UndefOr[js.Function1[/* e */ ElementFileName, _]] = js.undefined
+  /** @name dxDataGrid.Options.onFileSaving */
+  var onFileSaving: js.UndefOr[js.Function1[/* e */ Format, _]] = js.undefined
+  /** @name dxDataGrid.Options.onFocusedCellChanged */
+  var onFocusedCellChanged: js.UndefOr[js.Function1[/* e */ Row, _]] = js.undefined
+  /** @name dxDataGrid.Options.onFocusedCellChanging */
+  var onFocusedCellChanging: js.UndefOr[js.Function1[/* e */ Columns, _]] = js.undefined
+  /** @name dxDataGrid.Options.onFocusedRowChanged */
+  var onFocusedRowChanged: js.UndefOr[js.Function1[/* e */ RowElement, _]] = js.undefined
+  /** @name dxDataGrid.Options.onFocusedRowChanging */
+  var onFocusedRowChanging: js.UndefOr[js.Function1[/* e */ NewRowIndex, _]] = js.undefined
+  /** @name dxDataGrid.Options.onRowClick */
+  var onRowClick: js.UndefOr[(js.Function1[/* e */ GroupIndex, _]) | String] = js.undefined
+  /** @name dxDataGrid.Options.onRowDblClick */
+  var onRowDblClick: js.UndefOr[js.Function1[/* e */ IsNewRow, _]] = js.undefined
+  /** @name dxDataGrid.Options.onRowPrepared */
+  var onRowPrepared: js.UndefOr[js.Function1[/* e */ IsSelected, _]] = js.undefined
+  /** @name dxDataGrid.Options.remoteOperations */
+  var remoteOperations: js.UndefOr[Boolean | Filtering | auto] = js.undefined
+  /** @name dxDataGrid.Options.rowTemplate */
   var rowTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* rowElement */ dxElement, /* rowInfo */ js.Any, _])
-  ] = js.native
-  /** Configures scrolling. */
+  ] = js.undefined
+  /** @name dxDataGrid.Options.scrolling */
   @JSName("scrolling")
-  var scrolling_dxDataGridOptions: js.UndefOr[dxDataGridScrolling] = js.native
-  /** Specifies filters for the rows that must be selected initially. Applies only if selection.deferred is true. */
-  var selectionFilter: js.UndefOr[String | js.Array[_] | js.Function] = js.native
-  /** Configures runtime selection. */
+  var scrolling_dxDataGridOptions: js.UndefOr[dxDataGridScrolling] = js.undefined
+  /** @name dxDataGrid.Options.selectionFilter */
+  var selectionFilter: js.UndefOr[String | js.Array[_] | js.Function] = js.undefined
+  /** @name dxDataGrid.Options.selection */
   @JSName("selection")
-  var selection_dxDataGridOptions: js.UndefOr[dxDataGridSelection] = js.native
-  /** Allows you to sort groups according to the values of group summary items. */
-  var sortByGroupSummaryInfo: js.UndefOr[js.Array[GroupColumn]] = js.native
-  /** Specifies the options of the grid summary. */
-  var summary: js.UndefOr[CalculateCustomSummary] = js.native
+  var selection_dxDataGridOptions: js.UndefOr[dxDataGridSelection] = js.undefined
+  /** @name dxDataGrid.Options.sortByGroupSummaryInfo */
+  var sortByGroupSummaryInfo: js.UndefOr[js.Array[GroupColumn]] = js.undefined
+  /** @name dxDataGrid.Options.summary */
+  var summary: js.UndefOr[CalculateCustomSummary] = js.undefined
 }
 
 object dxDataGridOptions {
   @scala.inline
-  def apply(): dxDataGridOptions = {
+  def apply(
+    accessKey: String = null,
+    activeStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    allowColumnReordering: js.UndefOr[Boolean] = js.undefined,
+    allowColumnResizing: js.UndefOr[Boolean] = js.undefined,
+    autoNavigateToFocusedRow: js.UndefOr[Boolean] = js.undefined,
+    bindingOptions: js.Any = null,
+    cacheEnabled: js.UndefOr[Boolean] = js.undefined,
+    cellHintEnabled: js.UndefOr[Boolean] = js.undefined,
+    columnAutoWidth: js.UndefOr[Boolean] = js.undefined,
+    columnChooser: EmptyPanelText = null,
+    columnFixing: Enabled = null,
+    columnHidingEnabled: js.UndefOr[Boolean] = js.undefined,
+    columnMinWidth: js.UndefOr[Double] = js.undefined,
+    columnResizingMode: nextColumn | widget = null,
+    columnWidth: js.UndefOr[Double] = js.undefined,
+    columns: js.Array[dxDataGridColumn | String] = null,
+    customizeColumns: /* columns */ js.Array[dxDataGridColumn] => _ = null,
+    customizeExportData: (/* columns */ js.Array[dxDataGridColumn], /* rows */ js.Array[dxDataGridRowObject]) => _ = null,
+    dataSource: String | js.Array[_] | DataSource | DataSourceOptions = null,
+    dateSerializationFormat: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    editing: dxDataGridEditing = null,
+    elementAttr: js.Any = null,
+    errorRowEnabled: js.UndefOr[Boolean] = js.undefined,
+    export: AllowExportSelectedData = null,
+    filterBuilder: dxFilterBuilderOptions = null,
+    filterBuilderPopup: dxPopupOptions[dxPopup] = null,
+    filterPanel: CustomizeText[dxDataGrid] = null,
+    filterRow: ApplyFilter = null,
+    filterSyncEnabled: Boolean | auto = null,
+    filterValue: String | js.Array[_] | js.Function = null,
+    focusStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    focusedColumnIndex: js.UndefOr[Double] = js.undefined,
+    focusedRowEnabled: js.UndefOr[Boolean] = js.undefined,
+    focusedRowIndex: js.UndefOr[Double] = js.undefined,
+    focusedRowKey: js.Any = null,
+    groupPanel: AllowColumnDragging = null,
+    grouping: AllowCollapsing = null,
+    headerFilter: Height = null,
+    height: Double | String | (js.Function0[Double | String]) = null,
+    highlightChanges: js.UndefOr[Boolean] = js.undefined,
+    hint: String = null,
+    hoverStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    keyExpr: String | js.Array[String] = null,
+    keyboardNavigation: EditOnKeyPress = null,
+    loadPanel: IndicatorSrc = null,
+    masterDetail: AutoExpandAll = null,
+    noDataText: String = null,
+    onAdaptiveDetailRowPreparing: /* e */ FormOptions[dxDataGrid] => _ = null,
+    onCellClick: (js.Function1[/* e */ CellElement, _]) | String = null,
+    onCellDblClick: /* e */ ColumnIndex => _ = null,
+    onCellHoverChanged: /* e */ DisplayValue => _ = null,
+    onCellPrepared: /* e */ IsExpanded => _ = null,
+    onContentReady: /* e */ ComponentElement[dxDataGrid] => _ = null,
+    onContextMenuPreparing: /* e */ Items => _ = null,
+    onDataErrorOccurred: /* e */ Error[dxDataGrid] => _ = null,
+    onDisposing: /* e */ Model[dxDataGrid] => _ = null,
+    onEditingStart: /* e */ CancelColumn => _ = null,
+    onEditorPrepared: /* options */ DataField => _ = null,
+    onEditorPreparing: /* e */ Disabled => _ = null,
+    onExported: /* e */ ComponentDxDataGrid => _ = null,
+    onExporting: /* e */ ElementFileName => _ = null,
+    onFileSaving: /* e */ Format => _ = null,
+    onFocusedCellChanged: /* e */ Row => _ = null,
+    onFocusedCellChanging: /* e */ Columns => _ = null,
+    onFocusedRowChanged: /* e */ RowElement => _ = null,
+    onFocusedRowChanging: /* e */ NewRowIndex => _ = null,
+    onInitNewRow: /* e */ Promise[dxDataGrid] => _ = null,
+    onInitialized: /* e */ Element[dxDataGrid] => _ = null,
+    onKeyDown: /* e */ Handled[dxDataGrid] => _ = null,
+    onOptionChanged: /* e */ Name[dxDataGrid] => _ = null,
+    onRowClick: (js.Function1[/* e */ GroupIndex, _]) | String = null,
+    onRowCollapsed: /* e */ Key[dxDataGrid] => _ = null,
+    onRowCollapsing: /* e */ CancelComponent[dxDataGrid] => _ = null,
+    onRowDblClick: /* e */ IsNewRow => _ = null,
+    onRowExpanded: /* e */ Key[dxDataGrid] => _ = null,
+    onRowExpanding: /* e */ CancelComponent[dxDataGrid] => _ = null,
+    onRowInserted: /* e */ ComponentData[dxDataGrid] => _ = null,
+    onRowInserting: /* e */ DataElement[dxDataGrid] => _ = null,
+    onRowPrepared: /* e */ IsSelected => _ = null,
+    onRowRemoved: /* e */ ComponentData[dxDataGrid] => _ = null,
+    onRowRemoving: /* e */ ElementKey[dxDataGrid] => _ = null,
+    onRowUpdated: /* e */ ComponentData[dxDataGrid] => _ = null,
+    onRowUpdating: /* e */ NewData[dxDataGrid] => _ = null,
+    onRowValidating: /* e */ BrokenRules[dxDataGrid] => _ = null,
+    onSelectionChanged: /* e */ CurrentDeselectedRowKeys[dxDataGrid] => _ = null,
+    onToolbarPreparing: /* e */ ToolbarOptions[dxDataGrid] => _ = null,
+    pager: AllowedPageSizes = null,
+    paging: GridBasePaging = null,
+    remoteOperations: Boolean | Filtering | auto = null,
+    renderAsync: js.UndefOr[Boolean] = js.undefined,
+    repaintChangesOnly: js.UndefOr[Boolean] = js.undefined,
+    rowAlternationEnabled: js.UndefOr[Boolean] = js.undefined,
+    rowDragging: AllowDropInsideItem = null,
+    rowTemplate: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* rowElement */ dxElement, /* rowInfo */ js.Any, _]) = null,
+    rtlEnabled: js.UndefOr[Boolean] = js.undefined,
+    scrolling: dxDataGridScrolling = null,
+    searchPanel: HighlightCaseSensitive = null,
+    selectedRowKeys: js.Array[_] = null,
+    selection: dxDataGridSelection = null,
+    selectionFilter: String | js.Array[_] | js.Function = null,
+    showBorders: js.UndefOr[Boolean] = js.undefined,
+    showColumnHeaders: js.UndefOr[Boolean] = js.undefined,
+    showColumnLines: js.UndefOr[Boolean] = js.undefined,
+    showRowLines: js.UndefOr[Boolean] = js.undefined,
+    sortByGroupSummaryInfo: js.Array[GroupColumn] = null,
+    sorting: AscendingText = null,
+    stateStoring: CustomLoad = null,
+    summary: CalculateCustomSummary = null,
+    tabIndex: js.UndefOr[Double] = js.undefined,
+    twoWayBindingEnabled: js.UndefOr[Boolean] = js.undefined,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    width: Double | String | (js.Function0[Double | String]) = null,
+    wordWrapEnabled: js.UndefOr[Boolean] = js.undefined
+  ): dxDataGridOptions = {
     val __obj = js.Dynamic.literal()
+    if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(activeStateEnabled)) __obj.updateDynamic("activeStateEnabled")(activeStateEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowColumnReordering)) __obj.updateDynamic("allowColumnReordering")(allowColumnReordering.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowColumnResizing)) __obj.updateDynamic("allowColumnResizing")(allowColumnResizing.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoNavigateToFocusedRow)) __obj.updateDynamic("autoNavigateToFocusedRow")(autoNavigateToFocusedRow.get.asInstanceOf[js.Any])
+    if (bindingOptions != null) __obj.updateDynamic("bindingOptions")(bindingOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(cacheEnabled)) __obj.updateDynamic("cacheEnabled")(cacheEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cellHintEnabled)) __obj.updateDynamic("cellHintEnabled")(cellHintEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(columnAutoWidth)) __obj.updateDynamic("columnAutoWidth")(columnAutoWidth.get.asInstanceOf[js.Any])
+    if (columnChooser != null) __obj.updateDynamic("columnChooser")(columnChooser.asInstanceOf[js.Any])
+    if (columnFixing != null) __obj.updateDynamic("columnFixing")(columnFixing.asInstanceOf[js.Any])
+    if (!js.isUndefined(columnHidingEnabled)) __obj.updateDynamic("columnHidingEnabled")(columnHidingEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(columnMinWidth)) __obj.updateDynamic("columnMinWidth")(columnMinWidth.get.asInstanceOf[js.Any])
+    if (columnResizingMode != null) __obj.updateDynamic("columnResizingMode")(columnResizingMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(columnWidth)) __obj.updateDynamic("columnWidth")(columnWidth.get.asInstanceOf[js.Any])
+    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
+    if (customizeColumns != null) __obj.updateDynamic("customizeColumns")(js.Any.fromFunction1(customizeColumns))
+    if (customizeExportData != null) __obj.updateDynamic("customizeExportData")(js.Any.fromFunction2(customizeExportData))
+    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
+    if (dateSerializationFormat != null) __obj.updateDynamic("dateSerializationFormat")(dateSerializationFormat.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (editing != null) __obj.updateDynamic("editing")(editing.asInstanceOf[js.Any])
+    if (elementAttr != null) __obj.updateDynamic("elementAttr")(elementAttr.asInstanceOf[js.Any])
+    if (!js.isUndefined(errorRowEnabled)) __obj.updateDynamic("errorRowEnabled")(errorRowEnabled.get.asInstanceOf[js.Any])
+    if (export != null) __obj.updateDynamic("export")(export.asInstanceOf[js.Any])
+    if (filterBuilder != null) __obj.updateDynamic("filterBuilder")(filterBuilder.asInstanceOf[js.Any])
+    if (filterBuilderPopup != null) __obj.updateDynamic("filterBuilderPopup")(filterBuilderPopup.asInstanceOf[js.Any])
+    if (filterPanel != null) __obj.updateDynamic("filterPanel")(filterPanel.asInstanceOf[js.Any])
+    if (filterRow != null) __obj.updateDynamic("filterRow")(filterRow.asInstanceOf[js.Any])
+    if (filterSyncEnabled != null) __obj.updateDynamic("filterSyncEnabled")(filterSyncEnabled.asInstanceOf[js.Any])
+    if (filterValue != null) __obj.updateDynamic("filterValue")(filterValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(focusStateEnabled)) __obj.updateDynamic("focusStateEnabled")(focusStateEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(focusedColumnIndex)) __obj.updateDynamic("focusedColumnIndex")(focusedColumnIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(focusedRowEnabled)) __obj.updateDynamic("focusedRowEnabled")(focusedRowEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(focusedRowIndex)) __obj.updateDynamic("focusedRowIndex")(focusedRowIndex.get.asInstanceOf[js.Any])
+    if (focusedRowKey != null) __obj.updateDynamic("focusedRowKey")(focusedRowKey.asInstanceOf[js.Any])
+    if (groupPanel != null) __obj.updateDynamic("groupPanel")(groupPanel.asInstanceOf[js.Any])
+    if (grouping != null) __obj.updateDynamic("grouping")(grouping.asInstanceOf[js.Any])
+    if (headerFilter != null) __obj.updateDynamic("headerFilter")(headerFilter.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (!js.isUndefined(highlightChanges)) __obj.updateDynamic("highlightChanges")(highlightChanges.get.asInstanceOf[js.Any])
+    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
+    if (!js.isUndefined(hoverStateEnabled)) __obj.updateDynamic("hoverStateEnabled")(hoverStateEnabled.get.asInstanceOf[js.Any])
+    if (keyExpr != null) __obj.updateDynamic("keyExpr")(keyExpr.asInstanceOf[js.Any])
+    if (keyboardNavigation != null) __obj.updateDynamic("keyboardNavigation")(keyboardNavigation.asInstanceOf[js.Any])
+    if (loadPanel != null) __obj.updateDynamic("loadPanel")(loadPanel.asInstanceOf[js.Any])
+    if (masterDetail != null) __obj.updateDynamic("masterDetail")(masterDetail.asInstanceOf[js.Any])
+    if (noDataText != null) __obj.updateDynamic("noDataText")(noDataText.asInstanceOf[js.Any])
+    if (onAdaptiveDetailRowPreparing != null) __obj.updateDynamic("onAdaptiveDetailRowPreparing")(js.Any.fromFunction1(onAdaptiveDetailRowPreparing))
+    if (onCellClick != null) __obj.updateDynamic("onCellClick")(onCellClick.asInstanceOf[js.Any])
+    if (onCellDblClick != null) __obj.updateDynamic("onCellDblClick")(js.Any.fromFunction1(onCellDblClick))
+    if (onCellHoverChanged != null) __obj.updateDynamic("onCellHoverChanged")(js.Any.fromFunction1(onCellHoverChanged))
+    if (onCellPrepared != null) __obj.updateDynamic("onCellPrepared")(js.Any.fromFunction1(onCellPrepared))
+    if (onContentReady != null) __obj.updateDynamic("onContentReady")(js.Any.fromFunction1(onContentReady))
+    if (onContextMenuPreparing != null) __obj.updateDynamic("onContextMenuPreparing")(js.Any.fromFunction1(onContextMenuPreparing))
+    if (onDataErrorOccurred != null) __obj.updateDynamic("onDataErrorOccurred")(js.Any.fromFunction1(onDataErrorOccurred))
+    if (onDisposing != null) __obj.updateDynamic("onDisposing")(js.Any.fromFunction1(onDisposing))
+    if (onEditingStart != null) __obj.updateDynamic("onEditingStart")(js.Any.fromFunction1(onEditingStart))
+    if (onEditorPrepared != null) __obj.updateDynamic("onEditorPrepared")(js.Any.fromFunction1(onEditorPrepared))
+    if (onEditorPreparing != null) __obj.updateDynamic("onEditorPreparing")(js.Any.fromFunction1(onEditorPreparing))
+    if (onExported != null) __obj.updateDynamic("onExported")(js.Any.fromFunction1(onExported))
+    if (onExporting != null) __obj.updateDynamic("onExporting")(js.Any.fromFunction1(onExporting))
+    if (onFileSaving != null) __obj.updateDynamic("onFileSaving")(js.Any.fromFunction1(onFileSaving))
+    if (onFocusedCellChanged != null) __obj.updateDynamic("onFocusedCellChanged")(js.Any.fromFunction1(onFocusedCellChanged))
+    if (onFocusedCellChanging != null) __obj.updateDynamic("onFocusedCellChanging")(js.Any.fromFunction1(onFocusedCellChanging))
+    if (onFocusedRowChanged != null) __obj.updateDynamic("onFocusedRowChanged")(js.Any.fromFunction1(onFocusedRowChanged))
+    if (onFocusedRowChanging != null) __obj.updateDynamic("onFocusedRowChanging")(js.Any.fromFunction1(onFocusedRowChanging))
+    if (onInitNewRow != null) __obj.updateDynamic("onInitNewRow")(js.Any.fromFunction1(onInitNewRow))
+    if (onInitialized != null) __obj.updateDynamic("onInitialized")(js.Any.fromFunction1(onInitialized))
+    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
+    if (onOptionChanged != null) __obj.updateDynamic("onOptionChanged")(js.Any.fromFunction1(onOptionChanged))
+    if (onRowClick != null) __obj.updateDynamic("onRowClick")(onRowClick.asInstanceOf[js.Any])
+    if (onRowCollapsed != null) __obj.updateDynamic("onRowCollapsed")(js.Any.fromFunction1(onRowCollapsed))
+    if (onRowCollapsing != null) __obj.updateDynamic("onRowCollapsing")(js.Any.fromFunction1(onRowCollapsing))
+    if (onRowDblClick != null) __obj.updateDynamic("onRowDblClick")(js.Any.fromFunction1(onRowDblClick))
+    if (onRowExpanded != null) __obj.updateDynamic("onRowExpanded")(js.Any.fromFunction1(onRowExpanded))
+    if (onRowExpanding != null) __obj.updateDynamic("onRowExpanding")(js.Any.fromFunction1(onRowExpanding))
+    if (onRowInserted != null) __obj.updateDynamic("onRowInserted")(js.Any.fromFunction1(onRowInserted))
+    if (onRowInserting != null) __obj.updateDynamic("onRowInserting")(js.Any.fromFunction1(onRowInserting))
+    if (onRowPrepared != null) __obj.updateDynamic("onRowPrepared")(js.Any.fromFunction1(onRowPrepared))
+    if (onRowRemoved != null) __obj.updateDynamic("onRowRemoved")(js.Any.fromFunction1(onRowRemoved))
+    if (onRowRemoving != null) __obj.updateDynamic("onRowRemoving")(js.Any.fromFunction1(onRowRemoving))
+    if (onRowUpdated != null) __obj.updateDynamic("onRowUpdated")(js.Any.fromFunction1(onRowUpdated))
+    if (onRowUpdating != null) __obj.updateDynamic("onRowUpdating")(js.Any.fromFunction1(onRowUpdating))
+    if (onRowValidating != null) __obj.updateDynamic("onRowValidating")(js.Any.fromFunction1(onRowValidating))
+    if (onSelectionChanged != null) __obj.updateDynamic("onSelectionChanged")(js.Any.fromFunction1(onSelectionChanged))
+    if (onToolbarPreparing != null) __obj.updateDynamic("onToolbarPreparing")(js.Any.fromFunction1(onToolbarPreparing))
+    if (pager != null) __obj.updateDynamic("pager")(pager.asInstanceOf[js.Any])
+    if (paging != null) __obj.updateDynamic("paging")(paging.asInstanceOf[js.Any])
+    if (remoteOperations != null) __obj.updateDynamic("remoteOperations")(remoteOperations.asInstanceOf[js.Any])
+    if (!js.isUndefined(renderAsync)) __obj.updateDynamic("renderAsync")(renderAsync.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(repaintChangesOnly)) __obj.updateDynamic("repaintChangesOnly")(repaintChangesOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowAlternationEnabled)) __obj.updateDynamic("rowAlternationEnabled")(rowAlternationEnabled.get.asInstanceOf[js.Any])
+    if (rowDragging != null) __obj.updateDynamic("rowDragging")(rowDragging.asInstanceOf[js.Any])
+    if (rowTemplate != null) __obj.updateDynamic("rowTemplate")(rowTemplate.asInstanceOf[js.Any])
+    if (!js.isUndefined(rtlEnabled)) __obj.updateDynamic("rtlEnabled")(rtlEnabled.get.asInstanceOf[js.Any])
+    if (scrolling != null) __obj.updateDynamic("scrolling")(scrolling.asInstanceOf[js.Any])
+    if (searchPanel != null) __obj.updateDynamic("searchPanel")(searchPanel.asInstanceOf[js.Any])
+    if (selectedRowKeys != null) __obj.updateDynamic("selectedRowKeys")(selectedRowKeys.asInstanceOf[js.Any])
+    if (selection != null) __obj.updateDynamic("selection")(selection.asInstanceOf[js.Any])
+    if (selectionFilter != null) __obj.updateDynamic("selectionFilter")(selectionFilter.asInstanceOf[js.Any])
+    if (!js.isUndefined(showBorders)) __obj.updateDynamic("showBorders")(showBorders.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showColumnHeaders)) __obj.updateDynamic("showColumnHeaders")(showColumnHeaders.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showColumnLines)) __obj.updateDynamic("showColumnLines")(showColumnLines.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showRowLines)) __obj.updateDynamic("showRowLines")(showRowLines.get.asInstanceOf[js.Any])
+    if (sortByGroupSummaryInfo != null) __obj.updateDynamic("sortByGroupSummaryInfo")(sortByGroupSummaryInfo.asInstanceOf[js.Any])
+    if (sorting != null) __obj.updateDynamic("sorting")(sorting.asInstanceOf[js.Any])
+    if (stateStoring != null) __obj.updateDynamic("stateStoring")(stateStoring.asInstanceOf[js.Any])
+    if (summary != null) __obj.updateDynamic("summary")(summary.asInstanceOf[js.Any])
+    if (!js.isUndefined(tabIndex)) __obj.updateDynamic("tabIndex")(tabIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(twoWayBindingEnabled)) __obj.updateDynamic("twoWayBindingEnabled")(twoWayBindingEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
+    if (!js.isUndefined(wordWrapEnabled)) __obj.updateDynamic("wordWrapEnabled")(wordWrapEnabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxDataGridOptions]
   }
-  @scala.inline
-  implicit class dxDataGridOptionsOps[Self <: dxDataGridOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumns(value: js.Array[dxDataGridColumn | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomizeColumns(value: /* columns */ js.Array[dxDataGridColumn] => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeColumns")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCustomizeColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeColumns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomizeExportData(value: (/* columns */ js.Array[dxDataGridColumn], /* rows */ js.Array[dxDataGridRowObject]) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeExportData")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutCustomizeExportData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeExportData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEditing(value: dxDataGridEditing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEditing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExport(value: AllowExportSelectedData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("export")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("export")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupPanel(value: AllowColumnDragging): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupPanel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupPanel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupPanel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrouping(value: AllowCollapsing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grouping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrouping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grouping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyExpr(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyExpr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyExpr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyExpr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMasterDetail(value: AutoExpandAll): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterDetail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMasterDetail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterDetail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCellClickFunction1(value: /* e */ CellElement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCellClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnCellClick(value: (js.Function1[/* e */ CellElement, _]) | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCellClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnCellClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCellClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCellDblClick(value: /* e */ ColumnIndex => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCellDblClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCellDblClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCellDblClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCellHoverChanged(value: /* e */ DisplayValue => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCellHoverChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCellHoverChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCellHoverChanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCellPrepared(value: /* e */ IsExpanded => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCellPrepared")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCellPrepared: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCellPrepared")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnContextMenuPreparing(value: /* e */ Items => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenuPreparing")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnContextMenuPreparing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenuPreparing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEditingStart(value: /* e */ CancelColumn => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEditingStart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEditingStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEditingStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEditorPrepared(value: /* options */ DataField => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEditorPrepared")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEditorPrepared: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEditorPrepared")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEditorPreparing(value: /* e */ Disabled => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEditorPreparing")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEditorPreparing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEditorPreparing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnExported(value: /* e */ ComponentDxDataGrid => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onExported")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnExported: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onExported")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnExporting(value: /* e */ ElementFileName => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onExporting")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnExporting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onExporting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFileSaving(value: /* e */ Format => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFileSaving")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFileSaving: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFileSaving")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFocusedCellChanged(value: /* e */ Row => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusedCellChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFocusedCellChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusedCellChanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFocusedCellChanging(value: /* e */ Columns => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusedCellChanging")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFocusedCellChanging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusedCellChanging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFocusedRowChanged(value: /* e */ RowElement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusedRowChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFocusedRowChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusedRowChanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFocusedRowChanging(value: /* e */ NewRowIndex => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusedRowChanging")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFocusedRowChanging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusedRowChanging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRowClickFunction1(value: /* e */ GroupIndex => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnRowClick(value: (js.Function1[/* e */ GroupIndex, _]) | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnRowClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRowDblClick(value: /* e */ IsNewRow => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowDblClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRowDblClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowDblClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRowPrepared(value: /* e */ IsSelected => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowPrepared")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRowPrepared: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowPrepared")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoteOperations(value: Boolean | Filtering | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteOperations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoteOperations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteOperations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowTemplateFunction2(value: (/* rowElement */ dxElement, /* rowInfo */ js.Any) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowTemplate")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRowTemplateElement(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowTemplate(
-      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* rowElement */ dxElement, /* rowInfo */ js.Any, _])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrolling(value: dxDataGridScrolling): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrolling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrolling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrolling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelection(value: dxDataGridSelection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionFilter(value: String | js.Array[_] | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortByGroupSummaryInfo(value: js.Array[GroupColumn]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortByGroupSummaryInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortByGroupSummaryInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortByGroupSummaryInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSummary(value: CalculateCustomSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

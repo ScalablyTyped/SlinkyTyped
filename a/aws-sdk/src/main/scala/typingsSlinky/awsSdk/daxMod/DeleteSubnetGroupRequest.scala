@@ -18,19 +18,5 @@ object DeleteSubnetGroupRequest {
     val __obj = js.Dynamic.literal(SubnetGroupName = SubnetGroupName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteSubnetGroupRequest]
   }
-  @scala.inline
-  implicit class DeleteSubnetGroupRequestOps[Self <: DeleteSubnetGroupRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSubnetGroupName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

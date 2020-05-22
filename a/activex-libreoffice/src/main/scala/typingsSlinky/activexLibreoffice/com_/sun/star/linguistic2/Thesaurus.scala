@@ -14,7 +14,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** offers thesaurus functionality. */
-@js.native
 trait Thesaurus
   extends XThesaurus
      with XInitialization

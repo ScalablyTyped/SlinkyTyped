@@ -25,6 +25,7 @@ import typingsSlinky.grommet.grommetStrings.weak
 import typingsSlinky.grommet.imageMod.ImageProps
 import typingsSlinky.grommet.utilsMod.A11yTitleType
 import typingsSlinky.grommet.utilsMod.AlignSelfType
+import typingsSlinky.grommet.utilsMod.FillType
 import typingsSlinky.grommet.utilsMod.GridAreaType
 import typingsSlinky.grommet.utilsMod.MarginType
 import typingsSlinky.react.anon.Html
@@ -102,7 +103,7 @@ object Image {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any]] {
+       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
     @scala.inline
     def a11yTitle(value: A11yTitleType): this.type = set("a11yTitle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -242,7 +243,7 @@ object Image {
     @scala.inline
     def fallback(value: String): this.type = set("fallback", value.asInstanceOf[js.Any])
     @scala.inline
-    def fillProp(value: Boolean): this.type = set("fillProp", value.asInstanceOf[js.Any])
+    def fill(value: FillType): this.type = set("fill", value.asInstanceOf[js.Any])
     @scala.inline
     def fit(value: cover | contain): this.type = set("fit", value.asInstanceOf[js.Any])
     @scala.inline

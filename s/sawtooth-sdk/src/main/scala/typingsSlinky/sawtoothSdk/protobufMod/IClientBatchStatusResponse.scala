@@ -5,63 +5,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IClientBatchStatusResponse extends js.Object {
   /** ClientBatchStatusResponse batchStatuses */
-  var batchStatuses: js.UndefOr[js.Array[IClientBatchStatus] | Null] = js.native
+  var batchStatuses: js.UndefOr[js.Array[IClientBatchStatus] | Null] = js.undefined
   /** ClientBatchStatusResponse status */
-  var status: js.UndefOr[Status | Null] = js.native
+  var status: js.UndefOr[Status | Null] = js.undefined
 }
 
 object IClientBatchStatusResponse {
   @scala.inline
-  def apply(): IClientBatchStatusResponse = {
+  def apply(
+    batchStatuses: js.UndefOr[Null | js.Array[IClientBatchStatus]] = js.undefined,
+    status: js.UndefOr[Null | Status] = js.undefined
+  ): IClientBatchStatusResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(batchStatuses)) __obj.updateDynamic("batchStatuses")(batchStatuses.asInstanceOf[js.Any])
+    if (!js.isUndefined(status)) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[IClientBatchStatusResponse]
   }
-  @scala.inline
-  implicit class IClientBatchStatusResponseOps[Self <: IClientBatchStatusResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBatchStatuses(value: js.Array[IClientBatchStatus]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchStatuses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBatchStatuses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchStatuses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBatchStatusesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchStatuses")(null)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Status): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(null)
-        ret
-    }
-  }
-  
 }
 

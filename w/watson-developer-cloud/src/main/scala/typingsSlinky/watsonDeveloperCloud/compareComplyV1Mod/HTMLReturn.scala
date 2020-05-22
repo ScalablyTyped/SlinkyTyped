@@ -5,93 +5,35 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** The HTML converted from an input document. */
-@js.native
 trait HTMLReturn extends js.Object {
   /** The author of the input document, if identified. */
-  var author: js.UndefOr[String] = js.native
+  var author: js.UndefOr[String] = js.undefined
   /** The HTML version of the input document. */
-  var html: js.UndefOr[String] = js.native
+  var html: js.UndefOr[String] = js.undefined
   /** The number of pages in the input document. */
-  var num_pages: js.UndefOr[String] = js.native
+  var num_pages: js.UndefOr[String] = js.undefined
   /** The publication date of the input document, if identified. */
-  var publication_date: js.UndefOr[String] = js.native
+  var publication_date: js.UndefOr[String] = js.undefined
   /** The title of the input document, if identified. */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
 }
 
 object HTMLReturn {
   @scala.inline
-  def apply(): HTMLReturn = {
+  def apply(
+    author: String = null,
+    html: String = null,
+    num_pages: String = null,
+    publication_date: String = null,
+    title: String = null
+  ): HTMLReturn = {
     val __obj = js.Dynamic.literal()
+    if (author != null) __obj.updateDynamic("author")(author.asInstanceOf[js.Any])
+    if (html != null) __obj.updateDynamic("html")(html.asInstanceOf[js.Any])
+    if (num_pages != null) __obj.updateDynamic("num_pages")(num_pages.asInstanceOf[js.Any])
+    if (publication_date != null) __obj.updateDynamic("publication_date")(publication_date.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[HTMLReturn]
   }
-  @scala.inline
-  implicit class HTMLReturnOps[Self <: HTMLReturn] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHtml(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHtml: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNum_pages(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("num_pages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNum_pages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("num_pages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublication_date(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publication_date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublication_date: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publication_date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

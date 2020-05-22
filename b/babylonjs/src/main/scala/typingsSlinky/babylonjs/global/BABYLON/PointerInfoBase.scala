@@ -35,5 +35,15 @@ class PointerInfoBase protected ()
     */
   event: PointerEvent
   ) = this()
+  /**
+    * Defines the related dom event
+    */
+  /* CompleteClass */
+  override var event: PointerEvent | WheelEvent = js.native
+  /**
+    * Defines the type of event (PointerEventTypes)
+    */
+  /* CompleteClass */
+  override var `type`: Double = js.native
 }
 

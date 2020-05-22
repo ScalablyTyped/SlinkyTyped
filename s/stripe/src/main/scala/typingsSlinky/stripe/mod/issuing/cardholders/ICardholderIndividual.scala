@@ -6,69 +6,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ICardholderIndividual extends js.Object {
   /**
     * The date of birth of this cardholder.
     */
-  var dob: Day = js.native
+  var dob: Day
   /**
     * The first name of this cardholder.
     */
-  var first_name: String = js.native
+  var first_name: String
   /**
     * The last name of this cardholder.
     */
-  var last_name: String = js.native
+  var last_name: String
   /**
     * Government-issued ID document for this cardholder.
     */
-  var verification: js.UndefOr[DocumentFront] = js.native
+  var verification: js.UndefOr[DocumentFront] = js.undefined
 }
 
 object ICardholderIndividual {
   @scala.inline
-  def apply(dob: Day, first_name: String, last_name: String): ICardholderIndividual = {
+  def apply(dob: Day, first_name: String, last_name: String, verification: DocumentFront = null): ICardholderIndividual = {
     val __obj = js.Dynamic.literal(dob = dob.asInstanceOf[js.Any], first_name = first_name.asInstanceOf[js.Any], last_name = last_name.asInstanceOf[js.Any])
+    if (verification != null) __obj.updateDynamic("verification")(verification.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICardholderIndividual]
   }
-  @scala.inline
-  implicit class ICardholderIndividualOps[Self <: ICardholderIndividual] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDob(value: Day): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dob")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFirst_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("first_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLast_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("last_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerification(value: DocumentFront): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerification: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verification")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Serial extends js.Object {
   /**
     * Close connection.
@@ -12,7 +11,7 @@ trait Serial extends js.Object {
     * @param successCallback Function to call on success
     * @param errorCallback   Function to call on error
     */
-  def close(successCallback: js.Function, errorCallback: js.Function): Unit = js.native
+  def close(successCallback: js.Function, errorCallback: js.Function): Unit
   /**
     * Open a connection.
     *
@@ -20,28 +19,28 @@ trait Serial extends js.Object {
     * @param successCallback Function to call on success
     * @param errorCallback   Function to call on error
     */
-  def open(opts: SerialOptions, successCallback: js.Function, errorCallback: js.Function): Unit = js.native
+  def open(opts: SerialOptions, successCallback: js.Function, errorCallback: js.Function): Unit
   /**
     * Read from the serial port.
     *
     * @param successCallback Function to call on success
     * @param errorCallback   Function to call on error
     */
-  def read(successCallback: js.Function, errorCallback: js.Function): Unit = js.native
+  def read(successCallback: js.Function, errorCallback: js.Function): Unit
   /**
     * Register a callback for the driver reading incoming data from the serial device
     *
     * @param successCallback Function to call on success
     * @param errorCallback   Function to call on error
     */
-  def registerReadCallback(successCallback: js.Function, errorCallback: js.Function): Unit = js.native
+  def registerReadCallback(successCallback: js.Function, errorCallback: js.Function): Unit
   /**
     * Request permission to interact with the serial port.
     *
     * @param successCallback Function to call on success
     * @param errorCallback   Function to call on error
     */
-  def requestPermission(successCallback: js.Function, errorCallback: js.Function): Unit = js.native
+  def requestPermission(successCallback: js.Function, errorCallback: js.Function): Unit
   /**
     * Write to the serial port.
     *
@@ -49,7 +48,7 @@ trait Serial extends js.Object {
     * @param successCallback Function to call on success
     * @param errorCallback   Function to call on error
     */
-  def write(data: String, successCallback: js.Function, errorCallback: js.Function): Unit = js.native
+  def write(data: String, successCallback: js.Function, errorCallback: js.Function): Unit
 }
 
 object Serial {
@@ -65,49 +64,5 @@ object Serial {
     val __obj = js.Dynamic.literal(close = js.Any.fromFunction2(close), open = js.Any.fromFunction3(open), read = js.Any.fromFunction2(read), registerReadCallback = js.Any.fromFunction2(registerReadCallback), requestPermission = js.Any.fromFunction2(requestPermission), write = js.Any.fromFunction3(write))
     __obj.asInstanceOf[Serial]
   }
-  @scala.inline
-  implicit class SerialOps[Self <: Serial] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClose(value: (js.Function, js.Function) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withOpen(value: (SerialOptions, js.Function, js.Function) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withRead(value: (js.Function, js.Function) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRegisterReadCallback(value: (js.Function, js.Function) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerReadCallback")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRequestPermission(value: (js.Function, js.Function) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestPermission")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withWrite(value: (String, js.Function, js.Function) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("write")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

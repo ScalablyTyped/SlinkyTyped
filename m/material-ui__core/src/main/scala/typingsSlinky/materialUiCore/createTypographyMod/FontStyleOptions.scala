@@ -22,113 +22,26 @@ trait FontStyleOptions extends js.Object {
 
 object FontStyleOptions {
   @scala.inline
-  def apply(): FontStyleOptions = {
+  def apply(
+    allVariants: CSSProperties = null,
+    fontFamily: FontFamilyProperty = null,
+    fontSize: js.UndefOr[Double] = js.undefined,
+    fontWeightLight: FontWeightProperty = null,
+    fontWeightMedium: FontWeightProperty = null,
+    fontWeightRegular: FontWeightProperty = null,
+    htmlFontSize: js.UndefOr[Double] = js.undefined,
+    useNextVariants: js.UndefOr[Boolean] = js.undefined
+  ): FontStyleOptions = {
     val __obj = js.Dynamic.literal()
+    if (allVariants != null) __obj.updateDynamic("allVariants")(allVariants.asInstanceOf[js.Any])
+    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
+    if (!js.isUndefined(fontSize)) __obj.updateDynamic("fontSize")(fontSize.get.asInstanceOf[js.Any])
+    if (fontWeightLight != null) __obj.updateDynamic("fontWeightLight")(fontWeightLight.asInstanceOf[js.Any])
+    if (fontWeightMedium != null) __obj.updateDynamic("fontWeightMedium")(fontWeightMedium.asInstanceOf[js.Any])
+    if (fontWeightRegular != null) __obj.updateDynamic("fontWeightRegular")(fontWeightRegular.asInstanceOf[js.Any])
+    if (!js.isUndefined(htmlFontSize)) __obj.updateDynamic("htmlFontSize")(htmlFontSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useNextVariants)) __obj.updateDynamic("useNextVariants")(useNextVariants.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FontStyleOptions]
   }
-  @scala.inline
-  implicit class FontStyleOptionsOps[Self <: FontStyleOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllVariants(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allVariants")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllVariants: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allVariants")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontFamily(value: FontFamilyProperty): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontFamily: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontWeightLight(value: FontWeightProperty): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeightLight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontWeightLight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeightLight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontWeightMedium(value: FontWeightProperty): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeightMedium")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontWeightMedium: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeightMedium")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontWeightRegular(value: FontWeightProperty): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeightRegular")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontWeightRegular: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeightRegular")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHtmlFontSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlFontSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHtmlFontSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlFontSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseNextVariants(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useNextVariants")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseNextVariants: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useNextVariants")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

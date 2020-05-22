@@ -18,41 +18,14 @@ trait GetTransitGatewayRouteTablePropagationsResult extends js.Object {
 
 object GetTransitGatewayRouteTablePropagationsResult {
   @scala.inline
-  def apply(): GetTransitGatewayRouteTablePropagationsResult = {
+  def apply(
+    NextToken: String = null,
+    TransitGatewayRouteTablePropagations: TransitGatewayRouteTablePropagationList = null
+  ): GetTransitGatewayRouteTablePropagationsResult = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (TransitGatewayRouteTablePropagations != null) __obj.updateDynamic("TransitGatewayRouteTablePropagations")(TransitGatewayRouteTablePropagations.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetTransitGatewayRouteTablePropagationsResult]
   }
-  @scala.inline
-  implicit class GetTransitGatewayRouteTablePropagationsResultOps[Self <: GetTransitGatewayRouteTablePropagationsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransitGatewayRouteTablePropagations(value: TransitGatewayRouteTablePropagationList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitGatewayRouteTablePropagations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransitGatewayRouteTablePropagations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitGatewayRouteTablePropagations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

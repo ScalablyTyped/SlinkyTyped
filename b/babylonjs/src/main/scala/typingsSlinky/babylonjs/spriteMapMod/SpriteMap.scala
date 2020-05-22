@@ -69,6 +69,26 @@ class SpriteMap protected () extends ISpriteMap {
   var _tileMaps: js.Any = js.native
   /** Systems Time Ticker*/
   var _time: js.Any = js.native
+  /**
+    * The JSON Array file from a https://www.codeandweb.com/texturepacker export.  Or similar structure.
+    */
+  /* CompleteClass */
+  override var atlasJSON: ISpriteJSONAtlas = js.native
+  /**
+    * String name of the SpriteMap.
+    */
+  /* CompleteClass */
+  override var name: String = js.native
+  /**
+    * The parameters to initialize the SpriteMap with.
+    */
+  /* CompleteClass */
+  override var options: ISpriteMapOptions = js.native
+  /**
+    * Texture of the SpriteMap.
+    */
+  /* CompleteClass */
+  override var spriteSheet: Texture = js.native
   /** Public Sprite Storage array, parsed from atlasJSON */
   var sprites: js.Array[ISpriteJSONSprite] = js.native
   /**
@@ -99,6 +119,11 @@ class SpriteMap protected () extends ISpriteMap {
     */
   def changeTiles(_layer: js.UndefOr[Double], pos: Vector2): Unit = js.native
   def changeTiles(_layer: js.UndefOr[Double], pos: Vector2, tile: Double): Unit = js.native
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
   /**
     * Gets the UV location of the mouse over the SpriteMap.
     * @returns Vector2 the UV position of the mouse interaction

@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-			 * A set of constants for the style that can be used for the `style` property of
-			 * <Titanium.UI.ListView>.
-			 */
+  * A set of constants for the style that can be used for the `style` property of
+  * <Titanium.UI.ListView>.
+  */
 @JSGlobal("Titanium.UI.iOS.ListViewStyle")
 @js.native
 object ListViewStyle extends js.Object

@@ -18,41 +18,11 @@ trait SchemaReviewReplyResult extends js.Object {
 
 object SchemaReviewReplyResult {
   @scala.inline
-  def apply(): SchemaReviewReplyResult = {
+  def apply(lastEdited: SchemaTimestamp = null, replyText: String = null): SchemaReviewReplyResult = {
     val __obj = js.Dynamic.literal()
+    if (lastEdited != null) __obj.updateDynamic("lastEdited")(lastEdited.asInstanceOf[js.Any])
+    if (replyText != null) __obj.updateDynamic("replyText")(replyText.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReviewReplyResult]
   }
-  @scala.inline
-  implicit class SchemaReviewReplyResultOps[Self <: SchemaReviewReplyResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLastEdited(value: SchemaTimestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastEdited")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastEdited: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastEdited")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplyText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replyText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplyText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replyText")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

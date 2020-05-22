@@ -6,19 +6,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TestSequencer extends js.Object {
-  var _cache: js.Any = js.native
+  var _cache: js.Any
   def _getCache(
     test: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Test */ js.Any
-  ): Cache = js.native
-  def _getCachePath(context: Context): String = js.native
+  ): Cache
+  def _getCachePath(context: Context): String
   def cacheResults(
     tests: js.Array[
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Test */ _
     ],
     results: AggregatedResult
-  ): Unit = js.native
+  ): Unit
   /**
     * Sorting tests is very important because it has a great impact on the
     * user-perceived responsiveness and speed of the test run.
@@ -43,7 +42,7 @@ trait TestSequencer extends js.Object {
     ]
   ): js.Array[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Test */ _
-  ] = js.native
+  ]
 }
 
 object TestSequencer {
@@ -64,55 +63,5 @@ object TestSequencer {
     val __obj = js.Dynamic.literal(_cache = _cache.asInstanceOf[js.Any], _getCache = js.Any.fromFunction1(_getCache), _getCachePath = js.Any.fromFunction1(_getCachePath), cacheResults = js.Any.fromFunction2(cacheResults), sort = js.Any.fromFunction1(sort))
     __obj.asInstanceOf[TestSequencer]
   }
-  @scala.inline
-  implicit class TestSequencerOps[Self <: TestSequencer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_cache(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_cache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_getCache(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Test */ js.Any => Cache
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_getCache")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def with_getCachePath(value: Context => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_getCachePath")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCacheResults(
-      value: (js.Array[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Test */ _
-        ], AggregatedResult) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheResults")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSort(
-      value: js.Array[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Test */ _
-        ] => js.Array[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Test */ _
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

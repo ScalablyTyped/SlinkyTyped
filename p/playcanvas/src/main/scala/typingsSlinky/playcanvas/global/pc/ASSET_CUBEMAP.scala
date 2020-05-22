@@ -6,10 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-  * @constant
-  * @type {string}
-  * @name pc.ASSET_CUBEMAP
-  * @description Asset type name for cubemap.
+  * Asset type name for cubemap.
   */
 @JSGlobal("pc.ASSET_CUBEMAP")
 @js.native

@@ -4,65 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PipelineDescription extends js.Object {
   /** Pipeline level display data. */
-  var displayData: js.UndefOr[js.Array[DisplayData]] = js.native
+  var displayData: js.UndefOr[js.Array[DisplayData]] = js.undefined
   /** Description of each stage of execution of the pipeline. */
-  var executionPipelineStage: js.UndefOr[js.Array[ExecutionStageSummary]] = js.native
+  var executionPipelineStage: js.UndefOr[js.Array[ExecutionStageSummary]] = js.undefined
   /** Description of each transform in the pipeline and collections between them. */
-  var originalPipelineTransform: js.UndefOr[js.Array[TransformSummary]] = js.native
+  var originalPipelineTransform: js.UndefOr[js.Array[TransformSummary]] = js.undefined
 }
 
 object PipelineDescription {
   @scala.inline
-  def apply(): PipelineDescription = {
+  def apply(
+    displayData: js.Array[DisplayData] = null,
+    executionPipelineStage: js.Array[ExecutionStageSummary] = null,
+    originalPipelineTransform: js.Array[TransformSummary] = null
+  ): PipelineDescription = {
     val __obj = js.Dynamic.literal()
+    if (displayData != null) __obj.updateDynamic("displayData")(displayData.asInstanceOf[js.Any])
+    if (executionPipelineStage != null) __obj.updateDynamic("executionPipelineStage")(executionPipelineStage.asInstanceOf[js.Any])
+    if (originalPipelineTransform != null) __obj.updateDynamic("originalPipelineTransform")(originalPipelineTransform.asInstanceOf[js.Any])
     __obj.asInstanceOf[PipelineDescription]
   }
-  @scala.inline
-  implicit class PipelineDescriptionOps[Self <: PipelineDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisplayData(value: js.Array[DisplayData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecutionPipelineStage(value: js.Array[ExecutionStageSummary]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionPipelineStage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionPipelineStage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionPipelineStage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalPipelineTransform(value: js.Array[TransformSummary]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalPipelineTransform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalPipelineTransform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalPipelineTransform")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

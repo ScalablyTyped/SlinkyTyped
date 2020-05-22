@@ -49,113 +49,26 @@ trait SchemaDataTransfer extends js.Object {
 
 object SchemaDataTransfer {
   @scala.inline
-  def apply(): SchemaDataTransfer = {
+  def apply(
+    applicationDataTransfers: js.Array[SchemaApplicationDataTransfer] = null,
+    etag: String = null,
+    id: String = null,
+    kind: String = null,
+    newOwnerUserId: String = null,
+    oldOwnerUserId: String = null,
+    overallTransferStatusCode: String = null,
+    requestTime: String = null
+  ): SchemaDataTransfer = {
     val __obj = js.Dynamic.literal()
+    if (applicationDataTransfers != null) __obj.updateDynamic("applicationDataTransfers")(applicationDataTransfers.asInstanceOf[js.Any])
+    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (newOwnerUserId != null) __obj.updateDynamic("newOwnerUserId")(newOwnerUserId.asInstanceOf[js.Any])
+    if (oldOwnerUserId != null) __obj.updateDynamic("oldOwnerUserId")(oldOwnerUserId.asInstanceOf[js.Any])
+    if (overallTransferStatusCode != null) __obj.updateDynamic("overallTransferStatusCode")(overallTransferStatusCode.asInstanceOf[js.Any])
+    if (requestTime != null) __obj.updateDynamic("requestTime")(requestTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDataTransfer]
   }
-  @scala.inline
-  implicit class SchemaDataTransferOps[Self <: SchemaDataTransfer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationDataTransfers(value: js.Array[SchemaApplicationDataTransfer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationDataTransfers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationDataTransfers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationDataTransfers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEtag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewOwnerUserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newOwnerUserId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewOwnerUserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newOwnerUserId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOldOwnerUserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldOwnerUserId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOldOwnerUserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldOwnerUserId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverallTransferStatusCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overallTransferStatusCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverallTransferStatusCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overallTransferStatusCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

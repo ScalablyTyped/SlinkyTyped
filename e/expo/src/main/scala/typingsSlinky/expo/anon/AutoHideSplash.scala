@@ -5,75 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AutoHideSplash extends Props {
-  var autoHideSplash: js.UndefOr[Boolean] = js.native
-  var onError: js.UndefOr[js.Function1[/* error */ js.Error, Unit]] = js.native
-  var onFinish: js.UndefOr[js.Function0[Unit]] = js.native
-  var startAsync: js.UndefOr[js.Function0[js.Promise[Unit]]] = js.native
+  var autoHideSplash: js.UndefOr[Boolean] = js.undefined
+  var onError: js.UndefOr[js.Function1[/* error */ js.Error, Unit]] = js.undefined
+  var onFinish: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var startAsync: js.UndefOr[js.Function0[js.Promise[Unit]]] = js.undefined
 }
 
 object AutoHideSplash {
   @scala.inline
-  def apply(): AutoHideSplash = {
+  def apply(
+    autoHideSplash: js.UndefOr[Boolean] = js.undefined,
+    onError: /* error */ js.Error => Unit = null,
+    onFinish: () => Unit = null,
+    startAsync: () => js.Promise[Unit] = null
+  ): AutoHideSplash = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoHideSplash)) __obj.updateDynamic("autoHideSplash")(autoHideSplash.get.asInstanceOf[js.Any])
+    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
+    if (onFinish != null) __obj.updateDynamic("onFinish")(js.Any.fromFunction0(onFinish))
+    if (startAsync != null) __obj.updateDynamic("startAsync")(js.Any.fromFunction0(startAsync))
     __obj.asInstanceOf[AutoHideSplash]
   }
-  @scala.inline
-  implicit class AutoHideSplashOps[Self <: AutoHideSplash] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoHideSplash(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHideSplash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoHideSplash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHideSplash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnError(value: /* error */ js.Error => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFinish(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFinish")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFinish: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFinish")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartAsync(value: () => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAsync")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutStartAsync: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAsync")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

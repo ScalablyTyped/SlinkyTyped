@@ -9,14 +9,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait F extends js.Object {
-  var argCount: `2` = js.native
-  var f: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify power */ js.Any = js.native
-  var notation: infix = js.native
-  var precedence: `5` = js.native
-  var rightToLeft: `1` = js.native
-  var symbol: ^ = js.native
+  var argCount: `2`
+  var f: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify power */ js.Any
+  var notation: infix
+  var precedence: `5`
+  var rightToLeft: `1`
+  var symbol: ^
 }
 
 object F {
@@ -32,51 +31,5 @@ object F {
     val __obj = js.Dynamic.literal(argCount = argCount.asInstanceOf[js.Any], f = f.asInstanceOf[js.Any], notation = notation.asInstanceOf[js.Any], precedence = precedence.asInstanceOf[js.Any], rightToLeft = rightToLeft.asInstanceOf[js.Any], symbol = symbol.asInstanceOf[js.Any])
     __obj.asInstanceOf[F]
   }
-  @scala.inline
-  implicit class FOps[Self <: F] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgCount(value: `2`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withF(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify power */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("f")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNotation(value: infix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrecedence(value: `5`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("precedence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRightToLeft(value: `1`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightToLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSymbol(value: ^): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

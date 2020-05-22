@@ -4,139 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StyledCellProps extends js.Object {
   @JSName("$align")
-  var $align: js.UndefOr[Responsive[ALIGNMENT]] = js.native
+  var $align: js.UndefOr[Responsive[ALIGNMENT]] = js.undefined
   @JSName("$gridColumns")
-  var $gridColumns: js.UndefOr[Responsive[Double]] = js.native
+  var $gridColumns: js.UndefOr[Responsive[Double]] = js.undefined
   @JSName("$gridGaps")
-  var $gridGaps: js.UndefOr[Responsive[Double]] = js.native
+  var $gridGaps: js.UndefOr[Responsive[Double]] = js.undefined
   @JSName("$gridGutters")
-  var $gridGutters: js.UndefOr[Responsive[Double]] = js.native
+  var $gridGutters: js.UndefOr[Responsive[Double]] = js.undefined
   @JSName("$gridUnit")
   var $gridUnit: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSSLengthUnitT */ js.Any
-  ] = js.native
+  ] = js.undefined
   @JSName("$order")
-  var $order: js.UndefOr[Responsive[Double]] = js.native
+  var $order: js.UndefOr[Responsive[Double]] = js.undefined
   @JSName("$skip")
-  var $skip: js.UndefOr[Responsive[Double]] = js.native
+  var $skip: js.UndefOr[Responsive[Double]] = js.undefined
   @JSName("$span")
-  var $span: js.UndefOr[Responsive[Double]] = js.native
+  var $span: js.UndefOr[Responsive[Double]] = js.undefined
 }
 
 object StyledCellProps {
   @scala.inline
-  def apply(): StyledCellProps = {
+  def apply(
+    $align: Responsive[ALIGNMENT] = null,
+    $gridColumns: Responsive[Double] = null,
+    $gridGaps: Responsive[Double] = null,
+    $gridGutters: Responsive[Double] = null,
+    $gridUnit: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSSLengthUnitT */ js.Any = null,
+    $order: Responsive[Double] = null,
+    $skip: Responsive[Double] = null,
+    $span: Responsive[Double] = null
+  ): StyledCellProps = {
     val __obj = js.Dynamic.literal()
+    if ($align != null) __obj.updateDynamic("$align")($align.asInstanceOf[js.Any])
+    if ($gridColumns != null) __obj.updateDynamic("$gridColumns")($gridColumns.asInstanceOf[js.Any])
+    if ($gridGaps != null) __obj.updateDynamic("$gridGaps")($gridGaps.asInstanceOf[js.Any])
+    if ($gridGutters != null) __obj.updateDynamic("$gridGutters")($gridGutters.asInstanceOf[js.Any])
+    if ($gridUnit != null) __obj.updateDynamic("$gridUnit")($gridUnit.asInstanceOf[js.Any])
+    if ($order != null) __obj.updateDynamic("$order")($order.asInstanceOf[js.Any])
+    if ($skip != null) __obj.updateDynamic("$skip")($skip.asInstanceOf[js.Any])
+    if ($span != null) __obj.updateDynamic("$span")($span.asInstanceOf[js.Any])
     __obj.asInstanceOf[StyledCellProps]
   }
-  @scala.inline
-  implicit class StyledCellPropsOps[Self <: StyledCellProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$align(value: Responsive[ALIGNMENT]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$align: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$gridColumns(value: Responsive[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$gridColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$gridColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$gridColumns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$gridGaps(value: Responsive[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$gridGaps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$gridGaps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$gridGaps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$gridGutters(value: Responsive[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$gridGutters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$gridGutters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$gridGutters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$gridUnit(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSSLengthUnitT */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$gridUnit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$gridUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$gridUnit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$order(value: Responsive[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$order")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$order: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$order")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$skip(value: Responsive[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$skip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$skip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$skip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$span(value: Responsive[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$span")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$span: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$span")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

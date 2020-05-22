@@ -29,53 +29,16 @@ trait SchemaGoogleCloudDialogflowV2beta1BatchUpdateEntitiesRequest extends js.Ob
 
 object SchemaGoogleCloudDialogflowV2beta1BatchUpdateEntitiesRequest {
   @scala.inline
-  def apply(): SchemaGoogleCloudDialogflowV2beta1BatchUpdateEntitiesRequest = {
+  def apply(
+    entities: js.Array[SchemaGoogleCloudDialogflowV2beta1EntityTypeEntity] = null,
+    languageCode: String = null,
+    updateMask: String = null
+  ): SchemaGoogleCloudDialogflowV2beta1BatchUpdateEntitiesRequest = {
     val __obj = js.Dynamic.literal()
+    if (entities != null) __obj.updateDynamic("entities")(entities.asInstanceOf[js.Any])
+    if (languageCode != null) __obj.updateDynamic("languageCode")(languageCode.asInstanceOf[js.Any])
+    if (updateMask != null) __obj.updateDynamic("updateMask")(updateMask.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2beta1BatchUpdateEntitiesRequest]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudDialogflowV2beta1BatchUpdateEntitiesRequestOps[Self <: SchemaGoogleCloudDialogflowV2beta1BatchUpdateEntitiesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntities(value: js.Array[SchemaGoogleCloudDialogflowV2beta1EntityTypeEntity]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguageCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateMask(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateMask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

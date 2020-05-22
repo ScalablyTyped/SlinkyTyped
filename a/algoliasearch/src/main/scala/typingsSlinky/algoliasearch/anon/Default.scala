@@ -5,31 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Default
   extends /* key */ StringDictionary[js.Array[String]] {
-  var default: js.Array[String] = js.native
+  var default: js.Array[String]
 }
 
 object Default {
   @scala.inline
-  def apply(default: js.Array[String]): Default = {
+  def apply(default: js.Array[String], StringDictionary: /* key */ StringDictionary[js.Array[String]] = null): Default = {
     val __obj = js.Dynamic.literal(default = default.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[Default]
   }
-  @scala.inline
-  implicit class DefaultOps[Self <: Default] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefault(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

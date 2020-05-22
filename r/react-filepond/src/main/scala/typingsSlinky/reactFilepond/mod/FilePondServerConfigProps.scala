@@ -5,49 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FilePondServerConfigProps extends js.Object {
-  var instantUpload: js.UndefOr[Boolean] = js.native
-  var server: js.UndefOr[String | Fetch] = js.native
+  var instantUpload: js.UndefOr[Boolean] = js.undefined
+  var server: js.UndefOr[String | Fetch] = js.undefined
 }
 
 object FilePondServerConfigProps {
   @scala.inline
-  def apply(): FilePondServerConfigProps = {
+  def apply(instantUpload: js.UndefOr[Boolean] = js.undefined, server: String | Fetch = null): FilePondServerConfigProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(instantUpload)) __obj.updateDynamic("instantUpload")(instantUpload.get.asInstanceOf[js.Any])
+    if (server != null) __obj.updateDynamic("server")(server.asInstanceOf[js.Any])
     __obj.asInstanceOf[FilePondServerConfigProps]
   }
-  @scala.inline
-  implicit class FilePondServerConfigPropsOps[Self <: FilePondServerConfigProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstantUpload(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instantUpload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstantUpload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instantUpload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServer(value: String | Fetch): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

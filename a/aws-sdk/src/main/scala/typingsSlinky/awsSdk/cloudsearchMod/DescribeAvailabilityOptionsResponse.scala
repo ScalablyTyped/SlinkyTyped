@@ -14,29 +14,10 @@ trait DescribeAvailabilityOptionsResponse extends js.Object {
 
 object DescribeAvailabilityOptionsResponse {
   @scala.inline
-  def apply(): DescribeAvailabilityOptionsResponse = {
+  def apply(AvailabilityOptions: AvailabilityOptionsStatus = null): DescribeAvailabilityOptionsResponse = {
     val __obj = js.Dynamic.literal()
+    if (AvailabilityOptions != null) __obj.updateDynamic("AvailabilityOptions")(AvailabilityOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAvailabilityOptionsResponse]
   }
-  @scala.inline
-  implicit class DescribeAvailabilityOptionsResponseOps[Self <: DescribeAvailabilityOptionsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvailabilityOptions(value: AvailabilityOptionsStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailabilityOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

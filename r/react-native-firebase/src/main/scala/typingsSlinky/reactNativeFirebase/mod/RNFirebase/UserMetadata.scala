@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UserMetadata extends js.Object {
-  var creationTime: js.UndefOr[String] = js.native
-  var lastSignInTime: js.UndefOr[String] = js.native
+  var creationTime: js.UndefOr[String] = js.undefined
+  var lastSignInTime: js.UndefOr[String] = js.undefined
 }
 
 object UserMetadata {
   @scala.inline
-  def apply(): UserMetadata = {
+  def apply(creationTime: String = null, lastSignInTime: String = null): UserMetadata = {
     val __obj = js.Dynamic.literal()
+    if (creationTime != null) __obj.updateDynamic("creationTime")(creationTime.asInstanceOf[js.Any])
+    if (lastSignInTime != null) __obj.updateDynamic("lastSignInTime")(lastSignInTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserMetadata]
   }
-  @scala.inline
-  implicit class UserMetadataOps[Self <: UserMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastSignInTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastSignInTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastSignInTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastSignInTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

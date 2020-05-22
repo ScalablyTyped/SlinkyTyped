@@ -19,29 +19,10 @@ trait SchemaGoogleFirestoreAdminV1beta2ExportDocumentsResponse extends js.Object
 
 object SchemaGoogleFirestoreAdminV1beta2ExportDocumentsResponse {
   @scala.inline
-  def apply(): SchemaGoogleFirestoreAdminV1beta2ExportDocumentsResponse = {
+  def apply(outputUriPrefix: String = null): SchemaGoogleFirestoreAdminV1beta2ExportDocumentsResponse = {
     val __obj = js.Dynamic.literal()
+    if (outputUriPrefix != null) __obj.updateDynamic("outputUriPrefix")(outputUriPrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleFirestoreAdminV1beta2ExportDocumentsResponse]
   }
-  @scala.inline
-  implicit class SchemaGoogleFirestoreAdminV1beta2ExportDocumentsResponseOps[Self <: SchemaGoogleFirestoreAdminV1beta2ExportDocumentsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOutputUriPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputUriPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputUriPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputUriPrefix")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -38,101 +38,24 @@ trait OperatingSystem extends js.Object {
 
 object OperatingSystem {
   @scala.inline
-  def apply(): OperatingSystem = {
+  def apply(
+    ConfigurationManagers: OperatingSystemConfigurationManagers = null,
+    Id: String = null,
+    Name: String = null,
+    ReportedName: String = null,
+    ReportedVersion: String = null,
+    Supported: js.UndefOr[Boolean] = js.undefined,
+    Type: String = null
+  ): OperatingSystem = {
     val __obj = js.Dynamic.literal()
+    if (ConfigurationManagers != null) __obj.updateDynamic("ConfigurationManagers")(ConfigurationManagers.asInstanceOf[js.Any])
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (ReportedName != null) __obj.updateDynamic("ReportedName")(ReportedName.asInstanceOf[js.Any])
+    if (ReportedVersion != null) __obj.updateDynamic("ReportedVersion")(ReportedVersion.asInstanceOf[js.Any])
+    if (!js.isUndefined(Supported)) __obj.updateDynamic("Supported")(Supported.get.asInstanceOf[js.Any])
+    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[OperatingSystem]
   }
-  @scala.inline
-  implicit class OperatingSystemOps[Self <: OperatingSystem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfigurationManagers(value: OperatingSystemConfigurationManagers): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationManagers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigurationManagers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationManagers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportedName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportedName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReportedName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportedName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportedVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportedVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReportedVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportedVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupported(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Supported")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupported: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Supported")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

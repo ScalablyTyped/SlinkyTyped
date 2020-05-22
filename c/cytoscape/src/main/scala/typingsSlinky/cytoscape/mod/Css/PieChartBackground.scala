@@ -1,6 +1,5 @@
 package typingsSlinky.cytoscape.mod.Css
 
-import typingsSlinky.cytoscape.mod.NodeSingular
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,24 +21,23 @@ import scala.scalajs.js.annotation._
   *
   * http://js.cytoscape.org/#style/pie-chart-background
   */
-@js.native
 trait PieChartBackground extends js.Object {
   /**
     * The colour of the node’s ith pie chart slice.
     */
-  var `pie-i-background-color`: PropertyValueNode[Colour] = js.native
+  var `pie-i-background-color`: PropertyValueNode[Colour]
   /**
     * The opacity of the node’s ith pie chart slice.
     */
-  var `pie-i-background-opacity`: PropertyValueNode[Double] = js.native
+  var `pie-i-background-opacity`: PropertyValueNode[Double]
   /**
     * The size of the node’s ith pie chart slice, measured in percent (e.g. 25% or 25).
     */
-  var `pie-i-background-size`: PropertyValueNode[Double] = js.native
+  var `pie-i-background-size`: PropertyValueNode[Double]
   /**
     * The diameter of the pie, measured as a percent of node size (e.g. 100%) or an absolute length (e.g. 25px).
     */
-  var `pie-size`: PropertyValueNode[String] = js.native
+  var `pie-size`: PropertyValueNode[String]
 }
 
 object PieChartBackground {
@@ -57,61 +55,5 @@ object PieChartBackground {
     __obj.updateDynamic("pie-size")(`pie-size`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PieChartBackground]
   }
-  @scala.inline
-  implicit class PieChartBackgroundOps[Self <: PieChartBackground] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withPie-i-background-colorFunction1`(value: NodeSingular => Colour): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pie-i-background-color")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def `withPie-i-background-color`(value: PropertyValueNode[Colour]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pie-i-background-color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withPie-i-background-opacityFunction1`(value: NodeSingular => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pie-i-background-opacity")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def `withPie-i-background-opacity`(value: PropertyValueNode[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pie-i-background-opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withPie-i-background-sizeFunction1`(value: NodeSingular => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pie-i-background-size")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def `withPie-i-background-size`(value: PropertyValueNode[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pie-i-background-size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withPie-sizeFunction1`(value: NodeSingular => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pie-size")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def `withPie-size`(value: PropertyValueNode[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pie-size")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

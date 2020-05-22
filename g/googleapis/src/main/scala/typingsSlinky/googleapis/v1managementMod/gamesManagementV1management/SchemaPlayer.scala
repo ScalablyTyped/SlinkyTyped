@@ -1,6 +1,6 @@
 package typingsSlinky.googleapis.v1managementMod.gamesManagementV1management
 
-import typingsSlinky.googleapis.AnonFamilyName
+import typingsSlinky.googleapis.anon.FamilyName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -45,7 +45,7 @@ trait SchemaPlayer extends js.Object {
     * An object representation of the individual components of the player&#39;s
     * name. For some players, these fields may not be present.
     */
-  var name: js.UndefOr[AnonFamilyName] = js.native
+  var name: js.UndefOr[FamilyName] = js.native
   /**
     * The player ID that was used for this player the first time they signed
     * into the game in question. This is only populated for calls to player.get
@@ -70,161 +70,34 @@ trait SchemaPlayer extends js.Object {
 
 object SchemaPlayer {
   @scala.inline
-  def apply(): SchemaPlayer = {
+  def apply(
+    avatarImageUrl: String = null,
+    bannerUrlLandscape: String = null,
+    bannerUrlPortrait: String = null,
+    displayName: String = null,
+    experienceInfo: SchemaGamesPlayerExperienceInfoResource = null,
+    kind: String = null,
+    lastPlayedWith: SchemaGamesPlayedResource = null,
+    name: FamilyName = null,
+    originalPlayerId: String = null,
+    playerId: String = null,
+    profileSettings: SchemaProfileSettings = null,
+    title: String = null
+  ): SchemaPlayer = {
     val __obj = js.Dynamic.literal()
+    if (avatarImageUrl != null) __obj.updateDynamic("avatarImageUrl")(avatarImageUrl.asInstanceOf[js.Any])
+    if (bannerUrlLandscape != null) __obj.updateDynamic("bannerUrlLandscape")(bannerUrlLandscape.asInstanceOf[js.Any])
+    if (bannerUrlPortrait != null) __obj.updateDynamic("bannerUrlPortrait")(bannerUrlPortrait.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (experienceInfo != null) __obj.updateDynamic("experienceInfo")(experienceInfo.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (lastPlayedWith != null) __obj.updateDynamic("lastPlayedWith")(lastPlayedWith.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (originalPlayerId != null) __obj.updateDynamic("originalPlayerId")(originalPlayerId.asInstanceOf[js.Any])
+    if (playerId != null) __obj.updateDynamic("playerId")(playerId.asInstanceOf[js.Any])
+    if (profileSettings != null) __obj.updateDynamic("profileSettings")(profileSettings.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPlayer]
   }
-  @scala.inline
-  implicit class SchemaPlayerOps[Self <: SchemaPlayer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvatarImageUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatarImageUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvatarImageUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatarImageUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBannerUrlLandscape(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bannerUrlLandscape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBannerUrlLandscape: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bannerUrlLandscape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBannerUrlPortrait(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bannerUrlPortrait")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBannerUrlPortrait: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bannerUrlPortrait")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExperienceInfo(value: SchemaGamesPlayerExperienceInfoResource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experienceInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExperienceInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experienceInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastPlayedWith(value: SchemaGamesPlayedResource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastPlayedWith")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastPlayedWith: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastPlayedWith")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: AnonFamilyName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalPlayerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalPlayerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalPlayerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalPlayerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlayerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlayerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProfileSettings(value: SchemaProfileSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProfileSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

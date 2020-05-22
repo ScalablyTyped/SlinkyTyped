@@ -10,17 +10,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VersionsResource extends js.Object {
-  var instances: InstancesResource = js.native
+  var instances: InstancesResource
   /** Deploys code and resource files to a new version. */
-  def create(request: Pp): Request[Operation] = js.native
+  def create(request: Pp): Request[Operation]
   /** Deletes an existing Version resource. */
-  def delete(request: PrettyPrint): Request[Operation] = js.native
+  def delete(request: PrettyPrint): Request[Operation]
   /** Gets the specified Version resource. By default, only a BASIC_VIEW will be returned. Specify the FULL_VIEW parameter to get the full resource. */
-  def get(request: QuotaUser): Request[Version] = js.native
+  def get(request: QuotaUser): Request[Version]
   /** Lists the versions of a service. */
-  def list(request: PageToken): Request[ListVersionsResponse] = js.native
+  def list(request: PageToken): Request[ListVersionsResponse]
   /**
     * Updates the specified Version resource. You can specify the following fields depending on the App Engine environment and type of scaling that the
     * version resource uses:
@@ -47,7 +46,7 @@ trait VersionsResource extends js.Object {
     * (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling):  For Version resources
     * that use automatic scaling and run in the App  Engine Flexible environment.
     */
-  def patch(request: ServicesId): Request[Operation] = js.native
+  def patch(request: ServicesId): Request[Operation]
 }
 
 object VersionsResource {
@@ -63,49 +62,5 @@ object VersionsResource {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), instances = instances.asInstanceOf[js.Any], list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch))
     __obj.asInstanceOf[VersionsResource]
   }
-  @scala.inline
-  implicit class VersionsResourceOps[Self <: VersionsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreate(value: Pp => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDelete(value: PrettyPrint => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: QuotaUser => Request[Version]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInstances(value: InstancesResource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withList(value: PageToken => Request[ListVersionsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPatch(value: ServicesId => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

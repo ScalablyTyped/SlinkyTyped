@@ -7,62 +7,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeclarationAttributes extends js.Object {
-  var encoding: js.UndefOr[`utf-8` | String] = js.native
-  var standalone: js.UndefOr[yes | no] = js.native
-  var version: js.UndefOr[String | Double] = js.native
+  var encoding: js.UndefOr[`utf-8` | String] = js.undefined
+  var standalone: js.UndefOr[yes | no] = js.undefined
+  var version: js.UndefOr[String | Double] = js.undefined
 }
 
 object DeclarationAttributes {
   @scala.inline
-  def apply(): DeclarationAttributes = {
+  def apply(encoding: `utf-8` | String = null, standalone: yes | no = null, version: String | Double = null): DeclarationAttributes = {
     val __obj = js.Dynamic.literal()
+    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
+    if (standalone != null) __obj.updateDynamic("standalone")(standalone.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeclarationAttributes]
   }
-  @scala.inline
-  implicit class DeclarationAttributesOps[Self <: DeclarationAttributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncoding(value: `utf-8` | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStandalone(value: yes | no): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standalone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStandalone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standalone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

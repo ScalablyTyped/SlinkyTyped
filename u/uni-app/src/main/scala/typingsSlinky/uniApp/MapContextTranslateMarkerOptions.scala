@@ -4,135 +4,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MapContextTranslateMarkerOptions extends js.Object {
   /**
     * 动画结束回调函数
     */
-  var animationEnd: js.UndefOr[js.Function0[Unit]] = js.native
+  var animationEnd: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * 移动过程中是否自动旋转marker
     */
-  var autoRotate: js.UndefOr[Boolean] = js.native
+  var autoRotate: js.UndefOr[Boolean] = js.undefined
   /**
     * 指定marker移动到的目标点
     */
-  var destination: js.UndefOr[LocationObject] = js.native
+  var destination: js.UndefOr[LocationObject] = js.undefined
   /**
     * 动画持续时长，默认值1000ms，平移与旋转分别计算
     */
-  var duration: js.UndefOr[Double] = js.native
+  var duration: js.UndefOr[Double] = js.undefined
   /**
     * 接口调用失败的回调函数
     */
-  var fail: js.UndefOr[js.Function0[Unit]] = js.native
+  var fail: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * 指定marker
     */
-  var markerId: js.UndefOr[Double] = js.native
+  var markerId: js.UndefOr[Double] = js.undefined
   /**
     * marker的旋转角度
     */
-  var rotate: js.UndefOr[Double] = js.native
+  var rotate: js.UndefOr[Double] = js.undefined
 }
 
 object MapContextTranslateMarkerOptions {
   @scala.inline
-  def apply(): MapContextTranslateMarkerOptions = {
+  def apply(
+    animationEnd: () => Unit = null,
+    autoRotate: js.UndefOr[Boolean] = js.undefined,
+    destination: LocationObject = null,
+    duration: js.UndefOr[Double] = js.undefined,
+    fail: () => Unit = null,
+    markerId: js.UndefOr[Double] = js.undefined,
+    rotate: js.UndefOr[Double] = js.undefined
+  ): MapContextTranslateMarkerOptions = {
     val __obj = js.Dynamic.literal()
+    if (animationEnd != null) __obj.updateDynamic("animationEnd")(js.Any.fromFunction0(animationEnd))
+    if (!js.isUndefined(autoRotate)) __obj.updateDynamic("autoRotate")(autoRotate.get.asInstanceOf[js.Any])
+    if (destination != null) __obj.updateDynamic("destination")(destination.asInstanceOf[js.Any])
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction0(fail))
+    if (!js.isUndefined(markerId)) __obj.updateDynamic("markerId")(markerId.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rotate)) __obj.updateDynamic("rotate")(rotate.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapContextTranslateMarkerOptions]
   }
-  @scala.inline
-  implicit class MapContextTranslateMarkerOptionsOps[Self <: MapContextTranslateMarkerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimationEnd(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEnd")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutAnimationEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoRotate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRotate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoRotate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRotate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestination(value: LocationObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFail(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutFail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

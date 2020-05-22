@@ -23,6 +23,10 @@ object global extends js.Object {
       def this(value1: String, value2: typingsSlinky.jodata.jo.Concat) = this()
       def this(value1: typingsSlinky.jodata.jo.Concat, value2: String) = this()
       def this(value1: typingsSlinky.jodata.jo.Concat, value2: typingsSlinky.jodata.jo.Concat) = this()
+      /* CompleteClass */
+      override var LeftSide: String | typingsSlinky.jodata.jo.Concat = js.native
+      /* CompleteClass */
+      override var RightSide: String | typingsSlinky.jodata.jo.Concat = js.native
     }
     
     @js.native
@@ -35,6 +39,10 @@ object global extends js.Object {
     class PrecedenceGroup protected ()
       extends typingsSlinky.jodata.jo.PrecedenceGroup {
       def this(filterClause: typingsSlinky.jodata.jo.FilterClause) = this()
+      /* CompleteClass */
+      override def andFilter(filterClause: typingsSlinky.jodata.jo.FilterClause): typingsSlinky.jodata.jo.FilterClause = js.native
+      /* CompleteClass */
+      override def orFilter(filterClause: typingsSlinky.jodata.jo.FilterClause): typingsSlinky.jodata.jo.FilterClause = js.native
     }
     
     def datetime(stringLiteral: String): String = js.native

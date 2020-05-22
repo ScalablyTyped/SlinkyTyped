@@ -16,7 +16,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.configuration.backend.UpdatableLayer Service providing write access to a configuration data layer.
   * @since OOo 1.1.2
   */
-@js.native
 trait Layer
   extends XCompositeLayer
      with XTimeStamped {
@@ -24,7 +23,7 @@ trait Layer
     * The URL of the layer data.
     * @since OOo 2.0
     */
-  var URL: String = js.native
+  var URL: String
 }
 
 object Layer {
@@ -43,19 +42,5 @@ object Layer {
     val __obj = js.Dynamic.literal(Timestamp = Timestamp.asInstanceOf[js.Any], URL = URL.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getTimestamp = js.Any.fromFunction0(getTimestamp), listSubLayerIds = js.Any.fromFunction0(listSubLayerIds), queryInterface = js.Any.fromFunction1(queryInterface), readData = js.Any.fromFunction1(readData), readSubLayerData = js.Any.fromFunction2(readSubLayerData), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[Layer]
   }
-  @scala.inline
-  implicit class LayerOps[Self <: Layer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("URL")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

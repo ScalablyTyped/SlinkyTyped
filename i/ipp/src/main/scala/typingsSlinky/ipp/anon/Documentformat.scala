@@ -6,195 +6,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Documentformat extends js.Object {
-  var `attributes-charset`: js.UndefOr[CharacterSet] = js.native
-  var `attributes-natural-language`: js.UndefOr[String] = js.native
-  var compression: js.UndefOr[typingsSlinky.ipp.mod.Compression] = js.native
-  var `document-format`: js.UndefOr[MimeMediaType] = js.native
-  var `document-name`: js.UndefOr[String] = js.native
-  var `document-natural-language`: js.UndefOr[String] = js.native
-  var `document-uri`: String = js.native
-  var `ipp-attribute-fidelity`: js.UndefOr[Boolean] = js.native
-  var `job-impressions`: js.UndefOr[Double] = js.native
-  var `job-k-octets`: js.UndefOr[Double] = js.native
-  var `job-media-sheets`: js.UndefOr[Double] = js.native
-  var `job-name`: js.UndefOr[String] = js.native
-  var `printer-uri`: js.UndefOr[String] = js.native
-  var `requesting-user-name`: String = js.native
+  var `attributes-charset`: js.UndefOr[CharacterSet] = js.undefined
+  var `attributes-natural-language`: js.UndefOr[String] = js.undefined
+  var compression: js.UndefOr[typingsSlinky.ipp.mod.Compression] = js.undefined
+  var `document-format`: js.UndefOr[MimeMediaType] = js.undefined
+  var `document-name`: js.UndefOr[String] = js.undefined
+  var `document-natural-language`: js.UndefOr[String] = js.undefined
+  var `document-uri`: String
+  var `ipp-attribute-fidelity`: js.UndefOr[Boolean] = js.undefined
+  var `job-impressions`: js.UndefOr[Double] = js.undefined
+  var `job-k-octets`: js.UndefOr[Double] = js.undefined
+  var `job-media-sheets`: js.UndefOr[Double] = js.undefined
+  var `job-name`: js.UndefOr[String] = js.undefined
+  var `printer-uri`: js.UndefOr[String] = js.undefined
+  var `requesting-user-name`: String
 }
 
 object Documentformat {
   @scala.inline
-  def apply(`document-uri`: String, `requesting-user-name`: String): Documentformat = {
+  def apply(
+    `document-uri`: String,
+    `requesting-user-name`: String,
+    `attributes-charset`: CharacterSet = null,
+    `attributes-natural-language`: String = null,
+    compression: typingsSlinky.ipp.mod.Compression = null,
+    `document-format`: MimeMediaType = null,
+    `document-name`: String = null,
+    `document-natural-language`: String = null,
+    `ipp-attribute-fidelity`: js.UndefOr[Boolean] = js.undefined,
+    `job-impressions`: js.UndefOr[Double] = js.undefined,
+    `job-k-octets`: js.UndefOr[Double] = js.undefined,
+    `job-media-sheets`: js.UndefOr[Double] = js.undefined,
+    `job-name`: String = null,
+    `printer-uri`: String = null
+  ): Documentformat = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("document-uri")(`document-uri`.asInstanceOf[js.Any])
     __obj.updateDynamic("requesting-user-name")(`requesting-user-name`.asInstanceOf[js.Any])
+    if (`attributes-charset` != null) __obj.updateDynamic("attributes-charset")(`attributes-charset`.asInstanceOf[js.Any])
+    if (`attributes-natural-language` != null) __obj.updateDynamic("attributes-natural-language")(`attributes-natural-language`.asInstanceOf[js.Any])
+    if (compression != null) __obj.updateDynamic("compression")(compression.asInstanceOf[js.Any])
+    if (`document-format` != null) __obj.updateDynamic("document-format")(`document-format`.asInstanceOf[js.Any])
+    if (`document-name` != null) __obj.updateDynamic("document-name")(`document-name`.asInstanceOf[js.Any])
+    if (`document-natural-language` != null) __obj.updateDynamic("document-natural-language")(`document-natural-language`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`ipp-attribute-fidelity`)) __obj.updateDynamic("ipp-attribute-fidelity")(`ipp-attribute-fidelity`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`job-impressions`)) __obj.updateDynamic("job-impressions")(`job-impressions`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`job-k-octets`)) __obj.updateDynamic("job-k-octets")(`job-k-octets`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`job-media-sheets`)) __obj.updateDynamic("job-media-sheets")(`job-media-sheets`.get.asInstanceOf[js.Any])
+    if (`job-name` != null) __obj.updateDynamic("job-name")(`job-name`.asInstanceOf[js.Any])
+    if (`printer-uri` != null) __obj.updateDynamic("printer-uri")(`printer-uri`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Documentformat]
   }
-  @scala.inline
-  implicit class DocumentformatOps[Self <: Documentformat] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withDocument-uri`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withRequesting-user-name`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requesting-user-name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withAttributes-charset`(value: CharacterSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes-charset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAttributes-charset`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes-charset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAttributes-natural-language`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes-natural-language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAttributes-natural-language`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes-natural-language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompression(value: typingsSlinky.ipp.mod.Compression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withDocument-format`(value: MimeMediaType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDocument-format`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withDocument-name`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDocument-name`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withDocument-natural-language`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-natural-language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDocument-natural-language`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-natural-language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withIpp-attribute-fidelity`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipp-attribute-fidelity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutIpp-attribute-fidelity`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipp-attribute-fidelity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withJob-impressions`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-impressions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutJob-impressions`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-impressions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withJob-k-octets`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-k-octets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutJob-k-octets`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-k-octets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withJob-media-sheets`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-media-sheets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutJob-media-sheets`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-media-sheets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withJob-name`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutJob-name`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withPrinter-uri`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printer-uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutPrinter-uri`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printer-uri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

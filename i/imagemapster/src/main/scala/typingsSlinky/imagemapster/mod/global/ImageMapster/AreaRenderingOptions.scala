@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AreaRenderingOptions extends RenderingOptions {
   /**
     * when rendering an area or area group, also render the areas in the
@@ -28,7 +27,7 @@ trait AreaRenderingOptions extends RenderingOptions {
     * menu to display when the hotspot is moused over, but when it's
     * hidden, mousing over the menu area itself should have no effect.
     */
-  var includeKeys: js.UndefOr[String] = js.native
+  var includeKeys: js.UndefOr[String] = js.undefined
   /**
     * the area is a mask rather than a highlighted area.
     *
@@ -79,8 +78,8 @@ trait AreaRenderingOptions extends RenderingOptions {
     * effect, for any area as desired.
     *
     */
-  var isMask: js.UndefOr[Boolean] = js.native
-  var key: String = js.native
+  var isMask: js.UndefOr[Boolean] = js.undefined
+  var key: String
   /**
     * tool tip data for an area
     *
@@ -91,64 +90,66 @@ trait AreaRenderingOptions extends RenderingOptions {
     * using this option you must use a jQuery object. Any string will be
     * treated as plain text (and special characters rendered correctly).
     */
-  var toolTip: js.UndefOr[String] = js.native
+  var toolTip: js.UndefOr[String] = js.undefined
 }
 
 object AreaRenderingOptions {
   @scala.inline
-  def apply(key: String): AreaRenderingOptions = {
+  def apply(
+    key: String,
+    altImage: String = null,
+    altImageFill: js.UndefOr[Boolean] = js.undefined,
+    altImageOpacity: js.UndefOr[Double] = js.undefined,
+    altImageStroke: js.UndefOr[Boolean] = js.undefined,
+    fade: js.UndefOr[Boolean] = js.undefined,
+    fadeDuration: js.UndefOr[Double] = js.undefined,
+    fill: js.UndefOr[Boolean] = js.undefined,
+    fillColor: String = null,
+    fillColorMask: String = null,
+    fillOpacity: js.UndefOr[Double] = js.undefined,
+    highlight: js.UndefOr[Boolean] = js.undefined,
+    includeKeys: String = null,
+    isDeselectable: js.UndefOr[Boolean] = js.undefined,
+    isMask: js.UndefOr[Boolean] = js.undefined,
+    isSelectable: js.UndefOr[Boolean] = js.undefined,
+    render_highlight: String | RenderingOptions = null,
+    render_select: String | RenderingOptions = null,
+    selected: js.UndefOr[Boolean] = js.undefined,
+    singleSelect: js.UndefOr[Boolean] = js.undefined,
+    staticState: js.UndefOr[Boolean] = js.undefined,
+    stroke: js.UndefOr[Boolean] = js.undefined,
+    strokeColor: String = null,
+    strokeOpacity: js.UndefOr[Double] = js.undefined,
+    strokeWidth: js.UndefOr[Double] = js.undefined,
+    toolTip: String = null
+  ): AreaRenderingOptions = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
+    if (altImage != null) __obj.updateDynamic("altImage")(altImage.asInstanceOf[js.Any])
+    if (!js.isUndefined(altImageFill)) __obj.updateDynamic("altImageFill")(altImageFill.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(altImageOpacity)) __obj.updateDynamic("altImageOpacity")(altImageOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(altImageStroke)) __obj.updateDynamic("altImageStroke")(altImageStroke.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fade)) __obj.updateDynamic("fade")(fade.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fadeDuration)) __obj.updateDynamic("fadeDuration")(fadeDuration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fill)) __obj.updateDynamic("fill")(fill.get.asInstanceOf[js.Any])
+    if (fillColor != null) __obj.updateDynamic("fillColor")(fillColor.asInstanceOf[js.Any])
+    if (fillColorMask != null) __obj.updateDynamic("fillColorMask")(fillColorMask.asInstanceOf[js.Any])
+    if (!js.isUndefined(fillOpacity)) __obj.updateDynamic("fillOpacity")(fillOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(highlight)) __obj.updateDynamic("highlight")(highlight.get.asInstanceOf[js.Any])
+    if (includeKeys != null) __obj.updateDynamic("includeKeys")(includeKeys.asInstanceOf[js.Any])
+    if (!js.isUndefined(isDeselectable)) __obj.updateDynamic("isDeselectable")(isDeselectable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isMask)) __obj.updateDynamic("isMask")(isMask.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isSelectable)) __obj.updateDynamic("isSelectable")(isSelectable.get.asInstanceOf[js.Any])
+    if (render_highlight != null) __obj.updateDynamic("render_highlight")(render_highlight.asInstanceOf[js.Any])
+    if (render_select != null) __obj.updateDynamic("render_select")(render_select.asInstanceOf[js.Any])
+    if (!js.isUndefined(selected)) __obj.updateDynamic("selected")(selected.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(singleSelect)) __obj.updateDynamic("singleSelect")(singleSelect.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(staticState)) __obj.updateDynamic("staticState")(staticState.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stroke)) __obj.updateDynamic("stroke")(stroke.get.asInstanceOf[js.Any])
+    if (strokeColor != null) __obj.updateDynamic("strokeColor")(strokeColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(strokeOpacity)) __obj.updateDynamic("strokeOpacity")(strokeOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(strokeWidth)) __obj.updateDynamic("strokeWidth")(strokeWidth.get.asInstanceOf[js.Any])
+    if (toolTip != null) __obj.updateDynamic("toolTip")(toolTip.asInstanceOf[js.Any])
     __obj.asInstanceOf[AreaRenderingOptions]
   }
-  @scala.inline
-  implicit class AreaRenderingOptionsOps[Self <: AreaRenderingOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIncludeKeys(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsMask(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsMask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToolTip(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolTip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolTip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolTip")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

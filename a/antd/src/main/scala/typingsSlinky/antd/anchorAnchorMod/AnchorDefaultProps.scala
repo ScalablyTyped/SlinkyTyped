@@ -1,58 +1,53 @@
 package typingsSlinky.antd.anchorAnchorMod
 
+import org.scalajs.dom.raw.HTMLElement
+import slinky.core.TagMod
+import slinky.web.SyntheticMouseEvent
+import typingsSlinky.antd.anon.Href
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AnchorDefaultProps extends AnchorProps {
   @JSName("affix")
-  var affix_AnchorDefaultProps: Boolean = js.native
+  var affix_AnchorDefaultProps: Boolean
   @JSName("prefixCls")
-  var prefixCls_AnchorDefaultProps: String = js.native
+  var prefixCls_AnchorDefaultProps: String
   @JSName("showInkInFixed")
-  var showInkInFixed_AnchorDefaultProps: Boolean = js.native
+  var showInkInFixed_AnchorDefaultProps: Boolean
   @JSName("getContainer")
-  def getContainer_MAnchorDefaultProps(): AnchorContainer = js.native
+  def getContainer_MAnchorDefaultProps(): AnchorContainer
 }
 
 object AnchorDefaultProps {
   @scala.inline
-  def apply(affix: Boolean, getContainer: () => AnchorContainer, prefixCls: String, showInkInFixed: Boolean): AnchorDefaultProps = {
+  def apply(
+    affix: Boolean,
+    getContainer: () => AnchorContainer,
+    prefixCls: String,
+    showInkInFixed: Boolean,
+    bounds: js.UndefOr[Double] = js.undefined,
+    children: TagMod[Any] = null,
+    className: String = null,
+    getCurrentAnchor: () => String = null,
+    offsetTop: js.UndefOr[Double] = js.undefined,
+    onChange: /* currentActiveLink */ String => Unit = null,
+    onClick: (/* e */ SyntheticMouseEvent[HTMLElement], /* link */ Href) => Unit = null,
+    style: CSSProperties = null,
+    targetOffset: js.UndefOr[Double] = js.undefined
+  ): AnchorDefaultProps = {
     val __obj = js.Dynamic.literal(affix = affix.asInstanceOf[js.Any], getContainer = js.Any.fromFunction0(getContainer), prefixCls = prefixCls.asInstanceOf[js.Any], showInkInFixed = showInkInFixed.asInstanceOf[js.Any])
+    if (!js.isUndefined(bounds)) __obj.updateDynamic("bounds")(bounds.get.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (getCurrentAnchor != null) __obj.updateDynamic("getCurrentAnchor")(js.Any.fromFunction0(getCurrentAnchor))
+    if (!js.isUndefined(offsetTop)) __obj.updateDynamic("offsetTop")(offsetTop.get.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(targetOffset)) __obj.updateDynamic("targetOffset")(targetOffset.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnchorDefaultProps]
   }
-  @scala.inline
-  implicit class AnchorDefaultPropsOps[Self <: AnchorDefaultProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAffix(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("affix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetContainer(value: () => AnchorContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContainer")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPrefixCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowInkInFixed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showInkInFixed")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

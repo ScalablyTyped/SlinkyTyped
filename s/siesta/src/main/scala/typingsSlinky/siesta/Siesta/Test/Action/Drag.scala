@@ -8,88 +8,32 @@ import scala.scalajs.js.annotation._
 /**
   * @class
   */
-@js.native
 trait Drag extends IAction {
-  var by: js.UndefOr[js.Any] = js.native
-  var dragOnly: js.UndefOr[Boolean] = js.native
-  var source: js.UndefOr[js.Any] = js.native
-  var target: js.UndefOr[js.Any] = js.native
-  var to: js.UndefOr[js.Any] = js.native
+  var by: js.UndefOr[js.Any] = js.undefined
+  var dragOnly: js.UndefOr[Boolean] = js.undefined
+  var source: js.UndefOr[js.Any] = js.undefined
+  var target: js.UndefOr[js.Any] = js.undefined
+  var to: js.UndefOr[js.Any] = js.undefined
 }
 
 object Drag {
   @scala.inline
-  def apply(): Drag = {
+  def apply(
+    by: js.Any = null,
+    desc: String = null,
+    dragOnly: js.UndefOr[Boolean] = js.undefined,
+    source: js.Any = null,
+    target: js.Any = null,
+    to: js.Any = null
+  ): Drag = {
     val __obj = js.Dynamic.literal()
+    if (by != null) __obj.updateDynamic("by")(by.asInstanceOf[js.Any])
+    if (desc != null) __obj.updateDynamic("desc")(desc.asInstanceOf[js.Any])
+    if (!js.isUndefined(dragOnly)) __obj.updateDynamic("dragOnly")(dragOnly.get.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (to != null) __obj.updateDynamic("to")(to.asInstanceOf[js.Any])
     __obj.asInstanceOf[Drag]
   }
-  @scala.inline
-  implicit class DragOps[Self <: Drag] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBy(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("by")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("by")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTo(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

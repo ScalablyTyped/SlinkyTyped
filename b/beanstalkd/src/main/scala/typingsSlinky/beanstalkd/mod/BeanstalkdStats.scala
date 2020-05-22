@@ -4,106 +4,105 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BeanstalkdStats extends js.Object {
   /** The index of the current binlog file being written to. If binlog is not active this value will be 0. */
-  var `binlog-current-index`: Double = js.native
+  var `binlog-current-index`: Double
   /** The maximum size in bytes a binlog file is allowed to get before a new binlog file is opened. */
-  var `binlog-max-size`: Double = js.native
+  var `binlog-max-size`: Double
   /** The index of the oldest binlog file needed to store the current jobs. */
-  var `binlog-oldest-index`: Double = js.native
+  var `binlog-oldest-index`: Double
   /** The cumulative number of records written as part of compaction. */
-  var `binlog-records-migrated`: Double = js.native
+  var `binlog-records-migrated`: Double
   /** The cumulative number of records written to the binlog. */
-  var `binlog-records-written`: Double = js.native
+  var `binlog-records-written`: Double
   /** The cumulative number of bury commands. */
-  var `cmd-bury`: Double = js.native
+  var `cmd-bury`: Double
   /** The cumulative number of delete commands. */
-  var `cmd-delete`: Double = js.native
+  var `cmd-delete`: Double
   /** The cumulative number of ignore commands. */
-  var `cmd-ignore`: Double = js.native
+  var `cmd-ignore`: Double
   /** The cumulative number of kick commands. */
-  var `cmd-kick`: Double = js.native
+  var `cmd-kick`: Double
   /** The cumulative number of list-tube-used commands. */
-  var `cmd-list-tube-used`: Double = js.native
+  var `cmd-list-tube-used`: Double
   /** The cumulative number of list-tubes commands. */
-  var `cmd-list-tubes`: Double = js.native
+  var `cmd-list-tubes`: Double
   /** The cumulative number of list-tubes-watched commands. */
-  var `cmd-list-tubes-watched`: Double = js.native
+  var `cmd-list-tubes-watched`: Double
   /** The cumulative number of pause-tube commands. */
-  var `cmd-pause-tube`: Double = js.native
+  var `cmd-pause-tube`: Double
   /** The cumulative number of peek commands. */
-  var `cmd-peek`: Double = js.native
+  var `cmd-peek`: Double
   /** The cumulative number of peek-buried commands. */
-  var `cmd-peek-buried`: Double = js.native
+  var `cmd-peek-buried`: Double
   /** The cumulative number of peek-delayed commands. */
-  var `cmd-peek-delayed`: Double = js.native
+  var `cmd-peek-delayed`: Double
   /** The cumulative number of peek-ready commands. */
-  var `cmd-peek-ready`: Double = js.native
+  var `cmd-peek-ready`: Double
   /** The cumulative number of put commands. */
-  var `cmd-put`: Double = js.native
+  var `cmd-put`: Double
   /** The cumulative number of release commands. */
-  var `cmd-release`: Double = js.native
+  var `cmd-release`: Double
   /** The cumulative number of reserve commands. */
-  var `cmd-reserve`: Double = js.native
+  var `cmd-reserve`: Double
   /** The cumulative number of stats commands. */
-  var `cmd-stats`: Double = js.native
+  var `cmd-stats`: Double
   /** The cumulative number of stats-job commands. */
-  var `cmd-stats-job`: Double = js.native
+  var `cmd-stats-job`: Double
   /** The cumulative number of stats-tube commands. */
-  var `cmd-stats-tube`: Double = js.native
+  var `cmd-stats-tube`: Double
   /** The cumulative number of use commands. */
-  var `cmd-use`: Double = js.native
+  var `cmd-use`: Double
   /** The cumulative number of watch commands. */
-  var `cmd-watch`: Double = js.native
+  var `cmd-watch`: Double
   /** The number of currently open connections. */
-  var `current-connections`: Double = js.native
+  var `current-connections`: Double
   /** The number of buried jobs. */
-  var `current-jobs-buried`: Double = js.native
+  var `current-jobs-buried`: Double
   /** The number of delayed jobs. */
-  var `current-jobs-delayed`: Double = js.native
+  var `current-jobs-delayed`: Double
   /** The number of jobs in the ready queue. */
-  var `current-jobs-ready`: Double = js.native
+  var `current-jobs-ready`: Double
   /** The number of jobs reserved by all clients. */
-  var `current-jobs-reserved`: Double = js.native
+  var `current-jobs-reserved`: Double
   /** The number of ready jobs with priority < 1024. */
-  var `current-jobs-urgent`: Double = js.native
+  var `current-jobs-urgent`: Double
   /** The number of open connections that have each issued at least one put command. */
-  var `current-producers`: Double = js.native
+  var `current-producers`: Double
   /** The number of currently-existing tubes. */
-  var `current-tubes`: Double = js.native
+  var `current-tubes`: Double
   /** The number of open connections that have issued a reserve command but not yet received a response. */
-  var `current-waiting`: Double = js.native
+  var `current-waiting`: Double
   /** The number of open connections that have each issued at least one reserve command. */
-  var `current-workers`: Double = js.native
+  var `current-workers`: Double
   /** Set to "true" if the server is in drain mode, "false" otherwise. */
-  var draining: Boolean = js.native
+  var draining: Boolean
   /** The hostname of the machine as determined by uname. */
-  var hostname: String = js.native
+  var hostname: String
   /** A random id string for this server process, generated every time beanstalkd process starts. */
-  var id: String = js.native
+  var id: String
   /** The cumulative count of times a job has timed out. */
-  var `job-timeouts`: Double = js.native
+  var `job-timeouts`: Double
   /** The maximum number of bytes in a job. */
-  var `max-job-size`: Double = js.native
+  var `max-job-size`: Double
   /** The OS version as determined by uname */
-  var os: String = js.native
+  var os: String
   /** The process id of the server. */
-  var pid: String = js.native
+  var pid: String
   /** The machine architecture as determined by uname */
-  var platform: String = js.native
+  var platform: String
   /** The cumulative system CPU time of this process in seconds and microseconds. */
-  var `rusage-stime`: Double = js.native
+  var `rusage-stime`: Double
   /** The cumulative user CPU time of this process in seconds and microseconds. */
-  var `rusage-utime`: Double = js.native
+  var `rusage-utime`: Double
   /** The cumulative count of connections. */
-  var `total-connections`: Double = js.native
+  var `total-connections`: Double
   /** The cumulative count of jobs created. */
-  var `total-jobs`: Double = js.native
+  var `total-jobs`: Double
   /** The number of seconds since this server process started running. */
-  var uptime: Double = js.native
+  var uptime: Double
   /** The version string of the server. */
-  var version: String = js.native
+  var version: String
 }
 
 object BeanstalkdStats {
@@ -203,307 +202,5 @@ object BeanstalkdStats {
     __obj.updateDynamic("total-jobs")(`total-jobs`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BeanstalkdStats]
   }
-  @scala.inline
-  implicit class BeanstalkdStatsOps[Self <: BeanstalkdStats] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withBinlog-current-index`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binlog-current-index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withBinlog-max-size`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binlog-max-size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withBinlog-oldest-index`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binlog-oldest-index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withBinlog-records-migrated`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binlog-records-migrated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withBinlog-records-written`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binlog-records-written")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCmd-bury`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd-bury")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCmd-delete`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd-delete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCmd-ignore`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd-ignore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCmd-kick`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd-kick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCmd-list-tube-used`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd-list-tube-used")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCmd-list-tubes`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd-list-tubes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCmd-list-tubes-watched`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd-list-tubes-watched")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCmd-pause-tube`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd-pause-tube")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCmd-peek`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd-peek")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCmd-peek-buried`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd-peek-buried")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCmd-peek-delayed`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd-peek-delayed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCmd-peek-ready`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd-peek-ready")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCmd-put`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd-put")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCmd-release`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd-release")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCmd-reserve`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd-reserve")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCmd-stats`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd-stats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCmd-stats-job`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd-stats-job")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCmd-stats-tube`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd-stats-tube")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCmd-use`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd-use")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCmd-watch`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd-watch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCurrent-connections`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("current-connections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCurrent-jobs-buried`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("current-jobs-buried")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCurrent-jobs-delayed`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("current-jobs-delayed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCurrent-jobs-ready`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("current-jobs-ready")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCurrent-jobs-reserved`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("current-jobs-reserved")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCurrent-jobs-urgent`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("current-jobs-urgent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCurrent-producers`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("current-producers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCurrent-tubes`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("current-tubes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCurrent-waiting`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("current-waiting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCurrent-workers`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("current-workers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDraining(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draining")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHostname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withJob-timeouts`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-timeouts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withMax-job-size`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max-job-size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("os")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlatform(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withRusage-stime`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rusage-stime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withRusage-utime`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rusage-utime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withTotal-connections`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total-connections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withTotal-jobs`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total-jobs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUptime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uptime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

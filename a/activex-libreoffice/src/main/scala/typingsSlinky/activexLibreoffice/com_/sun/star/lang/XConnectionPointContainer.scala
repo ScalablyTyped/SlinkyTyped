@@ -15,10 +15,9 @@ import scala.scalajs.js.annotation._
   * @see XConnectionPoint
   * @see com.sun.star.uno.XWeak
   */
-@js.native
 trait XConnectionPointContainer extends XInterface {
   /** @returns a sequence of all outgoing types; specifies which are supported by this connectable object. */
-  val ConnectionPointTypes: SafeArray[`type`] = js.native
+  val ConnectionPointTypes: SafeArray[`type`]
   /**
     * creates a connection between this object and a client's sink, where the sink implements the outgoing interface specified with ID.
     *
@@ -28,19 +27,19 @@ trait XConnectionPointContainer extends XInterface {
     * does not matter that the outgoing interface is not supported.
     * @see XConnectionPoint.advise
     */
-  def advise(aType: `type`, xListener: XInterface): Unit = js.native
+  def advise(aType: `type`, xListener: XInterface): Unit
   /** @returns a sequence of all outgoing types; specifies which are supported by this connectable object. */
-  def getConnectionPointTypes(): SafeArray[`type`] = js.native
+  def getConnectionPointTypes(): SafeArray[`type`]
   /**
     * @param aType specifies the connection point's type.
     * @returns an {@link XConnectionPoint} interface of a connection point for a specified type if that type describes a supported outgoing interface. It is NUL
     */
-  def queryConnectionPoint(aType: `type`): XConnectionPoint = js.native
+  def queryConnectionPoint(aType: `type`): XConnectionPoint
   /**
     * terminates a notification previously set up with advise at the container or at the suitable connection point.
     * @see XConnectionPoint.unadvise
     */
-  def unadvise(aType: `type`, xListener: XInterface): Unit = js.native
+  def unadvise(aType: `type`, xListener: XInterface): Unit
 }
 
 object XConnectionPointContainer {
@@ -58,43 +57,5 @@ object XConnectionPointContainer {
     val __obj = js.Dynamic.literal(ConnectionPointTypes = ConnectionPointTypes.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), advise = js.Any.fromFunction2(advise), getConnectionPointTypes = js.Any.fromFunction0(getConnectionPointTypes), queryConnectionPoint = js.Any.fromFunction1(queryConnectionPoint), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), unadvise = js.Any.fromFunction2(unadvise))
     __obj.asInstanceOf[XConnectionPointContainer]
   }
-  @scala.inline
-  implicit class XConnectionPointContainerOps[Self <: XConnectionPointContainer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConnectionPointTypes(value: SafeArray[`type`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionPointTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAdvise(value: (`type`, XInterface) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advise")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetConnectionPointTypes(value: () => SafeArray[`type`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getConnectionPointTypes")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withQueryConnectionPoint(value: `type` => XConnectionPoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryConnectionPoint")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUnadvise(value: (`type`, XInterface) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unadvise")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

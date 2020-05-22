@@ -23,6 +23,10 @@ trait CreateDetectorVersionRequest extends js.Object {
     */
   var modelVersions: js.UndefOr[ListOfModelVersions] = js.native
   /**
+    * The rule execution mode for the rules included in the detector version. You can define and edit the rule mode at the detector version level, when it is in draft status. If you specify FIRST_MATCHED, Amazon Fraud Detector evaluates rules sequentially, first to last, stopping at the first matched rule. Amazon Fraud dectector then provides the outcomes for that single rule. If you specifiy ALL_MATCHED, Amazon Fraud Detector evaluates all rules and returns the outcomes for all matched rules.  The default behavior is FIRST_MATCHED.
+    */
+  var ruleExecutionMode: js.UndefOr[RuleExecutionMode] = js.native
+  /**
     * The rules to include in the detector version.
     */
   var rules: RuleList = js.native
@@ -30,65 +34,20 @@ trait CreateDetectorVersionRequest extends js.Object {
 
 object CreateDetectorVersionRequest {
   @scala.inline
-  def apply(detectorId: identifier, rules: RuleList): CreateDetectorVersionRequest = {
+  def apply(
+    detectorId: identifier,
+    rules: RuleList,
+    description: description = null,
+    externalModelEndpoints: ListOfStrings = null,
+    modelVersions: ListOfModelVersions = null,
+    ruleExecutionMode: RuleExecutionMode = null
+  ): CreateDetectorVersionRequest = {
     val __obj = js.Dynamic.literal(detectorId = detectorId.asInstanceOf[js.Any], rules = rules.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (externalModelEndpoints != null) __obj.updateDynamic("externalModelEndpoints")(externalModelEndpoints.asInstanceOf[js.Any])
+    if (modelVersions != null) __obj.updateDynamic("modelVersions")(modelVersions.asInstanceOf[js.Any])
+    if (ruleExecutionMode != null) __obj.updateDynamic("ruleExecutionMode")(ruleExecutionMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDetectorVersionRequest]
   }
-  @scala.inline
-  implicit class CreateDetectorVersionRequestOps[Self <: CreateDetectorVersionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDetectorId(value: identifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRules(value: RuleList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: description): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExternalModelEndpoints(value: ListOfStrings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalModelEndpoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExternalModelEndpoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalModelEndpoints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModelVersions(value: ListOfModelVersions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelVersions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModelVersions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelVersions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

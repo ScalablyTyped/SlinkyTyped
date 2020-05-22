@@ -64,125 +64,28 @@ trait SchemaDynamicLinkInfo extends js.Object {
 
 object SchemaDynamicLinkInfo {
   @scala.inline
-  def apply(): SchemaDynamicLinkInfo = {
+  def apply(
+    analyticsInfo: SchemaAnalyticsInfo = null,
+    androidInfo: SchemaAndroidInfo = null,
+    desktopInfo: SchemaDesktopInfo = null,
+    domainUriPrefix: String = null,
+    dynamicLinkDomain: String = null,
+    iosInfo: SchemaIosInfo = null,
+    link: String = null,
+    navigationInfo: SchemaNavigationInfo = null,
+    socialMetaTagInfo: SchemaSocialMetaTagInfo = null
+  ): SchemaDynamicLinkInfo = {
     val __obj = js.Dynamic.literal()
+    if (analyticsInfo != null) __obj.updateDynamic("analyticsInfo")(analyticsInfo.asInstanceOf[js.Any])
+    if (androidInfo != null) __obj.updateDynamic("androidInfo")(androidInfo.asInstanceOf[js.Any])
+    if (desktopInfo != null) __obj.updateDynamic("desktopInfo")(desktopInfo.asInstanceOf[js.Any])
+    if (domainUriPrefix != null) __obj.updateDynamic("domainUriPrefix")(domainUriPrefix.asInstanceOf[js.Any])
+    if (dynamicLinkDomain != null) __obj.updateDynamic("dynamicLinkDomain")(dynamicLinkDomain.asInstanceOf[js.Any])
+    if (iosInfo != null) __obj.updateDynamic("iosInfo")(iosInfo.asInstanceOf[js.Any])
+    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
+    if (navigationInfo != null) __obj.updateDynamic("navigationInfo")(navigationInfo.asInstanceOf[js.Any])
+    if (socialMetaTagInfo != null) __obj.updateDynamic("socialMetaTagInfo")(socialMetaTagInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDynamicLinkInfo]
   }
-  @scala.inline
-  implicit class SchemaDynamicLinkInfoOps[Self <: SchemaDynamicLinkInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnalyticsInfo(value: SchemaAnalyticsInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyticsInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnalyticsInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyticsInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAndroidInfo(value: SchemaAndroidInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAndroidInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDesktopInfo(value: SchemaDesktopInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desktopInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDesktopInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desktopInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomainUriPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainUriPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomainUriPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainUriPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDynamicLinkDomain(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicLinkDomain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDynamicLinkDomain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicLinkDomain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIosInfo(value: SchemaIosInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIosInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavigationInfo(value: SchemaNavigationInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigationInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavigationInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigationInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSocialMetaTagInfo(value: SchemaSocialMetaTagInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socialMetaTagInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSocialMetaTagInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socialMetaTagInfo")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

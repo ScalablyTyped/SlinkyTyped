@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BaseListener extends js.Object {
   /**
     * Waits for the next client to connect.
     */
-  def accept(): js.Promise[SocketConnection] = js.native
+  def accept(): js.Promise[SocketConnection]
   /**
     * Closes the listener, releasing resources related to it. Once the listener is closed, all other operations
     * will fail. Closing a listener multiple times is allowed and will not result in an error.
     */
-  def close(): js.Promise[Unit] = js.native
+  def close(): js.Promise[Unit]
 }
 
 object BaseListener {
@@ -23,25 +22,5 @@ object BaseListener {
     val __obj = js.Dynamic.literal(accept = js.Any.fromFunction0(accept), close = js.Any.fromFunction0(close))
     __obj.asInstanceOf[BaseListener]
   }
-  @scala.inline
-  implicit class BaseListenerOps[Self <: BaseListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccept(value: () => js.Promise[SocketConnection]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accept")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withClose(value: () => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

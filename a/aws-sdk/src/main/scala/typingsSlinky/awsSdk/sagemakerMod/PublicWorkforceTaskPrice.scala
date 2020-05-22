@@ -14,29 +14,10 @@ trait PublicWorkforceTaskPrice extends js.Object {
 
 object PublicWorkforceTaskPrice {
   @scala.inline
-  def apply(): PublicWorkforceTaskPrice = {
+  def apply(AmountInUsd: USD = null): PublicWorkforceTaskPrice = {
     val __obj = js.Dynamic.literal()
+    if (AmountInUsd != null) __obj.updateDynamic("AmountInUsd")(AmountInUsd.asInstanceOf[js.Any])
     __obj.asInstanceOf[PublicWorkforceTaskPrice]
   }
-  @scala.inline
-  implicit class PublicWorkforceTaskPriceOps[Self <: PublicWorkforceTaskPrice] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmountInUsd(value: USD): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmountInUsd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmountInUsd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmountInUsd")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

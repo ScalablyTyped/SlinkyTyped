@@ -15,10 +15,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Collection[T]
   extends Accessor
-     with Evented
-     with CollectionProperties[T]
-     with GoToTarget2D
-     with GoToTarget3D {
+     with Evented {
   val length: Double = js.native
   def add(item: T): Unit = js.native
   def add(item: T, index: Double): Unit = js.native

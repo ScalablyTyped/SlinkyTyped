@@ -4,140 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UpsertGraphOptions extends js.Object {
-  var insertMissing: js.UndefOr[Boolean | js.Array[String]] = js.native
-  var noDelete: js.UndefOr[Boolean | js.Array[String]] = js.native
-  var noInsert: js.UndefOr[Boolean | js.Array[String]] = js.native
-  var noRelate: js.UndefOr[Boolean | js.Array[String]] = js.native
-  var noUnrelate: js.UndefOr[Boolean | js.Array[String]] = js.native
-  var noUpdate: js.UndefOr[Boolean | js.Array[String]] = js.native
-  var relate: js.UndefOr[Boolean | js.Array[String]] = js.native
-  var unrelate: js.UndefOr[Boolean | js.Array[String]] = js.native
-  var update: js.UndefOr[Boolean | js.Array[String]] = js.native
+  var insertMissing: js.UndefOr[Boolean | js.Array[String]] = js.undefined
+  var noDelete: js.UndefOr[Boolean | js.Array[String]] = js.undefined
+  var noInsert: js.UndefOr[Boolean | js.Array[String]] = js.undefined
+  var noRelate: js.UndefOr[Boolean | js.Array[String]] = js.undefined
+  var noUnrelate: js.UndefOr[Boolean | js.Array[String]] = js.undefined
+  var noUpdate: js.UndefOr[Boolean | js.Array[String]] = js.undefined
+  var relate: js.UndefOr[Boolean | js.Array[String]] = js.undefined
+  var unrelate: js.UndefOr[Boolean | js.Array[String]] = js.undefined
+  var update: js.UndefOr[Boolean | js.Array[String]] = js.undefined
 }
 
 object UpsertGraphOptions {
   @scala.inline
-  def apply(): UpsertGraphOptions = {
+  def apply(
+    insertMissing: Boolean | js.Array[String] = null,
+    noDelete: Boolean | js.Array[String] = null,
+    noInsert: Boolean | js.Array[String] = null,
+    noRelate: Boolean | js.Array[String] = null,
+    noUnrelate: Boolean | js.Array[String] = null,
+    noUpdate: Boolean | js.Array[String] = null,
+    relate: Boolean | js.Array[String] = null,
+    unrelate: Boolean | js.Array[String] = null,
+    update: Boolean | js.Array[String] = null
+  ): UpsertGraphOptions = {
     val __obj = js.Dynamic.literal()
+    if (insertMissing != null) __obj.updateDynamic("insertMissing")(insertMissing.asInstanceOf[js.Any])
+    if (noDelete != null) __obj.updateDynamic("noDelete")(noDelete.asInstanceOf[js.Any])
+    if (noInsert != null) __obj.updateDynamic("noInsert")(noInsert.asInstanceOf[js.Any])
+    if (noRelate != null) __obj.updateDynamic("noRelate")(noRelate.asInstanceOf[js.Any])
+    if (noUnrelate != null) __obj.updateDynamic("noUnrelate")(noUnrelate.asInstanceOf[js.Any])
+    if (noUpdate != null) __obj.updateDynamic("noUpdate")(noUpdate.asInstanceOf[js.Any])
+    if (relate != null) __obj.updateDynamic("relate")(relate.asInstanceOf[js.Any])
+    if (unrelate != null) __obj.updateDynamic("unrelate")(unrelate.asInstanceOf[js.Any])
+    if (update != null) __obj.updateDynamic("update")(update.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpsertGraphOptions]
   }
-  @scala.inline
-  implicit class UpsertGraphOptionsOps[Self <: UpsertGraphOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInsertMissing(value: Boolean | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertMissing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsertMissing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertMissing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoDelete(value: Boolean | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noDelete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoDelete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noDelete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoInsert(value: Boolean | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noInsert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoInsert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noInsert")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoRelate(value: Boolean | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noRelate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoRelate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noRelate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoUnrelate(value: Boolean | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noUnrelate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoUnrelate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noUnrelate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoUpdate(value: Boolean | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelate(value: Boolean | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnrelate(value: Boolean | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unrelate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnrelate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unrelate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: Boolean | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

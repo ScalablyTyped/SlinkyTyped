@@ -17,29 +17,10 @@ trait SchemaWordArt extends js.Object {
 
 object SchemaWordArt {
   @scala.inline
-  def apply(): SchemaWordArt = {
+  def apply(renderedText: String = null): SchemaWordArt = {
     val __obj = js.Dynamic.literal()
+    if (renderedText != null) __obj.updateDynamic("renderedText")(renderedText.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWordArt]
   }
-  @scala.inline
-  implicit class SchemaWordArtOps[Self <: SchemaWordArt] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRenderedText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderedText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderedText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderedText")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

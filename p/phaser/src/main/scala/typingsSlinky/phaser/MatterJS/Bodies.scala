@@ -10,6 +10,5 @@ import scala.scalajs.js.annotation._
   *
   * See the included usage [examples](https://github.com/liabru/matter-js/tree/master/examples).
   */
-@js.native
 trait Bodies extends js.Object
 

@@ -30,77 +30,20 @@ trait ResourceDataSyncSourceWithState extends js.Object {
 
 object ResourceDataSyncSourceWithState {
   @scala.inline
-  def apply(): ResourceDataSyncSourceWithState = {
+  def apply(
+    AwsOrganizationsSource: ResourceDataSyncAwsOrganizationsSource = null,
+    IncludeFutureRegions: js.UndefOr[ResourceDataSyncIncludeFutureRegions] = js.undefined,
+    SourceRegions: ResourceDataSyncSourceRegionList = null,
+    SourceType: ResourceDataSyncSourceType = null,
+    State: ResourceDataSyncState = null
+  ): ResourceDataSyncSourceWithState = {
     val __obj = js.Dynamic.literal()
+    if (AwsOrganizationsSource != null) __obj.updateDynamic("AwsOrganizationsSource")(AwsOrganizationsSource.asInstanceOf[js.Any])
+    if (!js.isUndefined(IncludeFutureRegions)) __obj.updateDynamic("IncludeFutureRegions")(IncludeFutureRegions.get.asInstanceOf[js.Any])
+    if (SourceRegions != null) __obj.updateDynamic("SourceRegions")(SourceRegions.asInstanceOf[js.Any])
+    if (SourceType != null) __obj.updateDynamic("SourceType")(SourceType.asInstanceOf[js.Any])
+    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceDataSyncSourceWithState]
   }
-  @scala.inline
-  implicit class ResourceDataSyncSourceWithStateOps[Self <: ResourceDataSyncSourceWithState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAwsOrganizationsSource(value: ResourceDataSyncAwsOrganizationsSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsOrganizationsSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwsOrganizationsSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsOrganizationsSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeFutureRegions(value: ResourceDataSyncIncludeFutureRegions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeFutureRegions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeFutureRegions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeFutureRegions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceRegions(value: ResourceDataSyncSourceRegionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceRegions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceRegions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceRegions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceType(value: ResourceDataSyncSourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: ResourceDataSyncState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

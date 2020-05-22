@@ -9,33 +9,19 @@ import scala.scalajs.js.annotation._
 /**
   * The current list of {@link HtmlTrackElement}s.
   */
-@js.native
 trait HTMLTrackElementList extends /* index */ NumberDictionary[HTMLTrackElement] {
   /**
     * The current number of `Track`s in the this Trackist.
     */
-  var length: Double = js.native
+  var length: Double
 }
 
 object HTMLTrackElementList {
   @scala.inline
-  def apply(length: Double): HTMLTrackElementList = {
+  def apply(length: Double, NumberDictionary: /* index */ NumberDictionary[HTMLTrackElement] = null): HTMLTrackElementList = {
     val __obj = js.Dynamic.literal(length = length.asInstanceOf[js.Any])
+    if (NumberDictionary != null) js.Dynamic.global.Object.assign(__obj, NumberDictionary)
     __obj.asInstanceOf[HTMLTrackElementList]
   }
-  @scala.inline
-  implicit class HTMLTrackElementListOps[Self <: HTMLTrackElementList] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

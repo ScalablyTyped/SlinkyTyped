@@ -1,52 +1,40 @@
 package typingsSlinky.antDesignReactNative.checkboxCheckboxMod
 
 import typingsSlinky.antDesignReactNative.checkboxPropsTypeMod.CheckboxPropsType
+import typingsSlinky.antDesignReactNative.checkboxPropsTypeMod.OnChangeParams
 import typingsSlinky.antDesignReactNative.checkboxStyleMod.CheckboxStyle
 import typingsSlinky.antDesignReactNative.libStyleMod.WithThemeStyles
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
+import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CheckboxProps
   extends CheckboxPropsType
      with WithThemeStyles[CheckboxStyle] {
-  var style: js.UndefOr[StyleProp[TextStyle]] = js.native
+  var style: js.UndefOr[StyleProp[TextStyle]] = js.undefined
 }
 
 object CheckboxProps {
   @scala.inline
-  def apply(): CheckboxProps = {
+  def apply(
+    checked: js.UndefOr[Boolean] = js.undefined,
+    defaultChecked: js.UndefOr[Boolean] = js.undefined,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    onChange: /* params */ OnChangeParams => Unit = null,
+    style: js.UndefOr[Null | StyleProp[TextStyle]] = js.undefined,
+    styles: Partial[CheckboxStyle] = null
+  ): CheckboxProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(checked)) __obj.updateDynamic("checked")(checked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultChecked)) __obj.updateDynamic("defaultChecked")(defaultChecked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
     __obj.asInstanceOf[CheckboxProps]
   }
-  @scala.inline
-  implicit class CheckboxPropsOps[Self <: CheckboxProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStyle(value: StyleProp[TextStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
-        ret
-    }
-  }
-  
 }
 

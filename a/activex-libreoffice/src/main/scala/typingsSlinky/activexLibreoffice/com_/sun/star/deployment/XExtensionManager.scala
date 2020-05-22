@@ -19,7 +19,6 @@ import scala.scalajs.js.annotation._
   * @see ExtensionManager
   * @since OOo 3.3
   */
-@js.native
 trait XExtensionManager
   extends XComponent
      with XModifyBroadcaster {
@@ -27,7 +26,7 @@ trait XExtensionManager
     * gets the supported XPackageTypeInfos.
     * @returns supported XPackageTypeInfos.
     */
-  val SupportedPackageTypes: SafeArray[XPackageTypeInfo] = js.native
+  val SupportedPackageTypes: SafeArray[XPackageTypeInfo]
   /**
     * adds an extension.
     *
@@ -45,14 +44,14 @@ trait XExtensionManager
     repository: String,
     xAbortChannel: XAbortChannel,
     xCmdEnv: XCommandEnvironment
-  ): XPackage = js.native
+  ): XPackage
   /** check if all prerequisites for the extension are fulfilled and activates it, if possible. */
-  def checkPrerequisitesAndEnable(extension: XPackage, xAbortChannel: XAbortChannel, xCmdEnv: XCommandEnvironment): Double = js.native
+  def checkPrerequisitesAndEnable(extension: XPackage, xAbortChannel: XAbortChannel, xCmdEnv: XCommandEnvironment): Double
   /**
     * creates a command channel to be used to asynchronously abort a command.
     * @returns abort channel
     */
-  def createAbortChannel(): XAbortChannel = js.native
+  def createAbortChannel(): XAbortChannel
   /**
     * disable an extension.
     *
@@ -61,7 +60,7 @@ trait XExtensionManager
     * @param xAbortChannel abort channel to asynchronously abort the removing process, or null
     * @param xCmdEnv command environment for error and progress handling
     */
-  def disableExtension(extension: XPackage, xAbortChannel: XAbortChannel, xCmdEnv: XCommandEnvironment): Unit = js.native
+  def disableExtension(extension: XPackage, xAbortChannel: XAbortChannel, xCmdEnv: XCommandEnvironment): Unit
   /**
     * enable an extension.
     *
@@ -70,7 +69,7 @@ trait XExtensionManager
     * @param xAbortChannel abort channel to asynchronously abort the removing process, or null
     * @param xCmdEnv command environment for error and progress handling
     */
-  def enableExtension(extension: XPackage, xAbortChannel: XAbortChannel, xCmdEnv: XCommandEnvironment): Unit = js.native
+  def enableExtension(extension: XPackage, xAbortChannel: XAbortChannel, xCmdEnv: XCommandEnvironment): Unit
   /**
     * returns a sequence containing all installed extensions.
     *
@@ -78,7 +77,7 @@ trait XExtensionManager
     * as many elements as there are repositories. Those are ordered according to the priority of the repository. That is, the first member is the extension
     * from the user repository, the second is from the shared repository and the last is from the bundled repository.
     */
-  def getAllExtensions(xAbortChannel: XAbortChannel, xCmdEnv: XCommandEnvironment): SafeArray[SafeArray[XPackage]] = js.native
+  def getAllExtensions(xAbortChannel: XAbortChannel, xCmdEnv: XCommandEnvironment): SafeArray[SafeArray[XPackage]]
   /**
     * gets an installed extensions.
     * @param repository the name of the repository
@@ -87,7 +86,7 @@ trait XExtensionManager
     * @param xCmdEnv command environment for error and progress handling
     * @returns {@link XPackage} object
     */
-  def getDeployedExtension(repository: String, identifier: String, fileName: String, xCmdEnv: XCommandEnvironment): XPackage = js.native
+  def getDeployedExtension(repository: String, identifier: String, fileName: String, xCmdEnv: XCommandEnvironment): XPackage
   /**
     * gets all currently installed extensions, including disabled user extensions.
     * @param repository the repository from which the extensions are returned
@@ -95,14 +94,14 @@ trait XExtensionManager
     * @param xCmdEnv command environment for error and progress handling
     * @returns all currently installed packages
     */
-  def getDeployedExtensions(repository: String, xAbortChannel: XAbortChannel, xCmdEnv: XCommandEnvironment): SafeArray[XPackage] = js.native
+  def getDeployedExtensions(repository: String, xAbortChannel: XAbortChannel, xCmdEnv: XCommandEnvironment): SafeArray[XPackage]
   /**
     * gets all extensions with the same identifier from all repositories.
     *
     * The extension at the first position in the returned sequence represents the extension from the user repository. The next element is from the shared
     * and the last one is from the bundled repository. If one repository does not contain this extension, then the respective element is a null reference.
     */
-  def getExtensionsWithSameIdentifier(identifier: String, fileName: String, xCmdEnv: XCommandEnvironment): SafeArray[XPackage] = js.native
+  def getExtensionsWithSameIdentifier(identifier: String, fileName: String, xCmdEnv: XCommandEnvironment): SafeArray[XPackage]
   /**
     * returns all extensions which are currently not in use because the user did not accept the license.
     *
@@ -115,14 +114,14 @@ trait XExtensionManager
     * Extensions returned by these functions are not returned by {@link XExtensionManager.getDeployedExtension()}{@link
     * XExtensionManager.getDeployedExtensions()}{@link XExtensionManager.getAllExtensions()}{@link XExtensionManager.getExtensionsWithSameIdentifier()}
     */
-  def getExtensionsWithUnacceptedLicenses(repository: String, xCmdEnv: XCommandEnvironment): SafeArray[XPackage] = js.native
+  def getExtensionsWithUnacceptedLicenses(repository: String, xCmdEnv: XCommandEnvironment): SafeArray[XPackage]
   /**
     * gets the supported XPackageTypeInfos.
     * @returns supported XPackageTypeInfos.
     */
-  def getSupportedPackageTypes(): SafeArray[XPackageTypeInfo] = js.native
+  def getSupportedPackageTypes(): SafeArray[XPackageTypeInfo]
   /** determines if the current user has write access to the extensions folder of the repository. */
-  def isReadOnlyRepository(repository: String): Boolean = js.native
+  def isReadOnlyRepository(repository: String): Boolean
   /**
     * Expert feature: erases the underlying registry cache and reinstalls all previously added extensions. Please keep in mind that all registration status
     * get lost.
@@ -133,7 +132,7 @@ trait XExtensionManager
     * @param xAbortChannel abort channel to asynchronously abort the adding process
     * @param xCmdEnv command environment for error and progress handling
     */
-  def reinstallDeployedExtensions(force: Boolean, repository: String, xAbortChannel: XAbortChannel, xCmdEnv: XCommandEnvironment): Unit = js.native
+  def reinstallDeployedExtensions(force: Boolean, repository: String, xAbortChannel: XAbortChannel, xCmdEnv: XCommandEnvironment): Unit
   /**
     * removes an extension.
     * @param identifier package identifier
@@ -148,7 +147,7 @@ trait XExtensionManager
     repository: String,
     xAbortChannel: XAbortChannel,
     xCmdEnv: XCommandEnvironment
-  ): Unit = js.native
+  ): Unit
   /**
     * synchronizes the extension database with the contents of the extensions folder of shared and bundled extensions.
     *
@@ -156,7 +155,7 @@ trait XExtensionManager
     * is, shared or bundled extensions are not necessaryly registered ( {@link XPackage.registerPackage()} ).
     * @returns If true - then at least one extension was removed or added. Otherwise nothing was changed.
     */
-  def synchronize(xAbortChannel: XAbortChannel, xCmdEnv: XCommandEnvironment): Boolean = js.native
+  def synchronize(xAbortChannel: XAbortChannel, xCmdEnv: XCommandEnvironment): Boolean
 }
 
 object XExtensionManager {
@@ -190,109 +189,5 @@ object XExtensionManager {
     val __obj = js.Dynamic.literal(SupportedPackageTypes = SupportedPackageTypes.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), addExtension = js.Any.fromFunction5(addExtension), addModifyListener = js.Any.fromFunction1(addModifyListener), checkPrerequisitesAndEnable = js.Any.fromFunction3(checkPrerequisitesAndEnable), createAbortChannel = js.Any.fromFunction0(createAbortChannel), disableExtension = js.Any.fromFunction3(disableExtension), dispose = js.Any.fromFunction0(dispose), enableExtension = js.Any.fromFunction3(enableExtension), getAllExtensions = js.Any.fromFunction2(getAllExtensions), getDeployedExtension = js.Any.fromFunction4(getDeployedExtension), getDeployedExtensions = js.Any.fromFunction3(getDeployedExtensions), getExtensionsWithSameIdentifier = js.Any.fromFunction3(getExtensionsWithSameIdentifier), getExtensionsWithUnacceptedLicenses = js.Any.fromFunction2(getExtensionsWithUnacceptedLicenses), getSupportedPackageTypes = js.Any.fromFunction0(getSupportedPackageTypes), isReadOnlyRepository = js.Any.fromFunction1(isReadOnlyRepository), queryInterface = js.Any.fromFunction1(queryInterface), reinstallDeployedExtensions = js.Any.fromFunction4(reinstallDeployedExtensions), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), removeExtension = js.Any.fromFunction5(removeExtension), removeModifyListener = js.Any.fromFunction1(removeModifyListener), synchronize = js.Any.fromFunction2(synchronize))
     __obj.asInstanceOf[XExtensionManager]
   }
-  @scala.inline
-  implicit class XExtensionManagerOps[Self <: XExtensionManager] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSupportedPackageTypes(value: SafeArray[XPackageTypeInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedPackageTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddExtension(value: (String, SeqEquiv[NamedValue], String, XAbortChannel, XCommandEnvironment) => XPackage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addExtension")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withCheckPrerequisitesAndEnable(value: (XPackage, XAbortChannel, XCommandEnvironment) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkPrerequisitesAndEnable")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withCreateAbortChannel(value: () => XAbortChannel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createAbortChannel")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDisableExtension(value: (XPackage, XAbortChannel, XCommandEnvironment) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableExtension")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withEnableExtension(value: (XPackage, XAbortChannel, XCommandEnvironment) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableExtension")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetAllExtensions(value: (XAbortChannel, XCommandEnvironment) => SafeArray[SafeArray[XPackage]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllExtensions")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetDeployedExtension(value: (String, String, String, XCommandEnvironment) => XPackage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDeployedExtension")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withGetDeployedExtensions(value: (String, XAbortChannel, XCommandEnvironment) => SafeArray[XPackage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDeployedExtensions")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetExtensionsWithSameIdentifier(value: (String, String, XCommandEnvironment) => SafeArray[XPackage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getExtensionsWithSameIdentifier")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetExtensionsWithUnacceptedLicenses(value: (String, XCommandEnvironment) => SafeArray[XPackage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getExtensionsWithUnacceptedLicenses")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetSupportedPackageTypes(value: () => SafeArray[XPackageTypeInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSupportedPackageTypes")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsReadOnlyRepository(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isReadOnlyRepository")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withReinstallDeployedExtensions(value: (Boolean, String, XAbortChannel, XCommandEnvironment) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reinstallDeployedExtensions")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveExtension(value: (String, String, String, XAbortChannel, XCommandEnvironment) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeExtension")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withSynchronize(value: (XAbortChannel, XCommandEnvironment) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("synchronize")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

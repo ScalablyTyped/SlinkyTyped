@@ -17,5 +17,15 @@ class ASPxClientReportDesignerDialogEventArgs protected ()
     * @param report Specifies the report currently being processed. This value is assigned to the ASPxClientReportDesignerDialogEventArgs.Report property.
     */
   def this(url: String, report: js.Any) = this()
+  /**
+    * Specifies the report currently being processed.
+    */
+  /* CompleteClass */
+  override var Report: js.Any = js.native
+  /**
+    * Specifies the URL of the report currently being processed.
+    */
+  /* CompleteClass */
+  override var Url: String = js.native
 }
 

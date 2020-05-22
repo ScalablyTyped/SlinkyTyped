@@ -14,29 +14,10 @@ trait ModifyClusterOutput extends js.Object {
 
 object ModifyClusterOutput {
   @scala.inline
-  def apply(): ModifyClusterOutput = {
+  def apply(StepConcurrencyLevel: js.UndefOr[Integer] = js.undefined): ModifyClusterOutput = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(StepConcurrencyLevel)) __obj.updateDynamic("StepConcurrencyLevel")(StepConcurrencyLevel.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyClusterOutput]
   }
-  @scala.inline
-  implicit class ModifyClusterOutputOps[Self <: ModifyClusterOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStepConcurrencyLevel(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StepConcurrencyLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStepConcurrencyLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StepConcurrencyLevel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

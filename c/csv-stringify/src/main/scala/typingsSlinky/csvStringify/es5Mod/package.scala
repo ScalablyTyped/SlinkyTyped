@@ -17,4 +17,15 @@ package object es5Mod {
   ]
   type Input = js.Array[js.Any]
   type PlainObject[T] = typingsSlinky.std.Record[java.lang.String, T]
+  /* Rewritten from type alias, can be one of: 
+    - java.lang.String
+    - typingsSlinky.node.Buffer
+    - typingsSlinky.csvStringify.csvStringifyStrings.auto
+    - typingsSlinky.csvStringify.csvStringifyStrings.unix
+    - typingsSlinky.csvStringify.csvStringifyStrings.mac
+    - typingsSlinky.csvStringify.csvStringifyStrings.windows
+    - typingsSlinky.csvStringify.csvStringifyStrings.ascii
+    - typingsSlinky.csvStringify.csvStringifyStrings.unicode
+  */
+  type RecordDelimiter = typingsSlinky.csvStringify.es5Mod._RecordDelimiter | java.lang.String | typingsSlinky.node.Buffer
 }

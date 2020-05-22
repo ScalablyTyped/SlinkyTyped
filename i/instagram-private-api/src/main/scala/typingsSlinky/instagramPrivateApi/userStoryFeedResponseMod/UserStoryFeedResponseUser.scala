@@ -4,19 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UserStoryFeedResponseUser extends js.Object {
-  var friendship_status: js.UndefOr[UserStoryFeedResponseFriendshipStatus] = js.native
-  var full_name: String = js.native
-  var has_anonymous_profile_picture: js.UndefOr[Boolean] = js.native
-  var is_favorite: js.UndefOr[Boolean] = js.native
-  var is_private: Boolean = js.native
-  var is_unpublished: js.UndefOr[Boolean] = js.native
-  var is_verified: Boolean = js.native
-  var pk: Double = js.native
-  var profile_pic_id: String = js.native
-  var profile_pic_url: String = js.native
-  var username: String = js.native
+  var friendship_status: js.UndefOr[UserStoryFeedResponseFriendshipStatus] = js.undefined
+  var full_name: String
+  var has_anonymous_profile_picture: js.UndefOr[Boolean] = js.undefined
+  var is_favorite: js.UndefOr[Boolean] = js.undefined
+  var is_private: Boolean
+  var is_unpublished: js.UndefOr[Boolean] = js.undefined
+  var is_verified: Boolean
+  var pk: Double
+  var profile_pic_id: String
+  var profile_pic_url: String
+  var username: String
 }
 
 object UserStoryFeedResponseUser {
@@ -28,108 +27,18 @@ object UserStoryFeedResponseUser {
     pk: Double,
     profile_pic_id: String,
     profile_pic_url: String,
-    username: String
+    username: String,
+    friendship_status: UserStoryFeedResponseFriendshipStatus = null,
+    has_anonymous_profile_picture: js.UndefOr[Boolean] = js.undefined,
+    is_favorite: js.UndefOr[Boolean] = js.undefined,
+    is_unpublished: js.UndefOr[Boolean] = js.undefined
   ): UserStoryFeedResponseUser = {
     val __obj = js.Dynamic.literal(full_name = full_name.asInstanceOf[js.Any], is_private = is_private.asInstanceOf[js.Any], is_verified = is_verified.asInstanceOf[js.Any], pk = pk.asInstanceOf[js.Any], profile_pic_id = profile_pic_id.asInstanceOf[js.Any], profile_pic_url = profile_pic_url.asInstanceOf[js.Any], username = username.asInstanceOf[js.Any])
+    if (friendship_status != null) __obj.updateDynamic("friendship_status")(friendship_status.asInstanceOf[js.Any])
+    if (!js.isUndefined(has_anonymous_profile_picture)) __obj.updateDynamic("has_anonymous_profile_picture")(has_anonymous_profile_picture.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(is_favorite)) __obj.updateDynamic("is_favorite")(is_favorite.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(is_unpublished)) __obj.updateDynamic("is_unpublished")(is_unpublished.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserStoryFeedResponseUser]
   }
-  @scala.inline
-  implicit class UserStoryFeedResponseUserOps[Self <: UserStoryFeedResponseUser] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFull_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("full_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIs_private(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_private")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIs_verified(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_verified")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPk(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProfile_pic_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profile_pic_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProfile_pic_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profile_pic_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUsername(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFriendship_status(value: UserStoryFeedResponseFriendshipStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("friendship_status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFriendship_status: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("friendship_status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHas_anonymous_profile_picture(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_anonymous_profile_picture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHas_anonymous_profile_picture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_anonymous_profile_picture")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIs_favorite(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_favorite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIs_favorite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_favorite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIs_unpublished(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_unpublished")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIs_unpublished: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_unpublished")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

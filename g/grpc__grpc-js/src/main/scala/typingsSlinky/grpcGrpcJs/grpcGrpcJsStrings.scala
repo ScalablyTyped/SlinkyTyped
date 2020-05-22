@@ -7,6 +7,9 @@ import scala.scalajs.js.annotation._
 
 object grpcGrpcJsStrings {
   @js.native
+  sealed trait ServiceDefinition extends js.Object
+  
+  @js.native
   sealed trait bidi extends HandlerType
   
   @js.native
@@ -57,6 +60,8 @@ object grpcGrpcJsStrings {
   @js.native
   sealed trait unpipe extends js.Object
   
+  @scala.inline
+  def ServiceDefinition: ServiceDefinition = "ServiceDefinition".asInstanceOf[ServiceDefinition]
   @scala.inline
   def bidi: bidi = "bidi".asInstanceOf[bidi]
   @scala.inline

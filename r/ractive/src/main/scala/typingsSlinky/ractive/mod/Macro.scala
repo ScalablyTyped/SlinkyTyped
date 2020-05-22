@@ -5,11 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Macro
-  extends MacroFn
-     with Partial {
-  /* InferMemberOverrides */
-  override def apply(T0: /* MacroHelper */ js.Any): MacroHandle = js.native
+trait Macro extends MacroFn {
   /** Get the css data for this macro at the given keypath. */
   def styleGet(keypath: String): js.Any = js.native
   /** Set the css data for this macro at the given keypath to the given value. */

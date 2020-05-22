@@ -13,11 +13,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SketchUndoEvent extends js.Object {
-  var graphics: js.Array[Graphic] = js.native
-  var tool: point | polyline | polygon | rectangle | circle | move | transform | reshape = js.native
-  var `type`: undo = js.native
+  var graphics: js.Array[Graphic]
+  var tool: point | polyline | polygon | rectangle | circle | move | transform | reshape
+  var `type`: undo
 }
 
 object SketchUndoEvent {
@@ -31,31 +30,5 @@ object SketchUndoEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SketchUndoEvent]
   }
-  @scala.inline
-  implicit class SketchUndoEventOps[Self <: SketchUndoEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGraphics(value: js.Array[Graphic]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("graphics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTool(value: point | polyline | polygon | rectangle | circle | move | transform | reshape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tool")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: undo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

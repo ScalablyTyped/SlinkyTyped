@@ -2,6 +2,7 @@ package typingsSlinky.aframe.mod
 
 import org.scalajs.dom.raw.Event
 import typingsSlinky.aframe.anon.ComponentName
+import typingsSlinky.aframe.anon.Data
 import typingsSlinky.aframe.anon.El
 import typingsSlinky.aframe.anon.Id
 import typingsSlinky.aframe.anon.Name
@@ -16,6 +17,7 @@ trait EntityEventMap extends js.Object {
   var `child-attached`: DetailEvent[El] = js.native
   var `child-detached`: DetailEvent[El] = js.native
   var componentchanged: DetailEvent[Id] = js.native
+  var componentinitialized: DetailEvent[Data] = js.native
   var componentremoved: DetailEvent[Name] = js.native
   @JSName("loaded")
   var loaded_Original: EventListener = js.native

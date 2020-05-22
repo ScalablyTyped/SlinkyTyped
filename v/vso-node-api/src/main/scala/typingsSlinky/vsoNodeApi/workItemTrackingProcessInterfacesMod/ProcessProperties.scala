@@ -4,28 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProcessProperties extends js.Object {
   /**
     * Class of the process
     */
-  var `class`: ProcessClass = js.native
+  var `class`: ProcessClass
   /**
     * Is the process default process
     */
-  var isDefault: Boolean = js.native
+  var isDefault: Boolean
   /**
     * Is the process enabled
     */
-  var isEnabled: Boolean = js.native
+  var isEnabled: Boolean
   /**
     * ID of the parent process
     */
-  var parentProcessTypeId: String = js.native
+  var parentProcessTypeId: String
   /**
     * Version of the process
     */
-  var version: String = js.native
+  var version: String
 }
 
 object ProcessProperties {
@@ -41,43 +40,5 @@ object ProcessProperties {
     __obj.updateDynamic("class")(`class`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProcessProperties]
   }
-  @scala.inline
-  implicit class ProcessPropertiesOps[Self <: ProcessProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClass(value: ProcessClass): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("class")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsDefault(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParentProcessTypeId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentProcessTypeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,38 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DrillStartedEventArgs extends js.Object {
   /** Returns selected drilled treeMap object.
     */
-  var originalEvent: js.UndefOr[js.Any] = js.native
+  var originalEvent: js.UndefOr[js.Any] = js.undefined
 }
 
 object DrillStartedEventArgs {
   @scala.inline
-  def apply(): DrillStartedEventArgs = {
+  def apply(originalEvent: js.Any = null): DrillStartedEventArgs = {
     val __obj = js.Dynamic.literal()
+    if (originalEvent != null) __obj.updateDynamic("originalEvent")(originalEvent.asInstanceOf[js.Any])
     __obj.asInstanceOf[DrillStartedEventArgs]
   }
-  @scala.inline
-  implicit class DrillStartedEventArgsOps[Self <: DrillStartedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOriginalEvent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalEvent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

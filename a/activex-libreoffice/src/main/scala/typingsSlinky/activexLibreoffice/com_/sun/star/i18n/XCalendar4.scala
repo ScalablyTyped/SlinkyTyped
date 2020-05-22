@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * It is derived from {@link com.sun.star.i18n.XCalendar3} and provides additional methods to set and get the local time.
   * @since LibreOffice 5.0
   */
-@js.native
 trait XCalendar4 extends XCalendar3 {
   /**
     * Get the local date/time as an offset to the start of the calendar at 1-Jan-1970 00:00. The integer part represents the number of days passed since
@@ -21,14 +20,14 @@ trait XCalendar4 extends XCalendar3 {
     *
     * The actual timezone and daylight saving time offsets effective at the given date and time are considered and added to the UTC time at the calendar.
     */
-  var LocalDateTime: Double = js.native
+  var LocalDateTime: Double
   /**
     * Get the local date/time as an offset to the start of the calendar at 1-Jan-1970 00:00. The integer part represents the number of days passed since
     * start date. The fractional part represents fractions of a day, thus 0.5 means 12 hours.
     *
     * The actual timezone and daylight saving time offsets effective at the given date and time are considered and added to the UTC time at the calendar.
     */
-  def getLocalDateTime(): Double = js.native
+  def getLocalDateTime(): Double
   /**
     * Set the local date/time as an offset to the start of the calendar at 1-Jan-1970 00:00. The integer part represents the number of days passed since
     * start date. The fractional part represents fractions of a day, thus 0.5 means 12 hours.
@@ -36,7 +35,7 @@ trait XCalendar4 extends XCalendar3 {
     * The actual timezone and daylight saving time offsets effective at the given date and time are considered and subtracted before setting the UTC time at
     * the calendar.
     */
-  def setLocalDateTime(TimeInDays: Double): Unit = js.native
+  def setLocalDateTime(TimeInDays: Double): Unit
 }
 
 object XCalendar4 {
@@ -92,31 +91,5 @@ object XCalendar4 {
     val __obj = js.Dynamic.literal(DateTime = DateTime.asInstanceOf[js.Any], Days = Days.asInstanceOf[js.Any], Days2 = Days2.asInstanceOf[js.Any], FirstDayOfWeek = FirstDayOfWeek.asInstanceOf[js.Any], GenitiveMonths2 = GenitiveMonths2.asInstanceOf[js.Any], LoadedCalendar = LoadedCalendar.asInstanceOf[js.Any], LoadedCalendar2 = LoadedCalendar2.asInstanceOf[js.Any], LocalDateTime = LocalDateTime.asInstanceOf[js.Any], MinimumNumberOfDaysForFirstWeek = MinimumNumberOfDaysForFirstWeek.asInstanceOf[js.Any], Months = Months.asInstanceOf[js.Any], Months2 = Months2.asInstanceOf[js.Any], NumberOfDaysInWeek = NumberOfDaysInWeek.asInstanceOf[js.Any], NumberOfMonthsInYear = NumberOfMonthsInYear.asInstanceOf[js.Any], PartitiveMonths2 = PartitiveMonths2.asInstanceOf[js.Any], UniqueID = UniqueID.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addValue = js.Any.fromFunction2(addValue), getAllCalendars = js.Any.fromFunction1(getAllCalendars), getDateTime = js.Any.fromFunction0(getDateTime), getDays = js.Any.fromFunction0(getDays), getDays2 = js.Any.fromFunction0(getDays2), getDisplayName = js.Any.fromFunction3(getDisplayName), getDisplayString = js.Any.fromFunction2(getDisplayString), getFirstDayOfWeek = js.Any.fromFunction0(getFirstDayOfWeek), getGenitiveMonths2 = js.Any.fromFunction0(getGenitiveMonths2), getLoadedCalendar = js.Any.fromFunction0(getLoadedCalendar), getLoadedCalendar2 = js.Any.fromFunction0(getLoadedCalendar2), getLocalDateTime = js.Any.fromFunction0(getLocalDateTime), getMinimumNumberOfDaysForFirstWeek = js.Any.fromFunction0(getMinimumNumberOfDaysForFirstWeek), getMonths = js.Any.fromFunction0(getMonths), getMonths2 = js.Any.fromFunction0(getMonths2), getNumberOfDaysInWeek = js.Any.fromFunction0(getNumberOfDaysInWeek), getNumberOfMonthsInYear = js.Any.fromFunction0(getNumberOfMonthsInYear), getPartitiveMonths2 = js.Any.fromFunction0(getPartitiveMonths2), getUniqueID = js.Any.fromFunction0(getUniqueID), getValue = js.Any.fromFunction1(getValue), isValid = js.Any.fromFunction0(isValid), loadCalendar = js.Any.fromFunction2(loadCalendar), loadDefaultCalendar = js.Any.fromFunction1(loadDefaultCalendar), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setDateTime = js.Any.fromFunction1(setDateTime), setFirstDayOfWeek = js.Any.fromFunction1(setFirstDayOfWeek), setLocalDateTime = js.Any.fromFunction1(setLocalDateTime), setMinimumNumberOfDaysForFirstWeek = js.Any.fromFunction1(setMinimumNumberOfDaysForFirstWeek), setValue = js.Any.fromFunction2(setValue))
     __obj.asInstanceOf[XCalendar4]
   }
-  @scala.inline
-  implicit class XCalendar4Ops[Self <: XCalendar4] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocalDateTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetLocalDateTime(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLocalDateTime")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetLocalDateTime(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLocalDateTime")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

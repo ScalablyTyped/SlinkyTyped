@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("IncrementParagraphLeftIndentCommand")
 @js.native
 class IncrementParagraphLeftIndentCommand ()
-  extends typingsSlinky.devexpressWeb.IncrementParagraphLeftIndentCommand
+  extends typingsSlinky.devexpressWeb.IncrementParagraphLeftIndentCommand {
+  /**
+    * Executes the IncrementParagraphLeftIndentCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

@@ -7,56 +7,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CleanupMode extends js.Object {
-  var cleanupMode: js.UndefOr[onDisconnect | none] = js.native
-  var view: js.Array[Node] = js.native
-  var viewModel: js.Object | Null = js.native
+  var cleanupMode: js.UndefOr[onDisconnect | none] = js.undefined
+  var view: js.Array[Node]
+  var viewModel: js.Object | Null
 }
 
 object CleanupMode {
   @scala.inline
-  def apply(view: js.Array[Node]): CleanupMode = {
-    val __obj = js.Dynamic.literal(view = view.asInstanceOf[js.Any])
+  def apply(view: js.Array[Node], cleanupMode: onDisconnect | none = null, viewModel: js.Object = null): CleanupMode = {
+    val __obj = js.Dynamic.literal(view = view.asInstanceOf[js.Any], viewModel = viewModel.asInstanceOf[js.Any])
+    if (cleanupMode != null) __obj.updateDynamic("cleanupMode")(cleanupMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[CleanupMode]
   }
-  @scala.inline
-  implicit class CleanupModeOps[Self <: CleanupMode] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withView(value: js.Array[Node]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCleanupMode(value: onDisconnect | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cleanupMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCleanupMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cleanupMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewModel(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withViewModelNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewModel")(null)
-        ret
-    }
-  }
-  
 }
 

@@ -20,5 +20,10 @@ class ASPxClientSchedulerStorageReminderAlertEventArgs protected ()
     completedNotifications: js.Array[typingsSlinky.devexpressWeb.ASPxClientReminderAlertNotification],
     previousNotifications: js.Array[typingsSlinky.devexpressWeb.ASPxClientReminderAlertNotification]
   ) = this()
+  /**
+    * Returns an array of currently triggered reminders.
+    */
+  /* CompleteClass */
+  override var alertNotifications: js.Array[typingsSlinky.devexpressWeb.ASPxClientReminderAlertNotification] = js.native
 }
 

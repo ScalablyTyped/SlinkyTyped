@@ -7,20 +7,19 @@ import scala.scalajs.js.annotation._
 /**
   * Container for the dynamic properties of an attribute expression.
   */
-@js.native
 trait INxAxisTicks extends js.Object {
   /**
     * Name of the derived definition.
     */
-  var qName: String = js.native
+  var qName: String
   /**
     * List of tags.
     */
-  var qTags: js.Array[String] = js.native
+  var qTags: js.Array[String]
   /**
     * List of ticks.
     */
-  var qTicks: js.Array[INxTickCell] = js.native
+  var qTicks: js.Array[INxTickCell]
 }
 
 object INxAxisTicks {
@@ -29,31 +28,5 @@ object INxAxisTicks {
     val __obj = js.Dynamic.literal(qName = qName.asInstanceOf[js.Any], qTags = qTags.asInstanceOf[js.Any], qTicks = qTicks.asInstanceOf[js.Any])
     __obj.asInstanceOf[INxAxisTicks]
   }
-  @scala.inline
-  implicit class INxAxisTicksOps[Self <: INxAxisTicks] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQTags(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQTicks(value: js.Array[INxTickCell]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qTicks")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

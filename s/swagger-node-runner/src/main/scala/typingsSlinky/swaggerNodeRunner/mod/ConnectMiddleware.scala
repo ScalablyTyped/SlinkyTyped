@@ -8,11 +8,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConnectMiddleware extends Middleware {
-  def middleware(): js.Function3[/* req */ Request, /* res */ Response, /* next */ NextFunction, Unit] = js.native
+  def middleware(): js.Function3[/* req */ Request, /* res */ Response, /* next */ NextFunction, Unit]
   /** Register this Middleware with `app`  */
-  def register(app: Application): Unit = js.native
+  def register(app: Application): Unit
 }
 
 object ConnectMiddleware {
@@ -25,25 +24,5 @@ object ConnectMiddleware {
     val __obj = js.Dynamic.literal(middleware = js.Any.fromFunction0(middleware), register = js.Any.fromFunction1(register), runner = runner.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectMiddleware]
   }
-  @scala.inline
-  implicit class ConnectMiddlewareOps[Self <: ConnectMiddleware] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMiddleware(value: () => js.Function3[/* req */ Request, /* res */ Response, /* next */ NextFunction, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("middleware")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRegister(value: Application => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("register")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

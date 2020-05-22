@@ -4,49 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SequenceSegment extends js.Object {
-  var firstStepShouldMatchFirstHit: js.UndefOr[Boolean] = js.native
-  var segmentSequenceSteps: js.UndefOr[js.Array[SegmentSequenceStep]] = js.native
+  var firstStepShouldMatchFirstHit: js.UndefOr[Boolean] = js.undefined
+  var segmentSequenceSteps: js.UndefOr[js.Array[SegmentSequenceStep]] = js.undefined
 }
 
 object SequenceSegment {
   @scala.inline
-  def apply(): SequenceSegment = {
+  def apply(
+    firstStepShouldMatchFirstHit: js.UndefOr[Boolean] = js.undefined,
+    segmentSequenceSteps: js.Array[SegmentSequenceStep] = null
+  ): SequenceSegment = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(firstStepShouldMatchFirstHit)) __obj.updateDynamic("firstStepShouldMatchFirstHit")(firstStepShouldMatchFirstHit.get.asInstanceOf[js.Any])
+    if (segmentSequenceSteps != null) __obj.updateDynamic("segmentSequenceSteps")(segmentSequenceSteps.asInstanceOf[js.Any])
     __obj.asInstanceOf[SequenceSegment]
   }
-  @scala.inline
-  implicit class SequenceSegmentOps[Self <: SequenceSegment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFirstStepShouldMatchFirstHit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstStepShouldMatchFirstHit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstStepShouldMatchFirstHit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstStepShouldMatchFirstHit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegmentSequenceSteps(value: js.Array[SegmentSequenceStep]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentSequenceSteps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegmentSequenceSteps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentSequenceSteps")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

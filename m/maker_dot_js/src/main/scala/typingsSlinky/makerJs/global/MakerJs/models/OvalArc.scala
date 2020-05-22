@@ -1,5 +1,7 @@
 package typingsSlinky.makerJs.global.MakerJs.models
 
+import typingsSlinky.makerJs.MakerJs.IModelMap
+import typingsSlinky.makerJs.MakerJs.IPathMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,5 +26,11 @@ class OvalArc protected ()
     selfIntersect: Boolean,
     isolateCaps: Boolean
   ) = this()
+  /* CompleteClass */
+  @JSName("models")
+  override var models_OvalArc: IModelMap = js.native
+  /* CompleteClass */
+  @JSName("paths")
+  override var paths_OvalArc: IPathMap = js.native
 }
 

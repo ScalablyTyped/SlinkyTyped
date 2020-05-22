@@ -38,101 +38,24 @@ trait ConversionTask extends js.Object {
 
 object ConversionTask {
   @scala.inline
-  def apply(): ConversionTask = {
+  def apply(
+    ConversionTaskId: String = null,
+    ExpirationTime: String = null,
+    ImportInstance: ImportInstanceTaskDetails = null,
+    ImportVolume: ImportVolumeTaskDetails = null,
+    State: ConversionTaskState = null,
+    StatusMessage: String = null,
+    Tags: TagList = null
+  ): ConversionTask = {
     val __obj = js.Dynamic.literal()
+    if (ConversionTaskId != null) __obj.updateDynamic("ConversionTaskId")(ConversionTaskId.asInstanceOf[js.Any])
+    if (ExpirationTime != null) __obj.updateDynamic("ExpirationTime")(ExpirationTime.asInstanceOf[js.Any])
+    if (ImportInstance != null) __obj.updateDynamic("ImportInstance")(ImportInstance.asInstanceOf[js.Any])
+    if (ImportVolume != null) __obj.updateDynamic("ImportVolume")(ImportVolume.asInstanceOf[js.Any])
+    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
+    if (StatusMessage != null) __obj.updateDynamic("StatusMessage")(StatusMessage.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConversionTask]
   }
-  @scala.inline
-  implicit class ConversionTaskOps[Self <: ConversionTask] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConversionTaskId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConversionTaskId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConversionTaskId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConversionTaskId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpirationTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpirationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpirationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpirationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportInstance(value: ImportInstanceTaskDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportInstance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportInstance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportInstance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportVolume(value: ImportVolumeTaskDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportVolume")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportVolume: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportVolume")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: ConversionTaskState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

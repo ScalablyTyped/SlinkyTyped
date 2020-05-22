@@ -23,7 +23,7 @@ object ReactDropzone {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any]] {
+       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
     @scala.inline
     def accept(value: String | js.Array[String]): this.type = set("accept", value.asInstanceOf[js.Any])
     @scala.inline

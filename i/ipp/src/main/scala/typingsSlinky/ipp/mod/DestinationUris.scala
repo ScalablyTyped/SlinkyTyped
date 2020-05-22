@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DestinationUris extends js.Object {
-  var `destination-attributes`: js.UndefOr[js.Array[js.Object]] = js.native
-  var `destination-uri`: js.UndefOr[String] = js.native
-  var `feed-orientation`: js.UndefOr[FeedOrientation] = js.native
-  var `post-dial-string`: js.UndefOr[String] = js.native
-  var `pre-dial-string`: js.UndefOr[String] = js.native
-  var `t33-subaddress`: js.UndefOr[Double] = js.native
+  var `destination-attributes`: js.UndefOr[js.Array[js.Object]] = js.undefined
+  var `destination-uri`: js.UndefOr[String] = js.undefined
+  var `feed-orientation`: js.UndefOr[FeedOrientation] = js.undefined
+  var `post-dial-string`: js.UndefOr[String] = js.undefined
+  var `pre-dial-string`: js.UndefOr[String] = js.undefined
+  var `t33-subaddress`: js.UndefOr[Double] = js.undefined
 }
 
 object DestinationUris {
   @scala.inline
-  def apply(): DestinationUris = {
+  def apply(
+    `destination-attributes`: js.Array[js.Object] = null,
+    `destination-uri`: String = null,
+    `feed-orientation`: FeedOrientation = null,
+    `post-dial-string`: String = null,
+    `pre-dial-string`: String = null,
+    `t33-subaddress`: js.UndefOr[Double] = js.undefined
+  ): DestinationUris = {
     val __obj = js.Dynamic.literal()
+    if (`destination-attributes` != null) __obj.updateDynamic("destination-attributes")(`destination-attributes`.asInstanceOf[js.Any])
+    if (`destination-uri` != null) __obj.updateDynamic("destination-uri")(`destination-uri`.asInstanceOf[js.Any])
+    if (`feed-orientation` != null) __obj.updateDynamic("feed-orientation")(`feed-orientation`.asInstanceOf[js.Any])
+    if (`post-dial-string` != null) __obj.updateDynamic("post-dial-string")(`post-dial-string`.asInstanceOf[js.Any])
+    if (`pre-dial-string` != null) __obj.updateDynamic("pre-dial-string")(`pre-dial-string`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`t33-subaddress`)) __obj.updateDynamic("t33-subaddress")(`t33-subaddress`.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DestinationUris]
   }
-  @scala.inline
-  implicit class DestinationUrisOps[Self <: DestinationUris] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withDestination-attributes`(value: js.Array[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDestination-attributes`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withDestination-uri`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDestination-uri`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-uri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withFeed-orientation`(value: FeedOrientation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feed-orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutFeed-orientation`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feed-orientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withPost-dial-string`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("post-dial-string")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutPost-dial-string`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("post-dial-string")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withPre-dial-string`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pre-dial-string")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutPre-dial-string`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pre-dial-string")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withT33-subaddress`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("t33-subaddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutT33-subaddress`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("t33-subaddress")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

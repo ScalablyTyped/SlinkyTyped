@@ -7,101 +7,60 @@ import scala.scalajs.js.annotation._
 /**
   * Select codes/concepts by their properties (including relationships)
   */
-@js.native
 trait ValueSetComposeIncludeFilter extends BackboneElement {
   /**
     * Contains extended information for property 'op'.
     */
-  var _op: js.UndefOr[Element] = js.native
+  var _op: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'property'.
     */
-  var _property: js.UndefOr[Element] = js.native
+  var _property: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'value'.
     */
-  var _value: js.UndefOr[Element] = js.native
+  var _value: js.UndefOr[Element] = js.undefined
   /**
     * = | is-a | descendent-of | is-not-a | regex | in | not-in | generalizes | exists
     */
-  var op: code = js.native
+  var op: code
   /**
     * A property defined by the code system
     */
-  var property: code = js.native
+  var property: code
   /**
     * Code from the system, or regex criteria, or boolean value for exists
     */
-  var value: code = js.native
+  var value: code
 }
 
 object ValueSetComposeIncludeFilter {
   @scala.inline
-  def apply(op: code, property: code, value: code): ValueSetComposeIncludeFilter = {
+  def apply(
+    op: code,
+    property: code,
+    value: code,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _op: Element = null,
+    _property: Element = null,
+    _value: Element = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null
+  ): ValueSetComposeIncludeFilter = {
     val __obj = js.Dynamic.literal(op = op.asInstanceOf[js.Any], property = property.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_op != null) __obj.updateDynamic("_op")(_op.asInstanceOf[js.Any])
+    if (_property != null) __obj.updateDynamic("_property")(_property.asInstanceOf[js.Any])
+    if (_value != null) __obj.updateDynamic("_value")(_value.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValueSetComposeIncludeFilter]
   }
-  @scala.inline
-  implicit class ValueSetComposeIncludeFilterOps[Self <: ValueSetComposeIncludeFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOp(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("op")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProperty(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("property")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_op(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_op")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_op: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_op")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_property(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_property")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_property: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_property")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_value(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_value: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

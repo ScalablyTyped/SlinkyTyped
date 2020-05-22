@@ -5,10 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a location event that triggers a background task. This is used for Geofencing. */
-@js.native
 trait LocationTrigger extends js.Object {
   /** The type of location event for this trigger. */
-  var triggerType: LocationTriggerType = js.native
+  var triggerType: LocationTriggerType
 }
 
 object LocationTrigger {
@@ -17,19 +16,5 @@ object LocationTrigger {
     val __obj = js.Dynamic.literal(triggerType = triggerType.asInstanceOf[js.Any])
     __obj.asInstanceOf[LocationTrigger]
   }
-  @scala.inline
-  implicit class LocationTriggerOps[Self <: LocationTrigger] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTriggerType(value: LocationTriggerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

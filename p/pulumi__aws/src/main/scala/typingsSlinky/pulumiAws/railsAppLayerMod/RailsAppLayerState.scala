@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.railsAppLayerMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiAws.inputMod.opsworks.RailsAppLayerEbsVolume
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -12,6 +13,10 @@ trait RailsAppLayerState extends js.Object {
     * Keyword for the app server to use. Defaults to "apachePassenger".
     */
   val appServer: js.UndefOr[Input[String]] = js.native
+  /**
+    * The Amazon Resource Name(ARN) of the layer.
+    */
+  val arn: js.UndefOr[Input[String]] = js.native
   /**
     * Whether to automatically assign an elastic IP address to the layer's instances.
     */
@@ -94,6 +99,10 @@ trait RailsAppLayerState extends js.Object {
     */
   val systemPackages: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   /**
+    * A mapping of tags to assign to the resource.
+    */
+  val tags: js.UndefOr[Input[StringDictionary[_]]] = js.native
+  /**
     * Whether to use EBS-optimized instances.
     */
   val useEbsOptimizedInstances: js.UndefOr[Input[Boolean]] = js.native
@@ -101,329 +110,66 @@ trait RailsAppLayerState extends js.Object {
 
 object RailsAppLayerState {
   @scala.inline
-  def apply(): RailsAppLayerState = {
+  def apply(
+    appServer: Input[String] = null,
+    arn: Input[String] = null,
+    autoAssignElasticIps: Input[Boolean] = null,
+    autoAssignPublicIps: Input[Boolean] = null,
+    autoHealing: Input[Boolean] = null,
+    bundlerVersion: Input[String] = null,
+    customConfigureRecipes: Input[js.Array[Input[String]]] = null,
+    customDeployRecipes: Input[js.Array[Input[String]]] = null,
+    customInstanceProfileArn: Input[String] = null,
+    customJson: Input[String] = null,
+    customSecurityGroupIds: Input[js.Array[Input[String]]] = null,
+    customSetupRecipes: Input[js.Array[Input[String]]] = null,
+    customShutdownRecipes: Input[js.Array[Input[String]]] = null,
+    customUndeployRecipes: Input[js.Array[Input[String]]] = null,
+    drainElbOnShutdown: Input[Boolean] = null,
+    ebsVolumes: Input[js.Array[Input[RailsAppLayerEbsVolume]]] = null,
+    elasticLoadBalancer: Input[String] = null,
+    installUpdatesOnBoot: Input[Boolean] = null,
+    instanceShutdownTimeout: Input[Double] = null,
+    manageBundler: Input[Boolean] = null,
+    name: Input[String] = null,
+    passengerVersion: Input[String] = null,
+    rubyVersion: Input[String] = null,
+    rubygemsVersion: Input[String] = null,
+    stackId: Input[String] = null,
+    systemPackages: Input[js.Array[Input[String]]] = null,
+    tags: Input[StringDictionary[_]] = null,
+    useEbsOptimizedInstances: Input[Boolean] = null
+  ): RailsAppLayerState = {
     val __obj = js.Dynamic.literal()
+    if (appServer != null) __obj.updateDynamic("appServer")(appServer.asInstanceOf[js.Any])
+    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
+    if (autoAssignElasticIps != null) __obj.updateDynamic("autoAssignElasticIps")(autoAssignElasticIps.asInstanceOf[js.Any])
+    if (autoAssignPublicIps != null) __obj.updateDynamic("autoAssignPublicIps")(autoAssignPublicIps.asInstanceOf[js.Any])
+    if (autoHealing != null) __obj.updateDynamic("autoHealing")(autoHealing.asInstanceOf[js.Any])
+    if (bundlerVersion != null) __obj.updateDynamic("bundlerVersion")(bundlerVersion.asInstanceOf[js.Any])
+    if (customConfigureRecipes != null) __obj.updateDynamic("customConfigureRecipes")(customConfigureRecipes.asInstanceOf[js.Any])
+    if (customDeployRecipes != null) __obj.updateDynamic("customDeployRecipes")(customDeployRecipes.asInstanceOf[js.Any])
+    if (customInstanceProfileArn != null) __obj.updateDynamic("customInstanceProfileArn")(customInstanceProfileArn.asInstanceOf[js.Any])
+    if (customJson != null) __obj.updateDynamic("customJson")(customJson.asInstanceOf[js.Any])
+    if (customSecurityGroupIds != null) __obj.updateDynamic("customSecurityGroupIds")(customSecurityGroupIds.asInstanceOf[js.Any])
+    if (customSetupRecipes != null) __obj.updateDynamic("customSetupRecipes")(customSetupRecipes.asInstanceOf[js.Any])
+    if (customShutdownRecipes != null) __obj.updateDynamic("customShutdownRecipes")(customShutdownRecipes.asInstanceOf[js.Any])
+    if (customUndeployRecipes != null) __obj.updateDynamic("customUndeployRecipes")(customUndeployRecipes.asInstanceOf[js.Any])
+    if (drainElbOnShutdown != null) __obj.updateDynamic("drainElbOnShutdown")(drainElbOnShutdown.asInstanceOf[js.Any])
+    if (ebsVolumes != null) __obj.updateDynamic("ebsVolumes")(ebsVolumes.asInstanceOf[js.Any])
+    if (elasticLoadBalancer != null) __obj.updateDynamic("elasticLoadBalancer")(elasticLoadBalancer.asInstanceOf[js.Any])
+    if (installUpdatesOnBoot != null) __obj.updateDynamic("installUpdatesOnBoot")(installUpdatesOnBoot.asInstanceOf[js.Any])
+    if (instanceShutdownTimeout != null) __obj.updateDynamic("instanceShutdownTimeout")(instanceShutdownTimeout.asInstanceOf[js.Any])
+    if (manageBundler != null) __obj.updateDynamic("manageBundler")(manageBundler.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (passengerVersion != null) __obj.updateDynamic("passengerVersion")(passengerVersion.asInstanceOf[js.Any])
+    if (rubyVersion != null) __obj.updateDynamic("rubyVersion")(rubyVersion.asInstanceOf[js.Any])
+    if (rubygemsVersion != null) __obj.updateDynamic("rubygemsVersion")(rubygemsVersion.asInstanceOf[js.Any])
+    if (stackId != null) __obj.updateDynamic("stackId")(stackId.asInstanceOf[js.Any])
+    if (systemPackages != null) __obj.updateDynamic("systemPackages")(systemPackages.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (useEbsOptimizedInstances != null) __obj.updateDynamic("useEbsOptimizedInstances")(useEbsOptimizedInstances.asInstanceOf[js.Any])
     __obj.asInstanceOf[RailsAppLayerState]
   }
-  @scala.inline
-  implicit class RailsAppLayerStateOps[Self <: RailsAppLayerState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppServer(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appServer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppServer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appServer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoAssignElasticIps(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoAssignElasticIps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoAssignElasticIps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoAssignElasticIps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoAssignPublicIps(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoAssignPublicIps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoAssignPublicIps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoAssignPublicIps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoHealing(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHealing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoHealing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHealing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBundlerVersion(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bundlerVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBundlerVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bundlerVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomConfigureRecipes(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customConfigureRecipes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomConfigureRecipes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customConfigureRecipes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomDeployRecipes(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customDeployRecipes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomDeployRecipes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customDeployRecipes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomInstanceProfileArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customInstanceProfileArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomInstanceProfileArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customInstanceProfileArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomJson(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customJson")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomJson: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customJson")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomSecurityGroupIds(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customSecurityGroupIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomSecurityGroupIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customSecurityGroupIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomSetupRecipes(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customSetupRecipes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomSetupRecipes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customSetupRecipes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomShutdownRecipes(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customShutdownRecipes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomShutdownRecipes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customShutdownRecipes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomUndeployRecipes(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customUndeployRecipes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomUndeployRecipes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customUndeployRecipes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrainElbOnShutdown(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drainElbOnShutdown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDrainElbOnShutdown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drainElbOnShutdown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEbsVolumes(value: Input[js.Array[Input[RailsAppLayerEbsVolume]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ebsVolumes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEbsVolumes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ebsVolumes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElasticLoadBalancer(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elasticLoadBalancer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElasticLoadBalancer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elasticLoadBalancer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstallUpdatesOnBoot(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("installUpdatesOnBoot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstallUpdatesOnBoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("installUpdatesOnBoot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceShutdownTimeout(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceShutdownTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceShutdownTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceShutdownTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManageBundler(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manageBundler")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManageBundler: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manageBundler")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPassengerVersion(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passengerVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassengerVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passengerVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRubyVersion(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rubyVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRubyVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rubyVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRubygemsVersion(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rubygemsVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRubygemsVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rubygemsVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSystemPackages(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemPackages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSystemPackages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemPackages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseEbsOptimizedInstances(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useEbsOptimizedInstances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseEbsOptimizedInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useEbsOptimizedInstances")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

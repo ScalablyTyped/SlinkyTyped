@@ -8,263 +8,63 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of an Agent. */
-@js.native
 trait IAgent extends js.Object {
   /** Agent apiVersion */
-  var apiVersion: js.UndefOr[ApiVersion | Null] = js.native
+  var apiVersion: js.UndefOr[ApiVersion | Null] = js.undefined
   /** Agent avatarUri */
-  var avatarUri: js.UndefOr[String | Null] = js.native
+  var avatarUri: js.UndefOr[String | Null] = js.undefined
   /** Agent classificationThreshold */
-  var classificationThreshold: js.UndefOr[Double | Null] = js.native
+  var classificationThreshold: js.UndefOr[Double | Null] = js.undefined
   /** Agent defaultLanguageCode */
-  var defaultLanguageCode: js.UndefOr[String | Null] = js.native
+  var defaultLanguageCode: js.UndefOr[String | Null] = js.undefined
   /** Agent description */
-  var description: js.UndefOr[String | Null] = js.native
+  var description: js.UndefOr[String | Null] = js.undefined
   /** Agent displayName */
-  var displayName: js.UndefOr[String | Null] = js.native
+  var displayName: js.UndefOr[String | Null] = js.undefined
   /** Agent enableLogging */
-  var enableLogging: js.UndefOr[Boolean | Null] = js.native
+  var enableLogging: js.UndefOr[Boolean | Null] = js.undefined
   /** Agent matchMode */
-  var matchMode: js.UndefOr[MatchMode | Null] = js.native
+  var matchMode: js.UndefOr[MatchMode | Null] = js.undefined
   /** Agent parent */
-  var parent: js.UndefOr[String | Null] = js.native
+  var parent: js.UndefOr[String | Null] = js.undefined
   /** Agent supportedLanguageCodes */
-  var supportedLanguageCodes: js.UndefOr[js.Array[String] | Null] = js.native
+  var supportedLanguageCodes: js.UndefOr[js.Array[String] | Null] = js.undefined
   /** Agent tier */
-  var tier: js.UndefOr[Tier | Null] = js.native
+  var tier: js.UndefOr[Tier | Null] = js.undefined
   /** Agent timeZone */
-  var timeZone: js.UndefOr[String | Null] = js.native
+  var timeZone: js.UndefOr[String | Null] = js.undefined
 }
 
 object IAgent {
   @scala.inline
-  def apply(): IAgent = {
+  def apply(
+    apiVersion: js.UndefOr[Null | ApiVersion] = js.undefined,
+    avatarUri: js.UndefOr[Null | String] = js.undefined,
+    classificationThreshold: js.UndefOr[Null | Double] = js.undefined,
+    defaultLanguageCode: js.UndefOr[Null | String] = js.undefined,
+    description: js.UndefOr[Null | String] = js.undefined,
+    displayName: js.UndefOr[Null | String] = js.undefined,
+    enableLogging: js.UndefOr[Null | Boolean] = js.undefined,
+    matchMode: js.UndefOr[Null | MatchMode] = js.undefined,
+    parent: js.UndefOr[Null | String] = js.undefined,
+    supportedLanguageCodes: js.UndefOr[Null | js.Array[String]] = js.undefined,
+    tier: js.UndefOr[Null | Tier] = js.undefined,
+    timeZone: js.UndefOr[Null | String] = js.undefined
+  ): IAgent = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(apiVersion)) __obj.updateDynamic("apiVersion")(apiVersion.asInstanceOf[js.Any])
+    if (!js.isUndefined(avatarUri)) __obj.updateDynamic("avatarUri")(avatarUri.asInstanceOf[js.Any])
+    if (!js.isUndefined(classificationThreshold)) __obj.updateDynamic("classificationThreshold")(classificationThreshold.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultLanguageCode)) __obj.updateDynamic("defaultLanguageCode")(defaultLanguageCode.asInstanceOf[js.Any])
+    if (!js.isUndefined(description)) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(displayName)) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableLogging)) __obj.updateDynamic("enableLogging")(enableLogging.asInstanceOf[js.Any])
+    if (!js.isUndefined(matchMode)) __obj.updateDynamic("matchMode")(matchMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(parent)) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
+    if (!js.isUndefined(supportedLanguageCodes)) __obj.updateDynamic("supportedLanguageCodes")(supportedLanguageCodes.asInstanceOf[js.Any])
+    if (!js.isUndefined(tier)) __obj.updateDynamic("tier")(tier.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeZone)) __obj.updateDynamic("timeZone")(timeZone.asInstanceOf[js.Any])
     __obj.asInstanceOf[IAgent]
   }
-  @scala.inline
-  implicit class IAgentOps[Self <: IAgent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiVersion(value: ApiVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApiVersionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(null)
-        ret
-    }
-    @scala.inline
-    def withAvatarUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatarUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvatarUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatarUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAvatarUriNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatarUri")(null)
-        ret
-    }
-    @scala.inline
-    def withClassificationThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classificationThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassificationThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classificationThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassificationThresholdNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classificationThreshold")(null)
-        ret
-    }
-    @scala.inline
-    def withDefaultLanguageCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLanguageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLanguageCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultLanguageCodeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLanguageCode")(null)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescriptionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(null)
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(null)
-        ret
-    }
-    @scala.inline
-    def withEnableLogging(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableLogging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableLogging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableLogging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableLoggingNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableLogging")(null)
-        ret
-    }
-    @scala.inline
-    def withMatchMode(value: MatchMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatchMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatchModeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchMode")(null)
-        ret
-    }
-    @scala.inline
-    def withParent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(null)
-        ret
-    }
-    @scala.inline
-    def withSupportedLanguageCodes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedLanguageCodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportedLanguageCodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedLanguageCodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportedLanguageCodesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedLanguageCodes")(null)
-        ret
-    }
-    @scala.inline
-    def withTier(value: Tier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTierNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tier")(null)
-        ret
-    }
-    @scala.inline
-    def withTimeZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeZone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeZoneNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeZone")(null)
-        ret
-    }
-  }
-  
 }
 

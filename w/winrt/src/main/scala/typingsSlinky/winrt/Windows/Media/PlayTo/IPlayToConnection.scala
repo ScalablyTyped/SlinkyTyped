@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IPlayToConnection extends js.Object {
-  var onerror: js.Any = js.native
-  var onstatechanged: js.Any = js.native
-  var ontransferred: js.Any = js.native
-  var state: PlayToConnectionState = js.native
+  var onerror: js.Any
+  var onstatechanged: js.Any
+  var ontransferred: js.Any
+  var state: PlayToConnectionState
 }
 
 object IPlayToConnection {
@@ -18,37 +17,5 @@ object IPlayToConnection {
     val __obj = js.Dynamic.literal(onerror = onerror.asInstanceOf[js.Any], onstatechanged = onstatechanged.asInstanceOf[js.Any], ontransferred = ontransferred.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPlayToConnection]
   }
-  @scala.inline
-  implicit class IPlayToConnectionOps[Self <: IPlayToConnection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnerror(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onerror")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnstatechanged(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onstatechanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOntransferred(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontransferred")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withState(value: PlayToConnectionState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReminderObject extends js.Object {
-  val ReminderObject: Reminder = js.native
+  val ReminderObject: Reminder
 }
 
 object ReminderObject {
@@ -16,19 +15,5 @@ object ReminderObject {
     val __obj = js.Dynamic.literal(ReminderObject = ReminderObject.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReminderObject]
   }
-  @scala.inline
-  implicit class ReminderObjectOps[Self <: ReminderObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReminderObject(value: Reminder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReminderObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

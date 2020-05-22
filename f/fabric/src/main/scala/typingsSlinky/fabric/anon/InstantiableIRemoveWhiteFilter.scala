@@ -12,9 +12,9 @@ trait InstantiableIRemoveWhiteFilter
   extends Instantiable0[IRemoveWhiteFilter]
      with Instantiable1[/* options */ Distance, IRemoveWhiteFilter] {
   /**
-  		 * Returns filter instance from an object representation
-  		 * @param object Object to create an instance from
-  		 */
+    * Returns filter instance from an object representation
+    * @param object Object to create an instance from
+    */
   def fromObject(`object`: js.Any): IRemoveWhiteFilter = js.native
 }
 

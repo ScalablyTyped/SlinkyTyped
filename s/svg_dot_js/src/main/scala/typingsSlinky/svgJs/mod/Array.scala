@@ -9,8 +9,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Array
-  extends ArrayAlias
-     with Instantiable0[Array]
+  extends Instantiable0[Array]
      with Instantiable1[/* array */ ArrayAlias, Array]
      with Instantiable2[/* array */ ArrayAlias, /* fallback */ js.Array[Double], Array] {
   var value: js.Array[Double] = js.native

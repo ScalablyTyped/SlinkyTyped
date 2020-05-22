@@ -13,19 +13,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Rewritten from type alias, can be one of: 
-  - typingsSlinky.ably.mod.Types.ConnectionEvent.INITIALIZED
-  - typingsSlinky.ably.mod.Types.ConnectionEvent.CONNECTED
-  - typingsSlinky.ably.mod.Types.ConnectionEvent.CONNECTING
-  - typingsSlinky.ably.mod.Types.ConnectionEvent.DISCONNECTED
-  - typingsSlinky.ably.mod.Types.ConnectionEvent.SUSPENDED
-  - typingsSlinky.ably.mod.Types.ConnectionEvent.CLOSED
-  - typingsSlinky.ably.mod.Types.ConnectionEvent.CLOSING
-  - typingsSlinky.ably.mod.Types.ConnectionEvent.FAILED
-  - typingsSlinky.ably.mod.Types.ConnectionEvent.UPDATE
-*/
-trait ConnectionEvent extends js.Object
-
 @JSImport("ably", "Types.ConnectionEvent")
 @js.native
 object ConnectionEvent extends js.Object {

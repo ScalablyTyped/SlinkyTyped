@@ -5,65 +5,27 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An aggregation analyzing log information for queries and events. */
-@js.native
 trait MetricAggregation extends js.Object {
   /** The event type associated with this metric result. This field, when present, will always be `click`. */
-  var event_type: js.UndefOr[String] = js.native
+  var event_type: js.UndefOr[String] = js.undefined
   /** The measurement interval for this metric. Metric intervals are always 1 day (`1d`). */
-  var interval: js.UndefOr[String] = js.native
+  var interval: js.UndefOr[String] = js.undefined
   /** Array of metric aggregation query results. */
-  var results: js.UndefOr[js.Array[MetricAggregationResult]] = js.native
+  var results: js.UndefOr[js.Array[MetricAggregationResult]] = js.undefined
 }
 
 object MetricAggregation {
   @scala.inline
-  def apply(): MetricAggregation = {
+  def apply(
+    event_type: String = null,
+    interval: String = null,
+    results: js.Array[MetricAggregationResult] = null
+  ): MetricAggregation = {
     val __obj = js.Dynamic.literal()
+    if (event_type != null) __obj.updateDynamic("event_type")(event_type.asInstanceOf[js.Any])
+    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
+    if (results != null) __obj.updateDynamic("results")(results.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetricAggregation]
   }
-  @scala.inline
-  implicit class MetricAggregationOps[Self <: MetricAggregation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEvent_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvent_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterval(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResults(value: js.Array[MetricAggregationResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,70 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PolicyConstraints extends js.Object {
-  var inhibitPolicyMapping: js.UndefOr[Double] = js.native
-  var requireExplicitPolicy: js.UndefOr[Double] = js.native
-  def fromSchema(schema: js.Any): Unit = js.native
-  def toJSON(): js.Any = js.native
-  def toSchema(): js.Any = js.native
+  var inhibitPolicyMapping: js.UndefOr[Double] = js.undefined
+  var requireExplicitPolicy: js.UndefOr[Double] = js.undefined
+  def fromSchema(schema: js.Any): Unit
+  def toJSON(): js.Any
+  def toSchema(): js.Any
 }
 
 object PolicyConstraints {
   @scala.inline
-  def apply(fromSchema: js.Any => Unit, toJSON: () => js.Any, toSchema: () => js.Any): PolicyConstraints = {
+  def apply(
+    fromSchema: js.Any => Unit,
+    toJSON: () => js.Any,
+    toSchema: () => js.Any,
+    inhibitPolicyMapping: js.UndefOr[Double] = js.undefined,
+    requireExplicitPolicy: js.UndefOr[Double] = js.undefined
+  ): PolicyConstraints = {
     val __obj = js.Dynamic.literal(fromSchema = js.Any.fromFunction1(fromSchema), toJSON = js.Any.fromFunction0(toJSON), toSchema = js.Any.fromFunction0(toSchema))
+    if (!js.isUndefined(inhibitPolicyMapping)) __obj.updateDynamic("inhibitPolicyMapping")(inhibitPolicyMapping.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(requireExplicitPolicy)) __obj.updateDynamic("requireExplicitPolicy")(requireExplicitPolicy.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolicyConstraints]
   }
-  @scala.inline
-  implicit class PolicyConstraintsOps[Self <: PolicyConstraints] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFromSchema(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromSchema")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withToJSON(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withToSchema(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toSchema")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withInhibitPolicyMapping(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inhibitPolicyMapping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInhibitPolicyMapping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inhibitPolicyMapping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequireExplicitPolicy(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requireExplicitPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequireExplicitPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requireExplicitPolicy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

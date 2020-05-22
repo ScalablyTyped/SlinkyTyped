@@ -24,6 +24,7 @@ object rangeMod extends js.Object {
   @js.native
   trait Range
     extends Component[IProps, js.Object, js.Any] {
+    var resizeObserver: js.Any = js.native
     @JSName("state")
     var state_Range: DraggedThumbIndex = js.native
     var thumbRefs: js.Array[ReactRef[HTMLElement]] = js.native
@@ -48,13 +49,13 @@ object rangeMod extends js.Object {
     def onMouseMove(e: MouseEvent): Unit = js.native
     def onMouseOrTouchStart(e: MouseEvent with TouchEvent): Unit = js.native
     def onMove(clientX: Double, clientY: Double): js.UndefOr[Null] = js.native
+    def onResize(): Unit = js.native
     def onTouchMove(e: TouchEvent): Unit = js.native
     def onTouchStartTrack(e: SyntheticTouchEvent[Element]): Unit = js.native
-    def onWindowResize(): Unit = js.native
     def schdOnEnd(e: Event): Unit = js.native
     def schdOnMouseMove(e: MouseEvent): Unit = js.native
+    def schdOnResize(): Unit = js.native
     def schdOnTouchMove(e: TouchEvent): Unit = js.native
-    def schdOnWindowResize(): Unit = js.native
   }
   
   @js.native

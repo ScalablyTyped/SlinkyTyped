@@ -1,77 +1,49 @@
 package typingsSlinky.stripejs.elementMod
 
+import typingsSlinky.stripejs.anon.Empty
+import typingsSlinky.stripejs.anon.Invalid
 import typingsSlinky.stripejs.stripejsStrings.default
 import typingsSlinky.stripejs.stripejsStrings.solid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IBANElementOptions extends BaseOptions {
   /**
     * Appearance of the icon in the Element
     */
-  var iconStyle: js.UndefOr[solid | default] = js.native
+  var iconStyle: js.UndefOr[solid | default] = js.undefined
   /**
     * Customize the country and format of the placeholder IBAN
     * @default 'DE"
     */
-  var placeholderCountry: js.UndefOr[String] = js.native
+  var placeholderCountry: js.UndefOr[String] = js.undefined
   /**
     * Specify the list of countries or country-groups whose IBANs you want to allow
     */
-  var supportedCountries: js.UndefOr[js.Array[String]] = js.native
+  var supportedCountries: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object IBANElementOptions {
   @scala.inline
-  def apply(): IBANElementOptions = {
+  def apply(
+    classes: Empty = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    hideIcon: js.UndefOr[Boolean] = js.undefined,
+    iconStyle: solid | default = null,
+    placeholderCountry: String = null,
+    style: Invalid = null,
+    supportedCountries: js.Array[String] = null
+  ): IBANElementOptions = {
     val __obj = js.Dynamic.literal()
+    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideIcon)) __obj.updateDynamic("hideIcon")(hideIcon.get.asInstanceOf[js.Any])
+    if (iconStyle != null) __obj.updateDynamic("iconStyle")(iconStyle.asInstanceOf[js.Any])
+    if (placeholderCountry != null) __obj.updateDynamic("placeholderCountry")(placeholderCountry.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (supportedCountries != null) __obj.updateDynamic("supportedCountries")(supportedCountries.asInstanceOf[js.Any])
     __obj.asInstanceOf[IBANElementOptions]
   }
-  @scala.inline
-  implicit class IBANElementOptionsOps[Self <: IBANElementOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIconStyle(value: solid | default): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholderCountry(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderCountry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholderCountry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderCountry")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportedCountries(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedCountries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportedCountries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedCountries")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

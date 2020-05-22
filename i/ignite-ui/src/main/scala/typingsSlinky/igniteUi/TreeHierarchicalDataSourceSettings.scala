@@ -5,43 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TreeHierarchicalDataSourceSettings
   extends /**
-	 * Option for JSONPDataSourceSettings
-	 */
+  * Option for JSONPDataSourceSettings
+  */
 /* optionName */ StringDictionary[js.Any] {
   /**
-  	 * Configure tree datasource specific settings
-  	 */
-  var treeDS: js.UndefOr[TreeHierarchicalDataSourceSettingsTreeDS] = js.native
+    * Configure tree datasource specific settings
+    */
+  var treeDS: js.UndefOr[TreeHierarchicalDataSourceSettingsTreeDS] = js.undefined
 }
 
 object TreeHierarchicalDataSourceSettings {
   @scala.inline
-  def apply(): TreeHierarchicalDataSourceSettings = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    treeDS: TreeHierarchicalDataSourceSettingsTreeDS = null
+  ): TreeHierarchicalDataSourceSettings = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (treeDS != null) __obj.updateDynamic("treeDS")(treeDS.asInstanceOf[js.Any])
     __obj.asInstanceOf[TreeHierarchicalDataSourceSettings]
   }
-  @scala.inline
-  implicit class TreeHierarchicalDataSourceSettingsOps[Self <: TreeHierarchicalDataSourceSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTreeDS(value: TreeHierarchicalDataSourceSettingsTreeDS): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeDS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeDS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeDS")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

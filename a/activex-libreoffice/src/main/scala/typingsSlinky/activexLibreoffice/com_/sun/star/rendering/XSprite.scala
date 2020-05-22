@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   *
   * This is the basic interface to control a sprite object on a {@link XSpriteCanvas} . Sprites are moving, back-buffered objects.
   */
-@js.native
 trait XSprite extends XInterface {
   /**
     * Apply a clipping to the shape output.
@@ -33,13 +32,13 @@ trait XSprite extends XInterface {
     * empty sub-polygons, denotes the NULL clip. That means, nothing from the sprite will be visible.
     * @param aClip The clip poly-polygon to apply.
     */
-  def clip(aClip: XPolyPolygon2D): Unit = js.native
+  def clip(aClip: XPolyPolygon2D): Unit
   /**
     * Make the sprite invisible.
     *
     * This method makes the sprite invisible.
     */
-  def hide(): Unit = js.native
+  def hide(): Unit
   /**
     * Move sprite to the specified position.
     *
@@ -53,7 +52,7 @@ trait XSprite extends XInterface {
     * @param aRenderState The render state to be used when interpreting aNewPos.
     * @throws com::sun::star::lang::IllegalArgumentException if one of the view and render state parameters are outside the specified range.
     */
-  def move(aNewPos: RealPoint2D, aViewState: ViewState, aRenderState: RenderState): Unit = js.native
+  def move(aNewPos: RealPoint2D, aViewState: ViewState, aRenderState: RenderState): Unit
   /**
     * Set overall transparency of the sprite.
     *
@@ -64,7 +63,7 @@ trait XSprite extends XInterface {
     * @param nAlpha New global alpha value to composite this sprite with the background. Valid range is [0,1].
     * @throws com::sun::star::lang::IllegalArgumentException if nAlpha is not within the permissible range.
     */
-  def setAlpha(nAlpha: Double): Unit = js.native
+  def setAlpha(nAlpha: Double): Unit
   /**
     * Set sprite priority.
     *
@@ -72,13 +71,13 @@ trait XSprite extends XInterface {
     * the sprite be rendered, or, in other words, the closer to the screen surface the sprite is shown.
     * @param nPriority New sprite priority value to serve as the sort key when determining sprite rendering order. Avoid NaNs and other irregular floating poi
     */
-  def setPriority(nPriority: Double): Unit = js.native
+  def setPriority(nPriority: Double): Unit
   /**
     * Make the sprite visible.
     *
     * This method makes the sprite visible on the canvas it was created on.
     */
-  def show(): Unit = js.native
+  def show(): Unit
   /**
     * Apply a local transformation to the sprite.
     *
@@ -93,7 +92,7 @@ trait XSprite extends XInterface {
     * @param aTransformation The transformation to apply to the sprite shape.
     * @throws com::sun::star::lang::IllegalArgumentException if the given transformation matrix is singular.
     */
-  def transform(aTransformation: AffineMatrix2D): Unit = js.native
+  def transform(aTransformation: AffineMatrix2D): Unit
 }
 
 object XSprite {
@@ -113,55 +112,5 @@ object XSprite {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), clip = js.Any.fromFunction1(clip), hide = js.Any.fromFunction0(hide), move = js.Any.fromFunction3(move), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setAlpha = js.Any.fromFunction1(setAlpha), setPriority = js.Any.fromFunction1(setPriority), show = js.Any.fromFunction0(show), transform = js.Any.fromFunction1(transform))
     __obj.asInstanceOf[XSprite]
   }
-  @scala.inline
-  implicit class XSpriteOps[Self <: XSprite] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClip(value: XPolyPolygon2D => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clip")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withHide(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withMove(value: (RealPoint2D, ViewState, RenderState) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("move")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withSetAlpha(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAlpha")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetPriority(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPriority")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withShow(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withTransform(value: AffineMatrix2D => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

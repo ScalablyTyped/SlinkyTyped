@@ -43,89 +43,22 @@ trait SchemaResults extends js.Object {
 
 object SchemaResults {
   @scala.inline
-  def apply(): SchemaResults = {
+  def apply(
+    artifactManifest: String = null,
+    artifactTiming: SchemaTimeSpan = null,
+    buildStepImages: js.Array[String] = null,
+    buildStepOutputs: js.Array[String] = null,
+    images: js.Array[SchemaBuiltImage] = null,
+    numArtifacts: String = null
+  ): SchemaResults = {
     val __obj = js.Dynamic.literal()
+    if (artifactManifest != null) __obj.updateDynamic("artifactManifest")(artifactManifest.asInstanceOf[js.Any])
+    if (artifactTiming != null) __obj.updateDynamic("artifactTiming")(artifactTiming.asInstanceOf[js.Any])
+    if (buildStepImages != null) __obj.updateDynamic("buildStepImages")(buildStepImages.asInstanceOf[js.Any])
+    if (buildStepOutputs != null) __obj.updateDynamic("buildStepOutputs")(buildStepOutputs.asInstanceOf[js.Any])
+    if (images != null) __obj.updateDynamic("images")(images.asInstanceOf[js.Any])
+    if (numArtifacts != null) __obj.updateDynamic("numArtifacts")(numArtifacts.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaResults]
   }
-  @scala.inline
-  implicit class SchemaResultsOps[Self <: SchemaResults] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArtifactManifest(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artifactManifest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArtifactManifest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artifactManifest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArtifactTiming(value: SchemaTimeSpan): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artifactTiming")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArtifactTiming: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artifactTiming")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBuildStepImages(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buildStepImages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuildStepImages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buildStepImages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBuildStepOutputs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buildStepOutputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuildStepOutputs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buildStepOutputs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImages(value: js.Array[SchemaBuiltImage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("images")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("images")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumArtifacts(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numArtifacts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumArtifacts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numArtifacts")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

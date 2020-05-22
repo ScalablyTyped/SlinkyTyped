@@ -22,53 +22,16 @@ trait VideoSelector extends js.Object {
 
 object VideoSelector {
   @scala.inline
-  def apply(): VideoSelector = {
+  def apply(
+    ColorSpace: VideoSelectorColorSpace = null,
+    ColorSpaceUsage: VideoSelectorColorSpaceUsage = null,
+    SelectorSettings: VideoSelectorSettings = null
+  ): VideoSelector = {
     val __obj = js.Dynamic.literal()
+    if (ColorSpace != null) __obj.updateDynamic("ColorSpace")(ColorSpace.asInstanceOf[js.Any])
+    if (ColorSpaceUsage != null) __obj.updateDynamic("ColorSpaceUsage")(ColorSpaceUsage.asInstanceOf[js.Any])
+    if (SelectorSettings != null) __obj.updateDynamic("SelectorSettings")(SelectorSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[VideoSelector]
   }
-  @scala.inline
-  implicit class VideoSelectorOps[Self <: VideoSelector] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColorSpace(value: VideoSelectorColorSpace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorSpace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorSpace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorSpace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorSpaceUsage(value: VideoSelectorColorSpaceUsage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorSpaceUsage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorSpaceUsage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorSpaceUsage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectorSettings(value: VideoSelectorSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectorSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectorSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectorSettings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -19,21 +19,20 @@ import scala.scalajs.js.annotation._
   * If the data pilot table is based on a spreadsheet cell range, a field is represented by a column of the range and is named using the topmost cell of
   * the column.
   */
-@js.native
 trait DataPilotField
   extends XNamed
      with XPropertySet
      with XDataPilotField
      with XDataPilotFieldGrouping {
   /** enables the automatic inclusion of only a number of items with the highest or lowest result values. */
-  var AutoShowInfo: DataPilotFieldAutoShowInfo = js.native
+  var AutoShowInfo: DataPilotFieldAutoShowInfo
   /**
     * specifies the function used to calculate results for this field.
     *
     * For column and row fields, this is the function for subtotals (GeneralFunction::NONE means no subtotals). For data fields, this is the function shown
     * in the data pilot table.
     */
-  var Function: GeneralFunction = js.native
+  var Function: GeneralFunction
   /**
     * specifies the function used to calculate results for this field.
     *
@@ -41,40 +40,40 @@ trait DataPilotField
     * function shown in the data pilot table.
     * @since LibreOffice 5.3
     */
-  var Function2: Double = js.native
+  var Function2: Double
   /**
     * contains the grouping information of the DataPilot field.
     *
     * By changing the value of this property it is possible to modify the grouping settings of this field.
     */
-  var GroupInfo: DataPilotFieldGroupInfo = js.native
+  var GroupInfo: DataPilotFieldGroupInfo
   /** specifies whether this field has auto show information. */
-  var HasAutoShowInfo: Boolean = js.native
+  var HasAutoShowInfo: Boolean
   /** specifies whether this field has layout information. */
-  var HasLayoutInfo: Boolean = js.native
+  var HasLayoutInfo: Boolean
   /** specifies whether this field has a reference. */
-  var HasReference: Boolean = js.native
+  var HasReference: Boolean
   /** specifies whether this field has sorting information. */
-  var HasSortInfo: Boolean = js.native
+  var HasSortInfo: Boolean
   /** specifies whether this field is a group field. */
-  var IsGroupField: Boolean = js.native
+  var IsGroupField: Boolean
   /** controls how the field's items are laid out in the result table. */
-  var LayoutInfo: DataPilotFieldLayoutInfo = js.native
+  var LayoutInfo: DataPilotFieldLayoutInfo
   /**
     * specifies the orientation of the field.
     *
     * If the orientation of a field has been changed using this property, the field will be moved to the last position in the collection of all fields with
     * the specified orientation.
     */
-  var Orientation: DataPilotFieldOrientation = js.native
+  var Orientation: DataPilotFieldOrientation
   /** controls how the results are shown in relation to a selected reference result. */
-  var Reference: DataPilotFieldReference = js.native
+  var Reference: DataPilotFieldReference
   /** specifies the selected page which is used to filter the data pilot. */
-  var SelectedPage: String = js.native
+  var SelectedPage: String
   /** specifies whether to show this field also if it is empty or not. */
-  var ShowEmpty: Boolean = js.native
+  var ShowEmpty: Boolean
   /** controls how the field's items are sorted. */
-  var SortInfo: DataPilotFieldSortInfo = js.native
+  var SortInfo: DataPilotFieldSortInfo
   /**
     * specifies the functions used to calculate subtotals for this field.
     *
@@ -86,7 +85,7 @@ trait DataPilotField
     * The order of the functions in this sequence is reflected in the DataPilot table. Multiple entries of the same function are ignored when setting the
     * property.
     */
-  var Subtotals: SafeArray[GeneralFunction] = js.native
+  var Subtotals: SafeArray[GeneralFunction]
   /**
     * specifies the functions used to calculate subtotals for this field.
     *
@@ -100,14 +99,14 @@ trait DataPilotField
     * property.
     * @since LibreOffice 5.3
     */
-  var Subtotals2: SafeArray[Double] = js.native
+  var Subtotals2: SafeArray[Double]
   /** specifies whether to use the selected page to filter the data pilot or show all. */
-  var UseSelectedPage: Boolean = js.native
+  var UseSelectedPage: Boolean
   /**
     * specifies which hierarchy of the dimension is used.
     * @see com.sun.star.sheet.DataPilotSourceHierarchies
     */
-  var UsedHierarchy: String = js.native
+  var UsedHierarchy: String
 }
 
 object DataPilotField {
@@ -154,127 +153,5 @@ object DataPilotField {
     val __obj = js.Dynamic.literal(AutoShowInfo = AutoShowInfo.asInstanceOf[js.Any], Function = Function.asInstanceOf[js.Any], Function2 = Function2.asInstanceOf[js.Any], GroupInfo = GroupInfo.asInstanceOf[js.Any], HasAutoShowInfo = HasAutoShowInfo.asInstanceOf[js.Any], HasLayoutInfo = HasLayoutInfo.asInstanceOf[js.Any], HasReference = HasReference.asInstanceOf[js.Any], HasSortInfo = HasSortInfo.asInstanceOf[js.Any], IsGroupField = IsGroupField.asInstanceOf[js.Any], Items = Items.asInstanceOf[js.Any], LayoutInfo = LayoutInfo.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Orientation = Orientation.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], Reference = Reference.asInstanceOf[js.Any], SelectedPage = SelectedPage.asInstanceOf[js.Any], ShowEmpty = ShowEmpty.asInstanceOf[js.Any], SortInfo = SortInfo.asInstanceOf[js.Any], Subtotals = Subtotals.asInstanceOf[js.Any], Subtotals2 = Subtotals2.asInstanceOf[js.Any], UseSelectedPage = UseSelectedPage.asInstanceOf[js.Any], UsedHierarchy = UsedHierarchy.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), createDateGroup = js.Any.fromFunction1(createDateGroup), createNameGroup = js.Any.fromFunction1(createNameGroup), getItems = js.Any.fromFunction0(getItems), getName = js.Any.fromFunction0(getName), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setName = js.Any.fromFunction1(setName), setPropertyValue = js.Any.fromFunction2(setPropertyValue))
     __obj.asInstanceOf[DataPilotField]
   }
-  @scala.inline
-  implicit class DataPilotFieldOps[Self <: DataPilotField] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoShowInfo(value: DataPilotFieldAutoShowInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoShowInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFunction(value: GeneralFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Function")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFunction2(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Function2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroupInfo(value: DataPilotFieldGroupInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHasAutoShowInfo(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasAutoShowInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHasLayoutInfo(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasLayoutInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHasReference(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHasSortInfo(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasSortInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsGroupField(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsGroupField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLayoutInfo(value: DataPilotFieldLayoutInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LayoutInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: DataPilotFieldOrientation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReference(value: DataPilotFieldReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Reference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelectedPage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectedPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowEmpty(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowEmpty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSortInfo(value: DataPilotFieldSortInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SortInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubtotals(value: SafeArray[GeneralFunction]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subtotals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubtotals2(value: SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subtotals2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUseSelectedPage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseSelectedPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUsedHierarchy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UsedHierarchy")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

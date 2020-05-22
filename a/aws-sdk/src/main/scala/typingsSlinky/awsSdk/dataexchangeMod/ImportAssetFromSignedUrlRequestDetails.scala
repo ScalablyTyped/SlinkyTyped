@@ -35,37 +35,5 @@ object ImportAssetFromSignedUrlRequestDetails {
     val __obj = js.Dynamic.literal(AssetName = AssetName.asInstanceOf[js.Any], DataSetId = DataSetId.asInstanceOf[js.Any], Md5Hash = Md5Hash.asInstanceOf[js.Any], RevisionId = RevisionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImportAssetFromSignedUrlRequestDetails]
   }
-  @scala.inline
-  implicit class ImportAssetFromSignedUrlRequestDetailsOps[Self <: ImportAssetFromSignedUrlRequestDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssetName(value: AssetName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataSetId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMd5Hash(value: stringMin24Max24PatternAZaZ094AZaZ092AZaZ093): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Md5Hash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRevisionId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RevisionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

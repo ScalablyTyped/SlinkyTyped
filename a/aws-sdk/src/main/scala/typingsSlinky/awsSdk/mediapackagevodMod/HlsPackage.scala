@@ -24,59 +24,17 @@ trait HlsPackage extends js.Object {
 
 object HlsPackage {
   @scala.inline
-  def apply(HlsManifests: listOfHlsManifest): HlsPackage = {
+  def apply(
+    HlsManifests: listOfHlsManifest,
+    Encryption: HlsEncryption = null,
+    SegmentDurationSeconds: js.UndefOr[integer] = js.undefined,
+    UseAudioRenditionGroup: js.UndefOr[boolean] = js.undefined
+  ): HlsPackage = {
     val __obj = js.Dynamic.literal(HlsManifests = HlsManifests.asInstanceOf[js.Any])
+    if (Encryption != null) __obj.updateDynamic("Encryption")(Encryption.asInstanceOf[js.Any])
+    if (!js.isUndefined(SegmentDurationSeconds)) __obj.updateDynamic("SegmentDurationSeconds")(SegmentDurationSeconds.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(UseAudioRenditionGroup)) __obj.updateDynamic("UseAudioRenditionGroup")(UseAudioRenditionGroup.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[HlsPackage]
   }
-  @scala.inline
-  implicit class HlsPackageOps[Self <: HlsPackage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHlsManifests(value: listOfHlsManifest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsManifests")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEncryption(value: HlsEncryption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegmentDurationSeconds(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentDurationSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegmentDurationSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentDurationSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseAudioRenditionGroup(value: boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseAudioRenditionGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseAudioRenditionGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseAudioRenditionGroup")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

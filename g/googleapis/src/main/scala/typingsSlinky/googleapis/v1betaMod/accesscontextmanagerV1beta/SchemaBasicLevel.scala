@@ -25,41 +25,11 @@ trait SchemaBasicLevel extends js.Object {
 
 object SchemaBasicLevel {
   @scala.inline
-  def apply(): SchemaBasicLevel = {
+  def apply(combiningFunction: String = null, conditions: js.Array[SchemaCondition] = null): SchemaBasicLevel = {
     val __obj = js.Dynamic.literal()
+    if (combiningFunction != null) __obj.updateDynamic("combiningFunction")(combiningFunction.asInstanceOf[js.Any])
+    if (conditions != null) __obj.updateDynamic("conditions")(conditions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBasicLevel]
   }
-  @scala.inline
-  implicit class SchemaBasicLevelOps[Self <: SchemaBasicLevel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCombiningFunction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("combiningFunction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCombiningFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("combiningFunction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConditions(value: js.Array[SchemaCondition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConditions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

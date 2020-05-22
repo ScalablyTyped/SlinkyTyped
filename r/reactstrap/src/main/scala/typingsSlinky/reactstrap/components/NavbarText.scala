@@ -647,6 +647,11 @@ object NavbarText {
   }
   
   def withProps[T](p: NavbarTextProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[NavbarTextProps]))
+  }
   implicit def make[T](companion: NavbarText.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

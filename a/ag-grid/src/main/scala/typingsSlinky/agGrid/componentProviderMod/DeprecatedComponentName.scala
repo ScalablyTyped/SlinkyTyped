@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeprecatedComponentName extends js.Object {
-  var newComponentName: String = js.native
-  var propertyHolder: String = js.native
+  var newComponentName: String
+  var propertyHolder: String
 }
 
 object DeprecatedComponentName {
@@ -16,25 +15,5 @@ object DeprecatedComponentName {
     val __obj = js.Dynamic.literal(newComponentName = newComponentName.asInstanceOf[js.Any], propertyHolder = propertyHolder.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeprecatedComponentName]
   }
-  @scala.inline
-  implicit class DeprecatedComponentNameOps[Self <: DeprecatedComponentName] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNewComponentName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newComponentName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPropertyHolder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("propertyHolder")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -12,18 +12,17 @@ import scala.scalajs.js.annotation._
   * is a single page of a {@link Wizard}
   * @since OOo 3.3
   */
-@js.native
 trait XWizardPage extends XComponent {
   /**
     * denotes the ID of the page.
     *
     * Within a wizard, no two pages are allowed to have the same ID.
     */
-  var PageId: Double = js.native
+  var PageId: Double
   /** provides read-only access to the window of the page */
-  var Window: XWindow = js.native
+  var Window: XWindow
   /** called when the page is activated */
-  def activatePage(): Unit = js.native
+  def activatePage(): Unit
   /**
     * determines whether it is allowed to travel to a later page in the wizard
     *
@@ -33,14 +32,14 @@ trait XWizardPage extends XComponent {
     * If checked for validity is expensive, or if you prefer giving your user more detailed feedback on validity than a disabled `Next` button in the
     * wizard, then move your checks to the {@link commitPage()} method.
     */
-  def canAdvance(): Boolean = js.native
+  def canAdvance(): Boolean
   /**
     * is called when the page is about to be left
     *
     * An implementation can veto the leave by returning `FALSE` here. Usually, the decision about this depends on the current state of the page.
     * @param Reason is one of the {@link WizardTravelType} constants denoting the reason why the page should be committed.
     */
-  def commitPage(Reason: Double): Boolean = js.native
+  def commitPage(Reason: Double): Boolean
 }
 
 object XWizardPage {
@@ -61,43 +60,5 @@ object XWizardPage {
     val __obj = js.Dynamic.literal(PageId = PageId.asInstanceOf[js.Any], Window = Window.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), activatePage = js.Any.fromFunction0(activatePage), addEventListener = js.Any.fromFunction1(addEventListener), canAdvance = js.Any.fromFunction0(canAdvance), commitPage = js.Any.fromFunction1(commitPage), dispose = js.Any.fromFunction0(dispose), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener))
     __obj.asInstanceOf[XWizardPage]
   }
-  @scala.inline
-  implicit class XWizardPageOps[Self <: XWizardPage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPageId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWindow(value: XWindow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Window")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withActivatePage(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activatePage")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCanAdvance(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canAdvance")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCommitPage(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitPage")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

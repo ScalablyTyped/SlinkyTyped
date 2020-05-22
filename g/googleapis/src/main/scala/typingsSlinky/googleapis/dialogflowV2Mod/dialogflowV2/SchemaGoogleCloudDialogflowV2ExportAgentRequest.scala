@@ -21,29 +21,10 @@ trait SchemaGoogleCloudDialogflowV2ExportAgentRequest extends js.Object {
 
 object SchemaGoogleCloudDialogflowV2ExportAgentRequest {
   @scala.inline
-  def apply(): SchemaGoogleCloudDialogflowV2ExportAgentRequest = {
+  def apply(agentUri: String = null): SchemaGoogleCloudDialogflowV2ExportAgentRequest = {
     val __obj = js.Dynamic.literal()
+    if (agentUri != null) __obj.updateDynamic("agentUri")(agentUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2ExportAgentRequest]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudDialogflowV2ExportAgentRequestOps[Self <: SchemaGoogleCloudDialogflowV2ExportAgentRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAgentUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgentUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentUri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

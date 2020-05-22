@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Networking.NetworkOperators
 
+import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +10,28 @@ import scala.scalajs.js.annotation._
 @js.native
 /** Creates a new instance of a ProvisioningAgent . */
 class ProvisioningAgent ()
-  extends typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.ProvisioningAgent
+  extends typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.ProvisioningAgent {
+  /**
+    * Retrieves cost and plan information associated with the mobile broadband profile.
+    * @param mediaType The media type that the profile belongs to.
+    * @param profileName The name of the profile that the cost will be applied to.
+    * @return The profile.
+    */
+  /* CompleteClass */
+  override def getProvisionedProfile(
+    mediaType: typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.ProfileMediaType,
+    profileName: String
+  ): typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.ProvisionedProfile = js.native
+  /**
+    * Provisions a device for network connectivity asynchronously, based on the supplied XML document.
+    * @param provisioningXmlDocument An instance of CarrierControlSchema that contains the network connectivity provisioning information.
+    * @return An asynchronous handler to start the provisioning attempt and track its completion.
+    */
+  /* CompleteClass */
+  override def provisionFromXmlDocumentAsync(provisioningXmlDocument: String): IPromiseWithIAsyncOperation[
+    typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.ProvisionFromXmlDocumentResults
+  ] = js.native
+}
 
 /* static members */
 @JSGlobal("Windows.Networking.NetworkOperators.ProvisioningAgent")

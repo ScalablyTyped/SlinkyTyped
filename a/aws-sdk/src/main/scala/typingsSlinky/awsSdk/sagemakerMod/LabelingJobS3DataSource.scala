@@ -18,19 +18,5 @@ object LabelingJobS3DataSource {
     val __obj = js.Dynamic.literal(ManifestS3Uri = ManifestS3Uri.asInstanceOf[js.Any])
     __obj.asInstanceOf[LabelingJobS3DataSource]
   }
-  @scala.inline
-  implicit class LabelingJobS3DataSourceOps[Self <: LabelingJobS3DataSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withManifestS3Uri(value: S3Uri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ManifestS3Uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -8,412 +8,190 @@ import scala.scalajs.js.annotation._
   * A photo, video, or audio recording acquired or used in healthcare. The actual content may be inline or provided by direct reference
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.fhir.fhir.Resource because Already inherited */ @js.native
-trait Media extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait Media extends DomainResource {
   /**
     * Contains extended information for property 'duration'.
     */
-  var _duration: js.UndefOr[Element] = js.native
+  var _duration: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'frames'.
     */
-  var _frames: js.UndefOr[Element] = js.native
+  var _frames: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'height'.
     */
-  var _height: js.UndefOr[Element] = js.native
+  var _height: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'occurrenceDateTime'.
     */
-  var _occurrenceDateTime: js.UndefOr[Element] = js.native
+  var _occurrenceDateTime: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'type'.
     */
-  var _type: js.UndefOr[Element] = js.native
+  var _type: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'width'.
     */
-  var _width: js.UndefOr[Element] = js.native
+  var _width: js.UndefOr[Element] = js.undefined
   /**
     * Procedure that caused this media to be created
     */
-  var basedOn: js.UndefOr[js.Array[Reference]] = js.native
+  var basedOn: js.UndefOr[js.Array[Reference]] = js.undefined
   /**
     * Body part in media
     */
-  var bodySite: js.UndefOr[CodeableConcept] = js.native
+  var bodySite: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Actual Media - reference or data
     */
-  var content: Attachment = js.native
+  var content: Attachment
   /**
     * Encounter / Episode associated with media
     */
-  var context: js.UndefOr[Reference] = js.native
+  var context: js.UndefOr[Reference] = js.undefined
   /**
     * Observing Device
     */
-  var device: js.UndefOr[Reference] = js.native
+  var device: js.UndefOr[Reference] = js.undefined
   /**
     * Length in seconds (audio / video)
     */
-  var duration: js.UndefOr[unsignedInt] = js.native
+  var duration: js.UndefOr[unsignedInt] = js.undefined
   /**
     * Number of frames if > 1 (photo)
     */
-  var frames: js.UndefOr[positiveInt] = js.native
+  var frames: js.UndefOr[positiveInt] = js.undefined
   /**
     * Height of the image in pixels (photo/video)
     */
-  var height: js.UndefOr[positiveInt] = js.native
+  var height: js.UndefOr[positiveInt] = js.undefined
   /**
     * Identifier(s) for the image
     */
-  var identifier: js.UndefOr[js.Array[Identifier]] = js.native
+  var identifier: js.UndefOr[js.Array[Identifier]] = js.undefined
   /**
     * Comments made about the media
     */
-  var note: js.UndefOr[js.Array[Annotation]] = js.native
+  var note: js.UndefOr[js.Array[Annotation]] = js.undefined
   /**
     * When Media was collected
     */
-  var occurrenceDateTime: js.UndefOr[dateTime] = js.native
+  var occurrenceDateTime: js.UndefOr[dateTime] = js.undefined
   /**
     * When Media was collected
     */
-  var occurrencePeriod: js.UndefOr[Period] = js.native
+  var occurrencePeriod: js.UndefOr[Period] = js.undefined
   /**
     * The person who generated the image
     */
-  var operator: js.UndefOr[Reference] = js.native
+  var operator: js.UndefOr[Reference] = js.undefined
   /**
     * Why was event performed?
     */
-  var reasonCode: js.UndefOr[js.Array[CodeableConcept]] = js.native
+  var reasonCode: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
   /**
     * Who/What this Media is a record of
     */
-  var subject: js.UndefOr[Reference] = js.native
+  var subject: js.UndefOr[Reference] = js.undefined
   /**
     * The type of acquisition equipment/process
     */
-  var subtype: js.UndefOr[CodeableConcept] = js.native
+  var subtype: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * photo | video | audio
     */
-  var `type`: code = js.native
+  var `type`: code
   /**
     * Imaging view, e.g. Lateral or Antero-posterior
     */
-  var view: js.UndefOr[CodeableConcept] = js.native
+  var view: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Width of the image in pixels (photo/video)
     */
-  var width: js.UndefOr[positiveInt] = js.native
+  var width: js.UndefOr[positiveInt] = js.undefined
 }
 
 object Media {
   @scala.inline
-  def apply(content: Attachment, `type`: code): Media = {
+  def apply(
+    content: Attachment,
+    `type`: code,
+    _duration: Element = null,
+    _frames: Element = null,
+    _height: Element = null,
+    _id: Element = null,
+    _implicitRules: Element = null,
+    _language: Element = null,
+    _occurrenceDateTime: Element = null,
+    _resourceType: Element = null,
+    _type: Element = null,
+    _width: Element = null,
+    basedOn: js.Array[Reference] = null,
+    bodySite: CodeableConcept = null,
+    contained: js.Array[Resource] = null,
+    context: Reference = null,
+    device: Reference = null,
+    duration: js.UndefOr[unsignedInt] = js.undefined,
+    extension: js.Array[Extension] = null,
+    frames: js.UndefOr[positiveInt] = js.undefined,
+    height: js.UndefOr[positiveInt] = js.undefined,
+    id: id = null,
+    identifier: js.Array[Identifier] = null,
+    implicitRules: uri = null,
+    language: code = null,
+    meta: Meta = null,
+    modifierExtension: js.Array[Extension] = null,
+    note: js.Array[Annotation] = null,
+    occurrenceDateTime: dateTime = null,
+    occurrencePeriod: Period = null,
+    operator: Reference = null,
+    reasonCode: js.Array[CodeableConcept] = null,
+    resourceType: code = null,
+    subject: Reference = null,
+    subtype: CodeableConcept = null,
+    text: Narrative = null,
+    view: CodeableConcept = null,
+    width: js.UndefOr[positiveInt] = js.undefined
+  ): Media = {
     val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (_duration != null) __obj.updateDynamic("_duration")(_duration.asInstanceOf[js.Any])
+    if (_frames != null) __obj.updateDynamic("_frames")(_frames.asInstanceOf[js.Any])
+    if (_height != null) __obj.updateDynamic("_height")(_height.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_implicitRules != null) __obj.updateDynamic("_implicitRules")(_implicitRules.asInstanceOf[js.Any])
+    if (_language != null) __obj.updateDynamic("_language")(_language.asInstanceOf[js.Any])
+    if (_occurrenceDateTime != null) __obj.updateDynamic("_occurrenceDateTime")(_occurrenceDateTime.asInstanceOf[js.Any])
+    if (_resourceType != null) __obj.updateDynamic("_resourceType")(_resourceType.asInstanceOf[js.Any])
+    if (_type != null) __obj.updateDynamic("_type")(_type.asInstanceOf[js.Any])
+    if (_width != null) __obj.updateDynamic("_width")(_width.asInstanceOf[js.Any])
+    if (basedOn != null) __obj.updateDynamic("basedOn")(basedOn.asInstanceOf[js.Any])
+    if (bodySite != null) __obj.updateDynamic("bodySite")(bodySite.asInstanceOf[js.Any])
+    if (contained != null) __obj.updateDynamic("contained")(contained.asInstanceOf[js.Any])
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (device != null) __obj.updateDynamic("device")(device.asInstanceOf[js.Any])
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (!js.isUndefined(frames)) __obj.updateDynamic("frames")(frames.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (identifier != null) __obj.updateDynamic("identifier")(identifier.asInstanceOf[js.Any])
+    if (implicitRules != null) __obj.updateDynamic("implicitRules")(implicitRules.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (note != null) __obj.updateDynamic("note")(note.asInstanceOf[js.Any])
+    if (occurrenceDateTime != null) __obj.updateDynamic("occurrenceDateTime")(occurrenceDateTime.asInstanceOf[js.Any])
+    if (occurrencePeriod != null) __obj.updateDynamic("occurrencePeriod")(occurrencePeriod.asInstanceOf[js.Any])
+    if (operator != null) __obj.updateDynamic("operator")(operator.asInstanceOf[js.Any])
+    if (reasonCode != null) __obj.updateDynamic("reasonCode")(reasonCode.asInstanceOf[js.Any])
+    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
+    if (subject != null) __obj.updateDynamic("subject")(subject.asInstanceOf[js.Any])
+    if (subtype != null) __obj.updateDynamic("subtype")(subtype.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Media]
   }
-  @scala.inline
-  implicit class MediaOps[Self <: Media] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: Attachment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_duration(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_duration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_frames(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_frames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_frames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_frames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_height(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_height: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_occurrenceDateTime(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_occurrenceDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_occurrenceDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_occurrenceDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_type(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_width(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_width: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBasedOn(value: js.Array[Reference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basedOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasedOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basedOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBodySite(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodySite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodySite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodySite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContext(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDevice(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDevice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: unsignedInt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrames(value: positiveInt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: positiveInt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentifier(value: js.Array[Identifier]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNote(value: js.Array[Annotation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNote: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOccurrenceDateTime(value: dateTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("occurrenceDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOccurrenceDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("occurrenceDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOccurrencePeriod(value: Period): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("occurrencePeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOccurrencePeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("occurrencePeriod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperator(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReasonCode(value: js.Array[CodeableConcept]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReasonCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubject(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubtype(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtype")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubtype: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtype")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withView(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: positiveInt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

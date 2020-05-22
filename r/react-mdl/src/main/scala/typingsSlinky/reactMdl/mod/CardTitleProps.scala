@@ -6,38 +6,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CardTitleProps
   extends AllHTMLAttributes[js.Any]
      with ClassAttributes[js.Any] {
-  var expand: js.UndefOr[Boolean] = js.native
+  var expand: js.UndefOr[Boolean] = js.undefined
 }
 
 object CardTitleProps {
   @scala.inline
-  def apply(): CardTitleProps = {
+  def apply(
+    AllHTMLAttributes: AllHTMLAttributes[js.Any] = null,
+    ClassAttributes: ClassAttributes[js.Any] = null,
+    expand: js.UndefOr[Boolean] = js.undefined
+  ): CardTitleProps = {
     val __obj = js.Dynamic.literal()
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (!js.isUndefined(expand)) __obj.updateDynamic("expand")(expand.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CardTitleProps]
   }
-  @scala.inline
-  implicit class CardTitlePropsOps[Self <: CardTitleProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpand(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expand")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

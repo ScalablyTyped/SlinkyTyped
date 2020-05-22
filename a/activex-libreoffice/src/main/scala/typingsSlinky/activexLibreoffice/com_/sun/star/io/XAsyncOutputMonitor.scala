@@ -16,7 +16,6 @@ import scala.scalajs.js.annotation._
   * calls to {@link com.sun.star.io.XOutputStream.writeBytes()} .
   * @since OOo 2.0
   */
-@js.native
 trait XAsyncOutputMonitor extends js.Object {
   /**
     * waits for the completion of any previous calls to {@link com.sun.star.io.XOutputStream.writeBytes()} , and reports potentially pending errors.
@@ -28,7 +27,7 @@ trait XAsyncOutputMonitor extends js.Object {
     * stored on a stable physical medium, like a hard disk (and it is completely unspecified whether `flush` should give this guarantee).
     * @throws com::sun::star::io::IOException if any previous call to {@link com.sun.star.io.XOutputStream.writeBytes()} encountered such an error, but has not
     */
-  def waitForCompletion(): Unit = js.native
+  def waitForCompletion(): Unit
 }
 
 object XAsyncOutputMonitor {
@@ -37,19 +36,5 @@ object XAsyncOutputMonitor {
     val __obj = js.Dynamic.literal(waitForCompletion = js.Any.fromFunction0(waitForCompletion))
     __obj.asInstanceOf[XAsyncOutputMonitor]
   }
-  @scala.inline
-  implicit class XAsyncOutputMonitorOps[Self <: XAsyncOutputMonitor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWaitForCompletion(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForCompletion")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

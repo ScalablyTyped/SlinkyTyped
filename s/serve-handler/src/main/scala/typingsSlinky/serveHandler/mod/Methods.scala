@@ -9,90 +9,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Methods extends js.Object {
-  var createReadStream: js.UndefOr[FnCall] = js.native
-  var lstat: js.UndefOr[Typeoflstat] = js.native
-  var readdir: js.UndefOr[Typeofreaddir] = js.native
-  var realpath: js.UndefOr[Typeofrealpath] = js.native
-  var sendError: js.UndefOr[SendErrorHandler] = js.native
+  var createReadStream: js.UndefOr[FnCall] = js.undefined
+  var lstat: js.UndefOr[Typeoflstat] = js.undefined
+  var readdir: js.UndefOr[Typeofreaddir] = js.undefined
+  var realpath: js.UndefOr[Typeofrealpath] = js.undefined
+  var sendError: js.UndefOr[SendErrorHandler] = js.undefined
 }
 
 object Methods {
   @scala.inline
-  def apply(): Methods = {
+  def apply(
+    createReadStream: FnCall = null,
+    lstat: Typeoflstat = null,
+    readdir: Typeofreaddir = null,
+    realpath: Typeofrealpath = null,
+    sendError: (/* absolutePath */ js.UndefOr[String], /* response */ js.UndefOr[ServerResponse], /* acceptsJSON */ js.UndefOr[Boolean], /* current */ js.UndefOr[String], /* handlers */ js.UndefOr[Methods], /* config */ js.UndefOr[Config], /* spec */ js.UndefOr[js.Any]) => js.Promise[Unit] = null
+  ): Methods = {
     val __obj = js.Dynamic.literal()
+    if (createReadStream != null) __obj.updateDynamic("createReadStream")(createReadStream.asInstanceOf[js.Any])
+    if (lstat != null) __obj.updateDynamic("lstat")(lstat.asInstanceOf[js.Any])
+    if (readdir != null) __obj.updateDynamic("readdir")(readdir.asInstanceOf[js.Any])
+    if (realpath != null) __obj.updateDynamic("realpath")(realpath.asInstanceOf[js.Any])
+    if (sendError != null) __obj.updateDynamic("sendError")(js.Any.fromFunction7(sendError))
     __obj.asInstanceOf[Methods]
   }
-  @scala.inline
-  implicit class MethodsOps[Self <: Methods] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateReadStream(value: FnCall): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createReadStream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateReadStream: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createReadStream")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLstat(value: Typeoflstat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lstat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLstat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lstat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReaddir(value: Typeofreaddir): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readdir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReaddir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readdir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRealpath(value: Typeofrealpath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("realpath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRealpath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("realpath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSendError(
-      value: (/* absolutePath */ js.UndefOr[String], /* response */ js.UndefOr[ServerResponse], /* acceptsJSON */ js.UndefOr[Boolean], /* current */ js.UndefOr[String], /* handlers */ js.UndefOr[Methods], /* config */ js.UndefOr[Config], /* spec */ js.UndefOr[js.Any]) => js.Promise[Unit]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendError")(js.Any.fromFunction7(value))
-        ret
-    }
-    @scala.inline
-    def withoutSendError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendError")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

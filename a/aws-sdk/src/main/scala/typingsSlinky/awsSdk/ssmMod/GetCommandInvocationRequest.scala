@@ -11,7 +11,7 @@ trait GetCommandInvocationRequest extends js.Object {
     */
   var CommandId: typingsSlinky.awsSdk.ssmMod.CommandId = js.native
   /**
-    * (Required) The ID of the managed instance targeted by the command. A managed instance can be an Amazon EC2 instance or an instance in your hybrid environment that is configured for Systems Manager.
+    * (Required) The ID of the managed instance targeted by the command. A managed instance can be an EC2 instance or an instance in your hybrid environment that is configured for Systems Manager.
     */
   var InstanceId: typingsSlinky.awsSdk.ssmMod.InstanceId = js.native
   /**
@@ -22,41 +22,10 @@ trait GetCommandInvocationRequest extends js.Object {
 
 object GetCommandInvocationRequest {
   @scala.inline
-  def apply(CommandId: CommandId, InstanceId: InstanceId): GetCommandInvocationRequest = {
+  def apply(CommandId: CommandId, InstanceId: InstanceId, PluginName: CommandPluginName = null): GetCommandInvocationRequest = {
     val __obj = js.Dynamic.literal(CommandId = CommandId.asInstanceOf[js.Any], InstanceId = InstanceId.asInstanceOf[js.Any])
+    if (PluginName != null) __obj.updateDynamic("PluginName")(PluginName.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCommandInvocationRequest]
   }
-  @scala.inline
-  implicit class GetCommandInvocationRequestOps[Self <: GetCommandInvocationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommandId(value: CommandId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CommandId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInstanceId(value: InstanceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPluginName(value: CommandPluginName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PluginName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPluginName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PluginName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

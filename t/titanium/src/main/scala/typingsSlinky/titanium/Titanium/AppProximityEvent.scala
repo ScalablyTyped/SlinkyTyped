@@ -5,14 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-	 * Fired when the proximity sensor changes state.
-	 */
-@js.native
+  * Fired when the proximity sensor changes state.
+  */
 trait AppProximityEvent extends AppBaseEvent {
   /**
-  		 * Proximity state value.
-  		 */
-  var state: Boolean = js.native
+    * Proximity state value.
+    */
+  var state: Boolean
 }
 
 object AppProximityEvent {
@@ -21,19 +20,5 @@ object AppProximityEvent {
     val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppProximityEvent]
   }
-  @scala.inline
-  implicit class AppProximityEventOps[Self <: AppProximityEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withState(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

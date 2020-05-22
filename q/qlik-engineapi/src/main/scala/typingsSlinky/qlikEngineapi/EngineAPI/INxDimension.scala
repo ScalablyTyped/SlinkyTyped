@@ -11,38 +11,37 @@ import scala.scalajs.js.annotation._
   * Note: If the dimension is set in the hypercube and not in the library, this dimension cannot be shared with other objects.
   * Note: A dimension that is set in the library can be used by many objects.
   */
-@js.native
 trait INxDimension extends js.Object {
   /**
     * List of attribute dimensions.
     */
-  var qAttributeDimensions: js.UndefOr[js.Array[INxAttrDimDef]] = js.native
+  var qAttributeDimensions: js.UndefOr[js.Array[INxAttrDimDef]] = js.undefined
   /**
     * List of attribute expressions.
     */
-  var qAttributeExpressions: js.UndefOr[js.Array[INxAttrExprDef]] = js.native
+  var qAttributeExpressions: js.UndefOr[js.Array[INxAttrExprDef]] = js.undefined
   /**
     * Specifies a calculation condition, which must be fulfilled for the dimension to be calculated.
     * If the calculation condition is not met, the dimension is excluded from the calculation.
     * This property is optional. By default, there is no calculation condition.
     */
-  var qCalcCond: js.UndefOr[IValueExpr] = js.native
+  var qCalcCond: js.UndefOr[IValueExpr] = js.undefined
   /**
     * Refers to a dimension stored in the hypercube.
     */
-  var qDef: INxInlineDimensionDef = js.native
+  var qDef: INxInlineDimensionDef
   /**
     * no / empty docu
     */
-  var qIncludeElemValue: js.UndefOr[Boolean] = js.native
+  var qIncludeElemValue: js.UndefOr[Boolean] = js.undefined
   /**
     * Refers to a dimension stored in the library.
     */
-  var qLibraryId: js.UndefOr[String] = js.native
+  var qLibraryId: js.UndefOr[String] = js.undefined
   /**
     * If set to true, no null values are returned.
     */
-  var qNullSuppression: js.UndefOr[Boolean] = js.native
+  var qNullSuppression: js.UndefOr[Boolean] = js.undefined
   /**
     * This property is used when some dimension limits are set.
     * Label of the Others group. The default label is Others.
@@ -53,22 +52,22 @@ trait INxDimension extends js.Object {
     *               Where
     * <label> is the label of the Others group.
     */
-  var qOtherLabel: js.UndefOr[IStringExpressionContainer] = js.native
+  var qOtherLabel: js.UndefOr[IStringExpressionContainer] = js.undefined
   /**
     * Sets the dimension limits. Each dimension of a hypercube is configured separately.
     * Defines if some values (grouped as Others) should be grouped together in the visualization.
     * For example in a pie chart all values lower than 200 could be grouped together.
     */
-  var qOtherTotalSpec: js.UndefOr[IOtherTotalSpecProp] = js.native
+  var qOtherTotalSpec: js.UndefOr[IOtherTotalSpecProp] = js.undefined
   /**
     * If set to true, all dimension values are shown.
     */
-  var qShowAll: js.UndefOr[Boolean] = js.native
+  var qShowAll: js.UndefOr[Boolean] = js.undefined
    // ?Nicht in Doku
   /**
     * no / empty docu
     */
-  var qShowTotal: js.UndefOr[Boolean] = js.native
+  var qShowTotal: js.UndefOr[Boolean] = js.undefined
   /**
     * If this property is set, the total of the calculated values is returned.
     * The default label is Total.
@@ -79,160 +78,38 @@ trait INxDimension extends js.Object {
     *               Where
     * <label> is the label of the Totalgroup.
     */
-  var qTotalLabel: js.UndefOr[IStringExpressionContainer] = js.native
+  var qTotalLabel: js.UndefOr[IStringExpressionContainer] = js.undefined
 }
 
 object INxDimension {
   @scala.inline
-  def apply(qDef: INxInlineDimensionDef): INxDimension = {
+  def apply(
+    qDef: INxInlineDimensionDef,
+    qAttributeDimensions: js.Array[INxAttrDimDef] = null,
+    qAttributeExpressions: js.Array[INxAttrExprDef] = null,
+    qCalcCond: IValueExpr = null,
+    qIncludeElemValue: js.UndefOr[Boolean] = js.undefined,
+    qLibraryId: String = null,
+    qNullSuppression: js.UndefOr[Boolean] = js.undefined,
+    qOtherLabel: IStringExpressionContainer = null,
+    qOtherTotalSpec: IOtherTotalSpecProp = null,
+    qShowAll: js.UndefOr[Boolean] = js.undefined,
+    qShowTotal: js.UndefOr[Boolean] = js.undefined,
+    qTotalLabel: IStringExpressionContainer = null
+  ): INxDimension = {
     val __obj = js.Dynamic.literal(qDef = qDef.asInstanceOf[js.Any])
+    if (qAttributeDimensions != null) __obj.updateDynamic("qAttributeDimensions")(qAttributeDimensions.asInstanceOf[js.Any])
+    if (qAttributeExpressions != null) __obj.updateDynamic("qAttributeExpressions")(qAttributeExpressions.asInstanceOf[js.Any])
+    if (qCalcCond != null) __obj.updateDynamic("qCalcCond")(qCalcCond.asInstanceOf[js.Any])
+    if (!js.isUndefined(qIncludeElemValue)) __obj.updateDynamic("qIncludeElemValue")(qIncludeElemValue.get.asInstanceOf[js.Any])
+    if (qLibraryId != null) __obj.updateDynamic("qLibraryId")(qLibraryId.asInstanceOf[js.Any])
+    if (!js.isUndefined(qNullSuppression)) __obj.updateDynamic("qNullSuppression")(qNullSuppression.get.asInstanceOf[js.Any])
+    if (qOtherLabel != null) __obj.updateDynamic("qOtherLabel")(qOtherLabel.asInstanceOf[js.Any])
+    if (qOtherTotalSpec != null) __obj.updateDynamic("qOtherTotalSpec")(qOtherTotalSpec.asInstanceOf[js.Any])
+    if (!js.isUndefined(qShowAll)) __obj.updateDynamic("qShowAll")(qShowAll.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(qShowTotal)) __obj.updateDynamic("qShowTotal")(qShowTotal.get.asInstanceOf[js.Any])
+    if (qTotalLabel != null) __obj.updateDynamic("qTotalLabel")(qTotalLabel.asInstanceOf[js.Any])
     __obj.asInstanceOf[INxDimension]
   }
-  @scala.inline
-  implicit class INxDimensionOps[Self <: INxDimension] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQDef(value: INxInlineDimensionDef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qDef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQAttributeDimensions(value: js.Array[INxAttrDimDef]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qAttributeDimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQAttributeDimensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qAttributeDimensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQAttributeExpressions(value: js.Array[INxAttrExprDef]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qAttributeExpressions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQAttributeExpressions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qAttributeExpressions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQCalcCond(value: IValueExpr): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qCalcCond")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQCalcCond: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qCalcCond")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQIncludeElemValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qIncludeElemValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQIncludeElemValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qIncludeElemValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQLibraryId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qLibraryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQLibraryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qLibraryId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQNullSuppression(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qNullSuppression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQNullSuppression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qNullSuppression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQOtherLabel(value: IStringExpressionContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qOtherLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQOtherLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qOtherLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQOtherTotalSpec(value: IOtherTotalSpecProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qOtherTotalSpec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQOtherTotalSpec: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qOtherTotalSpec")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQShowAll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qShowAll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQShowAll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qShowAll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQShowTotal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qShowTotal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQShowTotal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qShowTotal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQTotalLabel(value: IStringExpressionContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qTotalLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQTotalLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qTotalLabel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

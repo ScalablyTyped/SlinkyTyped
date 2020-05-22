@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Notice
   extends Component[NoticeProps, js.Object, js.Any] {
-  var closeTimer: Double = js.native
+  var closeTimer: Double | Null = js.native
   def clearCloseTimer(): Unit = js.native
   def close(): Unit = js.native
   def close(e: SyntheticMouseEvent[HTMLAnchorElement]): Unit = js.native

@@ -6,9 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XMLSerializer extends js.Object {
-  def serializeToString(node: Node): String = js.native
+  def serializeToString(node: Node): String
 }
 
 @JSImport("xmldom", "XMLSerializer")

@@ -15,15 +15,15 @@ class TextTrackMode ()
 object TextTrackMode extends js.Object {
   /**
     * The track is active, but the player is not actively displaying cues.
-  		**/
+    **/
   var hidden: String = js.native
   /**
-  		* The track is disabled.
-  		**/
+    * The track is disabled.
+    **/
   var off: String = js.native
   /**
-  		* The track is active and the player is actively displaying cues.
-  		**/
+    * The track is active and the player is actively displaying cues.
+    **/
   var showing: String = js.native
 }
 

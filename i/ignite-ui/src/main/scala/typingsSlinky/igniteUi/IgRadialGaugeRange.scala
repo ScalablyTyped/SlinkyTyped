@@ -5,203 +5,87 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IgRadialGaugeRange
   extends /**
-	 * Option for JSONPDataSourceSettings
-	 */
+  * Option for JSONPDataSourceSettings
+  */
 /* optionName */ StringDictionary[js.Any] {
   /**
-  	 * Gets or sets the brush for the entire range.
-  	 */
-  var brush: js.UndefOr[String] = js.native
+    * Gets or sets the brush for the entire range.
+    */
+  var brush: js.UndefOr[String] = js.undefined
   /**
-  	 * Gets or sets the ending value of the range.
-  	 */
-  var endValue: js.UndefOr[Double] = js.native
+    * Gets or sets the ending value of the range.
+    */
+  var endValue: js.UndefOr[Double] = js.undefined
   /**
-  	 * Gets or sets the ending value of the inner extent of the range.
-  	 */
-  var innerEndExtent: js.UndefOr[Double] = js.native
+    * Gets or sets the ending value of the inner extent of the range.
+    */
+  var innerEndExtent: js.UndefOr[Double] = js.undefined
   /**
-  	 * Gets or sets the starting value of the inner extent of the range.
-  	 */
-  var innerStartExtent: js.UndefOr[Double] = js.native
+    * Gets or sets the starting value of the inner extent of the range.
+    */
+  var innerStartExtent: js.UndefOr[Double] = js.undefined
   /**
-  	 * Gets or sets the name of the range.
-  	 */
-  var name: js.UndefOr[String] = js.native
+    * Gets or sets the name of the range.
+    */
+  var name: js.UndefOr[String] = js.undefined
   /**
-  	 * Gets or sets the ending value of the outer extent of the range.
-  	 */
-  var outerEndExtent: js.UndefOr[Double] = js.native
+    * Gets or sets the ending value of the outer extent of the range.
+    */
+  var outerEndExtent: js.UndefOr[Double] = js.undefined
   /**
-  	 * Gets or sets the starting value of the outer extent of the range.
-  	 */
-  var outerStartExtent: js.UndefOr[Double] = js.native
+    * Gets or sets the starting value of the outer extent of the range.
+    */
+  var outerStartExtent: js.UndefOr[Double] = js.undefined
   /**
-  	 * Gets or sets the brush for the outline of the range.
-  	 */
-  var outline: js.UndefOr[String] = js.native
+    * Gets or sets the brush for the outline of the range.
+    */
+  var outline: js.UndefOr[String] = js.undefined
   /**
-  	 * Gets or sets the flag used to determine if the range should be removed. If set to true, the range (if existing) is removed.
-  	 */
-  var remove: js.UndefOr[Boolean] = js.native
+    * Gets or sets the flag used to determine if the range should be removed. If set to true, the range (if existing) is removed.
+    */
+  var remove: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Gets or sets the starting value of the range.
-  	 */
-  var startValue: js.UndefOr[Double] = js.native
+    * Gets or sets the starting value of the range.
+    */
+  var startValue: js.UndefOr[Double] = js.undefined
   /**
-  	 * Gets or sets the thickness of the range outline.
-  	 */
-  var strokeThickness: js.UndefOr[Double] = js.native
+    * Gets or sets the thickness of the range outline.
+    */
+  var strokeThickness: js.UndefOr[Double] = js.undefined
 }
 
 object IgRadialGaugeRange {
   @scala.inline
-  def apply(): IgRadialGaugeRange = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    brush: String = null,
+    endValue: js.UndefOr[Double] = js.undefined,
+    innerEndExtent: js.UndefOr[Double] = js.undefined,
+    innerStartExtent: js.UndefOr[Double] = js.undefined,
+    name: String = null,
+    outerEndExtent: js.UndefOr[Double] = js.undefined,
+    outerStartExtent: js.UndefOr[Double] = js.undefined,
+    outline: String = null,
+    remove: js.UndefOr[Boolean] = js.undefined,
+    startValue: js.UndefOr[Double] = js.undefined,
+    strokeThickness: js.UndefOr[Double] = js.undefined
+  ): IgRadialGaugeRange = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (brush != null) __obj.updateDynamic("brush")(brush.asInstanceOf[js.Any])
+    if (!js.isUndefined(endValue)) __obj.updateDynamic("endValue")(endValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(innerEndExtent)) __obj.updateDynamic("innerEndExtent")(innerEndExtent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(innerStartExtent)) __obj.updateDynamic("innerStartExtent")(innerStartExtent.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(outerEndExtent)) __obj.updateDynamic("outerEndExtent")(outerEndExtent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(outerStartExtent)) __obj.updateDynamic("outerStartExtent")(outerStartExtent.get.asInstanceOf[js.Any])
+    if (outline != null) __obj.updateDynamic("outline")(outline.asInstanceOf[js.Any])
+    if (!js.isUndefined(remove)) __obj.updateDynamic("remove")(remove.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startValue)) __obj.updateDynamic("startValue")(startValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(strokeThickness)) __obj.updateDynamic("strokeThickness")(strokeThickness.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgRadialGaugeRange]
   }
-  @scala.inline
-  implicit class IgRadialGaugeRangeOps[Self <: IgRadialGaugeRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBrush(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brush")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrush: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brush")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInnerEndExtent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerEndExtent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInnerEndExtent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerEndExtent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInnerStartExtent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerStartExtent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInnerStartExtent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerStartExtent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOuterEndExtent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outerEndExtent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOuterEndExtent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outerEndExtent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOuterStartExtent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outerStartExtent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOuterStartExtent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outerStartExtent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutline(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemove(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrokeThickness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeThickness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrokeThickness: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeThickness")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

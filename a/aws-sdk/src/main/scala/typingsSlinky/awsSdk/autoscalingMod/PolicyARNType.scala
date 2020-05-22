@@ -18,41 +18,11 @@ trait PolicyARNType extends js.Object {
 
 object PolicyARNType {
   @scala.inline
-  def apply(): PolicyARNType = {
+  def apply(Alarms: Alarms = null, PolicyARN: ResourceName = null): PolicyARNType = {
     val __obj = js.Dynamic.literal()
+    if (Alarms != null) __obj.updateDynamic("Alarms")(Alarms.asInstanceOf[js.Any])
+    if (PolicyARN != null) __obj.updateDynamic("PolicyARN")(PolicyARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolicyARNType]
   }
-  @scala.inline
-  implicit class PolicyARNTypeOps[Self <: PolicyARNType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlarms(value: Alarms): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Alarms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlarms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Alarms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicyARN(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyARN")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

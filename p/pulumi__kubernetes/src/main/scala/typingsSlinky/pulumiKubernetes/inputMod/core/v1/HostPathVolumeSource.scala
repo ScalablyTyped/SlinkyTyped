@@ -9,51 +9,25 @@ import scala.scalajs.js.annotation._
   * Represents a host path mapped into a pod. Host path volumes do not support ownership
   * management or SELinux relabeling.
   */
-@js.native
 trait HostPathVolumeSource extends js.Object {
   /**
     * Path of the directory on the host. If the path is a symlink, it will follow the link to the
     * real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
     */
-  var path: Input[String] = js.native
+  var path: Input[String]
   /**
     * Type for HostPath Volume Defaults to "" More info:
     * https://kubernetes.io/docs/concepts/storage/volumes#hostpath
     */
-  var `type`: js.UndefOr[Input[String]] = js.native
+  var `type`: js.UndefOr[Input[String]] = js.undefined
 }
 
 object HostPathVolumeSource {
   @scala.inline
-  def apply(path: Input[String]): HostPathVolumeSource = {
+  def apply(path: Input[String], `type`: Input[String] = null): HostPathVolumeSource = {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[HostPathVolumeSource]
   }
-  @scala.inline
-  implicit class HostPathVolumeSourceOps[Self <: HostPathVolumeSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPath(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

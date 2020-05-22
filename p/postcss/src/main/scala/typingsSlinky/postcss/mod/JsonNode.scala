@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JsonNode extends js.Object {
   /**
     * Returns the node's parent node.
     */
-  var parent: js.UndefOr[JsonContainer] = js.native
+  var parent: js.UndefOr[JsonContainer] = js.undefined
   /**
     * Contains information to generate byte-to-byte equal node string as it
     * was in origin input.
     */
-  var raws: js.UndefOr[NodeRaws] = js.native
+  var raws: js.UndefOr[NodeRaws] = js.undefined
   /**
     * Returns the input source of the node. The property is used in source
     * map generation. If you create a node manually (e.g., with
@@ -24,75 +23,28 @@ trait JsonNode extends js.Object {
     * case the new node's source will reference the original, cloned node)
     * or setting the source property manually.
     */
-  var source: js.UndefOr[NodeSource] = js.native
+  var source: js.UndefOr[NodeSource] = js.undefined
   /**
     * Returns a string representing the node's type. Possible values are
     * root, atrule, rule, decl or comment.
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object JsonNode {
   @scala.inline
-  def apply(): JsonNode = {
+  def apply(
+    parent: JsonContainer = null,
+    raws: NodeRaws = null,
+    source: NodeSource = null,
+    `type`: String = null
+  ): JsonNode = {
     val __obj = js.Dynamic.literal()
+    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
+    if (raws != null) __obj.updateDynamic("raws")(raws.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[JsonNode]
   }
-  @scala.inline
-  implicit class JsonNodeOps[Self <: JsonNode] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParent(value: JsonContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRaws(value: NodeRaws): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raws")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRaws: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raws")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: NodeSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

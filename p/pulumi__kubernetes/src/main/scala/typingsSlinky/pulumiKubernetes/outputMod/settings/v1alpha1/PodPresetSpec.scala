@@ -12,28 +12,27 @@ import scala.scalajs.js.annotation._
 /**
   * PodPresetSpec is a description of a pod preset.
   */
-@js.native
 trait PodPresetSpec extends js.Object {
   /**
     * Env defines the collection of EnvVar to inject into containers.
     */
-  val env: js.Array[EnvVar] = js.native
+  val env: js.Array[EnvVar]
   /**
     * EnvFrom defines the collection of EnvFromSource to inject into containers.
     */
-  val envFrom: js.Array[EnvFromSource] = js.native
+  val envFrom: js.Array[EnvFromSource]
   /**
     * Selector is a label query over a set of resources, in this case pods. Required.
     */
-  val selector: LabelSelector = js.native
+  val selector: LabelSelector
   /**
     * VolumeMounts defines the collection of VolumeMount to inject into containers.
     */
-  val volumeMounts: js.Array[VolumeMount] = js.native
+  val volumeMounts: js.Array[VolumeMount]
   /**
     * Volumes defines the collection of Volume to inject into the pod.
     */
-  val volumes: js.Array[Volume] = js.native
+  val volumes: js.Array[Volume]
 }
 
 object PodPresetSpec {
@@ -48,43 +47,5 @@ object PodPresetSpec {
     val __obj = js.Dynamic.literal(env = env.asInstanceOf[js.Any], envFrom = envFrom.asInstanceOf[js.Any], selector = selector.asInstanceOf[js.Any], volumeMounts = volumeMounts.asInstanceOf[js.Any], volumes = volumes.asInstanceOf[js.Any])
     __obj.asInstanceOf[PodPresetSpec]
   }
-  @scala.inline
-  implicit class PodPresetSpecOps[Self <: PodPresetSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnv(value: js.Array[EnvVar]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnvFrom(value: js.Array[EnvFromSource]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("envFrom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelector(value: LabelSelector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVolumeMounts(value: js.Array[VolumeMount]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeMounts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVolumes(value: js.Array[Volume]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumes")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

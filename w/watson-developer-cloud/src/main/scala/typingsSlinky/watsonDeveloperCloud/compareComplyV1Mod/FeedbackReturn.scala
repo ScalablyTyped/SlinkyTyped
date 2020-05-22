@@ -5,93 +5,35 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Information about the document and the submitted feedback. */
-@js.native
 trait FeedbackReturn extends js.Object {
   /** An optional comment from the person submitting the feedback. */
-  var comment: js.UndefOr[String] = js.native
+  var comment: js.UndefOr[String] = js.undefined
   /** Timestamp listing the creation time of the feedback submission. */
-  var created: js.UndefOr[String] = js.native
+  var created: js.UndefOr[String] = js.undefined
   /** Information returned from the `POST /v1/feedback` method. */
-  var feedback_data: js.UndefOr[FeedbackDataOutput] = js.native
+  var feedback_data: js.UndefOr[FeedbackDataOutput] = js.undefined
   /** The unique ID of the feedback object. */
-  var feedback_id: js.UndefOr[String] = js.native
+  var feedback_id: js.UndefOr[String] = js.undefined
   /** An optional string identifying the person submitting feedback. */
-  var user_id: js.UndefOr[String] = js.native
+  var user_id: js.UndefOr[String] = js.undefined
 }
 
 object FeedbackReturn {
   @scala.inline
-  def apply(): FeedbackReturn = {
+  def apply(
+    comment: String = null,
+    created: String = null,
+    feedback_data: FeedbackDataOutput = null,
+    feedback_id: String = null,
+    user_id: String = null
+  ): FeedbackReturn = {
     val __obj = js.Dynamic.literal()
+    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
+    if (created != null) __obj.updateDynamic("created")(created.asInstanceOf[js.Any])
+    if (feedback_data != null) __obj.updateDynamic("feedback_data")(feedback_data.asInstanceOf[js.Any])
+    if (feedback_id != null) __obj.updateDynamic("feedback_id")(feedback_id.asInstanceOf[js.Any])
+    if (user_id != null) __obj.updateDynamic("user_id")(user_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[FeedbackReturn]
   }
-  @scala.inline
-  implicit class FeedbackReturnOps[Self <: FeedbackReturn] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreated(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeedback_data(value: FeedbackDataOutput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feedback_data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeedback_data: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feedback_data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeedback_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feedback_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeedback_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feedback_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user_id")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

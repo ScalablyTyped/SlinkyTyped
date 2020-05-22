@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ObjectPrivileges extends js.Object {
-  var canDelete: Boolean = js.native
-  var canRead: Boolean = js.native
-  var canSetPermissions: Boolean = js.native
-  var canUpdate: Boolean = js.native
+  var canDelete: Boolean
+  var canRead: Boolean
+  var canSetPermissions: Boolean
+  var canUpdate: Boolean
 }
 
 object ObjectPrivileges {
@@ -18,37 +17,5 @@ object ObjectPrivileges {
     val __obj = js.Dynamic.literal(canDelete = canDelete.asInstanceOf[js.Any], canRead = canRead.asInstanceOf[js.Any], canSetPermissions = canSetPermissions.asInstanceOf[js.Any], canUpdate = canUpdate.asInstanceOf[js.Any])
     __obj.asInstanceOf[ObjectPrivileges]
   }
-  @scala.inline
-  implicit class ObjectPrivilegesOps[Self <: ObjectPrivileges] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCanDelete(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canDelete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCanRead(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canRead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCanSetPermissions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canSetPermissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCanUpdate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

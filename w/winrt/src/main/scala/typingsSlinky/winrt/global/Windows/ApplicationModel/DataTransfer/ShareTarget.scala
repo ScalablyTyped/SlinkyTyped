@@ -1,5 +1,7 @@
 package typingsSlinky.winrt.global.Windows.ApplicationModel.DataTransfer
 
+import typingsSlinky.winrt.Windows.Foundation.Collections.IVector
+import typingsSlinky.winrt.Windows.Storage.Streams.RandomAccessStreamReference
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +11,18 @@ import scala.scalajs.js.annotation._
 object ShareTarget extends js.Object {
   @js.native
   class QuickLink ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink
+    extends typingsSlinky.winrt.Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink {
+    /* CompleteClass */
+    override var id: String = js.native
+    /* CompleteClass */
+    override var supportedDataFormats: IVector[String] = js.native
+    /* CompleteClass */
+    override var supportedFileTypes: IVector[String] = js.native
+    /* CompleteClass */
+    override var thumbnail: RandomAccessStreamReference = js.native
+    /* CompleteClass */
+    override var title: String = js.native
+  }
   
   @js.native
   class ShareOperation ()

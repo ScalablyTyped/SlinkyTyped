@@ -6,244 +6,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Motion extends js.Object {
-  var leavedClassName: js.UndefOr[String] = js.native
-  var motionAppear: js.UndefOr[Boolean] = js.native
-  var motionEnter: js.UndefOr[Boolean] = js.native
-  var motionLeave: js.UndefOr[Boolean] = js.native
-  var motionLeaveImmediately: js.UndefOr[Boolean] = js.native
-  var motionName: js.UndefOr[String] = js.native
-  var onAppearActive: js.UndefOr[MotionFunc] = js.native
-  var onAppearEnd: js.UndefOr[MotionFunc] = js.native
-  var onAppearStart: js.UndefOr[MotionFunc] = js.native
-  var onEnterActive: js.UndefOr[MotionFunc] = js.native
-  var onEnterEnd: js.UndefOr[MotionFunc] = js.native
-  var onEnterStart: js.UndefOr[MotionFunc] = js.native
-  var onLeaveActive: js.UndefOr[MotionFunc] = js.native
-  var onLeaveEnd: js.UndefOr[MotionFunc] = js.native
-  var onLeaveStart: js.UndefOr[MotionFunc] = js.native
-  var removeOnLeave: js.UndefOr[Boolean] = js.native
-  var visible: js.UndefOr[Boolean] = js.native
+  var leavedClassName: js.UndefOr[String] = js.undefined
+  var motionAppear: js.UndefOr[Boolean] = js.undefined
+  var motionDeadline: js.UndefOr[Double] = js.undefined
+  var motionEnter: js.UndefOr[Boolean] = js.undefined
+  var motionLeave: js.UndefOr[Boolean] = js.undefined
+  var motionLeaveImmediately: js.UndefOr[Boolean] = js.undefined
+  var motionName: js.UndefOr[String] = js.undefined
+  var onAppearActive: js.UndefOr[MotionFunc] = js.undefined
+  var onAppearEnd: js.UndefOr[MotionFunc] = js.undefined
+  var onAppearStart: js.UndefOr[MotionFunc] = js.undefined
+  var onEnterActive: js.UndefOr[MotionFunc] = js.undefined
+  var onEnterEnd: js.UndefOr[MotionFunc] = js.undefined
+  var onEnterStart: js.UndefOr[MotionFunc] = js.undefined
+  var onLeaveActive: js.UndefOr[MotionFunc] = js.undefined
+  var onLeaveEnd: js.UndefOr[MotionFunc] = js.undefined
+  var onLeaveStart: js.UndefOr[MotionFunc] = js.undefined
+  var removeOnLeave: js.UndefOr[Boolean] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.undefined
 }
 
 object Motion {
   @scala.inline
-  def apply(): Motion = {
+  def apply(
+    leavedClassName: String = null,
+    motionAppear: js.UndefOr[Boolean] = js.undefined,
+    motionDeadline: js.UndefOr[Double] = js.undefined,
+    motionEnter: js.UndefOr[Boolean] = js.undefined,
+    motionLeave: js.UndefOr[Boolean] = js.undefined,
+    motionLeaveImmediately: js.UndefOr[Boolean] = js.undefined,
+    motionName: String = null,
+    onAppearActive: /* element */ HTMLElement => CSSProperties = null,
+    onAppearEnd: /* element */ HTMLElement => CSSProperties = null,
+    onAppearStart: /* element */ HTMLElement => CSSProperties = null,
+    onEnterActive: /* element */ HTMLElement => CSSProperties = null,
+    onEnterEnd: /* element */ HTMLElement => CSSProperties = null,
+    onEnterStart: /* element */ HTMLElement => CSSProperties = null,
+    onLeaveActive: /* element */ HTMLElement => CSSProperties = null,
+    onLeaveEnd: /* element */ HTMLElement => CSSProperties = null,
+    onLeaveStart: /* element */ HTMLElement => CSSProperties = null,
+    removeOnLeave: js.UndefOr[Boolean] = js.undefined,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): Motion = {
     val __obj = js.Dynamic.literal()
+    if (leavedClassName != null) __obj.updateDynamic("leavedClassName")(leavedClassName.asInstanceOf[js.Any])
+    if (!js.isUndefined(motionAppear)) __obj.updateDynamic("motionAppear")(motionAppear.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(motionDeadline)) __obj.updateDynamic("motionDeadline")(motionDeadline.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(motionEnter)) __obj.updateDynamic("motionEnter")(motionEnter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(motionLeave)) __obj.updateDynamic("motionLeave")(motionLeave.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(motionLeaveImmediately)) __obj.updateDynamic("motionLeaveImmediately")(motionLeaveImmediately.get.asInstanceOf[js.Any])
+    if (motionName != null) __obj.updateDynamic("motionName")(motionName.asInstanceOf[js.Any])
+    if (onAppearActive != null) __obj.updateDynamic("onAppearActive")(js.Any.fromFunction1(onAppearActive))
+    if (onAppearEnd != null) __obj.updateDynamic("onAppearEnd")(js.Any.fromFunction1(onAppearEnd))
+    if (onAppearStart != null) __obj.updateDynamic("onAppearStart")(js.Any.fromFunction1(onAppearStart))
+    if (onEnterActive != null) __obj.updateDynamic("onEnterActive")(js.Any.fromFunction1(onEnterActive))
+    if (onEnterEnd != null) __obj.updateDynamic("onEnterEnd")(js.Any.fromFunction1(onEnterEnd))
+    if (onEnterStart != null) __obj.updateDynamic("onEnterStart")(js.Any.fromFunction1(onEnterStart))
+    if (onLeaveActive != null) __obj.updateDynamic("onLeaveActive")(js.Any.fromFunction1(onLeaveActive))
+    if (onLeaveEnd != null) __obj.updateDynamic("onLeaveEnd")(js.Any.fromFunction1(onLeaveEnd))
+    if (onLeaveStart != null) __obj.updateDynamic("onLeaveStart")(js.Any.fromFunction1(onLeaveStart))
+    if (!js.isUndefined(removeOnLeave)) __obj.updateDynamic("removeOnLeave")(removeOnLeave.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Motion]
   }
-  @scala.inline
-  implicit class MotionOps[Self <: Motion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLeavedClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leavedClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeavedClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leavedClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMotionAppear(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("motionAppear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMotionAppear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("motionAppear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMotionEnter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("motionEnter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMotionEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("motionEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMotionLeave(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("motionLeave")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMotionLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("motionLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMotionLeaveImmediately(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("motionLeaveImmediately")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMotionLeaveImmediately: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("motionLeaveImmediately")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMotionName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("motionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMotionName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("motionName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAppearActive(value: /* element */ HTMLElement => CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAppearActive")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAppearActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAppearActive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAppearEnd(value: /* element */ HTMLElement => CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAppearEnd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAppearEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAppearEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAppearStart(value: /* element */ HTMLElement => CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAppearStart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAppearStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAppearStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEnterActive(value: /* element */ HTMLElement => CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnterActive")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEnterActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnterActive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEnterEnd(value: /* element */ HTMLElement => CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnterEnd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEnterEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnterEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEnterStart(value: /* element */ HTMLElement => CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnterStart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEnterStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnterStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLeaveActive(value: /* element */ HTMLElement => CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLeaveActive")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLeaveActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLeaveActive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLeaveEnd(value: /* element */ HTMLElement => CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLeaveEnd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLeaveEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLeaveEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLeaveStart(value: /* element */ HTMLElement => CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLeaveStart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLeaveStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLeaveStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveOnLeave(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeOnLeave")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoveOnLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeOnLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

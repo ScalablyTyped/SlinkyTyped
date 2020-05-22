@@ -4,119 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetUserInfoRes extends js.Object {
   /**
     * 包括敏感数据在内的完整用户信息的加密数据，详细见加密数据解密算法，仅微信小程序生效。
     */
-  var encryptedData: js.UndefOr[String] = js.native
+  var encryptedData: js.UndefOr[String] = js.undefined
   /**
     * 描述信息
     */
-  var errMsg: js.UndefOr[String] = js.native
+  var errMsg: js.UndefOr[String] = js.undefined
   /**
     * 加密算法的初始向量，详细见加密数据解密算法，仅微信小程序生效。
     */
-  var iv: js.UndefOr[String] = js.native
+  var iv: js.UndefOr[String] = js.undefined
   /**
     * 不包括敏感信息的原始数据字符串，用于计算签名。
     */
-  var rawData: js.UndefOr[String] = js.native
+  var rawData: js.UndefOr[String] = js.undefined
   /**
     * 使用 sha1( rawData + sessionkey ) 得到字符串，用于校验用户信息，仅微信小程序生效。
     */
-  var signature: js.UndefOr[String] = js.native
+  var signature: js.UndefOr[String] = js.undefined
   /**
     * 用户信息对象，不包含 openid 等敏感信息
     */
-  var userInfo: js.UndefOr[UserInfo] = js.native
+  var userInfo: js.UndefOr[UserInfo] = js.undefined
 }
 
 object GetUserInfoRes {
   @scala.inline
-  def apply(): GetUserInfoRes = {
+  def apply(
+    encryptedData: String = null,
+    errMsg: String = null,
+    iv: String = null,
+    rawData: String = null,
+    signature: String = null,
+    userInfo: UserInfo = null
+  ): GetUserInfoRes = {
     val __obj = js.Dynamic.literal()
+    if (encryptedData != null) __obj.updateDynamic("encryptedData")(encryptedData.asInstanceOf[js.Any])
+    if (errMsg != null) __obj.updateDynamic("errMsg")(errMsg.asInstanceOf[js.Any])
+    if (iv != null) __obj.updateDynamic("iv")(iv.asInstanceOf[js.Any])
+    if (rawData != null) __obj.updateDynamic("rawData")(rawData.asInstanceOf[js.Any])
+    if (signature != null) __obj.updateDynamic("signature")(signature.asInstanceOf[js.Any])
+    if (userInfo != null) __obj.updateDynamic("userInfo")(userInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetUserInfoRes]
   }
-  @scala.inline
-  implicit class GetUserInfoResOps[Self <: GetUserInfoRes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncryptedData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptedData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptedData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptedData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrMsg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errMsg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrMsg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errMsg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIv(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iv")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iv")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRawData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRawData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSignature(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignature: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserInfo(value: UserInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userInfo")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -9,10 +9,9 @@ import scala.scalajs.js.annotation._
   * but no actions list; you either have the named permission or you don't.
   * @since OOo 1.1.2
   */
-@js.native
 trait RuntimePermission extends js.Object {
   /** name of permission */
-  var Name: String = js.native
+  var Name: String
 }
 
 object RuntimePermission {
@@ -21,19 +20,5 @@ object RuntimePermission {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[RuntimePermission]
   }
-  @scala.inline
-  implicit class RuntimePermissionOps[Self <: RuntimePermission] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

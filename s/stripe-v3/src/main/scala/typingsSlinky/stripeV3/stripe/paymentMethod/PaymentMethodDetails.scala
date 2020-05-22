@@ -21,304 +21,63 @@ import scala.scalajs.js.annotation._
 /**
   * Details about the payment method at the time of the transaction.
   */
-@js.native
 trait PaymentMethodDetails extends js.Object {
-  var ach_credit_transfer: js.UndefOr[AchCreditTransferDetails | Null] = js.native
-  var ach_debit: js.UndefOr[AchDebitDetails | Null] = js.native
-  var alipay: js.UndefOr[js.Any | Null] = js.native
-  var bancontact: js.UndefOr[BanContactDetails | Null] = js.native
-  var card: js.UndefOr[PaymentMethodCard | Null] = js.native
-  var eps: js.UndefOr[EpsDetails | Null] = js.native
-  var giropay: js.UndefOr[GiropayDetails | Null] = js.native
-  var ideal: js.UndefOr[IdealDetails | Null] = js.native
-  var multibanco: js.UndefOr[MultibancoDetails | Null] = js.native
-  var p24: js.UndefOr[P24Details | Null] = js.native
-  var sepa_debit: js.UndefOr[SepaDebitDetails | Null] = js.native
-  var sofort: js.UndefOr[SofortDetails | Null] = js.native
-  var stripe_account: js.UndefOr[js.Any | Null] = js.native
+  var ach_credit_transfer: js.UndefOr[AchCreditTransferDetails | Null] = js.undefined
+  var ach_debit: js.UndefOr[AchDebitDetails | Null] = js.undefined
+  var alipay: js.UndefOr[js.Any | Null] = js.undefined
+  var bancontact: js.UndefOr[BanContactDetails | Null] = js.undefined
+  var card: js.UndefOr[PaymentMethodCard | Null] = js.undefined
+  var eps: js.UndefOr[EpsDetails | Null] = js.undefined
+  var giropay: js.UndefOr[GiropayDetails | Null] = js.undefined
+  var ideal: js.UndefOr[IdealDetails | Null] = js.undefined
+  var multibanco: js.UndefOr[MultibancoDetails | Null] = js.undefined
+  var p24: js.UndefOr[P24Details | Null] = js.undefined
+  var sepa_debit: js.UndefOr[SepaDebitDetails | Null] = js.undefined
+  var sofort: js.UndefOr[SofortDetails | Null] = js.undefined
+  var stripe_account: js.UndefOr[js.Any | Null] = js.undefined
   /**
     * The type of transaction-specific details of the payment method used in the payment
     */
-  var `type`: ach_credit_transfer | ach_debit | alipay | bancontact | card | eps | giropay | ideal | multibanco | p24 | sepa_debit | sofort | stripe_account | wechat = js.native
-  var wechat: js.UndefOr[js.Any | Null] = js.native
+  var `type`: ach_credit_transfer | ach_debit | alipay | bancontact | card | eps | giropay | ideal | multibanco | p24 | sepa_debit | sofort | stripe_account | wechat
+  var wechat: js.UndefOr[js.Any | Null] = js.undefined
 }
 
 object PaymentMethodDetails {
   @scala.inline
   def apply(
-    `type`: ach_credit_transfer | ach_debit | alipay | bancontact | card | eps | giropay | ideal | multibanco | p24 | sepa_debit | sofort | stripe_account | wechat
+    `type`: ach_credit_transfer | ach_debit | alipay | bancontact | card | eps | giropay | ideal | multibanco | p24 | sepa_debit | sofort | stripe_account | wechat,
+    ach_credit_transfer: js.UndefOr[Null | AchCreditTransferDetails] = js.undefined,
+    ach_debit: js.UndefOr[Null | AchDebitDetails] = js.undefined,
+    alipay: js.UndefOr[Null | js.Any] = js.undefined,
+    bancontact: js.UndefOr[Null | BanContactDetails] = js.undefined,
+    card: js.UndefOr[Null | PaymentMethodCard] = js.undefined,
+    eps: js.UndefOr[Null | EpsDetails] = js.undefined,
+    giropay: js.UndefOr[Null | GiropayDetails] = js.undefined,
+    ideal: js.UndefOr[Null | IdealDetails] = js.undefined,
+    multibanco: js.UndefOr[Null | MultibancoDetails] = js.undefined,
+    p24: js.UndefOr[Null | P24Details] = js.undefined,
+    sepa_debit: js.UndefOr[Null | SepaDebitDetails] = js.undefined,
+    sofort: js.UndefOr[Null | SofortDetails] = js.undefined,
+    stripe_account: js.UndefOr[Null | js.Any] = js.undefined,
+    wechat: js.UndefOr[Null | js.Any] = js.undefined
   ): PaymentMethodDetails = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(ach_credit_transfer)) __obj.updateDynamic("ach_credit_transfer")(ach_credit_transfer.asInstanceOf[js.Any])
+    if (!js.isUndefined(ach_debit)) __obj.updateDynamic("ach_debit")(ach_debit.asInstanceOf[js.Any])
+    if (!js.isUndefined(alipay)) __obj.updateDynamic("alipay")(alipay.asInstanceOf[js.Any])
+    if (!js.isUndefined(bancontact)) __obj.updateDynamic("bancontact")(bancontact.asInstanceOf[js.Any])
+    if (!js.isUndefined(card)) __obj.updateDynamic("card")(card.asInstanceOf[js.Any])
+    if (!js.isUndefined(eps)) __obj.updateDynamic("eps")(eps.asInstanceOf[js.Any])
+    if (!js.isUndefined(giropay)) __obj.updateDynamic("giropay")(giropay.asInstanceOf[js.Any])
+    if (!js.isUndefined(ideal)) __obj.updateDynamic("ideal")(ideal.asInstanceOf[js.Any])
+    if (!js.isUndefined(multibanco)) __obj.updateDynamic("multibanco")(multibanco.asInstanceOf[js.Any])
+    if (!js.isUndefined(p24)) __obj.updateDynamic("p24")(p24.asInstanceOf[js.Any])
+    if (!js.isUndefined(sepa_debit)) __obj.updateDynamic("sepa_debit")(sepa_debit.asInstanceOf[js.Any])
+    if (!js.isUndefined(sofort)) __obj.updateDynamic("sofort")(sofort.asInstanceOf[js.Any])
+    if (!js.isUndefined(stripe_account)) __obj.updateDynamic("stripe_account")(stripe_account.asInstanceOf[js.Any])
+    if (!js.isUndefined(wechat)) __obj.updateDynamic("wechat")(wechat.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaymentMethodDetails]
   }
-  @scala.inline
-  implicit class PaymentMethodDetailsOps[Self <: PaymentMethodDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(
-      value: ach_credit_transfer | ach_debit | alipay | bancontact | card | eps | giropay | ideal | multibanco | p24 | sepa_debit | sofort | stripe_account | wechat
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAch_credit_transfer(value: AchCreditTransferDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ach_credit_transfer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAch_credit_transfer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ach_credit_transfer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAch_credit_transferNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ach_credit_transfer")(null)
-        ret
-    }
-    @scala.inline
-    def withAch_debit(value: AchDebitDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ach_debit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAch_debit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ach_debit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAch_debitNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ach_debit")(null)
-        ret
-    }
-    @scala.inline
-    def withAlipay(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alipay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlipay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alipay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlipayNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alipay")(null)
-        ret
-    }
-    @scala.inline
-    def withBancontact(value: BanContactDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bancontact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBancontact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bancontact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBancontactNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bancontact")(null)
-        ret
-    }
-    @scala.inline
-    def withCard(value: PaymentMethodCard): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("card")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("card")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCardNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("card")(null)
-        ret
-    }
-    @scala.inline
-    def withEps(value: EpsDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEpsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eps")(null)
-        ret
-    }
-    @scala.inline
-    def withGiropay(value: GiropayDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("giropay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGiropay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("giropay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGiropayNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("giropay")(null)
-        ret
-    }
-    @scala.inline
-    def withIdeal(value: IdealDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ideal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdeal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ideal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdealNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ideal")(null)
-        ret
-    }
-    @scala.inline
-    def withMultibanco(value: MultibancoDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multibanco")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultibanco: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multibanco")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultibancoNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multibanco")(null)
-        ret
-    }
-    @scala.inline
-    def withP24(value: P24Details): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p24")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutP24: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p24")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withP24Null: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p24")(null)
-        ret
-    }
-    @scala.inline
-    def withSepa_debit(value: SepaDebitDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sepa_debit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSepa_debit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sepa_debit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSepa_debitNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sepa_debit")(null)
-        ret
-    }
-    @scala.inline
-    def withSofort(value: SofortDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sofort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSofort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sofort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSofortNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sofort")(null)
-        ret
-    }
-    @scala.inline
-    def withStripe_account(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripe_account")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStripe_account: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripe_account")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStripe_accountNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripe_account")(null)
-        ret
-    }
-    @scala.inline
-    def withWechat(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wechat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWechat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wechat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWechatNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wechat")(null)
-        ret
-    }
-  }
-  
 }
 

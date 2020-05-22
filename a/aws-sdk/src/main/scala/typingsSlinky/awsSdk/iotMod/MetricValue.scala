@@ -22,53 +22,12 @@ trait MetricValue extends js.Object {
 
 object MetricValue {
   @scala.inline
-  def apply(): MetricValue = {
+  def apply(cidrs: Cidrs = null, count: js.UndefOr[UnsignedLong] = js.undefined, ports: Ports = null): MetricValue = {
     val __obj = js.Dynamic.literal()
+    if (cidrs != null) __obj.updateDynamic("cidrs")(cidrs.asInstanceOf[js.Any])
+    if (!js.isUndefined(count)) __obj.updateDynamic("count")(count.get.asInstanceOf[js.Any])
+    if (ports != null) __obj.updateDynamic("ports")(ports.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetricValue]
   }
-  @scala.inline
-  implicit class MetricValueOps[Self <: MetricValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCidrs(value: Cidrs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cidrs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCidrs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cidrs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCount(value: UnsignedLong): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPorts(value: Ports): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPorts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

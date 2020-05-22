@@ -4,93 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AdClient extends js.Object {
   /** Whether this ad client is opted in to ARC. */
-  var arcOptIn: js.UndefOr[Boolean] = js.native
+  var arcOptIn: js.UndefOr[Boolean] = js.undefined
   /** Unique identifier of this ad client. */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /** Kind of resource this is, in this case adsense#adClient. */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /** This ad client's product code, which corresponds to the PRODUCT_CODE report dimension. */
-  var productCode: js.UndefOr[String] = js.native
+  var productCode: js.UndefOr[String] = js.undefined
   /** Whether this ad client supports being reported on. */
-  var supportsReporting: js.UndefOr[Boolean] = js.native
+  var supportsReporting: js.UndefOr[Boolean] = js.undefined
 }
 
 object AdClient {
   @scala.inline
-  def apply(): AdClient = {
+  def apply(
+    arcOptIn: js.UndefOr[Boolean] = js.undefined,
+    id: String = null,
+    kind: String = null,
+    productCode: String = null,
+    supportsReporting: js.UndefOr[Boolean] = js.undefined
+  ): AdClient = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(arcOptIn)) __obj.updateDynamic("arcOptIn")(arcOptIn.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (productCode != null) __obj.updateDynamic("productCode")(productCode.asInstanceOf[js.Any])
+    if (!js.isUndefined(supportsReporting)) __obj.updateDynamic("supportsReporting")(supportsReporting.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AdClient]
   }
-  @scala.inline
-  implicit class AdClientOps[Self <: AdClient] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArcOptIn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arcOptIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArcOptIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arcOptIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportsReporting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsReporting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportsReporting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsReporting")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

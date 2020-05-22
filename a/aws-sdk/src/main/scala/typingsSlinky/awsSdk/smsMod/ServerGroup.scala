@@ -22,53 +22,12 @@ trait ServerGroup extends js.Object {
 
 object ServerGroup {
   @scala.inline
-  def apply(): ServerGroup = {
+  def apply(name: ServerGroupName = null, serverGroupId: ServerGroupId = null, serverList: ServerList = null): ServerGroup = {
     val __obj = js.Dynamic.literal()
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (serverGroupId != null) __obj.updateDynamic("serverGroupId")(serverGroupId.asInstanceOf[js.Any])
+    if (serverList != null) __obj.updateDynamic("serverList")(serverList.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServerGroup]
   }
-  @scala.inline
-  implicit class ServerGroupOps[Self <: ServerGroup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: ServerGroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerGroupId(value: ServerGroupId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerList(value: ServerList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

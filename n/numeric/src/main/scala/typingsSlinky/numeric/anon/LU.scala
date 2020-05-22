@@ -6,10 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LU extends js.Object {
-  var LU: Matrix = js.native
-  var P: Vector = js.native
+  var LU: Matrix
+  var P: Vector
 }
 
 object LU {
@@ -18,25 +17,5 @@ object LU {
     val __obj = js.Dynamic.literal(LU = LU.asInstanceOf[js.Any], P = P.asInstanceOf[js.Any])
     __obj.asInstanceOf[LU]
   }
-  @scala.inline
-  implicit class LUOps[Self <: LU] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLU(value: Matrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LU")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withP(value: Vector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("P")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -9,16 +9,15 @@ import scala.scalajs.js.annotation._
 /**
   * An arguments object for the `keyBindingChanged` signal.
   */
-@js.native
 trait IKeyBindingChangedArgs extends js.Object {
   /**
     * The key binding which was changed.
     */
-  val binding: IKeyBinding = js.native
+  val binding: IKeyBinding
   /**
     * Whether the key binding was added or removed.
     */
-  val `type`: added | removed = js.native
+  val `type`: added | removed
 }
 
 object IKeyBindingChangedArgs {
@@ -28,25 +27,5 @@ object IKeyBindingChangedArgs {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IKeyBindingChangedArgs]
   }
-  @scala.inline
-  implicit class IKeyBindingChangedArgsOps[Self <: IKeyBindingChangedArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBinding(value: IKeyBinding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: added | removed): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

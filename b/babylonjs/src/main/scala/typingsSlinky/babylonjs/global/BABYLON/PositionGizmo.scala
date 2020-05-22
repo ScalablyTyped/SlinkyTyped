@@ -13,5 +13,10 @@ import scala.scalajs.js.annotation._
 class PositionGizmo ()
   extends typingsSlinky.babylonjs.BABYLON.PositionGizmo {
   def this(gizmoLayer: typingsSlinky.babylonjs.BABYLON.UtilityLayerRenderer) = this()
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 

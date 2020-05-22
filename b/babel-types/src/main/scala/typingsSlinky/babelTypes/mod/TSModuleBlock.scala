@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TSModuleBlock extends Node {
-  var body: js.Array[Statement] = js.native
+  var body: js.Array[Statement]
   @JSName("type")
-  var type_TSModuleBlock: typingsSlinky.babelTypes.babelTypesStrings.TSModuleBlock = js.native
+  var type_TSModuleBlock: typingsSlinky.babelTypes.babelTypesStrings.TSModuleBlock
 }
 
 @JSImport("babel-types", "TSModuleBlock")

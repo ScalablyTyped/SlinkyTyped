@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * A picker row, representing a selectable item in a <Titanium.UI.Picker>.
-		 */
+  * A picker row, representing a selectable item in a <Titanium.UI.Picker>.
+  */
 @JSGlobal("Titanium.UI.PickerRow")
 @js.native
 class PickerRow ()

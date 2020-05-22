@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Event
   extends typingsSlinky.sipml.SIPml.Event {
-  var session: typingsSlinky.sipml.SIPml.Session = js.native
-  def getTransferDestinationFriendlyName(): String = js.native
+  var session: typingsSlinky.sipml.SIPml.Session
+  def getTransferDestinationFriendlyName(): String
 }
 
 object Event {
@@ -27,25 +26,5 @@ object Event {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Event]
   }
-  @scala.inline
-  implicit class EventOps[Self <: Event] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetTransferDestinationFriendlyName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTransferDestinationFriendlyName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSession(value: typingsSlinky.sipml.SIPml.Session): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

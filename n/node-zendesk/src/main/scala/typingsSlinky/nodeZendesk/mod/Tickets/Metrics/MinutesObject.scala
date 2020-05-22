@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MinutesObject extends js.Object {
-  var business: Double = js.native
-  var calendar: Double = js.native
+  var business: Double
+  var calendar: Double
 }
 
 object MinutesObject {
@@ -16,25 +15,5 @@ object MinutesObject {
     val __obj = js.Dynamic.literal(business = business.asInstanceOf[js.Any], calendar = calendar.asInstanceOf[js.Any])
     __obj.asInstanceOf[MinutesObject]
   }
-  @scala.inline
-  implicit class MinutesObjectOps[Self <: MinutesObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBusiness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("business")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCalendar(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendar")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

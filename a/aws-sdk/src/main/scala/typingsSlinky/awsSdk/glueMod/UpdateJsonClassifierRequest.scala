@@ -18,35 +18,10 @@ trait UpdateJsonClassifierRequest extends js.Object {
 
 object UpdateJsonClassifierRequest {
   @scala.inline
-  def apply(Name: NameString): UpdateJsonClassifierRequest = {
+  def apply(Name: NameString, JsonPath: JsonPath = null): UpdateJsonClassifierRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
+    if (JsonPath != null) __obj.updateDynamic("JsonPath")(JsonPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateJsonClassifierRequest]
   }
-  @scala.inline
-  implicit class UpdateJsonClassifierRequestOps[Self <: UpdateJsonClassifierRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: NameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJsonPath(value: JsonPath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JsonPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJsonPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JsonPath")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

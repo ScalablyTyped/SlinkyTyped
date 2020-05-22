@@ -4,114 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HighlightCaseSensitive extends js.Object {
-  var highlightCaseSensitive: js.UndefOr[Boolean] = js.native
-  var highlightSearchText: js.UndefOr[Boolean] = js.native
-  var placeholder: js.UndefOr[String] = js.native
-  var searchVisibleColumnsOnly: js.UndefOr[Boolean] = js.native
-  var text: js.UndefOr[String] = js.native
-  var visible: js.UndefOr[Boolean] = js.native
-  var width: js.UndefOr[Double] = js.native
+  var highlightCaseSensitive: js.UndefOr[Boolean] = js.undefined
+  var highlightSearchText: js.UndefOr[Boolean] = js.undefined
+  var placeholder: js.UndefOr[String] = js.undefined
+  var searchVisibleColumnsOnly: js.UndefOr[Boolean] = js.undefined
+  var text: js.UndefOr[String] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.undefined
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object HighlightCaseSensitive {
   @scala.inline
-  def apply(): HighlightCaseSensitive = {
+  def apply(
+    highlightCaseSensitive: js.UndefOr[Boolean] = js.undefined,
+    highlightSearchText: js.UndefOr[Boolean] = js.undefined,
+    placeholder: String = null,
+    searchVisibleColumnsOnly: js.UndefOr[Boolean] = js.undefined,
+    text: String = null,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): HighlightCaseSensitive = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(highlightCaseSensitive)) __obj.updateDynamic("highlightCaseSensitive")(highlightCaseSensitive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(highlightSearchText)) __obj.updateDynamic("highlightSearchText")(highlightSearchText.get.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (!js.isUndefined(searchVisibleColumnsOnly)) __obj.updateDynamic("searchVisibleColumnsOnly")(searchVisibleColumnsOnly.get.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[HighlightCaseSensitive]
   }
-  @scala.inline
-  implicit class HighlightCaseSensitiveOps[Self <: HighlightCaseSensitive] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHighlightCaseSensitive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightCaseSensitive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHighlightCaseSensitive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightCaseSensitive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHighlightSearchText(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightSearchText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHighlightSearchText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightSearchText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchVisibleColumnsOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchVisibleColumnsOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchVisibleColumnsOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchVisibleColumnsOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

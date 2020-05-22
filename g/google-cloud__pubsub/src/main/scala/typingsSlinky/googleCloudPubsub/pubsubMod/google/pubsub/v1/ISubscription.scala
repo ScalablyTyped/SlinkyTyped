@@ -7,223 +7,55 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a Subscription. */
-@js.native
 trait ISubscription extends js.Object {
   /** Subscription ackDeadlineSeconds */
-  var ackDeadlineSeconds: js.UndefOr[Double | Null] = js.native
+  var ackDeadlineSeconds: js.UndefOr[Double | Null] = js.undefined
   /** Subscription deadLetterPolicy */
-  var deadLetterPolicy: js.UndefOr[IDeadLetterPolicy | Null] = js.native
+  var deadLetterPolicy: js.UndefOr[IDeadLetterPolicy | Null] = js.undefined
   /** Subscription enableMessageOrdering */
-  var enableMessageOrdering: js.UndefOr[Boolean | Null] = js.native
+  var enableMessageOrdering: js.UndefOr[Boolean | Null] = js.undefined
   /** Subscription expirationPolicy */
-  var expirationPolicy: js.UndefOr[IExpirationPolicy | Null] = js.native
+  var expirationPolicy: js.UndefOr[IExpirationPolicy | Null] = js.undefined
   /** Subscription labels */
-  var labels: js.UndefOr[StringDictionary[String] | Null] = js.native
+  var labels: js.UndefOr[StringDictionary[String] | Null] = js.undefined
   /** Subscription messageRetentionDuration */
-  var messageRetentionDuration: js.UndefOr[IDuration | Null] = js.native
+  var messageRetentionDuration: js.UndefOr[IDuration | Null] = js.undefined
   /** Subscription name */
-  var name: js.UndefOr[String | Null] = js.native
+  var name: js.UndefOr[String | Null] = js.undefined
   /** Subscription pushConfig */
-  var pushConfig: js.UndefOr[IPushConfig | Null] = js.native
+  var pushConfig: js.UndefOr[IPushConfig | Null] = js.undefined
   /** Subscription retainAckedMessages */
-  var retainAckedMessages: js.UndefOr[Boolean | Null] = js.native
+  var retainAckedMessages: js.UndefOr[Boolean | Null] = js.undefined
   /** Subscription topic */
-  var topic: js.UndefOr[String | Null] = js.native
+  var topic: js.UndefOr[String | Null] = js.undefined
 }
 
 object ISubscription {
   @scala.inline
-  def apply(): ISubscription = {
+  def apply(
+    ackDeadlineSeconds: js.UndefOr[Null | Double] = js.undefined,
+    deadLetterPolicy: js.UndefOr[Null | IDeadLetterPolicy] = js.undefined,
+    enableMessageOrdering: js.UndefOr[Null | Boolean] = js.undefined,
+    expirationPolicy: js.UndefOr[Null | IExpirationPolicy] = js.undefined,
+    labels: js.UndefOr[Null | StringDictionary[String]] = js.undefined,
+    messageRetentionDuration: js.UndefOr[Null | IDuration] = js.undefined,
+    name: js.UndefOr[Null | String] = js.undefined,
+    pushConfig: js.UndefOr[Null | IPushConfig] = js.undefined,
+    retainAckedMessages: js.UndefOr[Null | Boolean] = js.undefined,
+    topic: js.UndefOr[Null | String] = js.undefined
+  ): ISubscription = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ackDeadlineSeconds)) __obj.updateDynamic("ackDeadlineSeconds")(ackDeadlineSeconds.asInstanceOf[js.Any])
+    if (!js.isUndefined(deadLetterPolicy)) __obj.updateDynamic("deadLetterPolicy")(deadLetterPolicy.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableMessageOrdering)) __obj.updateDynamic("enableMessageOrdering")(enableMessageOrdering.asInstanceOf[js.Any])
+    if (!js.isUndefined(expirationPolicy)) __obj.updateDynamic("expirationPolicy")(expirationPolicy.asInstanceOf[js.Any])
+    if (!js.isUndefined(labels)) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (!js.isUndefined(messageRetentionDuration)) __obj.updateDynamic("messageRetentionDuration")(messageRetentionDuration.asInstanceOf[js.Any])
+    if (!js.isUndefined(name)) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(pushConfig)) __obj.updateDynamic("pushConfig")(pushConfig.asInstanceOf[js.Any])
+    if (!js.isUndefined(retainAckedMessages)) __obj.updateDynamic("retainAckedMessages")(retainAckedMessages.asInstanceOf[js.Any])
+    if (!js.isUndefined(topic)) __obj.updateDynamic("topic")(topic.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISubscription]
   }
-  @scala.inline
-  implicit class ISubscriptionOps[Self <: ISubscription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAckDeadlineSeconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ackDeadlineSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAckDeadlineSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ackDeadlineSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAckDeadlineSecondsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ackDeadlineSeconds")(null)
-        ret
-    }
-    @scala.inline
-    def withDeadLetterPolicy(value: IDeadLetterPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadLetterPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeadLetterPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadLetterPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeadLetterPolicyNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadLetterPolicy")(null)
-        ret
-    }
-    @scala.inline
-    def withEnableMessageOrdering(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableMessageOrdering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableMessageOrdering: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableMessageOrdering")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableMessageOrderingNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableMessageOrdering")(null)
-        ret
-    }
-    @scala.inline
-    def withExpirationPolicy(value: IExpirationPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpirationPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpirationPolicyNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationPolicy")(null)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(null)
-        ret
-    }
-    @scala.inline
-    def withMessageRetentionDuration(value: IDuration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageRetentionDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageRetentionDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageRetentionDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageRetentionDurationNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageRetentionDuration")(null)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(null)
-        ret
-    }
-    @scala.inline
-    def withPushConfig(value: IPushConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pushConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPushConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pushConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPushConfigNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pushConfig")(null)
-        ret
-    }
-    @scala.inline
-    def withRetainAckedMessages(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retainAckedMessages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetainAckedMessages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retainAckedMessages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetainAckedMessagesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retainAckedMessages")(null)
-        ret
-    }
-    @scala.inline
-    def withTopic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopicNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(null)
-        ret
-    }
-  }
-  
 }
 

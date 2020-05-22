@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Typeofbrowser extends js.Object {
   /** Not allowed in: Content scripts, Devtools pages */
-  val _manifest: js.Any = js.native
+  val _manifest: js.Any
   /**
     * Monitor extension activity
     *
@@ -15,13 +14,13 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val activityLog: TypeofactivityLog = js.native
+  val activityLog: TypeofactivityLog
   /**
     * Permissions: `alarms`
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val alarms: Typeofalarms = js.native
+  val alarms: Typeofalarms
   /**
     * Use the `browser.bookmarks` API to create, organize, and otherwise manipulate bookmarks. Also see Override Pages,
     * which you can use to create a custom Bookmark Manager page.
@@ -30,7 +29,7 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val bookmarks: Typeofbookmarks = js.native
+  val bookmarks: Typeofbookmarks
   /**
     * Use browser actions to put icons in the main browser toolbar, to the right of the address bar. In addition to its
     * icon, a browser action can also have a tooltip, a badge, and a popup.
@@ -39,7 +38,7 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val browserAction: TypeofbrowserAction = js.native
+  val browserAction: TypeofbrowserAction
   /**
     * Use the `browser.browserSettings` API to control global settings of the browser.
     *
@@ -47,7 +46,7 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val browserSettings: TypeofbrowserSettings = js.native
+  val browserSettings: TypeofbrowserSettings
   /**
     * Use the `browser.browsingData` API to remove browsing data from a user's local profile.
     *
@@ -55,7 +54,7 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val browsingData: TypeofbrowsingData = js.native
+  val browsingData: TypeofbrowsingData
   /**
     * This API provides the ability detect the captive portal state of the users connection.
     *
@@ -63,7 +62,7 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val captivePortal: TypeofcaptivePortal = js.native
+  val captivePortal: TypeofcaptivePortal
   /**
     * Offers the ability to write to the clipboard. Reading is not supported because the clipboard can already be read
     * through the standard web platform APIs.
@@ -72,7 +71,7 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val clipboard: Typeofclipboard = js.native
+  val clipboard: Typeofclipboard
   /**
     * Use the commands API to add keyboard shortcuts that trigger actions in your extension, for example, an action to
     * open the browser action or send a command to the xtension.
@@ -81,16 +80,16 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val commands: Typeofcommands = js.native
+  val commands: Typeofcommands
   /** Not allowed in: Content scripts, Devtools pages */
-  val contentScripts: TypeofcontentScripts = js.native
+  val contentScripts: TypeofcontentScripts
   /**
     * Use the browser.contextMenus API to add items to the browser's context menu. You can choose what types of objects
     * your context menu additions apply to, such as images, hyperlinks, and pages.
     *
     * Permissions: `contextMenus`
     */
-  val contextMenus: TypeofcontextMenus = js.native
+  val contextMenus: TypeofcontextMenus
   /**
     * Use the `browser.contextualIdentities` API to query and modify contextual identity, also called as containers.
     *
@@ -98,7 +97,7 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val contextualIdentities: TypeofcontextualIdentitie = js.native
+  val contextualIdentities: TypeofcontextualIdentitie
   /**
     * Use the `browser.cookies` API to query and modify cookies, and to be notified when they change.
     *
@@ -106,13 +105,13 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val cookies: Typeofcookies = js.native
+  val cookies: Typeofcookies
   /**
     * Manifest keys: `devtools_page`
     *
     * Allowed in: Devtools pages only
     */
-  val devtools: Typeofdevtools = js.native
+  val devtools: Typeofdevtools
   /**
     * Asynchronous DNS API
     *
@@ -120,34 +119,34 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val dns: Typeofdns = js.native
+  val dns: Typeofdns
   /**
     * Permissions: `downloads`
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val downloads: Typeofdownloads = js.native
+  val downloads: Typeofdownloads
   /**
     * The `browser.events` namespace contains common types used by APIs dispatching events to notify you when something
     * interesting happens.
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val events: js.Any = js.native
+  val events: js.Any
   /** Not allowed in: Content scripts, Devtools pages */
-  val experiments: js.Any = js.native
+  val experiments: js.Any
   /**
     * The `browser.extension` API has utilities that can be used by any extension page. It includes support for exchanging
     * messages between an extension and its content scripts or between extensions, as described in detail in Message
     * Passing.
     */
-  val extension: Typeofextension = js.native
+  val extension: Typeofextension
   /**
     * The `browser.extensionTypes` API contains type declarations for WebExtensions.
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val extensionTypes: js.Any = js.native
+  val extensionTypes: js.Any
   /**
     * Use the `browser.find` API to interact with the browser's `Find` interface.
     *
@@ -155,7 +154,7 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val find: Typeoffind = js.native
+  val find: Typeoffind
   /**
     * Exposes the browser's profiler.
     *
@@ -163,7 +162,7 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val geckoProfiler: TypeofgeckoProfiler = js.native
+  val geckoProfiler: TypeofgeckoProfiler
   /**
     * Use the `browser.history` API to interact with the browser's record of visited pages. You can add, remove, and query
     * for URLs in the browser's history. To override the history page with your own version, see Override Pages.
@@ -172,11 +171,11 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val history: Typeofhistory = js.native
+  val history: Typeofhistory
   /**
     * Use the `browser.i18n` infrastructure to implement internationalization across your whole app or extension.
     */
-  val i18n: Typeofi18n = js.native
+  val i18n: Typeofi18n
   /**
     * Use the browser.identity API to get OAuth2 access tokens.
     *
@@ -184,7 +183,7 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val identity: Typeofidentity = js.native
+  val identity: Typeofidentity
   /**
     * Use the `browser.idle` API to detect when the machine's idle state changes.
     *
@@ -192,20 +191,20 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val idle: Typeofidle = js.native
+  val idle: Typeofidle
   /**
     * The `browser.management` API provides ways to manage the list of extensions that are installed and running.
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val management: Typeofmanagement = js.native
+  val management: Typeofmanagement
   /**
     * Use the browser.menus API to add items to the browser's menus. You can choose what types of objects your context
     * menu additions apply to, such as images, hyperlinks, and pages.
     *
     * Permissions: `menus`, `menus`
     */
-  val menus: Typeofmenus = js.native
+  val menus: Typeofmenus
   /**
     * This API provides the ability to determine the status of and detect changes in the network connection. This API can
     * only be used in privileged extensions.
@@ -214,19 +213,19 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val networkStatus: TypeofnetworkStatus = js.native
+  val networkStatus: TypeofnetworkStatus
   /**
     * Normandy Study API
     *
     * Permissions: `normandyAddonStudy`
     */
-  val normandyAddonStudy: TypeofnormandyAddonStudy = js.native
+  val normandyAddonStudy: TypeofnormandyAddonStudy
   /**
     * Permissions: `notifications`
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val notifications: Typeofnotifications = js.native
+  val notifications: Typeofnotifications
   /**
     * The omnibox API allows you to register a keyword with Firefox's address bar.
     *
@@ -234,7 +233,7 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val omnibox: Typeofomnibox = js.native
+  val omnibox: Typeofomnibox
   /**
     * Use the `browser.pageAction` API to put icons inside the address bar. Page actions represent actions that can be
     * taken on the current page, but that aren't applicable to all pages.
@@ -243,13 +242,13 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val pageAction: TypeofpageAction = js.native
+  val pageAction: TypeofpageAction
   /**
     * Manifest keys: `optional_permissions`
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val permissions: Typeofpermissions = js.native
+  val permissions: Typeofpermissions
   /**
     * PKCS#11 module management API
     *
@@ -257,13 +256,13 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val pkcs11: Typeofpkcs11 = js.native
+  val pkcs11: Typeofpkcs11
   /**
     * Permissions: `privacy`
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val privacy: Typeofprivacy = js.native
+  val privacy: Typeofprivacy
   /**
     * Use the browser.proxy API to register proxy scripts in Firefox. Proxy scripts in Firefox are proxy auto-config files
     * with extra contextual information and support for additional return types.
@@ -272,7 +271,7 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val proxy: Typeofproxy = js.native
+  val proxy: Typeofproxy
   /**
     * Use the `browser.runtime` API to retrieve the background page, return details about the manifest, and listen for and
     * respond to events in the app or extension lifecycle. You can also use this API to convert the relative path of URLs
@@ -280,7 +279,7 @@ trait Typeofbrowser extends js.Object {
     *
     * Allowed in: Proxy scripts
     */
-  val runtime: Typeofruntime = js.native
+  val runtime: Typeofruntime
   /**
     * Use browser.search to interact with search engines.
     *
@@ -288,7 +287,7 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val search: Typeofsearch = js.native
+  val search: Typeofsearch
   /**
     * Use the `browser.sessions` API to query and restore tabs and windows from a browsing session.
     *
@@ -296,7 +295,7 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val sessions: Typeofsessions = js.native
+  val sessions: Typeofsessions
   /**
     * Use sidebar actions to add a sidebar to Firefox.
     *
@@ -304,20 +303,20 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val sidebarAction: TypeofsidebarAction = js.native
+  val sidebarAction: TypeofsidebarAction
   /**
     * Use the `browser.storage` API to store, retrieve, and track changes to user data.
     *
     * Permissions: `storage`
     */
-  val storage: Typeofstorage = js.native
+  val storage: Typeofstorage
   /**
     * Use the `browser.tabs` API to interact with the browser's tab system. You can use this API to create, modify, and
     * rearrange tabs in the browser.
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val tabs: Typeoftabs = js.native
+  val tabs: Typeoftabs
   /**
     * Use the `browser.telemetry` API to send telemetry data to the Mozilla Telemetry service. Restricted to Mozilla
     * privileged webextensions.
@@ -326,13 +325,13 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val telemetry: Typeoftelemetry = js.native
+  val telemetry: Typeoftelemetry
   /**
     * The theme API allows customizing of visual elements of the browser.
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val theme: Typeoftheme = js.native
+  val theme: Typeoftheme
   /**
     * Use the browser.topSites API to access the top sites that are displayed on the new tab page.
     *
@@ -340,13 +339,13 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val topSites: TypeoftopSites = js.native
+  val topSites: TypeoftopSites
   /**
     * Contains types used by other schemas.
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val types: js.Any = js.native
+  val types: js.Any
   /**
     * Use the `browser.urlbar` API to experiment with new features in the URLBar. Restricted to Mozilla privileged
     * WebExtensions.
@@ -355,13 +354,13 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val urlbar: Typeofurlbar = js.native
+  val urlbar: Typeofurlbar
   /**
     * Manifest keys: `user_scripts`, `user_scripts`
     *
     * Not allowed in: Devtools pages
     */
-  val userScripts: TypeofuserScripts = js.native
+  val userScripts: TypeofuserScripts
   /**
     * Use the `browser.webNavigation` API to receive notifications about the status of navigation requests in-flight.
     *
@@ -369,7 +368,7 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val webNavigation: TypeofwebNavigation = js.native
+  val webNavigation: TypeofwebNavigation
   /**
     * Use the `browser.webRequest` API to observe and analyze traffic and to intercept, block, or modify requests
     * in-flight.
@@ -378,14 +377,14 @@ trait Typeofbrowser extends js.Object {
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val webRequest: TypeofwebRequest = js.native
+  val webRequest: TypeofwebRequest
   /**
     * Use the `browser.windows` API to interact with browser windows. You can use this API to create, modify, and
     * rearrange windows in the browser.
     *
     * Not allowed in: Content scripts, Devtools pages
     */
-  val windows: Typeofwindows = js.native
+  val windows: Typeofwindows
 }
 
 object Typeofbrowser {
@@ -448,331 +447,5 @@ object Typeofbrowser {
     val __obj = js.Dynamic.literal(_manifest = _manifest.asInstanceOf[js.Any], activityLog = activityLog.asInstanceOf[js.Any], alarms = alarms.asInstanceOf[js.Any], bookmarks = bookmarks.asInstanceOf[js.Any], browserAction = browserAction.asInstanceOf[js.Any], browserSettings = browserSettings.asInstanceOf[js.Any], browsingData = browsingData.asInstanceOf[js.Any], captivePortal = captivePortal.asInstanceOf[js.Any], clipboard = clipboard.asInstanceOf[js.Any], commands = commands.asInstanceOf[js.Any], contentScripts = contentScripts.asInstanceOf[js.Any], contextMenus = contextMenus.asInstanceOf[js.Any], contextualIdentities = contextualIdentities.asInstanceOf[js.Any], cookies = cookies.asInstanceOf[js.Any], devtools = devtools.asInstanceOf[js.Any], dns = dns.asInstanceOf[js.Any], downloads = downloads.asInstanceOf[js.Any], events = events.asInstanceOf[js.Any], experiments = experiments.asInstanceOf[js.Any], extension = extension.asInstanceOf[js.Any], extensionTypes = extensionTypes.asInstanceOf[js.Any], find = find.asInstanceOf[js.Any], geckoProfiler = geckoProfiler.asInstanceOf[js.Any], history = history.asInstanceOf[js.Any], i18n = i18n.asInstanceOf[js.Any], identity = identity.asInstanceOf[js.Any], idle = idle.asInstanceOf[js.Any], management = management.asInstanceOf[js.Any], menus = menus.asInstanceOf[js.Any], networkStatus = networkStatus.asInstanceOf[js.Any], normandyAddonStudy = normandyAddonStudy.asInstanceOf[js.Any], notifications = notifications.asInstanceOf[js.Any], omnibox = omnibox.asInstanceOf[js.Any], pageAction = pageAction.asInstanceOf[js.Any], permissions = permissions.asInstanceOf[js.Any], pkcs11 = pkcs11.asInstanceOf[js.Any], privacy = privacy.asInstanceOf[js.Any], proxy = proxy.asInstanceOf[js.Any], runtime = runtime.asInstanceOf[js.Any], search = search.asInstanceOf[js.Any], sessions = sessions.asInstanceOf[js.Any], sidebarAction = sidebarAction.asInstanceOf[js.Any], storage = storage.asInstanceOf[js.Any], tabs = tabs.asInstanceOf[js.Any], telemetry = telemetry.asInstanceOf[js.Any], theme = theme.asInstanceOf[js.Any], topSites = topSites.asInstanceOf[js.Any], types = types.asInstanceOf[js.Any], urlbar = urlbar.asInstanceOf[js.Any], userScripts = userScripts.asInstanceOf[js.Any], webNavigation = webNavigation.asInstanceOf[js.Any], webRequest = webRequest.asInstanceOf[js.Any], windows = windows.asInstanceOf[js.Any])
     __obj.asInstanceOf[Typeofbrowser]
   }
-  @scala.inline
-  implicit class TypeofbrowserOps[Self <: Typeofbrowser] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_manifest(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_manifest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withActivityLog(value: TypeofactivityLog): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activityLog")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAlarms(value: Typeofalarms): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alarms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBookmarks(value: Typeofbookmarks): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bookmarks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBrowserAction(value: TypeofbrowserAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBrowserSettings(value: TypeofbrowserSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBrowsingData(value: TypeofbrowsingData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browsingData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaptivePortal(value: TypeofcaptivePortal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("captivePortal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClipboard(value: Typeofclipboard): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommands(value: Typeofcommands): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContentScripts(value: TypeofcontentScripts): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentScripts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContextMenus(value: TypeofcontextMenus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContextualIdentities(value: TypeofcontextualIdentitie): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextualIdentities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCookies(value: Typeofcookies): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDevtools(value: Typeofdevtools): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("devtools")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDns(value: Typeofdns): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDownloads(value: Typeofdownloads): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downloads")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEvents(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExperiments(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experiments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExtension(value: Typeofextension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExtensionTypes(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFind(value: Typeoffind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("find")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGeckoProfiler(value: TypeofgeckoProfiler): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geckoProfiler")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHistory(value: Typeofhistory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("history")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withI18n(value: Typeofi18n): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("i18n")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIdentity(value: Typeofidentity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIdle(value: Typeofidle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withManagement(value: Typeofmanagement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("management")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMenus(value: Typeofmenus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNetworkStatus(value: TypeofnetworkStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNormandyAddonStudy(value: TypeofnormandyAddonStudy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normandyAddonStudy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNotifications(value: Typeofnotifications): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notifications")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOmnibox(value: Typeofomnibox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("omnibox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPageAction(value: TypeofpageAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPermissions(value: Typeofpermissions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPkcs11(value: Typeofpkcs11): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pkcs11")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrivacy(value: Typeofprivacy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privacy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProxy(value: Typeofproxy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRuntime(value: Typeofruntime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runtime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSearch(value: Typeofsearch): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("search")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSessions(value: Typeofsessions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSidebarAction(value: TypeofsidebarAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sidebarAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStorage(value: Typeofstorage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTabs(value: Typeoftabs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTelemetry(value: Typeoftelemetry): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("telemetry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTheme(value: Typeoftheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTopSites(value: TypeoftopSites): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topSites")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypes(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrlbar(value: Typeofurlbar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlbar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserScripts(value: TypeofuserScripts): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userScripts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWebNavigation(value: TypeofwebNavigation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webNavigation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWebRequest(value: TypeofwebRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWindows(value: Typeofwindows): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windows")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

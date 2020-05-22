@@ -20,5 +20,20 @@ class ActiveViewChangingEventArgs protected ()
     oldView: typingsSlinky.devexpressWeb.ASPxSchedulerViewType,
     newView: typingsSlinky.devexpressWeb.ASPxSchedulerViewType
   ) = this()
+  /**
+    * Gets or sets whether the change of active view should be canceled.
+    */
+  /* CompleteClass */
+  override var cancel: Boolean = js.native
+  /**
+    * Gets the new value of the ASPxScheduler.ActiveView property.
+    */
+  /* CompleteClass */
+  override var newView: typingsSlinky.devexpressWeb.ASPxSchedulerViewType = js.native
+  /**
+    * Gets the value of the ASPxScheduler.ActiveView property before modification.
+    */
+  /* CompleteClass */
+  override var oldView: typingsSlinky.devexpressWeb.ASPxSchedulerViewType = js.native
 }
 

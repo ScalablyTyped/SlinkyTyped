@@ -22,41 +22,11 @@ trait SchemaChannelSectionContentDetails extends js.Object {
 
 object SchemaChannelSectionContentDetails {
   @scala.inline
-  def apply(): SchemaChannelSectionContentDetails = {
+  def apply(channels: js.Array[String] = null, playlists: js.Array[String] = null): SchemaChannelSectionContentDetails = {
     val __obj = js.Dynamic.literal()
+    if (channels != null) __obj.updateDynamic("channels")(channels.asInstanceOf[js.Any])
+    if (playlists != null) __obj.updateDynamic("playlists")(playlists.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaChannelSectionContentDetails]
   }
-  @scala.inline
-  implicit class SchemaChannelSectionContentDetailsOps[Self <: SchemaChannelSectionContentDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChannels(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaylists(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playlists")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaylists: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playlists")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

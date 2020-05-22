@@ -8,41 +8,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SecuritySchemeOauth2Application
   extends SecuritySchemeOauth2Base
      with SecuritySchemeOauth2 {
   @JSName("flow")
-  var flow_SecuritySchemeOauth2Application: application = js.native
-  var tokenUrl: String = js.native
+  var flow_SecuritySchemeOauth2Application: application
+  var tokenUrl: String
 }
 
 object SecuritySchemeOauth2Application {
   @scala.inline
-  def apply(flow: application, scopes: ScopesObject, tokenUrl: String, `type`: basic | apiKey | oauth2): SecuritySchemeOauth2Application = {
+  def apply(
+    flow: application,
+    scopes: ScopesObject,
+    tokenUrl: String,
+    `type`: basic | apiKey | oauth2,
+    description: String = null
+  ): SecuritySchemeOauth2Application = {
     val __obj = js.Dynamic.literal(flow = flow.asInstanceOf[js.Any], scopes = scopes.asInstanceOf[js.Any], tokenUrl = tokenUrl.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecuritySchemeOauth2Application]
   }
-  @scala.inline
-  implicit class SecuritySchemeOauth2ApplicationOps[Self <: SecuritySchemeOauth2Application] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFlow(value: application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTokenUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

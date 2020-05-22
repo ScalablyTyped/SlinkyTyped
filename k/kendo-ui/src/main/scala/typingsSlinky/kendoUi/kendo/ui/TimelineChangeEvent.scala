@@ -6,49 +6,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TimelineChangeEvent extends TimelineEvent {
-  var dataItem: js.UndefOr[Model] = js.native
-  var eventContainer: js.UndefOr[JQuery] = js.native
+  var dataItem: js.UndefOr[Model] = js.undefined
+  var eventContainer: js.UndefOr[JQuery] = js.undefined
 }
 
 object TimelineChangeEvent {
   @scala.inline
-  def apply(isDefaultPrevented: () => Boolean, preventDefault: js.Function, sender: Timeline): TimelineChangeEvent = {
+  def apply(
+    isDefaultPrevented: () => Boolean,
+    preventDefault: js.Function,
+    sender: Timeline,
+    dataItem: Model = null,
+    eventContainer: JQuery = null
+  ): TimelineChangeEvent = {
     val __obj = js.Dynamic.literal(isDefaultPrevented = js.Any.fromFunction0(isDefaultPrevented), preventDefault = preventDefault.asInstanceOf[js.Any], sender = sender.asInstanceOf[js.Any])
+    if (dataItem != null) __obj.updateDynamic("dataItem")(dataItem.asInstanceOf[js.Any])
+    if (eventContainer != null) __obj.updateDynamic("eventContainer")(eventContainer.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimelineChangeEvent]
   }
-  @scala.inline
-  implicit class TimelineChangeEventOps[Self <: TimelineChangeEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataItem(value: Model): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventContainer(value: JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventContainer")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

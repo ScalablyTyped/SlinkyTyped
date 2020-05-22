@@ -42,7 +42,7 @@ import scala.scalajs.js.annotation._
   * Use this over a Static Tilemap Layer when you need those features.
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.phaser.Phaser.Types.Physics.Arcade.ArcadeColliderType because Already inherited */ @js.native
+- typingsSlinky.phaser.Phaser.Types.Physics.Arcade._ArcadeColliderType because Already inherited */ @js.native
 trait DynamicTilemapLayer
   extends GameObject
      with Alpha

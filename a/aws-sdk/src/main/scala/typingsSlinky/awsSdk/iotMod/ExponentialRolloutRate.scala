@@ -30,31 +30,5 @@ object ExponentialRolloutRate {
     val __obj = js.Dynamic.literal(baseRatePerMinute = baseRatePerMinute.asInstanceOf[js.Any], incrementFactor = incrementFactor.asInstanceOf[js.Any], rateIncreaseCriteria = rateIncreaseCriteria.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExponentialRolloutRate]
   }
-  @scala.inline
-  implicit class ExponentialRolloutRateOps[Self <: ExponentialRolloutRate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBaseRatePerMinute(value: RolloutRatePerMinute): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseRatePerMinute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIncrementFactor(value: IncrementFactor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("incrementFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRateIncreaseCriteria(value: RateIncreaseCriteria): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rateIncreaseCriteria")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

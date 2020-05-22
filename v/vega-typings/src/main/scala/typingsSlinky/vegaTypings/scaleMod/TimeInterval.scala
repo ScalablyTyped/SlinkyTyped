@@ -1,6 +1,6 @@
 package typingsSlinky.vegaTypings.scaleMod
 
-import typingsSlinky.vegaTypings.axisMod.TickCount
+import typingsSlinky.vegaTypings.axisMod._TickCount
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.vegaTypings.vegaTypingsStrings.month
   - typingsSlinky.vegaTypings.vegaTypingsStrings.year
 */
-trait TimeInterval extends TickCount
+trait TimeInterval extends _TickCount
 
 object TimeInterval {
   @scala.inline

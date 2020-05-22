@@ -18,41 +18,11 @@ trait JobAlbumArt extends js.Object {
 
 object JobAlbumArt {
   @scala.inline
-  def apply(): JobAlbumArt = {
+  def apply(Artwork: Artworks = null, MergePolicy: MergePolicy = null): JobAlbumArt = {
     val __obj = js.Dynamic.literal()
+    if (Artwork != null) __obj.updateDynamic("Artwork")(Artwork.asInstanceOf[js.Any])
+    if (MergePolicy != null) __obj.updateDynamic("MergePolicy")(MergePolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobAlbumArt]
   }
-  @scala.inline
-  implicit class JobAlbumArtOps[Self <: JobAlbumArt] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArtwork(value: Artworks): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Artwork")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArtwork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Artwork")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMergePolicy(value: MergePolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MergePolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMergePolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MergePolicy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

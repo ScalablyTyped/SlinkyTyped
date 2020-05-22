@@ -13,8 +13,8 @@ object geocoder extends js.Object {
   // Geocoder
   //////////////////////////////////////////////////////////////////////
   /**
-  		 * A low-level interface to geocoding, useful for more complex uses and reverse-geocoding.
-  		 */
+    * A low-level interface to geocoding, useful for more complex uses and reverse-geocoding.
+    */
   def apply(id: String): Geocoder_ = js.native
 }
 

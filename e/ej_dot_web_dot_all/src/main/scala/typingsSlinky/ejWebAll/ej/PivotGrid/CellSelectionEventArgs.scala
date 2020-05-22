@@ -4,83 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CellSelectionEventArgs extends js.Object {
   /** returns the JSON records of the selected range of cells.
     */
-  var JSONRecords: js.UndefOr[js.Any] = js.native
+  var JSONRecords: js.UndefOr[js.Any] = js.undefined
   /** Returns the column headers corresponding to the selected value cells.
     */
-  var columnheader: js.UndefOr[js.Any] = js.native
+  var columnheader: js.UndefOr[js.Any] = js.undefined
   /** Returns the information about the measure associated with the selected cell.
     */
-  var measureCount: js.UndefOr[String] = js.native
+  var measureCount: js.UndefOr[String] = js.undefined
   /** Returns the row headers corresponding to the selected value cells.
     */
-  var rowheader: js.UndefOr[js.Any] = js.native
+  var rowheader: js.UndefOr[js.Any] = js.undefined
 }
 
 object CellSelectionEventArgs {
   @scala.inline
-  def apply(): CellSelectionEventArgs = {
+  def apply(
+    JSONRecords: js.Any = null,
+    columnheader: js.Any = null,
+    measureCount: String = null,
+    rowheader: js.Any = null
+  ): CellSelectionEventArgs = {
     val __obj = js.Dynamic.literal()
+    if (JSONRecords != null) __obj.updateDynamic("JSONRecords")(JSONRecords.asInstanceOf[js.Any])
+    if (columnheader != null) __obj.updateDynamic("columnheader")(columnheader.asInstanceOf[js.Any])
+    if (measureCount != null) __obj.updateDynamic("measureCount")(measureCount.asInstanceOf[js.Any])
+    if (rowheader != null) __obj.updateDynamic("rowheader")(rowheader.asInstanceOf[js.Any])
     __obj.asInstanceOf[CellSelectionEventArgs]
   }
-  @scala.inline
-  implicit class CellSelectionEventArgsOps[Self <: CellSelectionEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJSONRecords(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JSONRecords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJSONRecords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JSONRecords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnheader(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnheader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnheader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnheader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeasureCount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measureCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeasureCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measureCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowheader(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowheader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowheader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowheader")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -38,101 +38,24 @@ trait Playlist extends js.Object {
 
 object Playlist {
   @scala.inline
-  def apply(): Playlist = {
+  def apply(
+    Format: PlaylistFormat = null,
+    HlsContentProtection: HlsContentProtection = null,
+    Name: Filename = null,
+    OutputKeys: OutputKeys = null,
+    PlayReadyDrm: PlayReadyDrm = null,
+    Status: JobStatus = null,
+    StatusDetail: Description = null
+  ): Playlist = {
     val __obj = js.Dynamic.literal()
+    if (Format != null) __obj.updateDynamic("Format")(Format.asInstanceOf[js.Any])
+    if (HlsContentProtection != null) __obj.updateDynamic("HlsContentProtection")(HlsContentProtection.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (OutputKeys != null) __obj.updateDynamic("OutputKeys")(OutputKeys.asInstanceOf[js.Any])
+    if (PlayReadyDrm != null) __obj.updateDynamic("PlayReadyDrm")(PlayReadyDrm.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (StatusDetail != null) __obj.updateDynamic("StatusDetail")(StatusDetail.asInstanceOf[js.Any])
     __obj.asInstanceOf[Playlist]
   }
-  @scala.inline
-  implicit class PlaylistOps[Self <: Playlist] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormat(value: PlaylistFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHlsContentProtection(value: HlsContentProtection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsContentProtection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHlsContentProtection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsContentProtection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Filename): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputKeys(value: OutputKeys): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlayReadyDrm(value: PlayReadyDrm): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayReadyDrm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlayReadyDrm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayReadyDrm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: JobStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusDetail(value: Description): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusDetail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusDetail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusDetail")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

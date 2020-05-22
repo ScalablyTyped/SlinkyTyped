@@ -17,29 +17,10 @@ trait SchemaGooglePrivacyDlpV2KindExpression extends js.Object {
 
 object SchemaGooglePrivacyDlpV2KindExpression {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2KindExpression = {
+  def apply(name: String = null): SchemaGooglePrivacyDlpV2KindExpression = {
     val __obj = js.Dynamic.literal()
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2KindExpression]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2KindExpressionOps[Self <: SchemaGooglePrivacyDlpV2KindExpression] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

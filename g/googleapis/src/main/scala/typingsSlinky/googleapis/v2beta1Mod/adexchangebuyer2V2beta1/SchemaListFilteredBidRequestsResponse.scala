@@ -25,41 +25,11 @@ trait SchemaListFilteredBidRequestsResponse extends js.Object {
 
 object SchemaListFilteredBidRequestsResponse {
   @scala.inline
-  def apply(): SchemaListFilteredBidRequestsResponse = {
+  def apply(calloutStatusRows: js.Array[SchemaCalloutStatusRow] = null, nextPageToken: String = null): SchemaListFilteredBidRequestsResponse = {
     val __obj = js.Dynamic.literal()
+    if (calloutStatusRows != null) __obj.updateDynamic("calloutStatusRows")(calloutStatusRows.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListFilteredBidRequestsResponse]
   }
-  @scala.inline
-  implicit class SchemaListFilteredBidRequestsResponseOps[Self <: SchemaListFilteredBidRequestsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCalloutStatusRows(value: js.Array[SchemaCalloutStatusRow]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calloutStatusRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCalloutStatusRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calloutStatusRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

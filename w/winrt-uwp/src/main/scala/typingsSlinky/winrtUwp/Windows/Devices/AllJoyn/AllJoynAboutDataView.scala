@@ -9,40 +9,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Used to view data about another app and the device it is running on. */
-@js.native
 trait AllJoynAboutDataView extends js.Object {
   /** The version number for the implemented AllJoyn platform software. */
-  var ajSoftwareVersion: String = js.native
+  var ajSoftwareVersion: String
   /** A globally unique identifier associated with the app. */
-  var appId: String = js.native
+  var appId: String
   /** The name of the app. */
-  var appName: String = js.native
+  var appName: String
   /** The date of manufacture. */
-  var dateOfManufacture: js.Date = js.native
+  var dateOfManufacture: js.Date
   /** The default language of the app. */
-  var defaultLanguage: Language = js.native
+  var defaultLanguage: Language
   /** An app description provided by the manufacturer. */
-  var description: String = js.native
+  var description: String
   /** The device ID used during advertising. */
-  var deviceId: String = js.native
+  var deviceId: String
   /** Name of the device. */
-  var deviceName: String = js.native
+  var deviceName: String
   /** The current version of the hardware that the app is running on. This field is optional, presenting as an empty string if not set. */
-  var hardwareVersion: String = js.native
+  var hardwareVersion: String
   /** The name of the manufacturer. */
-  var manufacturer: String = js.native
+  var manufacturer: String
   /** The model number of the device running the app. */
-  var modelNumber: String = js.native
+  var modelNumber: String
   /** This is a set of fields, where each other named AllJoynAboutDataView property is also accessible. For example, ModelNumber is Properties ["ModelNumber"]. Additionally, this property can be used to get custom properties. */
-  var properties: IMapView[String, _] = js.native
+  var properties: IMapView[String, _]
   /** The version number of the app. */
-  var softwareVersion: String = js.native
+  var softwareVersion: String
   /** The status returned by the GetDataBySessionPortAsync operation that created the AllJoynAboutDataView object. */
-  var status: Double = js.native
+  var status: Double
   /** A URL to the manufacturer or developer support portal. */
-  var supportUrl: Uri = js.native
+  var supportUrl: Uri
   /** A list of languages supported by the app and will always include the DefaultLanguage . */
-  var supportedLanguages: IVectorView[Language] = js.native
+  var supportedLanguages: IVectorView[Language]
 }
 
 object AllJoynAboutDataView {
@@ -68,109 +67,5 @@ object AllJoynAboutDataView {
     val __obj = js.Dynamic.literal(ajSoftwareVersion = ajSoftwareVersion.asInstanceOf[js.Any], appId = appId.asInstanceOf[js.Any], appName = appName.asInstanceOf[js.Any], dateOfManufacture = dateOfManufacture.asInstanceOf[js.Any], defaultLanguage = defaultLanguage.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], deviceId = deviceId.asInstanceOf[js.Any], deviceName = deviceName.asInstanceOf[js.Any], hardwareVersion = hardwareVersion.asInstanceOf[js.Any], manufacturer = manufacturer.asInstanceOf[js.Any], modelNumber = modelNumber.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], softwareVersion = softwareVersion.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], supportUrl = supportUrl.asInstanceOf[js.Any], supportedLanguages = supportedLanguages.asInstanceOf[js.Any])
     __obj.asInstanceOf[AllJoynAboutDataView]
   }
-  @scala.inline
-  implicit class AllJoynAboutDataViewOps[Self <: AllJoynAboutDataView] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAjSoftwareVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajSoftwareVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDateOfManufacture(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateOfManufacture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultLanguage(value: Language): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLanguage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeviceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeviceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHardwareVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hardwareVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withManufacturer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manufacturer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModelNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProperties(value: IMapView[String, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSoftwareVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("softwareVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportUrl(value: Uri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportedLanguages(value: IVectorView[Language]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedLanguages")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

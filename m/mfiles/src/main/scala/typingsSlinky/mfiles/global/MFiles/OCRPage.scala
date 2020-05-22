@@ -2,13 +2,21 @@ package typingsSlinky.mfiles.global.MFiles
 
 import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.mfiles.IOCRPage
+import typingsSlinky.mfiles.IOCRZones
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.OCRPage")
 @js.native
-class OCRPage () extends IOCRPage
+class OCRPage () extends IOCRPage {
+  /* CompleteClass */
+  override var OCRZones: IOCRZones = js.native
+  /* CompleteClass */
+  override var PageNum: Double = js.native
+  /* CompleteClass */
+  override def Clone(): IOCRPage = js.native
+}
 
 @JSGlobal("MFiles.OCRPage")
 @js.native

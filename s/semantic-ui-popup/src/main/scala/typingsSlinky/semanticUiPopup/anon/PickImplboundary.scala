@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<semantic-ui-popup.SemanticUI.PopupSettings._Impl, 'boundary'> */
-@js.native
 trait PickImplboundary extends js.Object {
-  var boundary: String | JQuery = js.native
+  var boundary: String | JQuery
 }
 
 object PickImplboundary {
@@ -17,19 +16,5 @@ object PickImplboundary {
     val __obj = js.Dynamic.literal(boundary = boundary.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickImplboundary]
   }
-  @scala.inline
-  implicit class PickImplboundaryOps[Self <: PickImplboundary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBoundary(value: String | JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundary")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

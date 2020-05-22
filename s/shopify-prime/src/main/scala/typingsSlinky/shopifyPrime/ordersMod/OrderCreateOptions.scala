@@ -5,62 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OrderCreateOptions extends js.Object {
-  var inventory_behavior: js.UndefOr[InventoryBehavior] = js.native
-  var send_fulfillment_receipt: js.UndefOr[Boolean] = js.native
-  var send_receipt: js.UndefOr[Boolean] = js.native
+  var inventory_behavior: js.UndefOr[InventoryBehavior] = js.undefined
+  var send_fulfillment_receipt: js.UndefOr[Boolean] = js.undefined
+  var send_receipt: js.UndefOr[Boolean] = js.undefined
 }
 
 object OrderCreateOptions {
   @scala.inline
-  def apply(): OrderCreateOptions = {
+  def apply(
+    inventory_behavior: InventoryBehavior = null,
+    send_fulfillment_receipt: js.UndefOr[Boolean] = js.undefined,
+    send_receipt: js.UndefOr[Boolean] = js.undefined
+  ): OrderCreateOptions = {
     val __obj = js.Dynamic.literal()
+    if (inventory_behavior != null) __obj.updateDynamic("inventory_behavior")(inventory_behavior.asInstanceOf[js.Any])
+    if (!js.isUndefined(send_fulfillment_receipt)) __obj.updateDynamic("send_fulfillment_receipt")(send_fulfillment_receipt.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(send_receipt)) __obj.updateDynamic("send_receipt")(send_receipt.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrderCreateOptions]
   }
-  @scala.inline
-  implicit class OrderCreateOptionsOps[Self <: OrderCreateOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInventory_behavior(value: InventoryBehavior): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inventory_behavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInventory_behavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inventory_behavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSend_fulfillment_receipt(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("send_fulfillment_receipt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSend_fulfillment_receipt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("send_fulfillment_receipt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSend_receipt(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("send_receipt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSend_receipt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("send_receipt")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

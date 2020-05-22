@@ -22,25 +22,5 @@ object UserPoolSmsConfiguration {
     val __obj = js.Dynamic.literal(externalId = externalId.asInstanceOf[js.Any], snsCallerArn = snsCallerArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserPoolSmsConfiguration]
   }
-  @scala.inline
-  implicit class UserPoolSmsConfigurationOps[Self <: UserPoolSmsConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExternalId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSnsCallerArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snsCallerArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

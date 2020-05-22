@@ -5,49 +5,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait TargetConfiguration extends TargetConfigType {
+trait TargetConfiguration extends js.Object {
   /**
     * The arch or list of archs.
     */
-  val arch: js.UndefOr[js.Array[ArchType] | ArchType] = js.native
+  val arch: js.UndefOr[js.Array[ArchType] | ArchType] = js.undefined
   /**
     * The target name. e.g. `snap`.
     */
-  val target: String = js.native
+  val target: String
 }
 
 object TargetConfiguration {
   @scala.inline
-  def apply(target: String): TargetConfiguration = {
+  def apply(target: String, arch: js.Array[ArchType] | ArchType = null): TargetConfiguration = {
     val __obj = js.Dynamic.literal(target = target.asInstanceOf[js.Any])
+    if (arch != null) __obj.updateDynamic("arch")(arch.asInstanceOf[js.Any])
     __obj.asInstanceOf[TargetConfiguration]
   }
-  @scala.inline
-  implicit class TargetConfigurationOps[Self <: TargetConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTarget(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArch(value: js.Array[ArchType] | ArchType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arch")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

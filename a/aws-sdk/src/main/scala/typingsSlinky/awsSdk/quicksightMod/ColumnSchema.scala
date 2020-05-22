@@ -22,53 +22,12 @@ trait ColumnSchema extends js.Object {
 
 object ColumnSchema {
   @scala.inline
-  def apply(): ColumnSchema = {
+  def apply(DataType: String = null, GeographicRole: String = null, Name: String = null): ColumnSchema = {
     val __obj = js.Dynamic.literal()
+    if (DataType != null) __obj.updateDynamic("DataType")(DataType.asInstanceOf[js.Any])
+    if (GeographicRole != null) __obj.updateDynamic("GeographicRole")(GeographicRole.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnSchema]
   }
-  @scala.inline
-  implicit class ColumnSchemaOps[Self <: ColumnSchema] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGeographicRole(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GeographicRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeographicRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GeographicRole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

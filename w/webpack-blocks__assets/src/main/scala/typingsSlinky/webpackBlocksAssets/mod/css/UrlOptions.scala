@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UrlOptions extends js.Object {
-  var fallback: js.UndefOr[String] = js.native
-  var limit: js.UndefOr[Double | Boolean | String] = js.native
-  var mimetype: js.UndefOr[String] = js.native
+  var fallback: js.UndefOr[String] = js.undefined
+  var limit: js.UndefOr[Double | Boolean | String] = js.undefined
+  var mimetype: js.UndefOr[String] = js.undefined
 }
 
 object UrlOptions {
   @scala.inline
-  def apply(): UrlOptions = {
+  def apply(fallback: String = null, limit: Double | Boolean | String = null, mimetype: String = null): UrlOptions = {
     val __obj = js.Dynamic.literal()
+    if (fallback != null) __obj.updateDynamic("fallback")(fallback.asInstanceOf[js.Any])
+    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
+    if (mimetype != null) __obj.updateDynamic("mimetype")(mimetype.asInstanceOf[js.Any])
     __obj.asInstanceOf[UrlOptions]
   }
-  @scala.inline
-  implicit class UrlOptionsOps[Self <: UrlOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFallback(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: Double | Boolean | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMimetype(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimetype")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMimetype: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimetype")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

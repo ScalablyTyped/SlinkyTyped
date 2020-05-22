@@ -18,19 +18,5 @@ object DeleteInstanceSnapshotRequest {
     val __obj = js.Dynamic.literal(instanceSnapshotName = instanceSnapshotName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteInstanceSnapshotRequest]
   }
-  @scala.inline
-  implicit class DeleteInstanceSnapshotRequestOps[Self <: DeleteInstanceSnapshotRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceSnapshotName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceSnapshotName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

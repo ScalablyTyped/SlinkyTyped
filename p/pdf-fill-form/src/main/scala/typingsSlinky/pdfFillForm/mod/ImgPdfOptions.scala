@@ -5,49 +5,29 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.pdfFillForm.mod.Options because Already inherited */ @js.native
-trait ImgPdfOptions extends PdfOptions {
-  var endPage: js.UndefOr[Double] = js.native
-  var startPage: js.UndefOr[Double] = js.native
+- typingsSlinky.pdfFillForm.mod.Options because Already inherited */ trait ImgPdfOptions extends PdfOptions {
+  var endPage: js.UndefOr[Double] = js.undefined
+  var startPage: js.UndefOr[Double] = js.undefined
 }
 
 object ImgPdfOptions {
   @scala.inline
-  def apply(): ImgPdfOptions = {
+  def apply(
+    antialias: js.UndefOr[Boolean] = js.undefined,
+    cores: js.UndefOr[Double] = js.undefined,
+    endPage: js.UndefOr[Double] = js.undefined,
+    save: String = null,
+    scale: js.UndefOr[Double] = js.undefined,
+    startPage: js.UndefOr[Double] = js.undefined
+  ): ImgPdfOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(antialias)) __obj.updateDynamic("antialias")(antialias.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cores)) __obj.updateDynamic("cores")(cores.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(endPage)) __obj.updateDynamic("endPage")(endPage.get.asInstanceOf[js.Any])
+    if (save != null) __obj.updateDynamic("save")(save.asInstanceOf[js.Any])
+    if (!js.isUndefined(scale)) __obj.updateDynamic("scale")(scale.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startPage)) __obj.updateDynamic("startPage")(startPage.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImgPdfOptions]
   }
-  @scala.inline
-  implicit class ImgPdfOptionsOps[Self <: ImgPdfOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndPage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartPage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startPage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

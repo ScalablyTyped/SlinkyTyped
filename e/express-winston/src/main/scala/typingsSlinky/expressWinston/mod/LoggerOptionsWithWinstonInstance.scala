@@ -1,36 +1,73 @@
 package typingsSlinky.expressWinston.mod
 
+import typingsSlinky.express.mod.Request_
+import typingsSlinky.express.mod.Response_
+import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
+import typingsSlinky.expressWinston.anon.Error
+import typingsSlinky.logform.mod.Format_
 import typingsSlinky.winston.mod.Logger
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LoggerOptionsWithWinstonInstance
   extends BaseLoggerOptions
      with LoggerOptions {
-  var winstonInstance: Logger = js.native
+  var winstonInstance: Logger
 }
 
 object LoggerOptionsWithWinstonInstance {
   @scala.inline
-  def apply(winstonInstance: Logger): LoggerOptionsWithWinstonInstance = {
+  def apply(
+    winstonInstance: Logger,
+    baseMeta: js.Object = null,
+    bodyBlacklist: js.Array[String] = null,
+    bodyWhitelist: js.Array[String] = null,
+    colorize: js.UndefOr[Boolean] = js.undefined,
+    dynamicMeta: (/* req */ Request_[ParamsDictionary, js.Any, js.Any, Query], /* res */ Response_[js.Any], /* err */ js.Error) => js.Object = null,
+    expressFormat: js.UndefOr[Boolean] = js.undefined,
+    format: Format_ = null,
+    headerBlacklist: js.Array[String] = null,
+    ignoreRoute: (/* req */ Request_[ParamsDictionary, js.Any, js.Any, Query], /* res */ Response_[js.Any]) => Boolean = null,
+    ignoredRoutes: js.Array[String] = null,
+    level: String | DynamicLevelFunction = null,
+    meta: js.UndefOr[Boolean] = js.undefined,
+    metaField: String = null,
+    msg: MessageTemplate = null,
+    requestField: String = null,
+    requestFilter: (/* req */ FilterRequest, /* propName */ String) => js.Any = null,
+    requestWhitelist: js.Array[String] = null,
+    responseField: String = null,
+    responseFilter: (/* res */ FilterResponse, /* propName */ String) => js.Any = null,
+    responseWhitelist: js.Array[String] = null,
+    skip: (/* req */ Request_[ParamsDictionary, js.Any, js.Any, Query], /* res */ Response_[js.Any]) => Boolean = null,
+    statusLevels: Error = null
+  ): LoggerOptionsWithWinstonInstance = {
     val __obj = js.Dynamic.literal(winstonInstance = winstonInstance.asInstanceOf[js.Any])
+    if (baseMeta != null) __obj.updateDynamic("baseMeta")(baseMeta.asInstanceOf[js.Any])
+    if (bodyBlacklist != null) __obj.updateDynamic("bodyBlacklist")(bodyBlacklist.asInstanceOf[js.Any])
+    if (bodyWhitelist != null) __obj.updateDynamic("bodyWhitelist")(bodyWhitelist.asInstanceOf[js.Any])
+    if (!js.isUndefined(colorize)) __obj.updateDynamic("colorize")(colorize.get.asInstanceOf[js.Any])
+    if (dynamicMeta != null) __obj.updateDynamic("dynamicMeta")(js.Any.fromFunction3(dynamicMeta))
+    if (!js.isUndefined(expressFormat)) __obj.updateDynamic("expressFormat")(expressFormat.get.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (headerBlacklist != null) __obj.updateDynamic("headerBlacklist")(headerBlacklist.asInstanceOf[js.Any])
+    if (ignoreRoute != null) __obj.updateDynamic("ignoreRoute")(js.Any.fromFunction2(ignoreRoute))
+    if (ignoredRoutes != null) __obj.updateDynamic("ignoredRoutes")(ignoredRoutes.asInstanceOf[js.Any])
+    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
+    if (!js.isUndefined(meta)) __obj.updateDynamic("meta")(meta.get.asInstanceOf[js.Any])
+    if (metaField != null) __obj.updateDynamic("metaField")(metaField.asInstanceOf[js.Any])
+    if (msg != null) __obj.updateDynamic("msg")(msg.asInstanceOf[js.Any])
+    if (requestField != null) __obj.updateDynamic("requestField")(requestField.asInstanceOf[js.Any])
+    if (requestFilter != null) __obj.updateDynamic("requestFilter")(js.Any.fromFunction2(requestFilter))
+    if (requestWhitelist != null) __obj.updateDynamic("requestWhitelist")(requestWhitelist.asInstanceOf[js.Any])
+    if (responseField != null) __obj.updateDynamic("responseField")(responseField.asInstanceOf[js.Any])
+    if (responseFilter != null) __obj.updateDynamic("responseFilter")(js.Any.fromFunction2(responseFilter))
+    if (responseWhitelist != null) __obj.updateDynamic("responseWhitelist")(responseWhitelist.asInstanceOf[js.Any])
+    if (skip != null) __obj.updateDynamic("skip")(js.Any.fromFunction2(skip))
+    if (statusLevels != null) __obj.updateDynamic("statusLevels")(statusLevels.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoggerOptionsWithWinstonInstance]
   }
-  @scala.inline
-  implicit class LoggerOptionsWithWinstonInstanceOps[Self <: LoggerOptionsWithWinstonInstance] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWinstonInstance(value: Logger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("winstonInstance")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

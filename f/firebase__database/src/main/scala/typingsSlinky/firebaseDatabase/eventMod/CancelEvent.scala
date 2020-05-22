@@ -18,5 +18,20 @@ class CancelEvent protected () extends Event {
   var error: js.Error = js.native
   var eventRegistration: EventRegistration = js.native
   var path: Path = js.native
+  /**
+    * @return {!function()}
+    */
+  /* CompleteClass */
+  override def getEventRunner(): js.Function0[Unit] = js.native
+  /**
+    * @return {!string}
+    */
+  /* CompleteClass */
+  override def getEventType(): String = js.native
+  /**
+    * @return {!Path}
+    */
+  /* CompleteClass */
+  override def getPath(): Path = js.native
 }
 

@@ -9,10 +9,9 @@ import scala.scalajs.js.annotation._
   * @property label {string} - A short textual representation of the copyright note, e.g. "DigitalGlobe 2009"
   * @property alt {string} - A detailed textual representation of the copyright note, e.g. "copyright 2009 DigitalGlobe, Inc."
   */
-@js.native
 trait ICopyright extends js.Object {
-  var alt: String = js.native
-  var label: String = js.native
+  var alt: String
+  var label: String
 }
 
 object ICopyright {
@@ -21,25 +20,5 @@ object ICopyright {
     val __obj = js.Dynamic.literal(alt = alt.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICopyright]
   }
-  @scala.inline
-  implicit class ICopyrightOps[Self <: ICopyright] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

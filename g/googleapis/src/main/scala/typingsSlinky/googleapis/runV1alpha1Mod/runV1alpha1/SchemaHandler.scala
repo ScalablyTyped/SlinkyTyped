@@ -27,53 +27,16 @@ trait SchemaHandler extends js.Object {
 
 object SchemaHandler {
   @scala.inline
-  def apply(): SchemaHandler = {
+  def apply(
+    exec: SchemaExecAction = null,
+    httpGet: SchemaHTTPGetAction = null,
+    tcpSocket: SchemaTCPSocketAction = null
+  ): SchemaHandler = {
     val __obj = js.Dynamic.literal()
+    if (exec != null) __obj.updateDynamic("exec")(exec.asInstanceOf[js.Any])
+    if (httpGet != null) __obj.updateDynamic("httpGet")(httpGet.asInstanceOf[js.Any])
+    if (tcpSocket != null) __obj.updateDynamic("tcpSocket")(tcpSocket.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHandler]
   }
-  @scala.inline
-  implicit class SchemaHandlerOps[Self <: SchemaHandler] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExec(value: SchemaExecAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExec: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exec")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpGet(value: SchemaHTTPGetAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpGet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpGet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpGet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTcpSocket(value: SchemaTCPSocketAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tcpSocket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTcpSocket: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tcpSocket")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

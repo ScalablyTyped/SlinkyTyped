@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GeocodingEvent extends js.Object {
-  var waypoint: Waypoint_ = js.native
-  var waypointIndex: Double = js.native
+  var waypoint: Waypoint_
+  var waypointIndex: Double
 }
 
 object GeocodingEvent {
@@ -16,25 +15,5 @@ object GeocodingEvent {
     val __obj = js.Dynamic.literal(waypoint = waypoint.asInstanceOf[js.Any], waypointIndex = waypointIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeocodingEvent]
   }
-  @scala.inline
-  implicit class GeocodingEventOps[Self <: GeocodingEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWaypoint(value: Waypoint_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waypoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWaypointIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waypointIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

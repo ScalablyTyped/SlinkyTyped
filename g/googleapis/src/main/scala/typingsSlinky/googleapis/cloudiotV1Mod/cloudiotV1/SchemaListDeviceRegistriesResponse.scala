@@ -23,41 +23,11 @@ trait SchemaListDeviceRegistriesResponse extends js.Object {
 
 object SchemaListDeviceRegistriesResponse {
   @scala.inline
-  def apply(): SchemaListDeviceRegistriesResponse = {
+  def apply(deviceRegistries: js.Array[SchemaDeviceRegistry] = null, nextPageToken: String = null): SchemaListDeviceRegistriesResponse = {
     val __obj = js.Dynamic.literal()
+    if (deviceRegistries != null) __obj.updateDynamic("deviceRegistries")(deviceRegistries.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListDeviceRegistriesResponse]
   }
-  @scala.inline
-  implicit class SchemaListDeviceRegistriesResponseOps[Self <: SchemaListDeviceRegistriesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceRegistries(value: js.Array[SchemaDeviceRegistry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceRegistries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceRegistries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceRegistries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.popmotionPose
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.popmotion.typesMod.ColdSubscription
+import typingsSlinky.popmotion.actionTypesMod.ColdSubscription
 import typingsSlinky.popmotionPose.typesMod.DomPopmotionConfig
 import typingsSlinky.popmotionPose.typesMod.DomPopmotionPoser
 import typingsSlinky.poseCore.typesMod.ActiveActions

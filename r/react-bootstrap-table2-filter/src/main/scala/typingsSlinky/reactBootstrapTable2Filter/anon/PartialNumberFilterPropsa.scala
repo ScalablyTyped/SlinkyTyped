@@ -7,231 +7,63 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<react-bootstrap-table2-filter.react-bootstrap-table2-filter.NumberFilterProps<any>> */
-@js.native
 trait PartialNumberFilterPropsa extends js.Object {
-  var className: js.UndefOr[String] = js.native
-  var comparatorClassName: js.UndefOr[String] = js.native
-  var comparatorStyle: js.UndefOr[CSSProperties] = js.native
-  var comparators: js.UndefOr[js.Array[typingsSlinky.reactBootstrapTable2Filter.mod.Comparator]] = js.native
-  var defaultValue: js.UndefOr[js.Any] = js.native
-  var delay: js.UndefOr[Double] = js.native
-  var getFilter: js.UndefOr[js.Function1[/* filter */ TableColumnFilterProps[_, _], Unit]] = js.native
-  var id: js.UndefOr[String] = js.native
-  var numberClassName: js.UndefOr[String] = js.native
-  var numberStyle: js.UndefOr[CSSProperties] = js.native
-  var onFilter: js.UndefOr[js.Function1[/* filterValue */ TableColumnFilterProps[_, _], Unit | js.Array[_]]] = js.native
-  var options: js.UndefOr[js.Array[Double]] = js.native
-  var placeholder: js.UndefOr[String] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
-  var withoutEmptyComparatorOption: js.UndefOr[Boolean] = js.native
-  var withoutEmptyNumberOption: js.UndefOr[Boolean] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var comparatorClassName: js.UndefOr[String] = js.undefined
+  var comparatorStyle: js.UndefOr[CSSProperties] = js.undefined
+  var comparators: js.UndefOr[js.Array[typingsSlinky.reactBootstrapTable2Filter.mod.Comparator]] = js.undefined
+  var defaultValue: js.UndefOr[js.Any] = js.undefined
+  var delay: js.UndefOr[Double] = js.undefined
+  var getFilter: js.UndefOr[js.Function1[/* filter */ TableColumnFilterProps[_, _], Unit]] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var numberClassName: js.UndefOr[String] = js.undefined
+  var numberStyle: js.UndefOr[CSSProperties] = js.undefined
+  var onFilter: js.UndefOr[js.Function1[/* filterValue */ TableColumnFilterProps[_, _], Unit | js.Array[_]]] = js.undefined
+  var options: js.UndefOr[js.Array[Double]] = js.undefined
+  var placeholder: js.UndefOr[String] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
+  var withoutEmptyComparatorOption: js.UndefOr[Boolean] = js.undefined
+  var withoutEmptyNumberOption: js.UndefOr[Boolean] = js.undefined
 }
 
 object PartialNumberFilterPropsa {
   @scala.inline
-  def apply(): PartialNumberFilterPropsa = {
+  def apply(
+    className: String = null,
+    comparatorClassName: String = null,
+    comparatorStyle: CSSProperties = null,
+    comparators: js.Array[typingsSlinky.reactBootstrapTable2Filter.mod.Comparator] = null,
+    defaultValue: js.Any = null,
+    delay: js.UndefOr[Double] = js.undefined,
+    getFilter: /* filter */ TableColumnFilterProps[_, _] => Unit = null,
+    id: String = null,
+    numberClassName: String = null,
+    numberStyle: CSSProperties = null,
+    onFilter: /* filterValue */ TableColumnFilterProps[_, _] => Unit | js.Array[_] = null,
+    options: js.Array[Double] = null,
+    placeholder: String = null,
+    style: CSSProperties = null,
+    withoutEmptyComparatorOption: js.UndefOr[Boolean] = js.undefined,
+    withoutEmptyNumberOption: js.UndefOr[Boolean] = js.undefined
+  ): PartialNumberFilterPropsa = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (comparatorClassName != null) __obj.updateDynamic("comparatorClassName")(comparatorClassName.asInstanceOf[js.Any])
+    if (comparatorStyle != null) __obj.updateDynamic("comparatorStyle")(comparatorStyle.asInstanceOf[js.Any])
+    if (comparators != null) __obj.updateDynamic("comparators")(comparators.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(delay)) __obj.updateDynamic("delay")(delay.get.asInstanceOf[js.Any])
+    if (getFilter != null) __obj.updateDynamic("getFilter")(js.Any.fromFunction1(getFilter))
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (numberClassName != null) __obj.updateDynamic("numberClassName")(numberClassName.asInstanceOf[js.Any])
+    if (numberStyle != null) __obj.updateDynamic("numberStyle")(numberStyle.asInstanceOf[js.Any])
+    if (onFilter != null) __obj.updateDynamic("onFilter")(js.Any.fromFunction1(onFilter))
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(withoutEmptyComparatorOption)) __obj.updateDynamic("withoutEmptyComparatorOption")(withoutEmptyComparatorOption.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(withoutEmptyNumberOption)) __obj.updateDynamic("withoutEmptyNumberOption")(withoutEmptyNumberOption.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialNumberFilterPropsa]
   }
-  @scala.inline
-  implicit class PartialNumberFilterPropsaOps[Self <: PartialNumberFilterPropsa] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComparatorClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparatorClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComparatorClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparatorClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComparatorStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparatorStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComparatorStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparatorStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComparators(value: js.Array[typingsSlinky.reactBootstrapTable2Filter.mod.Comparator]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComparators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetFilter(value: /* filter */ TableColumnFilterProps[_, _] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFilter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFilter(value: /* filterValue */ TableColumnFilterProps[_, _] => Unit | js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFilter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWithoutEmptyComparatorOption(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withoutEmptyComparatorOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWithoutEmptyComparatorOption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withoutEmptyComparatorOption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWithoutEmptyNumberOption(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withoutEmptyNumberOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWithoutEmptyNumberOption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withoutEmptyNumberOption")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -54,149 +54,32 @@ trait DescribeEvaluationsInput extends js.Object {
 
 object DescribeEvaluationsInput {
   @scala.inline
-  def apply(): DescribeEvaluationsInput = {
+  def apply(
+    EQ: ComparatorValue = null,
+    FilterVariable: EvaluationFilterVariable = null,
+    GE: ComparatorValue = null,
+    GT: ComparatorValue = null,
+    LE: ComparatorValue = null,
+    LT: ComparatorValue = null,
+    Limit: js.UndefOr[PageLimit] = js.undefined,
+    NE: ComparatorValue = null,
+    NextToken: StringType = null,
+    Prefix: ComparatorValue = null,
+    SortOrder: SortOrder = null
+  ): DescribeEvaluationsInput = {
     val __obj = js.Dynamic.literal()
+    if (EQ != null) __obj.updateDynamic("EQ")(EQ.asInstanceOf[js.Any])
+    if (FilterVariable != null) __obj.updateDynamic("FilterVariable")(FilterVariable.asInstanceOf[js.Any])
+    if (GE != null) __obj.updateDynamic("GE")(GE.asInstanceOf[js.Any])
+    if (GT != null) __obj.updateDynamic("GT")(GT.asInstanceOf[js.Any])
+    if (LE != null) __obj.updateDynamic("LE")(LE.asInstanceOf[js.Any])
+    if (LT != null) __obj.updateDynamic("LT")(LT.asInstanceOf[js.Any])
+    if (!js.isUndefined(Limit)) __obj.updateDynamic("Limit")(Limit.get.asInstanceOf[js.Any])
+    if (NE != null) __obj.updateDynamic("NE")(NE.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (Prefix != null) __obj.updateDynamic("Prefix")(Prefix.asInstanceOf[js.Any])
+    if (SortOrder != null) __obj.updateDynamic("SortOrder")(SortOrder.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeEvaluationsInput]
   }
-  @scala.inline
-  implicit class DescribeEvaluationsInputOps[Self <: DescribeEvaluationsInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEQ(value: ComparatorValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EQ")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEQ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EQ")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterVariable(value: EvaluationFilterVariable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterVariable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterVariable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterVariable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGE(value: ComparatorValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGE: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GE")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGT(value: ComparatorValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GT")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGT: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GT")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLE(value: ComparatorValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLE: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LE")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLT(value: ComparatorValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LT")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLT: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LT")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: PageLimit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNE(value: ComparatorValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNE: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NE")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: StringType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: ComparatorValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Prefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortOrder(value: SortOrder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SortOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SortOrder")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

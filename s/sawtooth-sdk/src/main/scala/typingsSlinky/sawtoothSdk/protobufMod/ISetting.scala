@@ -5,43 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISetting extends js.Object {
   /** Setting entries */
-  var entries: js.UndefOr[js.Array[IEntry] | Null] = js.native
+  var entries: js.UndefOr[js.Array[IEntry] | Null] = js.undefined
 }
 
 object ISetting {
   @scala.inline
-  def apply(): ISetting = {
+  def apply(entries: js.UndefOr[Null | js.Array[IEntry]] = js.undefined): ISetting = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(entries)) __obj.updateDynamic("entries")(entries.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISetting]
   }
-  @scala.inline
-  implicit class ISettingOps[Self <: ISetting] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntries(value: js.Array[IEntry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntriesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(null)
-        ret
-    }
-  }
-  
 }
 

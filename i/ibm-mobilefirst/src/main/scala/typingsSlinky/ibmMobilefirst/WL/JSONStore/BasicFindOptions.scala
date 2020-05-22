@@ -1,53 +1,32 @@
 package typingsSlinky.ibmMobilefirst.WL.JSONStore
 
+import typingsSlinky.ibmMobilefirst.WL.IResponse
 import typingsSlinky.ibmMobilefirst.WL.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BasicFindOptions extends Options {
-  var filter: js.UndefOr[js.Array[String]] = js.native
-  var sort: js.UndefOr[js.Array[String]] = js.native
+  var filter: js.UndefOr[js.Array[String]] = js.undefined
+  var sort: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object BasicFindOptions {
   @scala.inline
-  def apply(): BasicFindOptions = {
+  def apply(
+    filter: js.Array[String] = null,
+    invocationContext: js.Any = null,
+    onFailure: /* response */ IResponse => Unit = null,
+    onSuccess: /* response */ IResponse => Unit = null,
+    sort: js.Array[String] = null
+  ): BasicFindOptions = {
     val __obj = js.Dynamic.literal()
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+    if (invocationContext != null) __obj.updateDynamic("invocationContext")(invocationContext.asInstanceOf[js.Any])
+    if (onFailure != null) __obj.updateDynamic("onFailure")(js.Any.fromFunction1(onFailure))
+    if (onSuccess != null) __obj.updateDynamic("onSuccess")(js.Any.fromFunction1(onSuccess))
+    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
     __obj.asInstanceOf[BasicFindOptions]
   }
-  @scala.inline
-  implicit class BasicFindOptionsOps[Self <: BasicFindOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilter(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSort(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

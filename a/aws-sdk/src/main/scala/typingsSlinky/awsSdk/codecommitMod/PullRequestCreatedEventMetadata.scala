@@ -26,65 +26,18 @@ trait PullRequestCreatedEventMetadata extends js.Object {
 
 object PullRequestCreatedEventMetadata {
   @scala.inline
-  def apply(): PullRequestCreatedEventMetadata = {
+  def apply(
+    destinationCommitId: CommitId = null,
+    mergeBase: CommitId = null,
+    repositoryName: RepositoryName = null,
+    sourceCommitId: CommitId = null
+  ): PullRequestCreatedEventMetadata = {
     val __obj = js.Dynamic.literal()
+    if (destinationCommitId != null) __obj.updateDynamic("destinationCommitId")(destinationCommitId.asInstanceOf[js.Any])
+    if (mergeBase != null) __obj.updateDynamic("mergeBase")(mergeBase.asInstanceOf[js.Any])
+    if (repositoryName != null) __obj.updateDynamic("repositoryName")(repositoryName.asInstanceOf[js.Any])
+    if (sourceCommitId != null) __obj.updateDynamic("sourceCommitId")(sourceCommitId.asInstanceOf[js.Any])
     __obj.asInstanceOf[PullRequestCreatedEventMetadata]
   }
-  @scala.inline
-  implicit class PullRequestCreatedEventMetadataOps[Self <: PullRequestCreatedEventMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestinationCommitId(value: CommitId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationCommitId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationCommitId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationCommitId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMergeBase(value: CommitId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeBase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMergeBase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeBase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepositoryName(value: RepositoryName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepositoryName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceCommitId(value: CommitId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceCommitId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceCommitId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceCommitId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

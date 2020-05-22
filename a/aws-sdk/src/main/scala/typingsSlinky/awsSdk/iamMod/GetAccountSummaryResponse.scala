@@ -14,29 +14,10 @@ trait GetAccountSummaryResponse extends js.Object {
 
 object GetAccountSummaryResponse {
   @scala.inline
-  def apply(): GetAccountSummaryResponse = {
+  def apply(SummaryMap: summaryMapType = null): GetAccountSummaryResponse = {
     val __obj = js.Dynamic.literal()
+    if (SummaryMap != null) __obj.updateDynamic("SummaryMap")(SummaryMap.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAccountSummaryResponse]
   }
-  @scala.inline
-  implicit class GetAccountSummaryResponseOps[Self <: GetAccountSummaryResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSummaryMap(value: summaryMapType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SummaryMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSummaryMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SummaryMap")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

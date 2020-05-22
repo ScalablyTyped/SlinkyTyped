@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OMathScrPre extends js.Object {
-  val Application: typingsSlinky.activexWord.Word.Application = js.native
-  val Creator: Double = js.native
-  val E: OMath = js.native
-  val Parent: js.Any = js.native
-  val Sub: OMath = js.native
-  val Sup: OMath = js.native
+  val Application: typingsSlinky.activexWord.Word.Application
+  val Creator: Double
+  val E: OMath
+  val Parent: js.Any
+  val Sub: OMath
+  val Sup: OMath
   @JSName("Word.OMathScrPre_typekey")
-  var WordDotOMathScrPre_typekey: OMathScrPre = js.native
-  def ToScrSubSup(): OMathFunction = js.native
+  var WordDotOMathScrPre_typekey: OMathScrPre
+  def ToScrSubSup(): OMathFunction
 }
 
 object OMathScrPre {
@@ -33,61 +32,5 @@ object OMathScrPre {
     __obj.updateDynamic("Word.OMathScrPre_typekey")(WordDotOMathScrPre_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[OMathScrPre]
   }
-  @scala.inline
-  implicit class OMathScrPreOps[Self <: OMathScrPre] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withE(value: OMath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("E")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSub(value: OMath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sub")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSup(value: OMath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToScrSubSup(value: () => OMathFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ToScrSubSup")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withWordDotOMathScrPre_typekey(value: OMathScrPre): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.OMathScrPre_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

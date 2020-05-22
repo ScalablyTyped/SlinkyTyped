@@ -23,41 +23,14 @@ trait SchemaModifyCourseWorkAssigneesRequest extends js.Object {
 
 object SchemaModifyCourseWorkAssigneesRequest {
   @scala.inline
-  def apply(): SchemaModifyCourseWorkAssigneesRequest = {
+  def apply(
+    assigneeMode: String = null,
+    modifyIndividualStudentsOptions: SchemaModifyIndividualStudentsOptions = null
+  ): SchemaModifyCourseWorkAssigneesRequest = {
     val __obj = js.Dynamic.literal()
+    if (assigneeMode != null) __obj.updateDynamic("assigneeMode")(assigneeMode.asInstanceOf[js.Any])
+    if (modifyIndividualStudentsOptions != null) __obj.updateDynamic("modifyIndividualStudentsOptions")(modifyIndividualStudentsOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaModifyCourseWorkAssigneesRequest]
   }
-  @scala.inline
-  implicit class SchemaModifyCourseWorkAssigneesRequestOps[Self <: SchemaModifyCourseWorkAssigneesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssigneeMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assigneeMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssigneeMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assigneeMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifyIndividualStudentsOptions(value: SchemaModifyIndividualStudentsOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifyIndividualStudentsOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifyIndividualStudentsOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifyIndividualStudentsOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

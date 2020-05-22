@@ -6,10 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KeytransformDatastore[Value] extends Datastore[Value] {
-  var child: Datastore[Value] = js.native
-  var transform: Transform = js.native
+  var child: Datastore[Value]
+  var transform: Transform
 }
 
 @JSImport("datastore-core", "KeytransformDatastore")

@@ -1,7 +1,5 @@
 package typingsSlinky.viewportMercatorProject.mod
 
-import typingsSlinky.viewportMercatorProject.anon.BaseDistanceScalesInputsc
-import typingsSlinky.viewportMercatorProject.anon.BaseDistanceScalesInputzo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +12,14 @@ trait DistanceScalesInput extends js.Object
 
 object DistanceScalesInput {
   @scala.inline
-  implicit def apply(value: BaseDistanceScalesInputsc): DistanceScalesInput = value.asInstanceOf[DistanceScalesInput]
+  def BaseDistanceScalesInputzo(latitude: Double, longitude: Double, zoom: Double): DistanceScalesInput = {
+    val __obj = js.Dynamic.literal(latitude = latitude.asInstanceOf[js.Any], longitude = longitude.asInstanceOf[js.Any], zoom = zoom.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DistanceScalesInput]
+  }
   @scala.inline
-  implicit def apply(value: BaseDistanceScalesInputzo): DistanceScalesInput = value.asInstanceOf[DistanceScalesInput]
+  def BaseDistanceScalesInputsc(latitude: Double, longitude: Double, scale: Double): DistanceScalesInput = {
+    val __obj = js.Dynamic.literal(latitude = latitude.asInstanceOf[js.Any], longitude = longitude.asInstanceOf[js.Any], scale = scale.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DistanceScalesInput]
+  }
 }
 

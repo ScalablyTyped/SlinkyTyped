@@ -17,5 +17,6 @@ package object mod {
     /* params */ typingsSlinky.universalRouter.mod.QueryParams, 
     typingsSlinky.universalRouter.mod.Result[R]
   ]
+  type Result[T] = T | (js.Promise[T | scala.Unit]) | scala.Unit
   type Routes[C /* <: typingsSlinky.universalRouter.mod.Context */, R] = js.Array[typingsSlinky.universalRouter.mod.Route[C, R]]
 }

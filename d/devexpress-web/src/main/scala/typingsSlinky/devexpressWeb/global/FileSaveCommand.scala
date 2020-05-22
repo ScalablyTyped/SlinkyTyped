@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("FileSaveCommand")
 @js.native
 class FileSaveCommand ()
-  extends typingsSlinky.devexpressWeb.FileSaveCommand
+  extends typingsSlinky.devexpressWeb.FileSaveCommand {
+  /**
+    * Executes the FileSaveCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

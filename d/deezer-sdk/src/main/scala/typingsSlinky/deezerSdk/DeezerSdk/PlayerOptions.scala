@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   * {@link https://developers.deezer.com/sdk/javascript/player | Initialize a player}\
   * {@link https://developers.deezer.com/musicplugins/player | Widget player}
   */
-@js.native
 trait PlayerOptions extends js.Object {
   /**
     * The general color of the widget. Has to be a hexadecimal value without the #.
@@ -20,7 +19,7 @@ trait PlayerOptions extends js.Object {
     * {@link https://developers.deezer.com/sdk/javascript/player#options | Player options}\
     * {@link https://developers.deezer.com/musicplugins/player | Widget player}
     */
-  val color: js.UndefOr[String] = js.native
+  val color: js.UndefOr[String] = js.undefined
   /**
     * The ID of the div that will contain the widget player
     *
@@ -31,7 +30,7 @@ trait PlayerOptions extends js.Object {
     *
     * See: {@link https://developers.deezer.com/sdk/javascript/player#options | Player options}
     */
-  val container: js.UndefOr[String] = js.native
+  val container: js.UndefOr[String] = js.undefined
   /**
     * The layout format of the widget
     *
@@ -41,7 +40,7 @@ trait PlayerOptions extends js.Object {
     * {@link https://developers.deezer.com/sdk/javascript/player#options | Player options}\
     * {@link https://developers.deezer.com/musicplugins/player | Widget player}
     */
-  val format: js.UndefOr[WidgetFormat] = js.native
+  val format: js.UndefOr[WidgetFormat] = js.undefined
   /**
     * The height of the player in pixels
     *
@@ -49,7 +48,7 @@ trait PlayerOptions extends js.Object {
     *
     * See: {@link https://developers.deezer.com/sdk/javascript/player#options | Player options}
     */
-  val height: js.UndefOr[Double] = js.native
+  val height: js.UndefOr[Double] = js.undefined
   /**
     * The general layout of the widget
     *
@@ -59,13 +58,13 @@ trait PlayerOptions extends js.Object {
     * {@link https://developers.deezer.com/sdk/javascript/player#options | Player options}\
     * {@link https://developers.deezer.com/musicplugins/player | Widget player}
     */
-  val layout: js.UndefOr[WidgetLayout] = js.native
+  val layout: js.UndefOr[WidgetLayout] = js.undefined
   /**
     * The callback function executed after the player has loaded.
     *
     * See: {@link https://developers.deezer.com/sdk/javascript/player#options | Player options}
     */
-  var onload: js.UndefOr[js.Function1[/* state */ PlayerState, Unit]] = js.native
+  var onload: js.UndefOr[js.Function1[/* state */ PlayerState, Unit]] = js.undefined
   /**
     * Whether to display the playlist from the player
     *
@@ -73,7 +72,7 @@ trait PlayerOptions extends js.Object {
     *
     * See: {@link https://developers.deezer.com/sdk/javascript/player#options | Player options}
     */
-  val playlist: js.UndefOr[Boolean] = js.native
+  val playlist: js.UndefOr[Boolean] = js.undefined
   /**
     * The layout size of the widget
     *
@@ -81,7 +80,7 @@ trait PlayerOptions extends js.Object {
     *
     * See: {@link https://developers.deezer.com/sdk/javascript/player#options | Player options}
     */
-  val size: js.UndefOr[WidgetSize] = js.native
+  val size: js.UndefOr[WidgetSize] = js.undefined
   /**
     * The width of the player in pixels
     *
@@ -89,130 +88,33 @@ trait PlayerOptions extends js.Object {
     *
     * See: {@link https://developers.deezer.com/sdk/javascript/player#options | Player options}
     */
-  val width: js.UndefOr[Double] = js.native
+  val width: js.UndefOr[Double] = js.undefined
 }
 
 object PlayerOptions {
   @scala.inline
-  def apply(): PlayerOptions = {
+  def apply(
+    color: String = null,
+    container: String = null,
+    format: WidgetFormat = null,
+    height: js.UndefOr[Double] = js.undefined,
+    layout: WidgetLayout = null,
+    onload: /* state */ PlayerState => Unit = null,
+    playlist: js.UndefOr[Boolean] = js.undefined,
+    size: WidgetSize = null,
+    width: js.UndefOr[Double] = js.undefined
+  ): PlayerOptions = {
     val __obj = js.Dynamic.literal()
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
+    if (onload != null) __obj.updateDynamic("onload")(js.Any.fromFunction1(onload))
+    if (!js.isUndefined(playlist)) __obj.updateDynamic("playlist")(playlist.get.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlayerOptions]
   }
-  @scala.inline
-  implicit class PlayerOptionsOps[Self <: PlayerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: WidgetFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayout(value: WidgetLayout): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnload(value: /* state */ PlayerState => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onload")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaylist(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playlist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaylist: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playlist")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: WidgetSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

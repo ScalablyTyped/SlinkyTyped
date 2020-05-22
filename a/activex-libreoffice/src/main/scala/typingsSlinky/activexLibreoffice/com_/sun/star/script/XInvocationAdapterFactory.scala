@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * This interface is deprecated. Use {@link XInvocationAdapterFactory2} .
   * @deprecated Deprecated
   */
-@js.native
 trait XInvocationAdapterFactory extends XInterface {
   /**
     * Creates an adapter interface of given type for calling the given {@link XInvocation} interface.
@@ -20,7 +19,7 @@ trait XInvocationAdapterFactory extends XInterface {
     * @param aType supported type of adapter
     * @returns adapter interface; this interface can be queried for XInterface and given type
     */
-  def createAdapter(Invocation: XInvocation, aType: `type`): XInterface = js.native
+  def createAdapter(Invocation: XInvocation, aType: `type`): XInterface
 }
 
 object XInvocationAdapterFactory {
@@ -34,19 +33,5 @@ object XInvocationAdapterFactory {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), createAdapter = js.Any.fromFunction2(createAdapter), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XInvocationAdapterFactory]
   }
-  @scala.inline
-  implicit class XInvocationAdapterFactoryOps[Self <: XInvocationAdapterFactory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateAdapter(value: (XInvocation, `type`) => XInterface): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createAdapter")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

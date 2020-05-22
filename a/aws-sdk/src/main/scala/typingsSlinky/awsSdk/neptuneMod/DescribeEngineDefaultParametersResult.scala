@@ -11,29 +11,10 @@ trait DescribeEngineDefaultParametersResult extends js.Object {
 
 object DescribeEngineDefaultParametersResult {
   @scala.inline
-  def apply(): DescribeEngineDefaultParametersResult = {
+  def apply(EngineDefaults: EngineDefaults = null): DescribeEngineDefaultParametersResult = {
     val __obj = js.Dynamic.literal()
+    if (EngineDefaults != null) __obj.updateDynamic("EngineDefaults")(EngineDefaults.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeEngineDefaultParametersResult]
   }
-  @scala.inline
-  implicit class DescribeEngineDefaultParametersResultOps[Self <: DescribeEngineDefaultParametersResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEngineDefaults(value: EngineDefaults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineDefaults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngineDefaults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineDefaults")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

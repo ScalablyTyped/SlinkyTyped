@@ -18,35 +18,10 @@ trait ListBucketInventoryConfigurationsRequest extends js.Object {
 
 object ListBucketInventoryConfigurationsRequest {
   @scala.inline
-  def apply(Bucket: BucketName): ListBucketInventoryConfigurationsRequest = {
+  def apply(Bucket: BucketName, ContinuationToken: Token = null): ListBucketInventoryConfigurationsRequest = {
     val __obj = js.Dynamic.literal(Bucket = Bucket.asInstanceOf[js.Any])
+    if (ContinuationToken != null) __obj.updateDynamic("ContinuationToken")(ContinuationToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListBucketInventoryConfigurationsRequest]
   }
-  @scala.inline
-  implicit class ListBucketInventoryConfigurationsRequestOps[Self <: ListBucketInventoryConfigurationsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucket(value: BucketName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContinuationToken(value: Token): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContinuationToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContinuationToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContinuationToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

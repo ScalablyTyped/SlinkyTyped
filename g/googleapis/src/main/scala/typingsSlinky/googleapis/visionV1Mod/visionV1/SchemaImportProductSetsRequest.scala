@@ -17,29 +17,10 @@ trait SchemaImportProductSetsRequest extends js.Object {
 
 object SchemaImportProductSetsRequest {
   @scala.inline
-  def apply(): SchemaImportProductSetsRequest = {
+  def apply(inputConfig: SchemaImportProductSetsInputConfig = null): SchemaImportProductSetsRequest = {
     val __obj = js.Dynamic.literal()
+    if (inputConfig != null) __obj.updateDynamic("inputConfig")(inputConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaImportProductSetsRequest]
   }
-  @scala.inline
-  implicit class SchemaImportProductSetsRequestOps[Self <: SchemaImportProductSetsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInputConfig(value: SchemaImportProductSetsInputConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

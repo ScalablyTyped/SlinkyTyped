@@ -6,60 +6,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MenuProps
   extends AllHTMLAttributes[js.Any]
      with ClassAttributes[js.Any]
      with RippleComponent {
-  var align: js.UndefOr[String] = js.native
+  var align: js.UndefOr[String] = js.undefined
   @JSName("target")
-  var target_MenuProps: String = js.native
-  var valign: js.UndefOr[String] = js.native
+  var target_MenuProps: String
+  var valign: js.UndefOr[String] = js.undefined
 }
 
 object MenuProps {
   @scala.inline
-  def apply(target: String): MenuProps = {
+  def apply(
+    target: String,
+    AllHTMLAttributes: AllHTMLAttributes[js.Any] = null,
+    ClassAttributes: ClassAttributes[js.Any] = null,
+    RippleComponent: RippleComponent = null,
+    align: String = null,
+    valign: String = null
+  ): MenuProps = {
     val __obj = js.Dynamic.literal(target = target.asInstanceOf[js.Any])
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (RippleComponent != null) js.Dynamic.global.Object.assign(__obj, RippleComponent)
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (valign != null) __obj.updateDynamic("valign")(valign.asInstanceOf[js.Any])
     __obj.asInstanceOf[MenuProps]
   }
-  @scala.inline
-  implicit class MenuPropsOps[Self <: MenuProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTarget(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAlign(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValign(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valign")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

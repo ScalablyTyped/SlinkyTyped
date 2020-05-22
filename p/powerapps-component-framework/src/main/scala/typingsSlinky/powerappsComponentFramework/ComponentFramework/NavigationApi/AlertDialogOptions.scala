@@ -5,57 +5,26 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * Interface for alert dialog options.
-		 */
-@js.native
+  * Interface for alert dialog options.
+  */
 trait AlertDialogOptions extends js.Object {
   /**
-  			 * Height of the alert dialog in pixels.
-  			 */
-  var height: js.UndefOr[Double] = js.native
+    * Height of the alert dialog in pixels.
+    */
+  var height: js.UndefOr[Double] = js.undefined
   /**
-  			 * Width of the alert dialog pixels.
-  			 */
-  var width: js.UndefOr[Double] = js.native
+    * Width of the alert dialog pixels.
+    */
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object AlertDialogOptions {
   @scala.inline
-  def apply(): AlertDialogOptions = {
+  def apply(height: js.UndefOr[Double] = js.undefined, width: js.UndefOr[Double] = js.undefined): AlertDialogOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AlertDialogOptions]
   }
-  @scala.inline
-  implicit class AlertDialogOptionsOps[Self <: AlertDialogOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -11,111 +11,53 @@ import scala.scalajs.js.annotation._
   * ClusterRole is a cluster level, logical grouping of PolicyRules that can be referenced as a
   * unit by a RoleBinding or ClusterRoleBinding.
   */
-@js.native
 trait ClusterRole extends js.Object {
   /**
     * AggregationRule is an optional field that describes how to build the Rules for this
     * ClusterRole. If AggregationRule is set, then the Rules are controller managed and direct
     * changes to Rules will be stomped by the controller.
     */
-  var aggregationRule: js.UndefOr[Input[AggregationRule]] = js.native
+  var aggregationRule: js.UndefOr[Input[AggregationRule]] = js.undefined
   /**
     * APIVersion defines the versioned schema of this representation of an object. Servers should
     * convert recognized schemas to the latest internal value, and may reject unrecognized
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  var apiVersion: js.UndefOr[Input[rbacDotauthorizationDotk8sDotioSlashv1]] = js.native
+  var apiVersion: js.UndefOr[Input[rbacDotauthorizationDotk8sDotioSlashv1]] = js.undefined
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
     * CamelCase. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
     */
-  var kind: js.UndefOr[Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.ClusterRole]] = js.native
+  var kind: js.UndefOr[Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.ClusterRole]] = js.undefined
   /**
     * Standard object's metadata.
     */
-  var metadata: js.UndefOr[Input[ObjectMeta]] = js.native
+  var metadata: js.UndefOr[Input[ObjectMeta]] = js.undefined
   /**
     * Rules holds all the PolicyRules for this ClusterRole
     */
-  var rules: js.UndefOr[Input[js.Array[Input[PolicyRule]]]] = js.native
+  var rules: js.UndefOr[Input[js.Array[Input[PolicyRule]]]] = js.undefined
 }
 
 object ClusterRole {
   @scala.inline
-  def apply(): ClusterRole = {
+  def apply(
+    aggregationRule: Input[AggregationRule] = null,
+    apiVersion: Input[rbacDotauthorizationDotk8sDotioSlashv1] = null,
+    kind: Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.ClusterRole] = null,
+    metadata: Input[ObjectMeta] = null,
+    rules: Input[js.Array[Input[PolicyRule]]] = null
+  ): ClusterRole = {
     val __obj = js.Dynamic.literal()
+    if (aggregationRule != null) __obj.updateDynamic("aggregationRule")(aggregationRule.asInstanceOf[js.Any])
+    if (apiVersion != null) __obj.updateDynamic("apiVersion")(apiVersion.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (rules != null) __obj.updateDynamic("rules")(rules.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterRole]
   }
-  @scala.inline
-  implicit class ClusterRoleOps[Self <: ClusterRole] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAggregationRule(value: Input[AggregationRule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAggregationRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationRule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApiVersion(value: Input[rbacDotauthorizationDotk8sDotioSlashv1]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.ClusterRole]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: Input[ObjectMeta]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRules(value: Input[js.Array[Input[PolicyRule]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

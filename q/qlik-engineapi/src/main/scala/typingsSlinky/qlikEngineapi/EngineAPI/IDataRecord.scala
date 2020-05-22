@@ -7,14 +7,13 @@ import scala.scalajs.js.annotation._
 /**
   * DataRecord...
   */
-@js.native
 trait IDataRecord extends js.Object {
   /**
     * List of values inside the table.
     * The first values (in result/qPreview/0/qValues) correspond to the field names in the table.
     * The following values (from result/qPreview/1/qValues) are the values of the fields in the table.
     */
-  var qValues: js.Array[String] = js.native
+  var qValues: js.Array[String]
 }
 
 object IDataRecord {
@@ -23,19 +22,5 @@ object IDataRecord {
     val __obj = js.Dynamic.literal(qValues = qValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDataRecord]
   }
-  @scala.inline
-  implicit class IDataRecordOps[Self <: IDataRecord] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQValues(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

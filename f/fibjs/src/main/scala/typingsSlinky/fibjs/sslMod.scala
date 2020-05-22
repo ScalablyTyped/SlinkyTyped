@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 /** module Or Internal Object */
 /**
-	* @brief ssl/tls 模块，模块别名：tls
-	* @detail 
-	*/
+  * @brief ssl/tls 模块，模块别名：tls
+  * @detail 
+  */
 @JSImport("ssl", JSImport.Namespace)
 @js.native
 object sslMod extends js.Object {

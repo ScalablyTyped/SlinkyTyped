@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/runtime.html](http://www.html5plus.org/doc/zh_cn/runtime.html)
   */
-@js.native
 trait PlusRuntimeApplicationInf extends js.Object {
   /**
     * 程序的操作行为
@@ -17,95 +16,48 @@ trait PlusRuntimeApplicationInf extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/runtime.html](http://www.html5plus.org/doc/zh_cn/runtime.html)
     */
-  var action: js.UndefOr[String] = js.native
+  var action: js.UndefOr[String] = js.undefined
   /**
     * 调用程序的参数
     * 仅Android平台支持，为JSON格式，用于传递给要调用程序的参数，如extra:{url:"http://www.html5plus.org"}。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/runtime.html](http://www.html5plus.org/doc/zh_cn/runtime.html)
     */
-  var extra: js.UndefOr[js.Any] = js.native
+  var extra: js.UndefOr[js.Any] = js.undefined
   /**
     * 新任务模式标记
     * 可取值：
-    * 		true-使用新任务模式标记（FLAG_ACTIVITY_NEW_TASK）启动应用；
-    * 		false-不使用新任务模式标记（FLAG_ACTIVITY_NEW_TASK）启动应用。
-    * 	默认值为true。
-    * 	注意：由于5+应用配置的launchMode为singleTask，所以另一个5+应用通过plus.runtime.launchApplication启动时如果应用已经在后台运行则不会触发newintent事件，为了避免此问题需要将newTask参数值设置为false。
+    *         true-使用新任务模式标记（FLAG_ACTIVITY_NEW_TASK）启动应用；
+    *         false-不使用新任务模式标记（FLAG_ACTIVITY_NEW_TASK）启动应用。
+    *     默认值为true。
+    *     注意：由于5+应用配置的launchMode为singleTask，所以另一个5+应用通过plus.runtime.launchApplication启动时如果应用已经在后台运行则不会触发newintent事件，为了避免此问题需要将newTask参数值设置为false。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/runtime.html](http://www.html5plus.org/doc/zh_cn/runtime.html)
     */
-  var newTask: js.UndefOr[Boolean] = js.native
+  var newTask: js.UndefOr[Boolean] = js.undefined
   /**
     * 第三方程序包名
     * 仅Android平台支持，表示程序的包名，其它平台忽略此属性值。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/runtime.html](http://www.html5plus.org/doc/zh_cn/runtime.html)
     */
-  var pname: js.UndefOr[String] = js.native
+  var pname: js.UndefOr[String] = js.undefined
 }
 
 object PlusRuntimeApplicationInf {
   @scala.inline
-  def apply(): PlusRuntimeApplicationInf = {
+  def apply(
+    action: String = null,
+    extra: js.Any = null,
+    newTask: js.UndefOr[Boolean] = js.undefined,
+    pname: String = null
+  ): PlusRuntimeApplicationInf = {
     val __obj = js.Dynamic.literal()
+    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
+    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
+    if (!js.isUndefined(newTask)) __obj.updateDynamic("newTask")(newTask.get.asInstanceOf[js.Any])
+    if (pname != null) __obj.updateDynamic("pname")(pname.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusRuntimeApplicationInf]
   }
-  @scala.inline
-  implicit class PlusRuntimeApplicationInfOps[Self <: PlusRuntimeApplicationInf] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtra(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtra: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewTask(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewTask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newTask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pname")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

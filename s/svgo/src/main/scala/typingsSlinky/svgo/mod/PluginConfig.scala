@@ -59,102 +59,249 @@ trait PluginConfig extends js.Object
 
 object PluginConfig {
   @scala.inline
-  implicit def apply(value: PluginAddAttributesToSVGElement): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveNonInheritableGroupAttrs(removeNonInheritableGroupAttrs: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeNonInheritableGroupAttrs = removeNonInheritableGroupAttrs.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginAddClassesToSVGElement): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginCleanupListOfValues(cleanupListOfValues: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(cleanupListOfValues = cleanupListOfValues.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginCleanupAttrs): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveRasterImages(removeRasterImages: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeRasterImages = removeRasterImages.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginCleanupEnableBackground): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveEditorsNSData(removeEditorsNSData: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeEditorsNSData = removeEditorsNSData.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginCleanupIDs): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginAddClassesToSVGElement(addClassesToSVGElement: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(addClassesToSVGElement = addClassesToSVGElement.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginCleanupListOfValues): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginCleanupIDs(cleanupIDs: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(cleanupIDs = cleanupIDs.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginCleanupNumericValues): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginConvertStyleToAttrs(convertStyleToAttrs: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(convertStyleToAttrs = convertStyleToAttrs.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginCollapseGroups): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveAttrs(removeAttrs: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeAttrs = removeAttrs.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginConvertColors): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginAddAttributesToSVGElement(addAttributesToSVGElement: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(addAttributesToSVGElement = addAttributesToSVGElement.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginConvertEllipseToCircle): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveAttributesBySelector(removeAttributesBySelector: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeAttributesBySelector = removeAttributesBySelector.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginConvertPathData): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveXMLProcInst(removeXMLProcInst: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeXMLProcInst = removeXMLProcInst.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginConvertShapeToPath): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveScriptElement(removeScriptElement: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeScriptElement = removeScriptElement.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginConvertStyleToAttrs): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveUnusedNS(removeUnusedNS: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeUnusedNS = removeUnusedNS.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginConvertTransform): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveTitle(removeTitle: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeTitle = removeTitle.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginInlineStyles): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveOffCanvasPaths(removeOffCanvasPaths: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeOffCanvasPaths = removeOffCanvasPaths.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginMergePaths): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveDimensions(removeDimensions: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeDimensions = removeDimensions.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginMinifyStyles): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveStyleElement(removeStyleElement: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeStyleElement = removeStyleElement.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginMoveElemsAttrsToGroup): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveEmptyContainers(removeEmptyContainers: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeEmptyContainers = removeEmptyContainers.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginMoveGroupAttrsToElems): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginInlineStyles(inlineStyles: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(inlineStyles = inlineStyles.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginPrefixIds): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveComments(removeComments: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeComments = removeComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveAttributesBySelector): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveUselessStrokeAndFill(removeUselessStrokeAndFill: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeUselessStrokeAndFill = removeUselessStrokeAndFill.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveAttrs): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginMoveGroupAttrsToElems(moveGroupAttrsToElems: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(moveGroupAttrsToElems = moveGroupAttrsToElems.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveComments): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveXMLNS(removeXMLNS: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeXMLNS = removeXMLNS.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveDesc): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginConvertPathData(convertPathData: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(convertPathData = convertPathData.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveDimensions): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveMetadata(removeMetadata: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeMetadata = removeMetadata.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveDoctype): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveEmptyAttrs(removeEmptyAttrs: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeEmptyAttrs = removeEmptyAttrs.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveEditorsNSData): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginConvertEllipseToCircle(convertEllipseToCircle: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(convertEllipseToCircle = convertEllipseToCircle.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveElementsByAttr): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveUselessDefs(removeUselessDefs: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeUselessDefs = removeUselessDefs.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveEmptyAttrs): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginSortAttrs(sortAttrs: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(sortAttrs = sortAttrs.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveEmptyContainers): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveElementsByAttr(removeElementsByAttr: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeElementsByAttr = removeElementsByAttr.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveEmptyText): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveUnknownsAndDefaults(removeUnknownsAndDefaults: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeUnknownsAndDefaults = removeUnknownsAndDefaults.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveHiddenElems): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginCleanupEnableBackground(cleanupEnableBackground: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(cleanupEnableBackground = cleanupEnableBackground.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveMetadata): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginMoveElemsAttrsToGroup(moveElemsAttrsToGroup: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(moveElemsAttrsToGroup = moveElemsAttrsToGroup.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveNonInheritableGroupAttrs): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveViewBox(removeViewBox: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeViewBox = removeViewBox.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveOffCanvasPaths): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginMergePaths(mergePaths: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(mergePaths = mergePaths.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveRasterImages): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveDoctype(removeDoctype: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeDoctype = removeDoctype.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveScriptElement): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginCleanupNumericValues(cleanupNumericValues: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(cleanupNumericValues = cleanupNumericValues.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveStyleElement): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginConvertColors(convertColors: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(convertColors = convertColors.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveTitle): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginSortDefsChildren(sortDefsChildren: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(sortDefsChildren = sortDefsChildren.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveUnknownsAndDefaults): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginMinifyStyles(minifyStyles: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(minifyStyles = minifyStyles.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveUnusedNS): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginConvertTransform(convertTransform: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(convertTransform = convertTransform.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveUselessDefs): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginCollapseGroups(collapseGroups: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(collapseGroups = collapseGroups.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveUselessStrokeAndFill): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginPrefixIds(prefixIds: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(prefixIds = prefixIds.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveViewBox): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginReusePaths(reusePaths: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(reusePaths = reusePaths.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveXMLNS): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveEmptyText(removeEmptyText: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeEmptyText = removeEmptyText.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginRemoveXMLProcInst): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginCleanupAttrs(cleanupAttrs: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(cleanupAttrs = cleanupAttrs.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginReusePaths): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginConvertShapeToPath(convertShapeToPath: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(convertShapeToPath = convertShapeToPath.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginSortAttrs): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveDesc(removeDesc: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeDesc = removeDesc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
   @scala.inline
-  implicit def apply(value: PluginSortDefsChildren): PluginConfig = value.asInstanceOf[PluginConfig]
+  def PluginRemoveHiddenElems(removeHiddenElems: Boolean | js.Object): PluginConfig = {
+    val __obj = js.Dynamic.literal(removeHiddenElems = removeHiddenElems.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PluginConfig]
+  }
 }
 

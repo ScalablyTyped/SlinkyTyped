@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MetricRule extends js.Object {
   /**
     * Metrics to update when the selected methods are called, and the associated
@@ -15,52 +14,22 @@ trait MetricRule extends js.Object {
     * increased for the metric against which the quota limits are defined.
     * The value must not be negative.
     */
-  var metricCosts: js.UndefOr[Record[String, String]] = js.native
+  var metricCosts: js.UndefOr[Record[String, String]] = js.undefined
   /**
     * Selects the methods to which this rule applies.
     *
     * Refer to selector for syntax details.
     */
-  var selector: js.UndefOr[String] = js.native
+  var selector: js.UndefOr[String] = js.undefined
 }
 
 object MetricRule {
   @scala.inline
-  def apply(): MetricRule = {
+  def apply(metricCosts: Record[String, String] = null, selector: String = null): MetricRule = {
     val __obj = js.Dynamic.literal()
+    if (metricCosts != null) __obj.updateDynamic("metricCosts")(metricCosts.asInstanceOf[js.Any])
+    if (selector != null) __obj.updateDynamic("selector")(selector.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetricRule]
   }
-  @scala.inline
-  implicit class MetricRuleOps[Self <: MetricRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMetricCosts(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricCosts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricCosts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricCosts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelector(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

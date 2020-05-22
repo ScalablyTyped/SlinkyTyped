@@ -14,29 +14,10 @@ trait GetShardIteratorOutput extends js.Object {
 
 object GetShardIteratorOutput {
   @scala.inline
-  def apply(): GetShardIteratorOutput = {
+  def apply(ShardIterator: ShardIterator = null): GetShardIteratorOutput = {
     val __obj = js.Dynamic.literal()
+    if (ShardIterator != null) __obj.updateDynamic("ShardIterator")(ShardIterator.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetShardIteratorOutput]
   }
-  @scala.inline
-  implicit class GetShardIteratorOutputOps[Self <: GetShardIteratorOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withShardIterator(value: ShardIterator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShardIterator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShardIterator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShardIterator")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

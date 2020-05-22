@@ -18,41 +18,11 @@ trait DescribeVolumeStatusResult extends js.Object {
 
 object DescribeVolumeStatusResult {
   @scala.inline
-  def apply(): DescribeVolumeStatusResult = {
+  def apply(NextToken: String = null, VolumeStatuses: VolumeStatusList = null): DescribeVolumeStatusResult = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (VolumeStatuses != null) __obj.updateDynamic("VolumeStatuses")(VolumeStatuses.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeVolumeStatusResult]
   }
-  @scala.inline
-  implicit class DescribeVolumeStatusResultOps[Self <: DescribeVolumeStatusResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolumeStatuses(value: VolumeStatusList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeStatuses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolumeStatuses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeStatuses")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

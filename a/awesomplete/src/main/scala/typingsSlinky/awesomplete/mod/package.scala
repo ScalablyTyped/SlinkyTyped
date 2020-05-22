@@ -10,4 +10,5 @@ package object mod {
     /* right */ scala.Double | js.Array[js.Any], 
     scala.Double
   ]
+  type Suggestion = java.lang.String | typingsSlinky.awesomplete.anon.Label | (js.Tuple2[java.lang.String, java.lang.String])
 }

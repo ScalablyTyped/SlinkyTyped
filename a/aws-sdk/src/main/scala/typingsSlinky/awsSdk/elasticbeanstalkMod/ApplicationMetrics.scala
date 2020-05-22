@@ -26,65 +26,18 @@ trait ApplicationMetrics extends js.Object {
 
 object ApplicationMetrics {
   @scala.inline
-  def apply(): ApplicationMetrics = {
+  def apply(
+    Duration: js.UndefOr[NullableInteger] = js.undefined,
+    Latency: Latency = null,
+    RequestCount: js.UndefOr[RequestCount] = js.undefined,
+    StatusCodes: StatusCodes = null
+  ): ApplicationMetrics = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Duration)) __obj.updateDynamic("Duration")(Duration.get.asInstanceOf[js.Any])
+    if (Latency != null) __obj.updateDynamic("Latency")(Latency.asInstanceOf[js.Any])
+    if (!js.isUndefined(RequestCount)) __obj.updateDynamic("RequestCount")(RequestCount.get.asInstanceOf[js.Any])
+    if (StatusCodes != null) __obj.updateDynamic("StatusCodes")(StatusCodes.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplicationMetrics]
   }
-  @scala.inline
-  implicit class ApplicationMetricsOps[Self <: ApplicationMetrics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDuration(value: NullableInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLatency(value: Latency): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Latency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Latency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestCount(value: RequestCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusCodes(value: StatusCodes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusCodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusCodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusCodes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

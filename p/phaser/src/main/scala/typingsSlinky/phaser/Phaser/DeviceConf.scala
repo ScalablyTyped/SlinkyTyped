@@ -11,40 +11,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeviceConf extends js.Object {
   /**
     * The Audio Device functions.
     */
-  var audio: Audio = js.native
+  var audio: Audio
   /**
     * The Browser Device functions.
     */
-  var browser: Browser = js.native
+  var browser: Browser
   /**
     * The Canvas Device functions.
     */
-  var canvasFeatures: CanvasFeatures = js.native
+  var canvasFeatures: CanvasFeatures
   /**
     * The Features Device functions.
     */
-  var features: Features = js.native
+  var features: Features
   /**
     * The Fullscreen Device functions.
     */
-  var fullscreen: Fullscreen = js.native
+  var fullscreen: Fullscreen
   /**
     * The Input Device functions.
     */
-  var input: typingsSlinky.phaser.Phaser.Device.Input = js.native
+  var input: typingsSlinky.phaser.Phaser.Device.Input
   /**
     * The OS Device functions.
     */
-  var os: OS = js.native
+  var os: OS
   /**
     * The Video Device functions.
     */
-  var video: Video = js.native
+  var video: Video
 }
 
 object DeviceConf {
@@ -62,61 +61,5 @@ object DeviceConf {
     val __obj = js.Dynamic.literal(audio = audio.asInstanceOf[js.Any], browser = browser.asInstanceOf[js.Any], canvasFeatures = canvasFeatures.asInstanceOf[js.Any], features = features.asInstanceOf[js.Any], fullscreen = fullscreen.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], os = os.asInstanceOf[js.Any], video = video.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeviceConf]
   }
-  @scala.inline
-  implicit class DeviceConfOps[Self <: DeviceConf] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudio(value: Audio): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBrowser(value: Browser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCanvasFeatures(value: CanvasFeatures): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canvasFeatures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeatures(value: Features): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFullscreen(value: Fullscreen): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullscreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInput(value: typingsSlinky.phaser.Phaser.Device.Input): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOs(value: OS): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("os")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVideo(value: Video): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

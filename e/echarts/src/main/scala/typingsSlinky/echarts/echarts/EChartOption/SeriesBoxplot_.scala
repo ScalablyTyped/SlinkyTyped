@@ -28,7 +28,6 @@ import scala.scalajs.js.annotation._
   *
   * @see https://echarts.apache.org/en/option.html#series-boxplot
   */
-@js.native
 trait SeriesBoxplot_ extends js.Object {
   /**
     * Delay before updating the first animation, which supports callback
@@ -45,7 +44,7 @@ trait SeriesBoxplot_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-boxplot.animationDelay
     */
-  var animationDelay: js.UndefOr[js.Function | Double] = js.native
+  var animationDelay: js.UndefOr[js.Function | Double] = js.undefined
   /**
     * Duration of the first animation, which supports callback function
     * for different data to have different animation effect:
@@ -57,7 +56,7 @@ trait SeriesBoxplot_ extends js.Object {
     * 800
     * @see https://echarts.apache.org/en/option.html#series-boxplot.animationDuration
     */
-  var animationDuration: js.UndefOr[js.Function | Double] = js.native
+  var animationDuration: js.UndefOr[js.Function | Double] = js.undefined
   /**
     * Easing method used for the first animation.
     * Varied easing effects can be found at
@@ -69,7 +68,7 @@ trait SeriesBoxplot_ extends js.Object {
     * "elasticOut"
     * @see https://echarts.apache.org/en/option.html#series-boxplot.animationEasing
     */
-  var animationEasing: js.UndefOr[String] = js.native
+  var animationEasing: js.UndefOr[String] = js.undefined
   /**
     * Up and bottom boundary of box width.
     * The array is in the form of `[min, max]`.
@@ -83,7 +82,7 @@ trait SeriesBoxplot_ extends js.Object {
     * [7, 50]
     * @see https://echarts.apache.org/en/option.html#series-boxplot.boxWidth
     */
-  var boxWidth: js.UndefOr[js.Array[_]] = js.native
+  var boxWidth: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * The coordinate used in the series, whose options are:
     *
@@ -101,7 +100,7 @@ trait SeriesBoxplot_ extends js.Object {
     * "cartesian2d"
     * @see https://echarts.apache.org/en/option.html#series-boxplot.coordinateSystem
     */
-  var coordinateSystem: js.UndefOr[String] = js.native
+  var coordinateSystem: js.UndefOr[String] = js.undefined
   /**
     * Data should be the two-dimensional array shown as follow.
     *
@@ -132,7 +131,7 @@ trait SeriesBoxplot_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-boxplot.data
     */
-  var data: js.UndefOr[js.Array[js.Array[Double | DataObject]]] = js.native
+  var data: js.UndefOr[js.Array[js.Array[Double | DataObject]]] = js.undefined
   /**
     * `dimensions` can be used to define dimension info for `series.data`
     * or `dataset.source`.
@@ -180,11 +179,11 @@ trait SeriesBoxplot_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-boxplot.dimensions
     */
-  var dimensions: js.UndefOr[js.Array[_]] = js.native
+  var dimensions: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * @see https://echarts.apache.org/en/option.html#series-boxplot.emphasis
     */
-  var emphasis: js.UndefOr[ItemStyleBorderType] = js.native
+  var emphasis: js.UndefOr[ItemStyleBorderType] = js.undefined
   /**
     * Define what is encoded to for each dimension of `data`.
     * For example:
@@ -221,7 +220,7 @@ trait SeriesBoxplot_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-boxplot.encode
     */
-  var encode: js.UndefOr[js.Object] = js.native
+  var encode: js.UndefOr[js.Object] = js.undefined
   /**
     * Whether to enable the animation when hovering on box.
     *
@@ -230,7 +229,7 @@ trait SeriesBoxplot_ extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-boxplot.hoverAnimation
     */
-  var hoverAnimation: js.UndefOr[Boolean] = js.native
+  var hoverAnimation: js.UndefOr[Boolean] = js.undefined
   /**
     * Component ID, not specified by default.
     * If specified, it can be used to refer the component in option
@@ -239,11 +238,11 @@ trait SeriesBoxplot_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-boxplot.id
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * @see https://echarts.apache.org/en/option.html#series-boxplot.itemStyle
     */
-  var itemStyle: js.UndefOr[BorderType] = js.native
+  var itemStyle: js.UndefOr[BorderType] = js.undefined
   /**
     * Layout methods, whose optional values are:
     *
@@ -261,7 +260,7 @@ trait SeriesBoxplot_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-boxplot.layout
     */
-  var layout: js.UndefOr[String] = js.native
+  var layout: js.UndefOr[String] = js.undefined
   /**
     * Whether to enable highlighting chart when
     * [legend](https://echarts.apache.org/en/option.html#legend)
@@ -272,7 +271,7 @@ trait SeriesBoxplot_ extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-boxplot.legendHoverLink
     */
-  var legendHoverLink: js.UndefOr[Boolean] = js.native
+  var legendHoverLink: js.UndefOr[Boolean] = js.undefined
   /**
     * Used to mark an area in chart.
     * For example, mark a time interval.
@@ -280,21 +279,21 @@ trait SeriesBoxplot_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-boxplot.markArea
     */
-  var markArea: js.UndefOr[AnimationDelayUpdate] = js.native
+  var markArea: js.UndefOr[AnimationDelayUpdate] = js.undefined
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-boxplot.markLine
     */
-  var markLine: js.UndefOr[AnimationDelay] = js.native
+  var markLine: js.UndefOr[AnimationDelay] = js.undefined
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-boxplot.markPoint
     */
-  var markPoint: js.UndefOr[AnimationDuration] = js.native
+  var markPoint: js.UndefOr[AnimationDuration] = js.undefined
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -305,7 +304,7 @@ trait SeriesBoxplot_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-boxplot.name
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * Whether to ignore mouse events.
     * Default value is false, for triggering and responding to mouse
@@ -314,20 +313,20 @@ trait SeriesBoxplot_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-boxplot.silent
     */
-  var silent: js.UndefOr[Boolean] = js.native
+  var silent: js.UndefOr[Boolean] = js.undefined
   /**
     * tooltip settings in this series.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-boxplot.tooltip
     */
-  var tooltip: js.UndefOr[ExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.undefined
   /**
     * @default
     * "boxplot"
     * @see https://echarts.apache.org/en/option.html#series-boxplot.type
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
   /**
     * Index of
     * [x axis](https://echarts.apache.org/en/option.html#xAxis)
@@ -336,7 +335,7 @@ trait SeriesBoxplot_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-boxplot.xAxisIndex
     */
-  var xAxisIndex: js.UndefOr[Double] = js.native
+  var xAxisIndex: js.UndefOr[Double] = js.undefined
   /**
     * Index of
     * [y axis](https://echarts.apache.org/en/option.html#yAxis)
@@ -345,7 +344,7 @@ trait SeriesBoxplot_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-boxplot.yAxisIndex
     */
-  var yAxisIndex: js.UndefOr[Double] = js.native
+  var yAxisIndex: js.UndefOr[Double] = js.undefined
   /**
     * `z` value of all graghical elements in Box plot, which controls
     * order of drawing graphical components.
@@ -360,7 +359,7 @@ trait SeriesBoxplot_ extends js.Object {
     * 2
     * @see https://echarts.apache.org/en/option.html#series-boxplot.z
     */
-  var z: js.UndefOr[Double] = js.native
+  var z: js.UndefOr[Double] = js.undefined
   /**
     * `zlevel` value of all graghical elements in Box plot.
     *
@@ -378,322 +377,65 @@ trait SeriesBoxplot_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-boxplot.zlevel
     */
-  var zlevel: js.UndefOr[Double] = js.native
+  var zlevel: js.UndefOr[Double] = js.undefined
 }
 
 object SeriesBoxplot_ {
   @scala.inline
-  def apply(): SeriesBoxplot_ = {
+  def apply(
+    animationDelay: js.Function | Double = null,
+    animationDuration: js.Function | Double = null,
+    animationEasing: String = null,
+    boxWidth: js.Array[_] = null,
+    coordinateSystem: String = null,
+    data: js.Array[js.Array[Double | DataObject]] = null,
+    dimensions: js.Array[_] = null,
+    emphasis: ItemStyleBorderType = null,
+    encode: js.Object = null,
+    hoverAnimation: js.UndefOr[Boolean] = js.undefined,
+    id: String = null,
+    itemStyle: BorderType = null,
+    layout: String = null,
+    legendHoverLink: js.UndefOr[Boolean] = js.undefined,
+    markArea: AnimationDelayUpdate = null,
+    markLine: AnimationDelay = null,
+    markPoint: AnimationDuration = null,
+    name: String = null,
+    silent: js.UndefOr[Boolean] = js.undefined,
+    tooltip: ExtraCssText = null,
+    `type`: String = null,
+    xAxisIndex: js.UndefOr[Double] = js.undefined,
+    yAxisIndex: js.UndefOr[Double] = js.undefined,
+    z: js.UndefOr[Double] = js.undefined,
+    zlevel: js.UndefOr[Double] = js.undefined
+  ): SeriesBoxplot_ = {
     val __obj = js.Dynamic.literal()
+    if (animationDelay != null) __obj.updateDynamic("animationDelay")(animationDelay.asInstanceOf[js.Any])
+    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
+    if (animationEasing != null) __obj.updateDynamic("animationEasing")(animationEasing.asInstanceOf[js.Any])
+    if (boxWidth != null) __obj.updateDynamic("boxWidth")(boxWidth.asInstanceOf[js.Any])
+    if (coordinateSystem != null) __obj.updateDynamic("coordinateSystem")(coordinateSystem.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (dimensions != null) __obj.updateDynamic("dimensions")(dimensions.asInstanceOf[js.Any])
+    if (emphasis != null) __obj.updateDynamic("emphasis")(emphasis.asInstanceOf[js.Any])
+    if (encode != null) __obj.updateDynamic("encode")(encode.asInstanceOf[js.Any])
+    if (!js.isUndefined(hoverAnimation)) __obj.updateDynamic("hoverAnimation")(hoverAnimation.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
+    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
+    if (!js.isUndefined(legendHoverLink)) __obj.updateDynamic("legendHoverLink")(legendHoverLink.get.asInstanceOf[js.Any])
+    if (markArea != null) __obj.updateDynamic("markArea")(markArea.asInstanceOf[js.Any])
+    if (markLine != null) __obj.updateDynamic("markLine")(markLine.asInstanceOf[js.Any])
+    if (markPoint != null) __obj.updateDynamic("markPoint")(markPoint.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(xAxisIndex)) __obj.updateDynamic("xAxisIndex")(xAxisIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(yAxisIndex)) __obj.updateDynamic("yAxisIndex")(yAxisIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(z)) __obj.updateDynamic("z")(z.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zlevel)) __obj.updateDynamic("zlevel")(zlevel.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesBoxplot_]
   }
-  @scala.inline
-  implicit class SeriesBoxplot_Ops[Self <: SeriesBoxplot_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimationDelay(value: js.Function | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationDuration(value: js.Function | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationEasing(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationEasing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoxWidth(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCoordinateSystem(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coordinateSystem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCoordinateSystem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coordinateSystem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Array[js.Array[Double | DataObject]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDimensions(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmphasis(value: ItemStyleBorderType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmphasis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncode(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoverAnimation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverAnimation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemStyle(value: BorderType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayout(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegendHoverLink(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendHoverLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegendHoverLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendHoverLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkArea(value: AnimationDelayUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkLine(value: AnimationDelay): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkPoint(value: AnimationDuration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSilent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSilent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: ExtraCssText): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXAxisIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xAxisIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXAxisIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xAxisIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYAxisIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxisIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYAxisIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxisIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZ(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZlevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZlevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

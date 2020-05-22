@@ -22,11 +22,9 @@ import typingsSlinky.graphqlCompose.objectTypeComposerMod.ComposeFieldConfig
 import typingsSlinky.graphqlCompose.objectTypeComposerMod.ComposeFieldConfigArgumentMap
 import typingsSlinky.graphqlCompose.objectTypeComposerMod.ComposeFieldConfigAsObject
 import typingsSlinky.graphqlCompose.objectTypeComposerMod.ComposeFieldConfigMap
-import typingsSlinky.graphqlCompose.objectTypeComposerMod.ComposeOutputType
 import typingsSlinky.graphqlCompose.objectTypeComposerMod.ObjectTypeComposer
+import typingsSlinky.graphqlCompose.objectTypeComposerMod._ComposeOutputType
 import typingsSlinky.graphqlCompose.scalarTypeComposerMod.ScalarTypeComposer
-import typingsSlinky.graphqlCompose.schemaComposerMod.AnyComposeType
-import typingsSlinky.graphqlCompose.schemaComposerMod.AnyType
 import typingsSlinky.graphqlCompose.schemaComposerMod.SchemaComposer
 import typingsSlinky.graphqlCompose.unionTypeComposerMod.UnionTypeComposer
 import typingsSlinky.std.Partial
@@ -36,11 +34,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("graphql-compose/lib/InterfaceTypeComposer", "InterfaceTypeComposer")
 @js.native
-class InterfaceTypeComposer[TSource, TContext] protected ()
-  extends ComposeOutputType[TSource, TContext]
-     with AnyComposeType[TContext]
-     with AnyType[TContext]
-     with ComposeInterfaceType {
+class InterfaceTypeComposer[TSource, TContext] protected () extends _ComposeOutputType[TSource, TContext] {
   def this(gqType: GraphQLInterfaceType, schemaComposer: SchemaComposer[TContext]) = this()
   var gqType: GraphQLInterfaceTypeExtended[TSource, TContext] = js.native
   var sc: SchemaComposer[TContext] = js.native

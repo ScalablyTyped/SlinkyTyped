@@ -18,41 +18,11 @@ trait TrafficMirrorFilterRuleDestinationPortRange extends js.Object {
 
 object TrafficMirrorFilterRuleDestinationPortRange {
   @scala.inline
-  def apply(): TrafficMirrorFilterRuleDestinationPortRange = {
+  def apply(fromPort: js.UndefOr[Double] = js.undefined, toPort: js.UndefOr[Double] = js.undefined): TrafficMirrorFilterRuleDestinationPortRange = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(fromPort)) __obj.updateDynamic("fromPort")(fromPort.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(toPort)) __obj.updateDynamic("toPort")(toPort.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrafficMirrorFilterRuleDestinationPortRange]
   }
-  @scala.inline
-  implicit class TrafficMirrorFilterRuleDestinationPortRangeOps[Self <: TrafficMirrorFilterRuleDestinationPortRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFromPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFromPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromPort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toPort")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

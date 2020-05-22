@@ -11,12 +11,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("graphql/type/definition", "GraphQLObjectType")
 @js.native
-class GraphQLObjectType[TSource, TContext, TArgs] protected ()
-  extends GraphQLCompositeType
-     with GraphQLNamedType
-     with GraphQLNullableType
-     with GraphQLOutputType
-     with GraphQLType {
+class GraphQLObjectType[TSource, TContext, TArgs] protected () extends js.Object {
   def this(config: GraphQLObjectTypeConfig[TSource, TContext, TArgs]) = this()
   var astNode: Maybe[ObjectTypeDefinitionNode] = js.native
   var description: Maybe[String] = js.native

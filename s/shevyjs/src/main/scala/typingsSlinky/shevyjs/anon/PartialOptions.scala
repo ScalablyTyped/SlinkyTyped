@@ -12,101 +12,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<shevyjs.shevyjs/types.Options> */
-@js.native
 trait PartialOptions extends js.Object {
-  var addMarginBottom: js.UndefOr[Boolean] = js.native
-  var baseFontScale: js.UndefOr[Scale | majorSecond | minorThird | majorThird | perfectFourth | augmentedFourth] = js.native
-  var baseFontSize: js.UndefOr[String] = js.native
-  var baseLineHeight: js.UndefOr[Double] = js.native
-  var proximity: js.UndefOr[Boolean] = js.native
-  var proximityFactor: js.UndefOr[Factor] = js.native
+  var addMarginBottom: js.UndefOr[Boolean] = js.undefined
+  var baseFontScale: js.UndefOr[Scale | majorSecond | minorThird | majorThird | perfectFourth | augmentedFourth] = js.undefined
+  var baseFontSize: js.UndefOr[String] = js.undefined
+  var baseLineHeight: js.UndefOr[Double] = js.undefined
+  var proximity: js.UndefOr[Boolean] = js.undefined
+  var proximityFactor: js.UndefOr[Factor] = js.undefined
 }
 
 object PartialOptions {
   @scala.inline
-  def apply(): PartialOptions = {
+  def apply(
+    addMarginBottom: js.UndefOr[Boolean] = js.undefined,
+    baseFontScale: Scale | majorSecond | minorThird | majorThird | perfectFourth | augmentedFourth = null,
+    baseFontSize: String = null,
+    baseLineHeight: js.UndefOr[Double] = js.undefined,
+    proximity: js.UndefOr[Boolean] = js.undefined,
+    proximityFactor: js.UndefOr[Factor] = js.undefined
+  ): PartialOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(addMarginBottom)) __obj.updateDynamic("addMarginBottom")(addMarginBottom.get.asInstanceOf[js.Any])
+    if (baseFontScale != null) __obj.updateDynamic("baseFontScale")(baseFontScale.asInstanceOf[js.Any])
+    if (baseFontSize != null) __obj.updateDynamic("baseFontSize")(baseFontSize.asInstanceOf[js.Any])
+    if (!js.isUndefined(baseLineHeight)) __obj.updateDynamic("baseLineHeight")(baseLineHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(proximity)) __obj.updateDynamic("proximity")(proximity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(proximityFactor)) __obj.updateDynamic("proximityFactor")(proximityFactor.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialOptions]
   }
-  @scala.inline
-  implicit class PartialOptionsOps[Self <: PartialOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddMarginBottom(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addMarginBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddMarginBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addMarginBottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseFontScale(value: Scale | majorSecond | minorThird | majorThird | perfectFourth | augmentedFourth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseFontScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseFontScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseFontScale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseFontSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseFontSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseFontSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseFontSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseLineHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseLineHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseLineHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseLineHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProximity(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proximity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProximity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proximity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProximityFactor(value: Factor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proximityFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProximityFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proximityFactor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

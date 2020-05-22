@@ -1,8 +1,7 @@
 package typingsSlinky.antd.affixMod
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.facade.ReactElement
-import typingsSlinky.antd.contextMod.ConfigConsumerProps
+import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +10,10 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Affix
   extends Component[AffixProps, AffixState, js.Any] {
+  @JSName("context")
+  var context_Affix: ConfigConsumerProps = js.native
   var fixedNode: HTMLDivElement = js.native
+  var getTargetFunc: js.Any = js.native
   var placeholderNode: HTMLDivElement = js.native
   var timeout: js.Any = js.native
   @JSName("componentDidMount")
@@ -25,7 +27,6 @@ trait Affix
   def lazyUpdatePosition(): Unit = js.native
   def measure(): Unit = js.native
   def prepareMeasure(): Unit = js.native
-  def renderAffix(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
   def saveFixedNode(node: HTMLDivElement): Unit = js.native
   def savePlaceholderNode(node: HTMLDivElement): Unit = js.native
   def updatePosition(): Unit = js.native

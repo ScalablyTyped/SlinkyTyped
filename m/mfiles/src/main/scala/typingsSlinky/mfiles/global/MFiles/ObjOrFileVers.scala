@@ -1,6 +1,7 @@
 package typingsSlinky.mfiles.global.MFiles
 
 import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.mfiles.IObjOrFileVer
 import typingsSlinky.mfiles.IObjOrFileVers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +9,18 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.ObjOrFileVers")
 @js.native
-class ObjOrFileVers () extends IObjOrFileVers
+class ObjOrFileVers () extends IObjOrFileVers {
+  /* CompleteClass */
+  override val Count: Double = js.native
+  /* CompleteClass */
+  override def Add(Index: Double, ObjOrFileVer: IObjOrFileVer): Unit = js.native
+  /* CompleteClass */
+  override def Clone(): IObjOrFileVers = js.native
+  /* CompleteClass */
+  override def Item(Index: Double): IObjOrFileVer = js.native
+  /* CompleteClass */
+  override def Remove(Index: Double): Unit = js.native
+}
 
 @JSGlobal("MFiles.ObjOrFileVers")
 @js.native

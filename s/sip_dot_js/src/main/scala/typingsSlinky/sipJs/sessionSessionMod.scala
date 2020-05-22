@@ -2,11 +2,12 @@ package typingsSlinky.sipJs
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.sipJs.bodyMod.Body
-import typingsSlinky.sipJs.byeMod.OutgoingByeRequest
 import typingsSlinky.sipJs.inviteMod.OutgoingInviteRequest
 import typingsSlinky.sipJs.inviteMod.OutgoingInviteRequestDelegate
 import typingsSlinky.sipJs.messagesMod.URI
+import typingsSlinky.sipJs.methodsByeMod.OutgoingByeRequest
 import typingsSlinky.sipJs.methodsInfoMod.OutgoingInfoRequest
+import typingsSlinky.sipJs.methodsMessageMod.OutgoingMessageRequest
 import typingsSlinky.sipJs.notifyMod.OutgoingNotifyRequest
 import typingsSlinky.sipJs.outgoingRequestMod.OutgoingRequestDelegate
 import typingsSlinky.sipJs.outgoingRequestMod.RequestOptions
@@ -80,6 +81,16 @@ object sessionSessionMod extends js.Object {
     def invite(): OutgoingInviteRequest = js.native
     def invite(delegate: OutgoingInviteRequestDelegate): OutgoingInviteRequest = js.native
     def invite(delegate: OutgoingInviteRequestDelegate, options: RequestOptions): OutgoingInviteRequest = js.native
+    /**
+      * Send MESSAGE request.
+      * Deliver a message during a session.
+      * https://tools.ietf.org/html/rfc3428#section-4
+      * @param delegate - Request delegate.
+      * @param options - Options bucket.
+      */
+    def message(): OutgoingMessageRequest = js.native
+    def message(delegate: OutgoingRequestDelegate): OutgoingMessageRequest = js.native
+    def message(delegate: OutgoingRequestDelegate, options: RequestOptions): OutgoingMessageRequest = js.native
     def notify(delegate: OutgoingRequestDelegate): OutgoingNotifyRequest = js.native
     def notify(delegate: OutgoingRequestDelegate, options: RequestOptions): OutgoingNotifyRequest = js.native
     /**
@@ -93,7 +104,7 @@ object sessionSessionMod extends js.Object {
     def prack(delegate: OutgoingRequestDelegate): OutgoingPrackRequest = js.native
     def prack(delegate: OutgoingRequestDelegate, options: RequestOptions): OutgoingPrackRequest = js.native
     /**
-      * Send REFER request (in dialog).
+      * Send REFER request.
       * Transfer a session.
       * https://tools.ietf.org/html/rfc3515#section-2.4.1
       * @param delegate - Request delegate.

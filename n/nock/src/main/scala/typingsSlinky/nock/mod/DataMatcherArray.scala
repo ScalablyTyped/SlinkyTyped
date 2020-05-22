@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DataMatcherArray
   extends Array[DataMatcher]
-     with DataMatcher
-     with RequestBodyMatcher
+     with _DataMatcher
+     with _RequestBodyMatcher
 

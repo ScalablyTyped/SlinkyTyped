@@ -26,65 +26,18 @@ trait LinkAssociation extends js.Object {
 
 object LinkAssociation {
   @scala.inline
-  def apply(): LinkAssociation = {
+  def apply(
+    DeviceId: String = null,
+    GlobalNetworkId: String = null,
+    LinkAssociationState: LinkAssociationState = null,
+    LinkId: String = null
+  ): LinkAssociation = {
     val __obj = js.Dynamic.literal()
+    if (DeviceId != null) __obj.updateDynamic("DeviceId")(DeviceId.asInstanceOf[js.Any])
+    if (GlobalNetworkId != null) __obj.updateDynamic("GlobalNetworkId")(GlobalNetworkId.asInstanceOf[js.Any])
+    if (LinkAssociationState != null) __obj.updateDynamic("LinkAssociationState")(LinkAssociationState.asInstanceOf[js.Any])
+    if (LinkId != null) __obj.updateDynamic("LinkId")(LinkId.asInstanceOf[js.Any])
     __obj.asInstanceOf[LinkAssociation]
   }
-  @scala.inline
-  implicit class LinkAssociationOps[Self <: LinkAssociation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobalNetworkId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalNetworkId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalNetworkId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalNetworkId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkAssociationState(value: LinkAssociationState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LinkAssociationState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinkAssociationState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LinkAssociationState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LinkId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinkId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LinkId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

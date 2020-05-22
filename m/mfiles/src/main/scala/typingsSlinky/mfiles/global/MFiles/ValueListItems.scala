@@ -1,6 +1,7 @@
 package typingsSlinky.mfiles.global.MFiles
 
 import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.mfiles.IValueListItem
 import typingsSlinky.mfiles.IValueListItems
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +9,12 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.ValueListItems")
 @js.native
-class ValueListItems () extends IValueListItems
+class ValueListItems () extends IValueListItems {
+  /* CompleteClass */
+  override val Count: Double = js.native
+  /* CompleteClass */
+  override def Item(Index: Double): IValueListItem = js.native
+}
 
 @JSGlobal("MFiles.ValueListItems")
 @js.native

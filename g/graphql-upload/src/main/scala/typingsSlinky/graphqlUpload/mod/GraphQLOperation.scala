@@ -4,68 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GraphQLOperation extends js.Object {
-  var operationName: js.UndefOr[Null | String] = js.native
-  var query: String = js.native
-  var variables: js.UndefOr[Null | js.Any] = js.native
+  var operationName: js.UndefOr[Null | String] = js.undefined
+  var query: String
+  var variables: js.UndefOr[Null | js.Any] = js.undefined
 }
 
 object GraphQLOperation {
   @scala.inline
-  def apply(query: String): GraphQLOperation = {
+  def apply(
+    query: String,
+    operationName: js.UndefOr[Null | String] = js.undefined,
+    variables: js.UndefOr[Null | js.Any] = js.undefined
+  ): GraphQLOperation = {
     val __obj = js.Dynamic.literal(query = query.asInstanceOf[js.Any])
+    if (!js.isUndefined(operationName)) __obj.updateDynamic("operationName")(operationName.asInstanceOf[js.Any])
+    if (!js.isUndefined(variables)) __obj.updateDynamic("variables")(variables.asInstanceOf[js.Any])
     __obj.asInstanceOf[GraphQLOperation]
   }
-  @scala.inline
-  implicit class GraphQLOperationOps[Self <: GraphQLOperation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQuery(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOperationName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperationNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationName")(null)
-        ret
-    }
-    @scala.inline
-    def withVariables(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariablesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(null)
-        ret
-    }
-  }
-  
 }
 

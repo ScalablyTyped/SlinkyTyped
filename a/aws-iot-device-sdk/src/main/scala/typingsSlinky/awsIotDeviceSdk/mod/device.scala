@@ -7,6 +7,7 @@ import typingsSlinky.awsIotDeviceSdk.awsIotDeviceSdkStrings.message
 import typingsSlinky.awsIotDeviceSdk.awsIotDeviceSdkStrings.offline
 import typingsSlinky.awsIotDeviceSdk.awsIotDeviceSdkStrings.reconnect
 import typingsSlinky.mqtt.clientMod.ClientSubscribeCallback
+import typingsSlinky.mqtt.clientMod.PacketCallback
 import typingsSlinky.mqtt.clientOptionsMod.IClientPublishOptions
 import typingsSlinky.mqtt.clientOptionsMod.IClientSubscribeOptions
 import typingsSlinky.mqtt.mod.Client
@@ -95,15 +96,12 @@ class device () extends EventEmitter {
     * Unsubscribe from a topic or topics
     *
     * @param topic  is a String topic or an array of topics to unsubscribe from
-    * @param options
     * @param callback  fired on unsuback
     */
   def unsubscribe(topic: String): Client = js.native
-  def unsubscribe(topic: String, options: IClientSubscribeOptions): Client = js.native
-  def unsubscribe(topic: String, options: IClientSubscribeOptions, callback: ClientSubscribeCallback): Client = js.native
+  def unsubscribe(topic: String, callback: PacketCallback): Client = js.native
   def unsubscribe(topic: js.Array[String]): Client = js.native
-  def unsubscribe(topic: js.Array[String], options: IClientSubscribeOptions): Client = js.native
-  def unsubscribe(topic: js.Array[String], options: IClientSubscribeOptions, callback: ClientSubscribeCallback): Client = js.native
+  def unsubscribe(topic: js.Array[String], callback: PacketCallback): Client = js.native
   /**
     * Update the credentials set used to authenticate via WebSocket/SigV4.
     *

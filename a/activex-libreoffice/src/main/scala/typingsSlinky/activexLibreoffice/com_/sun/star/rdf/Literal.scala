@@ -9,25 +9,24 @@ import scala.scalajs.js.annotation._
   * @see XRepository
   * @since OOo 3.0
   */
-@js.native
 trait Literal extends XLiteral {
   /**
     * creates a plain literal RDF node.
     * @param Value the string value of the literal
     */
-  def create(Value: String): Unit = js.native
+  def create(Value: String): Unit
   /**
     * creates a literal RDF node with a language.
     * @param Value the string value of the literal
     * @param Language the language of the literal
     */
-  def createWithLanguage(Value: String, Language: String): Unit = js.native
+  def createWithLanguage(Value: String, Language: String): Unit
   /**
     * creates a typed literal RDF node.
     * @param Value the string value of the literal
     * @param Type the data type of the literal
     */
-  def createWithType(Value: String, Type: XURI): Unit = js.native
+  def createWithType(Value: String, Type: XURI): Unit
 }
 
 object Literal {
@@ -44,31 +43,5 @@ object Literal {
     val __obj = js.Dynamic.literal(Datatype = Datatype.asInstanceOf[js.Any], Language = Language.asInstanceOf[js.Any], StringValue = StringValue.asInstanceOf[js.Any], Value = Value.asInstanceOf[js.Any], create = js.Any.fromFunction1(create), createWithLanguage = js.Any.fromFunction2(createWithLanguage), createWithType = js.Any.fromFunction2(createWithType))
     __obj.asInstanceOf[Literal]
   }
-  @scala.inline
-  implicit class LiteralOps[Self <: Literal] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreate(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreateWithLanguage(value: (String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createWithLanguage")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withCreateWithType(value: (String, XURI) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createWithType")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

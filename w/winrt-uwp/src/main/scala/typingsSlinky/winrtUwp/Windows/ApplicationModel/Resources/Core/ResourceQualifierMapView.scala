@@ -8,31 +8,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An unchangeable view into a map of ResourceQualifier objects. */
-@js.native
 trait ResourceQualifierMapView extends js.Object {
   /** Gets the number of ResourceQualifier objects in the map. */
-  var size: Double = js.native
+  var size: Double
   /**
     * Returns an iterator to enumerate the items in the map view.
     * @return The iterator. The current position of the iterator is index 0, or the end of the map view if the map view is empty.
     */
-  def first(): IIterator[IKeyValuePair[_, _]] = js.native
+  def first(): IIterator[IKeyValuePair[_, _]]
   /**
     * Determines whether the map view contains the specified key.
     * @param key The key to locate in the map view.
     * @return TRUE if the key is found, otherwise FALSE if it is not found.
     */
-  def hasKey(key: String): Boolean = js.native
+  def hasKey(key: String): Boolean
   /**
     * Returns the qualifier name at the specified key in the map view.
     * @param key The key to locate in the map view.
     * @return The qualifier name associated with the specified key.
     */
-  def lookup(key: String): String = js.native
+  def lookup(key: String): String
   /**
     * Splits the map view into two views.
     */
-  def split(): SecondIMapView = js.native
+  def split(): SecondIMapView
 }
 
 object ResourceQualifierMapView {
@@ -47,43 +46,5 @@ object ResourceQualifierMapView {
     val __obj = js.Dynamic.literal(first = js.Any.fromFunction0(first), hasKey = js.Any.fromFunction1(hasKey), lookup = js.Any.fromFunction1(lookup), size = size.asInstanceOf[js.Any], split = js.Any.fromFunction0(split))
     __obj.asInstanceOf[ResourceQualifierMapView]
   }
-  @scala.inline
-  implicit class ResourceQualifierMapViewOps[Self <: ResourceQualifierMapView] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFirst(value: () => IIterator[IKeyValuePair[_, _]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHasKey(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasKey")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLookup(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookup")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSplit(value: () => SecondIMapView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("split")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

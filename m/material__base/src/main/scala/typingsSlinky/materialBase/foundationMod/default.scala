@@ -8,6 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 class default[A] protected () extends MDCFoundation[A] {
   def this(adapter: A) = this()
+  // Subclasses should override this method to perform de-initialization routines (de-registering events, etc.)
+  /* CompleteClass */
+  override def destroy(): Unit = js.native
+  // Subclasses should override this method to perform initialization routines (registering events, etc.)
+  /* CompleteClass */
+  override def init(): Unit = js.native
 }
 
 /* static members */

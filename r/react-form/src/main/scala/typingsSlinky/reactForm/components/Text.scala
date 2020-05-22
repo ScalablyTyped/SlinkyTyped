@@ -12,7 +12,7 @@ object Text {
   @js.native
   object component extends js.Object
   
-  def withProps(p: FieldProps with InputHTMLAttributes[HTMLInputElement]): `SharedBuilder_<intersection>_1924190813` = new `SharedBuilder_<intersection>_1924190813`(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Text.type): `SharedBuilder_<intersection>_1924190813` = new `SharedBuilder_<intersection>_1924190813`(js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: FieldProps with InputHTMLAttributes[HTMLInputElement]): SharedBuilder_FieldPropsInputHTMLAttributes_1924190813 = new SharedBuilder_FieldPropsInputHTMLAttributes_1924190813(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Text.type): SharedBuilder_FieldPropsInputHTMLAttributes_1924190813 = new SharedBuilder_FieldPropsInputHTMLAttributes_1924190813(js.Array(this.component, js.Dictionary.empty))()
 }
 

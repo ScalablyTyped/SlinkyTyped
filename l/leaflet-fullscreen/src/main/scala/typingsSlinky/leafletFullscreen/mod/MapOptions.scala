@@ -6,36 +6,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MapOptions extends js.Object {
-  var fullscreenControl: js.UndefOr[`true` | PseudoFullscreen] = js.native
+  var fullscreenControl: js.UndefOr[`true` | PseudoFullscreen] = js.undefined
 }
 
 object MapOptions {
   @scala.inline
-  def apply(): MapOptions = {
+  def apply(fullscreenControl: `true` | PseudoFullscreen = null): MapOptions = {
     val __obj = js.Dynamic.literal()
+    if (fullscreenControl != null) __obj.updateDynamic("fullscreenControl")(fullscreenControl.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapOptions]
   }
-  @scala.inline
-  implicit class MapOptionsOps[Self <: MapOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFullscreenControl(value: `true` | PseudoFullscreen): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullscreenControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullscreenControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullscreenControl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,75 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RuleTesterTestRejected extends RuleTesterTest {
-  var column: js.UndefOr[Double] = js.native
-  var line: js.UndefOr[Double] = js.native
-  var message: js.UndefOr[String] = js.native
-  var only: js.UndefOr[Boolean] = js.native
+  var column: js.UndefOr[Double] = js.undefined
+  var line: js.UndefOr[Double] = js.undefined
+  var message: js.UndefOr[String] = js.undefined
+  var only: js.UndefOr[Boolean] = js.undefined
 }
 
 object RuleTesterTestRejected {
   @scala.inline
-  def apply(code: String): RuleTesterTestRejected = {
+  def apply(
+    code: String,
+    column: js.UndefOr[Double] = js.undefined,
+    description: String = null,
+    line: js.UndefOr[Double] = js.undefined,
+    message: String = null,
+    only: js.UndefOr[Boolean] = js.undefined
+  ): RuleTesterTestRejected = {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any])
+    if (!js.isUndefined(column)) __obj.updateDynamic("column")(column.get.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(line)) __obj.updateDynamic("line")(line.get.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (!js.isUndefined(only)) __obj.updateDynamic("only")(only.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RuleTesterTestRejected]
   }
-  @scala.inline
-  implicit class RuleTesterTestRejectedOps[Self <: RuleTesterTestRejected] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumn(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLine(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("only")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("only")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

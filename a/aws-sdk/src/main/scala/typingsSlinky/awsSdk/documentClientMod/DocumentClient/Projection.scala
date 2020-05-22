@@ -18,41 +18,11 @@ trait Projection extends js.Object {
 
 object Projection {
   @scala.inline
-  def apply(): Projection = {
+  def apply(NonKeyAttributes: NonKeyAttributeNameList = null, ProjectionType: ProjectionType = null): Projection = {
     val __obj = js.Dynamic.literal()
+    if (NonKeyAttributes != null) __obj.updateDynamic("NonKeyAttributes")(NonKeyAttributes.asInstanceOf[js.Any])
+    if (ProjectionType != null) __obj.updateDynamic("ProjectionType")(ProjectionType.asInstanceOf[js.Any])
     __obj.asInstanceOf[Projection]
   }
-  @scala.inline
-  implicit class ProjectionOps[Self <: Projection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNonKeyAttributes(value: NonKeyAttributeNameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NonKeyAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNonKeyAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NonKeyAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjectionType(value: ProjectionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProjectionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectionType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProjectionType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

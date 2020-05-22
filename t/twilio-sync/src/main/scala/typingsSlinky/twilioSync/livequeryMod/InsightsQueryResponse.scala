@@ -1,46 +1,22 @@
 package typingsSlinky.twilioSync.livequeryMod
 
+import typingsSlinky.twilioSync.anon.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InsightsQueryResponse extends js.Object {
-  var items: js.UndefOr[js.Array[InsightsItem]] = js.native
-  var query_id: String = js.native
+  var items: js.UndefOr[js.Array[Data]] = js.undefined
+  var last_event_id: Double
+  var query_id: String
 }
 
 object InsightsQueryResponse {
   @scala.inline
-  def apply(query_id: String): InsightsQueryResponse = {
-    val __obj = js.Dynamic.literal(query_id = query_id.asInstanceOf[js.Any])
+  def apply(last_event_id: Double, query_id: String, items: js.Array[Data] = null): InsightsQueryResponse = {
+    val __obj = js.Dynamic.literal(last_event_id = last_event_id.asInstanceOf[js.Any], query_id = query_id.asInstanceOf[js.Any])
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
     __obj.asInstanceOf[InsightsQueryResponse]
   }
-  @scala.inline
-  implicit class InsightsQueryResponseOps[Self <: InsightsQueryResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQuery_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItems(value: js.Array[InsightsItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

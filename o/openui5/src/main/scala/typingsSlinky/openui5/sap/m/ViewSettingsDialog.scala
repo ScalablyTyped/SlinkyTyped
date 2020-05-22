@@ -442,7 +442,7 @@ trait ViewSettingsDialog extends Control {
   def insertSortItem(oSortItem: ViewSettingsItem, iIndex: Double): ViewSettingsDialog = js.native
   /**
     * Opens the ViewSettingsDialog relative to the parent control.
-    * @param sPageId The ID of the initial page to be opened in the dialog.	The available values are
+    * @param sPageId The ID of the initial page to be opened in the dialog.    The available values are
     * "sort", "group", "filter" or IDs of custom tabs.
     * @returns this pointer for chaining
     */

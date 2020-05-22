@@ -4,327 +4,119 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Aspect extends js.Object {
   /**
     * To set the layout of the word cloud. "spiral" | "flow-center" | "flow-top"
     */
-  var aspect: js.UndefOr[String] = js.native
-  var button: js.UndefOr[Count] = js.native
+  var aspect: js.UndefOr[String] = js.undefined
+  var button: js.UndefOr[Count] = js.undefined
   /**
     * When the "color-type" attribute is set to "color", use this attribute to set the color of the text in the word cloud. "red" | "#3F
     * 51B5" | ...
     */
-  var color: js.UndefOr[String] = js.native
+  var color: js.UndefOr[String] = js.undefined
   /**
     * To set the type of color arrangement applied to the word cloud. Use the "color" value with the "color" attribute. Use the "palette
     * " value with the "palette" array. "random" (default) | "color" | "palette"
     */
-  var `color-type`: js.UndefOr[String] = js.native
-  var `context-menu`: js.UndefOr[Button] = js.native
+  var `color-type`: js.UndefOr[String] = js.undefined
+  var `context-menu`: js.UndefOr[Button] = js.undefined
   /**
     * To define words to be excluded from the word cloud, e.g., "and" or "the". [...]
     */
-  var ignore: js.UndefOr[js.Any] = js.native
-  var indicator: js.UndefOr[Npv] = js.native
+  var ignore: js.UndefOr[js.Any] = js.undefined
+  var indicator: js.UndefOr[Npv] = js.undefined
   /**
     * To set the maximum font size. 20 | "30px" | ...
     */
-  var `max-font-size`: js.UndefOr[js.Any] = js.native
+  var `max-font-size`: js.UndefOr[js.Any] = js.undefined
   /**
     * To set the maximum number of items displayed in the word cloud. 100 | 30 | ...
     */
-  var `max-items`: js.UndefOr[js.Any] = js.native
+  var `max-items`: js.UndefOr[js.Any] = js.undefined
   /**
     * To set the minimum font size. 10 | "12px" | ...
     */
-  var `min-font-size`: js.UndefOr[js.Any] = js.native
+  var `min-font-size`: js.UndefOr[js.Any] = js.undefined
   /**
     * To set the minimum length of the words displayed in the word cloud. 3 | 5 | ...
     */
-  var `min-length`: js.UndefOr[js.Any] = js.native
+  var `min-length`: js.UndefOr[js.Any] = js.undefined
   /**
     * When the "color-type" attribute is set to "palette", use this attribute to set the color palette of the word cloud. [...]
     */
-  var palette: js.UndefOr[js.Any] = js.native
+  var palette: js.UndefOr[js.Any] = js.undefined
   /**
     * To set whether every one or two words rotates 90 degrees. true | false (default)
     */
-  var rotate: js.UndefOr[Boolean] = js.native
+  var rotate: js.UndefOr[Boolean] = js.undefined
   /**
     * To control the step metering. Use this with the "step-radius" attribute. 45 | 90 | ...
     */
-  var `step-angle`: js.UndefOr[js.Any] = js.native
+  var `step-angle`: js.UndefOr[js.Any] = js.undefined
   /**
     * To control the step metering. Use this with the "step-angle" attribute. 30 | 50 | ...
     */
-  var `step-radius`: js.UndefOr[js.Any] = js.native
-  var style: js.UndefOr[Hoverstate] = js.native
+  var `step-radius`: js.UndefOr[js.Any] = js.undefined
+  var style: js.UndefOr[Hoverstate] = js.undefined
   /**
     * To provide the data for the word cloud. (Alternatively, data can be provided through a "words" array.) "text data..." | ...
     */
-  var text: js.UndefOr[String] = js.native
+  var text: js.UndefOr[String] = js.undefined
   /**
     * To set the type of item to be analyzed: words or characters. "word" (default) | "character"
     */
-  var token: js.UndefOr[String] = js.native
-  var violin: js.UndefOr[Jitter] = js.native
-  var words: js.UndefOr[js.Array[Text]] = js.native
+  var token: js.UndefOr[String] = js.undefined
+  var violin: js.UndefOr[Jitter] = js.undefined
+  var words: js.UndefOr[js.Array[Text]] = js.undefined
 }
 
 object Aspect {
   @scala.inline
-  def apply(): Aspect = {
+  def apply(
+    aspect: String = null,
+    button: Count = null,
+    color: String = null,
+    `color-type`: String = null,
+    `context-menu`: Button = null,
+    ignore: js.Any = null,
+    indicator: Npv = null,
+    `max-font-size`: js.Any = null,
+    `max-items`: js.Any = null,
+    `min-font-size`: js.Any = null,
+    `min-length`: js.Any = null,
+    palette: js.Any = null,
+    rotate: js.UndefOr[Boolean] = js.undefined,
+    `step-angle`: js.Any = null,
+    `step-radius`: js.Any = null,
+    style: Hoverstate = null,
+    text: String = null,
+    token: String = null,
+    violin: Jitter = null,
+    words: js.Array[Text] = null
+  ): Aspect = {
     val __obj = js.Dynamic.literal()
+    if (aspect != null) __obj.updateDynamic("aspect")(aspect.asInstanceOf[js.Any])
+    if (button != null) __obj.updateDynamic("button")(button.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (`color-type` != null) __obj.updateDynamic("color-type")(`color-type`.asInstanceOf[js.Any])
+    if (`context-menu` != null) __obj.updateDynamic("context-menu")(`context-menu`.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (indicator != null) __obj.updateDynamic("indicator")(indicator.asInstanceOf[js.Any])
+    if (`max-font-size` != null) __obj.updateDynamic("max-font-size")(`max-font-size`.asInstanceOf[js.Any])
+    if (`max-items` != null) __obj.updateDynamic("max-items")(`max-items`.asInstanceOf[js.Any])
+    if (`min-font-size` != null) __obj.updateDynamic("min-font-size")(`min-font-size`.asInstanceOf[js.Any])
+    if (`min-length` != null) __obj.updateDynamic("min-length")(`min-length`.asInstanceOf[js.Any])
+    if (palette != null) __obj.updateDynamic("palette")(palette.asInstanceOf[js.Any])
+    if (!js.isUndefined(rotate)) __obj.updateDynamic("rotate")(rotate.get.asInstanceOf[js.Any])
+    if (`step-angle` != null) __obj.updateDynamic("step-angle")(`step-angle`.asInstanceOf[js.Any])
+    if (`step-radius` != null) __obj.updateDynamic("step-radius")(`step-radius`.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (token != null) __obj.updateDynamic("token")(token.asInstanceOf[js.Any])
+    if (violin != null) __obj.updateDynamic("violin")(violin.asInstanceOf[js.Any])
+    if (words != null) __obj.updateDynamic("words")(words.asInstanceOf[js.Any])
     __obj.asInstanceOf[Aspect]
   }
-  @scala.inline
-  implicit class AspectOps[Self <: Aspect] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAspect(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aspect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAspect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aspect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButton(value: Count): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColor-type`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color-type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColor-type`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color-type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withContext-menu`(value: Button): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context-menu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutContext-menu`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context-menu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnore(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndicator(value: Npv): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indicator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndicator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indicator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMax-font-size`(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max-font-size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMax-font-size`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max-font-size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMax-items`(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max-items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMax-items`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max-items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMin-font-size`(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min-font-size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMin-font-size`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min-font-size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMin-length`(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min-length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMin-length`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min-length")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPalette(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("palette")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPalette: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("palette")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withStep-angle`(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step-angle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutStep-angle`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step-angle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withStep-radius`(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step-radius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutStep-radius`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step-radius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: Hoverstate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViolin(value: Jitter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("violin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViolin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("violin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWords(value: js.Array[Text]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("words")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("words")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

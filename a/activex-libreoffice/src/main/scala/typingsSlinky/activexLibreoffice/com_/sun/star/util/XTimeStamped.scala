@@ -16,18 +16,17 @@ import scala.scalajs.js.annotation._
   * meaningful order between timestamps, depend on the implementation.
   * @since OOo 1.1.2
   */
-@js.native
 trait XTimeStamped extends XInterface {
   /**
     * returns the timestamp of the object.
     * @returns a `string` that represents a timestamp.
     */
-  val Timestamp: String = js.native
+  val Timestamp: String
   /**
     * returns the timestamp of the object.
     * @returns a `string` that represents a timestamp.
     */
-  def getTimestamp(): String = js.native
+  def getTimestamp(): String
 }
 
 object XTimeStamped {
@@ -42,25 +41,5 @@ object XTimeStamped {
     val __obj = js.Dynamic.literal(Timestamp = Timestamp.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getTimestamp = js.Any.fromFunction0(getTimestamp), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XTimeStamped]
   }
-  @scala.inline
-  implicit class XTimeStampedOps[Self <: XTimeStamped] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetTimestamp(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTimestamp")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

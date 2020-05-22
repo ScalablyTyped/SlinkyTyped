@@ -6,114 +6,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DocumentPermissions extends js.Object {
-  var annotating: js.UndefOr[Boolean] = js.native
-  var contentAccessibility: js.UndefOr[Boolean] = js.native
-  var copying: js.UndefOr[Boolean] = js.native
-  var documentAssembly: js.UndefOr[Boolean] = js.native
-  var fillingForms: js.UndefOr[Boolean] = js.native
-  var modifying: js.UndefOr[Boolean] = js.native
-  var printing: js.UndefOr[lowResolution | highResolution] = js.native
+  var annotating: js.UndefOr[Boolean] = js.undefined
+  var contentAccessibility: js.UndefOr[Boolean] = js.undefined
+  var copying: js.UndefOr[Boolean] = js.undefined
+  var documentAssembly: js.UndefOr[Boolean] = js.undefined
+  var fillingForms: js.UndefOr[Boolean] = js.undefined
+  var modifying: js.UndefOr[Boolean] = js.undefined
+  var printing: js.UndefOr[lowResolution | highResolution] = js.undefined
 }
 
 object DocumentPermissions {
   @scala.inline
-  def apply(): DocumentPermissions = {
+  def apply(
+    annotating: js.UndefOr[Boolean] = js.undefined,
+    contentAccessibility: js.UndefOr[Boolean] = js.undefined,
+    copying: js.UndefOr[Boolean] = js.undefined,
+    documentAssembly: js.UndefOr[Boolean] = js.undefined,
+    fillingForms: js.UndefOr[Boolean] = js.undefined,
+    modifying: js.UndefOr[Boolean] = js.undefined,
+    printing: lowResolution | highResolution = null
+  ): DocumentPermissions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(annotating)) __obj.updateDynamic("annotating")(annotating.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(contentAccessibility)) __obj.updateDynamic("contentAccessibility")(contentAccessibility.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(copying)) __obj.updateDynamic("copying")(copying.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(documentAssembly)) __obj.updateDynamic("documentAssembly")(documentAssembly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fillingForms)) __obj.updateDynamic("fillingForms")(fillingForms.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(modifying)) __obj.updateDynamic("modifying")(modifying.get.asInstanceOf[js.Any])
+    if (printing != null) __obj.updateDynamic("printing")(printing.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentPermissions]
   }
-  @scala.inline
-  implicit class DocumentPermissionsOps[Self <: DocumentPermissions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnnotating(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("annotating")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnnotating: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("annotating")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentAccessibility(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentAccessibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentAccessibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentAccessibility")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCopying(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copying")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCopying: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copying")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocumentAssembly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentAssembly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentAssembly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentAssembly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFillingForms(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillingForms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFillingForms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillingForms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifying(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifying")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifying: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifying")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrinting(value: lowResolution | highResolution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrinting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printing")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

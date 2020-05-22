@@ -65,65 +65,18 @@ trait SchemaAggregation extends js.Object {
 
 object SchemaAggregation {
   @scala.inline
-  def apply(): SchemaAggregation = {
+  def apply(
+    alignmentPeriod: String = null,
+    crossSeriesReducer: String = null,
+    groupByFields: js.Array[String] = null,
+    perSeriesAligner: String = null
+  ): SchemaAggregation = {
     val __obj = js.Dynamic.literal()
+    if (alignmentPeriod != null) __obj.updateDynamic("alignmentPeriod")(alignmentPeriod.asInstanceOf[js.Any])
+    if (crossSeriesReducer != null) __obj.updateDynamic("crossSeriesReducer")(crossSeriesReducer.asInstanceOf[js.Any])
+    if (groupByFields != null) __obj.updateDynamic("groupByFields")(groupByFields.asInstanceOf[js.Any])
+    if (perSeriesAligner != null) __obj.updateDynamic("perSeriesAligner")(perSeriesAligner.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAggregation]
   }
-  @scala.inline
-  implicit class SchemaAggregationOps[Self <: SchemaAggregation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignmentPeriod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignmentPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignmentPeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignmentPeriod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrossSeriesReducer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossSeriesReducer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrossSeriesReducer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossSeriesReducer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupByFields(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupByFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupByFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupByFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPerSeriesAligner(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perSeriesAligner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerSeriesAligner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perSeriesAligner")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

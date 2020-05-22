@@ -5,14 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * Fired when the discovered services list is updated
-		 */
-@js.native
+  * Fired when the discovered services list is updated
+  */
 trait BonjourBrowserUpdatedservicesEvent extends BonjourBrowserBaseEvent {
   /**
-  			 * An array of BonjourService objects corresponding to currently available services.  If you cache this value, including using it as table data, be aware that it could become out of date at any time due to the asynchronous nature of Bonjour service discovery.
-  			 */
-  var services: js.Array[BonjourService] = js.native
+    * An array of BonjourService objects corresponding to currently available services.  If you cache this value, including using it as table data, be aware that it could become out of date at any time due to the asynchronous nature of Bonjour service discovery.
+    */
+  var services: js.Array[BonjourService]
 }
 
 object BonjourBrowserUpdatedservicesEvent {
@@ -21,19 +20,5 @@ object BonjourBrowserUpdatedservicesEvent {
     val __obj = js.Dynamic.literal(services = services.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
     __obj.asInstanceOf[BonjourBrowserUpdatedservicesEvent]
   }
-  @scala.inline
-  implicit class BonjourBrowserUpdatedservicesEventOps[Self <: BonjourBrowserUpdatedservicesEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withServices(value: js.Array[BonjourService]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("services")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.egg
 
-import typingsSlinky.egg.mod.EggEnvType
+import typingsSlinky.egg.mod._EggEnvType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,16 +31,16 @@ object eggStrings {
   sealed trait ignore extends js.Object
   
   @js.native
-  sealed trait local extends EggEnvType
+  sealed trait local extends _EggEnvType
   
   @js.native
-  sealed trait prod extends EggEnvType
+  sealed trait prod extends _EggEnvType
   
   @js.native
   sealed trait redirect extends js.Object
   
   @js.native
-  sealed trait unittest extends EggEnvType
+  sealed trait unittest extends _EggEnvType
   
   @scala.inline
   def `ALLOW-FROM`: `ALLOW-FROM` = "ALLOW-FROM".asInstanceOf[`ALLOW-FROM`]

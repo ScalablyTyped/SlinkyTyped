@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BooleanTypeProps extends KnobControlProps[BooleanTypeKnobValue] {
   @JSName("knob")
-  var knob_BooleanTypeProps: BooleanTypeKnob = js.native
+  var knob_BooleanTypeProps: BooleanTypeKnob
 }
 
 object BooleanTypeProps {
@@ -17,19 +16,5 @@ object BooleanTypeProps {
     val __obj = js.Dynamic.literal(knob = knob.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
     __obj.asInstanceOf[BooleanTypeProps]
   }
-  @scala.inline
-  implicit class BooleanTypePropsOps[Self <: BooleanTypeProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKnob(value: BooleanTypeKnob): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("knob")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

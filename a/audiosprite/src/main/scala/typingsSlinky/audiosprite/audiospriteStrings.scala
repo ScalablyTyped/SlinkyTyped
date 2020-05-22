@@ -1,14 +1,14 @@
 package typingsSlinky.audiosprite
 
-import typingsSlinky.audiosprite.mod.ExportType
 import typingsSlinky.audiosprite.mod.LogLevel
+import typingsSlinky.audiosprite.mod._ExportType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object audiospriteStrings {
   @js.native
-  sealed trait createjs extends ExportType
+  sealed trait createjs extends _ExportType
   
   @js.native
   sealed trait debug extends LogLevel
@@ -17,13 +17,13 @@ object audiospriteStrings {
   sealed trait error extends LogLevel
   
   @js.native
-  sealed trait howler extends ExportType
+  sealed trait howler extends _ExportType
   
   @js.native
   sealed trait info extends LogLevel
   
   @js.native
-  sealed trait jukebox extends ExportType
+  sealed trait jukebox extends _ExportType
   
   @js.native
   sealed trait notice extends LogLevel

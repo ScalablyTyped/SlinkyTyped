@@ -30,59 +30,17 @@ trait CreateLoadBalancerTlsCertificateRequest extends js.Object {
 
 object CreateLoadBalancerTlsCertificateRequest {
   @scala.inline
-  def apply(certificateDomainName: DomainName, certificateName: ResourceName, loadBalancerName: ResourceName): CreateLoadBalancerTlsCertificateRequest = {
+  def apply(
+    certificateDomainName: DomainName,
+    certificateName: ResourceName,
+    loadBalancerName: ResourceName,
+    certificateAlternativeNames: DomainNameList = null,
+    tags: TagList = null
+  ): CreateLoadBalancerTlsCertificateRequest = {
     val __obj = js.Dynamic.literal(certificateDomainName = certificateDomainName.asInstanceOf[js.Any], certificateName = certificateName.asInstanceOf[js.Any], loadBalancerName = loadBalancerName.asInstanceOf[js.Any])
+    if (certificateAlternativeNames != null) __obj.updateDynamic("certificateAlternativeNames")(certificateAlternativeNames.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateLoadBalancerTlsCertificateRequest]
   }
-  @scala.inline
-  implicit class CreateLoadBalancerTlsCertificateRequestOps[Self <: CreateLoadBalancerTlsCertificateRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificateDomainName(value: DomainName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateDomainName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCertificateName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoadBalancerName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCertificateAlternativeNames(value: DomainNameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateAlternativeNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificateAlternativeNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateAlternativeNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,144 +5,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Depth extends js.Object {
   /**
     * How deep to recurse through printed objects. This is the default unless the
     * print_obj function is passed an options object with a 'depth' property.
     */
-  var depth: js.UndefOr[Double] = js.native
+  var depth: js.UndefOr[Double] = js.undefined
   /**
     * If you need to add arbitrary attributes to the containing element of EDT,
     * this allows you to.
     */
-  var extra_attrs: js.UndefOr[String] = js.native
+  var extra_attrs: js.UndefOr[String] = js.undefined
   /**
     * Additional panels to show.
     */
-  var extra_panels: js.UndefOr[js.Array[CustomPanel]] = js.native
+  var extra_panels: js.UndefOr[js.Array[CustomPanel]] = js.undefined
   /**
     * Allows changing the default panel.
     */
-  var panels: js.UndefOr[js.Array[String]] = js.native
+  var panels: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Path to render standalone express-debug.
     */
-  var path: js.UndefOr[String] = js.native
+  var path: js.UndefOr[String] = js.undefined
   /**
     * Global option to determine sort order of printed object values. false for
     * default order, true for basic default sort, or a function to use for sort.
     */
-  var sort: js.UndefOr[Boolean | (js.Function2[/* a */ Double, /* b */ Double, Double])] = js.native
+  var sort: js.UndefOr[Boolean | (js.Function2[/* a */ Double, /* b */ Double, Double])] = js.undefined
   /**
     * Absolute path to a css file to include and override EDT's default css.
     */
-  var theme: js.UndefOr[String] = js.native
+  var theme: js.UndefOr[String] = js.undefined
 }
 
 object Depth {
   @scala.inline
-  def apply(): Depth = {
+  def apply(
+    depth: js.UndefOr[Double] = js.undefined,
+    extra_attrs: String = null,
+    extra_panels: js.Array[CustomPanel] = null,
+    panels: js.Array[String] = null,
+    path: String = null,
+    sort: Boolean | (js.Function2[/* a */ Double, /* b */ Double, Double]) = null,
+    theme: String = null
+  ): Depth = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(depth)) __obj.updateDynamic("depth")(depth.get.asInstanceOf[js.Any])
+    if (extra_attrs != null) __obj.updateDynamic("extra_attrs")(extra_attrs.asInstanceOf[js.Any])
+    if (extra_panels != null) __obj.updateDynamic("extra_panels")(extra_panels.asInstanceOf[js.Any])
+    if (panels != null) __obj.updateDynamic("panels")(panels.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
     __obj.asInstanceOf[Depth]
   }
-  @scala.inline
-  implicit class DepthOps[Self <: Depth] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDepth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDepth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtra_attrs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra_attrs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtra_attrs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra_attrs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtra_panels(value: js.Array[CustomPanel]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra_panels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtra_panels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra_panels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPanels(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPanels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortFunction2(value: (/* a */ Double, /* b */ Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSort(value: Boolean | (js.Function2[/* a */ Double, /* b */ Double, Double])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

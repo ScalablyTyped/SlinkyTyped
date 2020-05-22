@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeFirebaseApp
 
+import typingsSlinky.reactNativeFirebaseApp.ReactNativeFirebase.FirebaseApp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +12,23 @@ object global extends js.Object {
   object ReactNativeFirebase extends js.Object {
     @js.native
     class FirebaseModule ()
-      extends typingsSlinky.reactNativeFirebaseApp.ReactNativeFirebase.FirebaseModule
+      extends typingsSlinky.reactNativeFirebaseApp.ReactNativeFirebase.FirebaseModule {
+      /**
+        * The current `FirebaseApp` instance for this Firebase service.
+        */
+      /* CompleteClass */
+      override var app: FirebaseApp = js.native
+      /**
+        * Returns the shared event emitter instance used for all JS event routing.
+        */
+      /* CompleteClass */
+      override var emitter: js.Any = js.native
+      /**
+        * The native module instance for this Firebase service.
+        */
+      /* CompleteClass */
+      override var native: js.Any = js.native
+    }
     
   }
   
@@ -19,7 +36,30 @@ object global extends js.Object {
   object Utils extends js.Object {
     @js.native
     class Module ()
-      extends typingsSlinky.reactNativeFirebaseApp.Utils.Module
+      extends typingsSlinky.reactNativeFirebaseApp.Utils.Module {
+      /**
+        * The current `FirebaseApp` instance for this Firebase service.
+        */
+      /* CompleteClass */
+      override var app: FirebaseApp = js.native
+      /**
+        * Returns the shared event emitter instance used for all JS event routing.
+        */
+      /* CompleteClass */
+      override var emitter: js.Any = js.native
+      /**
+        * Returns true if this app is running inside a Firebase Test Lab environment. Always returns false on iOS.
+        *
+        * @android
+        */
+      /* CompleteClass */
+      override var isRunningInTestLab: Boolean = js.native
+      /**
+        * The native module instance for this Firebase service.
+        */
+      /* CompleteClass */
+      override var native: js.Any = js.native
+    }
     
   }
   

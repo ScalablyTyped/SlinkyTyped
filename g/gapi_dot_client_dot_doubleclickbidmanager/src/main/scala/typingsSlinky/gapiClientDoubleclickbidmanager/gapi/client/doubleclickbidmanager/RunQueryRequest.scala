@@ -4,79 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RunQueryRequest extends js.Object {
   /** Report data range used to generate the report. */
-  var dataRange: js.UndefOr[String] = js.native
+  var dataRange: js.UndefOr[String] = js.undefined
   /** The ending time for the data that is shown in the report. Note, reportDataEndTimeMs is required if dataRange is CUSTOM_DATES and ignored otherwise. */
-  var reportDataEndTimeMs: js.UndefOr[String] = js.native
+  var reportDataEndTimeMs: js.UndefOr[String] = js.undefined
   /** The starting time for the data that is shown in the report. Note, reportDataStartTimeMs is required if dataRange is CUSTOM_DATES and ignored otherwise. */
-  var reportDataStartTimeMs: js.UndefOr[String] = js.native
+  var reportDataStartTimeMs: js.UndefOr[String] = js.undefined
   /** Canonical timezone code for report data time. Defaults to America/New_York. */
-  var timezoneCode: js.UndefOr[String] = js.native
+  var timezoneCode: js.UndefOr[String] = js.undefined
 }
 
 object RunQueryRequest {
   @scala.inline
-  def apply(): RunQueryRequest = {
+  def apply(
+    dataRange: String = null,
+    reportDataEndTimeMs: String = null,
+    reportDataStartTimeMs: String = null,
+    timezoneCode: String = null
+  ): RunQueryRequest = {
     val __obj = js.Dynamic.literal()
+    if (dataRange != null) __obj.updateDynamic("dataRange")(dataRange.asInstanceOf[js.Any])
+    if (reportDataEndTimeMs != null) __obj.updateDynamic("reportDataEndTimeMs")(reportDataEndTimeMs.asInstanceOf[js.Any])
+    if (reportDataStartTimeMs != null) __obj.updateDynamic("reportDataStartTimeMs")(reportDataStartTimeMs.asInstanceOf[js.Any])
+    if (timezoneCode != null) __obj.updateDynamic("timezoneCode")(timezoneCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[RunQueryRequest]
   }
-  @scala.inline
-  implicit class RunQueryRequestOps[Self <: RunQueryRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataRange(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportDataEndTimeMs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportDataEndTimeMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReportDataEndTimeMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportDataEndTimeMs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportDataStartTimeMs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportDataStartTimeMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReportDataStartTimeMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportDataStartTimeMs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimezoneCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timezoneCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimezoneCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timezoneCode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

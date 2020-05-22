@@ -1,5 +1,7 @@
 package typingsSlinky.winrtUwp.global.Windows.UI.Input
 
+import typingsSlinky.winrtUwp.Windows.Devices.Input.PointerDeviceType
+import typingsSlinky.winrtUwp.Windows.Foundation.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +10,15 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.UI.Input.HoldingEventArgs")
 @js.native
 abstract class HoldingEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.UI.Input.HoldingEventArgs
+  extends typingsSlinky.winrtUwp.Windows.UI.Input.HoldingEventArgs {
+  /** Gets the state of the Holding event. */
+  /* CompleteClass */
+  override var holdingState: typingsSlinky.winrtUwp.Windows.UI.Input.HoldingState = js.native
+  /** Gets the device type of the input source. */
+  /* CompleteClass */
+  override var pointerDeviceType: PointerDeviceType = js.native
+  /** Gets the location of the touch, mouse, or pen/stylus contact. */
+  /* CompleteClass */
+  override var position: Point = js.native
+}
 

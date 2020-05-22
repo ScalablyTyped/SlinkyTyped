@@ -4,22 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ElevationResult extends js.Object {
   /** An `elevation` element indicating the elevation of the location in meters. */
-  var elevation: Double = js.native
+  var elevation: Double
   /**
     * A `location` element (containing `lat` and `lng` elements) of the position for which elevation data is being computed.
     * Note that for path requests, the set of `location` elements will contain the sampled points along the path.
     */
-  var location: LatLngLiteral = js.native
+  var location: LatLngLiteral
   /**
     * A `resolution` value, indicating the maximum distance between data points from which the elevation was interpolated, in meters.
     * This property will be missing if the resolution is not known.
     * Note that elevation data becomes more coarse (larger `resolution` values) when multiple points are passed.
     * To obtain the most accurate elevation value for a point, it should be queried independently.
     */
-  var resolution: Double = js.native
+  var resolution: Double
 }
 
 object ElevationResult {
@@ -28,31 +27,5 @@ object ElevationResult {
     val __obj = js.Dynamic.literal(elevation = elevation.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], resolution = resolution.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElevationResult]
   }
-  @scala.inline
-  implicit class ElevationResultOps[Self <: ElevationResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withElevation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocation(value: LatLngLiteral): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResolution(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -8,19 +8,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
-trait Program_
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait Program_
   extends Block
      with BaseNode
      with BlockParent
      with Scopable {
-  var body: js.Array[Statement] = js.native
-  var directives: js.Array[Directive_] = js.native
-  var interpreter: InterpreterDirective_ | Null = js.native
-  var sourceFile: String = js.native
-  var sourceType: script | module = js.native
+  var body: js.Array[Statement]
+  var directives: js.Array[Directive_]
+  var interpreter: InterpreterDirective_ | Null
+  var sourceFile: String
+  var sourceType: script | module
   @JSName("type")
-  var type_Program_ : Program = js.native
+  var type_Program_ : Program
 }
 
 object Program_ {
@@ -30,61 +29,18 @@ object Program_ {
     directives: js.Array[Directive_],
     sourceFile: String,
     sourceType: script | module,
-    `type`: Program
+    `type`: Program,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    interpreter: InterpreterDirective_ = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
   ): Program_ = {
-    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], directives = directives.asInstanceOf[js.Any], sourceFile = sourceFile.asInstanceOf[js.Any], sourceType = sourceType.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], directives = directives.asInstanceOf[js.Any], sourceFile = sourceFile.asInstanceOf[js.Any], sourceType = sourceType.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], interpreter = interpreter.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Program_]
   }
-  @scala.inline
-  implicit class Program_Ops[Self <: Program_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBody(value: js.Array[Statement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDirectives(value: js.Array[Directive_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceFile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceType(value: script | module): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: Program): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInterpreter(value: InterpreterDirective_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interpreter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInterpreterNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interpreter")(null)
-        ret
-    }
-  }
-  
 }
 

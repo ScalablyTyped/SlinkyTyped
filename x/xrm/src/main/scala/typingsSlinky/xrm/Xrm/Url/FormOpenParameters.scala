@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * @remarks  A member for "pagetype" is not provided.  The value "entityrecord" is required in
   *           the URL, for forms. Example:  "pagetype=entityrecord"
   */
-@js.native
 trait FormOpenParameters extends js.Object {
   /**
     * Controls whether the command bar is displayed.
@@ -20,18 +19,18 @@ trait FormOpenParameters extends js.Object {
     * * "true"    (The command bar is displayed.)
     * * "false"   (The command bar is not displayed.)
     */
-  var cmdbar: js.UndefOr[CmdBarDisplay] = js.native
+  var cmdbar: js.UndefOr[CmdBarDisplay] = js.undefined
   /**
     * The logical name of the entity.
     */
-  var etn: String = js.native
+  var etn: String
   /**
     * Additional parameters can be provided to the request. This can only be used to provide
     * default field values for the form, or pass data to custom parameters that have been
     * customized for the form.  See example below for setting the selected form.
     * @example Example:  encodeURIComponent("formid={8c9f3e6f-7839-e211-831e-00155db7d98f}");
     */
-  var extraqs: js.UndefOr[String] = js.native
+  var extraqs: js.UndefOr[String] = js.undefined
   /**
     * Controls whether the Navigation bar is displayed on the form.
     * @remarks **Accepted values are**:
@@ -39,64 +38,17 @@ trait FormOpenParameters extends js.Object {
     * * "off"     (The navigation bar is not displayed.)
     * * "entity"  (On an entity form, only the navigation options for related entities are available.)
     */
-  var navbar: js.UndefOr[NavBarDisplay] = js.native
+  var navbar: js.UndefOr[NavBarDisplay] = js.undefined
 }
 
 object FormOpenParameters {
   @scala.inline
-  def apply(etn: String): FormOpenParameters = {
+  def apply(etn: String, cmdbar: CmdBarDisplay = null, extraqs: String = null, navbar: NavBarDisplay = null): FormOpenParameters = {
     val __obj = js.Dynamic.literal(etn = etn.asInstanceOf[js.Any])
+    if (cmdbar != null) __obj.updateDynamic("cmdbar")(cmdbar.asInstanceOf[js.Any])
+    if (extraqs != null) __obj.updateDynamic("extraqs")(extraqs.asInstanceOf[js.Any])
+    if (navbar != null) __obj.updateDynamic("navbar")(navbar.asInstanceOf[js.Any])
     __obj.asInstanceOf[FormOpenParameters]
   }
-  @scala.inline
-  implicit class FormOpenParametersOps[Self <: FormOpenParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEtn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCmdbar(value: CmdBarDisplay): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmdbar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCmdbar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmdbar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtraqs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extraqs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtraqs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extraqs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavbar(value: NavBarDisplay): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navbar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavbar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navbar")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

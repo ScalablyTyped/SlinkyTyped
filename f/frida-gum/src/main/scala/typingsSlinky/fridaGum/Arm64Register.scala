@@ -173,7 +173,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.fridaGum.fridaGumStrings.q30
   - typingsSlinky.fridaGum.fridaGumStrings.q31
 */
-trait Arm64Register extends Arm64CallArgument
+trait Arm64Register extends _Arm64CallArgument
 
 object Arm64Register {
   @scala.inline

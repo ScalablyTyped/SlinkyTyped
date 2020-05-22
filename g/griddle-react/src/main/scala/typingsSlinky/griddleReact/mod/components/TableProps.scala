@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TableProps extends js.Object {
-  var NoResults: js.UndefOr[js.Any] = js.native
-  var TableBody: js.UndefOr[js.Any] = js.native
-  var TableHeading: js.UndefOr[js.Any] = js.native
-  var visibleRows: js.UndefOr[Double] = js.native
+  var NoResults: js.UndefOr[js.Any] = js.undefined
+  var TableBody: js.UndefOr[js.Any] = js.undefined
+  var TableHeading: js.UndefOr[js.Any] = js.undefined
+  var visibleRows: js.UndefOr[Double] = js.undefined
 }
 
 object TableProps {
   @scala.inline
-  def apply(): TableProps = {
+  def apply(
+    NoResults: js.Any = null,
+    TableBody: js.Any = null,
+    TableHeading: js.Any = null,
+    visibleRows: js.UndefOr[Double] = js.undefined
+  ): TableProps = {
     val __obj = js.Dynamic.literal()
+    if (NoResults != null) __obj.updateDynamic("NoResults")(NoResults.asInstanceOf[js.Any])
+    if (TableBody != null) __obj.updateDynamic("TableBody")(TableBody.asInstanceOf[js.Any])
+    if (TableHeading != null) __obj.updateDynamic("TableHeading")(TableHeading.asInstanceOf[js.Any])
+    if (!js.isUndefined(visibleRows)) __obj.updateDynamic("visibleRows")(visibleRows.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableProps]
   }
-  @scala.inline
-  implicit class TablePropsOps[Self <: TableProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNoResults(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NoResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NoResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableBody(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableHeading(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableHeading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableHeading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableHeading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibleRows(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibleRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleRows")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

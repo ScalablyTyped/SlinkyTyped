@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ResizeEvent extends LeafletEvent {
-  var newSize: Point_ = js.native
-  var oldSize: Point_ = js.native
+  var newSize: Point_
+  var oldSize: Point_
 }
 
 object ResizeEvent {
@@ -25,25 +24,5 @@ object ResizeEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResizeEvent]
   }
-  @scala.inline
-  implicit class ResizeEventOps[Self <: ResizeEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNewSize(value: Point_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOldSize(value: Point_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -7,5 +7,11 @@ import scala.scalajs.js.annotation._
 @JSGlobal("MSForms.ReturnSingle")
 @js.native
 class ReturnSingle protected ()
-  extends typingsSlinky.activexMsforms.MSForms.ReturnSingle
+  extends typingsSlinky.activexMsforms.MSForms.ReturnSingle {
+  /* CompleteClass */
+  @JSName("MSForms.ReturnSingle_typekey")
+  override var MSFormsDotReturnSingle_typekey: typingsSlinky.activexMsforms.MSForms.ReturnSingle = js.native
+  /* CompleteClass */
+  override var Value: Double = js.native
+}
 

@@ -8,14 +8,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Typeoferrors extends js.Object {
   // API: http://vitaly-t.github.io/spex/errors.BatchError.html
-  var BatchError: Instantiable0[typingsSlinky.spex.mod.errors.BatchError] = js.native
+  var BatchError: Instantiable0[typingsSlinky.spex.mod.errors.BatchError]
   // API: http://vitaly-t.github.io/spex/errors.PageError.html
-  var PageError: Instantiable0[typingsSlinky.spex.mod.errors.PageError] = js.native
+  var PageError: Instantiable0[typingsSlinky.spex.mod.errors.PageError]
   // API: http://vitaly-t.github.io/spex/errors.SequenceError.html
-  var SequenceError: Instantiable0[typingsSlinky.spex.mod.errors.SequenceError] = js.native
+  var SequenceError: Instantiable0[typingsSlinky.spex.mod.errors.SequenceError]
 }
 
 object Typeoferrors {
@@ -28,31 +27,5 @@ object Typeoferrors {
     val __obj = js.Dynamic.literal(BatchError = BatchError.asInstanceOf[js.Any], PageError = PageError.asInstanceOf[js.Any], SequenceError = SequenceError.asInstanceOf[js.Any])
     __obj.asInstanceOf[Typeoferrors]
   }
-  @scala.inline
-  implicit class TypeoferrorsOps[Self <: Typeoferrors] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBatchError(value: Instantiable0[BatchError]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPageError(value: Instantiable0[PageError]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSequenceError(value: Instantiable0[SequenceError]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SequenceError")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

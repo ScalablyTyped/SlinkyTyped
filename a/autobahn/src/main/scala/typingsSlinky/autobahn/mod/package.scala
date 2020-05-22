@@ -27,4 +27,5 @@ package object mod {
     /* details */ js.UndefOr[typingsSlinky.autobahn.mod.IEvent], 
     scala.Unit
   ]
+  type TransportType = typingsSlinky.autobahn.mod.DefaultTransportType | typingsSlinky.autobahn.mod.CustomTransportType
 }

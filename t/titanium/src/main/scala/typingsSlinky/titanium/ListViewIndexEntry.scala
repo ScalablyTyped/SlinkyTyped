@@ -7,55 +7,24 @@ import scala.scalajs.js.annotation._
 /**
   * A simple object that represents an index entry in a `ListView`.
   */
-@js.native
 trait ListViewIndexEntry extends js.Object {
   /**
-  	 * Section index associated with this title.
-  	 */
-  var index: js.UndefOr[Double] = js.native
+    * Section index associated with this title.
+    */
+  var index: js.UndefOr[Double] = js.undefined
   /**
-  	 * Title to display in the index bar.
-  	 */
-  var title: js.UndefOr[java.lang.String] = js.native
+    * Title to display in the index bar.
+    */
+  var title: js.UndefOr[java.lang.String] = js.undefined
 }
 
 object ListViewIndexEntry {
   @scala.inline
-  def apply(): ListViewIndexEntry = {
+  def apply(index: js.UndefOr[Double] = js.undefined, title: java.lang.String = null): ListViewIndexEntry = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(index)) __obj.updateDynamic("index")(index.get.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListViewIndexEntry]
   }
-  @scala.inline
-  implicit class ListViewIndexEntryOps[Self <: ListViewIndexEntry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

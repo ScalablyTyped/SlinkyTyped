@@ -34,83 +34,21 @@ trait GetParametersByPathRequest extends js.Object {
 
 object GetParametersByPathRequest {
   @scala.inline
-  def apply(Path: PSParameterName): GetParametersByPathRequest = {
+  def apply(
+    Path: PSParameterName,
+    MaxResults: js.UndefOr[GetParametersByPathMaxResults] = js.undefined,
+    NextToken: NextToken = null,
+    ParameterFilters: ParameterStringFilterList = null,
+    Recursive: js.UndefOr[Boolean] = js.undefined,
+    WithDecryption: js.UndefOr[Boolean] = js.undefined
+  ): GetParametersByPathRequest = {
     val __obj = js.Dynamic.literal(Path = Path.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxResults)) __obj.updateDynamic("MaxResults")(MaxResults.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (ParameterFilters != null) __obj.updateDynamic("ParameterFilters")(ParameterFilters.asInstanceOf[js.Any])
+    if (!js.isUndefined(Recursive)) __obj.updateDynamic("Recursive")(Recursive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(WithDecryption)) __obj.updateDynamic("WithDecryption")(WithDecryption.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetParametersByPathRequest]
   }
-  @scala.inline
-  implicit class GetParametersByPathRequestOps[Self <: GetParametersByPathRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPath(value: PSParameterName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: GetParametersByPathMaxResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameterFilters(value: ParameterStringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameterFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterFilters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecursive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Recursive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecursive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Recursive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWithDecryption(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WithDecryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWithDecryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WithDecryption")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

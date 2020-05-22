@@ -2,7 +2,6 @@ package typingsSlinky.antDesignPro.exceptionMod
 
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.antDesignPro.antDesignProStrings.`403`
 import typingsSlinky.antDesignPro.antDesignProStrings.`404`
 import typingsSlinky.antDesignPro.antDesignProStrings.`500`
@@ -11,189 +10,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExceptionProps[L] extends js.Object {
-  var actions: js.UndefOr[TagMod[Any]] = js.native
-  var backText: js.UndefOr[TagMod[Any]] = js.native
-  var className: js.UndefOr[String] = js.native
-  var desc: js.UndefOr[TagMod[Any]] = js.native
-  var img: js.UndefOr[String] = js.native
-  var linkElement: js.UndefOr[String | ReactComponentClass[L]] = js.native
-  var redirect: js.UndefOr[String] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
-  var title: js.UndefOr[TagMod[Any]] = js.native
-  var `type`: js.UndefOr[`403` | `404` | `500`] = js.native
+  var actions: js.UndefOr[TagMod[Any]] = js.undefined
+  var backText: js.UndefOr[TagMod[Any]] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var desc: js.UndefOr[TagMod[Any]] = js.undefined
+  var img: js.UndefOr[String] = js.undefined
+  var linkElement: js.UndefOr[String | ReactComponentClass[L]] = js.undefined
+  var redirect: js.UndefOr[String] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
+  var title: js.UndefOr[TagMod[Any]] = js.undefined
+  var `type`: js.UndefOr[`403` | `404` | `500`] = js.undefined
 }
 
 object ExceptionProps {
   @scala.inline
-  def apply[L](): ExceptionProps[L] = {
+  def apply[L](
+    actions: TagMod[Any] = null,
+    backText: TagMod[Any] = null,
+    className: String = null,
+    desc: TagMod[Any] = null,
+    img: String = null,
+    linkElement: String | ReactComponentClass[L] = null,
+    redirect: String = null,
+    style: CSSProperties = null,
+    title: TagMod[Any] = null,
+    `type`: `403` | `404` | `500` = null
+  ): ExceptionProps[L] = {
     val __obj = js.Dynamic.literal()
+    if (actions != null) __obj.updateDynamic("actions")(actions.asInstanceOf[js.Any])
+    if (backText != null) __obj.updateDynamic("backText")(backText.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (desc != null) __obj.updateDynamic("desc")(desc.asInstanceOf[js.Any])
+    if (img != null) __obj.updateDynamic("img")(img.asInstanceOf[js.Any])
+    if (linkElement != null) __obj.updateDynamic("linkElement")(linkElement.asInstanceOf[js.Any])
+    if (redirect != null) __obj.updateDynamic("redirect")(redirect.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExceptionProps[L]]
   }
-  @scala.inline
-  implicit class ExceptionPropsOps[Self[l] <: ExceptionProps[l], L] (val x: Self[L]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[L] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[L]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[L] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[L] with Other]
-    @scala.inline
-    def withActionsReactElement(value: ReactElement): Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withActions(value: TagMod[Any]): Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActions: Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackTextReactElement(value: ReactElement): Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackText(value: TagMod[Any]): Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackText: Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescReactElement(value: ReactElement): Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDesc(value: TagMod[Any]): Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDesc: Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImg(value: String): Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("img")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImg: Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("img")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkElementFunctionComponent(value: ReactComponentClass[L]): Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLinkElementComponentClass(value: ReactComponentClass[L]): Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLinkElement(value: String | ReactComponentClass[L]): Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinkElement: Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedirect(value: String): Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedirect: Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleReactElement(value: ReactElement): Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: TagMod[Any]): Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: `403` | `404` | `500`): Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self[L] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

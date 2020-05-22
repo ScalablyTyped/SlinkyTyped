@@ -7,62 +7,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ElementalProps extends js.Object {
-  val children: TagMod[Any] = js.native
-  val colorOpts: js.UndefOr[PrimaryDark] = js.native
-  val fontOpts: js.UndefOr[Primary] = js.native
+  val children: TagMod[Any]
+  val colorOpts: js.UndefOr[PrimaryDark] = js.undefined
+  val fontOpts: js.UndefOr[Primary] = js.undefined
 }
 
 object ElementalProps {
   @scala.inline
-  def apply(): ElementalProps = {
+  def apply(children: TagMod[Any] = null, colorOpts: PrimaryDark = null, fontOpts: Primary = null): ElementalProps = {
     val __obj = js.Dynamic.literal()
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (colorOpts != null) __obj.updateDynamic("colorOpts")(colorOpts.asInstanceOf[js.Any])
+    if (fontOpts != null) __obj.updateDynamic("fontOpts")(fontOpts.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElementalProps]
   }
-  @scala.inline
-  implicit class ElementalPropsOps[Self <: ElementalProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorOpts(value: PrimaryDark): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorOpts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorOpts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorOpts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontOpts(value: Primary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontOpts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontOpts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontOpts")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

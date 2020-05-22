@@ -18,41 +18,11 @@ trait UsagePlanThrottleSettings extends js.Object {
 
 object UsagePlanThrottleSettings {
   @scala.inline
-  def apply(): UsagePlanThrottleSettings = {
+  def apply(burstLimit: js.UndefOr[Double] = js.undefined, rateLimit: js.UndefOr[Double] = js.undefined): UsagePlanThrottleSettings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(burstLimit)) __obj.updateDynamic("burstLimit")(burstLimit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rateLimit)) __obj.updateDynamic("rateLimit")(rateLimit.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UsagePlanThrottleSettings]
   }
-  @scala.inline
-  implicit class UsagePlanThrottleSettingsOps[Self <: UsagePlanThrottleSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBurstLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("burstLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBurstLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("burstLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRateLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rateLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRateLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rateLimit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

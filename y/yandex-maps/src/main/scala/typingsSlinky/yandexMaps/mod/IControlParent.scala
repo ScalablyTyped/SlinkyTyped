@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IControlParent extends IParentOnMap {
-  def getChildElement(child: IControl): js.Promise[HTMLElement] = js.native
+  def getChildElement(child: IControl): js.Promise[HTMLElement]
 }
 
 object IControlParent {
@@ -16,19 +15,5 @@ object IControlParent {
     val __obj = js.Dynamic.literal(getChildElement = js.Any.fromFunction1(getChildElement), getMap = js.Any.fromFunction0(getMap))
     __obj.asInstanceOf[IControlParent]
   }
-  @scala.inline
-  implicit class IControlParentOps[Self <: IControlParent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetChildElement(value: IControl => js.Promise[HTMLElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getChildElement")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

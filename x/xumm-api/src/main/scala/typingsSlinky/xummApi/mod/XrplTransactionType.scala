@@ -22,11 +22,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.xummApi.xummApiStrings.SignerListSet
   - typingsSlinky.xummApi.xummApiStrings.TrustSet
   - typingsSlinky.xummApi.xummApiStrings.EnableAmendment
+  - typingsSlinky.xummApi.xummApiStrings.AccountDelete
   - typingsSlinky.xummApi.xummApiStrings.SetFee
 */
 trait XrplTransactionType extends js.Object
 
 object XrplTransactionType {
+  @scala.inline
+  def AccountDelete: typingsSlinky.xummApi.xummApiStrings.AccountDelete = "AccountDelete".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.AccountDelete]
   @scala.inline
   def AccountSet: typingsSlinky.xummApi.xummApiStrings.AccountSet = "AccountSet".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.AccountSet]
   @scala.inline

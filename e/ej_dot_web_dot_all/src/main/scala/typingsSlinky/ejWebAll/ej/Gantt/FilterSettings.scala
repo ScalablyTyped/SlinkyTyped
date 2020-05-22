@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FilterSettings extends js.Object {
   /** Specifies the column collection for filtering the Gantt content on initial load
     * @Default {[]}
     */
-  var filteredColumns: js.UndefOr[js.Array[FilterSettingsFilteredColumn]] = js.native
+  var filteredColumns: js.UndefOr[js.Array[FilterSettingsFilteredColumn]] = js.undefined
 }
 
 object FilterSettings {
   @scala.inline
-  def apply(): FilterSettings = {
+  def apply(filteredColumns: js.Array[FilterSettingsFilteredColumn] = null): FilterSettings = {
     val __obj = js.Dynamic.literal()
+    if (filteredColumns != null) __obj.updateDynamic("filteredColumns")(filteredColumns.asInstanceOf[js.Any])
     __obj.asInstanceOf[FilterSettings]
   }
-  @scala.inline
-  implicit class FilterSettingsOps[Self <: FilterSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilteredColumns(value: js.Array[FilterSettingsFilteredColumn]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filteredColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilteredColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filteredColumns")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

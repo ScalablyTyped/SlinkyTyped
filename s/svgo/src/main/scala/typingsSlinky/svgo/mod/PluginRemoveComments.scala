@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PluginRemoveComments extends PluginConfig {
-  var removeComments: Boolean | js.Object = js.native
+  var removeComments: Boolean | js.Object
 }
 
 object PluginRemoveComments {
@@ -15,19 +14,5 @@ object PluginRemoveComments {
     val __obj = js.Dynamic.literal(removeComments = removeComments.asInstanceOf[js.Any])
     __obj.asInstanceOf[PluginRemoveComments]
   }
-  @scala.inline
-  implicit class PluginRemoveCommentsOps[Self <: PluginRemoveComments] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRemoveComments(value: Boolean | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeComments")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

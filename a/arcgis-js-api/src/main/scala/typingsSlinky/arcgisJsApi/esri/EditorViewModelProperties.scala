@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EditorViewModelProperties extends js.Object {
   /**
     * An array of string values which specifies what end users are allowed to edit. For example, a feature layer with full editing privileges may be available. But you may only want the end user to have the ability to update existing features. Set the `allowedWorkflows` to only `update`.
@@ -18,124 +17,57 @@ trait EditorViewModelProperties extends js.Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#allowedWorkflows)
     */
-  var allowedWorkflows: js.UndefOr[js.Array[String]] = js.native
+  var allowedWorkflows: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * The [FeatureFormViewModel](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureForm-FeatureFormViewModel.html) for supporting the editor widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#featureFormViewModel)
     */
-  var featureFormViewModel: js.UndefOr[FeatureFormViewModelProperties] = js.native
+  var featureFormViewModel: js.UndefOr[FeatureFormViewModelProperties] = js.undefined
   /**
     * The [FeatureTemplatesViewModel](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTemplates-FeatureTemplatesViewModel.html) for supporting the editor widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#featureTemplatesViewModel)
     */
-  var featureTemplatesViewModel: js.UndefOr[FeatureTemplatesViewModelProperties] = js.native
+  var featureTemplatesViewModel: js.UndefOr[FeatureTemplatesViewModelProperties] = js.undefined
   /**
     * An array of editing configurations for individual layers.  If you have an editable feature layer but do not want the end user to do any type of editing, you can limit this by setting the `enabled` property to `false`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#layerInfos)
     */
-  var layerInfos: js.UndefOr[js.Array[LayerInfo]] = js.native
+  var layerInfos: js.UndefOr[js.Array[LayerInfo]] = js.undefined
   /**
     * The [SketchViewModel](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html) for supporting the editor widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#sketchViewModel)
     */
-  var sketchViewModel: js.UndefOr[SketchViewModelProperties] = js.native
+  var sketchViewModel: js.UndefOr[SketchViewModelProperties] = js.undefined
   /**
     * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html). This view provides the editable layers for the Editor widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#view)
     */
-  var view: js.UndefOr[MapViewProperties] = js.native
+  var view: js.UndefOr[MapViewProperties] = js.undefined
 }
 
 object EditorViewModelProperties {
   @scala.inline
-  def apply(): EditorViewModelProperties = {
+  def apply(
+    allowedWorkflows: js.Array[String] = null,
+    featureFormViewModel: FeatureFormViewModelProperties = null,
+    featureTemplatesViewModel: FeatureTemplatesViewModelProperties = null,
+    layerInfos: js.Array[LayerInfo] = null,
+    sketchViewModel: SketchViewModelProperties = null,
+    view: MapViewProperties = null
+  ): EditorViewModelProperties = {
     val __obj = js.Dynamic.literal()
+    if (allowedWorkflows != null) __obj.updateDynamic("allowedWorkflows")(allowedWorkflows.asInstanceOf[js.Any])
+    if (featureFormViewModel != null) __obj.updateDynamic("featureFormViewModel")(featureFormViewModel.asInstanceOf[js.Any])
+    if (featureTemplatesViewModel != null) __obj.updateDynamic("featureTemplatesViewModel")(featureTemplatesViewModel.asInstanceOf[js.Any])
+    if (layerInfos != null) __obj.updateDynamic("layerInfos")(layerInfos.asInstanceOf[js.Any])
+    if (sketchViewModel != null) __obj.updateDynamic("sketchViewModel")(sketchViewModel.asInstanceOf[js.Any])
+    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
     __obj.asInstanceOf[EditorViewModelProperties]
   }
-  @scala.inline
-  implicit class EditorViewModelPropertiesOps[Self <: EditorViewModelProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowedWorkflows(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedWorkflows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowedWorkflows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedWorkflows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeatureFormViewModel(value: FeatureFormViewModelProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featureFormViewModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeatureFormViewModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featureFormViewModel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeatureTemplatesViewModel(value: FeatureTemplatesViewModelProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featureTemplatesViewModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeatureTemplatesViewModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featureTemplatesViewModel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayerInfos(value: js.Array[LayerInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layerInfos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayerInfos: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layerInfos")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSketchViewModel(value: SketchViewModelProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sketchViewModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSketchViewModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sketchViewModel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withView(value: MapViewProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

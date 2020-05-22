@@ -39,11 +39,11 @@ trait MipsWriter extends js.Object {
   /**
     * Puts an ADDI instruction.
     */
-  def putAddiRegImm(destReg: MipsRegister, imm: Double): Unit = js.native
+  def putAddiRegImm(dstReg: MipsRegister, imm: Double): Unit = js.native
   /**
     * Puts an ADDI instruction.
     */
-  def putAddiRegRegImm(destReg: MipsRegister, leftReg: MipsRegister, imm: Double): Unit = js.native
+  def putAddiRegRegImm(dstReg: MipsRegister, leftReg: MipsRegister, imm: Double): Unit = js.native
   /**
     * Puts an ADDU instruction.
     */
@@ -76,6 +76,10 @@ trait MipsWriter extends js.Object {
     */
   def putCallRegWithArguments(reg: MipsRegister, args: js.Array[MipsCallArgument]): Unit = js.native
   /**
+    * Puts a DSLL instruction.
+    */
+  def putDsllRegReg(dstReg: MipsRegister, srcReg: MipsRegister, amount: Double): Unit = js.native
+  /**
     * Puts a raw instruction.
     */
   def putInstruction(insn: Double): Unit = js.native
@@ -83,6 +87,10 @@ trait MipsWriter extends js.Object {
     * Puts a J instruction.
     */
   def putJAddress(address: NativePointerValue): Unit = js.native
+  /**
+    * Puts a J WITHOUT NOP instruction.
+    */
+  def putJAddressWithoutNop(address: NativePointerValue): Unit = js.native
   /**
     * Puts a J instruction referencing `labelId`, defined by a past
     * or future `putLabel()`.
@@ -109,6 +117,12 @@ trait MipsWriter extends js.Object {
     * that may be referenced in past and future `put*Label()` calls.
     */
   def putLabel(id: String): Unit = js.native
+  /**
+    * Puts an LD instruction.
+    */
+  def putLdRegRegOffset(dstReg: MipsRegister, srcReg: MipsRegister, srcOffset: Double): Unit = js.native
+  def putLdRegRegOffset(dstReg: MipsRegister, srcReg: MipsRegister, srcOffset: Int64): Unit = js.native
+  def putLdRegRegOffset(dstReg: MipsRegister, srcReg: MipsRegister, srcOffset: UInt64): Unit = js.native
   /**
     * Puts a LUI instruction.
     */
@@ -152,6 +166,10 @@ trait MipsWriter extends js.Object {
     */
   def putPopReg(reg: MipsRegister): Unit = js.native
   /**
+    * Puts a minimal sized trampoline for vectoring to the given address.
+    */
+  def putPrologueTrampoline(reg: MipsRegister, address: NativePointerValue): Unit = js.native
+  /**
     * Puts a PUSH instruction.
     */
   def putPushReg(reg: MipsRegister): Unit = js.native
@@ -162,7 +180,7 @@ trait MipsWriter extends js.Object {
   /**
     * Puts a SUB instruction.
     */
-  def putSubRegRegImm(destReg: MipsRegister, leftReg: MipsRegister, imm: Double): Unit = js.native
+  def putSubRegRegImm(dstReg: MipsRegister, leftReg: MipsRegister, imm: Double): Unit = js.native
   /**
     * Puts a SW instruction.
     */

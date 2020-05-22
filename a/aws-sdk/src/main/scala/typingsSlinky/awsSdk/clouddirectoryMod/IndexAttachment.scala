@@ -18,41 +18,11 @@ trait IndexAttachment extends js.Object {
 
 object IndexAttachment {
   @scala.inline
-  def apply(): IndexAttachment = {
+  def apply(IndexedAttributes: AttributeKeyAndValueList = null, ObjectIdentifier: ObjectIdentifier = null): IndexAttachment = {
     val __obj = js.Dynamic.literal()
+    if (IndexedAttributes != null) __obj.updateDynamic("IndexedAttributes")(IndexedAttributes.asInstanceOf[js.Any])
+    if (ObjectIdentifier != null) __obj.updateDynamic("ObjectIdentifier")(ObjectIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[IndexAttachment]
   }
-  @scala.inline
-  implicit class IndexAttachmentOps[Self <: IndexAttachment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndexedAttributes(value: AttributeKeyAndValueList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexedAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndexedAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexedAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectIdentifier(value: ObjectIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectIdentifier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

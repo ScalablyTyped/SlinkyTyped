@@ -27,53 +27,16 @@ trait SchemaCreateJobRequest extends js.Object {
 
 object SchemaCreateJobRequest {
   @scala.inline
-  def apply(): SchemaCreateJobRequest = {
+  def apply(
+    disableStreetAddressResolution: js.UndefOr[Boolean] = js.undefined,
+    job: SchemaJob = null,
+    processingOptions: SchemaJobProcessingOptions = null
+  ): SchemaCreateJobRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(disableStreetAddressResolution)) __obj.updateDynamic("disableStreetAddressResolution")(disableStreetAddressResolution.get.asInstanceOf[js.Any])
+    if (job != null) __obj.updateDynamic("job")(job.asInstanceOf[js.Any])
+    if (processingOptions != null) __obj.updateDynamic("processingOptions")(processingOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreateJobRequest]
   }
-  @scala.inline
-  implicit class SchemaCreateJobRequestOps[Self <: SchemaCreateJobRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisableStreetAddressResolution(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStreetAddressResolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableStreetAddressResolution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStreetAddressResolution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJob(value: SchemaJob): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJob: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProcessingOptions(value: SchemaJobProcessingOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processingOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProcessingOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processingOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -55,77 +55,20 @@ trait SchemaBasicYarnAutoscalingConfig extends js.Object {
 
 object SchemaBasicYarnAutoscalingConfig {
   @scala.inline
-  def apply(): SchemaBasicYarnAutoscalingConfig = {
+  def apply(
+    gracefulDecommissionTimeout: String = null,
+    scaleDownFactor: js.UndefOr[Double] = js.undefined,
+    scaleDownMinWorkerFraction: js.UndefOr[Double] = js.undefined,
+    scaleUpFactor: js.UndefOr[Double] = js.undefined,
+    scaleUpMinWorkerFraction: js.UndefOr[Double] = js.undefined
+  ): SchemaBasicYarnAutoscalingConfig = {
     val __obj = js.Dynamic.literal()
+    if (gracefulDecommissionTimeout != null) __obj.updateDynamic("gracefulDecommissionTimeout")(gracefulDecommissionTimeout.asInstanceOf[js.Any])
+    if (!js.isUndefined(scaleDownFactor)) __obj.updateDynamic("scaleDownFactor")(scaleDownFactor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scaleDownMinWorkerFraction)) __obj.updateDynamic("scaleDownMinWorkerFraction")(scaleDownMinWorkerFraction.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scaleUpFactor)) __obj.updateDynamic("scaleUpFactor")(scaleUpFactor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scaleUpMinWorkerFraction)) __obj.updateDynamic("scaleUpMinWorkerFraction")(scaleUpMinWorkerFraction.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBasicYarnAutoscalingConfig]
   }
-  @scala.inline
-  implicit class SchemaBasicYarnAutoscalingConfigOps[Self <: SchemaBasicYarnAutoscalingConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGracefulDecommissionTimeout(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gracefulDecommissionTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGracefulDecommissionTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gracefulDecommissionTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaleDownFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleDownFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleDownFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleDownFactor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaleDownMinWorkerFraction(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleDownMinWorkerFraction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleDownMinWorkerFraction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleDownMinWorkerFraction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaleUpFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleUpFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleUpFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleUpFactor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaleUpMinWorkerFraction(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleUpMinWorkerFraction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleUpMinWorkerFraction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleUpMinWorkerFraction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

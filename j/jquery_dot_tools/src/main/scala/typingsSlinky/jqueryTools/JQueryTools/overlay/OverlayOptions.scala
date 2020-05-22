@@ -11,7 +11,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OverlayOptions extends js.Object {
   /**
     * A jQuery selector for the closing elements inside the overlay. These
@@ -19,29 +18,29 @@ trait OverlayOptions extends js.Object {
     * supplied, a close element is auto-generated. Read more about this in
     * defining close actions.
     */
-  var close: js.UndefOr[JQuery] = js.native
+  var close: js.UndefOr[JQuery] = js.undefined
   /**
     * By default, overlays are closed when the mouse is clicked outside the
     * overlay area. Setting this property to false suppresses this behaviour
     * which is suitable for modal dialogs.
     * @default true
     */
-  var closeOnClick: js.UndefOr[Boolean] = js.native
+  var closeOnClick: js.UndefOr[Boolean] = js.undefined
   /**
     * By default, overlays are closed when the ESC keyboard key is pressed.
     * Setting this property to false suppresses this behaviour.
     * @default true
     */
-  var closeOnEsc: js.UndefOr[Boolean] = js.native
+  var closeOnEsc: js.UndefOr[Boolean] = js.undefined
   /** The speed to close the overlay, in milliseconds */
-  var closeSpeed: js.UndefOr[Double] = js.native
+  var closeSpeed: js.UndefOr[Double] = js.undefined
   /**
     * The effect to be used when an overlay is opened and closed. This can
     * dramatically change the behaviour of the overlay. By default this tool
     * uses an effect called "default" which is a simple show/hide effect.
     * @default 'default'
     */
-  var effect: js.UndefOr[String] = js.native
+  var effect: js.UndefOr[String] = js.undefined
   /**
     * since 1.2.0. whether overlay stays in the same position while the screen
     * is scrolled. This is the default behaviour for all browsers except IE6
@@ -50,19 +49,19 @@ trait OverlayOptions extends js.Object {
     * so that when the screen is scrolled then the overlay moves along with the document.
     * @default true
     */
-  var fixed: js.UndefOr[Boolean] = js.native
+  var fixed: js.UndefOr[Boolean] = js.undefined
   /**
     * Specifies how far from the left-hand edge of the screen the overlay should be
     * placed. By default the overlay is horizontally centered with the value "center"
     * but you can also supply a numerical value specifying a distance in pixels.
     * @default 'center'
     */
-  var left: js.UndefOr[center | Double] = js.native
+  var left: js.UndefOr[center | Double] = js.undefined
   /**
     * If enabled then the overlay loads immediately after it has been initialized.
     * @default false
     */
-  var load: js.UndefOr[Boolean] = js.native
+  var load: js.UndefOr[Boolean] = js.undefined
   /**
     * Previously known as expose. Overlay is very often used together with the
     * Mask Tool. Because of this, the support for this feature has been built
@@ -71,35 +70,35 @@ trait OverlayOptions extends js.Object {
     * object literal specifying more configuration variables. See an example of an
     * overlay together with mask. By default masking is disabled.
     */
-  var mask: js.UndefOr[String | MaskOptions] = js.native
+  var mask: js.UndefOr[String | MaskOptions] = js.undefined
   /** before the overlay is closed */
-  var onBeforeClose: js.UndefOr[js.ThisFunction1[/* this */ Overlay, /* event */ JQueryEventObject, Unit]] = js.native
+  var onBeforeClose: js.UndefOr[js.ThisFunction1[/* this */ Overlay, /* event */ JQueryEventObject, Unit]] = js.undefined
   /**
     * before the overlay is displayed. The overlay has already been positioned at the
     * location from where it will start animating.
     */
-  var onBeforeLoad: js.UndefOr[js.ThisFunction1[/* this */ Overlay, /* event */ JQueryEventObject, Unit]] = js.native
+  var onBeforeLoad: js.UndefOr[js.ThisFunction1[/* this */ Overlay, /* event */ JQueryEventObject, Unit]] = js.undefined
   /** when the overlay is closed  */
-  var onClose: js.UndefOr[js.ThisFunction1[/* this */ Overlay, /* event */ JQueryEventObject, Unit]] = js.native
+  var onClose: js.UndefOr[js.ThisFunction1[/* this */ Overlay, /* event */ JQueryEventObject, Unit]] = js.undefined
   /** when the overlay has completely been displayed  */
-  var onLoad: js.UndefOr[js.ThisFunction1[/* this */ Overlay, /* event */ JQueryEventObject, Unit]] = js.native
+  var onLoad: js.UndefOr[js.ThisFunction1[/* this */ Overlay, /* event */ JQueryEventObject, Unit]] = js.undefined
   /**
     * By default, there can be only one overlay on the page at once. Setting this
     * property to false allows you to have multiple overlay instances.
     * @default true
     */
-  var oneInstance: js.UndefOr[Boolean] = js.native
+  var oneInstance: js.UndefOr[Boolean] = js.undefined
   /**
     * The speed of the fade-in animation on the "default" effect. Valid values are
     * 'slow', 'normal' and 'fast', or you can supply a numerical value (in milliseconds).
     * By setting this property to 0, the overlay will appear immediately without any animation.
     * @default 'normal'
     */
-  var speed: js.UndefOr[slow | normal | fast | Double] = js.native
+  var speed: js.UndefOr[slow | normal | fast | Double] = js.undefined
   /**
     * The element to be overlayed (if not specified in the rel attribute of the triggering element).
     */
-  var target: js.UndefOr[Element] = js.native
+  var target: js.UndefOr[Element] = js.undefined
   /**
     * Specifies how far from the top edge of the screen the overlay should be placed.
     * Acceptable values are an integer number specifying a distance in pixels, a string
@@ -107,226 +106,49 @@ trait OverlayOptions extends js.Object {
     * is vertically centered. Percentage values work consistently at different screen resolutions.
     * @default '10%'
     */
-  var top: js.UndefOr[String | Double] = js.native
+  var top: js.UndefOr[String | Double] = js.undefined
 }
 
 object OverlayOptions {
   @scala.inline
-  def apply(): OverlayOptions = {
+  def apply(
+    close: JQuery = null,
+    closeOnClick: js.UndefOr[Boolean] = js.undefined,
+    closeOnEsc: js.UndefOr[Boolean] = js.undefined,
+    closeSpeed: js.UndefOr[Double] = js.undefined,
+    effect: String = null,
+    fixed: js.UndefOr[Boolean] = js.undefined,
+    left: center | Double = null,
+    load: js.UndefOr[Boolean] = js.undefined,
+    mask: String | MaskOptions = null,
+    onBeforeClose: js.ThisFunction1[/* this */ Overlay, /* event */ JQueryEventObject, Unit] = null,
+    onBeforeLoad: js.ThisFunction1[/* this */ Overlay, /* event */ JQueryEventObject, Unit] = null,
+    onClose: js.ThisFunction1[/* this */ Overlay, /* event */ JQueryEventObject, Unit] = null,
+    onLoad: js.ThisFunction1[/* this */ Overlay, /* event */ JQueryEventObject, Unit] = null,
+    oneInstance: js.UndefOr[Boolean] = js.undefined,
+    speed: slow | normal | fast | Double = null,
+    target: Element = null,
+    top: String | Double = null
+  ): OverlayOptions = {
     val __obj = js.Dynamic.literal()
+    if (close != null) __obj.updateDynamic("close")(close.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeOnClick)) __obj.updateDynamic("closeOnClick")(closeOnClick.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeOnEsc)) __obj.updateDynamic("closeOnEsc")(closeOnEsc.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeSpeed)) __obj.updateDynamic("closeSpeed")(closeSpeed.get.asInstanceOf[js.Any])
+    if (effect != null) __obj.updateDynamic("effect")(effect.asInstanceOf[js.Any])
+    if (!js.isUndefined(fixed)) __obj.updateDynamic("fixed")(fixed.get.asInstanceOf[js.Any])
+    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
+    if (!js.isUndefined(load)) __obj.updateDynamic("load")(load.get.asInstanceOf[js.Any])
+    if (mask != null) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
+    if (onBeforeClose != null) __obj.updateDynamic("onBeforeClose")(onBeforeClose.asInstanceOf[js.Any])
+    if (onBeforeLoad != null) __obj.updateDynamic("onBeforeLoad")(onBeforeLoad.asInstanceOf[js.Any])
+    if (onClose != null) __obj.updateDynamic("onClose")(onClose.asInstanceOf[js.Any])
+    if (onLoad != null) __obj.updateDynamic("onLoad")(onLoad.asInstanceOf[js.Any])
+    if (!js.isUndefined(oneInstance)) __obj.updateDynamic("oneInstance")(oneInstance.get.asInstanceOf[js.Any])
+    if (speed != null) __obj.updateDynamic("speed")(speed.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (top != null) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
     __obj.asInstanceOf[OverlayOptions]
   }
-  @scala.inline
-  implicit class OverlayOptionsOps[Self <: OverlayOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClose(value: JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseOnClick(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseOnEsc(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnEsc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseOnEsc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnEsc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseSpeed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeSpeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeSpeed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEffect(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEffect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeft(value: center | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoad(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMask(value: String | MaskOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBeforeClose(value: js.ThisFunction1[/* this */ Overlay, /* event */ JQueryEventObject, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeClose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnBeforeClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBeforeLoad(value: js.ThisFunction1[/* this */ Overlay, /* event */ JQueryEventObject, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeLoad")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnBeforeLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeLoad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClose(value: js.ThisFunction1[/* this */ Overlay, /* event */ JQueryEventObject, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLoad(value: js.ThisFunction1[/* this */ Overlay, /* event */ JQueryEventObject, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOneInstance(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oneInstance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOneInstance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oneInstance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpeed(value: slow | normal | fast | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTop(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

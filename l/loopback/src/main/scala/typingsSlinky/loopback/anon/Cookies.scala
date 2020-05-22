@@ -4,127 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Cookies extends js.Object {
-  var cookies: js.UndefOr[js.Array[_]] = js.native
-  var currentUserLiteral: js.UndefOr[String] = js.native
-  var enableDoublecheck: js.UndefOr[Boolean] = js.native
-  var headers: js.UndefOr[js.Array[_]] = js.native
-  var model: js.UndefOr[js.Function0[Unit | String]] = js.native
-  var overwriteExistingToken: js.UndefOr[Boolean] = js.native
-  var params: js.UndefOr[js.Array[_]] = js.native
-  var searchDefaultTokenKeys: js.UndefOr[Boolean] = js.native
+  var cookies: js.UndefOr[js.Array[_]] = js.undefined
+  var currentUserLiteral: js.UndefOr[String] = js.undefined
+  var enableDoublecheck: js.UndefOr[Boolean] = js.undefined
+  var headers: js.UndefOr[js.Array[_]] = js.undefined
+  var model: js.UndefOr[js.Function0[Unit | String]] = js.undefined
+  var overwriteExistingToken: js.UndefOr[Boolean] = js.undefined
+  var params: js.UndefOr[js.Array[_]] = js.undefined
+  var searchDefaultTokenKeys: js.UndefOr[Boolean] = js.undefined
 }
 
 object Cookies {
   @scala.inline
-  def apply(): Cookies = {
+  def apply(
+    cookies: js.Array[_] = null,
+    currentUserLiteral: String = null,
+    enableDoublecheck: js.UndefOr[Boolean] = js.undefined,
+    headers: js.Array[_] = null,
+    model: () => Unit | String = null,
+    overwriteExistingToken: js.UndefOr[Boolean] = js.undefined,
+    params: js.Array[_] = null,
+    searchDefaultTokenKeys: js.UndefOr[Boolean] = js.undefined
+  ): Cookies = {
     val __obj = js.Dynamic.literal()
+    if (cookies != null) __obj.updateDynamic("cookies")(cookies.asInstanceOf[js.Any])
+    if (currentUserLiteral != null) __obj.updateDynamic("currentUserLiteral")(currentUserLiteral.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableDoublecheck)) __obj.updateDynamic("enableDoublecheck")(enableDoublecheck.get.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(js.Any.fromFunction0(model))
+    if (!js.isUndefined(overwriteExistingToken)) __obj.updateDynamic("overwriteExistingToken")(overwriteExistingToken.get.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    if (!js.isUndefined(searchDefaultTokenKeys)) __obj.updateDynamic("searchDefaultTokenKeys")(searchDefaultTokenKeys.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Cookies]
   }
-  @scala.inline
-  implicit class CookiesOps[Self <: Cookies] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCookies(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCookies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentUserLiteral(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentUserLiteral")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentUserLiteral: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentUserLiteral")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableDoublecheck(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDoublecheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableDoublecheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDoublecheck")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: () => Unit | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverwriteExistingToken(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overwriteExistingToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverwriteExistingToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overwriteExistingToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParams(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchDefaultTokenKeys(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchDefaultTokenKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchDefaultTokenKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchDefaultTokenKeys")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

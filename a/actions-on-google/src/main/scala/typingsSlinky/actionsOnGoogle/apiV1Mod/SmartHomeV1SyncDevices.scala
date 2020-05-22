@@ -5,18 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SmartHomeV1SyncDevices extends js.Object {
-  var attributes: js.UndefOr[ApiClientObjectMap[_]] = js.native
-  var customData: js.UndefOr[ApiClientObjectMap[_]] = js.native
-  var deviceInfo: js.UndefOr[SmartHomeV1SyncDeviceInfo] = js.native
-  var id: String = js.native
-  var name: SmartHomeV1SyncName = js.native
-  var otherDeviceIds: js.UndefOr[js.Array[SmartHomeV1SyncOtherDeviceIds]] = js.native
-  var roomHint: js.UndefOr[String] = js.native
-  var traits: js.Array[String] = js.native
-  var `type`: String = js.native
-  var willReportState: Boolean = js.native
+  var attributes: js.UndefOr[ApiClientObjectMap[_]] = js.undefined
+  var customData: js.UndefOr[ApiClientObjectMap[_]] = js.undefined
+  var deviceInfo: js.UndefOr[SmartHomeV1SyncDeviceInfo] = js.undefined
+  var id: String
+  var name: SmartHomeV1SyncName
+  var otherDeviceIds: js.UndefOr[js.Array[SmartHomeV1SyncOtherDeviceIds]] = js.undefined
+  var roomHint: js.UndefOr[String] = js.undefined
+  var traits: js.Array[String]
+  var `type`: String
+  var willReportState: Boolean
 }
 
 object SmartHomeV1SyncDevices {
@@ -26,109 +25,21 @@ object SmartHomeV1SyncDevices {
     name: SmartHomeV1SyncName,
     traits: js.Array[String],
     `type`: String,
-    willReportState: Boolean
+    willReportState: Boolean,
+    attributes: ApiClientObjectMap[_] = null,
+    customData: ApiClientObjectMap[_] = null,
+    deviceInfo: SmartHomeV1SyncDeviceInfo = null,
+    otherDeviceIds: js.Array[SmartHomeV1SyncOtherDeviceIds] = null,
+    roomHint: String = null
   ): SmartHomeV1SyncDevices = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], traits = traits.asInstanceOf[js.Any], willReportState = willReportState.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
+    if (customData != null) __obj.updateDynamic("customData")(customData.asInstanceOf[js.Any])
+    if (deviceInfo != null) __obj.updateDynamic("deviceInfo")(deviceInfo.asInstanceOf[js.Any])
+    if (otherDeviceIds != null) __obj.updateDynamic("otherDeviceIds")(otherDeviceIds.asInstanceOf[js.Any])
+    if (roomHint != null) __obj.updateDynamic("roomHint")(roomHint.asInstanceOf[js.Any])
     __obj.asInstanceOf[SmartHomeV1SyncDevices]
   }
-  @scala.inline
-  implicit class SmartHomeV1SyncDevicesOps[Self <: SmartHomeV1SyncDevices] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: SmartHomeV1SyncName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTraits(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("traits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWillReportState(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("willReportState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttributes(value: ApiClientObjectMap[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomData(value: ApiClientObjectMap[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceInfo(value: SmartHomeV1SyncDeviceInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOtherDeviceIds(value: js.Array[SmartHomeV1SyncOtherDeviceIds]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otherDeviceIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOtherDeviceIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otherDeviceIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoomHint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roomHint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoomHint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roomHint")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

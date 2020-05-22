@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListQueuesResponse extends js.Object {
   /**
     * A token to retrieve next page of results.
@@ -17,48 +16,18 @@ trait ListQueuesResponse extends js.Object {
     *
     * The page token is valid for only 2 hours.
     */
-  var nextPageToken: js.UndefOr[String] = js.native
+  var nextPageToken: js.UndefOr[String] = js.undefined
   /** The list of queues. */
-  var queues: js.UndefOr[js.Array[Queue]] = js.native
+  var queues: js.UndefOr[js.Array[Queue]] = js.undefined
 }
 
 object ListQueuesResponse {
   @scala.inline
-  def apply(): ListQueuesResponse = {
+  def apply(nextPageToken: String = null, queues: js.Array[Queue] = null): ListQueuesResponse = {
     val __obj = js.Dynamic.literal()
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
+    if (queues != null) __obj.updateDynamic("queues")(queues.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListQueuesResponse]
   }
-  @scala.inline
-  implicit class ListQueuesResponseOps[Self <: ListQueuesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueues(value: js.Array[Queue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queues")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

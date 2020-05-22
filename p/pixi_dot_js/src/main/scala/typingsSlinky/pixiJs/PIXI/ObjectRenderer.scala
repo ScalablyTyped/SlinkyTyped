@@ -12,32 +12,31 @@ import scala.scalajs.js.annotation._
   * @extends PIXI.System
   * @memberof PIXI
   */
-@js.native
 trait ObjectRenderer extends System {
   /**
     * Stub method that should be used to empty the current
     * batch by rendering objects now.
     */
-  def flush(): Unit = js.native
+  def flush(): Unit
   /**
     * Keeps the object to render. It doesn't have to be
     * rendered immediately.
     *
     * @param {PIXI.DisplayObject} object - The object to render.
     */
-  def render(`object`: DisplayObject): Unit = js.native
+  def render(`object`: DisplayObject): Unit
   /**
     * Stub method that initializes any state required before
     * rendering starts. It is different from the `prerender`
     * signal, which occurs every frame, in that it is called
     * whenever an object requests _this_ renderer specifically.
     */
-  def start(): Unit = js.native
+  def start(): Unit
   /**
     * Stops the renderer. It should free up any state and
     * become dormant.
     */
-  def stop(): Unit = js.native
+  def stop(): Unit
 }
 
 object ObjectRenderer {
@@ -53,37 +52,5 @@ object ObjectRenderer {
     val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy), flush = js.Any.fromFunction0(flush), render = js.Any.fromFunction1(render), renderer = renderer.asInstanceOf[js.Any], start = js.Any.fromFunction0(start), stop = js.Any.fromFunction0(stop))
     __obj.asInstanceOf[ObjectRenderer]
   }
-  @scala.inline
-  implicit class ObjectRendererOps[Self <: ObjectRenderer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFlush(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flush")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRender(value: DisplayObject => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("render")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStart(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStop(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

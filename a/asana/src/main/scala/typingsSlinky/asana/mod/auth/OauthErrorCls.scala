@@ -17,5 +17,9 @@ class OauthErrorCls protected () extends Error {
     * @constructor
     */
   def this(options: OauthErrorOptions) = this()
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
 }
 

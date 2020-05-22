@@ -4,154 +4,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SSH2StreamConfig extends js.Object {
   /**
     * This option allows you to explicitly override the default transport layer algorithms used for the connection. Each value must be an array of valid algorithms for that category. The order of the algorithms in the arrays are important, with the most favorable being first.
     */
-  var algorithms: js.UndefOr[Algorithms] = js.native
+  var algorithms: js.UndefOr[Algorithms] = js.undefined
   /**
     * A message that is sent to clients immediately upon connection, before handshaking begins.
     */
-  var banner: js.UndefOr[String] = js.native
+  var banner: js.UndefOr[String] = js.undefined
   /**
     * Set this to a function that receives a single string argument to get detailed (local) debug information.
     */
-  var debug: js.UndefOr[js.Function1[/* information */ String, _]] = js.native
+  var debug: js.UndefOr[js.Function1[/* information */ String, _]] = js.undefined
   /**
     * This is the highWaterMark to use for the parser stream.
     * @default 32 * 1024
     */
-  var highWaterMark: js.UndefOr[Double] = js.native
+  var highWaterMark: js.UndefOr[Double] = js.undefined
   /**
     * If in server mode, an object keyed on host key format.
     */
-  var hostKeys: js.UndefOr[HostKeys] = js.native
+  var hostKeys: js.UndefOr[HostKeys] = js.undefined
   /**
     * A custom server software name/version identifier.
     * @default 'ssh2js' + moduleVersion + 'srv'
     */
-  var ident: js.UndefOr[String] = js.native
+  var ident: js.UndefOr[String] = js.undefined
   /**
     * This is the maximum packet size that will be accepted. It should be 35000 bytes or larger to be compatible with other SSH2 implementations.
     * @default 35000
     */
-  var maxPacketSize: js.UndefOr[Double] = js.native
+  var maxPacketSize: js.UndefOr[Double] = js.undefined
   /**
     * Set to true to create an instance in server mode.
     */
-  var server: js.UndefOr[Boolean] = js.native
+  var server: js.UndefOr[Boolean] = js.undefined
 }
 
 object SSH2StreamConfig {
   @scala.inline
-  def apply(): SSH2StreamConfig = {
+  def apply(
+    algorithms: Algorithms = null,
+    banner: String = null,
+    debug: /* information */ String => _ = null,
+    highWaterMark: js.UndefOr[Double] = js.undefined,
+    hostKeys: HostKeys = null,
+    ident: String = null,
+    maxPacketSize: js.UndefOr[Double] = js.undefined,
+    server: js.UndefOr[Boolean] = js.undefined
+  ): SSH2StreamConfig = {
     val __obj = js.Dynamic.literal()
+    if (algorithms != null) __obj.updateDynamic("algorithms")(algorithms.asInstanceOf[js.Any])
+    if (banner != null) __obj.updateDynamic("banner")(banner.asInstanceOf[js.Any])
+    if (debug != null) __obj.updateDynamic("debug")(js.Any.fromFunction1(debug))
+    if (!js.isUndefined(highWaterMark)) __obj.updateDynamic("highWaterMark")(highWaterMark.get.asInstanceOf[js.Any])
+    if (hostKeys != null) __obj.updateDynamic("hostKeys")(hostKeys.asInstanceOf[js.Any])
+    if (ident != null) __obj.updateDynamic("ident")(ident.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxPacketSize)) __obj.updateDynamic("maxPacketSize")(maxPacketSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(server)) __obj.updateDynamic("server")(server.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SSH2StreamConfig]
   }
-  @scala.inline
-  implicit class SSH2StreamConfigOps[Self <: SSH2StreamConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlgorithms(value: Algorithms): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlgorithms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBanner(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("banner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBanner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("banner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebug(value: /* information */ String => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDebug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHighWaterMark(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highWaterMark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHighWaterMark: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highWaterMark")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHostKeys(value: HostKeys): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHostKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ident")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ident")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxPacketSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPacketSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxPacketSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPacketSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

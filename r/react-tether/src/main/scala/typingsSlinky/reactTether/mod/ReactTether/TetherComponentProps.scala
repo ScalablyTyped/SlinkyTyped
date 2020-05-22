@@ -1,9 +1,13 @@
 package typingsSlinky.reactTether.mod.ReactTether
 
+import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.Key
+import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.mod.Props
 import typingsSlinky.reactTether.mod.TetherComponent
 import typingsSlinky.tether.mod.ITetherOptions
@@ -11,162 +15,77 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TetherComponentProps
   extends Props[TetherComponent]
      with ITetherOptions {
-  var className: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.undefined
   @JSName("constraints")
-  var constraints_TetherComponentProps: js.UndefOr[js.Array[Constraints]] = js.native
-  var id: js.UndefOr[String] = js.native
-  var onRepositioned: js.UndefOr[js.Function0[Unit]] = js.native
-  var onUpdate: js.UndefOr[js.Function1[/* data */ UpdateEventData, Unit]] = js.native
-  var renderElement: js.UndefOr[RenderProp] = js.native
-  var renderElementTag: js.UndefOr[String] = js.native
-  var renderElementTo: js.UndefOr[Element | String] = js.native
-  var renderTarget: js.UndefOr[RenderProp] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
+  var constraints_TetherComponentProps: js.UndefOr[js.Array[Constraints]] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var onRepositioned: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onUpdate: js.UndefOr[js.Function1[/* data */ UpdateEventData, Unit]] = js.undefined
+  var renderElement: js.UndefOr[RenderProp] = js.undefined
+  var renderElementTag: js.UndefOr[String] = js.undefined
+  var renderElementTo: js.UndefOr[Element | String] = js.undefined
+  var renderTarget: js.UndefOr[RenderProp] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
 }
 
 object TetherComponentProps {
   @scala.inline
-  def apply(attachment: String): TetherComponentProps = {
+  def apply(
+    attachment: String,
+    bodyElement: HTMLElement = null,
+    children: TagMod[Any] = null,
+    className: String = null,
+    classPrefix: String = null,
+    classes: StringDictionary[Boolean | String] = null,
+    constraints: js.Array[Constraints] = null,
+    element: HTMLElement | String | js.Any = null,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    id: String = null,
+    key: Key = null,
+    offset: String = null,
+    onRepositioned: () => Unit = null,
+    onUpdate: /* data */ UpdateEventData => Unit = null,
+    optimizations: js.Any = null,
+    ref: js.UndefOr[Null | LegacyRef[TetherComponent]] = js.undefined,
+    renderElement: /* ref */ ReactRef[Element] => TagMod[Any] = null,
+    renderElementTag: String = null,
+    renderElementTo: Element | String = null,
+    renderTarget: /* ref */ ReactRef[Element] => TagMod[Any] = null,
+    style: CSSProperties = null,
+    target: HTMLElement | String | js.Any = null,
+    targetAttachment: String = null,
+    targetModifier: String = null,
+    targetOffset: String = null
+  ): TetherComponentProps = {
     val __obj = js.Dynamic.literal(attachment = attachment.asInstanceOf[js.Any])
+    if (bodyElement != null) __obj.updateDynamic("bodyElement")(bodyElement.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (classPrefix != null) __obj.updateDynamic("classPrefix")(classPrefix.asInstanceOf[js.Any])
+    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
+    if (constraints != null) __obj.updateDynamic("constraints")(constraints.asInstanceOf[js.Any])
+    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
+    if (onRepositioned != null) __obj.updateDynamic("onRepositioned")(js.Any.fromFunction0(onRepositioned))
+    if (onUpdate != null) __obj.updateDynamic("onUpdate")(js.Any.fromFunction1(onUpdate))
+    if (optimizations != null) __obj.updateDynamic("optimizations")(optimizations.asInstanceOf[js.Any])
+    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+    if (renderElement != null) __obj.updateDynamic("renderElement")(js.Any.fromFunction1(renderElement))
+    if (renderElementTag != null) __obj.updateDynamic("renderElementTag")(renderElementTag.asInstanceOf[js.Any])
+    if (renderElementTo != null) __obj.updateDynamic("renderElementTo")(renderElementTo.asInstanceOf[js.Any])
+    if (renderTarget != null) __obj.updateDynamic("renderTarget")(js.Any.fromFunction1(renderTarget))
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (targetAttachment != null) __obj.updateDynamic("targetAttachment")(targetAttachment.asInstanceOf[js.Any])
+    if (targetModifier != null) __obj.updateDynamic("targetModifier")(targetModifier.asInstanceOf[js.Any])
+    if (targetOffset != null) __obj.updateDynamic("targetOffset")(targetOffset.asInstanceOf[js.Any])
     __obj.asInstanceOf[TetherComponentProps]
   }
-  @scala.inline
-  implicit class TetherComponentPropsOps[Self <: TetherComponentProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConstraints(value: js.Array[Constraints]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constraints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstraints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constraints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRepositioned(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRepositioned")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRepositioned: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRepositioned")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnUpdate(value: /* data */ UpdateEventData => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderElement(value: /* ref */ ReactRef[Element] => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderElement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderElementTag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderElementTag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderElementTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderElementTag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderElementToElement(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderElementTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRenderElementTo(value: Element | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderElementTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderElementTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderElementTo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderTarget(value: /* ref */ ReactRef[Element] => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTarget")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTarget")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

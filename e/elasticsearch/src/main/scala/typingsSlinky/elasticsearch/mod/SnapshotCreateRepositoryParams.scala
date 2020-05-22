@@ -4,69 +4,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SnapshotCreateRepositoryParams extends GenericParams {
-  var masterTimeout: js.UndefOr[TimeSpan] = js.native
-  var repository: String = js.native
-  var timeout: js.UndefOr[TimeSpan] = js.native
-  var verify: js.UndefOr[Boolean] = js.native
+  var masterTimeout: js.UndefOr[TimeSpan] = js.undefined
+  var repository: String
+  var timeout: js.UndefOr[TimeSpan] = js.undefined
+  var verify: js.UndefOr[Boolean] = js.undefined
 }
 
 object SnapshotCreateRepositoryParams {
   @scala.inline
-  def apply(repository: String): SnapshotCreateRepositoryParams = {
+  def apply(
+    repository: String,
+    body: js.Any = null,
+    filterPath: String | js.Array[String] = null,
+    ignore: Double | js.Array[Double] = null,
+    masterTimeout: TimeSpan = null,
+    maxRetries: js.UndefOr[Double] = js.undefined,
+    method: String = null,
+    requestTimeout: js.UndefOr[Double] = js.undefined,
+    timeout: TimeSpan = null,
+    verify: js.UndefOr[Boolean] = js.undefined
+  ): SnapshotCreateRepositoryParams = {
     val __obj = js.Dynamic.literal(repository = repository.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (filterPath != null) __obj.updateDynamic("filterPath")(filterPath.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (masterTimeout != null) __obj.updateDynamic("masterTimeout")(masterTimeout.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxRetries)) __obj.updateDynamic("maxRetries")(maxRetries.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (!js.isUndefined(requestTimeout)) __obj.updateDynamic("requestTimeout")(requestTimeout.get.asInstanceOf[js.Any])
+    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
+    if (!js.isUndefined(verify)) __obj.updateDynamic("verify")(verify.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SnapshotCreateRepositoryParams]
   }
-  @scala.inline
-  implicit class SnapshotCreateRepositoryParamsOps[Self <: SnapshotCreateRepositoryParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRepository(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMasterTimeout(value: TimeSpan): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMasterTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: TimeSpan): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerify(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verify")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerify: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verify")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

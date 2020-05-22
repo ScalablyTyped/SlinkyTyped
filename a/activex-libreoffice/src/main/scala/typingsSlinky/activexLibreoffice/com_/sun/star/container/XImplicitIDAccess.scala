@@ -7,14 +7,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** makes it possible to access contents through an implicit (unique) ID. */
-@js.native
 trait XImplicitIDAccess extends XElementAccess {
   /** @returns a sequence with all existing implicit IDs. */
-  val ImplicitIDs: SafeArray[String] = js.native
+  val ImplicitIDs: SafeArray[String]
   /** @returns the element with the specified implicit ID. */
-  def getByImplicitID(ID: String): js.Any = js.native
+  def getByImplicitID(ID: String): js.Any
   /** @returns a sequence with all existing implicit IDs. */
-  def getImplicitIDs(): SafeArray[String] = js.native
+  def getImplicitIDs(): SafeArray[String]
 }
 
 object XImplicitIDAccess {
@@ -33,31 +32,5 @@ object XImplicitIDAccess {
     val __obj = js.Dynamic.literal(ElementType = ElementType.asInstanceOf[js.Any], ImplicitIDs = ImplicitIDs.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getByImplicitID = js.Any.fromFunction1(getByImplicitID), getElementType = js.Any.fromFunction0(getElementType), getImplicitIDs = js.Any.fromFunction0(getImplicitIDs), hasElements = js.Any.fromFunction0(hasElements), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XImplicitIDAccess]
   }
-  @scala.inline
-  implicit class XImplicitIDAccessOps[Self <: XImplicitIDAccess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImplicitIDs(value: SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImplicitIDs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetByImplicitID(value: String => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getByImplicitID")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetImplicitIDs(value: () => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getImplicitIDs")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

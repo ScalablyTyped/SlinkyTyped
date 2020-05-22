@@ -16,17 +16,16 @@ import scala.scalajs.js.annotation._
   * window is reactivated. Both permanent and temporary focus events are delivered using the FOCUS_GAINED and FOCUS_LOST event ids; the levels may be
   * distinguished in the event using the isTemporary() method.
   */
-@js.native
 trait FocusEvent extends EventObject {
   /**
     * specifies the reason for the focus change as an arithmetic-or combination of {@link FocusChangeReason} .
     * @see FocusChangeReason
     */
-  var FocusFlags: Double = js.native
+  var FocusFlags: Double
   /** contains the window which gets the focus on a lose focus event. */
-  var NextFocus: XInterface = js.native
+  var NextFocus: XInterface
   /** specifies if this focus change event is a temporary change. */
-  var Temporary: Boolean = js.native
+  var Temporary: Boolean
 }
 
 object FocusEvent {
@@ -35,31 +34,5 @@ object FocusEvent {
     val __obj = js.Dynamic.literal(FocusFlags = FocusFlags.asInstanceOf[js.Any], NextFocus = NextFocus.asInstanceOf[js.Any], Source = Source.asInstanceOf[js.Any], Temporary = Temporary.asInstanceOf[js.Any])
     __obj.asInstanceOf[FocusEvent]
   }
-  @scala.inline
-  implicit class FocusEventOps[Self <: FocusEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFocusFlags(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FocusFlags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNextFocus(value: XInterface): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemporary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Temporary")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

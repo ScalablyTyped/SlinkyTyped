@@ -14,29 +14,10 @@ trait StartVpcEndpointServicePrivateDnsVerificationResult extends js.Object {
 
 object StartVpcEndpointServicePrivateDnsVerificationResult {
   @scala.inline
-  def apply(): StartVpcEndpointServicePrivateDnsVerificationResult = {
+  def apply(ReturnValue: js.UndefOr[Boolean] = js.undefined): StartVpcEndpointServicePrivateDnsVerificationResult = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ReturnValue)) __obj.updateDynamic("ReturnValue")(ReturnValue.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartVpcEndpointServicePrivateDnsVerificationResult]
   }
-  @scala.inline
-  implicit class StartVpcEndpointServicePrivateDnsVerificationResultOps[Self <: StartVpcEndpointServicePrivateDnsVerificationResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReturnValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturnValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

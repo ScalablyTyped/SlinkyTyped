@@ -8,265 +8,119 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PolylineOptions extends SimpleShapeOptions {
   /**
     * Determines if line segments can cross.
     *
     * @default true
     */
-  var allowIntersection: js.UndefOr[Boolean] = js.native
+  var allowIntersection: js.UndefOr[Boolean] = js.undefined
   /**
     * Configuration options for the error that displays if an intersection is detected.
     *
     * @default { color: '#b00b00', timeout: 2500 }
     */
-  var drawError: js.UndefOr[DrawErrorOptions] = js.native
+  var drawError: js.UndefOr[DrawErrorOptions] = js.undefined
   /**
     * To change distance calculation
     *
     * @default 1
     */
-  var factor: js.UndefOr[Double] = js.native
+  var factor: js.UndefOr[Double] = js.undefined
   /**
     * When not metric, to use feet instead of yards for display.
     *
     * @default true
     */
-  var feet: js.UndefOr[Boolean] = js.native
+  var feet: js.UndefOr[Boolean] = js.undefined
   /**
     * Distance in pixels between each guide dash.
     *
     * @default 20
     */
-  var guidelineDistance: js.UndefOr[Double] = js.native
-  var icon: js.UndefOr[Icon_[IconOptions] | DivIcon_] = js.native
+  var guidelineDistance: js.UndefOr[Double] = js.undefined
+  var icon: js.UndefOr[Icon_[IconOptions] | DivIcon_] = js.undefined
   /**
     * The maximum length of the guide line
     *
     * @default 4000
     */
-  var maxGuideLineLength: js.UndefOr[Double] = js.native
+  var maxGuideLineLength: js.UndefOr[Double] = js.undefined
   /**
     * Once this number of points are placed, finish shape
     *
     * @default 0
     */
-  var maxPoints: js.UndefOr[Double] = js.native
+  var maxPoints: js.UndefOr[Double] = js.undefined
   /**
     * Determines which measurement system (metric or imperial) is used.
     *
     * @default true
     */
-  var metric: js.UndefOr[Boolean] = js.native
+  var metric: js.UndefOr[Boolean] = js.undefined
   /**
     * When not metric, not feet use nautic mile for display
     *
     * @default false
     */
-  var nautic: js.UndefOr[Boolean] = js.native
+  var nautic: js.UndefOr[Boolean] = js.undefined
   /**
     * The options used when drawing the polyline/polygon on the map.
     *
     * @default { stroke: true, color: '#3388ff', weight: 4, opacity: 0.5, fill: false, clickable: true }
     */
-  var shapeOptions: js.UndefOr[PolylineOptionsclickableb] = js.native
+  var shapeOptions: js.UndefOr[PolylineOptionsclickableb] = js.undefined
   /**
     * Whether to display distance in the tooltip
     *
     * @default true
     */
-  var showLength: js.UndefOr[Boolean] = js.native
-  var touchIcon: js.UndefOr[Icon_[IconOptions] | DivIcon_] = js.native
+  var showLength: js.UndefOr[Boolean] = js.undefined
+  var touchIcon: js.UndefOr[Icon_[IconOptions] | DivIcon_] = js.undefined
   /**
     * This should be a high number to ensure that you can draw over all other layers on the map.
     *
     * @default 2000
     */
-  var zIndexOffset: js.UndefOr[Double] = js.native
+  var zIndexOffset: js.UndefOr[Double] = js.undefined
 }
 
 object PolylineOptions {
   @scala.inline
-  def apply(): PolylineOptions = {
+  def apply(
+    allowIntersection: js.UndefOr[Boolean] = js.undefined,
+    drawError: DrawErrorOptions = null,
+    factor: js.UndefOr[Double] = js.undefined,
+    feet: js.UndefOr[Boolean] = js.undefined,
+    guidelineDistance: js.UndefOr[Double] = js.undefined,
+    icon: Icon_[IconOptions] | DivIcon_ = null,
+    maxGuideLineLength: js.UndefOr[Double] = js.undefined,
+    maxPoints: js.UndefOr[Double] = js.undefined,
+    metric: js.UndefOr[Boolean] = js.undefined,
+    nautic: js.UndefOr[Boolean] = js.undefined,
+    repeatMode: js.UndefOr[Boolean] = js.undefined,
+    shapeOptions: PolylineOptionsclickableb = null,
+    showLength: js.UndefOr[Boolean] = js.undefined,
+    touchIcon: Icon_[IconOptions] | DivIcon_ = null,
+    zIndexOffset: js.UndefOr[Double] = js.undefined
+  ): PolylineOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowIntersection)) __obj.updateDynamic("allowIntersection")(allowIntersection.get.asInstanceOf[js.Any])
+    if (drawError != null) __obj.updateDynamic("drawError")(drawError.asInstanceOf[js.Any])
+    if (!js.isUndefined(factor)) __obj.updateDynamic("factor")(factor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(feet)) __obj.updateDynamic("feet")(feet.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(guidelineDistance)) __obj.updateDynamic("guidelineDistance")(guidelineDistance.get.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxGuideLineLength)) __obj.updateDynamic("maxGuideLineLength")(maxGuideLineLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxPoints)) __obj.updateDynamic("maxPoints")(maxPoints.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(metric)) __obj.updateDynamic("metric")(metric.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(nautic)) __obj.updateDynamic("nautic")(nautic.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(repeatMode)) __obj.updateDynamic("repeatMode")(repeatMode.get.asInstanceOf[js.Any])
+    if (shapeOptions != null) __obj.updateDynamic("shapeOptions")(shapeOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(showLength)) __obj.updateDynamic("showLength")(showLength.get.asInstanceOf[js.Any])
+    if (touchIcon != null) __obj.updateDynamic("touchIcon")(touchIcon.asInstanceOf[js.Any])
+    if (!js.isUndefined(zIndexOffset)) __obj.updateDynamic("zIndexOffset")(zIndexOffset.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolylineOptions]
   }
-  @scala.inline
-  implicit class PolylineOptionsOps[Self <: PolylineOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowIntersection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowIntersection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowIntersection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowIntersection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrawError(value: DrawErrorOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDrawError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("factor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("factor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeet(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGuidelineDistance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guidelineDistance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGuidelineDistance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guidelineDistance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: Icon_[IconOptions] | DivIcon_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxGuideLineLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxGuideLineLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxGuideLineLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxGuideLineLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxPoints(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxPoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPoints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetric(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetric: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNautic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nautic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNautic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nautic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShapeOptions(value: PolylineOptionsclickableb): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shapeOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShapeOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shapeOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowLength(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTouchIcon(value: Icon_[IconOptions] | DivIcon_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTouchIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZIndexOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndexOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZIndexOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndexOffset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

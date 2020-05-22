@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("prom-client", "Gauge")
 @js.native
-class Gauge protected () extends Metric_ {
+class Gauge protected () extends _Metric_ {
   /**
   	 * @param configuration Configuration when creating a Gauge metric. Name and Help is mandatory
   	 */

@@ -4,166 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GridPageable extends js.Object {
-  var alwaysVisible: js.UndefOr[Boolean] = js.native
-  var buttonCount: js.UndefOr[Double] = js.native
-  var info: js.UndefOr[Boolean] = js.native
-  var input: js.UndefOr[Boolean] = js.native
-  var messages: js.UndefOr[GridPageableMessages] = js.native
-  var numeric: js.UndefOr[Boolean] = js.native
-  var pageSize: js.UndefOr[Double] = js.native
-  var pageSizes: js.UndefOr[Boolean | js.Any] = js.native
-  var previousNext: js.UndefOr[Boolean] = js.native
-  var refresh: js.UndefOr[Boolean] = js.native
-  var responsive: js.UndefOr[Boolean] = js.native
+  var alwaysVisible: js.UndefOr[Boolean] = js.undefined
+  var buttonCount: js.UndefOr[Double] = js.undefined
+  var info: js.UndefOr[Boolean] = js.undefined
+  var input: js.UndefOr[Boolean] = js.undefined
+  var messages: js.UndefOr[GridPageableMessages] = js.undefined
+  var numeric: js.UndefOr[Boolean] = js.undefined
+  var pageSize: js.UndefOr[Double] = js.undefined
+  var pageSizes: js.UndefOr[Boolean | js.Any] = js.undefined
+  var position: js.UndefOr[String] = js.undefined
+  var previousNext: js.UndefOr[Boolean] = js.undefined
+  var refresh: js.UndefOr[Boolean] = js.undefined
+  var responsive: js.UndefOr[Boolean] = js.undefined
 }
 
 object GridPageable {
   @scala.inline
-  def apply(): GridPageable = {
+  def apply(
+    alwaysVisible: js.UndefOr[Boolean] = js.undefined,
+    buttonCount: js.UndefOr[Double] = js.undefined,
+    info: js.UndefOr[Boolean] = js.undefined,
+    input: js.UndefOr[Boolean] = js.undefined,
+    messages: GridPageableMessages = null,
+    numeric: js.UndefOr[Boolean] = js.undefined,
+    pageSize: js.UndefOr[Double] = js.undefined,
+    pageSizes: Boolean | js.Any = null,
+    position: String = null,
+    previousNext: js.UndefOr[Boolean] = js.undefined,
+    refresh: js.UndefOr[Boolean] = js.undefined,
+    responsive: js.UndefOr[Boolean] = js.undefined
+  ): GridPageable = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(alwaysVisible)) __obj.updateDynamic("alwaysVisible")(alwaysVisible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(buttonCount)) __obj.updateDynamic("buttonCount")(buttonCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(info)) __obj.updateDynamic("info")(info.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(input)) __obj.updateDynamic("input")(input.get.asInstanceOf[js.Any])
+    if (messages != null) __obj.updateDynamic("messages")(messages.asInstanceOf[js.Any])
+    if (!js.isUndefined(numeric)) __obj.updateDynamic("numeric")(numeric.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pageSize)) __obj.updateDynamic("pageSize")(pageSize.get.asInstanceOf[js.Any])
+    if (pageSizes != null) __obj.updateDynamic("pageSizes")(pageSizes.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (!js.isUndefined(previousNext)) __obj.updateDynamic("previousNext")(previousNext.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(refresh)) __obj.updateDynamic("refresh")(refresh.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(responsive)) __obj.updateDynamic("responsive")(responsive.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridPageable]
   }
-  @scala.inline
-  implicit class GridPageableOps[Self <: GridPageable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlwaysVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlwaysVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysVisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInfo(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInput(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessages(value: GridPageableMessages): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumeric(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numeric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumeric: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numeric")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageSizes(value: Boolean | js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSizes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSizes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSizes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousNext(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousNext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousNext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousNext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefresh(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refresh")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefresh: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refresh")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponsive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponsive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsive")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

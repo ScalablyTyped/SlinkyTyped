@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/nativeui.html](http://www.html5plus.org/doc/zh_cn/nativeui.html)
   */
-@js.native
 trait PlusNativeUIPickTimeOption extends js.Object {
   /**
     * 是否24小时制模式
@@ -17,92 +16,45 @@ trait PlusNativeUIPickTimeOption extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/nativeui.html](http://www.html5plus.org/doc/zh_cn/nativeui.html)
     */
-  var is24Hour: js.UndefOr[Boolean] = js.native
+  var is24Hour: js.UndefOr[Boolean] = js.undefined
   /**
     * 日期选择对话框弹出指示区域
     * JSON类型对象，格式如{top:10;left:10;width:200;height:200;}，所有值为像素值，其值相对于容器webview的位置。
-    * 	如未设置此值，默认在屏幕居中显示。仅在iPad上有效，其它设备忽略此值。
+    *     如未设置此值，默认在屏幕居中显示。仅在iPad上有效，其它设备忽略此值。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/nativeui.html](http://www.html5plus.org/doc/zh_cn/nativeui.html)
     */
-  var popover: js.UndefOr[js.Any] = js.native
+  var popover: js.UndefOr[js.Any] = js.undefined
   /**
     * 时间选择对话框默认显示的时间
     * 如果未设置标题，则默认显示标题为当前选择的时间。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/nativeui.html](http://www.html5plus.org/doc/zh_cn/nativeui.html)
     */
-  var time: js.UndefOr[js.Date] = js.native
+  var time: js.UndefOr[js.Date] = js.undefined
   /**
     * 时间选择对话框显示的标题
     * 如果未设置标题，则默认显示标题为当前选择的时间。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/nativeui.html](http://www.html5plus.org/doc/zh_cn/nativeui.html)
     */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
 }
 
 object PlusNativeUIPickTimeOption {
   @scala.inline
-  def apply(): PlusNativeUIPickTimeOption = {
+  def apply(
+    is24Hour: js.UndefOr[Boolean] = js.undefined,
+    popover: js.Any = null,
+    time: js.Date = null,
+    title: String = null
+  ): PlusNativeUIPickTimeOption = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(is24Hour)) __obj.updateDynamic("is24Hour")(is24Hour.get.asInstanceOf[js.Any])
+    if (popover != null) __obj.updateDynamic("popover")(popover.asInstanceOf[js.Any])
+    if (time != null) __obj.updateDynamic("time")(time.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusNativeUIPickTimeOption]
   }
-  @scala.inline
-  implicit class PlusNativeUIPickTimeOptionOps[Self <: PlusNativeUIPickTimeOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIs24Hour(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is24Hour")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIs24Hour: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is24Hour")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPopover(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPopover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

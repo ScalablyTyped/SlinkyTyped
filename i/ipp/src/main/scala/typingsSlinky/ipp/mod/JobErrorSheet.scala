@@ -8,75 +8,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JobErrorSheet extends js.Object {
-  var `job-error-sheet-type`: js.UndefOr[none | standard] = js.native
-  var `job-error-sheet-when`: js.UndefOr[always | `on-error`] = js.native
-  var media: js.UndefOr[Media] = js.native
-  var `media-col`: js.UndefOr[MediaInterface] = js.native
+  var `job-error-sheet-type`: js.UndefOr[none | standard] = js.undefined
+  var `job-error-sheet-when`: js.UndefOr[always | `on-error`] = js.undefined
+  var media: js.UndefOr[Media] = js.undefined
+  var `media-col`: js.UndefOr[MediaInterface] = js.undefined
 }
 
 object JobErrorSheet {
   @scala.inline
-  def apply(): JobErrorSheet = {
+  def apply(
+    `job-error-sheet-type`: none | standard = null,
+    `job-error-sheet-when`: always | `on-error` = null,
+    media: Media = null,
+    `media-col`: MediaInterface = null
+  ): JobErrorSheet = {
     val __obj = js.Dynamic.literal()
+    if (`job-error-sheet-type` != null) __obj.updateDynamic("job-error-sheet-type")(`job-error-sheet-type`.asInstanceOf[js.Any])
+    if (`job-error-sheet-when` != null) __obj.updateDynamic("job-error-sheet-when")(`job-error-sheet-when`.asInstanceOf[js.Any])
+    if (media != null) __obj.updateDynamic("media")(media.asInstanceOf[js.Any])
+    if (`media-col` != null) __obj.updateDynamic("media-col")(`media-col`.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobErrorSheet]
   }
-  @scala.inline
-  implicit class JobErrorSheetOps[Self <: JobErrorSheet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withJob-error-sheet-type`(value: none | standard): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-error-sheet-type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutJob-error-sheet-type`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-error-sheet-type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withJob-error-sheet-when`(value: always | `on-error`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-error-sheet-when")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutJob-error-sheet-when`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-error-sheet-when")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMedia(value: Media): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMedia: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMedia-col`(value: MediaInterface): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media-col")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMedia-col`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media-col")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

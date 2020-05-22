@@ -18,4 +18,5 @@ package object mod {
     typingsSlinky.prettier.mod.AST
   ]
   type Doc_ = typingsSlinky.prettier.mod.doc.builders.Doc
+  type SupportOptionValue = scala.Double | scala.Boolean | java.lang.String
 }

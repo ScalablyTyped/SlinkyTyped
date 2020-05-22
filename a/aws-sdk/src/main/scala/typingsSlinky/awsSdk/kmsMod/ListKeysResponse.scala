@@ -22,53 +22,16 @@ trait ListKeysResponse extends js.Object {
 
 object ListKeysResponse {
   @scala.inline
-  def apply(): ListKeysResponse = {
+  def apply(
+    Keys: KeyList = null,
+    NextMarker: MarkerType = null,
+    Truncated: js.UndefOr[BooleanType] = js.undefined
+  ): ListKeysResponse = {
     val __obj = js.Dynamic.literal()
+    if (Keys != null) __obj.updateDynamic("Keys")(Keys.asInstanceOf[js.Any])
+    if (NextMarker != null) __obj.updateDynamic("NextMarker")(NextMarker.asInstanceOf[js.Any])
+    if (!js.isUndefined(Truncated)) __obj.updateDynamic("Truncated")(Truncated.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListKeysResponse]
   }
-  @scala.inline
-  implicit class ListKeysResponseOps[Self <: ListKeysResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeys(value: KeyList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Keys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Keys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextMarker(value: MarkerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTruncated(value: BooleanType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Truncated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTruncated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Truncated")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

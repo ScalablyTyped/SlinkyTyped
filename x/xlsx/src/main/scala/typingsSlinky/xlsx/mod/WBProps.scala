@@ -4,79 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WBProps extends js.Object {
   /** Defined Names */
-  var Names: js.UndefOr[js.Array[DefinedName]] = js.native
+  var Names: js.UndefOr[js.Array[DefinedName]] = js.undefined
   /** Sheet Properties */
-  var Sheets: js.UndefOr[js.Array[SheetProps]] = js.native
+  var Sheets: js.UndefOr[js.Array[SheetProps]] = js.undefined
   /** Workbook Views */
-  var Views: js.UndefOr[js.Array[WBView]] = js.native
+  var Views: js.UndefOr[js.Array[WBView]] = js.undefined
   /** Other Workbook Properties */
-  var WBProps: js.UndefOr[WorkbookProperties] = js.native
+  var WBProps: js.UndefOr[WorkbookProperties] = js.undefined
 }
 
 object WBProps {
   @scala.inline
-  def apply(): WBProps = {
+  def apply(
+    Names: js.Array[DefinedName] = null,
+    Sheets: js.Array[SheetProps] = null,
+    Views: js.Array[WBView] = null,
+    WBProps: WorkbookProperties = null
+  ): WBProps = {
     val __obj = js.Dynamic.literal()
+    if (Names != null) __obj.updateDynamic("Names")(Names.asInstanceOf[js.Any])
+    if (Sheets != null) __obj.updateDynamic("Sheets")(Sheets.asInstanceOf[js.Any])
+    if (Views != null) __obj.updateDynamic("Views")(Views.asInstanceOf[js.Any])
+    if (WBProps != null) __obj.updateDynamic("WBProps")(WBProps.asInstanceOf[js.Any])
     __obj.asInstanceOf[WBProps]
   }
-  @scala.inline
-  implicit class WBPropsOps[Self <: WBProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNames(value: js.Array[DefinedName]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Names")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Names")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSheets(value: js.Array[SheetProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sheets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSheets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sheets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViews(value: js.Array[WBView]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Views")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViews: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Views")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWBProps(value: WorkbookProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WBProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWBProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WBProps")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait DescribeAccountAttributesResponse extends js.Object {
 
 object DescribeAccountAttributesResponse {
   @scala.inline
-  def apply(): DescribeAccountAttributesResponse = {
+  def apply(AccountQuotas: AccountQuotaList = null, UniqueAccountIdentifier: String = null): DescribeAccountAttributesResponse = {
     val __obj = js.Dynamic.literal()
+    if (AccountQuotas != null) __obj.updateDynamic("AccountQuotas")(AccountQuotas.asInstanceOf[js.Any])
+    if (UniqueAccountIdentifier != null) __obj.updateDynamic("UniqueAccountIdentifier")(UniqueAccountIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAccountAttributesResponse]
   }
-  @scala.inline
-  implicit class DescribeAccountAttributesResponseOps[Self <: DescribeAccountAttributesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountQuotas(value: AccountQuotaList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountQuotas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountQuotas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountQuotas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUniqueAccountIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UniqueAccountIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUniqueAccountIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UniqueAccountIdentifier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

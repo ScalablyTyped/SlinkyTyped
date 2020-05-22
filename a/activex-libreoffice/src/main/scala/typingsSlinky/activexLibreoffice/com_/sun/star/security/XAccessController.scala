@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * Interface for checking permissions and invoking privileged or restricted actions.
   * @since OOo 1.1.2
   */
-@js.native
 trait XAccessController extends XInterface {
   /**
     * This method takes a "snapshot" of the current calling context and returns it.
@@ -18,7 +17,7 @@ trait XAccessController extends XInterface {
     * This context may then be checked at a later point, possibly in another thread.
     * @returns snapshot of context
     */
-  val Context: XAccessControlContext = js.native
+  val Context: XAccessControlContext
   /**
     * Determines whether the access request indicated by the specified permission should be allowed or denied, based on the security policy currently in
     * effect. The semantics are equivalent to the security permission classes of the Java platform.
@@ -33,7 +32,7 @@ trait XAccessController extends XInterface {
     * @see com.sun.star.connection.SocketPermission
     * @throws AccessControlException thrown if access is denied
     */
-  def checkPermission(perm: js.Any): Unit = js.native
+  def checkPermission(perm: js.Any): Unit
   /**
     * Perform the specified action adding a set of permissions defined by the given {@link XAccessControlContext} . The action is performed with the union
     * of the permissions of the currently installed {@link XAccessControlContext} , the given {@link XAccessControlContext} and the security policy
@@ -46,7 +45,7 @@ trait XAccessController extends XInterface {
     * @returns result
     * @throws com::sun::star::uno::Exception any UNO exception may be thrown
     */
-  def doPrivileged(action: XAction, restriction: XAccessControlContext): js.Any = js.native
+  def doPrivileged(action: XAction, restriction: XAccessControlContext): js.Any
   /**
     * Perform the specified action restricting permissions to the given {@link XAccessControlContext} . The action is performed with the intersection of the
     * permissions of the currently installed {@link XAccessControlContext} , the given {@link XAccessControlContext} and the security policy currently in
@@ -58,14 +57,14 @@ trait XAccessController extends XInterface {
     * @returns result
     * @throws com::sun::star::uno::Exception any UNO exception may be thrown
     */
-  def doRestricted(action: XAction, restriction: XAccessControlContext): js.Any = js.native
+  def doRestricted(action: XAction, restriction: XAccessControlContext): js.Any
   /**
     * This method takes a "snapshot" of the current calling context and returns it.
     *
     * This context may then be checked at a later point, possibly in another thread.
     * @returns snapshot of context
     */
-  def getContext(): XAccessControlContext = js.native
+  def getContext(): XAccessControlContext
 }
 
 object XAccessController {
@@ -83,43 +82,5 @@ object XAccessController {
     val __obj = js.Dynamic.literal(Context = Context.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), checkPermission = js.Any.fromFunction1(checkPermission), doPrivileged = js.Any.fromFunction2(doPrivileged), doRestricted = js.Any.fromFunction2(doRestricted), getContext = js.Any.fromFunction0(getContext), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XAccessController]
   }
-  @scala.inline
-  implicit class XAccessControllerOps[Self <: XAccessController] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContext(value: XAccessControlContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCheckPermission(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkPermission")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDoPrivileged(value: (XAction, XAccessControlContext) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doPrivileged")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withDoRestricted(value: (XAction, XAccessControlContext) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doRestricted")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetContext(value: () => XAccessControlContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContext")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

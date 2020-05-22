@@ -10,7 +10,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** provides the access to data definition beans from a connected database. */
-@js.native
 trait XDataDefinitionSupplier extends XInterface {
   /**
     * returns at least the container of tables related to the given connection.
@@ -18,7 +17,7 @@ trait XDataDefinitionSupplier extends XInterface {
     * @returns the container
     * @throws com::sun::star::sdbc::SQLException if a database access error occurs.
     */
-  def getDataDefinitionByConnection(connection: XConnection): XTablesSupplier = js.native
+  def getDataDefinitionByConnection(connection: XConnection): XTablesSupplier
   /**
     * returns at least the container of tables related to the given Database URL.
     * @param url a database url of the form sdbc:subprotocol:subname
@@ -26,7 +25,7 @@ trait XDataDefinitionSupplier extends XInterface {
     * @returns the container
     * @throws com::sun::star::sdbc::SQLException if a database access error occurs.
     */
-  def getDataDefinitionByURL(url: String, info: SeqEquiv[PropertyValue]): XTablesSupplier = js.native
+  def getDataDefinitionByURL(url: String, info: SeqEquiv[PropertyValue]): XTablesSupplier
 }
 
 object XDataDefinitionSupplier {
@@ -41,25 +40,5 @@ object XDataDefinitionSupplier {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), getDataDefinitionByConnection = js.Any.fromFunction1(getDataDefinitionByConnection), getDataDefinitionByURL = js.Any.fromFunction2(getDataDefinitionByURL), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XDataDefinitionSupplier]
   }
-  @scala.inline
-  implicit class XDataDefinitionSupplierOps[Self <: XDataDefinitionSupplier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetDataDefinitionByConnection(value: XConnection => XTablesSupplier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDataDefinitionByConnection")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetDataDefinitionByURL(value: (String, SeqEquiv[PropertyValue]) => XTablesSupplier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDataDefinitionByURL")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

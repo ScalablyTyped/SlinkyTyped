@@ -5,22 +5,21 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** The underlying pixel data of an area of a <canvas> element. It is created using the ImageData() constructor or creator methods on the CanvasRenderingContext2D object associated with a canvas: createImageData() and getImageData(). It can also be used to set a part of the canvas by using putImageData(). */
-@js.native
 trait ImageData
   extends ImageBitmapSource
      with TexImageSource {
   /**
     * Returns the one-dimensional array containing the data in RGBA order, as integers in the range 0 to 255.
     */
-  val data: js.typedarray.Uint8ClampedArray = js.native
+  val data: js.typedarray.Uint8ClampedArray
   /**
     * Returns the actual dimensions of the data in the ImageData object, in pixels.
     */
-  val height: Double = js.native
+  val height: Double
   /**
     * Returns the actual dimensions of the data in the ImageData object, in pixels.
     */
-  val width: Double = js.native
+  val width: Double
 }
 
 object ImageData {
@@ -29,31 +28,5 @@ object ImageData {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImageData]
   }
-  @scala.inline
-  implicit class ImageDataOps[Self <: org.scalajs.dom.raw.ImageData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: js.typedarray.Uint8ClampedArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,93 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollmentConfiguration {
   // Not yet documented
-  var androidRestriction: js.UndefOr[DeviceEnrollmentPlatformRestriction] = js.native
+  var androidRestriction: js.UndefOr[DeviceEnrollmentPlatformRestriction] = js.undefined
   // Not yet documented
-  var iosRestriction: js.UndefOr[DeviceEnrollmentPlatformRestriction] = js.native
+  var iosRestriction: js.UndefOr[DeviceEnrollmentPlatformRestriction] = js.undefined
   // Not yet documented
-  var macOSRestriction: js.UndefOr[DeviceEnrollmentPlatformRestriction] = js.native
+  var macOSRestriction: js.UndefOr[DeviceEnrollmentPlatformRestriction] = js.undefined
   // Not yet documented
-  var windowsMobileRestriction: js.UndefOr[DeviceEnrollmentPlatformRestriction] = js.native
+  var windowsMobileRestriction: js.UndefOr[DeviceEnrollmentPlatformRestriction] = js.undefined
   // Not yet documented
-  var windowsRestriction: js.UndefOr[DeviceEnrollmentPlatformRestriction] = js.native
+  var windowsRestriction: js.UndefOr[DeviceEnrollmentPlatformRestriction] = js.undefined
 }
 
 object DeviceEnrollmentPlatformRestrictionsConfiguration {
   @scala.inline
-  def apply(): DeviceEnrollmentPlatformRestrictionsConfiguration = {
+  def apply(
+    androidRestriction: DeviceEnrollmentPlatformRestriction = null,
+    assignments: js.Array[EnrollmentConfigurationAssignment] = null,
+    createdDateTime: String = null,
+    description: String = null,
+    displayName: String = null,
+    id: String = null,
+    iosRestriction: DeviceEnrollmentPlatformRestriction = null,
+    lastModifiedDateTime: String = null,
+    macOSRestriction: DeviceEnrollmentPlatformRestriction = null,
+    priority: js.UndefOr[Double] = js.undefined,
+    version: js.UndefOr[Double] = js.undefined,
+    windowsMobileRestriction: DeviceEnrollmentPlatformRestriction = null,
+    windowsRestriction: DeviceEnrollmentPlatformRestriction = null
+  ): DeviceEnrollmentPlatformRestrictionsConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (androidRestriction != null) __obj.updateDynamic("androidRestriction")(androidRestriction.asInstanceOf[js.Any])
+    if (assignments != null) __obj.updateDynamic("assignments")(assignments.asInstanceOf[js.Any])
+    if (createdDateTime != null) __obj.updateDynamic("createdDateTime")(createdDateTime.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (iosRestriction != null) __obj.updateDynamic("iosRestriction")(iosRestriction.asInstanceOf[js.Any])
+    if (lastModifiedDateTime != null) __obj.updateDynamic("lastModifiedDateTime")(lastModifiedDateTime.asInstanceOf[js.Any])
+    if (macOSRestriction != null) __obj.updateDynamic("macOSRestriction")(macOSRestriction.asInstanceOf[js.Any])
+    if (!js.isUndefined(priority)) __obj.updateDynamic("priority")(priority.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(version)) __obj.updateDynamic("version")(version.get.asInstanceOf[js.Any])
+    if (windowsMobileRestriction != null) __obj.updateDynamic("windowsMobileRestriction")(windowsMobileRestriction.asInstanceOf[js.Any])
+    if (windowsRestriction != null) __obj.updateDynamic("windowsRestriction")(windowsRestriction.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeviceEnrollmentPlatformRestrictionsConfiguration]
   }
-  @scala.inline
-  implicit class DeviceEnrollmentPlatformRestrictionsConfigurationOps[Self <: DeviceEnrollmentPlatformRestrictionsConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAndroidRestriction(value: DeviceEnrollmentPlatformRestriction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidRestriction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAndroidRestriction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidRestriction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIosRestriction(value: DeviceEnrollmentPlatformRestriction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosRestriction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIosRestriction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosRestriction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMacOSRestriction(value: DeviceEnrollmentPlatformRestriction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("macOSRestriction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMacOSRestriction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("macOSRestriction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowsMobileRestriction(value: DeviceEnrollmentPlatformRestriction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsMobileRestriction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowsMobileRestriction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsMobileRestriction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowsRestriction(value: DeviceEnrollmentPlatformRestriction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsRestriction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowsRestriction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsRestriction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

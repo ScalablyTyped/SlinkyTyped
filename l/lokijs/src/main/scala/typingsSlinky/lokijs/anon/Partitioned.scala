@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Partitioned extends js.Object {
-  var delimited: js.UndefOr[Boolean] = js.native
-  var delimiter: js.UndefOr[String] = js.native
-  var partitioned: js.UndefOr[Boolean] = js.native
+  var delimited: js.UndefOr[Boolean] = js.undefined
+  var delimiter: js.UndefOr[String] = js.undefined
+  var partitioned: js.UndefOr[Boolean] = js.undefined
 }
 
 object Partitioned {
   @scala.inline
-  def apply(): Partitioned = {
+  def apply(
+    delimited: js.UndefOr[Boolean] = js.undefined,
+    delimiter: String = null,
+    partitioned: js.UndefOr[Boolean] = js.undefined
+  ): Partitioned = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(delimited)) __obj.updateDynamic("delimited")(delimited.get.asInstanceOf[js.Any])
+    if (delimiter != null) __obj.updateDynamic("delimiter")(delimiter.asInstanceOf[js.Any])
+    if (!js.isUndefined(partitioned)) __obj.updateDynamic("partitioned")(partitioned.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Partitioned]
   }
-  @scala.inline
-  implicit class PartitionedOps[Self <: Partitioned] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelimited(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delimited")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelimited: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delimited")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelimiter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelimiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartitioned(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partitioned")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartitioned: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partitioned")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

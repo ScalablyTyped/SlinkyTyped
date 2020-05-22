@@ -19,7 +19,7 @@ trait ListStackInstancesInput extends js.Object {
     */
   var StackInstanceAccount: js.UndefOr[Account] = js.native
   /**
-    * The name of the region where you want to list stack instances. 
+    * The name of the Region where you want to list stack instances. 
     */
   var StackInstanceRegion: js.UndefOr[Region] = js.native
   /**
@@ -30,71 +30,19 @@ trait ListStackInstancesInput extends js.Object {
 
 object ListStackInstancesInput {
   @scala.inline
-  def apply(StackSetName: StackSetName): ListStackInstancesInput = {
+  def apply(
+    StackSetName: StackSetName,
+    MaxResults: js.UndefOr[MaxResults] = js.undefined,
+    NextToken: NextToken = null,
+    StackInstanceAccount: Account = null,
+    StackInstanceRegion: Region = null
+  ): ListStackInstancesInput = {
     val __obj = js.Dynamic.literal(StackSetName = StackSetName.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxResults)) __obj.updateDynamic("MaxResults")(MaxResults.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (StackInstanceAccount != null) __obj.updateDynamic("StackInstanceAccount")(StackInstanceAccount.asInstanceOf[js.Any])
+    if (StackInstanceRegion != null) __obj.updateDynamic("StackInstanceRegion")(StackInstanceRegion.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListStackInstancesInput]
   }
-  @scala.inline
-  implicit class ListStackInstancesInputOps[Self <: ListStackInstancesInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStackSetName(value: StackSetName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: MaxResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackInstanceAccount(value: Account): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackInstanceAccount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackInstanceAccount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackInstanceAccount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackInstanceRegion(value: Region): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackInstanceRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackInstanceRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackInstanceRegion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

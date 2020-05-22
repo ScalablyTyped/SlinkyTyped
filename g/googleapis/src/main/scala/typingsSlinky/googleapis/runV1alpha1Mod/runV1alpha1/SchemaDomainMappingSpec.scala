@@ -29,53 +29,16 @@ trait SchemaDomainMappingSpec extends js.Object {
 
 object SchemaDomainMappingSpec {
   @scala.inline
-  def apply(): SchemaDomainMappingSpec = {
+  def apply(
+    certificateMode: String = null,
+    forceOverride: js.UndefOr[Boolean] = js.undefined,
+    routeName: String = null
+  ): SchemaDomainMappingSpec = {
     val __obj = js.Dynamic.literal()
+    if (certificateMode != null) __obj.updateDynamic("certificateMode")(certificateMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(forceOverride)) __obj.updateDynamic("forceOverride")(forceOverride.get.asInstanceOf[js.Any])
+    if (routeName != null) __obj.updateDynamic("routeName")(routeName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDomainMappingSpec]
   }
-  @scala.inline
-  implicit class SchemaDomainMappingSpecOps[Self <: SchemaDomainMappingSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificateMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificateMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForceOverride(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceOverride")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceOverride: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceOverride")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRouteName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouteName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routeName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

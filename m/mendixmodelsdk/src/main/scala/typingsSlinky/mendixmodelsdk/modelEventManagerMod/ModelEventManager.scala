@@ -1,6 +1,8 @@
 package typingsSlinky.mendixmodelsdk.modelEventManagerMod
 
 import typingsSlinky.mendixmodelsdk.abstractModelMod.AbstractModel
+import typingsSlinky.mendixmodelsdk.commonMod.common.IErrorCallback
+import typingsSlinky.mendixmodelsdk.commonMod.common.IVoidCallback
 import typingsSlinky.mendixmodelsdk.deltaManagerMod.IDeltaManager
 import typingsSlinky.mendixmodelsdk.deltasMod.DeltaProcessor
 import typingsSlinky.mendixmodelsdk.imodeleventMod.IDeltaEvent
@@ -30,6 +32,18 @@ class ModelEventManager protected () extends IModelEventManager {
   var pendingUnits: js.Any = js.native
   var processEventsQueue: js.Any = js.native
   var processLoadedUnits: js.Any = js.native
+  /* CompleteClass */
+  override def loadUnitCompleted(eventId: Double, callback: IVoidCallback, errorCallback: IErrorCallback): Unit = js.native
+  /* CompleteClass */
+  override def loadUnitStarted(): Unit = js.native
+  /* CompleteClass */
+  override def onEventProcessed(callback: IVoidCallback): Unit = js.native
+  /* CompleteClass */
+  override def onFileChangesReceived(callback: js.Function1[/* files */ js.Array[String], Unit]): Unit = js.native
   def scheduleEvent(deltaEvent: IDeltaEvent): Unit = js.native
+  /* CompleteClass */
+  override def start(): Unit = js.native
+  /* CompleteClass */
+  override def stop(): Unit = js.native
 }
 

@@ -1,28 +1,28 @@
 package typingsSlinky.twilioMcsClient
 
-import typingsSlinky.twilioMcsClient.mod.LogLevel
+import typingsSlinky.twilioMcsClient.mod._LogLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object twilioMcsClientStrings {
   @js.native
-  sealed trait debug extends LogLevel
+  sealed trait debug extends _LogLevel
   
   @js.native
-  sealed trait error extends LogLevel
+  sealed trait error extends _LogLevel
   
   @js.native
-  sealed trait info extends LogLevel
+  sealed trait info extends _LogLevel
   
   @js.native
-  sealed trait silent extends LogLevel
+  sealed trait silent extends _LogLevel
   
   @js.native
-  sealed trait trace extends LogLevel
+  sealed trait trace extends _LogLevel
   
   @js.native
-  sealed trait warn extends LogLevel
+  sealed trait warn extends _LogLevel
   
   @scala.inline
   def debug: debug = "debug".asInstanceOf[debug]

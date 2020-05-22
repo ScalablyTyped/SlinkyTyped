@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.8]
   */
-@js.native
 trait ChartAddedEventArgs extends js.Object {
   /**
     *
@@ -21,28 +20,28 @@ trait ChartAddedEventArgs extends js.Object {
     *
     * [Api set: ExcelApi 1.8]
     */
-  var chartId: String = js.native
+  var chartId: String
   /**
     *
     * Gets the source of the event. See Excel.EventSource for details.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var source: EventSource | Local | Remote = js.native
+  var source: EventSource | Local | Remote
   /**
     *
     * Gets the type of the event. See Excel.EventType for details.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var `type`: ChartAdded = js.native
+  var `type`: ChartAdded
   /**
     *
     * Gets the id of the worksheet in which the chart is added.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var worksheetId: String = js.native
+  var worksheetId: String
 }
 
 object ChartAddedEventArgs {
@@ -52,37 +51,5 @@ object ChartAddedEventArgs {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartAddedEventArgs]
   }
-  @scala.inline
-  implicit class ChartAddedEventArgsOps[Self <: ChartAddedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChartId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chartId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSource(value: EventSource | Local | Remote): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: ChartAdded): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorksheetId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("worksheetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

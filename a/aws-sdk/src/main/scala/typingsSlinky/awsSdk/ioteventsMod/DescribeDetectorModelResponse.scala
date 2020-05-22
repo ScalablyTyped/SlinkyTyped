@@ -14,29 +14,10 @@ trait DescribeDetectorModelResponse extends js.Object {
 
 object DescribeDetectorModelResponse {
   @scala.inline
-  def apply(): DescribeDetectorModelResponse = {
+  def apply(detectorModel: DetectorModel = null): DescribeDetectorModelResponse = {
     val __obj = js.Dynamic.literal()
+    if (detectorModel != null) __obj.updateDynamic("detectorModel")(detectorModel.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeDetectorModelResponse]
   }
-  @scala.inline
-  implicit class DescribeDetectorModelResponseOps[Self <: DescribeDetectorModelResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDetectorModel(value: DetectorModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetectorModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorModel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

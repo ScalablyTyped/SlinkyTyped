@@ -1,17 +1,17 @@
 package typingsSlinky.reactSlick
 
 import typingsSlinky.reactSlick.mod.LazyLoadTypes
-import typingsSlinky.reactSlick.mod.SwipeDirection
+import typingsSlinky.reactSlick.mod._SwipeDirection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object reactSlickStrings {
   @js.native
-  sealed trait down extends SwipeDirection
+  sealed trait down extends _SwipeDirection
   
   @js.native
-  sealed trait left extends SwipeDirection
+  sealed trait left extends _SwipeDirection
   
   @js.native
   sealed trait ondemand extends LazyLoadTypes
@@ -20,13 +20,13 @@ object reactSlickStrings {
   sealed trait progressive extends LazyLoadTypes
   
   @js.native
-  sealed trait right extends SwipeDirection
+  sealed trait right extends _SwipeDirection
   
   @js.native
   sealed trait unslick extends js.Object
   
   @js.native
-  sealed trait up extends SwipeDirection
+  sealed trait up extends _SwipeDirection
   
   @scala.inline
   def down: down = "down".asInstanceOf[down]

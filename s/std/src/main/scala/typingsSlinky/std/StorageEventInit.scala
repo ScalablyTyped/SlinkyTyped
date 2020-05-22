@@ -4,112 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StorageEventInit extends EventInit {
-  var key: js.UndefOr[java.lang.String | Null] = js.native
-  var newValue: js.UndefOr[java.lang.String | Null] = js.native
-  var oldValue: js.UndefOr[java.lang.String | Null] = js.native
-  var storageArea: js.UndefOr[org.scalajs.dom.raw.Storage | Null] = js.native
-  var url: js.UndefOr[java.lang.String] = js.native
+  var key: js.UndefOr[java.lang.String | Null] = js.undefined
+  var newValue: js.UndefOr[java.lang.String | Null] = js.undefined
+  var oldValue: js.UndefOr[java.lang.String | Null] = js.undefined
+  var storageArea: js.UndefOr[org.scalajs.dom.raw.Storage | Null] = js.undefined
+  var url: js.UndefOr[java.lang.String] = js.undefined
 }
 
 object StorageEventInit {
   @scala.inline
-  def apply(): StorageEventInit = {
+  def apply(
+    bubbles: js.UndefOr[scala.Boolean] = js.undefined,
+    cancelable: js.UndefOr[scala.Boolean] = js.undefined,
+    composed: js.UndefOr[scala.Boolean] = js.undefined,
+    key: js.UndefOr[Null | java.lang.String] = js.undefined,
+    newValue: js.UndefOr[Null | java.lang.String] = js.undefined,
+    oldValue: js.UndefOr[Null | java.lang.String] = js.undefined,
+    storageArea: js.UndefOr[Null | org.scalajs.dom.raw.Storage] = js.undefined,
+    url: java.lang.String = null
+  ): StorageEventInit = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(bubbles)) __obj.updateDynamic("bubbles")(bubbles.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cancelable)) __obj.updateDynamic("cancelable")(cancelable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(composed)) __obj.updateDynamic("composed")(composed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(key)) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(newValue)) __obj.updateDynamic("newValue")(newValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(oldValue)) __obj.updateDynamic("oldValue")(oldValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(storageArea)) __obj.updateDynamic("storageArea")(storageArea.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[StorageEventInit]
   }
-  @scala.inline
-  implicit class StorageEventInitOps[Self <: StorageEventInit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKey(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(null)
-        ret
-    }
-    @scala.inline
-    def withNewValue(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewValueNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newValue")(null)
-        ret
-    }
-    @scala.inline
-    def withOldValue(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOldValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOldValueNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValue")(null)
-        ret
-    }
-    @scala.inline
-    def withStorageArea(value: org.scalajs.dom.raw.Storage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageAreaNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageArea")(null)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

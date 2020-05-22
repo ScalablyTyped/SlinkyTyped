@@ -14,29 +14,10 @@ trait SearchAvailablePhoneNumbersResponse extends js.Object {
 
 object SearchAvailablePhoneNumbersResponse {
   @scala.inline
-  def apply(): SearchAvailablePhoneNumbersResponse = {
+  def apply(E164PhoneNumbers: E164PhoneNumberList = null): SearchAvailablePhoneNumbersResponse = {
     val __obj = js.Dynamic.literal()
+    if (E164PhoneNumbers != null) __obj.updateDynamic("E164PhoneNumbers")(E164PhoneNumbers.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchAvailablePhoneNumbersResponse]
   }
-  @scala.inline
-  implicit class SearchAvailablePhoneNumbersResponseOps[Self <: SearchAvailablePhoneNumbersResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withE164PhoneNumbers(value: E164PhoneNumberList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("E164PhoneNumbers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutE164PhoneNumbers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("E164PhoneNumbers")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,32 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MDCTextFieldHelperTextAdapter extends js.Object {
   /**
     * Adds a class to the helper text element.
     */
-  def addClass(className: String): Unit = js.native
+  def addClass(className: String): Unit
   /**
     * Returns whether or not the helper text element contains the given class.
     */
-  def hasClass(className: String): Boolean = js.native
+  def hasClass(className: String): Boolean
   /**
     * Removes an attribute from the helper text element.
     */
-  def removeAttr(attr: String): Unit = js.native
+  def removeAttr(attr: String): Unit
   /**
     * Removes a class from the helper text element.
     */
-  def removeClass(className: String): Unit = js.native
+  def removeClass(className: String): Unit
   /**
     * Sets an attribute with a given value on the helper text element.
     */
-  def setAttr(attr: String, value: String): Unit = js.native
+  def setAttr(attr: String, value: String): Unit
   /**
     * Sets the text content for the helper text element.
     */
-  def setContent(content: String): Unit = js.native
+  def setContent(content: String): Unit
 }
 
 object MDCTextFieldHelperTextAdapter {
@@ -45,49 +44,5 @@ object MDCTextFieldHelperTextAdapter {
     val __obj = js.Dynamic.literal(addClass = js.Any.fromFunction1(addClass), hasClass = js.Any.fromFunction1(hasClass), removeAttr = js.Any.fromFunction1(removeAttr), removeClass = js.Any.fromFunction1(removeClass), setAttr = js.Any.fromFunction2(setAttr), setContent = js.Any.fromFunction1(setContent))
     __obj.asInstanceOf[MDCTextFieldHelperTextAdapter]
   }
-  @scala.inline
-  implicit class MDCTextFieldHelperTextAdapterOps[Self <: MDCTextFieldHelperTextAdapter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddClass(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addClass")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withHasClass(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasClass")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveAttr(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAttr")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveClass(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeClass")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetAttr(value: (String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttr")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetContent(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setContent")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

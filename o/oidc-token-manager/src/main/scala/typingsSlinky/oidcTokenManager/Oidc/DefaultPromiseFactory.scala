@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DefaultPromiseFactory extends js.Object {
-  def create(callback: js.Any): DefaultPromise = js.native
-  def reject(reason: js.Any): DefaultPromise = js.native
-  def resolve(value: js.Any): DefaultPromise = js.native
+  def create(callback: js.Any): DefaultPromise
+  def reject(reason: js.Any): DefaultPromise
+  def resolve(value: js.Any): DefaultPromise
 }
 
 object DefaultPromiseFactory {
@@ -21,31 +20,5 @@ object DefaultPromiseFactory {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), reject = js.Any.fromFunction1(reject), resolve = js.Any.fromFunction1(resolve))
     __obj.asInstanceOf[DefaultPromiseFactory]
   }
-  @scala.inline
-  implicit class DefaultPromiseFactoryOps[Self <: DefaultPromiseFactory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreate(value: js.Any => DefaultPromise): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withReject(value: js.Any => DefaultPromise): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reject")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withResolve(value: js.Any => DefaultPromise): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolve")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

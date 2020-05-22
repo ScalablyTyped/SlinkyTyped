@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeleteDimensionGroupResponse extends js.Object {
-  var dimensionGroups: js.UndefOr[js.Array[DimensionGroup]] = js.native
+  var dimensionGroups: js.UndefOr[js.Array[DimensionGroup]] = js.undefined
 }
 
 object DeleteDimensionGroupResponse {
   @scala.inline
-  def apply(): DeleteDimensionGroupResponse = {
+  def apply(dimensionGroups: js.Array[DimensionGroup] = null): DeleteDimensionGroupResponse = {
     val __obj = js.Dynamic.literal()
+    if (dimensionGroups != null) __obj.updateDynamic("dimensionGroups")(dimensionGroups.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteDimensionGroupResponse]
   }
-  @scala.inline
-  implicit class DeleteDimensionGroupResponseOps[Self <: DeleteDimensionGroupResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDimensionGroups(value: js.Array[DimensionGroup]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimensionGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionGroups")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

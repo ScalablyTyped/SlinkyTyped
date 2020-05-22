@@ -22,53 +22,16 @@ trait Deinterlacer extends js.Object {
 
 object Deinterlacer {
   @scala.inline
-  def apply(): Deinterlacer = {
+  def apply(
+    Algorithm: DeinterlaceAlgorithm = null,
+    Control: DeinterlacerControl = null,
+    Mode: DeinterlacerMode = null
+  ): Deinterlacer = {
     val __obj = js.Dynamic.literal()
+    if (Algorithm != null) __obj.updateDynamic("Algorithm")(Algorithm.asInstanceOf[js.Any])
+    if (Control != null) __obj.updateDynamic("Control")(Control.asInstanceOf[js.Any])
+    if (Mode != null) __obj.updateDynamic("Mode")(Mode.asInstanceOf[js.Any])
     __obj.asInstanceOf[Deinterlacer]
   }
-  @scala.inline
-  implicit class DeinterlacerOps[Self <: Deinterlacer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlgorithm(value: DeinterlaceAlgorithm): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Algorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlgorithm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Algorithm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withControl(value: DeinterlacerControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Control")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Control")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: DeinterlacerMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

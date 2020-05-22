@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.braintree.braintreeStrings.dispute_lost
   - typingsSlinky.braintree.braintreeStrings.dispute_won
 */
-trait DisputeNotificationKind extends WebhookNotificationKind
+trait DisputeNotificationKind extends _WebhookNotificationKind
 
 object DisputeNotificationKind {
   @scala.inline

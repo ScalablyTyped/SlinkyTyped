@@ -4,218 +4,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TransformObject extends js.Object {
-  var origin: js.UndefOr[NumberArray] = js.native
-  var originX: js.UndefOr[NumberProp] = js.native
-  var originY: js.UndefOr[NumberProp] = js.native
-  var rotation: js.UndefOr[NumberProp] = js.native
-  var scale: js.UndefOr[NumberArray] = js.native
-  var scaleX: js.UndefOr[NumberProp] = js.native
-  var scaleY: js.UndefOr[NumberProp] = js.native
-  var skew: js.UndefOr[NumberArray] = js.native
-  var skewX: js.UndefOr[NumberProp] = js.native
-  var skewY: js.UndefOr[NumberProp] = js.native
-  var translate: js.UndefOr[NumberArray] = js.native
-  var translateX: js.UndefOr[NumberProp] = js.native
-  var translateY: js.UndefOr[NumberProp] = js.native
-  var x: js.UndefOr[NumberArray] = js.native
-  var y: js.UndefOr[NumberArray] = js.native
+  var origin: js.UndefOr[NumberArray] = js.undefined
+  var originX: js.UndefOr[NumberProp] = js.undefined
+  var originY: js.UndefOr[NumberProp] = js.undefined
+  var rotation: js.UndefOr[NumberProp] = js.undefined
+  var scale: js.UndefOr[NumberArray] = js.undefined
+  var scaleX: js.UndefOr[NumberProp] = js.undefined
+  var scaleY: js.UndefOr[NumberProp] = js.undefined
+  var skew: js.UndefOr[NumberArray] = js.undefined
+  var skewX: js.UndefOr[NumberProp] = js.undefined
+  var skewY: js.UndefOr[NumberProp] = js.undefined
+  var translate: js.UndefOr[NumberArray] = js.undefined
+  var translateX: js.UndefOr[NumberProp] = js.undefined
+  var translateY: js.UndefOr[NumberProp] = js.undefined
+  var x: js.UndefOr[NumberArray] = js.undefined
+  var y: js.UndefOr[NumberArray] = js.undefined
 }
 
 object TransformObject {
   @scala.inline
-  def apply(): TransformObject = {
+  def apply(
+    origin: NumberArray = null,
+    originX: NumberProp = null,
+    originY: NumberProp = null,
+    rotation: NumberProp = null,
+    scale: NumberArray = null,
+    scaleX: NumberProp = null,
+    scaleY: NumberProp = null,
+    skew: NumberArray = null,
+    skewX: NumberProp = null,
+    skewY: NumberProp = null,
+    translate: NumberArray = null,
+    translateX: NumberProp = null,
+    translateY: NumberProp = null,
+    x: NumberArray = null,
+    y: NumberArray = null
+  ): TransformObject = {
     val __obj = js.Dynamic.literal()
+    if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
+    if (originX != null) __obj.updateDynamic("originX")(originX.asInstanceOf[js.Any])
+    if (originY != null) __obj.updateDynamic("originY")(originY.asInstanceOf[js.Any])
+    if (rotation != null) __obj.updateDynamic("rotation")(rotation.asInstanceOf[js.Any])
+    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
+    if (scaleX != null) __obj.updateDynamic("scaleX")(scaleX.asInstanceOf[js.Any])
+    if (scaleY != null) __obj.updateDynamic("scaleY")(scaleY.asInstanceOf[js.Any])
+    if (skew != null) __obj.updateDynamic("skew")(skew.asInstanceOf[js.Any])
+    if (skewX != null) __obj.updateDynamic("skewX")(skewX.asInstanceOf[js.Any])
+    if (skewY != null) __obj.updateDynamic("skewY")(skewY.asInstanceOf[js.Any])
+    if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
+    if (translateX != null) __obj.updateDynamic("translateX")(translateX.asInstanceOf[js.Any])
+    if (translateY != null) __obj.updateDynamic("translateY")(translateY.asInstanceOf[js.Any])
+    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
+    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransformObject]
   }
-  @scala.inline
-  implicit class TransformObjectOps[Self <: TransformObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOrigin(value: NumberArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginX(value: NumberProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginY(value: NumberProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotation(value: NumberProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScale(value: NumberArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaleX(value: NumberProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaleY(value: NumberProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkew(value: NumberArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skew")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkew: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skew")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkewX(value: NumberProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skewX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkewX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skewX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkewY(value: NumberProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skewY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkewY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skewY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranslate(value: NumberArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranslate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranslateX(value: NumberProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translateX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranslateX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translateX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranslateY(value: NumberProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translateY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranslateY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translateY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX(value: NumberArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY(value: NumberArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

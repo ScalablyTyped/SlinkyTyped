@@ -14,7 +14,6 @@ import scala.scalajs.js.annotation._
   *
   * The needed stub on server side can be created using {@link XCachedDynamicResultSetStubFactory} .
   */
-@js.native
 trait XCachedDynamicResultSetFactory extends XInterface {
   /**
     * creates a remote optimizes {@link XDynamicResultSet} .
@@ -22,7 +21,7 @@ trait XCachedDynamicResultSetFactory extends XInterface {
     * @param ContentIdentifierMapping is not required, but can be set if it is necessary to change the identity of the contents accessible via the interface {
     * @returns an instance of service {@link CachedDynamicResultSet} .
     */
-  def createCachedDynamicResultSet(SourceStub: XDynamicResultSet, ContentIdentifierMapping: XContentIdentifierMapping): XDynamicResultSet = js.native
+  def createCachedDynamicResultSet(SourceStub: XDynamicResultSet, ContentIdentifierMapping: XContentIdentifierMapping): XDynamicResultSet
 }
 
 object XCachedDynamicResultSetFactory {
@@ -36,19 +35,5 @@ object XCachedDynamicResultSetFactory {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), createCachedDynamicResultSet = js.Any.fromFunction2(createCachedDynamicResultSet), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XCachedDynamicResultSetFactory]
   }
-  @scala.inline
-  implicit class XCachedDynamicResultSetFactoryOps[Self <: XCachedDynamicResultSetFactory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateCachedDynamicResultSet(value: (XDynamicResultSet, XContentIdentifierMapping) => XDynamicResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createCachedDynamicResultSet")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

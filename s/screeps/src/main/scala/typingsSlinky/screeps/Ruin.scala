@@ -10,29 +10,28 @@ import scala.scalajs.js.annotation._
   *     <li>Decay: 500 ticks except some special cases</li>
   * </ul>
   */
-@js.native
 trait Ruin extends RoomObject {
   /**
     * Time of destruction.
     */
-  var destroyTime: Double = js.native
+  var destroyTime: Double
   /**
     * A unique object identificator.
     * You can use {@link Game.getObjectById} method to retrieve an object instance by its id.
     */
-  var id: Id[this.type] = js.native
+  var id: Id[this.type]
   /**
     * An object with the ruin contents.
     */
-  var store: StoreDefinitionUnlimited = js.native
+  var store: StoreDefinitionUnlimited
   /**
     * An object containing the destroyed structure.
     */
-  var structure: AnyStructure = js.native
+  var structure: AnyStructure
   /**
     * The amount of game ticks before this ruin decays.
     */
-  var ticksToDecay: Double = js.native
+  var ticksToDecay: Double
 }
 
 object Ruin {
@@ -44,48 +43,12 @@ object Ruin {
     pos: RoomPosition,
     store: StoreDefinitionUnlimited,
     structure: AnyStructure,
-    ticksToDecay: Double
+    ticksToDecay: Double,
+    room: Room = null
   ): Ruin = {
     val __obj = js.Dynamic.literal(destroyTime = destroyTime.asInstanceOf[js.Any], effects = effects.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], pos = pos.asInstanceOf[js.Any], store = store.asInstanceOf[js.Any], structure = structure.asInstanceOf[js.Any], ticksToDecay = ticksToDecay.asInstanceOf[js.Any])
+    if (room != null) __obj.updateDynamic("room")(room.asInstanceOf[js.Any])
     __obj.asInstanceOf[Ruin]
   }
-  @scala.inline
-  implicit class RuinOps[Self <: Ruin] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestroyTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroyTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: Id[Ruin]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStore(value: StoreDefinitionUnlimited): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStructure(value: AnyStructure): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("structure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTicksToDecay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticksToDecay")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

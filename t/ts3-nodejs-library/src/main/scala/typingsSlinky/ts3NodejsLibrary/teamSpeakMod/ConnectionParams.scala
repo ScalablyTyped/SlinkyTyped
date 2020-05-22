@@ -4,34 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConnectionParams extends js.Object {
   /** wether it should automatically connect after instanciating (default: true) */
-  var autoConnect: js.UndefOr[Boolean] = js.native
+  var autoConnect: js.UndefOr[Boolean] = js.undefined
   /** the host to connect to (default: 127.0.0.1) */
-  var host: String = js.native
+  var host: String
   /** wether query clients should be ignored allover (clientList, events, etc) */
-  var ignoreQueries: Boolean = js.native
+  var ignoreQueries: Boolean
   /** wether a keepalive should get sent (default: true) */
-  var keepAlive: Boolean = js.native
+  var keepAlive: Boolean
   /** sends the keepalive after x seconds of inactivity (default: 250s) */
-  var keepAliveTimeout: Double = js.native
+  var keepAliveTimeout: Double
   /** local address the socket should connect from */
-  var localAddress: js.UndefOr[String] = js.native
+  var localAddress: js.UndefOr[String] = js.undefined
   /** the nickname to connect with */
-  var nickname: js.UndefOr[String] = js.native
+  var nickname: js.UndefOr[String] = js.undefined
   /** the password to use with the login (default: none) */
-  var password: js.UndefOr[String] = js.native
+  var password: js.UndefOr[String] = js.undefined
   /** the query protocol to use (default: @see QueryProtocol ) */
-  var protocol: typingsSlinky.ts3NodejsLibrary.enumMod.QueryProtocol = js.native
+  var protocol: typingsSlinky.ts3NodejsLibrary.enumMod.QueryProtocol
   /** the queryport to use (default: raw=10011 ssh=10022) */
-  var queryport: Double = js.native
+  var queryport: Double
   /** time to wait until a timeout gets fired (default: 10000) */
-  var readyTimeout: Double = js.native
+  var readyTimeout: Double
   /** the server to select upon connect (default: none) */
-  var serverport: js.UndefOr[Double] = js.native
+  var serverport: js.UndefOr[Double] = js.undefined
   /** the username to login with (default: none) */
-  var username: js.UndefOr[String] = js.native
+  var username: js.UndefOr[String] = js.undefined
 }
 
 object ConnectionParams {
@@ -43,132 +42,22 @@ object ConnectionParams {
     keepAliveTimeout: Double,
     protocol: typingsSlinky.ts3NodejsLibrary.enumMod.QueryProtocol,
     queryport: Double,
-    readyTimeout: Double
+    readyTimeout: Double,
+    autoConnect: js.UndefOr[Boolean] = js.undefined,
+    localAddress: String = null,
+    nickname: String = null,
+    password: String = null,
+    serverport: js.UndefOr[Double] = js.undefined,
+    username: String = null
   ): ConnectionParams = {
     val __obj = js.Dynamic.literal(host = host.asInstanceOf[js.Any], ignoreQueries = ignoreQueries.asInstanceOf[js.Any], keepAlive = keepAlive.asInstanceOf[js.Any], keepAliveTimeout = keepAliveTimeout.asInstanceOf[js.Any], protocol = protocol.asInstanceOf[js.Any], queryport = queryport.asInstanceOf[js.Any], readyTimeout = readyTimeout.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoConnect)) __obj.updateDynamic("autoConnect")(autoConnect.get.asInstanceOf[js.Any])
+    if (localAddress != null) __obj.updateDynamic("localAddress")(localAddress.asInstanceOf[js.Any])
+    if (nickname != null) __obj.updateDynamic("nickname")(nickname.asInstanceOf[js.Any])
+    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
+    if (!js.isUndefined(serverport)) __obj.updateDynamic("serverport")(serverport.get.asInstanceOf[js.Any])
+    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectionParams]
   }
-  @scala.inline
-  implicit class ConnectionParamsOps[Self <: ConnectionParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIgnoreQueries(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreQueries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeepAlive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepAlive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeepAliveTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepAliveTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProtocol(value: typingsSlinky.ts3NodejsLibrary.enumMod.QueryProtocol): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQueryport(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReadyTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readyTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoConnect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoConnect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoConnect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoConnect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNickname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nickname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNickname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nickname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPassword(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerport(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsername(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsername: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

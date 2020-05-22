@@ -439,6 +439,11 @@ object Tag {
   }
   
   def withProps[T](p: TagProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[TagProps]))
+  }
   implicit def make[T](companion: Tag.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

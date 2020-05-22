@@ -18,29 +18,10 @@ trait SchemaQueryItem extends js.Object {
 
 object SchemaQueryItem {
   @scala.inline
-  def apply(): SchemaQueryItem = {
+  def apply(isSynthetic: js.UndefOr[Boolean] = js.undefined): SchemaQueryItem = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(isSynthetic)) __obj.updateDynamic("isSynthetic")(isSynthetic.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaQueryItem]
   }
-  @scala.inline
-  implicit class SchemaQueryItemOps[Self <: SchemaQueryItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsSynthetic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSynthetic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsSynthetic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSynthetic")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

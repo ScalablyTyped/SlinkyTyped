@@ -44,12 +44,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SceneAxis extends Axis {
-  var backgroundcolor: Color = js.native
-  var showaxeslabels: Boolean = js.native
-  var showbackground: Boolean = js.native
-  var spikesides: Boolean = js.native
+  var backgroundcolor: Color
+  var showaxeslabels: Boolean
+  var showbackground: Boolean
+  var spikesides: Boolean
 }
 
 object SceneAxis {
@@ -110,37 +109,5 @@ object SceneAxis {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SceneAxis]
   }
-  @scala.inline
-  implicit class SceneAxisOps[Self <: SceneAxis] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackgroundcolor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundcolor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowaxeslabels(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showaxeslabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowbackground(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showbackground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpikesides(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spikesides")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

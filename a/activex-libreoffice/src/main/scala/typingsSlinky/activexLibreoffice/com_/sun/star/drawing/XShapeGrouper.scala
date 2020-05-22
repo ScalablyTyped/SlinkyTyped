@@ -7,7 +7,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** specifies the group/ungroup functionality. */
-@js.native
 trait XShapeGrouper extends XInterface {
   /**
     * groups the {@link Shapes} inside a collection.
@@ -19,12 +18,12 @@ trait XShapeGrouper extends XInterface {
     * @param xShapes the {@link Shapes} that will be grouped. They must all be inserted into the same {@link GenericDrawPage} .
     * @returns a newly created {@link GroupShape} that contains all {@link Shapes} from xShapes and is also added to the {@link GenericDrawPage} of the {@link S
     */
-  def group(xShapes: XShapes): XShapeGroup = js.native
+  def group(xShapes: XShapes): XShapeGroup
   /**
     * ungroups a given {@link GroupShape} .
     * @param aGroup moves all {@link Shapes} from this {@link GroupShape} to the parent {@link XShapes} of the {@link GroupShape} . The {@link GroupShape} is
     */
-  def ungroup(aGroup: XShapeGroup): Unit = js.native
+  def ungroup(aGroup: XShapeGroup): Unit
 }
 
 object XShapeGrouper {
@@ -39,25 +38,5 @@ object XShapeGrouper {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), group = js.Any.fromFunction1(group), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), ungroup = js.Any.fromFunction1(ungroup))
     __obj.asInstanceOf[XShapeGrouper]
   }
-  @scala.inline
-  implicit class XShapeGrouperOps[Self <: XShapeGrouper] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroup(value: XShapes => XShapeGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUngroup(value: XShapeGroup => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ungroup")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

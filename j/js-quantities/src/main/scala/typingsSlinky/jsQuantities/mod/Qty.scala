@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Qty extends UnitSource {
+trait Qty extends js.Object {
   val baseScalar: Double = js.native
   val denominator: js.Array[String] = js.native
   val initValue: String = js.native

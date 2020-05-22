@@ -10,101 +10,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AddressResolution extends js.Object {
-  var addressResolution: js.UndefOr[AddressTranslator] = js.native
-  var loadBalancing: js.UndefOr[LoadBalancingPolicy] = js.native
-  var reconnection: js.UndefOr[ReconnectionPolicy] = js.native
-  var retry: js.UndefOr[RetryPolicy] = js.native
-  var speculativeExecution: js.UndefOr[SpeculativeExecutionPolicy] = js.native
-  var timestampGeneration: js.UndefOr[TimestampGenerator] = js.native
+  var addressResolution: js.UndefOr[AddressTranslator] = js.undefined
+  var loadBalancing: js.UndefOr[LoadBalancingPolicy] = js.undefined
+  var reconnection: js.UndefOr[ReconnectionPolicy] = js.undefined
+  var retry: js.UndefOr[RetryPolicy] = js.undefined
+  var speculativeExecution: js.UndefOr[SpeculativeExecutionPolicy] = js.undefined
+  var timestampGeneration: js.UndefOr[TimestampGenerator] = js.undefined
 }
 
 object AddressResolution {
   @scala.inline
-  def apply(): AddressResolution = {
+  def apply(
+    addressResolution: AddressTranslator = null,
+    loadBalancing: LoadBalancingPolicy = null,
+    reconnection: ReconnectionPolicy = null,
+    retry: RetryPolicy = null,
+    speculativeExecution: SpeculativeExecutionPolicy = null,
+    timestampGeneration: TimestampGenerator = null
+  ): AddressResolution = {
     val __obj = js.Dynamic.literal()
+    if (addressResolution != null) __obj.updateDynamic("addressResolution")(addressResolution.asInstanceOf[js.Any])
+    if (loadBalancing != null) __obj.updateDynamic("loadBalancing")(loadBalancing.asInstanceOf[js.Any])
+    if (reconnection != null) __obj.updateDynamic("reconnection")(reconnection.asInstanceOf[js.Any])
+    if (retry != null) __obj.updateDynamic("retry")(retry.asInstanceOf[js.Any])
+    if (speculativeExecution != null) __obj.updateDynamic("speculativeExecution")(speculativeExecution.asInstanceOf[js.Any])
+    if (timestampGeneration != null) __obj.updateDynamic("timestampGeneration")(timestampGeneration.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddressResolution]
   }
-  @scala.inline
-  implicit class AddressResolutionOps[Self <: AddressResolution] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddressResolution(value: AddressTranslator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addressResolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddressResolution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addressResolution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadBalancing(value: LoadBalancingPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadBalancing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReconnection(value: ReconnectionPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reconnection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReconnection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reconnection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetry(value: RetryPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retry")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpeculativeExecution(value: SpeculativeExecutionPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speculativeExecution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpeculativeExecution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speculativeExecution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestampGeneration(value: TimestampGenerator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampGeneration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestampGeneration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampGeneration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

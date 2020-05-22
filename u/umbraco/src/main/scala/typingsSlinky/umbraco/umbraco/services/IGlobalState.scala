@@ -7,14 +7,13 @@ import scala.scalajs.js.annotation._
 /**
   * Global State
   */
-@js.native
 trait IGlobalState extends js.Object {
-  var isReady: Boolean = js.native
-  var navMode: js.Any = js.native
-  var showNavigation: Boolean = js.native
-  var showTray: Boolean = js.native
-  var stickyNavigation: js.Any = js.native
-  var touchDevice: Boolean = js.native
+  var isReady: Boolean
+  var navMode: js.Any
+  var showNavigation: Boolean
+  var showTray: Boolean
+  var stickyNavigation: js.Any
+  var touchDevice: Boolean
 }
 
 object IGlobalState {
@@ -30,49 +29,5 @@ object IGlobalState {
     val __obj = js.Dynamic.literal(isReady = isReady.asInstanceOf[js.Any], navMode = navMode.asInstanceOf[js.Any], showNavigation = showNavigation.asInstanceOf[js.Any], showTray = showTray.asInstanceOf[js.Any], stickyNavigation = stickyNavigation.asInstanceOf[js.Any], touchDevice = touchDevice.asInstanceOf[js.Any])
     __obj.asInstanceOf[IGlobalState]
   }
-  @scala.inline
-  implicit class IGlobalStateOps[Self <: IGlobalState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsReady(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isReady")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNavMode(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowNavigation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showNavigation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowTray(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTray")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStickyNavigation(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stickyNavigation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTouchDevice(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchDevice")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

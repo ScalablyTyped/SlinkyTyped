@@ -1,5 +1,6 @@
 package typingsSlinky.googleGax
 
+import typingsSlinky.googleGax.apiCallerMod.APICaller
 import typingsSlinky.googleGax.apitypesMod.GaxCall
 import typingsSlinky.googleGax.descriptorMod.Descriptor
 import typingsSlinky.googleGax.gaxMod.CallSettings
@@ -22,6 +23,8 @@ object pageDescriptorMod extends js.Object {
       * Creates a new object Stream which emits the resource on 'data' event.
       */
     def createStream(apiCall: GaxCall, request: js.Object, options: CallSettings): Transform = js.native
+    /* CompleteClass */
+    override def getApiCaller(settings: CallSettings): APICaller = js.native
   }
   
 }

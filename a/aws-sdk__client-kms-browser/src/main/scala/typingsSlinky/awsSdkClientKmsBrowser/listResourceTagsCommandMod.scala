@@ -26,9 +26,16 @@ object listResourceTagsCommandMod extends js.Object {
           Blob
         ] {
     def this(input: ListResourceTagsInput) = this()
+    /* CompleteClass */
+    override val input: ListResourceTagsInput = js.native
     val middlewareStack: MiddlewareStack[ListResourceTagsInput, ListResourceTagsOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: KMSResolvedConfiguration
+    ): Handler[ListResourceTagsInput, ListResourceTagsOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: KMSResolvedConfiguration
     ): Handler[ListResourceTagsInput, ListResourceTagsOutput] = js.native
   }

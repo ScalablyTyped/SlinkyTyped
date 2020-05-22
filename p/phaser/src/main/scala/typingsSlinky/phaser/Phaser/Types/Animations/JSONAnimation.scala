@@ -5,56 +5,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JSONAnimation extends js.Object {
   /**
     * Delay before starting playback. Value given in milliseconds.
     */
-  var delay: integer = js.native
+  var delay: integer
   /**
     * How long the animation should play for in milliseconds. If not given its derived from frameRate.
     */
-  var duration: integer = js.native
+  var duration: integer
   /**
     * The frame rate of playback in frames per second (default 24 if duration is null)
     */
-  var frameRate: integer = js.native
+  var frameRate: integer
   /**
-    * [description]
+    * An array of the AnimationFrame objects inside this Animation.
     */
-  var frames: js.Array[JSONAnimationFrame] = js.native
+  var frames: js.Array[JSONAnimationFrame]
   /**
     * Should sprite.visible = false when the animation finishes?
     */
-  var hideOnComplete: Boolean = js.native
+  var hideOnComplete: Boolean
   /**
     * The key that the animation will be associated with. i.e. sprite.animations.play(key)
     */
-  var key: String = js.native
+  var key: String
   /**
     * Number of times to repeat the animation (-1 for infinity)
     */
-  var repeat: integer = js.native
+  var repeat: integer
   /**
     * Delay before the animation repeats. Value given in milliseconds.
     */
-  var repeatDelay: integer = js.native
+  var repeatDelay: integer
   /**
     * Should sprite.visible = true when the animation starts to play?
     */
-  var showOnStart: Boolean = js.native
+  var showOnStart: Boolean
   /**
     * Skip frames if the time lags, or always advanced anyway?
     */
-  var skipMissedFrames: Boolean = js.native
+  var skipMissedFrames: Boolean
   /**
     * A frame based animation (as opposed to a bone based animation)
     */
-  var `type`: String = js.native
+  var `type`: String
   /**
     * Should the animation yoyo? (reverse back down to the start) before repeating?
     */
-  var yoyo: Boolean = js.native
+  var yoyo: Boolean
 }
 
 object JSONAnimation {
@@ -77,85 +76,5 @@ object JSONAnimation {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[JSONAnimation]
   }
-  @scala.inline
-  implicit class JSONAnimationOps[Self <: JSONAnimation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelay(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDuration(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFrameRate(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFrames(value: js.Array[JSONAnimationFrame]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHideOnComplete(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideOnComplete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepeat(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repeat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepeatDelay(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repeatDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowOnStart(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showOnStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSkipMissedFrames(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipMissedFrames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withYoyo(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yoyo")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

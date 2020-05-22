@@ -14,5 +14,9 @@ class QueueUpdateItemsRequest protected ()
     * @see https://developers.google.com/cast/docs/reference/chrome/chrome.cast.media.QueueUpdateItemsRequest
     */
   def this(itemsToUpdate: js.Array[typingsSlinky.chrome.chrome.cast.media.QueueItem]) = this()
+  /* CompleteClass */
+  override var customData: js.Object = js.native
+  /* CompleteClass */
+  override var item: js.Array[typingsSlinky.chrome.chrome.cast.media.QueueItem] = js.native
 }
 

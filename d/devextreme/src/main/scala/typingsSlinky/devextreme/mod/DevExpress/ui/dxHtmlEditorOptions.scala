@@ -1,169 +1,121 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
+import typingsSlinky.devextreme.anon.ComponentElement
+import typingsSlinky.devextreme.anon.Element
 import typingsSlinky.devextreme.anon.EventModel
+import typingsSlinky.devextreme.anon.JQueryEvent
+import typingsSlinky.devextreme.anon.Model
+import typingsSlinky.devextreme.anon.Name
+import typingsSlinky.devextreme.devextremeStrings.always
+import typingsSlinky.devextreme.devextremeStrings.auto
 import typingsSlinky.devextreme.devextremeStrings.html
+import typingsSlinky.devextreme.devextremeStrings.invalid
 import typingsSlinky.devextreme.devextremeStrings.markdown
+import typingsSlinky.devextreme.devextremeStrings.pending
+import typingsSlinky.devextreme.devextremeStrings.valid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxHtmlEditorOptions extends EditorOptions[dxHtmlEditor] {
-  /** Allows you to customize Quill and 3rd-party modules. */
-  var customizeModules: js.UndefOr[js.Function1[/* config */ js.Any, _]] = js.native
-  /** Configures media resizing. */
-  var mediaResizing: js.UndefOr[dxHtmlEditorMediaResizing] = js.native
-  /** Configures mentions. */
-  var mentions: js.UndefOr[js.Array[dxHtmlEditorMention]] = js.native
-  /** The value to be assigned to the `name` attribute of the underlying HTML element. */
-  var name: js.UndefOr[String] = js.native
-  /** A function that is executed when the widget gets focus. */
-  var onFocusIn: js.UndefOr[js.Function1[/* e */ EventModel, _]] = js.native
-  /** A function that is executed when the widget loses focus. */
-  var onFocusOut: js.UndefOr[js.Function1[/* e */ EventModel, _]] = js.native
-  /** Specifies the text displayed when the input field is empty. */
-  var placeholder: js.UndefOr[String] = js.native
-  /** Configures the widget's toolbar. */
-  var toolbar: js.UndefOr[dxHtmlEditorToolbar] = js.native
-  /** Specifies in which markup language the value is stored. */
-  var valueType: js.UndefOr[html | markdown] = js.native
-  /** Configures variables, which are placeholders to be replaced with actual values when processing text. */
-  var variables: js.UndefOr[dxHtmlEditorVariables] = js.native
+  /** @name dxHtmlEditor.Options.customizeModules */
+  var customizeModules: js.UndefOr[js.Function1[/* config */ js.Any, _]] = js.undefined
+  /** @name dxHtmlEditor.Options.mediaResizing */
+  var mediaResizing: js.UndefOr[dxHtmlEditorMediaResizing] = js.undefined
+  /** @name dxHtmlEditor.Options.mentions */
+  var mentions: js.UndefOr[js.Array[dxHtmlEditorMention]] = js.undefined
+  /** @name dxHtmlEditor.Options.name */
+  var name: js.UndefOr[String] = js.undefined
+  /** @name dxHtmlEditor.Options.onFocusIn */
+  var onFocusIn: js.UndefOr[js.Function1[/* e */ EventModel, _]] = js.undefined
+  /** @name dxHtmlEditor.Options.onFocusOut */
+  var onFocusOut: js.UndefOr[js.Function1[/* e */ EventModel, _]] = js.undefined
+  /** @name dxHtmlEditor.Options.placeholder */
+  var placeholder: js.UndefOr[String] = js.undefined
+  /** @name dxHtmlEditor.Options.toolbar */
+  var toolbar: js.UndefOr[dxHtmlEditorToolbar] = js.undefined
+  /** @name dxHtmlEditor.Options.valueType */
+  var valueType: js.UndefOr[html | markdown] = js.undefined
+  /** @name dxHtmlEditor.Options.variables */
+  var variables: js.UndefOr[dxHtmlEditorVariables] = js.undefined
 }
 
 object dxHtmlEditorOptions {
   @scala.inline
-  def apply(): dxHtmlEditorOptions = {
+  def apply(
+    accessKey: String = null,
+    activeStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    bindingOptions: js.Any = null,
+    customizeModules: /* config */ js.Any => _ = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    elementAttr: js.Any = null,
+    focusStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    height: Double | String | (js.Function0[Double | String]) = null,
+    hint: String = null,
+    hoverStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    isValid: js.UndefOr[Boolean] = js.undefined,
+    mediaResizing: dxHtmlEditorMediaResizing = null,
+    mentions: js.Array[dxHtmlEditorMention] = null,
+    name: String = null,
+    onContentReady: /* e */ ComponentElement[dxHtmlEditor] => _ = null,
+    onDisposing: /* e */ Model[dxHtmlEditor] => _ = null,
+    onFocusIn: /* e */ EventModel => _ = null,
+    onFocusOut: /* e */ EventModel => _ = null,
+    onInitialized: /* e */ Element[dxHtmlEditor] => _ = null,
+    onOptionChanged: /* e */ Name[dxHtmlEditor] => _ = null,
+    onValueChanged: /* e */ JQueryEvent[dxHtmlEditor] => _ = null,
+    placeholder: String = null,
+    readOnly: js.UndefOr[Boolean] = js.undefined,
+    rtlEnabled: js.UndefOr[Boolean] = js.undefined,
+    tabIndex: js.UndefOr[Double] = js.undefined,
+    toolbar: dxHtmlEditorToolbar = null,
+    validationError: js.Any = null,
+    validationErrors: js.Array[_] = null,
+    validationMessageMode: always | auto = null,
+    validationStatus: valid | invalid | pending = null,
+    value: js.Any = null,
+    valueType: html | markdown = null,
+    variables: dxHtmlEditorVariables = null,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    width: Double | String | (js.Function0[Double | String]) = null
+  ): dxHtmlEditorOptions = {
     val __obj = js.Dynamic.literal()
+    if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(activeStateEnabled)) __obj.updateDynamic("activeStateEnabled")(activeStateEnabled.get.asInstanceOf[js.Any])
+    if (bindingOptions != null) __obj.updateDynamic("bindingOptions")(bindingOptions.asInstanceOf[js.Any])
+    if (customizeModules != null) __obj.updateDynamic("customizeModules")(js.Any.fromFunction1(customizeModules))
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (elementAttr != null) __obj.updateDynamic("elementAttr")(elementAttr.asInstanceOf[js.Any])
+    if (!js.isUndefined(focusStateEnabled)) __obj.updateDynamic("focusStateEnabled")(focusStateEnabled.get.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
+    if (!js.isUndefined(hoverStateEnabled)) __obj.updateDynamic("hoverStateEnabled")(hoverStateEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isValid)) __obj.updateDynamic("isValid")(isValid.get.asInstanceOf[js.Any])
+    if (mediaResizing != null) __obj.updateDynamic("mediaResizing")(mediaResizing.asInstanceOf[js.Any])
+    if (mentions != null) __obj.updateDynamic("mentions")(mentions.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (onContentReady != null) __obj.updateDynamic("onContentReady")(js.Any.fromFunction1(onContentReady))
+    if (onDisposing != null) __obj.updateDynamic("onDisposing")(js.Any.fromFunction1(onDisposing))
+    if (onFocusIn != null) __obj.updateDynamic("onFocusIn")(js.Any.fromFunction1(onFocusIn))
+    if (onFocusOut != null) __obj.updateDynamic("onFocusOut")(js.Any.fromFunction1(onFocusOut))
+    if (onInitialized != null) __obj.updateDynamic("onInitialized")(js.Any.fromFunction1(onInitialized))
+    if (onOptionChanged != null) __obj.updateDynamic("onOptionChanged")(js.Any.fromFunction1(onOptionChanged))
+    if (onValueChanged != null) __obj.updateDynamic("onValueChanged")(js.Any.fromFunction1(onValueChanged))
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (!js.isUndefined(readOnly)) __obj.updateDynamic("readOnly")(readOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rtlEnabled)) __obj.updateDynamic("rtlEnabled")(rtlEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tabIndex)) __obj.updateDynamic("tabIndex")(tabIndex.get.asInstanceOf[js.Any])
+    if (toolbar != null) __obj.updateDynamic("toolbar")(toolbar.asInstanceOf[js.Any])
+    if (validationError != null) __obj.updateDynamic("validationError")(validationError.asInstanceOf[js.Any])
+    if (validationErrors != null) __obj.updateDynamic("validationErrors")(validationErrors.asInstanceOf[js.Any])
+    if (validationMessageMode != null) __obj.updateDynamic("validationMessageMode")(validationMessageMode.asInstanceOf[js.Any])
+    if (validationStatus != null) __obj.updateDynamic("validationStatus")(validationStatus.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (valueType != null) __obj.updateDynamic("valueType")(valueType.asInstanceOf[js.Any])
+    if (variables != null) __obj.updateDynamic("variables")(variables.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxHtmlEditorOptions]
   }
-  @scala.inline
-  implicit class dxHtmlEditorOptionsOps[Self <: dxHtmlEditorOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomizeModules(value: /* config */ js.Any => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeModules")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCustomizeModules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeModules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMediaResizing(value: dxHtmlEditorMediaResizing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaResizing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMediaResizing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaResizing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMentions(value: js.Array[dxHtmlEditorMention]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mentions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMentions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mentions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFocusIn(value: /* e */ EventModel => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusIn")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFocusIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFocusOut(value: /* e */ EventModel => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusOut")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFocusOut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusOut")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToolbar(value: dxHtmlEditorToolbar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolbar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueType(value: html | markdown): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariables(value: dxHtmlEditorVariables): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -38,95 +38,23 @@ trait TargetTrackingConfiguration extends js.Object {
 
 object TargetTrackingConfiguration {
   @scala.inline
-  def apply(TargetValue: MetricScale): TargetTrackingConfiguration = {
+  def apply(
+    TargetValue: MetricScale,
+    CustomizedScalingMetricSpecification: CustomizedScalingMetricSpecification = null,
+    DisableScaleIn: js.UndefOr[DisableScaleIn] = js.undefined,
+    EstimatedInstanceWarmup: js.UndefOr[Cooldown] = js.undefined,
+    PredefinedScalingMetricSpecification: PredefinedScalingMetricSpecification = null,
+    ScaleInCooldown: js.UndefOr[Cooldown] = js.undefined,
+    ScaleOutCooldown: js.UndefOr[Cooldown] = js.undefined
+  ): TargetTrackingConfiguration = {
     val __obj = js.Dynamic.literal(TargetValue = TargetValue.asInstanceOf[js.Any])
+    if (CustomizedScalingMetricSpecification != null) __obj.updateDynamic("CustomizedScalingMetricSpecification")(CustomizedScalingMetricSpecification.asInstanceOf[js.Any])
+    if (!js.isUndefined(DisableScaleIn)) __obj.updateDynamic("DisableScaleIn")(DisableScaleIn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(EstimatedInstanceWarmup)) __obj.updateDynamic("EstimatedInstanceWarmup")(EstimatedInstanceWarmup.get.asInstanceOf[js.Any])
+    if (PredefinedScalingMetricSpecification != null) __obj.updateDynamic("PredefinedScalingMetricSpecification")(PredefinedScalingMetricSpecification.asInstanceOf[js.Any])
+    if (!js.isUndefined(ScaleInCooldown)) __obj.updateDynamic("ScaleInCooldown")(ScaleInCooldown.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ScaleOutCooldown)) __obj.updateDynamic("ScaleOutCooldown")(ScaleOutCooldown.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TargetTrackingConfiguration]
   }
-  @scala.inline
-  implicit class TargetTrackingConfigurationOps[Self <: TargetTrackingConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTargetValue(value: MetricScale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustomizedScalingMetricSpecification(value: CustomizedScalingMetricSpecification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomizedScalingMetricSpecification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomizedScalingMetricSpecification: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomizedScalingMetricSpecification")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableScaleIn(value: DisableScaleIn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableScaleIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableScaleIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableScaleIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEstimatedInstanceWarmup(value: Cooldown): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedInstanceWarmup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEstimatedInstanceWarmup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedInstanceWarmup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPredefinedScalingMetricSpecification(value: PredefinedScalingMetricSpecification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PredefinedScalingMetricSpecification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPredefinedScalingMetricSpecification: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PredefinedScalingMetricSpecification")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaleInCooldown(value: Cooldown): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScaleInCooldown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleInCooldown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScaleInCooldown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaleOutCooldown(value: Cooldown): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScaleOutCooldown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleOutCooldown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScaleOutCooldown")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

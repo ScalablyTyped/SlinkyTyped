@@ -10,36 +10,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ILabStatus extends js.Object {
   /**
     * A signal for when application changes its busy status.
     */
-  val busySignal: ISignal[JupyterFrontEnd[IShell], Boolean] = js.native
+  val busySignal: ISignal[JupyterFrontEnd[IShell], Boolean]
   /**
     * A signal for when application changes its dirty status.
     */
-  val dirtySignal: ISignal[JupyterFrontEnd[IShell], Boolean] = js.native
+  val dirtySignal: ISignal[JupyterFrontEnd[IShell], Boolean]
   /**
     * Whether the application is busy.
     */
-  val isBusy: Boolean = js.native
+  val isBusy: Boolean
   /**
     * Whether the application is dirty.
     */
-  val isDirty: Boolean = js.native
+  val isDirty: Boolean
   /**
     * Set the application state to busy.
     *
     * @returns A disposable used to clear the busy state for the caller.
     */
-  def setBusy(): IDisposable = js.native
+  def setBusy(): IDisposable
   /**
     * Set the application state to dirty.
     *
     * @returns A disposable used to clear the dirty state for the caller.
     */
-  def setDirty(): IDisposable = js.native
+  def setDirty(): IDisposable
 }
 
 @JSImport("@jupyterlab/application/lib/status", "ILabStatus")

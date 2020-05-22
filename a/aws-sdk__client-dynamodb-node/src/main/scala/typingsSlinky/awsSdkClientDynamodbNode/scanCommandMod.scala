@@ -26,9 +26,16 @@ object scanCommandMod extends js.Object {
           Readable
         ] {
     def this(input: ScanInput) = this()
+    /* CompleteClass */
+    override val input: ScanInput = js.native
     val middlewareStack: MiddlewareStack[ScanInput, ScanOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: DynamoDBResolvedConfiguration
+    ): Handler[ScanInput, ScanOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[ScanInput, ScanOutput] = js.native
   }

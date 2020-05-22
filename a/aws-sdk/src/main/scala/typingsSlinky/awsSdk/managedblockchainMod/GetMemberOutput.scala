@@ -14,29 +14,10 @@ trait GetMemberOutput extends js.Object {
 
 object GetMemberOutput {
   @scala.inline
-  def apply(): GetMemberOutput = {
+  def apply(Member: Member = null): GetMemberOutput = {
     val __obj = js.Dynamic.literal()
+    if (Member != null) __obj.updateDynamic("Member")(Member.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetMemberOutput]
   }
-  @scala.inline
-  implicit class GetMemberOutputOps[Self <: GetMemberOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMember(value: Member): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Member")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMember: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Member")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

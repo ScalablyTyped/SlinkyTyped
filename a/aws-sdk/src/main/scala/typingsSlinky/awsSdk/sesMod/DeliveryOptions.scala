@@ -14,29 +14,10 @@ trait DeliveryOptions extends js.Object {
 
 object DeliveryOptions {
   @scala.inline
-  def apply(): DeliveryOptions = {
+  def apply(TlsPolicy: TlsPolicy = null): DeliveryOptions = {
     val __obj = js.Dynamic.literal()
+    if (TlsPolicy != null) __obj.updateDynamic("TlsPolicy")(TlsPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeliveryOptions]
   }
-  @scala.inline
-  implicit class DeliveryOptionsOps[Self <: DeliveryOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTlsPolicy(value: TlsPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TlsPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTlsPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TlsPolicy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

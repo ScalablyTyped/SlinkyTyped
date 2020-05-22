@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ITemplate extends IColumn {
   /** [Method] When defined this will take precedence over the renderer config
-  		* @param value Object
-  		* @param meta Object
-  		* @param record Object
-  		*/
+    * @param value Object
+    * @param meta Object
+    * @param record Object
+    */
   @JSName("defaultRenderer")
   var defaultRenderer_ITemplate: js.UndefOr[
     js.Function3[
@@ -19,36 +18,19 @@ trait ITemplate extends IColumn {
       /* record */ js.UndefOr[js.Any], 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
 }
 
 object ITemplate {
   @scala.inline
-  def apply(): ITemplate = {
+  def apply(
+    IColumn: IColumn = null,
+    defaultRenderer: (/* value */ js.UndefOr[js.Any], /* meta */ js.UndefOr[js.Any], /* record */ js.UndefOr[js.Any]) => Unit = null
+  ): ITemplate = {
     val __obj = js.Dynamic.literal()
+    if (IColumn != null) js.Dynamic.global.Object.assign(__obj, IColumn)
+    if (defaultRenderer != null) __obj.updateDynamic("defaultRenderer")(js.Any.fromFunction3(defaultRenderer))
     __obj.asInstanceOf[ITemplate]
   }
-  @scala.inline
-  implicit class ITemplateOps[Self <: ITemplate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultRenderer(
-      value: (/* value */ js.UndefOr[js.Any], /* meta */ js.UndefOr[js.Any], /* record */ js.UndefOr[js.Any]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRenderer")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutDefaultRenderer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRenderer")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

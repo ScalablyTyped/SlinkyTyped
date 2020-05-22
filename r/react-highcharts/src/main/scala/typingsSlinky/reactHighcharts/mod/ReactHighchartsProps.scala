@@ -8,7 +8,6 @@ import scala.scalajs.js.annotation._
 /**
   * Props for ReactHighcharts component.
   */
-@js.native
 trait ReactHighchartsProps extends js.Object {
   /**
     *
@@ -19,62 +18,28 @@ trait ReactHighchartsProps extends js.Object {
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Highcharts.ChartObject */ /* chart */ js.Any, 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Highcharts configuration options.
     */
-  var config: Options = js.native
+  var config: Options
   /**
     * Chart will not rerender if the config is referentially equal to previous and this property is true
     */
-  var isPureConfig: js.UndefOr[Boolean] = js.native
+  var isPureConfig: js.UndefOr[Boolean] = js.undefined
 }
 
 object ReactHighchartsProps {
   @scala.inline
-  def apply(config: Options): ReactHighchartsProps = {
+  def apply(
+    config: Options,
+    callback: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Highcharts.ChartObject */ /* chart */ js.Any => Unit = null,
+    isPureConfig: js.UndefOr[Boolean] = js.undefined
+  ): ReactHighchartsProps = {
     val __obj = js.Dynamic.literal(config = config.asInstanceOf[js.Any])
+    if (callback != null) __obj.updateDynamic("callback")(js.Any.fromFunction1(callback))
+    if (!js.isUndefined(isPureConfig)) __obj.updateDynamic("isPureConfig")(isPureConfig.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReactHighchartsProps]
   }
-  @scala.inline
-  implicit class ReactHighchartsPropsOps[Self <: ReactHighchartsProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfig(value: Options): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCallback(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Highcharts.ChartObject */ /* chart */ js.Any => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsPureConfig(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPureConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsPureConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPureConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

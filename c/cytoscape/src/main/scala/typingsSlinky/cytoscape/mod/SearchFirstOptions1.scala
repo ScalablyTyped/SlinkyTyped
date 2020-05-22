@@ -4,35 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SearchFirstOptions1
   extends SearchFirstOptionsBase
      with SearchFirstOptions {
   /**
     * The root nodes (selector or collection) to start the search from.
     */
-  var root: Selector | CollectionArgument = js.native
+  var root: Selector | CollectionArgument
 }
 
 object SearchFirstOptions1 {
   @scala.inline
-  def apply(root: Selector | CollectionArgument): SearchFirstOptions1 = {
+  def apply(
+    root: Selector | CollectionArgument,
+    directed: js.UndefOr[Boolean] = js.undefined,
+    visit: (/* v */ NodeSingular, /* e */ EdgeSingular, /* u */ NodeSingular, /* i */ Double, /* depth */ Double) => Boolean | Unit = null
+  ): SearchFirstOptions1 = {
     val __obj = js.Dynamic.literal(root = root.asInstanceOf[js.Any])
+    if (!js.isUndefined(directed)) __obj.updateDynamic("directed")(directed.get.asInstanceOf[js.Any])
+    if (visit != null) __obj.updateDynamic("visit")(js.Any.fromFunction5(visit))
     __obj.asInstanceOf[SearchFirstOptions1]
   }
-  @scala.inline
-  implicit class SearchFirstOptions1Ops[Self <: SearchFirstOptions1] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRoot(value: Selector | CollectionArgument): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

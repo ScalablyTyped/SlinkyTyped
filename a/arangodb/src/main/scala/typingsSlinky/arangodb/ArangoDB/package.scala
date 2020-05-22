@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object ArangoDB {
+  type CollectionType = typingsSlinky.arangodb.ArangoDB.DocumentCollectionType | typingsSlinky.arangodb.ArangoDB.EdgeCollectionType
   type Document[T /* <: js.Object */] = typingsSlinky.arangodb.anon.From with typingsSlinky.arangodb.arangodbStrings.Document with org.scalablytyped.runtime.TopLevel[T] with typingsSlinky.arangodb.ArangoDB.DocumentMetadata
   // Collection
   type DocumentCollectionType = typingsSlinky.arangodb.arangodbNumbers.`2`

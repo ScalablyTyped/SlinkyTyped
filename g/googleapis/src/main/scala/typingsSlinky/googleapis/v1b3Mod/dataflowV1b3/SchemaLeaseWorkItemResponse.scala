@@ -22,41 +22,11 @@ trait SchemaLeaseWorkItemResponse extends js.Object {
 
 object SchemaLeaseWorkItemResponse {
   @scala.inline
-  def apply(): SchemaLeaseWorkItemResponse = {
+  def apply(unifiedWorkerResponse: StringDictionary[js.Any] = null, workItems: js.Array[SchemaWorkItem] = null): SchemaLeaseWorkItemResponse = {
     val __obj = js.Dynamic.literal()
+    if (unifiedWorkerResponse != null) __obj.updateDynamic("unifiedWorkerResponse")(unifiedWorkerResponse.asInstanceOf[js.Any])
+    if (workItems != null) __obj.updateDynamic("workItems")(workItems.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLeaseWorkItemResponse]
   }
-  @scala.inline
-  implicit class SchemaLeaseWorkItemResponseOps[Self <: SchemaLeaseWorkItemResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUnifiedWorkerResponse(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unifiedWorkerResponse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnifiedWorkerResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unifiedWorkerResponse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkItems(value: js.Array[SchemaWorkItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workItems")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

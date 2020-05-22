@@ -31,53 +31,16 @@ trait SchemaOrganizationSettings extends js.Object {
 
 object SchemaOrganizationSettings {
   @scala.inline
-  def apply(): SchemaOrganizationSettings = {
+  def apply(
+    assetDiscoveryConfig: SchemaAssetDiscoveryConfig = null,
+    enableAssetDiscovery: js.UndefOr[Boolean] = js.undefined,
+    name: String = null
+  ): SchemaOrganizationSettings = {
     val __obj = js.Dynamic.literal()
+    if (assetDiscoveryConfig != null) __obj.updateDynamic("assetDiscoveryConfig")(assetDiscoveryConfig.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableAssetDiscovery)) __obj.updateDynamic("enableAssetDiscovery")(enableAssetDiscovery.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOrganizationSettings]
   }
-  @scala.inline
-  implicit class SchemaOrganizationSettingsOps[Self <: SchemaOrganizationSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssetDiscoveryConfig(value: SchemaAssetDiscoveryConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assetDiscoveryConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssetDiscoveryConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assetDiscoveryConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableAssetDiscovery(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAssetDiscovery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableAssetDiscovery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAssetDiscovery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

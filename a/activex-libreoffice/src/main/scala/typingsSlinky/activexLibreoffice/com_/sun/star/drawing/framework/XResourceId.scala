@@ -19,21 +19,20 @@ import scala.scalajs.js.annotation._
   * The resource URL may have arguments that are passed to the factory method on its creation. Arguments are only available through the {@link
   * getFullResourceURL()} . The {@link getResourceURL()} method strips them away.
   */
-@js.native
 trait XResourceId extends js.Object {
   /** Return a new {@link XResourceId} that represents the anchor resource. */
-  val Anchor: XResourceId = js.native
+  val Anchor: XResourceId
   /**
     * Return the, possibly empty, list of anchor URLs. The URLs are ordered so that the one in position 0 is the direct anchor of the resource, while the
     * one in position i+1 is the direct anchor of the one in position i.
     */
-  val AnchorURLs: SafeArray[String] = js.native
+  val AnchorURLs: SafeArray[String]
   /** Return an URL object of the resource URL that may contain arguments. */
-  val FullResourceURL: URL = js.native
+  val FullResourceURL: URL
   /** Return the type prefix of the resource URL. This includes all up to and including the second slash. */
-  val ResourceTypePrefix: String = js.native
+  val ResourceTypePrefix: String
   /** Return the URL of the resource. Arguments supplied on creation are stripped away. Use {@link getFullResourceURL()} to access them. */
-  val ResourceURL: String = js.native
+  val ResourceURL: String
   /**
     * Compare the called {@link XResourceId} object with the given one.
     *
@@ -47,22 +46,22 @@ trait XResourceId extends js.Object {
     * @param xId The resource id to which the called resource id is compared.
     * @returns Returns 0 when the called resource id is equivalent to the given resource id. Returns `-1` or `+1` when the two compared resource ids differ.
     */
-  def compareTo(xId: XResourceId): Double = js.native
+  def compareTo(xId: XResourceId): Double
   /** Return a new {@link XResourceId} that represents the anchor resource. */
-  def getAnchor(): XResourceId = js.native
+  def getAnchor(): XResourceId
   /**
     * Return the, possibly empty, list of anchor URLs. The URLs are ordered so that the one in position 0 is the direct anchor of the resource, while the
     * one in position i+1 is the direct anchor of the one in position i.
     */
-  def getAnchorURLs(): SafeArray[String] = js.native
+  def getAnchorURLs(): SafeArray[String]
   /** Return an URL object of the resource URL that may contain arguments. */
-  def getFullResourceURL(): URL = js.native
+  def getFullResourceURL(): URL
   /** Return the type prefix of the resource URL. This includes all up to and including the second slash. */
-  def getResourceTypePrefix(): String = js.native
+  def getResourceTypePrefix(): String
   /** Return the URL of the resource. Arguments supplied on creation are stripped away. Use {@link getFullResourceURL()} to access them. */
-  def getResourceURL(): String = js.native
+  def getResourceURL(): String
   /** Return whether there is a non-empty anchor URL. When this method returns `FALSE` then {@link getAnchorURLs()} will return an empty list. */
-  def hasAnchor(): Boolean = js.native
+  def hasAnchor(): Boolean
   /**
     * Return whether the anchor of the called resource id object represents the same resource as the given object.
     *
@@ -71,14 +70,14 @@ trait XResourceId extends js.Object {
     * @param xAnchorId The resource id of the anchor.
     * @param eMode This mode specifies how the called resource has to be bound to the given anchor in order to have this function return `TRUE` . If eMode is
     */
-  def isBoundTo(xAnchorId: XResourceId, eMode: AnchorBindingMode): Boolean = js.native
+  def isBoundTo(xAnchorId: XResourceId, eMode: AnchorBindingMode): Boolean
   /**
     * Return whether the anchor of the called resource id object represents the same resource as the given anchor URL. This is a convenience variant of the
     * {@link isBoundTo()} function that can also be seen as an optimization for the case that the anchor consists of exactly one URL.
     * @param AnchorURL The resource URL of the anchor.
     * @param eMode This mode specifies how the called resource has to be bound to the given anchor in order to have this function return. See the description
     */
-  def isBoundToURL(AnchorURL: String, eMode: AnchorBindingMode): Boolean = js.native
+  def isBoundToURL(AnchorURL: String, eMode: AnchorBindingMode): Boolean
 }
 
 object XResourceId {
@@ -102,97 +101,5 @@ object XResourceId {
     val __obj = js.Dynamic.literal(Anchor = Anchor.asInstanceOf[js.Any], AnchorURLs = AnchorURLs.asInstanceOf[js.Any], FullResourceURL = FullResourceURL.asInstanceOf[js.Any], ResourceTypePrefix = ResourceTypePrefix.asInstanceOf[js.Any], ResourceURL = ResourceURL.asInstanceOf[js.Any], compareTo = js.Any.fromFunction1(compareTo), getAnchor = js.Any.fromFunction0(getAnchor), getAnchorURLs = js.Any.fromFunction0(getAnchorURLs), getFullResourceURL = js.Any.fromFunction0(getFullResourceURL), getResourceTypePrefix = js.Any.fromFunction0(getResourceTypePrefix), getResourceURL = js.Any.fromFunction0(getResourceURL), hasAnchor = js.Any.fromFunction0(hasAnchor), isBoundTo = js.Any.fromFunction2(isBoundTo), isBoundToURL = js.Any.fromFunction2(isBoundToURL))
     __obj.asInstanceOf[XResourceId]
   }
-  @scala.inline
-  implicit class XResourceIdOps[Self <: XResourceId] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnchor(value: XResourceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Anchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnchorURLs(value: SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AnchorURLs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFullResourceURL(value: URL): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullResourceURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceTypePrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceTypePrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCompareTo(value: XResourceId => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compareTo")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetAnchor(value: () => XResourceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAnchor")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetAnchorURLs(value: () => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAnchorURLs")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetFullResourceURL(value: () => URL): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFullResourceURL")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetResourceTypePrefix(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getResourceTypePrefix")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetResourceURL(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getResourceURL")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHasAnchor(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAnchor")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsBoundTo(value: (XResourceId, AnchorBindingMode) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBoundTo")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withIsBoundToURL(value: (String, AnchorBindingMode) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBoundToURL")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

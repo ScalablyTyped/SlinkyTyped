@@ -34,65 +34,18 @@ trait SchemaHttpHeaderAction extends js.Object {
 
 object SchemaHttpHeaderAction {
   @scala.inline
-  def apply(): SchemaHttpHeaderAction = {
+  def apply(
+    requestHeadersToAdd: js.Array[SchemaHttpHeaderOption] = null,
+    requestHeadersToRemove: js.Array[String] = null,
+    responseHeadersToAdd: js.Array[SchemaHttpHeaderOption] = null,
+    responseHeadersToRemove: js.Array[String] = null
+  ): SchemaHttpHeaderAction = {
     val __obj = js.Dynamic.literal()
+    if (requestHeadersToAdd != null) __obj.updateDynamic("requestHeadersToAdd")(requestHeadersToAdd.asInstanceOf[js.Any])
+    if (requestHeadersToRemove != null) __obj.updateDynamic("requestHeadersToRemove")(requestHeadersToRemove.asInstanceOf[js.Any])
+    if (responseHeadersToAdd != null) __obj.updateDynamic("responseHeadersToAdd")(responseHeadersToAdd.asInstanceOf[js.Any])
+    if (responseHeadersToRemove != null) __obj.updateDynamic("responseHeadersToRemove")(responseHeadersToRemove.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHttpHeaderAction]
   }
-  @scala.inline
-  implicit class SchemaHttpHeaderActionOps[Self <: SchemaHttpHeaderAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRequestHeadersToAdd(value: js.Array[SchemaHttpHeaderOption]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestHeadersToAdd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestHeadersToAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestHeadersToAdd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestHeadersToRemove(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestHeadersToRemove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestHeadersToRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestHeadersToRemove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseHeadersToAdd(value: js.Array[SchemaHttpHeaderOption]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseHeadersToAdd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseHeadersToAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseHeadersToAdd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseHeadersToRemove(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseHeadersToRemove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseHeadersToRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseHeadersToRemove")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

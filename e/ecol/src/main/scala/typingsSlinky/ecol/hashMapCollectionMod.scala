@@ -3,6 +3,8 @@ package typingsSlinky.ecol
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable3
 import typingsSlinky.ecol.collectionEventMod.CollectionEvent
+import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Listener
+import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Type
 import typingsSlinky.ecol.ieventdispatcherMod.IEventDispatcher
 import typingsSlinky.tstl.anon.Iteratoranyanyanyany
 import typingsSlinky.tstl.entryMod.Entry
@@ -31,7 +33,7 @@ object hashMapCollectionMod extends js.Object {
   - typingsSlinky.std.Iterable because Already inherited
   - typingsSlinky.tstl.ibidirectionalcontainerMod.IBidirectionalContainer because Already inherited
   - typingsSlinky.tstl.icontainerMod.IContainer because Already inherited
-  - typingsSlinky.tstl.containerContainerMod.Container because Inheritance from two classes. Inlined 
+  - typingsSlinky.tstl.containerContainerMod.Container because Inheritance from two classes. Inlined begin, empty, end, push, rbegin, rend, size
   - typingsSlinky.ecol.icollectionMod.ICollection because Inheritance from two classes. Inlined refresh, refresh, refresh */ @js.native
   class HashMapCollection[Key, T] ()
     extends HashMap[Key, T]
@@ -52,6 +54,11 @@ object hashMapCollectionMod extends js.Object {
     /* protected */ override def _Handle_insert(first: Iterator[Key, T], last: Iterator[Key, T]): Unit = js.native
     /* InferMemberOverrides */
     /* protected */ override def _Insert_by_range[InputIterator /* <: IForwardIterator[IPair[Key, T], InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
+    /* CompleteClass */
+    override def addEventListener(
+      `type`: Type,
+      listener: Listener[Entry[Key, T], HashMap[Key, T], Iterator[Key, T], ReverseIterator[Key, T]]
+    ): Unit = js.native
     /**
       * Range Assigner.
       *
@@ -65,7 +72,7 @@ object hashMapCollectionMod extends js.Object {
       *
       * @return Iterator to the first element.
       */
-    /* InferMemberOverrides */
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def begin(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[Entry[Key, T], HashMap[Key, T], Iterator[Key, T], ReverseIterator[Key, T], IPair[Key, T]] = js.native
     /**
@@ -84,16 +91,24 @@ object hashMapCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def count(key: Key): Double = js.native
+    /* CompleteClass */
+    override def dispatchEvent(event: CollectionEvent[Entry[Key, T], HashMap[Key, T], Iterator[Key, T], ReverseIterator[Key, T]]): Unit = js.native
     /* InferMemberOverrides */
     override def emplace(key: Key, `val`: T): InsertRet[Key, T, `true`, HashMap[Key, T], Iterator[Key, T], ReverseIterator[Key, T]] = js.native
     /* InferMemberOverrides */
     override def emplace_hint(hint: Iterator[Key, T], key: Key, `val`: T): Iterator[Key, T] = js.native
     /**
+      * Test whether container is empty.
+      */
+    /* CompleteClass */
+    /* InferMemberOverrides */
+    override def empty(): Boolean = js.native
+    /**
       * Iterator to the end.
       *
       * @return Iterator to the end.
       */
-    /* InferMemberOverrides */
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def end(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[Entry[Key, T], HashMap[Key, T], Iterator[Key, T], ReverseIterator[Key, T], IPair[Key, T]] = js.native
     /**
@@ -166,6 +181,8 @@ object hashMapCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def has(key: Key): Boolean = js.native
+    /* CompleteClass */
+    override def hasEventListener(`type`: Type): Boolean = js.native
     /* InferMemberOverrides */
     override def insert(hint: Iterator[Key, T], pair: IPair[Key, T]): Iterator[Key, T] = js.native
     /* InferMemberOverrides */
@@ -199,10 +216,20 @@ object hashMapCollectionMod extends js.Object {
     /* InferMemberOverrides */
     override def merge(source: HashMap[Key, T]): Unit = js.native
     /**
+      * Insert items at the end.
+      *
+      * @param items Items to insert.
+      * @return Number of elements in the container after insertion.
+      */
+    /* CompleteClass */
+    /* InferMemberOverrides */
+    override def push(items: (IPair[Key, T])*): Double = js.native
+    /**
       * Reverse iterator to the first element in reverse.
       *
       * @return Reverse iterator to the first.
       */
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def rbegin(): ReverseIterator[Key, T] = js.native
     /**
@@ -217,11 +244,17 @@ object hashMapCollectionMod extends js.Object {
       * @inheritDoc
       */
     def refresh(it: Iterator[Key, T]): Unit = js.native
+    /* CompleteClass */
+    override def removeEventListener(
+      `type`: Type,
+      listener: Listener[Entry[Key, T], HashMap[Key, T], Iterator[Key, T], ReverseIterator[Key, T]]
+    ): Unit = js.native
     /**
       * Reverse iterator to the reverse end.
       *
       * @return Reverse iterator to the end.
       */
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def rend(): ReverseIterator[Key, T] = js.native
     /**
@@ -232,6 +265,12 @@ object hashMapCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def set(key: Key, `val`: T): Unit = js.native
+    /**
+      * Number of elements in the container.
+      */
+    /* CompleteClass */
+    /* InferMemberOverrides */
+    override def size(): Double = js.native
     /**
       * Swap elements.
       *

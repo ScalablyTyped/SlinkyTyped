@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SkewYTransform extends js.Object {
-  var skewY: String = js.native
+  var skewY: String
 }
 
 object SkewYTransform {
@@ -15,19 +14,5 @@ object SkewYTransform {
     val __obj = js.Dynamic.literal(skewY = skewY.asInstanceOf[js.Any])
     __obj.asInstanceOf[SkewYTransform]
   }
-  @scala.inline
-  implicit class SkewYTransformOps[Self <: SkewYTransform] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSkewY(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skewY")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

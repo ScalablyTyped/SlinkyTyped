@@ -15,7 +15,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** a service for pie diagrams. */
-@js.native
 trait PieDiagram
   extends Diagram
      with Dim3DDiagram

@@ -30,65 +30,18 @@ trait DynamodbDataSourceConfig extends js.Object {
 
 object DynamodbDataSourceConfig {
   @scala.inline
-  def apply(awsRegion: String, tableName: String): DynamodbDataSourceConfig = {
+  def apply(
+    awsRegion: String,
+    tableName: String,
+    deltaSyncConfig: DeltaSyncConfig = null,
+    useCallerCredentials: js.UndefOr[Boolean] = js.undefined,
+    versioned: js.UndefOr[Boolean] = js.undefined
+  ): DynamodbDataSourceConfig = {
     val __obj = js.Dynamic.literal(awsRegion = awsRegion.asInstanceOf[js.Any], tableName = tableName.asInstanceOf[js.Any])
+    if (deltaSyncConfig != null) __obj.updateDynamic("deltaSyncConfig")(deltaSyncConfig.asInstanceOf[js.Any])
+    if (!js.isUndefined(useCallerCredentials)) __obj.updateDynamic("useCallerCredentials")(useCallerCredentials.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(versioned)) __obj.updateDynamic("versioned")(versioned.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DynamodbDataSourceConfig]
   }
-  @scala.inline
-  implicit class DynamodbDataSourceConfigOps[Self <: DynamodbDataSourceConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAwsRegion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTableName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeltaSyncConfig(value: DeltaSyncConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deltaSyncConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeltaSyncConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deltaSyncConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseCallerCredentials(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useCallerCredentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseCallerCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useCallerCredentials")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersioned(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versioned")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersioned: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versioned")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

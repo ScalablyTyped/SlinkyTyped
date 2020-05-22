@@ -9,39 +9,19 @@ import scala.scalajs.js.annotation._
 /**
   * IngressStatus describe the current state of the Ingress.
   */
-@js.native
 trait IngressStatus extends js.Object {
   /**
     * LoadBalancer contains the current status of the load-balancer.
     */
-  var loadBalancer: js.UndefOr[Input[LoadBalancerStatus]] = js.native
+  var loadBalancer: js.UndefOr[Input[LoadBalancerStatus]] = js.undefined
 }
 
 object IngressStatus {
   @scala.inline
-  def apply(): IngressStatus = {
+  def apply(loadBalancer: Input[LoadBalancerStatus] = null): IngressStatus = {
     val __obj = js.Dynamic.literal()
+    if (loadBalancer != null) __obj.updateDynamic("loadBalancer")(loadBalancer.asInstanceOf[js.Any])
     __obj.asInstanceOf[IngressStatus]
   }
-  @scala.inline
-  implicit class IngressStatusOps[Self <: IngressStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoadBalancer(value: Input[LoadBalancerStatus]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadBalancer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancer")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

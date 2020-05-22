@@ -6,11 +6,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SheetsCollection extends js.Object {
   // Copies a single sheet from a spreadsheet to another spreadsheet.
   // Returns the properties of the newly created sheet.
-  def copyTo(resource: CopySheetToAnotherSpreadsheetRequest, spreadsheetId: String, sheetId: Double): SheetProperties = js.native
+  def copyTo(resource: CopySheetToAnotherSpreadsheetRequest, spreadsheetId: String, sheetId: Double): SheetProperties
 }
 
 object SheetsCollection {
@@ -19,19 +18,5 @@ object SheetsCollection {
     val __obj = js.Dynamic.literal(copyTo = js.Any.fromFunction3(copyTo))
     __obj.asInstanceOf[SheetsCollection]
   }
-  @scala.inline
-  implicit class SheetsCollectionOps[Self <: SheetsCollection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCopyTo(value: (CopySheetToAnotherSpreadsheetRequest, String, Double) => SheetProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyTo")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

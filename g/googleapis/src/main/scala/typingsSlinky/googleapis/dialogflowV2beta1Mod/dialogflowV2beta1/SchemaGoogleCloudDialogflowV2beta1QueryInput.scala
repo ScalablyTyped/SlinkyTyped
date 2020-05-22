@@ -28,53 +28,16 @@ trait SchemaGoogleCloudDialogflowV2beta1QueryInput extends js.Object {
 
 object SchemaGoogleCloudDialogflowV2beta1QueryInput {
   @scala.inline
-  def apply(): SchemaGoogleCloudDialogflowV2beta1QueryInput = {
+  def apply(
+    audioConfig: SchemaGoogleCloudDialogflowV2beta1InputAudioConfig = null,
+    event: SchemaGoogleCloudDialogflowV2beta1EventInput = null,
+    text: SchemaGoogleCloudDialogflowV2beta1TextInput = null
+  ): SchemaGoogleCloudDialogflowV2beta1QueryInput = {
     val __obj = js.Dynamic.literal()
+    if (audioConfig != null) __obj.updateDynamic("audioConfig")(audioConfig.asInstanceOf[js.Any])
+    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2beta1QueryInput]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudDialogflowV2beta1QueryInputOps[Self <: SchemaGoogleCloudDialogflowV2beta1QueryInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudioConfig(value: SchemaGoogleCloudDialogflowV2beta1InputAudioConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audioConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audioConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvent(value: SchemaGoogleCloudDialogflowV2beta1EventInput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: SchemaGoogleCloudDialogflowV2beta1TextInput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

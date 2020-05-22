@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ICommand extends js.Object {
   /**
     * Compute the cursor state after the edit operations were applied.
@@ -13,13 +12,13 @@ trait ICommand extends js.Object {
     * @param helper A helper to get inverse edit operations and to get previously tracked selections.
     * @return The cursor state after the command executed.
     */
-  def computeCursorState(model: ITextModel, helper: ICursorStateComputerData): Selection = js.native
+  def computeCursorState(model: ITextModel, helper: ICursorStateComputerData): Selection
   /**
     * Get the edit operations needed to execute this command.
     * @param model The model the command will execute on.
     * @param builder A helper to collect the needed edit operations and to track selections.
     */
-  def getEditOperations(model: ITextModel, builder: IEditOperationBuilder): Unit = js.native
+  def getEditOperations(model: ITextModel, builder: IEditOperationBuilder): Unit
 }
 
 object ICommand {
@@ -31,25 +30,5 @@ object ICommand {
     val __obj = js.Dynamic.literal(computeCursorState = js.Any.fromFunction2(computeCursorState), getEditOperations = js.Any.fromFunction2(getEditOperations))
     __obj.asInstanceOf[ICommand]
   }
-  @scala.inline
-  implicit class ICommandOps[Self <: ICommand] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComputeCursorState(value: (ITextModel, ICursorStateComputerData) => Selection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeCursorState")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetEditOperations(value: (ITextModel, IEditOperationBuilder) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getEditOperations")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

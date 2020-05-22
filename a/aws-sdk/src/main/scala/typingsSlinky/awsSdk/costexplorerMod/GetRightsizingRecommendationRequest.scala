@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait GetRightsizingRecommendationRequest extends js.Object {
+  /**
+    *  Enables you to customize recommendations across two attributes. You can choose to view recommendations for instances within the same instance families or across different instance families. You can also choose to view your estimated savings associated with recommendations with consideration of existing Savings Plans or RI benefits, or niether. 
+    */
+  var Configuration: js.UndefOr[RightsizingRecommendationConfiguration] = js.native
   var Filter: js.UndefOr[Expression] = js.native
   /**
     * The pagination token that indicates the next set of results that you want to retrieve.
@@ -23,59 +27,19 @@ trait GetRightsizingRecommendationRequest extends js.Object {
 
 object GetRightsizingRecommendationRequest {
   @scala.inline
-  def apply(Service: GenericString): GetRightsizingRecommendationRequest = {
+  def apply(
+    Service: GenericString,
+    Configuration: RightsizingRecommendationConfiguration = null,
+    Filter: Expression = null,
+    NextPageToken: NextPageToken = null,
+    PageSize: js.UndefOr[NonNegativeInteger] = js.undefined
+  ): GetRightsizingRecommendationRequest = {
     val __obj = js.Dynamic.literal(Service = Service.asInstanceOf[js.Any])
+    if (Configuration != null) __obj.updateDynamic("Configuration")(Configuration.asInstanceOf[js.Any])
+    if (Filter != null) __obj.updateDynamic("Filter")(Filter.asInstanceOf[js.Any])
+    if (NextPageToken != null) __obj.updateDynamic("NextPageToken")(NextPageToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(PageSize)) __obj.updateDynamic("PageSize")(PageSize.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRightsizingRecommendationRequest]
   }
-  @scala.inline
-  implicit class GetRightsizingRecommendationRequestOps[Self <: GetRightsizingRecommendationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withService(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Service")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilter(value: Expression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: NextPageToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageSize(value: NonNegativeInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

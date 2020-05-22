@@ -1,7 +1,5 @@
 package typingsSlinky.typescript.mod
 
-import typingsSlinky.typescript.mod.SyntaxKind.MultiLineCommentTrivia
-import typingsSlinky.typescript.mod.SyntaxKind.SingleLineCommentTrivia
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,11 +9,4 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.typescript.mod.SyntaxKind.MultiLineCommentTrivia
 */
 trait CommentKind extends js.Object
-
-object CommentKind {
-  @scala.inline
-  implicit def apply(value: MultiLineCommentTrivia): CommentKind = value.asInstanceOf[CommentKind]
-  @scala.inline
-  implicit def apply(value: SingleLineCommentTrivia): CommentKind = value.asInstanceOf[CommentKind]
-}
 

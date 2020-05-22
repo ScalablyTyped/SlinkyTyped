@@ -18,41 +18,11 @@ trait Predicate extends js.Object {
 
 object Predicate {
   @scala.inline
-  def apply(): Predicate = {
+  def apply(Conditions: ConditionList = null, Logical: Logical = null): Predicate = {
     val __obj = js.Dynamic.literal()
+    if (Conditions != null) __obj.updateDynamic("Conditions")(Conditions.asInstanceOf[js.Any])
+    if (Logical != null) __obj.updateDynamic("Logical")(Logical.asInstanceOf[js.Any])
     __obj.asInstanceOf[Predicate]
   }
-  @scala.inline
-  implicit class PredicateOps[Self <: Predicate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConditions(value: ConditionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Conditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConditions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Conditions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogical(value: Logical): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Logical")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogical: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Logical")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

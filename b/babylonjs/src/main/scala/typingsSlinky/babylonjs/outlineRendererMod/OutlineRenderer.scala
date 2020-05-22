@@ -23,9 +23,24 @@ class OutlineRenderer protected () extends ISceneComponent {
   var _engine: js.Any = js.native
   var _savedDepthWrite: js.Any = js.native
   /**
+    * The name of the component. Each component must have a unique name.
+    */
+  /* CompleteClass */
+  override var name: String = js.native
+  /**
+    * The scene the component belongs to.
+    */
+  /* CompleteClass */
+  override var scene: Scene = js.native
+  /**
     * Defines a zOffset to prevent zFighting between the overlay and the mesh.
     */
   var zOffset: Double = js.native
+  /**
+    * Disposes the component and the associated ressources.
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
   /**
     * Returns whether or not the outline renderer is ready for a given submesh.
     * All the dependencies e.g. submeshes, texture, effect... mus be ready
@@ -34,6 +49,17 @@ class OutlineRenderer protected () extends ISceneComponent {
     * @returns true if ready otherwise false
     */
   def isReady(subMesh: SubMesh, useInstances: Boolean): Boolean = js.native
+  /**
+    * Rebuilds the elements related to this component in case of
+    * context lost for instance.
+    */
+  /* CompleteClass */
+  override def rebuild(): Unit = js.native
+  /**
+    * Register the component to one instance of a scene.
+    */
+  /* CompleteClass */
+  override def register(): Unit = js.native
   /**
     * Renders the outline in the canvas.
     * @param subMesh Defines the sumesh to render

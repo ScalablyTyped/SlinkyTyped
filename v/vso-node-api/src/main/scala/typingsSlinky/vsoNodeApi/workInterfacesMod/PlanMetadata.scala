@@ -5,24 +5,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PlanMetadata extends js.Object {
   /**
     * Identity of the creator of the plan
     */
-  var createdByIdentity: IdentityRef = js.native
+  var createdByIdentity: IdentityRef
   /**
     * Description of plan
     */
-  var description: String = js.native
+  var description: String
   /**
     * Last modified date of the plan
     */
-  var modifiedDate: js.Date = js.native
+  var modifiedDate: js.Date
   /**
     * Bit flag indicating set of permissions a user has to the plan.
     */
-  var userPermissions: PlanUserPermissions = js.native
+  var userPermissions: PlanUserPermissions
 }
 
 object PlanMetadata {
@@ -36,37 +35,5 @@ object PlanMetadata {
     val __obj = js.Dynamic.literal(createdByIdentity = createdByIdentity.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], modifiedDate = modifiedDate.asInstanceOf[js.Any], userPermissions = userPermissions.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlanMetadata]
   }
-  @scala.inline
-  implicit class PlanMetadataOps[Self <: PlanMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreatedByIdentity(value: IdentityRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdByIdentity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModifiedDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifiedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserPermissions(value: PlanUserPermissions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userPermissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

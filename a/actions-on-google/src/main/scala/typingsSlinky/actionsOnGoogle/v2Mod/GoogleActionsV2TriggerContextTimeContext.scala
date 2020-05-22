@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GoogleActionsV2TriggerContextTimeContext extends js.Object {
   /**
     * The high-level frequency of the recurring update.
     */
-  var frequency: js.UndefOr[GoogleActionsV2TriggerContextTimeContextFrequency] = js.native
+  var frequency: js.UndefOr[GoogleActionsV2TriggerContextTimeContextFrequency] = js.undefined
 }
 
 object GoogleActionsV2TriggerContextTimeContext {
   @scala.inline
-  def apply(): GoogleActionsV2TriggerContextTimeContext = {
+  def apply(frequency: GoogleActionsV2TriggerContextTimeContextFrequency = null): GoogleActionsV2TriggerContextTimeContext = {
     val __obj = js.Dynamic.literal()
+    if (frequency != null) __obj.updateDynamic("frequency")(frequency.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleActionsV2TriggerContextTimeContext]
   }
-  @scala.inline
-  implicit class GoogleActionsV2TriggerContextTimeContextOps[Self <: GoogleActionsV2TriggerContextTimeContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFrequency(value: GoogleActionsV2TriggerContextTimeContextFrequency): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrequency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

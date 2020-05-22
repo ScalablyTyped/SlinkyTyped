@@ -34,77 +34,20 @@ trait UpdateApplicationRequest extends js.Object {
 
 object UpdateApplicationRequest {
   @scala.inline
-  def apply(ApplicationName: ApplicationName, CurrentApplicationVersionId: ApplicationVersionId): UpdateApplicationRequest = {
+  def apply(
+    ApplicationName: ApplicationName,
+    CurrentApplicationVersionId: ApplicationVersionId,
+    ApplicationConfigurationUpdate: ApplicationConfigurationUpdate = null,
+    CloudWatchLoggingOptionUpdates: CloudWatchLoggingOptionUpdates = null,
+    RunConfigurationUpdate: RunConfigurationUpdate = null,
+    ServiceExecutionRoleUpdate: RoleARN = null
+  ): UpdateApplicationRequest = {
     val __obj = js.Dynamic.literal(ApplicationName = ApplicationName.asInstanceOf[js.Any], CurrentApplicationVersionId = CurrentApplicationVersionId.asInstanceOf[js.Any])
+    if (ApplicationConfigurationUpdate != null) __obj.updateDynamic("ApplicationConfigurationUpdate")(ApplicationConfigurationUpdate.asInstanceOf[js.Any])
+    if (CloudWatchLoggingOptionUpdates != null) __obj.updateDynamic("CloudWatchLoggingOptionUpdates")(CloudWatchLoggingOptionUpdates.asInstanceOf[js.Any])
+    if (RunConfigurationUpdate != null) __obj.updateDynamic("RunConfigurationUpdate")(RunConfigurationUpdate.asInstanceOf[js.Any])
+    if (ServiceExecutionRoleUpdate != null) __obj.updateDynamic("ServiceExecutionRoleUpdate")(ServiceExecutionRoleUpdate.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateApplicationRequest]
   }
-  @scala.inline
-  implicit class UpdateApplicationRequestOps[Self <: UpdateApplicationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationName(value: ApplicationName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrentApplicationVersionId(value: ApplicationVersionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentApplicationVersionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplicationConfigurationUpdate(value: ApplicationConfigurationUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationConfigurationUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationConfigurationUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationConfigurationUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloudWatchLoggingOptionUpdates(value: CloudWatchLoggingOptionUpdates): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchLoggingOptionUpdates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudWatchLoggingOptionUpdates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchLoggingOptionUpdates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRunConfigurationUpdate(value: RunConfigurationUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RunConfigurationUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRunConfigurationUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RunConfigurationUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceExecutionRoleUpdate(value: RoleARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceExecutionRoleUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceExecutionRoleUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceExecutionRoleUpdate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

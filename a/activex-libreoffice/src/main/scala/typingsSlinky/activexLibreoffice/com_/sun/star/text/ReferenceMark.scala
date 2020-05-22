@@ -8,7 +8,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** is used for cross references in text documents. */
-@js.native
 trait ReferenceMark
   extends XTextContent
      with XNamed

@@ -18,41 +18,11 @@ trait GetDistributionConfigResult extends js.Object {
 
 object GetDistributionConfigResult {
   @scala.inline
-  def apply(): GetDistributionConfigResult = {
+  def apply(DistributionConfig: DistributionConfig = null, ETag: String = null): GetDistributionConfigResult = {
     val __obj = js.Dynamic.literal()
+    if (DistributionConfig != null) __obj.updateDynamic("DistributionConfig")(DistributionConfig.asInstanceOf[js.Any])
+    if (ETag != null) __obj.updateDynamic("ETag")(ETag.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetDistributionConfigResult]
   }
-  @scala.inline
-  implicit class GetDistributionConfigResultOps[Self <: GetDistributionConfigResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDistributionConfig(value: DistributionConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DistributionConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDistributionConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DistributionConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withETag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutETag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

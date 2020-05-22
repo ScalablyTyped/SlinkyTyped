@@ -4,244 +4,68 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WebViewHTMLAttributes[T] extends HTMLAttributes[T] {
-  var allowFullScreen: js.UndefOr[Boolean] = js.native
-  var allowpopups: js.UndefOr[Boolean] = js.native
-  var autoFocus: js.UndefOr[Boolean] = js.native
-  var autosize: js.UndefOr[Boolean] = js.native
-  var blinkfeatures: js.UndefOr[String] = js.native
-  var disableblinkfeatures: js.UndefOr[String] = js.native
-  var disableguestresize: js.UndefOr[Boolean] = js.native
-  var disablewebsecurity: js.UndefOr[Boolean] = js.native
-  var guestinstance: js.UndefOr[String] = js.native
-  var httpreferrer: js.UndefOr[String] = js.native
-  var nodeintegration: js.UndefOr[Boolean] = js.native
-  var partition: js.UndefOr[String] = js.native
-  var plugins: js.UndefOr[Boolean] = js.native
-  var preload: js.UndefOr[String] = js.native
-  var src: js.UndefOr[String] = js.native
-  var useragent: js.UndefOr[String] = js.native
-  var webpreferences: js.UndefOr[String] = js.native
+  var allowFullScreen: js.UndefOr[Boolean] = js.undefined
+  var allowpopups: js.UndefOr[Boolean] = js.undefined
+  var autoFocus: js.UndefOr[Boolean] = js.undefined
+  var autosize: js.UndefOr[Boolean] = js.undefined
+  var blinkfeatures: js.UndefOr[String] = js.undefined
+  var disableblinkfeatures: js.UndefOr[String] = js.undefined
+  var disableguestresize: js.UndefOr[Boolean] = js.undefined
+  var disablewebsecurity: js.UndefOr[Boolean] = js.undefined
+  var guestinstance: js.UndefOr[String] = js.undefined
+  var httpreferrer: js.UndefOr[String] = js.undefined
+  var nodeintegration: js.UndefOr[Boolean] = js.undefined
+  var partition: js.UndefOr[String] = js.undefined
+  var plugins: js.UndefOr[Boolean] = js.undefined
+  var preload: js.UndefOr[String] = js.undefined
+  var src: js.UndefOr[String] = js.undefined
+  var useragent: js.UndefOr[String] = js.undefined
+  var webpreferences: js.UndefOr[String] = js.undefined
 }
 
 object WebViewHTMLAttributes {
   @scala.inline
-  def apply[T](): WebViewHTMLAttributes[T] = {
+  def apply[T](
+    HTMLAttributes: HTMLAttributes[T] = null,
+    allowFullScreen: js.UndefOr[Boolean] = js.undefined,
+    allowpopups: js.UndefOr[Boolean] = js.undefined,
+    autoFocus: js.UndefOr[Boolean] = js.undefined,
+    autosize: js.UndefOr[Boolean] = js.undefined,
+    blinkfeatures: String = null,
+    disableblinkfeatures: String = null,
+    disableguestresize: js.UndefOr[Boolean] = js.undefined,
+    disablewebsecurity: js.UndefOr[Boolean] = js.undefined,
+    guestinstance: String = null,
+    httpreferrer: String = null,
+    nodeintegration: js.UndefOr[Boolean] = js.undefined,
+    partition: String = null,
+    plugins: js.UndefOr[Boolean] = js.undefined,
+    preload: String = null,
+    src: String = null,
+    useragent: String = null,
+    webpreferences: String = null
+  ): WebViewHTMLAttributes[T] = {
     val __obj = js.Dynamic.literal()
+    if (HTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, HTMLAttributes)
+    if (!js.isUndefined(allowFullScreen)) __obj.updateDynamic("allowFullScreen")(allowFullScreen.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowpopups)) __obj.updateDynamic("allowpopups")(allowpopups.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autosize)) __obj.updateDynamic("autosize")(autosize.get.asInstanceOf[js.Any])
+    if (blinkfeatures != null) __obj.updateDynamic("blinkfeatures")(blinkfeatures.asInstanceOf[js.Any])
+    if (disableblinkfeatures != null) __obj.updateDynamic("disableblinkfeatures")(disableblinkfeatures.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableguestresize)) __obj.updateDynamic("disableguestresize")(disableguestresize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disablewebsecurity)) __obj.updateDynamic("disablewebsecurity")(disablewebsecurity.get.asInstanceOf[js.Any])
+    if (guestinstance != null) __obj.updateDynamic("guestinstance")(guestinstance.asInstanceOf[js.Any])
+    if (httpreferrer != null) __obj.updateDynamic("httpreferrer")(httpreferrer.asInstanceOf[js.Any])
+    if (!js.isUndefined(nodeintegration)) __obj.updateDynamic("nodeintegration")(nodeintegration.get.asInstanceOf[js.Any])
+    if (partition != null) __obj.updateDynamic("partition")(partition.asInstanceOf[js.Any])
+    if (!js.isUndefined(plugins)) __obj.updateDynamic("plugins")(plugins.get.asInstanceOf[js.Any])
+    if (preload != null) __obj.updateDynamic("preload")(preload.asInstanceOf[js.Any])
+    if (src != null) __obj.updateDynamic("src")(src.asInstanceOf[js.Any])
+    if (useragent != null) __obj.updateDynamic("useragent")(useragent.asInstanceOf[js.Any])
+    if (webpreferences != null) __obj.updateDynamic("webpreferences")(webpreferences.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebViewHTMLAttributes[T]]
   }
-  @scala.inline
-  implicit class WebViewHTMLAttributesOps[Self[t] <: WebViewHTMLAttributes[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withAllowFullScreen(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowFullScreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowFullScreen: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowFullScreen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowpopups(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowpopups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowpopups: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowpopups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoFocus(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoFocus: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutosize(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autosize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutosize: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autosize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlinkfeatures(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blinkfeatures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlinkfeatures: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blinkfeatures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableblinkfeatures(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableblinkfeatures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableblinkfeatures: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableblinkfeatures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableguestresize(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableguestresize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableguestresize: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableguestresize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisablewebsecurity(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablewebsecurity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisablewebsecurity: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablewebsecurity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGuestinstance(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guestinstance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGuestinstance: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guestinstance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpreferrer(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpreferrer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpreferrer: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpreferrer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeintegration(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeintegration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeintegration: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeintegration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartition(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartition: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlugins(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlugins: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreload(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreload: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSrc(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSrc: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseragent(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useragent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseragent: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useragent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebpreferences(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webpreferences")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebpreferences: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webpreferences")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

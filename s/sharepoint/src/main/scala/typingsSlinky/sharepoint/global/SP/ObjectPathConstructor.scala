@@ -9,5 +9,7 @@ import scala.scalajs.js.annotation._
 class ObjectPathConstructor protected ()
   extends typingsSlinky.sharepoint.SP.ObjectPath {
   def this(context: typingsSlinky.sharepoint.SP.ClientRuntimeContext, typeId: String, parameters: js.Array[_]) = this()
+  /* CompleteClass */
+  override def setPendingReplace(): Unit = js.native
 }
 

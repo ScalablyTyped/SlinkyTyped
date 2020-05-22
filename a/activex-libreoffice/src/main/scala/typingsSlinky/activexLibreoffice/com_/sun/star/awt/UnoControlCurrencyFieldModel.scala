@@ -18,62 +18,61 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** specifies the standard model of an {@link UnoControlCurrencyField} . */
-@js.native
 trait UnoControlCurrencyFieldModel extends UnoControlModel {
   /** specifies the background color (RGB) of the control. */
-  var BackgroundColor: Color = js.native
+  var BackgroundColor: Color
   /**
     * specifies the border style of the control.
     *
     * `; 0: No border; 1: 3D border; 2: simple border; `
     */
-  var Border: Double = js.native
+  var Border: Double
   /**
     * specifies the color of the border, if present
     *
     * Not every border style (see {@link Border} ) may support coloring. For instance, usually a border with 3D effect will ignore the BorderColor setting.
     * @since OOo 2.0
     */
-  var BorderColor: Double = js.native
+  var BorderColor: Double
   /** specifies the currency symbol. */
-  var CurrencySymbol: String = js.native
+  var CurrencySymbol: String
   /** specifies the decimal accuracy. */
-  var DecimalAccuracy: Double = js.native
+  var DecimalAccuracy: Double
   /** determines whether the control is enabled or disabled. */
-  var Enabled: Boolean = js.native
+  var Enabled: Boolean
   /** specifies the font attributes of the text in the control. */
-  var FontDescriptor: typingsSlinky.activexLibreoffice.com_.sun.star.awt.FontDescriptor = js.native
+  var FontDescriptor: typingsSlinky.activexLibreoffice.com_.sun.star.awt.FontDescriptor
   /** specifies the {@link com.sun.star.text.FontEmphasis} value of the text in the control. */
-  var FontEmphasisMark: Double = js.native
+  var FontEmphasisMark: Double
   /** specifies the {@link com.sun.star.text.FontRelief} value of the text in the control. */
-  var FontRelief: Double = js.native
+  var FontRelief: Double
   /** specifies the help text of the control. */
-  var HelpText: String = js.native
+  var HelpText: String
   /** specifies the help URL of the control. */
-  var HelpURL: String = js.native
+  var HelpURL: String
   /**
     * specifies whether the selection in the control should be hidden when the control is not active (focused).
     * @since OOo 2.0
     */
-  var HideInactiveSelection: Boolean = js.native
+  var HideInactiveSelection: Boolean
   /**
     * defines how the mouse wheel can be used to scroll through the control's content.
     *
     * Usually, the mouse wheel spins the numeric value displayed in the control. Using this property, and one of the {@link MouseWheelBehavior} constants,
     * you can control under which circumstances this is possible.
     */
-  var MouseWheelBehavior: Double = js.native
+  var MouseWheelBehavior: Double
   /** specifies whether the currency symbol is to be prepended. */
-  var PrependCurrencySymbol: Boolean = js.native
+  var PrependCurrencySymbol: Boolean
   /** specifies that the control will be printed with the document. */
-  var Printable: Boolean = js.native
+  var Printable: Boolean
   /** specifies that the content of the control cannot be modified by the user. */
-  var ReadOnly: Boolean = js.native
+  var ReadOnly: Boolean
   /**
     * specifies whether the mouse should show repeating behavior, i.e. repeatedly trigger an action when keeping pressed.
     * @since OOo 2.0
     */
-  var Repeat: Boolean = js.native
+  var Repeat: Boolean
   /**
     * specifies the mouse repeat delay, in milliseconds.
     *
@@ -82,39 +81,39 @@ trait UnoControlCurrencyFieldModel extends UnoControlModel {
     * specified with this property.
     * @since OOo 2.0
     */
-  var RepeatDelay: Double = js.native
+  var RepeatDelay: Double
   /** specifies whether the thousands separator is to be displayed. */
-  var ShowThousandsSeparator: Boolean = js.native
+  var ShowThousandsSeparator: Boolean
   /** specifies that the control has a spin button. */
-  var Spin: Boolean = js.native
+  var Spin: Boolean
   /** specifies that the value is checked during the user input. */
-  var StrictFormat: Boolean = js.native
+  var StrictFormat: Boolean
   /** specifies that the control can be reached with the TAB key. */
-  var Tabstop: Boolean = js.native
+  var Tabstop: Boolean
   /** specifies the text color (RGB) of the control. */
-  var TextColor: Color = js.native
+  var TextColor: Color
   /** specifies the text line color (RGB) of the control. */
-  var TextLineColor: Color = js.native
+  var TextLineColor: Color
   /** specifies the value displayed in the control. */
-  var Value: Double = js.native
+  var Value: Double
   /** specifies the maximum value that can be entered. */
-  var ValueMax: Double = js.native
+  var ValueMax: Double
   /** specifies the minimum value that can be entered. */
-  var ValueMin: Double = js.native
+  var ValueMin: Double
   /** specifies the value step when using the spin button. */
-  var ValueStep: Double = js.native
+  var ValueStep: Double
   /**
     * specifies the vertical alignment of the text in the control.
     * @since OOo 3.3
     */
-  var VerticalAlign: VerticalAlignment = js.native
+  var VerticalAlign: VerticalAlignment
   /**
     * denotes the writing mode used in the control, as specified in the {@link com.sun.star.text.WritingMode2} constants group.
     *
     * Only {@link com.sun.star.text.WritingMode2.LR_TB} and {@link com.sun.star.text.WritingMode2.RL_TB} are supported at the moment.
     * @since OOo 3.1
     */
-  var WritingMode: Double = js.native
+  var WritingMode: Double
 }
 
 object UnoControlCurrencyFieldModel {
@@ -187,193 +186,5 @@ object UnoControlCurrencyFieldModel {
     val __obj = js.Dynamic.literal(BackgroundColor = BackgroundColor.asInstanceOf[js.Any], Border = Border.asInstanceOf[js.Any], BorderColor = BorderColor.asInstanceOf[js.Any], CurrencySymbol = CurrencySymbol.asInstanceOf[js.Any], DecimalAccuracy = DecimalAccuracy.asInstanceOf[js.Any], DefaultControl = DefaultControl.asInstanceOf[js.Any], Enabled = Enabled.asInstanceOf[js.Any], FontDescriptor = FontDescriptor.asInstanceOf[js.Any], FontEmphasisMark = FontEmphasisMark.asInstanceOf[js.Any], FontRelief = FontRelief.asInstanceOf[js.Any], Height = Height.asInstanceOf[js.Any], HelpText = HelpText.asInstanceOf[js.Any], HelpURL = HelpURL.asInstanceOf[js.Any], HideInactiveSelection = HideInactiveSelection.asInstanceOf[js.Any], MouseWheelBehavior = MouseWheelBehavior.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], PositionX = PositionX.asInstanceOf[js.Any], PositionY = PositionY.asInstanceOf[js.Any], PrependCurrencySymbol = PrependCurrencySymbol.asInstanceOf[js.Any], Printable = Printable.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], ReadOnly = ReadOnly.asInstanceOf[js.Any], Repeat = Repeat.asInstanceOf[js.Any], RepeatDelay = RepeatDelay.asInstanceOf[js.Any], ServiceName = ServiceName.asInstanceOf[js.Any], ShowThousandsSeparator = ShowThousandsSeparator.asInstanceOf[js.Any], Spin = Spin.asInstanceOf[js.Any], Step = Step.asInstanceOf[js.Any], StrictFormat = StrictFormat.asInstanceOf[js.Any], TabIndex = TabIndex.asInstanceOf[js.Any], Tabstop = Tabstop.asInstanceOf[js.Any], Tag = Tag.asInstanceOf[js.Any], TextColor = TextColor.asInstanceOf[js.Any], TextLineColor = TextLineColor.asInstanceOf[js.Any], Value = Value.asInstanceOf[js.Any], ValueMax = ValueMax.asInstanceOf[js.Any], ValueMin = ValueMin.asInstanceOf[js.Any], ValueStep = ValueStep.asInstanceOf[js.Any], VerticalAlign = VerticalAlign.asInstanceOf[js.Any], Width = Width.asInstanceOf[js.Any], WritingMode = WritingMode.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), addPropertiesChangeListener = js.Any.fromFunction2(addPropertiesChangeListener), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), createClone = js.Any.fromFunction0(createClone), dispose = js.Any.fromFunction0(dispose), firePropertiesChangeEvent = js.Any.fromFunction2(firePropertiesChangeEvent), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), getPropertyValues = js.Any.fromFunction1(getPropertyValues), getServiceName = js.Any.fromFunction0(getServiceName), queryInterface = js.Any.fromFunction1(queryInterface), read = js.Any.fromFunction1(read), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), removePropertiesChangeListener = js.Any.fromFunction1(removePropertiesChangeListener), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue), setPropertyValues = js.Any.fromFunction2(setPropertyValues), write = js.Any.fromFunction1(write))
     __obj.asInstanceOf[UnoControlCurrencyFieldModel]
   }
-  @scala.inline
-  implicit class UnoControlCurrencyFieldModelOps[Self <: UnoControlCurrencyFieldModel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackgroundColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBorder(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBorderColor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BorderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrencySymbol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrencySymbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDecimalAccuracy(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DecimalAccuracy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFontDescriptor(value: FontDescriptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FontDescriptor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFontEmphasisMark(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FontEmphasisMark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFontRelief(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FontRelief")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHelpText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HelpText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHelpURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HelpURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHideInactiveSelection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HideInactiveSelection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMouseWheelBehavior(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MouseWheelBehavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrependCurrencySymbol(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrependCurrencySymbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrintable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Printable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReadOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepeat(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Repeat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepeatDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RepeatDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowThousandsSeparator(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowThousandsSeparator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Spin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStrictFormat(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StrictFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTabstop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tabstop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextLineColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextLineColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValueMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValueMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValueMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValueMin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValueStep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValueStep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerticalAlign(value: VerticalAlignment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VerticalAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWritingMode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WritingMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

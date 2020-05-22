@@ -34,89 +34,22 @@ trait ColorCorrector extends js.Object {
 
 object ColorCorrector {
   @scala.inline
-  def apply(): ColorCorrector = {
+  def apply(
+    Brightness: js.UndefOr[integerMin1Max100] = js.undefined,
+    ColorSpaceConversion: ColorSpaceConversion = null,
+    Contrast: js.UndefOr[integerMin1Max100] = js.undefined,
+    Hdr10Metadata: Hdr10Metadata = null,
+    Hue: js.UndefOr[integerMinNegative180Max180] = js.undefined,
+    Saturation: js.UndefOr[integerMin1Max100] = js.undefined
+  ): ColorCorrector = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Brightness)) __obj.updateDynamic("Brightness")(Brightness.get.asInstanceOf[js.Any])
+    if (ColorSpaceConversion != null) __obj.updateDynamic("ColorSpaceConversion")(ColorSpaceConversion.asInstanceOf[js.Any])
+    if (!js.isUndefined(Contrast)) __obj.updateDynamic("Contrast")(Contrast.get.asInstanceOf[js.Any])
+    if (Hdr10Metadata != null) __obj.updateDynamic("Hdr10Metadata")(Hdr10Metadata.asInstanceOf[js.Any])
+    if (!js.isUndefined(Hue)) __obj.updateDynamic("Hue")(Hue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Saturation)) __obj.updateDynamic("Saturation")(Saturation.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColorCorrector]
   }
-  @scala.inline
-  implicit class ColorCorrectorOps[Self <: ColorCorrector] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBrightness(value: integerMin1Max100): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Brightness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrightness: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Brightness")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorSpaceConversion(value: ColorSpaceConversion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorSpaceConversion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorSpaceConversion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorSpaceConversion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContrast(value: integerMin1Max100): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Contrast")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContrast: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Contrast")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHdr10Metadata(value: Hdr10Metadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hdr10Metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHdr10Metadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hdr10Metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHue(value: integerMinNegative180Max180): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSaturation(value: integerMin1Max100): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Saturation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSaturation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Saturation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

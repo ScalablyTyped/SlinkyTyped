@@ -48,65 +48,18 @@ trait SchemaTestCase extends js.Object {
 
 object SchemaTestCase {
   @scala.inline
-  def apply(): SchemaTestCase = {
+  def apply(
+    expectation: String = null,
+    functionMocks: js.Array[SchemaFunctionMock] = null,
+    request: js.Any = null,
+    resource: js.Any = null
+  ): SchemaTestCase = {
     val __obj = js.Dynamic.literal()
+    if (expectation != null) __obj.updateDynamic("expectation")(expectation.asInstanceOf[js.Any])
+    if (functionMocks != null) __obj.updateDynamic("functionMocks")(functionMocks.asInstanceOf[js.Any])
+    if (request != null) __obj.updateDynamic("request")(request.asInstanceOf[js.Any])
+    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTestCase]
   }
-  @scala.inline
-  implicit class SchemaTestCaseOps[Self <: SchemaTestCase] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpectation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpectation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunctionMocks(value: js.Array[SchemaFunctionMock]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("functionMocks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFunctionMocks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("functionMocks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequest(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResource(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

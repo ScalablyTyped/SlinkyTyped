@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Find extends js.Object {
-  var find: Boolean = js.native
+  var find: Boolean
 }
 
 object Find {
@@ -15,19 +14,5 @@ object Find {
     val __obj = js.Dynamic.literal(find = find.asInstanceOf[js.Any])
     __obj.asInstanceOf[Find]
   }
-  @scala.inline
-  implicit class FindOps[Self <: Find] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFind(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("find")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

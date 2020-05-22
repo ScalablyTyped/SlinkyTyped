@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 /**
   *
-  * Represents the types of conditional format values.
+  * Represents the types of color criterion for conditional formatting.
   *
   * [Api set: ExcelApi 1.6]
   */

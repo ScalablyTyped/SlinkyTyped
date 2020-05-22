@@ -8,12 +8,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait b2ConstantForceController extends b2Controller {
   /**
-  		* The acceleration to apply.
-  		**/
-  var A: b2Vec2 = js.native
+    * The acceleration to apply.
+    **/
+  var A: b2Vec2
 }
 
 object b2ConstantForceController {
@@ -34,19 +33,5 @@ object b2ConstantForceController {
     val __obj = js.Dynamic.literal(A = A.asInstanceOf[js.Any], AddBody = js.Any.fromFunction1(AddBody), Clear = js.Any.fromFunction0(Clear), Draw = js.Any.fromFunction1(Draw), GetBodyList = js.Any.fromFunction0(GetBodyList), GetNext = js.Any.fromFunction0(GetNext), GetWorld = js.Any.fromFunction0(GetWorld), RemoveBody = js.Any.fromFunction1(RemoveBody), Step = js.Any.fromFunction1(Step), m_bodyCount = m_bodyCount.asInstanceOf[js.Any], m_bodyList = m_bodyList.asInstanceOf[js.Any])
     __obj.asInstanceOf[b2ConstantForceController]
   }
-  @scala.inline
-  implicit class b2ConstantForceControllerOps[Self <: b2ConstantForceController] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withA(value: b2Vec2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("A")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

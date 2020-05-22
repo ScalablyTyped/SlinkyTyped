@@ -18,35 +18,10 @@ trait AcceptQualificationRequestRequest extends js.Object {
 
 object AcceptQualificationRequestRequest {
   @scala.inline
-  def apply(QualificationRequestId: String): AcceptQualificationRequestRequest = {
+  def apply(QualificationRequestId: String, IntegerValue: js.UndefOr[Integer] = js.undefined): AcceptQualificationRequestRequest = {
     val __obj = js.Dynamic.literal(QualificationRequestId = QualificationRequestId.asInstanceOf[js.Any])
+    if (!js.isUndefined(IntegerValue)) __obj.updateDynamic("IntegerValue")(IntegerValue.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AcceptQualificationRequestRequest]
   }
-  @scala.inline
-  implicit class AcceptQualificationRequestRequestOps[Self <: AcceptQualificationRequestRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQualificationRequestId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QualificationRequestId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIntegerValue(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegerValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntegerValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegerValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -14,29 +14,10 @@ trait GetEndpointArgs extends js.Object {
 
 object GetEndpointArgs {
   @scala.inline
-  def apply(): GetEndpointArgs = {
+  def apply(endpointType: String = null): GetEndpointArgs = {
     val __obj = js.Dynamic.literal()
+    if (endpointType != null) __obj.updateDynamic("endpointType")(endpointType.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetEndpointArgs]
   }
-  @scala.inline
-  implicit class GetEndpointArgsOps[Self <: GetEndpointArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndpointType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndpointType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

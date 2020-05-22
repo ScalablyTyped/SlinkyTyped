@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NodeManagement extends js.Object {
   /**
     * A flag that specifies whether the node auto-repair is enabled for the node
@@ -12,66 +11,29 @@ trait NodeManagement extends js.Object {
     * they fail health checks too many times, an automatic repair action will be
     * triggered.
     */
-  var autoRepair: js.UndefOr[Boolean] = js.native
+  var autoRepair: js.UndefOr[Boolean] = js.undefined
   /**
     * A flag that specifies whether node auto-upgrade is enabled for the node
     * pool. If enabled, node auto-upgrade helps keep the nodes in your node pool
     * up to date with the latest release version of Kubernetes.
     */
-  var autoUpgrade: js.UndefOr[Boolean] = js.native
+  var autoUpgrade: js.UndefOr[Boolean] = js.undefined
   /** Specifies the Auto Upgrade knobs for the node pool. */
-  var upgradeOptions: js.UndefOr[AutoUpgradeOptions] = js.native
+  var upgradeOptions: js.UndefOr[AutoUpgradeOptions] = js.undefined
 }
 
 object NodeManagement {
   @scala.inline
-  def apply(): NodeManagement = {
+  def apply(
+    autoRepair: js.UndefOr[Boolean] = js.undefined,
+    autoUpgrade: js.UndefOr[Boolean] = js.undefined,
+    upgradeOptions: AutoUpgradeOptions = null
+  ): NodeManagement = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoRepair)) __obj.updateDynamic("autoRepair")(autoRepair.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoUpgrade)) __obj.updateDynamic("autoUpgrade")(autoUpgrade.get.asInstanceOf[js.Any])
+    if (upgradeOptions != null) __obj.updateDynamic("upgradeOptions")(upgradeOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodeManagement]
   }
-  @scala.inline
-  implicit class NodeManagementOps[Self <: NodeManagement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoRepair(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRepair")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoRepair: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRepair")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoUpgrade(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoUpgrade")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoUpgrade: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoUpgrade")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpgradeOptions(value: AutoUpgradeOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upgradeOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpgradeOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upgradeOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

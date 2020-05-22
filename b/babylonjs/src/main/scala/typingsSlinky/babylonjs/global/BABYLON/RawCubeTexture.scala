@@ -32,6 +32,11 @@ class RawCubeTexture protected ()
     samplingMode: js.UndefOr[Double],
     compression: js.UndefOr[Nullable[String]]
   ) = this()
+  /**
+    * Array of animations
+    */
+  /* CompleteClass */
+  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
 
 /* static members */

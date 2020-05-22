@@ -11,29 +11,10 @@ trait CreateClusterSubnetGroupResult extends js.Object {
 
 object CreateClusterSubnetGroupResult {
   @scala.inline
-  def apply(): CreateClusterSubnetGroupResult = {
+  def apply(ClusterSubnetGroup: ClusterSubnetGroup = null): CreateClusterSubnetGroupResult = {
     val __obj = js.Dynamic.literal()
+    if (ClusterSubnetGroup != null) __obj.updateDynamic("ClusterSubnetGroup")(ClusterSubnetGroup.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateClusterSubnetGroupResult]
   }
-  @scala.inline
-  implicit class CreateClusterSubnetGroupResultOps[Self <: CreateClusterSubnetGroupResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClusterSubnetGroup(value: ClusterSubnetGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterSubnetGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusterSubnetGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterSubnetGroup")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

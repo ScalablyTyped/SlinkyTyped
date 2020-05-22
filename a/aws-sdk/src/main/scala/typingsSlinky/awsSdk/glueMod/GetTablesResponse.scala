@@ -18,41 +18,11 @@ trait GetTablesResponse extends js.Object {
 
 object GetTablesResponse {
   @scala.inline
-  def apply(): GetTablesResponse = {
+  def apply(NextToken: Token = null, TableList: TableList = null): GetTablesResponse = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (TableList != null) __obj.updateDynamic("TableList")(TableList.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetTablesResponse]
   }
-  @scala.inline
-  implicit class GetTablesResponseOps[Self <: GetTablesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: Token): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableList(value: TableList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

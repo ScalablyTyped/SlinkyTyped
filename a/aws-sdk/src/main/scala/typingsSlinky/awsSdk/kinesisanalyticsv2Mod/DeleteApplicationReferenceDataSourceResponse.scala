@@ -18,41 +18,14 @@ trait DeleteApplicationReferenceDataSourceResponse extends js.Object {
 
 object DeleteApplicationReferenceDataSourceResponse {
   @scala.inline
-  def apply(): DeleteApplicationReferenceDataSourceResponse = {
+  def apply(
+    ApplicationARN: ResourceARN = null,
+    ApplicationVersionId: js.UndefOr[ApplicationVersionId] = js.undefined
+  ): DeleteApplicationReferenceDataSourceResponse = {
     val __obj = js.Dynamic.literal()
+    if (ApplicationARN != null) __obj.updateDynamic("ApplicationARN")(ApplicationARN.asInstanceOf[js.Any])
+    if (!js.isUndefined(ApplicationVersionId)) __obj.updateDynamic("ApplicationVersionId")(ApplicationVersionId.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteApplicationReferenceDataSourceResponse]
   }
-  @scala.inline
-  implicit class DeleteApplicationReferenceDataSourceResponseOps[Self <: DeleteApplicationReferenceDataSourceResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationARN(value: ResourceARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationARN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApplicationVersionId(value: ApplicationVersionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationVersionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationVersionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationVersionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

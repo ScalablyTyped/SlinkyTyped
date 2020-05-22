@@ -19,652 +19,156 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var after: js.UndefOr[StartMiddlewareFunction] = js.native
-  var allowedHosts: js.UndefOr[js.Array[String]] = js.native
-  var before: js.UndefOr[StartMiddlewareFunction] = js.native
-  var bonjour: js.UndefOr[Boolean] = js.native
-  var clientLogLevel: js.UndefOr[silent | trace | debug | info | warn | error | none | warning] = js.native
-  var compress: js.UndefOr[Boolean] = js.native
-  var contentBase: js.UndefOr[Boolean | String | js.Array[String] | Double] = js.native
-  var disableHostCheck: js.UndefOr[Boolean] = js.native
-  var filename: js.UndefOr[String] = js.native
-  var headers: js.UndefOr[js.Object] = js.native
-  var historyApiFallback: js.UndefOr[Boolean | HistoryOptions] = js.native
-  var host: js.UndefOr[String] = js.native
-  var hot: js.UndefOr[Boolean] = js.native
-  var hotOnly: js.UndefOr[Boolean] = js.native
-  var http2: js.UndefOr[Boolean] = js.native
-  var https: js.UndefOr[Boolean | js.Object] = js.native
-  var index: js.UndefOr[String] = js.native
-  var injectClient: js.UndefOr[Boolean | InjectClientFunction] = js.native
-  var injectHot: js.UndefOr[Boolean | InjectClientFunction] = js.native
-  var `inline`: js.UndefOr[Boolean] = js.native
-  var `lazy`: js.UndefOr[Boolean] = js.native
-  var liveReload: js.UndefOr[Boolean] = js.native
-  var mimeTypes: js.UndefOr[typingsSlinky.webpackBlocksDevServer.anon.String] = js.native
-  var noInfo: js.UndefOr[Boolean] = js.native
-  var open: js.UndefOr[Boolean | String] = js.native
-  var openPage: js.UndefOr[String] = js.native
-  var overlay: js.UndefOr[Boolean | Errors] = js.native
-  var pfx: js.UndefOr[String] = js.native
-  var pfxPassphrase: js.UndefOr[String] = js.native
-  var port: js.UndefOr[Double] = js.native
-  var proxy: js.UndefOr[js.Object | js.Array[ProxyType]] = js.native
-  var public: js.UndefOr[String] = js.native
-  var publicPath: js.UndefOr[String] = js.native
-  var quiet: js.UndefOr[Boolean] = js.native
-  var serveIndex: js.UndefOr[Boolean] = js.native
-  var setup: js.UndefOr[InjectClientFunction] = js.native
-  var socket: js.UndefOr[String] = js.native
-  var socketHost: js.UndefOr[String] = js.native
-  var socketPath: js.UndefOr[String] = js.native
-  var socketPort: js.UndefOr[Double | String] = js.native
-  var staticOptions: js.UndefOr[SetHeadersFunction] = js.native
-  var stats: js.UndefOr[none | `errors-only` | minimal | normal | verbose | js.Object] = js.native
-  var transportMode: js.UndefOr[sockjs | ws | TransportMode] = js.native
-  var useLocalIp: js.UndefOr[Boolean] = js.native
-  var watchContentBase: js.UndefOr[Boolean] = js.native
-  var watchOptions: js.UndefOr[WatchOptions] = js.native
-  var writeToDisk: js.UndefOr[Boolean | WriteToDiskFunction] = js.native
+  var after: js.UndefOr[StartMiddlewareFunction] = js.undefined
+  var allowedHosts: js.UndefOr[js.Array[String]] = js.undefined
+  var before: js.UndefOr[StartMiddlewareFunction] = js.undefined
+  var bonjour: js.UndefOr[Boolean] = js.undefined
+  var clientLogLevel: js.UndefOr[silent | trace | debug | info | warn | error | none | warning] = js.undefined
+  var compress: js.UndefOr[Boolean] = js.undefined
+  var contentBase: js.UndefOr[Boolean | String | js.Array[String] | Double] = js.undefined
+  var disableHostCheck: js.UndefOr[Boolean] = js.undefined
+  var filename: js.UndefOr[String] = js.undefined
+  var headers: js.UndefOr[js.Object] = js.undefined
+  var historyApiFallback: js.UndefOr[Boolean | HistoryOptions] = js.undefined
+  var host: js.UndefOr[String] = js.undefined
+  var hot: js.UndefOr[Boolean] = js.undefined
+  var hotOnly: js.UndefOr[Boolean] = js.undefined
+  var http2: js.UndefOr[Boolean] = js.undefined
+  var https: js.UndefOr[Boolean | js.Object] = js.undefined
+  var index: js.UndefOr[String] = js.undefined
+  var injectClient: js.UndefOr[Boolean | InjectClientFunction] = js.undefined
+  var injectHot: js.UndefOr[Boolean | InjectClientFunction] = js.undefined
+  var `inline`: js.UndefOr[Boolean] = js.undefined
+  var `lazy`: js.UndefOr[Boolean] = js.undefined
+  var liveReload: js.UndefOr[Boolean] = js.undefined
+  var mimeTypes: js.UndefOr[typingsSlinky.webpackBlocksDevServer.anon.String] = js.undefined
+  var noInfo: js.UndefOr[Boolean] = js.undefined
+  var open: js.UndefOr[Boolean | String] = js.undefined
+  var openPage: js.UndefOr[String] = js.undefined
+  var overlay: js.UndefOr[Boolean | Errors] = js.undefined
+  var pfx: js.UndefOr[String] = js.undefined
+  var pfxPassphrase: js.UndefOr[String] = js.undefined
+  var port: js.UndefOr[Double] = js.undefined
+  var proxy: js.UndefOr[js.Object | js.Array[ProxyType]] = js.undefined
+  var public: js.UndefOr[String] = js.undefined
+  var publicPath: js.UndefOr[String] = js.undefined
+  var quiet: js.UndefOr[Boolean] = js.undefined
+  var serveIndex: js.UndefOr[Boolean] = js.undefined
+  var setup: js.UndefOr[InjectClientFunction] = js.undefined
+  var socket: js.UndefOr[String] = js.undefined
+  var socketHost: js.UndefOr[String] = js.undefined
+  var socketPath: js.UndefOr[String] = js.undefined
+  var socketPort: js.UndefOr[Double | String] = js.undefined
+  var staticOptions: js.UndefOr[SetHeadersFunction] = js.undefined
+  var stats: js.UndefOr[none | `errors-only` | minimal | normal | verbose | js.Object] = js.undefined
+  var transportMode: js.UndefOr[sockjs | ws | TransportMode] = js.undefined
+  var useLocalIp: js.UndefOr[Boolean] = js.undefined
+  var watchContentBase: js.UndefOr[Boolean] = js.undefined
+  var watchOptions: js.UndefOr[WatchOptions] = js.undefined
+  var writeToDisk: js.UndefOr[Boolean | WriteToDiskFunction] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    after: (/* app */ js.Any, /* server */ js.Any) => Unit = null,
+    allowedHosts: js.Array[String] = null,
+    before: (/* app */ js.Any, /* server */ js.Any) => Unit = null,
+    bonjour: js.UndefOr[Boolean] = js.undefined,
+    clientLogLevel: silent | trace | debug | info | warn | error | none | warning = null,
+    compress: js.UndefOr[Boolean] = js.undefined,
+    contentBase: Boolean | String | js.Array[String] | Double = null,
+    disableHostCheck: js.UndefOr[Boolean] = js.undefined,
+    filename: String = null,
+    headers: js.Object = null,
+    historyApiFallback: Boolean | HistoryOptions = null,
+    host: String = null,
+    hot: js.UndefOr[Boolean] = js.undefined,
+    hotOnly: js.UndefOr[Boolean] = js.undefined,
+    http2: js.UndefOr[Boolean] = js.undefined,
+    https: Boolean | js.Object = null,
+    index: String = null,
+    injectClient: Boolean | InjectClientFunction = null,
+    injectHot: Boolean | InjectClientFunction = null,
+    `inline`: js.UndefOr[Boolean] = js.undefined,
+    `lazy`: js.UndefOr[Boolean] = js.undefined,
+    liveReload: js.UndefOr[Boolean] = js.undefined,
+    mimeTypes: typingsSlinky.webpackBlocksDevServer.anon.String = null,
+    noInfo: js.UndefOr[Boolean] = js.undefined,
+    open: Boolean | String = null,
+    openPage: String = null,
+    overlay: Boolean | Errors = null,
+    pfx: String = null,
+    pfxPassphrase: String = null,
+    port: js.UndefOr[Double] = js.undefined,
+    proxy: js.Object | js.Array[ProxyType] = null,
+    public: String = null,
+    publicPath: String = null,
+    quiet: js.UndefOr[Boolean] = js.undefined,
+    serveIndex: js.UndefOr[Boolean] = js.undefined,
+    setup: /* compilerConfig */ js.Any => Boolean = null,
+    socket: String = null,
+    socketHost: String = null,
+    socketPath: String = null,
+    socketPort: Double | String = null,
+    staticOptions: (/* res */ js.Object, /* path */ String, /* stat */ js.Object) => Unit = null,
+    stats: none | `errors-only` | minimal | normal | verbose | js.Object = null,
+    transportMode: sockjs | ws | TransportMode = null,
+    useLocalIp: js.UndefOr[Boolean] = js.undefined,
+    watchContentBase: js.UndefOr[Boolean] = js.undefined,
+    watchOptions: WatchOptions = null,
+    writeToDisk: Boolean | WriteToDiskFunction = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (after != null) __obj.updateDynamic("after")(js.Any.fromFunction2(after))
+    if (allowedHosts != null) __obj.updateDynamic("allowedHosts")(allowedHosts.asInstanceOf[js.Any])
+    if (before != null) __obj.updateDynamic("before")(js.Any.fromFunction2(before))
+    if (!js.isUndefined(bonjour)) __obj.updateDynamic("bonjour")(bonjour.get.asInstanceOf[js.Any])
+    if (clientLogLevel != null) __obj.updateDynamic("clientLogLevel")(clientLogLevel.asInstanceOf[js.Any])
+    if (!js.isUndefined(compress)) __obj.updateDynamic("compress")(compress.get.asInstanceOf[js.Any])
+    if (contentBase != null) __obj.updateDynamic("contentBase")(contentBase.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableHostCheck)) __obj.updateDynamic("disableHostCheck")(disableHostCheck.get.asInstanceOf[js.Any])
+    if (filename != null) __obj.updateDynamic("filename")(filename.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (historyApiFallback != null) __obj.updateDynamic("historyApiFallback")(historyApiFallback.asInstanceOf[js.Any])
+    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
+    if (!js.isUndefined(hot)) __obj.updateDynamic("hot")(hot.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hotOnly)) __obj.updateDynamic("hotOnly")(hotOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(http2)) __obj.updateDynamic("http2")(http2.get.asInstanceOf[js.Any])
+    if (https != null) __obj.updateDynamic("https")(https.asInstanceOf[js.Any])
+    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
+    if (injectClient != null) __obj.updateDynamic("injectClient")(injectClient.asInstanceOf[js.Any])
+    if (injectHot != null) __obj.updateDynamic("injectHot")(injectHot.asInstanceOf[js.Any])
+    if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`lazy`)) __obj.updateDynamic("lazy")(`lazy`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(liveReload)) __obj.updateDynamic("liveReload")(liveReload.get.asInstanceOf[js.Any])
+    if (mimeTypes != null) __obj.updateDynamic("mimeTypes")(mimeTypes.asInstanceOf[js.Any])
+    if (!js.isUndefined(noInfo)) __obj.updateDynamic("noInfo")(noInfo.get.asInstanceOf[js.Any])
+    if (open != null) __obj.updateDynamic("open")(open.asInstanceOf[js.Any])
+    if (openPage != null) __obj.updateDynamic("openPage")(openPage.asInstanceOf[js.Any])
+    if (overlay != null) __obj.updateDynamic("overlay")(overlay.asInstanceOf[js.Any])
+    if (pfx != null) __obj.updateDynamic("pfx")(pfx.asInstanceOf[js.Any])
+    if (pfxPassphrase != null) __obj.updateDynamic("pfxPassphrase")(pfxPassphrase.asInstanceOf[js.Any])
+    if (!js.isUndefined(port)) __obj.updateDynamic("port")(port.get.asInstanceOf[js.Any])
+    if (proxy != null) __obj.updateDynamic("proxy")(proxy.asInstanceOf[js.Any])
+    if (public != null) __obj.updateDynamic("public")(public.asInstanceOf[js.Any])
+    if (publicPath != null) __obj.updateDynamic("publicPath")(publicPath.asInstanceOf[js.Any])
+    if (!js.isUndefined(quiet)) __obj.updateDynamic("quiet")(quiet.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(serveIndex)) __obj.updateDynamic("serveIndex")(serveIndex.get.asInstanceOf[js.Any])
+    if (setup != null) __obj.updateDynamic("setup")(js.Any.fromFunction1(setup))
+    if (socket != null) __obj.updateDynamic("socket")(socket.asInstanceOf[js.Any])
+    if (socketHost != null) __obj.updateDynamic("socketHost")(socketHost.asInstanceOf[js.Any])
+    if (socketPath != null) __obj.updateDynamic("socketPath")(socketPath.asInstanceOf[js.Any])
+    if (socketPort != null) __obj.updateDynamic("socketPort")(socketPort.asInstanceOf[js.Any])
+    if (staticOptions != null) __obj.updateDynamic("staticOptions")(js.Any.fromFunction3(staticOptions))
+    if (stats != null) __obj.updateDynamic("stats")(stats.asInstanceOf[js.Any])
+    if (transportMode != null) __obj.updateDynamic("transportMode")(transportMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(useLocalIp)) __obj.updateDynamic("useLocalIp")(useLocalIp.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(watchContentBase)) __obj.updateDynamic("watchContentBase")(watchContentBase.get.asInstanceOf[js.Any])
+    if (watchOptions != null) __obj.updateDynamic("watchOptions")(watchOptions.asInstanceOf[js.Any])
+    if (writeToDisk != null) __obj.updateDynamic("writeToDisk")(writeToDisk.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAfter(value: (/* app */ js.Any, /* server */ js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("after")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutAfter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("after")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowedHosts(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedHosts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowedHosts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedHosts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBefore(value: (/* app */ js.Any, /* server */ js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutBefore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBonjour(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bonjour")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBonjour: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bonjour")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientLogLevel(value: silent | trace | debug | info | warn | error | none | warning): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientLogLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientLogLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientLogLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompress(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentBase(value: Boolean | String | js.Array[String] | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentBase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentBase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentBase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableHostCheck(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableHostCheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableHostCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableHostCheck")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilename(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilename: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHistoryApiFallback(value: Boolean | HistoryOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("historyApiFallback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHistoryApiFallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("historyApiFallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHot(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHotOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hotOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHotOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hotOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttp2(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("http2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttp2: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("http2")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttps(value: Boolean | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("https")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("https")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInjectClientFunction1(value: /* compilerConfig */ js.Any => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("injectClient")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInjectClient(value: Boolean | InjectClientFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("injectClient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInjectClient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("injectClient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInjectHotFunction1(value: /* compilerConfig */ js.Any => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("injectHot")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInjectHot(value: Boolean | InjectClientFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("injectHot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInjectHot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("injectHot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLazy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lazy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLazy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lazy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLiveReload(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveReload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLiveReload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveReload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMimeTypes(value: typingsSlinky.webpackBlocksDevServer.anon.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMimeTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoInfo(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpen(value: Boolean | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpenPage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverlay(value: Boolean | Errors): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPfx(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pfx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPfx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pfx")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPfxPassphrase(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pfxPassphrase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPfxPassphrase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pfxPassphrase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProxy(value: js.Object | js.Array[ProxyType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProxy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("public")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("public")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublicPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublicPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuiet(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quiet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuiet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quiet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServeIndex(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serveIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServeIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serveIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetup(value: /* compilerConfig */ js.Any => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setup")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSocket(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSocket: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socket")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSocketHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socketHost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSocketHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socketHost")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSocketPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socketPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSocketPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socketPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSocketPort(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socketPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSocketPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socketPort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStaticOptions(value: (/* res */ js.Object, /* path */ String, /* stat */ js.Object) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticOptions")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutStaticOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStats(value: none | `errors-only` | minimal | normal | verbose | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransportMode(value: sockjs | ws | TransportMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transportMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransportMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transportMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseLocalIp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useLocalIp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseLocalIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useLocalIp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWatchContentBase(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("watchContentBase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWatchContentBase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("watchContentBase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWatchOptions(value: WatchOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("watchOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWatchOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("watchOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriteToDiskFunction1(value: /* filePath */ String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeToDisk")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withWriteToDisk(value: Boolean | WriteToDiskFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeToDisk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteToDisk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeToDisk")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

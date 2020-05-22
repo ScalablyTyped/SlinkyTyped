@@ -17,29 +17,10 @@ trait SchemaGoogleAppsScriptTypeExecutionApiEntryPoint extends js.Object {
 
 object SchemaGoogleAppsScriptTypeExecutionApiEntryPoint {
   @scala.inline
-  def apply(): SchemaGoogleAppsScriptTypeExecutionApiEntryPoint = {
+  def apply(entryPointConfig: SchemaGoogleAppsScriptTypeExecutionApiConfig = null): SchemaGoogleAppsScriptTypeExecutionApiEntryPoint = {
     val __obj = js.Dynamic.literal()
+    if (entryPointConfig != null) __obj.updateDynamic("entryPointConfig")(entryPointConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleAppsScriptTypeExecutionApiEntryPoint]
   }
-  @scala.inline
-  implicit class SchemaGoogleAppsScriptTypeExecutionApiEntryPointOps[Self <: SchemaGoogleAppsScriptTypeExecutionApiEntryPoint] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntryPointConfig(value: SchemaGoogleAppsScriptTypeExecutionApiConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entryPointConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntryPointConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entryPointConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

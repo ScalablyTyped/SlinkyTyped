@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * @name umbraco.resources.contentTypeResource
   * @description Loads in data for content types
   **/
-@js.native
 trait IContentTypeResource extends js.Object {
   /**
     * @ngdoc method
@@ -23,7 +22,7 @@ trait IContentTypeResource extends js.Object {
     * @returns {Promise} resourcePromise object.
     *
     */
-  def getAllPropertyTypeAliases(): IPromise[IResourcePromise] = js.native
+  def getAllPropertyTypeAliases(): IPromise[IResourcePromise]
   /**
     * @ngdoc method
     * @name umbraco.resources.contentTypeResource#getAllowedTypes
@@ -43,7 +42,7 @@ trait IContentTypeResource extends js.Object {
     * @returns {Promise} resourcePromise object.
     *
     */
-  def getAllowedTypes(contentId: Double): IPromise[IResourcePromise] = js.native
+  def getAllowedTypes(contentId: Double): IPromise[IResourcePromise]
 }
 
 object IContentTypeResource {
@@ -55,25 +54,5 @@ object IContentTypeResource {
     val __obj = js.Dynamic.literal(getAllPropertyTypeAliases = js.Any.fromFunction0(getAllPropertyTypeAliases), getAllowedTypes = js.Any.fromFunction1(getAllowedTypes))
     __obj.asInstanceOf[IContentTypeResource]
   }
-  @scala.inline
-  implicit class IContentTypeResourceOps[Self <: IContentTypeResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetAllPropertyTypeAliases(value: () => IPromise[IResourcePromise]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllPropertyTypeAliases")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetAllowedTypes(value: Double => IPromise[IResourcePromise]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllowedTypes")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

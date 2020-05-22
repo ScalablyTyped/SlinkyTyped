@@ -25,41 +25,14 @@ trait SchemaGoogleCloudDialogflowV2beta1BatchCreateEntitiesRequest extends js.Ob
 
 object SchemaGoogleCloudDialogflowV2beta1BatchCreateEntitiesRequest {
   @scala.inline
-  def apply(): SchemaGoogleCloudDialogflowV2beta1BatchCreateEntitiesRequest = {
+  def apply(
+    entities: js.Array[SchemaGoogleCloudDialogflowV2beta1EntityTypeEntity] = null,
+    languageCode: String = null
+  ): SchemaGoogleCloudDialogflowV2beta1BatchCreateEntitiesRequest = {
     val __obj = js.Dynamic.literal()
+    if (entities != null) __obj.updateDynamic("entities")(entities.asInstanceOf[js.Any])
+    if (languageCode != null) __obj.updateDynamic("languageCode")(languageCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2beta1BatchCreateEntitiesRequest]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudDialogflowV2beta1BatchCreateEntitiesRequestOps[Self <: SchemaGoogleCloudDialogflowV2beta1BatchCreateEntitiesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntities(value: js.Array[SchemaGoogleCloudDialogflowV2beta1EntityTypeEntity]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguageCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

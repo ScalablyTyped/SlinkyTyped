@@ -7,7 +7,12 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("BABYLON.BaseError")
 @js.native
-abstract class BaseError () extends Error
+abstract class BaseError () extends Error {
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
+}
 
 /* static members */
 @JSGlobal("BABYLON.BaseError")

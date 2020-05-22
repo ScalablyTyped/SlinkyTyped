@@ -16,5 +16,15 @@ class ASPxClientFileManagerFileOpenedEventArgs protected ()
     * @param file An ASPxClientFileManagerFile object is the file related to the event.
     */
   def this(file: typingsSlinky.devexpressWeb.ASPxClientFileManagerFile) = this()
+  /**
+    * Gets a file related to the event.
+    */
+  /* CompleteClass */
+  override var file: typingsSlinky.devexpressWeb.ASPxClientFileManagerFile = js.native
+  /**
+    * Gets or sets a value that specifies whether the event should be finally processed on the server side.
+    */
+  /* CompleteClass */
+  override var processOnServer: Boolean = js.native
 }
 

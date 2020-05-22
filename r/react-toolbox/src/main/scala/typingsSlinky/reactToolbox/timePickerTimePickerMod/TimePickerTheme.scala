@@ -4,391 +4,153 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TimePickerTheme extends js.Object {
   /**
     * Added to the number which is active in clock face.
     */
-  var active: js.UndefOr[String] = js.native
+  var active: js.UndefOr[String] = js.undefined
   /**
     * AM label in dialog header when mode is AM/PM.
     */
-  var am: js.UndefOr[String] = js.native
+  var am: js.UndefOr[String] = js.undefined
   /**
     * Added to the dialog when the selected format is AM.
     */
-  var amFormat: js.UndefOr[String] = js.native
+  var amFormat: js.UndefOr[String] = js.undefined
   /**
     * Wrapper for AM and PM labels in header when mode is AM/PM.
     */
-  var ampm: js.UndefOr[String] = js.native
+  var ampm: js.UndefOr[String] = js.undefined
   /**
     * Used for buttons inside the dialog of the picker.
     */
-  var button: js.UndefOr[String] = js.native
+  var button: js.UndefOr[String] = js.undefined
   /**
     * Clock root class element.
     */
-  var clock: js.UndefOr[String] = js.native
+  var clock: js.UndefOr[String] = js.undefined
   /**
     * Wrapper for the proper positioning of the clock.
     */
-  var clockWrapper: js.UndefOr[String] = js.native
+  var clockWrapper: js.UndefOr[String] = js.undefined
   /**
     * Used for the dialog component.
     */
-  var dialog: js.UndefOr[String] = js.native
+  var dialog: js.UndefOr[String] = js.undefined
   /**
     * Used to style the clock face.
     */
-  var face: js.UndefOr[String] = js.native
+  var face: js.UndefOr[String] = js.undefined
   /**
     * Used for the clock's hand.
     */
-  var hand: js.UndefOr[String] = js.native
+  var hand: js.UndefOr[String] = js.undefined
   /**
     * Dialog header wrapper class.
     */
-  var header: js.UndefOr[String] = js.native
+  var header: js.UndefOr[String] = js.undefined
   /**
     * Used for hours in dialog header.
     */
-  var hours: js.UndefOr[String] = js.native
+  var hours: js.UndefOr[String] = js.undefined
   /**
     * Added to the dialog hours are displayed.
     */
-  var hoursDisplay: js.UndefOr[String] = js.native
+  var hoursDisplay: js.UndefOr[String] = js.undefined
   /**
     * Used for Input element that opens the picker.
     */
-  var input: js.UndefOr[String] = js.native
+  var input: js.UndefOr[String] = js.undefined
   /**
     * Used for the knob of the hand.
     */
-  var knob: js.UndefOr[String] = js.native
+  var knob: js.UndefOr[String] = js.undefined
   /**
     * Used for minutes in dialog header.
     */
-  var minutes: js.UndefOr[String] = js.native
+  var minutes: js.UndefOr[String] = js.undefined
   /**
     * Added to the dialog minutes are displayed.
     */
-  var minutesDisplay: js.UndefOr[String] = js.native
+  var minutesDisplay: js.UndefOr[String] = js.undefined
   /**
     * Each of the numbers in the clock's face.
     */
-  var number: js.UndefOr[String] = js.native
+  var number: js.UndefOr[String] = js.undefined
   /**
     * Placeholder for the clock inside the dialog (inner wrapper).
     */
-  var placeholder: js.UndefOr[String] = js.native
+  var placeholder: js.UndefOr[String] = js.undefined
   /**
     * PM label in dialog header when mode is AM/PM.
     */
-  var pm: js.UndefOr[String] = js.native
+  var pm: js.UndefOr[String] = js.undefined
   /**
     * Added to the dialog when the selected format is PM.
     */
-  var pmFormat: js.UndefOr[String] = js.native
+  var pmFormat: js.UndefOr[String] = js.undefined
   /**
     * Is the : separator between hours and minutes in dialog header.
     */
-  var separator: js.UndefOr[String] = js.native
+  var separator: js.UndefOr[String] = js.undefined
   /**
     * Added to the knob when no round number is selected.
     */
-  var small: js.UndefOr[String] = js.native
+  var small: js.UndefOr[String] = js.undefined
 }
 
 object TimePickerTheme {
   @scala.inline
-  def apply(): TimePickerTheme = {
+  def apply(
+    active: String = null,
+    am: String = null,
+    amFormat: String = null,
+    ampm: String = null,
+    button: String = null,
+    clock: String = null,
+    clockWrapper: String = null,
+    dialog: String = null,
+    face: String = null,
+    hand: String = null,
+    header: String = null,
+    hours: String = null,
+    hoursDisplay: String = null,
+    input: String = null,
+    knob: String = null,
+    minutes: String = null,
+    minutesDisplay: String = null,
+    number: String = null,
+    placeholder: String = null,
+    pm: String = null,
+    pmFormat: String = null,
+    separator: String = null,
+    small: String = null
+  ): TimePickerTheme = {
     val __obj = js.Dynamic.literal()
+    if (active != null) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
+    if (am != null) __obj.updateDynamic("am")(am.asInstanceOf[js.Any])
+    if (amFormat != null) __obj.updateDynamic("amFormat")(amFormat.asInstanceOf[js.Any])
+    if (ampm != null) __obj.updateDynamic("ampm")(ampm.asInstanceOf[js.Any])
+    if (button != null) __obj.updateDynamic("button")(button.asInstanceOf[js.Any])
+    if (clock != null) __obj.updateDynamic("clock")(clock.asInstanceOf[js.Any])
+    if (clockWrapper != null) __obj.updateDynamic("clockWrapper")(clockWrapper.asInstanceOf[js.Any])
+    if (dialog != null) __obj.updateDynamic("dialog")(dialog.asInstanceOf[js.Any])
+    if (face != null) __obj.updateDynamic("face")(face.asInstanceOf[js.Any])
+    if (hand != null) __obj.updateDynamic("hand")(hand.asInstanceOf[js.Any])
+    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
+    if (hours != null) __obj.updateDynamic("hours")(hours.asInstanceOf[js.Any])
+    if (hoursDisplay != null) __obj.updateDynamic("hoursDisplay")(hoursDisplay.asInstanceOf[js.Any])
+    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
+    if (knob != null) __obj.updateDynamic("knob")(knob.asInstanceOf[js.Any])
+    if (minutes != null) __obj.updateDynamic("minutes")(minutes.asInstanceOf[js.Any])
+    if (minutesDisplay != null) __obj.updateDynamic("minutesDisplay")(minutesDisplay.asInstanceOf[js.Any])
+    if (number != null) __obj.updateDynamic("number")(number.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (pm != null) __obj.updateDynamic("pm")(pm.asInstanceOf[js.Any])
+    if (pmFormat != null) __obj.updateDynamic("pmFormat")(pmFormat.asInstanceOf[js.Any])
+    if (separator != null) __obj.updateDynamic("separator")(separator.asInstanceOf[js.Any])
+    if (small != null) __obj.updateDynamic("small")(small.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimePickerTheme]
   }
-  @scala.inline
-  implicit class TimePickerThemeOps[Self <: TimePickerTheme] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("am")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("am")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAmFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAmpm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ampm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmpm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ampm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButton(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClock(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClockWrapper(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clockWrapper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClockWrapper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clockWrapper")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDialog(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDialog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("face")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("face")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHand(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeader(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHours(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hours")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHours: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hours")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoursDisplay(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoursDisplay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoursDisplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoursDisplay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInput(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKnob(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("knob")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKnob: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("knob")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinutes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinutesDisplay(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minutesDisplay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinutesDisplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minutesDisplay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPmFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pmFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPmFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pmFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeparator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmall(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("small")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmall: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("small")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

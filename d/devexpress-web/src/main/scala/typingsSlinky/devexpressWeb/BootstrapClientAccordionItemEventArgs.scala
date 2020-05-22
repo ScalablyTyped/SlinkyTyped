@@ -7,20 +7,19 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for events related to manipulations on items.
   */
-@js.native
 trait BootstrapClientAccordionItemEventArgs extends ASPxClientProcessingModeEventArgs {
   /**
     * Gets an HTML object that contains the processed Accordion item.
     */
-  var htmlElement: js.Any = js.native
+  var htmlElement: js.Any
   /**
     * Gets a DHTML event object that relates to the processed event.
     */
-  var htmlEvent: js.Any = js.native
+  var htmlEvent: js.Any
   /**
     * Gets the item object related to the event.
     */
-  var item: BootstrapClientAccordionItem = js.native
+  var item: BootstrapClientAccordionItem
 }
 
 object BootstrapClientAccordionItemEventArgs {
@@ -34,31 +33,5 @@ object BootstrapClientAccordionItemEventArgs {
     val __obj = js.Dynamic.literal(htmlElement = htmlElement.asInstanceOf[js.Any], htmlEvent = htmlEvent.asInstanceOf[js.Any], item = item.asInstanceOf[js.Any], processOnServer = processOnServer.asInstanceOf[js.Any])
     __obj.asInstanceOf[BootstrapClientAccordionItemEventArgs]
   }
-  @scala.inline
-  implicit class BootstrapClientAccordionItemEventArgsOps[Self <: BootstrapClientAccordionItemEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHtmlElement(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHtmlEvent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItem(value: BootstrapClientAccordionItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

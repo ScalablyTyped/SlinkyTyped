@@ -3,6 +3,7 @@ package typingsSlinky.xstream
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import typingsSlinky.node.eventsMod.EventEmitter
+import typingsSlinky.xstream.mod.InternalListener
 import typingsSlinky.xstream.mod.InternalProducer
 import typingsSlinky.xstream.mod.Stream
 import scala.scalajs.js
@@ -20,6 +21,10 @@ object fromEventMod extends js.Object {
     var node: js.Any = js.native
     var `type`: String = js.native
     var useCapture: js.Any = js.native
+    /* CompleteClass */
+    override def _start(listener: InternalListener[Event]): Unit = js.native
+    /* CompleteClass */
+    override def _stop(): Unit = js.native
   }
   
   @js.native
@@ -30,6 +35,10 @@ object fromEventMod extends js.Object {
     var listener: js.UndefOr[js.Any] = js.native
     var node: js.Any = js.native
     var `type`: String = js.native
+    /* CompleteClass */
+    override def _start(listener: InternalListener[js.Any]): Unit = js.native
+    /* CompleteClass */
+    override def _stop(): Unit = js.native
   }
   
   def default[T](element: EventEmitter, eventName: String): Stream[T] = js.native

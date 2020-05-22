@@ -4,51 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ParseOptions extends js.Object {
   // Disables creating the imageHead property.
-  var disableImageHead: js.UndefOr[Boolean] = js.native
+  var disableImageHead: js.UndefOr[Boolean] = js.undefined
   // Defines the maximum number of bytes to parse.
-  var maxMetaDataSize: js.UndefOr[Double] = js.native
+  var maxMetaDataSize: js.UndefOr[Double] = js.undefined
 }
 
 object ParseOptions {
   @scala.inline
-  def apply(): ParseOptions = {
+  def apply(
+    disableImageHead: js.UndefOr[Boolean] = js.undefined,
+    maxMetaDataSize: js.UndefOr[Double] = js.undefined
+  ): ParseOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(disableImageHead)) __obj.updateDynamic("disableImageHead")(disableImageHead.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxMetaDataSize)) __obj.updateDynamic("maxMetaDataSize")(maxMetaDataSize.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParseOptions]
   }
-  @scala.inline
-  implicit class ParseOptionsOps[Self <: ParseOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisableImageHead(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableImageHead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableImageHead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableImageHead")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxMetaDataSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMetaDataSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxMetaDataSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMetaDataSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

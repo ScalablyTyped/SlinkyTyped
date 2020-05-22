@@ -19,41 +19,11 @@ trait CrawlerSchemaChangePolicy extends js.Object {
 
 object CrawlerSchemaChangePolicy {
   @scala.inline
-  def apply(): CrawlerSchemaChangePolicy = {
+  def apply(deleteBehavior: Input[String] = null, updateBehavior: Input[String] = null): CrawlerSchemaChangePolicy = {
     val __obj = js.Dynamic.literal()
+    if (deleteBehavior != null) __obj.updateDynamic("deleteBehavior")(deleteBehavior.asInstanceOf[js.Any])
+    if (updateBehavior != null) __obj.updateDynamic("updateBehavior")(updateBehavior.asInstanceOf[js.Any])
     __obj.asInstanceOf[CrawlerSchemaChangePolicy]
   }
-  @scala.inline
-  implicit class CrawlerSchemaChangePolicyOps[Self <: CrawlerSchemaChangePolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeleteBehavior(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteBehavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteBehavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateBehavior(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateBehavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateBehavior")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

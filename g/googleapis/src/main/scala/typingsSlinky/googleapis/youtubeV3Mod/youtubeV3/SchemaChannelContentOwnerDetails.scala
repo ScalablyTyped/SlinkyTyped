@@ -23,41 +23,11 @@ trait SchemaChannelContentOwnerDetails extends js.Object {
 
 object SchemaChannelContentOwnerDetails {
   @scala.inline
-  def apply(): SchemaChannelContentOwnerDetails = {
+  def apply(contentOwner: String = null, timeLinked: String = null): SchemaChannelContentOwnerDetails = {
     val __obj = js.Dynamic.literal()
+    if (contentOwner != null) __obj.updateDynamic("contentOwner")(contentOwner.asInstanceOf[js.Any])
+    if (timeLinked != null) __obj.updateDynamic("timeLinked")(timeLinked.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaChannelContentOwnerDetails]
   }
-  @scala.inline
-  implicit class SchemaChannelContentOwnerDetailsOps[Self <: SchemaChannelContentOwnerDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentOwner(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentOwner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentOwner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeLinked(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeLinked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeLinked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeLinked")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

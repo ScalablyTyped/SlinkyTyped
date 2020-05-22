@@ -8,183 +8,47 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a HTTP. */
-@js.native
 trait IHTTP extends js.Object {
   /** HTTP host */
-  var host: js.UndefOr[String | Null] = js.native
+  var host: js.UndefOr[String | Null] = js.undefined
   /** HTTP method */
-  var method: js.UndefOr[Method | Null] = js.native
+  var method: js.UndefOr[Method | Null] = js.undefined
   /** HTTP path */
-  var path: js.UndefOr[String | Null] = js.native
+  var path: js.UndefOr[String | Null] = js.undefined
   /** HTTP protocol */
-  var protocol: js.UndefOr[String | Null] = js.native
+  var protocol: js.UndefOr[String | Null] = js.undefined
   /** HTTP requestHeaders */
-  var requestHeaders: js.UndefOr[StringDictionary[IValues] | Null] = js.native
+  var requestHeaders: js.UndefOr[StringDictionary[IValues] | Null] = js.undefined
   /** HTTP responseHeaders */
-  var responseHeaders: js.UndefOr[StringDictionary[IValues] | Null] = js.native
+  var responseHeaders: js.UndefOr[StringDictionary[IValues] | Null] = js.undefined
   /** HTTP secure */
-  var secure: js.UndefOr[Boolean | Null] = js.native
+  var secure: js.UndefOr[Boolean | Null] = js.undefined
   /** HTTP statusCode */
-  var statusCode: js.UndefOr[Double | Null] = js.native
+  var statusCode: js.UndefOr[Double | Null] = js.undefined
 }
 
 object IHTTP {
   @scala.inline
-  def apply(): IHTTP = {
+  def apply(
+    host: js.UndefOr[Null | String] = js.undefined,
+    method: js.UndefOr[Null | Method] = js.undefined,
+    path: js.UndefOr[Null | String] = js.undefined,
+    protocol: js.UndefOr[Null | String] = js.undefined,
+    requestHeaders: js.UndefOr[Null | StringDictionary[IValues]] = js.undefined,
+    responseHeaders: js.UndefOr[Null | StringDictionary[IValues]] = js.undefined,
+    secure: js.UndefOr[Null | Boolean] = js.undefined,
+    statusCode: js.UndefOr[Null | Double] = js.undefined
+  ): IHTTP = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(host)) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
+    if (!js.isUndefined(method)) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (!js.isUndefined(path)) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (!js.isUndefined(protocol)) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
+    if (!js.isUndefined(requestHeaders)) __obj.updateDynamic("requestHeaders")(requestHeaders.asInstanceOf[js.Any])
+    if (!js.isUndefined(responseHeaders)) __obj.updateDynamic("responseHeaders")(responseHeaders.asInstanceOf[js.Any])
+    if (!js.isUndefined(secure)) __obj.updateDynamic("secure")(secure.asInstanceOf[js.Any])
+    if (!js.isUndefined(statusCode)) __obj.updateDynamic("statusCode")(statusCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[IHTTP]
   }
-  @scala.inline
-  implicit class IHTTPOps[Self <: IHTTP] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHostNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(null)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: Method): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethodNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(null)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPathNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(null)
-        ret
-    }
-    @scala.inline
-    def withProtocol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtocolNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(null)
-        ret
-    }
-    @scala.inline
-    def withRequestHeaders(value: StringDictionary[IValues]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestHeadersNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestHeaders")(null)
-        ret
-    }
-    @scala.inline
-    def withResponseHeaders(value: StringDictionary[IValues]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseHeadersNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseHeaders")(null)
-        ret
-    }
-    @scala.inline
-    def withSecure(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecureNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secure")(null)
-        ret
-    }
-    @scala.inline
-    def withStatusCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusCodeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(null)
-        ret
-    }
-  }
-  
 }
 

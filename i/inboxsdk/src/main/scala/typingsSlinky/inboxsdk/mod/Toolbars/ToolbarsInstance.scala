@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ToolbarsInstance extends js.Object {
-  def addToolbarButtonForApp(appToolbarButtonDescriptor: AppToolbarButtonDescriptor): AppToolbarButtonView = js.native
-  def registerThreadButton(toolbarButtonDescriptor: ToolbarButtonDescriptor): js.Function0[Unit] = js.native
+  def addToolbarButtonForApp(appToolbarButtonDescriptor: AppToolbarButtonDescriptor): AppToolbarButtonView
+  def registerThreadButton(toolbarButtonDescriptor: ToolbarButtonDescriptor): js.Function0[Unit]
   /**
     * @deprecated. use registerThreadButton
     * @param toolbarButtonDescriptor
     */
-  def registerToolbarButtonForList(toolbarButtonDescriptor: LegacyToolbarButtonDescriptor): js.Function0[Unit] = js.native
+  def registerToolbarButtonForList(toolbarButtonDescriptor: LegacyToolbarButtonDescriptor): js.Function0[Unit]
   /**
     * @deprecated. use registerThreadButton
     * @param toolbarButtonDescriptor
     */
-  def registerToolbarButtonForThreadView(toolbarButtonDescriptor: LegacyToolbarButtonDescriptor): js.Function0[Unit] = js.native
+  def registerToolbarButtonForThreadView(toolbarButtonDescriptor: LegacyToolbarButtonDescriptor): js.Function0[Unit]
 }
 
 object ToolbarsInstance {
@@ -31,37 +30,5 @@ object ToolbarsInstance {
     val __obj = js.Dynamic.literal(addToolbarButtonForApp = js.Any.fromFunction1(addToolbarButtonForApp), registerThreadButton = js.Any.fromFunction1(registerThreadButton), registerToolbarButtonForList = js.Any.fromFunction1(registerToolbarButtonForList), registerToolbarButtonForThreadView = js.Any.fromFunction1(registerToolbarButtonForThreadView))
     __obj.asInstanceOf[ToolbarsInstance]
   }
-  @scala.inline
-  implicit class ToolbarsInstanceOps[Self <: ToolbarsInstance] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddToolbarButtonForApp(value: AppToolbarButtonDescriptor => AppToolbarButtonView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addToolbarButtonForApp")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRegisterThreadButton(value: ToolbarButtonDescriptor => js.Function0[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerThreadButton")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRegisterToolbarButtonForList(value: LegacyToolbarButtonDescriptor => js.Function0[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerToolbarButtonForList")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRegisterToolbarButtonForThreadView(value: LegacyToolbarButtonDescriptor => js.Function0[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerToolbarButtonForThreadView")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

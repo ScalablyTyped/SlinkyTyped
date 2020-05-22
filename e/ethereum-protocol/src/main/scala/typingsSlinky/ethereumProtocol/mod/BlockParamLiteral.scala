@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-sealed trait BlockParamLiteral extends BlockParam
+sealed trait BlockParamLiteral extends js.Object
 
 @JSImport("ethereum-protocol", "BlockParamLiteral")
 @js.native

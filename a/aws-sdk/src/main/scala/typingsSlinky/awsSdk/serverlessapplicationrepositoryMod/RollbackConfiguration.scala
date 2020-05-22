@@ -20,41 +20,14 @@ trait RollbackConfiguration extends js.Object {
 
 object RollbackConfiguration {
   @scala.inline
-  def apply(): RollbackConfiguration = {
+  def apply(
+    MonitoringTimeInMinutes: js.UndefOr[integer] = js.undefined,
+    RollbackTriggers: listOfRollbackTrigger = null
+  ): RollbackConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(MonitoringTimeInMinutes)) __obj.updateDynamic("MonitoringTimeInMinutes")(MonitoringTimeInMinutes.get.asInstanceOf[js.Any])
+    if (RollbackTriggers != null) __obj.updateDynamic("RollbackTriggers")(RollbackTriggers.asInstanceOf[js.Any])
     __obj.asInstanceOf[RollbackConfiguration]
   }
-  @scala.inline
-  implicit class RollbackConfigurationOps[Self <: RollbackConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMonitoringTimeInMinutes(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MonitoringTimeInMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonitoringTimeInMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MonitoringTimeInMinutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRollbackTriggers(value: listOfRollbackTrigger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RollbackTriggers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRollbackTriggers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RollbackTriggers")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

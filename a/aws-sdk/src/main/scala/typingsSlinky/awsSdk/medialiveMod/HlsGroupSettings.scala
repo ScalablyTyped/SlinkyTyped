@@ -126,8 +126,9 @@ trait HlsGroupSettings extends js.Object {
     */
   var Mode: js.UndefOr[HlsMode] = js.native
   /**
-    * MANIFESTSANDSEGMENTS: Generates manifests (master manifest, if applicable, and media manifests) for this output group.
-  SEGMENTSONLY: Does not generate any manifests for this output group.
+    * MANIFESTS_AND_SEGMENTS: Generates manifests (master manifest, if applicable, and media manifests) for this output group.
+  VARIANT_MANIFESTS_AND_SEGMENTS: Generates media manifests for this output group, but not a master manifest.
+  SEGMENTS_ONLY: Does not generate any manifests for this output group.
     */
   var OutputSelection: js.UndefOr[HlsOutputSelection] = js.native
   /**
@@ -173,499 +174,97 @@ trait HlsGroupSettings extends js.Object {
     */
   var TimestampDeltaMilliseconds: js.UndefOr[integerMin0] = js.native
   /**
-    * SEGMENTEDFILES: Emit the program as segments - multiple .ts media files.
-  SINGLEFILE: Applies only if Mode field is VOD. Emit the program as a single .ts media file. The media manifest includes #EXT-X-BYTERANGE tags to index segments for playback. A typical use for this value is when sending the output to AWS Elemental MediaConvert, which can accept only a single media file. Playback while the channel is running is not guaranteed due to HTTP server caching.
+    * SEGMENTED_FILES: Emit the program as segments - multiple .ts media files.
+  SINGLE_FILE: Applies only if Mode field is VOD. Emit the program as a single .ts media file. The media manifest includes #EXT-X-BYTERANGE tags to index segments for playback. A typical use for this value is when sending the output to AWS Elemental MediaConvert, which can accept only a single media file. Playback while the channel is running is not guaranteed due to HTTP server caching.
     */
   var TsFileMode: js.UndefOr[HlsTsFileMode] = js.native
 }
 
 object HlsGroupSettings {
   @scala.inline
-  def apply(Destination: OutputLocationRef): HlsGroupSettings = {
+  def apply(
+    Destination: OutputLocationRef,
+    AdMarkers: listOfHlsAdMarkers = null,
+    BaseUrlContent: string = null,
+    BaseUrlContent1: string = null,
+    BaseUrlManifest: string = null,
+    BaseUrlManifest1: string = null,
+    CaptionLanguageMappings: listOfCaptionLanguageMapping = null,
+    CaptionLanguageSetting: HlsCaptionLanguageSetting = null,
+    ClientCache: HlsClientCache = null,
+    CodecSpecification: HlsCodecSpecification = null,
+    ConstantIv: stringMin32Max32 = null,
+    DirectoryStructure: HlsDirectoryStructure = null,
+    EncryptionType: HlsEncryptionType = null,
+    HlsCdnSettings: HlsCdnSettings = null,
+    HlsId3SegmentTagging: HlsId3SegmentTaggingState = null,
+    IFrameOnlyPlaylists: IFrameOnlyPlaylistType = null,
+    IndexNSegments: js.UndefOr[integerMin3] = js.undefined,
+    InputLossAction: InputLossActionForHlsOut = null,
+    IvInManifest: HlsIvInManifest = null,
+    IvSource: HlsIvSource = null,
+    KeepSegments: js.UndefOr[integerMin1] = js.undefined,
+    KeyFormat: string = null,
+    KeyFormatVersions: string = null,
+    KeyProviderSettings: KeyProviderSettings = null,
+    ManifestCompression: HlsManifestCompression = null,
+    ManifestDurationFormat: HlsManifestDurationFormat = null,
+    MinSegmentLength: js.UndefOr[integerMin0] = js.undefined,
+    Mode: HlsMode = null,
+    OutputSelection: HlsOutputSelection = null,
+    ProgramDateTime: HlsProgramDateTime = null,
+    ProgramDateTimePeriod: js.UndefOr[integerMin0Max3600] = js.undefined,
+    RedundantManifest: HlsRedundantManifest = null,
+    SegmentLength: js.UndefOr[integerMin1] = js.undefined,
+    SegmentationMode: HlsSegmentationMode = null,
+    SegmentsPerSubdirectory: js.UndefOr[integerMin1] = js.undefined,
+    StreamInfResolution: HlsStreamInfResolution = null,
+    TimedMetadataId3Frame: HlsTimedMetadataId3Frame = null,
+    TimedMetadataId3Period: js.UndefOr[integerMin0] = js.undefined,
+    TimestampDeltaMilliseconds: js.UndefOr[integerMin0] = js.undefined,
+    TsFileMode: HlsTsFileMode = null
+  ): HlsGroupSettings = {
     val __obj = js.Dynamic.literal(Destination = Destination.asInstanceOf[js.Any])
+    if (AdMarkers != null) __obj.updateDynamic("AdMarkers")(AdMarkers.asInstanceOf[js.Any])
+    if (BaseUrlContent != null) __obj.updateDynamic("BaseUrlContent")(BaseUrlContent.asInstanceOf[js.Any])
+    if (BaseUrlContent1 != null) __obj.updateDynamic("BaseUrlContent1")(BaseUrlContent1.asInstanceOf[js.Any])
+    if (BaseUrlManifest != null) __obj.updateDynamic("BaseUrlManifest")(BaseUrlManifest.asInstanceOf[js.Any])
+    if (BaseUrlManifest1 != null) __obj.updateDynamic("BaseUrlManifest1")(BaseUrlManifest1.asInstanceOf[js.Any])
+    if (CaptionLanguageMappings != null) __obj.updateDynamic("CaptionLanguageMappings")(CaptionLanguageMappings.asInstanceOf[js.Any])
+    if (CaptionLanguageSetting != null) __obj.updateDynamic("CaptionLanguageSetting")(CaptionLanguageSetting.asInstanceOf[js.Any])
+    if (ClientCache != null) __obj.updateDynamic("ClientCache")(ClientCache.asInstanceOf[js.Any])
+    if (CodecSpecification != null) __obj.updateDynamic("CodecSpecification")(CodecSpecification.asInstanceOf[js.Any])
+    if (ConstantIv != null) __obj.updateDynamic("ConstantIv")(ConstantIv.asInstanceOf[js.Any])
+    if (DirectoryStructure != null) __obj.updateDynamic("DirectoryStructure")(DirectoryStructure.asInstanceOf[js.Any])
+    if (EncryptionType != null) __obj.updateDynamic("EncryptionType")(EncryptionType.asInstanceOf[js.Any])
+    if (HlsCdnSettings != null) __obj.updateDynamic("HlsCdnSettings")(HlsCdnSettings.asInstanceOf[js.Any])
+    if (HlsId3SegmentTagging != null) __obj.updateDynamic("HlsId3SegmentTagging")(HlsId3SegmentTagging.asInstanceOf[js.Any])
+    if (IFrameOnlyPlaylists != null) __obj.updateDynamic("IFrameOnlyPlaylists")(IFrameOnlyPlaylists.asInstanceOf[js.Any])
+    if (!js.isUndefined(IndexNSegments)) __obj.updateDynamic("IndexNSegments")(IndexNSegments.get.asInstanceOf[js.Any])
+    if (InputLossAction != null) __obj.updateDynamic("InputLossAction")(InputLossAction.asInstanceOf[js.Any])
+    if (IvInManifest != null) __obj.updateDynamic("IvInManifest")(IvInManifest.asInstanceOf[js.Any])
+    if (IvSource != null) __obj.updateDynamic("IvSource")(IvSource.asInstanceOf[js.Any])
+    if (!js.isUndefined(KeepSegments)) __obj.updateDynamic("KeepSegments")(KeepSegments.get.asInstanceOf[js.Any])
+    if (KeyFormat != null) __obj.updateDynamic("KeyFormat")(KeyFormat.asInstanceOf[js.Any])
+    if (KeyFormatVersions != null) __obj.updateDynamic("KeyFormatVersions")(KeyFormatVersions.asInstanceOf[js.Any])
+    if (KeyProviderSettings != null) __obj.updateDynamic("KeyProviderSettings")(KeyProviderSettings.asInstanceOf[js.Any])
+    if (ManifestCompression != null) __obj.updateDynamic("ManifestCompression")(ManifestCompression.asInstanceOf[js.Any])
+    if (ManifestDurationFormat != null) __obj.updateDynamic("ManifestDurationFormat")(ManifestDurationFormat.asInstanceOf[js.Any])
+    if (!js.isUndefined(MinSegmentLength)) __obj.updateDynamic("MinSegmentLength")(MinSegmentLength.get.asInstanceOf[js.Any])
+    if (Mode != null) __obj.updateDynamic("Mode")(Mode.asInstanceOf[js.Any])
+    if (OutputSelection != null) __obj.updateDynamic("OutputSelection")(OutputSelection.asInstanceOf[js.Any])
+    if (ProgramDateTime != null) __obj.updateDynamic("ProgramDateTime")(ProgramDateTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(ProgramDateTimePeriod)) __obj.updateDynamic("ProgramDateTimePeriod")(ProgramDateTimePeriod.get.asInstanceOf[js.Any])
+    if (RedundantManifest != null) __obj.updateDynamic("RedundantManifest")(RedundantManifest.asInstanceOf[js.Any])
+    if (!js.isUndefined(SegmentLength)) __obj.updateDynamic("SegmentLength")(SegmentLength.get.asInstanceOf[js.Any])
+    if (SegmentationMode != null) __obj.updateDynamic("SegmentationMode")(SegmentationMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(SegmentsPerSubdirectory)) __obj.updateDynamic("SegmentsPerSubdirectory")(SegmentsPerSubdirectory.get.asInstanceOf[js.Any])
+    if (StreamInfResolution != null) __obj.updateDynamic("StreamInfResolution")(StreamInfResolution.asInstanceOf[js.Any])
+    if (TimedMetadataId3Frame != null) __obj.updateDynamic("TimedMetadataId3Frame")(TimedMetadataId3Frame.asInstanceOf[js.Any])
+    if (!js.isUndefined(TimedMetadataId3Period)) __obj.updateDynamic("TimedMetadataId3Period")(TimedMetadataId3Period.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(TimestampDeltaMilliseconds)) __obj.updateDynamic("TimestampDeltaMilliseconds")(TimestampDeltaMilliseconds.get.asInstanceOf[js.Any])
+    if (TsFileMode != null) __obj.updateDynamic("TsFileMode")(TsFileMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[HlsGroupSettings]
   }
-  @scala.inline
-  implicit class HlsGroupSettingsOps[Self <: HlsGroupSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestination(value: OutputLocationRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAdMarkers(value: listOfHlsAdMarkers): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdMarkers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdMarkers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdMarkers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseUrlContent(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaseUrlContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseUrlContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaseUrlContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseUrlContent1(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaseUrlContent1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseUrlContent1: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaseUrlContent1")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseUrlManifest(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaseUrlManifest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseUrlManifest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaseUrlManifest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseUrlManifest1(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaseUrlManifest1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseUrlManifest1: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaseUrlManifest1")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCaptionLanguageMappings(value: listOfCaptionLanguageMapping): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionLanguageMappings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaptionLanguageMappings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionLanguageMappings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCaptionLanguageSetting(value: HlsCaptionLanguageSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionLanguageSetting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaptionLanguageSetting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionLanguageSetting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientCache(value: HlsClientCache): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientCache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientCache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCodecSpecification(value: HlsCodecSpecification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodecSpecification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodecSpecification: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodecSpecification")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConstantIv(value: stringMin32Max32): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConstantIv")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstantIv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConstantIv")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectoryStructure(value: HlsDirectoryStructure): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryStructure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectoryStructure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryStructure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryptionType(value: HlsEncryptionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptionType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHlsCdnSettings(value: HlsCdnSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsCdnSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHlsCdnSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsCdnSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHlsId3SegmentTagging(value: HlsId3SegmentTaggingState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsId3SegmentTagging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHlsId3SegmentTagging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsId3SegmentTagging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIFrameOnlyPlaylists(value: IFrameOnlyPlaylistType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IFrameOnlyPlaylists")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIFrameOnlyPlaylists: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IFrameOnlyPlaylists")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndexNSegments(value: integerMin3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexNSegments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndexNSegments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexNSegments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputLossAction(value: InputLossActionForHlsOut): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputLossAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputLossAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputLossAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIvInManifest(value: HlsIvInManifest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IvInManifest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIvInManifest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IvInManifest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIvSource(value: HlsIvSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IvSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIvSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IvSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeepSegments(value: integerMin1): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeepSegments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeepSegments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeepSegments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyFormat(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyFormatVersions(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyFormatVersions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyFormatVersions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyFormatVersions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyProviderSettings(value: KeyProviderSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyProviderSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyProviderSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyProviderSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManifestCompression(value: HlsManifestCompression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ManifestCompression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManifestCompression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ManifestCompression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManifestDurationFormat(value: HlsManifestDurationFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ManifestDurationFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManifestDurationFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ManifestDurationFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinSegmentLength(value: integerMin0): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinSegmentLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinSegmentLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinSegmentLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: HlsMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputSelection(value: HlsOutputSelection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputSelection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputSelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputSelection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgramDateTime(value: HlsProgramDateTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgramDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgramDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgramDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgramDateTimePeriod(value: integerMin0Max3600): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgramDateTimePeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgramDateTimePeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgramDateTimePeriod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedundantManifest(value: HlsRedundantManifest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RedundantManifest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedundantManifest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RedundantManifest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegmentLength(value: integerMin1): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegmentLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegmentationMode(value: HlsSegmentationMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentationMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegmentationMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentationMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegmentsPerSubdirectory(value: integerMin1): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentsPerSubdirectory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegmentsPerSubdirectory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentsPerSubdirectory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamInfResolution(value: HlsStreamInfResolution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamInfResolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamInfResolution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamInfResolution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimedMetadataId3Frame(value: HlsTimedMetadataId3Frame): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimedMetadataId3Frame")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimedMetadataId3Frame: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimedMetadataId3Frame")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimedMetadataId3Period(value: integerMin0): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimedMetadataId3Period")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimedMetadataId3Period: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimedMetadataId3Period")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestampDeltaMilliseconds(value: integerMin0): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimestampDeltaMilliseconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestampDeltaMilliseconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimestampDeltaMilliseconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTsFileMode(value: HlsTsFileMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TsFileMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTsFileMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TsFileMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

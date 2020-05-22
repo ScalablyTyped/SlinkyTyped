@@ -86,245 +86,48 @@ trait TableStatistics extends js.Object {
 
 object TableStatistics {
   @scala.inline
-  def apply(): TableStatistics = {
+  def apply(
+    Ddls: js.UndefOr[Long] = js.undefined,
+    Deletes: js.UndefOr[Long] = js.undefined,
+    FullLoadCondtnlChkFailedRows: js.UndefOr[Long] = js.undefined,
+    FullLoadEndTime: js.Date = null,
+    FullLoadErrorRows: js.UndefOr[Long] = js.undefined,
+    FullLoadReloaded: js.UndefOr[BooleanOptional] = js.undefined,
+    FullLoadRows: js.UndefOr[Long] = js.undefined,
+    FullLoadStartTime: js.Date = null,
+    Inserts: js.UndefOr[Long] = js.undefined,
+    LastUpdateTime: js.Date = null,
+    SchemaName: String = null,
+    TableName: String = null,
+    TableState: String = null,
+    Updates: js.UndefOr[Long] = js.undefined,
+    ValidationFailedRecords: js.UndefOr[Long] = js.undefined,
+    ValidationPendingRecords: js.UndefOr[Long] = js.undefined,
+    ValidationState: String = null,
+    ValidationStateDetails: String = null,
+    ValidationSuspendedRecords: js.UndefOr[Long] = js.undefined
+  ): TableStatistics = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Ddls)) __obj.updateDynamic("Ddls")(Ddls.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Deletes)) __obj.updateDynamic("Deletes")(Deletes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(FullLoadCondtnlChkFailedRows)) __obj.updateDynamic("FullLoadCondtnlChkFailedRows")(FullLoadCondtnlChkFailedRows.get.asInstanceOf[js.Any])
+    if (FullLoadEndTime != null) __obj.updateDynamic("FullLoadEndTime")(FullLoadEndTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(FullLoadErrorRows)) __obj.updateDynamic("FullLoadErrorRows")(FullLoadErrorRows.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(FullLoadReloaded)) __obj.updateDynamic("FullLoadReloaded")(FullLoadReloaded.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(FullLoadRows)) __obj.updateDynamic("FullLoadRows")(FullLoadRows.get.asInstanceOf[js.Any])
+    if (FullLoadStartTime != null) __obj.updateDynamic("FullLoadStartTime")(FullLoadStartTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(Inserts)) __obj.updateDynamic("Inserts")(Inserts.get.asInstanceOf[js.Any])
+    if (LastUpdateTime != null) __obj.updateDynamic("LastUpdateTime")(LastUpdateTime.asInstanceOf[js.Any])
+    if (SchemaName != null) __obj.updateDynamic("SchemaName")(SchemaName.asInstanceOf[js.Any])
+    if (TableName != null) __obj.updateDynamic("TableName")(TableName.asInstanceOf[js.Any])
+    if (TableState != null) __obj.updateDynamic("TableState")(TableState.asInstanceOf[js.Any])
+    if (!js.isUndefined(Updates)) __obj.updateDynamic("Updates")(Updates.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ValidationFailedRecords)) __obj.updateDynamic("ValidationFailedRecords")(ValidationFailedRecords.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ValidationPendingRecords)) __obj.updateDynamic("ValidationPendingRecords")(ValidationPendingRecords.get.asInstanceOf[js.Any])
+    if (ValidationState != null) __obj.updateDynamic("ValidationState")(ValidationState.asInstanceOf[js.Any])
+    if (ValidationStateDetails != null) __obj.updateDynamic("ValidationStateDetails")(ValidationStateDetails.asInstanceOf[js.Any])
+    if (!js.isUndefined(ValidationSuspendedRecords)) __obj.updateDynamic("ValidationSuspendedRecords")(ValidationSuspendedRecords.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableStatistics]
   }
-  @scala.inline
-  implicit class TableStatisticsOps[Self <: TableStatistics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDdls(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ddls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDdls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ddls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeletes(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Deletes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeletes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Deletes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullLoadCondtnlChkFailedRows(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullLoadCondtnlChkFailedRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullLoadCondtnlChkFailedRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullLoadCondtnlChkFailedRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullLoadEndTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullLoadEndTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullLoadEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullLoadEndTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullLoadErrorRows(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullLoadErrorRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullLoadErrorRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullLoadErrorRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullLoadReloaded(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullLoadReloaded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullLoadReloaded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullLoadReloaded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullLoadRows(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullLoadRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullLoadRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullLoadRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullLoadStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullLoadStartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullLoadStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullLoadStartTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInserts(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Inserts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInserts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Inserts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchemaName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchemaName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdates(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Updates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Updates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidationFailedRecords(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationFailedRecords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidationFailedRecords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationFailedRecords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidationPendingRecords(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationPendingRecords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidationPendingRecords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationPendingRecords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidationState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidationState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidationStateDetails(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationStateDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidationStateDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationStateDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidationSuspendedRecords(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationSuspendedRecords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidationSuspendedRecords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationSuspendedRecords")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

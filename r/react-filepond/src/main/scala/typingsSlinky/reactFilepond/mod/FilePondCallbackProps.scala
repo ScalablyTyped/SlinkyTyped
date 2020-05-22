@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FilePondCallbackProps extends js.Object {
   /** If no error, file has been successfully loaded */
-  var onaddfile: js.UndefOr[js.Function2[/* error */ FilePondErrorDescription, /* file */ File, Unit]] = js.native
+  var onaddfile: js.UndefOr[js.Function2[/* error */ FilePondErrorDescription, /* file */ File, Unit]] = js.undefined
   /** Made progress loading a file */
-  var onaddfileprogress: js.UndefOr[js.Function2[/* file */ File, /* progress */ Double, Unit]] = js.native
+  var onaddfileprogress: js.UndefOr[js.Function2[/* file */ File, /* progress */ Double, Unit]] = js.undefined
   /** Started file load */
-  var onaddfilestart: js.UndefOr[js.Function1[/* file */ File, Unit]] = js.native
+  var onaddfilestart: js.UndefOr[js.Function1[/* file */ File, Unit]] = js.undefined
   /**
     * FilePond instance throws an error. Optionally receives
     * file if error is related to a file object.
@@ -23,29 +22,29 @@ trait FilePondCallbackProps extends js.Object {
       /* status */ js.UndefOr[js.Any], 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
   /** FilePond instance has been created and is ready. */
-  var oninit: js.UndefOr[js.Function0[Unit]] = js.native
+  var oninit: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * File has been transformed by the transform plugin or
     * another plugin subscribing to the prepare_output filter.
     * It receives the file item and the output data.
     */
-  var onpreparefile: js.UndefOr[js.Function2[/* file */ File, /* output */ js.Any, Unit]] = js.native
+  var onpreparefile: js.UndefOr[js.Function2[/* file */ File, /* output */ js.Any, Unit]] = js.undefined
   /** If no error, Processing of a file has been completed */
-  var onprocessfile: js.UndefOr[js.Function2[/* error */ FilePondErrorDescription, /* file */ File, Unit]] = js.native
+  var onprocessfile: js.UndefOr[js.Function2[/* error */ FilePondErrorDescription, /* file */ File, Unit]] = js.undefined
   /** Aborted processing of a file */
-  var onprocessfileabort: js.UndefOr[js.Function1[/* file */ File, Unit]] = js.native
+  var onprocessfileabort: js.UndefOr[js.Function1[/* file */ File, Unit]] = js.undefined
   /** Made progress processing a file */
-  var onprocessfileprogress: js.UndefOr[js.Function2[/* file */ File, /* progress */ Double, Unit]] = js.native
+  var onprocessfileprogress: js.UndefOr[js.Function2[/* file */ File, /* progress */ Double, Unit]] = js.undefined
   /** Started processing a file */
-  var onprocessfilestart: js.UndefOr[js.Function1[/* file */ File, Unit]] = js.native
+  var onprocessfilestart: js.UndefOr[js.Function1[/* file */ File, Unit]] = js.undefined
   /** Processing of a file has been undone */
-  var onprocessfileundo: js.UndefOr[js.Function1[/* file */ File, Unit]] = js.native
+  var onprocessfileundo: js.UndefOr[js.Function1[/* file */ File, Unit]] = js.undefined
   /** File has been removed. */
-  var onremovefile: js.UndefOr[js.Function1[/* file */ File, Unit]] = js.native
+  var onremovefile: js.UndefOr[js.Function1[/* file */ File, Unit]] = js.undefined
   /** A file has been added or removed, receives a list of file items */
-  var onupdatefiles: js.UndefOr[js.Function1[/* fileItems */ js.Array[File], Unit]] = js.native
+  var onupdatefiles: js.UndefOr[js.Function1[/* fileItems */ js.Array[File], Unit]] = js.undefined
   /**
     * FilePond instance throws a warning. For instance
     * when the maximum amount of files has been reached.
@@ -54,192 +53,43 @@ trait FilePondCallbackProps extends js.Object {
     */
   var onwarning: js.UndefOr[
     js.Function3[/* error */ js.Any, /* file */ js.UndefOr[File], /* status */ js.UndefOr[js.Any], Unit]
-  ] = js.native
+  ] = js.undefined
 }
 
 object FilePondCallbackProps {
   @scala.inline
-  def apply(): FilePondCallbackProps = {
+  def apply(
+    onaddfile: (/* error */ FilePondErrorDescription, /* file */ File) => Unit = null,
+    onaddfileprogress: (/* file */ File, /* progress */ Double) => Unit = null,
+    onaddfilestart: /* file */ File => Unit = null,
+    onerror: (/* error */ FilePondErrorDescription, /* file */ js.UndefOr[File], /* status */ js.UndefOr[js.Any]) => Unit = null,
+    oninit: () => Unit = null,
+    onpreparefile: (/* file */ File, /* output */ js.Any) => Unit = null,
+    onprocessfile: (/* error */ FilePondErrorDescription, /* file */ File) => Unit = null,
+    onprocessfileabort: /* file */ File => Unit = null,
+    onprocessfileprogress: (/* file */ File, /* progress */ Double) => Unit = null,
+    onprocessfilestart: /* file */ File => Unit = null,
+    onprocessfileundo: /* file */ File => Unit = null,
+    onremovefile: /* file */ File => Unit = null,
+    onupdatefiles: /* fileItems */ js.Array[File] => Unit = null,
+    onwarning: (/* error */ js.Any, /* file */ js.UndefOr[File], /* status */ js.UndefOr[js.Any]) => Unit = null
+  ): FilePondCallbackProps = {
     val __obj = js.Dynamic.literal()
+    if (onaddfile != null) __obj.updateDynamic("onaddfile")(js.Any.fromFunction2(onaddfile))
+    if (onaddfileprogress != null) __obj.updateDynamic("onaddfileprogress")(js.Any.fromFunction2(onaddfileprogress))
+    if (onaddfilestart != null) __obj.updateDynamic("onaddfilestart")(js.Any.fromFunction1(onaddfilestart))
+    if (onerror != null) __obj.updateDynamic("onerror")(js.Any.fromFunction3(onerror))
+    if (oninit != null) __obj.updateDynamic("oninit")(js.Any.fromFunction0(oninit))
+    if (onpreparefile != null) __obj.updateDynamic("onpreparefile")(js.Any.fromFunction2(onpreparefile))
+    if (onprocessfile != null) __obj.updateDynamic("onprocessfile")(js.Any.fromFunction2(onprocessfile))
+    if (onprocessfileabort != null) __obj.updateDynamic("onprocessfileabort")(js.Any.fromFunction1(onprocessfileabort))
+    if (onprocessfileprogress != null) __obj.updateDynamic("onprocessfileprogress")(js.Any.fromFunction2(onprocessfileprogress))
+    if (onprocessfilestart != null) __obj.updateDynamic("onprocessfilestart")(js.Any.fromFunction1(onprocessfilestart))
+    if (onprocessfileundo != null) __obj.updateDynamic("onprocessfileundo")(js.Any.fromFunction1(onprocessfileundo))
+    if (onremovefile != null) __obj.updateDynamic("onremovefile")(js.Any.fromFunction1(onremovefile))
+    if (onupdatefiles != null) __obj.updateDynamic("onupdatefiles")(js.Any.fromFunction1(onupdatefiles))
+    if (onwarning != null) __obj.updateDynamic("onwarning")(js.Any.fromFunction3(onwarning))
     __obj.asInstanceOf[FilePondCallbackProps]
   }
-  @scala.inline
-  implicit class FilePondCallbackPropsOps[Self <: FilePondCallbackProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnaddfile(value: (/* error */ FilePondErrorDescription, /* file */ File) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onaddfile")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnaddfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onaddfile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnaddfileprogress(value: (/* file */ File, /* progress */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onaddfileprogress")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnaddfileprogress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onaddfileprogress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnaddfilestart(value: /* file */ File => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onaddfilestart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnaddfilestart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onaddfilestart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnerror(
-      value: (/* error */ FilePondErrorDescription, /* file */ js.UndefOr[File], /* status */ js.UndefOr[js.Any]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onerror")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnerror: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onerror")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOninit(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oninit")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOninit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oninit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnpreparefile(value: (/* file */ File, /* output */ js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpreparefile")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnpreparefile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpreparefile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnprocessfile(value: (/* error */ FilePondErrorDescription, /* file */ File) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onprocessfile")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnprocessfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onprocessfile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnprocessfileabort(value: /* file */ File => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onprocessfileabort")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnprocessfileabort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onprocessfileabort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnprocessfileprogress(value: (/* file */ File, /* progress */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onprocessfileprogress")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnprocessfileprogress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onprocessfileprogress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnprocessfilestart(value: /* file */ File => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onprocessfilestart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnprocessfilestart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onprocessfilestart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnprocessfileundo(value: /* file */ File => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onprocessfileundo")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnprocessfileundo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onprocessfileundo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnremovefile(value: /* file */ File => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onremovefile")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnremovefile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onremovefile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnupdatefiles(value: /* fileItems */ js.Array[File] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onupdatefiles")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnupdatefiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onupdatefiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnwarning(value: (/* error */ js.Any, /* file */ js.UndefOr[File], /* status */ js.UndefOr[js.Any]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onwarning")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnwarning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onwarning")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

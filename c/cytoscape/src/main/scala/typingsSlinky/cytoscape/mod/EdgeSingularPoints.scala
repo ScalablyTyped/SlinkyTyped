@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * http://js.cytoscape.org/#collection/edge-points
   */
-@js.native
 trait EdgeSingularPoints extends js.Object {
   /**
     * Get an array of control point model positions for a {@code curve-style: bezier) or {@code curve-style: unbundled-bezier} edge.
@@ -17,7 +16,7 @@ trait EdgeSingularPoints extends js.Object {
     * The points are specified in the order of source-to-target direction.
     * This function works for bundled beziers, but it is not applicable to the middle, straight-line edge in the bundle.
     */
-  def controlPoints(): js.Array[Position] = js.native
+  def controlPoints(): js.Array[Position]
   /**
     * Get the model position of the midpoint of the edge.
     *
@@ -28,7 +27,7 @@ trait EdgeSingularPoints extends js.Object {
     * For curve-style: segments edges, the midpoint is the middle segment point if the number of segment points is odd.
     * For an even number of segment points, the overall midpoint is the midpoint of the middle-most line segment (i.e. the mean of the middle two segment points).
     */
-  def midpoint(): Position = js.native
+  def midpoint(): Position
   /**
     * Get an array of segment point model positions (i.e. bend points) for a {@code curve-style: segments} edge.
     *
@@ -36,15 +35,15 @@ trait EdgeSingularPoints extends js.Object {
     * this function returns the absolute model positions of the segment points.
     * The points are specified in the order of source-to-target direction.
     */
-  def segmentPoints(): js.Array[Position] = js.native
+  def segmentPoints(): js.Array[Position]
   /**
     * Get the model position of where the edge ends, towards the source node.
     */
-  def sourceEndpoint(): Position = js.native
+  def sourceEndpoint(): Position
   /**
     * Get the model position of where the edge ends, towards the target node.
     */
-  def targetEndpoint(): Position = js.native
+  def targetEndpoint(): Position
 }
 
 object EdgeSingularPoints {
@@ -59,43 +58,5 @@ object EdgeSingularPoints {
     val __obj = js.Dynamic.literal(controlPoints = js.Any.fromFunction0(controlPoints), midpoint = js.Any.fromFunction0(midpoint), segmentPoints = js.Any.fromFunction0(segmentPoints), sourceEndpoint = js.Any.fromFunction0(sourceEndpoint), targetEndpoint = js.Any.fromFunction0(targetEndpoint))
     __obj.asInstanceOf[EdgeSingularPoints]
   }
-  @scala.inline
-  implicit class EdgeSingularPointsOps[Self <: EdgeSingularPoints] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withControlPoints(value: () => js.Array[Position]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlPoints")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withMidpoint(value: () => Position): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("midpoint")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSegmentPoints(value: () => js.Array[Position]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentPoints")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSourceEndpoint(value: () => Position): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceEndpoint")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withTargetEndpoint(value: () => Position): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetEndpoint")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

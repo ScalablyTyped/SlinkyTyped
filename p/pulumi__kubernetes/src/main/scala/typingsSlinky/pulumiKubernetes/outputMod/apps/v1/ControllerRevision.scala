@@ -16,7 +16,6 @@ import scala.scalajs.js.annotation._
   * and representation changes in future releases, and clients should not depend on its
   * stability. It is primarily for internal use by controllers.
   */
-@js.native
 trait ControllerRevision extends js.Object {
   /**
     * APIVersion defines the versioned schema of this representation of an object. Servers should
@@ -24,27 +23,27 @@ trait ControllerRevision extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  val apiVersion: appsSlashv1 = js.native
+  val apiVersion: appsSlashv1
   /**
     * Data is the serialized representation of the state.
     */
-  val data: js.Object = js.native
+  val data: js.Object
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
     * CamelCase. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
     */
-  val kind: typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.ControllerRevision = js.native
+  val kind: typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.ControllerRevision
   /**
     * Standard object's metadata. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     */
-  val metadata: ObjectMeta = js.native
+  val metadata: ObjectMeta
   /**
     * Revision indicates the revision of the state represented by Data.
     */
-  val revision: Double = js.native
+  val revision: Double
 }
 
 object ControllerRevision {
@@ -59,43 +58,5 @@ object ControllerRevision {
     val __obj = js.Dynamic.literal(apiVersion = apiVersion.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], revision = revision.asInstanceOf[js.Any])
     __obj.asInstanceOf[ControllerRevision]
   }
-  @scala.inline
-  implicit class ControllerRevisionOps[Self <: ControllerRevision] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiVersion(value: appsSlashv1): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKind(value: typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.ControllerRevision): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: ObjectMeta): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRevision(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revision")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

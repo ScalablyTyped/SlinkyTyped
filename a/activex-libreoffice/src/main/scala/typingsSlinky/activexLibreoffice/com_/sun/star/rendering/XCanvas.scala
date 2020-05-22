@@ -45,7 +45,6 @@ import scala.scalajs.js.annotation._
   * underlying graphics subsystem.
   * @since OOo 2.0
   */
-@js.native
 trait XCanvas extends XInterface {
   /**
     * Request the associated graphic device for this canvas.
@@ -54,13 +53,13 @@ trait XCanvas extends XInterface {
     * This includes device resolution, color space, or bitmap formats.
     * @returns the associated {@link XGraphicDevice} .
     */
-  val Device: XGraphicDevice = js.native
+  val Device: XGraphicDevice
   /**
     * Clear the whole canvas area.
     *
     * This method clears the whole canvas area to the device default color (e.g. white for a printer, transparent for an {@link XCustomSprite} ).
     */
-  def clear(): Unit = js.native
+  def clear(): Unit
   /**
     * Create a suitable font for the specified font description.
     * @param aFontRequest
@@ -69,7 +68,7 @@ trait XCanvas extends XInterface {
     * @returns the requested font, or an invalid reference, if the request failed.
     * @throws com::sun::star::lang::IllegalArgumentException if one of the parameters is not within the allowed range.
     */
-  def createFont(aFontRequest: FontRequest, aExtraFontProperties: SeqEquiv[PropertyValue], aFontMatrix: Matrix2D): XCanvasFont = js.native
+  def createFont(aFontRequest: FontRequest, aExtraFontProperties: SeqEquiv[PropertyValue], aFontMatrix: Matrix2D): XCanvasFont
   /**
     * Draw a cubic Bezier curve in device resolution width (i.e. one device pixel wide).
     * @param aBezierSegment The start and the two control points of the Bezier curve.
@@ -83,7 +82,7 @@ trait XCanvas extends XInterface {
     aEndPoint: RealPoint2D,
     aViewState: ViewState,
     aRenderState: RenderState
-  ): Unit = js.native
+  ): Unit
   /**
     * Render the given bitmap.
     *
@@ -96,7 +95,7 @@ trait XCanvas extends XInterface {
     * @throws com::sun::star::lang::IllegalArgumentException if one of the view and render state parameters are outside the specified range.
     * @throws VolatileContentDestroyedException if a texture bitmap was volatile, and the content was destroyed before the rendering could take place.
     */
-  def drawBitmap(xBitmap: XBitmap, aViewState: ViewState, aRenderState: RenderState): XCachedPrimitive = js.native
+  def drawBitmap(xBitmap: XBitmap, aViewState: ViewState, aRenderState: RenderState): XCachedPrimitive
   /**
     * Render the given bitmap, with a global color modulation.
     *
@@ -110,7 +109,7 @@ trait XCanvas extends XInterface {
     * @throws com::sun::star::lang::IllegalArgumentException if one of the view and render state parameters are outside the specified range.
     * @throws VolatileContentDestroyedException if a texture bitmap was volatile, and the content was destroyed before the rendering could take place.
     */
-  def drawBitmapModulated(xBitmap: XBitmap, aViewState: ViewState, aRenderState: RenderState): XCachedPrimitive = js.native
+  def drawBitmapModulated(xBitmap: XBitmap, aViewState: ViewState, aRenderState: RenderState): XCachedPrimitive
   /**
     * Draw a line in device resolution width (i.e. one device pixel wide).
     * @param aStartPoint The start point of the line to draw.
@@ -119,7 +118,7 @@ trait XCanvas extends XInterface {
     * @param aRenderState The render state to be used when drawing this line.
     * @throws com::sun::star::lang::IllegalArgumentException if one of the view and render state parameters are outside the specified range.
     */
-  def drawLine(aStartPoint: RealPoint2D, aEndPoint: RealPoint2D, aViewState: ViewState, aRenderState: RenderState): Unit = js.native
+  def drawLine(aStartPoint: RealPoint2D, aEndPoint: RealPoint2D, aViewState: ViewState, aRenderState: RenderState): Unit
   /**
     * Draw a point in device resolution on the device.
     * @param aPoint The point to draw.
@@ -127,7 +126,7 @@ trait XCanvas extends XInterface {
     * @param aRenderState The render state to be used when drawing this point.
     * @throws com::sun::star::lang::IllegalArgumentException if one of the view and render state parameters are outside the specified range.
     */
-  def drawPoint(aPoint: RealPoint2D, aViewState: ViewState, aRenderState: RenderState): Unit = js.native
+  def drawPoint(aPoint: RealPoint2D, aViewState: ViewState, aRenderState: RenderState): Unit
   /**
     * Draw a poly-polygon in device resolution line width (i.e. the lines are one device pixel wide).
     * @param xPolyPolygon The poly-polygon to draw.
@@ -136,7 +135,7 @@ trait XCanvas extends XInterface {
     * @returns a handle to the cached rendering output.
     * @throws com::sun::star::lang::IllegalArgumentException if one of the view and render state parameters are outside the specified range.
     */
-  def drawPolyPolygon(xPolyPolygon: XPolyPolygon2D, aViewState: ViewState, aRenderState: RenderState): XCachedPrimitive = js.native
+  def drawPolyPolygon(xPolyPolygon: XPolyPolygon2D, aViewState: ViewState, aRenderState: RenderState): XCachedPrimitive
   /**
     * Draw the text given by the substring of the specified string with the given font.
     *
@@ -156,7 +155,7 @@ trait XCanvas extends XInterface {
     aViewState: ViewState,
     aRenderState: RenderState,
     nTextDirection: Double
-  ): XCachedPrimitive = js.native
+  ): XCachedPrimitive
   /**
     * Draw the formatted text given by the text layout.
     *
@@ -169,7 +168,7 @@ trait XCanvas extends XInterface {
     * @returns a handle to the cached rendering output.
     * @throws com::sun::star::lang::IllegalArgumentException if one of the view and render state parameters are outside the specified range.
     */
-  def drawTextLayout(xLayoutetText: XTextLayout, aViewState: ViewState, aRenderState: RenderState): XCachedPrimitive = js.native
+  def drawTextLayout(xLayoutetText: XTextLayout, aViewState: ViewState, aRenderState: RenderState): XCachedPrimitive
   /**
     * Fill the given poly-polygon.
     *
@@ -180,7 +179,7 @@ trait XCanvas extends XInterface {
     * @returns a handle to the cached rendering output.
     * @throws com::sun::star::lang::IllegalArgumentException if one of the view and render state parameters are outside the specified range.
     */
-  def fillPolyPolygon(xPolyPolygon: XPolyPolygon2D, aViewState: ViewState, aRenderState: RenderState): XCachedPrimitive = js.native
+  def fillPolyPolygon(xPolyPolygon: XPolyPolygon2D, aViewState: ViewState, aRenderState: RenderState): XCachedPrimitive
   /**
     * Fill the given poly-polygon with a mapped texture.
     *
@@ -201,7 +200,7 @@ trait XCanvas extends XInterface {
     aRenderState: RenderState,
     xTextures: SeqEquiv[Texture],
     xMapping: XMapping2D
-  ): XCachedPrimitive = js.native
+  ): XCachedPrimitive
   /**
     * Fill the given poly-polygon with a texture.
     *
@@ -219,7 +218,7 @@ trait XCanvas extends XInterface {
     aViewState: ViewState,
     aRenderState: RenderState,
     xTextures: SeqEquiv[Texture]
-  ): XCachedPrimitive = js.native
+  ): XCachedPrimitive
   /**
     * Request the associated graphic device for this canvas.
     *
@@ -227,7 +226,7 @@ trait XCanvas extends XInterface {
     * This includes device resolution, color space, or bitmap formats.
     * @returns the associated {@link XGraphicDevice} .
     */
-  def getDevice(): XGraphicDevice = js.native
+  def getDevice(): XGraphicDevice
   /**
     * Query font information, specific to this canvas.
     * @param aFilter Filter parameter to reduce the list of returned fonts. Every member of {@link FontInfo} that is not the empty string or the "don't care"
@@ -235,7 +234,7 @@ trait XCanvas extends XInterface {
     * @returns the list of fonts matching the filter set.
     * @throws com::sun::star::lang::IllegalArgumentException if one of the font properties are invalid or not recognized, or if one of the {@link FontInfo} mem
     */
-  def queryAvailableFonts(aFilter: FontInfo, aFontProperties: SeqEquiv[PropertyValue]): SafeArray[FontInfo] = js.native
+  def queryAvailableFonts(aFilter: FontInfo, aFontProperties: SeqEquiv[PropertyValue]): SafeArray[FontInfo]
   /**
     * Query the polygonal representation of the stroke outlines, as it would be generated by the strokePolyPolygon methods.
     *
@@ -252,7 +251,7 @@ trait XCanvas extends XInterface {
     aViewState: ViewState,
     aRenderState: RenderState,
     aStrokeAttributes: StrokeAttributes
-  ): XPolyPolygon2D = js.native
+  ): XPolyPolygon2D
   /**
     * Stroke each polygon of the provided poly-polygon with the specified stroke attributes.
     *
@@ -270,7 +269,7 @@ trait XCanvas extends XInterface {
     aViewState: ViewState,
     aRenderState: RenderState,
     aStrokeAttributes: StrokeAttributes
-  ): XCachedPrimitive = js.native
+  ): XCachedPrimitive
   /**
     * Stroke each polygon of the provided poly-polygon with the specified stroke attributes, fill the stroked outline with the specified texture graphics,
     * map the texture to the outline via the specified texture mapping.
@@ -294,7 +293,7 @@ trait XCanvas extends XInterface {
     aTextures: SeqEquiv[Texture],
     xMapping: XMapping2D,
     aStrokeAttributes: StrokeAttributes
-  ): XCachedPrimitive = js.native
+  ): XCachedPrimitive
   /**
     * Stroke each polygon of the provided poly-polygon with the specified stroke attributes, fill the stroked outline with the specified texture graphics.
     *
@@ -315,7 +314,7 @@ trait XCanvas extends XInterface {
     aRenderState: RenderState,
     aTextures: SeqEquiv[Texture],
     aStrokeAttributes: StrokeAttributes
-  ): XCachedPrimitive = js.native
+  ): XCachedPrimitive
 }
 
 object XCanvas {
@@ -348,137 +347,5 @@ object XCanvas {
     val __obj = js.Dynamic.literal(Device = Device.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), clear = js.Any.fromFunction0(clear), createFont = js.Any.fromFunction3(createFont), drawBezier = js.Any.fromFunction4(drawBezier), drawBitmap = js.Any.fromFunction3(drawBitmap), drawBitmapModulated = js.Any.fromFunction3(drawBitmapModulated), drawLine = js.Any.fromFunction4(drawLine), drawPoint = js.Any.fromFunction3(drawPoint), drawPolyPolygon = js.Any.fromFunction3(drawPolyPolygon), drawText = js.Any.fromFunction5(drawText), drawTextLayout = js.Any.fromFunction3(drawTextLayout), fillPolyPolygon = js.Any.fromFunction3(fillPolyPolygon), fillTextureMappedPolyPolygon = js.Any.fromFunction5(fillTextureMappedPolyPolygon), fillTexturedPolyPolygon = js.Any.fromFunction4(fillTexturedPolyPolygon), getDevice = js.Any.fromFunction0(getDevice), queryAvailableFonts = js.Any.fromFunction2(queryAvailableFonts), queryInterface = js.Any.fromFunction1(queryInterface), queryStrokeShapes = js.Any.fromFunction4(queryStrokeShapes), release = js.Any.fromFunction0(release), strokePolyPolygon = js.Any.fromFunction4(strokePolyPolygon), strokeTextureMappedPolyPolygon = js.Any.fromFunction6(strokeTextureMappedPolyPolygon), strokeTexturedPolyPolygon = js.Any.fromFunction5(strokeTexturedPolyPolygon))
     __obj.asInstanceOf[XCanvas]
   }
-  @scala.inline
-  implicit class XCanvasOps[Self <: XCanvas] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDevice(value: XGraphicDevice): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Device")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClear(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCreateFont(value: (FontRequest, SeqEquiv[PropertyValue], Matrix2D) => XCanvasFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createFont")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withDrawBezier(value: (RealBezierSegment2D, RealPoint2D, ViewState, RenderState) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawBezier")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withDrawBitmap(value: (XBitmap, ViewState, RenderState) => XCachedPrimitive): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawBitmap")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withDrawBitmapModulated(value: (XBitmap, ViewState, RenderState) => XCachedPrimitive): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawBitmapModulated")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withDrawLine(value: (RealPoint2D, RealPoint2D, ViewState, RenderState) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawLine")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withDrawPoint(value: (RealPoint2D, ViewState, RenderState) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawPoint")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withDrawPolyPolygon(value: (XPolyPolygon2D, ViewState, RenderState) => XCachedPrimitive): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawPolyPolygon")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withDrawText(value: (StringContext, XCanvasFont, ViewState, RenderState, Double) => XCachedPrimitive): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawText")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withDrawTextLayout(value: (XTextLayout, ViewState, RenderState) => XCachedPrimitive): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawTextLayout")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withFillPolyPolygon(value: (XPolyPolygon2D, ViewState, RenderState) => XCachedPrimitive): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillPolyPolygon")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withFillTextureMappedPolyPolygon(value: (XPolyPolygon2D, ViewState, RenderState, SeqEquiv[Texture], XMapping2D) => XCachedPrimitive): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillTextureMappedPolyPolygon")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withFillTexturedPolyPolygon(value: (XPolyPolygon2D, ViewState, RenderState, SeqEquiv[Texture]) => XCachedPrimitive): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillTexturedPolyPolygon")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withGetDevice(value: () => XGraphicDevice): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDevice")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withQueryAvailableFonts(value: (FontInfo, SeqEquiv[PropertyValue]) => SafeArray[FontInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryAvailableFonts")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withQueryStrokeShapes(value: (XPolyPolygon2D, ViewState, RenderState, StrokeAttributes) => XPolyPolygon2D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryStrokeShapes")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withStrokePolyPolygon(value: (XPolyPolygon2D, ViewState, RenderState, StrokeAttributes) => XCachedPrimitive): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokePolyPolygon")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withStrokeTextureMappedPolyPolygon(
-      value: (XPolyPolygon2D, ViewState, RenderState, SeqEquiv[Texture], XMapping2D, StrokeAttributes) => XCachedPrimitive
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeTextureMappedPolyPolygon")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withStrokeTexturedPolyPolygon(
-      value: (XPolyPolygon2D, ViewState, RenderState, SeqEquiv[Texture], StrokeAttributes) => XCachedPrimitive
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeTexturedPolyPolygon")(js.Any.fromFunction5(value))
-        ret
-    }
-  }
-  
 }
 

@@ -7,81 +7,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Fields[RT /* <: js.UndefOr[ResponseType] */] extends js.Object {
-  var fields: js.UndefOr[StringDictionary[String]] = js.native
-  var formSelector: js.UndefOr[String] = js.native
-  var params: js.UndefOr[RefinedParams[RT] | Null] = js.native
-  var submitSelector: js.UndefOr[String] = js.native
+  var fields: js.UndefOr[StringDictionary[String]] = js.undefined
+  var formSelector: js.UndefOr[String] = js.undefined
+  var params: js.UndefOr[RefinedParams[RT] | Null] = js.undefined
+  var submitSelector: js.UndefOr[String] = js.undefined
 }
 
 object Fields {
   @scala.inline
-  def apply[RT](): Fields[RT] = {
+  def apply[RT](
+    fields: StringDictionary[String] = null,
+    formSelector: String = null,
+    params: js.UndefOr[Null | RefinedParams[RT]] = js.undefined,
+    submitSelector: String = null
+  ): Fields[RT] = {
     val __obj = js.Dynamic.literal()
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (formSelector != null) __obj.updateDynamic("formSelector")(formSelector.asInstanceOf[js.Any])
+    if (!js.isUndefined(params)) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    if (submitSelector != null) __obj.updateDynamic("submitSelector")(submitSelector.asInstanceOf[js.Any])
     __obj.asInstanceOf[Fields[RT]]
   }
-  @scala.inline
-  implicit class FieldsOps[Self[rt] <: Fields[rt], RT] (val x: Self[RT]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[RT] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[RT]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[RT] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[RT] with Other]
-    @scala.inline
-    def withFields(value: StringDictionary[String]): Self[RT] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self[RT] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormSelector(value: String): Self[RT] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formSelector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormSelector: Self[RT] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formSelector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParams(value: RefinedParams[RT]): Self[RT] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self[RT] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParamsNull: Self[RT] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(null)
-        ret
-    }
-    @scala.inline
-    def withSubmitSelector(value: String): Self[RT] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submitSelector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubmitSelector: Self[RT] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submitSelector")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

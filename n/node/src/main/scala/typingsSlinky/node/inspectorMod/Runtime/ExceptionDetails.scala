@@ -7,143 +7,65 @@ import scala.scalajs.js.annotation._
 /**
   * Detailed information about exception (or error) that was thrown during script compilation or execution.
   */
-@js.native
 trait ExceptionDetails extends js.Object {
   /**
     * Column number of the exception location (0-based).
     */
-  var columnNumber: Double = js.native
+  var columnNumber: Double
   /**
     * Exception object if available.
     */
-  var exception: js.UndefOr[RemoteObject] = js.native
+  var exception: js.UndefOr[RemoteObject] = js.undefined
   /**
     * Exception id.
     */
-  var exceptionId: Double = js.native
+  var exceptionId: Double
   /**
     * Identifier of the context where exception happened.
     */
-  var executionContextId: js.UndefOr[ExecutionContextId] = js.native
+  var executionContextId: js.UndefOr[ExecutionContextId] = js.undefined
   /**
     * Line number of the exception location (0-based).
     */
-  var lineNumber: Double = js.native
+  var lineNumber: Double
   /**
     * Script ID of the exception location.
     */
-  var scriptId: js.UndefOr[ScriptId] = js.native
+  var scriptId: js.UndefOr[ScriptId] = js.undefined
   /**
     * JavaScript stack trace if available.
     */
-  var stackTrace: js.UndefOr[StackTrace] = js.native
+  var stackTrace: js.UndefOr[StackTrace] = js.undefined
   /**
     * Exception text, which should be used together with exception object when available.
     */
-  var text: String = js.native
+  var text: String
   /**
     * URL of the exception location, to be used when the script was not reported.
     */
-  var url: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object ExceptionDetails {
   @scala.inline
-  def apply(columnNumber: Double, exceptionId: Double, lineNumber: Double, text: String): ExceptionDetails = {
+  def apply(
+    columnNumber: Double,
+    exceptionId: Double,
+    lineNumber: Double,
+    text: String,
+    exception: RemoteObject = null,
+    executionContextId: js.UndefOr[ExecutionContextId] = js.undefined,
+    scriptId: ScriptId = null,
+    stackTrace: StackTrace = null,
+    url: String = null
+  ): ExceptionDetails = {
     val __obj = js.Dynamic.literal(columnNumber = columnNumber.asInstanceOf[js.Any], exceptionId = exceptionId.asInstanceOf[js.Any], lineNumber = lineNumber.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any])
+    if (exception != null) __obj.updateDynamic("exception")(exception.asInstanceOf[js.Any])
+    if (!js.isUndefined(executionContextId)) __obj.updateDynamic("executionContextId")(executionContextId.get.asInstanceOf[js.Any])
+    if (scriptId != null) __obj.updateDynamic("scriptId")(scriptId.asInstanceOf[js.Any])
+    if (stackTrace != null) __obj.updateDynamic("stackTrace")(stackTrace.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExceptionDetails]
   }
-  @scala.inline
-  implicit class ExceptionDetailsOps[Self <: ExceptionDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumnNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExceptionId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exceptionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withException(value: RemoteObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exception")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutException: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exception")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecutionContextId(value: ExecutionContextId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionContextId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionContextId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionContextId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScriptId(value: ScriptId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScriptId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackTrace(value: StackTrace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackTrace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackTrace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackTrace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

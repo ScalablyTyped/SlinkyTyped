@@ -13,7 +13,7 @@ import typingsSlinky.officeUiFabricReact.sliderTypesMod.ISliderStyleProps
 import typingsSlinky.officeUiFabricReact.sliderTypesMod.ISliderStyles
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -29,7 +29,7 @@ object Slider {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any]] {
+       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
     @scala.inline
     def ariaLabel(value: String): this.type = set("ariaLabel", value.asInstanceOf[js.Any])
     @scala.inline
@@ -67,7 +67,7 @@ object Slider {
     @scala.inline
     def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: ISliderStyleProps => Partial[ISliderStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: ISliderStyleProps => DeepPartial[ISliderStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[ISliderStyleProps, ISliderStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

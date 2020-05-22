@@ -12,7 +12,7 @@ object Scorecard {
   @js.native
   object component extends js.Object
   
-  def withProps(p: IconProps with SVGProps[SVGSVGElement]): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Scorecard] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Scorecard](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Scorecard.type): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Scorecard] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Scorecard](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: IconProps with SVGProps[SVGSVGElement]): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Scorecard] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Scorecard](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Scorecard.type): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Scorecard] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Scorecard](js.Array(this.component, js.Dictionary.empty))()
 }
 

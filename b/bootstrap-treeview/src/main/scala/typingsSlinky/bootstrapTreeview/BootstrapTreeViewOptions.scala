@@ -4,478 +4,120 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BootstrapTreeViewOptions extends js.Object {
-  var backColor: js.UndefOr[String] = js.native
-  var borderColor: js.UndefOr[String] = js.native
-  var checkedIcon: js.UndefOr[String] = js.native
-  var collapseIcon: js.UndefOr[String] = js.native
-  var color: js.UndefOr[String] = js.native
-  var data: js.UndefOr[js.Array[BootstrapTreeViewNodeData]] = js.native
-  var emptyIcon: js.UndefOr[String] = js.native
-  var enableLinks: js.UndefOr[Boolean] = js.native
-  var expandIcon: js.UndefOr[String] = js.native
-  var highlightSearchResults: js.UndefOr[Boolean] = js.native
-  var highlightSelected: js.UndefOr[Boolean] = js.native
-  var levels: js.UndefOr[Double] = js.native
-  var multiSelect: js.UndefOr[Boolean] = js.native
-  var nodeIcon: js.UndefOr[String] = js.native
-  var onNodeChecked: js.UndefOr[js.Function2[/* event */ js.Any, /* node */ BootstrapTreeViewNodeData, Unit]] = js.native
-  var onNodeCollapsed: js.UndefOr[js.Function2[/* event */ js.Any, /* node */ BootstrapTreeViewNodeData, Unit]] = js.native
-  var onNodeDisabled: js.UndefOr[js.Function2[/* event */ js.Any, /* node */ BootstrapTreeViewNodeData, Unit]] = js.native
-  var onNodeEnabled: js.UndefOr[js.Function2[/* event */ js.Any, /* node */ BootstrapTreeViewNodeData, Unit]] = js.native
-  var onNodeExpanded: js.UndefOr[js.Function2[/* event */ js.Any, /* node */ BootstrapTreeViewNodeData, Unit]] = js.native
-  var onNodeSelected: js.UndefOr[js.Function2[/* event */ js.Any, /* node */ BootstrapTreeViewNodeData, Unit]] = js.native
-  var onNodeUnchecked: js.UndefOr[js.Function2[/* event */ js.Any, /* node */ BootstrapTreeViewNodeData, Unit]] = js.native
-  var onNodeUnselected: js.UndefOr[js.Function2[/* event */ js.Any, /* node */ BootstrapTreeViewNodeData, Unit]] = js.native
-  var onSearchCleared: js.UndefOr[js.Function2[/* event */ js.Any, /* node */ BootstrapTreeViewNodeData, Unit]] = js.native
-  var onSearchComplete: js.UndefOr[js.Function2[/* event */ js.Any, /* node */ BootstrapTreeViewNodeData, Unit]] = js.native
-  var onhoverColor: js.UndefOr[String] = js.native
-  var searchResultBackColor: js.UndefOr[String] = js.native
-  var searchResultColor: js.UndefOr[String] = js.native
-  var selectedBackColor: js.UndefOr[String] = js.native
-  var selectedColor: js.UndefOr[String] = js.native
-  var selectedIcon: js.UndefOr[String] = js.native
-  var showBorder: js.UndefOr[Boolean] = js.native
-  var showCheckbox: js.UndefOr[Boolean] = js.native
-  var showIcon: js.UndefOr[Boolean] = js.native
-  var showTags: js.UndefOr[Boolean] = js.native
-  var uncheckedIcon: js.UndefOr[Boolean] = js.native
+  var backColor: js.UndefOr[String] = js.undefined
+  var borderColor: js.UndefOr[String] = js.undefined
+  var checkedIcon: js.UndefOr[String] = js.undefined
+  var collapseIcon: js.UndefOr[String] = js.undefined
+  var color: js.UndefOr[String] = js.undefined
+  var data: js.UndefOr[js.Array[BootstrapTreeViewNodeData]] = js.undefined
+  var emptyIcon: js.UndefOr[String] = js.undefined
+  var enableLinks: js.UndefOr[Boolean] = js.undefined
+  var expandIcon: js.UndefOr[String] = js.undefined
+  var highlightSearchResults: js.UndefOr[Boolean] = js.undefined
+  var highlightSelected: js.UndefOr[Boolean] = js.undefined
+  var levels: js.UndefOr[Double] = js.undefined
+  var multiSelect: js.UndefOr[Boolean] = js.undefined
+  var nodeIcon: js.UndefOr[String] = js.undefined
+  var onNodeChecked: js.UndefOr[js.Function2[/* event */ js.Any, /* node */ BootstrapTreeViewNodeData, Unit]] = js.undefined
+  var onNodeCollapsed: js.UndefOr[js.Function2[/* event */ js.Any, /* node */ BootstrapTreeViewNodeData, Unit]] = js.undefined
+  var onNodeDisabled: js.UndefOr[js.Function2[/* event */ js.Any, /* node */ BootstrapTreeViewNodeData, Unit]] = js.undefined
+  var onNodeEnabled: js.UndefOr[js.Function2[/* event */ js.Any, /* node */ BootstrapTreeViewNodeData, Unit]] = js.undefined
+  var onNodeExpanded: js.UndefOr[js.Function2[/* event */ js.Any, /* node */ BootstrapTreeViewNodeData, Unit]] = js.undefined
+  var onNodeSelected: js.UndefOr[js.Function2[/* event */ js.Any, /* node */ BootstrapTreeViewNodeData, Unit]] = js.undefined
+  var onNodeUnchecked: js.UndefOr[js.Function2[/* event */ js.Any, /* node */ BootstrapTreeViewNodeData, Unit]] = js.undefined
+  var onNodeUnselected: js.UndefOr[js.Function2[/* event */ js.Any, /* node */ BootstrapTreeViewNodeData, Unit]] = js.undefined
+  var onSearchCleared: js.UndefOr[js.Function2[/* event */ js.Any, /* node */ BootstrapTreeViewNodeData, Unit]] = js.undefined
+  var onSearchComplete: js.UndefOr[js.Function2[/* event */ js.Any, /* node */ BootstrapTreeViewNodeData, Unit]] = js.undefined
+  var onhoverColor: js.UndefOr[String] = js.undefined
+  var searchResultBackColor: js.UndefOr[String] = js.undefined
+  var searchResultColor: js.UndefOr[String] = js.undefined
+  var selectedBackColor: js.UndefOr[String] = js.undefined
+  var selectedColor: js.UndefOr[String] = js.undefined
+  var selectedIcon: js.UndefOr[String] = js.undefined
+  var showBorder: js.UndefOr[Boolean] = js.undefined
+  var showCheckbox: js.UndefOr[Boolean] = js.undefined
+  var showIcon: js.UndefOr[Boolean] = js.undefined
+  var showTags: js.UndefOr[Boolean] = js.undefined
+  var uncheckedIcon: js.UndefOr[Boolean] = js.undefined
 }
 
 object BootstrapTreeViewOptions {
   @scala.inline
-  def apply(): BootstrapTreeViewOptions = {
+  def apply(
+    backColor: String = null,
+    borderColor: String = null,
+    checkedIcon: String = null,
+    collapseIcon: String = null,
+    color: String = null,
+    data: js.Array[BootstrapTreeViewNodeData] = null,
+    emptyIcon: String = null,
+    enableLinks: js.UndefOr[Boolean] = js.undefined,
+    expandIcon: String = null,
+    highlightSearchResults: js.UndefOr[Boolean] = js.undefined,
+    highlightSelected: js.UndefOr[Boolean] = js.undefined,
+    levels: js.UndefOr[Double] = js.undefined,
+    multiSelect: js.UndefOr[Boolean] = js.undefined,
+    nodeIcon: String = null,
+    onNodeChecked: (/* event */ js.Any, /* node */ BootstrapTreeViewNodeData) => Unit = null,
+    onNodeCollapsed: (/* event */ js.Any, /* node */ BootstrapTreeViewNodeData) => Unit = null,
+    onNodeDisabled: (/* event */ js.Any, /* node */ BootstrapTreeViewNodeData) => Unit = null,
+    onNodeEnabled: (/* event */ js.Any, /* node */ BootstrapTreeViewNodeData) => Unit = null,
+    onNodeExpanded: (/* event */ js.Any, /* node */ BootstrapTreeViewNodeData) => Unit = null,
+    onNodeSelected: (/* event */ js.Any, /* node */ BootstrapTreeViewNodeData) => Unit = null,
+    onNodeUnchecked: (/* event */ js.Any, /* node */ BootstrapTreeViewNodeData) => Unit = null,
+    onNodeUnselected: (/* event */ js.Any, /* node */ BootstrapTreeViewNodeData) => Unit = null,
+    onSearchCleared: (/* event */ js.Any, /* node */ BootstrapTreeViewNodeData) => Unit = null,
+    onSearchComplete: (/* event */ js.Any, /* node */ BootstrapTreeViewNodeData) => Unit = null,
+    onhoverColor: String = null,
+    searchResultBackColor: String = null,
+    searchResultColor: String = null,
+    selectedBackColor: String = null,
+    selectedColor: String = null,
+    selectedIcon: String = null,
+    showBorder: js.UndefOr[Boolean] = js.undefined,
+    showCheckbox: js.UndefOr[Boolean] = js.undefined,
+    showIcon: js.UndefOr[Boolean] = js.undefined,
+    showTags: js.UndefOr[Boolean] = js.undefined,
+    uncheckedIcon: js.UndefOr[Boolean] = js.undefined
+  ): BootstrapTreeViewOptions = {
     val __obj = js.Dynamic.literal()
+    if (backColor != null) __obj.updateDynamic("backColor")(backColor.asInstanceOf[js.Any])
+    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
+    if (checkedIcon != null) __obj.updateDynamic("checkedIcon")(checkedIcon.asInstanceOf[js.Any])
+    if (collapseIcon != null) __obj.updateDynamic("collapseIcon")(collapseIcon.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (emptyIcon != null) __obj.updateDynamic("emptyIcon")(emptyIcon.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableLinks)) __obj.updateDynamic("enableLinks")(enableLinks.get.asInstanceOf[js.Any])
+    if (expandIcon != null) __obj.updateDynamic("expandIcon")(expandIcon.asInstanceOf[js.Any])
+    if (!js.isUndefined(highlightSearchResults)) __obj.updateDynamic("highlightSearchResults")(highlightSearchResults.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(highlightSelected)) __obj.updateDynamic("highlightSelected")(highlightSelected.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(levels)) __obj.updateDynamic("levels")(levels.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiSelect)) __obj.updateDynamic("multiSelect")(multiSelect.get.asInstanceOf[js.Any])
+    if (nodeIcon != null) __obj.updateDynamic("nodeIcon")(nodeIcon.asInstanceOf[js.Any])
+    if (onNodeChecked != null) __obj.updateDynamic("onNodeChecked")(js.Any.fromFunction2(onNodeChecked))
+    if (onNodeCollapsed != null) __obj.updateDynamic("onNodeCollapsed")(js.Any.fromFunction2(onNodeCollapsed))
+    if (onNodeDisabled != null) __obj.updateDynamic("onNodeDisabled")(js.Any.fromFunction2(onNodeDisabled))
+    if (onNodeEnabled != null) __obj.updateDynamic("onNodeEnabled")(js.Any.fromFunction2(onNodeEnabled))
+    if (onNodeExpanded != null) __obj.updateDynamic("onNodeExpanded")(js.Any.fromFunction2(onNodeExpanded))
+    if (onNodeSelected != null) __obj.updateDynamic("onNodeSelected")(js.Any.fromFunction2(onNodeSelected))
+    if (onNodeUnchecked != null) __obj.updateDynamic("onNodeUnchecked")(js.Any.fromFunction2(onNodeUnchecked))
+    if (onNodeUnselected != null) __obj.updateDynamic("onNodeUnselected")(js.Any.fromFunction2(onNodeUnselected))
+    if (onSearchCleared != null) __obj.updateDynamic("onSearchCleared")(js.Any.fromFunction2(onSearchCleared))
+    if (onSearchComplete != null) __obj.updateDynamic("onSearchComplete")(js.Any.fromFunction2(onSearchComplete))
+    if (onhoverColor != null) __obj.updateDynamic("onhoverColor")(onhoverColor.asInstanceOf[js.Any])
+    if (searchResultBackColor != null) __obj.updateDynamic("searchResultBackColor")(searchResultBackColor.asInstanceOf[js.Any])
+    if (searchResultColor != null) __obj.updateDynamic("searchResultColor")(searchResultColor.asInstanceOf[js.Any])
+    if (selectedBackColor != null) __obj.updateDynamic("selectedBackColor")(selectedBackColor.asInstanceOf[js.Any])
+    if (selectedColor != null) __obj.updateDynamic("selectedColor")(selectedColor.asInstanceOf[js.Any])
+    if (selectedIcon != null) __obj.updateDynamic("selectedIcon")(selectedIcon.asInstanceOf[js.Any])
+    if (!js.isUndefined(showBorder)) __obj.updateDynamic("showBorder")(showBorder.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showCheckbox)) __obj.updateDynamic("showCheckbox")(showCheckbox.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showIcon)) __obj.updateDynamic("showIcon")(showIcon.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showTags)) __obj.updateDynamic("showTags")(showTags.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(uncheckedIcon)) __obj.updateDynamic("uncheckedIcon")(uncheckedIcon.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BootstrapTreeViewOptions]
   }
-  @scala.inline
-  implicit class BootstrapTreeViewOptionsOps[Self <: BootstrapTreeViewOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheckedIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkedIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckedIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkedIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapseIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapseIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Array[BootstrapTreeViewNodeData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmptyIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emptyIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmptyIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emptyIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableLinks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableLinks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableLinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableLinks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpandIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpandIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHighlightSearchResults(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightSearchResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHighlightSearchResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightSearchResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHighlightSelected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightSelected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHighlightSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightSelected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevels(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("levels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("levels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiSelect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnNodeChecked(value: (/* event */ js.Any, /* node */ BootstrapTreeViewNodeData) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeChecked")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnNodeChecked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeChecked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnNodeCollapsed(value: (/* event */ js.Any, /* node */ BootstrapTreeViewNodeData) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeCollapsed")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnNodeCollapsed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeCollapsed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnNodeDisabled(value: (/* event */ js.Any, /* node */ BootstrapTreeViewNodeData) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeDisabled")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnNodeDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnNodeEnabled(value: (/* event */ js.Any, /* node */ BootstrapTreeViewNodeData) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeEnabled")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnNodeEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnNodeExpanded(value: (/* event */ js.Any, /* node */ BootstrapTreeViewNodeData) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeExpanded")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnNodeExpanded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeExpanded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnNodeSelected(value: (/* event */ js.Any, /* node */ BootstrapTreeViewNodeData) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeSelected")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnNodeSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeSelected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnNodeUnchecked(value: (/* event */ js.Any, /* node */ BootstrapTreeViewNodeData) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeUnchecked")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnNodeUnchecked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeUnchecked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnNodeUnselected(value: (/* event */ js.Any, /* node */ BootstrapTreeViewNodeData) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeUnselected")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnNodeUnselected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeUnselected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSearchCleared(value: (/* event */ js.Any, /* node */ BootstrapTreeViewNodeData) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSearchCleared")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSearchCleared: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSearchCleared")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSearchComplete(value: (/* event */ js.Any, /* node */ BootstrapTreeViewNodeData) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSearchComplete")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSearchComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSearchComplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnhoverColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onhoverColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnhoverColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onhoverColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchResultBackColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchResultBackColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchResultBackColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchResultBackColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchResultColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchResultColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchResultColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchResultColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedBackColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedBackColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedBackColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedBackColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowBorder(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showBorder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showBorder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowCheckbox(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCheckbox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowCheckbox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCheckbox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowIcon(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowTags(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUncheckedIcon(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uncheckedIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUncheckedIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uncheckedIcon")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,53 +22,16 @@ trait EC2InstanceLimit extends js.Object {
 
 object EC2InstanceLimit {
   @scala.inline
-  def apply(): EC2InstanceLimit = {
+  def apply(
+    CurrentInstances: js.UndefOr[WholeNumber] = js.undefined,
+    EC2InstanceType: EC2InstanceType = null,
+    InstanceLimit: js.UndefOr[WholeNumber] = js.undefined
+  ): EC2InstanceLimit = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(CurrentInstances)) __obj.updateDynamic("CurrentInstances")(CurrentInstances.get.asInstanceOf[js.Any])
+    if (EC2InstanceType != null) __obj.updateDynamic("EC2InstanceType")(EC2InstanceType.asInstanceOf[js.Any])
+    if (!js.isUndefined(InstanceLimit)) __obj.updateDynamic("InstanceLimit")(InstanceLimit.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[EC2InstanceLimit]
   }
-  @scala.inline
-  implicit class EC2InstanceLimitOps[Self <: EC2InstanceLimit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentInstances(value: WholeNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentInstances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentInstances")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEC2InstanceType(value: EC2InstanceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EC2InstanceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEC2InstanceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EC2InstanceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceLimit(value: WholeNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceLimit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

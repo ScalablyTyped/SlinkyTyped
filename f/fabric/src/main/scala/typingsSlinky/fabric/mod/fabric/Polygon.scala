@@ -12,10 +12,10 @@ import scala.scalajs.js.annotation._
 class Polygon protected ()
   extends typingsSlinky.fabric.fabricImplMod.Polygon {
   /**
-  	 * Constructor
-  	 * @param points Array of points
-  	 * @param [options] Options object
-  	 */
+    * Constructor
+    * @param points Array of points
+    * @param [options] Options object
+    */
   def this(points: js.Array[X]) = this()
   def this(points: js.Array[X], options: IPolylineOptions) = this()
 }
@@ -25,16 +25,16 @@ class Polygon protected ()
 @js.native
 object Polygon extends js.Object {
   /**
-  	 * Returns Polygon instance from an SVG element
-  	 * @param element Element to parse
-  	 * @param [options] Options object
-  	 */
+    * Returns Polygon instance from an SVG element
+    * @param element Element to parse
+    * @param [options] Options object
+    */
   def fromElement(element: SVGElement): typingsSlinky.fabric.fabricImplMod.Polygon = js.native
   def fromElement(element: SVGElement, options: IPolylineOptions): typingsSlinky.fabric.fabricImplMod.Polygon = js.native
   /**
-  	 * Returns fabric.Polygon instance from an object representation
-  	 * @param object Object to create an instance from
-  	 */
+    * Returns fabric.Polygon instance from an object representation
+    * @param object Object to create an instance from
+    */
   def fromObject(`object`: js.Any): typingsSlinky.fabric.fabricImplMod.Polygon = js.native
 }
 

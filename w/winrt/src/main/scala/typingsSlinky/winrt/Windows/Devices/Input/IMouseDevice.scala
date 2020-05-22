@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IMouseDevice extends js.Object {
-  var onmousemoved: js.Any = js.native
+  var onmousemoved: js.Any
 }
 
 object IMouseDevice {
@@ -15,19 +14,5 @@ object IMouseDevice {
     val __obj = js.Dynamic.literal(onmousemoved = onmousemoved.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMouseDevice]
   }
-  @scala.inline
-  implicit class IMouseDeviceOps[Self <: IMouseDevice] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnmousemoved(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmousemoved")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

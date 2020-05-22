@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FormLayout extends js.Object {
   /**
     * Gets and sets extensions list
     */
-  var extensions: js.Array[Extension] = js.native
+  var extensions: js.Array[Extension]
   /**
     * Top level tabs of the layout.
     */
-  var pages: js.Array[Page] = js.native
+  var pages: js.Array[Page]
   /**
     * Headers controls of the layout.
     */
-  var systemControls: js.Array[Control] = js.native
+  var systemControls: js.Array[Control]
 }
 
 object FormLayout {
@@ -26,31 +25,5 @@ object FormLayout {
     val __obj = js.Dynamic.literal(extensions = extensions.asInstanceOf[js.Any], pages = pages.asInstanceOf[js.Any], systemControls = systemControls.asInstanceOf[js.Any])
     __obj.asInstanceOf[FormLayout]
   }
-  @scala.inline
-  implicit class FormLayoutOps[Self <: FormLayout] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtensions(value: js.Array[Extension]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPages(value: js.Array[Page]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSystemControls(value: js.Array[Control]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemControls")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

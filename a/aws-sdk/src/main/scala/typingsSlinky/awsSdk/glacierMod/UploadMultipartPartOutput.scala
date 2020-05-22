@@ -14,29 +14,10 @@ trait UploadMultipartPartOutput extends js.Object {
 
 object UploadMultipartPartOutput {
   @scala.inline
-  def apply(): UploadMultipartPartOutput = {
+  def apply(checksum: String = null): UploadMultipartPartOutput = {
     val __obj = js.Dynamic.literal()
+    if (checksum != null) __obj.updateDynamic("checksum")(checksum.asInstanceOf[js.Any])
     __obj.asInstanceOf[UploadMultipartPartOutput]
   }
-  @scala.inline
-  implicit class UploadMultipartPartOutputOps[Self <: UploadMultipartPartOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChecksum(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checksum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChecksum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checksum")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

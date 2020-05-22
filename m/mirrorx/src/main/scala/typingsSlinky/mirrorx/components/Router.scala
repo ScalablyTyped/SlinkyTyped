@@ -25,6 +25,11 @@ object Router {
   }
   
   def withProps[State](p: ConnectedRouterProps[State]): Builder[State] = new Builder[State](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[State](): Builder[State] = {
+    val __props = js.Dynamic.literal()
+    new Builder[State](js.Array(this.component, __props.asInstanceOf[ConnectedRouterProps[State]]))
+  }
   implicit def make[State](companion: Router.type): Builder[State] = new Builder[State](js.Array(this.component, js.Dictionary.empty))()
 }
 

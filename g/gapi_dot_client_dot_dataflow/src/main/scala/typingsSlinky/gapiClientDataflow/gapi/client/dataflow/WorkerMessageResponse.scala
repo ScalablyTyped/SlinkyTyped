@@ -4,65 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WorkerMessageResponse extends js.Object {
   /** The service's response to a worker's health report. */
-  var workerHealthReportResponse: js.UndefOr[WorkerHealthReportResponse] = js.native
+  var workerHealthReportResponse: js.UndefOr[WorkerHealthReportResponse] = js.undefined
   /** Service's response to reporting worker metrics (currently empty). */
-  var workerMetricsResponse: js.UndefOr[js.Any] = js.native
+  var workerMetricsResponse: js.UndefOr[js.Any] = js.undefined
   /** Service's response to shutdown notice (currently empty). */
-  var workerShutdownNoticeResponse: js.UndefOr[js.Any] = js.native
+  var workerShutdownNoticeResponse: js.UndefOr[js.Any] = js.undefined
 }
 
 object WorkerMessageResponse {
   @scala.inline
-  def apply(): WorkerMessageResponse = {
+  def apply(
+    workerHealthReportResponse: WorkerHealthReportResponse = null,
+    workerMetricsResponse: js.Any = null,
+    workerShutdownNoticeResponse: js.Any = null
+  ): WorkerMessageResponse = {
     val __obj = js.Dynamic.literal()
+    if (workerHealthReportResponse != null) __obj.updateDynamic("workerHealthReportResponse")(workerHealthReportResponse.asInstanceOf[js.Any])
+    if (workerMetricsResponse != null) __obj.updateDynamic("workerMetricsResponse")(workerMetricsResponse.asInstanceOf[js.Any])
+    if (workerShutdownNoticeResponse != null) __obj.updateDynamic("workerShutdownNoticeResponse")(workerShutdownNoticeResponse.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkerMessageResponse]
   }
-  @scala.inline
-  implicit class WorkerMessageResponseOps[Self <: WorkerMessageResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWorkerHealthReportResponse(value: WorkerHealthReportResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerHealthReportResponse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkerHealthReportResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerHealthReportResponse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkerMetricsResponse(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerMetricsResponse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkerMetricsResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerMetricsResponse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkerShutdownNoticeResponse(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerShutdownNoticeResponse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkerShutdownNoticeResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerShutdownNoticeResponse")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

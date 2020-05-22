@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * MutatingWebhook describes an admission webhook and the resources and operations it applies
   * to.
   */
-@js.native
 trait MutatingWebhook extends js.Object {
   /**
     * AdmissionReviewVersions is an ordered list of preferred `AdmissionReview` versions the
@@ -20,16 +19,16 @@ trait MutatingWebhook extends js.Object {
     * not include any versions known to the API Server, calls to the webhook will fail and be
     * subject to the failure policy. Default to `['v1beta1']`.
     */
-  var admissionReviewVersions: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
+  var admissionReviewVersions: js.UndefOr[Input[js.Array[Input[String]]]] = js.undefined
   /**
     * ClientConfig defines how to communicate with the hook. Required
     */
-  var clientConfig: Input[WebhookClientConfig] = js.native
+  var clientConfig: Input[WebhookClientConfig]
   /**
     * FailurePolicy defines how unrecognized errors from the admission endpoint are handled -
     * allowed values are Ignore or Fail. Defaults to Ignore.
     */
-  var failurePolicy: js.UndefOr[Input[String]] = js.native
+  var failurePolicy: js.UndefOr[Input[String]] = js.undefined
   /**
     * matchPolicy defines how the "rules" list is used to match incoming requests. Allowed values
     * are "Exact" or "Equivalent".
@@ -47,13 +46,13 @@ trait MutatingWebhook extends js.Object {
     *
     * Defaults to "Exact"
     */
-  var matchPolicy: js.UndefOr[Input[String]] = js.native
+  var matchPolicy: js.UndefOr[Input[String]] = js.undefined
   /**
     * The name of the admission webhook. Name should be fully qualified, e.g.,
     * imagepolicy.kubernetes.io, where "imagepolicy" is the name of the webhook, and
     * kubernetes.io is the name of the organization. Required.
     */
-  var name: Input[String] = js.native
+  var name: Input[String]
   /**
     * NamespaceSelector decides whether to run the webhook on an object based on whether the
     * namespace for that object matches the selector. If the object itself is a namespace, the
@@ -94,7 +93,7 @@ trait MutatingWebhook extends js.Object {
     *
     * Default to the empty LabelSelector, which matches everything.
     */
-  var namespaceSelector: js.UndefOr[Input[LabelSelector]] = js.native
+  var namespaceSelector: js.UndefOr[Input[LabelSelector]] = js.undefined
   /**
     * ObjectSelector decides whether to run the webhook based on if the object has matching
     * labels. objectSelector is evaluated against both the oldObject and newObject that would be
@@ -105,7 +104,7 @@ trait MutatingWebhook extends js.Object {
     * users may skip the admission webhook by setting the labels. Default to the empty
     * LabelSelector, which matches everything.
     */
-  var objectSelector: js.UndefOr[Input[LabelSelector]] = js.native
+  var objectSelector: js.UndefOr[Input[LabelSelector]] = js.undefined
   /**
     * reinvocationPolicy indicates whether this webhook should be called multiple times as part
     * of a single admission evaluation. Allowed values are "Never" and "IfNeeded".
@@ -124,7 +123,7 @@ trait MutatingWebhook extends js.Object {
     *
     * Defaults to "Never".
     */
-  var reinvocationPolicy: js.UndefOr[Input[String]] = js.native
+  var reinvocationPolicy: js.UndefOr[Input[String]] = js.undefined
   /**
     * Rules describes what operations on what resources/subresources the webhook cares about. The
     * webhook cares about an operation if it matches _any_ Rule. However, in order to prevent
@@ -133,7 +132,7 @@ trait MutatingWebhook extends js.Object {
     * ValidatingAdmissionWebhooks and MutatingAdmissionWebhooks are never called on admission
     * requests for ValidatingWebhookConfiguration and MutatingWebhookConfiguration objects.
     */
-  var rules: js.UndefOr[Input[js.Array[Input[RuleWithOperations]]]] = js.native
+  var rules: js.UndefOr[Input[js.Array[Input[RuleWithOperations]]]] = js.undefined
   /**
     * SideEffects states whether this webhook has side effects. Acceptable values are: Unknown,
     * None, Some, NoneOnDryRun Webhooks with side effects MUST implement a reconciliation system,
@@ -142,148 +141,41 @@ trait MutatingWebhook extends js.Object {
     * auto-rejected if they match a webhook with sideEffects == Unknown or Some. Defaults to
     * Unknown.
     */
-  var sideEffects: js.UndefOr[Input[String]] = js.native
+  var sideEffects: js.UndefOr[Input[String]] = js.undefined
   /**
     * TimeoutSeconds specifies the timeout for this webhook. After the timeout passes, the
     * webhook call will be ignored or the API call will fail based on the failure policy. The
     * timeout value must be between 1 and 30 seconds. Default to 30 seconds.
     */
-  var timeoutSeconds: js.UndefOr[Input[Double]] = js.native
+  var timeoutSeconds: js.UndefOr[Input[Double]] = js.undefined
 }
 
 object MutatingWebhook {
   @scala.inline
-  def apply(clientConfig: Input[WebhookClientConfig], name: Input[String]): MutatingWebhook = {
+  def apply(
+    clientConfig: Input[WebhookClientConfig],
+    name: Input[String],
+    admissionReviewVersions: Input[js.Array[Input[String]]] = null,
+    failurePolicy: Input[String] = null,
+    matchPolicy: Input[String] = null,
+    namespaceSelector: Input[LabelSelector] = null,
+    objectSelector: Input[LabelSelector] = null,
+    reinvocationPolicy: Input[String] = null,
+    rules: Input[js.Array[Input[RuleWithOperations]]] = null,
+    sideEffects: Input[String] = null,
+    timeoutSeconds: Input[Double] = null
+  ): MutatingWebhook = {
     val __obj = js.Dynamic.literal(clientConfig = clientConfig.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (admissionReviewVersions != null) __obj.updateDynamic("admissionReviewVersions")(admissionReviewVersions.asInstanceOf[js.Any])
+    if (failurePolicy != null) __obj.updateDynamic("failurePolicy")(failurePolicy.asInstanceOf[js.Any])
+    if (matchPolicy != null) __obj.updateDynamic("matchPolicy")(matchPolicy.asInstanceOf[js.Any])
+    if (namespaceSelector != null) __obj.updateDynamic("namespaceSelector")(namespaceSelector.asInstanceOf[js.Any])
+    if (objectSelector != null) __obj.updateDynamic("objectSelector")(objectSelector.asInstanceOf[js.Any])
+    if (reinvocationPolicy != null) __obj.updateDynamic("reinvocationPolicy")(reinvocationPolicy.asInstanceOf[js.Any])
+    if (rules != null) __obj.updateDynamic("rules")(rules.asInstanceOf[js.Any])
+    if (sideEffects != null) __obj.updateDynamic("sideEffects")(sideEffects.asInstanceOf[js.Any])
+    if (timeoutSeconds != null) __obj.updateDynamic("timeoutSeconds")(timeoutSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[MutatingWebhook]
   }
-  @scala.inline
-  implicit class MutatingWebhookOps[Self <: MutatingWebhook] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientConfig(value: Input[WebhookClientConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAdmissionReviewVersions(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("admissionReviewVersions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdmissionReviewVersions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("admissionReviewVersions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailurePolicy(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failurePolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailurePolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failurePolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatchPolicy(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatchPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNamespaceSelector(value: Input[LabelSelector]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceSelector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamespaceSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceSelector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectSelector(value: Input[LabelSelector]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectSelector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectSelector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReinvocationPolicy(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reinvocationPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReinvocationPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reinvocationPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRules(value: Input[js.Array[Input[RuleWithOperations]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSideEffects(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sideEffects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSideEffects: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sideEffects")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeoutSeconds(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeoutSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutSeconds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

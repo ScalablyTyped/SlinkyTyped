@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IScrollDatasource[T] extends js.Object {
   /**
     * The datasource object implements methods and properties to be used by the directive to access the data
@@ -20,7 +19,7 @@ trait IScrollDatasource[T] extends js.Object {
     * Important: Make sure to respect the index and count parameters of the request. The array passed to the
     * success method should have exactly count elements unless it hit eof/bof
     */
-  def get(index: Double, count: Double, success: js.Function1[/* results */ js.Array[T], _]): Unit = js.native
+  def get(index: Double, count: Double, success: js.Function1[/* results */ js.Array[T], _]): Unit
 }
 
 object IScrollDatasource {
@@ -29,19 +28,5 @@ object IScrollDatasource {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction3(get))
     __obj.asInstanceOf[IScrollDatasource[T]]
   }
-  @scala.inline
-  implicit class IScrollDatasourceOps[Self[t] <: IScrollDatasource[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withGet(value: (Double, Double, js.Function1[/* results */ js.Array[T], _]) => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

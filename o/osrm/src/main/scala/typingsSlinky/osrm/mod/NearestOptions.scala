@@ -11,39 +11,31 @@ import scala.scalajs.js.annotation._
   *
   * https://github.com/Project-OSRM/node-osrm/blob/master/docs/api.md#nearest
   */
-@js.native
 trait NearestOptions extends Options {
   /**
     * Number of nearest segments that should be returned. Must be an integer greater than or equal to 1. (optional, default 1)
     */
-  var number: js.UndefOr[Double] = js.native
+  var number: js.UndefOr[Double] = js.undefined
 }
 
 object NearestOptions {
   @scala.inline
-  def apply(): NearestOptions = {
+  def apply(
+    bearings: js.UndefOr[Null | js.Array[Bearing]] = js.undefined,
+    coordinates: js.Array[Coordinate] = null,
+    generate_hints: js.UndefOr[Boolean] = js.undefined,
+    hints: js.Array[Hint] = null,
+    number: js.UndefOr[Double] = js.undefined,
+    radiuses: js.UndefOr[Null | js.Array[Radius]] = js.undefined
+  ): NearestOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(bearings)) __obj.updateDynamic("bearings")(bearings.asInstanceOf[js.Any])
+    if (coordinates != null) __obj.updateDynamic("coordinates")(coordinates.asInstanceOf[js.Any])
+    if (!js.isUndefined(generate_hints)) __obj.updateDynamic("generate_hints")(generate_hints.get.asInstanceOf[js.Any])
+    if (hints != null) __obj.updateDynamic("hints")(hints.asInstanceOf[js.Any])
+    if (!js.isUndefined(number)) __obj.updateDynamic("number")(number.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(radiuses)) __obj.updateDynamic("radiuses")(radiuses.asInstanceOf[js.Any])
     __obj.asInstanceOf[NearestOptions]
   }
-  @scala.inline
-  implicit class NearestOptionsOps[Self <: NearestOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

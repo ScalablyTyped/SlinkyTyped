@@ -5,179 +5,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JadeOptions extends js.Object {
-  var basedir: js.UndefOr[String] = js.native
-  var cache: js.UndefOr[Boolean] = js.native
-  var compileDebug: js.UndefOr[Boolean] = js.native
-  var debug: js.UndefOr[Boolean] = js.native
-  var doctype: js.UndefOr[String] = js.native
-  var filename: js.UndefOr[String] = js.native
-  var filters: js.UndefOr[StringDictionary[JadeCustomFilterFunction]] = js.native
-  var globals: js.UndefOr[js.Array[String]] = js.native
-  var inlineRuntimeFunctions: js.UndefOr[Boolean] = js.native
-  var name: js.UndefOr[String] = js.native
-  var pretty: js.UndefOr[Boolean | String] = js.native
-  var self: js.UndefOr[Boolean] = js.native
+  var basedir: js.UndefOr[String] = js.undefined
+  var cache: js.UndefOr[Boolean] = js.undefined
+  var compileDebug: js.UndefOr[Boolean] = js.undefined
+  var debug: js.UndefOr[Boolean] = js.undefined
+  var doctype: js.UndefOr[String] = js.undefined
+  var filename: js.UndefOr[String] = js.undefined
+  var filters: js.UndefOr[StringDictionary[JadeCustomFilterFunction]] = js.undefined
+  var globals: js.UndefOr[js.Array[String]] = js.undefined
+  var inlineRuntimeFunctions: js.UndefOr[Boolean] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var pretty: js.UndefOr[Boolean | String] = js.undefined
+  var self: js.UndefOr[Boolean] = js.undefined
 }
 
 object JadeOptions {
   @scala.inline
-  def apply(): JadeOptions = {
+  def apply(
+    basedir: String = null,
+    cache: js.UndefOr[Boolean] = js.undefined,
+    compileDebug: js.UndefOr[Boolean] = js.undefined,
+    debug: js.UndefOr[Boolean] = js.undefined,
+    doctype: String = null,
+    filename: String = null,
+    filters: StringDictionary[JadeCustomFilterFunction] = null,
+    globals: js.Array[String] = null,
+    inlineRuntimeFunctions: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    pretty: Boolean | String = null,
+    self: js.UndefOr[Boolean] = js.undefined
+  ): JadeOptions = {
     val __obj = js.Dynamic.literal()
+    if (basedir != null) __obj.updateDynamic("basedir")(basedir.asInstanceOf[js.Any])
+    if (!js.isUndefined(cache)) __obj.updateDynamic("cache")(cache.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(compileDebug)) __obj.updateDynamic("compileDebug")(compileDebug.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.get.asInstanceOf[js.Any])
+    if (doctype != null) __obj.updateDynamic("doctype")(doctype.asInstanceOf[js.Any])
+    if (filename != null) __obj.updateDynamic("filename")(filename.asInstanceOf[js.Any])
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (globals != null) __obj.updateDynamic("globals")(globals.asInstanceOf[js.Any])
+    if (!js.isUndefined(inlineRuntimeFunctions)) __obj.updateDynamic("inlineRuntimeFunctions")(inlineRuntimeFunctions.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (pretty != null) __obj.updateDynamic("pretty")(pretty.asInstanceOf[js.Any])
+    if (!js.isUndefined(self)) __obj.updateDynamic("self")(self.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[JadeOptions]
   }
-  @scala.inline
-  implicit class JadeOptionsOps[Self <: JadeOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBasedir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basedir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasedir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basedir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCache(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompileDebug(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compileDebug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompileDebug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compileDebug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebug(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDoctype(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doctype")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDoctype: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doctype")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilename(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilename: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilters(value: StringDictionary[JadeCustomFilterFunction]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobals(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInlineRuntimeFunctions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineRuntimeFunctions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInlineRuntimeFunctions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineRuntimeFunctions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPretty(value: Boolean | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pretty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPretty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pretty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelf(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("self")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelf: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("self")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait VueI18n_ extends js.Object {
   val availableLocales: js.Array[typingsSlinky.vueI18n.mod.VueI18n.Locale] = js.native
   val dateTimeFormats: typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormats = js.native
-  var fallbackLocale: typingsSlinky.vueI18n.mod.VueI18n.Locale = js.native
+  var fallbackLocale: typingsSlinky.vueI18n.mod.VueI18n.FallbackLocale = js.native
   var formatFallbackMessages: Boolean = js.native
   var formatter: typingsSlinky.vueI18n.mod.VueI18n.Formatter = js.native
   var locale: typingsSlinky.vueI18n.mod.VueI18n.Locale = js.native
@@ -20,6 +20,8 @@ trait VueI18n_ extends js.Object {
   var missing_Original: typingsSlinky.vueI18n.mod.VueI18n.MissingHandler = js.native
   val numberFormats: typingsSlinky.vueI18n.mod.VueI18n.NumberFormats = js.native
   var pluralizationRules: PluralizationRulesMap = js.native
+  @JSName("postTranslation")
+  var postTranslation_Original: typingsSlinky.vueI18n.mod.VueI18n.PostTranslationHandler = js.native
   var preserveDirectiveContent: Boolean = js.native
   var silentFallbackWarn: Boolean | js.RegExp = js.native
   var silentTranslationWarn: Boolean | js.RegExp = js.native
@@ -81,6 +83,8 @@ trait VueI18n_ extends js.Object {
     key: typingsSlinky.vueI18n.mod.VueI18n.Path,
     locale: typingsSlinky.vueI18n.mod.VueI18n.Locale
   ): typingsSlinky.vueI18n.mod.VueI18n.NumberFormatResult = js.native
+  def postTranslation(str: String): String = js.native
+  def postTranslation(str: String, key: String): String = js.native
   def setDateTimeFormat(
     locale: typingsSlinky.vueI18n.mod.VueI18n.Locale,
     format: typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormat

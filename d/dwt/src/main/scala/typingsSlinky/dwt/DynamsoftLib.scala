@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DynamsoftLib extends js.Object {
   /*ignored
     Addon_Events  Addon_Sendback_Events  AttachAndShowImage  BIO  DOM  DynamicLoadAddonFuns  DynamicWebTwain  EnumMouseButton
@@ -14,16 +13,16 @@ trait DynamsoftLib extends js.Object {
     addEventListener  ajax  all  appendMessage  appendRichMessage  aryControlLoadImage  attachAddon  attachProperty
     base64  bio  cancelFrome  clearMessage  closeAll  closeProgress  colorStrToInt  config  css  currentStyle
     debug*/
-  var detect: Ssl = js.native
+  var detect: Ssl
   /*ignored
     detectButton  dialog  dialogShowStatus  dlgProgress  dlgRef  drawBoxBorder  drawImageWithHermite
     each  empty  endsWith
     */
-  var env: BChrome = js.native
-  def NewOCRReadPara(): OCRReadPara = js.native
-  def NewOCRZone(): OCRZone = js.native
-  def NewRedaction(): Redaction = js.native
-  def getScript(url: String, bAsync: Boolean, callback: js.Function0[Unit]): Unit = js.native
+  var env: BChrome
+  def NewOCRReadPara(): OCRReadPara
+  def NewOCRZone(): OCRZone
+  def NewRedaction(): Redaction
+  def getScript(url: String, bAsync: Boolean, callback: js.Function0[Unit]): Unit
   /*ignored
     error  escapeHtml  escapeRegExp  extend  filter  fireEvent  fromUnicode  get  getColor  getCss
     getElDimensions  getHex  getHexColor  getHttpUrl  getLogger  getOffset  getRandom  getRealPath  getScript
@@ -36,8 +35,8 @@ trait DynamsoftLib extends js.Object {
     type  unEscapeHtml  unparam  upperCaseFirst  urlDecode  urlEncode  utf8  win
     ...other internal ones
     */
-  def hideMask(): Unit = js.native
-  def showMask(): Unit = js.native
+  def hideMask(): Unit
+  def showMask(): Unit
 }
 
 object DynamsoftLib {
@@ -55,61 +54,5 @@ object DynamsoftLib {
     val __obj = js.Dynamic.literal(NewOCRReadPara = js.Any.fromFunction0(NewOCRReadPara), NewOCRZone = js.Any.fromFunction0(NewOCRZone), NewRedaction = js.Any.fromFunction0(NewRedaction), detect = detect.asInstanceOf[js.Any], env = env.asInstanceOf[js.Any], getScript = js.Any.fromFunction3(getScript), hideMask = js.Any.fromFunction0(hideMask), showMask = js.Any.fromFunction0(showMask))
     __obj.asInstanceOf[DynamsoftLib]
   }
-  @scala.inline
-  implicit class DynamsoftLibOps[Self <: DynamsoftLib] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNewOCRReadPara(value: () => OCRReadPara): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewOCRReadPara")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewOCRZone(value: () => OCRZone): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewOCRZone")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewRedaction(value: () => Redaction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewRedaction")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDetect(value: Ssl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnv(value: BChrome): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetScript(value: (String, Boolean, js.Function0[Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScript")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withHideMask(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideMask")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withShowMask(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMask")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

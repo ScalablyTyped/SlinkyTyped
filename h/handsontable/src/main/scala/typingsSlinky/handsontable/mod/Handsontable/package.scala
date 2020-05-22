@@ -26,4 +26,8 @@ package object Handsontable {
     * Row objects can have any data assigned to them, not just column data, and can define a `__children` array for nested rows.
     */
   type RowObject = org.scalablytyped.runtime.StringDictionary[js.Any]
+  /**
+    * A single row of source data, which can be represented as an array of values, or an object with key/value pairs.
+    */
+  type SourceRowData = typingsSlinky.handsontable.mod.Handsontable.RowObject | js.Array[typingsSlinky.handsontable.mod.Handsontable.CellValue]
 }

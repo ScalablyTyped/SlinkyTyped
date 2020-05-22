@@ -30,8 +30,6 @@ import typingsSlinky.kendoUi.kendo.mobile.ui.Collapsible
 import typingsSlinky.kendoUi.kendo.mobile.ui.CollapsibleOptions
 import typingsSlinky.kendoUi.kendo.mobile.ui.DetailButton
 import typingsSlinky.kendoUi.kendo.mobile.ui.DetailButtonOptions
-import typingsSlinky.kendoUi.kendo.mobile.ui.Drawer
-import typingsSlinky.kendoUi.kendo.mobile.ui.DrawerOptions
 import typingsSlinky.kendoUi.kendo.mobile.ui.Layout
 import typingsSlinky.kendoUi.kendo.mobile.ui.LayoutOptions
 import typingsSlinky.kendoUi.kendo.mobile.ui.Loader
@@ -90,6 +88,8 @@ import typingsSlinky.kendoUi.kendo.ui.Dialog
 import typingsSlinky.kendoUi.kendo.ui.DialogOptions
 import typingsSlinky.kendoUi.kendo.ui.Draggable
 import typingsSlinky.kendoUi.kendo.ui.DraggableOptions
+import typingsSlinky.kendoUi.kendo.ui.Drawer
+import typingsSlinky.kendoUi.kendo.ui.DrawerOptions
 import typingsSlinky.kendoUi.kendo.ui.DropDownList
 import typingsSlinky.kendoUi.kendo.ui.DropDownListOptions
 import typingsSlinky.kendoUi.kendo.ui.DropDownTree
@@ -162,6 +162,12 @@ import typingsSlinky.kendoUi.kendo.ui.Splitter
 import typingsSlinky.kendoUi.kendo.ui.SplitterOptions
 import typingsSlinky.kendoUi.kendo.ui.Spreadsheet
 import typingsSlinky.kendoUi.kendo.ui.SpreadsheetOptions
+import typingsSlinky.kendoUi.kendo.ui.Stepper
+import typingsSlinky.kendoUi.kendo.ui.StepperOptions
+import typingsSlinky.kendoUi.kendo.ui.TextBox
+import typingsSlinky.kendoUi.kendo.ui.TextBoxOptions
+import typingsSlinky.kendoUi.kendo.ui.TileLayout
+import typingsSlinky.kendoUi.kendo.ui.TileLayoutOptions
 import typingsSlinky.kendoUi.kendo.ui.TimePicker
 import typingsSlinky.kendoUi.kendo.ui.TimePickerOptions
 import typingsSlinky.kendoUi.kendo.ui.Timeline
@@ -203,6 +209,7 @@ import typingsSlinky.kendoUi.kendoUiStrings.kendoDateTimePicker
 import typingsSlinky.kendoUi.kendoUiStrings.kendoDiagram
 import typingsSlinky.kendoUi.kendoUiStrings.kendoDialog
 import typingsSlinky.kendoUi.kendoUiStrings.kendoDraggable
+import typingsSlinky.kendoUi.kendoUiStrings.kendoDrawer
 import typingsSlinky.kendoUi.kendoUiStrings.kendoDropDownList
 import typingsSlinky.kendoUi.kendoUiStrings.kendoDropDownTree
 import typingsSlinky.kendoUi.kendoUiStrings.kendoDropTarget
@@ -265,9 +272,12 @@ import typingsSlinky.kendoUi.kendoUiStrings.kendoSortable
 import typingsSlinky.kendoUi.kendoUiStrings.kendoSparkline
 import typingsSlinky.kendoUi.kendoUiStrings.kendoSplitter
 import typingsSlinky.kendoUi.kendoUiStrings.kendoSpreadsheet
+import typingsSlinky.kendoUi.kendoUiStrings.kendoStepper
 import typingsSlinky.kendoUi.kendoUiStrings.kendoStockChart
 import typingsSlinky.kendoUi.kendoUiStrings.kendoSwitch
 import typingsSlinky.kendoUi.kendoUiStrings.kendoTabStrip
+import typingsSlinky.kendoUi.kendoUiStrings.kendoTextBox
+import typingsSlinky.kendoUi.kendoUiStrings.kendoTileLayout
 import typingsSlinky.kendoUi.kendoUiStrings.kendoTimePicker
 import typingsSlinky.kendoUi.kendoUiStrings.kendoTimeline
 import typingsSlinky.kendoUi.kendoUiStrings.kendoToolBar
@@ -329,6 +339,8 @@ trait JQuery extends js.Object {
   @JSName("data")
   def data_kendoDraggable(key: kendoDraggable): Draggable = js.native
   @JSName("data")
+  def data_kendoDrawer(key: kendoDrawer): Drawer = js.native
+  @JSName("data")
   def data_kendoDropDownList(key: kendoDropDownList): DropDownList = js.native
   @JSName("data")
   def data_kendoDropDownTree(key: kendoDropDownTree): DropDownTree = js.native
@@ -375,7 +387,7 @@ trait JQuery extends js.Object {
   @JSName("data")
   def data_kendoMobileDetailButton(key: kendoMobileDetailButton): DetailButton = js.native
   @JSName("data")
-  def data_kendoMobileDrawer(key: kendoMobileDrawer): Drawer = js.native
+  def data_kendoMobileDrawer(key: kendoMobileDrawer): typingsSlinky.kendoUi.kendo.mobile.ui.Drawer = js.native
   @JSName("data")
   def data_kendoMobileLayout(key: kendoMobileLayout): Layout = js.native
   @JSName("data")
@@ -453,11 +465,17 @@ trait JQuery extends js.Object {
   @JSName("data")
   def data_kendoSpreadsheet(key: kendoSpreadsheet): Spreadsheet = js.native
   @JSName("data")
+  def data_kendoStepper(key: kendoStepper): Stepper = js.native
+  @JSName("data")
   def data_kendoStockChart(key: kendoStockChart): StockChart = js.native
   @JSName("data")
   def data_kendoSwitch(key: kendoSwitch): typingsSlinky.kendoUi.kendo.ui.Switch = js.native
   @JSName("data")
   def data_kendoTabStrip(key: kendoTabStrip): typingsSlinky.kendoUi.kendo.ui.TabStrip = js.native
+  @JSName("data")
+  def data_kendoTextBox(key: kendoTextBox): TextBox = js.native
+  @JSName("data")
+  def data_kendoTileLayout(key: kendoTileLayout): TileLayout = js.native
   @JSName("data")
   def data_kendoTimePicker(key: kendoTimePicker): TimePicker = js.native
   @JSName("data")
@@ -522,6 +540,8 @@ trait JQuery extends js.Object {
   def kendoDialog(options: DialogOptions): JQuery = js.native
   def kendoDraggable(): JQuery = js.native
   def kendoDraggable(options: DraggableOptions): JQuery = js.native
+  def kendoDrawer(): JQuery = js.native
+  def kendoDrawer(options: DrawerOptions): JQuery = js.native
   def kendoDropDownList(): JQuery = js.native
   def kendoDropDownList(options: DropDownListOptions): JQuery = js.native
   def kendoDropDownTree(): JQuery = js.native
@@ -569,7 +589,7 @@ trait JQuery extends js.Object {
   def kendoMobileDetailButton(): JQuery = js.native
   def kendoMobileDetailButton(options: DetailButtonOptions): JQuery = js.native
   def kendoMobileDrawer(): JQuery = js.native
-  def kendoMobileDrawer(options: DrawerOptions): JQuery = js.native
+  def kendoMobileDrawer(options: typingsSlinky.kendoUi.kendo.mobile.ui.DrawerOptions): JQuery = js.native
   def kendoMobileLayout(): JQuery = js.native
   def kendoMobileLayout(options: LayoutOptions): JQuery = js.native
   def kendoMobileListView(): JQuery = js.native
@@ -646,12 +666,18 @@ trait JQuery extends js.Object {
   def kendoSplitter(options: SplitterOptions): JQuery = js.native
   def kendoSpreadsheet(): JQuery = js.native
   def kendoSpreadsheet(options: SpreadsheetOptions): JQuery = js.native
+  def kendoStepper(): JQuery = js.native
+  def kendoStepper(options: StepperOptions): JQuery = js.native
   def kendoStockChart(): JQuery = js.native
   def kendoStockChart(options: StockChartOptions): JQuery = js.native
   def kendoSwitch(): JQuery = js.native
   def kendoSwitch(options: typingsSlinky.kendoUi.kendo.ui.SwitchOptions): JQuery = js.native
   def kendoTabStrip(): JQuery = js.native
   def kendoTabStrip(options: typingsSlinky.kendoUi.kendo.ui.TabStripOptions): JQuery = js.native
+  def kendoTextBox(): JQuery = js.native
+  def kendoTextBox(options: TextBoxOptions): JQuery = js.native
+  def kendoTileLayout(): JQuery = js.native
+  def kendoTileLayout(options: TileLayoutOptions): JQuery = js.native
   def kendoTimePicker(): JQuery = js.native
   def kendoTimePicker(options: TimePickerOptions): JQuery = js.native
   def kendoTimeline(): JQuery = js.native

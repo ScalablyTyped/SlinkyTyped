@@ -27,7 +27,7 @@ object MenuAdapter {
     @scala.inline
     def artwork(value: TagMod[Any]): this.type = set("artwork", value.asInstanceOf[js.Any])
     @scala.inline
-    def artworkSize(value: ArtworkSizesT): this.type = set("artworkSize", value.asInstanceOf[js.Any])
+    def artworkSize(value: ArtworkSizesT | Double): this.type = set("artworkSize", value.asInstanceOf[js.Any])
     @scala.inline
     def endEnhancerReactElement(value: ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
     @scala.inline

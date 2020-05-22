@@ -10,16 +10,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DiscoverTypings extends TypingInstallerRequestWithProjectName {
-  val cachePath: js.UndefOr[String] = js.native
-  val compilerOptions: CompilerOptions = js.native
-  val fileNames: js.Array[String] = js.native
-  val kind: discover = js.native
-  val projectRootPath: Path = js.native
-  val typeAcquisition: TypeAcquisition = js.native
-  val unresolvedImports: SortedReadonlyArray[String] = js.native
-  val watchOptions: js.UndefOr[WatchOptions] = js.native
+  val cachePath: js.UndefOr[String] = js.undefined
+  val compilerOptions: CompilerOptions
+  val fileNames: js.Array[String]
+  val kind: discover
+  val projectRootPath: Path
+  val typeAcquisition: TypeAcquisition
+  val unresolvedImports: SortedReadonlyArray[String]
+  val watchOptions: js.UndefOr[WatchOptions] = js.undefined
 }
 
 object DiscoverTypings {
@@ -31,78 +30,14 @@ object DiscoverTypings {
     projectName: String,
     projectRootPath: Path,
     typeAcquisition: TypeAcquisition,
-    unresolvedImports: SortedReadonlyArray[String]
+    unresolvedImports: SortedReadonlyArray[String],
+    cachePath: String = null,
+    watchOptions: WatchOptions = null
   ): DiscoverTypings = {
     val __obj = js.Dynamic.literal(compilerOptions = compilerOptions.asInstanceOf[js.Any], fileNames = fileNames.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], projectName = projectName.asInstanceOf[js.Any], projectRootPath = projectRootPath.asInstanceOf[js.Any], typeAcquisition = typeAcquisition.asInstanceOf[js.Any], unresolvedImports = unresolvedImports.asInstanceOf[js.Any])
+    if (cachePath != null) __obj.updateDynamic("cachePath")(cachePath.asInstanceOf[js.Any])
+    if (watchOptions != null) __obj.updateDynamic("watchOptions")(watchOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[DiscoverTypings]
   }
-  @scala.inline
-  implicit class DiscoverTypingsOps[Self <: DiscoverTypings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompilerOptions(value: CompilerOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compilerOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFileNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKind(value: discover): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProjectRootPath(value: Path): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectRootPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeAcquisition(value: TypeAcquisition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAcquisition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnresolvedImports(value: SortedReadonlyArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unresolvedImports")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCachePath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cachePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCachePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cachePath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWatchOptions(value: WatchOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("watchOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWatchOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("watchOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

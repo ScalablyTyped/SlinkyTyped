@@ -1,7 +1,7 @@
 package typingsSlinky.node.http2Mod
 
-import typingsSlinky.node.fsMod.promises.FileHandle
 import typingsSlinky.node.httpMod.OutgoingHttpHeaders
+import typingsSlinky.node.promisesMod.FileHandle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

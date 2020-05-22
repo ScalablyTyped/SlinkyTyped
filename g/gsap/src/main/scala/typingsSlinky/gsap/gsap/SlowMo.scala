@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SlowMo extends Ease {
-  def config(linearRatio: Double, power: Double, yoyoMode: Boolean): SlowMo = js.native
+  def config(linearRatio: Double, power: Double, yoyoMode: Boolean): SlowMo
 }
 
 object SlowMo {
@@ -15,19 +14,5 @@ object SlowMo {
     val __obj = js.Dynamic.literal(config = js.Any.fromFunction3(config), getRatio = js.Any.fromFunction1(getRatio))
     __obj.asInstanceOf[SlowMo]
   }
-  @scala.inline
-  implicit class SlowMoOps[Self <: SlowMo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfig(value: (Double, Double, Boolean) => SlowMo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

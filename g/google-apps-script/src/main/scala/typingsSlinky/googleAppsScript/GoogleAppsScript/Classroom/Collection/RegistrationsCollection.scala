@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RegistrationsCollection extends js.Object {
   // Creates a `Registration`, causing Classroom to start sending notifications
   // from the provided `feed` to the destination provided in `cloudPubSubTopic`.
@@ -33,10 +32,10 @@ trait RegistrationsCollection extends js.Object {
   //       not have permission to determine whether or not it exists; or
   //     * the specified `cloudPubsubTopic` cannot be located, or Classroom has
   //       not been granted permission to publish to it.
-  def create(resource: Registration): Registration = js.native
+  def create(resource: Registration): Registration
   // Deletes a `Registration`, causing Classroom to stop sending notifications
   // for that `Registration`.
-  def remove(registrationId: String): Unit = js.native
+  def remove(registrationId: String): Unit
 }
 
 object RegistrationsCollection {
@@ -45,25 +44,5 @@ object RegistrationsCollection {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), remove = js.Any.fromFunction1(remove))
     __obj.asInstanceOf[RegistrationsCollection]
   }
-  @scala.inline
-  implicit class RegistrationsCollectionOps[Self <: RegistrationsCollection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreate(value: Registration => Registration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemove(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

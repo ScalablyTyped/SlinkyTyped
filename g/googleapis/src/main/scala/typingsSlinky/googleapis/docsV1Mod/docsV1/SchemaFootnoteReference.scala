@@ -45,89 +45,22 @@ trait SchemaFootnoteReference extends js.Object {
 
 object SchemaFootnoteReference {
   @scala.inline
-  def apply(): SchemaFootnoteReference = {
+  def apply(
+    footnoteId: String = null,
+    footnoteNumber: String = null,
+    suggestedDeletionIds: js.Array[String] = null,
+    suggestedInsertionIds: js.Array[String] = null,
+    suggestedTextStyleChanges: StringDictionary[SchemaSuggestedTextStyle] = null,
+    textStyle: SchemaTextStyle = null
+  ): SchemaFootnoteReference = {
     val __obj = js.Dynamic.literal()
+    if (footnoteId != null) __obj.updateDynamic("footnoteId")(footnoteId.asInstanceOf[js.Any])
+    if (footnoteNumber != null) __obj.updateDynamic("footnoteNumber")(footnoteNumber.asInstanceOf[js.Any])
+    if (suggestedDeletionIds != null) __obj.updateDynamic("suggestedDeletionIds")(suggestedDeletionIds.asInstanceOf[js.Any])
+    if (suggestedInsertionIds != null) __obj.updateDynamic("suggestedInsertionIds")(suggestedInsertionIds.asInstanceOf[js.Any])
+    if (suggestedTextStyleChanges != null) __obj.updateDynamic("suggestedTextStyleChanges")(suggestedTextStyleChanges.asInstanceOf[js.Any])
+    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFootnoteReference]
   }
-  @scala.inline
-  implicit class SchemaFootnoteReferenceOps[Self <: SchemaFootnoteReference] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFootnoteId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footnoteId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFootnoteId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footnoteId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFootnoteNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footnoteNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFootnoteNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footnoteNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuggestedDeletionIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedDeletionIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuggestedDeletionIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedDeletionIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuggestedInsertionIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedInsertionIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuggestedInsertionIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedInsertionIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuggestedTextStyleChanges(value: StringDictionary[SchemaSuggestedTextStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedTextStyleChanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuggestedTextStyleChanges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedTextStyleChanges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextStyle(value: SchemaTextStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

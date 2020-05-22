@@ -28,6 +28,11 @@ class DracoCompression () extends IDisposable {
   def decodeMeshAsync(data: js.typedarray.ArrayBufferView, attributes: StringDictionary[Double]): js.Promise[VertexData] = js.native
   def decodeMeshAsync(data: js.typedarray.ArrayBuffer, attributes: StringDictionary[Double]): js.Promise[VertexData] = js.native
   /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
+  /**
     * Returns a promise that resolves when ready. Call this manually to ensure draco compression is ready before use.
     * @returns a promise that resolves when ready
     */

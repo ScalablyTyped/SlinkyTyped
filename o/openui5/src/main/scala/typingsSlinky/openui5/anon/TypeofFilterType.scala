@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TypeofFilterType extends js.Object {
   /**
     * Filters which are changed by the application
     */
-  var Application: js.Any = js.native
+  var Application: js.Any
   /**
     * Filters which are set by the different controls
     */
-  var Control: js.Any = js.native
+  var Control: js.Any
 }
 
 object TypeofFilterType {
@@ -22,25 +21,5 @@ object TypeofFilterType {
     val __obj = js.Dynamic.literal(Application = Application.asInstanceOf[js.Any], Control = Control.asInstanceOf[js.Any])
     __obj.asInstanceOf[TypeofFilterType]
   }
-  @scala.inline
-  implicit class TypeofFilterTypeOps[Self <: TypeofFilterType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withControl(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Control")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

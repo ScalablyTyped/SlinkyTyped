@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JQuery extends js.Object {
   /** Dropdown menus that can differentiate between a user trying hover over a dropdown item vs trying to navigate into a submenu's contents.
     * @author Ben Kamens
     * https://github.com/kamens/jQuery-menu-aim
     */
-  def menuAim(options: JQueryMenuAimOptions): JQuery = js.native
+  def menuAim(options: JQueryMenuAimOptions): JQuery
 }
 
 object JQuery {
@@ -19,19 +18,5 @@ object JQuery {
     val __obj = js.Dynamic.literal(menuAim = js.Any.fromFunction1(menuAim))
     __obj.asInstanceOf[JQuery]
   }
-  @scala.inline
-  implicit class JQueryOps[Self <: JQuery] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMenuAim(value: JQueryMenuAimOptions => JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuAim")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

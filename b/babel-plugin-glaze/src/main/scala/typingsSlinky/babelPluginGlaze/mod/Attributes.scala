@@ -4,40 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Attributes extends js.Object {
   var sx: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ThemedStyle */ js.Any
-  ] = js.native
+  ] = js.undefined
 }
 
 object Attributes {
   @scala.inline
-  def apply(): Attributes = {
+  def apply(
+    sx: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ThemedStyle */ js.Any = null
+  ): Attributes = {
     val __obj = js.Dynamic.literal()
+    if (sx != null) __obj.updateDynamic("sx")(sx.asInstanceOf[js.Any])
     __obj.asInstanceOf[Attributes]
   }
-  @scala.inline
-  implicit class AttributesOps[Self <: Attributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSx(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ThemedStyle */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sx")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,175 +5,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BaseQueryOptions extends js.Object {
-  var cacheTime: js.UndefOr[Double] = js.native
+  var cacheTime: js.UndefOr[Double] = js.undefined
   /**
     * Set this to `true` to disable automatic refetching when the query mounts or changes query keys.
     * To refetch the query, use the `refetch` method returned from the `useQuery` instance.
     */
-  var manual: js.UndefOr[Boolean] = js.native
-  var onError: js.UndefOr[js.Function1[/* err */ js.Any, Unit]] = js.native
-  var refetchInterval: js.UndefOr[`false` | Double] = js.native
-  var refetchIntervalInBackground: js.UndefOr[Boolean] = js.native
-  var refetchOnMount: js.UndefOr[Boolean] = js.native
-  var refetchOnWindowFocus: js.UndefOr[Boolean] = js.native
+  var manual: js.UndefOr[Boolean] = js.undefined
+  var onError: js.UndefOr[js.Function1[/* err */ js.Any, Unit]] = js.undefined
+  var refetchInterval: js.UndefOr[`false` | Double] = js.undefined
+  var refetchIntervalInBackground: js.UndefOr[Boolean] = js.undefined
+  var refetchOnMount: js.UndefOr[Boolean] = js.undefined
+  var refetchOnWindowFocus: js.UndefOr[Boolean] = js.undefined
   /**
     * If `false`, failed queries will not retry by default.
     * If `true`, failed queries will retry infinitely.
     * If set to an integer number, e.g. 3, failed queries will retry until the failed query count meets that number.
     */
-  var retry: js.UndefOr[Boolean | Double] = js.native
-  var retryDelay: js.UndefOr[js.Function1[/* retryAttempt */ Double, Double]] = js.native
-  var staleTime: js.UndefOr[Double] = js.native
-  var suspense: js.UndefOr[Boolean] = js.native
+  var retry: js.UndefOr[Boolean | Double] = js.undefined
+  var retryDelay: js.UndefOr[js.Function1[/* retryAttempt */ Double, Double]] = js.undefined
+  var staleTime: js.UndefOr[Double] = js.undefined
+  var suspense: js.UndefOr[Boolean] = js.undefined
 }
 
 object BaseQueryOptions {
   @scala.inline
-  def apply(): BaseQueryOptions = {
+  def apply(
+    cacheTime: js.UndefOr[Double] = js.undefined,
+    manual: js.UndefOr[Boolean] = js.undefined,
+    onError: /* err */ js.Any => Unit = null,
+    refetchInterval: `false` | Double = null,
+    refetchIntervalInBackground: js.UndefOr[Boolean] = js.undefined,
+    refetchOnMount: js.UndefOr[Boolean] = js.undefined,
+    refetchOnWindowFocus: js.UndefOr[Boolean] = js.undefined,
+    retry: Boolean | Double = null,
+    retryDelay: /* retryAttempt */ Double => Double = null,
+    staleTime: js.UndefOr[Double] = js.undefined,
+    suspense: js.UndefOr[Boolean] = js.undefined
+  ): BaseQueryOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cacheTime)) __obj.updateDynamic("cacheTime")(cacheTime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(manual)) __obj.updateDynamic("manual")(manual.get.asInstanceOf[js.Any])
+    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
+    if (refetchInterval != null) __obj.updateDynamic("refetchInterval")(refetchInterval.asInstanceOf[js.Any])
+    if (!js.isUndefined(refetchIntervalInBackground)) __obj.updateDynamic("refetchIntervalInBackground")(refetchIntervalInBackground.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(refetchOnMount)) __obj.updateDynamic("refetchOnMount")(refetchOnMount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(refetchOnWindowFocus)) __obj.updateDynamic("refetchOnWindowFocus")(refetchOnWindowFocus.get.asInstanceOf[js.Any])
+    if (retry != null) __obj.updateDynamic("retry")(retry.asInstanceOf[js.Any])
+    if (retryDelay != null) __obj.updateDynamic("retryDelay")(js.Any.fromFunction1(retryDelay))
+    if (!js.isUndefined(staleTime)) __obj.updateDynamic("staleTime")(staleTime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(suspense)) __obj.updateDynamic("suspense")(suspense.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseQueryOptions]
   }
-  @scala.inline
-  implicit class BaseQueryOptionsOps[Self <: BaseQueryOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCacheTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManual(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manual")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManual: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manual")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnError(value: /* err */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefetchInterval(value: `false` | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refetchInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefetchInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refetchInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefetchIntervalInBackground(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refetchIntervalInBackground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefetchIntervalInBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refetchIntervalInBackground")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefetchOnMount(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refetchOnMount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefetchOnMount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refetchOnMount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefetchOnWindowFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refetchOnWindowFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefetchOnWindowFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refetchOnWindowFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetry(value: Boolean | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retry")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetryDelay(value: /* retryAttempt */ Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryDelay")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRetryDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStaleTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staleTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStaleTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staleTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuspense(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suspense")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuspense: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suspense")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

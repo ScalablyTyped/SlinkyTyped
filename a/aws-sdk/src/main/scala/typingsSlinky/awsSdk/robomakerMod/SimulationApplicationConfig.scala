@@ -22,41 +22,10 @@ trait SimulationApplicationConfig extends js.Object {
 
 object SimulationApplicationConfig {
   @scala.inline
-  def apply(application: Arn, launchConfig: LaunchConfig): SimulationApplicationConfig = {
+  def apply(application: Arn, launchConfig: LaunchConfig, applicationVersion: Version = null): SimulationApplicationConfig = {
     val __obj = js.Dynamic.literal(application = application.asInstanceOf[js.Any], launchConfig = launchConfig.asInstanceOf[js.Any])
+    if (applicationVersion != null) __obj.updateDynamic("applicationVersion")(applicationVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[SimulationApplicationConfig]
   }
-  @scala.inline
-  implicit class SimulationApplicationConfigOps[Self <: SimulationApplicationConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLaunchConfig(value: LaunchConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("launchConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplicationVersion(value: Version): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

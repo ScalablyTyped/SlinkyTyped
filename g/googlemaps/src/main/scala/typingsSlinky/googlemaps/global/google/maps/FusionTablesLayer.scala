@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+// TODO find source documentation
 @JSGlobal("google.maps.FusionTablesLayer")
 @js.native
 class FusionTablesLayer protected ()

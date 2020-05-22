@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Member extends js.Object {
-  var caption: js.UndefOr[String] = js.native
-  var children: js.UndefOr[js.Array[Member]] = js.native
-  var hierarchyName: js.UndefOr[String] = js.native
-  var isLeaf: js.UndefOr[Boolean] = js.native
-  var parentMember: js.UndefOr[String] = js.native
-  var uniqueName: js.UndefOr[String] = js.native
+  var caption: js.UndefOr[String] = js.undefined
+  var children: js.UndefOr[js.Array[Member]] = js.undefined
+  var hierarchyName: js.UndefOr[String] = js.undefined
+  var isLeaf: js.UndefOr[Boolean] = js.undefined
+  var parentMember: js.UndefOr[String] = js.undefined
+  var uniqueName: js.UndefOr[String] = js.undefined
 }
 
 object Member {
   @scala.inline
-  def apply(): Member = {
+  def apply(
+    caption: String = null,
+    children: js.Array[Member] = null,
+    hierarchyName: String = null,
+    isLeaf: js.UndefOr[Boolean] = js.undefined,
+    parentMember: String = null,
+    uniqueName: String = null
+  ): Member = {
     val __obj = js.Dynamic.literal()
+    if (caption != null) __obj.updateDynamic("caption")(caption.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (hierarchyName != null) __obj.updateDynamic("hierarchyName")(hierarchyName.asInstanceOf[js.Any])
+    if (!js.isUndefined(isLeaf)) __obj.updateDynamic("isLeaf")(isLeaf.get.asInstanceOf[js.Any])
+    if (parentMember != null) __obj.updateDynamic("parentMember")(parentMember.asInstanceOf[js.Any])
+    if (uniqueName != null) __obj.updateDynamic("uniqueName")(uniqueName.asInstanceOf[js.Any])
     __obj.asInstanceOf[Member]
   }
-  @scala.inline
-  implicit class MemberOps[Self <: Member] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaption(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildren(value: js.Array[Member]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHierarchyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hierarchyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHierarchyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hierarchyName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsLeaf(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLeaf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsLeaf: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLeaf")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentMember(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentMember")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentMember: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentMember")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUniqueName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUniqueName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

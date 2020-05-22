@@ -4,107 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WaterfallChartSpec extends js.Object {
   /** The line style for the connector lines. */
-  var connectorLineStyle: js.UndefOr[LineStyle] = js.native
+  var connectorLineStyle: js.UndefOr[LineStyle] = js.undefined
   /** The domain data (horizontal axis) for the waterfall chart. */
-  var domain: js.UndefOr[WaterfallChartDomain] = js.native
+  var domain: js.UndefOr[WaterfallChartDomain] = js.undefined
   /** True to interpret the first value as a total. */
-  var firstValueIsTotal: js.UndefOr[Boolean] = js.native
+  var firstValueIsTotal: js.UndefOr[Boolean] = js.undefined
   /** True to hide connector lines between columns. */
-  var hideConnectorLines: js.UndefOr[Boolean] = js.native
+  var hideConnectorLines: js.UndefOr[Boolean] = js.undefined
   /** The data this waterfall chart is visualizing. */
-  var series: js.UndefOr[js.Array[WaterfallChartSeries]] = js.native
+  var series: js.UndefOr[js.Array[WaterfallChartSeries]] = js.undefined
   /** The stacked type. */
-  var stackedType: js.UndefOr[String] = js.native
+  var stackedType: js.UndefOr[String] = js.undefined
 }
 
 object WaterfallChartSpec {
   @scala.inline
-  def apply(): WaterfallChartSpec = {
+  def apply(
+    connectorLineStyle: LineStyle = null,
+    domain: WaterfallChartDomain = null,
+    firstValueIsTotal: js.UndefOr[Boolean] = js.undefined,
+    hideConnectorLines: js.UndefOr[Boolean] = js.undefined,
+    series: js.Array[WaterfallChartSeries] = null,
+    stackedType: String = null
+  ): WaterfallChartSpec = {
     val __obj = js.Dynamic.literal()
+    if (connectorLineStyle != null) __obj.updateDynamic("connectorLineStyle")(connectorLineStyle.asInstanceOf[js.Any])
+    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
+    if (!js.isUndefined(firstValueIsTotal)) __obj.updateDynamic("firstValueIsTotal")(firstValueIsTotal.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideConnectorLines)) __obj.updateDynamic("hideConnectorLines")(hideConnectorLines.get.asInstanceOf[js.Any])
+    if (series != null) __obj.updateDynamic("series")(series.asInstanceOf[js.Any])
+    if (stackedType != null) __obj.updateDynamic("stackedType")(stackedType.asInstanceOf[js.Any])
     __obj.asInstanceOf[WaterfallChartSpec]
   }
-  @scala.inline
-  implicit class WaterfallChartSpecOps[Self <: WaterfallChartSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConnectorLineStyle(value: LineStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorLineStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectorLineStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorLineStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomain(value: WaterfallChartDomain): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstValueIsTotal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstValueIsTotal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstValueIsTotal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstValueIsTotal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideConnectorLines(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideConnectorLines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideConnectorLines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideConnectorLines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeries(value: js.Array[WaterfallChartSeries]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackedType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackedType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackedType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackedType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

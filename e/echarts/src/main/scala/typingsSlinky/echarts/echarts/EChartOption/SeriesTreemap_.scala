@@ -74,7 +74,6 @@ import scala.scalajs.js.annotation._
   *
   * @see https://echarts.apache.org/en/option.html#series-treemap
   */
-@js.native
 trait SeriesTreemap_ extends js.Object {
   /**
     * Delay before updating the first animation, which supports callback
@@ -91,7 +90,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.animationDelay
     */
-  var animationDelay: js.UndefOr[js.Function | Double] = js.native
+  var animationDelay: js.UndefOr[js.Function | Double] = js.undefined
   /**
     * Duration of the first animation, which supports callback function
     * for different data to have different animation effect:
@@ -103,7 +102,7 @@ trait SeriesTreemap_ extends js.Object {
     * 1500
     * @see https://echarts.apache.org/en/option.html#series-treemap.animationDuration
     */
-  var animationDuration: js.UndefOr[js.Function | Double] = js.native
+  var animationDuration: js.UndefOr[js.Function | Double] = js.undefined
   /**
     * Easing method used for the first animation.
     * Varied easing effects can be found at
@@ -115,7 +114,7 @@ trait SeriesTreemap_ extends js.Object {
     * "quinticInOut"
     * @see https://echarts.apache.org/en/option.html#series-treemap.animationEasing
     */
-  var animationEasing: js.UndefOr[String] = js.native
+  var animationEasing: js.UndefOr[String] = js.undefined
   /**
     * Distance between treemap component and the bottom side of the
     * container.
@@ -130,14 +129,14 @@ trait SeriesTreemap_ extends js.Object {
     * "auto"
     * @see https://echarts.apache.org/en/option.html#series-treemap.bottom
     */
-  var bottom: js.UndefOr[Double | String] = js.native
+  var bottom: js.UndefOr[Double | String] = js.undefined
   /**
     * breadcrumb, showing the path of the current node.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.breadcrumb
     */
-  var breadcrumb: js.UndefOr[Bottom] = js.native
+  var breadcrumb: js.UndefOr[Bottom] = js.undefined
   /**
     * Children will not be shown when area size of a node is smaller
     * than this value (unit: px square).
@@ -170,7 +169,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.childrenVisibleMin
     */
-  var childrenVisibleMin: js.UndefOr[Double] = js.native
+  var childrenVisibleMin: js.UndefOr[Double] = js.undefined
   /**
     * It indicates the range of tranparent rate (color alpha) of the
     * series. The range of values is 0 ~ 1.
@@ -200,7 +199,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.colorAlpha
     */
-  var colorAlpha: js.UndefOr[js.Array[_]] = js.native
+  var colorAlpha: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * Specify the rule according to which each node obtain color from
     * [color list](https://echarts.apache.org/en/option.html#series-treemap.levels.color)
@@ -266,7 +265,7 @@ trait SeriesTreemap_ extends js.Object {
     * "index"
     * @see https://echarts.apache.org/en/option.html#series-treemap.colorMappingBy
     */
-  var colorMappingBy: js.UndefOr[String] = js.native
+  var colorMappingBy: js.UndefOr[String] = js.undefined
   /**
     * It indicates the range of saturation (color alpha) of the series.
     * The range of values is 0 ~ 1.
@@ -296,7 +295,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.colorSaturation
     */
-  var colorSaturation: js.UndefOr[Double] = js.native
+  var colorSaturation: js.UndefOr[Double] = js.undefined
   /**
     * the the data format of
     * [series-treemap.data](https://echarts.apache.org/en/option.html#series-treemap.data)
@@ -307,7 +306,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.data
     */
-  var data: js.UndefOr[js.Array[DataObject]] = js.native
+  var data: js.UndefOr[js.Array[DataObject]] = js.undefined
   /**
     * Marker when the node is able to be drilled down.
     *
@@ -316,11 +315,11 @@ trait SeriesTreemap_ extends js.Object {
     * '▶'
     * @see https://echarts.apache.org/en/option.html#series-treemap.drillDownIcon
     */
-  var drillDownIcon: js.UndefOr[String] = js.native
+  var drillDownIcon: js.UndefOr[String] = js.undefined
   /**
     * @see https://echarts.apache.org/en/option.html#series-treemap.emphasis
     */
-  var emphasis: js.UndefOr[UpperLabel] = js.native
+  var emphasis: js.UndefOr[UpperLabel] = js.undefined
   /**
     * Height of treemap component.
     *
@@ -329,7 +328,7 @@ trait SeriesTreemap_ extends js.Object {
     * 80%
     * @see https://echarts.apache.org/en/option.html#series-treemap.height
     */
-  var height: js.UndefOr[Double | String] = js.native
+  var height: js.UndefOr[Double | String] = js.undefined
   /**
     * Component ID, not specified by default.
     * If specified, it can be used to refer the component in option
@@ -338,7 +337,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.id
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     *
     * > Tps: In treemap, `itemStyle` attribute could appear in more
@@ -360,7 +359,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.itemStyle
     */
-  var itemStyle: js.UndefOr[BorderColorSaturation] = js.native
+  var itemStyle: js.UndefOr[BorderColorSaturation] = js.undefined
   /**
     * `label` decribes the style of the label in each node.
     *
@@ -383,7 +382,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.label
     */
-  var label: js.UndefOr[Ellipsis] = js.native
+  var label: js.UndefOr[Ellipsis] = js.undefined
   /**
     * When `leafDepth` is set, the feature "drill down" is enabled,
     * which means when clicking a tree node, this node will be set
@@ -403,7 +402,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.leafDepth
     */
-  var leafDepth: js.UndefOr[Double] = js.native
+  var leafDepth: js.UndefOr[Double] = js.undefined
   /**
     * Distance between treemap component and the left side of the container.
     *
@@ -419,7 +418,7 @@ trait SeriesTreemap_ extends js.Object {
     * "center"
     * @see https://echarts.apache.org/en/option.html#series-treemap.left
     */
-  var left: js.UndefOr[Double | String] = js.native
+  var left: js.UndefOr[Double | String] = js.undefined
   /**
     * **Multiple Levels Configuration**
     *
@@ -516,7 +515,7 @@ trait SeriesTreemap_ extends js.Object {
     * []
     * @see https://echarts.apache.org/en/option.html#series-treemap.levels
     */
-  var levels: js.UndefOr[ChildrenVisibleMin] = js.native
+  var levels: js.UndefOr[ChildrenVisibleMin] = js.undefined
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -527,7 +526,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.name
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * The behaviour when clicking a node. Optional values are:
     *
@@ -542,7 +541,7 @@ trait SeriesTreemap_ extends js.Object {
     * "zoomToNode"
     * @see https://echarts.apache.org/en/option.html#series-treemap.nodeClick
     */
-  var nodeClick: js.UndefOr[Boolean | String] = js.native
+  var nodeClick: js.UndefOr[Boolean | String] = js.undefined
   /**
     * Distance between treemap component and the right side of the
     * container.
@@ -557,7 +556,7 @@ trait SeriesTreemap_ extends js.Object {
     * "auto"
     * @see https://echarts.apache.org/en/option.html#series-treemap.right
     */
-  var right: js.UndefOr[Double | String] = js.native
+  var right: js.UndefOr[Double | String] = js.undefined
   /**
     * Whether to enable dragging roam (move and zoom).
     * Optional values are:
@@ -572,7 +571,7 @@ trait SeriesTreemap_ extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-treemap.roam
     */
-  var roam: js.UndefOr[Boolean | String] = js.native
+  var roam: js.UndefOr[Boolean | String] = js.undefined
   /**
     * Whether to ignore mouse events.
     * Default value is false, for triggering and responding to mouse
@@ -581,7 +580,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.silent
     */
-  var silent: js.UndefOr[Link] = js.native
+  var silent: js.UndefOr[Link] = js.undefined
   /**
     * The expected square ratio.
     * Layout would approach the ratio as close as possible.
@@ -592,14 +591,14 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.squareRatio
     */
-  var squareRatio: js.UndefOr[Double] = js.native
+  var squareRatio: js.UndefOr[Double] = js.undefined
   /**
     * tooltip settings in this series.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.tooltip
     */
-  var tooltip: js.UndefOr[ExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.undefined
   /**
     * Distance between treemap component and the top side of the container.
     *
@@ -615,13 +614,13 @@ trait SeriesTreemap_ extends js.Object {
     * "middle"
     * @see https://echarts.apache.org/en/option.html#series-treemap.top
     */
-  var top: js.UndefOr[Double | String] = js.native
+  var top: js.UndefOr[Double | String] = js.undefined
   /**
     * @default
     * "treemap"
     * @see https://echarts.apache.org/en/option.html#series-treemap.type
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
   /**
     * `upperLabel` is used to specify whether show label when the node
     * has children. When
@@ -667,7 +666,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.upperLabel
     */
-  var upperLabel: js.UndefOr[TextShadowOffsetX] = js.native
+  var upperLabel: js.UndefOr[TextShadowOffsetX] = js.undefined
   /**
     * A node will not be shown when its area size is smaller than this
     * value (unit: px square).
@@ -703,7 +702,7 @@ trait SeriesTreemap_ extends js.Object {
     * 10
     * @see https://echarts.apache.org/en/option.html#series-treemap.visibleMin
     */
-  var visibleMin: js.UndefOr[Double] = js.native
+  var visibleMin: js.UndefOr[Double] = js.undefined
   /**
     * `treemap` is able to map any dimensions of data to visual.
     *
@@ -737,7 +736,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.visualDimension
     */
-  var visualDimension: js.UndefOr[Double] = js.native
+  var visualDimension: js.UndefOr[Double] = js.undefined
   /**
     * The maximal value of current level.
     * Auto-statistics by default.
@@ -750,7 +749,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.visualMax
     */
-  var visualMax: js.UndefOr[Double] = js.native
+  var visualMax: js.UndefOr[Double] = js.undefined
   /**
     * The minimal value of current level.
     * Auto-statistics by default.
@@ -763,7 +762,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.visualMin
     */
-  var visualMin: js.UndefOr[Double] = js.native
+  var visualMin: js.UndefOr[Double] = js.undefined
   /**
     * Width of treemap component.
     *
@@ -772,7 +771,7 @@ trait SeriesTreemap_ extends js.Object {
     * 80%
     * @see https://echarts.apache.org/en/option.html#series-treemap.width
     */
-  var width: js.UndefOr[Double | String] = js.native
+  var width: js.UndefOr[Double | String] = js.undefined
   /**
     * `z` value of all graghical elements in , which controls order
     * of drawing graphical components.
@@ -787,7 +786,7 @@ trait SeriesTreemap_ extends js.Object {
     * 2
     * @see https://echarts.apache.org/en/option.html#series-treemap.z
     */
-  var z: js.UndefOr[Double] = js.native
+  var z: js.UndefOr[Double] = js.undefined
   /**
     * `zlevel` value of all graghical elements in .
     *
@@ -805,7 +804,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.zlevel
     */
-  var zlevel: js.UndefOr[Double] = js.native
+  var zlevel: js.UndefOr[Double] = js.undefined
   /**
     * The treemap will be auto zoomed to a appropriate ratio when a
     * node is clicked (when
@@ -818,466 +817,89 @@ trait SeriesTreemap_ extends js.Object {
     * 0.32*0.32
     * @see https://echarts.apache.org/en/option.html#series-treemap.zoomToNodeRatio
     */
-  var zoomToNodeRatio: js.UndefOr[Double] = js.native
+  var zoomToNodeRatio: js.UndefOr[Double] = js.undefined
 }
 
 object SeriesTreemap_ {
   @scala.inline
-  def apply(): SeriesTreemap_ = {
+  def apply(
+    animationDelay: js.Function | Double = null,
+    animationDuration: js.Function | Double = null,
+    animationEasing: String = null,
+    bottom: Double | String = null,
+    breadcrumb: Bottom = null,
+    childrenVisibleMin: js.UndefOr[Double] = js.undefined,
+    colorAlpha: js.Array[_] = null,
+    colorMappingBy: String = null,
+    colorSaturation: js.UndefOr[Double] = js.undefined,
+    data: js.Array[DataObject] = null,
+    drillDownIcon: String = null,
+    emphasis: UpperLabel = null,
+    height: Double | String = null,
+    id: String = null,
+    itemStyle: BorderColorSaturation = null,
+    label: Ellipsis = null,
+    leafDepth: js.UndefOr[Double] = js.undefined,
+    left: Double | String = null,
+    levels: ChildrenVisibleMin = null,
+    name: String = null,
+    nodeClick: Boolean | String = null,
+    right: Double | String = null,
+    roam: Boolean | String = null,
+    silent: Link = null,
+    squareRatio: js.UndefOr[Double] = js.undefined,
+    tooltip: ExtraCssText = null,
+    top: Double | String = null,
+    `type`: String = null,
+    upperLabel: TextShadowOffsetX = null,
+    visibleMin: js.UndefOr[Double] = js.undefined,
+    visualDimension: js.UndefOr[Double] = js.undefined,
+    visualMax: js.UndefOr[Double] = js.undefined,
+    visualMin: js.UndefOr[Double] = js.undefined,
+    width: Double | String = null,
+    z: js.UndefOr[Double] = js.undefined,
+    zlevel: js.UndefOr[Double] = js.undefined,
+    zoomToNodeRatio: js.UndefOr[Double] = js.undefined
+  ): SeriesTreemap_ = {
     val __obj = js.Dynamic.literal()
+    if (animationDelay != null) __obj.updateDynamic("animationDelay")(animationDelay.asInstanceOf[js.Any])
+    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
+    if (animationEasing != null) __obj.updateDynamic("animationEasing")(animationEasing.asInstanceOf[js.Any])
+    if (bottom != null) __obj.updateDynamic("bottom")(bottom.asInstanceOf[js.Any])
+    if (breadcrumb != null) __obj.updateDynamic("breadcrumb")(breadcrumb.asInstanceOf[js.Any])
+    if (!js.isUndefined(childrenVisibleMin)) __obj.updateDynamic("childrenVisibleMin")(childrenVisibleMin.get.asInstanceOf[js.Any])
+    if (colorAlpha != null) __obj.updateDynamic("colorAlpha")(colorAlpha.asInstanceOf[js.Any])
+    if (colorMappingBy != null) __obj.updateDynamic("colorMappingBy")(colorMappingBy.asInstanceOf[js.Any])
+    if (!js.isUndefined(colorSaturation)) __obj.updateDynamic("colorSaturation")(colorSaturation.get.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (drillDownIcon != null) __obj.updateDynamic("drillDownIcon")(drillDownIcon.asInstanceOf[js.Any])
+    if (emphasis != null) __obj.updateDynamic("emphasis")(emphasis.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (!js.isUndefined(leafDepth)) __obj.updateDynamic("leafDepth")(leafDepth.get.asInstanceOf[js.Any])
+    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
+    if (levels != null) __obj.updateDynamic("levels")(levels.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (nodeClick != null) __obj.updateDynamic("nodeClick")(nodeClick.asInstanceOf[js.Any])
+    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
+    if (roam != null) __obj.updateDynamic("roam")(roam.asInstanceOf[js.Any])
+    if (silent != null) __obj.updateDynamic("silent")(silent.asInstanceOf[js.Any])
+    if (!js.isUndefined(squareRatio)) __obj.updateDynamic("squareRatio")(squareRatio.get.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    if (top != null) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (upperLabel != null) __obj.updateDynamic("upperLabel")(upperLabel.asInstanceOf[js.Any])
+    if (!js.isUndefined(visibleMin)) __obj.updateDynamic("visibleMin")(visibleMin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visualDimension)) __obj.updateDynamic("visualDimension")(visualDimension.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visualMax)) __obj.updateDynamic("visualMax")(visualMax.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visualMin)) __obj.updateDynamic("visualMin")(visualMin.get.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
+    if (!js.isUndefined(z)) __obj.updateDynamic("z")(z.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zlevel)) __obj.updateDynamic("zlevel")(zlevel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zoomToNodeRatio)) __obj.updateDynamic("zoomToNodeRatio")(zoomToNodeRatio.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesTreemap_]
   }
-  @scala.inline
-  implicit class SeriesTreemap_Ops[Self <: SeriesTreemap_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimationDelay(value: js.Function | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationDuration(value: js.Function | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationEasing(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationEasing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBottom(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBreadcrumb(value: Bottom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breadcrumb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBreadcrumb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breadcrumb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildrenVisibleMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childrenVisibleMin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildrenVisibleMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childrenVisibleMin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorAlpha(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorAlpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorAlpha: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorAlpha")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorMappingBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorMappingBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorMappingBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorMappingBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorSaturation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorSaturation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorSaturation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorSaturation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Array[DataObject]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrillDownIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drillDownIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDrillDownIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drillDownIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmphasis(value: UpperLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmphasis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemStyle(value: BorderColorSaturation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: Ellipsis): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeafDepth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leafDepth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeafDepth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leafDepth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeft(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevels(value: ChildrenVisibleMin): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("levels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("levels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeClick(value: Boolean | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoam(value: Boolean | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roam")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoam: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roam")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSilent(value: Link): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSilent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSquareRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("squareRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSquareRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("squareRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: ExtraCssText): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTop(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpperLabel(value: TextShadowOffsetX): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upperLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpperLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upperLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibleMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleMin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibleMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleMin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisualDimension(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visualDimension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisualDimension: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visualDimension")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisualMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visualMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisualMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visualMax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisualMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visualMin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisualMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visualMin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZ(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZlevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZlevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoomToNodeRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomToNodeRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoomToNodeRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomToNodeRatio")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

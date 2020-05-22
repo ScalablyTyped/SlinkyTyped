@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait history extends js.Object {
-  def push(view: String, url: String, value: js.Any): Unit = js.native
-  def track(view: String, url: String): Unit = js.native
+  def push(view: String, url: String, value: js.Any): Unit
+  def track(view: String, url: String): Unit
 }
 
 object history {
@@ -16,25 +15,5 @@ object history {
     val __obj = js.Dynamic.literal(push = js.Any.fromFunction3(push), track = js.Any.fromFunction2(track))
     __obj.asInstanceOf[history]
   }
-  @scala.inline
-  implicit class historyOps[Self <: history] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPush(value: (String, String, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("push")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withTrack(value: (String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

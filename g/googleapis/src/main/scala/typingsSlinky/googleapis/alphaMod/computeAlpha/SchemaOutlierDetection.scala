@@ -87,149 +87,32 @@ trait SchemaOutlierDetection extends js.Object {
 
 object SchemaOutlierDetection {
   @scala.inline
-  def apply(): SchemaOutlierDetection = {
+  def apply(
+    baseEjectionTime: SchemaDuration = null,
+    consecutiveErrors: js.UndefOr[Double] = js.undefined,
+    consecutiveGatewayFailure: js.UndefOr[Double] = js.undefined,
+    enforcingConsecutiveErrors: js.UndefOr[Double] = js.undefined,
+    enforcingConsecutiveGatewayFailure: js.UndefOr[Double] = js.undefined,
+    enforcingSuccessRate: js.UndefOr[Double] = js.undefined,
+    interval: SchemaDuration = null,
+    maxEjectionPercent: js.UndefOr[Double] = js.undefined,
+    successRateMinimumHosts: js.UndefOr[Double] = js.undefined,
+    successRateRequestVolume: js.UndefOr[Double] = js.undefined,
+    successRateStdevFactor: js.UndefOr[Double] = js.undefined
+  ): SchemaOutlierDetection = {
     val __obj = js.Dynamic.literal()
+    if (baseEjectionTime != null) __obj.updateDynamic("baseEjectionTime")(baseEjectionTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(consecutiveErrors)) __obj.updateDynamic("consecutiveErrors")(consecutiveErrors.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(consecutiveGatewayFailure)) __obj.updateDynamic("consecutiveGatewayFailure")(consecutiveGatewayFailure.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enforcingConsecutiveErrors)) __obj.updateDynamic("enforcingConsecutiveErrors")(enforcingConsecutiveErrors.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enforcingConsecutiveGatewayFailure)) __obj.updateDynamic("enforcingConsecutiveGatewayFailure")(enforcingConsecutiveGatewayFailure.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enforcingSuccessRate)) __obj.updateDynamic("enforcingSuccessRate")(enforcingSuccessRate.get.asInstanceOf[js.Any])
+    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxEjectionPercent)) __obj.updateDynamic("maxEjectionPercent")(maxEjectionPercent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(successRateMinimumHosts)) __obj.updateDynamic("successRateMinimumHosts")(successRateMinimumHosts.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(successRateRequestVolume)) __obj.updateDynamic("successRateRequestVolume")(successRateRequestVolume.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(successRateStdevFactor)) __obj.updateDynamic("successRateStdevFactor")(successRateStdevFactor.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOutlierDetection]
   }
-  @scala.inline
-  implicit class SchemaOutlierDetectionOps[Self <: SchemaOutlierDetection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBaseEjectionTime(value: SchemaDuration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseEjectionTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseEjectionTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseEjectionTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConsecutiveErrors(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consecutiveErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsecutiveErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consecutiveErrors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConsecutiveGatewayFailure(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consecutiveGatewayFailure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsecutiveGatewayFailure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consecutiveGatewayFailure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnforcingConsecutiveErrors(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enforcingConsecutiveErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnforcingConsecutiveErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enforcingConsecutiveErrors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnforcingConsecutiveGatewayFailure(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enforcingConsecutiveGatewayFailure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnforcingConsecutiveGatewayFailure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enforcingConsecutiveGatewayFailure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnforcingSuccessRate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enforcingSuccessRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnforcingSuccessRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enforcingSuccessRate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterval(value: SchemaDuration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxEjectionPercent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxEjectionPercent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxEjectionPercent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxEjectionPercent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccessRateMinimumHosts(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successRateMinimumHosts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuccessRateMinimumHosts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successRateMinimumHosts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccessRateRequestVolume(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successRateRequestVolume")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuccessRateRequestVolume: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successRateRequestVolume")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccessRateStdevFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successRateStdevFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuccessRateStdevFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successRateStdevFactor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

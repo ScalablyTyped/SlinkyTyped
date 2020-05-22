@@ -1,94 +1,52 @@
 package typingsSlinky.googleCloudCommon.serviceMod
 
+import typingsSlinky.googleAuthLibrary.credentialsMod.CredentialBody
 import typingsSlinky.googleAuthLibrary.googleauthMod.GoogleAuthOptions
+import typingsSlinky.googleAuthLibrary.jwtclientMod.JWTOptions
+import typingsSlinky.googleAuthLibrary.oauth2clientMod.OAuth2ClientOptions
+import typingsSlinky.googleAuthLibrary.refreshclientMod.UserRefreshClientOptions
 import typingsSlinky.googleCloudCommon.serviceObjectMod.Interceptor
 import typingsSlinky.std.PromiseConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ServiceOptions extends GoogleAuthOptions {
-  var email: js.UndefOr[String] = js.native
-  var interceptors_ : js.UndefOr[js.Array[Interceptor]] = js.native
-  var promise: js.UndefOr[PromiseConstructor] = js.native
-  var timeout: js.UndefOr[Double] = js.native
-  var token: js.UndefOr[String] = js.native
+  var email: js.UndefOr[String] = js.undefined
+  var interceptors_ : js.UndefOr[js.Array[Interceptor]] = js.undefined
+  var promise: js.UndefOr[PromiseConstructor] = js.undefined
+  var timeout: js.UndefOr[Double] = js.undefined
+  var token: js.UndefOr[String] = js.undefined
 }
 
 object ServiceOptions {
   @scala.inline
-  def apply(): ServiceOptions = {
+  def apply(
+    clientOptions: JWTOptions | OAuth2ClientOptions | UserRefreshClientOptions = null,
+    credentials: CredentialBody = null,
+    email: String = null,
+    interceptors_ : js.Array[Interceptor] = null,
+    keyFile: String = null,
+    keyFilename: String = null,
+    projectId: String = null,
+    promise: PromiseConstructor = null,
+    scopes: String | js.Array[String] = null,
+    timeout: js.UndefOr[Double] = js.undefined,
+    token: String = null
+  ): ServiceOptions = {
     val __obj = js.Dynamic.literal()
+    if (clientOptions != null) __obj.updateDynamic("clientOptions")(clientOptions.asInstanceOf[js.Any])
+    if (credentials != null) __obj.updateDynamic("credentials")(credentials.asInstanceOf[js.Any])
+    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
+    if (interceptors_ != null) __obj.updateDynamic("interceptors_")(interceptors_.asInstanceOf[js.Any])
+    if (keyFile != null) __obj.updateDynamic("keyFile")(keyFile.asInstanceOf[js.Any])
+    if (keyFilename != null) __obj.updateDynamic("keyFilename")(keyFilename.asInstanceOf[js.Any])
+    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
+    if (promise != null) __obj.updateDynamic("promise")(promise.asInstanceOf[js.Any])
+    if (scopes != null) __obj.updateDynamic("scopes")(scopes.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
+    if (token != null) __obj.updateDynamic("token")(token.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceOptions]
   }
-  @scala.inline
-  implicit class ServiceOptionsOps[Self <: ServiceOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterceptors_(value: js.Array[Interceptor]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interceptors_")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterceptors_ : Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interceptors_")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPromise(value: PromiseConstructor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promise")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPromise: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promise")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

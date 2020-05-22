@@ -27,77 +27,20 @@ trait SendVoiceMessageRequest extends js.Object {
 
 object SendVoiceMessageRequest {
   @scala.inline
-  def apply(): SendVoiceMessageRequest = {
+  def apply(
+    CallerId: String = null,
+    ConfigurationSetName: WordCharactersWithDelimiters = null,
+    Content: VoiceMessageContent = null,
+    DestinationPhoneNumber: NonEmptyString = null,
+    OriginationPhoneNumber: NonEmptyString = null
+  ): SendVoiceMessageRequest = {
     val __obj = js.Dynamic.literal()
+    if (CallerId != null) __obj.updateDynamic("CallerId")(CallerId.asInstanceOf[js.Any])
+    if (ConfigurationSetName != null) __obj.updateDynamic("ConfigurationSetName")(ConfigurationSetName.asInstanceOf[js.Any])
+    if (Content != null) __obj.updateDynamic("Content")(Content.asInstanceOf[js.Any])
+    if (DestinationPhoneNumber != null) __obj.updateDynamic("DestinationPhoneNumber")(DestinationPhoneNumber.asInstanceOf[js.Any])
+    if (OriginationPhoneNumber != null) __obj.updateDynamic("OriginationPhoneNumber")(OriginationPhoneNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendVoiceMessageRequest]
   }
-  @scala.inline
-  implicit class SendVoiceMessageRequestOps[Self <: SendVoiceMessageRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCallerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CallerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CallerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfigurationSetName(value: WordCharactersWithDelimiters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationSetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigurationSetName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationSetName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContent(value: VoiceMessageContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestinationPhoneNumber(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationPhoneNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationPhoneNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationPhoneNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginationPhoneNumber(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OriginationPhoneNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginationPhoneNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OriginationPhoneNumber")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

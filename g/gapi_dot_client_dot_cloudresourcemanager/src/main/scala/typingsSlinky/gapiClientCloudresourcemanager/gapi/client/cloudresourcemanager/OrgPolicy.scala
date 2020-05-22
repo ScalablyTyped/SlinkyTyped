@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OrgPolicy extends js.Object {
   /** For boolean `Constraints`, whether to enforce the `Constraint` or not. */
-  var booleanPolicy: js.UndefOr[BooleanPolicy] = js.native
+  var booleanPolicy: js.UndefOr[BooleanPolicy] = js.undefined
   /**
     * The name of the `Constraint` the `Policy` is configuring, for example,
     * `constraints/serviceuser.services`.
     *
     * Immutable after creation.
     */
-  var constraint: js.UndefOr[String] = js.native
+  var constraint: js.UndefOr[String] = js.undefined
   /**
     * An opaque tag indicating the current version of the `Policy`, used for
     * concurrency control.
@@ -32,122 +31,45 @@ trait OrgPolicy extends js.Object {
     * `SetOrgPolicy` request will result in an unconditional write of the
     * `Policy`.
     */
-  var etag: js.UndefOr[String] = js.native
+  var etag: js.UndefOr[String] = js.undefined
   /** List of values either allowed or disallowed. */
-  var listPolicy: js.UndefOr[ListPolicy] = js.native
+  var listPolicy: js.UndefOr[ListPolicy] = js.undefined
   /**
     * Restores the default behavior of the constraint; independent of
     * `Constraint` type.
     */
-  var restoreDefault: js.UndefOr[js.Any] = js.native
+  var restoreDefault: js.UndefOr[js.Any] = js.undefined
   /**
     * The time stamp the `Policy` was previously updated. This is set by the
     * server, not specified by the caller, and represents the last time a call to
     * `SetOrgPolicy` was made for that `Policy`. Any value set by the client will
     * be ignored.
     */
-  var updateTime: js.UndefOr[String] = js.native
+  var updateTime: js.UndefOr[String] = js.undefined
   /** Version of the `Policy`. Default version is 0; */
-  var version: js.UndefOr[Double] = js.native
+  var version: js.UndefOr[Double] = js.undefined
 }
 
 object OrgPolicy {
   @scala.inline
-  def apply(): OrgPolicy = {
+  def apply(
+    booleanPolicy: BooleanPolicy = null,
+    constraint: String = null,
+    etag: String = null,
+    listPolicy: ListPolicy = null,
+    restoreDefault: js.Any = null,
+    updateTime: String = null,
+    version: js.UndefOr[Double] = js.undefined
+  ): OrgPolicy = {
     val __obj = js.Dynamic.literal()
+    if (booleanPolicy != null) __obj.updateDynamic("booleanPolicy")(booleanPolicy.asInstanceOf[js.Any])
+    if (constraint != null) __obj.updateDynamic("constraint")(constraint.asInstanceOf[js.Any])
+    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
+    if (listPolicy != null) __obj.updateDynamic("listPolicy")(listPolicy.asInstanceOf[js.Any])
+    if (restoreDefault != null) __obj.updateDynamic("restoreDefault")(restoreDefault.asInstanceOf[js.Any])
+    if (updateTime != null) __obj.updateDynamic("updateTime")(updateTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(version)) __obj.updateDynamic("version")(version.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrgPolicy]
   }
-  @scala.inline
-  implicit class OrgPolicyOps[Self <: OrgPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBooleanPolicy(value: BooleanPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("booleanPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBooleanPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("booleanPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConstraint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constraint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstraint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constraint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEtag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListPolicy(value: ListPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestoreDefault(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restoreDefault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestoreDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restoreDefault")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

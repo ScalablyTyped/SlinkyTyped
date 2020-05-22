@@ -18,41 +18,11 @@ trait Threshold extends js.Object {
 
 object Threshold {
   @scala.inline
-  def apply(): Threshold = {
+  def apply(Comparison: Comparison = null, ThresholdValue: js.UndefOr[ThresholdValue] = js.undefined): Threshold = {
     val __obj = js.Dynamic.literal()
+    if (Comparison != null) __obj.updateDynamic("Comparison")(Comparison.asInstanceOf[js.Any])
+    if (!js.isUndefined(ThresholdValue)) __obj.updateDynamic("ThresholdValue")(ThresholdValue.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Threshold]
   }
-  @scala.inline
-  implicit class ThresholdOps[Self <: Threshold] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComparison(value: Comparison): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Comparison")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComparison: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Comparison")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThresholdValue(value: ThresholdValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThresholdValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThresholdValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThresholdValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

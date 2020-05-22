@@ -6,99 +6,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WorksheetViewFrozen extends js.Object {
   /**
   	 * Where a number of rows and columns to the top and left are frozen in place.
   	 * Only the bottom left section will scroll
   	 */
-  var state: frozen = js.native
+  var state: frozen
   /**
   	 * Presentation style
   	 */
-  var style: js.UndefOr[pageBreakPreview] = js.native
+  var style: js.UndefOr[pageBreakPreview] = js.undefined
   /**
   	 * Which cell will be top-left in the bottom-right pane. Note: cannot be a frozen cell.
   	 * Defaults to first unfrozen cell
   	 */
-  var topLeftCell: js.UndefOr[String] = js.native
+  var topLeftCell: js.UndefOr[String] = js.undefined
   /**
   	 * How many columns to freeze. To freeze rows only, set this to 0 or undefined
   	 */
-  var xSplit: js.UndefOr[Double] = js.native
+  var xSplit: js.UndefOr[Double] = js.undefined
   /**
   	 * How many rows to freeze. To freeze columns only, set this to 0 or undefined
   	 */
-  var ySplit: js.UndefOr[Double] = js.native
+  var ySplit: js.UndefOr[Double] = js.undefined
 }
 
 object WorksheetViewFrozen {
   @scala.inline
-  def apply(state: frozen): WorksheetViewFrozen = {
+  def apply(
+    state: frozen,
+    style: pageBreakPreview = null,
+    topLeftCell: String = null,
+    xSplit: js.UndefOr[Double] = js.undefined,
+    ySplit: js.UndefOr[Double] = js.undefined
+  ): WorksheetViewFrozen = {
     val __obj = js.Dynamic.literal(state = state.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (topLeftCell != null) __obj.updateDynamic("topLeftCell")(topLeftCell.asInstanceOf[js.Any])
+    if (!js.isUndefined(xSplit)) __obj.updateDynamic("xSplit")(xSplit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ySplit)) __obj.updateDynamic("ySplit")(ySplit.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorksheetViewFrozen]
   }
-  @scala.inline
-  implicit class WorksheetViewFrozenOps[Self <: WorksheetViewFrozen] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withState(value: frozen): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStyle(value: pageBreakPreview): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopLeftCell(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topLeftCell")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopLeftCell: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topLeftCell")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXSplit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xSplit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXSplit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xSplit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYSplit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ySplit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYSplit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ySplit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

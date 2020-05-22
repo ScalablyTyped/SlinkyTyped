@@ -4,283 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PolylineMeasureOptions extends js.Object {
-  var backgroundColor: js.UndefOr[String] = js.native
-  var clearControlClasses: js.UndefOr[js.Array[_]] = js.native
-  var clearControlLabel: js.UndefOr[String] = js.native
-  var clearControlTitle: js.UndefOr[String] = js.native
-  var clearMeasurementsOnStop: js.UndefOr[Boolean] = js.native
-  var currentCircle: js.UndefOr[js.Any] = js.native
-  var cursor: js.UndefOr[String] = js.native
-  var endCircle: js.UndefOr[js.Any] = js.native
-  var fixedLine: js.UndefOr[js.Any] = js.native
-  var intermedCircle: js.UndefOr[js.Any] = js.native
-  var measureControlClasses: js.UndefOr[js.Array[_]] = js.native
-  var measureControlLabel: js.UndefOr[String] = js.native
-  var measureControlTitleOff: js.UndefOr[String] = js.native
-  var measureControlTitleOn: js.UndefOr[String] = js.native
-  var position: js.UndefOr[String] = js.native
-  var showMeasurementsClearControl: js.UndefOr[Boolean] = js.native
-  var showUnitControl: js.UndefOr[Boolean] = js.native
-  var startCircle: js.UndefOr[js.Any] = js.native
-  var tempLine: js.UndefOr[js.Any] = js.native
-  var unit: js.UndefOr[String] = js.native
+  var backgroundColor: js.UndefOr[String] = js.undefined
+  var clearControlClasses: js.UndefOr[js.Array[_]] = js.undefined
+  var clearControlLabel: js.UndefOr[String] = js.undefined
+  var clearControlTitle: js.UndefOr[String] = js.undefined
+  var clearMeasurementsOnStop: js.UndefOr[Boolean] = js.undefined
+  var currentCircle: js.UndefOr[js.Any] = js.undefined
+  var cursor: js.UndefOr[String] = js.undefined
+  var endCircle: js.UndefOr[js.Any] = js.undefined
+  var fixedLine: js.UndefOr[js.Any] = js.undefined
+  var intermedCircle: js.UndefOr[js.Any] = js.undefined
+  var measureControlClasses: js.UndefOr[js.Array[_]] = js.undefined
+  var measureControlLabel: js.UndefOr[String] = js.undefined
+  var measureControlTitleOff: js.UndefOr[String] = js.undefined
+  var measureControlTitleOn: js.UndefOr[String] = js.undefined
+  var position: js.UndefOr[String] = js.undefined
+  var showMeasurementsClearControl: js.UndefOr[Boolean] = js.undefined
+  var showUnitControl: js.UndefOr[Boolean] = js.undefined
+  var startCircle: js.UndefOr[js.Any] = js.undefined
+  var tempLine: js.UndefOr[js.Any] = js.undefined
+  var unit: js.UndefOr[String] = js.undefined
 }
 
 object PolylineMeasureOptions {
   @scala.inline
-  def apply(): PolylineMeasureOptions = {
+  def apply(
+    backgroundColor: String = null,
+    clearControlClasses: js.Array[_] = null,
+    clearControlLabel: String = null,
+    clearControlTitle: String = null,
+    clearMeasurementsOnStop: js.UndefOr[Boolean] = js.undefined,
+    currentCircle: js.Any = null,
+    cursor: String = null,
+    endCircle: js.Any = null,
+    fixedLine: js.Any = null,
+    intermedCircle: js.Any = null,
+    measureControlClasses: js.Array[_] = null,
+    measureControlLabel: String = null,
+    measureControlTitleOff: String = null,
+    measureControlTitleOn: String = null,
+    position: String = null,
+    showMeasurementsClearControl: js.UndefOr[Boolean] = js.undefined,
+    showUnitControl: js.UndefOr[Boolean] = js.undefined,
+    startCircle: js.Any = null,
+    tempLine: js.Any = null,
+    unit: String = null
+  ): PolylineMeasureOptions = {
     val __obj = js.Dynamic.literal()
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (clearControlClasses != null) __obj.updateDynamic("clearControlClasses")(clearControlClasses.asInstanceOf[js.Any])
+    if (clearControlLabel != null) __obj.updateDynamic("clearControlLabel")(clearControlLabel.asInstanceOf[js.Any])
+    if (clearControlTitle != null) __obj.updateDynamic("clearControlTitle")(clearControlTitle.asInstanceOf[js.Any])
+    if (!js.isUndefined(clearMeasurementsOnStop)) __obj.updateDynamic("clearMeasurementsOnStop")(clearMeasurementsOnStop.get.asInstanceOf[js.Any])
+    if (currentCircle != null) __obj.updateDynamic("currentCircle")(currentCircle.asInstanceOf[js.Any])
+    if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
+    if (endCircle != null) __obj.updateDynamic("endCircle")(endCircle.asInstanceOf[js.Any])
+    if (fixedLine != null) __obj.updateDynamic("fixedLine")(fixedLine.asInstanceOf[js.Any])
+    if (intermedCircle != null) __obj.updateDynamic("intermedCircle")(intermedCircle.asInstanceOf[js.Any])
+    if (measureControlClasses != null) __obj.updateDynamic("measureControlClasses")(measureControlClasses.asInstanceOf[js.Any])
+    if (measureControlLabel != null) __obj.updateDynamic("measureControlLabel")(measureControlLabel.asInstanceOf[js.Any])
+    if (measureControlTitleOff != null) __obj.updateDynamic("measureControlTitleOff")(measureControlTitleOff.asInstanceOf[js.Any])
+    if (measureControlTitleOn != null) __obj.updateDynamic("measureControlTitleOn")(measureControlTitleOn.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (!js.isUndefined(showMeasurementsClearControl)) __obj.updateDynamic("showMeasurementsClearControl")(showMeasurementsClearControl.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showUnitControl)) __obj.updateDynamic("showUnitControl")(showUnitControl.get.asInstanceOf[js.Any])
+    if (startCircle != null) __obj.updateDynamic("startCircle")(startCircle.asInstanceOf[js.Any])
+    if (tempLine != null) __obj.updateDynamic("tempLine")(tempLine.asInstanceOf[js.Any])
+    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolylineMeasureOptions]
   }
-  @scala.inline
-  implicit class PolylineMeasureOptionsOps[Self <: PolylineMeasureOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackgroundColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClearControlClasses(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearControlClasses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClearControlClasses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearControlClasses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClearControlLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearControlLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClearControlLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearControlLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClearControlTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearControlTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClearControlTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearControlTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClearMeasurementsOnStop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearMeasurementsOnStop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClearMeasurementsOnStop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearMeasurementsOnStop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentCircle(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentCircle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentCircle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentCircle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCursor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCursor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndCircle(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endCircle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndCircle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endCircle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixedLine(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixedLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedLine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntermedCircle(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intermedCircle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntermedCircle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intermedCircle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeasureControlClasses(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measureControlClasses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeasureControlClasses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measureControlClasses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeasureControlLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measureControlLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeasureControlLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measureControlLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeasureControlTitleOff(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measureControlTitleOff")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeasureControlTitleOff: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measureControlTitleOff")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeasureControlTitleOn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measureControlTitleOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeasureControlTitleOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measureControlTitleOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowMeasurementsClearControl(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMeasurementsClearControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowMeasurementsClearControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMeasurementsClearControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowUnitControl(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showUnitControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowUnitControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showUnitControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartCircle(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startCircle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartCircle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startCircle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTempLine(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tempLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTempLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tempLine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

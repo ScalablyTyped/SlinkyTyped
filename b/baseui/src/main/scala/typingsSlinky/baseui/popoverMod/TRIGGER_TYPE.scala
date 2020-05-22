@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TRIGGER_TYPE extends js.Object {
-  var click: typingsSlinky.baseui.baseuiStrings.click = js.native
-  var hover: typingsSlinky.baseui.baseuiStrings.hover = js.native
+  var click: typingsSlinky.baseui.baseuiStrings.click
+  var hover: typingsSlinky.baseui.baseuiStrings.hover
 }
 
 @JSImport("baseui/popover", "TRIGGER_TYPE")

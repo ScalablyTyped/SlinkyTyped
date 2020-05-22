@@ -16,29 +16,10 @@ trait DescribeTableReplicaAutoScalingOutput extends js.Object {
 
 object DescribeTableReplicaAutoScalingOutput {
   @scala.inline
-  def apply(): DescribeTableReplicaAutoScalingOutput = {
+  def apply(TableAutoScalingDescription: TableAutoScalingDescription = null): DescribeTableReplicaAutoScalingOutput = {
     val __obj = js.Dynamic.literal()
+    if (TableAutoScalingDescription != null) __obj.updateDynamic("TableAutoScalingDescription")(TableAutoScalingDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeTableReplicaAutoScalingOutput]
   }
-  @scala.inline
-  implicit class DescribeTableReplicaAutoScalingOutputOps[Self <: DescribeTableReplicaAutoScalingOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTableAutoScalingDescription(value: TableAutoScalingDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableAutoScalingDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableAutoScalingDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableAutoScalingDescription")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

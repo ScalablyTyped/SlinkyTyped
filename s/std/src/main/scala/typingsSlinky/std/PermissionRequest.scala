@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PermissionRequest extends DeferredPermissionRequest {
-  val state: MSWebViewPermissionState = js.native
-  def defer(): Unit = js.native
+  val state: MSWebViewPermissionState
+  def defer(): Unit
 }
 
 object PermissionRequest {
@@ -25,25 +24,5 @@ object PermissionRequest {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PermissionRequest]
   }
-  @scala.inline
-  implicit class PermissionRequestOps[Self <: PermissionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefer(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defer")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withState(value: MSWebViewPermissionState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

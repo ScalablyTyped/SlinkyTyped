@@ -5,233 +5,232 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AmLegend extends js.Object {
   /**
     * Alignment of legend entries. Possible values are: "left", "center", "right". left
     */
-  var align: String = js.native
+  var align: String
   /**
     * Used if chart is Serial or XY.
     * In case true, margins of the legend are adjusted and made equal to chart's margins.
     * @default true
     */
-  var autoMargins: Boolean = js.native
+  var autoMargins: Boolean
   /**
     * Opacity of legend's background. Value range is 0 - 1
     */
-  var backgroundAlpha: Double = js.native
+  var backgroundAlpha: Double
   /**
     * Background color. You should set backgroundAlpha to >0 vallue in order background to be visible.
     * @default "#FFFFFF"
     */
-  var backgroundColor: String = js.native
+  var backgroundColor: String
   /**
     * Opacity of chart's border. Value range is 0 - 1.
     */
-  var borderAlpha: Double = js.native
+  var borderAlpha: Double
   /**
     * Color of legend's border. You should set borderAlpha >0 in order border to be visible.
     * @default "#000000"
     */
-  var borderColor: String = js.native
+  var borderColor: String
   /**
     * In case legend position is set to "absolute", you can set distance from bottom of the chart, in pixels.
     */
-  var bottom: Double = js.native
+  var bottom: Double
   /**
     * Text color. Will use chart's color if not set.
     */
-  var color: String = js.native
+  var color: String
   /**
     * This can be used by AmMap only.
     * You can pass array of objects with title, color, markerType values, for example:
     * [{title: "One", color: "#3366CC"},{title: "Two", color: "#FFCC33"}]
     */
-  var data: js.Array[_] = js.native
+  var data: js.Array[_]
   /**
     * Specifies if each of legend entry should be equal to the most wide entry.
     * Won't look good if legend has more than one line.
     * @default true
     */
-  var equalWidths: Boolean = js.native
+  var equalWidths: Boolean
   /**
     * Font size. Will use chart's font size if not set.
     */
-  var fontSize: String = js.native
+  var fontSize: String
   /**
     * Horizontal space between legend item and left/right border.
     */
-  var horizontalGap: Double = js.native
+  var horizontalGap: Double
   /**
     * The text which will be displayed in the legend.
     * Tag [[title]] will be replaced with the title of the graph. [[title]]
     */
-  var labelText: String = js.native
+  var labelText: String
   /**
     * In case legend position is set to "absolute", you can set distance from left side of the chart, in pixels.
     */
-  var left: Double = js.native
+  var left: Double
   /**
     * Bottom margin.
     */
-  var marginBottom: Double = js.native
+  var marginBottom: Double
   /**
     * Left margin.
     * This property will be ignored if chart is Serial or XY
     * and autoMargins property of the legend is true (default).
     * @default 20
     */
-  var marginLeft: Double = js.native
+  var marginLeft: Double
   /**
     * Right margin.
     * This property will be ignored if chart is Serial or XY
     * and autoMargins property of the legend is true (default).
     * @default 20
     */
-  var marginRight: Double = js.native
+  var marginRight: Double
   /**
     * Top margin.
     */
-  var marginTop: Double = js.native
+  var marginTop: Double
   /**
     * Marker border opacity 1.
     */
-  var markerBorderAlpha: Double = js.native
+  var markerBorderAlpha: Double
   /**
     * Marker border color. If not set, will use the same color as marker.
     */
-  var markerBorderColor: String = js.native
+  var markerBorderColor: String
   /**
     * Thickness of the legend border.
     * The default value (0) means the line will be a "hairline" (1 px).
     * In case marker type is line, this style will be used for line thickness.
     * @default 1
     */
-  var markerBorderThickness: Double = js.native
+  var markerBorderThickness: Double
   /**
     * The color of the disabled marker (when the graph is hidden). #AAB3B3
     */
-  var markerDisabledColor: String = js.native
+  var markerDisabledColor: String
   /**
     * Space between legend marker and legend text, in pixels.
     * @default 5
     */
-  var markerLabelGap: Double = js.native
+  var markerLabelGap: Double
   /**
     * Size of the legend marker (key).
     * @default 16
     */
-  var markerSize: Double = js.native
+  var markerSize: Double
   /**
     * Shape of the legend marker (key).
     * Possible values are:
     * "square", "circle", "line", "dashedLine", "triangleUp", "triangleDown", "bubble", "none". square
     */
-  var markerType: String = js.native
+  var markerType: String
   /**
     * Maximum number of columns in the legend.
     * If Legend's position is set to "right" or "left", maxColumns is automatically set to 1.
     */
-  var maxColumns: Double = js.native
+  var maxColumns: Double
   /**
     * Position of a legend. Possible values are: "bottom", "top", "left", "right" and "absolute".
     * In case "absolute", you should set left and top properties too. (this setting is ignored in Stock charts).
     * In case legend is used with AmMap, position is set to "absolute" automatically.  bottom
     */
-  var position: String = js.native
+  var position: String
   /**
     * Specifies whether legend entries should be placed in reversed order.
     */
-  var reversedOrder: Boolean = js.native
+  var reversedOrder: Boolean
   /**
     * In case legend position is set to "absolute", you can set distance from right side of the chart, in pixels.
     */
-  var right: Double = js.native
+  var right: Double
   /**
     * Legend item text color on roll-over.  #CC0000
     */
-  var rollOverColor: String = js.native
+  var rollOverColor: String
   /**
     * When you roll-over the legend entry, all other graphs can reduce their opacity,
     * so that the graph you rolled-over would be distinguished. This style specifies the opacity of the graphs.
     * @default 1
     */
-  var rollOverGraphAlpha: Double = js.native
+  var rollOverGraphAlpha: Double
   /**
     * You can use this property to turn all the legend entries off.
     * @default true
     */
-  var showEntries: Boolean = js.native
+  var showEntries: Boolean
   /**
     * Horizontal space between legend items, in pixels.
     * @default 10
     */
-  var spacing: Double = js.native
+  var spacing: Double
   /**
     * Legend switch color. #FFFFFF
     */
-  var switchColor: String = js.native
+  var switchColor: String
   /**
     * Legend switch type (in case the legend is switchable). Possible values are "x" and "v". x
     */
-  var switchType: String = js.native
+  var switchType: String
   /**
     * Whether showing/hiding of graphs by clicking on the legend marker is enabled or not.
     * In case legend is used with AmMap, this is set to false automatically.
     * @default true
     */
-  var switchable: Boolean = js.native
+  var switchable: Boolean
   /**
     * If true, clicking on the text will show/hide balloon of the graph.
     * Otherwise it will show/hide graph/slice, if switchable is set to true.
     */
-  var textClickEnabled: Boolean = js.native
+  var textClickEnabled: Boolean
   /**
     * In case legend position is set to "absolute", you can set distance from top of the chart, in pixels.
     */
-  var top: Double = js.native
+  var top: Double
   /**
     * Legend markers can mirror graph’s settings, displaying a line and a real bullet as in the graph itself.
     * Set this property to true if you want to enable this feature.
     * Note, if you set graph colors in dataProvider, they will not be reflected in the marker.
     * @default false
     */
-  var useGraphSettings: Boolean = js.native
+  var useGraphSettings: Boolean
   /**
     * Specifies if legend labels should be use same color as corresponding markers.
     */
-  var useMarkerColorForLabels: Boolean = js.native
+  var useMarkerColorForLabels: Boolean
   /**
     * Alignment of the value text. Possible values are "left" and "right". right
     */
-  var valueAlign: String = js.native
+  var valueAlign: String
   /**
     * The text which will be displayed in the value portion of the legend.
     * You can use tags like
     * [[value]], [[open]], [[high]], [[low]], [[close]], [[percents]], [[description]]. [[value]]
     */
-  var valueText: String = js.native
+  var valueText: String
   /**
     * Width of the value text.
     * @default 80
     */
-  var valueWidth: Double = js.native
+  var valueWidth: Double
   /**
     * Vertical space between legend items also between legend border and first and last legend row.
     * @default: 10
     */
-  var verticalGap: Double = js.native
+  var verticalGap: Double
   /**
     * Adds event listener of the type "clickLabel" or "clickMarker" or "hideItem" to the object.
     * @param type Either "clickLabel" or "clickMarker" or "hideItem".
     * @param handler The event handler.
     */
-  def addListener(`type`: String, handler: js.Function1[/* e */ DataItem, Unit]): Unit = js.native
+  def addListener(`type`: String, handler: js.Function1[/* e */ DataItem, Unit]): Unit
   /**
     * Removes event listener from chart object.
     */
-  def removeListener(chart: typingsSlinky.amcharts.amChartMod.default, `type`: String, handler: js.Any): Unit = js.native
+  def removeListener(chart: typingsSlinky.amcharts.amChartMod.default, `type`: String, handler: js.Any): Unit
 }
 
 object AmLegend {
@@ -287,289 +286,5 @@ object AmLegend {
     val __obj = js.Dynamic.literal(addListener = js.Any.fromFunction2(addListener), align = align.asInstanceOf[js.Any], autoMargins = autoMargins.asInstanceOf[js.Any], backgroundAlpha = backgroundAlpha.asInstanceOf[js.Any], backgroundColor = backgroundColor.asInstanceOf[js.Any], borderAlpha = borderAlpha.asInstanceOf[js.Any], borderColor = borderColor.asInstanceOf[js.Any], bottom = bottom.asInstanceOf[js.Any], color = color.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], equalWidths = equalWidths.asInstanceOf[js.Any], fontSize = fontSize.asInstanceOf[js.Any], horizontalGap = horizontalGap.asInstanceOf[js.Any], labelText = labelText.asInstanceOf[js.Any], left = left.asInstanceOf[js.Any], marginBottom = marginBottom.asInstanceOf[js.Any], marginLeft = marginLeft.asInstanceOf[js.Any], marginRight = marginRight.asInstanceOf[js.Any], marginTop = marginTop.asInstanceOf[js.Any], markerBorderAlpha = markerBorderAlpha.asInstanceOf[js.Any], markerBorderColor = markerBorderColor.asInstanceOf[js.Any], markerBorderThickness = markerBorderThickness.asInstanceOf[js.Any], markerDisabledColor = markerDisabledColor.asInstanceOf[js.Any], markerLabelGap = markerLabelGap.asInstanceOf[js.Any], markerSize = markerSize.asInstanceOf[js.Any], markerType = markerType.asInstanceOf[js.Any], maxColumns = maxColumns.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], removeListener = js.Any.fromFunction3(removeListener), reversedOrder = reversedOrder.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any], rollOverColor = rollOverColor.asInstanceOf[js.Any], rollOverGraphAlpha = rollOverGraphAlpha.asInstanceOf[js.Any], showEntries = showEntries.asInstanceOf[js.Any], spacing = spacing.asInstanceOf[js.Any], switchColor = switchColor.asInstanceOf[js.Any], switchType = switchType.asInstanceOf[js.Any], switchable = switchable.asInstanceOf[js.Any], textClickEnabled = textClickEnabled.asInstanceOf[js.Any], top = top.asInstanceOf[js.Any], useGraphSettings = useGraphSettings.asInstanceOf[js.Any], useMarkerColorForLabels = useMarkerColorForLabels.asInstanceOf[js.Any], valueAlign = valueAlign.asInstanceOf[js.Any], valueText = valueText.asInstanceOf[js.Any], valueWidth = valueWidth.asInstanceOf[js.Any], verticalGap = verticalGap.asInstanceOf[js.Any])
     __obj.asInstanceOf[AmLegend]
   }
-  @scala.inline
-  implicit class AmLegendOps[Self <: AmLegend] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddListener(value: (String, js.Function1[/* e */ DataItem, Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addListener")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withAlign(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoMargins(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoMargins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackgroundAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundAlpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackgroundColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBorderAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderAlpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBorderColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBottom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEqualWidths(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equalWidths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFontSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHorizontalGap(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalGap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabelText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarginBottom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarginLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarginRight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginRight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarginTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarkerBorderAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerBorderAlpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarkerBorderColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerBorderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarkerBorderThickness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerBorderThickness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarkerDisabledColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerDisabledColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarkerLabelGap(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerLabelGap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarkerSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarkerType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxColumns(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRemoveListener(value: (typingsSlinky.amcharts.amChartMod.default, String, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeListener")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withReversedOrder(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reversedOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRollOverColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rollOverColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRollOverGraphAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rollOverGraphAlpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowEntries(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showEntries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpacing(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSwitchColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("switchColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSwitchType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("switchType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSwitchable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("switchable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextClickEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textClickEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUseGraphSettings(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useGraphSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUseMarkerColorForLabels(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useMarkerColorForLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValueAlign(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValueText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValueWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerticalGap(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalGap")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -9,7 +9,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** provides a method to apply a Multiple Operations Table to the cell range. */
-@js.native
 trait XMultipleOperation extends XInterface {
   /**
     * creates a table of formulas (a "Multiple Operations Table").
@@ -26,7 +25,7 @@ trait XMultipleOperation extends XInterface {
     nMode: TableOperationMode,
     aColumnCell: CellAddress,
     aRowCell: CellAddress
-  ): Unit = js.native
+  ): Unit
 }
 
 object XMultipleOperation {
@@ -40,19 +39,5 @@ object XMultipleOperation {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setTableOperation = js.Any.fromFunction4(setTableOperation))
     __obj.asInstanceOf[XMultipleOperation]
   }
-  @scala.inline
-  implicit class XMultipleOperationOps[Self <: XMultipleOperation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSetTableOperation(value: (CellRangeAddress, TableOperationMode, CellAddress, CellAddress) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTableOperation")(js.Any.fromFunction4(value))
-        ret
-    }
-  }
-  
 }
 

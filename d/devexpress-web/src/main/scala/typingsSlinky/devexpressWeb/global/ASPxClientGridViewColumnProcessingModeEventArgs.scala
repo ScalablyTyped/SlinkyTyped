@@ -16,5 +16,15 @@ class ASPxClientGridViewColumnProcessingModeEventArgs protected ()
     * @param column A ASPxClientGridViewColumn object representing the column related to the event.
     */
   def this(column: typingsSlinky.devexpressWeb.ASPxClientGridViewColumn) = this()
+  /**
+    * Gets a grid column related to the event.
+    */
+  /* CompleteClass */
+  override var column: typingsSlinky.devexpressWeb.ASPxClientGridViewColumn = js.native
+  /**
+    * Gets or sets a value that specifies whether the event should be finally processed on the server side.
+    */
+  /* CompleteClass */
+  override var processOnServer: Boolean = js.native
 }
 

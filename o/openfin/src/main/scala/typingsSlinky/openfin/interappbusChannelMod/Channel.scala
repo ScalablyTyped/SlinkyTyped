@@ -1,10 +1,10 @@
 package typingsSlinky.openfin.interappbusChannelMod
 
 import typingsSlinky.openfin.baseMod.EmitterBase
-import typingsSlinky.openfin.channelChannelMod.ProviderIdentity
 import typingsSlinky.openfin.channelMod.ChannelEvents
 import typingsSlinky.openfin.clientMod.ChannelClient
 import typingsSlinky.openfin.providerMod.ChannelProvider
+import typingsSlinky.openfin.shapesMod.ProviderIdentity
 import typingsSlinky.openfin.transportMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,9 +14,13 @@ import scala.scalajs.js.annotation._
 @js.native
 class Channel protected () extends EmitterBase[ChannelEvents] {
   def this(wire: default) = this()
-  var channelMap: js.Any = js.native
+  var clientMap: js.Any = js.native
+  var endpointIdMap: js.Any = js.native
   var processChannelConnection: js.Any = js.native
   var processChannelMessage: js.Any = js.native
+  var providerMap: js.Any = js.native
+  /* protected */ def addChannelToClientMaps(channel: ChannelClient, channelId: String, endpointId: String): Unit = js.native
+  /* protected */ def checkForPreviousClientConnection(channelId: String): Unit = js.native
   def connect(channelName: String): js.Promise[ChannelClient] = js.native
   def connect(channelName: String, options: ConnectOptions): js.Promise[ChannelClient] = js.native
   def create(channelName: String): js.Promise[ChannelProvider] = js.native
@@ -24,6 +28,7 @@ class Channel protected () extends EmitterBase[ChannelEvents] {
   def onChannelConnect(listener: js.Function1[/* repeated */ js.Any, Unit]): js.Promise[Unit] = js.native
   def onChannelDisconnect(listener: js.Function1[/* repeated */ js.Any, Unit]): js.Promise[Unit] = js.native
   def onmessage(msg: ChannelMessage): Boolean = js.native
-  /* protected */ def removeChannelFromMap(mapKey: String): Unit = js.native
+  /* protected */ def removeChannelFromClientMaps(channelId: String, endpointId: String): Unit = js.native
+  /* protected */ def removeChannelFromProviderMap(channelId: String): Unit = js.native
 }
 

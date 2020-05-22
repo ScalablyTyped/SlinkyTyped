@@ -25,7 +25,6 @@ import scala.scalajs.js.annotation._
   * Otherwise, the filter operation is canceled.
   * @since OOo 1.1.2
   */
-@js.native
 trait FilterOptionsDialog
   extends XPropertyAccess
      with XExecutableDialog

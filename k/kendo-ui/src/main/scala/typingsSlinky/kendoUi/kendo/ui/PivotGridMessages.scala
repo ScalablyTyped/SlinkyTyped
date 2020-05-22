@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PivotGridMessages extends js.Object {
-  var columnFields: js.UndefOr[String] = js.native
-  var fieldMenu: js.UndefOr[PivotGridMessagesFieldMenu] = js.native
-  var measureFields: js.UndefOr[String] = js.native
-  var rowFields: js.UndefOr[String] = js.native
+  var columnFields: js.UndefOr[String] = js.undefined
+  var fieldMenu: js.UndefOr[PivotGridMessagesFieldMenu] = js.undefined
+  var measureFields: js.UndefOr[String] = js.undefined
+  var rowFields: js.UndefOr[String] = js.undefined
 }
 
 object PivotGridMessages {
   @scala.inline
-  def apply(): PivotGridMessages = {
+  def apply(
+    columnFields: String = null,
+    fieldMenu: PivotGridMessagesFieldMenu = null,
+    measureFields: String = null,
+    rowFields: String = null
+  ): PivotGridMessages = {
     val __obj = js.Dynamic.literal()
+    if (columnFields != null) __obj.updateDynamic("columnFields")(columnFields.asInstanceOf[js.Any])
+    if (fieldMenu != null) __obj.updateDynamic("fieldMenu")(fieldMenu.asInstanceOf[js.Any])
+    if (measureFields != null) __obj.updateDynamic("measureFields")(measureFields.asInstanceOf[js.Any])
+    if (rowFields != null) __obj.updateDynamic("rowFields")(rowFields.asInstanceOf[js.Any])
     __obj.asInstanceOf[PivotGridMessages]
   }
-  @scala.inline
-  implicit class PivotGridMessagesOps[Self <: PivotGridMessages] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumnFields(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFieldMenu(value: PivotGridMessagesFieldMenu): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldMenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeasureFields(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measureFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeasureFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measureFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowFields(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowFields")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

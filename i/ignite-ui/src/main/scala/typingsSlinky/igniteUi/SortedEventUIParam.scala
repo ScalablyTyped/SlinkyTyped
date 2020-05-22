@@ -4,71 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SortedEventUIParam extends js.Object {
   /**
-  	 * Gets an array of the tuple indices and sort directions that were actually applied to the table view.
-  	 */
-  var appliedSortDirections: js.UndefOr[js.Array[_]] = js.native
+    * Gets an array of the tuple indices and sort directions that were actually applied to the table view.
+    */
+  var appliedSortDirections: js.UndefOr[js.Array[_]] = js.undefined
   /**
-  	 * Gets a reference to the pivot grid.
-  	 */
-  var owner: js.UndefOr[js.Any] = js.native
+    * Gets a reference to the pivot grid.
+    */
+  var owner: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Gets an array of the tuple indices and sort directions that were passed to the table view.
-  	 */
-  var sortDirections: js.UndefOr[js.Array[_]] = js.native
+    * Gets an array of the tuple indices and sort directions that were passed to the table view.
+    */
+  var sortDirections: js.UndefOr[js.Array[_]] = js.undefined
 }
 
 object SortedEventUIParam {
   @scala.inline
-  def apply(): SortedEventUIParam = {
+  def apply(
+    appliedSortDirections: js.Array[_] = null,
+    owner: js.Any = null,
+    sortDirections: js.Array[_] = null
+  ): SortedEventUIParam = {
     val __obj = js.Dynamic.literal()
+    if (appliedSortDirections != null) __obj.updateDynamic("appliedSortDirections")(appliedSortDirections.asInstanceOf[js.Any])
+    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
+    if (sortDirections != null) __obj.updateDynamic("sortDirections")(sortDirections.asInstanceOf[js.Any])
     __obj.asInstanceOf[SortedEventUIParam]
   }
-  @scala.inline
-  implicit class SortedEventUIParamOps[Self <: SortedEventUIParam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppliedSortDirections(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appliedSortDirections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppliedSortDirections: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appliedSortDirections")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwner(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortDirections(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortDirections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortDirections: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortDirections")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

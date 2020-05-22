@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * the priority also returns `FAILURE`.
   *
   */
-@js.native
 trait Priority extends BaseNode
 
 object Priority {

@@ -18,41 +18,11 @@ trait DescribeLoadBalancerPoliciesInput extends js.Object {
 
 object DescribeLoadBalancerPoliciesInput {
   @scala.inline
-  def apply(): DescribeLoadBalancerPoliciesInput = {
+  def apply(LoadBalancerName: AccessPointName = null, PolicyNames: PolicyNames = null): DescribeLoadBalancerPoliciesInput = {
     val __obj = js.Dynamic.literal()
+    if (LoadBalancerName != null) __obj.updateDynamic("LoadBalancerName")(LoadBalancerName.asInstanceOf[js.Any])
+    if (PolicyNames != null) __obj.updateDynamic("PolicyNames")(PolicyNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeLoadBalancerPoliciesInput]
   }
-  @scala.inline
-  implicit class DescribeLoadBalancerPoliciesInputOps[Self <: DescribeLoadBalancerPoliciesInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoadBalancerName(value: AccessPointName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadBalancerName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancerName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicyNames(value: PolicyNames): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyNames")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

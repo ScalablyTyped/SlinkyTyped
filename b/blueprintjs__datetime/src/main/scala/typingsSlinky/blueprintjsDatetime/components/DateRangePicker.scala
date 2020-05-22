@@ -3,9 +3,10 @@ package typingsSlinky.blueprintjsDatetime.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.boundaryMod.Boundary
+import typingsSlinky.blueprintjsDatetime.anon.FormatDate
 import typingsSlinky.blueprintjsDatetime.datePickerCoreMod.IDatePickerModifiers
+import typingsSlinky.blueprintjsDatetime.dateRangeMod.DateRange
 import typingsSlinky.blueprintjsDatetime.dateRangePickerMod.IDateRangePickerProps
-import typingsSlinky.blueprintjsDatetime.dateUtilsMod.DateRange
 import typingsSlinky.blueprintjsDatetime.shortcutsMod.IDateRangeShortcut
 import typingsSlinky.blueprintjsDatetime.timePickerMod.ITimePickerProps
 import typingsSlinky.blueprintjsDatetime.timePickerMod.TimePrecision
@@ -40,7 +41,7 @@ object DateRangePicker {
     @scala.inline
     def locale(value: String): this.type = set("locale", value.asInstanceOf[js.Any])
     @scala.inline
-    def localeUtils(value: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof LocaleUtils */ js.Any): this.type = set("localeUtils", value.asInstanceOf[js.Any])
+    def localeUtils(value: FormatDate): this.type = set("localeUtils", value.asInstanceOf[js.Any])
     @scala.inline
     def maxDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
     @scala.inline

@@ -31,7 +31,7 @@ trait InstanceInformation extends js.Object {
     */
   var IPAddress: js.UndefOr[typingsSlinky.awsSdk.ssmMod.IPAddress] = js.native
   /**
-    * The Amazon Identity and Access Management (IAM) role assigned to the on-premises Systems Manager managed instances. This call does not return the IAM role for Amazon EC2 instances. 
+    * The Amazon Identity and Access Management (IAM) role assigned to the on-premises Systems Manager managed instances. This call does not return the IAM role for EC2 instances. 
     */
   var IamRole: js.UndefOr[typingsSlinky.awsSdk.ssmMod.IamRole] = js.native
   /**
@@ -86,245 +86,48 @@ trait InstanceInformation extends js.Object {
 
 object InstanceInformation {
   @scala.inline
-  def apply(): InstanceInformation = {
+  def apply(
+    ActivationId: ActivationId = null,
+    AgentVersion: Version = null,
+    AssociationOverview: InstanceAggregatedAssociationOverview = null,
+    AssociationStatus: StatusName = null,
+    ComputerName: ComputerName = null,
+    IPAddress: IPAddress = null,
+    IamRole: IamRole = null,
+    InstanceId: InstanceId = null,
+    IsLatestVersion: js.UndefOr[Boolean] = js.undefined,
+    LastAssociationExecutionDate: js.Date = null,
+    LastPingDateTime: js.Date = null,
+    LastSuccessfulAssociationExecutionDate: js.Date = null,
+    Name: String = null,
+    PingStatus: PingStatus = null,
+    PlatformName: String = null,
+    PlatformType: PlatformType = null,
+    PlatformVersion: String = null,
+    RegistrationDate: js.Date = null,
+    ResourceType: ResourceType = null
+  ): InstanceInformation = {
     val __obj = js.Dynamic.literal()
+    if (ActivationId != null) __obj.updateDynamic("ActivationId")(ActivationId.asInstanceOf[js.Any])
+    if (AgentVersion != null) __obj.updateDynamic("AgentVersion")(AgentVersion.asInstanceOf[js.Any])
+    if (AssociationOverview != null) __obj.updateDynamic("AssociationOverview")(AssociationOverview.asInstanceOf[js.Any])
+    if (AssociationStatus != null) __obj.updateDynamic("AssociationStatus")(AssociationStatus.asInstanceOf[js.Any])
+    if (ComputerName != null) __obj.updateDynamic("ComputerName")(ComputerName.asInstanceOf[js.Any])
+    if (IPAddress != null) __obj.updateDynamic("IPAddress")(IPAddress.asInstanceOf[js.Any])
+    if (IamRole != null) __obj.updateDynamic("IamRole")(IamRole.asInstanceOf[js.Any])
+    if (InstanceId != null) __obj.updateDynamic("InstanceId")(InstanceId.asInstanceOf[js.Any])
+    if (!js.isUndefined(IsLatestVersion)) __obj.updateDynamic("IsLatestVersion")(IsLatestVersion.get.asInstanceOf[js.Any])
+    if (LastAssociationExecutionDate != null) __obj.updateDynamic("LastAssociationExecutionDate")(LastAssociationExecutionDate.asInstanceOf[js.Any])
+    if (LastPingDateTime != null) __obj.updateDynamic("LastPingDateTime")(LastPingDateTime.asInstanceOf[js.Any])
+    if (LastSuccessfulAssociationExecutionDate != null) __obj.updateDynamic("LastSuccessfulAssociationExecutionDate")(LastSuccessfulAssociationExecutionDate.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (PingStatus != null) __obj.updateDynamic("PingStatus")(PingStatus.asInstanceOf[js.Any])
+    if (PlatformName != null) __obj.updateDynamic("PlatformName")(PlatformName.asInstanceOf[js.Any])
+    if (PlatformType != null) __obj.updateDynamic("PlatformType")(PlatformType.asInstanceOf[js.Any])
+    if (PlatformVersion != null) __obj.updateDynamic("PlatformVersion")(PlatformVersion.asInstanceOf[js.Any])
+    if (RegistrationDate != null) __obj.updateDynamic("RegistrationDate")(RegistrationDate.asInstanceOf[js.Any])
+    if (ResourceType != null) __obj.updateDynamic("ResourceType")(ResourceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceInformation]
   }
-  @scala.inline
-  implicit class InstanceInformationOps[Self <: InstanceInformation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivationId(value: ActivationId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAgentVersion(value: Version): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AgentVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgentVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AgentVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssociationOverview(value: InstanceAggregatedAssociationOverview): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationOverview")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssociationOverview: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationOverview")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssociationStatus(value: StatusName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssociationStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComputerName(value: ComputerName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComputerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComputerName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComputerName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIPAddress(value: IPAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IPAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIPAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IPAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIamRole(value: IamRole): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IamRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIamRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IamRole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceId(value: InstanceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsLatestVersion(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsLatestVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsLatestVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsLatestVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastAssociationExecutionDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastAssociationExecutionDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastAssociationExecutionDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastAssociationExecutionDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastPingDateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastPingDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastPingDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastPingDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastSuccessfulAssociationExecutionDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastSuccessfulAssociationExecutionDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastSuccessfulAssociationExecutionDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastSuccessfulAssociationExecutionDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPingStatus(value: PingStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PingStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPingStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PingStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlatformName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatformName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlatformType(value: PlatformType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatformType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlatformVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatformVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegistrationDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegistrationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegistrationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegistrationDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceType(value: ResourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

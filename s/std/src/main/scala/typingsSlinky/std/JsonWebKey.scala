@@ -4,257 +4,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JsonWebKey extends js.Object {
-  var alg: js.UndefOr[java.lang.String] = js.native
-  var crv: js.UndefOr[java.lang.String] = js.native
-  var d: js.UndefOr[java.lang.String] = js.native
-  var dp: js.UndefOr[java.lang.String] = js.native
-  var dq: js.UndefOr[java.lang.String] = js.native
-  var e: js.UndefOr[java.lang.String] = js.native
-  var ext: js.UndefOr[scala.Boolean] = js.native
-  var k: js.UndefOr[java.lang.String] = js.native
-  var key_ops: js.UndefOr[js.Array[java.lang.String]] = js.native
-  var kty: js.UndefOr[java.lang.String] = js.native
-  var n: js.UndefOr[java.lang.String] = js.native
-  var oth: js.UndefOr[js.Array[org.scalajs.dom.crypto.RsaOtherPrimesInfo]] = js.native
-  var p: js.UndefOr[java.lang.String] = js.native
-  var q: js.UndefOr[java.lang.String] = js.native
-  var qi: js.UndefOr[java.lang.String] = js.native
-  var use: js.UndefOr[java.lang.String] = js.native
-  var x: js.UndefOr[java.lang.String] = js.native
-  var y: js.UndefOr[java.lang.String] = js.native
+  var alg: js.UndefOr[java.lang.String] = js.undefined
+  var crv: js.UndefOr[java.lang.String] = js.undefined
+  var d: js.UndefOr[java.lang.String] = js.undefined
+  var dp: js.UndefOr[java.lang.String] = js.undefined
+  var dq: js.UndefOr[java.lang.String] = js.undefined
+  var e: js.UndefOr[java.lang.String] = js.undefined
+  var ext: js.UndefOr[scala.Boolean] = js.undefined
+  var k: js.UndefOr[java.lang.String] = js.undefined
+  var key_ops: js.UndefOr[js.Array[java.lang.String]] = js.undefined
+  var kty: js.UndefOr[java.lang.String] = js.undefined
+  var n: js.UndefOr[java.lang.String] = js.undefined
+  var oth: js.UndefOr[js.Array[org.scalajs.dom.crypto.RsaOtherPrimesInfo]] = js.undefined
+  var p: js.UndefOr[java.lang.String] = js.undefined
+  var q: js.UndefOr[java.lang.String] = js.undefined
+  var qi: js.UndefOr[java.lang.String] = js.undefined
+  var use: js.UndefOr[java.lang.String] = js.undefined
+  var x: js.UndefOr[java.lang.String] = js.undefined
+  var y: js.UndefOr[java.lang.String] = js.undefined
 }
 
 object JsonWebKey {
   @scala.inline
-  def apply(): JsonWebKey = {
+  def apply(
+    alg: java.lang.String = null,
+    crv: java.lang.String = null,
+    d: java.lang.String = null,
+    dp: java.lang.String = null,
+    dq: java.lang.String = null,
+    e: java.lang.String = null,
+    ext: js.UndefOr[scala.Boolean] = js.undefined,
+    k: java.lang.String = null,
+    key_ops: js.Array[java.lang.String] = null,
+    kty: java.lang.String = null,
+    n: java.lang.String = null,
+    oth: js.Array[org.scalajs.dom.crypto.RsaOtherPrimesInfo] = null,
+    p: java.lang.String = null,
+    q: java.lang.String = null,
+    qi: java.lang.String = null,
+    use: java.lang.String = null,
+    x: java.lang.String = null,
+    y: java.lang.String = null
+  ): JsonWebKey = {
     val __obj = js.Dynamic.literal()
+    if (alg != null) __obj.updateDynamic("alg")(alg.asInstanceOf[js.Any])
+    if (crv != null) __obj.updateDynamic("crv")(crv.asInstanceOf[js.Any])
+    if (d != null) __obj.updateDynamic("d")(d.asInstanceOf[js.Any])
+    if (dp != null) __obj.updateDynamic("dp")(dp.asInstanceOf[js.Any])
+    if (dq != null) __obj.updateDynamic("dq")(dq.asInstanceOf[js.Any])
+    if (e != null) __obj.updateDynamic("e")(e.asInstanceOf[js.Any])
+    if (!js.isUndefined(ext)) __obj.updateDynamic("ext")(ext.get.asInstanceOf[js.Any])
+    if (k != null) __obj.updateDynamic("k")(k.asInstanceOf[js.Any])
+    if (key_ops != null) __obj.updateDynamic("key_ops")(key_ops.asInstanceOf[js.Any])
+    if (kty != null) __obj.updateDynamic("kty")(kty.asInstanceOf[js.Any])
+    if (n != null) __obj.updateDynamic("n")(n.asInstanceOf[js.Any])
+    if (oth != null) __obj.updateDynamic("oth")(oth.asInstanceOf[js.Any])
+    if (p != null) __obj.updateDynamic("p")(p.asInstanceOf[js.Any])
+    if (q != null) __obj.updateDynamic("q")(q.asInstanceOf[js.Any])
+    if (qi != null) __obj.updateDynamic("qi")(qi.asInstanceOf[js.Any])
+    if (use != null) __obj.updateDynamic("use")(use.asInstanceOf[js.Any])
+    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
+    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
     __obj.asInstanceOf[JsonWebKey]
   }
-  @scala.inline
-  implicit class JsonWebKeyOps[Self <: org.scalajs.dom.crypto.JsonWebKey] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlg(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrv(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crv")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crv")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withD(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("d")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutD: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("d")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDp(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDq(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dq")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDq: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dq")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withE(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("e")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutE: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("e")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExt(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withK(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("k")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutK: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("k")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey_ops(value: js.Array[java.lang.String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key_ops")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey_ops: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key_ops")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKty(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withN(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("n")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("n")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOth(value: js.Array[org.scalajs.dom.crypto.RsaOtherPrimesInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withP(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQ(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQi(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qi")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQi: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qi")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUse(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("use")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("use")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

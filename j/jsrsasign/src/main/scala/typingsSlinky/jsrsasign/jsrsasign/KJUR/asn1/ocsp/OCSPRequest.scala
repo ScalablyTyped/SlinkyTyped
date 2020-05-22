@@ -26,7 +26,6 @@ import scala.scalajs.js.annotation._
   *   {issuerCert: "-----BEGIN...", subjectCert: "-----BEGIN...", alg: "sha256"}
   * ]});
   */
-@js.native
 trait OCSPRequest extends ASN1Object
 
 object OCSPRequest {

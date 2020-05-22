@@ -5,52 +5,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Metadata
   extends /* key */ StringDictionary[js.UndefOr[String | js.Array[String]]] {
   /** An alternate url to use if the webpage requires HTTPS. */
-  var secure_url: js.UndefOr[String | js.Array[String]] = js.native
+  var secure_url: js.UndefOr[String | js.Array[String]] = js.undefined
   /** A MIME type for this image. */
-  var `type`: js.UndefOr[String | js.Array[String]] = js.native
+  var `type`: js.UndefOr[String | js.Array[String]] = js.undefined
 }
 
 object Metadata {
   @scala.inline
-  def apply(): Metadata = {
+  def apply(
+    StringDictionary: /* key */ StringDictionary[js.UndefOr[String | js.Array[String]]] = null,
+    secure_url: String | js.Array[String] = null,
+    `type`: String | js.Array[String] = null
+  ): Metadata = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (secure_url != null) __obj.updateDynamic("secure_url")(secure_url.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Metadata]
   }
-  @scala.inline
-  implicit class MetadataOps[Self <: Metadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSecure_url(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secure_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecure_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secure_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

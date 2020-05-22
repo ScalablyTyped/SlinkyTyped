@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<semantic-ui-site.SemanticUI.SiteSettings._Impl, 'namespaceStub'> */
-@js.native
 trait PickImplnamespaceStub extends js.Object {
-  var namespaceStub: NamespaceStubSettings = js.native
+  var namespaceStub: NamespaceStubSettings
 }
 
 object PickImplnamespaceStub {
@@ -17,19 +16,5 @@ object PickImplnamespaceStub {
     val __obj = js.Dynamic.literal(namespaceStub = namespaceStub.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickImplnamespaceStub]
   }
-  @scala.inline
-  implicit class PickImplnamespaceStubOps[Self <: PickImplnamespaceStub] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNamespaceStub(value: NamespaceStubSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceStub")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

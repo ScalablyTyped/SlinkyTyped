@@ -18,35 +18,10 @@ trait GetEntitiesRequest extends js.Object {
 
 object GetEntitiesRequest {
   @scala.inline
-  def apply(ids: Urns): GetEntitiesRequest = {
+  def apply(ids: Urns, namespaceVersion: js.UndefOr[Version] = js.undefined): GetEntitiesRequest = {
     val __obj = js.Dynamic.literal(ids = ids.asInstanceOf[js.Any])
+    if (!js.isUndefined(namespaceVersion)) __obj.updateDynamic("namespaceVersion")(namespaceVersion.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetEntitiesRequest]
   }
-  @scala.inline
-  implicit class GetEntitiesRequestOps[Self <: GetEntitiesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIds(value: Urns): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNamespaceVersion(value: Version): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamespaceVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

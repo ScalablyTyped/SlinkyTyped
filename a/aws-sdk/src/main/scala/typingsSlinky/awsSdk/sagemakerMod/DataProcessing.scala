@@ -22,53 +22,12 @@ trait DataProcessing extends js.Object {
 
 object DataProcessing {
   @scala.inline
-  def apply(): DataProcessing = {
+  def apply(InputFilter: JsonPath = null, JoinSource: JoinSource = null, OutputFilter: JsonPath = null): DataProcessing = {
     val __obj = js.Dynamic.literal()
+    if (InputFilter != null) __obj.updateDynamic("InputFilter")(InputFilter.asInstanceOf[js.Any])
+    if (JoinSource != null) __obj.updateDynamic("JoinSource")(JoinSource.asInstanceOf[js.Any])
+    if (OutputFilter != null) __obj.updateDynamic("OutputFilter")(OutputFilter.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataProcessing]
   }
-  @scala.inline
-  implicit class DataProcessingOps[Self <: DataProcessing] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInputFilter(value: JsonPath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJoinSource(value: JoinSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JoinSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJoinSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JoinSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputFilter(value: JsonPath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputFilter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

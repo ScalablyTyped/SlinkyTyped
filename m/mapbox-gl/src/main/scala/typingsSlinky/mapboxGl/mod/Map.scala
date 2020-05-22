@@ -91,6 +91,7 @@ class Map () extends Evented {
     */
   var showPadding: Boolean = js.native
   var showTileBoundaries: Boolean = js.native
+  var touchPitch: TouchPitchHandler = js.native
   var touchZoomRotate: TouchZoomRotateHandler = js.native
   def addControl(control: Control): this.type = js.native
   def addControl(control: IControl): this.type = js.native
@@ -1006,6 +1007,7 @@ class Map () extends Evented {
   def setFeatureState(feature: MapboxGeoJSONFeature, state: StringDictionary[js.Any]): Unit = js.native
   def setFilter(layer: String): this.type = js.native
   def setFilter(layer: String, filter: js.Array[_]): this.type = js.native
+  def setFilter(layer: String, filter: Boolean): this.type = js.native
   def setLayerZoomRange(layerId: String, minzoom: Double, maxzoom: Double): this.type = js.native
   def setLayoutProperty(layer: String, name: String, value: js.Any): this.type = js.native
   def setLight(options: Light): this.type = js.native

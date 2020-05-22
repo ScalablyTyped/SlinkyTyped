@@ -7,5 +7,8 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.UI.Core.CoreAcceleratorKeys")
 @js.native
 class CoreAcceleratorKeys ()
-  extends typingsSlinky.winrt.Windows.UI.Core.CoreAcceleratorKeys
+  extends typingsSlinky.winrt.Windows.UI.Core.CoreAcceleratorKeys {
+  /* CompleteClass */
+  override var onacceleratorkeyactivated: js.Any = js.native
+}
 

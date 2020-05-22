@@ -22,47 +22,11 @@ trait ModifyHapgRequest extends js.Object {
 
 object ModifyHapgRequest {
   @scala.inline
-  def apply(HapgArn: HapgArn): ModifyHapgRequest = {
+  def apply(HapgArn: HapgArn, Label: Label = null, PartitionSerialList: PartitionSerialList = null): ModifyHapgRequest = {
     val __obj = js.Dynamic.literal(HapgArn = HapgArn.asInstanceOf[js.Any])
+    if (Label != null) __obj.updateDynamic("Label")(Label.asInstanceOf[js.Any])
+    if (PartitionSerialList != null) __obj.updateDynamic("PartitionSerialList")(PartitionSerialList.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyHapgRequest]
   }
-  @scala.inline
-  implicit class ModifyHapgRequestOps[Self <: ModifyHapgRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHapgArn(value: HapgArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HapgArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabel(value: Label): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartitionSerialList(value: PartitionSerialList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartitionSerialList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartitionSerialList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartitionSerialList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

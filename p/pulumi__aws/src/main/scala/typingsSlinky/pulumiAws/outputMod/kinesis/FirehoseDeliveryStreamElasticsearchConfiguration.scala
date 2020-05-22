@@ -15,7 +15,7 @@ trait FirehoseDeliveryStreamElasticsearchConfiguration extends js.Object {
     */
   var bufferingSize: js.UndefOr[Double] = js.native
   /**
-    * The CloudWatch Logging Options for the delivery stream. More details are given below.
+    * The CloudWatch Logging Options for the delivery stream. More details are given below
     */
   var cloudwatchLoggingOptions: FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptions = js.native
   /**
@@ -35,15 +35,15 @@ trait FirehoseDeliveryStreamElasticsearchConfiguration extends js.Object {
     */
   var processingConfiguration: js.UndefOr[FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration] = js.native
   /**
-    * After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
+    * After an initial failure to deliver to Amazon Elasticsearch, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
     */
   var retryDuration: js.UndefOr[Double] = js.native
   /**
-    * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+    * The ARN of the IAM role to be assumed by Firehose for calling the Amazon ES Configuration API and for indexing documents.  The pattern needs to be `arn:.*`.
     */
   var roleArn: String = js.native
   /**
-    * Defines how documents should be delivered to Amazon S3.  Valid values are `FailedEventsOnly` and `AllEvents`.  Default value is `FailedEventsOnly`.
+    * Defines how documents should be delivered to Amazon S3.  Valid values are `FailedDocumentsOnly` and `AllDocuments`.  Default value is `FailedDocumentsOnly`.
     */
   var s3BackupMode: js.UndefOr[String] = js.native
   /**
@@ -58,126 +58,24 @@ object FirehoseDeliveryStreamElasticsearchConfiguration {
     cloudwatchLoggingOptions: FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptions,
     domainArn: String,
     indexName: String,
-    roleArn: String
+    roleArn: String,
+    bufferingInterval: js.UndefOr[Double] = js.undefined,
+    bufferingSize: js.UndefOr[Double] = js.undefined,
+    indexRotationPeriod: String = null,
+    processingConfiguration: FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration = null,
+    retryDuration: js.UndefOr[Double] = js.undefined,
+    s3BackupMode: String = null,
+    typeName: String = null
   ): FirehoseDeliveryStreamElasticsearchConfiguration = {
     val __obj = js.Dynamic.literal(cloudwatchLoggingOptions = cloudwatchLoggingOptions.asInstanceOf[js.Any], domainArn = domainArn.asInstanceOf[js.Any], indexName = indexName.asInstanceOf[js.Any], roleArn = roleArn.asInstanceOf[js.Any])
+    if (!js.isUndefined(bufferingInterval)) __obj.updateDynamic("bufferingInterval")(bufferingInterval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bufferingSize)) __obj.updateDynamic("bufferingSize")(bufferingSize.get.asInstanceOf[js.Any])
+    if (indexRotationPeriod != null) __obj.updateDynamic("indexRotationPeriod")(indexRotationPeriod.asInstanceOf[js.Any])
+    if (processingConfiguration != null) __obj.updateDynamic("processingConfiguration")(processingConfiguration.asInstanceOf[js.Any])
+    if (!js.isUndefined(retryDuration)) __obj.updateDynamic("retryDuration")(retryDuration.get.asInstanceOf[js.Any])
+    if (s3BackupMode != null) __obj.updateDynamic("s3BackupMode")(s3BackupMode.asInstanceOf[js.Any])
+    if (typeName != null) __obj.updateDynamic("typeName")(typeName.asInstanceOf[js.Any])
     __obj.asInstanceOf[FirehoseDeliveryStreamElasticsearchConfiguration]
   }
-  @scala.inline
-  implicit class FirehoseDeliveryStreamElasticsearchConfigurationOps[Self <: FirehoseDeliveryStreamElasticsearchConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloudwatchLoggingOptions(value: FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudwatchLoggingOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDomainArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndexName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBufferingInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferingInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBufferingInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferingInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBufferingSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferingSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBufferingSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferingSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndexRotationPeriod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexRotationPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndexRotationPeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexRotationPeriod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProcessingConfiguration(value: FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processingConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProcessingConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processingConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetryDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetryDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3BackupMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3BackupMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3BackupMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3BackupMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

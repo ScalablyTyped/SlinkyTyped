@@ -1,6 +1,6 @@
 package typingsSlinky.rollup.mod
 
-import typingsSlinky.rollup.anon.Missing
+import typingsSlinky.rollup.rollupBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +13,25 @@ trait DecodedSourceMapOrMissing extends js.Object
 
 object DecodedSourceMapOrMissing {
   @scala.inline
-  implicit def apply(value: ExistingDecodedSourceMap): DecodedSourceMapOrMissing = value.asInstanceOf[DecodedSourceMapOrMissing]
+  def Missing(missing: `true`, plugin: String): DecodedSourceMapOrMissing = {
+    val __obj = js.Dynamic.literal(missing = missing.asInstanceOf[js.Any], plugin = plugin.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DecodedSourceMapOrMissing]
+  }
   @scala.inline
-  implicit def apply(value: Missing): DecodedSourceMapOrMissing = value.asInstanceOf[DecodedSourceMapOrMissing]
+  def ExistingDecodedSourceMap(
+    mappings: js.Array[js.Array[SourceMapSegment]],
+    names: js.Array[String],
+    sources: js.Array[String],
+    version: Double,
+    file: String = null,
+    sourceRoot: String = null,
+    sourcesContent: js.Array[String] = null
+  ): DecodedSourceMapOrMissing = {
+    val __obj = js.Dynamic.literal(mappings = mappings.asInstanceOf[js.Any], names = names.asInstanceOf[js.Any], sources = sources.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
+    if (file != null) __obj.updateDynamic("file")(file.asInstanceOf[js.Any])
+    if (sourceRoot != null) __obj.updateDynamic("sourceRoot")(sourceRoot.asInstanceOf[js.Any])
+    if (sourcesContent != null) __obj.updateDynamic("sourcesContent")(sourcesContent.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DecodedSourceMapOrMissing]
+  }
 }
 

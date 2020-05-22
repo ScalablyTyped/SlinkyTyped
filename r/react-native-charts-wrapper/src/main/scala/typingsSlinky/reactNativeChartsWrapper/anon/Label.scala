@@ -8,134 +8,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Label extends js.Object {
-  var label: js.UndefOr[String] = js.native
-  var labelPosition: js.UndefOr[LEFT_TOP | LEFT_BOTTOM | RIGHT_TOP | RIGHT_BOTTOM] = js.native
-  var limit: Double = js.native
-  var lineColor: js.UndefOr[typingsSlinky.reactNativeChartsWrapper.mod.Color] = js.native
-  var lineDashLengths: js.UndefOr[js.Array[Double]] = js.native
-  var lineDashPhase: js.UndefOr[Double] = js.native
-  var lineWidth: js.UndefOr[Double] = js.native
-  var valueFont: js.UndefOr[String] = js.native
-  var valueTextColor: js.UndefOr[typingsSlinky.reactNativeChartsWrapper.mod.Color] = js.native
+  var label: js.UndefOr[String] = js.undefined
+  var labelPosition: js.UndefOr[LEFT_TOP | LEFT_BOTTOM | RIGHT_TOP | RIGHT_BOTTOM] = js.undefined
+  var limit: Double
+  var lineColor: js.UndefOr[typingsSlinky.reactNativeChartsWrapper.mod.Color] = js.undefined
+  var lineDashLengths: js.UndefOr[js.Array[Double]] = js.undefined
+  var lineDashPhase: js.UndefOr[Double] = js.undefined
+  var lineWidth: js.UndefOr[Double] = js.undefined
+  var valueFont: js.UndefOr[String] = js.undefined
+  var valueTextColor: js.UndefOr[typingsSlinky.reactNativeChartsWrapper.mod.Color] = js.undefined
 }
 
 object Label {
   @scala.inline
-  def apply(limit: Double): Label = {
+  def apply(
+    limit: Double,
+    label: String = null,
+    labelPosition: LEFT_TOP | LEFT_BOTTOM | RIGHT_TOP | RIGHT_BOTTOM = null,
+    lineColor: js.UndefOr[typingsSlinky.reactNativeChartsWrapper.mod.Color] = js.undefined,
+    lineDashLengths: js.Array[Double] = null,
+    lineDashPhase: js.UndefOr[Double] = js.undefined,
+    lineWidth: js.UndefOr[Double] = js.undefined,
+    valueFont: String = null,
+    valueTextColor: js.UndefOr[typingsSlinky.reactNativeChartsWrapper.mod.Color] = js.undefined
+  ): Label = {
     val __obj = js.Dynamic.literal(limit = limit.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (labelPosition != null) __obj.updateDynamic("labelPosition")(labelPosition.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineColor)) __obj.updateDynamic("lineColor")(lineColor.get.asInstanceOf[js.Any])
+    if (lineDashLengths != null) __obj.updateDynamic("lineDashLengths")(lineDashLengths.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineDashPhase)) __obj.updateDynamic("lineDashPhase")(lineDashPhase.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineWidth)) __obj.updateDynamic("lineWidth")(lineWidth.get.asInstanceOf[js.Any])
+    if (valueFont != null) __obj.updateDynamic("valueFont")(valueFont.asInstanceOf[js.Any])
+    if (!js.isUndefined(valueTextColor)) __obj.updateDynamic("valueTextColor")(valueTextColor.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Label]
   }
-  @scala.inline
-  implicit class LabelOps[Self <: Label] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelPosition(value: LEFT_TOP | LEFT_BOTTOM | RIGHT_TOP | RIGHT_BOTTOM): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineColor(value: typingsSlinky.reactNativeChartsWrapper.mod.Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineDashLengths(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineDashLengths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineDashLengths: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineDashLengths")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineDashPhase(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineDashPhase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineDashPhase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineDashPhase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueFont(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueFont")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueFont")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueTextColor(value: typingsSlinky.reactNativeChartsWrapper.mod.Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueTextColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueTextColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueTextColor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EdgeLength extends js.Object {
   /**
     * The distance between 2 nodes on edge.
@@ -22,7 +21,7 @@ trait EdgeLength extends js.Object {
     * 30
     * @see https://echarts.apache.org/en/option.html#series-graph.force.edgeLength
     */
-  var edgeLength: js.UndefOr[js.Array[_] | Double] = js.native
+  var edgeLength: js.UndefOr[js.Array[_] | Double] = js.undefined
   /**
     * The gravity factor enforcing nodes approach to the center.
     * The nodes will be closer to the center as the value becomes
@@ -33,7 +32,7 @@ trait EdgeLength extends js.Object {
     * 0.1
     * @see https://echarts.apache.org/en/option.html#series-graph.force.gravity
     */
-  var gravity: js.UndefOr[Double] = js.native
+  var gravity: js.UndefOr[Double] = js.undefined
   /**
     * The initial layout before force-directed layout, which will
     * influence on the result of force-directed layout.
@@ -52,7 +51,7 @@ trait EdgeLength extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.force.initLayout
     */
-  var initLayout: js.UndefOr[String] = js.native
+  var initLayout: js.UndefOr[String] = js.undefined
   /**
     * Because the force-directed layout will be steady after several
     * iterations, this parameter will be decide whether to show
@@ -66,7 +65,7 @@ trait EdgeLength extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-graph.force.layoutAnimation
     */
-  var layoutAnimation: js.UndefOr[Boolean] = js.native
+  var layoutAnimation: js.UndefOr[Boolean] = js.undefined
   /**
     * The repulsion factor between nodes.
     * The repulsion will be stronger and the distance between 2
@@ -81,82 +80,25 @@ trait EdgeLength extends js.Object {
     * 50
     * @see https://echarts.apache.org/en/option.html#series-graph.force.repulsion
     */
-  var repulsion: js.UndefOr[js.Array[_] | Double] = js.native
+  var repulsion: js.UndefOr[js.Array[_] | Double] = js.undefined
 }
 
 object EdgeLength {
   @scala.inline
-  def apply(): EdgeLength = {
+  def apply(
+    edgeLength: js.Array[_] | Double = null,
+    gravity: js.UndefOr[Double] = js.undefined,
+    initLayout: String = null,
+    layoutAnimation: js.UndefOr[Boolean] = js.undefined,
+    repulsion: js.Array[_] | Double = null
+  ): EdgeLength = {
     val __obj = js.Dynamic.literal()
+    if (edgeLength != null) __obj.updateDynamic("edgeLength")(edgeLength.asInstanceOf[js.Any])
+    if (!js.isUndefined(gravity)) __obj.updateDynamic("gravity")(gravity.get.asInstanceOf[js.Any])
+    if (initLayout != null) __obj.updateDynamic("initLayout")(initLayout.asInstanceOf[js.Any])
+    if (!js.isUndefined(layoutAnimation)) __obj.updateDynamic("layoutAnimation")(layoutAnimation.get.asInstanceOf[js.Any])
+    if (repulsion != null) __obj.updateDynamic("repulsion")(repulsion.asInstanceOf[js.Any])
     __obj.asInstanceOf[EdgeLength]
   }
-  @scala.inline
-  implicit class EdgeLengthOps[Self <: EdgeLength] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEdgeLength(value: js.Array[_] | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGravity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gravity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGravity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gravity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitLayout(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initLayout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initLayout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayoutAnimation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayoutAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutAnimation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepulsion(value: js.Array[_] | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repulsion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepulsion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repulsion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SymbolType extends js.Object {
   /**
     * Renders this symbol type to the specified context with the specified size in square pixels. The context implements the CanvasPath interface.
@@ -13,7 +12,7 @@ trait SymbolType extends js.Object {
     * @param context A rendering context implementing CanvasPath.
     * @param size Size of the symbol to draw.
     */
-  def draw(context: CanvasPathD3Shape, size: Double): Unit = js.native
+  def draw(context: CanvasPathD3Shape, size: Double): Unit
 }
 
 object SymbolType {
@@ -22,19 +21,5 @@ object SymbolType {
     val __obj = js.Dynamic.literal(draw = js.Any.fromFunction2(draw))
     __obj.asInstanceOf[SymbolType]
   }
-  @scala.inline
-  implicit class SymbolTypeOps[Self <: SymbolType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDraw(value: (CanvasPathD3Shape, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draw")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

@@ -5,6 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.reactMarkdown.reactMarkdownStrings.left
+    - typingsSlinky.reactMarkdown.reactMarkdownStrings.right
+    - typingsSlinky.reactMarkdown.reactMarkdownStrings.center
+    - scala.Null
+  */
+  type AlignType = typingsSlinky.reactMarkdown.mod._AlignType | scala.Null
   type LinkTargetResolver = js.Function3[
     /* uri */ java.lang.String, 
     /* text */ java.lang.String, 

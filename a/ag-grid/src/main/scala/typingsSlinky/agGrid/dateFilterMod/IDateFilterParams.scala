@@ -9,10 +9,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IDateFilterParams extends IComparableFilterParams {
-  var browserDatePicker: js.UndefOr[Boolean] = js.native
-  var comparator: js.UndefOr[IDateComparatorFunc] = js.native
+  var browserDatePicker: js.UndefOr[Boolean] = js.undefined
+  var comparator: js.UndefOr[IDateComparatorFunc] = js.undefined
 }
 
 object IDateFilterParams {
@@ -27,42 +26,26 @@ object IDateFilterParams {
     filterModifiedCallback: () => Unit,
     rowModel: IRowModel,
     suppressAndOrCondition: Boolean,
-    valueGetter: RowNode => js.Any
+    valueGetter: RowNode => js.Any,
+    applyButton: js.UndefOr[Boolean] = js.undefined,
+    browserDatePicker: js.UndefOr[Boolean] = js.undefined,
+    clearButton: js.UndefOr[Boolean] = js.undefined,
+    comparator: (/* filterLocalDateAtMidnight */ js.Date, /* cellValue */ js.Any) => Double = null,
+    defaultOption: String = null,
+    filterOptions: js.Array[String] = null,
+    newRowsAction: String = null,
+    textFormatter: /* from */ String => String = null
   ): IDateFilterParams = {
     val __obj = js.Dynamic.literal($scope = $scope.asInstanceOf[js.Any], colDef = colDef.asInstanceOf[js.Any], column = column.asInstanceOf[js.Any], context = context.asInstanceOf[js.Any], doesRowPassOtherFilter = js.Any.fromFunction1(doesRowPassOtherFilter), filterChangedCallback = js.Any.fromFunction0(filterChangedCallback), filterModifiedCallback = js.Any.fromFunction0(filterModifiedCallback), rowModel = rowModel.asInstanceOf[js.Any], suppressAndOrCondition = suppressAndOrCondition.asInstanceOf[js.Any], valueGetter = js.Any.fromFunction1(valueGetter))
+    if (!js.isUndefined(applyButton)) __obj.updateDynamic("applyButton")(applyButton.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(browserDatePicker)) __obj.updateDynamic("browserDatePicker")(browserDatePicker.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(clearButton)) __obj.updateDynamic("clearButton")(clearButton.get.asInstanceOf[js.Any])
+    if (comparator != null) __obj.updateDynamic("comparator")(js.Any.fromFunction2(comparator))
+    if (defaultOption != null) __obj.updateDynamic("defaultOption")(defaultOption.asInstanceOf[js.Any])
+    if (filterOptions != null) __obj.updateDynamic("filterOptions")(filterOptions.asInstanceOf[js.Any])
+    if (newRowsAction != null) __obj.updateDynamic("newRowsAction")(newRowsAction.asInstanceOf[js.Any])
+    if (textFormatter != null) __obj.updateDynamic("textFormatter")(js.Any.fromFunction1(textFormatter))
     __obj.asInstanceOf[IDateFilterParams]
   }
-  @scala.inline
-  implicit class IDateFilterParamsOps[Self <: IDateFilterParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBrowserDatePicker(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserDatePicker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowserDatePicker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserDatePicker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComparator(value: (/* filterLocalDateAtMidnight */ js.Date, /* cellValue */ js.Any) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparator")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutComparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparator")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

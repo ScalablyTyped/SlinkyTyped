@@ -33,65 +33,18 @@ trait SchemaNewDisk extends js.Object {
 
 object SchemaNewDisk {
   @scala.inline
-  def apply(): SchemaNewDisk = {
+  def apply(
+    attachment: SchemaDiskAttachment = null,
+    autoDelete: js.UndefOr[Boolean] = js.undefined,
+    boot: js.UndefOr[Boolean] = js.undefined,
+    initializeParams: SchemaNewDiskInitializeParams = null
+  ): SchemaNewDisk = {
     val __obj = js.Dynamic.literal()
+    if (attachment != null) __obj.updateDynamic("attachment")(attachment.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoDelete)) __obj.updateDynamic("autoDelete")(autoDelete.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(boot)) __obj.updateDynamic("boot")(boot.get.asInstanceOf[js.Any])
+    if (initializeParams != null) __obj.updateDynamic("initializeParams")(initializeParams.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNewDisk]
   }
-  @scala.inline
-  implicit class SchemaNewDiskOps[Self <: SchemaNewDisk] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttachment(value: SchemaDiskAttachment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoDelete(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDelete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoDelete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDelete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoot(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitializeParams(value: SchemaNewDiskInitializeParams): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initializeParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitializeParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initializeParams")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

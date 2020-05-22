@@ -4,46 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Priority extends js.Object {
   @JSName(".priority")
-  var Dotpriority: String | Double | Null = js.native
+  var Dotpriority: String | Double | Null
   @JSName(".value")
-  var Dotvalue: js.Any = js.native
+  var Dotvalue: js.Any
 }
 
 object Priority {
   @scala.inline
-  def apply(Dotvalue: js.Any): Priority = {
+  def apply(Dotvalue: js.Any, Dotpriority: String | Double = null): Priority = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic(".value")(Dotvalue.asInstanceOf[js.Any])
+    __obj.updateDynamic(".priority")(Dotpriority.asInstanceOf[js.Any])
     __obj.asInstanceOf[Priority]
   }
-  @scala.inline
-  implicit class PriorityOps[Self <: Priority] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDotvalue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDotpriority(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".priority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDotpriorityNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".priority")(null)
-        ret
-    }
-  }
-  
 }
 

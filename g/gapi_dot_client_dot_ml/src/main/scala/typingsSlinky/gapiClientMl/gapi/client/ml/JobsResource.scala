@@ -9,27 +9,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JobsResource extends js.Object {
   /** Cancels a running job. */
-  def cancel(request: Accesstoken): Request[js.Object] = js.native
+  def cancel(request: Accesstoken): Request[js.Object]
   /** Creates a training or a batch prediction job. */
-  def create(request: Alt): Request[GoogleCloudMlV1Job] = js.native
+  def create(request: Alt): Request[GoogleCloudMlV1Job]
   /** Describes a job. */
-  def get(request: Accesstoken): Request[GoogleCloudMlV1Job] = js.native
+  def get(request: Accesstoken): Request[GoogleCloudMlV1Job]
   /**
     * Gets the access control policy for a resource.
     * Returns an empty policy if the resource exists and does not have a policy
     * set.
     */
-  def getIamPolicy(request: Bearertoken): Request[GoogleIamV1Policy] = js.native
+  def getIamPolicy(request: Bearertoken): Request[GoogleIamV1Policy]
   /** Lists the jobs in the project. */
-  def list(request: Callback): Request[GoogleCloudMlV1ListJobsResponse] = js.native
+  def list(request: Callback): Request[GoogleCloudMlV1ListJobsResponse]
   /**
     * Sets the access control policy on the specified resource. Replaces any
     * existing policy.
     */
-  def setIamPolicy(request: Bearertoken): Request[GoogleIamV1Policy] = js.native
+  def setIamPolicy(request: Bearertoken): Request[GoogleIamV1Policy]
   /**
     * Returns permissions that a caller has on the specified resource.
     * If the resource does not exist, this will return an empty set of
@@ -39,7 +38,7 @@ trait JobsResource extends js.Object {
     * UIs and command-line tools, not for authorization checking. This operation
     * may "fail open" without warning.
     */
-  def testIamPermissions(request: Bearertoken): Request[GoogleIamV1TestIamPermissionsResponse] = js.native
+  def testIamPermissions(request: Bearertoken): Request[GoogleIamV1TestIamPermissionsResponse]
 }
 
 object JobsResource {
@@ -56,55 +55,5 @@ object JobsResource {
     val __obj = js.Dynamic.literal(cancel = js.Any.fromFunction1(cancel), create = js.Any.fromFunction1(create), get = js.Any.fromFunction1(get), getIamPolicy = js.Any.fromFunction1(getIamPolicy), list = js.Any.fromFunction1(list), setIamPolicy = js.Any.fromFunction1(setIamPolicy), testIamPermissions = js.Any.fromFunction1(testIamPermissions))
     __obj.asInstanceOf[JobsResource]
   }
-  @scala.inline
-  implicit class JobsResourceOps[Self <: JobsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancel(value: Accesstoken => Request[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreate(value: Alt => Request[GoogleCloudMlV1Job]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: Accesstoken => Request[GoogleCloudMlV1Job]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetIamPolicy(value: Bearertoken => Request[GoogleIamV1Policy]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getIamPolicy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Callback => Request[GoogleCloudMlV1ListJobsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetIamPolicy(value: Bearertoken => Request[GoogleIamV1Policy]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setIamPolicy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTestIamPermissions(value: Bearertoken => Request[GoogleIamV1TestIamPermissionsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testIamPermissions")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Utils extends js.Object {
   @JSName("toArray")
-  def toArray_hex(msg: js.Any, enc: hex): js.Array[Double] = js.native
-  def toHex(msg: js.Any): String = js.native
+  def toArray_hex(msg: js.Any, enc: hex): js.Array[Double]
+  def toHex(msg: js.Any): String
 }
 
 object Utils {
@@ -18,25 +17,5 @@ object Utils {
     val __obj = js.Dynamic.literal(toArray = js.Any.fromFunction2(toArray), toHex = js.Any.fromFunction1(toHex))
     __obj.asInstanceOf[Utils]
   }
-  @scala.inline
-  implicit class UtilsOps[Self <: Utils] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withToArray(value: (js.Any, hex) => js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toArray")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withToHex(value: js.Any => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toHex")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

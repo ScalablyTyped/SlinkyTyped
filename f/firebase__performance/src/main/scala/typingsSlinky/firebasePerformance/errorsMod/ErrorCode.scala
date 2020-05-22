@@ -2,10 +2,11 @@ package typingsSlinky.firebasePerformance.errorsMod
 
 import typingsSlinky.firebasePerformance.firebasePerformanceStrings.`FB not default`
 import typingsSlinky.firebasePerformance.firebasePerformanceStrings.`RC response not ok`
+import typingsSlinky.firebasePerformance.firebasePerformanceStrings.`invalid String merger input`
 import typingsSlinky.firebasePerformance.firebasePerformanceStrings.`invalid attribute name`
 import typingsSlinky.firebasePerformance.firebasePerformanceStrings.`invalid attribute value`
 import typingsSlinky.firebasePerformance.firebasePerformanceStrings.`invalid cc log`
-import typingsSlinky.firebasePerformance.firebasePerformanceStrings.`invalide custom metric name`
+import typingsSlinky.firebasePerformance.firebasePerformanceStrings.`invalid custom metric name`
 import typingsSlinky.firebasePerformance.firebasePerformanceStrings.`no api key`
 import typingsSlinky.firebasePerformance.firebasePerformanceStrings.`no app id`
 import typingsSlinky.firebasePerformance.firebasePerformanceStrings.`no project id`
@@ -28,7 +29,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.firebasePerformance.firebasePerformanceStrings.`RC response not ok`
   - typingsSlinky.firebasePerformance.firebasePerformanceStrings.`invalid attribute name`
   - typingsSlinky.firebasePerformance.firebasePerformanceStrings.`invalid attribute value`
-  - typingsSlinky.firebasePerformance.firebasePerformanceStrings.`invalide custom metric name`
+  - typingsSlinky.firebasePerformance.firebasePerformanceStrings.`invalid custom metric name`
+  - typingsSlinky.firebasePerformance.firebasePerformanceStrings.`invalid String merger input`
 */
 trait ErrorCode extends js.Object
 
@@ -42,7 +44,9 @@ object ErrorCode {
   @scala.inline
   def INVALID_CC_LOG: `invalid cc log` = ("invalid cc log").asInstanceOf[`invalid cc log`]
   @scala.inline
-  def INVALID_CUSTOM_METRIC_NAME: `invalide custom metric name` = ("invalide custom metric name").asInstanceOf[`invalide custom metric name`]
+  def INVALID_CUSTOM_METRIC_NAME: `invalid custom metric name` = ("invalid custom metric name").asInstanceOf[`invalid custom metric name`]
+  @scala.inline
+  def INVALID_STRING_MERGER_PARAMETER: `invalid String merger input` = ("invalid String merger input").asInstanceOf[`invalid String merger input`]
   @scala.inline
   def NO_API_KEY: `no api key` = ("no api key").asInstanceOf[`no api key`]
   @scala.inline

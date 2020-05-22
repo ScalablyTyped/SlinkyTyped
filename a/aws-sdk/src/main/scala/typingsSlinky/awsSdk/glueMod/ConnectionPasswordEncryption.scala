@@ -18,35 +18,10 @@ trait ConnectionPasswordEncryption extends js.Object {
 
 object ConnectionPasswordEncryption {
   @scala.inline
-  def apply(ReturnConnectionPasswordEncrypted: Boolean): ConnectionPasswordEncryption = {
+  def apply(ReturnConnectionPasswordEncrypted: Boolean, AwsKmsKeyId: NameString = null): ConnectionPasswordEncryption = {
     val __obj = js.Dynamic.literal(ReturnConnectionPasswordEncrypted = ReturnConnectionPasswordEncrypted.asInstanceOf[js.Any])
+    if (AwsKmsKeyId != null) __obj.updateDynamic("AwsKmsKeyId")(AwsKmsKeyId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectionPasswordEncryption]
   }
-  @scala.inline
-  implicit class ConnectionPasswordEncryptionOps[Self <: ConnectionPasswordEncryption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReturnConnectionPasswordEncrypted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnConnectionPasswordEncrypted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAwsKmsKeyId(value: NameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsKmsKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwsKmsKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsKmsKeyId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

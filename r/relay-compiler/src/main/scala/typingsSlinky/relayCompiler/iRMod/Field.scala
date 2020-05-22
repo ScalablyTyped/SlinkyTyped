@@ -1,5 +1,7 @@
 package typingsSlinky.relayCompiler.iRMod
 
+import typingsSlinky.relayCompiler.schemaMod.LinkedFieldTypeID
+import typingsSlinky.relayCompiler.schemaMod.ScalarFieldTypeID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +14,42 @@ trait Field extends js.Object
 
 object Field {
   @scala.inline
-  implicit def apply(value: LinkedField): Field = value.asInstanceOf[Field]
+  def LinkedField(
+    alias: String,
+    args: js.Array[Argument],
+    connection: Boolean,
+    directives: js.Array[Directive],
+    kind: typingsSlinky.relayCompiler.relayCompilerStrings.LinkedField,
+    loc: Location,
+    name: String,
+    selections: js.Array[Selection],
+    `type`: LinkedFieldTypeID,
+    handles: js.Array[Handle] = null,
+    metadata: Metadata = null
+  ): Field = {
+    val __obj = js.Dynamic.literal(alias = alias.asInstanceOf[js.Any], args = args.asInstanceOf[js.Any], connection = connection.asInstanceOf[js.Any], directives = directives.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (handles != null) __obj.updateDynamic("handles")(handles.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Field]
+  }
   @scala.inline
-  implicit def apply(value: ScalarField): Field = value.asInstanceOf[Field]
+  def ScalarField(
+    alias: String,
+    args: js.Array[Argument],
+    directives: js.Array[Directive],
+    kind: typingsSlinky.relayCompiler.relayCompilerStrings.ScalarField,
+    loc: Location,
+    name: String,
+    `type`: ScalarFieldTypeID,
+    handles: js.Array[Handle] = null,
+    metadata: Metadata = null
+  ): Field = {
+    val __obj = js.Dynamic.literal(alias = alias.asInstanceOf[js.Any], args = args.asInstanceOf[js.Any], directives = directives.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (handles != null) __obj.updateDynamic("handles")(handles.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Field]
+  }
 }
 

@@ -26,9 +26,16 @@ object deleteBaiduChannelCommandMod extends js.Object {
           Blob
         ] {
     def this(input: DeleteBaiduChannelInput) = this()
+    /* CompleteClass */
+    override val input: DeleteBaiduChannelInput = js.native
     val middlewareStack: MiddlewareStack[DeleteBaiduChannelInput, DeleteBaiduChannelOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: PinpointResolvedConfiguration
+    ): Handler[DeleteBaiduChannelInput, DeleteBaiduChannelOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[DeleteBaiduChannelInput, DeleteBaiduChannelOutput] = js.native
   }

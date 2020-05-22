@@ -18,41 +18,11 @@ trait ListPublicKeysResponse extends js.Object {
 
 object ListPublicKeysResponse {
   @scala.inline
-  def apply(): ListPublicKeysResponse = {
+  def apply(NextToken: String = null, PublicKeyList: PublicKeyList = null): ListPublicKeysResponse = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (PublicKeyList != null) __obj.updateDynamic("PublicKeyList")(PublicKeyList.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListPublicKeysResponse]
   }
-  @scala.inline
-  implicit class ListPublicKeysResponseOps[Self <: ListPublicKeysResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublicKeyList(value: PublicKeyList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicKeyList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublicKeyList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicKeyList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

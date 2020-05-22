@@ -6,6 +6,7 @@ import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.firebase.firebaseStrings.add_payment_info
+  - typingsSlinky.firebase.firebaseStrings.add_shipping_info
   - typingsSlinky.firebase.firebaseStrings.add_to_cart
   - typingsSlinky.firebase.firebaseStrings.add_to_wishlist
   - typingsSlinky.firebase.firebaseStrings.begin_checkout
@@ -20,10 +21,13 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.firebase.firebaseStrings.screen_view
   - typingsSlinky.firebase.firebaseStrings.search
   - typingsSlinky.firebase.firebaseStrings.select_content
+  - typingsSlinky.firebase.firebaseStrings.select_item
+  - typingsSlinky.firebase.firebaseStrings.select_promotion
   - typingsSlinky.firebase.firebaseStrings.set_checkout_option
   - typingsSlinky.firebase.firebaseStrings.share
   - typingsSlinky.firebase.firebaseStrings.sign_up
   - typingsSlinky.firebase.firebaseStrings.timing_complete
+  - typingsSlinky.firebase.firebaseStrings.view_cart
   - typingsSlinky.firebase.firebaseStrings.view_item
   - typingsSlinky.firebase.firebaseStrings.view_item_list
   - typingsSlinky.firebase.firebaseStrings.view_promotion
@@ -34,6 +38,8 @@ trait EventNameString extends js.Object
 object EventNameString {
   @scala.inline
   def add_payment_info: typingsSlinky.firebase.firebaseStrings.add_payment_info = "add_payment_info".asInstanceOf[typingsSlinky.firebase.firebaseStrings.add_payment_info]
+  @scala.inline
+  def add_shipping_info: typingsSlinky.firebase.firebaseStrings.add_shipping_info = "add_shipping_info".asInstanceOf[typingsSlinky.firebase.firebaseStrings.add_shipping_info]
   @scala.inline
   def add_to_cart: typingsSlinky.firebase.firebaseStrings.add_to_cart = "add_to_cart".asInstanceOf[typingsSlinky.firebase.firebaseStrings.add_to_cart]
   @scala.inline
@@ -63,6 +69,10 @@ object EventNameString {
   @scala.inline
   def select_content: typingsSlinky.firebase.firebaseStrings.select_content = "select_content".asInstanceOf[typingsSlinky.firebase.firebaseStrings.select_content]
   @scala.inline
+  def select_item: typingsSlinky.firebase.firebaseStrings.select_item = "select_item".asInstanceOf[typingsSlinky.firebase.firebaseStrings.select_item]
+  @scala.inline
+  def select_promotion: typingsSlinky.firebase.firebaseStrings.select_promotion = "select_promotion".asInstanceOf[typingsSlinky.firebase.firebaseStrings.select_promotion]
+  @scala.inline
   def set_checkout_option: typingsSlinky.firebase.firebaseStrings.set_checkout_option = "set_checkout_option".asInstanceOf[typingsSlinky.firebase.firebaseStrings.set_checkout_option]
   @scala.inline
   def share: typingsSlinky.firebase.firebaseStrings.share = "share".asInstanceOf[typingsSlinky.firebase.firebaseStrings.share]
@@ -70,6 +80,8 @@ object EventNameString {
   def sign_up: typingsSlinky.firebase.firebaseStrings.sign_up = "sign_up".asInstanceOf[typingsSlinky.firebase.firebaseStrings.sign_up]
   @scala.inline
   def timing_complete: typingsSlinky.firebase.firebaseStrings.timing_complete = "timing_complete".asInstanceOf[typingsSlinky.firebase.firebaseStrings.timing_complete]
+  @scala.inline
+  def view_cart: typingsSlinky.firebase.firebaseStrings.view_cart = "view_cart".asInstanceOf[typingsSlinky.firebase.firebaseStrings.view_cart]
   @scala.inline
   def view_item: typingsSlinky.firebase.firebaseStrings.view_item = "view_item".asInstanceOf[typingsSlinky.firebase.firebaseStrings.view_item]
   @scala.inline

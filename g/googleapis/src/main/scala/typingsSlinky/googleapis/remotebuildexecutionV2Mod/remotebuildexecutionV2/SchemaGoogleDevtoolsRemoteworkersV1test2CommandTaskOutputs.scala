@@ -39,65 +39,18 @@ trait SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskOutputs extends js.Obje
 
 object SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskOutputs {
   @scala.inline
-  def apply(): SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskOutputs = {
+  def apply(
+    directories: js.Array[String] = null,
+    files: js.Array[String] = null,
+    stderrDestination: String = null,
+    stdoutDestination: String = null
+  ): SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskOutputs = {
     val __obj = js.Dynamic.literal()
+    if (directories != null) __obj.updateDynamic("directories")(directories.asInstanceOf[js.Any])
+    if (files != null) __obj.updateDynamic("files")(files.asInstanceOf[js.Any])
+    if (stderrDestination != null) __obj.updateDynamic("stderrDestination")(stderrDestination.asInstanceOf[js.Any])
+    if (stdoutDestination != null) __obj.updateDynamic("stdoutDestination")(stdoutDestination.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskOutputs]
   }
-  @scala.inline
-  implicit class SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskOutputsOps[Self <: SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskOutputs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirectories(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFiles(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStderrDestination(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stderrDestination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStderrDestination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stderrDestination")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStdoutDestination(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stdoutDestination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStdoutDestination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stdoutDestination")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

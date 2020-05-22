@@ -5,7 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.groupSpacerTypesMod.IGroupSpacerProps
 import typingsSlinky.officeUiFabricReact.groupSpacerTypesMod.IGroupSpacerStyleProps
 import typingsSlinky.officeUiFabricReact.groupSpacerTypesMod.IGroupSpacerStyles
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
@@ -24,7 +24,7 @@ object GroupSpacer {
     @scala.inline
     def indentWidth(value: Double): this.type = set("indentWidth", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IGroupSpacerStyleProps => Partial[IGroupSpacerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IGroupSpacerStyleProps => DeepPartial[IGroupSpacerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IGroupSpacerStyleProps, IGroupSpacerStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

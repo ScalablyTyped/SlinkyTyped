@@ -21,41 +21,14 @@ trait SchemaTableBorderCell extends js.Object {
 
 object SchemaTableBorderCell {
   @scala.inline
-  def apply(): SchemaTableBorderCell = {
+  def apply(
+    location: SchemaTableCellLocation = null,
+    tableBorderProperties: SchemaTableBorderProperties = null
+  ): SchemaTableBorderCell = {
     val __obj = js.Dynamic.literal()
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (tableBorderProperties != null) __obj.updateDynamic("tableBorderProperties")(tableBorderProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTableBorderCell]
   }
-  @scala.inline
-  implicit class SchemaTableBorderCellOps[Self <: SchemaTableBorderCell] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocation(value: SchemaTableCellLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableBorderProperties(value: SchemaTableBorderProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableBorderProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableBorderProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableBorderProperties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -71,6 +71,11 @@ object webXRFeaturesManagerMod extends js.Object {
     def disableFeature(featureName: String): Boolean = js.native
     def disableFeature(featureName: NameString): Boolean = js.native
     /**
+      * Releases all held resources
+      */
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
+    /**
       * Enable a feature using its name and a version. This will enable it in the scene, and will be responsible to attach it when the session starts.
       * If used twice, the old version will be disposed and a new one will be constructed. This way you can re-enable with different configuration.
       *

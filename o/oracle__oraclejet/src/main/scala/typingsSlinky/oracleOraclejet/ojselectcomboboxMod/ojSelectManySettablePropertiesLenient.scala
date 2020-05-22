@@ -23,294 +23,86 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<@oracle/oraclejet.@oracle/oraclejet/ojselectcombobox.ojSelectManySettableProperties<K, D>> */
-@js.native
 trait ojSelectManySettablePropertiesLenient[K, D]
   extends /* key */ StringDictionary[js.Any] {
-  var describedBy: js.UndefOr[String] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var displayOptions: js.UndefOr[ConverterHint] = js.native
-  var help: js.UndefOr[Instruction] = js.native
-  var helpHints: js.UndefOr[Definition] = js.native
-  var labelHint: js.UndefOr[String] = js.native
-  var messagesCustom: js.UndefOr[js.Array[^]] = js.native
-  var minimumResultsForSearch: js.UndefOr[Double] = js.native
-  var optionRenderer: js.UndefOr[js.Function1[/* param0 */ OptionContext, Element]] = js.native
+  var describedBy: js.UndefOr[String] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var displayOptions: js.UndefOr[ConverterHint] = js.undefined
+  var help: js.UndefOr[Instruction] = js.undefined
+  var helpHints: js.UndefOr[Definition] = js.undefined
+  var labelHint: js.UndefOr[String] = js.undefined
+  var messagesCustom: js.UndefOr[js.Array[^]] = js.undefined
+  var minimumResultsForSearch: js.UndefOr[Double] = js.undefined
+  var optionRenderer: js.UndefOr[js.Function1[/* param0 */ OptionContext, Element]] = js.undefined
   var options: js.UndefOr[
     (js.Array[
       typingsSlinky.oracleOraclejet.ojselectcomboboxMod.ojSelect.Option | typingsSlinky.oracleOraclejet.ojselectcomboboxMod.ojSelect.Optgroup
     ]) | (DataProvider[K, D])
-  ] = js.native
-  var optionsKeys: js.UndefOr[ChildrenLabel] = js.native
-  var pickerAttributes: js.UndefOr[Class] = js.native
-  var placeholder: js.UndefOr[String] = js.native
-  var readOnly: js.UndefOr[Boolean] = js.native
-  var renderMode: js.UndefOr[jet | native] = js.native
-  var required: js.UndefOr[Boolean] = js.native
-  var translations: js.UndefOr[MoreMatchesFound] = js.native
+  ] = js.undefined
+  var optionsKeys: js.UndefOr[ChildrenLabel] = js.undefined
+  var pickerAttributes: js.UndefOr[Class] = js.undefined
+  var placeholder: js.UndefOr[String] = js.undefined
+  var readOnly: js.UndefOr[Boolean] = js.undefined
+  var renderMode: js.UndefOr[jet | native] = js.undefined
+  var required: js.UndefOr[Boolean] = js.undefined
+  var translations: js.UndefOr[MoreMatchesFound] = js.undefined
   var valid: js.UndefOr[
     typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valid | pending | invalidHidden | invalidShown
-  ] = js.native
-  var value: js.UndefOr[js.Array[_]] = js.native
-  var valueOptions: js.UndefOr[js.Array[LabelValue]] = js.native
+  ] = js.undefined
+  var value: js.UndefOr[js.Array[_]] = js.undefined
+  var valueOptions: js.UndefOr[js.Array[LabelValue]] = js.undefined
 }
 
 object ojSelectManySettablePropertiesLenient {
   @scala.inline
-  def apply[K, D](): ojSelectManySettablePropertiesLenient[K, D] = {
+  def apply[K, D](
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    describedBy: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    displayOptions: ConverterHint = null,
+    help: Instruction = null,
+    helpHints: Definition = null,
+    labelHint: String = null,
+    messagesCustom: js.Array[^] = null,
+    minimumResultsForSearch: js.UndefOr[Double] = js.undefined,
+    optionRenderer: /* param0 */ OptionContext => Element = null,
+    options: (js.Array[
+      typingsSlinky.oracleOraclejet.ojselectcomboboxMod.ojSelect.Option | typingsSlinky.oracleOraclejet.ojselectcomboboxMod.ojSelect.Optgroup
+    ]) | (DataProvider[K, D]) = null,
+    optionsKeys: ChildrenLabel = null,
+    pickerAttributes: Class = null,
+    placeholder: String = null,
+    readOnly: js.UndefOr[Boolean] = js.undefined,
+    renderMode: jet | native = null,
+    required: js.UndefOr[Boolean] = js.undefined,
+    translations: MoreMatchesFound = null,
+    valid: valid | pending | invalidHidden | invalidShown = null,
+    value: js.Array[_] = null,
+    valueOptions: js.Array[LabelValue] = null
+  ): ojSelectManySettablePropertiesLenient[K, D] = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (describedBy != null) __obj.updateDynamic("describedBy")(describedBy.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (displayOptions != null) __obj.updateDynamic("displayOptions")(displayOptions.asInstanceOf[js.Any])
+    if (help != null) __obj.updateDynamic("help")(help.asInstanceOf[js.Any])
+    if (helpHints != null) __obj.updateDynamic("helpHints")(helpHints.asInstanceOf[js.Any])
+    if (labelHint != null) __obj.updateDynamic("labelHint")(labelHint.asInstanceOf[js.Any])
+    if (messagesCustom != null) __obj.updateDynamic("messagesCustom")(messagesCustom.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimumResultsForSearch)) __obj.updateDynamic("minimumResultsForSearch")(minimumResultsForSearch.get.asInstanceOf[js.Any])
+    if (optionRenderer != null) __obj.updateDynamic("optionRenderer")(js.Any.fromFunction1(optionRenderer))
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (optionsKeys != null) __obj.updateDynamic("optionsKeys")(optionsKeys.asInstanceOf[js.Any])
+    if (pickerAttributes != null) __obj.updateDynamic("pickerAttributes")(pickerAttributes.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (!js.isUndefined(readOnly)) __obj.updateDynamic("readOnly")(readOnly.get.asInstanceOf[js.Any])
+    if (renderMode != null) __obj.updateDynamic("renderMode")(renderMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.get.asInstanceOf[js.Any])
+    if (translations != null) __obj.updateDynamic("translations")(translations.asInstanceOf[js.Any])
+    if (valid != null) __obj.updateDynamic("valid")(valid.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (valueOptions != null) __obj.updateDynamic("valueOptions")(valueOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojSelectManySettablePropertiesLenient[K, D]]
   }
-  @scala.inline
-  implicit class ojSelectManySettablePropertiesLenientOps[Self[k, d] <: ojSelectManySettablePropertiesLenient[k, d], K, D] (val x: Self[K, D]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[K, D] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[K, D]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[K, D]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[K, D]) with Other]
-    @scala.inline
-    def withDescribedBy(value: String): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("describedBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescribedBy: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("describedBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayOptions(value: ConverterHint): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayOptions: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHelp(value: Instruction): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHelp: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHelpHints(value: Definition): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("helpHints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHelpHints: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("helpHints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelHint(value: String): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelHint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelHint: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelHint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessagesCustom(value: js.Array[^]): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messagesCustom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessagesCustom: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messagesCustom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumResultsForSearch(value: Double): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumResultsForSearch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumResultsForSearch: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumResultsForSearch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptionRenderer(value: /* param0 */ OptionContext => Element): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionRenderer")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOptionRenderer: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionRenderer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(
-      value: (js.Array[
-          typingsSlinky.oracleOraclejet.ojselectcomboboxMod.ojSelect.Option | typingsSlinky.oracleOraclejet.ojselectcomboboxMod.ojSelect.Optgroup
-        ]) | (DataProvider[K, D])
-    ): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptionsKeys(value: ChildrenLabel): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionsKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptionsKeys: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionsKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPickerAttributes(value: Class): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickerAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPickerAttributes: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickerAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadOnly(value: Boolean): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadOnly: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderMode(value: jet | native): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderMode: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequired(value: Boolean): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequired: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranslations(value: MoreMatchesFound): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranslations: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValid(value: valid | pending | invalidHidden | invalidShown): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValid: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Array[_]): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueOptions(value: js.Array[LabelValue]): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueOptions: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

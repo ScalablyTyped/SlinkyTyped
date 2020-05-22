@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   *
   * @see https://on.cypress.io/visit
   */
-@js.native
 trait VisitOptions
   extends Loggable
      with Timeoutable
@@ -31,7 +30,7 @@ trait VisitOptions
     *      }
     *    })
     */
-  var auth: Auth = js.native
+  var auth: Auth
   /**
     * An optional body to send along with a `POST` request. If it is a string, it will be passed along unmodified. If it is an object, it will be URL encoded to a string and sent with a `Content-Type: application/x-www-urlencoded` header.
     *
@@ -45,7 +44,7 @@ trait VisitOptions
     *      }
     *    })
     */
-  var body: RequestBody = js.native
+  var body: RequestBody
   /**
     * An object that maps HTTP header names to values to be sent along with the request.
     *
@@ -57,33 +56,33 @@ trait VisitOptions
     *      }
     *    })
     */
-  var headers: StringDictionary[String] = js.native
+  var headers: StringDictionary[String]
   /**
     * The HTTP method to use in the visit. Can be `GET` or `POST`.
     *
     * @default "GET"
     */
-  var method: GET | POST = js.native
+  var method: GET | POST
   /**
     * Query parameters to append to the `url` of the request.
     */
-  var qs: js.Object = js.native
+  var qs: js.Object
   /**
     * The URL to visit. Behaves the same as the `url` argument.
     */
-  var url: String = js.native
+  var url: String
   /**
     * Called before your page has loaded all of its resources.
     *
     * @param {Window} contentWindow the remote page's window object
     */
-  def onBeforeLoad(win: Window): Unit = js.native
+  def onBeforeLoad(win: Window): Unit
   /**
     * Called once your page has fired its load event.
     *
     * @param {Window} contentWindow the remote page's window object
     */
-  def onLoad(win: Window): Unit = js.native
+  def onLoad(win: Window): Unit
 }
 
 object VisitOptions {
@@ -106,61 +105,5 @@ object VisitOptions {
     val __obj = js.Dynamic.literal(auth = auth.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], failOnStatusCode = failOnStatusCode.asInstanceOf[js.Any], headers = headers.asInstanceOf[js.Any], log = log.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], onBeforeLoad = js.Any.fromFunction1(onBeforeLoad), onLoad = js.Any.fromFunction1(onLoad), qs = qs.asInstanceOf[js.Any], retryOnNetworkFailure = retryOnNetworkFailure.asInstanceOf[js.Any], retryOnStatusCodeFailure = retryOnStatusCodeFailure.asInstanceOf[js.Any], timeout = timeout.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisitOptions]
   }
-  @scala.inline
-  implicit class VisitOptionsOps[Self <: VisitOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuth(value: Auth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBody(value: RequestBody): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMethod(value: GET | POST): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnBeforeLoad(value: Window => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeLoad")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnLoad(value: Window => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withQs(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

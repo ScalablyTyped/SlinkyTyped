@@ -4,36 +4,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChartBarColumnAnnotations extends ChartAnnotations {
-  var alwaysOutside: js.UndefOr[Boolean] = js.native
+  var alwaysOutside: js.UndefOr[Boolean] = js.undefined
 }
 
 object ChartBarColumnAnnotations {
   @scala.inline
-  def apply(): ChartBarColumnAnnotations = {
+  def apply(
+    alwaysOutside: js.UndefOr[Boolean] = js.undefined,
+    boxStyle: ChartBoxStyle = null,
+    datum: ChartStemAndStyle = null,
+    domain: ChartStemAndStyle = null,
+    highContrast: js.UndefOr[Boolean] = js.undefined,
+    stem: ChartStem = null,
+    style: String = null,
+    textStyle: ChartTextStyle = null
+  ): ChartBarColumnAnnotations = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(alwaysOutside)) __obj.updateDynamic("alwaysOutside")(alwaysOutside.get.asInstanceOf[js.Any])
+    if (boxStyle != null) __obj.updateDynamic("boxStyle")(boxStyle.asInstanceOf[js.Any])
+    if (datum != null) __obj.updateDynamic("datum")(datum.asInstanceOf[js.Any])
+    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
+    if (!js.isUndefined(highContrast)) __obj.updateDynamic("highContrast")(highContrast.get.asInstanceOf[js.Any])
+    if (stem != null) __obj.updateDynamic("stem")(stem.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartBarColumnAnnotations]
   }
-  @scala.inline
-  implicit class ChartBarColumnAnnotationsOps[Self <: ChartBarColumnAnnotations] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlwaysOutside(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysOutside")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlwaysOutside: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysOutside")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

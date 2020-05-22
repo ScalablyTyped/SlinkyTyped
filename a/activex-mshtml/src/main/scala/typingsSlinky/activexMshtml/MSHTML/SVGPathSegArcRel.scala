@@ -4,19 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SVGPathSegArcRel extends js.Object {
   @JSName("MSHTML.SVGPathSegArcRel_typekey")
-  var MSHTMLDotSVGPathSegArcRel_typekey: SVGPathSegArcRel = js.native
-  var angle: Double = js.native
-  var largeArcFlag: Boolean = js.native
-  var pathSegType: Double = js.native
-  val pathSegTypeAsLetter: String = js.native
-  var r1: Double = js.native
-  var r2: Double = js.native
-  var sweepFlag: Boolean = js.native
-  var x: Double = js.native
-  var y: Double = js.native
+  var MSHTMLDotSVGPathSegArcRel_typekey: SVGPathSegArcRel
+  var angle: Double
+  var largeArcFlag: Boolean
+  var pathSegType: Double
+  val pathSegTypeAsLetter: String
+  var r1: Double
+  var r2: Double
+  var sweepFlag: Boolean
+  var x: Double
+  var y: Double
 }
 
 object SVGPathSegArcRel {
@@ -37,73 +36,5 @@ object SVGPathSegArcRel {
     __obj.updateDynamic("MSHTML.SVGPathSegArcRel_typekey")(MSHTMLDotSVGPathSegArcRel_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SVGPathSegArcRel]
   }
-  @scala.inline
-  implicit class SVGPathSegArcRelOps[Self <: SVGPathSegArcRel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSHTMLDotSVGPathSegArcRel_typekey(value: SVGPathSegArcRel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.SVGPathSegArcRel_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLargeArcFlag(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("largeArcFlag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPathSegType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathSegType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPathSegTypeAsLetter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathSegTypeAsLetter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withR1(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("r1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withR2(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("r2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSweepFlag(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sweepFlag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,140 +4,52 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LeaderboardConfiguration extends js.Object {
   /** The draft data of the leaderboard. */
-  var draft: js.UndefOr[LeaderboardConfigurationDetail] = js.native
+  var draft: js.UndefOr[LeaderboardConfigurationDetail] = js.undefined
   /** The ID of the leaderboard. */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /** Uniquely identifies the type of this resource. Value is always the fixed string gamesConfiguration#leaderboardConfiguration. */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /** The read-only published data of the leaderboard. */
-  var published: js.UndefOr[LeaderboardConfigurationDetail] = js.native
+  var published: js.UndefOr[LeaderboardConfigurationDetail] = js.undefined
   /** Maximum score that can be posted to this leaderboard. */
-  var scoreMax: js.UndefOr[String] = js.native
+  var scoreMax: js.UndefOr[String] = js.undefined
   /** Minimum score that can be posted to this leaderboard. */
-  var scoreMin: js.UndefOr[String] = js.native
+  var scoreMin: js.UndefOr[String] = js.undefined
   /**
     * The type of the leaderboard.
     * Possible values are:
     * - "LARGER_IS_BETTER" - Larger scores posted are ranked higher.
     * - "SMALLER_IS_BETTER" - Smaller scores posted are ranked higher.
     */
-  var scoreOrder: js.UndefOr[String] = js.native
+  var scoreOrder: js.UndefOr[String] = js.undefined
   /** The token for this resource. */
-  var token: js.UndefOr[String] = js.native
+  var token: js.UndefOr[String] = js.undefined
 }
 
 object LeaderboardConfiguration {
   @scala.inline
-  def apply(): LeaderboardConfiguration = {
+  def apply(
+    draft: LeaderboardConfigurationDetail = null,
+    id: String = null,
+    kind: String = null,
+    published: LeaderboardConfigurationDetail = null,
+    scoreMax: String = null,
+    scoreMin: String = null,
+    scoreOrder: String = null,
+    token: String = null
+  ): LeaderboardConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (draft != null) __obj.updateDynamic("draft")(draft.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (published != null) __obj.updateDynamic("published")(published.asInstanceOf[js.Any])
+    if (scoreMax != null) __obj.updateDynamic("scoreMax")(scoreMax.asInstanceOf[js.Any])
+    if (scoreMin != null) __obj.updateDynamic("scoreMin")(scoreMin.asInstanceOf[js.Any])
+    if (scoreOrder != null) __obj.updateDynamic("scoreOrder")(scoreOrder.asInstanceOf[js.Any])
+    if (token != null) __obj.updateDynamic("token")(token.asInstanceOf[js.Any])
     __obj.asInstanceOf[LeaderboardConfiguration]
   }
-  @scala.inline
-  implicit class LeaderboardConfigurationOps[Self <: LeaderboardConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDraft(value: LeaderboardConfigurationDetail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublished(value: LeaderboardConfigurationDetail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("published")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublished: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("published")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScoreMax(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scoreMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScoreMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scoreMax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScoreMin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scoreMin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScoreMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scoreMin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScoreOrder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scoreOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScoreOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scoreOrder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

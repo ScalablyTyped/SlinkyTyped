@@ -11,13 +11,12 @@ import scala.scalajs.js.annotation._
   *
   * For use with showDialog() of method type 'share'.
   */
-@js.native
 trait ShareDialogOptions extends BaseDialogOptions {
   /**
     * The link attached to this post. Required when using method share. Include open graph meta tags in the
     * page at this URL to customize the story that is shared.
     */
-  var href: String = js.native
+  var href: String
 }
 
 object ShareDialogOptions {
@@ -26,19 +25,5 @@ object ShareDialogOptions {
     val __obj = js.Dynamic.literal(href = href.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShareDialogOptions]
   }
-  @scala.inline
-  implicit class ShareDialogOptionsOps[Self <: ShareDialogOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHref(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

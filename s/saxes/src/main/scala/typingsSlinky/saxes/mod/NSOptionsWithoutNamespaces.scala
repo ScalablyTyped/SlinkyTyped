@@ -1,45 +1,32 @@
 package typingsSlinky.saxes.mod
 
 import typingsSlinky.saxes.saxesBooleans.`false`
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NSOptionsWithoutNamespaces extends NSOptions {
   @JSName("additionalNamespaces")
-  var additionalNamespaces_NSOptionsWithoutNamespaces: js.UndefOr[scala.Nothing] = js.native
+  var additionalNamespaces_NSOptionsWithoutNamespaces: js.UndefOr[scala.Nothing] = js.undefined
   @JSName("resolvePrefix")
-  var resolvePrefix_NSOptionsWithoutNamespaces: js.UndefOr[scala.Nothing] = js.native
+  var resolvePrefix_NSOptionsWithoutNamespaces: js.UndefOr[scala.Nothing] = js.undefined
   @JSName("xmlns")
-  var xmlns_NSOptionsWithoutNamespaces: js.UndefOr[`false`] = js.native
+  var xmlns_NSOptionsWithoutNamespaces: js.UndefOr[`false`] = js.undefined
 }
 
 object NSOptionsWithoutNamespaces {
   @scala.inline
-  def apply(): NSOptionsWithoutNamespaces = {
+  def apply(
+    additionalNamespaces: Record[String, String] = null,
+    resolvePrefix: /* prefix */ String => js.UndefOr[String] = null,
+    xmlns: `false` = null
+  ): NSOptionsWithoutNamespaces = {
     val __obj = js.Dynamic.literal()
+    if (additionalNamespaces != null) __obj.updateDynamic("additionalNamespaces")(additionalNamespaces.asInstanceOf[js.Any])
+    if (resolvePrefix != null) __obj.updateDynamic("resolvePrefix")(js.Any.fromFunction1(resolvePrefix))
+    if (xmlns != null) __obj.updateDynamic("xmlns")(xmlns.asInstanceOf[js.Any])
     __obj.asInstanceOf[NSOptionsWithoutNamespaces]
   }
-  @scala.inline
-  implicit class NSOptionsWithoutNamespacesOps[Self <: NSOptionsWithoutNamespaces] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withXmlns(value: `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXmlns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlns")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

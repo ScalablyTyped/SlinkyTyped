@@ -23,7 +23,7 @@ trait Setting extends ClientObject {
   var context_Setting: RequestContext = js.native
   /**
     *
-    * Returns the key that represents the id of the Setting. Read-only.
+    * The key that represents the id of the Setting.
     *
     * [Api set: ExcelApi 1.4]
     */

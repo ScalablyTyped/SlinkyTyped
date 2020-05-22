@@ -17,4 +17,5 @@ package object mod {
     scala.Unit
   ]
   type CompressionPlugin[O] = typingsSlinky.webpack.mod.Plugin
+  type Pattern = java.lang.String | js.RegExp | (js.Array[js.RegExp | java.lang.String])
 }

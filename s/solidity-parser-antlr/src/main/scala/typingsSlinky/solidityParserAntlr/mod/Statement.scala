@@ -23,30 +23,182 @@ trait Statement extends js.Object
 
 object Statement {
   @scala.inline
-  implicit def apply(value: Block): Statement = value.asInstanceOf[Statement]
+  def EmitStatement(
+    eventCall: FunctionCall,
+    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.EmitStatement,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
+  ): Statement = {
+    val __obj = js.Dynamic.literal(eventCall = eventCall.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Statement]
+  }
   @scala.inline
-  implicit def apply(value: BreakStatement): Statement = value.asInstanceOf[Statement]
+  def ReturnStatement(
+    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.ReturnStatement,
+    expression: Expression = null,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
+  ): Statement = {
+    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Statement]
+  }
   @scala.inline
-  implicit def apply(value: ContinueStatement): Statement = value.asInstanceOf[Statement]
+  def InlineAssemblyStatement(
+    body: AssemblyBlock,
+    language: String,
+    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.InlineAssemblyStatement,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
+  ): Statement = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], language = language.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Statement]
+  }
   @scala.inline
-  implicit def apply(value: DoWhileStatement): Statement = value.asInstanceOf[Statement]
+  def ForStatement(
+    body: Statement,
+    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.ForStatement,
+    conditionExpression: Expression = null,
+    initExpression: SimpleStatement = null,
+    loc: Location = null,
+    loopExpression: ExpressionStatement = null,
+    range: js.Tuple2[Double, Double] = null
+  ): Statement = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (conditionExpression != null) __obj.updateDynamic("conditionExpression")(conditionExpression.asInstanceOf[js.Any])
+    if (initExpression != null) __obj.updateDynamic("initExpression")(initExpression.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (loopExpression != null) __obj.updateDynamic("loopExpression")(loopExpression.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Statement]
+  }
   @scala.inline
-  implicit def apply(value: EmitStatement): Statement = value.asInstanceOf[Statement]
+  def WhileStatement(
+    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.WhileStatement,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
+  ): Statement = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Statement]
+  }
   @scala.inline
-  implicit def apply(value: ForStatement): Statement = value.asInstanceOf[Statement]
+  def Block(
+    statements: js.Array[Statement],
+    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.Block,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
+  ): Statement = {
+    val __obj = js.Dynamic.literal(statements = statements.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Statement]
+  }
   @scala.inline
-  implicit def apply(value: IfStatement): Statement = value.asInstanceOf[Statement]
+  def VariableDeclarationStatement(
+    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.VariableDeclarationStatement,
+    variables: js.Array[ASTNode],
+    initialValue: Expression = null,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
+  ): Statement = {
+    val __obj = js.Dynamic.literal(variables = variables.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (initialValue != null) __obj.updateDynamic("initialValue")(initialValue.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Statement]
+  }
   @scala.inline
-  implicit def apply(value: InlineAssemblyStatement): Statement = value.asInstanceOf[Statement]
+  def IfStatement(
+    condition: Expression,
+    trueBody: Statement,
+    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.IfStatement,
+    falseBody: Statement = null,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
+  ): Statement = {
+    val __obj = js.Dynamic.literal(condition = condition.asInstanceOf[js.Any], trueBody = trueBody.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (falseBody != null) __obj.updateDynamic("falseBody")(falseBody.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Statement]
+  }
   @scala.inline
-  implicit def apply(value: ReturnStatement): Statement = value.asInstanceOf[Statement]
+  def ExpressionStatement(
+    expression: Expression,
+    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.ExpressionStatement,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
+  ): Statement = {
+    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Statement]
+  }
   @scala.inline
-  implicit def apply(value: SimpleStatement): Statement = value.asInstanceOf[Statement]
+  def ContinueStatement(
+    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.ContinueStatement,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
+  ): Statement = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Statement]
+  }
   @scala.inline
-  implicit def apply(value: ThrowStatement): Statement = value.asInstanceOf[Statement]
+  def DoWhileStatement(
+    body: Statement,
+    condition: Expression,
+    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.DoWhileStatement,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
+  ): Statement = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], condition = condition.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Statement]
+  }
   @scala.inline
-  implicit def apply(value: VariableDeclarationStatement): Statement = value.asInstanceOf[Statement]
+  def BreakStatement(
+    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.BreakStatement,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
+  ): Statement = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Statement]
+  }
   @scala.inline
-  implicit def apply(value: WhileStatement): Statement = value.asInstanceOf[Statement]
+  def ThrowStatement(
+    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.ThrowStatement,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
+  ): Statement = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Statement]
+  }
 }
 

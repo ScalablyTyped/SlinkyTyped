@@ -38,101 +38,24 @@ trait ReplicaDescription extends js.Object {
 
 object ReplicaDescription {
   @scala.inline
-  def apply(): ReplicaDescription = {
+  def apply(
+    GlobalSecondaryIndexes: ReplicaGlobalSecondaryIndexDescriptionList = null,
+    KMSMasterKeyId: KMSMasterKeyId = null,
+    ProvisionedThroughputOverride: ProvisionedThroughputOverride = null,
+    RegionName: RegionName = null,
+    ReplicaStatus: ReplicaStatus = null,
+    ReplicaStatusDescription: ReplicaStatusDescription = null,
+    ReplicaStatusPercentProgress: ReplicaStatusPercentProgress = null
+  ): ReplicaDescription = {
     val __obj = js.Dynamic.literal()
+    if (GlobalSecondaryIndexes != null) __obj.updateDynamic("GlobalSecondaryIndexes")(GlobalSecondaryIndexes.asInstanceOf[js.Any])
+    if (KMSMasterKeyId != null) __obj.updateDynamic("KMSMasterKeyId")(KMSMasterKeyId.asInstanceOf[js.Any])
+    if (ProvisionedThroughputOverride != null) __obj.updateDynamic("ProvisionedThroughputOverride")(ProvisionedThroughputOverride.asInstanceOf[js.Any])
+    if (RegionName != null) __obj.updateDynamic("RegionName")(RegionName.asInstanceOf[js.Any])
+    if (ReplicaStatus != null) __obj.updateDynamic("ReplicaStatus")(ReplicaStatus.asInstanceOf[js.Any])
+    if (ReplicaStatusDescription != null) __obj.updateDynamic("ReplicaStatusDescription")(ReplicaStatusDescription.asInstanceOf[js.Any])
+    if (ReplicaStatusPercentProgress != null) __obj.updateDynamic("ReplicaStatusPercentProgress")(ReplicaStatusPercentProgress.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplicaDescription]
   }
-  @scala.inline
-  implicit class ReplicaDescriptionOps[Self <: ReplicaDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGlobalSecondaryIndexes(value: ReplicaGlobalSecondaryIndexDescriptionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalSecondaryIndexes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalSecondaryIndexes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalSecondaryIndexes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKMSMasterKeyId(value: KMSMasterKeyId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSMasterKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKMSMasterKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSMasterKeyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProvisionedThroughputOverride(value: ProvisionedThroughputOverride): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedThroughputOverride")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProvisionedThroughputOverride: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedThroughputOverride")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegionName(value: RegionName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegionName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegionName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplicaStatus(value: ReplicaStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicaStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplicaStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicaStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplicaStatusDescription(value: ReplicaStatusDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicaStatusDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplicaStatusDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicaStatusDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplicaStatusPercentProgress(value: ReplicaStatusPercentProgress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicaStatusPercentProgress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplicaStatusPercentProgress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicaStatusPercentProgress")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

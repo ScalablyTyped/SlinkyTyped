@@ -22,946 +22,228 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ViewStyle extends js.Object {
-  var alignItems: js.UndefOr[`flex-start` | `flex-end` | center | stretch] = js.native
-  var alignSelf: js.UndefOr[auto | `flex-start` | `flex-end` | center | stretch] = js.native
-  var aspectRatio: js.UndefOr[Double] = js.native
-  var backfaceVisibility: js.UndefOr[visible | hidden] = js.native
-  var backgroundColor: js.UndefOr[Color] = js.native
-  var borderBottomColor: js.UndefOr[Color] = js.native
-  var borderBottomLeftRadius: js.UndefOr[Double] = js.native
-  var borderBottomRightRadius: js.UndefOr[Double] = js.native
-  var borderBottomStyle: js.UndefOr[BorderStyle] = js.native
-  var borderBottomWidth: js.UndefOr[Double] = js.native
-  var borderColor: js.UndefOr[Color] = js.native
-  var borderLeftColor: js.UndefOr[Color] = js.native
-  var borderLeftStyle: js.UndefOr[BorderStyle] = js.native
-  var borderLeftWidth: js.UndefOr[Double] = js.native
-  var borderRadius: js.UndefOr[Double] = js.native
-  var borderRightColor: js.UndefOr[Color] = js.native
-  var borderRightStyle: js.UndefOr[BorderStyle] = js.native
-  var borderRightWidth: js.UndefOr[Double] = js.native
-  var borderStyle: js.UndefOr[BorderStyle] = js.native
-  var borderTopColor: js.UndefOr[Color] = js.native
-  var borderTopLeftRadius: js.UndefOr[Double] = js.native
-  var borderTopRightRadius: js.UndefOr[Double] = js.native
-  var borderTopStyle: js.UndefOr[BorderStyle] = js.native
-  var borderTopWidth: js.UndefOr[Double] = js.native
-  var borderWidth: js.UndefOr[Double] = js.native
-  var bottom: js.UndefOr[Double] = js.native
-  var color: js.UndefOr[Color] = js.native
-  var flex: js.UndefOr[Double] = js.native
-  var flexBasis: js.UndefOr[Double] = js.native
-  var flexDirection: js.UndefOr[row | `row-reverse` | column | `column-reverse`] = js.native
-  var flexGrow: js.UndefOr[Double] = js.native
-  var flexShrink: js.UndefOr[Double] = js.native
-  var flexWrap: js.UndefOr[wrap | nowrap] = js.native
-  var height: js.UndefOr[Double] = js.native
-  var justifyContent: js.UndefOr[`flex-start` | `flex-end` | center | `space-between` | `space-around`] = js.native
-  var left: js.UndefOr[Double] = js.native
-  var margin: js.UndefOr[Double] = js.native
-  var marginBottom: js.UndefOr[Double] = js.native
-  var marginHorizontal: js.UndefOr[Double] = js.native
-  var marginLeft: js.UndefOr[Double] = js.native
-  var marginRight: js.UndefOr[Double] = js.native
-  var marginTop: js.UndefOr[Double] = js.native
-  var marginVertical: js.UndefOr[Double] = js.native
-  var maxHeight: js.UndefOr[Double] = js.native
-  var maxWidth: js.UndefOr[Double] = js.native
-  var minHeight: js.UndefOr[Double] = js.native
-  var minWidth: js.UndefOr[Double] = js.native
-  var opacity: js.UndefOr[Double] = js.native
-  var overflow: js.UndefOr[Overflow] = js.native
-  var overflowX: js.UndefOr[Overflow] = js.native
-  var overflowY: js.UndefOr[Overflow] = js.native
-  var padding: js.UndefOr[Double] = js.native
-  var paddingBottom: js.UndefOr[Double] = js.native
-  var paddingHorizontal: js.UndefOr[Double] = js.native
-  var paddingLeft: js.UndefOr[Double] = js.native
-  var paddingRight: js.UndefOr[Double] = js.native
-  var paddingTop: js.UndefOr[Double] = js.native
-  var paddingVertical: js.UndefOr[Double] = js.native
-  var position: js.UndefOr[absolute | relative] = js.native
-  var right: js.UndefOr[Double] = js.native
-  var shadowColor: js.UndefOr[Color] = js.native
-  var shadowInner: js.UndefOr[Boolean] = js.native
-  var shadowOffset: js.UndefOr[Width] = js.native
-  var shadowOpacity: js.UndefOr[Double] = js.native
-  var shadowRadius: js.UndefOr[Double] = js.native
-  var shadowSpread: js.UndefOr[Double] = js.native
-  var top: js.UndefOr[Double] = js.native
-  var transform: js.UndefOr[String] = js.native
-  var transformOrigin: js.UndefOr[String] = js.native
-  var width: js.UndefOr[Double] = js.native
-  var zIndex: js.UndefOr[Double] = js.native
+  var alignItems: js.UndefOr[`flex-start` | `flex-end` | center | stretch] = js.undefined
+  var alignSelf: js.UndefOr[auto | `flex-start` | `flex-end` | center | stretch] = js.undefined
+  var aspectRatio: js.UndefOr[Double] = js.undefined
+  var backfaceVisibility: js.UndefOr[visible | hidden] = js.undefined
+  var backgroundColor: js.UndefOr[Color] = js.undefined
+  var borderBottomColor: js.UndefOr[Color] = js.undefined
+  var borderBottomLeftRadius: js.UndefOr[Double] = js.undefined
+  var borderBottomRightRadius: js.UndefOr[Double] = js.undefined
+  var borderBottomStyle: js.UndefOr[BorderStyle] = js.undefined
+  var borderBottomWidth: js.UndefOr[Double] = js.undefined
+  var borderColor: js.UndefOr[Color] = js.undefined
+  var borderLeftColor: js.UndefOr[Color] = js.undefined
+  var borderLeftStyle: js.UndefOr[BorderStyle] = js.undefined
+  var borderLeftWidth: js.UndefOr[Double] = js.undefined
+  var borderRadius: js.UndefOr[Double] = js.undefined
+  var borderRightColor: js.UndefOr[Color] = js.undefined
+  var borderRightStyle: js.UndefOr[BorderStyle] = js.undefined
+  var borderRightWidth: js.UndefOr[Double] = js.undefined
+  var borderStyle: js.UndefOr[BorderStyle] = js.undefined
+  var borderTopColor: js.UndefOr[Color] = js.undefined
+  var borderTopLeftRadius: js.UndefOr[Double] = js.undefined
+  var borderTopRightRadius: js.UndefOr[Double] = js.undefined
+  var borderTopStyle: js.UndefOr[BorderStyle] = js.undefined
+  var borderTopWidth: js.UndefOr[Double] = js.undefined
+  var borderWidth: js.UndefOr[Double] = js.undefined
+  var bottom: js.UndefOr[Double] = js.undefined
+  var color: js.UndefOr[Color] = js.undefined
+  var flex: js.UndefOr[Double] = js.undefined
+  var flexBasis: js.UndefOr[Double] = js.undefined
+  var flexDirection: js.UndefOr[row | `row-reverse` | column | `column-reverse`] = js.undefined
+  var flexGrow: js.UndefOr[Double] = js.undefined
+  var flexShrink: js.UndefOr[Double] = js.undefined
+  var flexWrap: js.UndefOr[wrap | nowrap] = js.undefined
+  var height: js.UndefOr[Double] = js.undefined
+  var justifyContent: js.UndefOr[`flex-start` | `flex-end` | center | `space-between` | `space-around`] = js.undefined
+  var left: js.UndefOr[Double] = js.undefined
+  var margin: js.UndefOr[Double] = js.undefined
+  var marginBottom: js.UndefOr[Double] = js.undefined
+  var marginHorizontal: js.UndefOr[Double] = js.undefined
+  var marginLeft: js.UndefOr[Double] = js.undefined
+  var marginRight: js.UndefOr[Double] = js.undefined
+  var marginTop: js.UndefOr[Double] = js.undefined
+  var marginVertical: js.UndefOr[Double] = js.undefined
+  var maxHeight: js.UndefOr[Double] = js.undefined
+  var maxWidth: js.UndefOr[Double] = js.undefined
+  var minHeight: js.UndefOr[Double] = js.undefined
+  var minWidth: js.UndefOr[Double] = js.undefined
+  var opacity: js.UndefOr[Double] = js.undefined
+  var overflow: js.UndefOr[Overflow] = js.undefined
+  var overflowX: js.UndefOr[Overflow] = js.undefined
+  var overflowY: js.UndefOr[Overflow] = js.undefined
+  var padding: js.UndefOr[Double] = js.undefined
+  var paddingBottom: js.UndefOr[Double] = js.undefined
+  var paddingHorizontal: js.UndefOr[Double] = js.undefined
+  var paddingLeft: js.UndefOr[Double] = js.undefined
+  var paddingRight: js.UndefOr[Double] = js.undefined
+  var paddingTop: js.UndefOr[Double] = js.undefined
+  var paddingVertical: js.UndefOr[Double] = js.undefined
+  var position: js.UndefOr[absolute | relative] = js.undefined
+  var right: js.UndefOr[Double] = js.undefined
+  var shadowColor: js.UndefOr[Color] = js.undefined
+  var shadowInner: js.UndefOr[Boolean] = js.undefined
+  var shadowOffset: js.UndefOr[Width] = js.undefined
+  var shadowOpacity: js.UndefOr[Double] = js.undefined
+  var shadowRadius: js.UndefOr[Double] = js.undefined
+  var shadowSpread: js.UndefOr[Double] = js.undefined
+  var top: js.UndefOr[Double] = js.undefined
+  var transform: js.UndefOr[String] = js.undefined
+  var transformOrigin: js.UndefOr[String] = js.undefined
+  var width: js.UndefOr[Double] = js.undefined
+  var zIndex: js.UndefOr[Double] = js.undefined
 }
 
 object ViewStyle {
   @scala.inline
-  def apply(): ViewStyle = {
+  def apply(
+    alignItems: `flex-start` | `flex-end` | center | stretch = null,
+    alignSelf: auto | `flex-start` | `flex-end` | center | stretch = null,
+    aspectRatio: js.UndefOr[Double] = js.undefined,
+    backfaceVisibility: visible | hidden = null,
+    backgroundColor: Color = null,
+    borderBottomColor: Color = null,
+    borderBottomLeftRadius: js.UndefOr[Double] = js.undefined,
+    borderBottomRightRadius: js.UndefOr[Double] = js.undefined,
+    borderBottomStyle: BorderStyle = null,
+    borderBottomWidth: js.UndefOr[Double] = js.undefined,
+    borderColor: Color = null,
+    borderLeftColor: Color = null,
+    borderLeftStyle: BorderStyle = null,
+    borderLeftWidth: js.UndefOr[Double] = js.undefined,
+    borderRadius: js.UndefOr[Double] = js.undefined,
+    borderRightColor: Color = null,
+    borderRightStyle: BorderStyle = null,
+    borderRightWidth: js.UndefOr[Double] = js.undefined,
+    borderStyle: BorderStyle = null,
+    borderTopColor: Color = null,
+    borderTopLeftRadius: js.UndefOr[Double] = js.undefined,
+    borderTopRightRadius: js.UndefOr[Double] = js.undefined,
+    borderTopStyle: BorderStyle = null,
+    borderTopWidth: js.UndefOr[Double] = js.undefined,
+    borderWidth: js.UndefOr[Double] = js.undefined,
+    bottom: js.UndefOr[Double] = js.undefined,
+    color: Color = null,
+    flex: js.UndefOr[Double] = js.undefined,
+    flexBasis: js.UndefOr[Double] = js.undefined,
+    flexDirection: row | `row-reverse` | column | `column-reverse` = null,
+    flexGrow: js.UndefOr[Double] = js.undefined,
+    flexShrink: js.UndefOr[Double] = js.undefined,
+    flexWrap: wrap | nowrap = null,
+    height: js.UndefOr[Double] = js.undefined,
+    justifyContent: `flex-start` | `flex-end` | center | `space-between` | `space-around` = null,
+    left: js.UndefOr[Double] = js.undefined,
+    margin: js.UndefOr[Double] = js.undefined,
+    marginBottom: js.UndefOr[Double] = js.undefined,
+    marginHorizontal: js.UndefOr[Double] = js.undefined,
+    marginLeft: js.UndefOr[Double] = js.undefined,
+    marginRight: js.UndefOr[Double] = js.undefined,
+    marginTop: js.UndefOr[Double] = js.undefined,
+    marginVertical: js.UndefOr[Double] = js.undefined,
+    maxHeight: js.UndefOr[Double] = js.undefined,
+    maxWidth: js.UndefOr[Double] = js.undefined,
+    minHeight: js.UndefOr[Double] = js.undefined,
+    minWidth: js.UndefOr[Double] = js.undefined,
+    opacity: js.UndefOr[Double] = js.undefined,
+    overflow: Overflow = null,
+    overflowX: Overflow = null,
+    overflowY: Overflow = null,
+    padding: js.UndefOr[Double] = js.undefined,
+    paddingBottom: js.UndefOr[Double] = js.undefined,
+    paddingHorizontal: js.UndefOr[Double] = js.undefined,
+    paddingLeft: js.UndefOr[Double] = js.undefined,
+    paddingRight: js.UndefOr[Double] = js.undefined,
+    paddingTop: js.UndefOr[Double] = js.undefined,
+    paddingVertical: js.UndefOr[Double] = js.undefined,
+    position: absolute | relative = null,
+    right: js.UndefOr[Double] = js.undefined,
+    shadowColor: Color = null,
+    shadowInner: js.UndefOr[Boolean] = js.undefined,
+    shadowOffset: Width = null,
+    shadowOpacity: js.UndefOr[Double] = js.undefined,
+    shadowRadius: js.UndefOr[Double] = js.undefined,
+    shadowSpread: js.UndefOr[Double] = js.undefined,
+    top: js.UndefOr[Double] = js.undefined,
+    transform: String = null,
+    transformOrigin: String = null,
+    width: js.UndefOr[Double] = js.undefined,
+    zIndex: js.UndefOr[Double] = js.undefined
+  ): ViewStyle = {
     val __obj = js.Dynamic.literal()
+    if (alignItems != null) __obj.updateDynamic("alignItems")(alignItems.asInstanceOf[js.Any])
+    if (alignSelf != null) __obj.updateDynamic("alignSelf")(alignSelf.asInstanceOf[js.Any])
+    if (!js.isUndefined(aspectRatio)) __obj.updateDynamic("aspectRatio")(aspectRatio.get.asInstanceOf[js.Any])
+    if (backfaceVisibility != null) __obj.updateDynamic("backfaceVisibility")(backfaceVisibility.asInstanceOf[js.Any])
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (borderBottomColor != null) __obj.updateDynamic("borderBottomColor")(borderBottomColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderBottomLeftRadius)) __obj.updateDynamic("borderBottomLeftRadius")(borderBottomLeftRadius.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderBottomRightRadius)) __obj.updateDynamic("borderBottomRightRadius")(borderBottomRightRadius.get.asInstanceOf[js.Any])
+    if (borderBottomStyle != null) __obj.updateDynamic("borderBottomStyle")(borderBottomStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderBottomWidth)) __obj.updateDynamic("borderBottomWidth")(borderBottomWidth.get.asInstanceOf[js.Any])
+    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
+    if (borderLeftColor != null) __obj.updateDynamic("borderLeftColor")(borderLeftColor.asInstanceOf[js.Any])
+    if (borderLeftStyle != null) __obj.updateDynamic("borderLeftStyle")(borderLeftStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderLeftWidth)) __obj.updateDynamic("borderLeftWidth")(borderLeftWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderRadius)) __obj.updateDynamic("borderRadius")(borderRadius.get.asInstanceOf[js.Any])
+    if (borderRightColor != null) __obj.updateDynamic("borderRightColor")(borderRightColor.asInstanceOf[js.Any])
+    if (borderRightStyle != null) __obj.updateDynamic("borderRightStyle")(borderRightStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderRightWidth)) __obj.updateDynamic("borderRightWidth")(borderRightWidth.get.asInstanceOf[js.Any])
+    if (borderStyle != null) __obj.updateDynamic("borderStyle")(borderStyle.asInstanceOf[js.Any])
+    if (borderTopColor != null) __obj.updateDynamic("borderTopColor")(borderTopColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderTopLeftRadius)) __obj.updateDynamic("borderTopLeftRadius")(borderTopLeftRadius.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderTopRightRadius)) __obj.updateDynamic("borderTopRightRadius")(borderTopRightRadius.get.asInstanceOf[js.Any])
+    if (borderTopStyle != null) __obj.updateDynamic("borderTopStyle")(borderTopStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderTopWidth)) __obj.updateDynamic("borderTopWidth")(borderTopWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderWidth)) __obj.updateDynamic("borderWidth")(borderWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bottom)) __obj.updateDynamic("bottom")(bottom.get.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(flex)) __obj.updateDynamic("flex")(flex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(flexBasis)) __obj.updateDynamic("flexBasis")(flexBasis.get.asInstanceOf[js.Any])
+    if (flexDirection != null) __obj.updateDynamic("flexDirection")(flexDirection.asInstanceOf[js.Any])
+    if (!js.isUndefined(flexGrow)) __obj.updateDynamic("flexGrow")(flexGrow.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(flexShrink)) __obj.updateDynamic("flexShrink")(flexShrink.get.asInstanceOf[js.Any])
+    if (flexWrap != null) __obj.updateDynamic("flexWrap")(flexWrap.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (justifyContent != null) __obj.updateDynamic("justifyContent")(justifyContent.asInstanceOf[js.Any])
+    if (!js.isUndefined(left)) __obj.updateDynamic("left")(left.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(margin)) __obj.updateDynamic("margin")(margin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(marginBottom)) __obj.updateDynamic("marginBottom")(marginBottom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(marginHorizontal)) __obj.updateDynamic("marginHorizontal")(marginHorizontal.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(marginLeft)) __obj.updateDynamic("marginLeft")(marginLeft.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(marginRight)) __obj.updateDynamic("marginRight")(marginRight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(marginTop)) __obj.updateDynamic("marginTop")(marginTop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(marginVertical)) __obj.updateDynamic("marginVertical")(marginVertical.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxHeight)) __obj.updateDynamic("maxHeight")(maxHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxWidth)) __obj.updateDynamic("maxWidth")(maxWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minHeight)) __obj.updateDynamic("minHeight")(minHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minWidth)) __obj.updateDynamic("minWidth")(minWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (overflow != null) __obj.updateDynamic("overflow")(overflow.asInstanceOf[js.Any])
+    if (overflowX != null) __obj.updateDynamic("overflowX")(overflowX.asInstanceOf[js.Any])
+    if (overflowY != null) __obj.updateDynamic("overflowY")(overflowY.asInstanceOf[js.Any])
+    if (!js.isUndefined(padding)) __obj.updateDynamic("padding")(padding.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(paddingBottom)) __obj.updateDynamic("paddingBottom")(paddingBottom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(paddingHorizontal)) __obj.updateDynamic("paddingHorizontal")(paddingHorizontal.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(paddingLeft)) __obj.updateDynamic("paddingLeft")(paddingLeft.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(paddingRight)) __obj.updateDynamic("paddingRight")(paddingRight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(paddingTop)) __obj.updateDynamic("paddingTop")(paddingTop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(paddingVertical)) __obj.updateDynamic("paddingVertical")(paddingVertical.get.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (!js.isUndefined(right)) __obj.updateDynamic("right")(right.get.asInstanceOf[js.Any])
+    if (shadowColor != null) __obj.updateDynamic("shadowColor")(shadowColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(shadowInner)) __obj.updateDynamic("shadowInner")(shadowInner.get.asInstanceOf[js.Any])
+    if (shadowOffset != null) __obj.updateDynamic("shadowOffset")(shadowOffset.asInstanceOf[js.Any])
+    if (!js.isUndefined(shadowOpacity)) __obj.updateDynamic("shadowOpacity")(shadowOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(shadowRadius)) __obj.updateDynamic("shadowRadius")(shadowRadius.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(shadowSpread)) __obj.updateDynamic("shadowSpread")(shadowSpread.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(top)) __obj.updateDynamic("top")(top.get.asInstanceOf[js.Any])
+    if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
+    if (transformOrigin != null) __obj.updateDynamic("transformOrigin")(transformOrigin.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zIndex)) __obj.updateDynamic("zIndex")(zIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ViewStyle]
   }
-  @scala.inline
-  implicit class ViewStyleOps[Self <: ViewStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignItems(value: `flex-start` | `flex-end` | center | stretch): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlignSelf(value: auto | `flex-start` | `flex-end` | center | stretch): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignSelf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignSelf: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignSelf")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAspectRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aspectRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAspectRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aspectRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackfaceVisibility(value: visible | hidden): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backfaceVisibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackfaceVisibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backfaceVisibility")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackgroundColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderBottomColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderBottomColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderBottomLeftRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomLeftRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderBottomLeftRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomLeftRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderBottomRightRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomRightRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderBottomRightRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomRightRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderBottomStyle(value: BorderStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderBottomStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderBottomWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderBottomWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderLeftColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderLeftColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderLeftColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderLeftColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderLeftStyle(value: BorderStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderLeftStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderLeftStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderLeftStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderLeftWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderLeftWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderLeftWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderLeftWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderRightColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRightColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderRightColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRightColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderRightStyle(value: BorderStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRightStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderRightStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRightStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderRightWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRightWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderRightWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRightWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderStyle(value: BorderStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderTopColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderTopColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderTopLeftRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopLeftRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderTopLeftRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopLeftRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderTopRightRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopRightRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderTopRightRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopRightRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderTopStyle(value: BorderStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderTopStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderTopWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderTopWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBottom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlexBasis(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flexBasis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlexBasis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flexBasis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlexDirection(value: row | `row-reverse` | column | `column-reverse`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flexDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlexDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flexDirection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlexGrow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flexGrow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlexGrow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flexGrow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlexShrink(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flexShrink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlexShrink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flexShrink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlexWrap(value: wrap | nowrap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flexWrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlexWrap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flexWrap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJustifyContent(value: `flex-start` | `flex-end` | center | `space-between` | `space-around`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("justifyContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJustifyContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("justifyContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarginBottom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarginBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginBottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarginHorizontal(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginHorizontal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarginHorizontal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginHorizontal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarginLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarginLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarginRight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginRight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarginRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginRight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarginTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarginTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarginVertical(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginVertical")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarginVertical: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginVertical")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverflow(value: Overflow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overflow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverflow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overflow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverflowX(value: Overflow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverflowX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverflowY(value: Overflow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverflowY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaddingBottom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaddingBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingBottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaddingHorizontal(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingHorizontal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaddingHorizontal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingHorizontal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaddingLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaddingLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaddingRight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingRight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaddingRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingRight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaddingTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaddingTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaddingVertical(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingVertical")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaddingVertical: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingVertical")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: absolute | relative): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadowColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadowColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadowInner(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowInner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadowInner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowInner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadowOffset(value: Width): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadowOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadowOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadowOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadowRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadowRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadowSpread(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowSpread")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadowSpread: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowSpread")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransform(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransformOrigin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformOrigin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransformOrigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformOrigin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,104 +4,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Branding extends js.Object {
   /**
     * Settings used to apply the account’s branding to email receipts, invoices,
     * Checkout, and other products.
     */
-  var branding: js.UndefOr[Icon] = js.native
+  var branding: js.UndefOr[Icon] = js.undefined
   /**
     * Settings specific to card charging on the account.
     */
-  var card_payments: js.UndefOr[Declineon] = js.native
+  var card_payments: js.UndefOr[Declineon] = js.undefined
   /**
     * Settings used to configure the account within the Stripe dashboard.
     */
-  var dashboard: js.UndefOr[Displayname] = js.native
+  var dashboard: js.UndefOr[Displayname] = js.undefined
   /**
     * Settings that apply across payment methods for charging on the account.
     */
-  var payments: js.UndefOr[Statementdescriptor] = js.native
+  var payments: js.UndefOr[Statementdescriptor] = js.undefined
   /**
     * Settings specific to the account’s payouts.
     */
-  var payouts: js.UndefOr[Debitnegativebalances] = js.native
+  var payouts: js.UndefOr[Debitnegativebalances] = js.undefined
 }
 
 object Branding {
   @scala.inline
-  def apply(): Branding = {
+  def apply(
+    branding: Icon = null,
+    card_payments: Declineon = null,
+    dashboard: Displayname = null,
+    payments: Statementdescriptor = null,
+    payouts: Debitnegativebalances = null
+  ): Branding = {
     val __obj = js.Dynamic.literal()
+    if (branding != null) __obj.updateDynamic("branding")(branding.asInstanceOf[js.Any])
+    if (card_payments != null) __obj.updateDynamic("card_payments")(card_payments.asInstanceOf[js.Any])
+    if (dashboard != null) __obj.updateDynamic("dashboard")(dashboard.asInstanceOf[js.Any])
+    if (payments != null) __obj.updateDynamic("payments")(payments.asInstanceOf[js.Any])
+    if (payouts != null) __obj.updateDynamic("payouts")(payouts.asInstanceOf[js.Any])
     __obj.asInstanceOf[Branding]
   }
-  @scala.inline
-  implicit class BrandingOps[Self <: Branding] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBranding(value: Icon): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBranding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCard_payments(value: Declineon): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("card_payments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCard_payments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("card_payments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDashboard(value: Displayname): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dashboard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDashboard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dashboard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayments(value: Statementdescriptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayouts(value: Debitnegativebalances): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payouts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayouts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payouts")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

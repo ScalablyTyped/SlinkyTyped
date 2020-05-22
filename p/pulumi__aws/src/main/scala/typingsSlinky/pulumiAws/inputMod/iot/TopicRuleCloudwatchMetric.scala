@@ -28,7 +28,7 @@ trait TopicRuleCloudwatchMetric extends js.Object {
     */
   var metricValue: Input[String] = js.native
   /**
-    * The ARN of the IAM role that grants access.
+    * The IAM role ARN that allows access to the CloudWatch metric.
     */
   var roleArn: Input[String] = js.native
 }
@@ -40,60 +40,12 @@ object TopicRuleCloudwatchMetric {
     metricNamespace: Input[String],
     metricUnit: Input[String],
     metricValue: Input[String],
-    roleArn: Input[String]
+    roleArn: Input[String],
+    metricTimestamp: Input[String] = null
   ): TopicRuleCloudwatchMetric = {
     val __obj = js.Dynamic.literal(metricName = metricName.asInstanceOf[js.Any], metricNamespace = metricNamespace.asInstanceOf[js.Any], metricUnit = metricUnit.asInstanceOf[js.Any], metricValue = metricValue.asInstanceOf[js.Any], roleArn = roleArn.asInstanceOf[js.Any])
+    if (metricTimestamp != null) __obj.updateDynamic("metricTimestamp")(metricTimestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[TopicRuleCloudwatchMetric]
   }
-  @scala.inline
-  implicit class TopicRuleCloudwatchMetricOps[Self <: TopicRuleCloudwatchMetric] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMetricName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetricNamespace(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricNamespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetricUnit(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricUnit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetricValue(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetricTimestamp(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricTimestamp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

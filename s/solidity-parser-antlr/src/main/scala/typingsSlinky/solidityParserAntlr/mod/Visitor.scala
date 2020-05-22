@@ -4,1706 +4,498 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Visitor extends js.Object {
-  var ArrayTypeName: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.ArrayTypeName, _]] = js.native
+  var ArrayTypeName: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.ArrayTypeName, _]] = js.undefined
   @JSName("ArrayTypeName:exit")
-  var ArrayTypeNameColonexit: js.UndefOr[js.Function1[/* node */ ArrayTypeName, _]] = js.native
+  var ArrayTypeNameColonexit: js.UndefOr[js.Function1[/* node */ ArrayTypeName, _]] = js.undefined
   var AssemblyAssignment: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.AssemblyAssignment, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("AssemblyAssignment:exit")
-  var AssemblyAssignmentColonexit: js.UndefOr[js.Function1[/* node */ AssemblyAssignment, _]] = js.native
-  var AssemblyBlock: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.AssemblyBlock, _]] = js.native
+  var AssemblyAssignmentColonexit: js.UndefOr[js.Function1[/* node */ AssemblyAssignment, _]] = js.undefined
+  var AssemblyBlock: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.AssemblyBlock, _]] = js.undefined
   @JSName("AssemblyBlock:exit")
-  var AssemblyBlockColonexit: js.UndefOr[js.Function1[/* node */ AssemblyBlock, _]] = js.native
-  var AssemblyCall: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.AssemblyCall, _]] = js.native
+  var AssemblyBlockColonexit: js.UndefOr[js.Function1[/* node */ AssemblyBlock, _]] = js.undefined
+  var AssemblyCall: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.AssemblyCall, _]] = js.undefined
   @JSName("AssemblyCall:exit")
-  var AssemblyCallColonexit: js.UndefOr[js.Function1[/* node */ AssemblyCall, _]] = js.native
-  var AssemblyCase: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.AssemblyCase, _]] = js.native
+  var AssemblyCallColonexit: js.UndefOr[js.Function1[/* node */ AssemblyCall, _]] = js.undefined
+  var AssemblyCase: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.AssemblyCase, _]] = js.undefined
   @JSName("AssemblyCase:exit")
-  var AssemblyCaseColonexit: js.UndefOr[js.Function1[/* node */ AssemblyCase, _]] = js.native
-  var AssemblyFor: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.AssemblyFor, _]] = js.native
+  var AssemblyCaseColonexit: js.UndefOr[js.Function1[/* node */ AssemblyCase, _]] = js.undefined
+  var AssemblyFor: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.AssemblyFor, _]] = js.undefined
   @JSName("AssemblyFor:exit")
-  var AssemblyForColonexit: js.UndefOr[js.Function1[/* node */ AssemblyFor, _]] = js.native
+  var AssemblyForColonexit: js.UndefOr[js.Function1[/* node */ AssemblyFor, _]] = js.undefined
   var AssemblyFunctionDefinition: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.AssemblyFunctionDefinition, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("AssemblyFunctionDefinition:exit")
-  var AssemblyFunctionDefinitionColonexit: js.UndefOr[js.Function1[/* node */ AssemblyFunctionDefinition, _]] = js.native
+  var AssemblyFunctionDefinitionColonexit: js.UndefOr[js.Function1[/* node */ AssemblyFunctionDefinition, _]] = js.undefined
   var AssemblyFunctionReturns: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.AssemblyFunctionReturns, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("AssemblyFunctionReturns:exit")
-  var AssemblyFunctionReturnsColonexit: js.UndefOr[js.Function1[/* node */ AssemblyFunctionReturns, _]] = js.native
-  var AssemblyIf: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.AssemblyIf, _]] = js.native
+  var AssemblyFunctionReturnsColonexit: js.UndefOr[js.Function1[/* node */ AssemblyFunctionReturns, _]] = js.undefined
+  var AssemblyIf: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.AssemblyIf, _]] = js.undefined
   @JSName("AssemblyIf:exit")
-  var AssemblyIfColonexit: js.UndefOr[js.Function1[/* node */ AssemblyIf, _]] = js.native
+  var AssemblyIfColonexit: js.UndefOr[js.Function1[/* node */ AssemblyIf, _]] = js.undefined
   var AssemblyLiteral: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.AssemblyLiteral, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("AssemblyLiteral:exit")
-  var AssemblyLiteralColonexit: js.UndefOr[js.Function1[/* node */ AssemblyLiteral, _]] = js.native
+  var AssemblyLiteralColonexit: js.UndefOr[js.Function1[/* node */ AssemblyLiteral, _]] = js.undefined
   var AssemblyLocalDefinition: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.AssemblyLocalDefinition, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("AssemblyLocalDefinition:exit")
-  var AssemblyLocalDefinitionColonexit: js.UndefOr[js.Function1[/* node */ AssemblyLocalDefinition, _]] = js.native
+  var AssemblyLocalDefinitionColonexit: js.UndefOr[js.Function1[/* node */ AssemblyLocalDefinition, _]] = js.undefined
   var AssemblyStackAssignment: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.AssemblyStackAssignment, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("AssemblyStackAssignment:exit")
-  var AssemblyStackAssignmentColonexit: js.UndefOr[js.Function1[/* node */ AssemblyStackAssignment, _]] = js.native
-  var AssemblySwitch: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.AssemblySwitch, _]] = js.native
+  var AssemblyStackAssignmentColonexit: js.UndefOr[js.Function1[/* node */ AssemblyStackAssignment, _]] = js.undefined
+  var AssemblySwitch: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.AssemblySwitch, _]] = js.undefined
   @JSName("AssemblySwitch:exit")
-  var AssemblySwitchColonexit: js.UndefOr[js.Function1[/* node */ AssemblySwitch, _]] = js.native
+  var AssemblySwitchColonexit: js.UndefOr[js.Function1[/* node */ AssemblySwitch, _]] = js.undefined
   var BinaryOperation: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.BinaryOperation, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("BinaryOperation:exit")
-  var BinaryOperationColonexit: js.UndefOr[js.Function1[/* node */ BinaryOperation, _]] = js.native
-  var Block: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.Block, _]] = js.native
+  var BinaryOperationColonexit: js.UndefOr[js.Function1[/* node */ BinaryOperation, _]] = js.undefined
+  var Block: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.Block, _]] = js.undefined
   @JSName("Block:exit")
-  var BlockColonexit: js.UndefOr[js.Function1[/* node */ Block, _]] = js.native
-  var BooleanLiteral: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.BooleanLiteral, _]] = js.native
+  var BlockColonexit: js.UndefOr[js.Function1[/* node */ Block, _]] = js.undefined
+  var BooleanLiteral: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.BooleanLiteral, _]] = js.undefined
   @JSName("BooleanLiteral:exit")
-  var BooleanLiteralColonexit: js.UndefOr[js.Function1[/* node */ BooleanLiteral, _]] = js.native
-  var Break: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.Break, _]] = js.native
+  var BooleanLiteralColonexit: js.UndefOr[js.Function1[/* node */ BooleanLiteral, _]] = js.undefined
+  var Break: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.Break, _]] = js.undefined
   @JSName("Break:exit")
-  var BreakColonexit: js.UndefOr[js.Function1[/* node */ Break, _]] = js.native
-  var BreakStatement: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.BreakStatement, _]] = js.native
+  var BreakColonexit: js.UndefOr[js.Function1[/* node */ Break, _]] = js.undefined
+  var BreakStatement: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.BreakStatement, _]] = js.undefined
   @JSName("BreakStatement:exit")
-  var BreakStatementColonexit: js.UndefOr[js.Function1[/* node */ BreakStatement, _]] = js.native
-  var Conditional: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.Conditional, _]] = js.native
+  var BreakStatementColonexit: js.UndefOr[js.Function1[/* node */ BreakStatement, _]] = js.undefined
+  var Conditional: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.Conditional, _]] = js.undefined
   @JSName("Conditional:exit")
-  var ConditionalColonexit: js.UndefOr[js.Function1[/* node */ Conditional, _]] = js.native
-  var Continue: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.Continue, _]] = js.native
+  var ConditionalColonexit: js.UndefOr[js.Function1[/* node */ Conditional, _]] = js.undefined
+  var Continue: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.Continue, _]] = js.undefined
   @JSName("Continue:exit")
-  var ContinueColonexit: js.UndefOr[js.Function1[/* node */ Continue, _]] = js.native
+  var ContinueColonexit: js.UndefOr[js.Function1[/* node */ Continue, _]] = js.undefined
   var ContinueStatement: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.ContinueStatement, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("ContinueStatement:exit")
-  var ContinueStatementColonexit: js.UndefOr[js.Function1[/* node */ ContinueStatement, _]] = js.native
+  var ContinueStatementColonexit: js.UndefOr[js.Function1[/* node */ ContinueStatement, _]] = js.undefined
   var ContractDefinition: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.ContractDefinition, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("ContractDefinition:exit")
-  var ContractDefinitionColonexit: js.UndefOr[js.Function1[/* node */ ContractDefinition, _]] = js.native
-  var DecimalNumber: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.DecimalNumber, _]] = js.native
+  var ContractDefinitionColonexit: js.UndefOr[js.Function1[/* node */ ContractDefinition, _]] = js.undefined
+  var DecimalNumber: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.DecimalNumber, _]] = js.undefined
   @JSName("DecimalNumber:exit")
-  var DecimalNumberColonexit: js.UndefOr[js.Function1[/* node */ DecimalNumber, _]] = js.native
+  var DecimalNumberColonexit: js.UndefOr[js.Function1[/* node */ DecimalNumber, _]] = js.undefined
   var DoWhileStatement: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.DoWhileStatement, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("DoWhileStatement:exit")
-  var DoWhileStatementColonexit: js.UndefOr[js.Function1[/* node */ DoWhileStatement, _]] = js.native
+  var DoWhileStatementColonexit: js.UndefOr[js.Function1[/* node */ DoWhileStatement, _]] = js.undefined
   var ElementaryTypeName: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.ElementaryTypeName, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("ElementaryTypeName:exit")
-  var ElementaryTypeNameColonexit: js.UndefOr[js.Function1[/* node */ ElementaryTypeName, _]] = js.native
+  var ElementaryTypeNameColonexit: js.UndefOr[js.Function1[/* node */ ElementaryTypeName, _]] = js.undefined
   var ElementaryTypeNameExpression: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.ElementaryTypeNameExpression, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("ElementaryTypeNameExpression:exit")
-  var ElementaryTypeNameExpressionColonexit: js.UndefOr[js.Function1[/* node */ ElementaryTypeNameExpression, _]] = js.native
-  var EmitStatement: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.EmitStatement, _]] = js.native
+  var ElementaryTypeNameExpressionColonexit: js.UndefOr[js.Function1[/* node */ ElementaryTypeNameExpression, _]] = js.undefined
+  var EmitStatement: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.EmitStatement, _]] = js.undefined
   @JSName("EmitStatement:exit")
-  var EmitStatementColonexit: js.UndefOr[js.Function1[/* node */ EmitStatement, _]] = js.native
-  var EnumDefinition: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.EnumDefinition, _]] = js.native
+  var EmitStatementColonexit: js.UndefOr[js.Function1[/* node */ EmitStatement, _]] = js.undefined
+  var EnumDefinition: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.EnumDefinition, _]] = js.undefined
   @JSName("EnumDefinition:exit")
-  var EnumDefinitionColonexit: js.UndefOr[js.Function1[/* node */ EnumDefinition, _]] = js.native
-  var EnumValue: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.EnumValue, _]] = js.native
+  var EnumDefinitionColonexit: js.UndefOr[js.Function1[/* node */ EnumDefinition, _]] = js.undefined
+  var EnumValue: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.EnumValue, _]] = js.undefined
   @JSName("EnumValue:exit")
-  var EnumValueColonexit: js.UndefOr[js.Function1[/* node */ EnumValue, _]] = js.native
+  var EnumValueColonexit: js.UndefOr[js.Function1[/* node */ EnumValue, _]] = js.undefined
   var EventDefinition: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.EventDefinition, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("EventDefinition:exit")
-  var EventDefinitionColonexit: js.UndefOr[js.Function1[/* node */ EventDefinition, _]] = js.native
+  var EventDefinitionColonexit: js.UndefOr[js.Function1[/* node */ EventDefinition, _]] = js.undefined
   var ExpressionStatement: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.ExpressionStatement, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("ExpressionStatement:exit")
-  var ExpressionStatementColonexit: js.UndefOr[js.Function1[/* node */ ExpressionStatement, _]] = js.native
-  var ForStatement: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.ForStatement, _]] = js.native
+  var ExpressionStatementColonexit: js.UndefOr[js.Function1[/* node */ ExpressionStatement, _]] = js.undefined
+  var ForStatement: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.ForStatement, _]] = js.undefined
   @JSName("ForStatement:exit")
-  var ForStatementColonexit: js.UndefOr[js.Function1[/* node */ ForStatement, _]] = js.native
+  var ForStatementColonexit: js.UndefOr[js.Function1[/* node */ ForStatement, _]] = js.undefined
   var FunctionDefinition: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.FunctionDefinition, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("FunctionDefinition:exit")
-  var FunctionDefinitionColonexit: js.UndefOr[js.Function1[/* node */ FunctionDefinition, _]] = js.native
+  var FunctionDefinitionColonexit: js.UndefOr[js.Function1[/* node */ FunctionDefinition, _]] = js.undefined
   var FunctionTypeName: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.FunctionTypeName, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("FunctionTypeName:exit")
-  var FunctionTypeNameColonexit: js.UndefOr[js.Function1[/* node */ FunctionTypeName, _]] = js.native
-  var HexNumber: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.HexNumber, _]] = js.native
+  var FunctionTypeNameColonexit: js.UndefOr[js.Function1[/* node */ FunctionTypeName, _]] = js.undefined
+  var HexNumber: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.HexNumber, _]] = js.undefined
   @JSName("HexNumber:exit")
-  var HexNumberColonexit: js.UndefOr[js.Function1[/* node */ HexNumber, _]] = js.native
-  var Identifier: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.Identifier, _]] = js.native
+  var HexNumberColonexit: js.UndefOr[js.Function1[/* node */ HexNumber, _]] = js.undefined
+  var Identifier: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.Identifier, _]] = js.undefined
   @JSName("Identifier:exit")
-  var IdentifierColonexit: js.UndefOr[js.Function1[/* node */ Identifier, _]] = js.native
-  var IfStatement: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.IfStatement, _]] = js.native
+  var IdentifierColonexit: js.UndefOr[js.Function1[/* node */ Identifier, _]] = js.undefined
+  var IfStatement: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.IfStatement, _]] = js.undefined
   @JSName("IfStatement:exit")
-  var IfStatementColonexit: js.UndefOr[js.Function1[/* node */ IfStatement, _]] = js.native
+  var IfStatementColonexit: js.UndefOr[js.Function1[/* node */ IfStatement, _]] = js.undefined
   var ImportDirective: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.ImportDirective, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("ImportDirective:exit")
-  var ImportDirectiveColonexit: js.UndefOr[js.Function1[/* node */ ImportDirective, _]] = js.native
-  var IndexAccess: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.IndexAccess, _]] = js.native
+  var ImportDirectiveColonexit: js.UndefOr[js.Function1[/* node */ ImportDirective, _]] = js.undefined
+  var IndexAccess: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.IndexAccess, _]] = js.undefined
   @JSName("IndexAccess:exit")
-  var IndexAccessColonexit: js.UndefOr[js.Function1[/* node */ IndexAccess, _]] = js.native
+  var IndexAccessColonexit: js.UndefOr[js.Function1[/* node */ IndexAccess, _]] = js.undefined
   var InheritanceSpecifier: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.InheritanceSpecifier, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("InheritanceSpecifier:exit")
-  var InheritanceSpecifierColonexit: js.UndefOr[js.Function1[/* node */ InheritanceSpecifier, _]] = js.native
+  var InheritanceSpecifierColonexit: js.UndefOr[js.Function1[/* node */ InheritanceSpecifier, _]] = js.undefined
   var InlineAssemblyStatement: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.InlineAssemblyStatement, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("InlineAssemblyStatement:exit")
-  var InlineAssemblyStatementColonexit: js.UndefOr[js.Function1[/* node */ InlineAssemblyStatement, _]] = js.native
+  var InlineAssemblyStatementColonexit: js.UndefOr[js.Function1[/* node */ InlineAssemblyStatement, _]] = js.undefined
   var LabelDefinition: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.LabelDefinition, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("LabelDefinition:exit")
-  var LabelDefinitionColonexit: js.UndefOr[js.Function1[/* node */ LabelDefinition, _]] = js.native
-  var Mapping: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.Mapping, _]] = js.native
+  var LabelDefinitionColonexit: js.UndefOr[js.Function1[/* node */ LabelDefinition, _]] = js.undefined
+  var Mapping: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.Mapping, _]] = js.undefined
   @JSName("Mapping:exit")
-  var MappingColonexit: js.UndefOr[js.Function1[/* node */ Mapping, _]] = js.native
-  var MemberAccess: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.MemberAccess, _]] = js.native
+  var MappingColonexit: js.UndefOr[js.Function1[/* node */ Mapping, _]] = js.undefined
+  var MemberAccess: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.MemberAccess, _]] = js.undefined
   @JSName("MemberAccess:exit")
-  var MemberAccessColonexit: js.UndefOr[js.Function1[/* node */ MemberAccess, _]] = js.native
+  var MemberAccessColonexit: js.UndefOr[js.Function1[/* node */ MemberAccess, _]] = js.undefined
   var ModifierDefinition: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.ModifierDefinition, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("ModifierDefinition:exit")
-  var ModifierDefinitionColonexit: js.UndefOr[js.Function1[/* node */ ModifierDefinition, _]] = js.native
+  var ModifierDefinitionColonexit: js.UndefOr[js.Function1[/* node */ ModifierDefinition, _]] = js.undefined
   var ModifierInvocation: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.ModifierInvocation, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("ModifierInvocation:exit")
-  var ModifierInvocationColonexit: js.UndefOr[js.Function1[/* node */ ModifierInvocation, _]] = js.native
-  var NumberLiteral: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.NumberLiteral, _]] = js.native
+  var ModifierInvocationColonexit: js.UndefOr[js.Function1[/* node */ ModifierInvocation, _]] = js.undefined
+  var NumberLiteral: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.NumberLiteral, _]] = js.undefined
   @JSName("NumberLiteral:exit")
-  var NumberLiteralColonexit: js.UndefOr[js.Function1[/* node */ NumberLiteral, _]] = js.native
+  var NumberLiteralColonexit: js.UndefOr[js.Function1[/* node */ NumberLiteral, _]] = js.undefined
   var PragmaDirective: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.PragmaDirective, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("PragmaDirective:exit")
-  var PragmaDirectiveColonexit: js.UndefOr[js.Function1[/* node */ PragmaDirective, _]] = js.native
+  var PragmaDirectiveColonexit: js.UndefOr[js.Function1[/* node */ PragmaDirective, _]] = js.undefined
   var ReturnStatement: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.ReturnStatement, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("ReturnStatement:exit")
-  var ReturnStatementColonexit: js.UndefOr[js.Function1[/* node */ ReturnStatement, _]] = js.native
-  var SourceUnit: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.SourceUnit, _]] = js.native
+  var ReturnStatementColonexit: js.UndefOr[js.Function1[/* node */ ReturnStatement, _]] = js.undefined
+  var SourceUnit: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.SourceUnit, _]] = js.undefined
   // Start of :exit handler for each type. Must be consistent with above
   @JSName("SourceUnit:exit")
-  var SourceUnitColonexit: js.UndefOr[js.Function1[/* node */ SourceUnit, _]] = js.native
+  var SourceUnitColonexit: js.UndefOr[js.Function1[/* node */ SourceUnit, _]] = js.undefined
   var StateVariableDeclaration: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.StateVariableDeclaration, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("StateVariableDeclaration:exit")
-  var StateVariableDeclarationColonexit: js.UndefOr[js.Function1[/* node */ StateVariableDeclaration, _]] = js.native
+  var StateVariableDeclarationColonexit: js.UndefOr[js.Function1[/* node */ StateVariableDeclaration, _]] = js.undefined
   var StructDefinition: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.StructDefinition, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("StructDefinition:exit")
-  var StructDefinitionColonexit: js.UndefOr[js.Function1[/* node */ StructDefinition, _]] = js.native
-  var SubAssembly: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.SubAssembly, _]] = js.native
+  var StructDefinitionColonexit: js.UndefOr[js.Function1[/* node */ StructDefinition, _]] = js.undefined
+  var SubAssembly: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.SubAssembly, _]] = js.undefined
   @JSName("SubAssembly:exit")
-  var SubAssemblyColonexit: js.UndefOr[js.Function1[/* node */ SubAssembly, _]] = js.native
-  var ThrowStatement: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.ThrowStatement, _]] = js.native
+  var SubAssemblyColonexit: js.UndefOr[js.Function1[/* node */ SubAssembly, _]] = js.undefined
+  var ThrowStatement: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.ThrowStatement, _]] = js.undefined
   @JSName("ThrowStatement:exit")
-  var ThrowStatementColonexit: js.UndefOr[js.Function1[/* node */ ThrowStatement, _]] = js.native
+  var ThrowStatementColonexit: js.UndefOr[js.Function1[/* node */ ThrowStatement, _]] = js.undefined
   var TupleExpression: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.TupleExpression, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("TupleExpression:exit")
-  var TupleExpressionColonexit: js.UndefOr[js.Function1[/* node */ TupleExpression, _]] = js.native
+  var TupleExpressionColonexit: js.UndefOr[js.Function1[/* node */ TupleExpression, _]] = js.undefined
   var UserDefinedTypeName: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.UserDefinedTypeName, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("UserDefinedTypeName:exit")
-  var UserDefinedTypeNameColonexit: js.UndefOr[js.Function1[/* node */ UserDefinedTypeName, _]] = js.native
+  var UserDefinedTypeNameColonexit: js.UndefOr[js.Function1[/* node */ UserDefinedTypeName, _]] = js.undefined
   var UsingForDeclaration: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.UsingForDeclaration, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("UsingForDeclaration:exit")
-  var UsingForDeclarationColonexit: js.UndefOr[js.Function1[/* node */ UsingForDeclaration, _]] = js.native
+  var UsingForDeclarationColonexit: js.UndefOr[js.Function1[/* node */ UsingForDeclaration, _]] = js.undefined
   var VariableDeclaration: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.VariableDeclaration, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("VariableDeclaration:exit")
-  var VariableDeclarationColonexit: js.UndefOr[js.Function1[/* node */ VariableDeclaration, _]] = js.native
+  var VariableDeclarationColonexit: js.UndefOr[js.Function1[/* node */ VariableDeclaration, _]] = js.undefined
   var VariableDeclarationStatement: js.UndefOr[
     js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.VariableDeclarationStatement, _]
-  ] = js.native
+  ] = js.undefined
   @JSName("VariableDeclarationStatement:exit")
-  var VariableDeclarationStatementColonexit: js.UndefOr[js.Function1[/* node */ VariableDeclarationStatement, _]] = js.native
-  var WhileStatement: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.WhileStatement, _]] = js.native
+  var VariableDeclarationStatementColonexit: js.UndefOr[js.Function1[/* node */ VariableDeclarationStatement, _]] = js.undefined
+  var WhileStatement: js.UndefOr[js.Function1[/* node */ typingsSlinky.solidityParserAntlr.mod.WhileStatement, _]] = js.undefined
   @JSName("WhileStatement:exit")
-  var WhileStatementColonexit: js.UndefOr[js.Function1[/* node */ WhileStatement, _]] = js.native
+  var WhileStatementColonexit: js.UndefOr[js.Function1[/* node */ WhileStatement, _]] = js.undefined
 }
 
 object Visitor {
   @scala.inline
-  def apply(): Visitor = {
+  def apply(
+    ArrayTypeName: /* node */ ArrayTypeName => _ = null,
+    ArrayTypeNameColonexit: /* node */ ArrayTypeName => _ = null,
+    AssemblyAssignment: /* node */ AssemblyAssignment => _ = null,
+    AssemblyAssignmentColonexit: /* node */ AssemblyAssignment => _ = null,
+    AssemblyBlock: /* node */ AssemblyBlock => _ = null,
+    AssemblyBlockColonexit: /* node */ AssemblyBlock => _ = null,
+    AssemblyCall: /* node */ AssemblyCall => _ = null,
+    AssemblyCallColonexit: /* node */ AssemblyCall => _ = null,
+    AssemblyCase: /* node */ AssemblyCase => _ = null,
+    AssemblyCaseColonexit: /* node */ AssemblyCase => _ = null,
+    AssemblyFor: /* node */ AssemblyFor => _ = null,
+    AssemblyForColonexit: /* node */ AssemblyFor => _ = null,
+    AssemblyFunctionDefinition: /* node */ AssemblyFunctionDefinition => _ = null,
+    AssemblyFunctionDefinitionColonexit: /* node */ AssemblyFunctionDefinition => _ = null,
+    AssemblyFunctionReturns: /* node */ AssemblyFunctionReturns => _ = null,
+    AssemblyFunctionReturnsColonexit: /* node */ AssemblyFunctionReturns => _ = null,
+    AssemblyIf: /* node */ AssemblyIf => _ = null,
+    AssemblyIfColonexit: /* node */ AssemblyIf => _ = null,
+    AssemblyLiteral: /* node */ AssemblyLiteral => _ = null,
+    AssemblyLiteralColonexit: /* node */ AssemblyLiteral => _ = null,
+    AssemblyLocalDefinition: /* node */ AssemblyLocalDefinition => _ = null,
+    AssemblyLocalDefinitionColonexit: /* node */ AssemblyLocalDefinition => _ = null,
+    AssemblyStackAssignment: /* node */ AssemblyStackAssignment => _ = null,
+    AssemblyStackAssignmentColonexit: /* node */ AssemblyStackAssignment => _ = null,
+    AssemblySwitch: /* node */ AssemblySwitch => _ = null,
+    AssemblySwitchColonexit: /* node */ AssemblySwitch => _ = null,
+    BinaryOperation: /* node */ BinaryOperation => _ = null,
+    BinaryOperationColonexit: /* node */ BinaryOperation => _ = null,
+    Block: /* node */ Block => _ = null,
+    BlockColonexit: /* node */ Block => _ = null,
+    BooleanLiteral: /* node */ BooleanLiteral => _ = null,
+    BooleanLiteralColonexit: /* node */ BooleanLiteral => _ = null,
+    Break: /* node */ Break => _ = null,
+    BreakColonexit: /* node */ Break => _ = null,
+    BreakStatement: /* node */ BreakStatement => _ = null,
+    BreakStatementColonexit: /* node */ BreakStatement => _ = null,
+    Conditional: /* node */ Conditional => _ = null,
+    ConditionalColonexit: /* node */ Conditional => _ = null,
+    Continue: /* node */ Continue => _ = null,
+    ContinueColonexit: /* node */ Continue => _ = null,
+    ContinueStatement: /* node */ ContinueStatement => _ = null,
+    ContinueStatementColonexit: /* node */ ContinueStatement => _ = null,
+    ContractDefinition: /* node */ ContractDefinition => _ = null,
+    ContractDefinitionColonexit: /* node */ ContractDefinition => _ = null,
+    DecimalNumber: /* node */ DecimalNumber => _ = null,
+    DecimalNumberColonexit: /* node */ DecimalNumber => _ = null,
+    DoWhileStatement: /* node */ DoWhileStatement => _ = null,
+    DoWhileStatementColonexit: /* node */ DoWhileStatement => _ = null,
+    ElementaryTypeName: /* node */ ElementaryTypeName => _ = null,
+    ElementaryTypeNameColonexit: /* node */ ElementaryTypeName => _ = null,
+    ElementaryTypeNameExpression: /* node */ ElementaryTypeNameExpression => _ = null,
+    ElementaryTypeNameExpressionColonexit: /* node */ ElementaryTypeNameExpression => _ = null,
+    EmitStatement: /* node */ EmitStatement => _ = null,
+    EmitStatementColonexit: /* node */ EmitStatement => _ = null,
+    EnumDefinition: /* node */ EnumDefinition => _ = null,
+    EnumDefinitionColonexit: /* node */ EnumDefinition => _ = null,
+    EnumValue: /* node */ EnumValue => _ = null,
+    EnumValueColonexit: /* node */ EnumValue => _ = null,
+    EventDefinition: /* node */ EventDefinition => _ = null,
+    EventDefinitionColonexit: /* node */ EventDefinition => _ = null,
+    ExpressionStatement: /* node */ ExpressionStatement => _ = null,
+    ExpressionStatementColonexit: /* node */ ExpressionStatement => _ = null,
+    ForStatement: /* node */ ForStatement => _ = null,
+    ForStatementColonexit: /* node */ ForStatement => _ = null,
+    FunctionDefinition: /* node */ FunctionDefinition => _ = null,
+    FunctionDefinitionColonexit: /* node */ FunctionDefinition => _ = null,
+    FunctionTypeName: /* node */ FunctionTypeName => _ = null,
+    FunctionTypeNameColonexit: /* node */ FunctionTypeName => _ = null,
+    HexNumber: /* node */ HexNumber => _ = null,
+    HexNumberColonexit: /* node */ HexNumber => _ = null,
+    Identifier: /* node */ Identifier => _ = null,
+    IdentifierColonexit: /* node */ Identifier => _ = null,
+    IfStatement: /* node */ IfStatement => _ = null,
+    IfStatementColonexit: /* node */ IfStatement => _ = null,
+    ImportDirective: /* node */ ImportDirective => _ = null,
+    ImportDirectiveColonexit: /* node */ ImportDirective => _ = null,
+    IndexAccess: /* node */ IndexAccess => _ = null,
+    IndexAccessColonexit: /* node */ IndexAccess => _ = null,
+    InheritanceSpecifier: /* node */ InheritanceSpecifier => _ = null,
+    InheritanceSpecifierColonexit: /* node */ InheritanceSpecifier => _ = null,
+    InlineAssemblyStatement: /* node */ InlineAssemblyStatement => _ = null,
+    InlineAssemblyStatementColonexit: /* node */ InlineAssemblyStatement => _ = null,
+    LabelDefinition: /* node */ LabelDefinition => _ = null,
+    LabelDefinitionColonexit: /* node */ LabelDefinition => _ = null,
+    Mapping: /* node */ Mapping => _ = null,
+    MappingColonexit: /* node */ Mapping => _ = null,
+    MemberAccess: /* node */ MemberAccess => _ = null,
+    MemberAccessColonexit: /* node */ MemberAccess => _ = null,
+    ModifierDefinition: /* node */ ModifierDefinition => _ = null,
+    ModifierDefinitionColonexit: /* node */ ModifierDefinition => _ = null,
+    ModifierInvocation: /* node */ ModifierInvocation => _ = null,
+    ModifierInvocationColonexit: /* node */ ModifierInvocation => _ = null,
+    NumberLiteral: /* node */ NumberLiteral => _ = null,
+    NumberLiteralColonexit: /* node */ NumberLiteral => _ = null,
+    PragmaDirective: /* node */ PragmaDirective => _ = null,
+    PragmaDirectiveColonexit: /* node */ PragmaDirective => _ = null,
+    ReturnStatement: /* node */ ReturnStatement => _ = null,
+    ReturnStatementColonexit: /* node */ ReturnStatement => _ = null,
+    SourceUnit: /* node */ SourceUnit => _ = null,
+    SourceUnitColonexit: /* node */ SourceUnit => _ = null,
+    StateVariableDeclaration: /* node */ StateVariableDeclaration => _ = null,
+    StateVariableDeclarationColonexit: /* node */ StateVariableDeclaration => _ = null,
+    StructDefinition: /* node */ StructDefinition => _ = null,
+    StructDefinitionColonexit: /* node */ StructDefinition => _ = null,
+    SubAssembly: /* node */ SubAssembly => _ = null,
+    SubAssemblyColonexit: /* node */ SubAssembly => _ = null,
+    ThrowStatement: /* node */ ThrowStatement => _ = null,
+    ThrowStatementColonexit: /* node */ ThrowStatement => _ = null,
+    TupleExpression: /* node */ TupleExpression => _ = null,
+    TupleExpressionColonexit: /* node */ TupleExpression => _ = null,
+    UserDefinedTypeName: /* node */ UserDefinedTypeName => _ = null,
+    UserDefinedTypeNameColonexit: /* node */ UserDefinedTypeName => _ = null,
+    UsingForDeclaration: /* node */ UsingForDeclaration => _ = null,
+    UsingForDeclarationColonexit: /* node */ UsingForDeclaration => _ = null,
+    VariableDeclaration: /* node */ VariableDeclaration => _ = null,
+    VariableDeclarationColonexit: /* node */ VariableDeclaration => _ = null,
+    VariableDeclarationStatement: /* node */ VariableDeclarationStatement => _ = null,
+    VariableDeclarationStatementColonexit: /* node */ VariableDeclarationStatement => _ = null,
+    WhileStatement: /* node */ WhileStatement => _ = null,
+    WhileStatementColonexit: /* node */ WhileStatement => _ = null
+  ): Visitor = {
     val __obj = js.Dynamic.literal()
+    if (ArrayTypeName != null) __obj.updateDynamic("ArrayTypeName")(js.Any.fromFunction1(ArrayTypeName))
+    if (ArrayTypeNameColonexit != null) __obj.updateDynamic("ArrayTypeName:exit")(js.Any.fromFunction1(ArrayTypeNameColonexit))
+    if (AssemblyAssignment != null) __obj.updateDynamic("AssemblyAssignment")(js.Any.fromFunction1(AssemblyAssignment))
+    if (AssemblyAssignmentColonexit != null) __obj.updateDynamic("AssemblyAssignment:exit")(js.Any.fromFunction1(AssemblyAssignmentColonexit))
+    if (AssemblyBlock != null) __obj.updateDynamic("AssemblyBlock")(js.Any.fromFunction1(AssemblyBlock))
+    if (AssemblyBlockColonexit != null) __obj.updateDynamic("AssemblyBlock:exit")(js.Any.fromFunction1(AssemblyBlockColonexit))
+    if (AssemblyCall != null) __obj.updateDynamic("AssemblyCall")(js.Any.fromFunction1(AssemblyCall))
+    if (AssemblyCallColonexit != null) __obj.updateDynamic("AssemblyCall:exit")(js.Any.fromFunction1(AssemblyCallColonexit))
+    if (AssemblyCase != null) __obj.updateDynamic("AssemblyCase")(js.Any.fromFunction1(AssemblyCase))
+    if (AssemblyCaseColonexit != null) __obj.updateDynamic("AssemblyCase:exit")(js.Any.fromFunction1(AssemblyCaseColonexit))
+    if (AssemblyFor != null) __obj.updateDynamic("AssemblyFor")(js.Any.fromFunction1(AssemblyFor))
+    if (AssemblyForColonexit != null) __obj.updateDynamic("AssemblyFor:exit")(js.Any.fromFunction1(AssemblyForColonexit))
+    if (AssemblyFunctionDefinition != null) __obj.updateDynamic("AssemblyFunctionDefinition")(js.Any.fromFunction1(AssemblyFunctionDefinition))
+    if (AssemblyFunctionDefinitionColonexit != null) __obj.updateDynamic("AssemblyFunctionDefinition:exit")(js.Any.fromFunction1(AssemblyFunctionDefinitionColonexit))
+    if (AssemblyFunctionReturns != null) __obj.updateDynamic("AssemblyFunctionReturns")(js.Any.fromFunction1(AssemblyFunctionReturns))
+    if (AssemblyFunctionReturnsColonexit != null) __obj.updateDynamic("AssemblyFunctionReturns:exit")(js.Any.fromFunction1(AssemblyFunctionReturnsColonexit))
+    if (AssemblyIf != null) __obj.updateDynamic("AssemblyIf")(js.Any.fromFunction1(AssemblyIf))
+    if (AssemblyIfColonexit != null) __obj.updateDynamic("AssemblyIf:exit")(js.Any.fromFunction1(AssemblyIfColonexit))
+    if (AssemblyLiteral != null) __obj.updateDynamic("AssemblyLiteral")(js.Any.fromFunction1(AssemblyLiteral))
+    if (AssemblyLiteralColonexit != null) __obj.updateDynamic("AssemblyLiteral:exit")(js.Any.fromFunction1(AssemblyLiteralColonexit))
+    if (AssemblyLocalDefinition != null) __obj.updateDynamic("AssemblyLocalDefinition")(js.Any.fromFunction1(AssemblyLocalDefinition))
+    if (AssemblyLocalDefinitionColonexit != null) __obj.updateDynamic("AssemblyLocalDefinition:exit")(js.Any.fromFunction1(AssemblyLocalDefinitionColonexit))
+    if (AssemblyStackAssignment != null) __obj.updateDynamic("AssemblyStackAssignment")(js.Any.fromFunction1(AssemblyStackAssignment))
+    if (AssemblyStackAssignmentColonexit != null) __obj.updateDynamic("AssemblyStackAssignment:exit")(js.Any.fromFunction1(AssemblyStackAssignmentColonexit))
+    if (AssemblySwitch != null) __obj.updateDynamic("AssemblySwitch")(js.Any.fromFunction1(AssemblySwitch))
+    if (AssemblySwitchColonexit != null) __obj.updateDynamic("AssemblySwitch:exit")(js.Any.fromFunction1(AssemblySwitchColonexit))
+    if (BinaryOperation != null) __obj.updateDynamic("BinaryOperation")(js.Any.fromFunction1(BinaryOperation))
+    if (BinaryOperationColonexit != null) __obj.updateDynamic("BinaryOperation:exit")(js.Any.fromFunction1(BinaryOperationColonexit))
+    if (Block != null) __obj.updateDynamic("Block")(js.Any.fromFunction1(Block))
+    if (BlockColonexit != null) __obj.updateDynamic("Block:exit")(js.Any.fromFunction1(BlockColonexit))
+    if (BooleanLiteral != null) __obj.updateDynamic("BooleanLiteral")(js.Any.fromFunction1(BooleanLiteral))
+    if (BooleanLiteralColonexit != null) __obj.updateDynamic("BooleanLiteral:exit")(js.Any.fromFunction1(BooleanLiteralColonexit))
+    if (Break != null) __obj.updateDynamic("Break")(js.Any.fromFunction1(Break))
+    if (BreakColonexit != null) __obj.updateDynamic("Break:exit")(js.Any.fromFunction1(BreakColonexit))
+    if (BreakStatement != null) __obj.updateDynamic("BreakStatement")(js.Any.fromFunction1(BreakStatement))
+    if (BreakStatementColonexit != null) __obj.updateDynamic("BreakStatement:exit")(js.Any.fromFunction1(BreakStatementColonexit))
+    if (Conditional != null) __obj.updateDynamic("Conditional")(js.Any.fromFunction1(Conditional))
+    if (ConditionalColonexit != null) __obj.updateDynamic("Conditional:exit")(js.Any.fromFunction1(ConditionalColonexit))
+    if (Continue != null) __obj.updateDynamic("Continue")(js.Any.fromFunction1(Continue))
+    if (ContinueColonexit != null) __obj.updateDynamic("Continue:exit")(js.Any.fromFunction1(ContinueColonexit))
+    if (ContinueStatement != null) __obj.updateDynamic("ContinueStatement")(js.Any.fromFunction1(ContinueStatement))
+    if (ContinueStatementColonexit != null) __obj.updateDynamic("ContinueStatement:exit")(js.Any.fromFunction1(ContinueStatementColonexit))
+    if (ContractDefinition != null) __obj.updateDynamic("ContractDefinition")(js.Any.fromFunction1(ContractDefinition))
+    if (ContractDefinitionColonexit != null) __obj.updateDynamic("ContractDefinition:exit")(js.Any.fromFunction1(ContractDefinitionColonexit))
+    if (DecimalNumber != null) __obj.updateDynamic("DecimalNumber")(js.Any.fromFunction1(DecimalNumber))
+    if (DecimalNumberColonexit != null) __obj.updateDynamic("DecimalNumber:exit")(js.Any.fromFunction1(DecimalNumberColonexit))
+    if (DoWhileStatement != null) __obj.updateDynamic("DoWhileStatement")(js.Any.fromFunction1(DoWhileStatement))
+    if (DoWhileStatementColonexit != null) __obj.updateDynamic("DoWhileStatement:exit")(js.Any.fromFunction1(DoWhileStatementColonexit))
+    if (ElementaryTypeName != null) __obj.updateDynamic("ElementaryTypeName")(js.Any.fromFunction1(ElementaryTypeName))
+    if (ElementaryTypeNameColonexit != null) __obj.updateDynamic("ElementaryTypeName:exit")(js.Any.fromFunction1(ElementaryTypeNameColonexit))
+    if (ElementaryTypeNameExpression != null) __obj.updateDynamic("ElementaryTypeNameExpression")(js.Any.fromFunction1(ElementaryTypeNameExpression))
+    if (ElementaryTypeNameExpressionColonexit != null) __obj.updateDynamic("ElementaryTypeNameExpression:exit")(js.Any.fromFunction1(ElementaryTypeNameExpressionColonexit))
+    if (EmitStatement != null) __obj.updateDynamic("EmitStatement")(js.Any.fromFunction1(EmitStatement))
+    if (EmitStatementColonexit != null) __obj.updateDynamic("EmitStatement:exit")(js.Any.fromFunction1(EmitStatementColonexit))
+    if (EnumDefinition != null) __obj.updateDynamic("EnumDefinition")(js.Any.fromFunction1(EnumDefinition))
+    if (EnumDefinitionColonexit != null) __obj.updateDynamic("EnumDefinition:exit")(js.Any.fromFunction1(EnumDefinitionColonexit))
+    if (EnumValue != null) __obj.updateDynamic("EnumValue")(js.Any.fromFunction1(EnumValue))
+    if (EnumValueColonexit != null) __obj.updateDynamic("EnumValue:exit")(js.Any.fromFunction1(EnumValueColonexit))
+    if (EventDefinition != null) __obj.updateDynamic("EventDefinition")(js.Any.fromFunction1(EventDefinition))
+    if (EventDefinitionColonexit != null) __obj.updateDynamic("EventDefinition:exit")(js.Any.fromFunction1(EventDefinitionColonexit))
+    if (ExpressionStatement != null) __obj.updateDynamic("ExpressionStatement")(js.Any.fromFunction1(ExpressionStatement))
+    if (ExpressionStatementColonexit != null) __obj.updateDynamic("ExpressionStatement:exit")(js.Any.fromFunction1(ExpressionStatementColonexit))
+    if (ForStatement != null) __obj.updateDynamic("ForStatement")(js.Any.fromFunction1(ForStatement))
+    if (ForStatementColonexit != null) __obj.updateDynamic("ForStatement:exit")(js.Any.fromFunction1(ForStatementColonexit))
+    if (FunctionDefinition != null) __obj.updateDynamic("FunctionDefinition")(js.Any.fromFunction1(FunctionDefinition))
+    if (FunctionDefinitionColonexit != null) __obj.updateDynamic("FunctionDefinition:exit")(js.Any.fromFunction1(FunctionDefinitionColonexit))
+    if (FunctionTypeName != null) __obj.updateDynamic("FunctionTypeName")(js.Any.fromFunction1(FunctionTypeName))
+    if (FunctionTypeNameColonexit != null) __obj.updateDynamic("FunctionTypeName:exit")(js.Any.fromFunction1(FunctionTypeNameColonexit))
+    if (HexNumber != null) __obj.updateDynamic("HexNumber")(js.Any.fromFunction1(HexNumber))
+    if (HexNumberColonexit != null) __obj.updateDynamic("HexNumber:exit")(js.Any.fromFunction1(HexNumberColonexit))
+    if (Identifier != null) __obj.updateDynamic("Identifier")(js.Any.fromFunction1(Identifier))
+    if (IdentifierColonexit != null) __obj.updateDynamic("Identifier:exit")(js.Any.fromFunction1(IdentifierColonexit))
+    if (IfStatement != null) __obj.updateDynamic("IfStatement")(js.Any.fromFunction1(IfStatement))
+    if (IfStatementColonexit != null) __obj.updateDynamic("IfStatement:exit")(js.Any.fromFunction1(IfStatementColonexit))
+    if (ImportDirective != null) __obj.updateDynamic("ImportDirective")(js.Any.fromFunction1(ImportDirective))
+    if (ImportDirectiveColonexit != null) __obj.updateDynamic("ImportDirective:exit")(js.Any.fromFunction1(ImportDirectiveColonexit))
+    if (IndexAccess != null) __obj.updateDynamic("IndexAccess")(js.Any.fromFunction1(IndexAccess))
+    if (IndexAccessColonexit != null) __obj.updateDynamic("IndexAccess:exit")(js.Any.fromFunction1(IndexAccessColonexit))
+    if (InheritanceSpecifier != null) __obj.updateDynamic("InheritanceSpecifier")(js.Any.fromFunction1(InheritanceSpecifier))
+    if (InheritanceSpecifierColonexit != null) __obj.updateDynamic("InheritanceSpecifier:exit")(js.Any.fromFunction1(InheritanceSpecifierColonexit))
+    if (InlineAssemblyStatement != null) __obj.updateDynamic("InlineAssemblyStatement")(js.Any.fromFunction1(InlineAssemblyStatement))
+    if (InlineAssemblyStatementColonexit != null) __obj.updateDynamic("InlineAssemblyStatement:exit")(js.Any.fromFunction1(InlineAssemblyStatementColonexit))
+    if (LabelDefinition != null) __obj.updateDynamic("LabelDefinition")(js.Any.fromFunction1(LabelDefinition))
+    if (LabelDefinitionColonexit != null) __obj.updateDynamic("LabelDefinition:exit")(js.Any.fromFunction1(LabelDefinitionColonexit))
+    if (Mapping != null) __obj.updateDynamic("Mapping")(js.Any.fromFunction1(Mapping))
+    if (MappingColonexit != null) __obj.updateDynamic("Mapping:exit")(js.Any.fromFunction1(MappingColonexit))
+    if (MemberAccess != null) __obj.updateDynamic("MemberAccess")(js.Any.fromFunction1(MemberAccess))
+    if (MemberAccessColonexit != null) __obj.updateDynamic("MemberAccess:exit")(js.Any.fromFunction1(MemberAccessColonexit))
+    if (ModifierDefinition != null) __obj.updateDynamic("ModifierDefinition")(js.Any.fromFunction1(ModifierDefinition))
+    if (ModifierDefinitionColonexit != null) __obj.updateDynamic("ModifierDefinition:exit")(js.Any.fromFunction1(ModifierDefinitionColonexit))
+    if (ModifierInvocation != null) __obj.updateDynamic("ModifierInvocation")(js.Any.fromFunction1(ModifierInvocation))
+    if (ModifierInvocationColonexit != null) __obj.updateDynamic("ModifierInvocation:exit")(js.Any.fromFunction1(ModifierInvocationColonexit))
+    if (NumberLiteral != null) __obj.updateDynamic("NumberLiteral")(js.Any.fromFunction1(NumberLiteral))
+    if (NumberLiteralColonexit != null) __obj.updateDynamic("NumberLiteral:exit")(js.Any.fromFunction1(NumberLiteralColonexit))
+    if (PragmaDirective != null) __obj.updateDynamic("PragmaDirective")(js.Any.fromFunction1(PragmaDirective))
+    if (PragmaDirectiveColonexit != null) __obj.updateDynamic("PragmaDirective:exit")(js.Any.fromFunction1(PragmaDirectiveColonexit))
+    if (ReturnStatement != null) __obj.updateDynamic("ReturnStatement")(js.Any.fromFunction1(ReturnStatement))
+    if (ReturnStatementColonexit != null) __obj.updateDynamic("ReturnStatement:exit")(js.Any.fromFunction1(ReturnStatementColonexit))
+    if (SourceUnit != null) __obj.updateDynamic("SourceUnit")(js.Any.fromFunction1(SourceUnit))
+    if (SourceUnitColonexit != null) __obj.updateDynamic("SourceUnit:exit")(js.Any.fromFunction1(SourceUnitColonexit))
+    if (StateVariableDeclaration != null) __obj.updateDynamic("StateVariableDeclaration")(js.Any.fromFunction1(StateVariableDeclaration))
+    if (StateVariableDeclarationColonexit != null) __obj.updateDynamic("StateVariableDeclaration:exit")(js.Any.fromFunction1(StateVariableDeclarationColonexit))
+    if (StructDefinition != null) __obj.updateDynamic("StructDefinition")(js.Any.fromFunction1(StructDefinition))
+    if (StructDefinitionColonexit != null) __obj.updateDynamic("StructDefinition:exit")(js.Any.fromFunction1(StructDefinitionColonexit))
+    if (SubAssembly != null) __obj.updateDynamic("SubAssembly")(js.Any.fromFunction1(SubAssembly))
+    if (SubAssemblyColonexit != null) __obj.updateDynamic("SubAssembly:exit")(js.Any.fromFunction1(SubAssemblyColonexit))
+    if (ThrowStatement != null) __obj.updateDynamic("ThrowStatement")(js.Any.fromFunction1(ThrowStatement))
+    if (ThrowStatementColonexit != null) __obj.updateDynamic("ThrowStatement:exit")(js.Any.fromFunction1(ThrowStatementColonexit))
+    if (TupleExpression != null) __obj.updateDynamic("TupleExpression")(js.Any.fromFunction1(TupleExpression))
+    if (TupleExpressionColonexit != null) __obj.updateDynamic("TupleExpression:exit")(js.Any.fromFunction1(TupleExpressionColonexit))
+    if (UserDefinedTypeName != null) __obj.updateDynamic("UserDefinedTypeName")(js.Any.fromFunction1(UserDefinedTypeName))
+    if (UserDefinedTypeNameColonexit != null) __obj.updateDynamic("UserDefinedTypeName:exit")(js.Any.fromFunction1(UserDefinedTypeNameColonexit))
+    if (UsingForDeclaration != null) __obj.updateDynamic("UsingForDeclaration")(js.Any.fromFunction1(UsingForDeclaration))
+    if (UsingForDeclarationColonexit != null) __obj.updateDynamic("UsingForDeclaration:exit")(js.Any.fromFunction1(UsingForDeclarationColonexit))
+    if (VariableDeclaration != null) __obj.updateDynamic("VariableDeclaration")(js.Any.fromFunction1(VariableDeclaration))
+    if (VariableDeclarationColonexit != null) __obj.updateDynamic("VariableDeclaration:exit")(js.Any.fromFunction1(VariableDeclarationColonexit))
+    if (VariableDeclarationStatement != null) __obj.updateDynamic("VariableDeclarationStatement")(js.Any.fromFunction1(VariableDeclarationStatement))
+    if (VariableDeclarationStatementColonexit != null) __obj.updateDynamic("VariableDeclarationStatement:exit")(js.Any.fromFunction1(VariableDeclarationStatementColonexit))
+    if (WhileStatement != null) __obj.updateDynamic("WhileStatement")(js.Any.fromFunction1(WhileStatement))
+    if (WhileStatementColonexit != null) __obj.updateDynamic("WhileStatement:exit")(js.Any.fromFunction1(WhileStatementColonexit))
     __obj.asInstanceOf[Visitor]
   }
-  @scala.inline
-  implicit class VisitorOps[Self <: Visitor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArrayTypeName(value: /* node */ ArrayTypeName => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ArrayTypeName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutArrayTypeName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ArrayTypeName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArrayTypeNameColonexit(value: /* node */ ArrayTypeName => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ArrayTypeName:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutArrayTypeNameColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ArrayTypeName:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblyAssignment(value: /* node */ AssemblyAssignment => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyAssignment")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblyAssignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyAssignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblyAssignmentColonexit(value: /* node */ AssemblyAssignment => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyAssignment:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblyAssignmentColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyAssignment:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblyBlock(value: /* node */ AssemblyBlock => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyBlock")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblyBlock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyBlock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblyBlockColonexit(value: /* node */ AssemblyBlock => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyBlock:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblyBlockColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyBlock:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblyCall(value: /* node */ AssemblyCall => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyCall")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblyCall: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyCall")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblyCallColonexit(value: /* node */ AssemblyCall => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyCall:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblyCallColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyCall:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblyCase(value: /* node */ AssemblyCase => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyCase")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblyCase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyCase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblyCaseColonexit(value: /* node */ AssemblyCase => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyCase:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblyCaseColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyCase:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblyFor(value: /* node */ AssemblyFor => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyFor")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblyFor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyFor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblyForColonexit(value: /* node */ AssemblyFor => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyFor:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblyForColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyFor:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblyFunctionDefinition(value: /* node */ AssemblyFunctionDefinition => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyFunctionDefinition")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblyFunctionDefinition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyFunctionDefinition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblyFunctionDefinitionColonexit(value: /* node */ AssemblyFunctionDefinition => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyFunctionDefinition:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblyFunctionDefinitionColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyFunctionDefinition:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblyFunctionReturns(value: /* node */ AssemblyFunctionReturns => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyFunctionReturns")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblyFunctionReturns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyFunctionReturns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblyFunctionReturnsColonexit(value: /* node */ AssemblyFunctionReturns => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyFunctionReturns:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblyFunctionReturnsColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyFunctionReturns:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblyIf(value: /* node */ AssemblyIf => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyIf")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblyIf: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyIf")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblyIfColonexit(value: /* node */ AssemblyIf => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyIf:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblyIfColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyIf:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblyLiteral(value: /* node */ AssemblyLiteral => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyLiteral")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblyLiteral: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyLiteral")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblyLiteralColonexit(value: /* node */ AssemblyLiteral => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyLiteral:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblyLiteralColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyLiteral:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblyLocalDefinition(value: /* node */ AssemblyLocalDefinition => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyLocalDefinition")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblyLocalDefinition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyLocalDefinition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblyLocalDefinitionColonexit(value: /* node */ AssemblyLocalDefinition => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyLocalDefinition:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblyLocalDefinitionColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyLocalDefinition:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblyStackAssignment(value: /* node */ AssemblyStackAssignment => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyStackAssignment")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblyStackAssignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyStackAssignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblyStackAssignmentColonexit(value: /* node */ AssemblyStackAssignment => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyStackAssignment:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblyStackAssignmentColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblyStackAssignment:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblySwitch(value: /* node */ AssemblySwitch => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblySwitch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblySwitch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblySwitch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssemblySwitchColonexit(value: /* node */ AssemblySwitch => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblySwitch:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAssemblySwitchColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssemblySwitch:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBinaryOperation(value: /* node */ BinaryOperation => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryOperation")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBinaryOperation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryOperation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBinaryOperationColonexit(value: /* node */ BinaryOperation => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryOperation:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBinaryOperationColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryOperation:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlock(value: /* node */ Block => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Block")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBlock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Block")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlockColonexit(value: /* node */ Block => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Block:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBlockColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Block:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBooleanLiteral(value: /* node */ BooleanLiteral => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BooleanLiteral")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBooleanLiteral: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BooleanLiteral")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBooleanLiteralColonexit(value: /* node */ BooleanLiteral => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BooleanLiteral:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBooleanLiteralColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BooleanLiteral:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBreak(value: /* node */ Break => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Break")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBreak: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Break")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBreakColonexit(value: /* node */ Break => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Break:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBreakColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Break:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBreakStatement(value: /* node */ BreakStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BreakStatement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBreakStatement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BreakStatement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBreakStatementColonexit(value: /* node */ BreakStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BreakStatement:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBreakStatementColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BreakStatement:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConditional(value: /* node */ Conditional => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Conditional")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutConditional: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Conditional")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConditionalColonexit(value: /* node */ Conditional => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Conditional:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutConditionalColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Conditional:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContinue(value: /* node */ Continue => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Continue")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutContinue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Continue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContinueColonexit(value: /* node */ Continue => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Continue:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutContinueColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Continue:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContinueStatement(value: /* node */ ContinueStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContinueStatement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutContinueStatement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContinueStatement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContinueStatementColonexit(value: /* node */ ContinueStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContinueStatement:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutContinueStatementColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContinueStatement:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContractDefinition(value: /* node */ ContractDefinition => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContractDefinition")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutContractDefinition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContractDefinition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContractDefinitionColonexit(value: /* node */ ContractDefinition => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContractDefinition:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutContractDefinitionColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContractDefinition:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecimalNumber(value: /* node */ DecimalNumber => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DecimalNumber")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDecimalNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DecimalNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecimalNumberColonexit(value: /* node */ DecimalNumber => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DecimalNumber:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDecimalNumberColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DecimalNumber:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDoWhileStatement(value: /* node */ DoWhileStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DoWhileStatement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDoWhileStatement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DoWhileStatement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDoWhileStatementColonexit(value: /* node */ DoWhileStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DoWhileStatement:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDoWhileStatementColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DoWhileStatement:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElementaryTypeName(value: /* node */ ElementaryTypeName => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ElementaryTypeName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutElementaryTypeName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ElementaryTypeName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElementaryTypeNameColonexit(value: /* node */ ElementaryTypeName => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ElementaryTypeName:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutElementaryTypeNameColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ElementaryTypeName:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElementaryTypeNameExpression(value: /* node */ ElementaryTypeNameExpression => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ElementaryTypeNameExpression")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutElementaryTypeNameExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ElementaryTypeNameExpression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElementaryTypeNameExpressionColonexit(value: /* node */ ElementaryTypeNameExpression => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ElementaryTypeNameExpression:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutElementaryTypeNameExpressionColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ElementaryTypeNameExpression:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmitStatement(value: /* node */ EmitStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmitStatement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutEmitStatement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmitStatement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmitStatementColonexit(value: /* node */ EmitStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmitStatement:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutEmitStatementColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmitStatement:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnumDefinition(value: /* node */ EnumDefinition => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnumDefinition")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutEnumDefinition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnumDefinition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnumDefinitionColonexit(value: /* node */ EnumDefinition => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnumDefinition:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutEnumDefinitionColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnumDefinition:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnumValue(value: /* node */ EnumValue => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnumValue")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutEnumValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnumValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnumValueColonexit(value: /* node */ EnumValue => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnumValue:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutEnumValueColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnumValue:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventDefinition(value: /* node */ EventDefinition => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventDefinition")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutEventDefinition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventDefinition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventDefinitionColonexit(value: /* node */ EventDefinition => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventDefinition:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutEventDefinitionColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventDefinition:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpressionStatement(value: /* node */ ExpressionStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpressionStatement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutExpressionStatement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpressionStatement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpressionStatementColonexit(value: /* node */ ExpressionStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpressionStatement:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutExpressionStatementColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpressionStatement:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForStatement(value: /* node */ ForStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForStatement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutForStatement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForStatement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForStatementColonexit(value: /* node */ ForStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForStatement:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutForStatementColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForStatement:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunctionDefinition(value: /* node */ FunctionDefinition => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionDefinition")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFunctionDefinition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionDefinition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunctionDefinitionColonexit(value: /* node */ FunctionDefinition => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionDefinition:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFunctionDefinitionColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionDefinition:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunctionTypeName(value: /* node */ FunctionTypeName => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionTypeName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFunctionTypeName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionTypeName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunctionTypeNameColonexit(value: /* node */ FunctionTypeName => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionTypeName:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFunctionTypeNameColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionTypeName:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHexNumber(value: /* node */ HexNumber => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HexNumber")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutHexNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HexNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHexNumberColonexit(value: /* node */ HexNumber => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HexNumber:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutHexNumberColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HexNumber:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentifier(value: /* node */ Identifier => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Identifier")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Identifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentifierColonexit(value: /* node */ Identifier => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Identifier:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutIdentifierColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Identifier:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIfStatement(value: /* node */ IfStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfStatement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutIfStatement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfStatement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIfStatementColonexit(value: /* node */ IfStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfStatement:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutIfStatementColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfStatement:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportDirective(value: /* node */ ImportDirective => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportDirective")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutImportDirective: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportDirective")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportDirectiveColonexit(value: /* node */ ImportDirective => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportDirective:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutImportDirectiveColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportDirective:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndexAccess(value: /* node */ IndexAccess => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexAccess")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutIndexAccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexAccess")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndexAccessColonexit(value: /* node */ IndexAccess => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexAccess:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutIndexAccessColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexAccess:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInheritanceSpecifier(value: /* node */ InheritanceSpecifier => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InheritanceSpecifier")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutInheritanceSpecifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InheritanceSpecifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInheritanceSpecifierColonexit(value: /* node */ InheritanceSpecifier => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InheritanceSpecifier:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutInheritanceSpecifierColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InheritanceSpecifier:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInlineAssemblyStatement(value: /* node */ InlineAssemblyStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InlineAssemblyStatement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutInlineAssemblyStatement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InlineAssemblyStatement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInlineAssemblyStatementColonexit(value: /* node */ InlineAssemblyStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InlineAssemblyStatement:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutInlineAssemblyStatementColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InlineAssemblyStatement:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelDefinition(value: /* node */ LabelDefinition => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelDefinition")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutLabelDefinition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelDefinition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelDefinitionColonexit(value: /* node */ LabelDefinition => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelDefinition:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutLabelDefinitionColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelDefinition:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMapping(value: /* node */ Mapping => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mapping")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutMapping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mapping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMappingColonexit(value: /* node */ Mapping => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mapping:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutMappingColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mapping:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemberAccess(value: /* node */ MemberAccess => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MemberAccess")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutMemberAccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MemberAccess")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemberAccessColonexit(value: /* node */ MemberAccess => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MemberAccess:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutMemberAccessColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MemberAccess:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifierDefinition(value: /* node */ ModifierDefinition => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModifierDefinition")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutModifierDefinition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModifierDefinition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifierDefinitionColonexit(value: /* node */ ModifierDefinition => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModifierDefinition:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutModifierDefinitionColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModifierDefinition:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifierInvocation(value: /* node */ ModifierInvocation => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModifierInvocation")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutModifierInvocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModifierInvocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifierInvocationColonexit(value: /* node */ ModifierInvocation => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModifierInvocation:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutModifierInvocationColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModifierInvocation:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberLiteral(value: /* node */ NumberLiteral => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberLiteral")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutNumberLiteral: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberLiteral")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberLiteralColonexit(value: /* node */ NumberLiteral => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberLiteral:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutNumberLiteralColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberLiteral:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPragmaDirective(value: /* node */ PragmaDirective => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PragmaDirective")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutPragmaDirective: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PragmaDirective")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPragmaDirectiveColonexit(value: /* node */ PragmaDirective => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PragmaDirective:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutPragmaDirectiveColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PragmaDirective:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnStatement(value: /* node */ ReturnStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnStatement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutReturnStatement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnStatement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnStatementColonexit(value: /* node */ ReturnStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnStatement:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutReturnStatementColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnStatement:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceUnit(value: /* node */ SourceUnit => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceUnit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSourceUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceUnit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceUnitColonexit(value: /* node */ SourceUnit => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceUnit:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSourceUnitColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceUnit:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateVariableDeclaration(value: /* node */ StateVariableDeclaration => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StateVariableDeclaration")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutStateVariableDeclaration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StateVariableDeclaration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateVariableDeclarationColonexit(value: /* node */ StateVariableDeclaration => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StateVariableDeclaration:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutStateVariableDeclarationColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StateVariableDeclaration:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStructDefinition(value: /* node */ StructDefinition => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StructDefinition")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutStructDefinition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StructDefinition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStructDefinitionColonexit(value: /* node */ StructDefinition => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StructDefinition:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutStructDefinitionColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StructDefinition:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubAssembly(value: /* node */ SubAssembly => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubAssembly")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSubAssembly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubAssembly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubAssemblyColonexit(value: /* node */ SubAssembly => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubAssembly:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSubAssemblyColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubAssembly:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThrowStatement(value: /* node */ ThrowStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThrowStatement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutThrowStatement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThrowStatement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThrowStatementColonexit(value: /* node */ ThrowStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThrowStatement:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutThrowStatementColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThrowStatement:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTupleExpression(value: /* node */ TupleExpression => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TupleExpression")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutTupleExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TupleExpression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTupleExpressionColonexit(value: /* node */ TupleExpression => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TupleExpression:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutTupleExpressionColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TupleExpression:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserDefinedTypeName(value: /* node */ UserDefinedTypeName => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserDefinedTypeName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutUserDefinedTypeName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserDefinedTypeName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserDefinedTypeNameColonexit(value: /* node */ UserDefinedTypeName => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserDefinedTypeName:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutUserDefinedTypeNameColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserDefinedTypeName:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsingForDeclaration(value: /* node */ UsingForDeclaration => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UsingForDeclaration")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutUsingForDeclaration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UsingForDeclaration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsingForDeclarationColonexit(value: /* node */ UsingForDeclaration => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UsingForDeclaration:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutUsingForDeclarationColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UsingForDeclaration:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariableDeclaration(value: /* node */ VariableDeclaration => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VariableDeclaration")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutVariableDeclaration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VariableDeclaration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariableDeclarationColonexit(value: /* node */ VariableDeclaration => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VariableDeclaration:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutVariableDeclarationColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VariableDeclaration:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariableDeclarationStatement(value: /* node */ VariableDeclarationStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VariableDeclarationStatement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutVariableDeclarationStatement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VariableDeclarationStatement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariableDeclarationStatementColonexit(value: /* node */ VariableDeclarationStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VariableDeclarationStatement:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutVariableDeclarationStatementColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VariableDeclarationStatement:exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWhileStatement(value: /* node */ WhileStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WhileStatement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutWhileStatement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WhileStatement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWhileStatementColonexit(value: /* node */ WhileStatement => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WhileStatement:exit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutWhileStatementColonexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WhileStatement:exit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

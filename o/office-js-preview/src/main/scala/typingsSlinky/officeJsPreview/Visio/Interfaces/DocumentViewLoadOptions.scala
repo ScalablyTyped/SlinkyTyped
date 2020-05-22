@@ -10,132 +10,64 @@ import scala.scalajs.js.annotation._
   *
   * [Api set:  1.1]
   */
-@js.native
 trait DocumentViewLoadOptions extends js.Object {
   @JSName("$all")
-  var $all: js.UndefOr[Boolean] = js.native
+  var $all: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Disable Hyperlinks.
     *
     * [Api set:  1.1]
     */
-  var disableHyperlinks: js.UndefOr[Boolean] = js.native
+  var disableHyperlinks: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Disable Pan.
     *
     * [Api set:  1.1]
     */
-  var disablePan: js.UndefOr[Boolean] = js.native
+  var disablePan: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Disable PanZoomWindow.
     *
     * [Api set:  1.1]
     */
-  var disablePanZoomWindow: js.UndefOr[Boolean] = js.native
+  var disablePanZoomWindow: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Disable Zoom.
     *
     * [Api set:  1.1]
     */
-  var disableZoom: js.UndefOr[Boolean] = js.native
+  var disableZoom: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Hide Diagram Boundary.
     *
     * [Api set:  1.1]
     */
-  var hideDiagramBoundary: js.UndefOr[Boolean] = js.native
+  var hideDiagramBoundary: js.UndefOr[Boolean] = js.undefined
 }
 
 object DocumentViewLoadOptions {
   @scala.inline
-  def apply(): DocumentViewLoadOptions = {
+  def apply(
+    $all: js.UndefOr[Boolean] = js.undefined,
+    disableHyperlinks: js.UndefOr[Boolean] = js.undefined,
+    disablePan: js.UndefOr[Boolean] = js.undefined,
+    disablePanZoomWindow: js.UndefOr[Boolean] = js.undefined,
+    disableZoom: js.UndefOr[Boolean] = js.undefined,
+    hideDiagramBoundary: js.UndefOr[Boolean] = js.undefined
+  ): DocumentViewLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($all)) __obj.updateDynamic("$all")($all.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableHyperlinks)) __obj.updateDynamic("disableHyperlinks")(disableHyperlinks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disablePan)) __obj.updateDynamic("disablePan")(disablePan.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disablePanZoomWindow)) __obj.updateDynamic("disablePanZoomWindow")(disablePanZoomWindow.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableZoom)) __obj.updateDynamic("disableZoom")(disableZoom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideDiagramBoundary)) __obj.updateDynamic("hideDiagramBoundary")(hideDiagramBoundary.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentViewLoadOptions]
   }
-  @scala.inline
-  implicit class DocumentViewLoadOptionsOps[Self <: DocumentViewLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$all: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableHyperlinks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableHyperlinks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableHyperlinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableHyperlinks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisablePan(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablePan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisablePan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablePan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisablePanZoomWindow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablePanZoomWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisablePanZoomWindow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablePanZoomWindow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableZoom(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableZoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableZoom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideDiagramBoundary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideDiagramBoundary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideDiagramBoundary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideDiagramBoundary")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -26,47 +26,15 @@ trait SendAnnouncementRequest extends js.Object {
 
 object SendAnnouncementRequest {
   @scala.inline
-  def apply(ClientRequestToken: ClientRequestToken, Content: Content, RoomFilters: FilterList): SendAnnouncementRequest = {
+  def apply(
+    ClientRequestToken: ClientRequestToken,
+    Content: Content,
+    RoomFilters: FilterList,
+    TimeToLiveInSeconds: js.UndefOr[TimeToLiveInSeconds] = js.undefined
+  ): SendAnnouncementRequest = {
     val __obj = js.Dynamic.literal(ClientRequestToken = ClientRequestToken.asInstanceOf[js.Any], Content = Content.asInstanceOf[js.Any], RoomFilters = RoomFilters.asInstanceOf[js.Any])
+    if (!js.isUndefined(TimeToLiveInSeconds)) __obj.updateDynamic("TimeToLiveInSeconds")(TimeToLiveInSeconds.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendAnnouncementRequest]
   }
-  @scala.inline
-  implicit class SendAnnouncementRequestOps[Self <: SendAnnouncementRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientRequestToken(value: ClientRequestToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContent(value: Content): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoomFilters(value: FilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoomFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeToLiveInSeconds(value: TimeToLiveInSeconds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeToLiveInSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeToLiveInSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeToLiveInSeconds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

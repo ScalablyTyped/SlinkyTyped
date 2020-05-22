@@ -10,10 +10,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined rbx.rbx/types.Prefer<rbx.rbx/elements/icon/icon.IconVariablesOverrides, rbx.rbx/elements/icon/icon.IconVariablesDefaults> */
-@js.native
 trait IconVariables extends js.Object {
-  var alignments: left | right = js.native
-  var sizes: small | medium | large = js.native
+  var alignments: left | right
+  var sizes: small | medium | large
 }
 
 object IconVariables {
@@ -22,25 +21,5 @@ object IconVariables {
     val __obj = js.Dynamic.literal(alignments = alignments.asInstanceOf[js.Any], sizes = sizes.asInstanceOf[js.Any])
     __obj.asInstanceOf[IconVariables]
   }
-  @scala.inline
-  implicit class IconVariablesOps[Self <: IconVariables] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignments(value: left | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSizes(value: small | medium | large): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizes")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

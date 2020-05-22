@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DateFormatterOptions extends js.Object {
-  var colons: js.UndefOr[Boolean] = js.native
-  var hyphens: js.UndefOr[Boolean] = js.native
-  var local: js.UndefOr[Boolean] = js.native
-  var ms: js.UndefOr[Boolean] = js.native
-  var offset: js.UndefOr[Boolean] = js.native
+  var colons: js.UndefOr[Boolean] = js.undefined
+  var hyphens: js.UndefOr[Boolean] = js.undefined
+  var local: js.UndefOr[Boolean] = js.undefined
+  var ms: js.UndefOr[Boolean] = js.undefined
+  var offset: js.UndefOr[Boolean] = js.undefined
 }
 
 object DateFormatterOptions {
   @scala.inline
-  def apply(): DateFormatterOptions = {
+  def apply(
+    colons: js.UndefOr[Boolean] = js.undefined,
+    hyphens: js.UndefOr[Boolean] = js.undefined,
+    local: js.UndefOr[Boolean] = js.undefined,
+    ms: js.UndefOr[Boolean] = js.undefined,
+    offset: js.UndefOr[Boolean] = js.undefined
+  ): DateFormatterOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(colons)) __obj.updateDynamic("colons")(colons.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hyphens)) __obj.updateDynamic("hyphens")(hyphens.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(local)) __obj.updateDynamic("local")(local.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ms)) __obj.updateDynamic("ms")(ms.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DateFormatterOptions]
   }
-  @scala.inline
-  implicit class DateFormatterOptionsOps[Self <: DateFormatterOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColons(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHyphens(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hyphens")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHyphens: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hyphens")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("local")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("local")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMs(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

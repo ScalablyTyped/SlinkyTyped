@@ -7,38 +7,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetMenuPropsOptions
   extends AllHTMLAttributes[HTMLElement]
      with ClassAttributes[HTMLElement] {
-  var refKey: js.UndefOr[String] = js.native
+  var refKey: js.UndefOr[String] = js.undefined
 }
 
 object GetMenuPropsOptions {
   @scala.inline
-  def apply(): GetMenuPropsOptions = {
+  def apply(
+    AllHTMLAttributes: AllHTMLAttributes[HTMLElement] = null,
+    ClassAttributes: ClassAttributes[HTMLElement] = null,
+    refKey: String = null
+  ): GetMenuPropsOptions = {
     val __obj = js.Dynamic.literal()
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (refKey != null) __obj.updateDynamic("refKey")(refKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetMenuPropsOptions]
   }
-  @scala.inline
-  implicit class GetMenuPropsOptionsOps[Self <: GetMenuPropsOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRefKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refKey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

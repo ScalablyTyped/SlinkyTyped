@@ -5,114 +5,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Torrent extends js.Object {
-  var announce: js.UndefOr[String] = js.native
-  var `announce-list`: js.UndefOr[js.Array[js.Array[String]]] = js.native
-  var comment: js.UndefOr[Buffer] = js.native
-  var `created by`: js.UndefOr[String] = js.native
-  var `creation date`: js.UndefOr[Double] = js.native
-  var info: js.UndefOr[TorrentInfo] = js.native
-  var `url-list`: js.UndefOr[Buffer] = js.native
+  var announce: js.UndefOr[String] = js.undefined
+  var `announce-list`: js.UndefOr[js.Array[js.Array[String]]] = js.undefined
+  var comment: js.UndefOr[Buffer] = js.undefined
+  var `created by`: js.UndefOr[String] = js.undefined
+  var `creation date`: js.UndefOr[Double] = js.undefined
+  var info: js.UndefOr[TorrentInfo] = js.undefined
+  var `url-list`: js.UndefOr[Buffer] = js.undefined
 }
 
 object Torrent {
   @scala.inline
-  def apply(): Torrent = {
+  def apply(
+    announce: String = null,
+    `announce-list`: js.Array[js.Array[String]] = null,
+    comment: Buffer = null,
+    `created by`: String = null,
+    `creation date`: js.UndefOr[Double] = js.undefined,
+    info: TorrentInfo = null,
+    `url-list`: Buffer = null
+  ): Torrent = {
     val __obj = js.Dynamic.literal()
+    if (announce != null) __obj.updateDynamic("announce")(announce.asInstanceOf[js.Any])
+    if (`announce-list` != null) __obj.updateDynamic("announce-list")(`announce-list`.asInstanceOf[js.Any])
+    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
+    if (`created by` != null) __obj.updateDynamic("created by")((`created by`).asInstanceOf[js.Any])
+    if (!js.isUndefined(`creation date`)) __obj.updateDynamic("creation date")(((`creation date`).get).asInstanceOf[js.Any])
+    if (info != null) __obj.updateDynamic("info")(info.asInstanceOf[js.Any])
+    if (`url-list` != null) __obj.updateDynamic("url-list")(`url-list`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Torrent]
   }
-  @scala.inline
-  implicit class TorrentOps[Self <: Torrent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnnounce(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("announce")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnnounce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("announce")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAnnounce-list`(value: js.Array[js.Array[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("announce-list")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAnnounce-list`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("announce-list")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComment(value: Buffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withCreated by`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created by")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutCreated by`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created by")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withCreation date`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creation date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutCreation date`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creation date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInfo(value: TorrentInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withUrl-list`(value: Buffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url-list")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutUrl-list`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url-list")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,36 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExtensionAcquisitionRequest extends js.Object {
   /**
     * How the item is being assigned
     */
-  var assignmentType: AcquisitionAssignmentType = js.native
+  var assignmentType: AcquisitionAssignmentType
   /**
     * The id of the subscription used for purchase
     */
-  var billingId: String = js.native
+  var billingId: String
   /**
     * The marketplace id (publisherName.extensionName) for the item
     */
-  var itemId: String = js.native
+  var itemId: String
   /**
     * The type of operation, such as install, request, purchase
     */
-  var operationType: AcquisitionOperationType = js.native
+  var operationType: AcquisitionOperationType
   /**
     * Additional properties which can be added to the request.
     */
-  var properties: js.Any = js.native
+  var properties: js.Any
   /**
     * How many licenses should be purchased
     */
-  var quantity: Double = js.native
+  var quantity: Double
   /**
     * A list of target guids where the item should be acquired (installed, requested, etc.), such as account id
     */
-  var targets: js.Array[String] = js.native
+  var targets: js.Array[String]
 }
 
 object ExtensionAcquisitionRequest {
@@ -50,55 +49,5 @@ object ExtensionAcquisitionRequest {
     val __obj = js.Dynamic.literal(assignmentType = assignmentType.asInstanceOf[js.Any], billingId = billingId.asInstanceOf[js.Any], itemId = itemId.asInstanceOf[js.Any], operationType = operationType.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], quantity = quantity.asInstanceOf[js.Any], targets = targets.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExtensionAcquisitionRequest]
   }
-  @scala.inline
-  implicit class ExtensionAcquisitionRequestOps[Self <: ExtensionAcquisitionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssignmentType(value: AcquisitionAssignmentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assignmentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBillingId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItemId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOperationType(value: AcquisitionOperationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProperties(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQuantity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargets(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targets")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

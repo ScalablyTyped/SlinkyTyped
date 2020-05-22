@@ -41,7 +41,6 @@ object userAgentMod extends js.Object {
     var _sessions: StringDictionary[Session] = js.native
     var _state: js.Any = js.native
     var _stateEventEmitter: js.Any = js.native
-    var _stateInitial: js.Any = js.native
     /** @internal */
     var _subscriptions: StringDictionary[Subscription] = js.native
     var _transport: js.Any = js.native

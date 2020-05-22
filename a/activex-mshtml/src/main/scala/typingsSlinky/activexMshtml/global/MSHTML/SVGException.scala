@@ -7,5 +7,13 @@ import scala.scalajs.js.annotation._
 @JSGlobal("MSHTML.SVGException")
 @js.native
 class SVGException protected ()
-  extends typingsSlinky.activexMshtml.MSHTML.SVGException
+  extends typingsSlinky.activexMshtml.MSHTML.SVGException {
+  /* CompleteClass */
+  @JSName("MSHTML.SVGException_typekey")
+  override var MSHTMLDotSVGException_typekey: typingsSlinky.activexMshtml.MSHTML.SVGException = js.native
+  /* CompleteClass */
+  override var code: Double = js.native
+  /* CompleteClass */
+  override val message: String = js.native
+}
 

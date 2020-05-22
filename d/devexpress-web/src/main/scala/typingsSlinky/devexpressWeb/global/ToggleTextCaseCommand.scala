@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ToggleTextCaseCommand")
 @js.native
 class ToggleTextCaseCommand ()
-  extends typingsSlinky.devexpressWeb.ToggleTextCaseCommand
+  extends typingsSlinky.devexpressWeb.ToggleTextCaseCommand {
+  /**
+    * Executes the ToggleTextCaseCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

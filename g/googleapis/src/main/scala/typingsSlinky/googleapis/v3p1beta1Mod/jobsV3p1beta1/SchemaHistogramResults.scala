@@ -29,53 +29,16 @@ trait SchemaHistogramResults extends js.Object {
 
 object SchemaHistogramResults {
   @scala.inline
-  def apply(): SchemaHistogramResults = {
+  def apply(
+    compensationHistogramResults: js.Array[SchemaCompensationHistogramResult] = null,
+    customAttributeHistogramResults: js.Array[SchemaCustomAttributeHistogramResult] = null,
+    simpleHistogramResults: js.Array[SchemaHistogramResult] = null
+  ): SchemaHistogramResults = {
     val __obj = js.Dynamic.literal()
+    if (compensationHistogramResults != null) __obj.updateDynamic("compensationHistogramResults")(compensationHistogramResults.asInstanceOf[js.Any])
+    if (customAttributeHistogramResults != null) __obj.updateDynamic("customAttributeHistogramResults")(customAttributeHistogramResults.asInstanceOf[js.Any])
+    if (simpleHistogramResults != null) __obj.updateDynamic("simpleHistogramResults")(simpleHistogramResults.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHistogramResults]
   }
-  @scala.inline
-  implicit class SchemaHistogramResultsOps[Self <: SchemaHistogramResults] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompensationHistogramResults(value: js.Array[SchemaCompensationHistogramResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compensationHistogramResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompensationHistogramResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compensationHistogramResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomAttributeHistogramResults(value: js.Array[SchemaCustomAttributeHistogramResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customAttributeHistogramResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomAttributeHistogramResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customAttributeHistogramResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSimpleHistogramResults(value: js.Array[SchemaHistogramResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("simpleHistogramResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSimpleHistogramResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("simpleHistogramResults")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

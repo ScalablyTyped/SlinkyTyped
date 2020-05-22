@@ -9,14 +9,13 @@ import scala.scalajs.js.annotation._
 /**
   * Used to control statement execution.
   */
-@js.native
 trait ExecuteOptions extends js.Object {
   /**
     * If true, the transaction in the current connection is automatically committed at the end of statement execution.
     *
     * @default false
     */
-  var autoCommit: js.UndefOr[Boolean] = js.native
+  var autoCommit: js.UndefOr[Boolean] = js.undefined
   /**
     * Determines whether additional metadata is available for queries and for REF CURSORs returned from PL/SQL blocks.
     *
@@ -26,7 +25,7 @@ trait ExecuteOptions extends js.Object {
     *
     * @default false
     */
-  var extendedMetaData: js.UndefOr[Boolean] = js.native
+  var extendedMetaData: js.UndefOr[Boolean] = js.undefined
   /**
     * This property sets the size of an internal buffer used for fetching query rows from Oracle Database.
     * Changing it may affect query performance but does not affect how many rows are returned to the application.
@@ -42,7 +41,7 @@ trait ExecuteOptions extends js.Object {
     *
     * @default 100
     */
-  var fetchArraySize: js.UndefOr[Double] = js.native
+  var fetchArraySize: js.UndefOr[Double] = js.undefined
   /**
     * Defines how query column data should be represented in JavaScript. It can be used in conjunction with,
     * or instead of, the global settings fetchAsString and fetchAsBuffer.
@@ -54,7 +53,7 @@ trait ExecuteOptions extends js.Object {
     *          "HIRE_DETAILS": { type: oracledb.DEFAULT }  // override fetchAsString or fetchAsBuffer
     *      }
     */
-  var fetchInfo: js.UndefOr[Record[String, Type]] = js.native
+  var fetchInfo: js.UndefOr[Record[String, Type]] = js.undefined
   /**
     * The maximum number of rows that are fetched by a query with connection.execute() when not using a ResultSet.
     * Rows beyond this limit are not fetched from the database. A value of 0 means there is no limit.
@@ -69,7 +68,7 @@ trait ExecuteOptions extends js.Object {
     *
     * @default 0 (unlimited)
     */
-  var maxRows: js.UndefOr[Double] = js.native
+  var maxRows: js.UndefOr[Double] = js.undefined
   /**
     * The format of query rows fetched when using connection.execute() or connection.queryStream().
     * It affects both ResultSet and non-ResultSet queries. It can be used for top level queries and REF CURSOR output.
@@ -85,112 +84,35 @@ trait ExecuteOptions extends js.Object {
     *
     * @default ARRAY
     */
-  var outFormat: js.UndefOr[Double] = js.native
+  var outFormat: js.UndefOr[Double] = js.undefined
   /**
     * Determines whether query results should be returned as a ResultSet object or directly.
     *
     * @default false
     */
-  var resultSet: js.UndefOr[Boolean] = js.native
+  var resultSet: js.UndefOr[Boolean] = js.undefined
 }
 
 object ExecuteOptions {
   @scala.inline
-  def apply(): ExecuteOptions = {
+  def apply(
+    autoCommit: js.UndefOr[Boolean] = js.undefined,
+    extendedMetaData: js.UndefOr[Boolean] = js.undefined,
+    fetchArraySize: js.UndefOr[Double] = js.undefined,
+    fetchInfo: Record[String, Type] = null,
+    maxRows: js.UndefOr[Double] = js.undefined,
+    outFormat: js.UndefOr[Double] = js.undefined,
+    resultSet: js.UndefOr[Boolean] = js.undefined
+  ): ExecuteOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoCommit)) __obj.updateDynamic("autoCommit")(autoCommit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(extendedMetaData)) __obj.updateDynamic("extendedMetaData")(extendedMetaData.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fetchArraySize)) __obj.updateDynamic("fetchArraySize")(fetchArraySize.get.asInstanceOf[js.Any])
+    if (fetchInfo != null) __obj.updateDynamic("fetchInfo")(fetchInfo.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxRows)) __obj.updateDynamic("maxRows")(maxRows.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(outFormat)) __obj.updateDynamic("outFormat")(outFormat.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(resultSet)) __obj.updateDynamic("resultSet")(resultSet.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecuteOptions]
   }
-  @scala.inline
-  implicit class ExecuteOptionsOps[Self <: ExecuteOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoCommit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCommit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoCommit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCommit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtendedMetaData(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedMetaData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtendedMetaData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedMetaData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFetchArraySize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchArraySize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFetchArraySize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchArraySize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFetchInfo(value: Record[String, Type]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFetchInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxRows(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutFormat(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResultSet(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resultSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResultSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resultSet")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

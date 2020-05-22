@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ServiceStatus extends js.Object {
   /**
     * Authorization status.
@@ -15,11 +14,11 @@ trait ServiceStatus extends js.Object {
     * @example
     * if (authorization == BackgroundGeolocation.NOT_AUTHORIZED) {...}
     */
-  var authorization: AuthorizationStatus = js.native
+  var authorization: AuthorizationStatus
   /** TRUE if service is running. */
-  var isRunning: Boolean = js.native
+  var isRunning: Boolean
   /** TRUE if location services are enabled */
-  var locationServicesEnabled: Boolean = js.native
+  var locationServicesEnabled: Boolean
 }
 
 object ServiceStatus {
@@ -28,31 +27,5 @@ object ServiceStatus {
     val __obj = js.Dynamic.literal(authorization = authorization.asInstanceOf[js.Any], isRunning = isRunning.asInstanceOf[js.Any], locationServicesEnabled = locationServicesEnabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceStatus]
   }
-  @scala.inline
-  implicit class ServiceStatusOps[Self <: ServiceStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthorization(value: AuthorizationStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsRunning(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isRunning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocationServicesEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationServicesEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

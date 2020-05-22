@@ -22,41 +22,11 @@ trait SchemaGooglePrivacyDlpV2ListJobTriggersResponse extends js.Object {
 
 object SchemaGooglePrivacyDlpV2ListJobTriggersResponse {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2ListJobTriggersResponse = {
+  def apply(jobTriggers: js.Array[SchemaGooglePrivacyDlpV2JobTrigger] = null, nextPageToken: String = null): SchemaGooglePrivacyDlpV2ListJobTriggersResponse = {
     val __obj = js.Dynamic.literal()
+    if (jobTriggers != null) __obj.updateDynamic("jobTriggers")(jobTriggers.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2ListJobTriggersResponse]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2ListJobTriggersResponseOps[Self <: SchemaGooglePrivacyDlpV2ListJobTriggersResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJobTriggers(value: js.Array[SchemaGooglePrivacyDlpV2JobTrigger]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobTriggers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobTriggers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobTriggers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

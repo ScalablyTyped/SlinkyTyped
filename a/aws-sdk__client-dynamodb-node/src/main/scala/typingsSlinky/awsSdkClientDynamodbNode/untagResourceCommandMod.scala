@@ -26,9 +26,16 @@ object untagResourceCommandMod extends js.Object {
           Readable
         ] {
     def this(input: UntagResourceInput) = this()
+    /* CompleteClass */
+    override val input: UntagResourceInput = js.native
     val middlewareStack: MiddlewareStack[UntagResourceInput, UntagResourceOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: DynamoDBResolvedConfiguration
+    ): Handler[UntagResourceInput, UntagResourceOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[UntagResourceInput, UntagResourceOutput] = js.native
   }

@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Uploader extends js.Object {
-  var kind: js.UndefOr[String] = js.native
-  var uploaderName: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
+  var uploaderName: js.UndefOr[String] = js.undefined
 }
 
 object Uploader {
   @scala.inline
-  def apply(): Uploader = {
+  def apply(kind: String = null, uploaderName: String = null): Uploader = {
     val __obj = js.Dynamic.literal()
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (uploaderName != null) __obj.updateDynamic("uploaderName")(uploaderName.asInstanceOf[js.Any])
     __obj.asInstanceOf[Uploader]
   }
-  @scala.inline
-  implicit class UploaderOps[Self <: Uploader] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUploaderName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploaderName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUploaderName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploaderName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

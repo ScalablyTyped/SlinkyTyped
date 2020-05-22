@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISettingsPaneStatics extends js.Object {
-  var edge: SettingsEdgeLocation = js.native
-  def getForCurrentView(): SettingsPane = js.native
-  def show(): Unit = js.native
+  var edge: SettingsEdgeLocation
+  def getForCurrentView(): SettingsPane
+  def show(): Unit
 }
 
 object ISettingsPaneStatics {
@@ -17,31 +16,5 @@ object ISettingsPaneStatics {
     val __obj = js.Dynamic.literal(edge = edge.asInstanceOf[js.Any], getForCurrentView = js.Any.fromFunction0(getForCurrentView), show = js.Any.fromFunction0(show))
     __obj.asInstanceOf[ISettingsPaneStatics]
   }
-  @scala.inline
-  implicit class ISettingsPaneStaticsOps[Self <: ISettingsPaneStatics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEdge(value: SettingsEdgeLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetForCurrentView(value: () => SettingsPane): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getForCurrentView")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withShow(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

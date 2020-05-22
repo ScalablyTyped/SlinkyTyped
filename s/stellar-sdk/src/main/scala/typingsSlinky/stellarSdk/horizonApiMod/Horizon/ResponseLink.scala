@@ -4,43 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ResponseLink extends js.Object {
-  var href: String = js.native
-  var templated: js.UndefOr[Boolean] = js.native
+  var href: String
+  var templated: js.UndefOr[Boolean] = js.undefined
 }
 
 object ResponseLink {
   @scala.inline
-  def apply(href: String): ResponseLink = {
+  def apply(href: String, templated: js.UndefOr[Boolean] = js.undefined): ResponseLink = {
     val __obj = js.Dynamic.literal(href = href.asInstanceOf[js.Any])
+    if (!js.isUndefined(templated)) __obj.updateDynamic("templated")(templated.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResponseLink]
   }
-  @scala.inline
-  implicit class ResponseLinkOps[Self <: ResponseLink] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHref(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemplated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templated")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

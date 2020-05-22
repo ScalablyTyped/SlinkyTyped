@@ -6,140 +6,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var cache: js.UndefOr[Boolean] = js.native
-  var devMode: js.UndefOr[Mode] = js.native
-  var favicons: js.UndefOr[PartialConfiguration] = js.native
-  var inject: js.UndefOr[Boolean | (js.Function1[/* htmlPlugin */ optionsOptions, Boolean])] = js.native
-  var logo: String = js.native
-  var mode: js.UndefOr[Mode] = js.native
-  var outputPath: js.UndefOr[String] = js.native
-  var prefix: js.UndefOr[String] = js.native
-  var publicPath: js.UndefOr[String] = js.native
+  var cache: js.UndefOr[Boolean] = js.undefined
+  var devMode: js.UndefOr[Mode] = js.undefined
+  var favicons: js.UndefOr[PartialConfiguration] = js.undefined
+  var inject: js.UndefOr[Boolean | (js.Function1[/* htmlPlugin */ optionsOptions, Boolean])] = js.undefined
+  var logo: String
+  var mode: js.UndefOr[Mode] = js.undefined
+  var outputPath: js.UndefOr[String] = js.undefined
+  var prefix: js.UndefOr[String] = js.undefined
+  var publicPath: js.UndefOr[String] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(logo: String): Options = {
+  def apply(
+    logo: String,
+    cache: js.UndefOr[Boolean] = js.undefined,
+    devMode: Mode = null,
+    favicons: PartialConfiguration = null,
+    inject: Boolean | (js.Function1[/* htmlPlugin */ optionsOptions, Boolean]) = null,
+    mode: Mode = null,
+    outputPath: String = null,
+    prefix: String = null,
+    publicPath: String = null
+  ): Options = {
     val __obj = js.Dynamic.literal(logo = logo.asInstanceOf[js.Any])
+    if (!js.isUndefined(cache)) __obj.updateDynamic("cache")(cache.get.asInstanceOf[js.Any])
+    if (devMode != null) __obj.updateDynamic("devMode")(devMode.asInstanceOf[js.Any])
+    if (favicons != null) __obj.updateDynamic("favicons")(favicons.asInstanceOf[js.Any])
+    if (inject != null) __obj.updateDynamic("inject")(inject.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (outputPath != null) __obj.updateDynamic("outputPath")(outputPath.asInstanceOf[js.Any])
+    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
+    if (publicPath != null) __obj.updateDynamic("publicPath")(publicPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLogo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCache(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDevMode(value: Mode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("devMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDevMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("devMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFavicons(value: PartialConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("favicons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFavicons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("favicons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInjectFunction1(value: /* htmlPlugin */ optionsOptions => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inject")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInject(value: Boolean | (js.Function1[/* htmlPlugin */ optionsOptions, Boolean])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: Mode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublicPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublicPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicPath")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

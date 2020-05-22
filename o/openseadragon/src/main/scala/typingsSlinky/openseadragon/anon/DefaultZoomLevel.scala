@@ -4,186 +4,53 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DefaultZoomLevel extends js.Object {
-  var animationTime: js.UndefOr[Double] = js.native
-  var defaultZoomLevel: js.UndefOr[Double] = js.native
-  var degrees: js.UndefOr[Double] = js.native
-  var homeFillsViewer: js.UndefOr[Boolean] = js.native
-  var margins: js.Object = js.native
-  var maxZoomLevel: js.UndefOr[Double] = js.native
-  var maxZoomPixelRatio: js.UndefOr[Double] = js.native
-  var minZoomImageRatio: js.UndefOr[Double] = js.native
-  var minZoomLevel: js.UndefOr[Double] = js.native
-  var springStiffness: js.UndefOr[Double] = js.native
-  var visibilityRatio: js.UndefOr[Double] = js.native
-  var wrapHorizontal: js.UndefOr[Boolean] = js.native
-  var wrapVertical: js.UndefOr[Boolean] = js.native
+  var animationTime: js.UndefOr[Double] = js.undefined
+  var defaultZoomLevel: js.UndefOr[Double] = js.undefined
+  var degrees: js.UndefOr[Double] = js.undefined
+  var homeFillsViewer: js.UndefOr[Boolean] = js.undefined
+  var margins: js.Object
+  var maxZoomLevel: js.UndefOr[Double] = js.undefined
+  var maxZoomPixelRatio: js.UndefOr[Double] = js.undefined
+  var minZoomImageRatio: js.UndefOr[Double] = js.undefined
+  var minZoomLevel: js.UndefOr[Double] = js.undefined
+  var springStiffness: js.UndefOr[Double] = js.undefined
+  var visibilityRatio: js.UndefOr[Double] = js.undefined
+  var wrapHorizontal: js.UndefOr[Boolean] = js.undefined
+  var wrapVertical: js.UndefOr[Boolean] = js.undefined
 }
 
 object DefaultZoomLevel {
   @scala.inline
-  def apply(margins: js.Object): DefaultZoomLevel = {
+  def apply(
+    margins: js.Object,
+    animationTime: js.UndefOr[Double] = js.undefined,
+    defaultZoomLevel: js.UndefOr[Double] = js.undefined,
+    degrees: js.UndefOr[Double] = js.undefined,
+    homeFillsViewer: js.UndefOr[Boolean] = js.undefined,
+    maxZoomLevel: js.UndefOr[Double] = js.undefined,
+    maxZoomPixelRatio: js.UndefOr[Double] = js.undefined,
+    minZoomImageRatio: js.UndefOr[Double] = js.undefined,
+    minZoomLevel: js.UndefOr[Double] = js.undefined,
+    springStiffness: js.UndefOr[Double] = js.undefined,
+    visibilityRatio: js.UndefOr[Double] = js.undefined,
+    wrapHorizontal: js.UndefOr[Boolean] = js.undefined,
+    wrapVertical: js.UndefOr[Boolean] = js.undefined
+  ): DefaultZoomLevel = {
     val __obj = js.Dynamic.literal(margins = margins.asInstanceOf[js.Any])
+    if (!js.isUndefined(animationTime)) __obj.updateDynamic("animationTime")(animationTime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultZoomLevel)) __obj.updateDynamic("defaultZoomLevel")(defaultZoomLevel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(degrees)) __obj.updateDynamic("degrees")(degrees.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(homeFillsViewer)) __obj.updateDynamic("homeFillsViewer")(homeFillsViewer.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxZoomLevel)) __obj.updateDynamic("maxZoomLevel")(maxZoomLevel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxZoomPixelRatio)) __obj.updateDynamic("maxZoomPixelRatio")(maxZoomPixelRatio.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minZoomImageRatio)) __obj.updateDynamic("minZoomImageRatio")(minZoomImageRatio.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minZoomLevel)) __obj.updateDynamic("minZoomLevel")(minZoomLevel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(springStiffness)) __obj.updateDynamic("springStiffness")(springStiffness.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visibilityRatio)) __obj.updateDynamic("visibilityRatio")(visibilityRatio.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wrapHorizontal)) __obj.updateDynamic("wrapHorizontal")(wrapHorizontal.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wrapVertical)) __obj.updateDynamic("wrapVertical")(wrapVertical.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultZoomLevel]
   }
-  @scala.inline
-  implicit class DefaultZoomLevelOps[Self <: DefaultZoomLevel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMargins(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnimationTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultZoomLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultZoomLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultZoomLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultZoomLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDegrees(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("degrees")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDegrees: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("degrees")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHomeFillsViewer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("homeFillsViewer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHomeFillsViewer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("homeFillsViewer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxZoomLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxZoomLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxZoomLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxZoomLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxZoomPixelRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxZoomPixelRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxZoomPixelRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxZoomPixelRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinZoomImageRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minZoomImageRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinZoomImageRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minZoomImageRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinZoomLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minZoomLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinZoomLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minZoomLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpringStiffness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("springStiffness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpringStiffness: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("springStiffness")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibilityRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibilityRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibilityRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibilityRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrapHorizontal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapHorizontal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrapHorizontal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapHorizontal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrapVertical(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapVertical")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrapVertical: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapVertical")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

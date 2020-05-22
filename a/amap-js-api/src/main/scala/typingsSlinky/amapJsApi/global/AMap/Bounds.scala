@@ -28,5 +28,36 @@ class Bounds ()
     * @param northEastLat 东北角纬度
     */
   def this(southWestLng: Double, southWestLat: Double, northEastLng: Double, northEastLat: Double) = this()
+  /**
+    * 指定点坐标是否在矩形范围内
+    * @param point 制定坐标
+    */
+  /* CompleteClass */
+  override def contains(point: LocationValue): Boolean = js.native
+  /**
+    * 获取当前Bounds的中心点经纬度坐标
+    */
+  /* CompleteClass */
+  override def getCenter(): typingsSlinky.amapJsApi.AMap.LngLat = js.native
+  /**
+    * 获取东北角坐标
+    */
+  /* CompleteClass */
+  override def getNorthEast(): typingsSlinky.amapJsApi.AMap.LngLat = js.native
+  /**
+    * 获取西北角坐标
+    */
+  /* CompleteClass */
+  override def getNorthWest(): typingsSlinky.amapJsApi.AMap.LngLat = js.native
+  /**
+    * 获取东南角坐标
+    */
+  /* CompleteClass */
+  override def getSouthEast(): typingsSlinky.amapJsApi.AMap.LngLat = js.native
+  /**
+    * 获取西南角坐标
+    */
+  /* CompleteClass */
+  override def getSouthWest(): typingsSlinky.amapJsApi.AMap.LngLat = js.native
 }
 

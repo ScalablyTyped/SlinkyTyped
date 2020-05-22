@@ -7,93 +7,49 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GangliaLayerEbsVolume extends js.Object {
   var encrypted: js.UndefOr[Boolean] = js.native
+  /**
+    * For PIOPS volumes, the IOPS per disk.
+    */
   var iops: js.UndefOr[Double] = js.native
+  /**
+    * The path to mount the EBS volume on the layer's instances.
+    */
   var mountPoint: String = js.native
+  /**
+    * The number of disks to use for the EBS volume.
+    */
   var numberOfDisks: Double = js.native
+  /**
+    * The RAID level to use for the volume.
+    */
   var raidLevel: js.UndefOr[String] = js.native
+  /**
+    * The size of the volume in gigabytes.
+    */
   var size: Double = js.native
+  /**
+    * The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
+    */
   var `type`: js.UndefOr[String] = js.native
 }
 
 object GangliaLayerEbsVolume {
   @scala.inline
-  def apply(mountPoint: String, numberOfDisks: Double, size: Double): GangliaLayerEbsVolume = {
+  def apply(
+    mountPoint: String,
+    numberOfDisks: Double,
+    size: Double,
+    encrypted: js.UndefOr[Boolean] = js.undefined,
+    iops: js.UndefOr[Double] = js.undefined,
+    raidLevel: String = null,
+    `type`: String = null
+  ): GangliaLayerEbsVolume = {
     val __obj = js.Dynamic.literal(mountPoint = mountPoint.asInstanceOf[js.Any], numberOfDisks = numberOfDisks.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
+    if (!js.isUndefined(encrypted)) __obj.updateDynamic("encrypted")(encrypted.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(iops)) __obj.updateDynamic("iops")(iops.get.asInstanceOf[js.Any])
+    if (raidLevel != null) __obj.updateDynamic("raidLevel")(raidLevel.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GangliaLayerEbsVolume]
   }
-  @scala.inline
-  implicit class GangliaLayerEbsVolumeOps[Self <: GangliaLayerEbsVolume] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMountPoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberOfDisks(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfDisks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEncrypted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encrypted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncrypted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encrypted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIops(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iops")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIops: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iops")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRaidLevel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raidLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRaidLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raidLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

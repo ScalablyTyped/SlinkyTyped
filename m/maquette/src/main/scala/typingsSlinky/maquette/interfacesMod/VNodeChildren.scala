@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation._
 @js.native
 trait VNodeChildren
   extends Array[VNodeChild]
-     with VNodeChild
+     with _VNodeChild
 

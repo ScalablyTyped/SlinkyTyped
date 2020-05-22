@@ -87,197 +87,40 @@ trait SchemaFinding extends js.Object {
 
 object SchemaFinding {
   @scala.inline
-  def apply(): SchemaFinding = {
+  def apply(
+    body: String = null,
+    description: String = null,
+    finalUrl: String = null,
+    findingType: String = null,
+    frameUrl: String = null,
+    fuzzedUrl: String = null,
+    httpMethod: String = null,
+    name: String = null,
+    outdatedLibrary: SchemaOutdatedLibrary = null,
+    reproductionUrl: String = null,
+    trackingId: String = null,
+    violatingResource: SchemaViolatingResource = null,
+    vulnerableHeaders: SchemaVulnerableHeaders = null,
+    vulnerableParameters: SchemaVulnerableParameters = null,
+    xss: SchemaXss = null
+  ): SchemaFinding = {
     val __obj = js.Dynamic.literal()
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (finalUrl != null) __obj.updateDynamic("finalUrl")(finalUrl.asInstanceOf[js.Any])
+    if (findingType != null) __obj.updateDynamic("findingType")(findingType.asInstanceOf[js.Any])
+    if (frameUrl != null) __obj.updateDynamic("frameUrl")(frameUrl.asInstanceOf[js.Any])
+    if (fuzzedUrl != null) __obj.updateDynamic("fuzzedUrl")(fuzzedUrl.asInstanceOf[js.Any])
+    if (httpMethod != null) __obj.updateDynamic("httpMethod")(httpMethod.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (outdatedLibrary != null) __obj.updateDynamic("outdatedLibrary")(outdatedLibrary.asInstanceOf[js.Any])
+    if (reproductionUrl != null) __obj.updateDynamic("reproductionUrl")(reproductionUrl.asInstanceOf[js.Any])
+    if (trackingId != null) __obj.updateDynamic("trackingId")(trackingId.asInstanceOf[js.Any])
+    if (violatingResource != null) __obj.updateDynamic("violatingResource")(violatingResource.asInstanceOf[js.Any])
+    if (vulnerableHeaders != null) __obj.updateDynamic("vulnerableHeaders")(vulnerableHeaders.asInstanceOf[js.Any])
+    if (vulnerableParameters != null) __obj.updateDynamic("vulnerableParameters")(vulnerableParameters.asInstanceOf[js.Any])
+    if (xss != null) __obj.updateDynamic("xss")(xss.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFinding]
   }
-  @scala.inline
-  implicit class SchemaFindingOps[Self <: SchemaFinding] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBody(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFinalUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFinalUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFindingType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findingType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFindingType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findingType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrameUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrameUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFuzzedUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fuzzedUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFuzzedUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fuzzedUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutdatedLibrary(value: SchemaOutdatedLibrary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outdatedLibrary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutdatedLibrary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outdatedLibrary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReproductionUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reproductionUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReproductionUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reproductionUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrackingId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackingId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrackingId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackingId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViolatingResource(value: SchemaViolatingResource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("violatingResource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViolatingResource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("violatingResource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVulnerableHeaders(value: SchemaVulnerableHeaders): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vulnerableHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVulnerableHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vulnerableHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVulnerableParameters(value: SchemaVulnerableParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vulnerableParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVulnerableParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vulnerableParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXss(value: SchemaXss): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xss")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xss")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

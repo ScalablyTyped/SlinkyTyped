@@ -5,75 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait IParameterizedQuery extends QueryParam {
-  var binary: js.UndefOr[Boolean] = js.native
-  var rowMode: js.UndefOr[Unit | array] = js.native
-  var text: js.UndefOr[String | QueryFile] = js.native
-  var values: js.UndefOr[js.Array[_]] = js.native
+trait IParameterizedQuery extends _QueryParam {
+  var binary: js.UndefOr[Boolean] = js.undefined
+  var rowMode: js.UndefOr[Unit | array] = js.undefined
+  var text: js.UndefOr[String | QueryFile] = js.undefined
+  var values: js.UndefOr[js.Array[_]] = js.undefined
 }
 
 object IParameterizedQuery {
   @scala.inline
-  def apply(): IParameterizedQuery = {
+  def apply(
+    binary: js.UndefOr[Boolean] = js.undefined,
+    rowMode: Unit | array = null,
+    text: String | QueryFile = null,
+    values: js.Array[_] = null
+  ): IParameterizedQuery = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(binary)) __obj.updateDynamic("binary")(binary.get.asInstanceOf[js.Any])
+    if (rowMode != null) __obj.updateDynamic("rowMode")(rowMode.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
     __obj.asInstanceOf[IParameterizedQuery]
   }
-  @scala.inline
-  implicit class IParameterizedQueryOps[Self <: IParameterizedQuery] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBinary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBinary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowMode(value: Unit | array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String | QueryFile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValues(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

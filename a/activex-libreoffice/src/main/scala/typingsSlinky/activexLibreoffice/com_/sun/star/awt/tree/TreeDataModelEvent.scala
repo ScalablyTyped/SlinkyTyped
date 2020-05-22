@@ -14,20 +14,19 @@ import scala.scalajs.js.annotation._
   * @see XTreeControl
   * @see XTreeDataModelListener
   */
-@js.native
 trait TreeDataModelEvent extends EventObject {
   /**
     * contains the changed, added or removed nodes.
     *
     * All nodes must have {@link ParentNode} as parent.
     */
-  var Nodes: SafeArray[XTreeNode] = js.native
+  var Nodes: SafeArray[XTreeNode]
   /**
     * holds the parent node for changed, added or removed nodes.
     *
     * If this is null, {@link Nodes} must contain only the root node
     */
-  var ParentNode: XTreeNode = js.native
+  var ParentNode: XTreeNode
 }
 
 object TreeDataModelEvent {
@@ -36,25 +35,5 @@ object TreeDataModelEvent {
     val __obj = js.Dynamic.literal(Nodes = Nodes.asInstanceOf[js.Any], ParentNode = ParentNode.asInstanceOf[js.Any], Source = Source.asInstanceOf[js.Any])
     __obj.asInstanceOf[TreeDataModelEvent]
   }
-  @scala.inline
-  implicit class TreeDataModelEventOps[Self <: TreeDataModelEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNodes(value: SafeArray[XTreeNode]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Nodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParentNode(value: XTreeNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

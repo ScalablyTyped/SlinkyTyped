@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DragSourceConnector extends js.Object {
   /**
     * Optional. Returns a function that may be used inside the component to assign the drag preview role to a node. By
@@ -19,14 +18,14 @@ trait DragSourceConnector extends js.Object {
     * from a lifecycle method like componentDidMount. This lets you use the actual images for drag previews. (Note that IE does not
     * support this customization). See the example code below for the different usage examples.
     */
-  def dragPreview(): ConnectDragPreview = js.native
+  def dragPreview(): ConnectDragPreview
   /**
     * Returns a function that must be used inside the component to assign the drag source role to a node. By
     * returning { connectDragSource: connect.dragSource() } from your collecting function, you can mark any React
     * element as the draggable node. To do that, replace any element with this.props.connectDragSource(element) inside
     * the render function.
     */
-  def dragSource(): ConnectDragSource = js.native
+  def dragSource(): ConnectDragSource
 }
 
 object DragSourceConnector {
@@ -35,25 +34,5 @@ object DragSourceConnector {
     val __obj = js.Dynamic.literal(dragPreview = js.Any.fromFunction0(dragPreview), dragSource = js.Any.fromFunction0(dragSource))
     __obj.asInstanceOf[DragSourceConnector]
   }
-  @scala.inline
-  implicit class DragSourceConnectorOps[Self <: DragSourceConnector] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDragPreview(value: () => ConnectDragPreview): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragPreview")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDragSource(value: () => ConnectDragSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragSource")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

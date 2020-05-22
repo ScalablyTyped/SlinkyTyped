@@ -6,12 +6,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Fft extends js.Object {
-  def fft(x: Tensor[Rank]): Tensor[Rank] = js.native
-  def ifft(x: Tensor[Rank]): Tensor[Rank] = js.native
-  def irfft(x: Tensor[Rank]): Tensor[Rank] = js.native
-  def rfft(x: Tensor[Rank]): Tensor[Rank] = js.native
+  def fft(x: Tensor[Rank]): Tensor[Rank]
+  def ifft(x: Tensor[Rank]): Tensor[Rank]
+  def irfft(x: Tensor[Rank]): Tensor[Rank]
+  def rfft(x: Tensor[Rank]): Tensor[Rank]
 }
 
 object Fft {
@@ -25,37 +24,5 @@ object Fft {
     val __obj = js.Dynamic.literal(fft = js.Any.fromFunction1(fft), ifft = js.Any.fromFunction1(ifft), irfft = js.Any.fromFunction1(irfft), rfft = js.Any.fromFunction1(rfft))
     __obj.asInstanceOf[Fft]
   }
-  @scala.inline
-  implicit class FftOps[Self <: Fft] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFft(value: Tensor[Rank] => Tensor[Rank]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fft")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIfft(value: Tensor[Rank] => Tensor[Rank]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ifft")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIrfft(value: Tensor[Rank] => Tensor[Rank]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("irfft")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRfft(value: Tensor[Rank] => Tensor[Rank]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rfft")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

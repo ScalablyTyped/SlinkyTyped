@@ -5,103 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of an Error. */
-@js.native
 trait IError extends js.Object {
   /** Error json */
-  var json: js.UndefOr[String | Null] = js.native
+  var json: js.UndefOr[String | Null] = js.undefined
   /** Error location */
-  var location: js.UndefOr[js.Array[ILocation] | Null] = js.native
+  var location: js.UndefOr[js.Array[ILocation] | Null] = js.undefined
   /** Error message */
-  var message: js.UndefOr[String | Null] = js.native
+  var message: js.UndefOr[String | Null] = js.undefined
   /** Error timeNs */
-  var timeNs: js.UndefOr[Double | Null] = js.native
+  var timeNs: js.UndefOr[Double | Null] = js.undefined
 }
 
 object IError {
   @scala.inline
-  def apply(): IError = {
+  def apply(
+    json: js.UndefOr[Null | String] = js.undefined,
+    location: js.UndefOr[Null | js.Array[ILocation]] = js.undefined,
+    message: js.UndefOr[Null | String] = js.undefined,
+    timeNs: js.UndefOr[Null | Double] = js.undefined
+  ): IError = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(json)) __obj.updateDynamic("json")(json.asInstanceOf[js.Any])
+    if (!js.isUndefined(location)) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (!js.isUndefined(message)) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeNs)) __obj.updateDynamic("timeNs")(timeNs.asInstanceOf[js.Any])
     __obj.asInstanceOf[IError]
   }
-  @scala.inline
-  implicit class IErrorOps[Self <: IError] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJson(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJson: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJsonNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(null)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: js.Array[ILocation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocationNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(null)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(null)
-        ret
-    }
-    @scala.inline
-    def withTimeNs(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeNs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeNs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeNs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeNsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeNs")(null)
-        ret
-    }
-  }
-  
 }
 

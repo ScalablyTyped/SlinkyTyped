@@ -13,17 +13,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait editableValueSettableProperties[V, SV, RV] extends baseComponentSettableProperties {
-  var describedBy: String | Null = js.native
-  var disabled: Boolean = js.native
-  var displayOptions: ConverterHint = js.native
-  var help: Instruction = js.native
-  var helpHints: Definition = js.native
-  var labelHint: String = js.native
-  var messagesCustom: js.Array[^] = js.native
-  val valid: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valid | pending | invalidHidden | invalidShown = js.native
-  var value: SV = js.native
+  var describedBy: String | Null
+  var disabled: Boolean
+  var displayOptions: ConverterHint
+  var help: Instruction
+  var helpHints: Definition
+  var labelHint: String
+  var messagesCustom: js.Array[^]
+  val valid: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valid | pending | invalidHidden | invalidShown
+  var value: SV
 }
 
 object editableValueSettableProperties {
@@ -36,78 +35,12 @@ object editableValueSettableProperties {
     labelHint: String,
     messagesCustom: js.Array[^],
     valid: valid | pending | invalidHidden | invalidShown,
-    value: SV
+    value: SV,
+    describedBy: String = null,
+    translations: js.Object = null
   ): editableValueSettableProperties[V, SV, RV] = {
-    val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], displayOptions = displayOptions.asInstanceOf[js.Any], help = help.asInstanceOf[js.Any], helpHints = helpHints.asInstanceOf[js.Any], labelHint = labelHint.asInstanceOf[js.Any], messagesCustom = messagesCustom.asInstanceOf[js.Any], valid = valid.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], displayOptions = displayOptions.asInstanceOf[js.Any], help = help.asInstanceOf[js.Any], helpHints = helpHints.asInstanceOf[js.Any], labelHint = labelHint.asInstanceOf[js.Any], messagesCustom = messagesCustom.asInstanceOf[js.Any], valid = valid.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any], describedBy = describedBy.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[editableValueSettableProperties[V, SV, RV]]
   }
-  @scala.inline
-  implicit class editableValueSettablePropertiesOps[Self[v, sv, rv] <: editableValueSettableProperties[v, sv, rv], V, SV, RV] (val x: Self[V, SV, RV]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[V, SV, RV] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[V, SV, RV]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[V, SV, RV]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[V, SV, RV]) with Other]
-    @scala.inline
-    def withDisabled(value: Boolean): Self[V, SV, RV] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisplayOptions(value: ConverterHint): Self[V, SV, RV] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHelp(value: Instruction): Self[V, SV, RV] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHelpHints(value: Definition): Self[V, SV, RV] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("helpHints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabelHint(value: String): Self[V, SV, RV] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelHint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessagesCustom(value: js.Array[^]): Self[V, SV, RV] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messagesCustom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValid(value: valid | pending | invalidHidden | invalidShown): Self[V, SV, RV] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: SV): Self[V, SV, RV] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescribedBy(value: String): Self[V, SV, RV] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("describedBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescribedByNull: Self[V, SV, RV] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("describedBy")(null)
-        ret
-    }
-  }
-  
 }
 

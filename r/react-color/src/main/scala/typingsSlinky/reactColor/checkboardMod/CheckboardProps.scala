@@ -1,66 +1,34 @@
 package typingsSlinky.reactColor.checkboardMod
 
 import typingsSlinky.react.mod.ClassAttributes
+import typingsSlinky.react.mod.Key
+import typingsSlinky.react.mod.LegacyRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CheckboardProps extends ClassAttributes[Checkboard] {
-  var grey: js.UndefOr[String] = js.native
-  var size: js.UndefOr[Double] = js.native
-  var white: js.UndefOr[String] = js.native
+  var grey: js.UndefOr[String] = js.undefined
+  var size: js.UndefOr[Double] = js.undefined
+  var white: js.UndefOr[String] = js.undefined
 }
 
 object CheckboardProps {
   @scala.inline
-  def apply(): CheckboardProps = {
+  def apply(
+    grey: String = null,
+    key: Key = null,
+    ref: js.UndefOr[Null | LegacyRef[Checkboard]] = js.undefined,
+    size: js.UndefOr[Double] = js.undefined,
+    white: String = null
+  ): CheckboardProps = {
     val __obj = js.Dynamic.literal()
+    if (grey != null) __obj.updateDynamic("grey")(grey.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
+    if (white != null) __obj.updateDynamic("white")(white.asInstanceOf[js.Any])
     __obj.asInstanceOf[CheckboardProps]
   }
-  @scala.inline
-  implicit class CheckboardPropsOps[Self <: CheckboardProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGrey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWhite(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("white")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWhite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("white")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

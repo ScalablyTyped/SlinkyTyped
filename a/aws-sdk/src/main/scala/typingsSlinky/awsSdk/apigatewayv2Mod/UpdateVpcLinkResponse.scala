@@ -46,125 +46,28 @@ trait UpdateVpcLinkResponse extends js.Object {
 
 object UpdateVpcLinkResponse {
   @scala.inline
-  def apply(): UpdateVpcLinkResponse = {
+  def apply(
+    CreatedDate: js.Date = null,
+    Name: StringWithLengthBetween1And128 = null,
+    SecurityGroupIds: SecurityGroupIdList = null,
+    SubnetIds: SubnetIdList = null,
+    Tags: Tags = null,
+    VpcLinkId: Id = null,
+    VpcLinkStatus: VpcLinkStatus = null,
+    VpcLinkStatusMessage: StringWithLengthBetween0And1024 = null,
+    VpcLinkVersion: VpcLinkVersion = null
+  ): UpdateVpcLinkResponse = {
     val __obj = js.Dynamic.literal()
+    if (CreatedDate != null) __obj.updateDynamic("CreatedDate")(CreatedDate.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (SecurityGroupIds != null) __obj.updateDynamic("SecurityGroupIds")(SecurityGroupIds.asInstanceOf[js.Any])
+    if (SubnetIds != null) __obj.updateDynamic("SubnetIds")(SubnetIds.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
+    if (VpcLinkId != null) __obj.updateDynamic("VpcLinkId")(VpcLinkId.asInstanceOf[js.Any])
+    if (VpcLinkStatus != null) __obj.updateDynamic("VpcLinkStatus")(VpcLinkStatus.asInstanceOf[js.Any])
+    if (VpcLinkStatusMessage != null) __obj.updateDynamic("VpcLinkStatusMessage")(VpcLinkStatusMessage.asInstanceOf[js.Any])
+    if (VpcLinkVersion != null) __obj.updateDynamic("VpcLinkVersion")(VpcLinkVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateVpcLinkResponse]
   }
-  @scala.inline
-  implicit class UpdateVpcLinkResponseOps[Self <: UpdateVpcLinkResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreatedDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: StringWithLengthBetween1And128): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurityGroupIds(value: SecurityGroupIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroupIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityGroupIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroupIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubnetIds(value: SubnetIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubnetIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: Tags): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcLinkId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcLinkId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcLinkId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcLinkId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcLinkStatus(value: VpcLinkStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcLinkStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcLinkStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcLinkStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcLinkStatusMessage(value: StringWithLengthBetween0And1024): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcLinkStatusMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcLinkStatusMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcLinkStatusMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcLinkVersion(value: VpcLinkVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcLinkVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcLinkVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcLinkVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

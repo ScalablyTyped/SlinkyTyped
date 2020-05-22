@@ -34,89 +34,22 @@ trait AssumeRoleWithWebIdentityResponse extends js.Object {
 
 object AssumeRoleWithWebIdentityResponse {
   @scala.inline
-  def apply(): AssumeRoleWithWebIdentityResponse = {
+  def apply(
+    AssumedRoleUser: AssumedRoleUser = null,
+    Audience: Audience = null,
+    Credentials: Credentials = null,
+    PackedPolicySize: js.UndefOr[nonNegativeIntegerType] = js.undefined,
+    Provider: Issuer = null,
+    SubjectFromWebIdentityToken: webIdentitySubjectType = null
+  ): AssumeRoleWithWebIdentityResponse = {
     val __obj = js.Dynamic.literal()
+    if (AssumedRoleUser != null) __obj.updateDynamic("AssumedRoleUser")(AssumedRoleUser.asInstanceOf[js.Any])
+    if (Audience != null) __obj.updateDynamic("Audience")(Audience.asInstanceOf[js.Any])
+    if (Credentials != null) __obj.updateDynamic("Credentials")(Credentials.asInstanceOf[js.Any])
+    if (!js.isUndefined(PackedPolicySize)) __obj.updateDynamic("PackedPolicySize")(PackedPolicySize.get.asInstanceOf[js.Any])
+    if (Provider != null) __obj.updateDynamic("Provider")(Provider.asInstanceOf[js.Any])
+    if (SubjectFromWebIdentityToken != null) __obj.updateDynamic("SubjectFromWebIdentityToken")(SubjectFromWebIdentityToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssumeRoleWithWebIdentityResponse]
   }
-  @scala.inline
-  implicit class AssumeRoleWithWebIdentityResponseOps[Self <: AssumeRoleWithWebIdentityResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssumedRoleUser(value: AssumedRoleUser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssumedRoleUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssumedRoleUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssumedRoleUser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAudience(value: Audience): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Audience")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudience: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Audience")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCredentials(value: Credentials): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Credentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Credentials")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPackedPolicySize(value: nonNegativeIntegerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PackedPolicySize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPackedPolicySize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PackedPolicySize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProvider(value: Issuer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Provider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProvider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Provider")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubjectFromWebIdentityToken(value: webIdentitySubjectType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubjectFromWebIdentityToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubjectFromWebIdentityToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubjectFromWebIdentityToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

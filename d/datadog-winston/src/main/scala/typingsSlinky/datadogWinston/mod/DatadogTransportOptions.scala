@@ -1,86 +1,48 @@
 package typingsSlinky.datadogWinston.mod
 
+import typingsSlinky.logform.mod.Format_
 import typingsSlinky.winstonTransport.mod.TransportStreamOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DatadogTransportOptions extends TransportStreamOptions {
-  var apiKey: String = js.native
-  var ddsource: js.UndefOr[String] = js.native
-  var ddtags: js.UndefOr[String] = js.native
-  var hostname: js.UndefOr[String] = js.native
-  var service: js.UndefOr[String] = js.native
+  var apiKey: String
+  var ddsource: js.UndefOr[String] = js.undefined
+  var ddtags: js.UndefOr[String] = js.undefined
+  var hostname: js.UndefOr[String] = js.undefined
+  var service: js.UndefOr[String] = js.undefined
 }
 
 object DatadogTransportOptions {
   @scala.inline
-  def apply(apiKey: String): DatadogTransportOptions = {
+  def apply(
+    apiKey: String,
+    close: () => Unit = null,
+    ddsource: String = null,
+    ddtags: String = null,
+    format: Format_ = null,
+    handleExceptions: js.UndefOr[Boolean] = js.undefined,
+    hostname: String = null,
+    level: String = null,
+    log: (/* info */ js.Any, /* next */ js.Function0[Unit]) => _ = null,
+    logv: (/* info */ js.Any, /* next */ js.Function0[Unit]) => _ = null,
+    service: String = null,
+    silent: js.UndefOr[Boolean] = js.undefined
+  ): DatadogTransportOptions = {
     val __obj = js.Dynamic.literal(apiKey = apiKey.asInstanceOf[js.Any])
+    if (close != null) __obj.updateDynamic("close")(js.Any.fromFunction0(close))
+    if (ddsource != null) __obj.updateDynamic("ddsource")(ddsource.asInstanceOf[js.Any])
+    if (ddtags != null) __obj.updateDynamic("ddtags")(ddtags.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (!js.isUndefined(handleExceptions)) __obj.updateDynamic("handleExceptions")(handleExceptions.get.asInstanceOf[js.Any])
+    if (hostname != null) __obj.updateDynamic("hostname")(hostname.asInstanceOf[js.Any])
+    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
+    if (log != null) __obj.updateDynamic("log")(js.Any.fromFunction2(log))
+    if (logv != null) __obj.updateDynamic("logv")(js.Any.fromFunction2(logv))
+    if (service != null) __obj.updateDynamic("service")(service.asInstanceOf[js.Any])
+    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DatadogTransportOptions]
   }
-  @scala.inline
-  implicit class DatadogTransportOptionsOps[Self <: DatadogTransportOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDdsource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ddsource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDdsource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ddsource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDdtags(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ddtags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDdtags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ddtags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHostname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHostname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withService(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutService: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

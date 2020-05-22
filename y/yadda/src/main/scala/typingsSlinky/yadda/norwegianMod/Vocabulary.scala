@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Vocabulary
   extends typingsSlinky.yadda.englishMod.Vocabulary {
-  var gitt: String = js.native
-  var når: String = js.native
-  var så: String = js.native
+  var gitt: String
+  var når: String
+  var så: String
 }
 
 object Vocabulary {
@@ -33,31 +32,5 @@ object Vocabulary {
     __obj.updateDynamic("then")(`then`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Vocabulary]
   }
-  @scala.inline
-  implicit class VocabularyOps[Self <: Vocabulary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGitt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gitt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNår(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("n\u00E5r")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSå(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s\u00E5")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

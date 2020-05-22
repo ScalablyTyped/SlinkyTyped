@@ -5,49 +5,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<hashring.hashring.ServerConfig> */
-@js.native
 trait PartialServerConfig extends js.Object {
-  var vnodes: js.UndefOr[Double] = js.native
-  var weight: js.UndefOr[Double] = js.native
+  var vnodes: js.UndefOr[Double] = js.undefined
+  var weight: js.UndefOr[Double] = js.undefined
 }
 
 object PartialServerConfig {
   @scala.inline
-  def apply(): PartialServerConfig = {
+  def apply(vnodes: js.UndefOr[Double] = js.undefined, weight: js.UndefOr[Double] = js.undefined): PartialServerConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(vnodes)) __obj.updateDynamic("vnodes")(vnodes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(weight)) __obj.updateDynamic("weight")(weight.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialServerConfig]
   }
-  @scala.inline
-  implicit class PartialServerConfigOps[Self <: PartialServerConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVnodes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vnodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVnodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vnodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

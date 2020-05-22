@@ -4,96 +4,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NotificationMessageTemplate extends Entity {
   /**
     * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none,
     * includeCompanyLogo, includeCompanyName, includeContactInformation.
     */
-  var brandingOptions: js.UndefOr[NotificationTemplateBrandingOptions] = js.native
+  var brandingOptions: js.UndefOr[NotificationTemplateBrandingOptions] = js.undefined
   // The default locale to fallback onto when the requested locale is not available.
-  var defaultLocale: js.UndefOr[String] = js.native
+  var defaultLocale: js.UndefOr[String] = js.undefined
   // Display name for the Notification Message Template.
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[String] = js.undefined
   // DateTime the object was last modified.
-  var lastModifiedDateTime: js.UndefOr[String] = js.native
+  var lastModifiedDateTime: js.UndefOr[String] = js.undefined
   // The list of localized messages for this Notification Message Template.
-  var localizedNotificationMessages: js.UndefOr[js.Array[LocalizedNotificationMessage]] = js.native
+  var localizedNotificationMessages: js.UndefOr[js.Array[LocalizedNotificationMessage]] = js.undefined
 }
 
 object NotificationMessageTemplate {
   @scala.inline
-  def apply(): NotificationMessageTemplate = {
+  def apply(
+    brandingOptions: NotificationTemplateBrandingOptions = null,
+    defaultLocale: String = null,
+    displayName: String = null,
+    id: String = null,
+    lastModifiedDateTime: String = null,
+    localizedNotificationMessages: js.Array[LocalizedNotificationMessage] = null
+  ): NotificationMessageTemplate = {
     val __obj = js.Dynamic.literal()
+    if (brandingOptions != null) __obj.updateDynamic("brandingOptions")(brandingOptions.asInstanceOf[js.Any])
+    if (defaultLocale != null) __obj.updateDynamic("defaultLocale")(defaultLocale.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (lastModifiedDateTime != null) __obj.updateDynamic("lastModifiedDateTime")(lastModifiedDateTime.asInstanceOf[js.Any])
+    if (localizedNotificationMessages != null) __obj.updateDynamic("localizedNotificationMessages")(localizedNotificationMessages.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotificationMessageTemplate]
   }
-  @scala.inline
-  implicit class NotificationMessageTemplateOps[Self <: NotificationMessageTemplate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBrandingOptions(value: NotificationTemplateBrandingOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brandingOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrandingOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brandingOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultLocale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLocale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLocale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifiedDateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalizedNotificationMessages(value: js.Array[LocalizedNotificationMessage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localizedNotificationMessages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalizedNotificationMessages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localizedNotificationMessages")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

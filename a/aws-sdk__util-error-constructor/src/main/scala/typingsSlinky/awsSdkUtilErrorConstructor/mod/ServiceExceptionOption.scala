@@ -5,87 +5,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ServiceExceptionOption extends js.Object {
   @JSName("$metadata")
-  var $metadata: ResponseMetadata = js.native
+  var $metadata: ResponseMetadata
   /** a human readable description of this exception */
-  var message: js.UndefOr[String] = js.native
+  var message: js.UndefOr[String] = js.undefined
   /** name of exception */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /** the name of the operation that throws the exception */
-  var operationName: js.UndefOr[String] = js.native
+  var operationName: js.UndefOr[String] = js.undefined
   /** parsed exception object normalized according to its API model */
-  var rawException: js.UndefOr[js.Any] = js.native
+  var rawException: js.UndefOr[js.Any] = js.undefined
 }
 
 object ServiceExceptionOption {
   @scala.inline
-  def apply($metadata: ResponseMetadata): ServiceExceptionOption = {
+  def apply(
+    $metadata: ResponseMetadata,
+    message: String = null,
+    name: String = null,
+    operationName: String = null,
+    rawException: js.Any = null
+  ): ServiceExceptionOption = {
     val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (operationName != null) __obj.updateDynamic("operationName")(operationName.asInstanceOf[js.Any])
+    if (rawException != null) __obj.updateDynamic("rawException")(rawException.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceExceptionOption]
   }
-  @scala.inline
-  implicit class ServiceExceptionOptionOps[Self <: ServiceExceptionOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$metadata(value: ResponseMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperationName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRawException(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawException")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRawException: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawException")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

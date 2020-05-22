@@ -14,29 +14,10 @@ trait DescribeNamespaceRequest extends js.Object {
 
 object DescribeNamespaceRequest {
   @scala.inline
-  def apply(): DescribeNamespaceRequest = {
+  def apply(namespaceName: NamespaceName = null): DescribeNamespaceRequest = {
     val __obj = js.Dynamic.literal()
+    if (namespaceName != null) __obj.updateDynamic("namespaceName")(namespaceName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeNamespaceRequest]
   }
-  @scala.inline
-  implicit class DescribeNamespaceRequestOps[Self <: DescribeNamespaceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNamespaceName(value: NamespaceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamespaceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

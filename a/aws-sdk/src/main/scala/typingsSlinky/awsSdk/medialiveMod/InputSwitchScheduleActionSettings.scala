@@ -22,47 +22,15 @@ trait InputSwitchScheduleActionSettings extends js.Object {
 
 object InputSwitchScheduleActionSettings {
   @scala.inline
-  def apply(InputAttachmentNameReference: string): InputSwitchScheduleActionSettings = {
+  def apply(
+    InputAttachmentNameReference: string,
+    InputClippingSettings: InputClippingSettings = null,
+    UrlPath: listOfString = null
+  ): InputSwitchScheduleActionSettings = {
     val __obj = js.Dynamic.literal(InputAttachmentNameReference = InputAttachmentNameReference.asInstanceOf[js.Any])
+    if (InputClippingSettings != null) __obj.updateDynamic("InputClippingSettings")(InputClippingSettings.asInstanceOf[js.Any])
+    if (UrlPath != null) __obj.updateDynamic("UrlPath")(UrlPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputSwitchScheduleActionSettings]
   }
-  @scala.inline
-  implicit class InputSwitchScheduleActionSettingsOps[Self <: InputSwitchScheduleActionSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInputAttachmentNameReference(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputAttachmentNameReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInputClippingSettings(value: InputClippingSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputClippingSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputClippingSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputClippingSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrlPath(value: listOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UrlPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrlPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UrlPath")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

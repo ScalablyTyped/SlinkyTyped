@@ -6,14 +6,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait View extends js.Object {
   @JSName("ADOX.View_typekey")
-  var ADOXDotView_typekey: View = js.native
-  var Command: typingsSlinky.activexAdodb.ADODB.Command = js.native
-  val DateCreated: VarDate = js.native
-  val DateModified: VarDate = js.native
-  val Name: String = js.native
+  var ADOXDotView_typekey: View
+  var Command: typingsSlinky.activexAdodb.ADODB.Command
+  val DateCreated: VarDate
+  val DateModified: VarDate
+  val Name: String
 }
 
 object View {
@@ -29,43 +28,5 @@ object View {
     __obj.updateDynamic("ADOX.View_typekey")(ADOXDotView_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[View]
   }
-  @scala.inline
-  implicit class ViewOps[Self <: View] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withADOXDotView_typekey(value: View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ADOX.View_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommand(value: Command): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Command")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDateCreated(value: VarDate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DateCreated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDateModified(value: VarDate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DateModified")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

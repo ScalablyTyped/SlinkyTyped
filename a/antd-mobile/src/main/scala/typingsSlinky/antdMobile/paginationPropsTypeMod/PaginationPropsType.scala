@@ -7,128 +7,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PaginationPropsType extends js.Object {
-  var current: Double = js.native
-  var mode: js.UndefOr[button | number | pointer] = js.native
-  var nextText: js.UndefOr[String] = js.native
-  var onChange: js.UndefOr[js.Function1[/* current */ Double, Unit]] = js.native
-  var onNext: js.UndefOr[js.Function0[Unit]] = js.native
-  var onPrev: js.UndefOr[js.Function0[Unit]] = js.native
-  var prevText: js.UndefOr[String] = js.native
-  var simple: js.UndefOr[Boolean] = js.native
-  var total: Double = js.native
+  var current: Double
+  var mode: js.UndefOr[button | number | pointer] = js.undefined
+  var nextText: js.UndefOr[String] = js.undefined
+  var onChange: js.UndefOr[js.Function1[/* current */ Double, Unit]] = js.undefined
+  var onNext: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onPrev: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var prevText: js.UndefOr[String] = js.undefined
+  var simple: js.UndefOr[Boolean] = js.undefined
+  var total: Double
 }
 
 object PaginationPropsType {
   @scala.inline
-  def apply(current: Double, total: Double): PaginationPropsType = {
+  def apply(
+    current: Double,
+    total: Double,
+    mode: button | number | pointer = null,
+    nextText: String = null,
+    onChange: /* current */ Double => Unit = null,
+    onNext: () => Unit = null,
+    onPrev: () => Unit = null,
+    prevText: String = null,
+    simple: js.UndefOr[Boolean] = js.undefined
+  ): PaginationPropsType = {
     val __obj = js.Dynamic.literal(current = current.asInstanceOf[js.Any], total = total.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (nextText != null) __obj.updateDynamic("nextText")(nextText.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onNext != null) __obj.updateDynamic("onNext")(js.Any.fromFunction0(onNext))
+    if (onPrev != null) __obj.updateDynamic("onPrev")(js.Any.fromFunction0(onPrev))
+    if (prevText != null) __obj.updateDynamic("prevText")(prevText.asInstanceOf[js.Any])
+    if (!js.isUndefined(simple)) __obj.updateDynamic("simple")(simple.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaginationPropsType]
   }
-  @scala.inline
-  implicit class PaginationPropsTypeOps[Self <: PaginationPropsType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("current")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotal(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMode(value: button | number | pointer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: /* current */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnNext(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNext")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnNext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPrev(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPrev")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPrev: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPrev")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrevText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrevText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSimple(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("simple")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSimple: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("simple")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

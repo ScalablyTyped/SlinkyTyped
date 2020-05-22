@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.qlik.qlikStrings.pl
   - typingsSlinky.qlik.qlikStrings.`pl-PL`
 */
-trait Polish extends ALL
+trait Polish extends _ALL
 
 object Polish {
   @scala.inline

@@ -22,41 +22,10 @@ trait PollForActivityTaskInput extends js.Object {
 
 object PollForActivityTaskInput {
   @scala.inline
-  def apply(domain: DomainName, taskList: TaskList): PollForActivityTaskInput = {
+  def apply(domain: DomainName, taskList: TaskList, identity: Identity = null): PollForActivityTaskInput = {
     val __obj = js.Dynamic.literal(domain = domain.asInstanceOf[js.Any], taskList = taskList.asInstanceOf[js.Any])
+    if (identity != null) __obj.updateDynamic("identity")(identity.asInstanceOf[js.Any])
     __obj.asInstanceOf[PollForActivityTaskInput]
   }
-  @scala.inline
-  implicit class PollForActivityTaskInputOps[Self <: PollForActivityTaskInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDomain(value: DomainName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTaskList(value: TaskList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIdentity(value: Identity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

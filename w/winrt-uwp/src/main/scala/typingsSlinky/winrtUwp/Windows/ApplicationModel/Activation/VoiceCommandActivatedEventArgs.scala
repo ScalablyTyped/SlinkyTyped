@@ -6,16 +6,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Contains info for the app's activated event when the app is launched through a voice command. */
-@js.native
 trait VoiceCommandActivatedEventArgs extends js.Object {
   /** Gets the activation type. */
-  var kind: ActivationKind = js.native
+  var kind: ActivationKind
   /** Gets the execution state of the app before it was activated. */
-  var previousExecutionState: ApplicationExecutionState = js.native
+  var previousExecutionState: ApplicationExecutionState
   /** Gets the SpeechRecognitionResult object representing the voice command that activated the app. */
-  var result: SpeechRecognitionResult = js.native
+  var result: SpeechRecognitionResult
   /** Gets info about the transition from the splash screen to the activated app. */
-  var splashScreen: SplashScreen = js.native
+  var splashScreen: SplashScreen
 }
 
 object VoiceCommandActivatedEventArgs {
@@ -29,37 +28,5 @@ object VoiceCommandActivatedEventArgs {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], previousExecutionState = previousExecutionState.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any], splashScreen = splashScreen.asInstanceOf[js.Any])
     __obj.asInstanceOf[VoiceCommandActivatedEventArgs]
   }
-  @scala.inline
-  implicit class VoiceCommandActivatedEventArgsOps[Self <: VoiceCommandActivatedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: ActivationKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreviousExecutionState(value: ApplicationExecutionState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousExecutionState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResult(value: SpeechRecognitionResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSplashScreen(value: SplashScreen): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("splashScreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

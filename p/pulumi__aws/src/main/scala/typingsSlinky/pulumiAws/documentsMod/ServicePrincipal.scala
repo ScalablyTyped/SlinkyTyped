@@ -16,19 +16,5 @@ object ServicePrincipal {
     val __obj = js.Dynamic.literal(Service = Service.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServicePrincipal]
   }
-  @scala.inline
-  implicit class ServicePrincipalOps[Self <: ServicePrincipal] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withService(value: Input[js.Array[Input[String]] | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Service")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

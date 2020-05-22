@@ -4,59 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PostModuleAction extends js.Object {
   /** A URL to load the data layer from. Currently supports data in GeoJSON, GeoRSS (with inline GML), GPX, KML, and KMZ formats. */
-  var addLayerFromUrl: String = js.native
+  var addLayerFromUrl: String
   /** Options to use when loading data via the GeoJson module. */
-  var geoJsonOption: js.UndefOr[IGeoJsonReadOptions] = js.native
+  var geoJsonOption: js.UndefOr[IGeoJsonReadOptions] = js.undefined
   /** Options to use when loading data via the GeoXml module. */
-  var geoXmlOption: js.UndefOr[IGeoXmlLayerOptions] = js.native
+  var geoXmlOption: js.UndefOr[IGeoXmlLayerOptions] = js.undefined
 }
 
 object PostModuleAction {
   @scala.inline
-  def apply(addLayerFromUrl: String): PostModuleAction = {
+  def apply(
+    addLayerFromUrl: String,
+    geoJsonOption: IGeoJsonReadOptions = null,
+    geoXmlOption: IGeoXmlLayerOptions = null
+  ): PostModuleAction = {
     val __obj = js.Dynamic.literal(addLayerFromUrl = addLayerFromUrl.asInstanceOf[js.Any])
+    if (geoJsonOption != null) __obj.updateDynamic("geoJsonOption")(geoJsonOption.asInstanceOf[js.Any])
+    if (geoXmlOption != null) __obj.updateDynamic("geoXmlOption")(geoXmlOption.asInstanceOf[js.Any])
     __obj.asInstanceOf[PostModuleAction]
   }
-  @scala.inline
-  implicit class PostModuleActionOps[Self <: PostModuleAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddLayerFromUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addLayerFromUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGeoJsonOption(value: IGeoJsonReadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geoJsonOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeoJsonOption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geoJsonOption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGeoXmlOption(value: IGeoXmlLayerOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geoXmlOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeoXmlOption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geoXmlOption")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

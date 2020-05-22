@@ -18,25 +18,24 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** specifies the standard model of an {@link UnoControlContainer} . */
-@js.native
 trait UnoControlRoadmapModel
   extends UnoControlModel
      with XIndexContainer {
   /** specifies the background color (RGB) of the control. The Default value is white */
-  var BackgroundColor: Double = js.native
+  var BackgroundColor: Double
   /**
     * specifies the border style of the control.
     *
     * `; 0: No border; 1: 3D border; 2: simple border; `
     */
-  var Border: Double = js.native
+  var Border: Double
   /** determines whether the control container is complete or not. If it is false than a non - interactive {@link RoadmapItem} is appended */
-  var Complete: Boolean = js.native
+  var Complete: Boolean
   /**
     * refers to the ID of the currently selected item. Initially this property is set to "-1" which is equal to "undefined" If the Roadmap Item that the
     * CurrentItemID refers to is removed the property "CurrentItemID" is set to -1
     */
-  var CurrentItemID: Double = js.native
+  var CurrentItemID: Double
   /**
     * specifies a graphic to be displayed on the control
     *
@@ -45,32 +44,32 @@ trait UnoControlRoadmapModel
     * ImageURL} will be reset to an empty string.
     * @since OOo 2.1
     */
-  var Graphic: XGraphic = js.native
+  var Graphic: XGraphic
   /** specifies the help text of the control. */
-  var HelpText: String = js.native
+  var HelpText: String
   /** specifies the help URL of the control. */
-  var HelpURL: String = js.native
+  var HelpURL: String
   /**
     * specifies an URL to an image to use for the control. The image is placed in the lower right corner of the control
     * @see Graphic
     */
-  var ImageURL: String = js.native
+  var ImageURL: String
   /**
     * determines whether the control is interactive or not.
     *
     * A roadmap control which is interactive allows selecting its items out-of-order, by simply clicking them.
     */
-  var Interactive: Boolean = js.native
+  var Interactive: Boolean
   /** specifies whether the control will be printed with the document. */
-  var Printable: Boolean = js.native
+  var Printable: Boolean
   /** specifies the text displayed in the control. */
-  var Text: String = js.native
+  var Text: String
   /**
     * @returns the {@link XPropertySetInfo} interface, which describes all properties of the object which supplies this interface.
     * @returns NULL if the implementation cannot or will not provide information about the properties; otherwise the interface {@link XPropertySetInfo} is returned.
     */
   /* InferMemberOverrides */
-  override def getPropertySetInfo(): XPropertySetInfo = js.native
+  override def getPropertySetInfo(): XPropertySetInfo
 }
 
 object UnoControlRoadmapModel {
@@ -133,85 +132,5 @@ object UnoControlRoadmapModel {
     val __obj = js.Dynamic.literal(BackgroundColor = BackgroundColor.asInstanceOf[js.Any], Border = Border.asInstanceOf[js.Any], Complete = Complete.asInstanceOf[js.Any], Count = Count.asInstanceOf[js.Any], CurrentItemID = CurrentItemID.asInstanceOf[js.Any], DefaultControl = DefaultControl.asInstanceOf[js.Any], ElementType = ElementType.asInstanceOf[js.Any], Graphic = Graphic.asInstanceOf[js.Any], Height = Height.asInstanceOf[js.Any], HelpText = HelpText.asInstanceOf[js.Any], HelpURL = HelpURL.asInstanceOf[js.Any], ImageURL = ImageURL.asInstanceOf[js.Any], Interactive = Interactive.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], PositionX = PositionX.asInstanceOf[js.Any], PositionY = PositionY.asInstanceOf[js.Any], Printable = Printable.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], ServiceName = ServiceName.asInstanceOf[js.Any], Step = Step.asInstanceOf[js.Any], TabIndex = TabIndex.asInstanceOf[js.Any], Tag = Tag.asInstanceOf[js.Any], Text = Text.asInstanceOf[js.Any], Width = Width.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), addPropertiesChangeListener = js.Any.fromFunction2(addPropertiesChangeListener), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), createClone = js.Any.fromFunction0(createClone), dispose = js.Any.fromFunction0(dispose), firePropertiesChangeEvent = js.Any.fromFunction2(firePropertiesChangeEvent), getByIndex = js.Any.fromFunction1(getByIndex), getCount = js.Any.fromFunction0(getCount), getElementType = js.Any.fromFunction0(getElementType), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), getPropertyValues = js.Any.fromFunction1(getPropertyValues), getServiceName = js.Any.fromFunction0(getServiceName), hasElements = js.Any.fromFunction0(hasElements), insertByIndex = js.Any.fromFunction2(insertByIndex), queryInterface = js.Any.fromFunction1(queryInterface), read = js.Any.fromFunction1(read), release = js.Any.fromFunction0(release), removeByIndex = js.Any.fromFunction1(removeByIndex), removeEventListener = js.Any.fromFunction1(removeEventListener), removePropertiesChangeListener = js.Any.fromFunction1(removePropertiesChangeListener), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), replaceByIndex = js.Any.fromFunction2(replaceByIndex), setPropertyValue = js.Any.fromFunction2(setPropertyValue), setPropertyValues = js.Any.fromFunction2(setPropertyValues), write = js.Any.fromFunction1(write))
     __obj.asInstanceOf[UnoControlRoadmapModel]
   }
-  @scala.inline
-  implicit class UnoControlRoadmapModelOps[Self <: UnoControlRoadmapModel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackgroundColor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBorder(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComplete(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Complete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrentItemID(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentItemID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGraphic(value: XGraphic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Graphic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHelpText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HelpText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHelpURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HelpURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImageURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInteractive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Interactive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrintable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Printable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetPropertySetInfo(value: () => XPropertySetInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPropertySetInfo")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

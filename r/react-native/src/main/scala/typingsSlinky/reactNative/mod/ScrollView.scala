@@ -2,7 +2,7 @@ package typingsSlinky.reactNative.mod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactNative.anon.AnimatedBoolean
+import typingsSlinky.reactNative.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,6 +52,6 @@ class ScrollView ()
     * The animated prop defaults to true
     */
   def scrollToEnd(): Unit = js.native
-  def scrollToEnd(options: AnimatedBoolean): Unit = js.native
+  def scrollToEnd(options: `1`): Unit = js.native
 }
 

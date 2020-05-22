@@ -5,49 +5,21 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<{  useDisplayedColumnsOnly  :boolean,   useDisplayedRowsOnly  :boolean}> */
-@js.native
 trait PartialuseDisplayedColumn extends js.Object {
-  var useDisplayedColumnsOnly: js.UndefOr[Boolean] = js.native
-  var useDisplayedRowsOnly: js.UndefOr[Boolean] = js.native
+  var useDisplayedColumnsOnly: js.UndefOr[Boolean] = js.undefined
+  var useDisplayedRowsOnly: js.UndefOr[Boolean] = js.undefined
 }
 
 object PartialuseDisplayedColumn {
   @scala.inline
-  def apply(): PartialuseDisplayedColumn = {
+  def apply(
+    useDisplayedColumnsOnly: js.UndefOr[Boolean] = js.undefined,
+    useDisplayedRowsOnly: js.UndefOr[Boolean] = js.undefined
+  ): PartialuseDisplayedColumn = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(useDisplayedColumnsOnly)) __obj.updateDynamic("useDisplayedColumnsOnly")(useDisplayedColumnsOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useDisplayedRowsOnly)) __obj.updateDynamic("useDisplayedRowsOnly")(useDisplayedRowsOnly.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialuseDisplayedColumn]
   }
-  @scala.inline
-  implicit class PartialuseDisplayedColumnOps[Self <: PartialuseDisplayedColumn] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUseDisplayedColumnsOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useDisplayedColumnsOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseDisplayedColumnsOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useDisplayedColumnsOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseDisplayedRowsOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useDisplayedRowsOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseDisplayedRowsOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useDisplayedRowsOnly")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

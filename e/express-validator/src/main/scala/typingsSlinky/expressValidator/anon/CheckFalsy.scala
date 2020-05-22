@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CheckFalsy extends js.Object {
-  var checkFalsy: js.UndefOr[Boolean] = js.native
-  var checkNull: js.UndefOr[Boolean] = js.native
+  var checkFalsy: js.UndefOr[Boolean] = js.undefined
+  var checkNull: js.UndefOr[Boolean] = js.undefined
 }
 
 object CheckFalsy {
   @scala.inline
-  def apply(): CheckFalsy = {
+  def apply(checkFalsy: js.UndefOr[Boolean] = js.undefined, checkNull: js.UndefOr[Boolean] = js.undefined): CheckFalsy = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(checkFalsy)) __obj.updateDynamic("checkFalsy")(checkFalsy.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(checkNull)) __obj.updateDynamic("checkNull")(checkNull.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CheckFalsy]
   }
-  @scala.inline
-  implicit class CheckFalsyOps[Self <: CheckFalsy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCheckFalsy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkFalsy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckFalsy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkFalsy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheckNull(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkNull")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkNull")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

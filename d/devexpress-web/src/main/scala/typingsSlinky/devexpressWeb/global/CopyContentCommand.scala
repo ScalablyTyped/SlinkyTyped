@@ -10,5 +10,17 @@ import scala.scalajs.js.annotation._
 @JSGlobal("CopyContentCommand")
 @js.native
 class CopyContentCommand ()
-  extends typingsSlinky.devexpressWeb.CopyContentCommand
+  extends typingsSlinky.devexpressWeb.CopyContentCommand {
+  /**
+    * Executes the CopyContentCommand command with the specified parameter. true if the command has been successfully executed; false if the command execution has failed.
+    * @param position An integer value specifying a position of the inserted text.
+    */
+  /* CompleteClass */
+  override def execute(position: Double): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

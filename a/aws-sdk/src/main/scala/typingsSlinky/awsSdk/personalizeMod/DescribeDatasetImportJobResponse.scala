@@ -14,29 +14,10 @@ trait DescribeDatasetImportJobResponse extends js.Object {
 
 object DescribeDatasetImportJobResponse {
   @scala.inline
-  def apply(): DescribeDatasetImportJobResponse = {
+  def apply(datasetImportJob: DatasetImportJob = null): DescribeDatasetImportJobResponse = {
     val __obj = js.Dynamic.literal()
+    if (datasetImportJob != null) __obj.updateDynamic("datasetImportJob")(datasetImportJob.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeDatasetImportJobResponse]
   }
-  @scala.inline
-  implicit class DescribeDatasetImportJobResponseOps[Self <: DescribeDatasetImportJobResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDatasetImportJob(value: DatasetImportJob): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datasetImportJob")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatasetImportJob: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datasetImportJob")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

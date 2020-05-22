@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<semantic-ui-form.SemanticUI.FormSettings._Impl, 'fields'> */
-@js.native
 trait PickImplfields extends js.Object {
-  var fields: StringDictionary[String | js.Array[String] | Field] = js.native
+  var fields: StringDictionary[String | js.Array[String] | Field]
 }
 
 object PickImplfields {
@@ -18,19 +17,5 @@ object PickImplfields {
     val __obj = js.Dynamic.literal(fields = fields.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickImplfields]
   }
-  @scala.inline
-  implicit class PickImplfieldsOps[Self <: PickImplfields] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFields(value: StringDictionary[String | js.Array[String] | Field]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

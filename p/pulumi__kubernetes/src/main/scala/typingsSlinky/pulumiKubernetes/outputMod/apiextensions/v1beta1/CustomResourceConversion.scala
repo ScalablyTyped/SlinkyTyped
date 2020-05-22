@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * CustomResourceConversion describes how to convert different versions of a CR.
   */
-@js.native
 trait CustomResourceConversion extends js.Object {
   /**
     * conversionReviewVersions is an ordered list of preferred `ConversionReview` versions the
@@ -17,7 +16,7 @@ trait CustomResourceConversion extends js.Object {
     * versions and does not include any versions known to the API Server, calls to the webhook
     * will fail. Defaults to `["v1beta1"]`.
     */
-  val conversionReviewVersions: js.Array[String] = js.native
+  val conversionReviewVersions: js.Array[String]
   /**
     * strategy specifies how custom resources are converted between versions. Allowed values are:
     * - `None`: The converter only change the apiVersion and would not touch any other field in
@@ -26,12 +25,12 @@ trait CustomResourceConversion extends js.Object {
     *   is needed for this option. This requires spec.preserveUnknownFields to be false, and
     * spec.conversion.webhookClientConfig to be set.
     */
-  val strategy: String = js.native
+  val strategy: String
   /**
     * webhookClientConfig is the instructions for how to call the webhook if strategy is
     * `Webhook`. Required when `strategy` is set to `Webhook`.
     */
-  val webhookClientConfig: WebhookClientConfig = js.native
+  val webhookClientConfig: WebhookClientConfig
 }
 
 object CustomResourceConversion {
@@ -44,31 +43,5 @@ object CustomResourceConversion {
     val __obj = js.Dynamic.literal(conversionReviewVersions = conversionReviewVersions.asInstanceOf[js.Any], strategy = strategy.asInstanceOf[js.Any], webhookClientConfig = webhookClientConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomResourceConversion]
   }
-  @scala.inline
-  implicit class CustomResourceConversionOps[Self <: CustomResourceConversion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConversionReviewVersions(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conversionReviewVersions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStrategy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWebhookClientConfig(value: WebhookClientConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webhookClientConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -5,16 +5,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** IVBSAXErrorHandler interface */
-@js.native
 trait IVBSAXErrorHandler extends js.Object {
   @JSName("MSXML2.IVBSAXErrorHandler_typekey")
-  var MSXML2DotIVBSAXErrorHandler_typekey: IVBSAXErrorHandler = js.native
+  var MSXML2DotIVBSAXErrorHandler_typekey: IVBSAXErrorHandler
   /** Receive notification of a recoverable error. */
-  def error(oLocator: IVBSAXLocator, strErrorMessage: String, nErrorCode: Double): Unit = js.native
+  def error(oLocator: IVBSAXLocator, strErrorMessage: String, nErrorCode: Double): Unit
   /** Receive notification of a non-recoverable error. */
-  def fatalError(oLocator: IVBSAXLocator, strErrorMessage: String, nErrorCode: Double): Unit = js.native
+  def fatalError(oLocator: IVBSAXLocator, strErrorMessage: String, nErrorCode: Double): Unit
   /** Receive notification of an ignorable warning. */
-  def ignorableWarning(oLocator: IVBSAXLocator, strErrorMessage: String, nErrorCode: Double): Unit = js.native
+  def ignorableWarning(oLocator: IVBSAXLocator, strErrorMessage: String, nErrorCode: Double): Unit
 }
 
 object IVBSAXErrorHandler {
@@ -29,37 +28,5 @@ object IVBSAXErrorHandler {
     __obj.updateDynamic("MSXML2.IVBSAXErrorHandler_typekey")(MSXML2DotIVBSAXErrorHandler_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[IVBSAXErrorHandler]
   }
-  @scala.inline
-  implicit class IVBSAXErrorHandlerOps[Self <: IVBSAXErrorHandler] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSXML2DotIVBSAXErrorHandler_typekey(value: IVBSAXErrorHandler): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSXML2.IVBSAXErrorHandler_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withError(value: (IVBSAXLocator, String, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withFatalError(value: (IVBSAXLocator, String, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fatalError")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withIgnorableWarning(value: (IVBSAXLocator, String, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignorableWarning")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

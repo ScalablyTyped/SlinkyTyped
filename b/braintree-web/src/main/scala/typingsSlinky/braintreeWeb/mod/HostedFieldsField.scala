@@ -16,160 +16,47 @@ import scala.scalajs.js.annotation._
   * @property {string[]} [select.options] An array of 12 strings, one per month. This can only be used for the `expirationMonth` field. For example, the array can look like `['01 - January', '02 - February', ...]`.
   * @property {boolean | HostedFieldsFieldMaskInput} [maskInput] Enable or disable input masking when input is not focused. If set to `true` instead of an object, the defaults for the `maskInput` parameters will be used.
   */
-@js.native
 trait HostedFieldsField extends js.Object {
-  var formatInput: js.UndefOr[Boolean] = js.native
-  var maskInput: js.UndefOr[Boolean | HostedFieldsFieldMaskInput] = js.native
-  var maxCardLength: js.UndefOr[Double] = js.native
-  var maxlength: js.UndefOr[Double] = js.native
-  var minlength: js.UndefOr[Double] = js.native
-  var placeholder: js.UndefOr[String] = js.native
-  var prefill: js.UndefOr[String] = js.native
-  var rejectUnsupportedCards: js.UndefOr[Boolean] = js.native
-  var select: js.UndefOr[Boolean | Options] = js.native
-  var selector: String = js.native
-  var `type`: js.UndefOr[String] = js.native
+  var formatInput: js.UndefOr[Boolean] = js.undefined
+  var maskInput: js.UndefOr[Boolean | HostedFieldsFieldMaskInput] = js.undefined
+  var maxCardLength: js.UndefOr[Double] = js.undefined
+  var maxlength: js.UndefOr[Double] = js.undefined
+  var minlength: js.UndefOr[Double] = js.undefined
+  var placeholder: js.UndefOr[String] = js.undefined
+  var prefill: js.UndefOr[String] = js.undefined
+  var rejectUnsupportedCards: js.UndefOr[Boolean] = js.undefined
+  var select: js.UndefOr[Boolean | Options] = js.undefined
+  var selector: String
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object HostedFieldsField {
   @scala.inline
-  def apply(selector: String): HostedFieldsField = {
+  def apply(
+    selector: String,
+    formatInput: js.UndefOr[Boolean] = js.undefined,
+    maskInput: Boolean | HostedFieldsFieldMaskInput = null,
+    maxCardLength: js.UndefOr[Double] = js.undefined,
+    maxlength: js.UndefOr[Double] = js.undefined,
+    minlength: js.UndefOr[Double] = js.undefined,
+    placeholder: String = null,
+    prefill: String = null,
+    rejectUnsupportedCards: js.UndefOr[Boolean] = js.undefined,
+    select: Boolean | Options = null,
+    `type`: String = null
+  ): HostedFieldsField = {
     val __obj = js.Dynamic.literal(selector = selector.asInstanceOf[js.Any])
+    if (!js.isUndefined(formatInput)) __obj.updateDynamic("formatInput")(formatInput.get.asInstanceOf[js.Any])
+    if (maskInput != null) __obj.updateDynamic("maskInput")(maskInput.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxCardLength)) __obj.updateDynamic("maxCardLength")(maxCardLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxlength)) __obj.updateDynamic("maxlength")(maxlength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minlength)) __obj.updateDynamic("minlength")(minlength.get.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (prefill != null) __obj.updateDynamic("prefill")(prefill.asInstanceOf[js.Any])
+    if (!js.isUndefined(rejectUnsupportedCards)) __obj.updateDynamic("rejectUnsupportedCards")(rejectUnsupportedCards.get.asInstanceOf[js.Any])
+    if (select != null) __obj.updateDynamic("select")(select.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[HostedFieldsField]
   }
-  @scala.inline
-  implicit class HostedFieldsFieldOps[Self <: HostedFieldsField] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSelector(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormatInput(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatInput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormatInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatInput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaskInput(value: Boolean | HostedFieldsFieldMaskInput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maskInput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaskInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maskInput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxCardLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxCardLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxCardLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxCardLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxlength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxlength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxlength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxlength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinlength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minlength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinlength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minlength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefill(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRejectUnsupportedCards(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectUnsupportedCards")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRejectUnsupportedCards: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectUnsupportedCards")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelect(value: Boolean | Options): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

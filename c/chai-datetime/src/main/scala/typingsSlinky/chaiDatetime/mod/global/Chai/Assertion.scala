@@ -5,16 +5,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Assertion extends js.Object {
-  def afterDate(date: Date): Assertion = js.native
-  def afterTime(date: Date): Assertion = js.native
-  def beforeDate(date: Date): Assertion = js.native
-  def beforeTime(date: Date): Assertion = js.native
-  def equalDate(date: Date): Assertion = js.native
-  def equalTime(date: Date): Assertion = js.native
-  def withinDate(dateFrom: Date, dateTo: Date): Assertion = js.native
-  def withinTime(dateFrom: Date, dateTo: Date): Assertion = js.native
+  def afterDate(date: Date): Assertion
+  def afterTime(date: Date): Assertion
+  def beforeDate(date: Date): Assertion
+  def beforeTime(date: Date): Assertion
+  def equalDate(date: Date): Assertion
+  def equalTime(date: Date): Assertion
+  def withinDate(dateFrom: Date, dateTo: Date): Assertion
+  def withinTime(dateFrom: Date, dateTo: Date): Assertion
 }
 
 object Assertion {
@@ -32,61 +31,5 @@ object Assertion {
     val __obj = js.Dynamic.literal(afterDate = js.Any.fromFunction1(afterDate), afterTime = js.Any.fromFunction1(afterTime), beforeDate = js.Any.fromFunction1(beforeDate), beforeTime = js.Any.fromFunction1(beforeTime), equalDate = js.Any.fromFunction1(equalDate), equalTime = js.Any.fromFunction1(equalTime), withinDate = js.Any.fromFunction2(withinDate), withinTime = js.Any.fromFunction2(withinTime))
     __obj.asInstanceOf[Assertion]
   }
-  @scala.inline
-  implicit class AssertionOps[Self <: Assertion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAfterDate(value: Date => Assertion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterDate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAfterTime(value: Date => Assertion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterTime")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withBeforeDate(value: Date => Assertion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeDate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withBeforeTime(value: Date => Assertion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeTime")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEqualDate(value: Date => Assertion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equalDate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEqualTime(value: Date => Assertion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equalTime")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withWithinDate(value: (Date, Date) => Assertion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withinDate")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withWithinTime(value: (Date, Date) => Assertion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withinTime")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

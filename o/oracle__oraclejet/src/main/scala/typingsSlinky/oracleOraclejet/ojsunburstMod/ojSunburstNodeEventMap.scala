@@ -23,28 +23,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ojSunburstNodeEventMap
   extends ElementEventMap
      with GlobalEventHandlersEventMap
      with DocumentAndElementEventHandlersEventMap {
-  var borderColorChanged: CustomEvent = js.native
-  var borderWidthChanged: CustomEvent = js.native
-  var categoriesChanged: CustomEvent = js.native
-  var colorChanged: CustomEvent = js.native
-  var drillingChanged: CustomEvent = js.native
-  var labelChanged: CustomEvent = js.native
-  var labelDisplayChanged: CustomEvent = js.native
-  var labelHalignChanged: CustomEvent = js.native
-  var labelStyleChanged: CustomEvent = js.native
-  var patternChanged: CustomEvent = js.native
-  var radiusChanged: CustomEvent = js.native
-  var selectableChanged: CustomEvent = js.native
-  var shortDescChanged: CustomEvent = js.native
-  var showDisclosureChanged: CustomEvent = js.native
-  var svgClassNameChanged: CustomEvent = js.native
-  var svgStyleChanged: CustomEvent = js.native
-  var valueChanged: CustomEvent = js.native
+  var borderColorChanged: CustomEvent
+  var borderWidthChanged: CustomEvent
+  var categoriesChanged: CustomEvent
+  var colorChanged: CustomEvent
+  var drillingChanged: CustomEvent
+  var labelChanged: CustomEvent
+  var labelDisplayChanged: CustomEvent
+  var labelHalignChanged: CustomEvent
+  var labelStyleChanged: CustomEvent
+  var patternChanged: CustomEvent
+  var radiusChanged: CustomEvent
+  var selectableChanged: CustomEvent
+  var shortDescChanged: CustomEvent
+  var showDisclosureChanged: CustomEvent
+  var svgClassNameChanged: CustomEvent
+  var svgStyleChanged: CustomEvent
+  var valueChanged: CustomEvent
 }
 
 object ojSunburstNodeEventMap {
@@ -163,115 +162,5 @@ object ojSunburstNodeEventMap {
     val __obj = js.Dynamic.literal(abort = abort.asInstanceOf[js.Any], animationcancel = animationcancel.asInstanceOf[js.Any], animationend = animationend.asInstanceOf[js.Any], animationiteration = animationiteration.asInstanceOf[js.Any], animationstart = animationstart.asInstanceOf[js.Any], auxclick = auxclick.asInstanceOf[js.Any], blur = blur.asInstanceOf[js.Any], borderColorChanged = borderColorChanged.asInstanceOf[js.Any], borderWidthChanged = borderWidthChanged.asInstanceOf[js.Any], cancel = cancel.asInstanceOf[js.Any], canplay = canplay.asInstanceOf[js.Any], canplaythrough = canplaythrough.asInstanceOf[js.Any], categoriesChanged = categoriesChanged.asInstanceOf[js.Any], change = change.asInstanceOf[js.Any], click = click.asInstanceOf[js.Any], close = close.asInstanceOf[js.Any], colorChanged = colorChanged.asInstanceOf[js.Any], contextmenu = contextmenu.asInstanceOf[js.Any], copy = copy.asInstanceOf[js.Any], cuechange = cuechange.asInstanceOf[js.Any], cut = cut.asInstanceOf[js.Any], dblclick = dblclick.asInstanceOf[js.Any], drag = drag.asInstanceOf[js.Any], dragend = dragend.asInstanceOf[js.Any], dragenter = dragenter.asInstanceOf[js.Any], dragexit = dragexit.asInstanceOf[js.Any], dragleave = dragleave.asInstanceOf[js.Any], dragover = dragover.asInstanceOf[js.Any], dragstart = dragstart.asInstanceOf[js.Any], drillingChanged = drillingChanged.asInstanceOf[js.Any], drop = drop.asInstanceOf[js.Any], durationchange = durationchange.asInstanceOf[js.Any], emptied = emptied.asInstanceOf[js.Any], ended = ended.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], focus = focus.asInstanceOf[js.Any], focusin = focusin.asInstanceOf[js.Any], focusout = focusout.asInstanceOf[js.Any], fullscreenchange = fullscreenchange.asInstanceOf[js.Any], fullscreenerror = fullscreenerror.asInstanceOf[js.Any], gotpointercapture = gotpointercapture.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], invalid = invalid.asInstanceOf[js.Any], keydown = keydown.asInstanceOf[js.Any], keypress = keypress.asInstanceOf[js.Any], keyup = keyup.asInstanceOf[js.Any], labelChanged = labelChanged.asInstanceOf[js.Any], labelDisplayChanged = labelDisplayChanged.asInstanceOf[js.Any], labelHalignChanged = labelHalignChanged.asInstanceOf[js.Any], labelStyleChanged = labelStyleChanged.asInstanceOf[js.Any], load = load.asInstanceOf[js.Any], loadeddata = loadeddata.asInstanceOf[js.Any], loadedmetadata = loadedmetadata.asInstanceOf[js.Any], loadstart = loadstart.asInstanceOf[js.Any], lostpointercapture = lostpointercapture.asInstanceOf[js.Any], mousedown = mousedown.asInstanceOf[js.Any], mouseenter = mouseenter.asInstanceOf[js.Any], mouseleave = mouseleave.asInstanceOf[js.Any], mousemove = mousemove.asInstanceOf[js.Any], mouseout = mouseout.asInstanceOf[js.Any], mouseover = mouseover.asInstanceOf[js.Any], mouseup = mouseup.asInstanceOf[js.Any], paste = paste.asInstanceOf[js.Any], patternChanged = patternChanged.asInstanceOf[js.Any], pause = pause.asInstanceOf[js.Any], play = play.asInstanceOf[js.Any], playing = playing.asInstanceOf[js.Any], pointercancel = pointercancel.asInstanceOf[js.Any], pointerdown = pointerdown.asInstanceOf[js.Any], pointerenter = pointerenter.asInstanceOf[js.Any], pointerleave = pointerleave.asInstanceOf[js.Any], pointermove = pointermove.asInstanceOf[js.Any], pointerout = pointerout.asInstanceOf[js.Any], pointerover = pointerover.asInstanceOf[js.Any], pointerup = pointerup.asInstanceOf[js.Any], progress = progress.asInstanceOf[js.Any], radiusChanged = radiusChanged.asInstanceOf[js.Any], ratechange = ratechange.asInstanceOf[js.Any], reset = reset.asInstanceOf[js.Any], resize = resize.asInstanceOf[js.Any], scroll = scroll.asInstanceOf[js.Any], securitypolicyviolation = securitypolicyviolation.asInstanceOf[js.Any], seeked = seeked.asInstanceOf[js.Any], seeking = seeking.asInstanceOf[js.Any], select = select.asInstanceOf[js.Any], selectableChanged = selectableChanged.asInstanceOf[js.Any], selectionchange = selectionchange.asInstanceOf[js.Any], selectstart = selectstart.asInstanceOf[js.Any], shortDescChanged = shortDescChanged.asInstanceOf[js.Any], showDisclosureChanged = showDisclosureChanged.asInstanceOf[js.Any], stalled = stalled.asInstanceOf[js.Any], submit = submit.asInstanceOf[js.Any], suspend = suspend.asInstanceOf[js.Any], svgClassNameChanged = svgClassNameChanged.asInstanceOf[js.Any], svgStyleChanged = svgStyleChanged.asInstanceOf[js.Any], timeupdate = timeupdate.asInstanceOf[js.Any], toggle = toggle.asInstanceOf[js.Any], touchcancel = touchcancel.asInstanceOf[js.Any], touchend = touchend.asInstanceOf[js.Any], touchmove = touchmove.asInstanceOf[js.Any], touchstart = touchstart.asInstanceOf[js.Any], transitioncancel = transitioncancel.asInstanceOf[js.Any], transitionend = transitionend.asInstanceOf[js.Any], transitionrun = transitionrun.asInstanceOf[js.Any], transitionstart = transitionstart.asInstanceOf[js.Any], valueChanged = valueChanged.asInstanceOf[js.Any], volumechange = volumechange.asInstanceOf[js.Any], waiting = waiting.asInstanceOf[js.Any], wheel = wheel.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojSunburstNodeEventMap]
   }
-  @scala.inline
-  implicit class ojSunburstNodeEventMapOps[Self <: ojSunburstNodeEventMap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBorderColorChanged(value: CustomEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColorChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBorderWidthChanged(value: CustomEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidthChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCategoriesChanged(value: CustomEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categoriesChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColorChanged(value: CustomEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDrillingChanged(value: CustomEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drillingChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabelChanged(value: CustomEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabelDisplayChanged(value: CustomEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelDisplayChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabelHalignChanged(value: CustomEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelHalignChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabelStyleChanged(value: CustomEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelStyleChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPatternChanged(value: CustomEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patternChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRadiusChanged(value: CustomEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radiusChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelectableChanged(value: CustomEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectableChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShortDescChanged(value: CustomEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortDescChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowDisclosureChanged(value: CustomEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showDisclosureChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSvgClassNameChanged(value: CustomEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgClassNameChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSvgStyleChanged(value: CustomEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgStyleChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValueChanged(value: CustomEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

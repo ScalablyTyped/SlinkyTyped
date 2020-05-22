@@ -1,34 +1,42 @@
 package typingsSlinky.antdMobile.actionSheetMod
 
+import typingsSlinky.antdMobile.antdMobileStrings.large
+import typingsSlinky.antdMobile.antdMobileStrings.small
 import typingsSlinky.antdMobile.badgeMod.BadgeProps
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BadgesOption extends BadgeProps {
-  var index: Double = js.native
+  var index: Double
 }
 
 object BadgesOption {
   @scala.inline
-  def apply(index: Double): BadgesOption = {
+  def apply(
+    index: Double,
+    className: String = null,
+    corner: js.UndefOr[Boolean] = js.undefined,
+    dot: js.UndefOr[Boolean] = js.undefined,
+    hot: js.UndefOr[Boolean] = js.undefined,
+    overflowCount: js.UndefOr[Double] = js.undefined,
+    prefixCls: String = null,
+    size: large | small = null,
+    style: CSSProperties = null,
+    text: js.Any = null
+  ): BadgesOption = {
     val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(corner)) __obj.updateDynamic("corner")(corner.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dot)) __obj.updateDynamic("dot")(dot.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hot)) __obj.updateDynamic("hot")(hot.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(overflowCount)) __obj.updateDynamic("overflowCount")(overflowCount.get.asInstanceOf[js.Any])
+    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[BadgesOption]
   }
-  @scala.inline
-  implicit class BadgesOptionOps[Self <: BadgesOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

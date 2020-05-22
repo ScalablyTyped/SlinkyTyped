@@ -1,126 +1,117 @@
 package typingsSlinky.fineUploader.azureMod.azure
 
+import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.fineUploader.coreMod.BlobsOptions
+import typingsSlinky.fineUploader.coreMod.CameraOptions
+import typingsSlinky.fineUploader.coreMod.CoreEvents
 import typingsSlinky.fineUploader.coreMod.CoreOptions
+import typingsSlinky.fineUploader.coreMod.DeleteFileOptions
+import typingsSlinky.fineUploader.coreMod.ExtraButtonsOptions
+import typingsSlinky.fineUploader.coreMod.FormOptions
+import typingsSlinky.fineUploader.coreMod.Messages
+import typingsSlinky.fineUploader.coreMod.PasteOptions
+import typingsSlinky.fineUploader.coreMod.ResumeOptions
+import typingsSlinky.fineUploader.coreMod.ScalingOptions
+import typingsSlinky.fineUploader.coreMod.SessionOptions
+import typingsSlinky.fineUploader.coreMod.TextOptions
+import typingsSlinky.fineUploader.coreMod.ValidationOptions
+import typingsSlinky.fineUploader.coreMod.WorkArounds
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AzureCoreOptions extends CoreOptions {
   /**
     * blobProperties
     */
-  var blobProperties: js.UndefOr[AzureBlobPropertyOptions] = js.native
+  var blobProperties: js.UndefOr[AzureBlobPropertyOptions] = js.undefined
   /**
     * chunking options
     */
   @JSName("chunking")
-  var chunking_AzureCoreOptions: js.UndefOr[AzureChunkingOptions] = js.native
+  var chunking_AzureCoreOptions: js.UndefOr[AzureChunkingOptions] = js.undefined
   /**
     * cors options
     */
   @JSName("cors")
-  var cors_AzureCoreOptions: js.UndefOr[AzureCorsOptions] = js.native
+  var cors_AzureCoreOptions: js.UndefOr[AzureCorsOptions] = js.undefined
   /**
     * RequestOptions
     */
   @JSName("request")
-  var request_AzureCoreOptions: js.UndefOr[AzureRequestOptions] = js.native
+  var request_AzureCoreOptions: js.UndefOr[AzureRequestOptions] = js.undefined
   /**
     * AzureSignatureOptions
     */
-  var signature: js.UndefOr[AzureSignatureOptions] = js.native
+  var signature: js.UndefOr[AzureSignatureOptions] = js.undefined
   /**
     * AzureUploadSuccessOptions
     */
-  var uploadSuccess: js.UndefOr[AzureUploadSuccessOptions] = js.native
+  var uploadSuccess: js.UndefOr[AzureUploadSuccessOptions] = js.undefined
 }
 
 object AzureCoreOptions {
   @scala.inline
-  def apply(): AzureCoreOptions = {
+  def apply(
+    autoUpload: js.UndefOr[Boolean] = js.undefined,
+    blobProperties: AzureBlobPropertyOptions = null,
+    blobs: BlobsOptions = null,
+    button: HTMLElement = null,
+    callbacks: CoreEvents = null,
+    camera: CameraOptions = null,
+    chunking: AzureChunkingOptions = null,
+    cors: AzureCorsOptions = null,
+    debug: js.UndefOr[Boolean] = js.undefined,
+    deleteFile: DeleteFileOptions = null,
+    disableCancelForFormUploads: js.UndefOr[Boolean] = js.undefined,
+    extraButtons: js.Array[ExtraButtonsOptions] = null,
+    form: FormOptions = null,
+    formatFileName: /* fileOrBlobName */ String => String = null,
+    maxConnections: js.UndefOr[Double] = js.undefined,
+    messages: Messages = null,
+    multiple: js.UndefOr[Boolean] = js.undefined,
+    paste: PasteOptions = null,
+    request: AzureRequestOptions = null,
+    resume: ResumeOptions = null,
+    scaling: ScalingOptions = null,
+    session: SessionOptions = null,
+    signature: AzureSignatureOptions = null,
+    text: TextOptions = null,
+    uploadSuccess: AzureUploadSuccessOptions = null,
+    validation: ValidationOptions = null,
+    warnBeforeUnload: js.UndefOr[Boolean] = js.undefined,
+    workarounds: WorkArounds = null
+  ): AzureCoreOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoUpload)) __obj.updateDynamic("autoUpload")(autoUpload.get.asInstanceOf[js.Any])
+    if (blobProperties != null) __obj.updateDynamic("blobProperties")(blobProperties.asInstanceOf[js.Any])
+    if (blobs != null) __obj.updateDynamic("blobs")(blobs.asInstanceOf[js.Any])
+    if (button != null) __obj.updateDynamic("button")(button.asInstanceOf[js.Any])
+    if (callbacks != null) __obj.updateDynamic("callbacks")(callbacks.asInstanceOf[js.Any])
+    if (camera != null) __obj.updateDynamic("camera")(camera.asInstanceOf[js.Any])
+    if (chunking != null) __obj.updateDynamic("chunking")(chunking.asInstanceOf[js.Any])
+    if (cors != null) __obj.updateDynamic("cors")(cors.asInstanceOf[js.Any])
+    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.get.asInstanceOf[js.Any])
+    if (deleteFile != null) __obj.updateDynamic("deleteFile")(deleteFile.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableCancelForFormUploads)) __obj.updateDynamic("disableCancelForFormUploads")(disableCancelForFormUploads.get.asInstanceOf[js.Any])
+    if (extraButtons != null) __obj.updateDynamic("extraButtons")(extraButtons.asInstanceOf[js.Any])
+    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
+    if (formatFileName != null) __obj.updateDynamic("formatFileName")(js.Any.fromFunction1(formatFileName))
+    if (!js.isUndefined(maxConnections)) __obj.updateDynamic("maxConnections")(maxConnections.get.asInstanceOf[js.Any])
+    if (messages != null) __obj.updateDynamic("messages")(messages.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiple)) __obj.updateDynamic("multiple")(multiple.get.asInstanceOf[js.Any])
+    if (paste != null) __obj.updateDynamic("paste")(paste.asInstanceOf[js.Any])
+    if (request != null) __obj.updateDynamic("request")(request.asInstanceOf[js.Any])
+    if (resume != null) __obj.updateDynamic("resume")(resume.asInstanceOf[js.Any])
+    if (scaling != null) __obj.updateDynamic("scaling")(scaling.asInstanceOf[js.Any])
+    if (session != null) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
+    if (signature != null) __obj.updateDynamic("signature")(signature.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (uploadSuccess != null) __obj.updateDynamic("uploadSuccess")(uploadSuccess.asInstanceOf[js.Any])
+    if (validation != null) __obj.updateDynamic("validation")(validation.asInstanceOf[js.Any])
+    if (!js.isUndefined(warnBeforeUnload)) __obj.updateDynamic("warnBeforeUnload")(warnBeforeUnload.get.asInstanceOf[js.Any])
+    if (workarounds != null) __obj.updateDynamic("workarounds")(workarounds.asInstanceOf[js.Any])
     __obj.asInstanceOf[AzureCoreOptions]
   }
-  @scala.inline
-  implicit class AzureCoreOptionsOps[Self <: AzureCoreOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlobProperties(value: AzureBlobPropertyOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blobProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlobProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blobProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChunking(value: AzureChunkingOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunking")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChunking: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunking")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCors(value: AzureCorsOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequest(value: AzureRequestOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSignature(value: AzureSignatureOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignature: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUploadSuccess(value: AzureUploadSuccessOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadSuccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUploadSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadSuccess")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

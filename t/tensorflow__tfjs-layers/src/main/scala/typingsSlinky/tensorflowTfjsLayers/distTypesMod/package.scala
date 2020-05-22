@@ -24,4 +24,7 @@ package object distTypesMod {
       ]
     ]
   ]
+  type TensorOrArrayOrMap = typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] | (js.Array[
+    typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
+  ]) | typingsSlinky.tensorflowTfjsCore.tensorTypesMod.NamedTensorMap
 }

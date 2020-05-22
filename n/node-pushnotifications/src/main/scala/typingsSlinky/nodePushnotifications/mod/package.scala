@@ -12,4 +12,5 @@ package object mod {
     /* settings */ typingsSlinky.nodePushnotifications.mod.Settings, 
     scala.Unit
   ]
+  type RegistrationId = java.lang.String | typingsSlinky.webPush.mod.PushSubscription
 }

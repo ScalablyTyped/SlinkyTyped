@@ -9,10 +9,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProjectsResource extends js.Object {
   /** Clears a `Policy` from a resource. */
-  def clearOrgPolicy(request: Accesstoken): Request[js.Object] = js.native
+  def clearOrgPolicy(request: Accesstoken): Request[js.Object]
   /**
     * Request that a new Project be created. The result is an Operation which
     * can be used to track the creation process. It is automatically deleted
@@ -27,7 +26,7 @@ trait ProjectsResource extends js.Object {
     * `resourcemanager.projects.create` on the specified parent for the new
     * project.
     */
-  def create(request: Alt): Request[Operation] = js.native
+  def create(request: Alt): Request[Operation]
   /**
     * Marks the Project identified by the specified
     * `project_id` (for example, `my-project-123`) for deletion.
@@ -54,27 +53,27 @@ trait ProjectsResource extends js.Object {
     *
     * The caller must have modify permissions for this Project.
     */
-  def delete(request: Fields): Request[js.Object] = js.native
+  def delete(request: Fields): Request[js.Object]
   /**
     * Retrieves the Project identified by the specified
     * `project_id` (for example, `my-project-123`).
     *
     * The caller must have read permissions for this Project.
     */
-  def get(request: Fields): Request[Project] = js.native
+  def get(request: Fields): Request[Project]
   /**
     * Gets a list of ancestors in the resource hierarchy for the Project
     * identified by the specified `project_id` (for example, `my-project-123`).
     *
     * The caller must have read permissions for this Project.
     */
-  def getAncestry(request: Fields): Request[GetAncestryResponse] = js.native
+  def getAncestry(request: Fields): Request[GetAncestryResponse]
   /**
     * Gets the effective `Policy` on a resource. This is the result of merging
     * `Policies` in the resource hierarchy. The returned `Policy` will not have
     * an `etag`set because it is a computed `Policy` across multiple resources.
     */
-  def getEffectiveOrgPolicy(request: Accesstoken): Request[OrgPolicy] = js.native
+  def getEffectiveOrgPolicy(request: Accesstoken): Request[OrgPolicy]
   /**
     * Returns the IAM access control policy for the specified Project.
     * Permission is denied if the policy or the resource does not exist.
@@ -82,7 +81,7 @@ trait ProjectsResource extends js.Object {
     * Authorization requires the Google IAM permission
     * `resourcemanager.projects.getIamPolicy` on the project
     */
-  def getIamPolicy(request: Accesstoken): Request[Policy] = js.native
+  def getIamPolicy(request: Accesstoken): Request[Policy]
   /**
     * Gets a `Policy` on a resource.
     *
@@ -91,17 +90,17 @@ trait ProjectsResource extends js.Object {
     * `etag` value can be used with `SetOrgPolicy()` to create or update a
     * `Policy` during read-modify-write.
     */
-  def getOrgPolicy(request: Accesstoken): Request[OrgPolicy] = js.native
+  def getOrgPolicy(request: Accesstoken): Request[OrgPolicy]
   /**
     * Lists Projects that are visible to the user and satisfy the
     * specified filter. This method returns Projects in an unspecified order.
     * New Projects do not necessarily appear at the end of the list.
     */
-  def list(request: Filter): Request[ListProjectsResponse] = js.native
+  def list(request: Filter): Request[ListProjectsResponse]
   /** Lists `Constraints` that could be applied on the specified resource. */
-  def listAvailableOrgPolicyConstraints(request: Accesstoken): Request[ListAvailableOrgPolicyConstraintsResponse] = js.native
+  def listAvailableOrgPolicyConstraints(request: Accesstoken): Request[ListAvailableOrgPolicyConstraintsResponse]
   /** Lists all the `Policies` set for a particular resource. */
-  def listOrgPolicies(request: Accesstoken): Request[ListOrgPoliciesResponse] = js.native
+  def listOrgPolicies(request: Accesstoken): Request[ListOrgPoliciesResponse]
   /**
     * Sets the IAM access control policy for the specified Project. Replaces
     * any existing policy.
@@ -146,7 +145,7 @@ trait ProjectsResource extends js.Object {
     * Authorization requires the Google IAM permission
     * `resourcemanager.projects.setIamPolicy` on the project
     */
-  def setIamPolicy(request: Accesstoken): Request[Policy] = js.native
+  def setIamPolicy(request: Accesstoken): Request[Policy]
   /**
     * Updates the specified `Policy` on the resource. Creates a new `Policy` for
     * that `Constraint` on the resource if one does not exist.
@@ -154,13 +153,13 @@ trait ProjectsResource extends js.Object {
     * Not supplying an `etag` on the request `Policy` results in an unconditional
     * write of the `Policy`.
     */
-  def setOrgPolicy(request: Accesstoken): Request[OrgPolicy] = js.native
+  def setOrgPolicy(request: Accesstoken): Request[OrgPolicy]
   /**
     * Returns permissions that a caller has on the specified Project.
     *
     * There are no permissions required for making this API call.
     */
-  def testIamPermissions(request: Accesstoken): Request[TestIamPermissionsResponse] = js.native
+  def testIamPermissions(request: Accesstoken): Request[TestIamPermissionsResponse]
   /**
     * Restores the Project identified by the specified
     * `project_id` (for example, `my-project-123`).
@@ -170,14 +169,14 @@ trait ProjectsResource extends js.Object {
     *
     * The caller must have modify permissions for this Project.
     */
-  def undelete(request: Fields): Request[js.Object] = js.native
+  def undelete(request: Fields): Request[js.Object]
   /**
     * Updates the attributes of the Project identified by the specified
     * `project_id` (for example, `my-project-123`).
     *
     * The caller must have modify permissions for this Project.
     */
-  def update(request: Fields): Request[Project] = js.native
+  def update(request: Fields): Request[Project]
 }
 
 object ProjectsResource {
@@ -203,109 +202,5 @@ object ProjectsResource {
     val __obj = js.Dynamic.literal(clearOrgPolicy = js.Any.fromFunction1(clearOrgPolicy), create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), getAncestry = js.Any.fromFunction1(getAncestry), getEffectiveOrgPolicy = js.Any.fromFunction1(getEffectiveOrgPolicy), getIamPolicy = js.Any.fromFunction1(getIamPolicy), getOrgPolicy = js.Any.fromFunction1(getOrgPolicy), list = js.Any.fromFunction1(list), listAvailableOrgPolicyConstraints = js.Any.fromFunction1(listAvailableOrgPolicyConstraints), listOrgPolicies = js.Any.fromFunction1(listOrgPolicies), setIamPolicy = js.Any.fromFunction1(setIamPolicy), setOrgPolicy = js.Any.fromFunction1(setOrgPolicy), testIamPermissions = js.Any.fromFunction1(testIamPermissions), undelete = js.Any.fromFunction1(undelete), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[ProjectsResource]
   }
-  @scala.inline
-  implicit class ProjectsResourceOps[Self <: ProjectsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClearOrgPolicy(value: Accesstoken => Request[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearOrgPolicy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreate(value: Alt => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDelete(value: Fields => Request[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: Fields => Request[Project]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetAncestry(value: Fields => Request[GetAncestryResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAncestry")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetEffectiveOrgPolicy(value: Accesstoken => Request[OrgPolicy]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getEffectiveOrgPolicy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetIamPolicy(value: Accesstoken => Request[Policy]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getIamPolicy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetOrgPolicy(value: Accesstoken => Request[OrgPolicy]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOrgPolicy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Filter => Request[ListProjectsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withListAvailableOrgPolicyConstraints(value: Accesstoken => Request[ListAvailableOrgPolicyConstraintsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listAvailableOrgPolicyConstraints")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withListOrgPolicies(value: Accesstoken => Request[ListOrgPoliciesResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listOrgPolicies")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetIamPolicy(value: Accesstoken => Request[Policy]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setIamPolicy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetOrgPolicy(value: Accesstoken => Request[OrgPolicy]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setOrgPolicy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTestIamPermissions(value: Accesstoken => Request[TestIamPermissionsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testIamPermissions")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUndelete(value: Fields => Request[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("undelete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: Fields => Request[Project]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

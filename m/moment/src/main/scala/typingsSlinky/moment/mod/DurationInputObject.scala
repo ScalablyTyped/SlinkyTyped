@@ -4,103 +4,83 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DurationInputObject
   extends MomentInputObject
-     with DurationInputArg1 {
-  var Q: js.UndefOr[Double] = js.native
-  var quarter: js.UndefOr[Double] = js.native
-  var quarters: js.UndefOr[Double] = js.native
-  var w: js.UndefOr[Double] = js.native
-  var week: js.UndefOr[Double] = js.native
-  var weeks: js.UndefOr[Double] = js.native
+     with _DurationInputArg1 {
+  var Q: js.UndefOr[numberlike] = js.undefined
+  var quarter: js.UndefOr[numberlike] = js.undefined
+  var quarters: js.UndefOr[numberlike] = js.undefined
+  var w: js.UndefOr[numberlike] = js.undefined
+  var week: js.UndefOr[numberlike] = js.undefined
+  var weeks: js.UndefOr[numberlike] = js.undefined
 }
 
 object DurationInputObject {
   @scala.inline
-  def apply(): DurationInputObject = {
+  def apply(
+    D: numberlike = null,
+    M: numberlike = null,
+    Q: numberlike = null,
+    d: numberlike = null,
+    date: numberlike = null,
+    dates: numberlike = null,
+    day: numberlike = null,
+    days: numberlike = null,
+    h: numberlike = null,
+    hour: numberlike = null,
+    hours: numberlike = null,
+    m: numberlike = null,
+    millisecond: numberlike = null,
+    milliseconds: numberlike = null,
+    minute: numberlike = null,
+    minutes: numberlike = null,
+    month: numberlike = null,
+    months: numberlike = null,
+    ms: numberlike = null,
+    quarter: numberlike = null,
+    quarters: numberlike = null,
+    s: numberlike = null,
+    second: numberlike = null,
+    seconds: numberlike = null,
+    w: numberlike = null,
+    week: numberlike = null,
+    weeks: numberlike = null,
+    y: numberlike = null,
+    year: numberlike = null,
+    years: numberlike = null
+  ): DurationInputObject = {
     val __obj = js.Dynamic.literal()
+    if (D != null) __obj.updateDynamic("D")(D.asInstanceOf[js.Any])
+    if (M != null) __obj.updateDynamic("M")(M.asInstanceOf[js.Any])
+    if (Q != null) __obj.updateDynamic("Q")(Q.asInstanceOf[js.Any])
+    if (d != null) __obj.updateDynamic("d")(d.asInstanceOf[js.Any])
+    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
+    if (dates != null) __obj.updateDynamic("dates")(dates.asInstanceOf[js.Any])
+    if (day != null) __obj.updateDynamic("day")(day.asInstanceOf[js.Any])
+    if (days != null) __obj.updateDynamic("days")(days.asInstanceOf[js.Any])
+    if (h != null) __obj.updateDynamic("h")(h.asInstanceOf[js.Any])
+    if (hour != null) __obj.updateDynamic("hour")(hour.asInstanceOf[js.Any])
+    if (hours != null) __obj.updateDynamic("hours")(hours.asInstanceOf[js.Any])
+    if (m != null) __obj.updateDynamic("m")(m.asInstanceOf[js.Any])
+    if (millisecond != null) __obj.updateDynamic("millisecond")(millisecond.asInstanceOf[js.Any])
+    if (milliseconds != null) __obj.updateDynamic("milliseconds")(milliseconds.asInstanceOf[js.Any])
+    if (minute != null) __obj.updateDynamic("minute")(minute.asInstanceOf[js.Any])
+    if (minutes != null) __obj.updateDynamic("minutes")(minutes.asInstanceOf[js.Any])
+    if (month != null) __obj.updateDynamic("month")(month.asInstanceOf[js.Any])
+    if (months != null) __obj.updateDynamic("months")(months.asInstanceOf[js.Any])
+    if (ms != null) __obj.updateDynamic("ms")(ms.asInstanceOf[js.Any])
+    if (quarter != null) __obj.updateDynamic("quarter")(quarter.asInstanceOf[js.Any])
+    if (quarters != null) __obj.updateDynamic("quarters")(quarters.asInstanceOf[js.Any])
+    if (s != null) __obj.updateDynamic("s")(s.asInstanceOf[js.Any])
+    if (second != null) __obj.updateDynamic("second")(second.asInstanceOf[js.Any])
+    if (seconds != null) __obj.updateDynamic("seconds")(seconds.asInstanceOf[js.Any])
+    if (w != null) __obj.updateDynamic("w")(w.asInstanceOf[js.Any])
+    if (week != null) __obj.updateDynamic("week")(week.asInstanceOf[js.Any])
+    if (weeks != null) __obj.updateDynamic("weeks")(weeks.asInstanceOf[js.Any])
+    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
+    if (year != null) __obj.updateDynamic("year")(year.asInstanceOf[js.Any])
+    if (years != null) __obj.updateDynamic("years")(years.asInstanceOf[js.Any])
     __obj.asInstanceOf[DurationInputObject]
   }
-  @scala.inline
-  implicit class DurationInputObjectOps[Self <: DurationInputObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQ(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Q")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Q")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuarter(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quarter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuarter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quarter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuarters(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quarters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuarters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quarters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withW(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("w")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutW: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("w")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeek(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("week")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeek: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("week")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeeks(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weeks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeeks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weeks")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

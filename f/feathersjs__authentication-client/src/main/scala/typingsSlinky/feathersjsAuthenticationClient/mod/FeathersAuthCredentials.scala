@@ -5,31 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FeathersAuthCredentials
   extends /* index */ StringDictionary[js.Any] {
-  var strategy: String = js.native
+  var strategy: String
 }
 
 object FeathersAuthCredentials {
   @scala.inline
-  def apply(strategy: String): FeathersAuthCredentials = {
+  def apply(strategy: String, StringDictionary: /* name */ StringDictionary[js.Any] = null): FeathersAuthCredentials = {
     val __obj = js.Dynamic.literal(strategy = strategy.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[FeathersAuthCredentials]
   }
-  @scala.inline
-  implicit class FeathersAuthCredentialsOps[Self <: FeathersAuthCredentials] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStrategy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

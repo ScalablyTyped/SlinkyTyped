@@ -1,67 +1,38 @@
 package typingsSlinky.antDesignReactNative.cardHeaderMod
 
+import slinky.core.TagMod
+import typingsSlinky.antDesignReactNative.anon.PickCardStyleheaderConten
 import typingsSlinky.reactNative.mod.ImageStyle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
+import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CardHeaderProps extends CardHeaderPropsType {
-  var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var thumbStyle: js.UndefOr[StyleProp[ImageStyle]] = js.native
+  var style: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var thumbStyle: js.UndefOr[StyleProp[ImageStyle]] = js.undefined
 }
 
 object CardHeaderProps {
   @scala.inline
-  def apply(): CardHeaderProps = {
+  def apply(
+    extra: TagMod[Any] = null,
+    style: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    styles: Partial[PickCardStyleheaderConten] = null,
+    thumb: TagMod[Any] = null,
+    thumbStyle: js.UndefOr[Null | StyleProp[ImageStyle]] = js.undefined,
+    title: TagMod[Any] = null
+  ): CardHeaderProps = {
     val __obj = js.Dynamic.literal()
+    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
+    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
+    if (thumb != null) __obj.updateDynamic("thumb")(thumb.asInstanceOf[js.Any])
+    if (!js.isUndefined(thumbStyle)) __obj.updateDynamic("thumbStyle")(thumbStyle.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[CardHeaderProps]
   }
-  @scala.inline
-  implicit class CardHeaderPropsOps[Self <: CardHeaderProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
-        ret
-    }
-    @scala.inline
-    def withThumbStyle(value: StyleProp[ImageStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbStyle")(null)
-        ret
-    }
-  }
-  
 }
 

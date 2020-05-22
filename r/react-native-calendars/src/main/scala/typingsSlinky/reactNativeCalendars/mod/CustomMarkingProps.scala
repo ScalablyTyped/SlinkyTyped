@@ -6,10 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait CustomMarkingProps extends CalendarMarkingProps {
-  var markedDates: StringDictionary[CustomMarking] = js.native
-  var markingType: custom = js.native
+trait CustomMarkingProps extends _CalendarMarkingProps {
+  var markedDates: StringDictionary[CustomMarking]
+  var markingType: custom
 }
 
 object CustomMarkingProps {
@@ -18,25 +17,5 @@ object CustomMarkingProps {
     val __obj = js.Dynamic.literal(markedDates = markedDates.asInstanceOf[js.Any], markingType = markingType.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomMarkingProps]
   }
-  @scala.inline
-  implicit class CustomMarkingPropsOps[Self <: CustomMarkingProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMarkedDates(value: StringDictionary[CustomMarking]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markedDates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarkingType(value: custom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markingType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

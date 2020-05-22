@@ -51,10 +51,31 @@ class OutputAreaModel () extends IOutputAreaModel {
     */
   var clearNext: Boolean = js.native
   /**
+    * Test whether the object has been disposed.
+    *
+    * #### Notes
+    * This property is always safe to access.
+    */
+  /* CompleteClass */
+  override val isDisposed: Boolean = js.native
+  /**
     * An observable list containing the output models
     * for this output area.
     */
   var list: IObservableList[IOutputModel] = js.native
+  /**
+    * Dispose of the resources held by the object.
+    *
+    * #### Notes
+    * If the object's `dispose` method is called more than once, all
+    * calls made after the first will be a no-op.
+    *
+    * #### Undefined Behavior
+    * It is undefined behavior to use any functionality of the object
+    * after it has been disposed unless otherwise explicitly noted.
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
   /**
     * Whether a new value should be consolidated with the previous output.
     *
@@ -71,7 +92,13 @@ object OutputAreaModel extends js.Object {
     * The default implementation of a `IModelOutputFactory`.
     */
   @js.native
-  class ContentFactory () extends IContentFactory
+  class ContentFactory () extends IContentFactory {
+    /**
+      * Create an output model.
+      */
+    /* CompleteClass */
+    override def createOutputModel(options: typingsSlinky.jupyterlabRendermime.outputmodelMod.IOutputModel.IOptions): IOutputModel = js.native
+  }
   
   /**
     * The default output model factory.

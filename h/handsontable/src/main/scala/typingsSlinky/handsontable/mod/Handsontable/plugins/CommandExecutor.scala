@@ -5,14 +5,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CommandExecutor extends js.Object {
-  var commands: js.Object = js.native
-  var commonCallback: js.Function0[Unit] | Unit = js.native
-  var hot: Core = js.native
-  def execute(commandName: String, params: js.Any*): Unit = js.native
-  def registerCommand(name: String, commandDescriptor: js.Object): Unit = js.native
-  def setCommonCallback(callback: js.Function0[Unit]): Unit = js.native
+  var commands: js.Object
+  var commonCallback: js.Function0[Unit] | Unit
+  var hot: Core
+  def execute(commandName: String, params: js.Any*): Unit
+  def registerCommand(name: String, commandDescriptor: js.Object): Unit
+  def setCommonCallback(callback: js.Function0[Unit]): Unit
 }
 
 object CommandExecutor {
@@ -28,55 +27,5 @@ object CommandExecutor {
     val __obj = js.Dynamic.literal(commands = commands.asInstanceOf[js.Any], commonCallback = commonCallback.asInstanceOf[js.Any], execute = js.Any.fromFunction2(execute), hot = hot.asInstanceOf[js.Any], registerCommand = js.Any.fromFunction2(registerCommand), setCommonCallback = js.Any.fromFunction1(setCommonCallback))
     __obj.asInstanceOf[CommandExecutor]
   }
-  @scala.inline
-  implicit class CommandExecutorOps[Self <: CommandExecutor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommands(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommonCallbackFunction0(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commonCallback")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCommonCallback(value: js.Function0[Unit] | Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commonCallback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExecute(value: (String, /* repeated */ js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withHot(value: Core): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRegisterCommand(value: (String, js.Object) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerCommand")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetCommonCallback(value: js.Function0[Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setCommonCallback")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

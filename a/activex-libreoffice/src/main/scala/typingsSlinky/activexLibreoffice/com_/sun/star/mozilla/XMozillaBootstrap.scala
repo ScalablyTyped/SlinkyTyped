@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.mozilla.XProxyRunner
   * @see com.sun.star.mozilla.MozillaBootstrap
   */
-@js.native
 trait XMozillaBootstrap
   extends XProfileDiscover
      with XProfileManager

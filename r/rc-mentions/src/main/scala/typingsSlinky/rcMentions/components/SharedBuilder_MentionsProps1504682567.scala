@@ -20,6 +20,7 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.textarea.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.rcMentions.mentionsMod.Direction
 import typingsSlinky.rcMentions.mentionsMod.MentionsProps
 import typingsSlinky.rcMentions.mentionsMod.Placement
 import typingsSlinky.rcMentions.optionMod.OptionProps
@@ -213,6 +214,8 @@ class SharedBuilder_MentionsProps1504682567[R <: js.Object] (val args: js.Array[
   def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
   @scala.inline
   def dirName(value: String): this.type = set("dirName", value.asInstanceOf[js.Any])
+  @scala.inline
+  def direction(value: Direction): this.type = set("direction", value.asInstanceOf[js.Any])
   @scala.inline
   def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
   @scala.inline

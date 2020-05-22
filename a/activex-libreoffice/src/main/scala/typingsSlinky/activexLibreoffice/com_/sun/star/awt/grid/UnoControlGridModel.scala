@@ -24,20 +24,19 @@ import scala.scalajs.js.annotation._
   * specifies the standard model of a {@link UnoControlGrid} control.
   * @since OOo 3.3
   */
-@js.native
 trait UnoControlGridModel extends UnoControlModel {
   /**
     * specifies the color to be used when drawing the background of selected cells, while the control has the focus.
     *
     * If this property has a value of `VOID` , the grid control renderer will use some default color, depending on the control's style settings.
     */
-  var ActiveSelectionBackgroundColor: Color = js.native
+  var ActiveSelectionBackgroundColor: Color
   /**
     * specifies the color to be used when drawing the text of selected cells, while the control has the focus.
     *
     * If this property has a value of `VOID` , the grid control renderer will use some default color, depending on the control's style settings.
     */
-  var ActiveSelectionTextColor: Color = js.native
+  var ActiveSelectionTextColor: Color
   /**
     * specifies the height of the column header row, if applicable.
     *
@@ -48,7 +47,7 @@ trait UnoControlGridModel extends UnoControlModel {
     * If the property is `VOID` , the grid control shall automatically determine a height which conveniently allows, according to the used font, to display
     * one line of text.
     */
-  var ColumnHeaderHeight: Double = js.native
+  var ColumnHeaderHeight: Double
   /**
     * Specifies the {@link XGridColumnModel} that is providing the column structure.
     *
@@ -59,13 +58,13 @@ trait UnoControlGridModel extends UnoControlModel {
     *
     * The default for this property is an empty instance of the {@link DefaultGridColumnModel} .
     */
-  var ColumnModel: XGridColumnModel = js.native
+  var ColumnModel: XGridColumnModel
   /** specifies the font attributes of the text in the control. */
-  var FontDescriptor: typingsSlinky.activexLibreoffice.com_.sun.star.awt.FontDescriptor = js.native
+  var FontDescriptor: typingsSlinky.activexLibreoffice.com_.sun.star.awt.FontDescriptor
   /** specifies the {@link com.sun.star.text.FontEmphasis} value of the text in the control. */
-  var FontEmphasisMark: Double = js.native
+  var FontEmphasisMark: Double
   /** specifies the {@link com.sun.star.text.FontRelief} value of the text in the control. */
-  var FontRelief: Double = js.native
+  var FontRelief: Double
   /**
     * Specifies the {@link XGridDataModel} that is providing the hierarchical data.
     *
@@ -76,48 +75,48 @@ trait UnoControlGridModel extends UnoControlModel {
     *
     * The default for this property is an empty instance of the {@link DefaultGridDataModel} .
     */
-  var GridDataModel: XGridDataModel = js.native
+  var GridDataModel: XGridDataModel
   /**
     * specifies the color to be used when drawing lines between cells
     *
     * If this property has a value of `VOID` , the grid control renderer will use some default color, depending on the control's style settings.
     * @see UseGridLines
     */
-  var GridLineColor: Color = js.native
+  var GridLineColor: Color
   /**
     * Specifies the vertical scrollbar mode.
     *
     * The default value is `FALSE`
     */
-  var HScroll: Boolean = js.native
+  var HScroll: Boolean
   /**
     * specifies the color to be used when drawing the background of row or column headers
     *
     * If this property has a value of `VOID` , the grid control renderer will use some default color, depending on the control's style settings.
     */
-  var HeaderBackgroundColor: Color = js.native
+  var HeaderBackgroundColor: Color
   /**
     * specifies the color to be used when drawing the text within row or column headers
     *
     * If this property has a value of `VOID` , the grid control renderer will use some default color, depending on the control's style settings.
     */
-  var HeaderTextColor: Color = js.native
+  var HeaderTextColor: Color
   /** specifies the help text of the control. */
-  var HelpText: String = js.native
+  var HelpText: String
   /** specifies the help URL of the control. */
-  var HelpURL: String = js.native
+  var HelpURL: String
   /**
     * specifies the color to be used when drawing the background of selected cells, while the control does not have the focus.
     *
     * If this property has a value of `VOID` , the grid control renderer will use some default color, depending on the control's style settings.
     */
-  var InactiveSelectionBackgroundColor: Color = js.native
+  var InactiveSelectionBackgroundColor: Color
   /**
     * specifies the color to be used when drawing the text of selected cells, while the control does not have the focus.
     *
     * If this property has a value of `VOID` , the grid control renderer will use some default color, depending on the control's style settings.
     */
-  var InactiveSelectionTextColor: Color = js.native
+  var InactiveSelectionTextColor: Color
   /**
     * specifies the colors to be used as background for data rows.
     *
@@ -129,7 +128,7 @@ trait UnoControlGridModel extends UnoControlModel {
     * If this property has a value of `VOID` , rows will be painted in alternating background colors, every second row having a background color derived
     * from the control's selection color.
     */
-  var RowBackgroundColors: SafeArray[Color] = js.native
+  var RowBackgroundColors: SafeArray[Color]
   /**
     * specifies the width of the row header column, if applicable.
     *
@@ -137,58 +136,58 @@ trait UnoControlGridModel extends UnoControlModel {
     *
     * The value given here is ignored if {@link ShowRowHeader} is `FALSE` .
     */
-  var RowHeaderWidth: Double = js.native
+  var RowHeaderWidth: Double
   /**
     * Specifies the height of rows in the grid control.
     *
     * The height is specified in application font units - see {@link com.sun.star.util.MeasureUnit} .
     */
-  var RowHeight: Double = js.native
+  var RowHeight: Double
   /**
     * Specifies the selection mode that is enabled for this grid control.
     *
     * The default value is com::sun::star::view::SelectionType::SINGLE
     */
-  var SelectionModel: SelectionType = js.native
+  var SelectionModel: SelectionType
   /**
     * Specifies whether the grid control should display a title row.
     *
     * The default value is `TRUE`
     */
-  var ShowColumnHeader: Boolean = js.native
+  var ShowColumnHeader: Boolean
   /**
     * Specifies whether the grid control should display a special header column.
     *
     * The default value is `FALSE`
     */
-  var ShowRowHeader: Boolean = js.native
+  var ShowRowHeader: Boolean
   /** Specifies that the control can be reached with the TAB key. */
-  var Tabstop: Boolean = js.native
+  var Tabstop: Boolean
   /**
     * specifies the color to be used when drawing cell texts
     *
     * If this property has a value of `VOID` , the grid control renderer will use some default color, depending on the control's style settings.
     */
-  var TextColor: Color = js.native
+  var TextColor: Color
   /**
     * specifies the color to be used when drawing text lines (underlining and strikethrough)
     *
     * If this property has a value of `VOID` , the grid control renderer will use some default color, depending on the control's style settings.
     */
-  var TextLineColor: Color = js.native
+  var TextLineColor: Color
   /**
     * controls whether or not to paint horizontal and vertical lines between the grid cells.
     * @see GridLineColor
     */
-  var UseGridLines: Boolean = js.native
+  var UseGridLines: Boolean
   /**
     * Specifies the horizontal scrollbar mode.
     *
     * The default value is `FALSE`
     */
-  var VScroll: Boolean = js.native
+  var VScroll: Boolean
   /** specifies the vertical alignment of the content in the control. */
-  var VerticalAlign: VerticalAlignment = js.native
+  var VerticalAlign: VerticalAlignment
 }
 
 object UnoControlGridModel {
@@ -259,181 +258,5 @@ object UnoControlGridModel {
     val __obj = js.Dynamic.literal(ActiveSelectionBackgroundColor = ActiveSelectionBackgroundColor.asInstanceOf[js.Any], ActiveSelectionTextColor = ActiveSelectionTextColor.asInstanceOf[js.Any], ColumnHeaderHeight = ColumnHeaderHeight.asInstanceOf[js.Any], ColumnModel = ColumnModel.asInstanceOf[js.Any], DefaultControl = DefaultControl.asInstanceOf[js.Any], FontDescriptor = FontDescriptor.asInstanceOf[js.Any], FontEmphasisMark = FontEmphasisMark.asInstanceOf[js.Any], FontRelief = FontRelief.asInstanceOf[js.Any], GridDataModel = GridDataModel.asInstanceOf[js.Any], GridLineColor = GridLineColor.asInstanceOf[js.Any], HScroll = HScroll.asInstanceOf[js.Any], HeaderBackgroundColor = HeaderBackgroundColor.asInstanceOf[js.Any], HeaderTextColor = HeaderTextColor.asInstanceOf[js.Any], Height = Height.asInstanceOf[js.Any], HelpText = HelpText.asInstanceOf[js.Any], HelpURL = HelpURL.asInstanceOf[js.Any], InactiveSelectionBackgroundColor = InactiveSelectionBackgroundColor.asInstanceOf[js.Any], InactiveSelectionTextColor = InactiveSelectionTextColor.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], PositionX = PositionX.asInstanceOf[js.Any], PositionY = PositionY.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], RowBackgroundColors = RowBackgroundColors.asInstanceOf[js.Any], RowHeaderWidth = RowHeaderWidth.asInstanceOf[js.Any], RowHeight = RowHeight.asInstanceOf[js.Any], SelectionModel = SelectionModel.asInstanceOf[js.Any], ServiceName = ServiceName.asInstanceOf[js.Any], ShowColumnHeader = ShowColumnHeader.asInstanceOf[js.Any], ShowRowHeader = ShowRowHeader.asInstanceOf[js.Any], Step = Step.asInstanceOf[js.Any], TabIndex = TabIndex.asInstanceOf[js.Any], Tabstop = Tabstop.asInstanceOf[js.Any], Tag = Tag.asInstanceOf[js.Any], TextColor = TextColor.asInstanceOf[js.Any], TextLineColor = TextLineColor.asInstanceOf[js.Any], UseGridLines = UseGridLines.asInstanceOf[js.Any], VScroll = VScroll.asInstanceOf[js.Any], VerticalAlign = VerticalAlign.asInstanceOf[js.Any], Width = Width.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), addPropertiesChangeListener = js.Any.fromFunction2(addPropertiesChangeListener), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), createClone = js.Any.fromFunction0(createClone), dispose = js.Any.fromFunction0(dispose), firePropertiesChangeEvent = js.Any.fromFunction2(firePropertiesChangeEvent), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), getPropertyValues = js.Any.fromFunction1(getPropertyValues), getServiceName = js.Any.fromFunction0(getServiceName), queryInterface = js.Any.fromFunction1(queryInterface), read = js.Any.fromFunction1(read), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), removePropertiesChangeListener = js.Any.fromFunction1(removePropertiesChangeListener), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue), setPropertyValues = js.Any.fromFunction2(setPropertyValues), write = js.Any.fromFunction1(write))
     __obj.asInstanceOf[UnoControlGridModel]
   }
-  @scala.inline
-  implicit class UnoControlGridModelOps[Self <: UnoControlGridModel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveSelectionBackgroundColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveSelectionBackgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withActiveSelectionTextColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveSelectionTextColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColumnHeaderHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnHeaderHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColumnModel(value: XGridColumnModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFontDescriptor(value: FontDescriptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FontDescriptor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFontEmphasisMark(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FontEmphasisMark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFontRelief(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FontRelief")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGridDataModel(value: XGridDataModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GridDataModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGridLineColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GridLineColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHScroll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeaderBackgroundColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HeaderBackgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeaderTextColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HeaderTextColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHelpText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HelpText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHelpURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HelpURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInactiveSelectionBackgroundColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InactiveSelectionBackgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInactiveSelectionTextColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InactiveSelectionTextColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowBackgroundColors(value: SafeArray[Color]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RowBackgroundColors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowHeaderWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RowHeaderWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RowHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelectionModel(value: SelectionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectionModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowColumnHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowColumnHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowRowHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowRowHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTabstop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tabstop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextLineColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextLineColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUseGridLines(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseGridLines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVScroll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerticalAlign(value: VerticalAlignment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VerticalAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

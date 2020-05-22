@@ -5,107 +5,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** TestDocument. */
-@js.native
 trait TestDocument extends js.Object {
   /** The unique identifier for the configuration. */
-  var configuration_id: js.UndefOr[String] = js.native
+  var configuration_id: js.UndefOr[String] = js.undefined
   /** The number of 10-kB chunks of field data that were enriched. This can be used to estimate the cost of running a real ingestion. */
-  var enriched_field_units: js.UndefOr[Double] = js.native
+  var enriched_field_units: js.UndefOr[Double] = js.undefined
   /** An array of notice messages about the preview operation. */
-  var notices: js.UndefOr[js.Array[Notice]] = js.native
+  var notices: js.UndefOr[js.Array[Notice]] = js.undefined
   /** Format of the test document. */
-  var original_media_type: js.UndefOr[String] = js.native
+  var original_media_type: js.UndefOr[String] = js.undefined
   /** An array of objects that describe each step in the preview process. */
-  var snapshots: js.UndefOr[js.Array[DocumentSnapshot]] = js.native
+  var snapshots: js.UndefOr[js.Array[DocumentSnapshot]] = js.undefined
   /** Status of the preview operation. */
-  var status: js.UndefOr[String] = js.native
+  var status: js.UndefOr[String] = js.undefined
 }
 
 object TestDocument {
   @scala.inline
-  def apply(): TestDocument = {
+  def apply(
+    configuration_id: String = null,
+    enriched_field_units: js.UndefOr[Double] = js.undefined,
+    notices: js.Array[Notice] = null,
+    original_media_type: String = null,
+    snapshots: js.Array[DocumentSnapshot] = null,
+    status: String = null
+  ): TestDocument = {
     val __obj = js.Dynamic.literal()
+    if (configuration_id != null) __obj.updateDynamic("configuration_id")(configuration_id.asInstanceOf[js.Any])
+    if (!js.isUndefined(enriched_field_units)) __obj.updateDynamic("enriched_field_units")(enriched_field_units.get.asInstanceOf[js.Any])
+    if (notices != null) __obj.updateDynamic("notices")(notices.asInstanceOf[js.Any])
+    if (original_media_type != null) __obj.updateDynamic("original_media_type")(original_media_type.asInstanceOf[js.Any])
+    if (snapshots != null) __obj.updateDynamic("snapshots")(snapshots.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestDocument]
   }
-  @scala.inline
-  implicit class TestDocumentOps[Self <: TestDocument] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfiguration_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfiguration_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnriched_field_units(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enriched_field_units")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnriched_field_units: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enriched_field_units")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotices(value: js.Array[Notice]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginal_media_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("original_media_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginal_media_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("original_media_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnapshots(value: js.Array[DocumentSnapshot]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnapshots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshots")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

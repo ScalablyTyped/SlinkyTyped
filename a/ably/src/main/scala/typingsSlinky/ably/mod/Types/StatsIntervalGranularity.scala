@@ -8,14 +8,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Rewritten from type alias, can be one of: 
-  - typingsSlinky.ably.mod.Types.StatsIntervalGranularity.MINUTE
-  - typingsSlinky.ably.mod.Types.StatsIntervalGranularity.HOUR
-  - typingsSlinky.ably.mod.Types.StatsIntervalGranularity.DAY
-  - typingsSlinky.ably.mod.Types.StatsIntervalGranularity.MONTH
-*/
-trait StatsIntervalGranularity extends js.Object
-
 @JSImport("ably", "Types.StatsIntervalGranularity")
 @js.native
 object StatsIntervalGranularity extends js.Object {

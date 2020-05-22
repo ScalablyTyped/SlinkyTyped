@@ -55,7 +55,7 @@ trait UpdateHealthCheckRequest extends js.Object {
     */
   var Inverted: js.UndefOr[typingsSlinky.awsSdk.route53Mod.Inverted] = js.native
   /**
-    * The port on the endpoint on which you want Amazon Route 53 to perform health checks.
+    * The port on the endpoint that you want Amazon Route 53 to perform health checks on.  Don't specify a value for Port when you specify a value for Type of CLOUDWATCH_METRIC or CALCULATED. 
     */
   var Port: js.UndefOr[typingsSlinky.awsSdk.route53Mod.Port] = js.native
   /**
@@ -71,222 +71,50 @@ trait UpdateHealthCheckRequest extends js.Object {
     */
   var ResourcePath: js.UndefOr[typingsSlinky.awsSdk.route53Mod.ResourcePath] = js.native
   /**
-    * If the value of Type is HTTP_STR_MATCH or HTTP_STR_MATCH, the string that you want Amazon Route 53 to search for in the response body from the specified resource. If the string appears in the response body, Route 53 considers the resource healthy. (You can't change the value of Type when you update a health check.)
+    * If the value of Type is HTTP_STR_MATCH or HTTPS_STR_MATCH, the string that you want Amazon Route 53 to search for in the response body from the specified resource. If the string appears in the response body, Route 53 considers the resource healthy. (You can't change the value of Type when you update a health check.)
     */
   var SearchString: js.UndefOr[typingsSlinky.awsSdk.route53Mod.SearchString] = js.native
 }
 
 object UpdateHealthCheckRequest {
   @scala.inline
-  def apply(HealthCheckId: HealthCheckId): UpdateHealthCheckRequest = {
+  def apply(
+    HealthCheckId: HealthCheckId,
+    AlarmIdentifier: AlarmIdentifier = null,
+    ChildHealthChecks: ChildHealthCheckList = null,
+    Disabled: js.UndefOr[Disabled] = js.undefined,
+    EnableSNI: js.UndefOr[EnableSNI] = js.undefined,
+    FailureThreshold: js.UndefOr[FailureThreshold] = js.undefined,
+    FullyQualifiedDomainName: FullyQualifiedDomainName = null,
+    HealthCheckVersion: js.UndefOr[HealthCheckVersion] = js.undefined,
+    HealthThreshold: js.UndefOr[HealthThreshold] = js.undefined,
+    IPAddress: IPAddress = null,
+    InsufficientDataHealthStatus: InsufficientDataHealthStatus = null,
+    Inverted: js.UndefOr[Inverted] = js.undefined,
+    Port: js.UndefOr[Port] = js.undefined,
+    Regions: HealthCheckRegionList = null,
+    ResetElements: ResettableElementNameList = null,
+    ResourcePath: ResourcePath = null,
+    SearchString: SearchString = null
+  ): UpdateHealthCheckRequest = {
     val __obj = js.Dynamic.literal(HealthCheckId = HealthCheckId.asInstanceOf[js.Any])
+    if (AlarmIdentifier != null) __obj.updateDynamic("AlarmIdentifier")(AlarmIdentifier.asInstanceOf[js.Any])
+    if (ChildHealthChecks != null) __obj.updateDynamic("ChildHealthChecks")(ChildHealthChecks.asInstanceOf[js.Any])
+    if (!js.isUndefined(Disabled)) __obj.updateDynamic("Disabled")(Disabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(EnableSNI)) __obj.updateDynamic("EnableSNI")(EnableSNI.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(FailureThreshold)) __obj.updateDynamic("FailureThreshold")(FailureThreshold.get.asInstanceOf[js.Any])
+    if (FullyQualifiedDomainName != null) __obj.updateDynamic("FullyQualifiedDomainName")(FullyQualifiedDomainName.asInstanceOf[js.Any])
+    if (!js.isUndefined(HealthCheckVersion)) __obj.updateDynamic("HealthCheckVersion")(HealthCheckVersion.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(HealthThreshold)) __obj.updateDynamic("HealthThreshold")(HealthThreshold.get.asInstanceOf[js.Any])
+    if (IPAddress != null) __obj.updateDynamic("IPAddress")(IPAddress.asInstanceOf[js.Any])
+    if (InsufficientDataHealthStatus != null) __obj.updateDynamic("InsufficientDataHealthStatus")(InsufficientDataHealthStatus.asInstanceOf[js.Any])
+    if (!js.isUndefined(Inverted)) __obj.updateDynamic("Inverted")(Inverted.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Port)) __obj.updateDynamic("Port")(Port.get.asInstanceOf[js.Any])
+    if (Regions != null) __obj.updateDynamic("Regions")(Regions.asInstanceOf[js.Any])
+    if (ResetElements != null) __obj.updateDynamic("ResetElements")(ResetElements.asInstanceOf[js.Any])
+    if (ResourcePath != null) __obj.updateDynamic("ResourcePath")(ResourcePath.asInstanceOf[js.Any])
+    if (SearchString != null) __obj.updateDynamic("SearchString")(SearchString.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateHealthCheckRequest]
   }
-  @scala.inline
-  implicit class UpdateHealthCheckRequestOps[Self <: UpdateHealthCheckRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHealthCheckId(value: HealthCheckId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAlarmIdentifier(value: AlarmIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlarmIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildHealthChecks(value: ChildHealthCheckList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChildHealthChecks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildHealthChecks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChildHealthChecks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Disabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableSNI(value: EnableSNI): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableSNI")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableSNI: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableSNI")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailureThreshold(value: FailureThreshold): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullyQualifiedDomainName(value: FullyQualifiedDomainName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullyQualifiedDomainName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullyQualifiedDomainName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullyQualifiedDomainName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHealthCheckVersion(value: HealthCheckVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthCheckVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHealthThreshold(value: HealthThreshold): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIPAddress(value: IPAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IPAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIPAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IPAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsufficientDataHealthStatus(value: InsufficientDataHealthStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InsufficientDataHealthStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsufficientDataHealthStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InsufficientDataHealthStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInverted(value: Inverted): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Inverted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInverted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Inverted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: Port): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegions(value: HealthCheckRegionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Regions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Regions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResetElements(value: ResettableElementNameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResetElements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResetElements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResetElements")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourcePath(value: ResourcePath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourcePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourcePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourcePath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchString(value: SearchString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SearchString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SearchString")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

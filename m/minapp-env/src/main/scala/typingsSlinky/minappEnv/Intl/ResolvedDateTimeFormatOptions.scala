@@ -4,181 +4,53 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ResolvedDateTimeFormatOptions extends js.Object {
-  var calendar: String = js.native
-  var day: js.UndefOr[String] = js.native
-  var era: js.UndefOr[String] = js.native
-  var hour: js.UndefOr[String] = js.native
-  var hour12: js.UndefOr[Boolean] = js.native
-  var locale: String = js.native
-  var minute: js.UndefOr[String] = js.native
-  var month: js.UndefOr[String] = js.native
-  var numberingSystem: String = js.native
-  var second: js.UndefOr[String] = js.native
-  var timeZone: String = js.native
-  var timeZoneName: js.UndefOr[String] = js.native
-  var weekday: js.UndefOr[String] = js.native
-  var year: js.UndefOr[String] = js.native
+  var calendar: String
+  var day: js.UndefOr[String] = js.undefined
+  var era: js.UndefOr[String] = js.undefined
+  var hour: js.UndefOr[String] = js.undefined
+  var hour12: js.UndefOr[Boolean] = js.undefined
+  var locale: String
+  var minute: js.UndefOr[String] = js.undefined
+  var month: js.UndefOr[String] = js.undefined
+  var numberingSystem: String
+  var second: js.UndefOr[String] = js.undefined
+  var timeZone: String
+  var timeZoneName: js.UndefOr[String] = js.undefined
+  var weekday: js.UndefOr[String] = js.undefined
+  var year: js.UndefOr[String] = js.undefined
 }
 
 object ResolvedDateTimeFormatOptions {
   @scala.inline
-  def apply(calendar: String, locale: String, numberingSystem: String, timeZone: String): ResolvedDateTimeFormatOptions = {
+  def apply(
+    calendar: String,
+    locale: String,
+    numberingSystem: String,
+    timeZone: String,
+    day: String = null,
+    era: String = null,
+    hour: String = null,
+    hour12: js.UndefOr[Boolean] = js.undefined,
+    minute: String = null,
+    month: String = null,
+    second: String = null,
+    timeZoneName: String = null,
+    weekday: String = null,
+    year: String = null
+  ): ResolvedDateTimeFormatOptions = {
     val __obj = js.Dynamic.literal(calendar = calendar.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], numberingSystem = numberingSystem.asInstanceOf[js.Any], timeZone = timeZone.asInstanceOf[js.Any])
+    if (day != null) __obj.updateDynamic("day")(day.asInstanceOf[js.Any])
+    if (era != null) __obj.updateDynamic("era")(era.asInstanceOf[js.Any])
+    if (hour != null) __obj.updateDynamic("hour")(hour.asInstanceOf[js.Any])
+    if (!js.isUndefined(hour12)) __obj.updateDynamic("hour12")(hour12.get.asInstanceOf[js.Any])
+    if (minute != null) __obj.updateDynamic("minute")(minute.asInstanceOf[js.Any])
+    if (month != null) __obj.updateDynamic("month")(month.asInstanceOf[js.Any])
+    if (second != null) __obj.updateDynamic("second")(second.asInstanceOf[js.Any])
+    if (timeZoneName != null) __obj.updateDynamic("timeZoneName")(timeZoneName.asInstanceOf[js.Any])
+    if (weekday != null) __obj.updateDynamic("weekday")(weekday.asInstanceOf[js.Any])
+    if (year != null) __obj.updateDynamic("year")(year.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResolvedDateTimeFormatOptions]
   }
-  @scala.inline
-  implicit class ResolvedDateTimeFormatOptionsOps[Self <: ResolvedDateTimeFormatOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCalendar(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberingSystem(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberingSystem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDay(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("day")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("day")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEra(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("era")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEra: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("era")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHour(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hour")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHour: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hour")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHour12(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hour12")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHour12: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hour12")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinute(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("month")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("month")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecond(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("second")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecond: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("second")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeZoneName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeZoneName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeZoneName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeZoneName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeekday(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weekday")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeekday: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weekday")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYear(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("year")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("year")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

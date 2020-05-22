@@ -14,29 +14,10 @@ trait RegionOfInterest extends js.Object {
 
 object RegionOfInterest {
   @scala.inline
-  def apply(): RegionOfInterest = {
+  def apply(BoundingBox: BoundingBox = null): RegionOfInterest = {
     val __obj = js.Dynamic.literal()
+    if (BoundingBox != null) __obj.updateDynamic("BoundingBox")(BoundingBox.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegionOfInterest]
   }
-  @scala.inline
-  implicit class RegionOfInterestOps[Self <: RegionOfInterest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBoundingBox(value: BoundingBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BoundingBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoundingBox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BoundingBox")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -17,6 +17,9 @@ object foundationMod extends js.Object {
   class MDCTabBarFoundation () extends MDCFoundation[MDCTabBarAdapter] {
     def this(adapter: PartialMDCTabBarAdapter) = this()
     def activateTab(index: Double): Unit = js.native
+    // Subclasses should override this method to perform de-initialization routines (de-registering events, etc.)
+    /* CompleteClass */
+    override def destroy(): Unit = js.native
     def handleKeyDown(evt: KeyboardEvent): Unit = js.native
     /**
       * Handles the MDCTab:interacted event
@@ -24,6 +27,9 @@ object foundationMod extends js.Object {
     def handleTabInteraction(
       evt: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MDCTabInteractionEvent */ js.Any
     ): Unit = js.native
+    // Subclasses should override this method to perform initialization routines (registering events, etc.)
+    /* CompleteClass */
+    override def init(): Unit = js.native
     /**
       * Scrolls the tab at the given index into view
       * @param index The tab index to make visible

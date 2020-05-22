@@ -20,5 +20,9 @@ class Content protected () extends Node {
   var attributes: js.Array[TextAttribute] = js.native
   var i18n: js.UndefOr[Message | typingsSlinky.angularCompiler.i18nAstMod.Node] = js.native
   var selector: String = js.native
+  /* CompleteClass */
+  override var sourceSpan: ParseSourceSpan = js.native
+  /* CompleteClass */
+  override def visit[Result](visitor: Visitor[Result]): Result = js.native
 }
 

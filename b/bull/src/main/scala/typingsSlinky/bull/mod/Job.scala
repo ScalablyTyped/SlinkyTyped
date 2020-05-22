@@ -17,6 +17,7 @@ trait Job[T] extends js.Object {
     * The custom data passed when the job was created
     */
   var data: T = js.native
+  var failedReason: js.UndefOr[String] = js.native
   /**
     * When this job was completed (unix milliseconds)
     */

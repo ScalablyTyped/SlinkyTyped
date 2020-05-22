@@ -12,16 +12,15 @@ import scala.scalajs.js.annotation._
   * @author Bill Knechtel, <br>
   *		   Migrated and Refactored by Jeongho Nam <http://samchon.org>
   */
-@js.native
 trait Scrap extends js.Object {
   /**
     * Cumulated length on the X-axis in 3D.
     */
-  var cumx: Double = js.native
+  var cumx: Double
   /**
     * Cumulated length on the Z-axis in 3D.
     */
-  var cumz: Double = js.native
+  var cumz: Double
 }
 
 object Scrap {
@@ -30,25 +29,5 @@ object Scrap {
     val __obj = js.Dynamic.literal(cumx = cumx.asInstanceOf[js.Any], cumz = cumz.asInstanceOf[js.Any])
     __obj.asInstanceOf[Scrap]
   }
-  @scala.inline
-  implicit class ScrapOps[Self <: Scrap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCumx(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cumx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCumz(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cumz")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

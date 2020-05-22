@@ -15,6 +15,12 @@ package object stsMod {
   type accessKeyIdType = java.lang.String
   type accessKeySecretType = java.lang.String
   type accountType = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`2011-06-15`
+    - typingsSlinky.awsSdk.awsSdkStrings.latest_
+    - java.lang.String
+  */
+  type apiVersion = typingsSlinky.awsSdk.stsMod._apiVersion | java.lang.String
   type arnType = java.lang.String
   type assumedRoleIdType = java.lang.String
   type clientTokenType = java.lang.String

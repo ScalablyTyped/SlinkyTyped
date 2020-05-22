@@ -10,5 +10,21 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ASPxClientXYDiagram3D")
 @js.native
 class ASPxClientXYDiagram3D ()
-  extends typingsSlinky.devexpressWeb.ASPxClientXYDiagramBase
+  extends typingsSlinky.devexpressWeb.ASPxClientXYDiagramBase {
+  /**
+    * Gets the X-axis.
+    */
+  /* CompleteClass */
+  override var axisX: typingsSlinky.devexpressWeb.ASPxClientAxisBase = js.native
+  /**
+    * Gets the Y-axis.
+    */
+  /* CompleteClass */
+  override var axisY: typingsSlinky.devexpressWeb.ASPxClientAxisBase = js.native
+  /**
+    * Gets the chart that owns the current chart element.
+    */
+  /* CompleteClass */
+  override var chart: typingsSlinky.devexpressWeb.ASPxClientWebChart = js.native
+}
 

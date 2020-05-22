@@ -1,17 +1,5 @@
 package typingsSlinky.screeps
 
-import typingsSlinky.screeps.anon.Data
-import typingsSlinky.screeps.anon.DataEvent
-import typingsSlinky.screeps.anon.DataEventObjectId
-import typingsSlinky.screeps.anon.Event
-import typingsSlinky.screeps.anon.EventEVENTEXIT
-import typingsSlinky.screeps.anon.EventEVENTPOWER
-import typingsSlinky.screeps.anon.EventEVENTREPAIR
-import typingsSlinky.screeps.anon.EventEVENTRESERVECONTROLLER
-import typingsSlinky.screeps.anon.EventEVENTTRANSFER
-import typingsSlinky.screeps.anon.EventEVENTUPGRADECONTROLLER
-import typingsSlinky.screeps.anon.EventObjectId
-import typingsSlinky.screeps.anon.ObjectId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,28 +22,112 @@ trait EventItem extends js.Object
 
 object EventItem {
   @scala.inline
-  implicit def apply(value: Data): EventItem = value.asInstanceOf[EventItem]
+  def ObjectId(
+    data: /* import warning: importer.ImportType#apply Failed type conversion: screeps.EventData[screeps.EVENT_ATTACK_CONTROLLER] */ js.Any,
+    event: EVENT_ATTACK_CONTROLLER,
+    objectId: String
+  ): EventItem = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any], objectId = objectId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EventItem]
+  }
   @scala.inline
-  implicit def apply(value: DataEvent): EventItem = value.asInstanceOf[EventItem]
+  def EventEVENTTRANSFER(
+    data: /* import warning: importer.ImportType#apply Failed type conversion: screeps.EventData[screeps.EVENT_TRANSFER] */ js.Any,
+    event: EVENT_TRANSFER,
+    objectId: String
+  ): EventItem = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any], objectId = objectId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EventItem]
+  }
   @scala.inline
-  implicit def apply(value: DataEventObjectId): EventItem = value.asInstanceOf[EventItem]
+  def EventEVENTPOWER(
+    data: /* import warning: importer.ImportType#apply Failed type conversion: screeps.EventData[screeps.EVENT_POWER] */ js.Any,
+    event: EVENT_POWER,
+    objectId: String
+  ): EventItem = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any], objectId = objectId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EventItem]
+  }
   @scala.inline
-  implicit def apply(value: Event): EventItem = value.asInstanceOf[EventItem]
+  def DataEventObjectId(
+    data: /* import warning: importer.ImportType#apply Failed type conversion: screeps.EventData[screeps.EVENT_HEAL] */ js.Any,
+    event: EVENT_HEAL,
+    objectId: String
+  ): EventItem = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any], objectId = objectId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EventItem]
+  }
   @scala.inline
-  implicit def apply(value: EventEVENTEXIT): EventItem = value.asInstanceOf[EventItem]
+  def EventEVENTEXIT(
+    data: /* import warning: importer.ImportType#apply Failed type conversion: screeps.EventData[screeps.EVENT_EXIT] */ js.Any,
+    event: EVENT_EXIT,
+    objectId: String
+  ): EventItem = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any], objectId = objectId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EventItem]
+  }
   @scala.inline
-  implicit def apply(value: EventEVENTPOWER): EventItem = value.asInstanceOf[EventItem]
+  def DataEvent(
+    data: /* import warning: importer.ImportType#apply Failed type conversion: screeps.EventData[screeps.EVENT_BUILD] */ js.Any,
+    event: EVENT_BUILD,
+    objectId: String
+  ): EventItem = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any], objectId = objectId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EventItem]
+  }
   @scala.inline
-  implicit def apply(value: EventEVENTREPAIR): EventItem = value.asInstanceOf[EventItem]
+  def EventEVENTUPGRADECONTROLLER(
+    data: /* import warning: importer.ImportType#apply Failed type conversion: screeps.EventData[screeps.EVENT_UPGRADE_CONTROLLER] */ js.Any,
+    event: EVENT_UPGRADE_CONTROLLER,
+    objectId: String
+  ): EventItem = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any], objectId = objectId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EventItem]
+  }
   @scala.inline
-  implicit def apply(value: EventEVENTRESERVECONTROLLER): EventItem = value.asInstanceOf[EventItem]
+  def Event(
+    data: /* import warning: importer.ImportType#apply Failed type conversion: screeps.EventData[screeps.EVENT_OBJECT_DESTROYED] */ js.Any,
+    event: EVENT_OBJECT_DESTROYED,
+    objectId: String
+  ): EventItem = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any], objectId = objectId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EventItem]
+  }
   @scala.inline
-  implicit def apply(value: EventEVENTTRANSFER): EventItem = value.asInstanceOf[EventItem]
+  def Data(
+    data: /* import warning: importer.ImportType#apply Failed type conversion: screeps.EventData[screeps.EVENT_ATTACK] */ js.Any,
+    event: EVENT_ATTACK,
+    objectId: String
+  ): EventItem = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any], objectId = objectId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EventItem]
+  }
   @scala.inline
-  implicit def apply(value: EventEVENTUPGRADECONTROLLER): EventItem = value.asInstanceOf[EventItem]
+  def EventObjectId(
+    data: /* import warning: importer.ImportType#apply Failed type conversion: screeps.EventData[screeps.EVENT_HARVEST] */ js.Any,
+    event: EVENT_HARVEST,
+    objectId: String
+  ): EventItem = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any], objectId = objectId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EventItem]
+  }
   @scala.inline
-  implicit def apply(value: EventObjectId): EventItem = value.asInstanceOf[EventItem]
+  def EventEVENTREPAIR(
+    data: /* import warning: importer.ImportType#apply Failed type conversion: screeps.EventData[screeps.EVENT_REPAIR] */ js.Any,
+    event: EVENT_REPAIR,
+    objectId: String
+  ): EventItem = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any], objectId = objectId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EventItem]
+  }
   @scala.inline
-  implicit def apply(value: ObjectId): EventItem = value.asInstanceOf[EventItem]
+  def EventEVENTRESERVECONTROLLER(
+    data: /* import warning: importer.ImportType#apply Failed type conversion: screeps.EventData[screeps.EVENT_RESERVE_CONTROLLER] */ js.Any,
+    event: EVENT_RESERVE_CONTROLLER,
+    objectId: String
+  ): EventItem = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any], objectId = objectId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EventItem]
+  }
 }
 

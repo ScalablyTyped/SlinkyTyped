@@ -4,40 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TVError extends js.Object {
   /** The error code. */
-  var code: String = js.native
+  var code: String
   /** A string containing the description of the error. */
-  var description: String = js.native
+  var description: String
   /**
-  		 * A string containing the error domain.
-  		 *
-  		 * The predefined error domains:
-  		 * NSPOSIXErrorDomain - POSIX/BSD errors
-  		 * NSOSStatusErrorDomain - OS X/Carbon errors
-  		 * NSMachErrorDomain - Mach errors
-  		 * */
-  var domain: String = js.native
+    * A string containing the error domain.
+    *
+    * The predefined error domains:
+    * NSPOSIXErrorDomain - POSIX/BSD errors
+    * NSOSStatusErrorDomain - OS X/Carbon errors
+    * NSMachErrorDomain - Mach errors
+    * */
+  var domain: String
   /**
-  		 * The user info dictionary.
-  		 *
-  		 * These keys may exist in the user info dictionary:
-  		 * NSLocalizedDesciptionKey
-  		 * NSFilePathErrorKey
-  		 * NSStringEncodingErrorKey
-  		 * NSUnderlyingErrorKey
-  		 * NSURLErrorKey
-  		 * NSLocalizedFailureReasonErrorKey
-  		 * NSLocalizedRecoverySuggestionErrorKey
-  		 * NSLocalizedRecoveryOptionsErrorKey
-  		 * NSRecoveryAttempterErrorKey
-  		 * NSHelpAnchorErrorKey
-  		 * NSURLErrorFailingURLErrorKey
-  		 * NSURLErrorFailingURLStringErrorKey
-  		 * NSURLErrorFailingURLPeerTrustErrorKey
-  		 * */
-  var userInfo: js.Any = js.native
+    * The user info dictionary.
+    *
+    * These keys may exist in the user info dictionary:
+    * NSLocalizedDesciptionKey
+    * NSFilePathErrorKey
+    * NSStringEncodingErrorKey
+    * NSUnderlyingErrorKey
+    * NSURLErrorKey
+    * NSLocalizedFailureReasonErrorKey
+    * NSLocalizedRecoverySuggestionErrorKey
+    * NSLocalizedRecoveryOptionsErrorKey
+    * NSRecoveryAttempterErrorKey
+    * NSHelpAnchorErrorKey
+    * NSURLErrorFailingURLErrorKey
+    * NSURLErrorFailingURLStringErrorKey
+    * NSURLErrorFailingURLPeerTrustErrorKey
+    * */
+  var userInfo: js.Any
 }
 
 object TVError {
@@ -46,37 +45,5 @@ object TVError {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], domain = domain.asInstanceOf[js.Any], userInfo = userInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[TVError]
   }
-  @scala.inline
-  implicit class TVErrorOps[Self <: TVError] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDomain(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserInfo(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

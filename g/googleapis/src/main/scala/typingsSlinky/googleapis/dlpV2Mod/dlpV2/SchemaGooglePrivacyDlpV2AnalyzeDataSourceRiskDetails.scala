@@ -27,113 +27,26 @@ trait SchemaGooglePrivacyDlpV2AnalyzeDataSourceRiskDetails extends js.Object {
 
 object SchemaGooglePrivacyDlpV2AnalyzeDataSourceRiskDetails {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2AnalyzeDataSourceRiskDetails = {
+  def apply(
+    categoricalStatsResult: SchemaGooglePrivacyDlpV2CategoricalStatsResult = null,
+    deltaPresenceEstimationResult: SchemaGooglePrivacyDlpV2DeltaPresenceEstimationResult = null,
+    kAnonymityResult: SchemaGooglePrivacyDlpV2KAnonymityResult = null,
+    kMapEstimationResult: SchemaGooglePrivacyDlpV2KMapEstimationResult = null,
+    lDiversityResult: SchemaGooglePrivacyDlpV2LDiversityResult = null,
+    numericalStatsResult: SchemaGooglePrivacyDlpV2NumericalStatsResult = null,
+    requestedPrivacyMetric: SchemaGooglePrivacyDlpV2PrivacyMetric = null,
+    requestedSourceTable: SchemaGooglePrivacyDlpV2BigQueryTable = null
+  ): SchemaGooglePrivacyDlpV2AnalyzeDataSourceRiskDetails = {
     val __obj = js.Dynamic.literal()
+    if (categoricalStatsResult != null) __obj.updateDynamic("categoricalStatsResult")(categoricalStatsResult.asInstanceOf[js.Any])
+    if (deltaPresenceEstimationResult != null) __obj.updateDynamic("deltaPresenceEstimationResult")(deltaPresenceEstimationResult.asInstanceOf[js.Any])
+    if (kAnonymityResult != null) __obj.updateDynamic("kAnonymityResult")(kAnonymityResult.asInstanceOf[js.Any])
+    if (kMapEstimationResult != null) __obj.updateDynamic("kMapEstimationResult")(kMapEstimationResult.asInstanceOf[js.Any])
+    if (lDiversityResult != null) __obj.updateDynamic("lDiversityResult")(lDiversityResult.asInstanceOf[js.Any])
+    if (numericalStatsResult != null) __obj.updateDynamic("numericalStatsResult")(numericalStatsResult.asInstanceOf[js.Any])
+    if (requestedPrivacyMetric != null) __obj.updateDynamic("requestedPrivacyMetric")(requestedPrivacyMetric.asInstanceOf[js.Any])
+    if (requestedSourceTable != null) __obj.updateDynamic("requestedSourceTable")(requestedSourceTable.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2AnalyzeDataSourceRiskDetails]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsOps[Self <: SchemaGooglePrivacyDlpV2AnalyzeDataSourceRiskDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCategoricalStatsResult(value: SchemaGooglePrivacyDlpV2CategoricalStatsResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categoricalStatsResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategoricalStatsResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categoricalStatsResult")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeltaPresenceEstimationResult(value: SchemaGooglePrivacyDlpV2DeltaPresenceEstimationResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deltaPresenceEstimationResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeltaPresenceEstimationResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deltaPresenceEstimationResult")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKAnonymityResult(value: SchemaGooglePrivacyDlpV2KAnonymityResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kAnonymityResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKAnonymityResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kAnonymityResult")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKMapEstimationResult(value: SchemaGooglePrivacyDlpV2KMapEstimationResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kMapEstimationResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKMapEstimationResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kMapEstimationResult")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLDiversityResult(value: SchemaGooglePrivacyDlpV2LDiversityResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lDiversityResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLDiversityResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lDiversityResult")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumericalStatsResult(value: SchemaGooglePrivacyDlpV2NumericalStatsResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numericalStatsResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumericalStatsResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numericalStatsResult")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestedPrivacyMetric(value: SchemaGooglePrivacyDlpV2PrivacyMetric): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedPrivacyMetric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestedPrivacyMetric: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedPrivacyMetric")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestedSourceTable(value: SchemaGooglePrivacyDlpV2BigQueryTable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedSourceTable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestedSourceTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedSourceTable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

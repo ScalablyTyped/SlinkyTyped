@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Device extends js.Object {
-  var capture: Capture = js.native
+  var capture: Capture
 }
 
 object Device {
@@ -15,19 +14,5 @@ object Device {
     val __obj = js.Dynamic.literal(capture = capture.asInstanceOf[js.Any])
     __obj.asInstanceOf[Device]
   }
-  @scala.inline
-  implicit class DeviceOps[Self <: Device] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCapture(value: Capture): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capture")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

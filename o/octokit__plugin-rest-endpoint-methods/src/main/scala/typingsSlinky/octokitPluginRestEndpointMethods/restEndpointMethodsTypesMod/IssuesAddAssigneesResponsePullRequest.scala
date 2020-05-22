@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IssuesAddAssigneesResponsePullRequest extends js.Object {
-  var diff_url: String = js.native
-  var html_url: String = js.native
-  var patch_url: String = js.native
-  var url: String = js.native
+  var diff_url: String
+  var html_url: String
+  var patch_url: String
+  var url: String
 }
 
 object IssuesAddAssigneesResponsePullRequest {
@@ -18,37 +17,5 @@ object IssuesAddAssigneesResponsePullRequest {
     val __obj = js.Dynamic.literal(diff_url = diff_url.asInstanceOf[js.Any], html_url = html_url.asInstanceOf[js.Any], patch_url = patch_url.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[IssuesAddAssigneesResponsePullRequest]
   }
-  @scala.inline
-  implicit class IssuesAddAssigneesResponsePullRequestOps[Self <: IssuesAddAssigneesResponsePullRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDiff_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diff_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHtml_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPatch_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

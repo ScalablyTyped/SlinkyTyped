@@ -37,14 +37,14 @@ import scala.scalajs.js.annotation._
 trait ChartAreaFormat extends ClientObject {
   /**
     *
-    * Represents the border format of chart area, which includes color, linestyle, and weight. Read-only.
+    * Represents the border format of chart area, which includes color, linestyle, and weight.
     *
     * [Api set: ExcelApi 1.7]
     */
   val border: ChartBorder = js.native
   /**
     *
-    * Returns or sets color scheme of the chart. Read/Write.
+    * Specifies the color scheme of the chart.
     *
     * [Api set: ExcelApi 1.9]
     */
@@ -54,21 +54,21 @@ trait ChartAreaFormat extends ClientObject {
   var context_ChartAreaFormat: RequestContext = js.native
   /**
     *
-    * Represents the fill format of an object, which includes background formatting information. Read-only.
+    * Represents the fill format of an object, which includes background formatting information.
     *
     * [Api set: ExcelApi 1.1]
     */
   val fill: ChartFill = js.native
   /**
     *
-    * Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only.
+    * Represents the font attributes (font name, font size, color, etc.) for the current object.
     *
     * [Api set: ExcelApi 1.1]
     */
   val font: ChartFont = js.native
   /**
     *
-    * Specifies whether or not chart area of the chart has rounded corners. Read/Write.
+    * Specifies if the chart area of the chart has rounded corners.
     *
     * [Api set: ExcelApi 1.9]
     */

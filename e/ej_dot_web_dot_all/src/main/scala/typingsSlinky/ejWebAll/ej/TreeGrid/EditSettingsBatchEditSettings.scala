@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EditSettingsBatchEditSettings extends js.Object {
   /** Specifies the batch edit mode whether it is cell, row or dialog.
     * @Default {ej.TreeGrid.BatchEditMode.Cell}
     */
-  var editMode: js.UndefOr[BatchEditMode | String] = js.native
+  var editMode: js.UndefOr[BatchEditMode | String] = js.undefined
 }
 
 object EditSettingsBatchEditSettings {
   @scala.inline
-  def apply(): EditSettingsBatchEditSettings = {
+  def apply(editMode: BatchEditMode | String = null): EditSettingsBatchEditSettings = {
     val __obj = js.Dynamic.literal()
+    if (editMode != null) __obj.updateDynamic("editMode")(editMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[EditSettingsBatchEditSettings]
   }
-  @scala.inline
-  implicit class EditSettingsBatchEditSettingsOps[Self <: EditSettingsBatchEditSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEditMode(value: BatchEditMode | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEditMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

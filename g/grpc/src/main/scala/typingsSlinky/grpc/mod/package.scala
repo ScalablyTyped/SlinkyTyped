@@ -5,6 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
+  /**
+    * Any client call type
+    */
+  type Call = typingsSlinky.grpc.mod.ClientUnaryCall | typingsSlinky.grpc.mod.ClientReadableStream[js.Any] | typingsSlinky.grpc.mod.ClientWritableStream[js.Any] | (typingsSlinky.grpc.mod.ClientDuplexStream[js.Any, js.Any])
   type CancelRequester = js.Function1[/* next */ js.Function, scala.Unit]
   type CheckServerIdentityCallback = js.Function2[
     /* hostname */ java.lang.String, 
@@ -12,6 +16,8 @@ package object mod {
     js.UndefOr[js.Error]
   ]
   type CloseRequester = js.Function1[/* next */ js.Function, scala.Unit]
+  type Deadline = scala.Double | js.Date
+  type Filename = java.lang.String | typingsSlinky.grpc.anon.File
   type GetPeerRequester = js.Function1[/* next */ js.Function, java.lang.String]
   type MessageListener = js.Function2[/* message */ js.Any, /* next */ js.Function, scala.Unit]
   type MessageRequester = js.Function2[/* message */ js.Any, /* next */ js.Function, scala.Unit]
@@ -22,6 +28,7 @@ package object mod {
     /* next */ js.Function, 
     scala.Unit
   ]
+  type MetadataValue = java.lang.String | typingsSlinky.node.Buffer
   type PackageDefinition = org.scalablytyped.runtime.StringDictionary[
     typingsSlinky.grpc.mod.ServiceDefinition[js.Any] | typingsSlinky.grpc.mod.ProtobufTypeDefinition
   ]
@@ -43,6 +50,7 @@ package object mod {
     /* call */ typingsSlinky.grpc.mod.ServerDuplexStream[RequestType, ResponseType], 
     scala.Unit
   ]
+  type handleCall[RequestType, ResponseType] = (typingsSlinky.grpc.mod.handleUnaryCall[RequestType, ResponseType]) | (typingsSlinky.grpc.mod.handleClientStreamingCall[RequestType, ResponseType]) | (typingsSlinky.grpc.mod.handleServerStreamingCall[RequestType, ResponseType]) | (typingsSlinky.grpc.mod.handleBidiStreamingCall[RequestType, ResponseType])
   /**
     * User provided method to handle client streaming methods on the server.
     */

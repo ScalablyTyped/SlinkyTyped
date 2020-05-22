@@ -8,62 +8,24 @@ import scala.scalajs.js.annotation._
 /**
   * @see {@link https://developer.zendesk.com/rest_api/docs/support/requests#update-request|Zendesk Requests Update}
   */
-@js.native
 trait UpdateModel extends js.Object {
-  var additional_collaborators: js.UndefOr[js.Array[Collaborator | String | ZendeskID]] = js.native
-  var comment: js.UndefOr[typingsSlinky.nodeZendesk.mod.Requests.Comments.CreateModel] = js.native
-  var solved: js.UndefOr[Boolean] = js.native
+  var additional_collaborators: js.UndefOr[js.Array[Collaborator | String | ZendeskID]] = js.undefined
+  var comment: js.UndefOr[typingsSlinky.nodeZendesk.mod.Requests.Comments.CreateModel] = js.undefined
+  var solved: js.UndefOr[Boolean] = js.undefined
 }
 
 object UpdateModel {
   @scala.inline
-  def apply(): UpdateModel = {
+  def apply(
+    additional_collaborators: js.Array[Collaborator | String | ZendeskID] = null,
+    comment: typingsSlinky.nodeZendesk.mod.Requests.Comments.CreateModel = null,
+    solved: js.UndefOr[Boolean] = js.undefined
+  ): UpdateModel = {
     val __obj = js.Dynamic.literal()
+    if (additional_collaborators != null) __obj.updateDynamic("additional_collaborators")(additional_collaborators.asInstanceOf[js.Any])
+    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
+    if (!js.isUndefined(solved)) __obj.updateDynamic("solved")(solved.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateModel]
   }
-  @scala.inline
-  implicit class UpdateModelOps[Self <: UpdateModel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdditional_collaborators(value: js.Array[Collaborator | String | ZendeskID]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additional_collaborators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditional_collaborators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additional_collaborators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComment(value: typingsSlinky.nodeZendesk.mod.Requests.Comments.CreateModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSolved(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("solved")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSolved: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("solved")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

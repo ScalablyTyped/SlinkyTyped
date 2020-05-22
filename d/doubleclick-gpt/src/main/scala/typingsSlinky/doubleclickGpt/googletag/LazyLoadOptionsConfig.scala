@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LazyLoadOptionsConfig extends js.Object {
-  var fetchMarginPercent: js.UndefOr[Double] = js.native
-  var mobileScaling: js.UndefOr[Double] = js.native
-  var renderMarginPercent: js.UndefOr[Double] = js.native
+  var fetchMarginPercent: js.UndefOr[Double] = js.undefined
+  var mobileScaling: js.UndefOr[Double] = js.undefined
+  var renderMarginPercent: js.UndefOr[Double] = js.undefined
 }
 
 object LazyLoadOptionsConfig {
   @scala.inline
-  def apply(): LazyLoadOptionsConfig = {
+  def apply(
+    fetchMarginPercent: js.UndefOr[Double] = js.undefined,
+    mobileScaling: js.UndefOr[Double] = js.undefined,
+    renderMarginPercent: js.UndefOr[Double] = js.undefined
+  ): LazyLoadOptionsConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(fetchMarginPercent)) __obj.updateDynamic("fetchMarginPercent")(fetchMarginPercent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mobileScaling)) __obj.updateDynamic("mobileScaling")(mobileScaling.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(renderMarginPercent)) __obj.updateDynamic("renderMarginPercent")(renderMarginPercent.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[LazyLoadOptionsConfig]
   }
-  @scala.inline
-  implicit class LazyLoadOptionsConfigOps[Self <: LazyLoadOptionsConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFetchMarginPercent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchMarginPercent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFetchMarginPercent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchMarginPercent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMobileScaling(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mobileScaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMobileScaling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mobileScaling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderMarginPercent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderMarginPercent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderMarginPercent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderMarginPercent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

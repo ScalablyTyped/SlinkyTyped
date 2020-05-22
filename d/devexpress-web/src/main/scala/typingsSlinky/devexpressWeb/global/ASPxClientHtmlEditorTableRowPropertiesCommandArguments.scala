@@ -17,5 +17,15 @@ class ASPxClientHtmlEditorTableRowPropertiesCommandArguments protected ()
     * @param selectedElement The element currently selected in the HTML editor.
     */
   def this(htmlEditor: typingsSlinky.devexpressWeb.ASPxClientHtmlEditor, selectedElement: js.Any) = this()
+  /**
+    * Gets the currently selected element in the ASPxHtmlEditor.
+    */
+  /* CompleteClass */
+  override var selectedElement: js.Any = js.native
+  /**
+    * Contains the style settings specifying the appearance of the specified table row.
+    */
+  /* CompleteClass */
+  override var styleSettings: typingsSlinky.devexpressWeb.ASPxClientHtmlEditorCommandStyleSettings = js.native
 }
 

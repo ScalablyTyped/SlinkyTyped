@@ -6,12 +6,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 //#region API Definitions
-@js.native
 trait UrbanAirshipStatic extends js.Object {
   /**
     * The enumeration values for use with setNotificationTypes().
     */
-  var notificationType: Alert = js.native
+  var notificationType: Alert
   /**
     * (Android Only)
     *
@@ -19,7 +18,7 @@ trait UrbanAirshipStatic extends js.Object {
     *
     * @param callback The function to call on completion.
     */
-  def clearNotifications(callback: js.Function0[Unit]): Unit = js.native
+  def clearNotifications(callback: js.Function0[Unit]): Unit
   /**
     * Fluent API to edit the channel tag groups by adding or removing tags,
     * then applying the changes.
@@ -31,7 +30,7 @@ trait UrbanAirshipStatic extends js.Object {
     *      .removeTags("loyalty", ["silver-member", "bronze-member"])
     *      .apply()
     */
-  def editChannelTagGroups(): EditChannelTagGroupsApi = js.native
+  def editChannelTagGroups(): EditChannelTagGroupsApi
   /**
     * Fluent API to edit the named user tag groups by adding or removing
     * tags, then applying the changes.
@@ -45,13 +44,13 @@ trait UrbanAirshipStatic extends js.Object {
     *
     * @returns The chainable API instance.
     */
-  def editNamedUserTagGroups(): EditNamedUserTagGroupsApi = js.native
+  def editNamedUserTagGroups(): EditNamedUserTagGroupsApi
   /**
     * Gets the alias for this device.
     *
     * @param callback The function to call on completion.
     */
-  def getAlias(callback: js.Function1[/* alias */ String, Unit]): Unit = js.native
+  def getAlias(callback: js.Function1[/* alias */ String, Unit]): Unit
   /**
     * (iOS Only)
     *
@@ -59,7 +58,7 @@ trait UrbanAirshipStatic extends js.Object {
     *
     * @param callback The function to call on completion.
     */
-  def getBadgeNumber(callback: js.Function1[/* badgeNumber */ Double, Unit]): Unit = js.native
+  def getBadgeNumber(callback: js.Function1[/* badgeNumber */ Double, Unit]): Unit
   /**
     * Get the push identifier for the device. The channel ID is used to send
     * messages to the device for testing, and is the canonical identifier for
@@ -67,7 +66,7 @@ trait UrbanAirshipStatic extends js.Object {
     *
     * @param callback The function to call on completion.
     */
-  def getChannelID(callback: js.Function1[/* id */ String, Unit]): Unit = js.native
+  def getChannelID(callback: js.Function1[/* id */ String, Unit]): Unit
   /**
     * Returns the push message object that contains the data associated with a
     * push notification. The extras dictionary can contain arbitrary key/value
@@ -76,13 +75,13 @@ trait UrbanAirshipStatic extends js.Object {
     * @param clear Set to true to clear the notification.
     * @param callback The function to call on completion.
     */
-  def getLaunchNotification(clear: Boolean, callback: js.Function1[/* push */ PushEvent, Unit]): Unit = js.native
+  def getLaunchNotification(clear: Boolean, callback: js.Function1[/* push */ PushEvent, Unit]): Unit
   /**
     * Gets the named user ID for this device.
     *
     * @param callback The function to call on completion.
     */
-  def getNamedUser(callback: js.Function1[/* namedUserId */ String, Unit]): Unit = js.native
+  def getNamedUser(callback: js.Function1[/* namedUserId */ String, Unit]): Unit
   /**
     * Get the current quiet time. The quietTime object represents a timespan
     * during which notifications should be silenced. The typical use case is
@@ -91,43 +90,43 @@ trait UrbanAirshipStatic extends js.Object {
     *
     * @param callback The function to call on completion.
     */
-  def getQuietTime(callback: js.Function1[/* quietTime */ QuietTimeTimeSpan, Unit]): Unit = js.native
+  def getQuietTime(callback: js.Function1[/* quietTime */ QuietTimeTimeSpan, Unit]): Unit
   /**
     * Returns the tags for the device.
     *
     * @param callback The function to call on completion.
     */
-  def getTags(callback: js.Function1[/* tags */ js.Array[String], Unit]): Unit = js.native
+  def getTags(callback: js.Function1[/* tags */ js.Array[String], Unit]): Unit
   /**
     * Checks if analytics is enabled or not.
     *
     * @param callback The function to call on completion.
     */
-  def isAnalyticsEnabled(callback: js.Function1[/* enabled */ Boolean, Unit]): Unit = js.native
+  def isAnalyticsEnabled(callback: js.Function1[/* enabled */ Boolean, Unit]): Unit
   /**
     * Checks if background location updates are enabled or not.
     *
     * @param callback The function to call on completion.
     */
-  def isBackgroundLocationEnabled(callback: js.Function0[Unit]): Unit = js.native
+  def isBackgroundLocationEnabled(callback: js.Function0[Unit]): Unit
   /**
     * Checks if quiet time is currently in effect.
     *
     * @param callback The function to call on completion.
     */
-  def isInQuietTime(callback: js.Function1[/* inQuietTime */ Boolean, Unit]): Unit = js.native
+  def isInQuietTime(callback: js.Function1[/* inQuietTime */ Boolean, Unit]): Unit
   /**
     * Checks if location is enabled or not.
     *
     * @param callback The function to call on completion.
     */
-  def isLocationEnabled(callback: js.Function1[/* enabled */ Boolean, Unit]): Unit = js.native
+  def isLocationEnabled(callback: js.Function1[/* enabled */ Boolean, Unit]): Unit
   /**
     * Checks if quiet time is enabled or not.
     *
     * @param callback The function to call on completion.
     */
-  def isQuietTimeEnabled(callback: js.Function1[/* enabled */ Boolean, Unit]): Unit = js.native
+  def isQuietTimeEnabled(callback: js.Function1[/* enabled */ Boolean, Unit]): Unit
   /**
     * (Android Only)
     *
@@ -135,13 +134,13 @@ trait UrbanAirshipStatic extends js.Object {
     *
     * @param callback The function to call on completion.
     */
-  def isSoundEnabled(callback: js.Function1[/* enabled */ Boolean, Unit]): Unit = js.native
+  def isSoundEnabled(callback: js.Function1[/* enabled */ Boolean, Unit]): Unit
   /**
     * Checks if user notifications are enabled or not.
     *
     * @param callback The function to call on completion.
     */
-  def isUserNotificationsEnabled(callback: js.Function1[/* enabled */ Boolean, Unit]): Unit = js.native
+  def isUserNotificationsEnabled(callback: js.Function1[/* enabled */ Boolean, Unit]): Unit
   /**
     * (Android Only)
     *
@@ -149,13 +148,13 @@ trait UrbanAirshipStatic extends js.Object {
     *
     * @param callback The function to call on completion.
     */
-  def isVibrateEnabled(callback: js.Function1[/* enabled */ Boolean, Unit]): Unit = js.native
+  def isVibrateEnabled(callback: js.Function1[/* enabled */ Boolean, Unit]): Unit
   /**
     * Records the current location of the device.
     *
     * @param callback The function to call on completion.
     */
-  def recordCurrentLocation(callback: js.Function0[Unit]): Unit = js.native
+  def recordCurrentLocation(callback: js.Function0[Unit]): Unit
   /**
     * (iOS Only)
     *
@@ -163,7 +162,7 @@ trait UrbanAirshipStatic extends js.Object {
     *
     * @param callback The function to call on completion.
     */
-  def resetBadge(callback: js.Function0[Unit]): Unit = js.native
+  def resetBadge(callback: js.Function0[Unit]): Unit
   /**
     * Runs an Urban Airship action.
     *
@@ -175,14 +174,14 @@ trait UrbanAirshipStatic extends js.Object {
     actionName: String,
     actionValue: String,
     callback: js.Function1[/* result */ RunActionResult, Unit]
-  ): Unit = js.native
+  ): Unit
   /**
     * Set alias for the device.
     *
     * @param alias The alias to set for this device.
     * @param callback The function to call on completion.
     */
-  def setAlias(alias: String, callback: js.Function0[Unit]): Unit = js.native
+  def setAlias(alias: String, callback: js.Function0[Unit]): Unit
   /**
     * Enables or disables analytics. Disabling analytics will delete any
     * locally stored events and prevent any events from uploading. Features
@@ -193,7 +192,7 @@ trait UrbanAirshipStatic extends js.Object {
     * @param enabled Set to true to enable analytics, false to disable.
     * @param callback The function to call on completion.
     */
-  def setAnalyticsEnabled(enabled: Boolean, callback: js.Function0[Unit]): Unit = js.native
+  def setAnalyticsEnabled(enabled: Boolean, callback: js.Function0[Unit]): Unit
   /**
     * (iOS Only)
     *
@@ -202,14 +201,14 @@ trait UrbanAirshipStatic extends js.Object {
     * @param enabled Set to true to enable Autobadge, false to disable.
     * @param callback The function to call on completion.
     */
-  def setAutobadgeEnabled(enabled: Boolean, callback: js.Function0[Unit]): Unit = js.native
+  def setAutobadgeEnabled(enabled: Boolean, callback: js.Function0[Unit]): Unit
   /**
     * Enables or disables background location on the device.
     *
     * @param enabled Set to true to enable background location, false to disable.
     * @param callback The function to call on completion.
     */
-  def setBackgroundLocationEnabled(enabled: Boolean, callback: js.Function0[Unit]): Unit = js.native
+  def setBackgroundLocationEnabled(enabled: Boolean, callback: js.Function0[Unit]): Unit
   /**
     * (iOS Only)
     *
@@ -218,21 +217,21 @@ trait UrbanAirshipStatic extends js.Object {
     * @param badge The number to use for the badge.
     * @param callback The function to call on completion.
     */
-  def setBadgeNumber(badge: Double, callback: js.Function0[Unit]): Unit = js.native
+  def setBadgeNumber(badge: Double, callback: js.Function0[Unit]): Unit
   /**
     * Enables or disables Urban Airship location services on the device.
     *
     * @param enabled Set to true to enable location, false to disable.
     * @param callback The function to call on completion.
     */
-  def setLocationEnabled(enabled: Boolean, callback: js.Function0[Unit]): Unit = js.native
+  def setLocationEnabled(enabled: Boolean, callback: js.Function0[Unit]): Unit
   /**
     * Set the named user ID for this device.
     *
     * @param namedUser The named user ID.
     * @param callback The function to call on completion.
     */
-  def setNamedUser(namedUserId: String, callback: js.Function0[Unit]): Unit = js.native
+  def setNamedUser(namedUserId: String, callback: js.Function0[Unit]): Unit
   /**
     * (iOS Only)
     *
@@ -248,7 +247,7 @@ trait UrbanAirshipStatic extends js.Object {
     * @param bitmask The notification types to set.
     * @param callback The function to call on completion.
     */
-  def setNotificationTypes(bitmask: Double, callback: js.Function0[Unit]): Unit = js.native
+  def setNotificationTypes(bitmask: Double, callback: js.Function0[Unit]): Unit
   /**
     * Set the quiet time for the device.
     *
@@ -264,14 +263,14 @@ trait UrbanAirshipStatic extends js.Object {
     endHour: Double,
     endMinute: Double,
     callback: js.Function0[Unit]
-  ): Unit = js.native
+  ): Unit
   /**
     * Enables or disables quiet time.
     *
     * @param enabled Set to true to enable quiet time, false to disable.
     * @param callback The function to call on completion.
     */
-  def setQuietTimeEnabled(enabled: Boolean, callback: js.Function0[Unit]): Unit = js.native
+  def setQuietTimeEnabled(enabled: Boolean, callback: js.Function0[Unit]): Unit
   /**
     * (Android only, iOS sound settings come in the push)
     *
@@ -280,14 +279,14 @@ trait UrbanAirshipStatic extends js.Object {
     * @param enabled Set to true to enable sound, false to disable.
     * @param callback The function to call on completion.
     */
-  def setSoundEnabled(enabled: Boolean, callback: js.Function0[Unit]): Unit = js.native
+  def setSoundEnabled(enabled: Boolean, callback: js.Function0[Unit]): Unit
   /**
     * Sets tags for the device.
     *
     * @param tags An array of tags.
     * @param callback The function to call on completion.
     */
-  def setTags(tags: js.Array[String], callback: js.Function0[Unit]): Unit = js.native
+  def setTags(tags: js.Array[String], callback: js.Function0[Unit]): Unit
   /**
     * Enables or disables user notifications on the device.
     * This will prompt users to opt-in to notifications on iOS.
@@ -295,7 +294,7 @@ trait UrbanAirshipStatic extends js.Object {
     * @param enabled Set to true to enable notifications, false to disable.
     * @param callback The function to call on completion.
     */
-  def setUserNotificationsEnabled(enabled: Boolean, callback: js.Function1[/* status */ String, Unit]): Unit = js.native
+  def setUserNotificationsEnabled(enabled: Boolean, callback: js.Function1[/* status */ String, Unit]): Unit
   /**
     * (Android Only)
     *
@@ -304,7 +303,7 @@ trait UrbanAirshipStatic extends js.Object {
     * @param enabled Set to true to enable vibration, false to disable.
     * @param callback The function to call on completion.
     */
-  def setVibrateEnabled(enabled: Boolean, callback: js.Function0[Unit]): Unit = js.native
+  def setVibrateEnabled(enabled: Boolean, callback: js.Function0[Unit]): Unit
 }
 
 object UrbanAirshipStatic {
@@ -350,229 +349,5 @@ object UrbanAirshipStatic {
     val __obj = js.Dynamic.literal(clearNotifications = js.Any.fromFunction1(clearNotifications), editChannelTagGroups = js.Any.fromFunction0(editChannelTagGroups), editNamedUserTagGroups = js.Any.fromFunction0(editNamedUserTagGroups), getAlias = js.Any.fromFunction1(getAlias), getBadgeNumber = js.Any.fromFunction1(getBadgeNumber), getChannelID = js.Any.fromFunction1(getChannelID), getLaunchNotification = js.Any.fromFunction2(getLaunchNotification), getNamedUser = js.Any.fromFunction1(getNamedUser), getQuietTime = js.Any.fromFunction1(getQuietTime), getTags = js.Any.fromFunction1(getTags), isAnalyticsEnabled = js.Any.fromFunction1(isAnalyticsEnabled), isBackgroundLocationEnabled = js.Any.fromFunction1(isBackgroundLocationEnabled), isInQuietTime = js.Any.fromFunction1(isInQuietTime), isLocationEnabled = js.Any.fromFunction1(isLocationEnabled), isQuietTimeEnabled = js.Any.fromFunction1(isQuietTimeEnabled), isSoundEnabled = js.Any.fromFunction1(isSoundEnabled), isUserNotificationsEnabled = js.Any.fromFunction1(isUserNotificationsEnabled), isVibrateEnabled = js.Any.fromFunction1(isVibrateEnabled), notificationType = notificationType.asInstanceOf[js.Any], recordCurrentLocation = js.Any.fromFunction1(recordCurrentLocation), resetBadge = js.Any.fromFunction1(resetBadge), runAction = js.Any.fromFunction3(runAction), setAlias = js.Any.fromFunction2(setAlias), setAnalyticsEnabled = js.Any.fromFunction2(setAnalyticsEnabled), setAutobadgeEnabled = js.Any.fromFunction2(setAutobadgeEnabled), setBackgroundLocationEnabled = js.Any.fromFunction2(setBackgroundLocationEnabled), setBadgeNumber = js.Any.fromFunction2(setBadgeNumber), setLocationEnabled = js.Any.fromFunction2(setLocationEnabled), setNamedUser = js.Any.fromFunction2(setNamedUser), setNotificationTypes = js.Any.fromFunction2(setNotificationTypes), setQuietTime = js.Any.fromFunction5(setQuietTime), setQuietTimeEnabled = js.Any.fromFunction2(setQuietTimeEnabled), setSoundEnabled = js.Any.fromFunction2(setSoundEnabled), setTags = js.Any.fromFunction2(setTags), setUserNotificationsEnabled = js.Any.fromFunction2(setUserNotificationsEnabled), setVibrateEnabled = js.Any.fromFunction2(setVibrateEnabled))
     __obj.asInstanceOf[UrbanAirshipStatic]
   }
-  @scala.inline
-  implicit class UrbanAirshipStaticOps[Self <: UrbanAirshipStatic] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClearNotifications(value: js.Function0[Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearNotifications")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEditChannelTagGroups(value: () => EditChannelTagGroupsApi): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editChannelTagGroups")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withEditNamedUserTagGroups(value: () => EditNamedUserTagGroupsApi): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editNamedUserTagGroups")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetAlias(value: js.Function1[/* alias */ String, Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAlias")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetBadgeNumber(value: js.Function1[/* badgeNumber */ Double, Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getBadgeNumber")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetChannelID(value: js.Function1[/* id */ String, Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getChannelID")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetLaunchNotification(value: (Boolean, js.Function1[/* push */ PushEvent, Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLaunchNotification")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetNamedUser(value: js.Function1[/* namedUserId */ String, Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNamedUser")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetQuietTime(value: js.Function1[/* quietTime */ QuietTimeTimeSpan, Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getQuietTime")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetTags(value: js.Function1[/* tags */ js.Array[String], Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTags")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsAnalyticsEnabled(value: js.Function1[/* enabled */ Boolean, Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAnalyticsEnabled")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsBackgroundLocationEnabled(value: js.Function0[Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBackgroundLocationEnabled")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsInQuietTime(value: js.Function1[/* inQuietTime */ Boolean, Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isInQuietTime")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsLocationEnabled(value: js.Function1[/* enabled */ Boolean, Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLocationEnabled")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsQuietTimeEnabled(value: js.Function1[/* enabled */ Boolean, Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isQuietTimeEnabled")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsSoundEnabled(value: js.Function1[/* enabled */ Boolean, Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSoundEnabled")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsUserNotificationsEnabled(value: js.Function1[/* enabled */ Boolean, Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isUserNotificationsEnabled")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsVibrateEnabled(value: js.Function1[/* enabled */ Boolean, Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVibrateEnabled")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withNotificationType(value: Alert): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRecordCurrentLocation(value: js.Function0[Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordCurrentLocation")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withResetBadge(value: js.Function0[Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetBadge")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRunAction(value: (String, String, js.Function1[/* result */ RunActionResult, Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runAction")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withSetAlias(value: (String, js.Function0[Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAlias")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetAnalyticsEnabled(value: (Boolean, js.Function0[Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAnalyticsEnabled")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetAutobadgeEnabled(value: (Boolean, js.Function0[Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAutobadgeEnabled")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetBackgroundLocationEnabled(value: (Boolean, js.Function0[Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBackgroundLocationEnabled")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetBadgeNumber(value: (Double, js.Function0[Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBadgeNumber")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetLocationEnabled(value: (Boolean, js.Function0[Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLocationEnabled")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetNamedUser(value: (String, js.Function0[Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setNamedUser")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetNotificationTypes(value: (Double, js.Function0[Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setNotificationTypes")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetQuietTime(value: (Double, Double, Double, Double, js.Function0[Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setQuietTime")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withSetQuietTimeEnabled(value: (Boolean, js.Function0[Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setQuietTimeEnabled")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetSoundEnabled(value: (Boolean, js.Function0[Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSoundEnabled")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetTags(value: (js.Array[String], js.Function0[Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTags")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetUserNotificationsEnabled(value: (Boolean, js.Function1[/* status */ String, Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setUserNotificationsEnabled")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetVibrateEnabled(value: (Boolean, js.Function0[Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setVibrateEnabled")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

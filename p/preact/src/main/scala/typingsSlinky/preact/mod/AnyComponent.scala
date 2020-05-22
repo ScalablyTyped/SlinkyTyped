@@ -11,10 +11,3 @@ import scala.scalajs.js.annotation._
 */
 trait AnyComponent[P, S] extends js.Object
 
-object AnyComponent {
-  @scala.inline
-  implicit def apply[P, S](value: Component[P, S]): AnyComponent[P, S] = value.asInstanceOf[AnyComponent[P, S]]
-  @scala.inline
-  implicit def apply[P, S](value: FunctionComponent[P]): AnyComponent[P, S] = value.asInstanceOf[AnyComponent[P, S]]
-}
-

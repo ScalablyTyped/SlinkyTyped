@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ASPxClientHitObject")
 @js.native
 class ASPxClientHitObject ()
-  extends typingsSlinky.devexpressWeb.ASPxClientHitObject
+  extends typingsSlinky.devexpressWeb.ASPxClientHitObject {
+  /**
+    * Provides access to an object, which is in some way related to the object being hit. The returned value depends on the ASPxClientHitObject.Object type and hit point location.
+    */
+  /* CompleteClass */
+  override var AdditionalObject: typingsSlinky.devexpressWeb.ASPxClientWebChartElement = js.native
+  /**
+    * Gets the chart element for which the event was raised.
+    */
+  /* CompleteClass */
+  override var Object: typingsSlinky.devexpressWeb.ASPxClientWebChartElement = js.native
+}
 

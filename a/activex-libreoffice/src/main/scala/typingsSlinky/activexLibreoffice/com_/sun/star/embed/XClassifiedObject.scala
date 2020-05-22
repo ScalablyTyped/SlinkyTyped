@@ -9,35 +9,34 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** represents common functionality for embedded objects */
-@js.native
 trait XClassifiedObject extends XInterface {
   /**
     * retrieves class ID of the object.
     * @returns unique class ID of the object
     */
-  val ClassID: SafeArray[Double] = js.native
+  val ClassID: SafeArray[Double]
   /**
     * retrieves symbolic name for the object type to be used in UI.
     * @returns the symbolic name for the object
     */
-  val ClassName: String = js.native
+  val ClassName: String
   /**
     * retrieves class ID of the object.
     * @returns unique class ID of the object
     */
-  def getClassID(): SafeArray[Double] = js.native
+  def getClassID(): SafeArray[Double]
   /**
     * retrieves symbolic name for the object type to be used in UI.
     * @returns the symbolic name for the object
     */
-  def getClassName(): String = js.native
+  def getClassName(): String
   /**
     * sets the class ID and symbolic name to an object.
     * @param aClassID the new class ID
     * @param sClassName the new symbolic name
     * @throws com::sun::star::lang::NoSupportException in case changing of class information is not allowed
     */
-  def setClassInfo(aClassID: SeqEquiv[Double], sClassName: String): Unit = js.native
+  def setClassInfo(aClassID: SeqEquiv[Double], sClassName: String): Unit
 }
 
 object XClassifiedObject {
@@ -55,43 +54,5 @@ object XClassifiedObject {
     val __obj = js.Dynamic.literal(ClassID = ClassID.asInstanceOf[js.Any], ClassName = ClassName.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getClassID = js.Any.fromFunction0(getClassID), getClassName = js.Any.fromFunction0(getClassName), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setClassInfo = js.Any.fromFunction2(setClassInfo))
     __obj.asInstanceOf[XClassifiedObject]
   }
-  @scala.inline
-  implicit class XClassifiedObjectOps[Self <: XClassifiedObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassID(value: SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClassID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetClassID(value: () => SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getClassID")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetClassName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getClassName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetClassInfo(value: (SeqEquiv[Double], String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setClassInfo")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

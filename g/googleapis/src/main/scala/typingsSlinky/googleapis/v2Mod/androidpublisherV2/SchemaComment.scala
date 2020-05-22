@@ -18,41 +18,11 @@ trait SchemaComment extends js.Object {
 
 object SchemaComment {
   @scala.inline
-  def apply(): SchemaComment = {
+  def apply(developerComment: SchemaDeveloperComment = null, userComment: SchemaUserComment = null): SchemaComment = {
     val __obj = js.Dynamic.literal()
+    if (developerComment != null) __obj.updateDynamic("developerComment")(developerComment.asInstanceOf[js.Any])
+    if (userComment != null) __obj.updateDynamic("userComment")(userComment.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaComment]
   }
-  @scala.inline
-  implicit class SchemaCommentOps[Self <: SchemaComment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeveloperComment(value: SchemaDeveloperComment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("developerComment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeveloperComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("developerComment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserComment(value: SchemaUserComment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userComment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userComment")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

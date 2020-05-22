@@ -14,29 +14,10 @@ trait DescribeAgentVersionsResult extends js.Object {
 
 object DescribeAgentVersionsResult {
   @scala.inline
-  def apply(): DescribeAgentVersionsResult = {
+  def apply(AgentVersions: AgentVersions = null): DescribeAgentVersionsResult = {
     val __obj = js.Dynamic.literal()
+    if (AgentVersions != null) __obj.updateDynamic("AgentVersions")(AgentVersions.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAgentVersionsResult]
   }
-  @scala.inline
-  implicit class DescribeAgentVersionsResultOps[Self <: DescribeAgentVersionsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAgentVersions(value: AgentVersions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AgentVersions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgentVersions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AgentVersions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

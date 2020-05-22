@@ -5,12 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Contains properties that allow a client to access and/or manipulate print event data and print device name information. */
-@js.native
 trait PrintNotificationEventDetails extends js.Object {
   /** Gets or sets the event data for a print notification event. */
-  var eventData: String = js.native
+  var eventData: String
   /** Gets the name of the print device associated with the print notification. */
-  var printerName: String = js.native
+  var printerName: String
 }
 
 object PrintNotificationEventDetails {
@@ -19,25 +18,5 @@ object PrintNotificationEventDetails {
     val __obj = js.Dynamic.literal(eventData = eventData.asInstanceOf[js.Any], printerName = printerName.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrintNotificationEventDetails]
   }
-  @scala.inline
-  implicit class PrintNotificationEventDetailsOps[Self <: PrintNotificationEventDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEventData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrinterName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

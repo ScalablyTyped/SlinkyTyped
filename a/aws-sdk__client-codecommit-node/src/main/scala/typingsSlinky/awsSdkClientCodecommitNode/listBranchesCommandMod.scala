@@ -26,9 +26,16 @@ object listBranchesCommandMod extends js.Object {
           Readable
         ] {
     def this(input: ListBranchesInput) = this()
+    /* CompleteClass */
+    override val input: ListBranchesInput = js.native
     val middlewareStack: MiddlewareStack[ListBranchesInput, ListBranchesOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: CodeCommitResolvedConfiguration
+    ): Handler[ListBranchesInput, ListBranchesOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: CodeCommitResolvedConfiguration
     ): Handler[ListBranchesInput, ListBranchesOutput] = js.native
   }

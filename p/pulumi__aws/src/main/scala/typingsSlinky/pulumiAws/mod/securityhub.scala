@@ -4,6 +4,8 @@ import typingsSlinky.pulumiAws.productSubscriptionMod.ProductSubscriptionArgs
 import typingsSlinky.pulumiAws.productSubscriptionMod.ProductSubscriptionState
 import typingsSlinky.pulumiAws.securityhubAccountMod.AccountArgs
 import typingsSlinky.pulumiAws.securityhubAccountMod.AccountState
+import typingsSlinky.pulumiAws.securityhubMemberMod.MemberArgs
+import typingsSlinky.pulumiAws.securityhubMemberMod.MemberState
 import typingsSlinky.pulumiAws.standardsSubscriptionMod.StandardsSubscriptionArgs
 import typingsSlinky.pulumiAws.standardsSubscriptionMod.StandardsSubscriptionState
 import typingsSlinky.pulumiPulumi.outputMod.Input
@@ -29,6 +31,20 @@ object securityhub extends js.Object {
     def this(name: String) = this()
     def this(name: String, args: AccountArgs) = this()
     def this(name: String, args: AccountArgs, opts: CustomResourceOptions) = this()
+  }
+  
+  @js.native
+  class Member protected ()
+    extends typingsSlinky.pulumiAws.securityhubMod.Member {
+    /**
+      * Create a Member resource with the given unique name, arguments, and options.
+      *
+      * @param name The _unique_ name of the resource.
+      * @param args The arguments to use to populate this resource's properties.
+      * @param opts A bag of options that control this resource's behavior.
+      */
+    def this(name: String, args: MemberArgs) = this()
+    def this(name: String, args: MemberArgs, opts: CustomResourceOptions) = this()
   }
   
   @js.native
@@ -78,6 +94,27 @@ object securityhub extends js.Object {
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/securityhub/account.Account */ Boolean = js.native
+  }
+  
+  /* static members */
+  @js.native
+  object Member extends js.Object {
+    /**
+      * Get an existing Member resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.securityhubMemberMod.Member = js.native
+    def get(name: String, id: Input[ID], state: MemberState): typingsSlinky.pulumiAws.securityhubMemberMod.Member = js.native
+    def get(name: String, id: Input[ID], state: MemberState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.securityhubMemberMod.Member = js.native
+    /**
+      * Returns true if the given object is an instance of Member.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/securityhub/member.Member */ Boolean = js.native
   }
   
   /* static members */

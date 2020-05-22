@@ -27,77 +27,20 @@ trait LustreFileSystemConfiguration extends js.Object {
 
 object LustreFileSystemConfiguration {
   @scala.inline
-  def apply(): LustreFileSystemConfiguration = {
+  def apply(
+    DataRepositoryConfiguration: DataRepositoryConfiguration = null,
+    DeploymentType: LustreDeploymentType = null,
+    MountName: LustreFileSystemMountName = null,
+    PerUnitStorageThroughput: js.UndefOr[PerUnitStorageThroughput] = js.undefined,
+    WeeklyMaintenanceStartTime: WeeklyTime = null
+  ): LustreFileSystemConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (DataRepositoryConfiguration != null) __obj.updateDynamic("DataRepositoryConfiguration")(DataRepositoryConfiguration.asInstanceOf[js.Any])
+    if (DeploymentType != null) __obj.updateDynamic("DeploymentType")(DeploymentType.asInstanceOf[js.Any])
+    if (MountName != null) __obj.updateDynamic("MountName")(MountName.asInstanceOf[js.Any])
+    if (!js.isUndefined(PerUnitStorageThroughput)) __obj.updateDynamic("PerUnitStorageThroughput")(PerUnitStorageThroughput.get.asInstanceOf[js.Any])
+    if (WeeklyMaintenanceStartTime != null) __obj.updateDynamic("WeeklyMaintenanceStartTime")(WeeklyMaintenanceStartTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[LustreFileSystemConfiguration]
   }
-  @scala.inline
-  implicit class LustreFileSystemConfigurationOps[Self <: LustreFileSystemConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataRepositoryConfiguration(value: DataRepositoryConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataRepositoryConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataRepositoryConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataRepositoryConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeploymentType(value: LustreDeploymentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMountName(value: LustreFileSystemMountName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MountName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMountName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MountName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPerUnitStorageThroughput(value: PerUnitStorageThroughput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PerUnitStorageThroughput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerUnitStorageThroughput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PerUnitStorageThroughput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeeklyMaintenanceStartTime(value: WeeklyTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WeeklyMaintenanceStartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeeklyMaintenanceStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WeeklyMaintenanceStartTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

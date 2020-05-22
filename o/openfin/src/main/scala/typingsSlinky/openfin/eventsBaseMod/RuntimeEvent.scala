@@ -1,6 +1,7 @@
 package typingsSlinky.openfin.eventsBaseMod
 
-import typingsSlinky.openfin.frameMod.FrameEvent
+import typingsSlinky.openfin.openfinStrings.frame
+import typingsSlinky.openfin.openfinStrings.iframe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,12 +16,28 @@ trait RuntimeEvent[Topic, Type] extends js.Object
 
 object RuntimeEvent {
   @scala.inline
-  implicit def apply[Topic, Type](value: ApplicationEvent[Topic, Type]): RuntimeEvent[Topic, Type] = value.asInstanceOf[RuntimeEvent[Topic, Type]]
+  def BaseEvent[Topic, Type](topic: Topic, `type`: Type): RuntimeEvent[Topic, Type] = {
+    val __obj = js.Dynamic.literal(topic = topic.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RuntimeEvent[Topic, Type]]
+  }
   @scala.inline
-  implicit def apply[Topic, Type](value: BaseEvent[Topic, Type]): RuntimeEvent[Topic, Type] = value.asInstanceOf[RuntimeEvent[Topic, Type]]
+  def ApplicationEvent[Topic, Type](topic: Topic, `type`: Type, uuid: String): RuntimeEvent[Topic, Type] = {
+    val __obj = js.Dynamic.literal(topic = topic.asInstanceOf[js.Any], uuid = uuid.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RuntimeEvent[Topic, Type]]
+  }
   @scala.inline
-  implicit def apply[Topic, Type](value: FrameEvent[Type]): RuntimeEvent[Topic, Type] = value.asInstanceOf[RuntimeEvent[Topic, Type]]
+  def FrameEvent[Topic, Type](entityType: iframe, frameName: String, name: String, topic: frame, `type`: Type, uuid: String): RuntimeEvent[Topic, Type] = {
+    val __obj = js.Dynamic.literal(entityType = entityType.asInstanceOf[js.Any], frameName = frameName.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], topic = topic.asInstanceOf[js.Any], uuid = uuid.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RuntimeEvent[Topic, Type]]
+  }
   @scala.inline
-  implicit def apply[Topic, Type](value: WindowEvent[Topic, Type]): RuntimeEvent[Topic, Type] = value.asInstanceOf[RuntimeEvent[Topic, Type]]
+  def WindowEvent[Topic, Type](name: String, topic: Topic, `type`: Type, uuid: String): RuntimeEvent[Topic, Type] = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], topic = topic.asInstanceOf[js.Any], uuid = uuid.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RuntimeEvent[Topic, Type]]
+  }
 }
 

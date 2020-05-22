@@ -4,38 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ITransformableScale extends js.Object {
   /**
     * Returns the current transformed domain of the scale. This must be a
     * numerical range in the same coordinate space used for
     * `scaleTransformation`.
     */
-  def getTransformationDomain(): js.Tuple2[Double, Double] = js.native
+  def getTransformationDomain(): js.Tuple2[Double, Double]
   /**
     * Gets the full extent of the transformation domain.
     */
-  def getTransformationExtent(): js.Tuple2[Double, Double] = js.native
+  def getTransformationExtent(): js.Tuple2[Double, Double]
   /**
     * Returns value in *Transformation Space* for the provided *screen space*.
     */
-  def invertedTransformation(value: Double): Double = js.native
+  def invertedTransformation(value: Double): Double
   /**
     * Translates the scale by a number of pixels.
     *
     * @param {number} [translateAmount] The translation amount in screen space
     */
-  def pan(translateAmount: Double): Unit = js.native
+  def pan(translateAmount: Double): Unit
   /**
     * Returns value in *screen space* for the given domain value.
     */
-  def scaleTransformation(value: Double): Double = js.native
+  def scaleTransformation(value: Double): Double
   /**
     * Directly set the transformation domain. Instead of calling `.zoom` or
     * `.pan` perform calculations relative to the current domain, this can but
     * used to pan/zoom to an exact domain interval (in transformation space).
     */
-  def setTransformationDomain(domain: js.Tuple2[Double, Double]): Unit = js.native
+  def setTransformationDomain(domain: js.Tuple2[Double, Double]): Unit
   /**
     * Apply the magnification with the floating point `magnifyAmount` centered
     * at the `centerValue` coordinate.
@@ -45,7 +44,7 @@ trait ITransformableScale extends js.Object {
     * @param {number} [centerValue] The coordinate of the mouse in screen
     * space.
     */
-  def zoom(magnifyAmount: Double, centerValue: Double): Unit = js.native
+  def zoom(magnifyAmount: Double, centerValue: Double): Unit
 }
 
 object ITransformableScale {
@@ -62,55 +61,5 @@ object ITransformableScale {
     val __obj = js.Dynamic.literal(getTransformationDomain = js.Any.fromFunction0(getTransformationDomain), getTransformationExtent = js.Any.fromFunction0(getTransformationExtent), invertedTransformation = js.Any.fromFunction1(invertedTransformation), pan = js.Any.fromFunction1(pan), scaleTransformation = js.Any.fromFunction1(scaleTransformation), setTransformationDomain = js.Any.fromFunction1(setTransformationDomain), zoom = js.Any.fromFunction2(zoom))
     __obj.asInstanceOf[ITransformableScale]
   }
-  @scala.inline
-  implicit class ITransformableScaleOps[Self <: ITransformableScale] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetTransformationDomain(value: () => js.Tuple2[Double, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTransformationDomain")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTransformationExtent(value: () => js.Tuple2[Double, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTransformationExtent")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withInvertedTransformation(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invertedTransformation")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPan(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pan")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withScaleTransformation(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleTransformation")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetTransformationDomain(value: js.Tuple2[Double, Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTransformationDomain")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withZoom(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

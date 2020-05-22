@@ -17,41 +17,11 @@ trait SchemaDimension extends js.Object {
 
 object SchemaDimension {
   @scala.inline
-  def apply(): SchemaDimension = {
+  def apply(dimensionType: String = null, dimensionValues: js.Array[SchemaDimensionDimensionValue] = null): SchemaDimension = {
     val __obj = js.Dynamic.literal()
+    if (dimensionType != null) __obj.updateDynamic("dimensionType")(dimensionType.asInstanceOf[js.Any])
+    if (dimensionValues != null) __obj.updateDynamic("dimensionValues")(dimensionValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDimension]
   }
-  @scala.inline
-  implicit class SchemaDimensionOps[Self <: SchemaDimension] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDimensionType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimensionType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDimensionValues(value: js.Array[SchemaDimensionDimensionValue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimensionValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionValues")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

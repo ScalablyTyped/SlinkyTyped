@@ -9,13 +9,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** provides access to multiple properties with a single call. */
-@js.native
 trait XMultiPropertySet extends XInterface {
   /**
     * @returns the {@link XPropertySetInfo} interface, which describes all properties of the object to which this interface belongs. NULL is returned if the obj
     * @see XPropertySet.getPropertySetInfo
     */
-  val PropertySetInfo: XPropertySetInfo = js.native
+  val PropertySetInfo: XPropertySetInfo
   /**
     * adds an {@link XPropertiesChangeListener} to the specified property with the specified names.
     *
@@ -26,23 +25,23 @@ trait XMultiPropertySet extends XInterface {
     * @param xListener contains the listener for the property change events.
     * @see removePropertiesChangeListener
     */
-  def addPropertiesChangeListener(aPropertyNames: SeqEquiv[String], xListener: XPropertiesChangeListener): Unit = js.native
+  def addPropertiesChangeListener(aPropertyNames: SeqEquiv[String], xListener: XPropertiesChangeListener): Unit
   /**
     * fires a sequence of PropertyChangeEvents to the specified listener.
     * @param aPropertyNames specifies the sorted names of the properties.
     * @param xListener contains the listener for the property change events.
     */
-  def firePropertiesChangeEvent(aPropertyNames: SeqEquiv[String], xListener: XPropertiesChangeListener): Unit = js.native
+  def firePropertiesChangeEvent(aPropertyNames: SeqEquiv[String], xListener: XPropertiesChangeListener): Unit
   /**
     * @returns the {@link XPropertySetInfo} interface, which describes all properties of the object to which this interface belongs. NULL is returned if the obj
     * @see XPropertySet.getPropertySetInfo
     */
-  def getPropertySetInfo(): XPropertySetInfo = js.native
+  def getPropertySetInfo(): XPropertySetInfo
   /**
     * @param aPropertyNames specifies the names of the properties. This sequence must be alphabetically sorted.
     * @returns a sequence of all values of the properties which are specified by their names.  The order of the values in the returned sequence will be the same
     */
-  def getPropertyValues(aPropertyNames: SeqEquiv[String]): SafeArray[_] = js.native
+  def getPropertyValues(aPropertyNames: SeqEquiv[String]): SafeArray[_]
   /**
     * removes an {@link XPropertiesChangeListener} from the listener list.
     *
@@ -52,7 +51,7 @@ trait XMultiPropertySet extends XInterface {
     * @param xListener contains the listener to be removed.
     * @see addPropertiesChangeListener
     */
-  def removePropertiesChangeListener(xListener: XPropertiesChangeListener): Unit = js.native
+  def removePropertiesChangeListener(xListener: XPropertiesChangeListener): Unit
   /**
     * sets the values to the properties with the specified names.
     *
@@ -63,7 +62,7 @@ trait XMultiPropertySet extends XInterface {
     * @throws IllegalArgumentException if one of the new values cannot be converted to the type of the underlying property by an identity or widening conversion.
     * @throws com::sun::star::lang:WrappedTargetException if the implementation has an internal reason for the exception. In this case the original exception i
     */
-  def setPropertyValues(aPropertyNames: SeqEquiv[String], aValues: SeqEquiv[_]): Unit = js.native
+  def setPropertyValues(aPropertyNames: SeqEquiv[String], aValues: SeqEquiv[_]): Unit
 }
 
 object XMultiPropertySet {
@@ -83,55 +82,5 @@ object XMultiPropertySet {
     val __obj = js.Dynamic.literal(PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addPropertiesChangeListener = js.Any.fromFunction2(addPropertiesChangeListener), firePropertiesChangeEvent = js.Any.fromFunction2(firePropertiesChangeEvent), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValues = js.Any.fromFunction1(getPropertyValues), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removePropertiesChangeListener = js.Any.fromFunction1(removePropertiesChangeListener), setPropertyValues = js.Any.fromFunction2(setPropertyValues))
     __obj.asInstanceOf[XMultiPropertySet]
   }
-  @scala.inline
-  implicit class XMultiPropertySetOps[Self <: XMultiPropertySet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPropertySetInfo(value: XPropertySetInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PropertySetInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddPropertiesChangeListener(value: (SeqEquiv[String], XPropertiesChangeListener) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addPropertiesChangeListener")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withFirePropertiesChangeEvent(value: (SeqEquiv[String], XPropertiesChangeListener) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firePropertiesChangeEvent")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetPropertySetInfo(value: () => XPropertySetInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPropertySetInfo")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetPropertyValues(value: SeqEquiv[String] => SafeArray[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPropertyValues")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemovePropertiesChangeListener(value: XPropertiesChangeListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removePropertiesChangeListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetPropertyValues(value: (SeqEquiv[String], SeqEquiv[_]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPropertyValues")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

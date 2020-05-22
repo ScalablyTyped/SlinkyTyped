@@ -56,6 +56,14 @@ class DocumentWidgetManager_ protected () extends IDisposable {
     */
   val activateRequested: ISignal[this.type, String] = js.native
   /**
+    * Test whether the object has been disposed.
+    *
+    * #### Notes
+    * This property is always safe to access.
+    */
+  /* CompleteClass */
+  override val isDisposed: Boolean = js.native
+  /**
     * Install the message hook for the widget and add to list
     * of known widgets.
     *
@@ -109,6 +117,19 @@ class DocumentWidgetManager_ protected () extends IDisposable {
     * @param context - The document context object.
     */
   def deleteWidgets(context: Context): js.Promise[Unit] = js.native
+  /**
+    * Dispose of the resources held by the object.
+    *
+    * #### Notes
+    * If the object's `dispose` method is called more than once, all
+    * calls made after the first will be a no-op.
+    *
+    * #### Undefined Behavior
+    * It is undefined behavior to use any functionality of the object
+    * after it has been disposed unless otherwise explicitly noted.
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
   /**
     * See if a widget already exists for the given context and widget name.
     *

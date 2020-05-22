@@ -44,10 +44,9 @@ import scala.scalajs.js.annotation._
   *
   * @publicApi
   */
-@js.native
 trait InjectionToken[T] extends js.Object {
-  var _desc: String = js.native
-  val ngInjectableDef: js.UndefOr[scala.Nothing] = js.native
+  var _desc: String
+  val ngInjectableDef: js.UndefOr[scala.Nothing] = js.undefined
 }
 
 object InjectionToken {
@@ -56,19 +55,5 @@ object InjectionToken {
     val __obj = js.Dynamic.literal(_desc = _desc.asInstanceOf[js.Any])
     __obj.asInstanceOf[InjectionToken[T]]
   }
-  @scala.inline
-  implicit class InjectionTokenOps[Self[t] <: InjectionToken[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def with_desc(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_desc")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

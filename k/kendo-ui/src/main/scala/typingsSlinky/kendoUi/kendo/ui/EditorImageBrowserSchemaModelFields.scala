@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EditorImageBrowserSchemaModelFields extends js.Object {
-  var name: js.UndefOr[String | EditorImageBrowserSchemaModelFieldsName] = js.native
-  var size: js.UndefOr[String | EditorImageBrowserSchemaModelFieldsSize] = js.native
-  var `type`: js.UndefOr[String | EditorImageBrowserSchemaModelFieldsType] = js.native
+  var name: js.UndefOr[String | EditorImageBrowserSchemaModelFieldsName] = js.undefined
+  var size: js.UndefOr[String | EditorImageBrowserSchemaModelFieldsSize] = js.undefined
+  var `type`: js.UndefOr[String | EditorImageBrowserSchemaModelFieldsType] = js.undefined
 }
 
 object EditorImageBrowserSchemaModelFields {
   @scala.inline
-  def apply(): EditorImageBrowserSchemaModelFields = {
+  def apply(
+    name: String | EditorImageBrowserSchemaModelFieldsName = null,
+    size: String | EditorImageBrowserSchemaModelFieldsSize = null,
+    `type`: String | EditorImageBrowserSchemaModelFieldsType = null
+  ): EditorImageBrowserSchemaModelFields = {
     val __obj = js.Dynamic.literal()
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[EditorImageBrowserSchemaModelFields]
   }
-  @scala.inline
-  implicit class EditorImageBrowserSchemaModelFieldsOps[Self <: EditorImageBrowserSchemaModelFields] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String | EditorImageBrowserSchemaModelFieldsName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: String | EditorImageBrowserSchemaModelFieldsSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String | EditorImageBrowserSchemaModelFieldsType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,55 +5,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FullscreenControlProps extends BaseControlProps {
-  var className: js.UndefOr[String] = js.native
-  var container: js.UndefOr[HTMLElement | Null] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var container: js.UndefOr[HTMLElement | Null] = js.undefined
 }
 
 object FullscreenControlProps {
   @scala.inline
-  def apply(): FullscreenControlProps = {
+  def apply(
+    captureClick: js.UndefOr[Boolean] = js.undefined,
+    captureDoubleClick: js.UndefOr[Boolean] = js.undefined,
+    captureDrag: js.UndefOr[Boolean] = js.undefined,
+    captureScroll: js.UndefOr[Boolean] = js.undefined,
+    className: String = null,
+    container: js.UndefOr[Null | HTMLElement] = js.undefined
+  ): FullscreenControlProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(captureClick)) __obj.updateDynamic("captureClick")(captureClick.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(captureDoubleClick)) __obj.updateDynamic("captureDoubleClick")(captureDoubleClick.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(captureDrag)) __obj.updateDynamic("captureDrag")(captureDrag.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(captureScroll)) __obj.updateDynamic("captureScroll")(captureScroll.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(container)) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
     __obj.asInstanceOf[FullscreenControlProps]
   }
-  @scala.inline
-  implicit class FullscreenControlPropsOps[Self <: FullscreenControlProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainer(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(null)
-        ret
-    }
-  }
-  
 }
 

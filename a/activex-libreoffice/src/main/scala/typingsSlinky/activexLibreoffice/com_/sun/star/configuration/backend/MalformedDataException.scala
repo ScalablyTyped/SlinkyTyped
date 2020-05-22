@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * is raised when the data of a component schema, layer or update is not well-formed, violates the schema or is otherwise invalid.
   * @since OOo 1.1.2
   */
-@js.native
 trait MalformedDataException extends Exception {
   /**
     * data that provides more detailed information about the reason and location of the error.
@@ -37,7 +36,7 @@ trait MalformedDataException extends Exception {
     *
     * If no more detail information is available, this may be left `VOID` .
     */
-  var ErrorDetails: js.Any = js.native
+  var ErrorDetails: js.Any
 }
 
 object MalformedDataException {
@@ -46,19 +45,5 @@ object MalformedDataException {
     val __obj = js.Dynamic.literal(Context = Context.asInstanceOf[js.Any], ErrorDetails = ErrorDetails.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any])
     __obj.asInstanceOf[MalformedDataException]
   }
-  @scala.inline
-  implicit class MalformedDataExceptionOps[Self <: MalformedDataException] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrorDetails(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

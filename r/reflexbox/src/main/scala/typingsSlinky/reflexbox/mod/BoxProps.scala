@@ -1,6 +1,5 @@
 package typingsSlinky.reflexbox.mod
 
-import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import typingsSlinky.csstype.mod.FlexBasisProperty
 import typingsSlinky.csstype.mod.FlexProperty
@@ -58,7 +57,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BoxProps
   extends SpaceProps[RequiredTheme, ThemeValue[space, RequiredTheme, js.Any]]
      with WidthProps[RequiredTheme, WidthProperty[TLengthStyledSystem]]
@@ -94,46 +92,6 @@ trait BoxProps
      with JustifySelfProps[RequiredTheme]
      with AlignSelfProps[RequiredTheme]
      with OrderProps[RequiredTheme] {
-  var as: js.UndefOr[ReactElement] = js.native
-}
-
-object BoxProps {
-  @scala.inline
-  def apply(): BoxProps = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[BoxProps]
-  }
-  @scala.inline
-  implicit class BoxPropsOps[Self <: BoxProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAsFunctionComponent(value: ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAsComponentClass(value: ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAs(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(js.undefined)
-        ret
-    }
-  }
-  
+  var as: js.UndefOr[ReactElement] = js.undefined
 }
 

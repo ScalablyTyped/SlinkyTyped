@@ -4,443 +4,155 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ActionCompleteEventArgs extends js.Object {
   /** Returns the cancel option value.
     */
-  var cancel: js.UndefOr[Boolean] = js.native
+  var cancel: js.UndefOr[Boolean] = js.undefined
   /** Returns the current sorted column field name.
     */
-  var columnName: js.UndefOr[String] = js.native
+  var columnName: js.UndefOr[String] = js.undefined
   /** Returns the column sort direction.
     */
-  var columnSortDirection: js.UndefOr[String] = js.native
+  var columnSortDirection: js.UndefOr[String] = js.undefined
   /** Returns type of the column like number, string and so on.
     */
-  var columnType: js.UndefOr[String] = js.native
+  var columnType: js.UndefOr[String] = js.undefined
   /** Returns current filtering object.
     */
-  var currentFilterObject: js.UndefOr[js.Any] = js.native
+  var currentFilterObject: js.UndefOr[js.Any] = js.undefined
   /** Returns current filtering column field name.
     */
-  var currentFilteringColumn: js.UndefOr[String] = js.native
+  var currentFilteringColumn: js.UndefOr[String] = js.undefined
   /** Returns the current selected page number.
     */
-  var currentPage: js.UndefOr[Double] = js.native
+  var currentPage: js.UndefOr[Double] = js.undefined
   /** Returns the record object (JSON).
     */
-  var data: js.UndefOr[js.Any] = js.native
+  var data: js.UndefOr[js.Any] = js.undefined
   /** Returns the dataSource.
     */
-  var dataSource: js.UndefOr[js.Any] = js.native
+  var dataSource: js.UndefOr[js.Any] = js.undefined
   /** Returns the end row index of that current page.
     */
-  var endIndex: js.UndefOr[Double] = js.native
+  var endIndex: js.UndefOr[Double] = js.undefined
   /** Returns filter details.
     */
-  var filterCollection: js.UndefOr[js.Any] = js.native
+  var filterCollection: js.UndefOr[js.Any] = js.undefined
   /** Returns the excel filter model.
     */
-  var filtermodel: js.UndefOr[js.Any] = js.native
+  var filtermodel: js.UndefOr[js.Any] = js.undefined
   /** Returns the foreign key record object (JSON).
     */
-  var foreignKeyData: js.UndefOr[js.Any] = js.native
+  var foreignKeyData: js.UndefOr[js.Any] = js.undefined
   /** Returns the customfilter option value.
     */
-  var isCustomFilter: js.UndefOr[Boolean] = js.native
+  var isCustomFilter: js.UndefOr[Boolean] = js.undefined
   /** Returns the grid model.
     */
-  var model: js.UndefOr[js.Any] = js.native
+  var model: js.UndefOr[js.Any] = js.undefined
   /** Returns current action event type.
     */
-  var originalEventType: js.UndefOr[String] = js.native
+  var originalEventType: js.UndefOr[String] = js.undefined
   /** Returns the previous selected page number.
     */
-  var previousPage: js.UndefOr[Double] = js.native
+  var previousPage: js.UndefOr[Double] = js.undefined
   /** Returns primary key.
     */
-  var primaryKey: js.UndefOr[String] = js.native
+  var primaryKey: js.UndefOr[String] = js.undefined
   /** Returns primary key value.
     */
-  var primaryKeyValue: js.UndefOr[String] = js.native
+  var primaryKeyValue: js.UndefOr[String] = js.undefined
   /** Returns request type.
     */
-  var requestType: js.UndefOr[String] = js.native
+  var requestType: js.UndefOr[String] = js.undefined
   /** Returns current edited row.
     */
-  var row: js.UndefOr[js.Any] = js.native
+  var row: js.UndefOr[js.Any] = js.undefined
   /** Returns the record object (JSON).
     */
-  var rowData: js.UndefOr[js.Any] = js.native
+  var rowData: js.UndefOr[js.Any] = js.undefined
   /** Returns the edited row index.
     */
-  var rowIndex: js.UndefOr[Double] = js.native
+  var rowIndex: js.UndefOr[Double] = js.undefined
   /** Returns the selectedRow index.
     */
-  var selectedRow: js.UndefOr[Double] = js.native
+  var selectedRow: js.UndefOr[Double] = js.undefined
   /** Returns the start row index of the current page.
     */
-  var startIndex: js.UndefOr[Double] = js.native
+  var startIndex: js.UndefOr[Double] = js.undefined
   /** Returns grid element.
     */
-  var target: js.UndefOr[js.Any] = js.native
+  var target: js.UndefOr[js.Any] = js.undefined
   /** Returns selected row for delete.
     */
-  var tr: js.UndefOr[js.Any] = js.native
+  var tr: js.UndefOr[js.Any] = js.undefined
   /** Returns the name of the event.
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object ActionCompleteEventArgs {
   @scala.inline
-  def apply(): ActionCompleteEventArgs = {
+  def apply(
+    cancel: js.UndefOr[Boolean] = js.undefined,
+    columnName: String = null,
+    columnSortDirection: String = null,
+    columnType: String = null,
+    currentFilterObject: js.Any = null,
+    currentFilteringColumn: String = null,
+    currentPage: js.UndefOr[Double] = js.undefined,
+    data: js.Any = null,
+    dataSource: js.Any = null,
+    endIndex: js.UndefOr[Double] = js.undefined,
+    filterCollection: js.Any = null,
+    filtermodel: js.Any = null,
+    foreignKeyData: js.Any = null,
+    isCustomFilter: js.UndefOr[Boolean] = js.undefined,
+    model: js.Any = null,
+    originalEventType: String = null,
+    previousPage: js.UndefOr[Double] = js.undefined,
+    primaryKey: String = null,
+    primaryKeyValue: String = null,
+    requestType: String = null,
+    row: js.Any = null,
+    rowData: js.Any = null,
+    rowIndex: js.UndefOr[Double] = js.undefined,
+    selectedRow: js.UndefOr[Double] = js.undefined,
+    startIndex: js.UndefOr[Double] = js.undefined,
+    target: js.Any = null,
+    tr: js.Any = null,
+    `type`: String = null
+  ): ActionCompleteEventArgs = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cancel)) __obj.updateDynamic("cancel")(cancel.get.asInstanceOf[js.Any])
+    if (columnName != null) __obj.updateDynamic("columnName")(columnName.asInstanceOf[js.Any])
+    if (columnSortDirection != null) __obj.updateDynamic("columnSortDirection")(columnSortDirection.asInstanceOf[js.Any])
+    if (columnType != null) __obj.updateDynamic("columnType")(columnType.asInstanceOf[js.Any])
+    if (currentFilterObject != null) __obj.updateDynamic("currentFilterObject")(currentFilterObject.asInstanceOf[js.Any])
+    if (currentFilteringColumn != null) __obj.updateDynamic("currentFilteringColumn")(currentFilteringColumn.asInstanceOf[js.Any])
+    if (!js.isUndefined(currentPage)) __obj.updateDynamic("currentPage")(currentPage.get.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
+    if (!js.isUndefined(endIndex)) __obj.updateDynamic("endIndex")(endIndex.get.asInstanceOf[js.Any])
+    if (filterCollection != null) __obj.updateDynamic("filterCollection")(filterCollection.asInstanceOf[js.Any])
+    if (filtermodel != null) __obj.updateDynamic("filtermodel")(filtermodel.asInstanceOf[js.Any])
+    if (foreignKeyData != null) __obj.updateDynamic("foreignKeyData")(foreignKeyData.asInstanceOf[js.Any])
+    if (!js.isUndefined(isCustomFilter)) __obj.updateDynamic("isCustomFilter")(isCustomFilter.get.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (originalEventType != null) __obj.updateDynamic("originalEventType")(originalEventType.asInstanceOf[js.Any])
+    if (!js.isUndefined(previousPage)) __obj.updateDynamic("previousPage")(previousPage.get.asInstanceOf[js.Any])
+    if (primaryKey != null) __obj.updateDynamic("primaryKey")(primaryKey.asInstanceOf[js.Any])
+    if (primaryKeyValue != null) __obj.updateDynamic("primaryKeyValue")(primaryKeyValue.asInstanceOf[js.Any])
+    if (requestType != null) __obj.updateDynamic("requestType")(requestType.asInstanceOf[js.Any])
+    if (row != null) __obj.updateDynamic("row")(row.asInstanceOf[js.Any])
+    if (rowData != null) __obj.updateDynamic("rowData")(rowData.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowIndex)) __obj.updateDynamic("rowIndex")(rowIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectedRow)) __obj.updateDynamic("selectedRow")(selectedRow.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startIndex)) __obj.updateDynamic("startIndex")(startIndex.get.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (tr != null) __obj.updateDynamic("tr")(tr.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActionCompleteEventArgs]
   }
-  @scala.inline
-  implicit class ActionCompleteEventArgsOps[Self <: ActionCompleteEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnSortDirection(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnSortDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnSortDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnSortDirection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentFilterObject(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentFilterObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentFilterObject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentFilterObject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentFilteringColumn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentFilteringColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentFilteringColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentFilteringColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentPage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSource(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterCollection(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterCollection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterCollection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterCollection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFiltermodel(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filtermodel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFiltermodel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filtermodel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForeignKeyData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("foreignKeyData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForeignKeyData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("foreignKeyData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsCustomFilter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCustomFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsCustomFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCustomFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalEventType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalEventType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalEventType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalEventType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousPage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryKeyValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryKeyValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryKeyValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryKeyValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRow(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("row")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("row")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedRow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTr(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

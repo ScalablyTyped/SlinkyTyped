@@ -2,7 +2,7 @@ package typingsSlinky.firebaseFirestore
 
 import typingsSlinky.firebaseFirestore.connectionMod.Connection
 import typingsSlinky.firebaseFirestore.databaseInfoMod.DatabaseInfo
-import typingsSlinky.grpc.mod.GrpcObject
+import typingsSlinky.grpcGrpcJs.makeClientMod.GrpcObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -28,6 +28,10 @@ trait PathFollower
     */
   var pathConfig: PathConfig = js.native
   /**
+    * The distance the follower has traveled from the previous point to the current one, at the last update.
+    */
+  var pathDelta: Vector2 = js.native
+  /**
     * An additional vector to add to the PathFollowers position, allowing you to offset it from the
     * Path coordinates.
     */

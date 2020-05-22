@@ -5,16 +5,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Free Threaded XML HTTP Request class 6.0 */
-@js.native
 trait FreeThreadedXMLHTTP60 extends js.Object {
   @JSName("MSXML2.FreeThreadedXMLHTTP60_typekey")
-  var MSXML2DotFreeThreadedXMLHTTP60_typekey: FreeThreadedXMLHTTP60 = js.native
-  def GetCookie(pwszUrl: String, pwszName: String, dwFlags: Double, pcCookies: Double, ppCookies: tagXHRCOOKIE): Unit = js.native
-  def SetCookie(pCookie: tagXHRCOOKIE, pdwCookieState: Double): Unit = js.native
-  def SetCustomResponseStream(pSequentialStream: ISequentialStream): Unit = js.native
-  def abort(): Unit = js.native
-  def getAllResponseHeaders(ppwszHeaders: String): Unit = js.native
-  def getResponseHeader(pwszHeader: String, ppwszValue: String): Unit = js.native
+  var MSXML2DotFreeThreadedXMLHTTP60_typekey: FreeThreadedXMLHTTP60
+  def GetCookie(pwszUrl: String, pwszName: String, dwFlags: Double, pcCookies: Double, ppCookies: tagXHRCOOKIE): Unit
+  def SetCookie(pCookie: tagXHRCOOKIE, pdwCookieState: Double): Unit
+  def SetCustomResponseStream(pSequentialStream: ISequentialStream): Unit
+  def abort(): Unit
+  def getAllResponseHeaders(ppwszHeaders: String): Unit
+  def getResponseHeader(pwszHeader: String, ppwszValue: String): Unit
   def open(
     pwszMethod: String,
     pwszUrl: String,
@@ -23,10 +22,10 @@ trait FreeThreadedXMLHTTP60 extends js.Object {
     pwszPassword: String,
     pwszProxyUserName: String,
     pwszProxyPassword: String
-  ): Unit = js.native
-  def send(pBody: ISequentialStream, cbBody: Double): Unit = js.native
-  def setProperty(eProperty: XHR_PROPERTY, ullValue: Double): Unit = js.native
-  def setRequestHeader(pwszHeader: String, pwszValue: String): Unit = js.native
+  ): Unit
+  def send(pBody: ISequentialStream, cbBody: Double): Unit
+  def setProperty(eProperty: XHR_PROPERTY, ullValue: Double): Unit
+  def setRequestHeader(pwszHeader: String, pwszValue: String): Unit
 }
 
 object FreeThreadedXMLHTTP60 {
@@ -48,79 +47,5 @@ object FreeThreadedXMLHTTP60 {
     __obj.updateDynamic("MSXML2.FreeThreadedXMLHTTP60_typekey")(MSXML2DotFreeThreadedXMLHTTP60_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[FreeThreadedXMLHTTP60]
   }
-  @scala.inline
-  implicit class FreeThreadedXMLHTTP60Ops[Self <: FreeThreadedXMLHTTP60] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetCookie(value: (String, String, Double, Double, tagXHRCOOKIE) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetCookie")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withMSXML2DotFreeThreadedXMLHTTP60_typekey(value: FreeThreadedXMLHTTP60): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSXML2.FreeThreadedXMLHTTP60_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetCookie(value: (tagXHRCOOKIE, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetCookie")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetCustomResponseStream(value: ISequentialStream => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetCustomResponseStream")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAbort(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abort")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetAllResponseHeaders(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllResponseHeaders")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetResponseHeader(value: (String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getResponseHeader")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withOpen(value: (String, String, IXMLHTTPRequest2Callback, String, String, String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.Any.fromFunction7(value))
-        ret
-    }
-    @scala.inline
-    def withSend(value: (ISequentialStream, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("send")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetProperty(value: (XHR_PROPERTY, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setProperty")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetRequestHeader(value: (String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setRequestHeader")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

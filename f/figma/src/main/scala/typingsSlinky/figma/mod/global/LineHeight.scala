@@ -1,7 +1,8 @@
 package typingsSlinky.figma.mod.global
 
-import typingsSlinky.figma.anon.Unit
-import typingsSlinky.figma.anon.`0`
+import typingsSlinky.figma.figmaStrings.AUTO
+import typingsSlinky.figma.figmaStrings.PERCENT
+import typingsSlinky.figma.figmaStrings.PIXELS
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +15,14 @@ trait LineHeight extends js.Object
 
 object LineHeight {
   @scala.inline
-  implicit def apply(value: `0`): LineHeight = value.asInstanceOf[LineHeight]
+  def Unit(unit: PIXELS | PERCENT, value: Double): LineHeight = {
+    val __obj = js.Dynamic.literal(unit = unit.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LineHeight]
+  }
   @scala.inline
-  implicit def apply(value: Unit): LineHeight = value.asInstanceOf[LineHeight]
+  def `0`(unit: AUTO): LineHeight = {
+    val __obj = js.Dynamic.literal(unit = unit.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LineHeight]
+  }
 }
 

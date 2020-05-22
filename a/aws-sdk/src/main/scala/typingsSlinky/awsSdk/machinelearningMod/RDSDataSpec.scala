@@ -62,102 +62,16 @@ object RDSDataSpec {
     SecurityGroupIds: EDPSecurityGroupIds,
     SelectSqlQuery: RDSSelectSqlQuery,
     ServiceRole: EDPServiceRole,
-    SubnetId: EDPSubnetId
+    SubnetId: EDPSubnetId,
+    DataRearrangement: DataRearrangement = null,
+    DataSchema: DataSchema = null,
+    DataSchemaUri: S3Url = null
   ): RDSDataSpec = {
     val __obj = js.Dynamic.literal(DatabaseCredentials = DatabaseCredentials.asInstanceOf[js.Any], DatabaseInformation = DatabaseInformation.asInstanceOf[js.Any], ResourceRole = ResourceRole.asInstanceOf[js.Any], S3StagingLocation = S3StagingLocation.asInstanceOf[js.Any], SecurityGroupIds = SecurityGroupIds.asInstanceOf[js.Any], SelectSqlQuery = SelectSqlQuery.asInstanceOf[js.Any], ServiceRole = ServiceRole.asInstanceOf[js.Any], SubnetId = SubnetId.asInstanceOf[js.Any])
+    if (DataRearrangement != null) __obj.updateDynamic("DataRearrangement")(DataRearrangement.asInstanceOf[js.Any])
+    if (DataSchema != null) __obj.updateDynamic("DataSchema")(DataSchema.asInstanceOf[js.Any])
+    if (DataSchemaUri != null) __obj.updateDynamic("DataSchemaUri")(DataSchemaUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[RDSDataSpec]
   }
-  @scala.inline
-  implicit class RDSDataSpecOps[Self <: RDSDataSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDatabaseCredentials(value: RDSDatabaseCredentials): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseCredentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDatabaseInformation(value: RDSDatabase): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseInformation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceRole(value: EDPResourceRole): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withS3StagingLocation(value: S3Url): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3StagingLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSecurityGroupIds(value: EDPSecurityGroupIds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroupIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelectSqlQuery(value: RDSSelectSqlQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectSqlQuery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServiceRole(value: EDPServiceRole): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubnetId(value: EDPSubnetId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataRearrangement(value: DataRearrangement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataRearrangement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataRearrangement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataRearrangement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSchema(value: DataSchema): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSchema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSchema: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSchema")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSchemaUri(value: S3Url): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSchemaUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSchemaUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSchemaUri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

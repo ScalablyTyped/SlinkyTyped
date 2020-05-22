@@ -4,173 +4,65 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SignaturePropertiesChangeEventArgs extends js.Object {
   /** Returns the cancel option value.
     */
-  var cancel: js.UndefOr[Boolean] = js.native
+  var cancel: js.UndefOr[Boolean] = js.undefined
   /** Returns the current color of the signature.
     */
-  var currentColor: js.UndefOr[String] = js.native
+  var currentColor: js.UndefOr[String] = js.undefined
   /** Returns the current opacity of the signature.
     */
-  var currentOpacity: js.UndefOr[Double] = js.native
+  var currentOpacity: js.UndefOr[Double] = js.undefined
   /** Specifies that the color of the signature is changed.
     */
-  var isColorChange: js.UndefOr[Boolean] = js.native
+  var isColorChange: js.UndefOr[Boolean] = js.undefined
   /** Specifies that the opacity of the signature is changed.
     */
-  var isOpacityChange: js.UndefOr[Boolean] = js.native
+  var isOpacityChange: js.UndefOr[Boolean] = js.undefined
   /** Returns the PDF viewer model
     */
-  var model: js.UndefOr[js.Any] = js.native
+  var model: js.UndefOr[js.Any] = js.undefined
   /** Returns the page number in which the signature properties is changed.
     */
-  var pageID: js.UndefOr[Double] = js.native
+  var pageID: js.UndefOr[Double] = js.undefined
   /** Returns the previous color of the signature.
     */
-  var previousColor: js.UndefOr[String] = js.native
+  var previousColor: js.UndefOr[String] = js.undefined
   /** Returns the previous opacity of the signature.
     */
-  var previousOpacity: js.UndefOr[Double] = js.native
+  var previousOpacity: js.UndefOr[Double] = js.undefined
   /** Returns the name of the event
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object SignaturePropertiesChangeEventArgs {
   @scala.inline
-  def apply(): SignaturePropertiesChangeEventArgs = {
+  def apply(
+    cancel: js.UndefOr[Boolean] = js.undefined,
+    currentColor: String = null,
+    currentOpacity: js.UndefOr[Double] = js.undefined,
+    isColorChange: js.UndefOr[Boolean] = js.undefined,
+    isOpacityChange: js.UndefOr[Boolean] = js.undefined,
+    model: js.Any = null,
+    pageID: js.UndefOr[Double] = js.undefined,
+    previousColor: String = null,
+    previousOpacity: js.UndefOr[Double] = js.undefined,
+    `type`: String = null
+  ): SignaturePropertiesChangeEventArgs = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cancel)) __obj.updateDynamic("cancel")(cancel.get.asInstanceOf[js.Any])
+    if (currentColor != null) __obj.updateDynamic("currentColor")(currentColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(currentOpacity)) __obj.updateDynamic("currentOpacity")(currentOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isColorChange)) __obj.updateDynamic("isColorChange")(isColorChange.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isOpacityChange)) __obj.updateDynamic("isOpacityChange")(isOpacityChange.get.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (!js.isUndefined(pageID)) __obj.updateDynamic("pageID")(pageID.get.asInstanceOf[js.Any])
+    if (previousColor != null) __obj.updateDynamic("previousColor")(previousColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(previousOpacity)) __obj.updateDynamic("previousOpacity")(previousOpacity.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SignaturePropertiesChangeEventArgs]
   }
-  @scala.inline
-  implicit class SignaturePropertiesChangeEventArgsOps[Self <: SignaturePropertiesChangeEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsColorChange(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isColorChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsColorChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isColorChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsOpacityChange(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOpacityChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsOpacityChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOpacityChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageID(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageID")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

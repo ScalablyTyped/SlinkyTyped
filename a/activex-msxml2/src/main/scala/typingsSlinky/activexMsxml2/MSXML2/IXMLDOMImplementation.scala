@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IXMLDOMImplementation extends js.Object {
   @JSName("MSXML2.IXMLDOMImplementation_typekey")
-  var MSXML2DotIXMLDOMImplementation_typekey: IXMLDOMImplementation = js.native
-  def hasFeature(feature: String, version: String): Boolean = js.native
+  var MSXML2DotIXMLDOMImplementation_typekey: IXMLDOMImplementation
+  def hasFeature(feature: String, version: String): Boolean
 }
 
 object IXMLDOMImplementation {
@@ -21,25 +20,5 @@ object IXMLDOMImplementation {
     __obj.updateDynamic("MSXML2.IXMLDOMImplementation_typekey")(MSXML2DotIXMLDOMImplementation_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[IXMLDOMImplementation]
   }
-  @scala.inline
-  implicit class IXMLDOMImplementationOps[Self <: IXMLDOMImplementation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSXML2DotIXMLDOMImplementation_typekey(value: IXMLDOMImplementation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSXML2.IXMLDOMImplementation_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHasFeature(value: (String, String) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasFeature")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

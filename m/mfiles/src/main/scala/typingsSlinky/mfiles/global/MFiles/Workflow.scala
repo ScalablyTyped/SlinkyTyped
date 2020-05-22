@@ -1,14 +1,31 @@
 package typingsSlinky.mfiles.global.MFiles
 
 import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.mfiles.ILookup
+import typingsSlinky.mfiles.ITypedValue
 import typingsSlinky.mfiles.IWorkflow
+import typingsSlinky.mfiles.MFiles.MFBuiltInDocumentClass
+import typingsSlinky.mfiles.MFiles.MFBuiltInObjectClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.Workflow")
 @js.native
-class Workflow () extends IWorkflow
+class Workflow () extends IWorkflow {
+  /* CompleteClass */
+  override var ID: Double = js.native
+  /* CompleteClass */
+  override var Name: String = js.native
+  /* CompleteClass */
+  override var ObjectClass: MFBuiltInDocumentClass | MFBuiltInObjectClass | Double = js.native
+  /* CompleteClass */
+  override def Clone(): IWorkflow = js.native
+  /* CompleteClass */
+  override def GetAsLookup(): ILookup = js.native
+  /* CompleteClass */
+  override def GetAsTypedValue(): ITypedValue = js.native
+}
 
 @JSGlobal("MFiles.Workflow")
 @js.native

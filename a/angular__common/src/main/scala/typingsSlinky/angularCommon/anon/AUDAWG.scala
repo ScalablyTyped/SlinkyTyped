@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AUDAWG extends js.Object {
-  var AUD: js.Array[String] = js.native
-  var AWG: js.Array[String] = js.native
-  var CAD: js.Array[String] = js.native
-  var FJD: js.Array[String] = js.native
-  var JPY: js.Array[String] = js.native
-  var SBD: js.Array[String] = js.native
-  var THB: js.Array[String] = js.native
-  var TWD: js.Array[String] = js.native
-  var USD: js.Array[String] = js.native
-  var XPF: js.Array[scala.Nothing] = js.native
+  var AUD: js.Array[String]
+  var AWG: js.Array[String]
+  var CAD: js.Array[String]
+  var FJD: js.Array[String]
+  var JPY: js.Array[String]
+  var SBD: js.Array[String]
+  var THB: js.Array[String]
+  var TWD: js.Array[String]
+  var USD: js.Array[String]
+  var XPF: js.Array[scala.Nothing]
 }
 
 object AUDAWG {
@@ -35,73 +34,5 @@ object AUDAWG {
     val __obj = js.Dynamic.literal(AUD = AUD.asInstanceOf[js.Any], AWG = AWG.asInstanceOf[js.Any], CAD = CAD.asInstanceOf[js.Any], FJD = FJD.asInstanceOf[js.Any], JPY = JPY.asInstanceOf[js.Any], SBD = SBD.asInstanceOf[js.Any], THB = THB.asInstanceOf[js.Any], TWD = TWD.asInstanceOf[js.Any], USD = USD.asInstanceOf[js.Any], XPF = XPF.asInstanceOf[js.Any])
     __obj.asInstanceOf[AUDAWG]
   }
-  @scala.inline
-  implicit class AUDAWGOps[Self <: AUDAWG] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAUD(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AUD")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAWG(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AWG")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCAD(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CAD")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFJD(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FJD")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJPY(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JPY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSBD(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SBD")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTHB(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("THB")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTWD(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TWD")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUSD(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("USD")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withXPF(value: js.Array[scala.Nothing]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("XPF")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

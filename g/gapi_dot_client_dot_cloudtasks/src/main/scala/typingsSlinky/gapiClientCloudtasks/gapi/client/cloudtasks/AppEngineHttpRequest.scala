@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AppEngineHttpRequest extends js.Object {
   /**
     * Task-level setting for App Engine routing.
@@ -14,7 +13,7 @@ trait AppEngineHttpRequest extends js.Object {
     * all tasks in the queue, no matter what the setting is for the
     * task-level app_engine_routing.
     */
-  var appEngineRouting: js.UndefOr[AppEngineRouting] = js.native
+  var appEngineRouting: js.UndefOr[AppEngineRouting] = js.undefined
   /**
     * HTTP request headers.
     *
@@ -52,7 +51,7 @@ trait AppEngineHttpRequest extends js.Object {
     * task-specific information, are also be sent to the task handler; see
     * [request headers](/appengine/docs/python/taskqueue/push/creating-handlers#reading_request_headers).
     */
-  var headers: js.UndefOr[Record[String, String]] = js.native
+  var headers: js.UndefOr[Record[String, String]] = js.undefined
   /**
     * The HTTP method to use for the request. The default is POST.
     *
@@ -66,7 +65,7 @@ trait AppEngineHttpRequest extends js.Object {
     * written in e.g.
     * [python RequestHandler](/appengine/docs/python/tools/webapp/requesthandlerclass).
     */
-  var httpMethod: js.UndefOr[String] = js.native
+  var httpMethod: js.UndefOr[String] = js.undefined
   /**
     * Payload.
     *
@@ -75,7 +74,7 @@ trait AppEngineHttpRequest extends js.Object {
     * POST or PUT. It is an error to set a data payload on a task with
     * an incompatible HttpMethod.
     */
-  var payload: js.UndefOr[String] = js.native
+  var payload: js.UndefOr[String] = js.undefined
   /**
     * The relative URL.
     *
@@ -84,82 +83,25 @@ trait AppEngineHttpRequest extends js.Object {
     * If the relative URL is empty, then the root path "/" will be used.
     * No spaces are allowed, and the maximum length allowed is 2083 characters.
     */
-  var relativeUrl: js.UndefOr[String] = js.native
+  var relativeUrl: js.UndefOr[String] = js.undefined
 }
 
 object AppEngineHttpRequest {
   @scala.inline
-  def apply(): AppEngineHttpRequest = {
+  def apply(
+    appEngineRouting: AppEngineRouting = null,
+    headers: Record[String, String] = null,
+    httpMethod: String = null,
+    payload: String = null,
+    relativeUrl: String = null
+  ): AppEngineHttpRequest = {
     val __obj = js.Dynamic.literal()
+    if (appEngineRouting != null) __obj.updateDynamic("appEngineRouting")(appEngineRouting.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (httpMethod != null) __obj.updateDynamic("httpMethod")(httpMethod.asInstanceOf[js.Any])
+    if (payload != null) __obj.updateDynamic("payload")(payload.asInstanceOf[js.Any])
+    if (relativeUrl != null) __obj.updateDynamic("relativeUrl")(relativeUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppEngineHttpRequest]
   }
-  @scala.inline
-  implicit class AppEngineHttpRequestOps[Self <: AppEngineHttpRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppEngineRouting(value: AppEngineRouting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appEngineRouting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppEngineRouting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appEngineRouting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayload(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelativeUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relativeUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelativeUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relativeUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

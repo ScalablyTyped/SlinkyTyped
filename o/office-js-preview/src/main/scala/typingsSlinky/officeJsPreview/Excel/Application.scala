@@ -29,7 +29,7 @@ import scala.scalajs.js.annotation._
 trait Application extends ClientObject {
   /**
     *
-    * Returns the Excel calculation engine version used for the last full recalculation. Read-only.
+    * Returns the Excel calculation engine version used for the last full recalculation.
     *
     * [Api set: ExcelApi 1.9]
     */
@@ -43,7 +43,7 @@ trait Application extends ClientObject {
   var calculationMode: CalculationMode | Automatic | AutomaticExceptTables | Manual = js.native
   /**
     *
-    * Returns the calculation state of the application. See Excel.CalculationState for details. Read-only.
+    * Returns the calculation state of the application. See Excel.CalculationState for details.
     *
     * [Api set: ExcelApi 1.9]
     */
@@ -55,16 +55,14 @@ trait Application extends ClientObject {
     *
     * Provides information based on current system culture settings. This includes the culture names, number formatting, and other culturally dependent settings.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.11]
     */
   val cultureInfo: CultureInfo = js.native
   /**
     *
     * Gets the string used as the decimal separator for numeric values. This is based on Excel's local settings.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.11]
     */
   val decimalSeparator: String = js.native
   /**
@@ -80,17 +78,15 @@ trait Application extends ClientObject {
     *
     * Gets the string used to separate groups of digits to the left of the decimal for numeric values. This is based on Excel's local settings.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.11]
     */
   val thousandsSeparator: String = js.native
   /**
     *
-    * Specifies whether the system separators of Microsoft Excel are enabled.
+    * Specifies if the system separators of Excel are enabled.
     System separators include the decimal separator and thousands separator.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.11]
     */
   val useSystemSeparators: Boolean = js.native
   /**
@@ -147,8 +143,7 @@ trait Application extends ClientObject {
   def suspendApiCalculationUntilNextSync(): Unit = js.native
   /**
     * Suspends screen updating until the next `context.sync()` is called.
-    * 
-    * **Note**: Don't call `suspendScreenUpdatingUntilNextSync` repeatedly (such as in a loop). Repeated calls will cause the Excel window to flicker.
+    **Note**: Don't call `suspendScreenUpdatingUntilNextSync` repeatedly (such as in a loop). Repeated calls will cause the Excel window to flicker.
     *
     * [Api set: ExcelApi 1.9]
     */

@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ICLSIDs extends js.Object {
-  val PreviewerCtrl: String = js.native
-  val ShellListingCtrl: String = js.native
+  val PreviewerCtrl: String
+  val ShellListingCtrl: String
 }
 
 object ICLSIDs {
@@ -16,25 +15,5 @@ object ICLSIDs {
     val __obj = js.Dynamic.literal(PreviewerCtrl = PreviewerCtrl.asInstanceOf[js.Any], ShellListingCtrl = ShellListingCtrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICLSIDs]
   }
-  @scala.inline
-  implicit class ICLSIDsOps[Self <: ICLSIDs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPreviewerCtrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreviewerCtrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShellListingCtrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShellListingCtrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

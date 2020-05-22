@@ -4,55 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReposUpdateProtectedBranchPullRequestReviewEnforcementParamsDismissalRestrictions extends js.Object {
   /**
     * The list of team `slug`s with dismissal access
     */
-  var teams: js.UndefOr[js.Array[String]] = js.native
+  var teams: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * The list of user `login`s with dismissal access
     */
-  var users: js.UndefOr[js.Array[String]] = js.native
+  var users: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object ReposUpdateProtectedBranchPullRequestReviewEnforcementParamsDismissalRestrictions {
   @scala.inline
-  def apply(): ReposUpdateProtectedBranchPullRequestReviewEnforcementParamsDismissalRestrictions = {
+  def apply(teams: js.Array[String] = null, users: js.Array[String] = null): ReposUpdateProtectedBranchPullRequestReviewEnforcementParamsDismissalRestrictions = {
     val __obj = js.Dynamic.literal()
+    if (teams != null) __obj.updateDynamic("teams")(teams.asInstanceOf[js.Any])
+    if (users != null) __obj.updateDynamic("users")(users.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReposUpdateProtectedBranchPullRequestReviewEnforcementParamsDismissalRestrictions]
   }
-  @scala.inline
-  implicit class ReposUpdateProtectedBranchPullRequestReviewEnforcementParamsDismissalRestrictionsOps[Self <: ReposUpdateProtectedBranchPullRequestReviewEnforcementParamsDismissalRestrictions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTeams(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("teams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTeams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("teams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsers(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("users")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("users")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

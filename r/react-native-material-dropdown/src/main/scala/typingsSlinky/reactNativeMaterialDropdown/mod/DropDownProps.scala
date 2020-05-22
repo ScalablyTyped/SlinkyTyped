@@ -1,641 +1,278 @@
 package typingsSlinky.reactNativeMaterialDropdown.mod
 
+import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
+import typingsSlinky.reactNative.mod.AccessibilityActionInfo
+import typingsSlinky.reactNative.mod.AccessibilityRole
+import typingsSlinky.reactNative.mod.AccessibilityState
+import typingsSlinky.reactNative.mod.AccessibilityTrait
+import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.Insets
+import typingsSlinky.reactNative.mod.LayoutChangeEvent
+import typingsSlinky.reactNative.mod.NativeTouchEvent
+import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
+import typingsSlinky.reactNative.mod.TVParallaxProperties
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.TouchableWithoutFeedbackProps
 import typingsSlinky.reactNative.mod.ViewStyle
+import typingsSlinky.reactNative.reactNativeStrings.`no-hide-descendants`
+import typingsSlinky.reactNative.reactNativeStrings.assertive
+import typingsSlinky.reactNative.reactNativeStrings.auto
+import typingsSlinky.reactNative.reactNativeStrings.button
+import typingsSlinky.reactNative.reactNativeStrings.no
+import typingsSlinky.reactNative.reactNativeStrings.none
+import typingsSlinky.reactNative.reactNativeStrings.polite
+import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
+import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
+import typingsSlinky.reactNative.reactNativeStrings.yes
 import typingsSlinky.reactNativeMaterialDropdown.anon.PartialDropDownProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DropDownProps extends TouchableWithoutFeedbackProps {
   /** Enable RTL layout */
-  var absoluteRTLLayout: js.UndefOr[Boolean] = js.native
+  var absoluteRTLLayout: js.UndefOr[Boolean] = js.undefined
   /** Animation duration (default: 225) */
-  var animationDuration: js.UndefOr[Double] = js.native
+  var animationDuration: js.UndefOr[Double] = js.undefined
   /** Set base color (default: rgba(0, 0, 0, .38)) */
-  var baseColor: js.UndefOr[String] = js.native
+  var baseColor: js.UndefOr[String] = js.undefined
   /** Set container styles */
-  var containerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var containerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
   /** Dropdown data items */
-  var data: js.Array[DropDownData] = js.native
+  var data: js.Array[DropDownData]
   /** Set disabled item color */
-  var disabledItemColor: js.UndefOr[String] = js.native
+  var disabledItemColor: js.UndefOr[String] = js.undefined
   /** Provide Dropdown margins */
-  var dropdownMargins: js.UndefOr[DropDownMargins] = js.native
+  var dropdownMargins: js.UndefOr[DropDownMargins] = js.undefined
   /** Provide Dropdown top-left position */
-  var dropdownOffset: js.UndefOr[DropDownOffset] = js.native
+  var dropdownOffset: js.UndefOr[DropDownOffset] = js.undefined
   /** Provide dropdown position (dynamic if undefined) */
-  var dropdownPosition: js.UndefOr[Double] = js.native
+  var dropdownPosition: js.UndefOr[Double] = js.undefined
   /** Set font size of dropdown items (default: 16) */
-  var fontSize: js.UndefOr[Double] = js.native
+  var fontSize: js.UndefOr[Double] = js.undefined
   /** Hitslop insets (default: { top: 6, right: 4, bottom: 6, left: 4 }) */
   @JSName("hitSlop")
-  var hitSlop_DropDownProps: js.UndefOr[DropDownInsets] = js.native
+  var hitSlop_DropDownProps: js.UndefOr[DropDownInsets] = js.undefined
   /** Set input container styles */
-  var inputContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var inputContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
   /** Set Item color (default: rgba(0, 0, 0, .54)) */
-  var itemColor: js.UndefOr[String] = js.native
+  var itemColor: js.UndefOr[String] = js.undefined
   /** Set Item count (default: 4) */
-  var itemCount: js.UndefOr[Double] = js.native
+  var itemCount: js.UndefOr[Double] = js.undefined
   /** Set Item padding (default: 8) */
-  var itemPadding: js.UndefOr[Double] = js.native
+  var itemPadding: js.UndefOr[Double] = js.undefined
   /** Set Item text style. */
-  var itemTextStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
+  var itemTextStyle: js.UndefOr[StyleProp[TextStyle]] = js.undefined
   /** Label to be shown for dropdown */
-  var label: js.UndefOr[String] = js.native
+  var label: js.UndefOr[String] = js.undefined
   /** Label extractor function. Extract label from item. */
-  var labelExtractor: js.UndefOr[js.Function2[/* item */ DropDownData, /* index */ Double, String]] = js.native
+  var labelExtractor: js.UndefOr[js.Function2[/* item */ DropDownData, /* index */ Double, String]] = js.undefined
   /** Set font size of label (default: 12) */
-  var labelFontSize: js.UndefOr[Double] = js.native
+  var labelFontSize: js.UndefOr[Double] = js.undefined
   /** Set the label styles */
-  var labelTextStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
+  var labelTextStyle: js.UndefOr[StyleProp[TextStyle]] = js.undefined
   /** Event: When focus lost from dropdown */
   @JSName("onBlur")
-  var onBlur_DropDownProps: js.UndefOr[js.Function0[Unit]] = js.native
+  var onBlur_DropDownProps: js.UndefOr[js.Function0[Unit]] = js.undefined
   /** Event: When change selected item */
   var onChangeText: js.UndefOr[
     js.Function3[/* value */ String, /* index */ Double, /* data */ js.Array[DropDownData], Unit]
-  ] = js.native
+  ] = js.undefined
   /** Event: When dropdown opens */
   @JSName("onFocus")
-  var onFocus_DropDownProps: js.UndefOr[js.Function0[Unit]] = js.native
+  var onFocus_DropDownProps: js.UndefOr[js.Function0[Unit]] = js.undefined
   /** Set overlay styles */
-  var overlayStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var overlayStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
   /** Set picker styles */
-  var pickerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var pickerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
   /** Props extractor function. Extract props from item. */
-  var propsExtractor: js.UndefOr[js.Function2[/* item */ DropDownData, /* index */ Double, PartialDropDownProps]] = js.native
+  var propsExtractor: js.UndefOr[js.Function2[/* item */ DropDownData, /* index */ Double, PartialDropDownProps]] = js.undefined
   /** Render text field accessory */
-  var renderAccessory: js.UndefOr[js.Function0[ReactElement]] = js.native
+  var renderAccessory: js.UndefOr[js.Function0[ReactElement]] = js.undefined
   /** Render base component */
-  var renderBase: js.UndefOr[js.Function1[/* props */ RenderBaseProps, ReactElement]] = js.native
+  var renderBase: js.UndefOr[js.Function1[/* props */ RenderBaseProps, ReactElement]] = js.undefined
   /** Whether ripple be centered or not (default: false) */
-  var rippleCentered: js.UndefOr[Boolean] = js.native
+  var rippleCentered: js.UndefOr[Boolean] = js.undefined
   /** Provide Ripple color */
-  var rippleColor: js.UndefOr[String] = js.native
+  var rippleColor: js.UndefOr[String] = js.undefined
   /** Ripple duration (defailt: 400) */
-  var rippleDuration: js.UndefOr[Double] = js.native
+  var rippleDuration: js.UndefOr[Double] = js.undefined
   /** Ripple insets  */
-  var rippleInsets: js.UndefOr[DropDownInsets] = js.native
+  var rippleInsets: js.UndefOr[DropDownInsets] = js.undefined
   /** Ripple opacity (default: 0.54) */
-  var rippleOpacity: js.UndefOr[Double] = js.native
+  var rippleOpacity: js.UndefOr[Double] = js.undefined
   /** Whether ripple rendered in sequential order (default: false)  */
-  var rippleSequential: js.UndefOr[Boolean] = js.native
+  var rippleSequential: js.UndefOr[Boolean] = js.undefined
   /** Set selected item color */
-  var selectedItemColor: js.UndefOr[String] = js.native
+  var selectedItemColor: js.UndefOr[String] = js.undefined
   /** Shade opacity (default: 0.12) */
-  var shadeOpacity: js.UndefOr[Double] = js.native
+  var shadeOpacity: js.UndefOr[Double] = js.undefined
   /** Specify which orientations are supported. (default: ['portrait', 'portrait-upside-down', 'landscape', 'landscape-left', 'landscape-right']) */
-  var supportedOrientations: js.UndefOr[js.Array[String]] = js.native
+  var supportedOrientations: js.UndefOr[js.Array[String]] = js.undefined
   /** Set Text color (default: rgba(0, 0, 0, .87)) */
-  var textColor: js.UndefOr[String] = js.native
+  var textColor: js.UndefOr[String] = js.undefined
   /** Use native driver (default: false) */
-  var useNativeDriver: js.UndefOr[Boolean] = js.native
+  var useNativeDriver: js.UndefOr[Boolean] = js.undefined
   /** Selected value */
-  var value: js.UndefOr[String | Double] = js.native
+  var value: js.UndefOr[String | Double] = js.undefined
   /** Value extractor function. Extract value from item. */
-  var valueExtractor: js.UndefOr[js.Function2[/* item */ DropDownData, /* index */ Double, String]] = js.native
+  var valueExtractor: js.UndefOr[js.Function2[/* item */ DropDownData, /* index */ Double, String]] = js.undefined
 }
 
 object DropDownProps {
   @scala.inline
-  def apply(data: js.Array[DropDownData]): DropDownProps = {
+  def apply(
+    data: js.Array[DropDownData],
+    absoluteRTLLayout: js.UndefOr[Boolean] = js.undefined,
+    accessibilityActions: js.Array[AccessibilityActionInfo] = null,
+    accessibilityComponentType: none | button | radiobutton_checked | radiobutton_unchecked = null,
+    accessibilityElementsHidden: js.UndefOr[Boolean] = js.undefined,
+    accessibilityHint: String = null,
+    accessibilityIgnoresInvertColors: js.UndefOr[Boolean] = js.undefined,
+    accessibilityLabel: String = null,
+    accessibilityLiveRegion: none | polite | assertive = null,
+    accessibilityRole: AccessibilityRole = null,
+    accessibilityState: AccessibilityState = null,
+    accessibilityTraits: AccessibilityTrait | js.Array[AccessibilityTrait] = null,
+    accessibilityValue: AccessibilityValue = null,
+    accessibilityViewIsModal: js.UndefOr[Boolean] = js.undefined,
+    accessible: js.UndefOr[Boolean] = js.undefined,
+    animationDuration: js.UndefOr[Double] = js.undefined,
+    baseColor: String = null,
+    containerStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    delayLongPress: js.UndefOr[Double] = js.undefined,
+    delayPressIn: js.UndefOr[Double] = js.undefined,
+    delayPressOut: js.UndefOr[Double] = js.undefined,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    disabledItemColor: String = null,
+    dropdownMargins: DropDownMargins = null,
+    dropdownOffset: DropDownOffset = null,
+    dropdownPosition: js.UndefOr[Double] = js.undefined,
+    fontSize: js.UndefOr[Double] = js.undefined,
+    hasTVPreferredFocus: js.UndefOr[Boolean] = js.undefined,
+    hitSlop: DropDownInsets = null,
+    importantForAccessibility: auto | yes | no | `no-hide-descendants` = null,
+    inputContainerStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    itemColor: String = null,
+    itemCount: js.UndefOr[Double] = js.undefined,
+    itemPadding: js.UndefOr[Double] = js.undefined,
+    itemTextStyle: js.UndefOr[Null | StyleProp[TextStyle]] = js.undefined,
+    label: String = null,
+    labelExtractor: (/* item */ DropDownData, /* index */ Double) => String = null,
+    labelFontSize: js.UndefOr[Double] = js.undefined,
+    labelTextStyle: js.UndefOr[Null | StyleProp[TextStyle]] = js.undefined,
+    onAccessibilityAction: SyntheticEvent[NodeHandle, ReadonlyactionNamestring] => Unit = null,
+    onAccessibilityEscape: () => Unit = null,
+    onAccessibilityTap: () => Unit = null,
+    onBlur: () => Unit = null,
+    onChangeText: (/* value */ String, /* index */ Double, /* data */ js.Array[DropDownData]) => Unit = null,
+    onFocus: () => Unit = null,
+    onLayout: /* event */ LayoutChangeEvent => Unit = null,
+    onLongPress: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onMagicTap: () => Unit = null,
+    onPress: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onPressIn: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onPressOut: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    overlayStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    pickerStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    pressRetentionOffset: Insets = null,
+    propsExtractor: (/* item */ DropDownData, /* index */ Double) => PartialDropDownProps = null,
+    renderAccessory: () => ReactElement = null,
+    renderBase: /* props */ RenderBaseProps => ReactElement = null,
+    rippleCentered: js.UndefOr[Boolean] = js.undefined,
+    rippleColor: String = null,
+    rippleDuration: js.UndefOr[Double] = js.undefined,
+    rippleInsets: DropDownInsets = null,
+    rippleOpacity: js.UndefOr[Double] = js.undefined,
+    rippleSequential: js.UndefOr[Boolean] = js.undefined,
+    selectedItemColor: String = null,
+    shadeOpacity: js.UndefOr[Double] = js.undefined,
+    style: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    supportedOrientations: js.Array[String] = null,
+    testID: String = null,
+    textColor: String = null,
+    tvParallaxProperties: TVParallaxProperties = null,
+    useNativeDriver: js.UndefOr[Boolean] = js.undefined,
+    value: String | Double = null,
+    valueExtractor: (/* item */ DropDownData, /* index */ Double) => String = null
+  ): DropDownProps = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    if (!js.isUndefined(absoluteRTLLayout)) __obj.updateDynamic("absoluteRTLLayout")(absoluteRTLLayout.get.asInstanceOf[js.Any])
+    if (accessibilityActions != null) __obj.updateDynamic("accessibilityActions")(accessibilityActions.asInstanceOf[js.Any])
+    if (accessibilityComponentType != null) __obj.updateDynamic("accessibilityComponentType")(accessibilityComponentType.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessibilityElementsHidden)) __obj.updateDynamic("accessibilityElementsHidden")(accessibilityElementsHidden.get.asInstanceOf[js.Any])
+    if (accessibilityHint != null) __obj.updateDynamic("accessibilityHint")(accessibilityHint.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessibilityIgnoresInvertColors)) __obj.updateDynamic("accessibilityIgnoresInvertColors")(accessibilityIgnoresInvertColors.get.asInstanceOf[js.Any])
+    if (accessibilityLabel != null) __obj.updateDynamic("accessibilityLabel")(accessibilityLabel.asInstanceOf[js.Any])
+    if (accessibilityLiveRegion != null) __obj.updateDynamic("accessibilityLiveRegion")(accessibilityLiveRegion.asInstanceOf[js.Any])
+    if (accessibilityRole != null) __obj.updateDynamic("accessibilityRole")(accessibilityRole.asInstanceOf[js.Any])
+    if (accessibilityState != null) __obj.updateDynamic("accessibilityState")(accessibilityState.asInstanceOf[js.Any])
+    if (accessibilityTraits != null) __obj.updateDynamic("accessibilityTraits")(accessibilityTraits.asInstanceOf[js.Any])
+    if (accessibilityValue != null) __obj.updateDynamic("accessibilityValue")(accessibilityValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessibilityViewIsModal)) __obj.updateDynamic("accessibilityViewIsModal")(accessibilityViewIsModal.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessible)) __obj.updateDynamic("accessible")(accessible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(animationDuration)) __obj.updateDynamic("animationDuration")(animationDuration.get.asInstanceOf[js.Any])
+    if (baseColor != null) __obj.updateDynamic("baseColor")(baseColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(containerStyle)) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(delayLongPress)) __obj.updateDynamic("delayLongPress")(delayLongPress.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(delayPressIn)) __obj.updateDynamic("delayPressIn")(delayPressIn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(delayPressOut)) __obj.updateDynamic("delayPressOut")(delayPressOut.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (disabledItemColor != null) __obj.updateDynamic("disabledItemColor")(disabledItemColor.asInstanceOf[js.Any])
+    if (dropdownMargins != null) __obj.updateDynamic("dropdownMargins")(dropdownMargins.asInstanceOf[js.Any])
+    if (dropdownOffset != null) __obj.updateDynamic("dropdownOffset")(dropdownOffset.asInstanceOf[js.Any])
+    if (!js.isUndefined(dropdownPosition)) __obj.updateDynamic("dropdownPosition")(dropdownPosition.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fontSize)) __obj.updateDynamic("fontSize")(fontSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasTVPreferredFocus)) __obj.updateDynamic("hasTVPreferredFocus")(hasTVPreferredFocus.get.asInstanceOf[js.Any])
+    if (hitSlop != null) __obj.updateDynamic("hitSlop")(hitSlop.asInstanceOf[js.Any])
+    if (importantForAccessibility != null) __obj.updateDynamic("importantForAccessibility")(importantForAccessibility.asInstanceOf[js.Any])
+    if (!js.isUndefined(inputContainerStyle)) __obj.updateDynamic("inputContainerStyle")(inputContainerStyle.asInstanceOf[js.Any])
+    if (itemColor != null) __obj.updateDynamic("itemColor")(itemColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(itemCount)) __obj.updateDynamic("itemCount")(itemCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(itemPadding)) __obj.updateDynamic("itemPadding")(itemPadding.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(itemTextStyle)) __obj.updateDynamic("itemTextStyle")(itemTextStyle.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (labelExtractor != null) __obj.updateDynamic("labelExtractor")(js.Any.fromFunction2(labelExtractor))
+    if (!js.isUndefined(labelFontSize)) __obj.updateDynamic("labelFontSize")(labelFontSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(labelTextStyle)) __obj.updateDynamic("labelTextStyle")(labelTextStyle.asInstanceOf[js.Any])
+    if (onAccessibilityAction != null) __obj.updateDynamic("onAccessibilityAction")(js.Any.fromFunction1(onAccessibilityAction))
+    if (onAccessibilityEscape != null) __obj.updateDynamic("onAccessibilityEscape")(js.Any.fromFunction0(onAccessibilityEscape))
+    if (onAccessibilityTap != null) __obj.updateDynamic("onAccessibilityTap")(js.Any.fromFunction0(onAccessibilityTap))
+    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction0(onBlur))
+    if (onChangeText != null) __obj.updateDynamic("onChangeText")(js.Any.fromFunction3(onChangeText))
+    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction0(onFocus))
+    if (onLayout != null) __obj.updateDynamic("onLayout")(js.Any.fromFunction1(onLayout))
+    if (onLongPress != null) __obj.updateDynamic("onLongPress")(js.Any.fromFunction1(onLongPress))
+    if (onMagicTap != null) __obj.updateDynamic("onMagicTap")(js.Any.fromFunction0(onMagicTap))
+    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction1(onPress))
+    if (onPressIn != null) __obj.updateDynamic("onPressIn")(js.Any.fromFunction1(onPressIn))
+    if (onPressOut != null) __obj.updateDynamic("onPressOut")(js.Any.fromFunction1(onPressOut))
+    if (!js.isUndefined(overlayStyle)) __obj.updateDynamic("overlayStyle")(overlayStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(pickerStyle)) __obj.updateDynamic("pickerStyle")(pickerStyle.asInstanceOf[js.Any])
+    if (pressRetentionOffset != null) __obj.updateDynamic("pressRetentionOffset")(pressRetentionOffset.asInstanceOf[js.Any])
+    if (propsExtractor != null) __obj.updateDynamic("propsExtractor")(js.Any.fromFunction2(propsExtractor))
+    if (renderAccessory != null) __obj.updateDynamic("renderAccessory")(js.Any.fromFunction0(renderAccessory))
+    if (renderBase != null) __obj.updateDynamic("renderBase")(js.Any.fromFunction1(renderBase))
+    if (!js.isUndefined(rippleCentered)) __obj.updateDynamic("rippleCentered")(rippleCentered.get.asInstanceOf[js.Any])
+    if (rippleColor != null) __obj.updateDynamic("rippleColor")(rippleColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(rippleDuration)) __obj.updateDynamic("rippleDuration")(rippleDuration.get.asInstanceOf[js.Any])
+    if (rippleInsets != null) __obj.updateDynamic("rippleInsets")(rippleInsets.asInstanceOf[js.Any])
+    if (!js.isUndefined(rippleOpacity)) __obj.updateDynamic("rippleOpacity")(rippleOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rippleSequential)) __obj.updateDynamic("rippleSequential")(rippleSequential.get.asInstanceOf[js.Any])
+    if (selectedItemColor != null) __obj.updateDynamic("selectedItemColor")(selectedItemColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(shadeOpacity)) __obj.updateDynamic("shadeOpacity")(shadeOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (supportedOrientations != null) __obj.updateDynamic("supportedOrientations")(supportedOrientations.asInstanceOf[js.Any])
+    if (testID != null) __obj.updateDynamic("testID")(testID.asInstanceOf[js.Any])
+    if (textColor != null) __obj.updateDynamic("textColor")(textColor.asInstanceOf[js.Any])
+    if (tvParallaxProperties != null) __obj.updateDynamic("tvParallaxProperties")(tvParallaxProperties.asInstanceOf[js.Any])
+    if (!js.isUndefined(useNativeDriver)) __obj.updateDynamic("useNativeDriver")(useNativeDriver.get.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (valueExtractor != null) __obj.updateDynamic("valueExtractor")(js.Any.fromFunction2(valueExtractor))
     __obj.asInstanceOf[DropDownProps]
   }
-  @scala.inline
-  implicit class DropDownPropsOps[Self <: DropDownProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: js.Array[DropDownData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAbsoluteRTLLayout(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("absoluteRTLLayout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbsoluteRTLLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("absoluteRTLLayout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withDisabledItemColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledItemColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabledItemColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledItemColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropdownMargins(value: DropDownMargins): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownMargins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropdownMargins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownMargins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropdownOffset(value: DropDownOffset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropdownOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropdownPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropdownPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHitSlop(value: DropDownInsets): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hitSlop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHitSlop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hitSlop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputContainerStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputContainerStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputContainerStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputContainerStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputContainerStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputContainerStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withItemColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemPadding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemPadding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemPadding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemTextStyle(value: StyleProp[TextStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemTextStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemTextStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemTextStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemTextStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemTextStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelExtractor(value: (/* item */ DropDownData, /* index */ Double) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelExtractor")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutLabelExtractor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelExtractor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelFontSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFontSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelFontSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFontSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelTextStyle(value: StyleProp[TextStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelTextStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelTextStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelTextStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelTextStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelTextStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withOnBlur(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnBlur: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChangeText(value: (/* value */ String, /* index */ Double, /* data */ js.Array[DropDownData]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChangeText")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChangeText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChangeText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFocus(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverlayStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverlayStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverlayStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withPickerStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickerStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPickerStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickerStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPickerStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickerStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withPropsExtractor(value: (/* item */ DropDownData, /* index */ Double) => PartialDropDownProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("propsExtractor")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutPropsExtractor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("propsExtractor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderAccessory(value: () => ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderAccessory")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderAccessory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderAccessory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderBase(value: /* props */ RenderBaseProps => ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderBase")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderBase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderBase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRippleCentered(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rippleCentered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRippleCentered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rippleCentered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRippleColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rippleColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRippleColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rippleColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRippleDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rippleDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRippleDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rippleDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRippleInsets(value: DropDownInsets): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rippleInsets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRippleInsets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rippleInsets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRippleOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rippleOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRippleOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rippleOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRippleSequential(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rippleSequential")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRippleSequential: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rippleSequential")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedItemColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedItemColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedItemColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedItemColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadeOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadeOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadeOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadeOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportedOrientations(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedOrientations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportedOrientations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedOrientations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseNativeDriver(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useNativeDriver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseNativeDriver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useNativeDriver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueExtractor(value: (/* item */ DropDownData, /* index */ Double) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueExtractor")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutValueExtractor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueExtractor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

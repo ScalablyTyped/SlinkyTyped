@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SkImage extends SkObject[SkImage] {
-  def encodeToData(): SkData = js.native
-  def height(): Double = js.native
-  def readPixels(info: SkImageInfo, srcX: Double, srcY: Double): js.typedarray.Uint8Array | js.typedarray.Float32Array | Null = js.native
-  def width(): Double = js.native
+  def encodeToData(): SkData
+  def height(): Double
+  def readPixels(info: SkImageInfo, srcX: Double, srcY: Double): js.typedarray.Uint8Array | js.typedarray.Float32Array | Null
+  def width(): Double
 }
 
 object SkImage {
@@ -27,39 +26,5 @@ object SkImage {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction0(delete), deleteAfter = js.Any.fromFunction0(deleteAfter), encodeToData = js.Any.fromFunction0(encodeToData), height = js.Any.fromFunction0(height), isAliasOf = js.Any.fromFunction1(isAliasOf), isDeleted = js.Any.fromFunction0(isDeleted), readPixels = js.Any.fromFunction3(readPixels), width = js.Any.fromFunction0(width))
     __obj.asInstanceOf[SkImage]
   }
-  @scala.inline
-  implicit class SkImageOps[Self <: SkImage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncodeToData(value: () => SkData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encodeToData")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHeight(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withReadPixels(
-      value: (SkImageInfo, Double, Double) => js.typedarray.Uint8Array | js.typedarray.Float32Array | Null
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readPixels")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withWidth(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

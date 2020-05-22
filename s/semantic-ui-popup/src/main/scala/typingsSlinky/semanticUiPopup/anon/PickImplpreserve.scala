@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<semantic-ui-popup.SemanticUI.PopupSettings._Impl, 'preserve'> */
-@js.native
 trait PickImplpreserve extends js.Object {
-  var preserve: Boolean = js.native
+  var preserve: Boolean
 }
 
 object PickImplpreserve {
@@ -16,19 +15,5 @@ object PickImplpreserve {
     val __obj = js.Dynamic.literal(preserve = preserve.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickImplpreserve]
   }
-  @scala.inline
-  implicit class PickImplpreserveOps[Self <: PickImplpreserve] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPreserve(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserve")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

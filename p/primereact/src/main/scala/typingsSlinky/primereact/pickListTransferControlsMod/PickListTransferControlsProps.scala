@@ -5,88 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PickListTransferControlsProps extends js.Object {
-  var onTransfer: js.UndefOr[js.Function1[/* e */ Target, Unit]] = js.native
-  var source: js.UndefOr[js.Array[_]] = js.native
-  var sourceSelection: js.UndefOr[js.Array[_]] = js.native
-  var target: js.UndefOr[js.Array[_]] = js.native
-  var targetSelection: js.UndefOr[js.Array[_]] = js.native
+  var onTransfer: js.UndefOr[js.Function1[/* e */ Target, Unit]] = js.undefined
+  var source: js.UndefOr[js.Array[_]] = js.undefined
+  var sourceSelection: js.UndefOr[js.Array[_]] = js.undefined
+  var target: js.UndefOr[js.Array[_]] = js.undefined
+  var targetSelection: js.UndefOr[js.Array[_]] = js.undefined
 }
 
 object PickListTransferControlsProps {
   @scala.inline
-  def apply(): PickListTransferControlsProps = {
+  def apply(
+    onTransfer: /* e */ Target => Unit = null,
+    source: js.Array[_] = null,
+    sourceSelection: js.Array[_] = null,
+    target: js.Array[_] = null,
+    targetSelection: js.Array[_] = null
+  ): PickListTransferControlsProps = {
     val __obj = js.Dynamic.literal()
+    if (onTransfer != null) __obj.updateDynamic("onTransfer")(js.Any.fromFunction1(onTransfer))
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (sourceSelection != null) __obj.updateDynamic("sourceSelection")(sourceSelection.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (targetSelection != null) __obj.updateDynamic("targetSelection")(targetSelection.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickListTransferControlsProps]
   }
-  @scala.inline
-  implicit class PickListTransferControlsPropsOps[Self <: PickListTransferControlsProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnTransfer(value: /* e */ Target => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTransfer")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTransfer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTransfer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceSelection(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceSelection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceSelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceSelection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetSelection(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetSelection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetSelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetSelection")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

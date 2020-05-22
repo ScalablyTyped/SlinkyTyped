@@ -1,6 +1,7 @@
 package typingsSlinky.makerJs.global.MakerJs
 
 import typingsSlinky.makerJs.MakerJs.IMeasure
+import typingsSlinky.makerJs.MakerJs.IMeasureMap
 import typingsSlinky.makerJs.MakerJs.IMeasureWithCenter
 import typingsSlinky.makerJs.MakerJs.IModel
 import typingsSlinky.makerJs.MakerJs.IPath
@@ -32,6 +33,25 @@ object measure extends js.Object {
       * @param modelContext The model to measure.
       */
     def this(modelContext: IModel) = this()
+    /* CompleteClass */
+    override var modelContext: IModel = js.native
+    /**
+      * Map of model measurements, mapped by routeKey.
+      */
+    /* CompleteClass */
+    override var modelMap: IMeasureMap = js.native
+    /**
+      * Flag that models have been measured.
+      */
+    /* CompleteClass */
+    override var modelsMeasured: Boolean = js.native
+    /**
+      * Map of path measurements, mapped by routeKey.
+      */
+    /* CompleteClass */
+    override var pathMap: IMeasureMap = js.native
+    /* CompleteClass */
+    override def measureModels(): Unit = js.native
   }
   
   /**

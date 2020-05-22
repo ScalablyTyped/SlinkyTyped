@@ -10,108 +10,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FunctionOptions extends js.Object {
-  var behavior: js.UndefOr[IMMUTABLE | STABLE | VOLATILE] = js.native
-  var language: String = js.native
-  var onNull: js.UndefOr[Boolean] = js.native
-  var parallel: js.UndefOr[UNSAFE | RESTRICTED | SAFE] = js.native
-  var replace: js.UndefOr[Boolean] = js.native
-  var returns: js.UndefOr[String] = js.native
-  var window: js.UndefOr[Boolean] = js.native
+  var behavior: js.UndefOr[IMMUTABLE | STABLE | VOLATILE] = js.undefined
+  var language: String
+  var onNull: js.UndefOr[Boolean] = js.undefined
+  var parallel: js.UndefOr[UNSAFE | RESTRICTED | SAFE] = js.undefined
+  var replace: js.UndefOr[Boolean] = js.undefined
+  var returns: js.UndefOr[String] = js.undefined
+  var window: js.UndefOr[Boolean] = js.undefined
 }
 
 object FunctionOptions {
   @scala.inline
-  def apply(language: String): FunctionOptions = {
+  def apply(
+    language: String,
+    behavior: IMMUTABLE | STABLE | VOLATILE = null,
+    onNull: js.UndefOr[Boolean] = js.undefined,
+    parallel: UNSAFE | RESTRICTED | SAFE = null,
+    replace: js.UndefOr[Boolean] = js.undefined,
+    returns: String = null,
+    window: js.UndefOr[Boolean] = js.undefined
+  ): FunctionOptions = {
     val __obj = js.Dynamic.literal(language = language.asInstanceOf[js.Any])
+    if (behavior != null) __obj.updateDynamic("behavior")(behavior.asInstanceOf[js.Any])
+    if (!js.isUndefined(onNull)) __obj.updateDynamic("onNull")(onNull.get.asInstanceOf[js.Any])
+    if (parallel != null) __obj.updateDynamic("parallel")(parallel.asInstanceOf[js.Any])
+    if (!js.isUndefined(replace)) __obj.updateDynamic("replace")(replace.get.asInstanceOf[js.Any])
+    if (returns != null) __obj.updateDynamic("returns")(returns.asInstanceOf[js.Any])
+    if (!js.isUndefined(window)) __obj.updateDynamic("window")(window.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FunctionOptions]
   }
-  @scala.inline
-  implicit class FunctionOptionsOps[Self <: FunctionOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBehavior(value: IMMUTABLE | STABLE | VOLATILE): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("behavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("behavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnNull(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNull")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNull")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParallel(value: UNSAFE | RESTRICTED | SAFE): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parallel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParallel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parallel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplace(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturns(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

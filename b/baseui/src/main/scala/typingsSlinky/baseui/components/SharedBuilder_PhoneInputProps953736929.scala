@@ -37,6 +37,8 @@ class SharedBuilder_PhoneInputProps953736929 (val args: js.Array[js.Any])
   @scala.inline
   def `aria-describedby`(value: String): this.type = set("aria-describedby", value.asInstanceOf[js.Any])
   @scala.inline
+  def `aria-errormessage`(value: String): this.type = set("aria-errormessage", value.asInstanceOf[js.Any])
+  @scala.inline
   def `aria-label`(value: String): this.type = set("aria-label", value.asInstanceOf[js.Any])
   @scala.inline
   def `aria-labelledby`(value: String): this.type = set("aria-labelledby", value.asInstanceOf[js.Any])
@@ -102,6 +104,8 @@ class SharedBuilder_PhoneInputProps953736929 (val args: js.Array[js.Any])
   def onTextChange(value: /* event */ SyntheticEvent[Event, HTMLInputElement] => _): this.type = set("onTextChange", js.Any.fromFunction1(value))
   @scala.inline
   def overrides(value: PhoneInputOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
+  @scala.inline
+  def pattern(value: String): this.type = set("pattern", value.asInstanceOf[js.Any])
   @scala.inline
   def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
   @scala.inline

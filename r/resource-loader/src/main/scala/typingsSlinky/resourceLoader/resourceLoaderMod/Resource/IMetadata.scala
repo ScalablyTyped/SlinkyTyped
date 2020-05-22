@@ -18,80 +18,24 @@ import scala.scalajs.js.annotation._
   *      of a video/audio elment. If the urls are an array, you can pass this as an array as well
   *      where each index is the mime type to use for the corresponding url index.
   */
-@js.native
 trait IMetadata extends js.Object {
-  var loadElement: js.UndefOr[HTMLImageElement | HTMLAudioElement | HTMLVideoElement] = js.native
-  var mimeType: js.UndefOr[String | js.Array[String]] = js.native
-  var skipSource: js.UndefOr[Boolean] = js.native
+  var loadElement: js.UndefOr[HTMLImageElement | HTMLAudioElement | HTMLVideoElement] = js.undefined
+  var mimeType: js.UndefOr[String | js.Array[String]] = js.undefined
+  var skipSource: js.UndefOr[Boolean] = js.undefined
 }
 
 object IMetadata {
   @scala.inline
-  def apply(): IMetadata = {
+  def apply(
+    loadElement: HTMLImageElement | HTMLAudioElement | HTMLVideoElement = null,
+    mimeType: String | js.Array[String] = null,
+    skipSource: js.UndefOr[Boolean] = js.undefined
+  ): IMetadata = {
     val __obj = js.Dynamic.literal()
+    if (loadElement != null) __obj.updateDynamic("loadElement")(loadElement.asInstanceOf[js.Any])
+    if (mimeType != null) __obj.updateDynamic("mimeType")(mimeType.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipSource)) __obj.updateDynamic("skipSource")(skipSource.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMetadata]
   }
-  @scala.inline
-  implicit class IMetadataOps[Self <: IMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoadElementHTMLVideoElement(value: HTMLVideoElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoadElementHTMLImageElement(value: HTMLImageElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoadElementHTMLAudioElement(value: HTMLAudioElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoadElement(value: HTMLImageElement | HTMLAudioElement | HTMLVideoElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMimeType(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMimeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipSource(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipSource")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

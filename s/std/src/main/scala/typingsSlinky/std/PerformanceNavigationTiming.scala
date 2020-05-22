@@ -5,18 +5,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides methods and properties to store and retrieve metrics regarding the browser's document navigation events. For example, this interface can be used to determine how much time it takes to load or unload a document. */
-@js.native
 trait PerformanceNavigationTiming extends PerformanceResourceTiming {
-  val domComplete: Double = js.native
-  val domContentLoadedEventEnd: Double = js.native
-  val domContentLoadedEventStart: Double = js.native
-  val domInteractive: Double = js.native
-  val loadEventEnd: Double = js.native
-  val loadEventStart: Double = js.native
-  val redirectCount: Double = js.native
-  val `type`: NavigationType = js.native
-  val unloadEventEnd: Double = js.native
-  val unloadEventStart: Double = js.native
+  val domComplete: Double
+  val domContentLoadedEventEnd: Double
+  val domContentLoadedEventStart: Double
+  val domInteractive: Double
+  val loadEventEnd: Double
+  val loadEventStart: Double
+  val redirectCount: Double
+  val `type`: NavigationType
+  val unloadEventEnd: Double
+  val unloadEventStart: Double
 }
 
 object PerformanceNavigationTiming {
@@ -59,73 +58,5 @@ object PerformanceNavigationTiming {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PerformanceNavigationTiming]
   }
-  @scala.inline
-  implicit class PerformanceNavigationTimingOps[Self <: PerformanceNavigationTiming] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDomComplete(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domComplete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDomContentLoadedEventEnd(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domContentLoadedEventEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDomContentLoadedEventStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domContentLoadedEventStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDomInteractive(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domInteractive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoadEventEnd(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadEventEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoadEventStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadEventStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRedirectCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: NavigationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnloadEventEnd(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unloadEventEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnloadEventStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unloadEventStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

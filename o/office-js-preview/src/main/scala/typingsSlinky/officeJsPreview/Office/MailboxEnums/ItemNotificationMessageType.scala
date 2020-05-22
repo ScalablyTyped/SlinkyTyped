@@ -13,7 +13,7 @@ sealed trait ItemNotificationMessageType extends js.Object
   * [Api set: Mailbox 1.3]
   *
   * @remarks
-  * 
+  *
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
   */
 @JSGlobal("Office.MailboxEnums.ItemNotificationMessageType")

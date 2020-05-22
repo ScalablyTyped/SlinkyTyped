@@ -4,95 +4,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Transaction extends js.Object {
-  var affiliation: js.UndefOr[String] = js.native
-  var couponCode: js.UndefOr[String] = js.native
-  var id: String = js.native
-  var revenue: js.UndefOr[Double] = js.native
-  var shipping: js.UndefOr[Double] = js.native
-  var tax: js.UndefOr[Double] = js.native
+  var affiliation: js.UndefOr[String] = js.undefined
+  var couponCode: js.UndefOr[String] = js.undefined
+  var id: String
+  var revenue: js.UndefOr[Double] = js.undefined
+  var shipping: js.UndefOr[Double] = js.undefined
+  var tax: js.UndefOr[Double] = js.undefined
 }
 
 object Transaction {
   @scala.inline
-  def apply(id: String): Transaction = {
+  def apply(
+    id: String,
+    affiliation: String = null,
+    couponCode: String = null,
+    revenue: js.UndefOr[Double] = js.undefined,
+    shipping: js.UndefOr[Double] = js.undefined,
+    tax: js.UndefOr[Double] = js.undefined
+  ): Transaction = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    if (affiliation != null) __obj.updateDynamic("affiliation")(affiliation.asInstanceOf[js.Any])
+    if (couponCode != null) __obj.updateDynamic("couponCode")(couponCode.asInstanceOf[js.Any])
+    if (!js.isUndefined(revenue)) __obj.updateDynamic("revenue")(revenue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(shipping)) __obj.updateDynamic("shipping")(shipping.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tax)) __obj.updateDynamic("tax")(tax.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Transaction]
   }
-  @scala.inline
-  implicit class TransactionOps[Self <: Transaction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAffiliation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("affiliation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAffiliation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("affiliation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCouponCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("couponCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCouponCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("couponCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRevenue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revenue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRevenue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revenue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShipping(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shipping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShipping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shipping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tax")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TaskStatus extends js.Object {
   /**
     * Output only.
@@ -12,7 +11,7 @@ trait TaskStatus extends js.Object {
     * The number of attempts dispatched. This count includes tasks which have
     * been dispatched but haven't received a response.
     */
-  var attemptDispatchCount: js.UndefOr[String] = js.native
+  var attemptDispatchCount: js.UndefOr[String] = js.undefined
   /**
     * Output only.
     *
@@ -21,7 +20,7 @@ trait TaskStatus extends js.Object {
     * This field is not calculated for
     * [pull tasks](google.cloud.tasks.v2beta2.PullTaskTarget).
     */
-  var attemptResponseCount: js.UndefOr[String] = js.native
+  var attemptResponseCount: js.UndefOr[String] = js.undefined
   /**
     * Output only.
     *
@@ -33,7 +32,7 @@ trait TaskStatus extends js.Object {
     * This field is not calculated for
     * [pull tasks](google.cloud.tasks.v2beta2.PullTaskTarget).
     */
-  var firstAttemptStatus: js.UndefOr[AttemptStatus] = js.native
+  var firstAttemptStatus: js.UndefOr[AttemptStatus] = js.undefined
   /**
     * Output only.
     *
@@ -42,70 +41,23 @@ trait TaskStatus extends js.Object {
     * This field is not calculated for
     * [pull tasks](google.cloud.tasks.v2beta2.PullTaskTarget).
     */
-  var lastAttemptStatus: js.UndefOr[AttemptStatus] = js.native
+  var lastAttemptStatus: js.UndefOr[AttemptStatus] = js.undefined
 }
 
 object TaskStatus {
   @scala.inline
-  def apply(): TaskStatus = {
+  def apply(
+    attemptDispatchCount: String = null,
+    attemptResponseCount: String = null,
+    firstAttemptStatus: AttemptStatus = null,
+    lastAttemptStatus: AttemptStatus = null
+  ): TaskStatus = {
     val __obj = js.Dynamic.literal()
+    if (attemptDispatchCount != null) __obj.updateDynamic("attemptDispatchCount")(attemptDispatchCount.asInstanceOf[js.Any])
+    if (attemptResponseCount != null) __obj.updateDynamic("attemptResponseCount")(attemptResponseCount.asInstanceOf[js.Any])
+    if (firstAttemptStatus != null) __obj.updateDynamic("firstAttemptStatus")(firstAttemptStatus.asInstanceOf[js.Any])
+    if (lastAttemptStatus != null) __obj.updateDynamic("lastAttemptStatus")(lastAttemptStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[TaskStatus]
   }
-  @scala.inline
-  implicit class TaskStatusOps[Self <: TaskStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttemptDispatchCount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attemptDispatchCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttemptDispatchCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attemptDispatchCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttemptResponseCount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attemptResponseCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttemptResponseCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attemptResponseCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstAttemptStatus(value: AttemptStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstAttemptStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstAttemptStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstAttemptStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastAttemptStatus(value: AttemptStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastAttemptStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastAttemptStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastAttemptStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

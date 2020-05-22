@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetFilterRequest extends js.Object {
   /**
-    * The unique ID of the detector the filter is associated with.
+    * The unique ID of the detector that the filter is associated with.
     */
   var DetectorId: typingsSlinky.awsSdk.guarddutyMod.DetectorId = js.native
   /**
@@ -22,25 +22,5 @@ object GetFilterRequest {
     val __obj = js.Dynamic.literal(DetectorId = DetectorId.asInstanceOf[js.Any], FilterName = FilterName.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetFilterRequest]
   }
-  @scala.inline
-  implicit class GetFilterRequestOps[Self <: GetFilterRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDetectorId(value: DetectorId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DetectorId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilterName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

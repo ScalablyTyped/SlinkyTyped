@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.userPoolClientMod
 
+import typingsSlinky.pulumiAws.inputMod.cognito.UserPoolClientAnalyticsConfiguration
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,6 +20,10 @@ trait UserPoolClientState extends js.Object {
     * List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
     */
   val allowedOauthScopes: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
+  /**
+    * The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.
+    */
+  val analyticsConfiguration: js.UndefOr[Input[UserPoolClientAnalyticsConfiguration]] = js.native
   /**
     * List of allowed callback URLs for the identity providers.
     */
@@ -48,6 +53,10 @@ trait UserPoolClientState extends js.Object {
     */
   val name: js.UndefOr[Input[String]] = js.native
   /**
+    * Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool.
+    */
+  val preventUserExistenceErrors: js.UndefOr[Input[String]] = js.native
+  /**
     * List of user pool attributes the application client can read from.
     */
   val readAttributes: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
@@ -71,197 +80,44 @@ trait UserPoolClientState extends js.Object {
 
 object UserPoolClientState {
   @scala.inline
-  def apply(): UserPoolClientState = {
+  def apply(
+    allowedOauthFlows: Input[js.Array[Input[String]]] = null,
+    allowedOauthFlowsUserPoolClient: Input[Boolean] = null,
+    allowedOauthScopes: Input[js.Array[Input[String]]] = null,
+    analyticsConfiguration: Input[UserPoolClientAnalyticsConfiguration] = null,
+    callbackUrls: Input[js.Array[Input[String]]] = null,
+    clientSecret: Input[String] = null,
+    defaultRedirectUri: Input[String] = null,
+    explicitAuthFlows: Input[js.Array[Input[String]]] = null,
+    generateSecret: Input[Boolean] = null,
+    logoutUrls: Input[js.Array[Input[String]]] = null,
+    name: Input[String] = null,
+    preventUserExistenceErrors: Input[String] = null,
+    readAttributes: Input[js.Array[Input[String]]] = null,
+    refreshTokenValidity: Input[Double] = null,
+    supportedIdentityProviders: Input[js.Array[Input[String]]] = null,
+    userPoolId: Input[String] = null,
+    writeAttributes: Input[js.Array[Input[String]]] = null
+  ): UserPoolClientState = {
     val __obj = js.Dynamic.literal()
+    if (allowedOauthFlows != null) __obj.updateDynamic("allowedOauthFlows")(allowedOauthFlows.asInstanceOf[js.Any])
+    if (allowedOauthFlowsUserPoolClient != null) __obj.updateDynamic("allowedOauthFlowsUserPoolClient")(allowedOauthFlowsUserPoolClient.asInstanceOf[js.Any])
+    if (allowedOauthScopes != null) __obj.updateDynamic("allowedOauthScopes")(allowedOauthScopes.asInstanceOf[js.Any])
+    if (analyticsConfiguration != null) __obj.updateDynamic("analyticsConfiguration")(analyticsConfiguration.asInstanceOf[js.Any])
+    if (callbackUrls != null) __obj.updateDynamic("callbackUrls")(callbackUrls.asInstanceOf[js.Any])
+    if (clientSecret != null) __obj.updateDynamic("clientSecret")(clientSecret.asInstanceOf[js.Any])
+    if (defaultRedirectUri != null) __obj.updateDynamic("defaultRedirectUri")(defaultRedirectUri.asInstanceOf[js.Any])
+    if (explicitAuthFlows != null) __obj.updateDynamic("explicitAuthFlows")(explicitAuthFlows.asInstanceOf[js.Any])
+    if (generateSecret != null) __obj.updateDynamic("generateSecret")(generateSecret.asInstanceOf[js.Any])
+    if (logoutUrls != null) __obj.updateDynamic("logoutUrls")(logoutUrls.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (preventUserExistenceErrors != null) __obj.updateDynamic("preventUserExistenceErrors")(preventUserExistenceErrors.asInstanceOf[js.Any])
+    if (readAttributes != null) __obj.updateDynamic("readAttributes")(readAttributes.asInstanceOf[js.Any])
+    if (refreshTokenValidity != null) __obj.updateDynamic("refreshTokenValidity")(refreshTokenValidity.asInstanceOf[js.Any])
+    if (supportedIdentityProviders != null) __obj.updateDynamic("supportedIdentityProviders")(supportedIdentityProviders.asInstanceOf[js.Any])
+    if (userPoolId != null) __obj.updateDynamic("userPoolId")(userPoolId.asInstanceOf[js.Any])
+    if (writeAttributes != null) __obj.updateDynamic("writeAttributes")(writeAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserPoolClientState]
   }
-  @scala.inline
-  implicit class UserPoolClientStateOps[Self <: UserPoolClientState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowedOauthFlows(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedOauthFlows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowedOauthFlows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedOauthFlows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowedOauthFlowsUserPoolClient(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedOauthFlowsUserPoolClient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowedOauthFlowsUserPoolClient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedOauthFlowsUserPoolClient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowedOauthScopes(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedOauthScopes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowedOauthScopes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedOauthScopes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCallbackUrls(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackUrls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallbackUrls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackUrls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientSecret(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientSecret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientSecret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientSecret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultRedirectUri(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRedirectUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultRedirectUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRedirectUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExplicitAuthFlows(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("explicitAuthFlows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExplicitAuthFlows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("explicitAuthFlows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGenerateSecret(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateSecret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGenerateSecret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateSecret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogoutUrls(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logoutUrls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogoutUrls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logoutUrls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadAttributes(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefreshTokenValidity(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshTokenValidity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefreshTokenValidity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshTokenValidity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportedIdentityProviders(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedIdentityProviders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportedIdentityProviders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedIdentityProviders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserPoolId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userPoolId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserPoolId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userPoolId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriteAttributes(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeAttributes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

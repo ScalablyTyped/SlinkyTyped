@@ -8,17 +8,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OptionProfileProps extends BaseMenuPropsT {
   @JSName("$isHighlighted")
-  var $isHighlighted: js.UndefOr[Boolean] = js.native
-  var getChildMenu: js.UndefOr[js.Function1[/* item */ js.Any, TagMod[Any]]] = js.native
-  var item: js.Any = js.native
-  var overrides: js.UndefOr[ListItemProfile] = js.native
-  var resetMenu: js.UndefOr[js.Function0[Unit]] = js.native
-  def getProfileItemImg(item: js.Any): String | ReactComponentClass[_] = js.native
-  def getProfileItemImgText(item: js.Any): String = js.native
-  def getProfileItemLabels(item: js.Any): Body = js.native
+  var $isHighlighted: js.UndefOr[Boolean] = js.undefined
+  var getChildMenu: js.UndefOr[js.Function1[/* item */ js.Any, TagMod[Any]]] = js.undefined
+  var item: js.Any
+  var overrides: js.UndefOr[ListItemProfile] = js.undefined
+  var resetMenu: js.UndefOr[js.Function0[Unit]] = js.undefined
+  def getProfileItemImg(item: js.Any): String | ReactComponentClass[_]
+  def getProfileItemImgText(item: js.Any): String
+  def getProfileItemLabels(item: js.Any): Body
 }
 
 object OptionProfileProps {
@@ -27,90 +26,20 @@ object OptionProfileProps {
     getProfileItemImg: js.Any => String | ReactComponentClass[_],
     getProfileItemImgText: js.Any => String,
     getProfileItemLabels: js.Any => Body,
-    item: js.Any
+    item: js.Any,
+    $isHighlighted: js.UndefOr[Boolean] = js.undefined,
+    getChildMenu: /* item */ js.Any => TagMod[Any] = null,
+    overrides: ListItemProfile = null,
+    renderAll: js.UndefOr[Boolean] = js.undefined,
+    resetMenu: () => Unit = null
   ): OptionProfileProps = {
     val __obj = js.Dynamic.literal(getProfileItemImg = js.Any.fromFunction1(getProfileItemImg), getProfileItemImgText = js.Any.fromFunction1(getProfileItemImgText), getProfileItemLabels = js.Any.fromFunction1(getProfileItemLabels), item = item.asInstanceOf[js.Any])
+    if (!js.isUndefined($isHighlighted)) __obj.updateDynamic("$isHighlighted")($isHighlighted.get.asInstanceOf[js.Any])
+    if (getChildMenu != null) __obj.updateDynamic("getChildMenu")(js.Any.fromFunction1(getChildMenu))
+    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
+    if (!js.isUndefined(renderAll)) __obj.updateDynamic("renderAll")(renderAll.get.asInstanceOf[js.Any])
+    if (resetMenu != null) __obj.updateDynamic("resetMenu")(js.Any.fromFunction0(resetMenu))
     __obj.asInstanceOf[OptionProfileProps]
   }
-  @scala.inline
-  implicit class OptionProfilePropsOps[Self <: OptionProfileProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetProfileItemImg(value: js.Any => String | ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getProfileItemImg")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetProfileItemImgText(value: js.Any => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getProfileItemImgText")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetProfileItemLabels(value: js.Any => Body): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getProfileItemLabels")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withItem(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with$isHighlighted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$isHighlighted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$isHighlighted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$isHighlighted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetChildMenu(value: /* item */ js.Any => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getChildMenu")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetChildMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getChildMenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverrides(value: ListItemProfile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverrides: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResetMenu(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetMenu")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutResetMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetMenu")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

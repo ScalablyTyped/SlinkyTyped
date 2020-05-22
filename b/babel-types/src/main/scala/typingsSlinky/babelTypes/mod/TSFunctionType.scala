@@ -4,15 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TSFunctionType
   extends Node
      with TSType {
-  var parameters: (js.Array[Identifier_ | RestElement_]) | Null = js.native
-  var typeAnnotation: TSTypeAnnotation | Null = js.native
-  var typeParameters: TypeParameterDeclaration_ | Null = js.native
+  var parameters: (js.Array[Identifier_ | RestElement_]) | Null
+  var typeAnnotation: TSTypeAnnotation | Null
+  var typeParameters: TypeParameterDeclaration_ | Null
   @JSName("type")
-  var type_TSFunctionType: typingsSlinky.babelTypes.babelTypesStrings.TSFunctionType = js.native
+  var type_TSFunctionType: typingsSlinky.babelTypes.babelTypesStrings.TSFunctionType
 }
 
 @JSImport("babel-types", "TSFunctionType")

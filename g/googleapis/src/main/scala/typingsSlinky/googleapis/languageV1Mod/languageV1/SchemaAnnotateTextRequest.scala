@@ -26,53 +26,12 @@ trait SchemaAnnotateTextRequest extends js.Object {
 
 object SchemaAnnotateTextRequest {
   @scala.inline
-  def apply(): SchemaAnnotateTextRequest = {
+  def apply(document: SchemaDocument = null, encodingType: String = null, features: SchemaFeatures = null): SchemaAnnotateTextRequest = {
     val __obj = js.Dynamic.literal()
+    if (document != null) __obj.updateDynamic("document")(document.asInstanceOf[js.Any])
+    if (encodingType != null) __obj.updateDynamic("encodingType")(encodingType.asInstanceOf[js.Any])
+    if (features != null) __obj.updateDynamic("features")(features.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAnnotateTextRequest]
   }
-  @scala.inline
-  implicit class SchemaAnnotateTextRequestOps[Self <: SchemaAnnotateTextRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocument(value: SchemaDocument): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocument: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncodingType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encodingType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncodingType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encodingType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeatures(value: SchemaFeatures): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeatures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

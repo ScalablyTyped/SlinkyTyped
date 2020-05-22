@@ -22,41 +22,11 @@ trait SchemaRegionInstanceGroupManagersListInstancesResponse extends js.Object {
 
 object SchemaRegionInstanceGroupManagersListInstancesResponse {
   @scala.inline
-  def apply(): SchemaRegionInstanceGroupManagersListInstancesResponse = {
+  def apply(managedInstances: js.Array[SchemaManagedInstance] = null, nextPageToken: String = null): SchemaRegionInstanceGroupManagersListInstancesResponse = {
     val __obj = js.Dynamic.literal()
+    if (managedInstances != null) __obj.updateDynamic("managedInstances")(managedInstances.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRegionInstanceGroupManagersListInstancesResponse]
   }
-  @scala.inline
-  implicit class SchemaRegionInstanceGroupManagersListInstancesResponseOps[Self <: SchemaRegionInstanceGroupManagersListInstancesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withManagedInstances(value: js.Array[SchemaManagedInstance]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedInstances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManagedInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedInstances")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

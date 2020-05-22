@@ -4,152 +4,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InventorySetRequest extends js.Object {
   /** The availability of the product. */
-  var availability: js.UndefOr[String] = js.native
+  var availability: js.UndefOr[String] = js.undefined
   /** Number and amount of installments to pay for an item. Brazil only. */
-  var installment: js.UndefOr[Installment] = js.native
+  var installment: js.UndefOr[Installment] = js.undefined
   /** Loyalty points that users receive after purchasing the item. Japan only. */
-  var loyaltyPoints: js.UndefOr[LoyaltyPoints] = js.native
+  var loyaltyPoints: js.UndefOr[LoyaltyPoints] = js.undefined
   /**
     * Store pickup information. Only supported for local inventory. Not setting pickup means "don't update" while setting it to the empty value ({} in JSON)
     * means "delete". Otherwise, pickupMethod and pickupSla must be set together, unless pickupMethod is "not supported".
     */
-  var pickup: js.UndefOr[InventoryPickup] = js.native
+  var pickup: js.UndefOr[InventoryPickup] = js.undefined
   /** The price of the product. */
-  var price: js.UndefOr[Price] = js.native
+  var price: js.UndefOr[Price] = js.undefined
   /** The quantity of the product. Must be equal to or greater than zero. Supported only for local products. */
-  var quantity: js.UndefOr[Double] = js.native
+  var quantity: js.UndefOr[Double] = js.undefined
   /** The sale price of the product. Mandatory if sale_price_effective_date is defined. */
-  var salePrice: js.UndefOr[Price] = js.native
+  var salePrice: js.UndefOr[Price] = js.undefined
   /** A date range represented by a pair of ISO 8601 dates separated by a space, comma, or slash. Both dates might be specified as 'null' if undecided. */
-  var salePriceEffectiveDate: js.UndefOr[String] = js.native
+  var salePriceEffectiveDate: js.UndefOr[String] = js.undefined
   /** The quantity of the product that is reserved for sell-on-google ads. Supported only for online products. */
-  var sellOnGoogleQuantity: js.UndefOr[Double] = js.native
+  var sellOnGoogleQuantity: js.UndefOr[Double] = js.undefined
 }
 
 object InventorySetRequest {
   @scala.inline
-  def apply(): InventorySetRequest = {
+  def apply(
+    availability: String = null,
+    installment: Installment = null,
+    loyaltyPoints: LoyaltyPoints = null,
+    pickup: InventoryPickup = null,
+    price: Price = null,
+    quantity: js.UndefOr[Double] = js.undefined,
+    salePrice: Price = null,
+    salePriceEffectiveDate: String = null,
+    sellOnGoogleQuantity: js.UndefOr[Double] = js.undefined
+  ): InventorySetRequest = {
     val __obj = js.Dynamic.literal()
+    if (availability != null) __obj.updateDynamic("availability")(availability.asInstanceOf[js.Any])
+    if (installment != null) __obj.updateDynamic("installment")(installment.asInstanceOf[js.Any])
+    if (loyaltyPoints != null) __obj.updateDynamic("loyaltyPoints")(loyaltyPoints.asInstanceOf[js.Any])
+    if (pickup != null) __obj.updateDynamic("pickup")(pickup.asInstanceOf[js.Any])
+    if (price != null) __obj.updateDynamic("price")(price.asInstanceOf[js.Any])
+    if (!js.isUndefined(quantity)) __obj.updateDynamic("quantity")(quantity.get.asInstanceOf[js.Any])
+    if (salePrice != null) __obj.updateDynamic("salePrice")(salePrice.asInstanceOf[js.Any])
+    if (salePriceEffectiveDate != null) __obj.updateDynamic("salePriceEffectiveDate")(salePriceEffectiveDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(sellOnGoogleQuantity)) __obj.updateDynamic("sellOnGoogleQuantity")(sellOnGoogleQuantity.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[InventorySetRequest]
   }
-  @scala.inline
-  implicit class InventorySetRequestOps[Self <: InventorySetRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvailability(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availability")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailability: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availability")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstallment(value: Installment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("installment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstallment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("installment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoyaltyPoints(value: LoyaltyPoints): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loyaltyPoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoyaltyPoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loyaltyPoints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPickup(value: InventoryPickup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPickup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrice(value: Price): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("price")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("price")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuantity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuantity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSalePrice(value: Price): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("salePrice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSalePrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("salePrice")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSalePriceEffectiveDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("salePriceEffectiveDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSalePriceEffectiveDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("salePriceEffectiveDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSellOnGoogleQuantity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sellOnGoogleQuantity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSellOnGoogleQuantity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sellOnGoogleQuantity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

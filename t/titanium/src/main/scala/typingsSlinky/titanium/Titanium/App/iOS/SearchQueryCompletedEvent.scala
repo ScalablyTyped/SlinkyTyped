@@ -5,19 +5,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-			 * Fired when the query completes to inform you about it's success.
-			 * To receive items, use the `founditems` event.
-			 */
-@js.native
+  * Fired when the query completes to inform you about it's success.
+  * To receive items, use the `founditems` event.
+  */
 trait SearchQueryCompletedEvent extends SearchQueryBaseEvent {
   /**
-  				 * Error message, if any returned. Undefined otherwise.
-  				 */
-  var error: String = js.native
+    * Error message, if any returned. Undefined otherwise.
+    */
+  var error: String
   /**
-  				 * Indicates if the operation succeeded. Returns true if download succeeded, false otherwise.
-  				 */
-  var success: Boolean = js.native
+    * Indicates if the operation succeeded. Returns true if download succeeded, false otherwise.
+    */
+  var success: Boolean
 }
 
 object SearchQueryCompletedEvent {
@@ -26,25 +25,5 @@ object SearchQueryCompletedEvent {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], success = success.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchQueryCompletedEvent]
   }
-  @scala.inline
-  implicit class SearchQueryCompletedEventOps[Self <: SearchQueryCompletedEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withError(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

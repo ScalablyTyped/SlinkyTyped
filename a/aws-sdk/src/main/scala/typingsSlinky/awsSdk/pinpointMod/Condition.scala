@@ -18,41 +18,11 @@ trait Condition extends js.Object {
 
 object Condition {
   @scala.inline
-  def apply(): Condition = {
+  def apply(Conditions: ListOfSimpleCondition = null, Operator: Operator = null): Condition = {
     val __obj = js.Dynamic.literal()
+    if (Conditions != null) __obj.updateDynamic("Conditions")(Conditions.asInstanceOf[js.Any])
+    if (Operator != null) __obj.updateDynamic("Operator")(Operator.asInstanceOf[js.Any])
     __obj.asInstanceOf[Condition]
   }
-  @scala.inline
-  implicit class ConditionOps[Self <: Condition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConditions(value: ListOfSimpleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Conditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConditions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Conditions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperator(value: Operator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Operator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Operator")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

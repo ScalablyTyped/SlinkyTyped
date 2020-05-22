@@ -8,7 +8,6 @@ import scala.scalajs.js.annotation._
 /**
   * A renderer for use with a menu bar.
   */
-@js.native
 trait IRenderer extends js.Object {
   /**
     * Render the virtual element for a menu bar item.
@@ -17,7 +16,7 @@ trait IRenderer extends js.Object {
     *
     * @returns A virtual element representing the item.
     */
-  def renderItem(data: IRenderData): VirtualElement = js.native
+  def renderItem(data: IRenderData): VirtualElement
 }
 
 object IRenderer {
@@ -26,19 +25,5 @@ object IRenderer {
     val __obj = js.Dynamic.literal(renderItem = js.Any.fromFunction1(renderItem))
     __obj.asInstanceOf[IRenderer]
   }
-  @scala.inline
-  implicit class IRendererOps[Self <: IRenderer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRenderItem(value: IRenderData => VirtualElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderItem")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait InitiateLayerUploadResponse extends js.Object {
 
 object InitiateLayerUploadResponse {
   @scala.inline
-  def apply(): InitiateLayerUploadResponse = {
+  def apply(partSize: js.UndefOr[PartSize] = js.undefined, uploadId: UploadId = null): InitiateLayerUploadResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(partSize)) __obj.updateDynamic("partSize")(partSize.get.asInstanceOf[js.Any])
+    if (uploadId != null) __obj.updateDynamic("uploadId")(uploadId.asInstanceOf[js.Any])
     __obj.asInstanceOf[InitiateLayerUploadResponse]
   }
-  @scala.inline
-  implicit class InitiateLayerUploadResponseOps[Self <: InitiateLayerUploadResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPartSize(value: PartSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUploadId(value: UploadId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUploadId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

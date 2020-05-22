@@ -7,21 +7,20 @@ import scala.scalajs.js.annotation._
 /**
   * http://js.cytoscape.org/#collection/position--dimensions
   */
-@js.native
 trait CollectionPosition extends js.Object {
   /**
     * Get the bounding box of the elements in model coordinates.
     * @param options An object containing options for the function.
     * http://js.cytoscape.org/#eles.boundingBox
     */
-  def boundingBox(options: BoundingBoxOptions): BoundingBox12 with BoundingBoxWH = js.native
-  def boundingbox(options: BoundingBoxOptions): BoundingBox12 with BoundingBoxWH = js.native
+  def boundingBox(options: BoundingBoxOptions): BoundingBox12 with BoundingBoxWH
+  def boundingbox(options: BoundingBoxOptions): BoundingBox12 with BoundingBoxWH
   /**
     * Get the bounding box of the elements in rendered coordinates.
     * @param options An object containing options for the function.
     */
-  def renderedBoundingBox(options: BoundingBoxOptions): BoundingBox12 with BoundingBoxWH = js.native
-  def renderedBoundingbox(options: BoundingBoxOptions): BoundingBox12 with BoundingBoxWH = js.native
+  def renderedBoundingBox(options: BoundingBoxOptions): BoundingBox12 with BoundingBoxWH
+  def renderedBoundingbox(options: BoundingBoxOptions): BoundingBox12 with BoundingBoxWH
 }
 
 object CollectionPosition {
@@ -35,25 +34,5 @@ object CollectionPosition {
     val __obj = js.Dynamic.literal(boundingBox = js.Any.fromFunction1(boundingBox), boundingbox = js.Any.fromFunction1(boundingbox), renderedBoundingBox = js.Any.fromFunction1(renderedBoundingBox), renderedBoundingbox = js.Any.fromFunction1(renderedBoundingbox))
     __obj.asInstanceOf[CollectionPosition]
   }
-  @scala.inline
-  implicit class CollectionPositionOps[Self <: CollectionPosition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBoundingBox(value: BoundingBoxOptions => BoundingBox12 with BoundingBoxWH): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundingBox")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRenderedBoundingBox(value: BoundingBoxOptions => BoundingBox12 with BoundingBoxWH): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderedBoundingBox")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

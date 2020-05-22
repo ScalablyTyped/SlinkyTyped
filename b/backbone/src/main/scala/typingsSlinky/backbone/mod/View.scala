@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("backbone", "View")
 @js.native
-class View[TModel /* <: Model */] () extends js.Object {
+class View[TModel /* <: Model[_, ModelSetOptions] */] () extends js.Object {
   def this(options: ViewOptions[TModel]) = this()
   @JSName("$el")
   var $el: JQuery[HTMLElement] = js.native

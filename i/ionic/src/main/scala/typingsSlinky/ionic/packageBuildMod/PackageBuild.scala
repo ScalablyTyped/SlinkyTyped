@@ -4,26 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PackageBuild extends js.Object {
-  var automation_id: Double = js.native
-  var automation_name: String = js.native
-  var build_type: String = js.native
-  var caller_id: Double = js.native
-  var commit: js.Any = js.native
-  var created: String = js.native
-  var environment_id: Double = js.native
-  var environment_name: String = js.native
-  var finished: String = js.native
-  var id: String = js.native
-  var job: js.Any = js.native
-  var job_id: Double = js.native
-  var native_config_id: Double = js.native
-  var native_config_name: String = js.native
-  var platform: String = js.native
-  var profile_tag: String = js.native
-  var stack: js.Any = js.native
-  var state: String = js.native
+  var automation_id: Double
+  var automation_name: String
+  var build_type: String
+  var caller_id: Double
+  var commit: js.Any
+  var created: String
+  var environment_id: Double
+  var environment_name: String
+  var finished: String
+  var id: String
+  var job: js.Any
+  var job_id: Double
+  var native_config_id: Double
+  var native_config_name: String
+  var platform: String
+  var profile_tag: String
+  var stack: js.Any
+  var state: String
 }
 
 object PackageBuild {
@@ -51,121 +50,5 @@ object PackageBuild {
     val __obj = js.Dynamic.literal(automation_id = automation_id.asInstanceOf[js.Any], automation_name = automation_name.asInstanceOf[js.Any], build_type = build_type.asInstanceOf[js.Any], caller_id = caller_id.asInstanceOf[js.Any], commit = commit.asInstanceOf[js.Any], created = created.asInstanceOf[js.Any], environment_id = environment_id.asInstanceOf[js.Any], environment_name = environment_name.asInstanceOf[js.Any], finished = finished.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], job = job.asInstanceOf[js.Any], job_id = job_id.asInstanceOf[js.Any], native_config_id = native_config_id.asInstanceOf[js.Any], native_config_name = native_config_name.asInstanceOf[js.Any], platform = platform.asInstanceOf[js.Any], profile_tag = profile_tag.asInstanceOf[js.Any], stack = stack.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
     __obj.asInstanceOf[PackageBuild]
   }
-  @scala.inline
-  implicit class PackageBuildOps[Self <: PackageBuild] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutomation_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("automation_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutomation_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("automation_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBuild_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("build_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaller_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caller_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommit(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreated(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnvironment_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environment_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnvironment_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environment_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFinished(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finished")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJob(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJob_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNative_config_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("native_config_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNative_config_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("native_config_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlatform(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProfile_tag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profile_tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStack(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

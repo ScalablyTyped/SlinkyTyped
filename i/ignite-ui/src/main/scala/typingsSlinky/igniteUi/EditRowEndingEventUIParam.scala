@@ -4,103 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EditRowEndingEventUIParam extends js.Object {
   /**
-  	 * Gets the old value for the column with the specified key.
-  	 */
-  var oldValues: js.UndefOr[js.Any] = js.native
+    * Gets the old value for the column with the specified key.
+    */
+  var oldValues: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Gets a reference to GridUpdating.
-  	 */
-  var owner: js.UndefOr[js.Any] = js.native
+    * Gets a reference to GridUpdating.
+    */
+  var owner: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Checks if the edit mode is for adding a new row.
-  	 */
-  var rowAdding: js.UndefOr[Boolean] = js.native
+    * Checks if the edit mode is for adding a new row.
+    */
+  var rowAdding: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Check if any of the values is changed which will cause update in the data source. Can be manually set to false to prevent this update.
-  	 */
-  var update: js.UndefOr[Boolean] = js.native
+    * Check if any of the values is changed which will cause update in the data source. Can be manually set to false to prevent this update.
+    */
+  var update: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Gets or set the new value for the column with the specified key.
-  	 */
-  var values: js.UndefOr[js.Any] = js.native
+    * Gets or set the new value for the column with the specified key.
+    */
+  var values: js.UndefOr[js.Any] = js.undefined
 }
 
 object EditRowEndingEventUIParam {
   @scala.inline
-  def apply(): EditRowEndingEventUIParam = {
+  def apply(
+    oldValues: js.Any = null,
+    owner: js.Any = null,
+    rowAdding: js.UndefOr[Boolean] = js.undefined,
+    update: js.UndefOr[Boolean] = js.undefined,
+    values: js.Any = null
+  ): EditRowEndingEventUIParam = {
     val __obj = js.Dynamic.literal()
+    if (oldValues != null) __obj.updateDynamic("oldValues")(oldValues.asInstanceOf[js.Any])
+    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowAdding)) __obj.updateDynamic("rowAdding")(rowAdding.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(update)) __obj.updateDynamic("update")(update.get.asInstanceOf[js.Any])
+    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
     __obj.asInstanceOf[EditRowEndingEventUIParam]
   }
-  @scala.inline
-  implicit class EditRowEndingEventUIParamOps[Self <: EditRowEndingEventUIParam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOldValues(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOldValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwner(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowAdding(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowAdding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowAdding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowAdding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValues(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

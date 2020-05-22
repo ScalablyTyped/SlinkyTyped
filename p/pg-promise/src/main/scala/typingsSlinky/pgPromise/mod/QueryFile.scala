@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 // API: http://vitaly-t.github.io/pg-promise/QueryFile.html
 @JSImport("pg-promise", "QueryFile")
 @js.native
-class QueryFile protected () extends QueryParam {
+class QueryFile protected () extends _QueryParam {
   def this(file: String) = this()
   def this(file: String, options: IQueryFileOptions) = this()
   val error: js.Error = js.native

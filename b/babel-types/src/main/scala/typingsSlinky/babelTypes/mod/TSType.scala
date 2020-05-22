@@ -37,58 +37,491 @@ trait TSType extends js.Object
 
 object TSType {
   @scala.inline
-  implicit def apply(value: TSAnyKeyword): TSType = value.asInstanceOf[TSType]
+  def TSUndefinedKeyword(
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSUndefinedKeyword,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSArrayType): TSType = value.asInstanceOf[TSType]
+  def TSTypeReference(
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSTypeReference,
+    typeName: TSEntityName,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null,
+    typeParameters: TypeParameterInstantiation_ = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], typeName = typeName.asInstanceOf[js.Any], typeParameters = typeParameters.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSBooleanKeyword): TSType = value.asInstanceOf[TSType]
+  def TSNullKeyword(
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSNullKeyword,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSConstructorType): TSType = value.asInstanceOf[TSType]
+  def TSIndexedAccessType(
+    end: Double,
+    indexType: TSType,
+    loc: SourceLocation,
+    objectType: TSType,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSIndexedAccessType,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], indexType = indexType.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], objectType = objectType.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSExpressionWithTypeArguments): TSType = value.asInstanceOf[TSType]
+  def TSVoidKeyword(
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSVoidKeyword,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSFunctionType): TSType = value.asInstanceOf[TSType]
+  def TSExpressionWithTypeArguments(
+    end: Double,
+    expression: TSEntityName,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSExpressionWithTypeArguments,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null,
+    typeParameters: TypeParameterInstantiation_ = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], expression = expression.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], typeParameters = typeParameters.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSIndexedAccessType): TSType = value.asInstanceOf[TSType]
+  def TSIntersectionType(
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSIntersectionType,
+    types: js.Array[TSType],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], types = types.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSIntersectionType): TSType = value.asInstanceOf[TSType]
+  def TSArrayType(
+    elementType: TSType,
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSArrayType,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(elementType = elementType.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSLiteralType): TSType = value.asInstanceOf[TSType]
+  def TSNeverKeyword(
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSNeverKeyword,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSMappedType): TSType = value.asInstanceOf[TSType]
+  def TSObjectKeyword(
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSObjectKeyword,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSNeverKeyword): TSType = value.asInstanceOf[TSType]
+  def TSConstructorType(
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSConstructorType,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    parameters: js.Array[Identifier_ | RestElement_] = null,
+    trailingComments: js.Array[Comment] = null,
+    typeAnnotation: TSTypeAnnotation = null,
+    typeParameters: TypeParameterDeclaration_ = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], parameters = parameters.asInstanceOf[js.Any], typeAnnotation = typeAnnotation.asInstanceOf[js.Any], typeParameters = typeParameters.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSNullKeyword): TSType = value.asInstanceOf[TSType]
+  def TSFunctionType(
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSFunctionType,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    parameters: js.Array[Identifier_ | RestElement_] = null,
+    trailingComments: js.Array[Comment] = null,
+    typeAnnotation: TSTypeAnnotation = null,
+    typeParameters: TypeParameterDeclaration_ = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], parameters = parameters.asInstanceOf[js.Any], typeAnnotation = typeAnnotation.asInstanceOf[js.Any], typeParameters = typeParameters.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSNumberKeyword): TSType = value.asInstanceOf[TSType]
+  def TSUnionType(
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSUnionType,
+    types: js.Array[TSType],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], types = types.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSObjectKeyword): TSType = value.asInstanceOf[TSType]
+  def TSStringKeyword(
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSStringKeyword,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSParenthesizedType): TSType = value.asInstanceOf[TSType]
+  def TSAnyKeyword(
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSAnyKeyword,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSStringKeyword): TSType = value.asInstanceOf[TSType]
+  def TSThisType(
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSThisType,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSSymbolKeyword): TSType = value.asInstanceOf[TSType]
+  def TSParenthesizedType(
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSParenthesizedType,
+    typeAnnotation: TSType,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], typeAnnotation = typeAnnotation.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSThisType): TSType = value.asInstanceOf[TSType]
+  def TSBooleanKeyword(
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSBooleanKeyword,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSTupleType): TSType = value.asInstanceOf[TSType]
+  def TSTypeOperator(
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSTypeOperator,
+    typeAnnotation: TSType,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    operator: String = null,
+    trailingComments: js.Array[Comment] = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], typeAnnotation = typeAnnotation.asInstanceOf[js.Any], operator = operator.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSTypeLiteral): TSType = value.asInstanceOf[TSType]
+  def TSTypePredicate(
+    end: Double,
+    loc: SourceLocation,
+    parameterName: Identifier_ | TSThisType,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSTypePredicate,
+    typeAnnotation: TSTypeAnnotation,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], parameterName = parameterName.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], typeAnnotation = typeAnnotation.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSTypeOperator): TSType = value.asInstanceOf[TSType]
+  def TSNumberKeyword(
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSNumberKeyword,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSTypePredicate): TSType = value.asInstanceOf[TSType]
+  def TSSymbolKeyword(
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSSymbolKeyword,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSTypeQuery): TSType = value.asInstanceOf[TSType]
+  def TSLiteralType(
+    end: Double,
+    literal: NumericLiteral_ | StringLiteral_ | BooleanLiteral_,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSLiteralType,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], literal = literal.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSTypeReference): TSType = value.asInstanceOf[TSType]
+  def TSTypeQuery(
+    end: Double,
+    exprName: TSEntityName,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSTypeQuery,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], exprName = exprName.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSUndefinedKeyword): TSType = value.asInstanceOf[TSType]
+  def TSTupleType(
+    elementTypes: js.Array[TSType],
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSTupleType,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(elementTypes = elementTypes.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSUnionType): TSType = value.asInstanceOf[TSType]
+  def TSTypeLiteral(
+    end: Double,
+    loc: SourceLocation,
+    members: js.Array[TSTypeElement],
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSTypeLiteral,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], members = members.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
   @scala.inline
-  implicit def apply(value: TSVoidKeyword): TSType = value.asInstanceOf[TSType]
+  def TSMappedType(
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSMappedType,
+    typeParameter: TypeParameter_,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    optional: Boolean = null.asInstanceOf[Boolean],
+    readonly: Boolean = null.asInstanceOf[Boolean],
+    trailingComments: js.Array[Comment] = null,
+    typeAnnotation: TSType = null
+  ): TSType = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], typeParameter = typeParameter.asInstanceOf[js.Any], optional = optional.asInstanceOf[js.Any], readonly = readonly.asInstanceOf[js.Any], typeAnnotation = typeAnnotation.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSType]
+  }
 }
 

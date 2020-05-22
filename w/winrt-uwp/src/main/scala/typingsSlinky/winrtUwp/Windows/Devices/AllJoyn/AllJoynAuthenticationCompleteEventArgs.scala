@@ -5,14 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Contains information about a successful or unsuccessful completion of an authentication operation. */
-@js.native
 trait AllJoynAuthenticationCompleteEventArgs extends js.Object {
   /** The mechanism used during authentication. */
-  var authenticationMechanism: AllJoynAuthenticationMechanism = js.native
+  var authenticationMechanism: AllJoynAuthenticationMechanism
   /** The unique bus name of the Consumer being authenticated. On the initiating side this will be the unique bus name of the remote app being authenticated. On the accepting side this will be the unique bus name for the remote app. */
-  var peerUniqueName: String = js.native
+  var peerUniqueName: String
   /** Indicates if the remote app was authenticated. */
-  var succeeded: Boolean = js.native
+  var succeeded: Boolean
 }
 
 object AllJoynAuthenticationCompleteEventArgs {
@@ -25,31 +24,5 @@ object AllJoynAuthenticationCompleteEventArgs {
     val __obj = js.Dynamic.literal(authenticationMechanism = authenticationMechanism.asInstanceOf[js.Any], peerUniqueName = peerUniqueName.asInstanceOf[js.Any], succeeded = succeeded.asInstanceOf[js.Any])
     __obj.asInstanceOf[AllJoynAuthenticationCompleteEventArgs]
   }
-  @scala.inline
-  implicit class AllJoynAuthenticationCompleteEventArgsOps[Self <: AllJoynAuthenticationCompleteEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthenticationMechanism(value: AllJoynAuthenticationMechanism): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationMechanism")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPeerUniqueName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peerUniqueName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSucceeded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("succeeded")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,83 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Mocks extends js.Object {
-  var mocks: js.UndefOr[Default] = js.native
-  var plugins: js.UndefOr[DefaultReadonlyArray] = js.native
+  var mocks: js.UndefOr[Default] = js.undefined
+  var plugins: js.UndefOr[DefaultReadonlyArray] = js.undefined
   /**
     * Path to protractor configuration file.
     * Default: protractor-conf.js
     */
-  var protractorConfig: js.UndefOr[String] = js.native
+  var protractorConfig: js.UndefOr[String] = js.undefined
   /**
     * Mocks directory where mock files are located.
     * Default: process.cwd()
     */
-  var rootDirectory: js.UndefOr[String] = js.native
+  var rootDirectory: js.UndefOr[String] = js.undefined
 }
 
 object Mocks {
   @scala.inline
-  def apply(): Mocks = {
+  def apply(
+    mocks: Default = null,
+    plugins: DefaultReadonlyArray = null,
+    protractorConfig: String = null,
+    rootDirectory: String = null
+  ): Mocks = {
     val __obj = js.Dynamic.literal()
+    if (mocks != null) __obj.updateDynamic("mocks")(mocks.asInstanceOf[js.Any])
+    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
+    if (protractorConfig != null) __obj.updateDynamic("protractorConfig")(protractorConfig.asInstanceOf[js.Any])
+    if (rootDirectory != null) __obj.updateDynamic("rootDirectory")(rootDirectory.asInstanceOf[js.Any])
     __obj.asInstanceOf[Mocks]
   }
-  @scala.inline
-  implicit class MocksOps[Self <: Mocks] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMocks(value: Default): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mocks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMocks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mocks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlugins(value: DefaultReadonlyArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlugins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtractorConfig(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protractorConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtractorConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protractorConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootDirectory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootDirectory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRootDirectory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootDirectory")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

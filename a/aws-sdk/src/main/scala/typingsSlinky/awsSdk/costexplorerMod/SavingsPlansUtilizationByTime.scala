@@ -23,53 +23,16 @@ trait SavingsPlansUtilizationByTime extends js.Object {
 
 object SavingsPlansUtilizationByTime {
   @scala.inline
-  def apply(TimePeriod: DateInterval, Utilization: SavingsPlansUtilization): SavingsPlansUtilizationByTime = {
+  def apply(
+    TimePeriod: DateInterval,
+    Utilization: SavingsPlansUtilization,
+    AmortizedCommitment: SavingsPlansAmortizedCommitment = null,
+    Savings: SavingsPlansSavings = null
+  ): SavingsPlansUtilizationByTime = {
     val __obj = js.Dynamic.literal(TimePeriod = TimePeriod.asInstanceOf[js.Any], Utilization = Utilization.asInstanceOf[js.Any])
+    if (AmortizedCommitment != null) __obj.updateDynamic("AmortizedCommitment")(AmortizedCommitment.asInstanceOf[js.Any])
+    if (Savings != null) __obj.updateDynamic("Savings")(Savings.asInstanceOf[js.Any])
     __obj.asInstanceOf[SavingsPlansUtilizationByTime]
   }
-  @scala.inline
-  implicit class SavingsPlansUtilizationByTimeOps[Self <: SavingsPlansUtilizationByTime] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTimePeriod(value: DateInterval): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimePeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUtilization(value: SavingsPlansUtilization): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Utilization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmortizedCommitment(value: SavingsPlansAmortizedCommitment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmortizedCommitment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmortizedCommitment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmortizedCommitment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSavings(value: SavingsPlansSavings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Savings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSavings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Savings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

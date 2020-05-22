@@ -6,218 +6,62 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined simplebar.simplebar.KnownClassNamesOptions & {[className: string] : string} */
-@js.native
 trait ClassNamesOptions extends /* className */ StringDictionary[String] {
-  var contentEl: js.UndefOr[String] = js.native
-  var contentWrapper: js.UndefOr[String] = js.native
-  var dragging: js.UndefOr[String] = js.native
-  var heightAutoObserverEl: js.UndefOr[String] = js.native
-  var heightAutoObserverWrapperEl: js.UndefOr[String] = js.native
-  var horizontal: js.UndefOr[String] = js.native
-  var hover: js.UndefOr[String] = js.native
-  var mask: js.UndefOr[String] = js.native
-  var offset: js.UndefOr[String] = js.native
-  var placeholder: js.UndefOr[String] = js.native
-  var scrollbar: js.UndefOr[String] = js.native
-  var track: js.UndefOr[String] = js.native
-  var vertical: js.UndefOr[String] = js.native
-  var visible: js.UndefOr[String] = js.native
-  var wrapper: js.UndefOr[String] = js.native
+  var contentEl: js.UndefOr[String] = js.undefined
+  var contentWrapper: js.UndefOr[String] = js.undefined
+  var dragging: js.UndefOr[String] = js.undefined
+  var heightAutoObserverEl: js.UndefOr[String] = js.undefined
+  var heightAutoObserverWrapperEl: js.UndefOr[String] = js.undefined
+  var horizontal: js.UndefOr[String] = js.undefined
+  var hover: js.UndefOr[String] = js.undefined
+  var mask: js.UndefOr[String] = js.undefined
+  var offset: js.UndefOr[String] = js.undefined
+  var placeholder: js.UndefOr[String] = js.undefined
+  var scrollbar: js.UndefOr[String] = js.undefined
+  var track: js.UndefOr[String] = js.undefined
+  var vertical: js.UndefOr[String] = js.undefined
+  var visible: js.UndefOr[String] = js.undefined
+  var wrapper: js.UndefOr[String] = js.undefined
 }
 
 object ClassNamesOptions {
   @scala.inline
-  def apply(): ClassNamesOptions = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[String] = null,
+    contentEl: String = null,
+    contentWrapper: String = null,
+    dragging: String = null,
+    heightAutoObserverEl: String = null,
+    heightAutoObserverWrapperEl: String = null,
+    horizontal: String = null,
+    hover: String = null,
+    mask: String = null,
+    offset: String = null,
+    placeholder: String = null,
+    scrollbar: String = null,
+    track: String = null,
+    vertical: String = null,
+    visible: String = null,
+    wrapper: String = null
+  ): ClassNamesOptions = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (contentEl != null) __obj.updateDynamic("contentEl")(contentEl.asInstanceOf[js.Any])
+    if (contentWrapper != null) __obj.updateDynamic("contentWrapper")(contentWrapper.asInstanceOf[js.Any])
+    if (dragging != null) __obj.updateDynamic("dragging")(dragging.asInstanceOf[js.Any])
+    if (heightAutoObserverEl != null) __obj.updateDynamic("heightAutoObserverEl")(heightAutoObserverEl.asInstanceOf[js.Any])
+    if (heightAutoObserverWrapperEl != null) __obj.updateDynamic("heightAutoObserverWrapperEl")(heightAutoObserverWrapperEl.asInstanceOf[js.Any])
+    if (horizontal != null) __obj.updateDynamic("horizontal")(horizontal.asInstanceOf[js.Any])
+    if (hover != null) __obj.updateDynamic("hover")(hover.asInstanceOf[js.Any])
+    if (mask != null) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
+    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (scrollbar != null) __obj.updateDynamic("scrollbar")(scrollbar.asInstanceOf[js.Any])
+    if (track != null) __obj.updateDynamic("track")(track.asInstanceOf[js.Any])
+    if (vertical != null) __obj.updateDynamic("vertical")(vertical.asInstanceOf[js.Any])
+    if (visible != null) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
+    if (wrapper != null) __obj.updateDynamic("wrapper")(wrapper.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClassNamesOptions]
   }
-  @scala.inline
-  implicit class ClassNamesOptionsOps[Self <: ClassNamesOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentEl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentEl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentEl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentEl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentWrapper(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentWrapper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentWrapper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentWrapper")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragging(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeightAutoObserverEl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightAutoObserverEl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeightAutoObserverEl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightAutoObserverEl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeightAutoObserverWrapperEl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightAutoObserverWrapperEl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeightAutoObserverWrapperEl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightAutoObserverWrapperEl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHorizontal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHover(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMask(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollbar(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollbar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollbar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollbar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrack(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrack: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVertical(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVertical: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrapper(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrapper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapper")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

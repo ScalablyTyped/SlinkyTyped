@@ -6,13 +6,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /** https://github.com/webdeveric/webpack-assets-manifest#apply */
   @JSName("apply")
-  var apply: js.UndefOr[(js.Function1[/* manifest */ WebpackAssetsManifest, Unit]) | Null] = js.native
+  var apply: js.UndefOr[(js.Function1[/* manifest */ WebpackAssetsManifest, Unit]) | Null] = js.undefined
   /** https://github.com/webdeveric/webpack-assets-manifest#assets */
-  var assets: js.UndefOr[js.Object] = js.native
+  var assets: js.UndefOr[js.Object] = js.undefined
   /** https://github.com/webdeveric/webpack-assets-manifest#customize */
   var customize: js.UndefOr[
     (js.Function4[
@@ -22,31 +21,31 @@ trait Options extends js.Object {
       /* asset */ AnyObject, 
       Entry | `false`
     ]) | Null
-  ] = js.native
+  ] = js.undefined
   /** https://github.com/webdeveric/webpack-assets-manifest#done */
   var done: js.UndefOr[
     (js.Function2[/* manifest */ WebpackAssetsManifest, /* stats */ AnyObject, Unit]) | Null
-  ] = js.native
+  ] = js.undefined
   /** https://github.com/webdeveric/webpack-assets-manifest#entrypoints */
-  var entrypoints: js.UndefOr[Boolean] = js.native
+  var entrypoints: js.UndefOr[Boolean] = js.undefined
   /** https://github.com/webdeveric/webpack-assets-manifest#entrypointskey */
-  var entrypointsKey: js.UndefOr[String | `false`] = js.native
+  var entrypointsKey: js.UndefOr[String | `false`] = js.undefined
   /** https://github.com/webdeveric/webpack-assets-manifest#fileextregex */
-  var fileExtRegex: js.UndefOr[js.RegExp | Null | `false`] = js.native
+  var fileExtRegex: js.UndefOr[js.RegExp | Null | `false`] = js.undefined
   /** https://github.com/webdeveric/webpack-assets-manifest#integrity */
-  var integrity: js.UndefOr[Boolean] = js.native
+  var integrity: js.UndefOr[Boolean] = js.undefined
   /** https://github.com/webdeveric/webpack-assets-manifest#integrityhashes */
-  var integrityHashes: js.UndefOr[js.Array[String]] = js.native
+  var integrityHashes: js.UndefOr[js.Array[String]] = js.undefined
   /** https://github.com/webdeveric/webpack-assets-manifest#integritypropertyname */
-  var integrityPropertyName: js.UndefOr[String] = js.native
+  var integrityPropertyName: js.UndefOr[String] = js.undefined
   /** https://github.com/webdeveric/webpack-assets-manifest#merge */
-  var merge: js.UndefOr[Boolean | customize] = js.native
+  var merge: js.UndefOr[Boolean | customize] = js.undefined
   /** https://github.com/webdeveric/webpack-assets-manifest#output */
-  var output: js.UndefOr[String] = js.native
+  var output: js.UndefOr[String] = js.undefined
   /** https://github.com/webdeveric/webpack-assets-manifest#publicpath */
   var publicPath: js.UndefOr[
     String | Boolean | Null | (js.Function2[/* filename */ String, /* manifest */ WebpackAssetsManifest, String])
-  ] = js.native
+  ] = js.undefined
   /** https://github.com/webdeveric/webpack-assets-manifest#replacer */
   var replacer: js.UndefOr[
     Null | js.Array[String] | (js.Function2[
@@ -54,324 +53,73 @@ trait Options extends js.Object {
       /* value */ String, 
       js.UndefOr[Double | String | Boolean | Null | js.Object]
     ])
-  ] = js.native
+  ] = js.undefined
   /** https://github.com/webdeveric/webpack-assets-manifest#sortmanifest */
   var sortManifest: js.UndefOr[
     Boolean | (js.ThisFunction2[/* this */ WebpackAssetsManifest, /* a */ String, /* b */ String, Double])
-  ] = js.native
+  ] = js.undefined
   /** https://github.com/webdeveric/webpack-assets-manifest#space */
-  var space: js.UndefOr[Double] = js.native
+  var space: js.UndefOr[Double] = js.undefined
   /** https://github.com/webdeveric/webpack-assets-manifest#transform */
   var transform: js.UndefOr[
     (js.Function2[/* assets */ AnyObject, /* manifest */ WebpackAssetsManifest, _]) | Null
-  ] = js.native
+  ] = js.undefined
   /** https://github.com/webdeveric/webpack-assets-manifest#writetodisk */
-  var writeToDisk: js.UndefOr[Boolean] = js.native
+  var writeToDisk: js.UndefOr[Boolean] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    apply: js.UndefOr[Null | (/* manifest */ WebpackAssetsManifest => Unit)] = js.undefined,
+    assets: js.Object = null,
+    customize: js.UndefOr[
+      Null | ((/* entry */ Entry, /* original */ AnyObject, /* manifest */ WebpackAssetsManifest, /* asset */ AnyObject) => Entry | `false`)
+    ] = js.undefined,
+    done: js.UndefOr[Null | ((/* manifest */ WebpackAssetsManifest, /* stats */ AnyObject) => Unit)] = js.undefined,
+    entrypoints: js.UndefOr[Boolean] = js.undefined,
+    entrypointsKey: String | `false` = null,
+    fileExtRegex: js.UndefOr[Null | js.RegExp | `false`] = js.undefined,
+    integrity: js.UndefOr[Boolean] = js.undefined,
+    integrityHashes: js.Array[String] = null,
+    integrityPropertyName: String = null,
+    merge: Boolean | customize = null,
+    output: String = null,
+    publicPath: js.UndefOr[
+      Null | String | Boolean | (js.Function2[/* filename */ String, /* manifest */ WebpackAssetsManifest, String])
+    ] = js.undefined,
+    replacer: js.UndefOr[
+      Null | js.Array[String] | (js.Function2[
+        /* key */ String, 
+        /* value */ String, 
+        js.UndefOr[Double | String | Boolean | Null | js.Object]
+      ])
+    ] = js.undefined,
+    sortManifest: Boolean | (js.ThisFunction2[/* this */ WebpackAssetsManifest, /* a */ String, /* b */ String, Double]) = null,
+    space: js.UndefOr[Double] = js.undefined,
+    transform: js.UndefOr[Null | ((/* assets */ AnyObject, /* manifest */ WebpackAssetsManifest) => _)] = js.undefined,
+    writeToDisk: js.UndefOr[Boolean] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(apply)) __obj.updateDynamic("apply")(if (apply != null) js.Any.fromFunction1(apply.asInstanceOf[/* manifest */ WebpackAssetsManifest => Unit]) else null)
+    if (assets != null) __obj.updateDynamic("assets")(assets.asInstanceOf[js.Any])
+    if (!js.isUndefined(customize)) __obj.updateDynamic("customize")(if (customize != null) js.Any.fromFunction4(customize.asInstanceOf[(/* entry */ Entry, /* original */ AnyObject, /* manifest */ WebpackAssetsManifest, /* asset */ AnyObject) => Entry | `false`]) else null)
+    if (!js.isUndefined(done)) __obj.updateDynamic("done")(if (done != null) js.Any.fromFunction2(done.asInstanceOf[(/* manifest */ WebpackAssetsManifest, /* stats */ AnyObject) => Unit]) else null)
+    if (!js.isUndefined(entrypoints)) __obj.updateDynamic("entrypoints")(entrypoints.get.asInstanceOf[js.Any])
+    if (entrypointsKey != null) __obj.updateDynamic("entrypointsKey")(entrypointsKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(fileExtRegex)) __obj.updateDynamic("fileExtRegex")(fileExtRegex.asInstanceOf[js.Any])
+    if (!js.isUndefined(integrity)) __obj.updateDynamic("integrity")(integrity.get.asInstanceOf[js.Any])
+    if (integrityHashes != null) __obj.updateDynamic("integrityHashes")(integrityHashes.asInstanceOf[js.Any])
+    if (integrityPropertyName != null) __obj.updateDynamic("integrityPropertyName")(integrityPropertyName.asInstanceOf[js.Any])
+    if (merge != null) __obj.updateDynamic("merge")(merge.asInstanceOf[js.Any])
+    if (output != null) __obj.updateDynamic("output")(output.asInstanceOf[js.Any])
+    if (!js.isUndefined(publicPath)) __obj.updateDynamic("publicPath")(publicPath.asInstanceOf[js.Any])
+    if (!js.isUndefined(replacer)) __obj.updateDynamic("replacer")(replacer.asInstanceOf[js.Any])
+    if (sortManifest != null) __obj.updateDynamic("sortManifest")(sortManifest.asInstanceOf[js.Any])
+    if (!js.isUndefined(space)) __obj.updateDynamic("space")(space.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(transform)) __obj.updateDynamic("transform")(if (transform != null) js.Any.fromFunction2(transform.asInstanceOf[(/* assets */ AnyObject, /* manifest */ WebpackAssetsManifest) => _]) else null)
+    if (!js.isUndefined(writeToDisk)) __obj.updateDynamic("writeToDisk")(writeToDisk.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApply(value: /* manifest */ WebpackAssetsManifest => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apply")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutApply: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apply")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApplyNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apply")(null)
-        ret
-    }
-    @scala.inline
-    def withAssets(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomize(
-      value: (/* entry */ Entry, /* original */ AnyObject, /* manifest */ WebpackAssetsManifest, /* asset */ AnyObject) => Entry | `false`
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customize")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutCustomize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomizeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customize")(null)
-        ret
-    }
-    @scala.inline
-    def withDone(value: (/* manifest */ WebpackAssetsManifest, /* stats */ AnyObject) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("done")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutDone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("done")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDoneNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("done")(null)
-        ret
-    }
-    @scala.inline
-    def withEntrypoints(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entrypoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntrypoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entrypoints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntrypointsKey(value: String | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entrypointsKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntrypointsKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entrypointsKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileExtRegexRegExp(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileExtRegex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFileExtRegex(value: js.RegExp | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileExtRegex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileExtRegex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileExtRegex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileExtRegexNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileExtRegex")(null)
-        ret
-    }
-    @scala.inline
-    def withIntegrity(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integrity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntegrity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integrity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntegrityHashes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integrityHashes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntegrityHashes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integrityHashes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntegrityPropertyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integrityPropertyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntegrityPropertyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integrityPropertyName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMerge(value: Boolean | customize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("merge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMerge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("merge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutput(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublicPathFunction2(value: (/* filename */ String, /* manifest */ WebpackAssetsManifest) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicPath")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withPublicPath(
-      value: String | Boolean | (js.Function2[/* filename */ String, /* manifest */ WebpackAssetsManifest, String])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublicPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublicPathNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicPath")(null)
-        ret
-    }
-    @scala.inline
-    def withReplacerFunction2(
-      value: (/* key */ String, /* value */ String) => js.UndefOr[Double | String | Boolean | Null | js.Object]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replacer")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withReplacer(
-      value: js.Array[String] | (js.Function2[
-          /* key */ String, 
-          /* value */ String, 
-          js.UndefOr[Double | String | Boolean | Null | js.Object]
-        ])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replacer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplacer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replacer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplacerNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replacer")(null)
-        ret
-    }
-    @scala.inline
-    def withSortManifest(
-      value: Boolean | (js.ThisFunction2[/* this */ WebpackAssetsManifest, /* a */ String, /* b */ String, Double])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortManifest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortManifest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortManifest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpace(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("space")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("space")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransform(value: (/* assets */ AnyObject, /* manifest */ WebpackAssetsManifest) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutTransform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransformNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(null)
-        ret
-    }
-    @scala.inline
-    def withWriteToDisk(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeToDisk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteToDisk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeToDisk")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

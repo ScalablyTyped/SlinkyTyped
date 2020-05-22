@@ -1,8 +1,10 @@
 package typingsSlinky.relayRuntime.relayConnectionMod
 
-import typingsSlinky.relayRuntime.anon.Edge
-import typingsSlinky.relayRuntime.anon.EdgeData
-import typingsSlinky.relayRuntime.anon.Edges
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.relayRuntime.relayRuntimeStrings.fetch
+import typingsSlinky.relayRuntime.relayRuntimeStrings.insert
+import typingsSlinky.relayRuntime.relayRuntimeStrings.update
+import typingsSlinky.relayRuntime.relayRuntimeTypesMod.Variables
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,10 +18,19 @@ trait ConnectionEvent[TEdge] extends js.Object
 
 object ConnectionEvent {
   @scala.inline
-  implicit def apply[TEdge](value: Edge[TEdge]): ConnectionEvent[TEdge] = value.asInstanceOf[ConnectionEvent[TEdge]]
+  def Edges[TEdge](args: Variables, edges: js.Array[TEdge], kind: fetch, pageInfo: PageInfo): ConnectionEvent[TEdge] = {
+    val __obj = js.Dynamic.literal(args = args.asInstanceOf[js.Any], edges = edges.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], pageInfo = pageInfo.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ConnectionEvent[TEdge]]
+  }
   @scala.inline
-  implicit def apply[TEdge](value: EdgeData[TEdge]): ConnectionEvent[TEdge] = value.asInstanceOf[ConnectionEvent[TEdge]]
+  def EdgeData[TEdge](edgeData: StringDictionary[TEdge], kind: update): ConnectionEvent[TEdge] = {
+    val __obj = js.Dynamic.literal(edgeData = edgeData.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ConnectionEvent[TEdge]]
+  }
   @scala.inline
-  implicit def apply[TEdge](value: Edges[TEdge]): ConnectionEvent[TEdge] = value.asInstanceOf[ConnectionEvent[TEdge]]
+  def Edge[TEdge](args: Variables, edge: TEdge, kind: insert): ConnectionEvent[TEdge] = {
+    val __obj = js.Dynamic.literal(args = args.asInstanceOf[js.Any], edge = edge.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ConnectionEvent[TEdge]]
+  }
 }
 

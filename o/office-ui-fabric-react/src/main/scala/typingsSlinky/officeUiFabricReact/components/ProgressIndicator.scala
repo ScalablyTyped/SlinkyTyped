@@ -8,7 +8,7 @@ import typingsSlinky.officeUiFabricReact.progressIndicatorTypesMod.IProgressIndi
 import typingsSlinky.officeUiFabricReact.progressIndicatorTypesMod.IProgressIndicatorStyleProps
 import typingsSlinky.officeUiFabricReact.progressIndicatorTypesMod.IProgressIndicatorStyles
 import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
@@ -23,7 +23,7 @@ object ProgressIndicator {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any]] {
+       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
     @scala.inline
     def ariaValueText(value: String): this.type = set("ariaValueText", value.asInstanceOf[js.Any])
     @scala.inline
@@ -49,7 +49,7 @@ object ProgressIndicator {
     @scala.inline
     def progressHidden(value: Boolean): this.type = set("progressHidden", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IProgressIndicatorStyleProps => Partial[IProgressIndicatorStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IProgressIndicatorStyleProps => DeepPartial[IProgressIndicatorStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IProgressIndicatorStyleProps, IProgressIndicatorStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* **** Base **** */
 /**
   * A LatLng is a point in geographical coordinates: latitude and longitude.
   *

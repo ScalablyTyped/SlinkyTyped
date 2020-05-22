@@ -6,12 +6,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a color material used in the 3D model. */
-@js.native
 trait Printing3DColorMaterial extends js.Object {
   /** Gets or sets the color of the material. */
-  var color: Color = js.native
+  var color: Color
   /** Gets or sets the color value of the material. */
-  var value: Double = js.native
+  var value: Double
 }
 
 object Printing3DColorMaterial {
@@ -20,25 +19,5 @@ object Printing3DColorMaterial {
     val __obj = js.Dynamic.literal(color = color.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[Printing3DColorMaterial]
   }
-  @scala.inline
-  implicit class Printing3DColorMaterialOps[Self <: Printing3DColorMaterial] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

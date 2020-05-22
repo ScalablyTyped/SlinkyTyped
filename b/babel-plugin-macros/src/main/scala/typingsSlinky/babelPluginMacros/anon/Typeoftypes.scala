@@ -1471,6 +1471,9 @@ trait Typeoftypes extends js.Object {
   def conditionalExpression(test: Expression, consequent: Expression, alternate: Expression): ConditionalExpression_ = js.native
   def continueStatement(): ContinueStatement_ = js.native
   def continueStatement(label: Identifier_): ContinueStatement_ = js.native
+  def createFlowUnionType(types: js.Array[FlowType]): UnionTypeAnnotation_ = js.native
+  @JSName("createFlowUnionType")
+  def createFlowUnionType_T_FlowType_T[T /* <: FlowType */](types: js.Array[T]): T = js.native
   @JSName("createTypeAnnotationBasedOnTypeof")
   def createTypeAnnotationBasedOnTypeof_boolean(`type`: boolean): StringTypeAnnotation_ | VoidTypeAnnotation_ | NumberTypeAnnotation_ | BooleanTypeAnnotation_ | GenericTypeAnnotation_ = js.native
   @JSName("createTypeAnnotationBasedOnTypeof")
@@ -1702,7 +1705,6 @@ trait Typeoftypes extends js.Object {
   def is(`type`: String, n: Node, required: Partial[Node]): /* is @babel/types.@babel/types.Node */ Boolean = js.native
   def is[T /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 237 */ js.Any */](`type`: T): /* is std.Extract<@babel/types.@babel/types.Node, @babel/types.anon.Type<T>> */ Boolean = js.native
   def is[T /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 237 */ js.Any */](`type`: T, n: Node): /* is std.Extract<@babel/types.@babel/types.Node, @babel/types.anon.Type<T>> */ Boolean = js.native
-  def is[P /* <: Node */](`type`: String, n: js.UndefOr[Node | Null], required: Partial[P]): /* is P */ Boolean = js.native
   def is[T /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 237 */ js.Any */, P /* <: Extract[Node, Type[T]] */](`type`: T, n: js.UndefOr[Node | Null], required: Partial[P]): /* is P */ Boolean = js.native
   def isAnyTypeAnnotation(): /* is @babel/types.@babel/types.AnyTypeAnnotation */ Boolean = js.native
   def isAnyTypeAnnotation(node: js.Object): /* is @babel/types.@babel/types.AnyTypeAnnotation */ Boolean = js.native
@@ -2493,6 +2495,10 @@ trait Typeoftypes extends js.Object {
   def isTSAsExpression(node: js.Object): /* is @babel/types.@babel/types.TSAsExpression */ Boolean = js.native
   def isTSAsExpression(node: js.Object, opts: js.Object): /* is @babel/types.@babel/types.TSAsExpression */ Boolean = js.native
   def isTSAsExpression(node: Null, opts: js.Object): /* is @babel/types.@babel/types.TSAsExpression */ Boolean = js.native
+  def isTSBaseType(): /* is @babel/types.@babel/types.TSBaseType */ Boolean = js.native
+  def isTSBaseType(node: js.Object): /* is @babel/types.@babel/types.TSBaseType */ Boolean = js.native
+  def isTSBaseType(node: js.Object, opts: js.Object): /* is @babel/types.@babel/types.TSBaseType */ Boolean = js.native
+  def isTSBaseType(node: Null, opts: js.Object): /* is @babel/types.@babel/types.TSBaseType */ Boolean = js.native
   def isTSBigIntKeyword(): /* is @babel/types.@babel/types.TSBigIntKeyword */ Boolean = js.native
   def isTSBigIntKeyword(node: js.Object): /* is @babel/types.@babel/types.TSBigIntKeyword */ Boolean = js.native
   def isTSBigIntKeyword(node: js.Object, opts: js.Object): /* is @babel/types.@babel/types.TSBigIntKeyword */ Boolean = js.native
@@ -2866,6 +2872,8 @@ trait Typeoftypes extends js.Object {
   def isYieldExpression(node: js.Object): /* is @babel/types.@babel/types.YieldExpression */ Boolean = js.native
   def isYieldExpression(node: js.Object, opts: js.Object): /* is @babel/types.@babel/types.YieldExpression */ Boolean = js.native
   def isYieldExpression(node: Null, opts: js.Object): /* is @babel/types.@babel/types.YieldExpression */ Boolean = js.native
+  @JSName("is")
+  def is_P_Node[P /* <: Node */](`type`: String, n: js.UndefOr[Node | Null], required: Partial[P]): /* is P */ Boolean = js.native
   def jsxAttribute(name: JSXIdentifier_): JSXAttribute_ = js.native
   def jsxAttribute(name: JSXIdentifier_, value: JSXElement_): JSXAttribute_ = js.native
   def jsxAttribute(name: JSXIdentifier_, value: JSXExpressionContainer_): JSXAttribute_ = js.native

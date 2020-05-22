@@ -18,41 +18,11 @@ trait MinimumEngineVersionPerAllowedValue extends js.Object {
 
 object MinimumEngineVersionPerAllowedValue {
   @scala.inline
-  def apply(): MinimumEngineVersionPerAllowedValue = {
+  def apply(AllowedValue: String = null, MinimumEngineVersion: String = null): MinimumEngineVersionPerAllowedValue = {
     val __obj = js.Dynamic.literal()
+    if (AllowedValue != null) __obj.updateDynamic("AllowedValue")(AllowedValue.asInstanceOf[js.Any])
+    if (MinimumEngineVersion != null) __obj.updateDynamic("MinimumEngineVersion")(MinimumEngineVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[MinimumEngineVersionPerAllowedValue]
   }
-  @scala.inline
-  implicit class MinimumEngineVersionPerAllowedValueOps[Self <: MinimumEngineVersionPerAllowedValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowedValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowedValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowedValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowedValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumEngineVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinimumEngineVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumEngineVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinimumEngineVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

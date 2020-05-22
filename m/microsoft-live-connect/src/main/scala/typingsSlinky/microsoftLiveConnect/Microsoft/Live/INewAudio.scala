@@ -7,129 +7,56 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a new audio item.
   */
-@js.native
 trait INewAudio extends js.Object {
   /**
     * The audio's album name.
     */
-  var album: js.UndefOr[String] = js.native
+  var album: js.UndefOr[String] = js.undefined
   /**
     * The artist name of the audio's album.
     */
-  var album_artist: js.UndefOr[String] = js.native
+  var album_artist: js.UndefOr[String] = js.undefined
   /**
     * The audio's artist name.
     */
-  var artist: js.UndefOr[String] = js.native
+  var artist: js.UndefOr[String] = js.undefined
   /**
     * A description of the audio.
     */
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   /**
     * The audio's genre.
     */
-  var genre: js.UndefOr[String] = js.native
+  var genre: js.UndefOr[String] = js.undefined
   /**
     * The name of the audio.
     */
-  var name: String = js.native
+  var name: String
   /**
     * The audio's title.
     */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
 }
 
 object INewAudio {
   @scala.inline
-  def apply(name: String): INewAudio = {
+  def apply(
+    name: String,
+    album: String = null,
+    album_artist: String = null,
+    artist: String = null,
+    description: String = null,
+    genre: String = null,
+    title: String = null
+  ): INewAudio = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (album != null) __obj.updateDynamic("album")(album.asInstanceOf[js.Any])
+    if (album_artist != null) __obj.updateDynamic("album_artist")(album_artist.asInstanceOf[js.Any])
+    if (artist != null) __obj.updateDynamic("artist")(artist.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (genre != null) __obj.updateDynamic("genre")(genre.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[INewAudio]
   }
-  @scala.inline
-  implicit class INewAudioOps[Self <: INewAudio] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAlbum(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("album")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlbum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("album")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlbum_artist(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("album_artist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlbum_artist: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("album_artist")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArtist(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArtist: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artist")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGenre(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("genre")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGenre: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("genre")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,53 +22,16 @@ trait SkewedInfo extends js.Object {
 
 object SkewedInfo {
   @scala.inline
-  def apply(): SkewedInfo = {
+  def apply(
+    SkewedColumnNames: NameStringList = null,
+    SkewedColumnValueLocationMaps: LocationMap = null,
+    SkewedColumnValues: ColumnValueStringList = null
+  ): SkewedInfo = {
     val __obj = js.Dynamic.literal()
+    if (SkewedColumnNames != null) __obj.updateDynamic("SkewedColumnNames")(SkewedColumnNames.asInstanceOf[js.Any])
+    if (SkewedColumnValueLocationMaps != null) __obj.updateDynamic("SkewedColumnValueLocationMaps")(SkewedColumnValueLocationMaps.asInstanceOf[js.Any])
+    if (SkewedColumnValues != null) __obj.updateDynamic("SkewedColumnValues")(SkewedColumnValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[SkewedInfo]
   }
-  @scala.inline
-  implicit class SkewedInfoOps[Self <: SkewedInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSkewedColumnNames(value: NameStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SkewedColumnNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkewedColumnNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SkewedColumnNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkewedColumnValueLocationMaps(value: LocationMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SkewedColumnValueLocationMaps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkewedColumnValueLocationMaps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SkewedColumnValueLocationMaps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkewedColumnValues(value: ColumnValueStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SkewedColumnValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkewedColumnValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SkewedColumnValues")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

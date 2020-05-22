@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojtableMod.ojTable
 
-import typingsSlinky.oracleOraclejet.anon.StartIndexStartKey
-import typingsSlinky.oracleOraclejet.anon.StartKey
+import typingsSlinky.oracleOraclejet.anon.`20`
+import typingsSlinky.oracleOraclejet.anon.`21`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,8 +15,16 @@ trait ColumnSelectionStart[K] extends js.Object
 
 object ColumnSelectionStart {
   @scala.inline
-  implicit def apply[K](value: StartIndexStartKey[K]): ColumnSelectionStart[K] = value.asInstanceOf[ColumnSelectionStart[K]]
+  def StartKey[K](startIndex: `20`, startKey: `21`[K] = null): ColumnSelectionStart[K] = {
+    val __obj = js.Dynamic.literal(startIndex = startIndex.asInstanceOf[js.Any])
+    if (startKey != null) __obj.updateDynamic("startKey")(startKey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ColumnSelectionStart[K]]
+  }
   @scala.inline
-  implicit def apply[K](value: StartKey[K]): ColumnSelectionStart[K] = value.asInstanceOf[ColumnSelectionStart[K]]
+  def StartIndexStartKey[K](startKey: `21`[K], startIndex: `20` = null): ColumnSelectionStart[K] = {
+    val __obj = js.Dynamic.literal(startKey = startKey.asInstanceOf[js.Any])
+    if (startIndex != null) __obj.updateDynamic("startIndex")(startIndex.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ColumnSelectionStart[K]]
+  }
 }
 

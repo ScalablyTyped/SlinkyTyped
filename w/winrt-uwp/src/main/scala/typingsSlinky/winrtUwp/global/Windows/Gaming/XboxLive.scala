@@ -1,6 +1,12 @@
 package typingsSlinky.winrtUwp.global.Windows.Gaming
 
+import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterable
+import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IMapView
+import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IPropertySet
+import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
+import typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveErrorStatus
+import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
 import typingsSlinky.winrtUwp.Windows.System.User
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,17 +21,38 @@ object XboxLive extends js.Object {
     /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
     @js.native
     abstract class GameSaveBlobGetResult ()
-      extends typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveBlobGetResult
+      extends typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveBlobGetResult {
+      /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+      /* CompleteClass */
+      override var status: GameSaveErrorStatus = js.native
+      /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+      /* CompleteClass */
+      override var value: IMapView[String, IBuffer] = js.native
+    }
     
     /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
     @js.native
     abstract class GameSaveBlobInfo ()
-      extends typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveBlobInfo
+      extends typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveBlobInfo {
+      /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+      /* CompleteClass */
+      override var name: String = js.native
+      /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+      /* CompleteClass */
+      override var size: Double = js.native
+    }
     
     /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
     @js.native
     abstract class GameSaveBlobInfoGetResult ()
-      extends typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoGetResult
+      extends typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoGetResult {
+      /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+      /* CompleteClass */
+      override var status: GameSaveErrorStatus = js.native
+      /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+      /* CompleteClass */
+      override var value: IVectorView[typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveBlobInfo] = js.native
+    }
     
     /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
     @js.native
@@ -35,17 +62,86 @@ object XboxLive extends js.Object {
     /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
     @js.native
     abstract class GameSaveContainer ()
-      extends typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveContainer
+      extends typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveContainer {
+      /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+      /* CompleteClass */
+      override var name: String = js.native
+      /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+      /* CompleteClass */
+      override var provider: typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveProvider = js.native
+      /**
+        * This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+        * @param blobNamePrefix This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+        * @return This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+        */
+      /* CompleteClass */
+      override def createBlobInfoQuery(blobNamePrefix: String): typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery = js.native
+      /**
+        * This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+        * @param blobsToRead This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+        * @return This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+        */
+      /* CompleteClass */
+      override def getAsync(blobsToRead: IIterable[String]): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveBlobGetResult] = js.native
+      /**
+        * This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+        * @param blobsToRead This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+        * @return This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+        */
+      /* CompleteClass */
+      override def readAsync(blobsToRead: IMapView[String, IBuffer]): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveOperationResult] = js.native
+      /**
+        * This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+        * @param blobsToWrite This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+        * @param blobsToDelete This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+        * @param displayName This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+        * @return This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+        */
+      /* CompleteClass */
+      override def submitPropertySetUpdatesAsync(blobsToWrite: IPropertySet, blobsToDelete: IIterable[String], displayName: String): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveOperationResult] = js.native
+      /**
+        * This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+        * @param blobsToWrite This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+        * @param blobsToDelete This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+        * @param displayName This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+        * @return This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
+        */
+      /* CompleteClass */
+      override def submitUpdatesAsync(blobsToWrite: IMapView[String, IBuffer], blobsToDelete: IIterable[String], displayName: String): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveOperationResult] = js.native
+    }
     
     /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
     @js.native
     abstract class GameSaveContainerInfo ()
-      extends typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo
+      extends typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo {
+      /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+      /* CompleteClass */
+      override var displayName: String = js.native
+      /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+      /* CompleteClass */
+      override var lastModifiedTime: js.Date = js.native
+      /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+      /* CompleteClass */
+      override var name: String = js.native
+      /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+      /* CompleteClass */
+      override var needsSync: Boolean = js.native
+      /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+      /* CompleteClass */
+      override var totalSize: Double = js.native
+    }
     
     /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
     @js.native
     abstract class GameSaveContainerInfoGetResult ()
-      extends typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoGetResult
+      extends typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoGetResult {
+      /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+      /* CompleteClass */
+      override var status: GameSaveErrorStatus = js.native
+      /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+      /* CompleteClass */
+      override var value: IVectorView[typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo] = js.native
+    }
     
     /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
     @js.native
@@ -55,7 +151,11 @@ object XboxLive extends js.Object {
     /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
     @js.native
     abstract class GameSaveOperationResult ()
-      extends typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveOperationResult
+      extends typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveOperationResult {
+      /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+      /* CompleteClass */
+      override var status: GameSaveErrorStatus = js.native
+    }
     
     /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
     @js.native
@@ -65,7 +165,14 @@ object XboxLive extends js.Object {
     /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
     @js.native
     abstract class GameSaveProviderGetResult ()
-      extends typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveProviderGetResult
+      extends typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveProviderGetResult {
+      /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+      /* CompleteClass */
+      override var status: GameSaveErrorStatus = js.native
+      /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
+      /* CompleteClass */
+      override var value: typingsSlinky.winrtUwp.Windows.Gaming.XboxLive.Storage.GameSaveProvider = js.native
+    }
     
     /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
     @js.native

@@ -4,128 +4,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConfigObject extends js.Object {
-  var aliases: js.UndefOr[Boolean | js.Object] = js.native
+  var aliases: js.UndefOr[Boolean | js.Object] = js.undefined
   // assuming this is optional
-  var filters: js.UndefOr[Boolean | Callback | js.Array[Callback]] = js.native
-  var maxItems: js.UndefOr[Double] = js.native
-  var parsedErrorFilters: js.UndefOr[Boolean | Callback | js.Array[Callback]] = js.native
-  var skip: js.UndefOr[Boolean | Callback | js.Array[Callback]] = js.native
-  var skipNodeFiles: js.UndefOr[Boolean | js.Any] = js.native
-  var skipPackages: js.UndefOr[Boolean | js.Array[String]] = js.native
-  var skipPaths: js.UndefOr[Boolean | js.Array[String]] = js.native
+  var filters: js.UndefOr[Boolean | Callback | js.Array[Callback]] = js.undefined
+  var maxItems: js.UndefOr[Double] = js.undefined
+  var parsedErrorFilters: js.UndefOr[Boolean | Callback | js.Array[Callback]] = js.undefined
+  var skip: js.UndefOr[Boolean | Callback | js.Array[Callback]] = js.undefined
+  var skipNodeFiles: js.UndefOr[Boolean | js.Any] = js.undefined
+  var skipPackages: js.UndefOr[Boolean | js.Array[String]] = js.undefined
+  var skipPaths: js.UndefOr[Boolean | js.Array[String]] = js.undefined
 }
 
 object ConfigObject {
   @scala.inline
-  def apply(): ConfigObject = {
+  def apply(
+    aliases: Boolean | js.Object = null,
+    filters: Boolean | Callback | js.Array[Callback] = null,
+    maxItems: js.UndefOr[Double] = js.undefined,
+    parsedErrorFilters: Boolean | Callback | js.Array[Callback] = null,
+    skip: Boolean | Callback | js.Array[Callback] = null,
+    skipNodeFiles: Boolean | js.Any = null,
+    skipPackages: Boolean | js.Array[String] = null,
+    skipPaths: Boolean | js.Array[String] = null
+  ): ConfigObject = {
     val __obj = js.Dynamic.literal()
+    if (aliases != null) __obj.updateDynamic("aliases")(aliases.asInstanceOf[js.Any])
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxItems)) __obj.updateDynamic("maxItems")(maxItems.get.asInstanceOf[js.Any])
+    if (parsedErrorFilters != null) __obj.updateDynamic("parsedErrorFilters")(parsedErrorFilters.asInstanceOf[js.Any])
+    if (skip != null) __obj.updateDynamic("skip")(skip.asInstanceOf[js.Any])
+    if (skipNodeFiles != null) __obj.updateDynamic("skipNodeFiles")(skipNodeFiles.asInstanceOf[js.Any])
+    if (skipPackages != null) __obj.updateDynamic("skipPackages")(skipPackages.asInstanceOf[js.Any])
+    if (skipPaths != null) __obj.updateDynamic("skipPaths")(skipPaths.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigObject]
   }
-  @scala.inline
-  implicit class ConfigObjectOps[Self <: ConfigObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAliases(value: Boolean | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aliases")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAliases: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aliases")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilters(value: Boolean | Callback | js.Array[Callback]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxItems(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParsedErrorFilters(value: Boolean | Callback | js.Array[Callback]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parsedErrorFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParsedErrorFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parsedErrorFilters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkip(value: Boolean | Callback | js.Array[Callback]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipNodeFiles(value: Boolean | js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipNodeFiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipNodeFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipNodeFiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipPackages(value: Boolean | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipPackages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipPackages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipPackages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipPaths(value: Boolean | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipPaths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipPaths: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipPaths")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait ListRepositoriesForApprovalRuleTemplateOutput extends js.Object {
 
 object ListRepositoriesForApprovalRuleTemplateOutput {
   @scala.inline
-  def apply(): ListRepositoriesForApprovalRuleTemplateOutput = {
+  def apply(nextToken: NextToken = null, repositoryNames: RepositoryNameList = null): ListRepositoriesForApprovalRuleTemplateOutput = {
     val __obj = js.Dynamic.literal()
+    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
+    if (repositoryNames != null) __obj.updateDynamic("repositoryNames")(repositoryNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListRepositoriesForApprovalRuleTemplateOutput]
   }
-  @scala.inline
-  implicit class ListRepositoriesForApprovalRuleTemplateOutputOps[Self <: ListRepositoriesForApprovalRuleTemplateOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepositoryNames(value: RepositoryNameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepositoryNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryNames")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

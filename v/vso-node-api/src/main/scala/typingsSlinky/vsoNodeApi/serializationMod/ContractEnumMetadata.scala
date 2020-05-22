@@ -5,36 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ContractEnumMetadata extends js.Object {
-  var enumValues: js.UndefOr[StringDictionary[Double]] = js.native
+  var enumValues: js.UndefOr[StringDictionary[Double]] = js.undefined
 }
 
 object ContractEnumMetadata {
   @scala.inline
-  def apply(): ContractEnumMetadata = {
+  def apply(enumValues: StringDictionary[Double] = null): ContractEnumMetadata = {
     val __obj = js.Dynamic.literal()
+    if (enumValues != null) __obj.updateDynamic("enumValues")(enumValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContractEnumMetadata]
   }
-  @scala.inline
-  implicit class ContractEnumMetadataOps[Self <: ContractEnumMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnumValues(value: StringDictionary[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enumValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnumValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enumValues")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

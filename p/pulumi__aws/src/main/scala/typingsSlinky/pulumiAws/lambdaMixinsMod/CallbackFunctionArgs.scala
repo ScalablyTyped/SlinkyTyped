@@ -1,6 +1,9 @@
 package typingsSlinky.pulumiAws.lambdaMixinsMod
 
 import typingsSlinky.pulumiAws.anon.CodePathOptions
+import typingsSlinky.pulumiAws.arnMod.ARN
+import typingsSlinky.pulumiAws.iamMod.Role
+import typingsSlinky.pulumiAws.runtimesMod.Runtime
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,43 +31,22 @@ trait CallbackFunctionArgs[E, R] extends CodePathOptions {
 
 object CallbackFunctionArgs {
   @scala.inline
-  def apply[E, R](): CallbackFunctionArgs[E, R] = {
+  def apply[E, R](
+    callback: (E, /* context */ Context, /* callback */ js.Function2[/* error */ js.UndefOr[js.Any], /* result */ js.UndefOr[R], Unit]) => js.Promise[R] | Unit = null,
+    callbackFactory: () => Callback[E, R] = null,
+    codePathOptions: typingsSlinky.pulumiPulumi.codePathsMod.CodePathOptions = null,
+    policies: js.Array[ARN] = null,
+    role: Role = null,
+    runtime: Runtime = null
+  ): CallbackFunctionArgs[E, R] = {
     val __obj = js.Dynamic.literal()
+    if (callback != null) __obj.updateDynamic("callback")(js.Any.fromFunction3(callback))
+    if (callbackFactory != null) __obj.updateDynamic("callbackFactory")(js.Any.fromFunction0(callbackFactory))
+    if (codePathOptions != null) __obj.updateDynamic("codePathOptions")(codePathOptions.asInstanceOf[js.Any])
+    if (policies != null) __obj.updateDynamic("policies")(policies.asInstanceOf[js.Any])
+    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
+    if (runtime != null) __obj.updateDynamic("runtime")(runtime.asInstanceOf[js.Any])
     __obj.asInstanceOf[CallbackFunctionArgs[E, R]]
   }
-  @scala.inline
-  implicit class CallbackFunctionArgsOps[Self[e, r] <: CallbackFunctionArgs[e, r], E, R] (val x: Self[E, R]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[E, R] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[E, R]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[E, R]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[E, R]) with Other]
-    @scala.inline
-    def withCallback(
-      value: (E, /* context */ Context, /* callback */ js.Function2[/* error */ js.UndefOr[js.Any], /* result */ js.UndefOr[R], Unit]) => js.Promise[R] | Unit
-    ): Self[E, R] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutCallback: Self[E, R] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCallbackFactory(value: () => Callback[E, R]): Self[E, R] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackFactory")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutCallbackFactory: Self[E, R] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackFactory")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

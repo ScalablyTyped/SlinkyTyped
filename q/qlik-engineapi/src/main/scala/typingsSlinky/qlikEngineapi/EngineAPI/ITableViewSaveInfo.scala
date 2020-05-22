@@ -7,27 +7,26 @@ import scala.scalajs.js.annotation._
 /**
   * TableViewSaveInfo...
   */
-@js.native
 trait ITableViewSaveInfo extends js.Object {
   /**
     * List of the broom points in the database model viewer.
     * Not used in Qlik Sense.
     */
-  var qBroomPoints: js.Array[ITableViewBroomPointSaveInfo] = js.native
+  var qBroomPoints: js.Array[ITableViewBroomPointSaveInfo]
   /**
     * List of connection points in the database model viewer.
     * Not used in Qlik Sense.
     */
-  var qConnectionPoints: js.Array[ITableViewConnectionPointSaveInfo] = js.native
+  var qConnectionPoints: js.Array[ITableViewConnectionPointSaveInfo]
   /**
     * List of the tables in the database model viewer.
     */
-  var qTables: js.Array[ITableViewTableWinSaveInfo] = js.native
+  var qTables: js.Array[ITableViewTableWinSaveInfo]
   /**
     * Zoom factor in the database model viewer.
     * The default value is 1.0.
     */
-  var qZoomFactor: Double = js.native
+  var qZoomFactor: Double
 }
 
 object ITableViewSaveInfo {
@@ -41,37 +40,5 @@ object ITableViewSaveInfo {
     val __obj = js.Dynamic.literal(qBroomPoints = qBroomPoints.asInstanceOf[js.Any], qConnectionPoints = qConnectionPoints.asInstanceOf[js.Any], qTables = qTables.asInstanceOf[js.Any], qZoomFactor = qZoomFactor.asInstanceOf[js.Any])
     __obj.asInstanceOf[ITableViewSaveInfo]
   }
-  @scala.inline
-  implicit class ITableViewSaveInfoOps[Self <: ITableViewSaveInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQBroomPoints(value: js.Array[ITableViewBroomPointSaveInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qBroomPoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQConnectionPoints(value: js.Array[ITableViewConnectionPointSaveInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qConnectionPoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQTables(value: js.Array[ITableViewTableWinSaveInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qTables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQZoomFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qZoomFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

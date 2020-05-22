@@ -10,5 +10,7 @@ import scala.scalajs.js.annotation._
 class OnBeginUndoDataUpdateChange protected ()
   extends typingsSlinky.sharepoint.SP.JsGrid.EventArgs.OnBeginUndoDataUpdateChange {
   def this(changeKey: IChangeKey) = this()
+  /* CompleteClass */
+  override var changeKey: IChangeKey = js.native
 }
 

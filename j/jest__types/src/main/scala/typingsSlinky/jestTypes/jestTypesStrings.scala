@@ -1,9 +1,9 @@
 package typingsSlinky.jestTypes
 
-import typingsSlinky.jestTypes.circusMod.BlockMode
 import typingsSlinky.jestTypes.circusMod.HookType
 import typingsSlinky.jestTypes.circusMod.SharedHookType
 import typingsSlinky.jestTypes.circusMod.TestStatus
+import typingsSlinky.jestTypes.circusMod._BlockMode
 import typingsSlinky.jestTypes.configMod.DisplayNameColor
 import typingsSlinky.jestTypes.configMod.NotifyMode
 import typingsSlinky.jestTypes.configMod.SnapshotUpdateState
@@ -44,9 +44,6 @@ object jestTypesStrings {
   
   @js.native
   sealed trait Function extends js.Object
-  
-  @js.native
-  sealed trait GLOBAL extends js.Object
   
   @js.native
   sealed trait Infinity extends js.Object
@@ -269,7 +266,7 @@ object jestTypesStrings {
   sealed trait finish_describe_definition extends js.Object
   
   @js.native
-  sealed trait global_ extends js.Object
+  sealed trait global extends js.Object
   
   @js.native
   sealed trait gray extends DisplayNameColor
@@ -326,7 +323,7 @@ object jestTypesStrings {
   sealed trait none extends SnapshotUpdateState
   
   @js.native
-  sealed trait only extends BlockMode
+  sealed trait only extends _BlockMode
   
   @js.native
   sealed trait parseFloat extends js.Object
@@ -350,9 +347,6 @@ object jestTypesStrings {
   sealed trait redBright extends DisplayNameColor
   
   @js.native
-  sealed trait root extends js.Object
-  
-  @js.native
   sealed trait run_describe_finish extends js.Object
   
   @js.native
@@ -369,8 +363,8 @@ object jestTypesStrings {
   
   @js.native
   sealed trait skip
-    extends BlockMode
-       with TestStatus
+    extends TestStatus
+       with _BlockMode
   
   @js.native
   sealed trait start_describe_definition extends js.Object
@@ -422,8 +416,8 @@ object jestTypesStrings {
   
   @js.native
   sealed trait todo
-    extends BlockMode
-       with TestStatus
+    extends TestStatus
+       with _BlockMode
   
   @js.native
   sealed trait undefined extends js.Object
@@ -465,8 +459,6 @@ object jestTypesStrings {
   def Float64Array: Float64Array = "Float64Array".asInstanceOf[Float64Array]
   @scala.inline
   def Function: Function = "Function".asInstanceOf[Function]
-  @scala.inline
-  def GLOBAL: GLOBAL = "GLOBAL".asInstanceOf[GLOBAL]
   @scala.inline
   def Infinity: Infinity = "Infinity".asInstanceOf[Infinity]
   @scala.inline
@@ -612,7 +604,7 @@ object jestTypesStrings {
   @scala.inline
   def finish_describe_definition: finish_describe_definition = "finish_describe_definition".asInstanceOf[finish_describe_definition]
   @scala.inline
-  def global_ : global_ = "global".asInstanceOf[global_]
+  def global: global = "global".asInstanceOf[global]
   @scala.inline
   def gray: gray = "gray".asInstanceOf[gray]
   @scala.inline
@@ -665,8 +657,6 @@ object jestTypesStrings {
   def red: red = "red".asInstanceOf[red]
   @scala.inline
   def redBright: redBright = "redBright".asInstanceOf[redBright]
-  @scala.inline
-  def root: root = "root".asInstanceOf[root]
   @scala.inline
   def run_describe_finish: run_describe_finish = "run_describe_finish".asInstanceOf[run_describe_finish]
   @scala.inline

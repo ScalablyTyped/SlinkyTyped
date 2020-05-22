@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FieldGeolocationValue extends ClientValueObject {
-  def get_altitude(): Double = js.native
-  def get_latitude(): Double = js.native
-  def get_longitude(): Double = js.native
-  def get_measure(): Double = js.native
-  def set_altitude(value: Double): Unit = js.native
-  def set_latitude(value: Double): Unit = js.native
-  def set_longitude(value: Double): Unit = js.native
-  def set_measure(value: Double): Unit = js.native
+  def get_altitude(): Double
+  def get_latitude(): Double
+  def get_longitude(): Double
+  def get_measure(): Double
+  def set_altitude(value: Double): Unit
+  def set_latitude(value: Double): Unit
+  def set_longitude(value: Double): Unit
+  def set_measure(value: Double): Unit
 }
 
 object FieldGeolocationValue {
@@ -36,61 +35,5 @@ object FieldGeolocationValue {
     val __obj = js.Dynamic.literal(customFromJson = js.Any.fromFunction1(customFromJson), customWriteToXml = js.Any.fromFunction2(customWriteToXml), fromJson = js.Any.fromFunction1(fromJson), get_altitude = js.Any.fromFunction0(get_altitude), get_latitude = js.Any.fromFunction0(get_latitude), get_longitude = js.Any.fromFunction0(get_longitude), get_measure = js.Any.fromFunction0(get_measure), get_typeId = js.Any.fromFunction0(get_typeId), set_altitude = js.Any.fromFunction1(set_altitude), set_latitude = js.Any.fromFunction1(set_latitude), set_longitude = js.Any.fromFunction1(set_longitude), set_measure = js.Any.fromFunction1(set_measure), writeToXml = js.Any.fromFunction2(writeToXml))
     __obj.asInstanceOf[FieldGeolocationValue]
   }
-  @scala.inline
-  implicit class FieldGeolocationValueOps[Self <: FieldGeolocationValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet_altitude(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_altitude")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_latitude(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_latitude")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_longitude(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_longitude")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_measure(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_measure")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSet_altitude(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_altitude")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_latitude(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_latitude")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_longitude(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_longitude")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_measure(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_measure")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

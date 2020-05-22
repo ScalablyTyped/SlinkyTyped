@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CollectionOptionsWithID extends js.Object {
-  var collectionID: String = js.native
+  var collectionID: String
 }
 
 object CollectionOptionsWithID {
@@ -15,19 +14,5 @@ object CollectionOptionsWithID {
     val __obj = js.Dynamic.literal(collectionID = collectionID.asInstanceOf[js.Any])
     __obj.asInstanceOf[CollectionOptionsWithID]
   }
-  @scala.inline
-  implicit class CollectionOptionsWithIDOps[Self <: CollectionOptionsWithID] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCollectionID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collectionID")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

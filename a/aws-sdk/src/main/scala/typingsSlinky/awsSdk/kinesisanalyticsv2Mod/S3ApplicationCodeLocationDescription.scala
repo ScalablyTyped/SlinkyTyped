@@ -22,41 +22,10 @@ trait S3ApplicationCodeLocationDescription extends js.Object {
 
 object S3ApplicationCodeLocationDescription {
   @scala.inline
-  def apply(BucketARN: BucketARN, FileKey: FileKey): S3ApplicationCodeLocationDescription = {
+  def apply(BucketARN: BucketARN, FileKey: FileKey, ObjectVersion: ObjectVersion = null): S3ApplicationCodeLocationDescription = {
     val __obj = js.Dynamic.literal(BucketARN = BucketARN.asInstanceOf[js.Any], FileKey = FileKey.asInstanceOf[js.Any])
+    if (ObjectVersion != null) __obj.updateDynamic("ObjectVersion")(ObjectVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3ApplicationCodeLocationDescription]
   }
-  @scala.inline
-  implicit class S3ApplicationCodeLocationDescriptionOps[Self <: S3ApplicationCodeLocationDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucketARN(value: BucketARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BucketARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFileKey(value: FileKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObjectVersion(value: ObjectVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

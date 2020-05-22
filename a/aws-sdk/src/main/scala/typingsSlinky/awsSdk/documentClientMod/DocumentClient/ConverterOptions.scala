@@ -21,41 +21,14 @@ trait ConverterOptions extends js.Object {
 
 object ConverterOptions {
   @scala.inline
-  def apply(): ConverterOptions = {
+  def apply(
+    convertEmptyValues: js.UndefOr[Boolean] = js.undefined,
+    wrapNumbers: js.UndefOr[Boolean] = js.undefined
+  ): ConverterOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(convertEmptyValues)) __obj.updateDynamic("convertEmptyValues")(convertEmptyValues.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wrapNumbers)) __obj.updateDynamic("wrapNumbers")(wrapNumbers.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConverterOptions]
   }
-  @scala.inline
-  implicit class ConverterOptionsOps[Self <: ConverterOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConvertEmptyValues(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("convertEmptyValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConvertEmptyValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("convertEmptyValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrapNumbers(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapNumbers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrapNumbers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapNumbers")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

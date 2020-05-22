@@ -11,7 +11,7 @@ import typingsSlinky.officeUiFabricReact.groupShowAllTypesMod.IGroupShowAllStyle
 import typingsSlinky.officeUiFabricReact.groupedListTypesMod.IGroup
 import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -75,7 +75,7 @@ class SharedBuilder_IGroupShowAllProps_1085117924 (val args: js.Array[js.Any])
   @scala.inline
   def showAllLinkText(value: String): this.type = set("showAllLinkText", value.asInstanceOf[js.Any])
   @scala.inline
-  def stylesFunction1(value: IGroupShowAllStyleProps => Partial[IGroupShowAllStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+  def stylesFunction1(value: IGroupShowAllStyleProps => DeepPartial[IGroupShowAllStyles]): this.type = set("styles", js.Any.fromFunction1(value))
   @scala.inline
   def styles(value: IStyleFunctionOrObject[IGroupShowAllStyleProps, IGroupShowAllStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
   @scala.inline

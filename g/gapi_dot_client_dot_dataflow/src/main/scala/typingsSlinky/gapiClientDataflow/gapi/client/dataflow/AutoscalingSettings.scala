@@ -4,51 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AutoscalingSettings extends js.Object {
   /** The algorithm to use for autoscaling. */
-  var algorithm: js.UndefOr[String] = js.native
+  var algorithm: js.UndefOr[String] = js.undefined
   /** The maximum number of workers to cap scaling at. */
-  var maxNumWorkers: js.UndefOr[Double] = js.native
+  var maxNumWorkers: js.UndefOr[Double] = js.undefined
 }
 
 object AutoscalingSettings {
   @scala.inline
-  def apply(): AutoscalingSettings = {
+  def apply(algorithm: String = null, maxNumWorkers: js.UndefOr[Double] = js.undefined): AutoscalingSettings = {
     val __obj = js.Dynamic.literal()
+    if (algorithm != null) __obj.updateDynamic("algorithm")(algorithm.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxNumWorkers)) __obj.updateDynamic("maxNumWorkers")(maxNumWorkers.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoscalingSettings]
   }
-  @scala.inline
-  implicit class AutoscalingSettingsOps[Self <: AutoscalingSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlgorithm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlgorithm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxNumWorkers(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxNumWorkers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxNumWorkers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxNumWorkers")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

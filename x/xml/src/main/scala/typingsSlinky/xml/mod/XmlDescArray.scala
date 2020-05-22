@@ -6,15 +6,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XmlDescArray
-  extends XmlDesc
-     with /* index */ NumberDictionary[Attr | XmlObject]
+  extends /* index */ NumberDictionary[Attr | XmlObject]
+     with _XmlDesc
 
 object XmlDescArray {
   @scala.inline
-  def apply(): XmlDescArray = {
+  def apply(NumberDictionary: /* index */ NumberDictionary[Attr | XmlObject] = null): XmlDescArray = {
     val __obj = js.Dynamic.literal()
+    if (NumberDictionary != null) js.Dynamic.global.Object.assign(__obj, NumberDictionary)
     __obj.asInstanceOf[XmlDescArray]
   }
 }

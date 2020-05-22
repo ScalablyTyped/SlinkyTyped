@@ -1,6 +1,7 @@
 package typingsSlinky.winrt.global.Windows
 
 import typingsSlinky.winrt.Windows.Management.Core.IApplicationDataManager
+import typingsSlinky.winrt.Windows.Management.Deployment.PackageInstallState
 import typingsSlinky.winrt.Windows.Storage.ApplicationData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,7 +27,14 @@ object Management extends js.Object {
   object Deployment extends js.Object {
     @js.native
     class DeploymentResult ()
-      extends typingsSlinky.winrt.Windows.Management.Deployment.DeploymentResult
+      extends typingsSlinky.winrt.Windows.Management.Deployment.DeploymentResult {
+      /* CompleteClass */
+      override var activityId: String = js.native
+      /* CompleteClass */
+      override var errorText: String = js.native
+      /* CompleteClass */
+      override var extendedErrorCode: Double = js.native
+    }
     
     @js.native
     class PackageManager ()
@@ -34,7 +42,12 @@ object Management extends js.Object {
     
     @js.native
     class PackageUserInformation ()
-      extends typingsSlinky.winrt.Windows.Management.Deployment.PackageUserInformation
+      extends typingsSlinky.winrt.Windows.Management.Deployment.PackageUserInformation {
+      /* CompleteClass */
+      override var installState: PackageInstallState = js.native
+      /* CompleteClass */
+      override var userSecurityId: String = js.native
+    }
     
     @js.native
     object DeploymentOptions extends js.Object {

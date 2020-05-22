@@ -22,47 +22,15 @@ trait GetConnectionRequest extends js.Object {
 
 object GetConnectionRequest {
   @scala.inline
-  def apply(Name: NameString): GetConnectionRequest = {
+  def apply(
+    Name: NameString,
+    CatalogId: CatalogIdString = null,
+    HidePassword: js.UndefOr[Boolean] = js.undefined
+  ): GetConnectionRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
+    if (CatalogId != null) __obj.updateDynamic("CatalogId")(CatalogId.asInstanceOf[js.Any])
+    if (!js.isUndefined(HidePassword)) __obj.updateDynamic("HidePassword")(HidePassword.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetConnectionRequest]
   }
-  @scala.inline
-  implicit class GetConnectionRequestOps[Self <: GetConnectionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: NameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCatalogId(value: CatalogIdString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCatalogId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHidePassword(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HidePassword")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHidePassword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HidePassword")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

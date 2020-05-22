@@ -19,29 +19,10 @@ trait SchemaInstanceGroupManagerStatus extends js.Object {
 
 object SchemaInstanceGroupManagerStatus {
   @scala.inline
-  def apply(): SchemaInstanceGroupManagerStatus = {
+  def apply(isStable: js.UndefOr[Boolean] = js.undefined): SchemaInstanceGroupManagerStatus = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(isStable)) __obj.updateDynamic("isStable")(isStable.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstanceGroupManagerStatus]
   }
-  @scala.inline
-  implicit class SchemaInstanceGroupManagerStatusOps[Self <: SchemaInstanceGroupManagerStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsStable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isStable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsStable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isStable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

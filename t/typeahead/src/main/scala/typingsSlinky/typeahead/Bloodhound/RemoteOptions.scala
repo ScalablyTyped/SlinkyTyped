@@ -10,12 +10,11 @@ import scala.scalajs.js.annotation._
   * provide a sufficient number of results. In order to prevent an obscene
   * number of requests being made to the remote endpoint, requests are rate-limited.
   */
-@js.native
 trait RemoteOptions[T] extends js.Object {
   /**
     * DEPRECATED: transform the remote response before the Bloodhound instance operates on it.
     * */
-  var filter: js.UndefOr[js.Function1[/* response */ T, T]] = js.native
+  var filter: js.UndefOr[js.Function1[/* response */ T, T]] = js.undefined
   /**
     * A function that provides a hook to allow you to prepare the settings
     * object passed to transport when a request is about to be made.
@@ -30,17 +29,17 @@ trait RemoteOptions[T] extends js.Object {
     */
   var prepare: js.UndefOr[
     js.Function2[/* query */ String, /* settings */ JQueryAjaxSettings, JQueryAjaxSettings]
-  ] = js.native
+  ] = js.undefined
   /**
     * The time interval in milliseconds that will be used by rateLimitBy.
     * Defaults to 300.
     */
-  var rateLimitWait: js.UndefOr[Double] = js.native
+  var rateLimitWait: js.UndefOr[Double] = js.undefined
   /**
     * The method used to rate-limit network requests.
     * Can be either debounce or throttle. Defaults to debounce.
     */
-  var rateLimitby: js.UndefOr[String] = js.native
+  var rateLimitby: js.UndefOr[String] = js.undefined
   /**
     * A function with the signature transform(response) that allows you to
     * transform the remote response before the Bloodhound instance operates on it.
@@ -49,109 +48,37 @@ trait RemoteOptions[T] extends js.Object {
     * @param response Prefetch response.
     * @returns Transform response.
     */
-  var transform: js.UndefOr[js.Function1[/* response */ T, T]] = js.native
+  var transform: js.UndefOr[js.Function1[/* response */ T, T]] = js.undefined
   /**
     * The URL remote data should be loaded from.
     */
-  var url: String = js.native
+  var url: String
   /**
     * A convenience option for prepare. If set, prepare will be a function
     * that replaces the value of this option in url with the URI encoded query.
     */
-  var wildcard: js.UndefOr[String] = js.native
+  var wildcard: js.UndefOr[String] = js.undefined
 }
 
 object RemoteOptions {
   @scala.inline
-  def apply[T](url: String): RemoteOptions[T] = {
+  def apply[T](
+    url: String,
+    filter: /* response */ T => T = null,
+    prepare: (/* query */ String, /* settings */ JQueryAjaxSettings) => JQueryAjaxSettings = null,
+    rateLimitWait: js.UndefOr[Double] = js.undefined,
+    rateLimitby: String = null,
+    transform: /* response */ T => T = null,
+    wildcard: String = null
+  ): RemoteOptions[T] = {
     val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction1(filter))
+    if (prepare != null) __obj.updateDynamic("prepare")(js.Any.fromFunction2(prepare))
+    if (!js.isUndefined(rateLimitWait)) __obj.updateDynamic("rateLimitWait")(rateLimitWait.get.asInstanceOf[js.Any])
+    if (rateLimitby != null) __obj.updateDynamic("rateLimitby")(rateLimitby.asInstanceOf[js.Any])
+    if (transform != null) __obj.updateDynamic("transform")(js.Any.fromFunction1(transform))
+    if (wildcard != null) __obj.updateDynamic("wildcard")(wildcard.asInstanceOf[js.Any])
     __obj.asInstanceOf[RemoteOptions[T]]
   }
-  @scala.inline
-  implicit class RemoteOptionsOps[Self[t] <: RemoteOptions[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withUrl(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilter(value: /* response */ T => T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrepare(value: (/* query */ String, /* settings */ JQueryAjaxSettings) => JQueryAjaxSettings): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prepare")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutPrepare: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prepare")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRateLimitWait(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rateLimitWait")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRateLimitWait: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rateLimitWait")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRateLimitby(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rateLimitby")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRateLimitby: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rateLimitby")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransform(value: /* response */ T => T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutTransform: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWildcard(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wildcard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWildcard: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wildcard")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -34,83 +34,21 @@ trait CreateAgentRequest extends js.Object {
 
 object CreateAgentRequest {
   @scala.inline
-  def apply(ActivationKey: ActivationKey): CreateAgentRequest = {
+  def apply(
+    ActivationKey: ActivationKey,
+    AgentName: TagValue = null,
+    SecurityGroupArns: PLSecurityGroupArnList = null,
+    SubnetArns: PLSubnetArnList = null,
+    Tags: TagList = null,
+    VpcEndpointId: VpcEndpointId = null
+  ): CreateAgentRequest = {
     val __obj = js.Dynamic.literal(ActivationKey = ActivationKey.asInstanceOf[js.Any])
+    if (AgentName != null) __obj.updateDynamic("AgentName")(AgentName.asInstanceOf[js.Any])
+    if (SecurityGroupArns != null) __obj.updateDynamic("SecurityGroupArns")(SecurityGroupArns.asInstanceOf[js.Any])
+    if (SubnetArns != null) __obj.updateDynamic("SubnetArns")(SubnetArns.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
+    if (VpcEndpointId != null) __obj.updateDynamic("VpcEndpointId")(VpcEndpointId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateAgentRequest]
   }
-  @scala.inline
-  implicit class CreateAgentRequestOps[Self <: CreateAgentRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivationKey(value: ActivationKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivationKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAgentName(value: TagValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AgentName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgentName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AgentName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurityGroupArns(value: PLSecurityGroupArnList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroupArns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityGroupArns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroupArns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubnetArns(value: PLSubnetArnList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetArns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubnetArns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetArns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcEndpointId(value: VpcEndpointId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcEndpointId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcEndpointId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcEndpointId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

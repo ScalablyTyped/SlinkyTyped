@@ -5,12 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IGulpCacheOptions extends js.Object {
   /**
     * The cache instance to use for caching.
     */
-  var fileCache: js.UndefOr[IGulpCache] = js.native
+  var fileCache: js.UndefOr[IGulpCache] = js.undefined
   /**
     * The hash generator to use.
     */
@@ -20,103 +19,38 @@ trait IGulpCacheOptions extends js.Object {
       /* callback */ js.UndefOr[js.Function2[/* err */ js.Any, /* result */ String, Unit]], 
       String | js.Promise[String]
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * The name of the bucket which stores the cached objects.
     * Default value = 'default'
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * Value representing the success of a task.
     */
-  var success: js.UndefOr[Boolean | Predicate[_]] = js.native
+  var success: js.UndefOr[Boolean | Predicate[_]] = js.undefined
   /**
     * Content that is to be cached.
     */
-  var value: js.UndefOr[js.Function1[/* result */ js.Any, js.Object | js.Promise[js.Object] | String]] = js.native
+  var value: js.UndefOr[js.Function1[/* result */ js.Any, js.Object | js.Promise[js.Object] | String]] = js.undefined
 }
 
 object IGulpCacheOptions {
   @scala.inline
-  def apply(): IGulpCacheOptions = {
+  def apply(
+    fileCache: IGulpCache = null,
+    key: (/* file */ File, /* callback */ js.UndefOr[js.Function2[/* err */ js.Any, /* result */ String, Unit]]) => String | js.Promise[String] = null,
+    name: String = null,
+    success: Boolean | Predicate[_] = null,
+    value: /* result */ js.Any => js.Object | js.Promise[js.Object] | String = null
+  ): IGulpCacheOptions = {
     val __obj = js.Dynamic.literal()
+    if (fileCache != null) __obj.updateDynamic("fileCache")(fileCache.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(js.Any.fromFunction2(key))
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (success != null) __obj.updateDynamic("success")(success.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(js.Any.fromFunction1(value))
     __obj.asInstanceOf[IGulpCacheOptions]
   }
-  @scala.inline
-  implicit class IGulpCacheOptionsOps[Self <: IGulpCacheOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFileCache(value: IGulpCache): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileCache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileCache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(
-      value: (/* file */ File, /* callback */ js.UndefOr[js.Function2[/* err */ js.Any, /* result */ String, Unit]]) => String | js.Promise[String]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccessFunction1(value: _ => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: Boolean | Predicate[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: /* result */ js.Any => js.Object | js.Promise[js.Object] | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

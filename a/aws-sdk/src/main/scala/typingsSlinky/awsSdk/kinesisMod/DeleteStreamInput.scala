@@ -18,35 +18,10 @@ trait DeleteStreamInput extends js.Object {
 
 object DeleteStreamInput {
   @scala.inline
-  def apply(StreamName: StreamName): DeleteStreamInput = {
+  def apply(StreamName: StreamName, EnforceConsumerDeletion: js.UndefOr[BooleanObject] = js.undefined): DeleteStreamInput = {
     val __obj = js.Dynamic.literal(StreamName = StreamName.asInstanceOf[js.Any])
+    if (!js.isUndefined(EnforceConsumerDeletion)) __obj.updateDynamic("EnforceConsumerDeletion")(EnforceConsumerDeletion.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteStreamInput]
   }
-  @scala.inline
-  implicit class DeleteStreamInputOps[Self <: DeleteStreamInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStreamName(value: StreamName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnforceConsumerDeletion(value: BooleanObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnforceConsumerDeletion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnforceConsumerDeletion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnforceConsumerDeletion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

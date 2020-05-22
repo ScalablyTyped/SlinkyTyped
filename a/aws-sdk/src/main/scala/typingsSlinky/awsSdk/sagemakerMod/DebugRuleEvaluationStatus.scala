@@ -30,77 +30,20 @@ trait DebugRuleEvaluationStatus extends js.Object {
 
 object DebugRuleEvaluationStatus {
   @scala.inline
-  def apply(): DebugRuleEvaluationStatus = {
+  def apply(
+    LastModifiedTime: js.Date = null,
+    RuleConfigurationName: RuleConfigurationName = null,
+    RuleEvaluationJobArn: ProcessingJobArn = null,
+    RuleEvaluationStatus: RuleEvaluationStatus = null,
+    StatusDetails: StatusDetails = null
+  ): DebugRuleEvaluationStatus = {
     val __obj = js.Dynamic.literal()
+    if (LastModifiedTime != null) __obj.updateDynamic("LastModifiedTime")(LastModifiedTime.asInstanceOf[js.Any])
+    if (RuleConfigurationName != null) __obj.updateDynamic("RuleConfigurationName")(RuleConfigurationName.asInstanceOf[js.Any])
+    if (RuleEvaluationJobArn != null) __obj.updateDynamic("RuleEvaluationJobArn")(RuleEvaluationJobArn.asInstanceOf[js.Any])
+    if (RuleEvaluationStatus != null) __obj.updateDynamic("RuleEvaluationStatus")(RuleEvaluationStatus.asInstanceOf[js.Any])
+    if (StatusDetails != null) __obj.updateDynamic("StatusDetails")(StatusDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[DebugRuleEvaluationStatus]
   }
-  @scala.inline
-  implicit class DebugRuleEvaluationStatusOps[Self <: DebugRuleEvaluationStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLastModifiedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuleConfigurationName(value: RuleConfigurationName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleConfigurationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuleConfigurationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleConfigurationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuleEvaluationJobArn(value: ProcessingJobArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleEvaluationJobArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuleEvaluationJobArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleEvaluationJobArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuleEvaluationStatus(value: RuleEvaluationStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleEvaluationStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuleEvaluationStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleEvaluationStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusDetails(value: StatusDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusDetails")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

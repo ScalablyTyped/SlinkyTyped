@@ -31,65 +31,13 @@ trait SchemaITunesConnectAnalytics extends js.Object {
 
 object SchemaITunesConnectAnalytics {
   @scala.inline
-  def apply(): SchemaITunesConnectAnalytics = {
+  def apply(at: String = null, ct: String = null, mt: String = null, pt: String = null): SchemaITunesConnectAnalytics = {
     val __obj = js.Dynamic.literal()
+    if (at != null) __obj.updateDynamic("at")(at.asInstanceOf[js.Any])
+    if (ct != null) __obj.updateDynamic("ct")(ct.asInstanceOf[js.Any])
+    if (mt != null) __obj.updateDynamic("mt")(mt.asInstanceOf[js.Any])
+    if (pt != null) __obj.updateDynamic("pt")(pt.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaITunesConnectAnalytics]
   }
-  @scala.inline
-  implicit class SchemaITunesConnectAnalyticsOps[Self <: SchemaITunesConnectAnalytics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("at")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ct")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ct")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pt")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

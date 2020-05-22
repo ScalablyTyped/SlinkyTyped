@@ -21,6 +21,16 @@ class default protected () extends URI {
   protected def this(scheme: String, authority: String, path: String, query: String) = this()
   protected def this(scheme: String, authority: String, path: String, query: String, fragment: String) = this()
   protected def this(scheme: String, authority: String, path: String, query: String, fragment: String, _strict: Boolean) = this()
+  /* CompleteClass */
+  override var authority: String = js.native
+  /* CompleteClass */
+  override var fragment: String = js.native
+  /* CompleteClass */
+  override var path: String = js.native
+  /* CompleteClass */
+  override var query: String = js.native
+  /* CompleteClass */
+  override var scheme: String = js.native
 }
 
 /* static members */

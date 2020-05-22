@@ -1,6 +1,7 @@
 package typingsSlinky.stripe.mod.cards
 
 import typingsSlinky.stripe.mod.ICardHashInfo
+import typingsSlinky.stripe.mod.IMetadata
 import typingsSlinky.stripe.mod.IResourceObject
 import typingsSlinky.stripe.stripeStrings.Discover
 import typingsSlinky.stripe.stripeStrings.JCB
@@ -9,6 +10,8 @@ import typingsSlinky.stripe.stripeStrings.Unknown
 import typingsSlinky.stripe.stripeStrings.Visa
 import typingsSlinky.stripe.stripeStrings.`American Express`
 import typingsSlinky.stripe.stripeStrings.`Diners Club`
+import typingsSlinky.stripe.stripeStrings.android_pay
+import typingsSlinky.stripe.stripeStrings.apple_pay
 import typingsSlinky.stripe.stripeStrings.card
 import typingsSlinky.stripe.stripeStrings.credit
 import typingsSlinky.stripe.stripeStrings.debit
@@ -25,7 +28,6 @@ import scala.scalajs.js.annotation._
 /**
   * Hash describing the card used to make the charge
   */
-@js.native
 trait ICardHash
   extends IResourceObject
      with ICardHashInfo {
@@ -33,7 +35,7 @@ trait ICardHash
     * Value is 'card'
     */
   @JSName("object")
-  var object_ICardHash: card = js.native
+  var object_ICardHash: card
 }
 
 object ICardHash {
@@ -48,25 +50,26 @@ object ICardHash {
     funding: credit | debit | prepaid | unknown_,
     id: String,
     last4: String,
-    `object`: card
+    `object`: card,
+    address_city: String = null,
+    address_country: String = null,
+    address_line1: String = null,
+    address_line1_check: pass | fail | unavailable | unchecked = null,
+    address_line2: String = null,
+    address_state: String = null,
+    address_zip: String = null,
+    address_zip_check: pass | fail | unavailable | unchecked = null,
+    dynamic_last4: String = null,
+    metadata: IMetadata = null,
+    name: String = null,
+    number: String = null,
+    tokenization_method: apple_pay | android_pay = null
   ): ICardHash = {
-    val __obj = js.Dynamic.literal(brand = brand.asInstanceOf[js.Any], country = country.asInstanceOf[js.Any], cvc_check = cvc_check.asInstanceOf[js.Any], exp_month = exp_month.asInstanceOf[js.Any], exp_year = exp_year.asInstanceOf[js.Any], fingerprint = fingerprint.asInstanceOf[js.Any], funding = funding.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], last4 = last4.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(brand = brand.asInstanceOf[js.Any], country = country.asInstanceOf[js.Any], cvc_check = cvc_check.asInstanceOf[js.Any], exp_month = exp_month.asInstanceOf[js.Any], exp_year = exp_year.asInstanceOf[js.Any], fingerprint = fingerprint.asInstanceOf[js.Any], funding = funding.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], last4 = last4.asInstanceOf[js.Any], address_city = address_city.asInstanceOf[js.Any], address_country = address_country.asInstanceOf[js.Any], address_line1 = address_line1.asInstanceOf[js.Any], address_line1_check = address_line1_check.asInstanceOf[js.Any], address_line2 = address_line2.asInstanceOf[js.Any], address_state = address_state.asInstanceOf[js.Any], address_zip = address_zip.asInstanceOf[js.Any], address_zip_check = address_zip_check.asInstanceOf[js.Any], dynamic_last4 = dynamic_last4.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], tokenization_method = tokenization_method.asInstanceOf[js.Any])
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (number != null) __obj.updateDynamic("number")(number.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICardHash]
   }
-  @scala.inline
-  implicit class ICardHashOps[Self <: ICardHash] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withObject(value: card): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

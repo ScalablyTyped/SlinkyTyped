@@ -4,23 +4,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InfoPathEditorObject extends js.Object {
-  var DataConnectionBaseUrl: String = js.native
-  var Host: js.Any = js.native
-  var HostName: String = js.native
+  var DataConnectionBaseUrl: String
+  var Host: js.Any
+  var HostName: String
   @JSName("InfoPath.InfoPathEditorObject_typekey")
-  var InfoPathDotInfoPathEditorObject_typekey: InfoPathEditorObject = js.native
-  val XDocument: _XDocument = js.native
-  def CloseDocument(): Unit = js.native
-  def FlushDocument(): Unit = js.native
-  def Load(bstrURL: String): Unit = js.native
-  def LoadFromStream(punkStream: js.Any): Unit = js.native
-  def NewFromSolution(bstrSolutionURI: String): Unit = js.native
-  def NewFromSolutionWithData(bstrURLXSN: String, punkStream: js.Any, dwBehavior: Double): Unit = js.native
-  def SetInitEventHandler(handler: IInitEventHandler): Unit = js.native
-  def SetNotifyHostEventHandler(pHandler: INotifyHostEventHandler): Unit = js.native
-  def SetSubmitToHostEventHandler(pHandler: ISubmitToHostEventHandler): Unit = js.native
+  var InfoPathDotInfoPathEditorObject_typekey: InfoPathEditorObject
+  val XDocument: _XDocument
+  def CloseDocument(): Unit
+  def FlushDocument(): Unit
+  def Load(bstrURL: String): Unit
+  def LoadFromStream(punkStream: js.Any): Unit
+  def NewFromSolution(bstrSolutionURI: String): Unit
+  def NewFromSolutionWithData(bstrURLXSN: String, punkStream: js.Any, dwBehavior: Double): Unit
+  def SetInitEventHandler(handler: IInitEventHandler): Unit
+  def SetNotifyHostEventHandler(pHandler: INotifyHostEventHandler): Unit
+  def SetSubmitToHostEventHandler(pHandler: ISubmitToHostEventHandler): Unit
 }
 
 object InfoPathEditorObject {
@@ -45,97 +44,5 @@ object InfoPathEditorObject {
     __obj.updateDynamic("InfoPath.InfoPathEditorObject_typekey")(InfoPathDotInfoPathEditorObject_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[InfoPathEditorObject]
   }
-  @scala.inline
-  implicit class InfoPathEditorObjectOps[Self <: InfoPathEditorObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloseDocument(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloseDocument")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDataConnectionBaseUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataConnectionBaseUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFlushDocument(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FlushDocument")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHost(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHostName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HostName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInfoPathDotInfoPathEditorObject_typekey(value: InfoPathEditorObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InfoPath.InfoPathEditorObject_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoad(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Load")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLoadFromStream(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadFromStream")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withNewFromSolution(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewFromSolution")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withNewFromSolutionWithData(value: (String, js.Any, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewFromSolutionWithData")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withSetInitEventHandler(value: IInitEventHandler => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetInitEventHandler")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetNotifyHostEventHandler(value: INotifyHostEventHandler => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetNotifyHostEventHandler")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetSubmitToHostEventHandler(value: ISubmitToHostEventHandler => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetSubmitToHostEventHandler")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withXDocument(value: _XDocument): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("XDocument")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

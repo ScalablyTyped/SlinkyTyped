@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("ltx/lib/Element", "Element")
 @js.native
-class Element protected () extends Node {
+class Element protected () extends js.Object {
   def this(name: String) = this()
   def this(name: String, attrs: String) = this()
   def this(name: String, attrs: StringDictionary[js.Any]) = this()

@@ -1,7 +1,6 @@
 package typingsSlinky.reactInteractive.mod
 
-import typingsSlinky.reactInteractive.anon.Active
-import typingsSlinky.reactInteractive.anon.HoverActive
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +13,22 @@ trait ActiveProps extends js.Object
 
 object ActiveProps {
   @scala.inline
-  implicit def apply(value: Active): ActiveProps = value.asInstanceOf[ActiveProps]
+  def Active(active: CSSProperties = null): ActiveProps = {
+    val __obj = js.Dynamic.literal()
+    if (active != null) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ActiveProps]
+  }
   @scala.inline
-  implicit def apply(value: HoverActive): ActiveProps = value.asInstanceOf[ActiveProps]
+  def HoverActive(
+    hoverActive: CSSProperties = null,
+    keyActive: CSSProperties = null,
+    touchActive: CSSProperties = null
+  ): ActiveProps = {
+    val __obj = js.Dynamic.literal()
+    if (hoverActive != null) __obj.updateDynamic("hoverActive")(hoverActive.asInstanceOf[js.Any])
+    if (keyActive != null) __obj.updateDynamic("keyActive")(keyActive.asInstanceOf[js.Any])
+    if (touchActive != null) __obj.updateDynamic("touchActive")(touchActive.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ActiveProps]
+  }
 }
 

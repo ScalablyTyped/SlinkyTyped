@@ -55,6 +55,10 @@ trait RunJobFlowInput extends js.Object {
     */
   var LogUri: js.UndefOr[XmlString] = js.native
   /**
+    *  The specified managed scaling policy for an Amazon EMR cluster. 
+    */
+  var ManagedScalingPolicy: js.UndefOr[typingsSlinky.awsSdk.emrMod.ManagedScalingPolicy] = js.native
+  /**
     * The name of the job flow.
     */
   var Name: XmlStringMaxLen256 = js.native
@@ -106,293 +110,58 @@ trait RunJobFlowInput extends js.Object {
 
 object RunJobFlowInput {
   @scala.inline
-  def apply(Instances: JobFlowInstancesConfig, Name: XmlStringMaxLen256): RunJobFlowInput = {
+  def apply(
+    Instances: JobFlowInstancesConfig,
+    Name: XmlStringMaxLen256,
+    AdditionalInfo: XmlString = null,
+    AmiVersion: XmlStringMaxLen256 = null,
+    Applications: ApplicationList = null,
+    AutoScalingRole: XmlString = null,
+    BootstrapActions: BootstrapActionConfigList = null,
+    Configurations: ConfigurationList = null,
+    CustomAmiId: XmlStringMaxLen256 = null,
+    EbsRootVolumeSize: js.UndefOr[Integer] = js.undefined,
+    JobFlowRole: XmlString = null,
+    KerberosAttributes: KerberosAttributes = null,
+    LogUri: XmlString = null,
+    ManagedScalingPolicy: ManagedScalingPolicy = null,
+    NewSupportedProducts: NewSupportedProductsList = null,
+    ReleaseLabel: XmlStringMaxLen256 = null,
+    RepoUpgradeOnBoot: RepoUpgradeOnBoot = null,
+    ScaleDownBehavior: ScaleDownBehavior = null,
+    SecurityConfiguration: XmlString = null,
+    ServiceRole: XmlString = null,
+    StepConcurrencyLevel: js.UndefOr[Integer] = js.undefined,
+    Steps: StepConfigList = null,
+    SupportedProducts: SupportedProductsList = null,
+    Tags: TagList = null,
+    VisibleToAllUsers: js.UndefOr[Boolean] = js.undefined
+  ): RunJobFlowInput = {
     val __obj = js.Dynamic.literal(Instances = Instances.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
+    if (AdditionalInfo != null) __obj.updateDynamic("AdditionalInfo")(AdditionalInfo.asInstanceOf[js.Any])
+    if (AmiVersion != null) __obj.updateDynamic("AmiVersion")(AmiVersion.asInstanceOf[js.Any])
+    if (Applications != null) __obj.updateDynamic("Applications")(Applications.asInstanceOf[js.Any])
+    if (AutoScalingRole != null) __obj.updateDynamic("AutoScalingRole")(AutoScalingRole.asInstanceOf[js.Any])
+    if (BootstrapActions != null) __obj.updateDynamic("BootstrapActions")(BootstrapActions.asInstanceOf[js.Any])
+    if (Configurations != null) __obj.updateDynamic("Configurations")(Configurations.asInstanceOf[js.Any])
+    if (CustomAmiId != null) __obj.updateDynamic("CustomAmiId")(CustomAmiId.asInstanceOf[js.Any])
+    if (!js.isUndefined(EbsRootVolumeSize)) __obj.updateDynamic("EbsRootVolumeSize")(EbsRootVolumeSize.get.asInstanceOf[js.Any])
+    if (JobFlowRole != null) __obj.updateDynamic("JobFlowRole")(JobFlowRole.asInstanceOf[js.Any])
+    if (KerberosAttributes != null) __obj.updateDynamic("KerberosAttributes")(KerberosAttributes.asInstanceOf[js.Any])
+    if (LogUri != null) __obj.updateDynamic("LogUri")(LogUri.asInstanceOf[js.Any])
+    if (ManagedScalingPolicy != null) __obj.updateDynamic("ManagedScalingPolicy")(ManagedScalingPolicy.asInstanceOf[js.Any])
+    if (NewSupportedProducts != null) __obj.updateDynamic("NewSupportedProducts")(NewSupportedProducts.asInstanceOf[js.Any])
+    if (ReleaseLabel != null) __obj.updateDynamic("ReleaseLabel")(ReleaseLabel.asInstanceOf[js.Any])
+    if (RepoUpgradeOnBoot != null) __obj.updateDynamic("RepoUpgradeOnBoot")(RepoUpgradeOnBoot.asInstanceOf[js.Any])
+    if (ScaleDownBehavior != null) __obj.updateDynamic("ScaleDownBehavior")(ScaleDownBehavior.asInstanceOf[js.Any])
+    if (SecurityConfiguration != null) __obj.updateDynamic("SecurityConfiguration")(SecurityConfiguration.asInstanceOf[js.Any])
+    if (ServiceRole != null) __obj.updateDynamic("ServiceRole")(ServiceRole.asInstanceOf[js.Any])
+    if (!js.isUndefined(StepConcurrencyLevel)) __obj.updateDynamic("StepConcurrencyLevel")(StepConcurrencyLevel.get.asInstanceOf[js.Any])
+    if (Steps != null) __obj.updateDynamic("Steps")(Steps.asInstanceOf[js.Any])
+    if (SupportedProducts != null) __obj.updateDynamic("SupportedProducts")(SupportedProducts.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
+    if (!js.isUndefined(VisibleToAllUsers)) __obj.updateDynamic("VisibleToAllUsers")(VisibleToAllUsers.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RunJobFlowInput]
   }
-  @scala.inline
-  implicit class RunJobFlowInputOps[Self <: RunJobFlowInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstances(value: JobFlowInstancesConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Instances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: XmlStringMaxLen256): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAdditionalInfo(value: XmlString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAmiVersion(value: XmlStringMaxLen256): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmiVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmiVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmiVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApplications(value: ApplicationList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Applications")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplications: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Applications")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoScalingRole(value: XmlString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoScalingRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingRole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBootstrapActions(value: BootstrapActionConfigList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BootstrapActions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBootstrapActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BootstrapActions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfigurations(value: ConfigurationList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Configurations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigurations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Configurations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomAmiId(value: XmlStringMaxLen256): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomAmiId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomAmiId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomAmiId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEbsRootVolumeSize(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EbsRootVolumeSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEbsRootVolumeSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EbsRootVolumeSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobFlowRole(value: XmlString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobFlowRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobFlowRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobFlowRole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKerberosAttributes(value: KerberosAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KerberosAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKerberosAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KerberosAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogUri(value: XmlString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewSupportedProducts(value: NewSupportedProductsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewSupportedProducts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewSupportedProducts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewSupportedProducts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReleaseLabel(value: XmlStringMaxLen256): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReleaseLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReleaseLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReleaseLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepoUpgradeOnBoot(value: RepoUpgradeOnBoot): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RepoUpgradeOnBoot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepoUpgradeOnBoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RepoUpgradeOnBoot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaleDownBehavior(value: ScaleDownBehavior): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScaleDownBehavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleDownBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScaleDownBehavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurityConfiguration(value: XmlString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceRole(value: XmlString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceRole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStepConcurrencyLevel(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StepConcurrencyLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStepConcurrencyLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StepConcurrencyLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSteps(value: StepConfigList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Steps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSteps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Steps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportedProducts(value: SupportedProductsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedProducts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportedProducts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedProducts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibleToAllUsers(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VisibleToAllUsers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibleToAllUsers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VisibleToAllUsers")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ModelUpdateOptions
   extends ModelOptions
      with /** other options */
@@ -13,156 +12,64 @@ trait ModelUpdateOptions
   /**
     * Only update elements that match the arrayFilters conditions in the document or documents that match the query conditions.
     */
-  var arrayFilters: js.UndefOr[js.Array[StringDictionary[_]]] = js.native
+  var arrayFilters: js.UndefOr[js.Array[StringDictionary[_]]] = js.undefined
   /** whether multiple documents should be updated (false) */
-  var multi: js.UndefOr[Boolean] = js.native
+  var multi: js.UndefOr[Boolean] = js.undefined
   /**
     *  by default, mongoose only returns the first error that occurred in casting the query.
     *  Turn on this option to aggregate all the cast errors.
     */
-  var multipleCastError: js.UndefOr[Boolean] = js.native
+  var multipleCastError: js.UndefOr[Boolean] = js.undefined
   /** disables update-only mode, allowing you to overwrite the doc (false) */
-  var overwrite: js.UndefOr[Boolean] = js.native
+  var overwrite: js.UndefOr[Boolean] = js.undefined
   /**
     * If true, runs update validators on this command. Update validators validate
     * the update operation against the model's schema.
     */
-  var runValidators: js.UndefOr[Boolean] = js.native
+  var runValidators: js.UndefOr[Boolean] = js.undefined
   /** safe mode (defaults to value set in schema (true)) */
-  var safe: js.UndefOr[Boolean] = js.native
+  var safe: js.UndefOr[Boolean] = js.undefined
   /**
     * If this and upsert are true, mongoose will apply the defaults specified in the
     * model's schema if a new document is created. This option only works on MongoDB >= 2.4
     * because it relies on MongoDB's $setOnInsert operator.
     */
-  var setDefaultsOnInsert: js.UndefOr[Boolean] = js.native
+  var setDefaultsOnInsert: js.UndefOr[Boolean] = js.undefined
   /** overrides the strict option for this update */
-  var strict: js.UndefOr[Boolean] = js.native
+  var strict: js.UndefOr[Boolean] = js.undefined
   /** whether to create the doc if it doesn't match (false) */
-  var upsert: js.UndefOr[Boolean] = js.native
+  var upsert: js.UndefOr[Boolean] = js.undefined
 }
 
 object ModelUpdateOptions {
   @scala.inline
-  def apply(): ModelUpdateOptions = {
+  def apply(
+    StringDictionary: /** other options */
+  /* other */ StringDictionary[js.Any] = null,
+    arrayFilters: js.Array[StringDictionary[_]] = null,
+    multi: js.UndefOr[Boolean] = js.undefined,
+    multipleCastError: js.UndefOr[Boolean] = js.undefined,
+    overwrite: js.UndefOr[Boolean] = js.undefined,
+    runValidators: js.UndefOr[Boolean] = js.undefined,
+    safe: js.UndefOr[Boolean] = js.undefined,
+    session: js.UndefOr[Null | ClientSession] = js.undefined,
+    setDefaultsOnInsert: js.UndefOr[Boolean] = js.undefined,
+    strict: js.UndefOr[Boolean] = js.undefined,
+    upsert: js.UndefOr[Boolean] = js.undefined
+  ): ModelUpdateOptions = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (arrayFilters != null) __obj.updateDynamic("arrayFilters")(arrayFilters.asInstanceOf[js.Any])
+    if (!js.isUndefined(multi)) __obj.updateDynamic("multi")(multi.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(multipleCastError)) __obj.updateDynamic("multipleCastError")(multipleCastError.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(overwrite)) __obj.updateDynamic("overwrite")(overwrite.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(runValidators)) __obj.updateDynamic("runValidators")(runValidators.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(safe)) __obj.updateDynamic("safe")(safe.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(session)) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
+    if (!js.isUndefined(setDefaultsOnInsert)) __obj.updateDynamic("setDefaultsOnInsert")(setDefaultsOnInsert.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(strict)) __obj.updateDynamic("strict")(strict.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(upsert)) __obj.updateDynamic("upsert")(upsert.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModelUpdateOptions]
   }
-  @scala.inline
-  implicit class ModelUpdateOptionsOps[Self <: ModelUpdateOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArrayFilters(value: js.Array[StringDictionary[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArrayFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayFilters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMulti(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multi")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMulti: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multi")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultipleCastError(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multipleCastError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultipleCastError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multipleCastError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverwrite(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overwrite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverwrite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overwrite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRunValidators(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runValidators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRunValidators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runValidators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSafe(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSafe: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safe")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetDefaultsOnInsert(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDefaultsOnInsert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetDefaultsOnInsert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDefaultsOnInsert")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrict(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpsert(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upsert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpsert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upsert")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

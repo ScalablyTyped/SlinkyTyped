@@ -25,53 +25,16 @@ trait SchemaShieldedVmConfig extends js.Object {
 
 object SchemaShieldedVmConfig {
   @scala.inline
-  def apply(): SchemaShieldedVmConfig = {
+  def apply(
+    enableIntegrityMonitoring: js.UndefOr[Boolean] = js.undefined,
+    enableSecureBoot: js.UndefOr[Boolean] = js.undefined,
+    enableVtpm: js.UndefOr[Boolean] = js.undefined
+  ): SchemaShieldedVmConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(enableIntegrityMonitoring)) __obj.updateDynamic("enableIntegrityMonitoring")(enableIntegrityMonitoring.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableSecureBoot)) __obj.updateDynamic("enableSecureBoot")(enableSecureBoot.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableVtpm)) __obj.updateDynamic("enableVtpm")(enableVtpm.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaShieldedVmConfig]
   }
-  @scala.inline
-  implicit class SchemaShieldedVmConfigOps[Self <: SchemaShieldedVmConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnableIntegrityMonitoring(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableIntegrityMonitoring")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableIntegrityMonitoring: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableIntegrityMonitoring")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableSecureBoot(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSecureBoot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableSecureBoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSecureBoot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableVtpm(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableVtpm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableVtpm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableVtpm")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

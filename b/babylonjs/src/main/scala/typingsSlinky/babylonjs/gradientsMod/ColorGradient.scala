@@ -17,6 +17,11 @@ class ColorGradient () extends IValueGradient {
     */
   var color2: js.UndefOr[Color4] = js.native
   /**
+    * Gets or sets the gradient value (between 0 and 1)
+    */
+  /* CompleteClass */
+  override var gradient: Double = js.native
+  /**
     * Will get a color picked randomly between color1 and color2.
     * If color2 is undefined then color1 will be used
     * @param result defines the target Color4 to store the result in

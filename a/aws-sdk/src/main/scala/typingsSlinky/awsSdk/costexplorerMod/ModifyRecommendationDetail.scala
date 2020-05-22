@@ -14,29 +14,10 @@ trait ModifyRecommendationDetail extends js.Object {
 
 object ModifyRecommendationDetail {
   @scala.inline
-  def apply(): ModifyRecommendationDetail = {
+  def apply(TargetInstances: TargetInstancesList = null): ModifyRecommendationDetail = {
     val __obj = js.Dynamic.literal()
+    if (TargetInstances != null) __obj.updateDynamic("TargetInstances")(TargetInstances.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyRecommendationDetail]
   }
-  @scala.inline
-  implicit class ModifyRecommendationDetailOps[Self <: ModifyRecommendationDetail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTargetInstances(value: TargetInstancesList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetInstances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetInstances")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@js.native
 trait ShapeDeactivatedEventArgs extends js.Object {
   /**
     *
@@ -19,21 +18,21 @@ trait ShapeDeactivatedEventArgs extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var shapeId: String = js.native
+  var shapeId: String
   /**
     *
     * Gets the type of the event. See Excel.EventType for details.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var `type`: ShapeDeactivated = js.native
+  var `type`: ShapeDeactivated
   /**
     *
     * Gets the id of the worksheet in which the shape is deactivated.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var worksheetId: String = js.native
+  var worksheetId: String
 }
 
 object ShapeDeactivatedEventArgs {
@@ -43,31 +42,5 @@ object ShapeDeactivatedEventArgs {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShapeDeactivatedEventArgs]
   }
-  @scala.inline
-  implicit class ShapeDeactivatedEventArgsOps[Self <: ShapeDeactivatedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withShapeId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shapeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: ShapeDeactivated): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorksheetId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("worksheetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

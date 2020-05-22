@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SubscribableMixin extends js.Object {
   /**
     * Special form of calling `addListener` that *guarantees* that a
@@ -19,7 +18,7 @@ trait SubscribableMixin extends js.Object {
     * @param listener Function to invoke when event occurs.
     * @param context Object to use as listener context.
     */
-  def addListenerOn(eventEmitter: js.Any, eventType: String, listener: js.Function0[_], context: js.Any): Unit = js.native
+  def addListenerOn(eventEmitter: js.Any, eventType: String, listener: js.Function0[_], context: js.Any): Unit
 }
 
 object SubscribableMixin {
@@ -28,19 +27,5 @@ object SubscribableMixin {
     val __obj = js.Dynamic.literal(addListenerOn = js.Any.fromFunction4(addListenerOn))
     __obj.asInstanceOf[SubscribableMixin]
   }
-  @scala.inline
-  implicit class SubscribableMixinOps[Self <: SubscribableMixin] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddListenerOn(value: (js.Any, String, js.Function0[_], js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addListenerOn")(js.Any.fromFunction4(value))
-        ret
-    }
-  }
-  
 }
 

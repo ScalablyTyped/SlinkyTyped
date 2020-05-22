@@ -78,185 +78,38 @@ trait DomainArgs extends js.Object {
 
 object DomainArgs {
   @scala.inline
-  def apply(): DomainArgs = {
+  def apply(
+    accessPolicies: Input[String | PolicyDocument] = null,
+    advancedOptions: Input[StringDictionary[_]] = null,
+    clusterConfig: Input[DomainClusterConfig] = null,
+    cognitoOptions: Input[DomainCognitoOptions] = null,
+    domainEndpointOptions: Input[DomainDomainEndpointOptions] = null,
+    domainName: Input[String] = null,
+    ebsOptions: Input[DomainEbsOptions] = null,
+    elasticsearchVersion: Input[String] = null,
+    encryptAtRest: Input[DomainEncryptAtRest] = null,
+    logPublishingOptions: Input[js.Array[Input[DomainLogPublishingOption]]] = null,
+    nodeToNodeEncryption: Input[DomainNodeToNodeEncryption] = null,
+    snapshotOptions: Input[DomainSnapshotOptions] = null,
+    tags: Input[StringDictionary[_]] = null,
+    vpcOptions: Input[DomainVpcOptions] = null
+  ): DomainArgs = {
     val __obj = js.Dynamic.literal()
+    if (accessPolicies != null) __obj.updateDynamic("accessPolicies")(accessPolicies.asInstanceOf[js.Any])
+    if (advancedOptions != null) __obj.updateDynamic("advancedOptions")(advancedOptions.asInstanceOf[js.Any])
+    if (clusterConfig != null) __obj.updateDynamic("clusterConfig")(clusterConfig.asInstanceOf[js.Any])
+    if (cognitoOptions != null) __obj.updateDynamic("cognitoOptions")(cognitoOptions.asInstanceOf[js.Any])
+    if (domainEndpointOptions != null) __obj.updateDynamic("domainEndpointOptions")(domainEndpointOptions.asInstanceOf[js.Any])
+    if (domainName != null) __obj.updateDynamic("domainName")(domainName.asInstanceOf[js.Any])
+    if (ebsOptions != null) __obj.updateDynamic("ebsOptions")(ebsOptions.asInstanceOf[js.Any])
+    if (elasticsearchVersion != null) __obj.updateDynamic("elasticsearchVersion")(elasticsearchVersion.asInstanceOf[js.Any])
+    if (encryptAtRest != null) __obj.updateDynamic("encryptAtRest")(encryptAtRest.asInstanceOf[js.Any])
+    if (logPublishingOptions != null) __obj.updateDynamic("logPublishingOptions")(logPublishingOptions.asInstanceOf[js.Any])
+    if (nodeToNodeEncryption != null) __obj.updateDynamic("nodeToNodeEncryption")(nodeToNodeEncryption.asInstanceOf[js.Any])
+    if (snapshotOptions != null) __obj.updateDynamic("snapshotOptions")(snapshotOptions.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (vpcOptions != null) __obj.updateDynamic("vpcOptions")(vpcOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[DomainArgs]
   }
-  @scala.inline
-  implicit class DomainArgsOps[Self <: DomainArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessPolicies(value: Input[String | PolicyDocument]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessPolicies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessPolicies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessPolicies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdvancedOptions(value: Input[StringDictionary[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advancedOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdvancedOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advancedOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClusterConfig(value: Input[DomainClusterConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusterConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCognitoOptions(value: Input[DomainCognitoOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cognitoOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCognitoOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cognitoOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomainEndpointOptions(value: Input[DomainDomainEndpointOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainEndpointOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomainEndpointOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainEndpointOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomainName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomainName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEbsOptions(value: Input[DomainEbsOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ebsOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEbsOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ebsOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElasticsearchVersion(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elasticsearchVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElasticsearchVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elasticsearchVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryptAtRest(value: Input[DomainEncryptAtRest]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptAtRest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptAtRest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptAtRest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogPublishingOptions(value: Input[js.Array[Input[DomainLogPublishingOption]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logPublishingOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogPublishingOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logPublishingOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeToNodeEncryption(value: Input[DomainNodeToNodeEncryption]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeToNodeEncryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeToNodeEncryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeToNodeEncryption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnapshotOptions(value: Input[DomainSnapshotOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshotOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnapshotOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshotOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: Input[StringDictionary[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcOptions(value: Input[DomainVpcOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

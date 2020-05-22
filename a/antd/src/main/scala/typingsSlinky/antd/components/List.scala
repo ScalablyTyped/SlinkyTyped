@@ -10,7 +10,6 @@ import typingsSlinky.antd.listMod.ListItemLayout
 import typingsSlinky.antd.listMod.ListLocale
 import typingsSlinky.antd.listMod.ListProps
 import typingsSlinky.antd.listMod.ListSize
-import typingsSlinky.antd.listMod.default
 import typingsSlinky.antd.paginationPaginationMod.PaginationConfig
 import typingsSlinky.antd.spinMod.SpinProps
 import typingsSlinky.react.mod.CSSProperties
@@ -26,7 +25,7 @@ object List {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def bordered(value: Boolean): this.type = set("bordered", value.asInstanceOf[js.Any])
     @scala.inline
@@ -78,6 +77,11 @@ object List {
   }
   
   def withProps[T](p: ListProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[ListProps[T]]))
+  }
   implicit def make[T](companion: List.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

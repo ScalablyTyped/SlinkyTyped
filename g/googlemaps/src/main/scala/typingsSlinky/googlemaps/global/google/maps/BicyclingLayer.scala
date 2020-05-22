@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/***** Layers *****/
 @JSGlobal("google.maps.BicyclingLayer")
 @js.native
 class BicyclingLayer ()

@@ -6,9 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Ref[TSrc /* <: String */, TMapping /* <: js.Object */]
-  extends Raw[String]
-     with InferrableColumnDescriptor[js.Any] {
+trait Ref[TSrc /* <: String */, TMapping /* <: js.Object */] extends Raw[String] {
   def as[TAlias /* <: String */](alias: TAlias): Ref[
     TSrc, 
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 

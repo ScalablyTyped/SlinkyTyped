@@ -23,41 +23,11 @@ trait SchemaAllocateQuotaRequest extends js.Object {
 
 object SchemaAllocateQuotaRequest {
   @scala.inline
-  def apply(): SchemaAllocateQuotaRequest = {
+  def apply(allocateOperation: SchemaQuotaOperation = null, serviceConfigId: String = null): SchemaAllocateQuotaRequest = {
     val __obj = js.Dynamic.literal()
+    if (allocateOperation != null) __obj.updateDynamic("allocateOperation")(allocateOperation.asInstanceOf[js.Any])
+    if (serviceConfigId != null) __obj.updateDynamic("serviceConfigId")(serviceConfigId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAllocateQuotaRequest]
   }
-  @scala.inline
-  implicit class SchemaAllocateQuotaRequestOps[Self <: SchemaAllocateQuotaRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllocateOperation(value: SchemaQuotaOperation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allocateOperation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllocateOperation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allocateOperation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceConfigId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceConfigId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceConfigId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceConfigId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

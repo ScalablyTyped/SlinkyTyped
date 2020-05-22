@@ -6,62 +6,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SparklinesSpotsProps extends js.Object {
-  var size: js.UndefOr[Double] = js.native
-  var spotColors: js.UndefOr[StringDictionary[String]] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
+  var size: js.UndefOr[Double] = js.undefined
+  var spotColors: js.UndefOr[StringDictionary[String]] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
 }
 
 object SparklinesSpotsProps {
   @scala.inline
-  def apply(): SparklinesSpotsProps = {
+  def apply(
+    size: js.UndefOr[Double] = js.undefined,
+    spotColors: StringDictionary[String] = null,
+    style: CSSProperties = null
+  ): SparklinesSpotsProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
+    if (spotColors != null) __obj.updateDynamic("spotColors")(spotColors.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[SparklinesSpotsProps]
   }
-  @scala.inline
-  implicit class SparklinesSpotsPropsOps[Self <: SparklinesSpotsProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpotColors(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spotColors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpotColors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spotColors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,101 +5,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
+// TODO find source documentation
 trait FusionTablesLayerOptions extends js.Object {
-  var clickable: js.UndefOr[Boolean] = js.native
-  var heatmap: js.UndefOr[FusionTablesHeatmap] = js.native
-  var map: js.UndefOr[Map[Element]] = js.native
-  var query: js.UndefOr[FusionTablesQuery] = js.native
-  var styles: js.UndefOr[js.Array[FusionTablesStyle]] = js.native
-  var suppressInfoWindows: js.UndefOr[Boolean] = js.native
+  var clickable: js.UndefOr[Boolean] = js.undefined
+  var heatmap: js.UndefOr[FusionTablesHeatmap] = js.undefined
+  var map: js.UndefOr[Map[Element]] = js.undefined
+  var query: js.UndefOr[FusionTablesQuery] = js.undefined
+  var styles: js.UndefOr[js.Array[FusionTablesStyle]] = js.undefined
+  var suppressInfoWindows: js.UndefOr[Boolean] = js.undefined
 }
 
 object FusionTablesLayerOptions {
   @scala.inline
-  def apply(): FusionTablesLayerOptions = {
+  def apply(
+    clickable: js.UndefOr[Boolean] = js.undefined,
+    heatmap: FusionTablesHeatmap = null,
+    map: Map[Element] = null,
+    query: FusionTablesQuery = null,
+    styles: js.Array[FusionTablesStyle] = null,
+    suppressInfoWindows: js.UndefOr[Boolean] = js.undefined
+  ): FusionTablesLayerOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(clickable)) __obj.updateDynamic("clickable")(clickable.get.asInstanceOf[js.Any])
+    if (heatmap != null) __obj.updateDynamic("heatmap")(heatmap.asInstanceOf[js.Any])
+    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
+    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
+    if (!js.isUndefined(suppressInfoWindows)) __obj.updateDynamic("suppressInfoWindows")(suppressInfoWindows.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FusionTablesLayerOptions]
   }
-  @scala.inline
-  implicit class FusionTablesLayerOptionsOps[Self <: FusionTablesLayerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClickable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeatmap(value: FusionTablesHeatmap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heatmap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeatmap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heatmap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMap(value: Map[Element]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuery(value: FusionTablesQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyles(value: js.Array[FusionTablesStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuppressInfoWindows(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressInfoWindows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressInfoWindows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressInfoWindows")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

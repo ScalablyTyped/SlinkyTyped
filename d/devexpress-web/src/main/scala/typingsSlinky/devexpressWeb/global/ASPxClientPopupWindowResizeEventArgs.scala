@@ -17,5 +17,15 @@ class ASPxClientPopupWindowResizeEventArgs protected ()
     * @param resizeState The integer value determining the window state.
     */
   def this(window: typingsSlinky.devexpressWeb.ASPxClientPopupWindow, resizeState: Double) = this()
+  /**
+    * Returns the value indicating the window state after resizing.
+    */
+  /* CompleteClass */
+  override var resizeState: Double = js.native
+  /**
+    * Gets the popup window object related to the event.
+    */
+  /* CompleteClass */
+  override var window: typingsSlinky.devexpressWeb.ASPxClientPopupWindow = js.native
 }
 

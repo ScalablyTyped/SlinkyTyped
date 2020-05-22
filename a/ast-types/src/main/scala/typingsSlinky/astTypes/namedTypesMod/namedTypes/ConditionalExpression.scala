@@ -12,18 +12,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Expression, 'type'> */
-@js.native
 trait ConditionalExpression
   extends ASTNode
      with ExpressionKind
      with NodeKind
      with PrintableKind {
-  var alternate: ExpressionKind = js.native
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var consequent: ExpressionKind = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var test: ExpressionKind = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.ConditionalExpression = js.native
+  var alternate: ExpressionKind
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var consequent: ExpressionKind
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var test: ExpressionKind
+  var `type`: typingsSlinky.astTypes.astTypesStrings.ConditionalExpression
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.ConditionalExpression")

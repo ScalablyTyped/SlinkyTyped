@@ -137,6 +137,13 @@ object nodeMod extends js.Object {
     /** @hidden */
     def _updateCache(): Unit = js.native
     def _updateCache(ignoreParentClass: Boolean): Unit = js.native
+    /**
+      * Attach a behavior
+      * @param behavior defines the behavior to attach
+      * @returns the current host
+      */
+    /* CompleteClass */
+    override def addBehavior(behavior: Behavior[Node]): Node = js.native
     def addBehavior(behavior: Behavior[Node], attachImmediately: Boolean): Node = js.native
     /**
       * Gets or sets the animation properties override
@@ -211,6 +218,13 @@ object nodeMod extends js.Object {
       * @returns an array
       */
     def getAnimationRanges(): js.Array[Nullable[AnimationRange]] = js.native
+    /**
+      * Gets a behavior using its name to search
+      * @param name defines the name to search
+      * @returns the behavior or null if not found
+      */
+    /* CompleteClass */
+    override def getBehaviorByName(name: String): Nullable[Behavior[Node]] = js.native
     /**
       * Get all child-meshes of this node
       * @param directDescendantsOnly defines if true only direct descendants of 'this' will be considered, if false direct and also indirect (children of children, an so on in a recursive manner) descendants of 'this' will be considered (Default: false)
@@ -311,6 +325,13 @@ object nodeMod extends js.Object {
       * @see https://doc.babylonjs.com/how_to/parenting
       */
     def parent(parent: Nullable[Node]): js.Any = js.native
+    /**
+      * Remove a behavior from the current object
+      * @param behavior defines the behavior to detach
+      * @returns the current host
+      */
+    /* CompleteClass */
+    override def removeBehavior(behavior: Behavior[Node]): Node = js.native
     /**
       * Serialize animation ranges into a JSON compatible object
       * @returns serialization object

@@ -13,419 +13,105 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VideoPlayerProps extends js.Object {
-  var autoplay: js.UndefOr[Boolean] = js.native
-  var controlsTimeout: js.UndefOr[Double] = js.native
-  var customStyles: js.UndefOr[ControlButton] = js.native
-  var defaultMuted: js.UndefOr[Boolean] = js.native
-  var disableControlsAutoHide: js.UndefOr[Boolean] = js.native
-  var disableFullscreen: js.UndefOr[Boolean] = js.native
-  var disableSeek: js.UndefOr[Boolean] = js.native
-  var duration: js.UndefOr[Double] = js.native
-  var endThumbnail: js.UndefOr[ImageSourcePropType] = js.native
-  var endWithThumbnail: js.UndefOr[Boolean] = js.native
-  var fullScreenOnLongPress: js.UndefOr[Boolean] = js.native
-  var hideControlsOnStart: js.UndefOr[Boolean] = js.native
-  var loop: js.UndefOr[Boolean] = js.native
-  var muted: js.UndefOr[Boolean] = js.native
-  var onEnd: js.UndefOr[js.Function1[/* event */ js.Any, _]] = js.native
-  var onHideControls: js.UndefOr[js.Function0[_]] = js.native
-  var onLoad: js.UndefOr[js.Function1[/* event */ js.Any, _]] = js.native
-  var onMutePress: js.UndefOr[js.Function0[_]] = js.native
-  var onPlayPress: js.UndefOr[js.Function0[_]] = js.native
-  var onProgress: js.UndefOr[js.Function1[/* event */ js.Any, _]] = js.native
-  var onShowControls: js.UndefOr[js.Function0[_]] = js.native
-  var onStart: js.UndefOr[js.Function0[_]] = js.native
-  var pauseOnPress: js.UndefOr[Boolean] = js.native
-  var paused: js.UndefOr[Boolean] = js.native
-  var resizeMode: js.UndefOr[stretch | contain | cover | none] = js.native
-  var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var thumbnail: js.UndefOr[ImageSourcePropType] = js.native
-  var video: js.UndefOr[Uri | Double] = js.native
-  var videoHeight: js.UndefOr[Double] = js.native
-  var videoWidth: js.UndefOr[Double] = js.native
+  var autoplay: js.UndefOr[Boolean] = js.undefined
+  var controlsTimeout: js.UndefOr[Double] = js.undefined
+  var customStyles: js.UndefOr[ControlButton] = js.undefined
+  var defaultMuted: js.UndefOr[Boolean] = js.undefined
+  var disableControlsAutoHide: js.UndefOr[Boolean] = js.undefined
+  var disableFullscreen: js.UndefOr[Boolean] = js.undefined
+  var disableSeek: js.UndefOr[Boolean] = js.undefined
+  var duration: js.UndefOr[Double] = js.undefined
+  var endThumbnail: js.UndefOr[ImageSourcePropType] = js.undefined
+  var endWithThumbnail: js.UndefOr[Boolean] = js.undefined
+  var fullScreenOnLongPress: js.UndefOr[Boolean] = js.undefined
+  var hideControlsOnStart: js.UndefOr[Boolean] = js.undefined
+  var loop: js.UndefOr[Boolean] = js.undefined
+  var muted: js.UndefOr[Boolean] = js.undefined
+  var onEnd: js.UndefOr[js.Function1[/* event */ js.Any, _]] = js.undefined
+  var onHideControls: js.UndefOr[js.Function0[_]] = js.undefined
+  var onLoad: js.UndefOr[js.Function1[/* event */ js.Any, _]] = js.undefined
+  var onMutePress: js.UndefOr[js.Function0[_]] = js.undefined
+  var onPlayPress: js.UndefOr[js.Function0[_]] = js.undefined
+  var onProgress: js.UndefOr[js.Function1[/* event */ js.Any, _]] = js.undefined
+  var onShowControls: js.UndefOr[js.Function0[_]] = js.undefined
+  var onStart: js.UndefOr[js.Function0[_]] = js.undefined
+  var pauseOnPress: js.UndefOr[Boolean] = js.undefined
+  var paused: js.UndefOr[Boolean] = js.undefined
+  var resizeMode: js.UndefOr[stretch | contain | cover | none] = js.undefined
+  var style: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var thumbnail: js.UndefOr[ImageSourcePropType] = js.undefined
+  var video: js.UndefOr[Uri | Double] = js.undefined
+  var videoHeight: js.UndefOr[Double] = js.undefined
+  var videoWidth: js.UndefOr[Double] = js.undefined
 }
 
 object VideoPlayerProps {
   @scala.inline
-  def apply(): VideoPlayerProps = {
+  def apply(
+    autoplay: js.UndefOr[Boolean] = js.undefined,
+    controlsTimeout: js.UndefOr[Double] = js.undefined,
+    customStyles: ControlButton = null,
+    defaultMuted: js.UndefOr[Boolean] = js.undefined,
+    disableControlsAutoHide: js.UndefOr[Boolean] = js.undefined,
+    disableFullscreen: js.UndefOr[Boolean] = js.undefined,
+    disableSeek: js.UndefOr[Boolean] = js.undefined,
+    duration: js.UndefOr[Double] = js.undefined,
+    endThumbnail: ImageSourcePropType = null,
+    endWithThumbnail: js.UndefOr[Boolean] = js.undefined,
+    fullScreenOnLongPress: js.UndefOr[Boolean] = js.undefined,
+    hideControlsOnStart: js.UndefOr[Boolean] = js.undefined,
+    loop: js.UndefOr[Boolean] = js.undefined,
+    muted: js.UndefOr[Boolean] = js.undefined,
+    onEnd: /* event */ js.Any => _ = null,
+    onHideControls: () => _ = null,
+    onLoad: /* event */ js.Any => _ = null,
+    onMutePress: () => _ = null,
+    onPlayPress: () => _ = null,
+    onProgress: /* event */ js.Any => _ = null,
+    onShowControls: () => _ = null,
+    onStart: () => _ = null,
+    pauseOnPress: js.UndefOr[Boolean] = js.undefined,
+    paused: js.UndefOr[Boolean] = js.undefined,
+    resizeMode: stretch | contain | cover | none = null,
+    style: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    thumbnail: ImageSourcePropType = null,
+    video: Uri | Double = null,
+    videoHeight: js.UndefOr[Double] = js.undefined,
+    videoWidth: js.UndefOr[Double] = js.undefined
+  ): VideoPlayerProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoplay)) __obj.updateDynamic("autoplay")(autoplay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(controlsTimeout)) __obj.updateDynamic("controlsTimeout")(controlsTimeout.get.asInstanceOf[js.Any])
+    if (customStyles != null) __obj.updateDynamic("customStyles")(customStyles.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultMuted)) __obj.updateDynamic("defaultMuted")(defaultMuted.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableControlsAutoHide)) __obj.updateDynamic("disableControlsAutoHide")(disableControlsAutoHide.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableFullscreen)) __obj.updateDynamic("disableFullscreen")(disableFullscreen.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableSeek)) __obj.updateDynamic("disableSeek")(disableSeek.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
+    if (endThumbnail != null) __obj.updateDynamic("endThumbnail")(endThumbnail.asInstanceOf[js.Any])
+    if (!js.isUndefined(endWithThumbnail)) __obj.updateDynamic("endWithThumbnail")(endWithThumbnail.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fullScreenOnLongPress)) __obj.updateDynamic("fullScreenOnLongPress")(fullScreenOnLongPress.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideControlsOnStart)) __obj.updateDynamic("hideControlsOnStart")(hideControlsOnStart.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(loop)) __obj.updateDynamic("loop")(loop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(muted)) __obj.updateDynamic("muted")(muted.get.asInstanceOf[js.Any])
+    if (onEnd != null) __obj.updateDynamic("onEnd")(js.Any.fromFunction1(onEnd))
+    if (onHideControls != null) __obj.updateDynamic("onHideControls")(js.Any.fromFunction0(onHideControls))
+    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction1(onLoad))
+    if (onMutePress != null) __obj.updateDynamic("onMutePress")(js.Any.fromFunction0(onMutePress))
+    if (onPlayPress != null) __obj.updateDynamic("onPlayPress")(js.Any.fromFunction0(onPlayPress))
+    if (onProgress != null) __obj.updateDynamic("onProgress")(js.Any.fromFunction1(onProgress))
+    if (onShowControls != null) __obj.updateDynamic("onShowControls")(js.Any.fromFunction0(onShowControls))
+    if (onStart != null) __obj.updateDynamic("onStart")(js.Any.fromFunction0(onStart))
+    if (!js.isUndefined(pauseOnPress)) __obj.updateDynamic("pauseOnPress")(pauseOnPress.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(paused)) __obj.updateDynamic("paused")(paused.get.asInstanceOf[js.Any])
+    if (resizeMode != null) __obj.updateDynamic("resizeMode")(resizeMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (thumbnail != null) __obj.updateDynamic("thumbnail")(thumbnail.asInstanceOf[js.Any])
+    if (video != null) __obj.updateDynamic("video")(video.asInstanceOf[js.Any])
+    if (!js.isUndefined(videoHeight)) __obj.updateDynamic("videoHeight")(videoHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(videoWidth)) __obj.updateDynamic("videoWidth")(videoWidth.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[VideoPlayerProps]
   }
-  @scala.inline
-  implicit class VideoPlayerPropsOps[Self <: VideoPlayerProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoplay(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withControlsTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlsTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControlsTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlsTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomStyles(value: ControlButton): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customStyles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customStyles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultMuted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultMuted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultMuted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultMuted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableControlsAutoHide(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableControlsAutoHide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableControlsAutoHide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableControlsAutoHide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableFullscreen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableFullscreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableFullscreen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableFullscreen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableSeek(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableSeek")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableSeek: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableSeek")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndThumbnail(value: ImageSourcePropType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endThumbnail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndThumbnail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endThumbnail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndWithThumbnail(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endWithThumbnail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndWithThumbnail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endWithThumbnail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullScreenOnLongPress(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullScreenOnLongPress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullScreenOnLongPress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullScreenOnLongPress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideControlsOnStart(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideControlsOnStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideControlsOnStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideControlsOnStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMuted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("muted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMuted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("muted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEnd(value: /* event */ js.Any => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnHideControls(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHideControls")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnHideControls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHideControls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLoad(value: /* event */ js.Any => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMutePress(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMutePress")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMutePress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMutePress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPlayPress(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlayPress")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPlayPress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlayPress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnProgress(value: /* event */ js.Any => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnProgress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnShowControls(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShowControls")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnShowControls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShowControls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnStart(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStart")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPauseOnPress(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pauseOnPress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPauseOnPress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pauseOnPress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaused(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaused: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResizeMode(value: stretch | contain | cover | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResizeMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
-        ret
-    }
-    @scala.inline
-    def withThumbnail(value: ImageSourcePropType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbnail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideo(value: Uri | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideoHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideoHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideoWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideoWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoWidth")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -30,65 +30,18 @@ trait SignalExternalWorkflowExecutionDecisionAttributes extends js.Object {
 
 object SignalExternalWorkflowExecutionDecisionAttributes {
   @scala.inline
-  def apply(signalName: SignalName, workflowId: WorkflowId): SignalExternalWorkflowExecutionDecisionAttributes = {
+  def apply(
+    signalName: SignalName,
+    workflowId: WorkflowId,
+    control: Data = null,
+    input: Data = null,
+    runId: WorkflowRunIdOptional = null
+  ): SignalExternalWorkflowExecutionDecisionAttributes = {
     val __obj = js.Dynamic.literal(signalName = signalName.asInstanceOf[js.Any], workflowId = workflowId.asInstanceOf[js.Any])
+    if (control != null) __obj.updateDynamic("control")(control.asInstanceOf[js.Any])
+    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
+    if (runId != null) __obj.updateDynamic("runId")(runId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SignalExternalWorkflowExecutionDecisionAttributes]
   }
-  @scala.inline
-  implicit class SignalExternalWorkflowExecutionDecisionAttributesOps[Self <: SignalExternalWorkflowExecutionDecisionAttributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSignalName(value: SignalName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signalName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorkflowId(value: WorkflowId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withControl(value: Data): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("control")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("control")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInput(value: Data): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRunId(value: WorkflowRunIdOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRunId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

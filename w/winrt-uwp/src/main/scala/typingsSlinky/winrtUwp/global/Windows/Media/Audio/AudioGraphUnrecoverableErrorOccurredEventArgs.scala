@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.Audio.AudioGraphUnrecoverableErrorOccurredEventArgs")
 @js.native
 abstract class AudioGraphUnrecoverableErrorOccurredEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Audio.AudioGraphUnrecoverableErrorOccurredEventArgs
+  extends typingsSlinky.winrtUwp.Windows.Media.Audio.AudioGraphUnrecoverableErrorOccurredEventArgs {
+  /** Gets the error associated with the event. */
+  /* CompleteClass */
+  override var error: typingsSlinky.winrtUwp.Windows.Media.Audio.AudioGraphUnrecoverableError = js.native
+}
 

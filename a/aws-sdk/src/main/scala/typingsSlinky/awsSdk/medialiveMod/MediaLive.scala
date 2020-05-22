@@ -1,11 +1,15 @@
 package typingsSlinky.awsSdk.medialiveMod
 
 import typingsSlinky.awsSdk.anon.DescribeChannelRequestwai
+import typingsSlinky.awsSdk.anon.DescribeInputRequestwaite
 import typingsSlinky.awsSdk.anon.DescribeMultiplexRequestw
 import typingsSlinky.awsSdk.awsSdkStrings.channelCreated
 import typingsSlinky.awsSdk.awsSdkStrings.channelDeleted
 import typingsSlinky.awsSdk.awsSdkStrings.channelRunning
 import typingsSlinky.awsSdk.awsSdkStrings.channelStopped
+import typingsSlinky.awsSdk.awsSdkStrings.inputAttached
+import typingsSlinky.awsSdk.awsSdkStrings.inputDeleted
+import typingsSlinky.awsSdk.awsSdkStrings.inputDetached
 import typingsSlinky.awsSdk.awsSdkStrings.multiplexCreated
 import typingsSlinky.awsSdk.awsSdkStrings.multiplexDeleted
 import typingsSlinky.awsSdk.awsSdkStrings.multiplexRunning
@@ -238,6 +242,19 @@ trait MediaLive extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeInputResponse, Unit]
   ): Request[DescribeInputResponse, AWSError] = js.native
   /**
+    * Gets the details for the input device
+    */
+  def describeInputDevice(): Request[DescribeInputDeviceResponse, AWSError] = js.native
+  def describeInputDevice(callback: js.Function2[/* err */ AWSError, /* data */ DescribeInputDeviceResponse, Unit]): Request[DescribeInputDeviceResponse, AWSError] = js.native
+  /**
+    * Gets the details for the input device
+    */
+  def describeInputDevice(params: DescribeInputDeviceRequest): Request[DescribeInputDeviceResponse, AWSError] = js.native
+  def describeInputDevice(
+    params: DescribeInputDeviceRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeInputDeviceResponse, Unit]
+  ): Request[DescribeInputDeviceResponse, AWSError] = js.native
+  /**
     * Produces a summary of an Input Security Group
     */
   def describeInputSecurityGroup(): Request[DescribeInputSecurityGroupResponse, AWSError] = js.native
@@ -328,6 +345,19 @@ trait MediaLive extends Service {
     params: ListChannelsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListChannelsResponse, Unit]
   ): Request[ListChannelsResponse, AWSError] = js.native
+  /**
+    * List input devices
+    */
+  def listInputDevices(): Request[ListInputDevicesResponse, AWSError] = js.native
+  def listInputDevices(callback: js.Function2[/* err */ AWSError, /* data */ ListInputDevicesResponse, Unit]): Request[ListInputDevicesResponse, AWSError] = js.native
+  /**
+    * List input devices
+    */
+  def listInputDevices(params: ListInputDevicesRequest): Request[ListInputDevicesResponse, AWSError] = js.native
+  def listInputDevices(
+    params: ListInputDevicesRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListInputDevicesResponse, Unit]
+  ): Request[ListInputDevicesResponse, AWSError] = js.native
   /**
     * Produces a list of Input Security Groups for an account
     */
@@ -524,6 +554,19 @@ trait MediaLive extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateInputResponse, Unit]
   ): Request[UpdateInputResponse, AWSError] = js.native
   /**
+    * Updates the parameters for the input device.
+    */
+  def updateInputDevice(): Request[UpdateInputDeviceResponse, AWSError] = js.native
+  def updateInputDevice(callback: js.Function2[/* err */ AWSError, /* data */ UpdateInputDeviceResponse, Unit]): Request[UpdateInputDeviceResponse, AWSError] = js.native
+  /**
+    * Updates the parameters for the input device.
+    */
+  def updateInputDevice(params: UpdateInputDeviceRequest): Request[UpdateInputDeviceResponse, AWSError] = js.native
+  def updateInputDevice(
+    params: UpdateInputDeviceRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ UpdateInputDeviceResponse, Unit]
+  ): Request[UpdateInputDeviceResponse, AWSError] = js.native
+  /**
     * Update an Input Security Group's Whilelists.
     */
   def updateInputSecurityGroup(): Request[UpdateInputSecurityGroupResponse, AWSError] = js.native
@@ -597,7 +640,7 @@ trait MediaLive extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeChannelResponse, Unit]
   ): Request[DescribeChannelResponse, AWSError] = js.native
   /**
-    * Waits for the channelDeleted state by periodically calling the underlying MediaLive.describeChanneloperation every 5 seconds (at most 20 times). Wait until a channel has been deleted
+    * Waits for the channelDeleted state by periodically calling the underlying MediaLive.describeChanneloperation every 5 seconds (at most 84 times). Wait until a channel has been deleted
     */
   @JSName("waitFor")
   def waitFor_channelDeleted(state: channelDeleted): Request[DescribeChannelResponse, AWSError] = js.native
@@ -607,7 +650,7 @@ trait MediaLive extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeChannelResponse, Unit]
   ): Request[DescribeChannelResponse, AWSError] = js.native
   /**
-    * Waits for the channelDeleted state by periodically calling the underlying MediaLive.describeChanneloperation every 5 seconds (at most 20 times). Wait until a channel has been deleted
+    * Waits for the channelDeleted state by periodically calling the underlying MediaLive.describeChanneloperation every 5 seconds (at most 84 times). Wait until a channel has been deleted
     */
   @JSName("waitFor")
   def waitFor_channelDeleted(state: channelDeleted, params: DescribeChannelRequestwai): Request[DescribeChannelResponse, AWSError] = js.native
@@ -639,7 +682,7 @@ trait MediaLive extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeChannelResponse, Unit]
   ): Request[DescribeChannelResponse, AWSError] = js.native
   /**
-    * Waits for the channelStopped state by periodically calling the underlying MediaLive.describeChanneloperation every 5 seconds (at most 28 times). Wait until a channel has is stopped
+    * Waits for the channelStopped state by periodically calling the underlying MediaLive.describeChanneloperation every 5 seconds (at most 60 times). Wait until a channel has is stopped
     */
   @JSName("waitFor")
   def waitFor_channelStopped(state: channelStopped): Request[DescribeChannelResponse, AWSError] = js.native
@@ -649,7 +692,7 @@ trait MediaLive extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeChannelResponse, Unit]
   ): Request[DescribeChannelResponse, AWSError] = js.native
   /**
-    * Waits for the channelStopped state by periodically calling the underlying MediaLive.describeChanneloperation every 5 seconds (at most 28 times). Wait until a channel has is stopped
+    * Waits for the channelStopped state by periodically calling the underlying MediaLive.describeChanneloperation every 5 seconds (at most 60 times). Wait until a channel has is stopped
     */
   @JSName("waitFor")
   def waitFor_channelStopped(state: channelStopped, params: DescribeChannelRequestwai): Request[DescribeChannelResponse, AWSError] = js.native
@@ -659,6 +702,69 @@ trait MediaLive extends Service {
     params: DescribeChannelRequestwai,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeChannelResponse, Unit]
   ): Request[DescribeChannelResponse, AWSError] = js.native
+  /**
+    * Waits for the inputAttached state by periodically calling the underlying MediaLive.describeInputoperation every 5 seconds (at most 20 times). Wait until an input has been attached
+    */
+  @JSName("waitFor")
+  def waitFor_inputAttached(state: inputAttached): Request[DescribeInputResponse, AWSError] = js.native
+  @JSName("waitFor")
+  def waitFor_inputAttached(
+    state: inputAttached,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeInputResponse, Unit]
+  ): Request[DescribeInputResponse, AWSError] = js.native
+  /**
+    * Waits for the inputAttached state by periodically calling the underlying MediaLive.describeInputoperation every 5 seconds (at most 20 times). Wait until an input has been attached
+    */
+  @JSName("waitFor")
+  def waitFor_inputAttached(state: inputAttached, params: DescribeInputRequestwaite): Request[DescribeInputResponse, AWSError] = js.native
+  @JSName("waitFor")
+  def waitFor_inputAttached(
+    state: inputAttached,
+    params: DescribeInputRequestwaite,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeInputResponse, Unit]
+  ): Request[DescribeInputResponse, AWSError] = js.native
+  /**
+    * Waits for the inputDeleted state by periodically calling the underlying MediaLive.describeInputoperation every 5 seconds (at most 20 times). Wait until an input has been deleted
+    */
+  @JSName("waitFor")
+  def waitFor_inputDeleted(state: inputDeleted): Request[DescribeInputResponse, AWSError] = js.native
+  @JSName("waitFor")
+  def waitFor_inputDeleted(
+    state: inputDeleted,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeInputResponse, Unit]
+  ): Request[DescribeInputResponse, AWSError] = js.native
+  /**
+    * Waits for the inputDeleted state by periodically calling the underlying MediaLive.describeInputoperation every 5 seconds (at most 20 times). Wait until an input has been deleted
+    */
+  @JSName("waitFor")
+  def waitFor_inputDeleted(state: inputDeleted, params: DescribeInputRequestwaite): Request[DescribeInputResponse, AWSError] = js.native
+  @JSName("waitFor")
+  def waitFor_inputDeleted(
+    state: inputDeleted,
+    params: DescribeInputRequestwaite,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeInputResponse, Unit]
+  ): Request[DescribeInputResponse, AWSError] = js.native
+  /**
+    * Waits for the inputDetached state by periodically calling the underlying MediaLive.describeInputoperation every 5 seconds (at most 84 times). Wait until an input has been detached
+    */
+  @JSName("waitFor")
+  def waitFor_inputDetached(state: inputDetached): Request[DescribeInputResponse, AWSError] = js.native
+  @JSName("waitFor")
+  def waitFor_inputDetached(
+    state: inputDetached,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeInputResponse, Unit]
+  ): Request[DescribeInputResponse, AWSError] = js.native
+  /**
+    * Waits for the inputDetached state by periodically calling the underlying MediaLive.describeInputoperation every 5 seconds (at most 84 times). Wait until an input has been detached
+    */
+  @JSName("waitFor")
+  def waitFor_inputDetached(state: inputDetached, params: DescribeInputRequestwaite): Request[DescribeInputResponse, AWSError] = js.native
+  @JSName("waitFor")
+  def waitFor_inputDetached(
+    state: inputDetached,
+    params: DescribeInputRequestwaite,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeInputResponse, Unit]
+  ): Request[DescribeInputResponse, AWSError] = js.native
   /**
     * Waits for the multiplexCreated state by periodically calling the underlying MediaLive.describeMultiplexoperation every 3 seconds (at most 5 times). Wait until a multiplex has been created
     */

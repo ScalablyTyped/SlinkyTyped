@@ -27,6 +27,8 @@ class Map_ protected () extends IEventEmitter {
   var converter: Converter = js.native
   var copyrights: Copyrights = js.native
   var cursors: typingsSlinky.yandexMaps.mod.util.cursor.Manager = js.native
+  /* CompleteClass */
+  override var events: IEventManager = js.native
   @JSName("events")
   var events_Map_ : typingsSlinky.yandexMaps.mod.event.Manager = js.native
   var geoObjects: GeoObjects = js.native

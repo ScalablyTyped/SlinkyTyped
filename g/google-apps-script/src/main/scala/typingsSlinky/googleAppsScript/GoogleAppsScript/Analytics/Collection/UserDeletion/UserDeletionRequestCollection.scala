@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UserDeletionRequestCollection extends js.Object {
   // Insert or update a user deletion requests.
-  def upsert(resource: UserDeletionRequest): UserDeletionRequest = js.native
+  def upsert(resource: UserDeletionRequest): UserDeletionRequest
 }
 
 object UserDeletionRequestCollection {
@@ -17,19 +16,5 @@ object UserDeletionRequestCollection {
     val __obj = js.Dynamic.literal(upsert = js.Any.fromFunction1(upsert))
     __obj.asInstanceOf[UserDeletionRequestCollection]
   }
-  @scala.inline
-  implicit class UserDeletionRequestCollectionOps[Self <: UserDeletionRequestCollection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUpsert(value: UserDeletionRequest => UserDeletionRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upsert")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

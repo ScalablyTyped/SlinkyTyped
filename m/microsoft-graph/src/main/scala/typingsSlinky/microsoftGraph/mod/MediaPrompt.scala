@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MediaPrompt extends Prompt {
-  var mediaInfo: js.UndefOr[MediaInfo] = js.native
+  var mediaInfo: js.UndefOr[MediaInfo] = js.undefined
 }
 
 object MediaPrompt {
   @scala.inline
-  def apply(): MediaPrompt = {
+  def apply(mediaInfo: MediaInfo = null): MediaPrompt = {
     val __obj = js.Dynamic.literal()
+    if (mediaInfo != null) __obj.updateDynamic("mediaInfo")(mediaInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaPrompt]
   }
-  @scala.inline
-  implicit class MediaPromptOps[Self <: MediaPrompt] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMediaInfo(value: MediaInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMediaInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaInfo")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

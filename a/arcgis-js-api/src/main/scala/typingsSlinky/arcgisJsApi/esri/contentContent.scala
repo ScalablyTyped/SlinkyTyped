@@ -12,14 +12,3 @@ import scala.scalajs.js.annotation._
 */
 trait contentContent extends js.Object
 
-object contentContent {
-  @scala.inline
-  implicit def apply(value: AttachmentsContent): contentContent = value.asInstanceOf[contentContent]
-  @scala.inline
-  implicit def apply(value: FieldsContent): contentContent = value.asInstanceOf[contentContent]
-  @scala.inline
-  implicit def apply(value: MediaContent): contentContent = value.asInstanceOf[contentContent]
-  @scala.inline
-  implicit def apply(value: TextContent): contentContent = value.asInstanceOf[contentContent]
-}
-

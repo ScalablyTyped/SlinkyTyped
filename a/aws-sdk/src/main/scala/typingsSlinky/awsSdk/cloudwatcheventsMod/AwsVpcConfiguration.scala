@@ -22,47 +22,11 @@ trait AwsVpcConfiguration extends js.Object {
 
 object AwsVpcConfiguration {
   @scala.inline
-  def apply(Subnets: StringList): AwsVpcConfiguration = {
+  def apply(Subnets: StringList, AssignPublicIp: AssignPublicIp = null, SecurityGroups: StringList = null): AwsVpcConfiguration = {
     val __obj = js.Dynamic.literal(Subnets = Subnets.asInstanceOf[js.Any])
+    if (AssignPublicIp != null) __obj.updateDynamic("AssignPublicIp")(AssignPublicIp.asInstanceOf[js.Any])
+    if (SecurityGroups != null) __obj.updateDynamic("SecurityGroups")(SecurityGroups.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwsVpcConfiguration]
   }
-  @scala.inline
-  implicit class AwsVpcConfigurationOps[Self <: AwsVpcConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSubnets(value: StringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subnets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAssignPublicIp(value: AssignPublicIp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignPublicIp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssignPublicIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignPublicIp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurityGroups(value: StringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroups")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

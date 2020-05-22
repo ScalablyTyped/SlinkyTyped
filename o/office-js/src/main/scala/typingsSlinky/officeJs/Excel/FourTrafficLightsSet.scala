@@ -5,51 +5,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FourTrafficLightsSet extends /* index */ NumberDictionary[Icon] {
-  var blackCircleWithBorder: Icon = js.native
-  var greenCircle: Icon = js.native
-  var redCircleWithBorder: Icon = js.native
-  var yellowCircle: Icon = js.native
+  var blackCircleWithBorder: Icon
+  var greenCircle: Icon
+  var redCircleWithBorder: Icon
+  var yellowCircle: Icon
 }
 
 object FourTrafficLightsSet {
   @scala.inline
-  def apply(blackCircleWithBorder: Icon, greenCircle: Icon, redCircleWithBorder: Icon, yellowCircle: Icon): FourTrafficLightsSet = {
+  def apply(
+    blackCircleWithBorder: Icon,
+    greenCircle: Icon,
+    redCircleWithBorder: Icon,
+    yellowCircle: Icon,
+    NumberDictionary: /* index */ NumberDictionary[Icon] = null
+  ): FourTrafficLightsSet = {
     val __obj = js.Dynamic.literal(blackCircleWithBorder = blackCircleWithBorder.asInstanceOf[js.Any], greenCircle = greenCircle.asInstanceOf[js.Any], redCircleWithBorder = redCircleWithBorder.asInstanceOf[js.Any], yellowCircle = yellowCircle.asInstanceOf[js.Any])
+    if (NumberDictionary != null) js.Dynamic.global.Object.assign(__obj, NumberDictionary)
     __obj.asInstanceOf[FourTrafficLightsSet]
   }
-  @scala.inline
-  implicit class FourTrafficLightsSetOps[Self <: FourTrafficLightsSet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlackCircleWithBorder(value: Icon): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blackCircleWithBorder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGreenCircle(value: Icon): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("greenCircle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRedCircleWithBorder(value: Icon): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redCircleWithBorder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withYellowCircle(value: Icon): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yellowCircle")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

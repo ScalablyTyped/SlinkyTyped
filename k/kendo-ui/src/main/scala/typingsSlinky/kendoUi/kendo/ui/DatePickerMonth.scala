@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DatePickerMonth extends js.Object {
-  var content: js.UndefOr[String] = js.native
-  var empty: js.UndefOr[String] = js.native
-  var weekNumber: js.UndefOr[String] = js.native
+  var content: js.UndefOr[String] = js.undefined
+  var empty: js.UndefOr[String] = js.undefined
+  var weekNumber: js.UndefOr[String] = js.undefined
 }
 
 object DatePickerMonth {
   @scala.inline
-  def apply(): DatePickerMonth = {
+  def apply(content: String = null, empty: String = null, weekNumber: String = null): DatePickerMonth = {
     val __obj = js.Dynamic.literal()
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (empty != null) __obj.updateDynamic("empty")(empty.asInstanceOf[js.Any])
+    if (weekNumber != null) __obj.updateDynamic("weekNumber")(weekNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[DatePickerMonth]
   }
-  @scala.inline
-  implicit class DatePickerMonthOps[Self <: DatePickerMonth] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmpty(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmpty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeekNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weekNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeekNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weekNumber")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

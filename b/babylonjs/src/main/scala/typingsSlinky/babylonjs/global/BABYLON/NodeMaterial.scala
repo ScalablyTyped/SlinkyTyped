@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
+import typingsSlinky.babylonjs.BABYLON.Nullable
 import typingsSlinky.babylonjs.anon.PartialINodeMaterialOptio
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,6 +19,11 @@ class NodeMaterial protected ()
   def this(name: String) = this()
   def this(name: String, scene: typingsSlinky.babylonjs.BABYLON.Scene) = this()
   def this(name: String, scene: typingsSlinky.babylonjs.BABYLON.Scene, options: PartialINodeMaterialOptio) = this()
+  /**
+    * Array of animations
+    */
+  /* CompleteClass */
+  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
 
 /* static members */

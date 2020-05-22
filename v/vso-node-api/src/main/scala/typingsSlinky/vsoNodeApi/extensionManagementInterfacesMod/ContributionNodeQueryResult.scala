@@ -5,16 +5,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ContributionNodeQueryResult extends js.Object {
   /**
     * Map of contribution ids to corresponding node.
     */
-  var nodes: StringDictionary[ClientContributionNode] = js.native
+  var nodes: StringDictionary[ClientContributionNode]
   /**
     * Map of provder ids to the corresponding provider details object.
     */
-  var providerDetails: StringDictionary[ClientContributionProviderDetails] = js.native
+  var providerDetails: StringDictionary[ClientContributionProviderDetails]
 }
 
 object ContributionNodeQueryResult {
@@ -26,25 +25,5 @@ object ContributionNodeQueryResult {
     val __obj = js.Dynamic.literal(nodes = nodes.asInstanceOf[js.Any], providerDetails = providerDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContributionNodeQueryResult]
   }
-  @scala.inline
-  implicit class ContributionNodeQueryResultOps[Self <: ContributionNodeQueryResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNodes(value: StringDictionary[ClientContributionNode]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProviderDetails(value: StringDictionary[ClientContributionProviderDetails]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("providerDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

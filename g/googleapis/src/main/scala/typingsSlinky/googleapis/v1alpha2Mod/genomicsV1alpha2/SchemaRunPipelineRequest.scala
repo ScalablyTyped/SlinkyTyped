@@ -30,53 +30,16 @@ trait SchemaRunPipelineRequest extends js.Object {
 
 object SchemaRunPipelineRequest {
   @scala.inline
-  def apply(): SchemaRunPipelineRequest = {
+  def apply(
+    ephemeralPipeline: SchemaPipeline = null,
+    pipelineArgs: SchemaRunPipelineArgs = null,
+    pipelineId: String = null
+  ): SchemaRunPipelineRequest = {
     val __obj = js.Dynamic.literal()
+    if (ephemeralPipeline != null) __obj.updateDynamic("ephemeralPipeline")(ephemeralPipeline.asInstanceOf[js.Any])
+    if (pipelineArgs != null) __obj.updateDynamic("pipelineArgs")(pipelineArgs.asInstanceOf[js.Any])
+    if (pipelineId != null) __obj.updateDynamic("pipelineId")(pipelineId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRunPipelineRequest]
   }
-  @scala.inline
-  implicit class SchemaRunPipelineRequestOps[Self <: SchemaRunPipelineRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEphemeralPipeline(value: SchemaPipeline): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ephemeralPipeline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEphemeralPipeline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ephemeralPipeline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPipelineArgs(value: SchemaRunPipelineArgs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineArgs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPipelineArgs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineArgs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPipelineId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPipelineId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

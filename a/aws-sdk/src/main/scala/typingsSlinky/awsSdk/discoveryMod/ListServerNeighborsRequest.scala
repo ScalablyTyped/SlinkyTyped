@@ -30,71 +30,19 @@ trait ListServerNeighborsRequest extends js.Object {
 
 object ListServerNeighborsRequest {
   @scala.inline
-  def apply(configurationId: ConfigurationId): ListServerNeighborsRequest = {
+  def apply(
+    configurationId: ConfigurationId,
+    maxResults: js.UndefOr[Integer] = js.undefined,
+    neighborConfigurationIds: ConfigurationIdList = null,
+    nextToken: String = null,
+    portInformationNeeded: js.UndefOr[Boolean] = js.undefined
+  ): ListServerNeighborsRequest = {
     val __obj = js.Dynamic.literal(configurationId = configurationId.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxResults)) __obj.updateDynamic("maxResults")(maxResults.get.asInstanceOf[js.Any])
+    if (neighborConfigurationIds != null) __obj.updateDynamic("neighborConfigurationIds")(neighborConfigurationIds.asInstanceOf[js.Any])
+    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(portInformationNeeded)) __obj.updateDynamic("portInformationNeeded")(portInformationNeeded.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListServerNeighborsRequest]
   }
-  @scala.inline
-  implicit class ListServerNeighborsRequestOps[Self <: ListServerNeighborsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfigurationId(value: ConfigurationId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNeighborConfigurationIds(value: ConfigurationIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("neighborConfigurationIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNeighborConfigurationIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("neighborConfigurationIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPortInformationNeeded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("portInformationNeeded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPortInformationNeeded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("portInformationNeeded")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

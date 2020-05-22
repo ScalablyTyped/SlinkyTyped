@@ -2,9 +2,9 @@ package typingsSlinky.tensorflowTfjsLayers
 
 import typingsSlinky.tensorflowTfjsLayers.activationConfigMod.ActivationIdentifier
 import typingsSlinky.tensorflowTfjsLayers.advancedActivationSerializationMod.AdvancedActivationLayerClassName
-import typingsSlinky.tensorflowTfjsLayers.baseCallbacksMod.YieldEveryOptions
+import typingsSlinky.tensorflowTfjsLayers.baseCallbacksMod._YieldEveryOptions
 import typingsSlinky.tensorflowTfjsLayers.constraintConfigMod.ConstraintClassName
-import typingsSlinky.tensorflowTfjsLayers.constraintsMod.ConstraintIdentifier
+import typingsSlinky.tensorflowTfjsLayers.constraintsMod._ConstraintIdentifier
 import typingsSlinky.tensorflowTfjsLayers.convolutionalSerializationMod.ConvolutionalLayerClassName
 import typingsSlinky.tensorflowTfjsLayers.coreSerializationMod.CoreLayerClassName
 import typingsSlinky.tensorflowTfjsLayers.initializerConfigMod.Distribution
@@ -12,7 +12,7 @@ import typingsSlinky.tensorflowTfjsLayers.initializerConfigMod.DistributionSeria
 import typingsSlinky.tensorflowTfjsLayers.initializerConfigMod.FanMode
 import typingsSlinky.tensorflowTfjsLayers.initializerConfigMod.FanModeSerialization
 import typingsSlinky.tensorflowTfjsLayers.initializerConfigMod.InitializerClassName
-import typingsSlinky.tensorflowTfjsLayers.initializersMod.InitializerIdentifier
+import typingsSlinky.tensorflowTfjsLayers.initializersMod._InitializerIdentifier
 import typingsSlinky.tensorflowTfjsLayers.kerasClassNamesMod.KerasClassName
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.BidirectionalMergeMode
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.DataFormat
@@ -25,7 +25,6 @@ import typingsSlinky.tensorflowTfjsLayers.mergeSerializationMod.MergeLayerClassN
 import typingsSlinky.tensorflowTfjsLayers.optimizerConfigMod.OptimizerClassName
 import typingsSlinky.tensorflowTfjsLayers.poolingSerializationMod.PoolingLayerClassName
 import typingsSlinky.tensorflowTfjsLayers.recurrentSerializationMod.RecurrentLayerClassName
-import typingsSlinky.tensorflowTfjsLayers.regularizersMod.RegularizerIdentifier
 import typingsSlinky.tensorflowTfjsLayers.wrappersSerializationMod.WrapperLayerClassName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -416,7 +415,7 @@ object tensorflowTfjsLayersStrings {
        with KerasClassName
   
   @js.native
-  sealed trait auto extends YieldEveryOptions
+  sealed trait auto extends _YieldEveryOptions
   
   @js.native
   sealed trait ave extends BidirectionalMergeMode
@@ -425,7 +424,7 @@ object tensorflowTfjsLayersStrings {
   sealed trait avg extends PoolMode
   
   @js.native
-  sealed trait batch extends YieldEveryOptions
+  sealed trait batch extends _YieldEveryOptions
   
   @js.native
   sealed trait batch_input_shape extends js.Object
@@ -464,7 +463,7 @@ object tensorflowTfjsLayersStrings {
   sealed trait concat extends BidirectionalMergeMode
   
   @js.native
-  sealed trait constant_ extends InitializerIdentifier
+  sealed trait constant_ extends _InitializerIdentifier
   
   @js.native
   sealed trait cosine_proximity extends js.Object
@@ -479,7 +478,7 @@ object tensorflowTfjsLayersStrings {
   sealed trait elu_ extends ActivationIdentifier
   
   @js.native
-  sealed trait epoch extends YieldEveryOptions
+  sealed trait epoch extends _YieldEveryOptions
   
   @js.native
   sealed trait fanAvg extends FanMode
@@ -503,10 +502,10 @@ object tensorflowTfjsLayersStrings {
   sealed trait float32 extends DataType
   
   @js.native
-  sealed trait glorotNormal extends InitializerIdentifier
+  sealed trait glorotNormal extends _InitializerIdentifier
   
   @js.native
-  sealed trait glorotUniform extends InitializerIdentifier
+  sealed trait glorotUniform extends _InitializerIdentifier
   
   @js.native
   sealed trait hardSigmoid extends ActivationIdentifier
@@ -515,16 +514,16 @@ object tensorflowTfjsLayersStrings {
   sealed trait hard_sigmoid extends js.Object
   
   @js.native
-  sealed trait heNormal extends InitializerIdentifier
+  sealed trait heNormal extends _InitializerIdentifier
   
   @js.native
-  sealed trait heUniform extends InitializerIdentifier
+  sealed trait heUniform extends _InitializerIdentifier
   
   @js.native
   sealed trait hinge extends js.Object
   
   @js.native
-  sealed trait identity_ extends InitializerIdentifier
+  sealed trait identity_ extends _InitializerIdentifier
   
   @js.native
   sealed trait input_dtype extends js.Object
@@ -539,13 +538,13 @@ object tensorflowTfjsLayersStrings {
   sealed trait kullback_leibler_divergence extends js.Object
   
   @js.native
-  sealed trait l1l2_ extends RegularizerIdentifier
+  sealed trait l1l2_ extends js.Object
   
   @js.native
-  sealed trait leCunNormal extends InitializerIdentifier
+  sealed trait leCunNormal extends _InitializerIdentifier
   
   @js.native
-  sealed trait leCunUniform extends InitializerIdentifier
+  sealed trait leCunUniform extends _InitializerIdentifier
   
   @js.native
   sealed trait linear extends ActivationIdentifier
@@ -557,7 +556,7 @@ object tensorflowTfjsLayersStrings {
   sealed trait max extends PoolMode
   
   @js.native
-  sealed trait maxNorm_ extends ConstraintIdentifier
+  sealed trait maxNorm_ extends _ConstraintIdentifier
   
   @js.native
   sealed trait mean_absolute_error extends js.Object
@@ -575,7 +574,7 @@ object tensorflowTfjsLayersStrings {
   sealed trait min extends js.Object
   
   @js.native
-  sealed trait minMaxNorm_ extends ConstraintIdentifier
+  sealed trait minMaxNorm_ extends _ConstraintIdentifier
   
   @js.native
   sealed trait mul extends BidirectionalMergeMode
@@ -584,10 +583,10 @@ object tensorflowTfjsLayersStrings {
   sealed trait name extends js.Object
   
   @js.native
-  sealed trait never extends YieldEveryOptions
+  sealed trait never extends _YieldEveryOptions
   
   @js.native
-  sealed trait nonNeg_ extends ConstraintIdentifier
+  sealed trait nonNeg_ extends _ConstraintIdentifier
   
   @js.native
   sealed trait normal
@@ -595,19 +594,19 @@ object tensorflowTfjsLayersStrings {
        with DistributionSerialization
   
   @js.native
-  sealed trait ones_ extends InitializerIdentifier
+  sealed trait ones_ extends _InitializerIdentifier
   
   @js.native
-  sealed trait orthogonal_ extends InitializerIdentifier
+  sealed trait orthogonal_ extends _InitializerIdentifier
   
   @js.native
   sealed trait poisson extends js.Object
   
   @js.native
-  sealed trait randomNormal_ extends InitializerIdentifier
+  sealed trait randomNormal_ extends _InitializerIdentifier
   
   @js.native
-  sealed trait randomUniform_ extends InitializerIdentifier
+  sealed trait randomUniform_ extends _InitializerIdentifier
   
   @js.native
   sealed trait relu6 extends ActivationIdentifier
@@ -657,7 +656,7 @@ object tensorflowTfjsLayersStrings {
   @js.native
   sealed trait truncatedNormal_
     extends Distribution
-       with InitializerIdentifier
+       with _InitializerIdentifier
   
   @js.native
   sealed trait truncated_normal extends DistributionSerialization
@@ -668,19 +667,19 @@ object tensorflowTfjsLayersStrings {
        with DistributionSerialization
   
   @js.native
-  sealed trait unitNorm_ extends ConstraintIdentifier
+  sealed trait unitNorm_ extends _ConstraintIdentifier
   
   @js.native
   sealed trait valid extends PaddingMode
   
   @js.native
-  sealed trait varianceScaling_ extends InitializerIdentifier
+  sealed trait varianceScaling_ extends _InitializerIdentifier
   
   @js.native
   sealed trait webgl extends js.Object
   
   @js.native
-  sealed trait zeros_ extends InitializerIdentifier
+  sealed trait zeros_ extends _InitializerIdentifier
   
   @scala.inline
   def Activation: Activation = "Activation".asInstanceOf[Activation]

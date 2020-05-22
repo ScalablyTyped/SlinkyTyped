@@ -1,5 +1,9 @@
 package typingsSlinky.winrtUwp.global.Windows.UI.WebUI
 
+import typingsSlinky.winrtUwp.Windows.ApplicationModel.Activation.ActivationKind
+import typingsSlinky.winrtUwp.Windows.ApplicationModel.Activation.ApplicationExecutionState
+import typingsSlinky.winrtUwp.Windows.ApplicationModel.Activation.SplashScreen
+import typingsSlinky.winrtUwp.Windows.Foundation.Collections.ValueSet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +12,24 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs")
 @js.native
 abstract class WebUIToastNotificationActivatedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs {
+  /** Gets the app activation operation. */
+  /* CompleteClass */
+  override var activatedOperation: typingsSlinky.winrtUwp.Windows.UI.WebUI.ActivatedOperation = js.native
+  /** Gets the arguments that the app can retrieve after it is activated through an interactive toast notification. */
+  /* CompleteClass */
+  override var argument: String = js.native
+  /** Gets the kind of activation. */
+  /* CompleteClass */
+  override var kind: ActivationKind = js.native
+  /** Gets the previous execution state of the app. */
+  /* CompleteClass */
+  override var previousExecutionState: ApplicationExecutionState = js.native
+  /** Gets the splash screen object that provides information about the transition from the splash screen to the activated app. */
+  /* CompleteClass */
+  override var splashScreen: SplashScreen = js.native
+  /** Gets a set of values that you can use to obtain the user input from an interactive toast notification. */
+  /* CompleteClass */
+  override var userInput: ValueSet = js.native
+}
 

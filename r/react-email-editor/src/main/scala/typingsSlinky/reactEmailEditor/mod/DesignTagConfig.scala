@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DesignTagConfig extends js.Object {
-  val delimeter: js.Tuple2[String, String] = js.native
+  val delimeter: js.Tuple2[String, String]
 }
 
 object DesignTagConfig {
@@ -15,19 +14,5 @@ object DesignTagConfig {
     val __obj = js.Dynamic.literal(delimeter = delimeter.asInstanceOf[js.Any])
     __obj.asInstanceOf[DesignTagConfig]
   }
-  @scala.inline
-  implicit class DesignTagConfigOps[Self <: DesignTagConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelimeter(value: js.Tuple2[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delimeter")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

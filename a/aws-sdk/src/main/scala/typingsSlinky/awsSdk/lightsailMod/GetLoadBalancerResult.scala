@@ -14,29 +14,10 @@ trait GetLoadBalancerResult extends js.Object {
 
 object GetLoadBalancerResult {
   @scala.inline
-  def apply(): GetLoadBalancerResult = {
+  def apply(loadBalancer: LoadBalancer = null): GetLoadBalancerResult = {
     val __obj = js.Dynamic.literal()
+    if (loadBalancer != null) __obj.updateDynamic("loadBalancer")(loadBalancer.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetLoadBalancerResult]
   }
-  @scala.inline
-  implicit class GetLoadBalancerResultOps[Self <: GetLoadBalancerResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoadBalancer(value: LoadBalancer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadBalancer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancer")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -16,18 +16,17 @@ import scala.scalajs.js.annotation._
   * an application-wide notion of a singleton command registry and a singleton
   * state database.
   */
-@js.native
 trait IOptions extends js.Object {
   /**
     * An optional `Contents.IDrive` name for the model.
     * If given, the model will prepend `driveName:` to
     * all paths used in file operations.
     */
-  var driveName: js.UndefOr[String] = js.native
+  var driveName: js.UndefOr[String] = js.undefined
   /**
     * The time interval for browser refreshing, in ms.
     */
-  var refreshInterval: js.UndefOr[Double] = js.native
+  var refreshInterval: js.UndefOr[Double] = js.undefined
   /**
     * The state database to use for saving file browser state and restoring it.
     *
@@ -35,64 +34,21 @@ trait IOptions extends js.Object {
     * Unless the value `null` is set for this option, the application state
     * database will be automatically passed in and used for state restoration.
     */
-  var state: js.UndefOr[IStateDB[ReadonlyJSONValue] | Null] = js.native
+  var state: js.UndefOr[IStateDB[ReadonlyJSONValue] | Null] = js.undefined
 }
 
 object IOptions {
   @scala.inline
-  def apply(): IOptions = {
+  def apply(
+    driveName: String = null,
+    refreshInterval: js.UndefOr[Double] = js.undefined,
+    state: js.UndefOr[Null | IStateDB[ReadonlyJSONValue]] = js.undefined
+  ): IOptions = {
     val __obj = js.Dynamic.literal()
+    if (driveName != null) __obj.updateDynamic("driveName")(driveName.asInstanceOf[js.Any])
+    if (!js.isUndefined(refreshInterval)) __obj.updateDynamic("refreshInterval")(refreshInterval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(state)) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOptions]
   }
-  @scala.inline
-  implicit class IOptionsOps[Self <: IOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDriveName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driveName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDriveName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driveName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefreshInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefreshInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: IStateDB[ReadonlyJSONValue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(null)
-        ret
-    }
-  }
-  
 }
 

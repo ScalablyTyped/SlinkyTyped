@@ -33,53 +33,16 @@ trait DistributionOrderedCacheBehaviorForwardedValues extends js.Object {
 
 object DistributionOrderedCacheBehaviorForwardedValues {
   @scala.inline
-  def apply(cookies: DistributionOrderedCacheBehaviorForwardedValuesCookies, queryString: Boolean): DistributionOrderedCacheBehaviorForwardedValues = {
+  def apply(
+    cookies: DistributionOrderedCacheBehaviorForwardedValuesCookies,
+    queryString: Boolean,
+    headers: js.Array[String] = null,
+    queryStringCacheKeys: js.Array[String] = null
+  ): DistributionOrderedCacheBehaviorForwardedValues = {
     val __obj = js.Dynamic.literal(cookies = cookies.asInstanceOf[js.Any], queryString = queryString.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (queryStringCacheKeys != null) __obj.updateDynamic("queryStringCacheKeys")(queryStringCacheKeys.asInstanceOf[js.Any])
     __obj.asInstanceOf[DistributionOrderedCacheBehaviorForwardedValues]
   }
-  @scala.inline
-  implicit class DistributionOrderedCacheBehaviorForwardedValuesOps[Self <: DistributionOrderedCacheBehaviorForwardedValues] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCookies(value: DistributionOrderedCacheBehaviorForwardedValuesCookies): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQueryString(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryStringCacheKeys(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryStringCacheKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryStringCacheKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryStringCacheKeys")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

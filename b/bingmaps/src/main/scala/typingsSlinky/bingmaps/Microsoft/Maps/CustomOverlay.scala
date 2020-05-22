@@ -5,37 +5,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CustomOverlay extends ILayer {
   /** A reference the the map instance that the overlay was added to. This will be null until the onLoad function has fired. **/
-  var _map: Map = js.native
+  var _map: Map
   /**
     * Gets the html element of this custom overlay.
     * @returns The htmlElement of this overlay.
     */
-  def getHtmlElement(): HTMLElement = js.native
+  def getHtmlElement(): HTMLElement
   /**
     * Gets the map that this overlay is attached to.
     * @returns The map that this overlay is attached to.
     */
-  def getMap(): Map = js.native
+  def getMap(): Map
   /**
     * Implement this method to perform any task that should be done when the overlay is added to the map.
     */
-  def onAdd(): Unit = js.native
+  def onAdd(): Unit
   /**
     * Implement this method to perform any tasks that should be done when the overlay is removed from the map.
     */
-  def onLoad(): Unit = js.native
+  def onLoad(): Unit
   /**
     * Implement this methof to perform any task that should be done after the overlay has been added to the map.
     */
-  def onRemove(): Unit = js.native
+  def onRemove(): Unit
   /**
     * Updates the html element of this custom overlay.
     * @param htmlElement The new htmlElement to set for the overlay.
     */
-  def setHtmlElement(htmlElement: HTMLElement): Unit = js.native
+  def setHtmlElement(htmlElement: HTMLElement): Unit
 }
 
 object CustomOverlay {
@@ -52,55 +51,5 @@ object CustomOverlay {
     val __obj = js.Dynamic.literal(_map = _map.asInstanceOf[js.Any], getHtmlElement = js.Any.fromFunction0(getHtmlElement), getMap = js.Any.fromFunction0(getMap), onAdd = js.Any.fromFunction0(onAdd), onLoad = js.Any.fromFunction0(onLoad), onRemove = js.Any.fromFunction0(onRemove), setHtmlElement = js.Any.fromFunction1(setHtmlElement))
     __obj.asInstanceOf[CustomOverlay]
   }
-  @scala.inline
-  implicit class CustomOverlayOps[Self <: CustomOverlay] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_map(value: Map): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_map")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetHtmlElement(value: () => HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getHtmlElement")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMap(value: () => Map): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMap")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOnAdd(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAdd")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOnLoad(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOnRemove(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRemove")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetHtmlElement(value: HTMLElement => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setHtmlElement")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

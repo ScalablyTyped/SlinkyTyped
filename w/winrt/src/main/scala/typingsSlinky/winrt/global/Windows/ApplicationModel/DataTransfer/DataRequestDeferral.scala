@@ -7,5 +7,8 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.DataTransfer.DataRequestDeferral")
 @js.native
 class DataRequestDeferral ()
-  extends typingsSlinky.winrt.Windows.ApplicationModel.DataTransfer.DataRequestDeferral
+  extends typingsSlinky.winrt.Windows.ApplicationModel.DataTransfer.DataRequestDeferral {
+  /* CompleteClass */
+  override def complete(): Unit = js.native
+}
 

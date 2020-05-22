@@ -8,7 +8,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SessionsResource extends js.Object {
   /**
     * Begins a new transaction. This step can often be skipped:
@@ -16,7 +15,7 @@ trait SessionsResource extends js.Object {
     * Commit can begin a new transaction as a
     * side-effect.
     */
-  def beginTransaction(request: Callback): Request[Transaction] = js.native
+  def beginTransaction(request: Callback): Request[Transaction]
   /**
     * Commits a transaction. The request includes the mutations to be
     * applied to rows in the database.
@@ -27,7 +26,7 @@ trait SessionsResource extends js.Object {
     * reasons. If `Commit` returns `ABORTED`, the caller should re-attempt
     * the transaction from the beginning, re-using the same session.
     */
-  def commit(request: Callback): Request[CommitResponse] = js.native
+  def commit(request: Callback): Request[CommitResponse]
   /**
     * Creates a new session. A session can be used to perform
     * transactions that read and/or modify data in a Cloud Spanner database.
@@ -49,9 +48,9 @@ trait SessionsResource extends js.Object {
     * Idle sessions can be kept alive by sending a trivial SQL query
     * periodically, e.g., `"SELECT 1"`.
     */
-  def create(request: typingsSlinky.gapiClientSpanner.anon.Database): Request[Session] = js.native
+  def create(request: typingsSlinky.gapiClientSpanner.anon.Database): Request[Session]
   /** Ends a session, releasing server resources associated with it. */
-  def delete(request: Accesstoken): Request[js.Object] = js.native
+  def delete(request: Accesstoken): Request[js.Object]
   /**
     * Executes an SQL query, returning all rows in a single reply. This
     * method cannot be used to return a result set larger than 10 MiB;
@@ -65,7 +64,7 @@ trait SessionsResource extends js.Object {
     * Larger result sets can be fetched in streaming fashion by calling
     * ExecuteStreamingSql instead.
     */
-  def executeSql(request: Callback): Request[ResultSet] = js.native
+  def executeSql(request: Callback): Request[ResultSet]
   /**
     * Like ExecuteSql, except returns the result
     * set as a stream. Unlike ExecuteSql, there
@@ -73,15 +72,15 @@ trait SessionsResource extends js.Object {
     * individual row in the result set can exceed 100 MiB, and no
     * column value can exceed 10 MiB.
     */
-  def executeStreamingSql(request: Callback): Request[PartialResultSet] = js.native
+  def executeStreamingSql(request: Callback): Request[PartialResultSet]
   /**
     * Gets a session. Returns `NOT_FOUND` if the session does not exist.
     * This is mainly useful for determining whether a session is still
     * alive.
     */
-  def get(request: Accesstoken): Request[Session] = js.native
+  def get(request: Accesstoken): Request[Session]
   /** Lists all sessions in a given database. */
-  def list(request: Fields): Request[ListSessionsResponse] = js.native
+  def list(request: Fields): Request[ListSessionsResponse]
   /**
     * Reads rows from the database using key lookups and scans, as a
     * simple key/value style alternative to
@@ -97,7 +96,7 @@ trait SessionsResource extends js.Object {
     * Larger result sets can be yielded in streaming fashion by calling
     * StreamingRead instead.
     */
-  def read(request: Callback): Request[ResultSet] = js.native
+  def read(request: Callback): Request[ResultSet]
   /**
     * Rolls back a transaction, releasing any locks it holds. It is a good
     * idea to call this for any transaction that includes one or more
@@ -108,7 +107,7 @@ trait SessionsResource extends js.Object {
     * transaction was already aborted, or the transaction is not
     * found. `Rollback` never returns `ABORTED`.
     */
-  def rollback(request: Callback): Request[js.Object] = js.native
+  def rollback(request: Callback): Request[js.Object]
   /**
     * Like Read, except returns the result set as a
     * stream. Unlike Read, there is no limit on the
@@ -116,7 +115,7 @@ trait SessionsResource extends js.Object {
     * the result set can exceed 100 MiB, and no column value can exceed
     * 10 MiB.
     */
-  def streamingRead(request: Callback): Request[PartialResultSet] = js.native
+  def streamingRead(request: Callback): Request[PartialResultSet]
 }
 
 object SessionsResource {
@@ -137,79 +136,5 @@ object SessionsResource {
     val __obj = js.Dynamic.literal(beginTransaction = js.Any.fromFunction1(beginTransaction), commit = js.Any.fromFunction1(commit), create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), executeSql = js.Any.fromFunction1(executeSql), executeStreamingSql = js.Any.fromFunction1(executeStreamingSql), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), read = js.Any.fromFunction1(read), rollback = js.Any.fromFunction1(rollback), streamingRead = js.Any.fromFunction1(streamingRead))
     __obj.asInstanceOf[SessionsResource]
   }
-  @scala.inline
-  implicit class SessionsResourceOps[Self <: SessionsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBeginTransaction(value: Callback => Request[Transaction]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beginTransaction")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCommit(value: Callback => Request[CommitResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreate(value: typingsSlinky.gapiClientSpanner.anon.Database => Request[Session]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDelete(value: Accesstoken => Request[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withExecuteSql(value: Callback => Request[ResultSet]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executeSql")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withExecuteStreamingSql(value: Callback => Request[PartialResultSet]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executeStreamingSql")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: Accesstoken => Request[Session]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Fields => Request[ListSessionsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRead(value: Callback => Request[ResultSet]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRollback(value: Callback => Request[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rollback")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStreamingRead(value: Callback => Request[PartialResultSet]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamingRead")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

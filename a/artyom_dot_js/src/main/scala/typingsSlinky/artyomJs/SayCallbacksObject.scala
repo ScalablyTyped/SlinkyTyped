@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SayCallbacksObject extends js.Object {
-  var lang: js.UndefOr[String] = js.native
-  var onEnd: js.UndefOr[js.Function] = js.native
-  var onStart: js.UndefOr[js.Function] = js.native
+  var lang: js.UndefOr[String] = js.undefined
+  var onEnd: js.UndefOr[js.Function] = js.undefined
+  var onStart: js.UndefOr[js.Function] = js.undefined
 }
 
 object SayCallbacksObject {
   @scala.inline
-  def apply(): SayCallbacksObject = {
+  def apply(lang: String = null, onEnd: js.Function = null, onStart: js.Function = null): SayCallbacksObject = {
     val __obj = js.Dynamic.literal()
+    if (lang != null) __obj.updateDynamic("lang")(lang.asInstanceOf[js.Any])
+    if (onEnd != null) __obj.updateDynamic("onEnd")(onEnd.asInstanceOf[js.Any])
+    if (onStart != null) __obj.updateDynamic("onStart")(onStart.asInstanceOf[js.Any])
     __obj.asInstanceOf[SayCallbacksObject]
   }
-  @scala.inline
-  implicit class SayCallbacksObjectOps[Self <: SayCallbacksObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLang(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLang: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEnd(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnStart(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStart")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

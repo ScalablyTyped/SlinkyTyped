@@ -5,61 +5,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IgGridGroupBySummarySettings
   extends /**
-	 * Option for JSONPDataSourceSettings
-	 */
+  * Option for JSONPDataSourceSettings
+  */
 /* optionName */ StringDictionary[js.Any] {
   /**
-  	 * Specifies the delimiter for multiple summaries.
-  	 *
-  	 */
-  var multiSummaryDelimiter: js.UndefOr[String] = js.native
+    * Specifies the delimiter for multiple summaries.
+    *
+    */
+  var multiSummaryDelimiter: js.UndefOr[String] = js.undefined
   /**
-  	 * Format of the summary value. By default, two digits are shown after the decimal place. Checkout [Formatting Dates, Numbers and Strings](http://www.igniteui.com/help/formatting-dates-numbers-and-strings) for details on the valid formatting specifiers.
-  	 *
-  	 */
-  var summaryFormat: js.UndefOr[String] = js.native
+    * Format of the summary value. By default, two digits are shown after the decimal place. Checkout [Formatting Dates, Numbers and Strings](http://www.igniteui.com/help/formatting-dates-numbers-and-strings) for details on the valid formatting specifiers.
+    *
+    */
+  var summaryFormat: js.UndefOr[String] = js.undefined
 }
 
 object IgGridGroupBySummarySettings {
   @scala.inline
-  def apply(): IgGridGroupBySummarySettings = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    multiSummaryDelimiter: String = null,
+    summaryFormat: String = null
+  ): IgGridGroupBySummarySettings = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (multiSummaryDelimiter != null) __obj.updateDynamic("multiSummaryDelimiter")(multiSummaryDelimiter.asInstanceOf[js.Any])
+    if (summaryFormat != null) __obj.updateDynamic("summaryFormat")(summaryFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgGridGroupBySummarySettings]
   }
-  @scala.inline
-  implicit class IgGridGroupBySummarySettingsOps[Self <: IgGridGroupBySummarySettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMultiSummaryDelimiter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiSummaryDelimiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiSummaryDelimiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiSummaryDelimiter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSummaryFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summaryFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSummaryFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summaryFormat")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

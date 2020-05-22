@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * A single application container that you want to run within a pod.
   */
-@js.native
 trait Container extends js.Object {
   /**
     * Arguments to the entrypoint. The docker image's CMD is used if this is not provided.
@@ -18,7 +17,7 @@ trait Container extends js.Object {
     * updated. More info:
     * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
     */
-  val args: js.Array[String] = js.native
+  val args: js.Array[String]
   /**
     * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if
     * this is not provided. Variable references $(VAR_NAME) are expanded using the container's
@@ -28,11 +27,11 @@ trait Container extends js.Object {
     * not. Cannot be updated. More info:
     * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
     */
-  val command: js.Array[String] = js.native
+  val command: js.Array[String]
   /**
     * List of environment variables to set in the container. Cannot be updated.
     */
-  val env: js.Array[EnvVar] = js.native
+  val env: js.Array[EnvVar]
   /**
     * List of sources to populate environment variables in the container. The keys defined within
     * a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the
@@ -40,35 +39,35 @@ trait Container extends js.Object {
     * last source will take precedence. Values defined by an Env with a duplicate key will take
     * precedence. Cannot be updated.
     */
-  val envFrom: js.Array[EnvFromSource] = js.native
+  val envFrom: js.Array[EnvFromSource]
   /**
     * Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images This
     * field is optional to allow higher level config management to default or override container
     * images in workload controllers like Deployments and StatefulSets.
     */
-  val image: String = js.native
+  val image: String
   /**
     * Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is
     * specified, or IfNotPresent otherwise. Cannot be updated. More info:
     * https://kubernetes.io/docs/concepts/containers/images#updating-images
     */
-  val imagePullPolicy: String = js.native
+  val imagePullPolicy: String
   /**
     * Actions that the management system should take in response to container lifecycle events.
     * Cannot be updated.
     */
-  val lifecycle: Lifecycle = js.native
+  val lifecycle: Lifecycle
   /**
     * Periodic probe of container liveness. Container will be restarted if the probe fails.
     * Cannot be updated. More info:
     * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
     */
-  val livenessProbe: Probe = js.native
+  val livenessProbe: Probe
   /**
     * Name of the container specified as a DNS_LABEL. Each container in a pod must have a unique
     * name (DNS_LABEL). Cannot be updated.
     */
-  val name: String = js.native
+  val name: String
   /**
     * List of ports to expose from the container. Exposing a port here gives the system
     * additional information about the network connections a container uses, but is primarily
@@ -76,39 +75,39 @@ trait Container extends js.Object {
     * Any port which is listening on the default "0.0.0.0" address inside a container will be
     * accessible from the network. Cannot be updated.
     */
-  val ports: js.Array[ContainerPort] = js.native
+  val ports: js.Array[ContainerPort]
   /**
     * Periodic probe of container service readiness. Container will be removed from service
     * endpoints if the probe fails. Cannot be updated. More info:
     * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
     */
-  val readinessProbe: Probe = js.native
+  val readinessProbe: Probe
   /**
     * Compute Resources required by this container. Cannot be updated. More info:
     * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
     */
-  val resources: ResourceRequirements = js.native
+  val resources: ResourceRequirements
   /**
     * Security options the pod should run with. More info:
     * https://kubernetes.io/docs/concepts/policy/security-context/ More info:
     * https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
     */
-  val securityContext: SecurityContext = js.native
+  val securityContext: SecurityContext
   /**
     * StartupProbe indicates that the Pod has successfully initialized. If specified, no other
     * probes are executed until this completes successfully. If this probe fails, the Pod will be
     * restarted, just as if the livenessProbe failed. This can be used to provide different probe
     * parameters at the beginning of a Pod's lifecycle, when it might take a long time to load
-    * data or warm a cache, than during steady-state operation. This cannot be updated. This is
-    * an alpha feature enabled by the StartupProbe feature flag. More info:
+    * data or warm a cache, than during steady-state operation. This cannot be updated. This is a
+    * beta feature enabled by the StartupProbe feature flag. More info:
     * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
     */
-  val startupProbe: Probe = js.native
+  val startupProbe: Probe
   /**
     * Whether this container should allocate a buffer for stdin in the container runtime. If this
     * is not set, reads from stdin in the container will always result in EOF. Default is false.
     */
-  val stdin: Boolean = js.native
+  val stdin: Boolean
   /**
     * Whether the container runtime should close the stdin channel after it has been opened by a
     * single attach. When stdin is true the stdin stream will remain open across multiple attach
@@ -118,7 +117,7 @@ trait Container extends js.Object {
     * restarted. If this flag is false, a container processes that reads from stdin will never
     * receive an EOF. Default is false
     */
-  val stdinOnce: Boolean = js.native
+  val stdinOnce: Boolean
   /**
     * Optional: Path at which the file to which the container's termination message will be
     * written is mounted into the container's filesystem. Message written is intended to be brief
@@ -126,7 +125,7 @@ trait Container extends js.Object {
     * greater than 4096 bytes. The total message length across all containers will be limited to
     * 12kb. Defaults to /dev/termination-log. Cannot be updated.
     */
-  val terminationMessagePath: String = js.native
+  val terminationMessagePath: String
   /**
     * Indicate how the termination message should be populated. File will use the contents of
     * terminationMessagePath to populate the container status message on both success and
@@ -135,26 +134,25 @@ trait Container extends js.Object {
     * limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be
     * updated.
     */
-  val terminationMessagePolicy: String = js.native
+  val terminationMessagePolicy: String
   /**
     * Whether this container should allocate a TTY for itself, also requires 'stdin' to be true.
     * Default is false.
     */
-  val tty: Boolean = js.native
+  val tty: Boolean
   /**
-    * volumeDevices is the list of block devices to be used by the container. This is a beta
-    * feature.
+    * volumeDevices is the list of block devices to be used by the container.
     */
-  val volumeDevices: js.Array[VolumeDevice] = js.native
+  val volumeDevices: js.Array[VolumeDevice]
   /**
     * Pod volumes to mount into the container's filesystem. Cannot be updated.
     */
-  val volumeMounts: js.Array[VolumeMount] = js.native
+  val volumeMounts: js.Array[VolumeMount]
   /**
     * Container's working directory. If not specified, the container runtime's default will be
     * used, which might be configured in the container image. Cannot be updated.
     */
-  val workingDir: String = js.native
+  val workingDir: String
 }
 
 object Container {
@@ -186,145 +184,5 @@ object Container {
     val __obj = js.Dynamic.literal(args = args.asInstanceOf[js.Any], command = command.asInstanceOf[js.Any], env = env.asInstanceOf[js.Any], envFrom = envFrom.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], imagePullPolicy = imagePullPolicy.asInstanceOf[js.Any], lifecycle = lifecycle.asInstanceOf[js.Any], livenessProbe = livenessProbe.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], ports = ports.asInstanceOf[js.Any], readinessProbe = readinessProbe.asInstanceOf[js.Any], resources = resources.asInstanceOf[js.Any], securityContext = securityContext.asInstanceOf[js.Any], startupProbe = startupProbe.asInstanceOf[js.Any], stdin = stdin.asInstanceOf[js.Any], stdinOnce = stdinOnce.asInstanceOf[js.Any], terminationMessagePath = terminationMessagePath.asInstanceOf[js.Any], terminationMessagePolicy = terminationMessagePolicy.asInstanceOf[js.Any], tty = tty.asInstanceOf[js.Any], volumeDevices = volumeDevices.asInstanceOf[js.Any], volumeMounts = volumeMounts.asInstanceOf[js.Any], workingDir = workingDir.asInstanceOf[js.Any])
     __obj.asInstanceOf[Container]
   }
-  @scala.inline
-  implicit class ContainerOps[Self <: Container] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommand(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnv(value: js.Array[EnvVar]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnvFrom(value: js.Array[EnvFromSource]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("envFrom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImagePullPolicy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imagePullPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLifecycle(value: Lifecycle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLivenessProbe(value: Probe): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("livenessProbe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPorts(value: js.Array[ContainerPort]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReadinessProbe(value: Probe): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readinessProbe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResources(value: ResourceRequirements): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSecurityContext(value: SecurityContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartupProbe(value: Probe): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startupProbe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStdin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stdin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStdinOnce(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stdinOnce")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTerminationMessagePath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("terminationMessagePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTerminationMessagePolicy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("terminationMessagePolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTty(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVolumeDevices(value: js.Array[VolumeDevice]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeDevices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVolumeMounts(value: js.Array[VolumeMount]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeMounts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorkingDir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workingDir")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.Email.EmailMailboxChangedDeferral")
 @js.native
 abstract class EmailMailboxChangedDeferral ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Email.EmailMailboxChangedDeferral
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Email.EmailMailboxChangedDeferral {
+  /** Indicates to waiting processes that the deferral is complete. */
+  /* CompleteClass */
+  override def complete(): Unit = js.native
+}
 

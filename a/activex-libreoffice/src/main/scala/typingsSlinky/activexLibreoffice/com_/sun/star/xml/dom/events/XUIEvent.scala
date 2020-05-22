@@ -7,19 +7,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XUIEvent extends XEvent {
-  val Detail: Double = js.native
-  val View: XAbstractView = js.native
-  def getDetail(): Double = js.native
-  def getView(): XAbstractView = js.native
+  val Detail: Double
+  val View: XAbstractView
+  def getDetail(): Double
+  def getView(): XAbstractView
   def initUIEvent(
     typeArg: String,
     canBubbleArg: Boolean,
     cancelableArg: Boolean,
     viewArg: XAbstractView,
     detailArg: Double
-  ): Unit = js.native
+  ): Unit
 }
 
 object XUIEvent {
@@ -54,43 +53,5 @@ object XUIEvent {
     val __obj = js.Dynamic.literal(Bubbles = Bubbles.asInstanceOf[js.Any], Cancelable = Cancelable.asInstanceOf[js.Any], CurrentTarget = CurrentTarget.asInstanceOf[js.Any], Detail = Detail.asInstanceOf[js.Any], EventPhase = EventPhase.asInstanceOf[js.Any], Target = Target.asInstanceOf[js.Any], TimeStamp = TimeStamp.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any], View = View.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getBubbles = js.Any.fromFunction0(getBubbles), getCancelable = js.Any.fromFunction0(getCancelable), getCurrentTarget = js.Any.fromFunction0(getCurrentTarget), getDetail = js.Any.fromFunction0(getDetail), getEventPhase = js.Any.fromFunction0(getEventPhase), getTarget = js.Any.fromFunction0(getTarget), getTimeStamp = js.Any.fromFunction0(getTimeStamp), getType = js.Any.fromFunction0(getType), getView = js.Any.fromFunction0(getView), initEvent = js.Any.fromFunction3(initEvent), initUIEvent = js.Any.fromFunction5(initUIEvent), preventDefault = js.Any.fromFunction0(preventDefault), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), stopPropagation = js.Any.fromFunction0(stopPropagation))
     __obj.asInstanceOf[XUIEvent]
   }
-  @scala.inline
-  implicit class XUIEventOps[Self <: XUIEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDetail(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Detail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withView(value: XAbstractView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("View")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetDetail(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDetail")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetView(value: () => XAbstractView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getView")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withInitUIEvent(value: (String, Boolean, Boolean, XAbstractView, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initUIEvent")(js.Any.fromFunction5(value))
-        ret
-    }
-  }
-  
 }
 

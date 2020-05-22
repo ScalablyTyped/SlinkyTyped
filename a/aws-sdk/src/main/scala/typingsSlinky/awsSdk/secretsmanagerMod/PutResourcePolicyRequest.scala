@@ -22,25 +22,5 @@ object PutResourcePolicyRequest {
     val __obj = js.Dynamic.literal(ResourcePolicy = ResourcePolicy.asInstanceOf[js.Any], SecretId = SecretId.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutResourcePolicyRequest]
   }
-  @scala.inline
-  implicit class PutResourcePolicyRequestOps[Self <: PutResourcePolicyRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResourcePolicy(value: NonEmptyResourcePolicyType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourcePolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSecretId(value: SecretIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecretId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

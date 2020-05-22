@@ -10,10 +10,9 @@ import scala.scalajs.js.annotation._
   * describes a change of the active sheet. The new active sheet is given with this event.
   * @since OOo 2.0
   */
-@js.native
 trait ActivationEvent extends EventObject {
   /** specifies the new active {@link Spreadsheet} . */
-  var ActiveSheet: XSpreadsheet = js.native
+  var ActiveSheet: XSpreadsheet
 }
 
 object ActivationEvent {
@@ -22,19 +21,5 @@ object ActivationEvent {
     val __obj = js.Dynamic.literal(ActiveSheet = ActiveSheet.asInstanceOf[js.Any], Source = Source.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActivationEvent]
   }
-  @scala.inline
-  implicit class ActivationEventOps[Self <: ActivationEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveSheet(value: XSpreadsheet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveSheet")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

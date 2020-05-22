@@ -7,6 +7,5 @@ import scala.scalajs.js.annotation._
 
 @JSImport("@tensorflow/tfjs-core/dist/kernel_names", "Square")
 @js.native
-object Square
-  extends TopLevel[/* "1.7.0" */ String]
+object Square extends TopLevel[/* "Identity" */ String]
 

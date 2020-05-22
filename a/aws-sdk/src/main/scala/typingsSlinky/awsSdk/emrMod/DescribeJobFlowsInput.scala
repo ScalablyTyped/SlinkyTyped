@@ -26,65 +26,18 @@ trait DescribeJobFlowsInput extends js.Object {
 
 object DescribeJobFlowsInput {
   @scala.inline
-  def apply(): DescribeJobFlowsInput = {
+  def apply(
+    CreatedAfter: js.Date = null,
+    CreatedBefore: js.Date = null,
+    JobFlowIds: XmlStringList = null,
+    JobFlowStates: JobFlowExecutionStateList = null
+  ): DescribeJobFlowsInput = {
     val __obj = js.Dynamic.literal()
+    if (CreatedAfter != null) __obj.updateDynamic("CreatedAfter")(CreatedAfter.asInstanceOf[js.Any])
+    if (CreatedBefore != null) __obj.updateDynamic("CreatedBefore")(CreatedBefore.asInstanceOf[js.Any])
+    if (JobFlowIds != null) __obj.updateDynamic("JobFlowIds")(JobFlowIds.asInstanceOf[js.Any])
+    if (JobFlowStates != null) __obj.updateDynamic("JobFlowStates")(JobFlowStates.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeJobFlowsInput]
   }
-  @scala.inline
-  implicit class DescribeJobFlowsInputOps[Self <: DescribeJobFlowsInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreatedAfter(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAfter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedAfter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAfter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedBefore(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedBefore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedBefore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedBefore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobFlowIds(value: XmlStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobFlowIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobFlowIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobFlowIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobFlowStates(value: JobFlowExecutionStateList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobFlowStates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobFlowStates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobFlowStates")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

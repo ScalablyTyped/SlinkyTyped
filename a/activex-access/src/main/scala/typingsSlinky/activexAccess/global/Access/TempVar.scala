@@ -7,5 +7,17 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Access.TempVar")
 @js.native
 class TempVar protected ()
-  extends typingsSlinky.activexAccess.Access.TempVar
+  extends typingsSlinky.activexAccess.Access.TempVar {
+  /* CompleteClass */
+  @JSName("Access.TempVar_typekey")
+  override var AccessDotTempVar_typekey: typingsSlinky.activexAccess.Access.TempVar = js.native
+  /* CompleteClass */
+  override val Name: String = js.native
+  /* CompleteClass */
+  override var Value: Double | String | Boolean = js.native
+  /* CompleteClass */
+  override var _Value: Double | String | Boolean = js.native
+  /* CompleteClass */
+  override def IsMemberSafe(dispid: Double): Boolean = js.native
+}
 

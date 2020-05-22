@@ -1,14 +1,14 @@
 package typingsSlinky.xstate.typesMod
 
+import typingsSlinky.std.Record
 import typingsSlinky.xstate.stateNodeMod.StateNode
 import typingsSlinky.xstate.xstateStrings.Asterisk
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DelayedTransitionDefinition[TContext, TEvent /* <: EventObject */] extends TransitionDefinition[TContext, TEvent] {
-  var delay: Double | String | (DelayExpr[TContext, TEvent]) = js.native
+  var delay: Double | String | (DelayExpr[TContext, TEvent])
 }
 
 object DelayedTransitionDefinition {
@@ -17,30 +17,21 @@ object DelayedTransitionDefinition {
     actions: js.Array[ActionObject[TContext, TEvent]],
     delay: Double | String | (DelayExpr[TContext, TEvent]),
     eventType: (/* import warning: importer.ImportType#apply Failed type conversion: TEvent['type'] */ js.Any) | typingsSlinky.xstate.typesMod.ActionTypes.NullEvent | Asterisk,
-    source: StateNode[TContext, _, TEvent, _]
+    source: StateNode[TContext, _, TEvent, _],
+    toJSON: () => typingsSlinky.xstate.anon.Actions[TContext, TEvent],
+    cond: Guard[TContext, TEvent] = null,
+    in: StateValue = null,
+    internal: js.UndefOr[Boolean] = js.undefined,
+    meta: Record[String, _] = null,
+    target: js.Array[StateNode[TContext, _, TEvent, _]] = null
   ): DelayedTransitionDefinition[TContext, TEvent] = {
-    val __obj = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any], delay = delay.asInstanceOf[js.Any], eventType = eventType.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any], delay = delay.asInstanceOf[js.Any], eventType = eventType.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON))
+    if (cond != null) __obj.updateDynamic("cond")(cond.asInstanceOf[js.Any])
+    if (in != null) __obj.updateDynamic("in")(in.asInstanceOf[js.Any])
+    if (!js.isUndefined(internal)) __obj.updateDynamic("internal")(internal.get.asInstanceOf[js.Any])
+    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
     __obj.asInstanceOf[DelayedTransitionDefinition[TContext, TEvent]]
   }
-  @scala.inline
-  implicit class DelayedTransitionDefinitionOps[Self[tcontext, tevent] <: DelayedTransitionDefinition[tcontext, tevent], TContext, TEvent] (val x: Self[TContext, TEvent]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TContext, TEvent] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TContext, TEvent]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[TContext, TEvent]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[TContext, TEvent]) with Other]
-    @scala.inline
-    def withDelayFunction3(value: (TContext, TEvent, /* meta */ SCXMLEventMeta[TEvent]) => Double): Self[TContext, TEvent] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withDelay(value: Double | String | (DelayExpr[TContext, TEvent])): Self[TContext, TEvent] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

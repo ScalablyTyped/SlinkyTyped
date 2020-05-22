@@ -12,6 +12,7 @@ package object matchesMod {
     /* options */ js.UndefOr[typingsSlinky.testingLibraryDom.matchesMod.MatcherOptions], 
     scala.Boolean
   ]
+  type Matcher = java.lang.String | js.RegExp | typingsSlinky.testingLibraryDom.matchesMod.MatcherFunction
   type MatcherFunction = js.Function2[
     /* content */ java.lang.String, 
     /* element */ org.scalajs.dom.raw.HTMLElement, 

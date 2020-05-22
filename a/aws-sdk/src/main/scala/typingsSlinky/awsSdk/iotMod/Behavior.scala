@@ -15,6 +15,10 @@ trait Behavior extends js.Object {
     */
   var metric: js.UndefOr[BehaviorMetric] = js.native
   /**
+    * The dimension for a metric in your behavior. For example, using a TOPIC_FILTER dimension, you can narrow down the scope of the metric only to MQTT topics whose name match the pattern specified in the dimension.
+    */
+  var metricDimension: js.UndefOr[MetricDimension] = js.native
+  /**
     * The name you have given to the behavior.
     */
   var name: BehaviorName = js.native
@@ -22,47 +26,17 @@ trait Behavior extends js.Object {
 
 object Behavior {
   @scala.inline
-  def apply(name: BehaviorName): Behavior = {
+  def apply(
+    name: BehaviorName,
+    criteria: BehaviorCriteria = null,
+    metric: BehaviorMetric = null,
+    metricDimension: MetricDimension = null
+  ): Behavior = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (criteria != null) __obj.updateDynamic("criteria")(criteria.asInstanceOf[js.Any])
+    if (metric != null) __obj.updateDynamic("metric")(metric.asInstanceOf[js.Any])
+    if (metricDimension != null) __obj.updateDynamic("metricDimension")(metricDimension.asInstanceOf[js.Any])
     __obj.asInstanceOf[Behavior]
   }
-  @scala.inline
-  implicit class BehaviorOps[Self <: Behavior] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: BehaviorName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCriteria(value: BehaviorCriteria): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("criteria")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCriteria: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("criteria")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetric(value: BehaviorMetric): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetric: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

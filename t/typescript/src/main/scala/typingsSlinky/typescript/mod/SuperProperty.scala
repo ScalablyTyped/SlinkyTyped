@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait SuperProperty extends js.Object
 
-object SuperProperty {
-  @scala.inline
-  implicit def apply(value: SuperElementAccessExpression): SuperProperty = value.asInstanceOf[SuperProperty]
-  @scala.inline
-  implicit def apply(value: SuperPropertyAccessExpression): SuperProperty = value.asInstanceOf[SuperProperty]
-}
-

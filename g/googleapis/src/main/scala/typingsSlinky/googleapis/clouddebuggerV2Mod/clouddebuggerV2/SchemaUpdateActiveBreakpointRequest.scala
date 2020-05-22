@@ -18,29 +18,10 @@ trait SchemaUpdateActiveBreakpointRequest extends js.Object {
 
 object SchemaUpdateActiveBreakpointRequest {
   @scala.inline
-  def apply(): SchemaUpdateActiveBreakpointRequest = {
+  def apply(breakpoint: SchemaBreakpoint = null): SchemaUpdateActiveBreakpointRequest = {
     val __obj = js.Dynamic.literal()
+    if (breakpoint != null) __obj.updateDynamic("breakpoint")(breakpoint.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUpdateActiveBreakpointRequest]
   }
-  @scala.inline
-  implicit class SchemaUpdateActiveBreakpointRequestOps[Self <: SchemaUpdateActiveBreakpointRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBreakpoint(value: SchemaBreakpoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breakpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBreakpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breakpoint")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -26,31 +26,5 @@ object GetConfigRequest {
     val __obj = js.Dynamic.literal(ClientArn = ClientArn.asInstanceOf[js.Any], ClientVersion = ClientVersion.asInstanceOf[js.Any], HapgList = HapgList.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetConfigRequest]
   }
-  @scala.inline
-  implicit class GetConfigRequestOps[Self <: GetConfigRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientArn(value: ClientArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientVersion(value: ClientVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHapgList(value: HapgList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HapgList")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

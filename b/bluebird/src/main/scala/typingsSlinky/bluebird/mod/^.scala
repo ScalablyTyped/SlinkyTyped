@@ -24,6 +24,40 @@ class ^[R] protected () extends Bluebird[R] {
         /* onCancel */ js.UndefOr[js.Function1[/* callback */ js.Function0[Unit], Unit]], 
         Unit
       ]) = this()
+  /**
+    * See if the underlying promise was cancelled at the creation time of this inspection object.
+    */
+  /* CompleteClass */
+  override def isCancelled(): Boolean = js.native
+  /**
+    * See if the underlying promise was fulfilled at the creation time of this inspection object.
+    */
+  /* CompleteClass */
+  override def isFulfilled(): Boolean = js.native
+  /**
+    * See if the underlying promise was defer at the creation time of this inspection object.
+    */
+  /* CompleteClass */
+  override def isPending(): Boolean = js.native
+  /**
+    * See if the underlying promise was rejected at the creation time of this inspection object.
+    */
+  /* CompleteClass */
+  override def isRejected(): Boolean = js.native
+  /**
+    * Get the rejection reason for the underlying promise. Throws if the promise wasn't rejected at the creation time of this inspection object.
+    *
+    * throws `TypeError`
+    */
+  /* CompleteClass */
+  override def reason(): js.Any = js.native
+  /**
+    * Get the fulfillment value of the underlying promise. Throws if the promise wasn't fulfilled at the creation time of this inspection object.
+    *
+    * throws `TypeError`
+    */
+  /* CompleteClass */
+  override def value(): R = js.native
 }
 
 @JSImport("bluebird", JSImport.Namespace)
@@ -52,6 +86,14 @@ object ^ extends js.Object {
   // TODO enable more overloads
   // array with promises of different types
   def all[T1, T2, T3, T4, T5](values: js.Tuple5[Resolvable[T1], Resolvable[T2], Resolvable[T3], Resolvable[T4], Resolvable[T5]]): Bluebird[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
+  def allSettled[T1](values: js.Array[Resolvable[T1]]): Bluebird[js.Array[Inspection[T1]]] = js.native
+  def allSettled[R](values: Resolvable[js.Iterable[Resolvable[R]]]): Bluebird[js.Array[Inspection[R]]] = js.native
+  def allSettled[T1, T2](values: js.Tuple2[Resolvable[T1], Resolvable[T2]]): Bluebird[js.Tuple2[Inspection[T1], Inspection[T2]]] = js.native
+  def allSettled[T1, T2, T3](values: js.Tuple3[Resolvable[T1], Resolvable[T2], Resolvable[T3]]): Bluebird[js.Tuple3[Inspection[T1], Inspection[T2], Inspection[T3]]] = js.native
+  def allSettled[T1, T2, T3, T4](values: js.Tuple4[Resolvable[T1], Resolvable[T2], Resolvable[T3], Resolvable[T4]]): Bluebird[js.Tuple4[Inspection[T1], Inspection[T2], Inspection[T3], Inspection[T4]]] = js.native
+  def allSettled[T1, T2, T3, T4, T5](values: js.Tuple5[Resolvable[T1], Resolvable[T2], Resolvable[T3], Resolvable[T4], Resolvable[T5]]): Bluebird[
+    js.Tuple5[Inspection[T1], Inspection[T2], Inspection[T3], Inspection[T4], Inspection[T5]]
+  ] = js.native
    // tslint:disable-line:unified-signatures
   /**
     * Like `Promise.some()`, with 1 as `count`. However, if the promise fulfills, the fulfillment value is not an array of 1 but the value directly.

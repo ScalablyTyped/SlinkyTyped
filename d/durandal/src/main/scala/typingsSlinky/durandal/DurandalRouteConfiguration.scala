@@ -5,140 +5,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DurandalRouteConfiguration extends js.Object {
-  var hasChildRoutes: js.UndefOr[Boolean] = js.native
-  var hash: js.UndefOr[String] = js.native
-  var isActive: js.UndefOr[KnockoutComputed[Boolean]] = js.native
-  var moduleId: js.UndefOr[String] = js.native
-  var nav: js.UndefOr[js.Any] = js.native
-  var route: js.UndefOr[String | js.Array[String]] = js.native
-  var routePattern: js.UndefOr[js.RegExp] = js.native
-  var title: js.UndefOr[js.Any] = js.native
-  var viewUrl: js.UndefOr[String] = js.native
+  var hasChildRoutes: js.UndefOr[Boolean] = js.undefined
+  var hash: js.UndefOr[String] = js.undefined
+  var isActive: js.UndefOr[KnockoutComputed[Boolean]] = js.undefined
+  var moduleId: js.UndefOr[String] = js.undefined
+  var nav: js.UndefOr[js.Any] = js.undefined
+  var route: js.UndefOr[String | js.Array[String]] = js.undefined
+  var routePattern: js.UndefOr[js.RegExp] = js.undefined
+  var title: js.UndefOr[js.Any] = js.undefined
+  var viewUrl: js.UndefOr[String] = js.undefined
 }
 
 object DurandalRouteConfiguration {
   @scala.inline
-  def apply(): DurandalRouteConfiguration = {
+  def apply(
+    hasChildRoutes: js.UndefOr[Boolean] = js.undefined,
+    hash: String = null,
+    isActive: KnockoutComputed[Boolean] = null,
+    moduleId: String = null,
+    nav: js.Any = null,
+    route: String | js.Array[String] = null,
+    routePattern: js.RegExp = null,
+    title: js.Any = null,
+    viewUrl: String = null
+  ): DurandalRouteConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(hasChildRoutes)) __obj.updateDynamic("hasChildRoutes")(hasChildRoutes.get.asInstanceOf[js.Any])
+    if (hash != null) __obj.updateDynamic("hash")(hash.asInstanceOf[js.Any])
+    if (isActive != null) __obj.updateDynamic("isActive")(isActive.asInstanceOf[js.Any])
+    if (moduleId != null) __obj.updateDynamic("moduleId")(moduleId.asInstanceOf[js.Any])
+    if (nav != null) __obj.updateDynamic("nav")(nav.asInstanceOf[js.Any])
+    if (route != null) __obj.updateDynamic("route")(route.asInstanceOf[js.Any])
+    if (routePattern != null) __obj.updateDynamic("routePattern")(routePattern.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (viewUrl != null) __obj.updateDynamic("viewUrl")(viewUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[DurandalRouteConfiguration]
   }
-  @scala.inline
-  implicit class DurandalRouteConfigurationOps[Self <: DurandalRouteConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHasChildRoutes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasChildRoutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasChildRoutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasChildRoutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHash(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsActive(value: KnockoutComputed[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isActive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isActive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModuleId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moduleId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModuleId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moduleId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNav(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nav")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNav: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nav")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoute(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("route")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("route")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoutePattern(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routePattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoutePattern: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routePattern")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

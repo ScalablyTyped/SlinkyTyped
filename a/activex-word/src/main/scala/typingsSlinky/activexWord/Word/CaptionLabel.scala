@@ -4,22 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CaptionLabel extends js.Object {
-  val Application: typingsSlinky.activexWord.Word.Application = js.native
-  val BuiltIn: Boolean = js.native
-  var ChapterStyleLevel: Double = js.native
-  val Creator: Double = js.native
-  val ID: WdCaptionLabelID = js.native
-  var IncludeChapterNumber: Boolean = js.native
-  val Name: String = js.native
-  var NumberStyle: WdCaptionNumberStyle = js.native
-  val Parent: js.Any = js.native
-  var Position: WdCaptionPosition = js.native
-  var Separator: WdSeparatorType = js.native
+  val Application: typingsSlinky.activexWord.Word.Application
+  val BuiltIn: Boolean
+  var ChapterStyleLevel: Double
+  val Creator: Double
+  val ID: WdCaptionLabelID
+  var IncludeChapterNumber: Boolean
+  val Name: String
+  var NumberStyle: WdCaptionNumberStyle
+  val Parent: js.Any
+  var Position: WdCaptionPosition
+  var Separator: WdSeparatorType
   @JSName("Word.CaptionLabel_typekey")
-  var WordDotCaptionLabel_typekey: CaptionLabel = js.native
-  def Delete(): Unit = js.native
+  var WordDotCaptionLabel_typekey: CaptionLabel
+  def Delete(): Unit
 }
 
 object CaptionLabel {
@@ -43,91 +42,5 @@ object CaptionLabel {
     __obj.updateDynamic("Word.CaptionLabel_typekey")(WordDotCaptionLabel_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[CaptionLabel]
   }
-  @scala.inline
-  implicit class CaptionLabelOps[Self <: CaptionLabel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBuiltIn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BuiltIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChapterStyleLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChapterStyleLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDelete(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Delete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withID(value: WdCaptionLabelID): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIncludeChapterNumber(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeChapterNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberStyle(value: WdCaptionNumberStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPosition(value: WdCaptionPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSeparator(value: WdSeparatorType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Separator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordDotCaptionLabel_typekey(value: CaptionLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.CaptionLabel_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -7,39 +7,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SequelizeStorageOptions extends Storage {
   /**
     * The name of table column holding migration name.
     * Defaults to 'name'.
     */
-  var columnName: String = js.native
+  var columnName: String
   /**
     * The type of the column holding migration name.
     * Defaults to `Sequelize.STRING`
     */
-  var columnType: DataTypeAbstract = js.native
+  var columnType: DataTypeAbstract
   /**
     * The to be used Sequelize model.
     * Must have column name matching `columnName` option
     * Optional of `sequelize` is passed.
     */
-  var model: js.UndefOr[Model[_, _, _]] = js.native
+  var model: js.UndefOr[Model[_, _, _]] = js.undefined
   /**
     * The name of the to be used model.
     * Defaults to 'SequelizeMeta'
     */
-  var modelName: js.UndefOr[String] = js.native
+  var modelName: js.UndefOr[String] = js.undefined
   /**
     * The configured instance of Sequelize.
     * Optional if `model` is passed.
     */
-  var sequelize: js.UndefOr[Sequelize] = js.native
+  var sequelize: js.UndefOr[Sequelize] = js.undefined
   /**
     * The name of table to create if `model` option is not supplied
     * Defaults to `modelName`
     */
-  var tableName: js.UndefOr[String] = js.native
+  var tableName: js.UndefOr[String] = js.undefined
 }
 
 object SequelizeStorageOptions {
@@ -49,78 +48,18 @@ object SequelizeStorageOptions {
     columnType: DataTypeAbstract,
     executed: () => js.Promise[js.Array[String]],
     logMigration: String => js.Promise[Unit],
-    unlogMigration: String => js.Promise[Unit]
+    unlogMigration: String => js.Promise[Unit],
+    model: Model[_, _, _] = null,
+    modelName: String = null,
+    sequelize: Sequelize = null,
+    tableName: String = null
   ): SequelizeStorageOptions = {
     val __obj = js.Dynamic.literal(columnName = columnName.asInstanceOf[js.Any], columnType = columnType.asInstanceOf[js.Any], executed = js.Any.fromFunction0(executed), logMigration = js.Any.fromFunction1(logMigration), unlogMigration = js.Any.fromFunction1(unlogMigration))
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (modelName != null) __obj.updateDynamic("modelName")(modelName.asInstanceOf[js.Any])
+    if (sequelize != null) __obj.updateDynamic("sequelize")(sequelize.asInstanceOf[js.Any])
+    if (tableName != null) __obj.updateDynamic("tableName")(tableName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SequelizeStorageOptions]
   }
-  @scala.inline
-  implicit class SequelizeStorageOptionsOps[Self <: SequelizeStorageOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumnName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColumnType(value: DataTypeAbstract): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModel(value: Model[_, _, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModelName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModelName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSequelize(value: Sequelize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sequelize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSequelize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sequelize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

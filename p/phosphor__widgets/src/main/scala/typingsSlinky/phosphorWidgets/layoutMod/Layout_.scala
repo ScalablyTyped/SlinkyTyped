@@ -1,6 +1,7 @@
 package typingsSlinky.phosphorWidgets.layoutMod
 
 import typingsSlinky.phosphorAlgorithm.iterMod.IIterable
+import typingsSlinky.phosphorAlgorithm.iterMod.IIterator
 import typingsSlinky.phosphorDisposable.mod.IDisposable
 import typingsSlinky.phosphorMessaging.mod.Message
 import typingsSlinky.phosphorWidgets.layoutMod.Layout.FitPolicy
@@ -49,6 +50,14 @@ abstract class Layout_ ()
     */
   var fitPolicy: FitPolicy = js.native
   /**
+    * Test whether the object has been disposed.
+    *
+    * #### Notes
+    * This property is always safe to access.
+    */
+  /* CompleteClass */
+  override val isDisposed: Boolean = js.native
+  /**
     * Get the parent widget of the layout.
     */
   /**
@@ -59,6 +68,19 @@ abstract class Layout_ ()
     * widget. The parent widget should not be set directly by user code.
     */
   var parent: Widget | Null = js.native
+  /**
+    * Dispose of the resources held by the object.
+    *
+    * #### Notes
+    * If the object's `dispose` method is called more than once, all
+    * calls made after the first will be a no-op.
+    *
+    * #### Undefined Behavior
+    * It is undefined behavior to use any functionality of the object
+    * after it has been disposed unless otherwise explicitly noted.
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
   /**
     * Perform layout initialization which requires the parent widget.
     *
@@ -73,6 +95,19 @@ abstract class Layout_ ()
     * widget nodes to the parent widget's node.
     */
   /* protected */ def init(): Unit = js.native
+  /**
+    * Get an iterator over the object's values.
+    *
+    * @returns An iterator which yields the object's values.
+    *
+    * #### Notes
+    * Depending on the iterable, the returned iterator may or may not be
+    * a new object. A collection or other container-like object should
+    * typically return a new iterator, while an iterator itself should
+    * normally return `this`.
+    */
+  /* CompleteClass */
+  override def iter(): IIterator[Widget] = js.native
   /**
     * A message handler invoked on an `'after-attach'` message.
     *

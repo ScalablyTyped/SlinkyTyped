@@ -7,6 +7,10 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ListSecurityProfilesRequest extends js.Object {
   /**
+    * A filter to limit results to the security profiles that use the defined dimension.
+    */
+  var dimensionName: js.UndefOr[DimensionName] = js.native
+  /**
     * The maximum number of results to return at one time.
     */
   var maxResults: js.UndefOr[MaxResults] = js.native
@@ -18,41 +22,16 @@ trait ListSecurityProfilesRequest extends js.Object {
 
 object ListSecurityProfilesRequest {
   @scala.inline
-  def apply(): ListSecurityProfilesRequest = {
+  def apply(
+    dimensionName: DimensionName = null,
+    maxResults: js.UndefOr[MaxResults] = js.undefined,
+    nextToken: NextToken = null
+  ): ListSecurityProfilesRequest = {
     val __obj = js.Dynamic.literal()
+    if (dimensionName != null) __obj.updateDynamic("dimensionName")(dimensionName.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxResults)) __obj.updateDynamic("maxResults")(maxResults.get.asInstanceOf[js.Any])
+    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListSecurityProfilesRequest]
   }
-  @scala.inline
-  implicit class ListSecurityProfilesRequestOps[Self <: ListSecurityProfilesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxResults(value: MaxResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

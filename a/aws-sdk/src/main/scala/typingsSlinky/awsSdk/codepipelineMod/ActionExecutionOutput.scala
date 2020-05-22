@@ -22,53 +22,16 @@ trait ActionExecutionOutput extends js.Object {
 
 object ActionExecutionOutput {
   @scala.inline
-  def apply(): ActionExecutionOutput = {
+  def apply(
+    executionResult: ActionExecutionResult = null,
+    outputArtifacts: ArtifactDetailList = null,
+    outputVariables: OutputVariablesMap = null
+  ): ActionExecutionOutput = {
     val __obj = js.Dynamic.literal()
+    if (executionResult != null) __obj.updateDynamic("executionResult")(executionResult.asInstanceOf[js.Any])
+    if (outputArtifacts != null) __obj.updateDynamic("outputArtifacts")(outputArtifacts.asInstanceOf[js.Any])
+    if (outputVariables != null) __obj.updateDynamic("outputVariables")(outputVariables.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActionExecutionOutput]
   }
-  @scala.inline
-  implicit class ActionExecutionOutputOps[Self <: ActionExecutionOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecutionResult(value: ActionExecutionResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionResult")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputArtifacts(value: ArtifactDetailList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputArtifacts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputArtifacts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputArtifacts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputVariables(value: OutputVariablesMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputVariables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputVariables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputVariables")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

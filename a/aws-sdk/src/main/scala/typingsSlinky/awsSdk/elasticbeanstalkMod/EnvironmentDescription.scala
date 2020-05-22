@@ -59,7 +59,7 @@ trait EnvironmentDescription extends js.Object {
     */
   var HealthStatus: js.UndefOr[EnvironmentHealthStatus] = js.native
   /**
-    * The ARN of the platform.
+    * The ARN of the platform version.
     */
   var PlatformArn: js.UndefOr[typingsSlinky.awsSdk.elasticbeanstalkMod.PlatformArn] = js.native
   /**
@@ -90,257 +90,50 @@ trait EnvironmentDescription extends js.Object {
 
 object EnvironmentDescription {
   @scala.inline
-  def apply(): EnvironmentDescription = {
+  def apply(
+    AbortableOperationInProgress: js.UndefOr[AbortableOperationInProgress] = js.undefined,
+    ApplicationName: ApplicationName = null,
+    CNAME: DNSCname = null,
+    DateCreated: js.Date = null,
+    DateUpdated: js.Date = null,
+    Description: Description = null,
+    EndpointURL: EndpointURL = null,
+    EnvironmentArn: EnvironmentArn = null,
+    EnvironmentId: EnvironmentId = null,
+    EnvironmentLinks: EnvironmentLinks = null,
+    EnvironmentName: EnvironmentName = null,
+    Health: EnvironmentHealth = null,
+    HealthStatus: EnvironmentHealthStatus = null,
+    PlatformArn: PlatformArn = null,
+    Resources: EnvironmentResourcesDescription = null,
+    SolutionStackName: SolutionStackName = null,
+    Status: EnvironmentStatus = null,
+    TemplateName: ConfigurationTemplateName = null,
+    Tier: EnvironmentTier = null,
+    VersionLabel: VersionLabel = null
+  ): EnvironmentDescription = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(AbortableOperationInProgress)) __obj.updateDynamic("AbortableOperationInProgress")(AbortableOperationInProgress.get.asInstanceOf[js.Any])
+    if (ApplicationName != null) __obj.updateDynamic("ApplicationName")(ApplicationName.asInstanceOf[js.Any])
+    if (CNAME != null) __obj.updateDynamic("CNAME")(CNAME.asInstanceOf[js.Any])
+    if (DateCreated != null) __obj.updateDynamic("DateCreated")(DateCreated.asInstanceOf[js.Any])
+    if (DateUpdated != null) __obj.updateDynamic("DateUpdated")(DateUpdated.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (EndpointURL != null) __obj.updateDynamic("EndpointURL")(EndpointURL.asInstanceOf[js.Any])
+    if (EnvironmentArn != null) __obj.updateDynamic("EnvironmentArn")(EnvironmentArn.asInstanceOf[js.Any])
+    if (EnvironmentId != null) __obj.updateDynamic("EnvironmentId")(EnvironmentId.asInstanceOf[js.Any])
+    if (EnvironmentLinks != null) __obj.updateDynamic("EnvironmentLinks")(EnvironmentLinks.asInstanceOf[js.Any])
+    if (EnvironmentName != null) __obj.updateDynamic("EnvironmentName")(EnvironmentName.asInstanceOf[js.Any])
+    if (Health != null) __obj.updateDynamic("Health")(Health.asInstanceOf[js.Any])
+    if (HealthStatus != null) __obj.updateDynamic("HealthStatus")(HealthStatus.asInstanceOf[js.Any])
+    if (PlatformArn != null) __obj.updateDynamic("PlatformArn")(PlatformArn.asInstanceOf[js.Any])
+    if (Resources != null) __obj.updateDynamic("Resources")(Resources.asInstanceOf[js.Any])
+    if (SolutionStackName != null) __obj.updateDynamic("SolutionStackName")(SolutionStackName.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (TemplateName != null) __obj.updateDynamic("TemplateName")(TemplateName.asInstanceOf[js.Any])
+    if (Tier != null) __obj.updateDynamic("Tier")(Tier.asInstanceOf[js.Any])
+    if (VersionLabel != null) __obj.updateDynamic("VersionLabel")(VersionLabel.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnvironmentDescription]
   }
-  @scala.inline
-  implicit class EnvironmentDescriptionOps[Self <: EnvironmentDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbortableOperationInProgress(value: AbortableOperationInProgress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AbortableOperationInProgress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbortableOperationInProgress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AbortableOperationInProgress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApplicationName(value: ApplicationName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCNAME(value: DNSCname): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CNAME")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCNAME: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CNAME")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDateCreated(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DateCreated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateCreated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DateCreated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDateUpdated(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DateUpdated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateUpdated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DateUpdated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: Description): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndpointURL(value: EndpointURL): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndpointURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointURL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvironmentArn(value: EnvironmentArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironmentArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvironmentId(value: EnvironmentId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironmentId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvironmentLinks(value: EnvironmentLinks): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentLinks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironmentLinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentLinks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvironmentName(value: EnvironmentName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironmentName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHealth(value: EnvironmentHealth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Health")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Health")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHealthStatus(value: EnvironmentHealthStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlatformArn(value: PlatformArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatformArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResources(value: EnvironmentResourcesDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Resources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Resources")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSolutionStackName(value: SolutionStackName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SolutionStackName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSolutionStackName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SolutionStackName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: EnvironmentStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateName(value: ConfigurationTemplateName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTier(value: EnvironmentTier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionLabel(value: VersionLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionLabel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

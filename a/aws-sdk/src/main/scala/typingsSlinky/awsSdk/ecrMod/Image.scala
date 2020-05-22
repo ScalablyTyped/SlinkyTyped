@@ -15,6 +15,10 @@ trait Image extends js.Object {
     */
   var imageManifest: js.UndefOr[ImageManifest] = js.native
   /**
+    * The media type associated with the image manifest.
+    */
+  var imageManifestMediaType: js.UndefOr[MediaType] = js.native
+  /**
     * The AWS account ID associated with the registry containing the image.
     */
   var registryId: js.UndefOr[RegistryId] = js.native
@@ -26,65 +30,20 @@ trait Image extends js.Object {
 
 object Image {
   @scala.inline
-  def apply(): Image = {
+  def apply(
+    imageId: ImageIdentifier = null,
+    imageManifest: ImageManifest = null,
+    imageManifestMediaType: MediaType = null,
+    registryId: RegistryId = null,
+    repositoryName: RepositoryName = null
+  ): Image = {
     val __obj = js.Dynamic.literal()
+    if (imageId != null) __obj.updateDynamic("imageId")(imageId.asInstanceOf[js.Any])
+    if (imageManifest != null) __obj.updateDynamic("imageManifest")(imageManifest.asInstanceOf[js.Any])
+    if (imageManifestMediaType != null) __obj.updateDynamic("imageManifestMediaType")(imageManifestMediaType.asInstanceOf[js.Any])
+    if (registryId != null) __obj.updateDynamic("registryId")(registryId.asInstanceOf[js.Any])
+    if (repositoryName != null) __obj.updateDynamic("repositoryName")(repositoryName.asInstanceOf[js.Any])
     __obj.asInstanceOf[Image]
   }
-  @scala.inline
-  implicit class ImageOps[Self <: Image] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImageId(value: ImageIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageManifest(value: ImageManifest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageManifest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageManifest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageManifest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegistryId(value: RegistryId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegistryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registryId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepositoryName(value: RepositoryName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepositoryName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

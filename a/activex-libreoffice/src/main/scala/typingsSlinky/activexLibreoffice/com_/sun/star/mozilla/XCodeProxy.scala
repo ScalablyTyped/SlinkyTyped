@@ -12,18 +12,17 @@ import scala.scalajs.js.annotation._
   * @see XProxyRunner
   * @see XMozillaBootstrap
   */
-@js.native
 trait XCodeProxy extends XInterface {
   /** which Mozilla product this code is write for */
-  val ProductType: MozillaProductType = js.native
+  val ProductType: MozillaProductType
   /** which Mozilla profile this code will use */
-  val ProfileName: String = js.native
+  val ProfileName: String
   /** which Mozilla product this code is write for */
-  def getProductType(): MozillaProductType = js.native
+  def getProductType(): MozillaProductType
   /** which Mozilla profile this code will use */
-  def getProfileName(): String = js.native
+  def getProfileName(): String
   /** all Mozilla XPCOM code must be called in {@link run()} or functions called by {@link run()} */
-  def run(): Double = js.native
+  def run(): Double
 }
 
 object XCodeProxy {
@@ -41,43 +40,5 @@ object XCodeProxy {
     val __obj = js.Dynamic.literal(ProductType = ProductType.asInstanceOf[js.Any], ProfileName = ProfileName.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getProductType = js.Any.fromFunction0(getProductType), getProfileName = js.Any.fromFunction0(getProfileName), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), run = js.Any.fromFunction0(run))
     __obj.asInstanceOf[XCodeProxy]
   }
-  @scala.inline
-  implicit class XCodeProxyOps[Self <: XCodeProxy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProductType(value: MozillaProductType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProfileName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProfileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetProductType(value: () => MozillaProductType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getProductType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetProfileName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getProfileName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRun(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("run")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

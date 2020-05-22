@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.8]
   */
-@js.native
 trait DataValidationRule extends js.Object {
   /**
     *
@@ -18,148 +17,71 @@ trait DataValidationRule extends js.Object {
     *
     * [Api set: ExcelApi 1.8]
     */
-  var custom: js.UndefOr[CustomDataValidation] = js.native
+  var custom: js.UndefOr[CustomDataValidation] = js.undefined
   /**
     *
     * Date data validation criteria.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var date: js.UndefOr[DateTimeDataValidation] = js.native
+  var date: js.UndefOr[DateTimeDataValidation] = js.undefined
   /**
     *
     * Decimal data validation criteria.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var decimal: js.UndefOr[BasicDataValidation] = js.native
+  var decimal: js.UndefOr[BasicDataValidation] = js.undefined
   /**
     *
     * List data validation criteria.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var list: js.UndefOr[ListDataValidation] = js.native
+  var list: js.UndefOr[ListDataValidation] = js.undefined
   /**
     *
     * TextLength data validation criteria.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var textLength: js.UndefOr[BasicDataValidation] = js.native
+  var textLength: js.UndefOr[BasicDataValidation] = js.undefined
   /**
     *
     * Time data validation criteria.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var time: js.UndefOr[DateTimeDataValidation] = js.native
+  var time: js.UndefOr[DateTimeDataValidation] = js.undefined
   /**
     *
     * WholeNumber data validation criteria.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var wholeNumber: js.UndefOr[BasicDataValidation] = js.native
+  var wholeNumber: js.UndefOr[BasicDataValidation] = js.undefined
 }
 
 object DataValidationRule {
   @scala.inline
-  def apply(): DataValidationRule = {
+  def apply(
+    custom: CustomDataValidation = null,
+    date: DateTimeDataValidation = null,
+    decimal: BasicDataValidation = null,
+    list: ListDataValidation = null,
+    textLength: BasicDataValidation = null,
+    time: DateTimeDataValidation = null,
+    wholeNumber: BasicDataValidation = null
+  ): DataValidationRule = {
     val __obj = js.Dynamic.literal()
+    if (custom != null) __obj.updateDynamic("custom")(custom.asInstanceOf[js.Any])
+    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
+    if (decimal != null) __obj.updateDynamic("decimal")(decimal.asInstanceOf[js.Any])
+    if (list != null) __obj.updateDynamic("list")(list.asInstanceOf[js.Any])
+    if (textLength != null) __obj.updateDynamic("textLength")(textLength.asInstanceOf[js.Any])
+    if (time != null) __obj.updateDynamic("time")(time.asInstanceOf[js.Any])
+    if (wholeNumber != null) __obj.updateDynamic("wholeNumber")(wholeNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataValidationRule]
   }
-  @scala.inline
-  implicit class DataValidationRuleOps[Self <: DataValidationRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustom(value: CustomDataValidation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDate(value: DateTimeDataValidation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecimal(value: BasicDataValidation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecimal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withList(value: ListDataValidation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextLength(value: BasicDataValidation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTime(value: DateTimeDataValidation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWholeNumber(value: BasicDataValidation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wholeNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWholeNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wholeNumber")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

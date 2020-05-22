@@ -6,11 +6,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISPECTATOR_TO_PLAYER extends js.Object {
-  var playerId: Double = js.native
-  var room: SFSRoom = js.native
-  var user: SFSUser = js.native
+  var playerId: Double
+  var room: SFSRoom
+  var user: SFSUser
 }
 
 object ISPECTATOR_TO_PLAYER {
@@ -19,31 +18,5 @@ object ISPECTATOR_TO_PLAYER {
     val __obj = js.Dynamic.literal(playerId = playerId.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any], user = user.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISPECTATOR_TO_PLAYER]
   }
-  @scala.inline
-  implicit class ISPECTATOR_TO_PLAYEROps[Self <: ISPECTATOR_TO_PLAYER] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPlayerId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoom(value: SFSRoom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("room")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUser(value: SFSUser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -76,101 +76,24 @@ trait SchemaGroupLicense extends js.Object {
 
 object SchemaGroupLicense {
   @scala.inline
-  def apply(): SchemaGroupLicense = {
+  def apply(
+    acquisitionKind: String = null,
+    approval: String = null,
+    kind: String = null,
+    numProvisioned: js.UndefOr[Double] = js.undefined,
+    numPurchased: js.UndefOr[Double] = js.undefined,
+    permissions: String = null,
+    productId: String = null
+  ): SchemaGroupLicense = {
     val __obj = js.Dynamic.literal()
+    if (acquisitionKind != null) __obj.updateDynamic("acquisitionKind")(acquisitionKind.asInstanceOf[js.Any])
+    if (approval != null) __obj.updateDynamic("approval")(approval.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (!js.isUndefined(numProvisioned)) __obj.updateDynamic("numProvisioned")(numProvisioned.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(numPurchased)) __obj.updateDynamic("numPurchased")(numPurchased.get.asInstanceOf[js.Any])
+    if (permissions != null) __obj.updateDynamic("permissions")(permissions.asInstanceOf[js.Any])
+    if (productId != null) __obj.updateDynamic("productId")(productId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGroupLicense]
   }
-  @scala.inline
-  implicit class SchemaGroupLicenseOps[Self <: SchemaGroupLicense] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAcquisitionKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acquisitionKind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcquisitionKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acquisitionKind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApproval(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("approval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApproval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("approval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumProvisioned(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numProvisioned")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumProvisioned: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numProvisioned")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumPurchased(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numPurchased")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumPurchased: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numPurchased")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermissions(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermissions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

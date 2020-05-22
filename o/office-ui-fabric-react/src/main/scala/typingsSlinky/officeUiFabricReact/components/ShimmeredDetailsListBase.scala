@@ -9,7 +9,7 @@ import typingsSlinky.officeUiFabricReact.detailsRowTypesMod.IDetailsRowProps
 import typingsSlinky.officeUiFabricReact.shimmeredDetailsListTypesMod.IShimmeredDetailsListProps
 import typingsSlinky.officeUiFabricReact.shimmeredDetailsListTypesMod.IShimmeredDetailsListStyleProps
 import typingsSlinky.officeUiFabricReact.shimmeredDetailsListTypesMod.IShimmeredDetailsListStyles
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,7 +27,7 @@ object ShimmeredDetailsListBase {
     @scala.inline
     def ariaLabelForShimmer(value: String): this.type = set("ariaLabelForShimmer", value.asInstanceOf[js.Any])
     @scala.inline
-    def detailsListStylesFunction1(value: IDetailsListStyleProps => Partial[IDetailsListStyles]): this.type = set("detailsListStyles", js.Any.fromFunction1(value))
+    def detailsListStylesFunction1(value: IDetailsListStyleProps => DeepPartial[IDetailsListStyles]): this.type = set("detailsListStyles", js.Any.fromFunction1(value))
     @scala.inline
     def detailsListStyles(value: IStyleFunctionOrObject[IDetailsListStyleProps, IDetailsListStyles]): this.type = set("detailsListStyles", value.asInstanceOf[js.Any])
     @scala.inline
@@ -41,11 +41,11 @@ object ShimmeredDetailsListBase {
     @scala.inline
     def shimmerLines(value: Double): this.type = set("shimmerLines", value.asInstanceOf[js.Any])
     @scala.inline
-    def shimmerOverlayStylesFunction1(value: IShimmeredDetailsListStyleProps => Partial[IShimmeredDetailsListStyles]): this.type = set("shimmerOverlayStyles", js.Any.fromFunction1(value))
+    def shimmerOverlayStylesFunction1(value: IShimmeredDetailsListStyleProps => DeepPartial[IShimmeredDetailsListStyles]): this.type = set("shimmerOverlayStyles", js.Any.fromFunction1(value))
     @scala.inline
     def shimmerOverlayStyles(value: IStyleFunctionOrObject[IShimmeredDetailsListStyleProps, IShimmeredDetailsListStyles]): this.type = set("shimmerOverlayStyles", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IShimmeredDetailsListStyleProps => Partial[IShimmeredDetailsListStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IShimmeredDetailsListStyleProps => DeepPartial[IShimmeredDetailsListStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IShimmeredDetailsListStyleProps, IShimmeredDetailsListStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
   }

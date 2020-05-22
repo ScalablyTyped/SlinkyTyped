@@ -5,7 +5,8 @@ import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antd.contextMod.ConfigConsumerProps
+import typingsSlinky.antd.anon.AutoComplete
+import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
 import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.Component
@@ -37,9 +38,10 @@ trait Input
   def handleChange(e: ChangeEvent[HTMLInputElement]): Unit = js.native
   def handleKeyDown(e: SyntheticKeyboardEvent[HTMLInputElement]): Unit = js.native
   def handleReset(e: SyntheticMouseEvent[HTMLElement]): Unit = js.native
-  def renderComponent(hasGetPrefixClsDirection: ConfigConsumerProps): ReactElement = js.native
+  def renderComponent(hasGetPrefixClsDirectionInput: ConfigConsumerProps): ReactElement = js.native
   def renderInput(prefixCls: String): ReactElement = js.native
   def renderInput(prefixCls: String, size: SizeType): ReactElement = js.native
+  def renderInput(prefixCls: String, size: SizeType, input: AutoComplete): ReactElement = js.native
   def saveClearableInput(input: typingsSlinky.antd.clearableLabeledInputMod.default): Unit = js.native
   def saveInput(input: HTMLInputElement): Unit = js.native
   def select(): Unit = js.native

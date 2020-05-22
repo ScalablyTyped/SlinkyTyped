@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Struct_[T]
   extends Type[T]
-     with StructMixin
      with Instantiable1[/* value */ T, T] {
   @JSName("meta")
   var meta_Struct_ : DefaultProps = js.native

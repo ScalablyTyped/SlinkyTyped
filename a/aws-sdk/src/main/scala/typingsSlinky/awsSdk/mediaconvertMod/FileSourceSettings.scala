@@ -11,6 +11,10 @@ trait FileSourceSettings extends js.Object {
     */
   var Convert608To708: js.UndefOr[FileSourceConvert608To708] = js.native
   /**
+    * Ignore this setting unless your input captions format is SCC. To have the service compensate for differing framerates between your input captions and input video, specify the framerate of the captions file. Specify this value as a fraction, using the settings Framerate numerator (framerateNumerator) and Framerate denominator (framerateDenominator). For example, you might specify 24 / 1 for 24 fps, 25 / 1 for 25 fps, 24000 / 1001 for 23.976 fps, or 30000 / 1001 for 29.97 fps.
+    */
+  var Framerate: js.UndefOr[CaptionSourceFramerate] = js.native
+  /**
     * External caption file used for loading captions. Accepted file extensions are 'scc', 'ttml', 'dfxp', 'stl', 'srt', 'xml', and 'smi'.
     */
   var SourceFile: js.UndefOr[
@@ -24,55 +28,18 @@ trait FileSourceSettings extends js.Object {
 
 object FileSourceSettings {
   @scala.inline
-  def apply(): FileSourceSettings = {
+  def apply(
+    Convert608To708: FileSourceConvert608To708 = null,
+    Framerate: CaptionSourceFramerate = null,
+    SourceFile: stringMin14PatternS3SccSCCTtmlTTMLDfxpDFXPStlSTLSrtSRTXmlXMLSmiSMIHttpsSccSCCTtmlTTMLDfxpDFXPStlSTLSrtSRTXmlXMLSmiSMI = null,
+    TimeDelta: js.UndefOr[integerMinNegative2147483648Max2147483647] = js.undefined
+  ): FileSourceSettings = {
     val __obj = js.Dynamic.literal()
+    if (Convert608To708 != null) __obj.updateDynamic("Convert608To708")(Convert608To708.asInstanceOf[js.Any])
+    if (Framerate != null) __obj.updateDynamic("Framerate")(Framerate.asInstanceOf[js.Any])
+    if (SourceFile != null) __obj.updateDynamic("SourceFile")(SourceFile.asInstanceOf[js.Any])
+    if (!js.isUndefined(TimeDelta)) __obj.updateDynamic("TimeDelta")(TimeDelta.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileSourceSettings]
   }
-  @scala.inline
-  implicit class FileSourceSettingsOps[Self <: FileSourceSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConvert608To708(value: FileSourceConvert608To708): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Convert608To708")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConvert608To708: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Convert608To708")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceFile(
-      value: stringMin14PatternS3SccSCCTtmlTTMLDfxpDFXPStlSTLSrtSRTXmlXMLSmiSMIHttpsSccSCCTtmlTTMLDfxpDFXPStlSTLSrtSRTXmlXMLSmiSMI
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeDelta(value: integerMinNegative2147483648Max2147483647): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeDelta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeDelta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeDelta")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

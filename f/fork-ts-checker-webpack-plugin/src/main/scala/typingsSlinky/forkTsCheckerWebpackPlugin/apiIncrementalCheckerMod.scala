@@ -1,8 +1,10 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin
 
+import typingsSlinky.forkTsCheckerWebpackPlugin.cancellationTokenMod.CancellationToken
 import typingsSlinky.forkTsCheckerWebpackPlugin.compilerHostMod.CompilerHost
 import typingsSlinky.forkTsCheckerWebpackPlugin.incrementalCheckerInterfaceMod.ApiIncrementalCheckerParams
 import typingsSlinky.forkTsCheckerWebpackPlugin.incrementalCheckerInterfaceMod.IncrementalCheckerInterface
+import typingsSlinky.forkTsCheckerWebpackPlugin.normalizedMessageMod.NormalizedMessage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,7 +33,19 @@ object apiIncrementalCheckerMod extends js.Object {
     var linterConfigs: js.Any = js.native
     var linterExclusions: js.Any = js.native
     val tsIncrementalCompiler: CompilerHost = js.native
+    /* CompleteClass */
+    override def getDiagnostics(cancellationToken: CancellationToken): js.Promise[js.Array[NormalizedMessage]] = js.native
+    /* CompleteClass */
+    override def getEsLints(cancellationToken: CancellationToken): js.Array[NormalizedMessage] = js.native
+    /* CompleteClass */
+    override def getLints(cancellationToken: CancellationToken): js.Array[NormalizedMessage] = js.native
+    /* CompleteClass */
+    override def hasEsLinter(): Boolean = js.native
+    /* CompleteClass */
+    override def hasLinter(): Boolean = js.native
     def isFileExcluded(filePath: String): Boolean = js.native
+    /* CompleteClass */
+    override def nextIteration(): Unit = js.native
   }
   
 }

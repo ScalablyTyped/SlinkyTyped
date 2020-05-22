@@ -22,41 +22,14 @@ trait SignUpResponse extends js.Object {
 
 object SignUpResponse {
   @scala.inline
-  def apply(UserConfirmed: BooleanType, UserSub: StringType): SignUpResponse = {
+  def apply(
+    UserConfirmed: BooleanType,
+    UserSub: StringType,
+    CodeDeliveryDetails: CodeDeliveryDetailsType = null
+  ): SignUpResponse = {
     val __obj = js.Dynamic.literal(UserConfirmed = UserConfirmed.asInstanceOf[js.Any], UserSub = UserSub.asInstanceOf[js.Any])
+    if (CodeDeliveryDetails != null) __obj.updateDynamic("CodeDeliveryDetails")(CodeDeliveryDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[SignUpResponse]
   }
-  @scala.inline
-  implicit class SignUpResponseOps[Self <: SignUpResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUserConfirmed(value: BooleanType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserConfirmed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserSub(value: StringType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserSub")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCodeDeliveryDetails(value: CodeDeliveryDetailsType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeDeliveryDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodeDeliveryDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeDeliveryDetails")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

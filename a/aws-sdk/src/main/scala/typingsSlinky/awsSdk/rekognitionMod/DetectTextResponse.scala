@@ -18,41 +18,11 @@ trait DetectTextResponse extends js.Object {
 
 object DetectTextResponse {
   @scala.inline
-  def apply(): DetectTextResponse = {
+  def apply(TextDetections: TextDetectionList = null, TextModelVersion: String = null): DetectTextResponse = {
     val __obj = js.Dynamic.literal()
+    if (TextDetections != null) __obj.updateDynamic("TextDetections")(TextDetections.asInstanceOf[js.Any])
+    if (TextModelVersion != null) __obj.updateDynamic("TextModelVersion")(TextModelVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[DetectTextResponse]
   }
-  @scala.inline
-  implicit class DetectTextResponseOps[Self <: DetectTextResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTextDetections(value: TextDetectionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextDetections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextDetections: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextDetections")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextModelVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextModelVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextModelVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextModelVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

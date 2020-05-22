@@ -12,34 +12,33 @@ import scala.scalajs.js.annotation._
   * a user. Use the wl.contacts_calendars scope to read a user's friends'
   * Calendar objects.
   */
-@js.native
 trait ICalendar extends js.Object {
   /**
     * The time, in ISO 8601 format, at which the calendar was created.
     */
-  var created_time: String = js.native
+  var created_time: String
   /**
     * Description of the calendar.
     */
-  var description: String = js.native
+  var description: String
   /**
     * Info about the user who owns the calendar.
     */
-  var from: IUserInfo = js.native
+  var from: IUserInfo
   /**
     * The Calendar object's ID.
     */
-  var id: String = js.native
+  var id: String
   /**
     * A value that indicates whether this calendar is the default calendar.
     * If this calendar is the default calendar, this value is true;
     * otherwise, it is false.
     */
-  var is_default: Boolean = js.native
+  var is_default: Boolean
   /**
     * Name of the calendar.
     */
-  var name: String = js.native
+  var name: String
   /**
     * Role and permissions that are granted to the user for the calendar.
     * The possible values are:
@@ -50,17 +49,17 @@ trait ICalendar extends js.Object {
     * - co_owner: The user is co-owner of this calendar.
     * - owner: The user is the owner of this calendar.
     */
-  var permissions: String = js.native
+  var permissions: String
   /**
     * A public subscription URL with which Live Connect will synchronize
     * properties and events periodically for this calendar. A NULL value
     * indicates that this is not a subscribed calendar.
     */
-  var subscription_location: String = js.native
+  var subscription_location: String
   /**
     * The time, in ISO 8601 format, that the calendar was last updated.
     */
-  var updated_time: String = js.native
+  var updated_time: String
 }
 
 object ICalendar {
@@ -79,67 +78,5 @@ object ICalendar {
     val __obj = js.Dynamic.literal(created_time = created_time.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], from = from.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], is_default = is_default.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], permissions = permissions.asInstanceOf[js.Any], subscription_location = subscription_location.asInstanceOf[js.Any], updated_time = updated_time.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICalendar]
   }
-  @scala.inline
-  implicit class ICalendarOps[Self <: ICalendar] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreated_time(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFrom(value: IUserInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIs_default(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_default")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPermissions(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubscription_location(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription_location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdated_time(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

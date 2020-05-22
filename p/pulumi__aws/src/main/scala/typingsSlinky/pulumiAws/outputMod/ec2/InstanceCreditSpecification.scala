@@ -6,34 +6,18 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait InstanceCreditSpecification extends js.Object {
+  /**
+    * The credit option for CPU usage. Can be `"standard"` or `"unlimited"`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
+    */
   var cpuCredits: js.UndefOr[String] = js.native
 }
 
 object InstanceCreditSpecification {
   @scala.inline
-  def apply(): InstanceCreditSpecification = {
+  def apply(cpuCredits: String = null): InstanceCreditSpecification = {
     val __obj = js.Dynamic.literal()
+    if (cpuCredits != null) __obj.updateDynamic("cpuCredits")(cpuCredits.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceCreditSpecification]
   }
-  @scala.inline
-  implicit class InstanceCreditSpecificationOps[Self <: InstanceCreditSpecification] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCpuCredits(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuCredits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCpuCredits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuCredits")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

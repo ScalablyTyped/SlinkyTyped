@@ -10,20 +10,8 @@ import scala.scalajs.js.annotation._
 object coreTargetIdGeneratorMod extends js.Object {
   @js.native
   class TargetIdGenerator protected () extends js.Object {
-    /**
-      * Instantiates a new TargetIdGenerator. If a seed is provided, the generator
-      * will use the seed value as the next target ID.
-      */
-    def this(generatorId: Double) = this()
-    def this(generatorId: Double, seed: Double) = this()
-    var generatorId: js.Any = js.native
-    var nextId: js.Any = js.native
-    var seek: js.Any = js.native
-    /**
-      * Returns the ID that follows the given ID. Subsequent calls to `next()`
-      * use the newly returned target ID as their base.
-      */
-    def after(targetId: TargetId): TargetId = js.native
+    def this(lastId: Double) = this()
+    var lastId: js.Any = js.native
     def next(): TargetId = js.native
   }
   

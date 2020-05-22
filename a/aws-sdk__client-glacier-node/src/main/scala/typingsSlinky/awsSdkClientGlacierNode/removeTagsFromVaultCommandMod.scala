@@ -26,9 +26,16 @@ object removeTagsFromVaultCommandMod extends js.Object {
           Readable
         ] {
     def this(input: RemoveTagsFromVaultInput) = this()
+    /* CompleteClass */
+    override val input: RemoveTagsFromVaultInput = js.native
     val middlewareStack: MiddlewareStack[RemoveTagsFromVaultInput, RemoveTagsFromVaultOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: GlacierResolvedConfiguration
+    ): Handler[RemoveTagsFromVaultInput, RemoveTagsFromVaultOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: GlacierResolvedConfiguration
     ): Handler[RemoveTagsFromVaultInput, RemoveTagsFromVaultOutput] = js.native
   }

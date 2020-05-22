@@ -12,7 +12,12 @@ import scala.scalajs.js.annotation._
 object containerSnapshotMod extends js.Object {
   @js.native
   class ContainerSnapshot ()
-    extends typingsSlinky.inversify.interfacesMod.interfaces.ContainerSnapshot
+    extends typingsSlinky.inversify.interfacesMod.interfaces.ContainerSnapshot {
+    /* CompleteClass */
+    override var bindings: Lookup[Binding[_]] = js.native
+    /* CompleteClass */
+    override var middleware: Next | Null = js.native
+  }
   
   /* static members */
   @js.native

@@ -2,7 +2,11 @@ package typingsSlinky.xstate
 
 import typingsSlinky.std.Record
 import typingsSlinky.std.Required
+import typingsSlinky.xstate.anon.Context
 import typingsSlinky.xstate.anon.Type
+import typingsSlinky.xstate.anon.TypeUpdate
+import typingsSlinky.xstate.stateMod.State
+import typingsSlinky.xstate.stateNodeMod.StateNode
 import typingsSlinky.xstate.typesMod.Action
 import typingsSlinky.xstate.typesMod.ActionFunction
 import typingsSlinky.xstate.typesMod.ActionFunctionMap
@@ -14,6 +18,8 @@ import typingsSlinky.xstate.typesMod.AnyEventObject
 import typingsSlinky.xstate.typesMod.AssignAction
 import typingsSlinky.xstate.typesMod.Assigner
 import typingsSlinky.xstate.typesMod.CancelAction
+import typingsSlinky.xstate.typesMod.ChooseAction
+import typingsSlinky.xstate.typesMod.ChooseConditon
 import typingsSlinky.xstate.typesMod.DelayFunctionMap
 import typingsSlinky.xstate.typesMod.DoneEvent
 import typingsSlinky.xstate.typesMod.DoneEventObject
@@ -49,28 +55,29 @@ object actionsMod extends js.Object {
   def assign[TContext, TEvent /* <: EventObject */](assignment: PropertyAssigner[TContext, TEvent]): AssignAction[TContext, TEvent] = js.native
   def cancel(sendId: String): CancelAction = js.native
   def cancel(sendId: Double): CancelAction = js.native
+  def choose[TContext, TEvent /* <: EventObject */](conds: js.Array[ChooseConditon[TContext, TEvent]]): ChooseAction[TContext, TEvent] = js.native
   def done(id: String): DoneEventObject = js.native
   def done(id: String, data: js.Any): DoneEventObject = js.native
   def doneInvoke(id: String): DoneEvent = js.native
   def doneInvoke(id: String, data: js.Any): DoneEvent = js.native
   def error(id: String): ErrorPlatformEvent with String = js.native
   def error(id: String, data: js.Any): ErrorPlatformEvent with String = js.native
-  def escalate[TContext, TEvent /* <: EventObject */, TErrorData](errorData: TErrorData): SendAction[TContext, TEvent] = js.native
-  def escalate[TContext, TEvent /* <: EventObject */, TErrorData](errorData: TErrorData, options: SendActionOptions[TContext, TEvent]): SendAction[TContext, TEvent] = js.native
-  def escalate[TContext, TEvent /* <: EventObject */, TErrorData](errorData: ExprWithMeta[TContext, TEvent, TErrorData]): SendAction[TContext, TEvent] = js.native
+  def escalate[TContext, TEvent /* <: EventObject */, TErrorData](errorData: TErrorData): SendAction[TContext, TEvent, AnyEventObject] = js.native
+  def escalate[TContext, TEvent /* <: EventObject */, TErrorData](errorData: TErrorData, options: SendActionOptions[TContext, TEvent]): SendAction[TContext, TEvent, AnyEventObject] = js.native
+  def escalate[TContext, TEvent /* <: EventObject */, TErrorData](errorData: ExprWithMeta[TContext, TEvent, TErrorData]): SendAction[TContext, TEvent, AnyEventObject] = js.native
   def escalate[TContext, TEvent /* <: EventObject */, TErrorData](
     errorData: ExprWithMeta[TContext, TEvent, TErrorData],
     options: SendActionOptions[TContext, TEvent]
-  ): SendAction[TContext, TEvent] = js.native
+  ): SendAction[TContext, TEvent, AnyEventObject] = js.native
   @JSName("forwardTo")
   def forwardTo_to[TContext, TEvent /* <: EventObject */](
     target: /* import warning: importer.ImportType#apply Failed type conversion: std.Required<xstate.xstate/lib/types.SendActionOptions<TContext, TEvent>>['to'] */ js.Any
-  ): SendAction[TContext, TEvent] = js.native
+  ): SendAction[TContext, TEvent, AnyEventObject] = js.native
   @JSName("forwardTo")
   def forwardTo_to[TContext, TEvent /* <: EventObject */](
     target: /* import warning: importer.ImportType#apply Failed type conversion: std.Required<xstate.xstate/lib/types.SendActionOptions<TContext, TEvent>>['to'] */ js.Any,
     options: SendActionOptions[TContext, TEvent]
-  ): SendAction[TContext, TEvent] = js.native
+  ): SendAction[TContext, TEvent, AnyEventObject] = js.native
   def getActionFunction[TContext, TEvent /* <: EventObject */](actionType: ActionType): js.UndefOr[(ActionObject[TContext, TEvent]) | (ActionFunction[TContext, TEvent])] = js.native
   def getActionFunction[TContext, TEvent /* <: EventObject */](actionType: ActionType, actionFunctionMap: ActionFunctionMap[TContext, TEvent]): js.UndefOr[(ActionObject[TContext, TEvent]) | (ActionFunction[TContext, TEvent])] = js.native
   def isActionObject[TContext, TEvent /* <: EventObject */](action: Action[TContext, TEvent]): /* is xstate.xstate/lib/types.ActionObject<TContext, TEvent> */ Boolean = js.native
@@ -86,29 +93,42 @@ object actionsMod extends js.Object {
       js.UndefOr[SingleOrArray[ActionObject[TContext, TEvent]]]
     ]
   ): PureAction[TContext, TEvent] = js.native
-  def raise[TContext, TEvent /* <: EventObject */](event: typingsSlinky.xstate.typesMod.Event[TEvent]): RaiseAction[TEvent] | (SendAction[TContext, TEvent]) = js.native
+  def raise[TContext, TEvent /* <: EventObject */](event: typingsSlinky.xstate.typesMod.Event[TEvent]): RaiseAction[TEvent] | (SendAction[TContext, TEvent, TEvent]) = js.native
+  def resolveActions[TContext, TEvent /* <: EventObject */](
+    machine: StateNode[TContext, _, TEvent, _],
+    currentState: js.UndefOr[State[TContext, TEvent, _, Context[TContext]]],
+    currentContext: TContext,
+    _event: Event[TEvent],
+    actions: js.Array[ActionObject[TContext, TEvent]]
+  ): js.Tuple2[js.Array[ActionObject[TContext, TEvent]], TContext] = js.native
   def resolveLog[TContext, TEvent /* <: EventObject */](action: LogAction[TContext, TEvent], ctx: TContext, _event: Event[TEvent]): LogActionObject[TContext, TEvent] = js.native
   def resolveRaise[TEvent /* <: EventObject */](action: RaiseAction[TEvent]): RaiseActionObject[TEvent] = js.native
-  def resolveSend[TContext, TEvent /* <: EventObject */](action: SendAction[TContext, TEvent], ctx: TContext, _event: Event[TEvent]): SendActionObject[TContext, TEvent] = js.native
-  def resolveSend[TContext, TEvent /* <: EventObject */](
-    action: SendAction[TContext, TEvent],
+  def resolveSend[TContext, TEvent /* <: EventObject */, TSentEvent /* <: EventObject */](action: SendAction[TContext, TEvent, TSentEvent], ctx: TContext, _event: Event[TEvent]): SendActionObject[TContext, TEvent, TSentEvent] = js.native
+  def resolveSend[TContext, TEvent /* <: EventObject */, TSentEvent /* <: EventObject */](
+    action: SendAction[TContext, TEvent, TSentEvent],
     ctx: TContext,
     _event: Event[TEvent],
     delaysMap: DelayFunctionMap[TContext, TEvent]
-  ): SendActionObject[TContext, TEvent] = js.native
-  def respond[TContext, TEvent /* <: EventObject */](event: typingsSlinky.xstate.typesMod.Event[TEvent]): SendAction[TContext, TEvent] = js.native
-  def respond[TContext, TEvent /* <: EventObject */](event: typingsSlinky.xstate.typesMod.Event[TEvent], options: SendActionOptions[TContext, TEvent]): SendAction[TContext, TEvent] = js.native
-  def respond[TContext, TEvent /* <: EventObject */](event: SendExpr[TContext, TEvent]): SendAction[TContext, TEvent] = js.native
-  def respond[TContext, TEvent /* <: EventObject */](event: SendExpr[TContext, TEvent], options: SendActionOptions[TContext, TEvent]): SendAction[TContext, TEvent] = js.native
-  def send[TContext, TEvent /* <: EventObject */](event: typingsSlinky.xstate.typesMod.Event[TEvent]): SendAction[TContext, TEvent] = js.native
-  def send[TContext, TEvent /* <: EventObject */](event: typingsSlinky.xstate.typesMod.Event[TEvent], options: SendActionOptions[TContext, TEvent]): SendAction[TContext, TEvent] = js.native
-  def send[TContext, TEvent /* <: EventObject */](event: SendExpr[TContext, TEvent]): SendAction[TContext, TEvent] = js.native
-  def send[TContext, TEvent /* <: EventObject */](event: SendExpr[TContext, TEvent], options: SendActionOptions[TContext, TEvent]): SendAction[TContext, TEvent] = js.native
-  def sendParent[TContext, TEvent /* <: EventObject */](event: typingsSlinky.xstate.typesMod.Event[_]): SendAction[TContext, TEvent] = js.native
-  def sendParent[TContext, TEvent /* <: EventObject */](event: typingsSlinky.xstate.typesMod.Event[_], options: SendActionOptions[TContext, TEvent]): SendAction[TContext, TEvent] = js.native
-  def sendParent[TContext, TEvent /* <: EventObject */](event: SendExpr[TContext, TEvent]): SendAction[TContext, TEvent] = js.native
-  def sendParent[TContext, TEvent /* <: EventObject */](event: SendExpr[TContext, TEvent], options: SendActionOptions[TContext, TEvent]): SendAction[TContext, TEvent] = js.native
-  def sendUpdate[TContext, TEvent /* <: EventObject */](): SendAction[TContext, TEvent] = js.native
+  ): SendActionObject[TContext, TEvent, TSentEvent] = js.native
+  def respond[TContext, TEvent /* <: EventObject */, TSentEvent /* <: EventObject */](event: typingsSlinky.xstate.typesMod.Event[TEvent]): SendAction[TContext, TEvent, AnyEventObject] = js.native
+  def respond[TContext, TEvent /* <: EventObject */, TSentEvent /* <: EventObject */](event: typingsSlinky.xstate.typesMod.Event[TEvent], options: SendActionOptions[TContext, TEvent]): SendAction[TContext, TEvent, AnyEventObject] = js.native
+  def respond[TContext, TEvent /* <: EventObject */, TSentEvent /* <: EventObject */](event: SendExpr[TContext, TEvent, TSentEvent]): SendAction[TContext, TEvent, AnyEventObject] = js.native
+  def respond[TContext, TEvent /* <: EventObject */, TSentEvent /* <: EventObject */](event: SendExpr[TContext, TEvent, TSentEvent], options: SendActionOptions[TContext, TEvent]): SendAction[TContext, TEvent, AnyEventObject] = js.native
+  def send[TContext, TEvent /* <: EventObject */, TSentEvent /* <: EventObject */](event: typingsSlinky.xstate.typesMod.Event[TSentEvent]): SendAction[TContext, TEvent, TSentEvent] = js.native
+  def send[TContext, TEvent /* <: EventObject */, TSentEvent /* <: EventObject */](
+    event: typingsSlinky.xstate.typesMod.Event[TSentEvent],
+    options: SendActionOptions[TContext, TEvent]
+  ): SendAction[TContext, TEvent, TSentEvent] = js.native
+  def send[TContext, TEvent /* <: EventObject */, TSentEvent /* <: EventObject */](event: SendExpr[TContext, TEvent, TSentEvent]): SendAction[TContext, TEvent, TSentEvent] = js.native
+  def send[TContext, TEvent /* <: EventObject */, TSentEvent /* <: EventObject */](event: SendExpr[TContext, TEvent, TSentEvent], options: SendActionOptions[TContext, TEvent]): SendAction[TContext, TEvent, TSentEvent] = js.native
+  def sendParent[TContext, TEvent /* <: EventObject */, TSentEvent /* <: EventObject */](event: typingsSlinky.xstate.typesMod.Event[TSentEvent]): SendAction[TContext, TEvent, TSentEvent] = js.native
+  def sendParent[TContext, TEvent /* <: EventObject */, TSentEvent /* <: EventObject */](
+    event: typingsSlinky.xstate.typesMod.Event[TSentEvent],
+    options: SendActionOptions[TContext, TEvent]
+  ): SendAction[TContext, TEvent, TSentEvent] = js.native
+  def sendParent[TContext, TEvent /* <: EventObject */, TSentEvent /* <: EventObject */](event: SendExpr[TContext, TEvent, TSentEvent]): SendAction[TContext, TEvent, TSentEvent] = js.native
+  def sendParent[TContext, TEvent /* <: EventObject */, TSentEvent /* <: EventObject */](event: SendExpr[TContext, TEvent, TSentEvent], options: SendActionOptions[TContext, TEvent]): SendAction[TContext, TEvent, TSentEvent] = js.native
+  def sendUpdate[TContext, TEvent /* <: EventObject */](): SendAction[TContext, TEvent, TypeUpdate] = js.native
   def start[TContext, TEvent /* <: EventObject */](activity: String): ActivityActionObject[TContext, TEvent] = js.native
   def start[TContext, TEvent /* <: EventObject */](activity: ActivityDefinition[TContext, TEvent]): ActivityActionObject[TContext, TEvent] = js.native
   def stop[TContext, TEvent /* <: EventObject */](activity: String): ActivityActionObject[TContext, TEvent] = js.native
@@ -141,14 +161,19 @@ object actionsMod extends js.Object {
     action: AssignAction[Required[TContext], TEvent],
     actionFunctionMap: Record[String, (ActionFunction[TContext, TEvent]) | (ActionObject[TContext, TEvent])]
   ): js.Array[ActionObject[TContext, TEvent]] = js.native
+  def toActionObjects[TContext, TEvent /* <: EventObject */](action: ChooseAction[TContext, TEvent]): js.Array[ActionObject[TContext, TEvent]] = js.native
+  def toActionObjects[TContext, TEvent /* <: EventObject */](
+    action: ChooseAction[TContext, TEvent],
+    actionFunctionMap: Record[String, (ActionFunction[TContext, TEvent]) | (ActionObject[TContext, TEvent])]
+  ): js.Array[ActionObject[TContext, TEvent]] = js.native
   def toActionObjects[TContext, TEvent /* <: EventObject */](action: RaiseAction[AnyEventObject]): js.Array[ActionObject[TContext, TEvent]] = js.native
   def toActionObjects[TContext, TEvent /* <: EventObject */](
     action: RaiseAction[AnyEventObject],
     actionFunctionMap: Record[String, (ActionFunction[TContext, TEvent]) | (ActionObject[TContext, TEvent])]
   ): js.Array[ActionObject[TContext, TEvent]] = js.native
-  def toActionObjects[TContext, TEvent /* <: EventObject */](action: SendAction[TContext, TEvent]): js.Array[ActionObject[TContext, TEvent]] = js.native
+  def toActionObjects[TContext, TEvent /* <: EventObject */](action: SendAction[TContext, TEvent, AnyEventObject]): js.Array[ActionObject[TContext, TEvent]] = js.native
   def toActionObjects[TContext, TEvent /* <: EventObject */](
-    action: SendAction[TContext, TEvent],
+    action: SendAction[TContext, TEvent, AnyEventObject],
     actionFunctionMap: Record[String, (ActionFunction[TContext, TEvent]) | (ActionObject[TContext, TEvent])]
   ): js.Array[ActionObject[TContext, TEvent]] = js.native
   def toActivityDefinition[TContext, TEvent /* <: EventObject */](action: String): ActivityDefinition[TContext, TEvent] = js.native
@@ -158,6 +183,7 @@ object actionsMod extends js.Object {
     val after: String | Double = js.native
     val assign: String | Double = js.native
     val cancel: String | Double = js.native
+    val choose: String | Double = js.native
     val doneState: String | Double = js.native
     val error: String | Double = js.native
     val errorExecution: String | Double = js.native

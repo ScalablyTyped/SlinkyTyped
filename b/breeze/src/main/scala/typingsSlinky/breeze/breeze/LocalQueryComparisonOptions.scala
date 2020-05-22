@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LocalQueryComparisonOptions extends js.Object {
-  def setAsDefault(): Unit = js.native
+  def setAsDefault(): Unit
 }
 
 object LocalQueryComparisonOptions {
@@ -15,19 +14,5 @@ object LocalQueryComparisonOptions {
     val __obj = js.Dynamic.literal(setAsDefault = js.Any.fromFunction0(setAsDefault))
     __obj.asInstanceOf[LocalQueryComparisonOptions]
   }
-  @scala.inline
-  implicit class LocalQueryComparisonOptionsOps[Self <: LocalQueryComparisonOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSetAsDefault(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAsDefault")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

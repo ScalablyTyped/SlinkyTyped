@@ -18,41 +18,11 @@ trait DescribePatchGroupsResult extends js.Object {
 
 object DescribePatchGroupsResult {
   @scala.inline
-  def apply(): DescribePatchGroupsResult = {
+  def apply(Mappings: PatchGroupPatchBaselineMappingList = null, NextToken: NextToken = null): DescribePatchGroupsResult = {
     val __obj = js.Dynamic.literal()
+    if (Mappings != null) __obj.updateDynamic("Mappings")(Mappings.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribePatchGroupsResult]
   }
-  @scala.inline
-  implicit class DescribePatchGroupsResultOps[Self <: DescribePatchGroupsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMappings(value: PatchGroupPatchBaselineMappingList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mappings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMappings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mappings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait AuthClient extends js.Object
 
-object AuthClient {
-  @scala.inline
-  implicit def apply(value: AuthClientThreeLegged): AuthClient = value.asInstanceOf[AuthClient]
-  @scala.inline
-  implicit def apply(value: AuthClientTwoLegged): AuthClient = value.asInstanceOf[AuthClient]
-}
-

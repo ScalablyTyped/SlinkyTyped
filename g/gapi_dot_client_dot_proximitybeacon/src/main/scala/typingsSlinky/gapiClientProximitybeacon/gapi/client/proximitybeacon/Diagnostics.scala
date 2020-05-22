@@ -4,72 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Diagnostics extends js.Object {
   /** An unordered list of Alerts that the beacon has. */
-  var alerts: js.UndefOr[js.Array[String]] = js.native
+  var alerts: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Resource name of the beacon. For Eddystone-EID beacons, this may
     * be the beacon's current EID, or the beacon's "stable" Eddystone-UID.
     */
-  var beaconName: js.UndefOr[String] = js.native
+  var beaconName: js.UndefOr[String] = js.undefined
   /**
     * The date when the battery is expected to be low. If the value is missing
     * then there is no estimate for when the battery will be low.
     * This value is only an estimate, not an exact date.
     */
-  var estimatedLowBatteryDate: js.UndefOr[Date] = js.native
+  var estimatedLowBatteryDate: js.UndefOr[Date] = js.undefined
 }
 
 object Diagnostics {
   @scala.inline
-  def apply(): Diagnostics = {
+  def apply(alerts: js.Array[String] = null, beaconName: String = null, estimatedLowBatteryDate: Date = null): Diagnostics = {
     val __obj = js.Dynamic.literal()
+    if (alerts != null) __obj.updateDynamic("alerts")(alerts.asInstanceOf[js.Any])
+    if (beaconName != null) __obj.updateDynamic("beaconName")(beaconName.asInstanceOf[js.Any])
+    if (estimatedLowBatteryDate != null) __obj.updateDynamic("estimatedLowBatteryDate")(estimatedLowBatteryDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[Diagnostics]
   }
-  @scala.inline
-  implicit class DiagnosticsOps[Self <: Diagnostics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlerts(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alerts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlerts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alerts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeaconName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beaconName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBeaconName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beaconName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEstimatedLowBatteryDate(value: Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedLowBatteryDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEstimatedLowBatteryDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedLowBatteryDate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

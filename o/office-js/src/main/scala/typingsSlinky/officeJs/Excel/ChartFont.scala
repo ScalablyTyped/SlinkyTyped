@@ -29,7 +29,7 @@ trait ChartFont extends ClientObject {
   var bold: Boolean = js.native
   /**
     *
-    * HTML color code representation of the text color. E.g. #FF0000 represents Red.
+    * HTML color code representation of the text color (e.g., #FF0000 represents Red).
     *
     * [Api set: ExcelApi 1.1]
     */
@@ -46,14 +46,14 @@ trait ChartFont extends ClientObject {
   var italic: Boolean = js.native
   /**
     *
-    * Font name (e.g. "Calibri")
+    * Font name (e.g., "Calibri")
     *
     * [Api set: ExcelApi 1.1]
     */
   var name: String = js.native
   /**
     *
-    * Size of the font (e.g. 11)
+    * Size of the font (e.g., 11)
     *
     * [Api set: ExcelApi 1.1]
     */

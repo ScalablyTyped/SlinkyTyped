@@ -1,6 +1,5 @@
 package typingsSlinky.elasticElasticsearch.anon
 
-import typingsSlinky.elasticElasticsearch.mod.ApiMethod
 import typingsSlinky.elasticElasticsearch.mod.callbackFn
 import typingsSlinky.elasticElasticsearch.requestParamsMod.TasksCancel
 import typingsSlinky.elasticElasticsearch.requestParamsMod.TasksGet
@@ -8,41 +7,30 @@ import typingsSlinky.elasticElasticsearch.requestParamsMod.TasksList
 import typingsSlinky.elasticElasticsearch.transportMod.ApiResponse
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestCallback
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestOptions
+import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestPromise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Cancel extends js.Object {
-  @JSName("cancel")
-  var cancel_Original: ApiMethod[TasksCancel, _] = js.native
-  @JSName("get")
-  var get_Original: ApiMethod[TasksGet, _] = js.native
-  @JSName("list")
-  var list_Original: ApiMethod[TasksList, _] = js.native
-  // Promise API
-  def cancel(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def cancel(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def cancel(params: TasksCancel): js.Promise[ApiResponse[_, _]] = js.native
-  def cancel(params: TasksCancel, callback: callbackFn[_]): TransportRequestCallback = js.native
-  def cancel(params: TasksCancel, options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def cancel(params: TasksCancel, options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
-  // Promise API
-  def get(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def get(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def get(params: TasksGet): js.Promise[ApiResponse[_, _]] = js.native
-  def get(params: TasksGet, callback: callbackFn[_]): TransportRequestCallback = js.native
-  def get(params: TasksGet, options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def get(params: TasksGet, options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
-  // Promise API
-  def list(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def list(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def list(params: TasksList): js.Promise[ApiResponse[_, _]] = js.native
-  def list(params: TasksList, callback: callbackFn[_]): TransportRequestCallback = js.native
-  def list(params: TasksList, options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def list(params: TasksList, options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
+  def cancel[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def cancel[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def cancel[TResponse, TContext](params: TasksCancel): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def cancel[TResponse, TContext](params: TasksCancel, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def cancel[TResponse, TContext](params: TasksCancel, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def cancel[TResponse, TContext](params: TasksCancel, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def get[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def get[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def get[TResponse, TContext](params: TasksGet): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def get[TResponse, TContext](params: TasksGet, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def get[TResponse, TContext](params: TasksGet, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def get[TResponse, TContext](params: TasksGet, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def list[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def list[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def list[TResponse, TContext](params: TasksList): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def list[TResponse, TContext](params: TasksList, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def list[TResponse, TContext](params: TasksList, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def list[TResponse, TContext](params: TasksList, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
 }
 

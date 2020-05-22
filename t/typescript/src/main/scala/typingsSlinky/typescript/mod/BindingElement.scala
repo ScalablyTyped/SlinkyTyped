@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation._
 trait BindingElement
   extends NamedDeclaration
      with ArrayBindingElement
-     with BindingOrAssignmentElement
      with HasExpressionInitializer
-     with VariableLikeDeclaration {
+     with VariableLikeDeclaration
+     with _BindingOrAssignmentElement {
   var dotDotDotToken: js.UndefOr[DotDotDotToken] = js.native
   var initializer: js.UndefOr[Expression] = js.native
   @JSName("kind")

@@ -4,230 +4,92 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SeriesErrorBar extends js.Object {
   /** Options for customizing the error bar cap.
     */
-  var cap: js.UndefOr[SeriesErrorBarCap] = js.native
+  var cap: js.UndefOr[SeriesErrorBarCap] = js.undefined
   /** Specifies the direction of error bar.
     * @Default {both}
     */
-  var direction: js.UndefOr[ErrorBarDirection | String] = js.native
+  var direction: js.UndefOr[ErrorBarDirection | String] = js.undefined
   /** Fill color of the error bar.
     * @Default {#000000}
     */
-  var fill: js.UndefOr[String] = js.native
+  var fill: js.UndefOr[String] = js.undefined
   /** Value of horizontal  error bar.
     * @Default {1}
     */
-  var horizontalErrorValue: js.UndefOr[Double] = js.native
+  var horizontalErrorValue: js.UndefOr[Double] = js.undefined
   /** Value of negative horizontal error bar.
     * @Default {1}
     */
-  var horizontalNegativeErrorValue: js.UndefOr[Double] = js.native
+  var horizontalNegativeErrorValue: js.UndefOr[Double] = js.undefined
   /** Value of positive horizontal error bar.
     * @Default {1}
     */
-  var horizontalPositiveErrorValue: js.UndefOr[Double] = js.native
+  var horizontalPositiveErrorValue: js.UndefOr[Double] = js.undefined
   /** Specifies the mode of error bar.
     * @Default {vertical}
     */
-  var mode: js.UndefOr[ErrorBarMode | String] = js.native
+  var mode: js.UndefOr[ErrorBarMode | String] = js.undefined
   /** Specifies the type of error bar.
     * @Default {FixedValue}
     */
-  var `type`: js.UndefOr[ErrorBarType | String] = js.native
+  var `type`: js.UndefOr[ErrorBarType | String] = js.undefined
   /** Value of vertical error bar.
     * @Default {3}
     */
-  var verticalErrorValue: js.UndefOr[Double] = js.native
+  var verticalErrorValue: js.UndefOr[Double] = js.undefined
   /** Value of negative vertical error bar.
     * @Default {5}
     */
-  var verticalNegativeErrorValue: js.UndefOr[Double] = js.native
+  var verticalNegativeErrorValue: js.UndefOr[Double] = js.undefined
   /** Value of positive vertical error bar.
     * @Default {5}
     */
-  var verticalPositiveErrorValue: js.UndefOr[Double] = js.native
+  var verticalPositiveErrorValue: js.UndefOr[Double] = js.undefined
   /** Show/hides the error bar
     * @Default {visible}
     */
-  var visibility: js.UndefOr[Boolean] = js.native
+  var visibility: js.UndefOr[Boolean] = js.undefined
   /** Width of the error bar.
     * @Default {1}
     */
-  var width: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object SeriesErrorBar {
   @scala.inline
-  def apply(): SeriesErrorBar = {
+  def apply(
+    cap: SeriesErrorBarCap = null,
+    direction: ErrorBarDirection | String = null,
+    fill: String = null,
+    horizontalErrorValue: js.UndefOr[Double] = js.undefined,
+    horizontalNegativeErrorValue: js.UndefOr[Double] = js.undefined,
+    horizontalPositiveErrorValue: js.UndefOr[Double] = js.undefined,
+    mode: ErrorBarMode | String = null,
+    `type`: ErrorBarType | String = null,
+    verticalErrorValue: js.UndefOr[Double] = js.undefined,
+    verticalNegativeErrorValue: js.UndefOr[Double] = js.undefined,
+    verticalPositiveErrorValue: js.UndefOr[Double] = js.undefined,
+    visibility: js.UndefOr[Boolean] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): SeriesErrorBar = {
     val __obj = js.Dynamic.literal()
+    if (cap != null) __obj.updateDynamic("cap")(cap.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
+    if (!js.isUndefined(horizontalErrorValue)) __obj.updateDynamic("horizontalErrorValue")(horizontalErrorValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(horizontalNegativeErrorValue)) __obj.updateDynamic("horizontalNegativeErrorValue")(horizontalNegativeErrorValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(horizontalPositiveErrorValue)) __obj.updateDynamic("horizontalPositiveErrorValue")(horizontalPositiveErrorValue.get.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(verticalErrorValue)) __obj.updateDynamic("verticalErrorValue")(verticalErrorValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(verticalNegativeErrorValue)) __obj.updateDynamic("verticalNegativeErrorValue")(verticalNegativeErrorValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(verticalPositiveErrorValue)) __obj.updateDynamic("verticalPositiveErrorValue")(verticalPositiveErrorValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visibility)) __obj.updateDynamic("visibility")(visibility.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesErrorBar]
   }
-  @scala.inline
-  implicit class SeriesErrorBarOps[Self <: SeriesErrorBar] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCap(value: SeriesErrorBarCap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirection(value: ErrorBarDirection | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFill(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHorizontalErrorValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalErrorValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontalErrorValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalErrorValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHorizontalNegativeErrorValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalNegativeErrorValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontalNegativeErrorValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalNegativeErrorValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHorizontalPositiveErrorValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalPositiveErrorValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontalPositiveErrorValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalPositiveErrorValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: ErrorBarMode | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: ErrorBarType | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerticalErrorValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalErrorValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalErrorValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalErrorValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerticalNegativeErrorValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalNegativeErrorValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalNegativeErrorValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalNegativeErrorValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerticalPositiveErrorValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalPositiveErrorValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalPositiveErrorValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalPositiveErrorValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibility(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

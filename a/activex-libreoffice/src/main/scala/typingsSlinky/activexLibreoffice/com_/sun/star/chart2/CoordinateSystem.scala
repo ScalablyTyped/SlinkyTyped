@@ -8,12 +8,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CoordinateSystem
   extends XCoordinateSystem
      with XChartTypeContainer
      with XCloneable {
-  var SwapXAndYAxis: Boolean = js.native
+  var SwapXAndYAxis: Boolean
 }
 
 object CoordinateSystem {
@@ -42,19 +41,5 @@ object CoordinateSystem {
     val __obj = js.Dynamic.literal(ChartTypes = ChartTypes.asInstanceOf[js.Any], CoordinateSystemType = CoordinateSystemType.asInstanceOf[js.Any], Dimension = Dimension.asInstanceOf[js.Any], SwapXAndYAxis = SwapXAndYAxis.asInstanceOf[js.Any], ViewServiceName = ViewServiceName.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addChartType = js.Any.fromFunction1(addChartType), createClone = js.Any.fromFunction0(createClone), getAxisByDimension = js.Any.fromFunction2(getAxisByDimension), getChartTypes = js.Any.fromFunction0(getChartTypes), getCoordinateSystemType = js.Any.fromFunction0(getCoordinateSystemType), getDimension = js.Any.fromFunction0(getDimension), getMaximumAxisIndexByDimension = js.Any.fromFunction1(getMaximumAxisIndexByDimension), getViewServiceName = js.Any.fromFunction0(getViewServiceName), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeChartType = js.Any.fromFunction1(removeChartType), setAxisByDimension = js.Any.fromFunction3(setAxisByDimension), setChartTypes = js.Any.fromFunction1(setChartTypes))
     __obj.asInstanceOf[CoordinateSystem]
   }
-  @scala.inline
-  implicit class CoordinateSystemOps[Self <: CoordinateSystem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSwapXAndYAxis(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SwapXAndYAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

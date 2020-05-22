@@ -1,54 +1,44 @@
 package typingsSlinky.inboxsdk.mod.NavMenu
 
+import typingsSlinky.inboxsdk.anon.PreventDefault
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NavItemIconUrlDescriptor
   extends NavItemDescriptorBase
      with NavItemDescriptor {
-  var iconClass: js.UndefOr[String] = js.native
-  var iconUrl: js.UndefOr[String] = js.native
+  var iconClass: js.UndefOr[String] = js.undefined
+  var iconUrl: js.UndefOr[String] = js.undefined
 }
 
 object NavItemIconUrlDescriptor {
   @scala.inline
-  def apply(name: String): NavItemIconUrlDescriptor = {
+  def apply(
+    name: String,
+    accessory: CreateAccessoryDescriptor | IconButtonAccessoryDescriptor | DropdownButtonAccessoryDescriptor = null,
+    backgroundColor: String = null,
+    expanderForegroundColor: String = null,
+    iconClass: String = null,
+    iconUrl: String = null,
+    onClick: /* event */ PreventDefault => Unit = null,
+    orderHint: js.UndefOr[Double] = js.undefined,
+    routeID: String = null,
+    routeParams: js.Object = null,
+    `type`: NavItemTypes = null
+  ): NavItemIconUrlDescriptor = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (accessory != null) __obj.updateDynamic("accessory")(accessory.asInstanceOf[js.Any])
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (expanderForegroundColor != null) __obj.updateDynamic("expanderForegroundColor")(expanderForegroundColor.asInstanceOf[js.Any])
+    if (iconClass != null) __obj.updateDynamic("iconClass")(iconClass.asInstanceOf[js.Any])
+    if (iconUrl != null) __obj.updateDynamic("iconUrl")(iconUrl.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (!js.isUndefined(orderHint)) __obj.updateDynamic("orderHint")(orderHint.get.asInstanceOf[js.Any])
+    if (routeID != null) __obj.updateDynamic("routeID")(routeID.asInstanceOf[js.Any])
+    if (routeParams != null) __obj.updateDynamic("routeParams")(routeParams.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavItemIconUrlDescriptor]
   }
-  @scala.inline
-  implicit class NavItemIconUrlDescriptorOps[Self <: NavItemIconUrlDescriptor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIconClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

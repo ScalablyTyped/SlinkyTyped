@@ -76,6 +76,11 @@ object Accordion {
   }
   
   def withProps[T <: AccordionHeader](p: AccordionNativeProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T <: AccordionHeader](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[AccordionNativeProps[T]]))
+  }
   implicit def make[T <: AccordionHeader](companion: Accordion.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

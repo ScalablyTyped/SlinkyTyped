@@ -15,29 +15,10 @@ trait SchemaLiasettingsSetInventoryVerificationContactResponse extends js.Object
 
 object SchemaLiasettingsSetInventoryVerificationContactResponse {
   @scala.inline
-  def apply(): SchemaLiasettingsSetInventoryVerificationContactResponse = {
+  def apply(kind: String = null): SchemaLiasettingsSetInventoryVerificationContactResponse = {
     val __obj = js.Dynamic.literal()
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLiasettingsSetInventoryVerificationContactResponse]
   }
-  @scala.inline
-  implicit class SchemaLiasettingsSetInventoryVerificationContactResponseOps[Self <: SchemaLiasettingsSetInventoryVerificationContactResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

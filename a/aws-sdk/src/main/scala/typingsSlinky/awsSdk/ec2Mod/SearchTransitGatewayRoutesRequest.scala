@@ -26,53 +26,16 @@ trait SearchTransitGatewayRoutesRequest extends js.Object {
 
 object SearchTransitGatewayRoutesRequest {
   @scala.inline
-  def apply(Filters: FilterList, TransitGatewayRouteTableId: TransitGatewayRouteTableId): SearchTransitGatewayRoutesRequest = {
+  def apply(
+    Filters: FilterList,
+    TransitGatewayRouteTableId: TransitGatewayRouteTableId,
+    DryRun: js.UndefOr[Boolean] = js.undefined,
+    MaxResults: js.UndefOr[TransitGatewayMaxResults] = js.undefined
+  ): SearchTransitGatewayRoutesRequest = {
     val __obj = js.Dynamic.literal(Filters = Filters.asInstanceOf[js.Any], TransitGatewayRouteTableId = TransitGatewayRouteTableId.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxResults)) __obj.updateDynamic("MaxResults")(MaxResults.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchTransitGatewayRoutesRequest]
   }
-  @scala.inline
-  implicit class SearchTransitGatewayRoutesRequestOps[Self <: SearchTransitGatewayRoutesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilters(value: FilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTransitGatewayRouteTableId(value: TransitGatewayRouteTableId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitGatewayRouteTableId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: TransitGatewayMaxResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

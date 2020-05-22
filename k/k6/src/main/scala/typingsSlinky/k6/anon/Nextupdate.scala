@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Nextupdate extends js.Object {
   /** When response will be refreshed with the CA in millisecond Unix time. */
-  var next_update: Double = js.native
+  var next_update: Double
   /** When response signed by responder in millisecond Unix time. */
-  var produced_at: Double = js.native
+  var produced_at: Double
   /** Certificate revocation reason. One of `OCSP_REASON_*` constants. */
-  var revocation_reason: String = js.native
+  var revocation_reason: String
   /** When certificate was revoked in millisecond Unix time. */
-  var revoked_at: Double = js.native
+  var revoked_at: Double
   /** Certificate status. One of `OCSP_STATUS_*` constants. */
-  var status: String = js.native
+  var status: String
   /** When indicated status was known correct in millisecond Unix time. */
-  var this_update: Double = js.native
+  var this_update: Double
 }
 
 object Nextupdate {
@@ -33,49 +32,5 @@ object Nextupdate {
     val __obj = js.Dynamic.literal(next_update = next_update.asInstanceOf[js.Any], produced_at = produced_at.asInstanceOf[js.Any], revocation_reason = revocation_reason.asInstanceOf[js.Any], revoked_at = revoked_at.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], this_update = this_update.asInstanceOf[js.Any])
     __obj.asInstanceOf[Nextupdate]
   }
-  @scala.inline
-  implicit class NextupdateOps[Self <: Nextupdate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNext_update(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next_update")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProduced_at(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("produced_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRevocation_reason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revocation_reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRevoked_at(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revoked_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThis_update(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("this_update")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

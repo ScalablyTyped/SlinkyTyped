@@ -14,29 +14,10 @@ trait Run extends js.Object {
 
 object Run {
   @scala.inline
-  def apply(): Run = {
+  def apply(runId: WorkflowRunId = null): Run = {
     val __obj = js.Dynamic.literal()
+    if (runId != null) __obj.updateDynamic("runId")(runId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Run]
   }
-  @scala.inline
-  implicit class RunOps[Self <: Run] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRunId(value: WorkflowRunId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRunId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

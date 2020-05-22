@@ -13,90 +13,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Font extends js.Object {
-  var decoration: js.UndefOr[`line-through` | underline | none] = js.native
-  var family: js.UndefOr[String] = js.native
+  var decoration: js.UndefOr[`line-through` | underline | none] = js.undefined
+  var family: js.UndefOr[String] = js.undefined
    // "<fontFamily>";
-  var size: js.UndefOr[Double] = js.native
+  var size: js.UndefOr[Double] = js.undefined
    // <fontSize>;
-  var style: js.UndefOr[italic | normal | oblique] = js.native
-  var weight: js.UndefOr[bold | bolder | lighter | normal] = js.native
+  var style: js.UndefOr[italic | normal | oblique] = js.undefined
+  var weight: js.UndefOr[bold | bolder | lighter | normal] = js.undefined
 }
 
 object Font {
   @scala.inline
-  def apply(): Font = {
+  def apply(
+    decoration: `line-through` | underline | none = null,
+    family: String = null,
+    size: js.UndefOr[Double] = js.undefined,
+    style: italic | normal | oblique = null,
+    weight: bold | bolder | lighter | normal = null
+  ): Font = {
     val __obj = js.Dynamic.literal()
+    if (decoration != null) __obj.updateDynamic("decoration")(decoration.asInstanceOf[js.Any])
+    if (family != null) __obj.updateDynamic("family")(family.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (weight != null) __obj.updateDynamic("weight")(weight.asInstanceOf[js.Any])
     __obj.asInstanceOf[Font]
   }
-  @scala.inline
-  implicit class FontOps[Self <: Font] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDecoration(value: `line-through` | underline | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decoration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecoration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decoration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFamily(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("family")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFamily: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("family")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: italic | normal | oblique): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeight(value: bold | bolder | lighter | normal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -11,6 +11,10 @@ trait PlaybackConfiguration extends js.Object {
     */
   var AdDecisionServerUrl: js.UndefOr[string] = js.native
   /**
+    * The configuration for Avail Suppression. Ad suppression can be used to turn off ad personalization in a long manifest, or if a viewer joins mid-break.
+    */
+  var AvailSuppression: js.UndefOr[typingsSlinky.awsSdk.mediatailorMod.AvailSuppression] = js.native
+  /**
     * The configuration for using a content delivery network (CDN), like Amazon CloudFront, for content and ad segment management. 
     */
   var CdnConfiguration: js.UndefOr[typingsSlinky.awsSdk.mediatailorMod.CdnConfiguration] = js.native
@@ -62,173 +66,38 @@ trait PlaybackConfiguration extends js.Object {
 
 object PlaybackConfiguration {
   @scala.inline
-  def apply(): PlaybackConfiguration = {
+  def apply(
+    AdDecisionServerUrl: string = null,
+    AvailSuppression: AvailSuppression = null,
+    CdnConfiguration: CdnConfiguration = null,
+    DashConfiguration: DashConfiguration = null,
+    HlsConfiguration: HlsConfiguration = null,
+    Name: string = null,
+    PersonalizationThresholdSeconds: js.UndefOr[integerMin1] = js.undefined,
+    PlaybackConfigurationArn: string = null,
+    PlaybackEndpointPrefix: string = null,
+    SessionInitializationEndpointPrefix: string = null,
+    SlateAdUrl: string = null,
+    Tags: mapOfString = null,
+    TranscodeProfileName: string = null,
+    VideoContentSourceUrl: string = null
+  ): PlaybackConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (AdDecisionServerUrl != null) __obj.updateDynamic("AdDecisionServerUrl")(AdDecisionServerUrl.asInstanceOf[js.Any])
+    if (AvailSuppression != null) __obj.updateDynamic("AvailSuppression")(AvailSuppression.asInstanceOf[js.Any])
+    if (CdnConfiguration != null) __obj.updateDynamic("CdnConfiguration")(CdnConfiguration.asInstanceOf[js.Any])
+    if (DashConfiguration != null) __obj.updateDynamic("DashConfiguration")(DashConfiguration.asInstanceOf[js.Any])
+    if (HlsConfiguration != null) __obj.updateDynamic("HlsConfiguration")(HlsConfiguration.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (!js.isUndefined(PersonalizationThresholdSeconds)) __obj.updateDynamic("PersonalizationThresholdSeconds")(PersonalizationThresholdSeconds.get.asInstanceOf[js.Any])
+    if (PlaybackConfigurationArn != null) __obj.updateDynamic("PlaybackConfigurationArn")(PlaybackConfigurationArn.asInstanceOf[js.Any])
+    if (PlaybackEndpointPrefix != null) __obj.updateDynamic("PlaybackEndpointPrefix")(PlaybackEndpointPrefix.asInstanceOf[js.Any])
+    if (SessionInitializationEndpointPrefix != null) __obj.updateDynamic("SessionInitializationEndpointPrefix")(SessionInitializationEndpointPrefix.asInstanceOf[js.Any])
+    if (SlateAdUrl != null) __obj.updateDynamic("SlateAdUrl")(SlateAdUrl.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
+    if (TranscodeProfileName != null) __obj.updateDynamic("TranscodeProfileName")(TranscodeProfileName.asInstanceOf[js.Any])
+    if (VideoContentSourceUrl != null) __obj.updateDynamic("VideoContentSourceUrl")(VideoContentSourceUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlaybackConfiguration]
   }
-  @scala.inline
-  implicit class PlaybackConfigurationOps[Self <: PlaybackConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdDecisionServerUrl(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdDecisionServerUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdDecisionServerUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdDecisionServerUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCdnConfiguration(value: CdnConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CdnConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCdnConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CdnConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDashConfiguration(value: DashConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DashConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDashConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DashConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHlsConfiguration(value: HlsConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHlsConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPersonalizationThresholdSeconds(value: integerMin1): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PersonalizationThresholdSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPersonalizationThresholdSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PersonalizationThresholdSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaybackConfigurationArn(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlaybackConfigurationArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaybackConfigurationArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlaybackConfigurationArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaybackEndpointPrefix(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlaybackEndpointPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaybackEndpointPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlaybackEndpointPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionInitializationEndpointPrefix(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SessionInitializationEndpointPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionInitializationEndpointPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SessionInitializationEndpointPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlateAdUrl(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SlateAdUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlateAdUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SlateAdUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: mapOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranscodeProfileName(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TranscodeProfileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranscodeProfileName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TranscodeProfileName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideoContentSourceUrl(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoContentSourceUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideoContentSourceUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoContentSourceUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

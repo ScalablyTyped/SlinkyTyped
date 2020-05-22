@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HistogramChartSpec extends js.Object {
-  var bucketSize: js.UndefOr[Double] = js.native
-  var legendPosition: js.UndefOr[String] = js.native
-  var outlierPercentile: js.UndefOr[Double] = js.native
-  var series: js.UndefOr[js.Array[HistogramSeries]] = js.native
-  var showItemDividers: js.UndefOr[Boolean] = js.native
+  var bucketSize: js.UndefOr[Double] = js.undefined
+  var legendPosition: js.UndefOr[String] = js.undefined
+  var outlierPercentile: js.UndefOr[Double] = js.undefined
+  var series: js.UndefOr[js.Array[HistogramSeries]] = js.undefined
+  var showItemDividers: js.UndefOr[Boolean] = js.undefined
 }
 
 object HistogramChartSpec {
   @scala.inline
-  def apply(): HistogramChartSpec = {
+  def apply(
+    bucketSize: js.UndefOr[Double] = js.undefined,
+    legendPosition: String = null,
+    outlierPercentile: js.UndefOr[Double] = js.undefined,
+    series: js.Array[HistogramSeries] = null,
+    showItemDividers: js.UndefOr[Boolean] = js.undefined
+  ): HistogramChartSpec = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(bucketSize)) __obj.updateDynamic("bucketSize")(bucketSize.get.asInstanceOf[js.Any])
+    if (legendPosition != null) __obj.updateDynamic("legendPosition")(legendPosition.asInstanceOf[js.Any])
+    if (!js.isUndefined(outlierPercentile)) __obj.updateDynamic("outlierPercentile")(outlierPercentile.get.asInstanceOf[js.Any])
+    if (series != null) __obj.updateDynamic("series")(series.asInstanceOf[js.Any])
+    if (!js.isUndefined(showItemDividers)) __obj.updateDynamic("showItemDividers")(showItemDividers.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[HistogramChartSpec]
   }
-  @scala.inline
-  implicit class HistogramChartSpecOps[Self <: HistogramChartSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucketSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucketSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegendPosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegendPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutlierPercentile(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlierPercentile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutlierPercentile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlierPercentile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeries(value: js.Array[HistogramSeries]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowItemDividers(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showItemDividers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowItemDividers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showItemDividers")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,140 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Config extends js.Object {
-  var canonical: js.UndefOr[String] = js.native
-  var dangerouslySetAllPagesToNoIndex: js.UndefOr[Boolean] = js.native
-  var description: js.UndefOr[String] = js.native
-  var facebook: js.UndefOr[Facebook] = js.native
-  var noindex: js.UndefOr[Boolean] = js.native
-  var openGraph: js.UndefOr[OpenGraph] = js.native
-  var title: js.UndefOr[String] = js.native
-  var titleTemplate: js.UndefOr[String] = js.native
-  var twitter: js.UndefOr[Twitter] = js.native
+  var canonical: js.UndefOr[String] = js.undefined
+  var dangerouslySetAllPagesToNoIndex: js.UndefOr[Boolean] = js.undefined
+  var description: js.UndefOr[String] = js.undefined
+  var facebook: js.UndefOr[Facebook] = js.undefined
+  var noindex: js.UndefOr[Boolean] = js.undefined
+  var openGraph: js.UndefOr[OpenGraph] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
+  var titleTemplate: js.UndefOr[String] = js.undefined
+  var twitter: js.UndefOr[Twitter] = js.undefined
 }
 
 object Config {
   @scala.inline
-  def apply(): Config = {
+  def apply(
+    canonical: String = null,
+    dangerouslySetAllPagesToNoIndex: js.UndefOr[Boolean] = js.undefined,
+    description: String = null,
+    facebook: Facebook = null,
+    noindex: js.UndefOr[Boolean] = js.undefined,
+    openGraph: OpenGraph = null,
+    title: String = null,
+    titleTemplate: String = null,
+    twitter: Twitter = null
+  ): Config = {
     val __obj = js.Dynamic.literal()
+    if (canonical != null) __obj.updateDynamic("canonical")(canonical.asInstanceOf[js.Any])
+    if (!js.isUndefined(dangerouslySetAllPagesToNoIndex)) __obj.updateDynamic("dangerouslySetAllPagesToNoIndex")(dangerouslySetAllPagesToNoIndex.get.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (facebook != null) __obj.updateDynamic("facebook")(facebook.asInstanceOf[js.Any])
+    if (!js.isUndefined(noindex)) __obj.updateDynamic("noindex")(noindex.get.asInstanceOf[js.Any])
+    if (openGraph != null) __obj.updateDynamic("openGraph")(openGraph.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (titleTemplate != null) __obj.updateDynamic("titleTemplate")(titleTemplate.asInstanceOf[js.Any])
+    if (twitter != null) __obj.updateDynamic("twitter")(twitter.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config]
   }
-  @scala.inline
-  implicit class ConfigOps[Self <: Config] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCanonical(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canonical")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCanonical: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canonical")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDangerouslySetAllPagesToNoIndex(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dangerouslySetAllPagesToNoIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDangerouslySetAllPagesToNoIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dangerouslySetAllPagesToNoIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFacebook(value: Facebook): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("facebook")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFacebook: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("facebook")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoindex(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noindex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoindex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noindex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpenGraph(value: OpenGraph): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openGraph")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenGraph: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openGraph")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitleTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTwitter(value: Twitter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("twitter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTwitter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("twitter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

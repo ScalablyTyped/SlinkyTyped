@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   *
   * A hash of options to describe the scope of the search
   */
-@js.native
 trait FindOptions[T]
   extends LoggingOptions
      with SearchPathOptions {
@@ -21,41 +20,41 @@ trait FindOptions[T]
     * `Sequelize.literal`, `Sequelize.fn` and so on), and the second is the name you want the attribute to
     * have in the returned instance
     */
-  var attributes: js.UndefOr[FindOptionsAttributesArray | Exclude] = js.native
+  var attributes: js.UndefOr[FindOptionsAttributesArray | Exclude] = js.undefined
   /**
     * Apply DISTINCT(col) for FindAndCount(all)
     */
-  var distinct: js.UndefOr[Boolean] = js.native
+  var distinct: js.UndefOr[Boolean] = js.undefined
   /**
     * Group by. It is not mentioned in sequelize's JSDoc, but mentioned in docs.
     * https://github.com/sequelize/sequelize/blob/master/docs/docs/models-usage.md#user-content-manipulating-the-dataset-with-limit-offset-order-and-group
     */
-  var group: js.UndefOr[String | js.Array[String] | js.Object] = js.native
+  var group: js.UndefOr[String | js.Array[String] | js.Object] = js.undefined
   /**
     * having ?!?
     */
-  var having: js.UndefOr[AnyWhereOptions] = js.native
+  var having: js.UndefOr[AnyWhereOptions] = js.undefined
   /**
     * A list of associations to eagerly load using a left join. Supported is either
     * `{ include: [ Model1, Model2, ...]}` or `{ include: [{ model: Model1, as: 'Alias' }]}`.
     * If your association are set up with an `as` (eg. `X.hasMany(Y, { as: 'Z }`, you need to specify Z in
     * the as attribute when eager loading Y).
     */
-  var include: js.UndefOr[js.Array[(Model[_, _, _]) | IncludeOptions]] = js.native
+  var include: js.UndefOr[js.Array[(Model[_, _, _]) | IncludeOptions]] = js.undefined
   /**
     * Limit the results
     */
-  var limit: js.UndefOr[Double] = js.native
+  var limit: js.UndefOr[Double] = js.undefined
   /**
     * Lock the selected rows. Possible options are transaction.LOCK.UPDATE and transaction.LOCK.SHARE.
     * Postgres also supports transaction.LOCK.KEY_SHARE, transaction.LOCK.NO_KEY_UPDATE and specific model
     * locks with joins. See [transaction.LOCK for an example](transaction#lock)
     */
-  var lock: js.UndefOr[TransactionLockLevel | Level] = js.native
+  var lock: js.UndefOr[TransactionLockLevel | Level] = js.undefined
   /**
     * Skip the results;
     */
-  var offset: js.UndefOr[Double] = js.native
+  var offset: js.UndefOr[Double] = js.undefined
   /**
     * Specifies an ordering. If a string is provided, it will be escaped. Using an array, you can provide
     * several columns / functions to order by. Each element can be further wrapped in a two-element array. The
@@ -64,233 +63,82 @@ trait FindOptions[T]
     */
   var order: js.UndefOr[
     String | col | literal | FindOptionsOrderArray | fn | (js.Array[String | col | literal | FindOptionsOrderArray | fn])
-  ] = js.native
+  ] = js.undefined
   /**
     * If true, only non-deleted records will be returned. If false, both deleted and non-deleted records will
     * be returned. Only applies if `options.paranoid` is true for the model.
     */
-  var paranoid: js.UndefOr[Boolean] = js.native
+  var paranoid: js.UndefOr[Boolean] = js.undefined
   /**
     * Return raw result. See sequelize.query for more information.
     */
-  var raw: js.UndefOr[Boolean] = js.native
+  var raw: js.UndefOr[Boolean] = js.undefined
   /**
     * Throw EmptyResultError if a record is not found
     */
-  var rejectOnEmpty: js.UndefOr[Boolean] = js.native
+  var rejectOnEmpty: js.UndefOr[Boolean] = js.undefined
   /**
     * Prevents a subquery on the main table when using include
     */
-  var subQuery: js.UndefOr[Boolean] = js.native
+  var subQuery: js.UndefOr[Boolean] = js.undefined
   /**
     * Force the query to use the write pool
     *
     * Defaults to false
     */
-  var useMaster: js.UndefOr[Boolean] = js.native
+  var useMaster: js.UndefOr[Boolean] = js.undefined
   /**
     * A hash of attributes to describe your search. See above for examples.
     */
   var where: js.UndefOr[
     WhereOptions[T] | typingsSlinky.sequelize.mod.where | fn | (js.Array[col | and | or | String])
-  ] = js.native
+  ] = js.undefined
 }
 
 object FindOptions {
   @scala.inline
-  def apply[T](): FindOptions[T] = {
+  def apply[T](
+    attributes: FindOptionsAttributesArray | Exclude = null,
+    benchmark: js.UndefOr[Boolean] = js.undefined,
+    distinct: js.UndefOr[Boolean] = js.undefined,
+    group: String | js.Array[String] | js.Object = null,
+    having: AnyWhereOptions = null,
+    include: js.Array[(Model[_, _, _]) | IncludeOptions] = null,
+    limit: js.UndefOr[Double] = js.undefined,
+    lock: TransactionLockLevel | Level = null,
+    logging: Boolean | js.Function = null,
+    offset: js.UndefOr[Double] = js.undefined,
+    order: String | col | literal | FindOptionsOrderArray | fn | (js.Array[String | col | literal | FindOptionsOrderArray | fn]) = null,
+    paranoid: js.UndefOr[Boolean] = js.undefined,
+    raw: js.UndefOr[Boolean] = js.undefined,
+    rejectOnEmpty: js.UndefOr[Boolean] = js.undefined,
+    searchPath: String = null,
+    subQuery: js.UndefOr[Boolean] = js.undefined,
+    transaction: Transaction = null,
+    useMaster: js.UndefOr[Boolean] = js.undefined,
+    where: WhereOptions[T] | where | fn | (js.Array[col | and | or | String]) = null
+  ): FindOptions[T] = {
     val __obj = js.Dynamic.literal()
+    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
+    if (!js.isUndefined(benchmark)) __obj.updateDynamic("benchmark")(benchmark.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(distinct)) __obj.updateDynamic("distinct")(distinct.get.asInstanceOf[js.Any])
+    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
+    if (having != null) __obj.updateDynamic("having")(having.asInstanceOf[js.Any])
+    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (lock != null) __obj.updateDynamic("lock")(lock.asInstanceOf[js.Any])
+    if (logging != null) __obj.updateDynamic("logging")(logging.asInstanceOf[js.Any])
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
+    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
+    if (!js.isUndefined(paranoid)) __obj.updateDynamic("paranoid")(paranoid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(raw)) __obj.updateDynamic("raw")(raw.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rejectOnEmpty)) __obj.updateDynamic("rejectOnEmpty")(rejectOnEmpty.get.asInstanceOf[js.Any])
+    if (searchPath != null) __obj.updateDynamic("searchPath")(searchPath.asInstanceOf[js.Any])
+    if (!js.isUndefined(subQuery)) __obj.updateDynamic("subQuery")(subQuery.get.asInstanceOf[js.Any])
+    if (transaction != null) __obj.updateDynamic("transaction")(transaction.asInstanceOf[js.Any])
+    if (!js.isUndefined(useMaster)) __obj.updateDynamic("useMaster")(useMaster.get.asInstanceOf[js.Any])
+    if (where != null) __obj.updateDynamic("where")(where.asInstanceOf[js.Any])
     __obj.asInstanceOf[FindOptions[T]]
   }
-  @scala.inline
-  implicit class FindOptionsOps[Self[t] <: FindOptions[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withAttributes(value: FindOptionsAttributesArray | Exclude): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDistinct(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distinct")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDistinct: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distinct")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroup(value: String | js.Array[String] | js.Object): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroup: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHaving(value: AnyWhereOptions): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("having")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHaving: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("having")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInclude(value: js.Array[(Model[_, _, _]) | IncludeOptions]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInclude: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLock(value: TransactionLockLevel | Level): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLock: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrder(
-      value: String | col | literal | FindOptionsOrderArray | fn | (js.Array[String | col | literal | FindOptionsOrderArray | fn])
-    ): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrder: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParanoid(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paranoid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParanoid: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paranoid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRaw(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRaw: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRejectOnEmpty(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectOnEmpty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRejectOnEmpty: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectOnEmpty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubQuery(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subQuery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubQuery: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subQuery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseMaster(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useMaster")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseMaster: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useMaster")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWhere(value: WhereOptions[T] | where | fn | (js.Array[col | and | or | String])): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("where")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWhere: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("where")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Appender extends js.Object {
   /**
     * Appends a debug log.
@@ -12,28 +11,28 @@ trait Appender extends js.Object {
     * @param logger The source logger.
     * @param rest The data to log.
     */
-  def debug(logger: Logger, rest: js.Any*): Unit = js.native
+  def debug(logger: Logger, rest: js.Any*): Unit
   /**
     * Appends an error log.
     *
     * @param logger The source logger.
     * @param rest The data to log.
     */
-  def error(logger: Logger, rest: js.Any*): Unit = js.native
+  def error(logger: Logger, rest: js.Any*): Unit
   /**
     * Appends an info log.
     *
     * @param logger The source logger.
     * @param rest The data to log.
     */
-  def info(logger: Logger, rest: js.Any*): Unit = js.native
+  def info(logger: Logger, rest: js.Any*): Unit
   /**
     * Appends a warning log.
     *
     * @param logger The source logger.
     * @param rest The data to log.
     */
-  def warn(logger: Logger, rest: js.Any*): Unit = js.native
+  def warn(logger: Logger, rest: js.Any*): Unit
 }
 
 object Appender {
@@ -47,37 +46,5 @@ object Appender {
     val __obj = js.Dynamic.literal(debug = js.Any.fromFunction2(debug), error = js.Any.fromFunction2(error), info = js.Any.fromFunction2(info), warn = js.Any.fromFunction2(warn))
     __obj.asInstanceOf[Appender]
   }
-  @scala.inline
-  implicit class AppenderOps[Self <: Appender] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDebug(value: (Logger, /* repeated */ js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withError(value: (Logger, /* repeated */ js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withInfo(value: (Logger, /* repeated */ js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withWarn(value: (Logger, /* repeated */ js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warn")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

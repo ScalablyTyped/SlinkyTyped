@@ -9,140 +9,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MjmlHeroProps extends js.Object {
-  var backgroundColor: js.UndefOr[BackgroundColorProperty] = js.native
-  var backgroundHeight: js.UndefOr[String] = js.native
-  var backgroundPosition: js.UndefOr[BackgroundPositionProperty[String | Double]] = js.native
-  var backgroundUrl: js.UndefOr[String] = js.native
-  var backgroundWidth: js.UndefOr[String] = js.native
-  var height: js.UndefOr[String | Double] = js.native
-  var mode: js.UndefOr[`fluid-height` | `fixed-height`] = js.native
-  var verticalAlign: js.UndefOr[VerticalAlignProperty[String | Double]] = js.native
-  var width: js.UndefOr[String | Double] = js.native
+  var backgroundColor: js.UndefOr[BackgroundColorProperty] = js.undefined
+  var backgroundHeight: js.UndefOr[String] = js.undefined
+  var backgroundPosition: js.UndefOr[BackgroundPositionProperty[String | Double]] = js.undefined
+  var backgroundUrl: js.UndefOr[String] = js.undefined
+  var backgroundWidth: js.UndefOr[String] = js.undefined
+  var height: js.UndefOr[String | Double] = js.undefined
+  var mode: js.UndefOr[`fluid-height` | `fixed-height`] = js.undefined
+  var verticalAlign: js.UndefOr[VerticalAlignProperty[String | Double]] = js.undefined
+  var width: js.UndefOr[String | Double] = js.undefined
 }
 
 object MjmlHeroProps {
   @scala.inline
-  def apply(): MjmlHeroProps = {
+  def apply(
+    backgroundColor: BackgroundColorProperty = null,
+    backgroundHeight: String = null,
+    backgroundPosition: BackgroundPositionProperty[String | Double] = null,
+    backgroundUrl: String = null,
+    backgroundWidth: String = null,
+    height: String | Double = null,
+    mode: `fluid-height` | `fixed-height` = null,
+    verticalAlign: VerticalAlignProperty[String | Double] = null,
+    width: String | Double = null
+  ): MjmlHeroProps = {
     val __obj = js.Dynamic.literal()
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (backgroundHeight != null) __obj.updateDynamic("backgroundHeight")(backgroundHeight.asInstanceOf[js.Any])
+    if (backgroundPosition != null) __obj.updateDynamic("backgroundPosition")(backgroundPosition.asInstanceOf[js.Any])
+    if (backgroundUrl != null) __obj.updateDynamic("backgroundUrl")(backgroundUrl.asInstanceOf[js.Any])
+    if (backgroundWidth != null) __obj.updateDynamic("backgroundWidth")(backgroundWidth.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (verticalAlign != null) __obj.updateDynamic("verticalAlign")(verticalAlign.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[MjmlHeroProps]
   }
-  @scala.inline
-  implicit class MjmlHeroPropsOps[Self <: MjmlHeroProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackgroundColor(value: BackgroundColorProperty): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackgroundHeight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackgroundPosition(value: BackgroundPositionProperty[String | Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackgroundUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackgroundWidth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: `fluid-height` | `fixed-height`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerticalAlign(value: VerticalAlignProperty[String | Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

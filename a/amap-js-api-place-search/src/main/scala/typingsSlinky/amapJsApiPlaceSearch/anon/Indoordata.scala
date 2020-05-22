@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Indoordata extends js.Object {
-  var indoor_data: Cpid = js.native
-  var indoor_map: `true` = js.native
+  var indoor_data: Cpid
+  var indoor_map: `true`
 }
 
 object Indoordata {
@@ -17,25 +16,5 @@ object Indoordata {
     val __obj = js.Dynamic.literal(indoor_data = indoor_data.asInstanceOf[js.Any], indoor_map = indoor_map.asInstanceOf[js.Any])
     __obj.asInstanceOf[Indoordata]
   }
-  @scala.inline
-  implicit class IndoordataOps[Self <: Indoordata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndoor_data(value: Cpid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indoor_data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndoor_map(value: `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indoor_map")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

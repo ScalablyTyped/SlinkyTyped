@@ -10,7 +10,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This interfaces exposes the initialize and a rasterize method to rasterize a given data stream to a pixel graphic */
-@js.native
 trait XGraphicRasterizer extends XInterface {
   /**
     * Initializing the rasterizer
@@ -25,7 +24,7 @@ trait XGraphicRasterizer extends XInterface {
     * @see com.sun.star.io.XInputStream
     * @see com.sun.star.awt.Size
     */
-  def initializeData(DataStream: XInputStream, DPI_X: Double, DPI_Y: Double, DefaultSizePixel: js.Array[Size]): Boolean = js.native
+  def initializeData(DataStream: XInputStream, DPI_X: Double, DPI_Y: Double, DefaultSizePixel: js.Array[Size]): Boolean
   /**
     * Rasterizing the initialized data into a {@link XGraphic} container.
     *
@@ -49,7 +48,7 @@ trait XGraphicRasterizer extends XInterface {
     ShearAngle_X: Double,
     ShearAngle_Y: Double,
     RasterizeProperties: PropertyValues
-  ): XGraphic = js.native
+  ): XGraphic
 }
 
 object XGraphicRasterizer {
@@ -64,25 +63,5 @@ object XGraphicRasterizer {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), initializeData = js.Any.fromFunction4(initializeData), queryInterface = js.Any.fromFunction1(queryInterface), rasterize = js.Any.fromFunction6(rasterize), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XGraphicRasterizer]
   }
-  @scala.inline
-  implicit class XGraphicRasterizerOps[Self <: XGraphicRasterizer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInitializeData(value: (XInputStream, Double, Double, js.Array[Size]) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initializeData")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withRasterize(value: (Double, Double, Double, Double, Double, PropertyValues) => XGraphic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rasterize")(js.Any.fromFunction6(value))
-        ret
-    }
-  }
-  
 }
 

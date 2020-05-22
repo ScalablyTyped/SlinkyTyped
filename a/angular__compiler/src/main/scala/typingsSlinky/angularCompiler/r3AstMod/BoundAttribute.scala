@@ -90,10 +90,14 @@ class BoundAttribute protected () extends Node {
   var i18n: js.UndefOr[Message | typingsSlinky.angularCompiler.i18nAstMod.Node] = js.native
   var name: String = js.native
   var securityContext: SecurityContext = js.native
+  /* CompleteClass */
+  override var sourceSpan: ParseSourceSpan = js.native
   var `type`: BindingType = js.native
   var unit: String | Null = js.native
   var value: AST = js.native
   var valueSpan: js.UndefOr[ParseSourceSpan] = js.native
+  /* CompleteClass */
+  override def visit[Result](visitor: Visitor[Result]): Result = js.native
 }
 
 /* static members */

@@ -10,7 +10,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ITheme extends IScheme {
   /**
     * @internal
@@ -18,7 +17,7 @@ trait ITheme extends IScheme {
     * in conjunction with new 'schemes' prop that any component making use of Foundation can use.
     * Alternative themes that can be referred to by name.
     */
-  var schemes: js.UndefOr[PinISchemeNamesIScheme] = js.native
+  var schemes: js.UndefOr[PinISchemeNamesIScheme] = js.undefined
 }
 
 object ITheme {
@@ -30,30 +29,14 @@ object ITheme {
     isInverted: Boolean,
     palette: IPalette,
     semanticColors: ISemanticColors,
-    spacing: ISpacing
+    spacing: ISpacing,
+    rtl: js.UndefOr[Boolean] = js.undefined,
+    schemes: PinISchemeNamesIScheme = null
   ): ITheme = {
     val __obj = js.Dynamic.literal(disableGlobalClassNames = disableGlobalClassNames.asInstanceOf[js.Any], effects = effects.asInstanceOf[js.Any], fonts = fonts.asInstanceOf[js.Any], isInverted = isInverted.asInstanceOf[js.Any], palette = palette.asInstanceOf[js.Any], semanticColors = semanticColors.asInstanceOf[js.Any], spacing = spacing.asInstanceOf[js.Any])
+    if (!js.isUndefined(rtl)) __obj.updateDynamic("rtl")(rtl.get.asInstanceOf[js.Any])
+    if (schemes != null) __obj.updateDynamic("schemes")(schemes.asInstanceOf[js.Any])
     __obj.asInstanceOf[ITheme]
   }
-  @scala.inline
-  implicit class IThemeOps[Self <: ITheme] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSchemes(value: PinISchemeNamesIScheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schemes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchemes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schemes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -15,7 +15,6 @@ import scala.scalajs.js.annotation._
   *
   * see: https://en.wikipedia.org/wiki/Flyweight_pattern for more on the Flyweight pattern
   */
-@js.native
 trait TNode extends js.Object {
   /**
     * Attributes associated with an element. We need to store attributes to support various use-cases
@@ -31,14 +30,14 @@ trait TNode extends js.Object {
     * This array can contain flags that will indicate "special attributes" (attributes with
     * namespaces, attributes extracted from bindings and outputs).
     */
-  var attrs: TAttributes | Null = js.native
+  var attrs: TAttributes | Null
   /**
     * First child of the current node.
     *
     * For component nodes, the child will always be a ContentChild (in same view).
     * For embedded view nodes, the child will be in their child view.
     */
-  var child: TNode | Null = js.native
+  var child: TNode | Null
   /**
     * A collection of all class bindings and/or static class values for an element.
     *
@@ -57,19 +56,19 @@ trait TNode extends js.Object {
     * are encountered. If and when this happens then the existing `StylingMapArray` value
     * will be placed into the initial styling slot in the newly created `TStylingContext`.
     */
-  var classes: StylingMapArray | TStylingContext | Null = js.native
+  var classes: StylingMapArray | TStylingContext | Null
   /**
     * Stores final exclusive index of the directives.
     */
-  var directiveEnd: Double = js.native
+  var directiveEnd: Double
   /**
     * Stores starting index of the directives.
     */
-  var directiveStart: Double = js.native
+  var directiveStart: Double
   /**
     * Stores if Node isComponent, isProjected, hasContentQuery, hasClassInput and hasStyleInput
     */
-  var flags: TNodeFlags = js.native
+  var flags: TNodeFlags
   /**
     * Index of the TNode in TView.data and corresponding native element in LView.
     *
@@ -78,9 +77,9 @@ trait TNode extends js.Object {
     *
     * If index is -1, this is a dynamically created container node or embedded view node.
     */
-  var index: Double = js.native
+  var index: Double
   /** Information about input properties that need to be set once from attribute data. */
-  var initialInputs: js.UndefOr[InitialInputData | Null] = js.native
+  var initialInputs: js.UndefOr[InitialInputData | Null] = js.undefined
   /**
     * The index of the closest injector in this node's LView.
     *
@@ -94,14 +93,14 @@ trait TNode extends js.Object {
     * If tNode.injectorIndex === tNode.parent.injectorIndex, then the index belongs to a parent
     * injector.
     */
-  var injectorIndex: Double = js.native
+  var injectorIndex: Double
   /**
     * Input data for all directives on this node.
     *
     * - `undefined` means that the prop has not been initialized yet,
     * - `null` means that the prop has been initialized but no inputs have been found.
     */
-  var inputs: js.UndefOr[PropertyAliases | Null] = js.native
+  var inputs: js.UndefOr[PropertyAliases | Null] = js.undefined
   /**
     * A set of local names under which a given element is exported in a template and
     * visible to queries. An entry in this array can be created for different reasons:
@@ -119,19 +118,19 @@ trait TNode extends js.Object {
     * - `<my-cmpt #foo #bar="directiveExportAs">` => `["foo", myCmptIdx, "bar", directiveIdx]`
     * - `<div #foo #bar="directiveExportAs">` => `["foo", -1, "bar", directiveIdx]`
     */
-  var localNames: (js.Array[String | Double]) | Null = js.native
+  var localNames: (js.Array[String | Double]) | Null
   /**
     * The next sibling node. Necessary so we can propagate through the root nodes of a view
     * to insert them or remove them from the DOM.
     */
-  var next: TNode | Null = js.native
+  var next: TNode | Null
   /**
     * Output data for all directives on this node.
     *
     * - `undefined` means that the prop has not been initialized yet,
     * - `null` means that the prop has been initialized but no outputs have been found.
     */
-  var outputs: js.UndefOr[PropertyAliases | Null] = js.native
+  var outputs: js.UndefOr[PropertyAliases | Null] = js.undefined
   /**
     * Parent node (in the same view only).
     *
@@ -146,7 +145,7 @@ trait TNode extends js.Object {
     *
     * If this is an inline view node (V), the parent will be its container.
     */
-  var parent: ɵangularPackagesCoreCoreBf | TContainerNode | Null = js.native
+  var parent: ɵangularPackagesCoreCoreBf | TContainerNode | Null
   /**
     * List of projected TNodes for a given component host element OR index into the said nodes.
     *
@@ -186,31 +185,31 @@ trait TNode extends js.Object {
     * If `projection` is of type `RNode[][]` than we have a collection of native nodes passed as
     * projectable nodes during dynamic component creation.
     */
-  var projection: (js.Array[TNode | js.Array[RNode]]) | Double | Null = js.native
+  var projection: (js.Array[TNode | js.Array[RNode]]) | Double | Null
   /**
     * The next projected sibling. Since in Angular content projection works on the node-by-node basis
     * the act of projecting nodes might change nodes relationship at the insertion point (target
     * view). At the same time we need to keep initial relationship between nodes as expressed in
     * content view.
     */
-  var projectionNext: TNode | Null = js.native
+  var projectionNext: TNode | Null
   /**
     * Stores the exclusive final index where property binding metadata is
     * stored for this node.
     */
-  var propertyMetadataEndIndex: Double = js.native
+  var propertyMetadataEndIndex: Double
   /**
     * Stores the first index where property binding metadata is stored for
     * this node.
     */
-  var propertyMetadataStartIndex: Double = js.native
+  var propertyMetadataStartIndex: Double
   /**
     * This number stores two values using its bits:
     *
     * - the index of the first provider on that node (first 16 bits)
     * - the count of view providers from the component on this node (last 16 bits)
     */
-  var providerIndexes: TNodeProviderIndexes = js.native
+  var providerIndexes: TNodeProviderIndexes
   /**
     * A collection of all style bindings and/or static style values for an element.
     *
@@ -229,7 +228,7 @@ trait TNode extends js.Object {
     * are encountered. If and when this happens then the existing `StylingMapArray` value
     * will be placed into the initial styling slot in the newly created `TStylingContext`.
     */
-  var styles: StylingMapArray | TStylingContext | Null = js.native
+  var styles: StylingMapArray | TStylingContext | Null
   /**
     * The TView or TViews attached to this node.
     *
@@ -250,11 +249,11 @@ trait TNode extends js.Object {
     *
     * If this TNode corresponds to an element, tViews will be null .
     */
-  var tViews: TView | js.Array[TView] | Null = js.native
+  var tViews: TView | js.Array[TView] | Null
   /** The tag name associated with this node. */
-  var tagName: String | Null = js.native
+  var tagName: String | Null
   /** The type of the TNode. See TNodeType. */
-  var `type`: TNodeType = js.native
+  var `type`: TNodeType
 }
 
 object TNode {
@@ -268,259 +267,28 @@ object TNode {
     propertyMetadataEndIndex: Double,
     propertyMetadataStartIndex: Double,
     providerIndexes: TNodeProviderIndexes,
-    `type`: TNodeType
+    `type`: TNodeType,
+    attrs: TAttributes = null,
+    child: TNode = null,
+    classes: StylingMapArray | TStylingContext = null,
+    initialInputs: js.UndefOr[Null | InitialInputData] = js.undefined,
+    inputs: js.UndefOr[Null | PropertyAliases] = js.undefined,
+    localNames: js.Array[String | Double] = null,
+    next: TNode = null,
+    outputs: js.UndefOr[Null | PropertyAliases] = js.undefined,
+    parent: ɵangularPackagesCoreCoreBf | TContainerNode = null,
+    projection: (js.Array[TNode | js.Array[RNode]]) | Double = null,
+    projectionNext: TNode = null,
+    styles: StylingMapArray | TStylingContext = null,
+    tViews: TView | js.Array[TView] = null,
+    tagName: String = null
   ): TNode = {
-    val __obj = js.Dynamic.literal(directiveEnd = directiveEnd.asInstanceOf[js.Any], directiveStart = directiveStart.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], injectorIndex = injectorIndex.asInstanceOf[js.Any], propertyMetadataEndIndex = propertyMetadataEndIndex.asInstanceOf[js.Any], propertyMetadataStartIndex = propertyMetadataStartIndex.asInstanceOf[js.Any], providerIndexes = providerIndexes.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(directiveEnd = directiveEnd.asInstanceOf[js.Any], directiveStart = directiveStart.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], injectorIndex = injectorIndex.asInstanceOf[js.Any], propertyMetadataEndIndex = propertyMetadataEndIndex.asInstanceOf[js.Any], propertyMetadataStartIndex = propertyMetadataStartIndex.asInstanceOf[js.Any], providerIndexes = providerIndexes.asInstanceOf[js.Any], attrs = attrs.asInstanceOf[js.Any], child = child.asInstanceOf[js.Any], classes = classes.asInstanceOf[js.Any], localNames = localNames.asInstanceOf[js.Any], next = next.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], projection = projection.asInstanceOf[js.Any], projectionNext = projectionNext.asInstanceOf[js.Any], styles = styles.asInstanceOf[js.Any], tViews = tViews.asInstanceOf[js.Any], tagName = tagName.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialInputs)) __obj.updateDynamic("initialInputs")(initialInputs.asInstanceOf[js.Any])
+    if (!js.isUndefined(inputs)) __obj.updateDynamic("inputs")(inputs.asInstanceOf[js.Any])
+    if (!js.isUndefined(outputs)) __obj.updateDynamic("outputs")(outputs.asInstanceOf[js.Any])
     __obj.asInstanceOf[TNode]
   }
-  @scala.inline
-  implicit class TNodeOps[Self <: TNode] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirectiveEnd(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directiveEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDirectiveStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directiveStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFlags(value: TNodeFlags): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInjectorIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("injectorIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPropertyMetadataEndIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("propertyMetadataEndIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPropertyMetadataStartIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("propertyMetadataStartIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProviderIndexes(value: TNodeProviderIndexes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("providerIndexes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: TNodeType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttrs(value: TAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attrs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttrsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attrs")(null)
-        ret
-    }
-    @scala.inline
-    def withChild(value: TNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("child")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("child")(null)
-        ret
-    }
-    @scala.inline
-    def withClasses(value: StylingMapArray | TStylingContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClassesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(null)
-        ret
-    }
-    @scala.inline
-    def withInitialInputs(value: InitialInputData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialInputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialInputs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialInputs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialInputsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialInputs")(null)
-        ret
-    }
-    @scala.inline
-    def withInputs(value: PropertyAliases): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(null)
-        ret
-    }
-    @scala.inline
-    def withLocalNames(value: js.Array[String | Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocalNamesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localNames")(null)
-        ret
-    }
-    @scala.inline
-    def withNext(value: TNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNextNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(null)
-        ret
-    }
-    @scala.inline
-    def withOutputs(value: PropertyAliases): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputs")(null)
-        ret
-    }
-    @scala.inline
-    def withParent(value: ɵangularPackagesCoreCoreBf | TContainerNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParentNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(null)
-        ret
-    }
-    @scala.inline
-    def withProjection(value: (js.Array[TNode | js.Array[RNode]]) | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProjectionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(null)
-        ret
-    }
-    @scala.inline
-    def withProjectionNext(value: TNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectionNext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProjectionNextNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectionNext")(null)
-        ret
-    }
-    @scala.inline
-    def withStyles(value: StylingMapArray | TStylingContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStylesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(null)
-        ret
-    }
-    @scala.inline
-    def withTViews(value: TView | js.Array[TView]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tViews")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTViewsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tViews")(null)
-        ret
-    }
-    @scala.inline
-    def withTagName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTagNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagName")(null)
-        ret
-    }
-  }
-  
 }
 

@@ -19,29 +19,10 @@ trait SchemaNamedStyles extends js.Object {
 
 object SchemaNamedStyles {
   @scala.inline
-  def apply(): SchemaNamedStyles = {
+  def apply(styles: js.Array[SchemaNamedStyle] = null): SchemaNamedStyles = {
     val __obj = js.Dynamic.literal()
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNamedStyles]
   }
-  @scala.inline
-  implicit class SchemaNamedStylesOps[Self <: SchemaNamedStyles] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStyles(value: js.Array[SchemaNamedStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

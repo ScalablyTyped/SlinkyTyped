@@ -8,18 +8,17 @@ import scala.scalajs.js.annotation._
   * is the UNO representation of the Automation type `DECIMAL` .
   * @since OOo 1.1.2
   */
-@js.native
 trait Decimal extends js.Object {
   /** corresponds to `DECIMAL.Hi32` . */
-  var HighValue: Double = js.native
+  var HighValue: Double
   /** corresponds to `DECIMAL.Lo32` . */
-  var LowValue: Double = js.native
+  var LowValue: Double
   /** corresponds to `DECIMAL.Mid32` . */
-  var MiddleValue: Double = js.native
+  var MiddleValue: Double
   /** corresponds to `DECIMAL.scale` . */
-  var Scale: Double = js.native
+  var Scale: Double
   /** corresponds to `DECIMAL.sign` . */
-  var Sign: Double = js.native
+  var Sign: Double
 }
 
 object Decimal {
@@ -28,43 +27,5 @@ object Decimal {
     val __obj = js.Dynamic.literal(HighValue = HighValue.asInstanceOf[js.Any], LowValue = LowValue.asInstanceOf[js.Any], MiddleValue = MiddleValue.asInstanceOf[js.Any], Scale = Scale.asInstanceOf[js.Any], Sign = Sign.asInstanceOf[js.Any])
     __obj.asInstanceOf[Decimal]
   }
-  @scala.inline
-  implicit class DecimalOps[Self <: Decimal] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHighValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HighValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLowValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LowValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMiddleValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MiddleValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSign(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sign")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

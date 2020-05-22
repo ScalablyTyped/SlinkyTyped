@@ -7,16 +7,15 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientRichEdit.KeyDown event.
   */
-@js.native
 trait ASPxClientRichEditKeyDownEventArgs extends ASPxClientEventArgs {
   /**
     * Gets or sets whether the event is handled manually, so no default processing is required.
     */
-  var handled: Boolean = js.native
+  var handled: Boolean
   /**
     * Gets a DHTML event object that relates to the processed event.
     */
-  var htmlEvent: js.Any = js.native
+  var htmlEvent: js.Any
 }
 
 object ASPxClientRichEditKeyDownEventArgs {
@@ -25,25 +24,5 @@ object ASPxClientRichEditKeyDownEventArgs {
     val __obj = js.Dynamic.literal(handled = handled.asInstanceOf[js.Any], htmlEvent = htmlEvent.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientRichEditKeyDownEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientRichEditKeyDownEventArgsOps[Self <: ASPxClientRichEditKeyDownEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHandled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHtmlEvent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

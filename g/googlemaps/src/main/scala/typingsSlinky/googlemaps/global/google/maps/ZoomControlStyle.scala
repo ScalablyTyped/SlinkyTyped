@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+// TODO find source documentation
 @JSGlobal("google.maps.ZoomControlStyle")
 @js.native
 object ZoomControlStyle extends js.Object {

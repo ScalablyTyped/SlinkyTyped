@@ -30,7 +30,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<std.Pick<semantic-ui-dropdown.SemanticUI.DropdownSettings._Impl, keyof semantic-ui-dropdown.SemanticUI.DropdownSettings._Impl>> */
-@js.native
 trait PartialPickImplkeyofImpl extends js.Object {
   var action: js.UndefOr[
     activate | select | combo | nothing | hide | (js.ThisFunction3[
@@ -40,36 +39,36 @@ trait PartialPickImplkeyofImpl extends js.Object {
       /* element */ JQuery, 
       Unit
     ])
-  ] = js.native
-  var allowAdditions: js.UndefOr[Boolean] = js.native
-  var allowCategorySelection: js.UndefOr[Boolean] = js.native
-  var allowReselection: js.UndefOr[Boolean] = js.native
-  var allowTab: js.UndefOr[Boolean] = js.native
-  var apiSettings: js.UndefOr[`false` | ApiSettings] = js.native
-  var className: js.UndefOr[ClassNameSettings] = js.native
-  var context: js.UndefOr[String | JQuery] = js.native
-  var debug: js.UndefOr[Boolean] = js.native
-  var delay: js.UndefOr[DelaySettings] = js.native
-  var direction: js.UndefOr[auto | upward | downward] = js.native
-  var duration: js.UndefOr[Double] = js.native
-  var error: js.UndefOr[ErrorSettings] = js.native
-  var fields: js.UndefOr[FieldsSettings] = js.native
-  var filterRemoteData: js.UndefOr[Boolean] = js.native
-  var forceSelection: js.UndefOr[Boolean] = js.native
-  var fullTextSearch: js.UndefOr[Boolean | exact] = js.native
-  var glyphWidth: js.UndefOr[Double] = js.native
-  var hideAdditions: js.UndefOr[Boolean] = js.native
-  var keepOnScreen: js.UndefOr[Boolean] = js.native
-  var keys: js.UndefOr[KeySettings] = js.native
-  var label: js.UndefOr[LabelSettings] = js.native
-  var `match`: js.UndefOr[both | value | text] = js.native
-  var maxSelections: js.UndefOr[`false` | Double] = js.native
-  var message: js.UndefOr[MessageSettings] = js.native
-  var metadata: js.UndefOr[MetadataSettings] = js.native
-  var minCharacters: js.UndefOr[Double] = js.native
-  var name: js.UndefOr[String] = js.native
-  var namespace: js.UndefOr[String] = js.native
-  var on: js.UndefOr[String] = js.native
+  ] = js.undefined
+  var allowAdditions: js.UndefOr[Boolean] = js.undefined
+  var allowCategorySelection: js.UndefOr[Boolean] = js.undefined
+  var allowReselection: js.UndefOr[Boolean] = js.undefined
+  var allowTab: js.UndefOr[Boolean] = js.undefined
+  var apiSettings: js.UndefOr[`false` | ApiSettings] = js.undefined
+  var className: js.UndefOr[ClassNameSettings] = js.undefined
+  var context: js.UndefOr[String | JQuery] = js.undefined
+  var debug: js.UndefOr[Boolean] = js.undefined
+  var delay: js.UndefOr[DelaySettings] = js.undefined
+  var direction: js.UndefOr[auto | upward | downward] = js.undefined
+  var duration: js.UndefOr[Double] = js.undefined
+  var error: js.UndefOr[ErrorSettings] = js.undefined
+  var fields: js.UndefOr[FieldsSettings] = js.undefined
+  var filterRemoteData: js.UndefOr[Boolean] = js.undefined
+  var forceSelection: js.UndefOr[Boolean] = js.undefined
+  var fullTextSearch: js.UndefOr[Boolean | exact] = js.undefined
+  var glyphWidth: js.UndefOr[Double] = js.undefined
+  var hideAdditions: js.UndefOr[Boolean] = js.undefined
+  var keepOnScreen: js.UndefOr[Boolean] = js.undefined
+  var keys: js.UndefOr[KeySettings] = js.undefined
+  var label: js.UndefOr[LabelSettings] = js.undefined
+  var `match`: js.UndefOr[both | value | text] = js.undefined
+  var maxSelections: js.UndefOr[`false` | Double] = js.undefined
+  var message: js.UndefOr[MessageSettings] = js.undefined
+  var metadata: js.UndefOr[MetadataSettings] = js.undefined
+  var minCharacters: js.UndefOr[Double] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var namespace: js.UndefOr[String] = js.undefined
+  var on: js.UndefOr[String] = js.undefined
   var onAdd: js.UndefOr[
     js.ThisFunction3[
       /* this */ JQuery, 
@@ -78,17 +77,17 @@ trait PartialPickImplkeyofImpl extends js.Object {
       /* $addedChoice */ JQuery, 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
   var onChange: js.UndefOr[
     js.ThisFunction3[/* this */ JQuery, /* value */ js.Any, /* text */ String, /* $choice */ JQuery, Unit]
-  ] = js.native
-  var onHide: js.UndefOr[js.ThisFunction0[/* this */ JQuery, `false` | Unit]] = js.native
+  ] = js.undefined
+  var onHide: js.UndefOr[js.ThisFunction0[/* this */ JQuery, `false` | Unit]] = js.undefined
   var onLabelCreate: js.UndefOr[
     js.ThisFunction2[/* this */ JQuery, /* value */ js.Any, /* text */ String, JQuery]
-  ] = js.native
-  var onLabelRemove: js.UndefOr[js.ThisFunction1[/* this */ JQuery, /* value */ js.Any, `false` | Unit]] = js.native
-  var onLabelSelect: js.UndefOr[js.ThisFunction1[/* this */ JQuery, /* $selectedLabels */ JQuery, Unit]] = js.native
-  var onNoResults: js.UndefOr[js.ThisFunction1[/* this */ JQuery, /* searchValue */ js.Any, Unit]] = js.native
+  ] = js.undefined
+  var onLabelRemove: js.UndefOr[js.ThisFunction1[/* this */ JQuery, /* value */ js.Any, `false` | Unit]] = js.undefined
+  var onLabelSelect: js.UndefOr[js.ThisFunction1[/* this */ JQuery, /* $selectedLabels */ JQuery, Unit]] = js.undefined
+  var onNoResults: js.UndefOr[js.ThisFunction1[/* this */ JQuery, /* searchValue */ js.Any, Unit]] = js.undefined
   var onRemove: js.UndefOr[
     js.ThisFunction3[
       /* this */ JQuery, 
@@ -97,699 +96,154 @@ trait PartialPickImplkeyofImpl extends js.Object {
       /* $removedChoice */ JQuery, 
       Unit
     ]
-  ] = js.native
-  var onShow: js.UndefOr[js.ThisFunction0[/* this */ JQuery, `false` | Unit]] = js.native
-  var performance: js.UndefOr[Boolean] = js.native
-  var placeholder: js.UndefOr[auto | value | `false`] = js.native
-  var preserveHTML: js.UndefOr[Boolean] = js.native
-  var regExp: js.UndefOr[RegExpSettings] = js.native
-  var saveRemoteData: js.UndefOr[Boolean] = js.native
-  var selectOnKeydown: js.UndefOr[Boolean] = js.native
-  var selector: js.UndefOr[SelectorSettings] = js.native
-  var showOnFocus: js.UndefOr[Boolean] = js.native
-  var silent: js.UndefOr[Boolean] = js.native
-  var sortSelect: js.UndefOr[Boolean] = js.native
-  var transition: js.UndefOr[auto | String] = js.native
-  var useLabels: js.UndefOr[Boolean] = js.native
-  var values: js.UndefOr[js.Any] = js.native
-  var verbose: js.UndefOr[Boolean] = js.native
+  ] = js.undefined
+  var onShow: js.UndefOr[js.ThisFunction0[/* this */ JQuery, `false` | Unit]] = js.undefined
+  var performance: js.UndefOr[Boolean] = js.undefined
+  var placeholder: js.UndefOr[auto | value | `false`] = js.undefined
+  var preserveHTML: js.UndefOr[Boolean] = js.undefined
+  var regExp: js.UndefOr[RegExpSettings] = js.undefined
+  var saveRemoteData: js.UndefOr[Boolean] = js.undefined
+  var selectOnKeydown: js.UndefOr[Boolean] = js.undefined
+  var selector: js.UndefOr[SelectorSettings] = js.undefined
+  var showOnFocus: js.UndefOr[Boolean] = js.undefined
+  var silent: js.UndefOr[Boolean] = js.undefined
+  var sortSelect: js.UndefOr[Boolean] = js.undefined
+  var transition: js.UndefOr[auto | String] = js.undefined
+  var useLabels: js.UndefOr[Boolean] = js.undefined
+  var values: js.UndefOr[js.Any] = js.undefined
+  var verbose: js.UndefOr[Boolean] = js.undefined
 }
 
 object PartialPickImplkeyofImpl {
   @scala.inline
-  def apply(): PartialPickImplkeyofImpl = {
+  def apply(
+    action: activate | select | combo | nothing | hide | (js.ThisFunction3[
+      /* this */ JQuery, 
+      /* text */ String, 
+      /* value */ String | `false`, 
+      /* element */ JQuery, 
+      Unit
+    ]) = null,
+    allowAdditions: js.UndefOr[Boolean] = js.undefined,
+    allowCategorySelection: js.UndefOr[Boolean] = js.undefined,
+    allowReselection: js.UndefOr[Boolean] = js.undefined,
+    allowTab: js.UndefOr[Boolean] = js.undefined,
+    apiSettings: `false` | ApiSettings = null,
+    className: ClassNameSettings = null,
+    context: String | JQuery = null,
+    debug: js.UndefOr[Boolean] = js.undefined,
+    delay: DelaySettings = null,
+    direction: auto | upward | downward = null,
+    duration: js.UndefOr[Double] = js.undefined,
+    error: ErrorSettings = null,
+    fields: FieldsSettings = null,
+    filterRemoteData: js.UndefOr[Boolean] = js.undefined,
+    forceSelection: js.UndefOr[Boolean] = js.undefined,
+    fullTextSearch: Boolean | exact = null,
+    glyphWidth: js.UndefOr[Double] = js.undefined,
+    hideAdditions: js.UndefOr[Boolean] = js.undefined,
+    keepOnScreen: js.UndefOr[Boolean] = js.undefined,
+    keys: KeySettings = null,
+    label: LabelSettings = null,
+    `match`: both | value | text = null,
+    maxSelections: `false` | Double = null,
+    message: MessageSettings = null,
+    metadata: MetadataSettings = null,
+    minCharacters: js.UndefOr[Double] = js.undefined,
+    name: String = null,
+    namespace: String = null,
+    on: String = null,
+    onAdd: js.ThisFunction3[
+      /* this */ JQuery, 
+      /* addedValue */ js.Any, 
+      /* addedText */ String, 
+      /* $addedChoice */ JQuery, 
+      Unit
+    ] = null,
+    onChange: js.ThisFunction3[/* this */ JQuery, /* value */ js.Any, /* text */ String, /* $choice */ JQuery, Unit] = null,
+    onHide: js.ThisFunction0[/* this */ JQuery, `false` | Unit] = null,
+    onLabelCreate: js.ThisFunction2[/* this */ JQuery, /* value */ js.Any, /* text */ String, JQuery] = null,
+    onLabelRemove: js.ThisFunction1[/* this */ JQuery, /* value */ js.Any, `false` | Unit] = null,
+    onLabelSelect: js.ThisFunction1[/* this */ JQuery, /* $selectedLabels */ JQuery, Unit] = null,
+    onNoResults: js.ThisFunction1[/* this */ JQuery, /* searchValue */ js.Any, Unit] = null,
+    onRemove: js.ThisFunction3[
+      /* this */ JQuery, 
+      /* removedValue */ js.Any, 
+      /* removedText */ String, 
+      /* $removedChoice */ JQuery, 
+      Unit
+    ] = null,
+    onShow: js.ThisFunction0[/* this */ JQuery, `false` | Unit] = null,
+    performance: js.UndefOr[Boolean] = js.undefined,
+    placeholder: auto | value | `false` = null,
+    preserveHTML: js.UndefOr[Boolean] = js.undefined,
+    regExp: RegExpSettings = null,
+    saveRemoteData: js.UndefOr[Boolean] = js.undefined,
+    selectOnKeydown: js.UndefOr[Boolean] = js.undefined,
+    selector: SelectorSettings = null,
+    showOnFocus: js.UndefOr[Boolean] = js.undefined,
+    silent: js.UndefOr[Boolean] = js.undefined,
+    sortSelect: js.UndefOr[Boolean] = js.undefined,
+    transition: auto | String = null,
+    useLabels: js.UndefOr[Boolean] = js.undefined,
+    values: js.Any = null,
+    verbose: js.UndefOr[Boolean] = js.undefined
+  ): PartialPickImplkeyofImpl = {
     val __obj = js.Dynamic.literal()
+    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowAdditions)) __obj.updateDynamic("allowAdditions")(allowAdditions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowCategorySelection)) __obj.updateDynamic("allowCategorySelection")(allowCategorySelection.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowReselection)) __obj.updateDynamic("allowReselection")(allowReselection.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowTab)) __obj.updateDynamic("allowTab")(allowTab.get.asInstanceOf[js.Any])
+    if (apiSettings != null) __obj.updateDynamic("apiSettings")(apiSettings.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.get.asInstanceOf[js.Any])
+    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (!js.isUndefined(filterRemoteData)) __obj.updateDynamic("filterRemoteData")(filterRemoteData.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(forceSelection)) __obj.updateDynamic("forceSelection")(forceSelection.get.asInstanceOf[js.Any])
+    if (fullTextSearch != null) __obj.updateDynamic("fullTextSearch")(fullTextSearch.asInstanceOf[js.Any])
+    if (!js.isUndefined(glyphWidth)) __obj.updateDynamic("glyphWidth")(glyphWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideAdditions)) __obj.updateDynamic("hideAdditions")(hideAdditions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(keepOnScreen)) __obj.updateDynamic("keepOnScreen")(keepOnScreen.get.asInstanceOf[js.Any])
+    if (keys != null) __obj.updateDynamic("keys")(keys.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (`match` != null) __obj.updateDynamic("match")(`match`.asInstanceOf[js.Any])
+    if (maxSelections != null) __obj.updateDynamic("maxSelections")(maxSelections.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (!js.isUndefined(minCharacters)) __obj.updateDynamic("minCharacters")(minCharacters.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (namespace != null) __obj.updateDynamic("namespace")(namespace.asInstanceOf[js.Any])
+    if (on != null) __obj.updateDynamic("on")(on.asInstanceOf[js.Any])
+    if (onAdd != null) __obj.updateDynamic("onAdd")(onAdd.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(onChange.asInstanceOf[js.Any])
+    if (onHide != null) __obj.updateDynamic("onHide")(onHide.asInstanceOf[js.Any])
+    if (onLabelCreate != null) __obj.updateDynamic("onLabelCreate")(onLabelCreate.asInstanceOf[js.Any])
+    if (onLabelRemove != null) __obj.updateDynamic("onLabelRemove")(onLabelRemove.asInstanceOf[js.Any])
+    if (onLabelSelect != null) __obj.updateDynamic("onLabelSelect")(onLabelSelect.asInstanceOf[js.Any])
+    if (onNoResults != null) __obj.updateDynamic("onNoResults")(onNoResults.asInstanceOf[js.Any])
+    if (onRemove != null) __obj.updateDynamic("onRemove")(onRemove.asInstanceOf[js.Any])
+    if (onShow != null) __obj.updateDynamic("onShow")(onShow.asInstanceOf[js.Any])
+    if (!js.isUndefined(performance)) __obj.updateDynamic("performance")(performance.get.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (!js.isUndefined(preserveHTML)) __obj.updateDynamic("preserveHTML")(preserveHTML.get.asInstanceOf[js.Any])
+    if (regExp != null) __obj.updateDynamic("regExp")(regExp.asInstanceOf[js.Any])
+    if (!js.isUndefined(saveRemoteData)) __obj.updateDynamic("saveRemoteData")(saveRemoteData.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectOnKeydown)) __obj.updateDynamic("selectOnKeydown")(selectOnKeydown.get.asInstanceOf[js.Any])
+    if (selector != null) __obj.updateDynamic("selector")(selector.asInstanceOf[js.Any])
+    if (!js.isUndefined(showOnFocus)) __obj.updateDynamic("showOnFocus")(showOnFocus.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sortSelect)) __obj.updateDynamic("sortSelect")(sortSelect.get.asInstanceOf[js.Any])
+    if (transition != null) __obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
+    if (!js.isUndefined(useLabels)) __obj.updateDynamic("useLabels")(useLabels.get.asInstanceOf[js.Any])
+    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
+    if (!js.isUndefined(verbose)) __obj.updateDynamic("verbose")(verbose.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialPickImplkeyofImpl]
   }
-  @scala.inline
-  implicit class PartialPickImplkeyofImplOps[Self <: PartialPickImplkeyofImpl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAction(
-      value: activate | select | combo | nothing | hide | (js.ThisFunction3[
-          /* this */ JQuery, 
-          /* text */ String, 
-          /* value */ String | `false`, 
-          /* element */ JQuery, 
-          Unit
-        ])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowAdditions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowAdditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowAdditions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowAdditions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowCategorySelection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowCategorySelection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowCategorySelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowCategorySelection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowReselection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowReselection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowReselection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowReselection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowTab(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTab")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowTab: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTab")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApiSettings(value: `false` | ApiSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: ClassNameSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContext(value: String | JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebug(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelay(value: DelaySettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirection(value: auto | upward | downward): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: ErrorSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFields(value: FieldsSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterRemoteData(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterRemoteData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterRemoteData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterRemoteData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForceSelection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceSelection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceSelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceSelection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullTextSearch(value: Boolean | exact): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullTextSearch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullTextSearch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullTextSearch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlyphWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("glyphWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlyphWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("glyphWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideAdditions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideAdditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideAdditions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideAdditions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeepOnScreen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepOnScreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeepOnScreen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepOnScreen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeys(value: KeySettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: LabelSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatch(value: both | value | text): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("match")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("match")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxSelections(value: `false` | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSelections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxSelections: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSelections")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: MessageSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: MetadataSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinCharacters(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minCharacters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinCharacters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minCharacters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNamespace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAdd(
-      value: js.ThisFunction3[
-          /* this */ JQuery, 
-          /* addedValue */ js.Any, 
-          /* addedText */ String, 
-          /* $addedChoice */ JQuery, 
-          Unit
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAdd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAdd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(
-      value: js.ThisFunction3[/* this */ JQuery, /* value */ js.Any, /* text */ String, /* $choice */ JQuery, Unit]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnHide(value: js.ThisFunction0[/* this */ JQuery, `false` | Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnHide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLabelCreate(value: js.ThisFunction2[/* this */ JQuery, /* value */ js.Any, /* text */ String, JQuery]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLabelCreate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnLabelCreate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLabelCreate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLabelRemove(value: js.ThisFunction1[/* this */ JQuery, /* value */ js.Any, `false` | Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLabelRemove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnLabelRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLabelRemove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLabelSelect(value: js.ThisFunction1[/* this */ JQuery, /* $selectedLabels */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLabelSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnLabelSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLabelSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnNoResults(value: js.ThisFunction1[/* this */ JQuery, /* searchValue */ js.Any, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNoResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnNoResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNoResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRemove(
-      value: js.ThisFunction3[
-          /* this */ JQuery, 
-          /* removedValue */ js.Any, 
-          /* removedText */ String, 
-          /* $removedChoice */ JQuery, 
-          Unit
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRemove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRemove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnShow(value: js.ThisFunction0[/* this */ JQuery, `false` | Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPerformance(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("performance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerformance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("performance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: auto | value | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreserveHTML(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveHTML")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreserveHTML: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveHTML")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegExp(value: RegExpSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regExp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegExp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regExp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSaveRemoteData(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveRemoteData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSaveRemoteData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveRemoteData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectOnKeydown(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectOnKeydown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectOnKeydown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectOnKeydown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelector(value: SelectorSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowOnFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showOnFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowOnFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showOnFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSilent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSilent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortSelect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransition(value: auto | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseLabels(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValues(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerbose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerbose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

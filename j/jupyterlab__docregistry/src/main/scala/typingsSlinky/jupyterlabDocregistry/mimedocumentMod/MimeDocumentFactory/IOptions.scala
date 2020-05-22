@@ -4,6 +4,7 @@ import typingsSlinky.jupyterlabDocregistry.jupyterlabDocregistryStrings.json
 import typingsSlinky.jupyterlabDocregistry.jupyterlabDocregistryStrings.string
 import typingsSlinky.jupyterlabDocregistry.mimedocumentMod.MimeDocument
 import typingsSlinky.jupyterlabDocregistry.registryMod.DocumentRegistry.IFileType
+import typingsSlinky.jupyterlabDocregistry.registryMod.DocumentRegistry.IToolbarItem
 import typingsSlinky.jupyterlabDocregistry.registryMod.DocumentRegistry.IWidgetFactoryOptions
 import typingsSlinky.jupyterlabRendermime.tokensMod.IRenderMimeRegistry
 import scala.scalajs.js
@@ -13,24 +14,23 @@ import scala.scalajs.js.annotation._
 /**
   * The options used to initialize a MimeDocumentFactory.
   */
-@js.native
 trait IOptions[T /* <: MimeDocument */] extends IWidgetFactoryOptions[T] {
   /**
     * Preferred data type from the model.
     */
-  var dataType: js.UndefOr[string | json] = js.native
+  var dataType: js.UndefOr[string | json] = js.undefined
   /**
     * The primary file type associated with the document.
     */
-  var primaryFileType: IFileType = js.native
+  var primaryFileType: IFileType
   /**
     * The render timeout.
     */
-  var renderTimeout: js.UndefOr[Double] = js.native
+  var renderTimeout: js.UndefOr[Double] = js.undefined
   /**
     * The rendermime instance.
     */
-  var rendermime: IRenderMimeRegistry = js.native
+  var rendermime: IRenderMimeRegistry
 }
 
 object IOptions {
@@ -39,54 +39,30 @@ object IOptions {
     fileTypes: js.Array[String],
     name: String,
     primaryFileType: IFileType,
-    rendermime: IRenderMimeRegistry
+    rendermime: IRenderMimeRegistry,
+    canStartKernel: js.UndefOr[Boolean] = js.undefined,
+    dataType: string | json = null,
+    defaultFor: js.Array[String] = null,
+    defaultRendered: js.Array[String] = null,
+    modelName: String = null,
+    preferKernel: js.UndefOr[Boolean] = js.undefined,
+    readOnly: js.UndefOr[Boolean] = js.undefined,
+    renderTimeout: js.UndefOr[Double] = js.undefined,
+    shutdownOnClose: js.UndefOr[Boolean] = js.undefined,
+    toolbarFactory: T => js.Array[IToolbarItem] = null
   ): IOptions[T] = {
     val __obj = js.Dynamic.literal(fileTypes = fileTypes.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], primaryFileType = primaryFileType.asInstanceOf[js.Any], rendermime = rendermime.asInstanceOf[js.Any])
+    if (!js.isUndefined(canStartKernel)) __obj.updateDynamic("canStartKernel")(canStartKernel.get.asInstanceOf[js.Any])
+    if (dataType != null) __obj.updateDynamic("dataType")(dataType.asInstanceOf[js.Any])
+    if (defaultFor != null) __obj.updateDynamic("defaultFor")(defaultFor.asInstanceOf[js.Any])
+    if (defaultRendered != null) __obj.updateDynamic("defaultRendered")(defaultRendered.asInstanceOf[js.Any])
+    if (modelName != null) __obj.updateDynamic("modelName")(modelName.asInstanceOf[js.Any])
+    if (!js.isUndefined(preferKernel)) __obj.updateDynamic("preferKernel")(preferKernel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(readOnly)) __obj.updateDynamic("readOnly")(readOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(renderTimeout)) __obj.updateDynamic("renderTimeout")(renderTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(shutdownOnClose)) __obj.updateDynamic("shutdownOnClose")(shutdownOnClose.get.asInstanceOf[js.Any])
+    if (toolbarFactory != null) __obj.updateDynamic("toolbarFactory")(js.Any.fromFunction1(toolbarFactory))
     __obj.asInstanceOf[IOptions[T]]
   }
-  @scala.inline
-  implicit class IOptionsOps[Self[t] <: IOptions[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withPrimaryFileType(value: IFileType): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryFileType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRendermime(value: IRenderMimeRegistry): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rendermime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataType(value: string | json): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataType: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderTimeout(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderTimeout: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTimeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

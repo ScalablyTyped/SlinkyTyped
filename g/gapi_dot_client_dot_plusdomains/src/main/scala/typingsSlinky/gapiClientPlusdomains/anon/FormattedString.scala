@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FormattedString extends js.Object {
   /** The formatted address for display. */
-  var formatted: js.UndefOr[String] = js.native
+  var formatted: js.UndefOr[String] = js.undefined
 }
 
 object FormattedString {
   @scala.inline
-  def apply(): FormattedString = {
+  def apply(formatted: String = null): FormattedString = {
     val __obj = js.Dynamic.literal()
+    if (formatted != null) __obj.updateDynamic("formatted")(formatted.asInstanceOf[js.Any])
     __obj.asInstanceOf[FormattedString]
   }
-  @scala.inline
-  implicit class FormattedStringOps[Self <: FormattedString] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormatted(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormatted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatted")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,180 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IdentitytoolkitRelyingpartyVerifyAssertionRequest extends js.Object {
   /**
     * When it's true, automatically creates a new account if the user doesn't exist. When it's false, allows existing user to sign in normally and throws
     * exception if the user doesn't exist.
     */
-  var autoCreate: js.UndefOr[Boolean] = js.native
+  var autoCreate: js.UndefOr[Boolean] = js.undefined
   /** GCP project number of the requesting delegated app. Currently only intended for Firebase V1 migration. */
-  var delegatedProjectNumber: js.UndefOr[String] = js.native
+  var delegatedProjectNumber: js.UndefOr[String] = js.undefined
   /** The GITKit token of the authenticated user. */
-  var idToken: js.UndefOr[String] = js.native
+  var idToken: js.UndefOr[String] = js.undefined
   /** Instance id token of the app. */
-  var instanceId: js.UndefOr[String] = js.native
+  var instanceId: js.UndefOr[String] = js.undefined
   /** The GITKit token for the non-trusted IDP pending to be confirmed by the user. */
-  var pendingIdToken: js.UndefOr[String] = js.native
+  var pendingIdToken: js.UndefOr[String] = js.undefined
   /** The post body if the request is a HTTP POST. */
-  var postBody: js.UndefOr[String] = js.native
+  var postBody: js.UndefOr[String] = js.undefined
   /** The URI to which the IDP redirects the user back. It may contain federated login result params added by the IDP. */
-  var requestUri: js.UndefOr[String] = js.native
+  var requestUri: js.UndefOr[String] = js.undefined
   /** Whether return 200 and IDP credential rather than throw exception when federated id is already linked. */
-  var returnIdpCredential: js.UndefOr[Boolean] = js.native
+  var returnIdpCredential: js.UndefOr[Boolean] = js.undefined
   /** Whether to return refresh tokens. */
-  var returnRefreshToken: js.UndefOr[Boolean] = js.native
+  var returnRefreshToken: js.UndefOr[Boolean] = js.undefined
   /** Whether return sts id token and refresh token instead of gitkit token. */
-  var returnSecureToken: js.UndefOr[Boolean] = js.native
+  var returnSecureToken: js.UndefOr[Boolean] = js.undefined
   /** Session ID, which should match the one in previous createAuthUri request. */
-  var sessionId: js.UndefOr[String] = js.native
+  var sessionId: js.UndefOr[String] = js.undefined
 }
 
 object IdentitytoolkitRelyingpartyVerifyAssertionRequest {
   @scala.inline
-  def apply(): IdentitytoolkitRelyingpartyVerifyAssertionRequest = {
+  def apply(
+    autoCreate: js.UndefOr[Boolean] = js.undefined,
+    delegatedProjectNumber: String = null,
+    idToken: String = null,
+    instanceId: String = null,
+    pendingIdToken: String = null,
+    postBody: String = null,
+    requestUri: String = null,
+    returnIdpCredential: js.UndefOr[Boolean] = js.undefined,
+    returnRefreshToken: js.UndefOr[Boolean] = js.undefined,
+    returnSecureToken: js.UndefOr[Boolean] = js.undefined,
+    sessionId: String = null
+  ): IdentitytoolkitRelyingpartyVerifyAssertionRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoCreate)) __obj.updateDynamic("autoCreate")(autoCreate.get.asInstanceOf[js.Any])
+    if (delegatedProjectNumber != null) __obj.updateDynamic("delegatedProjectNumber")(delegatedProjectNumber.asInstanceOf[js.Any])
+    if (idToken != null) __obj.updateDynamic("idToken")(idToken.asInstanceOf[js.Any])
+    if (instanceId != null) __obj.updateDynamic("instanceId")(instanceId.asInstanceOf[js.Any])
+    if (pendingIdToken != null) __obj.updateDynamic("pendingIdToken")(pendingIdToken.asInstanceOf[js.Any])
+    if (postBody != null) __obj.updateDynamic("postBody")(postBody.asInstanceOf[js.Any])
+    if (requestUri != null) __obj.updateDynamic("requestUri")(requestUri.asInstanceOf[js.Any])
+    if (!js.isUndefined(returnIdpCredential)) __obj.updateDynamic("returnIdpCredential")(returnIdpCredential.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(returnRefreshToken)) __obj.updateDynamic("returnRefreshToken")(returnRefreshToken.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(returnSecureToken)) __obj.updateDynamic("returnSecureToken")(returnSecureToken.get.asInstanceOf[js.Any])
+    if (sessionId != null) __obj.updateDynamic("sessionId")(sessionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[IdentitytoolkitRelyingpartyVerifyAssertionRequest]
   }
-  @scala.inline
-  implicit class IdentitytoolkitRelyingpartyVerifyAssertionRequestOps[Self <: IdentitytoolkitRelyingpartyVerifyAssertionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoCreate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCreate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoCreate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCreate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelegatedProjectNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delegatedProjectNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelegatedProjectNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delegatedProjectNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPendingIdToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pendingIdToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPendingIdToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pendingIdToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPostBody(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPostBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnIdpCredential(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnIdpCredential")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturnIdpCredential: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnIdpCredential")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnRefreshToken(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnRefreshToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturnRefreshToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnRefreshToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnSecureToken(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnSecureToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturnSecureToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnSecureToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

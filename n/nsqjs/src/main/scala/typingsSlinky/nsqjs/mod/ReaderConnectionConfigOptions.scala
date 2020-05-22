@@ -4,114 +4,64 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReaderConnectionConfigOptions extends ConnectionConfigOptions {
-  var lookupdHTTPAddresses: js.UndefOr[String | js.Array[String]] = js.native
-  var lookupdPollInterval: js.UndefOr[Double] = js.native
-  var lookupdPollJitter: js.UndefOr[Double] = js.native
-  var maxAttempts: js.UndefOr[Double] = js.native
-  var maxBackoffDuration: js.UndefOr[Double] = js.native
-  var name: js.UndefOr[String] = js.native
-  var nsqdTCPAddresses: js.UndefOr[String | js.Array[String]] = js.native
+  var lookupdHTTPAddresses: js.UndefOr[String | js.Array[String]] = js.undefined
+  var lookupdPollInterval: js.UndefOr[Double] = js.undefined
+  var lookupdPollJitter: js.UndefOr[Double] = js.undefined
+  var maxAttempts: js.UndefOr[Double] = js.undefined
+  var maxBackoffDuration: js.UndefOr[Double] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var nsqdTCPAddresses: js.UndefOr[String | js.Array[String]] = js.undefined
 }
 
 object ReaderConnectionConfigOptions {
   @scala.inline
-  def apply(): ReaderConnectionConfigOptions = {
+  def apply(
+    authSecret: String = null,
+    clientId: String = null,
+    deflate: js.UndefOr[Boolean] = js.undefined,
+    deflateLevel: js.UndefOr[Double] = js.undefined,
+    heartbeatInterval: js.UndefOr[Double] = js.undefined,
+    lookupdHTTPAddresses: String | js.Array[String] = null,
+    lookupdPollInterval: js.UndefOr[Double] = js.undefined,
+    lookupdPollJitter: js.UndefOr[Double] = js.undefined,
+    maxAttempts: js.UndefOr[Double] = js.undefined,
+    maxBackoffDuration: js.UndefOr[Double] = js.undefined,
+    maxInFlight: js.UndefOr[Double] = js.undefined,
+    messageTimeout: js.UndefOr[Double] = js.undefined,
+    name: String = null,
+    nsqdTCPAddresses: String | js.Array[String] = null,
+    outputBufferSize: js.UndefOr[Double] = js.undefined,
+    outputBufferTimeout: js.UndefOr[Double] = js.undefined,
+    requeueDelay: js.UndefOr[Double] = js.undefined,
+    sampleRate: js.UndefOr[Double] = js.undefined,
+    snappy: js.UndefOr[Boolean] = js.undefined,
+    tls: js.UndefOr[Boolean] = js.undefined,
+    tlsVerification: js.UndefOr[Boolean] = js.undefined
+  ): ReaderConnectionConfigOptions = {
     val __obj = js.Dynamic.literal()
+    if (authSecret != null) __obj.updateDynamic("authSecret")(authSecret.asInstanceOf[js.Any])
+    if (clientId != null) __obj.updateDynamic("clientId")(clientId.asInstanceOf[js.Any])
+    if (!js.isUndefined(deflate)) __obj.updateDynamic("deflate")(deflate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(deflateLevel)) __obj.updateDynamic("deflateLevel")(deflateLevel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(heartbeatInterval)) __obj.updateDynamic("heartbeatInterval")(heartbeatInterval.get.asInstanceOf[js.Any])
+    if (lookupdHTTPAddresses != null) __obj.updateDynamic("lookupdHTTPAddresses")(lookupdHTTPAddresses.asInstanceOf[js.Any])
+    if (!js.isUndefined(lookupdPollInterval)) __obj.updateDynamic("lookupdPollInterval")(lookupdPollInterval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lookupdPollJitter)) __obj.updateDynamic("lookupdPollJitter")(lookupdPollJitter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxAttempts)) __obj.updateDynamic("maxAttempts")(maxAttempts.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxBackoffDuration)) __obj.updateDynamic("maxBackoffDuration")(maxBackoffDuration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxInFlight)) __obj.updateDynamic("maxInFlight")(maxInFlight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(messageTimeout)) __obj.updateDynamic("messageTimeout")(messageTimeout.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (nsqdTCPAddresses != null) __obj.updateDynamic("nsqdTCPAddresses")(nsqdTCPAddresses.asInstanceOf[js.Any])
+    if (!js.isUndefined(outputBufferSize)) __obj.updateDynamic("outputBufferSize")(outputBufferSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(outputBufferTimeout)) __obj.updateDynamic("outputBufferTimeout")(outputBufferTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(requeueDelay)) __obj.updateDynamic("requeueDelay")(requeueDelay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sampleRate)) __obj.updateDynamic("sampleRate")(sampleRate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(snappy)) __obj.updateDynamic("snappy")(snappy.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tls)) __obj.updateDynamic("tls")(tls.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tlsVerification)) __obj.updateDynamic("tlsVerification")(tlsVerification.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReaderConnectionConfigOptions]
   }
-  @scala.inline
-  implicit class ReaderConnectionConfigOptionsOps[Self <: ReaderConnectionConfigOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLookupdHTTPAddresses(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookupdHTTPAddresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLookupdHTTPAddresses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookupdHTTPAddresses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLookupdPollInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookupdPollInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLookupdPollInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookupdPollInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLookupdPollJitter(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookupdPollJitter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLookupdPollJitter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookupdPollJitter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxAttempts(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAttempts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxAttempts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAttempts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxBackoffDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBackoffDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxBackoffDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBackoffDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNsqdTCPAddresses(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nsqdTCPAddresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNsqdTCPAddresses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nsqdTCPAddresses")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

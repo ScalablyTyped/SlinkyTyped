@@ -4,166 +4,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait QueryResponse extends js.Object {
-  var cacheHit: js.UndefOr[Boolean] = js.native
-  var errors: js.UndefOr[js.Array[ErrorProto]] = js.native
-  var jobComplete: js.UndefOr[Boolean] = js.native
-  var jobReference: js.UndefOr[JobReference] = js.native
-  var kind: js.UndefOr[String] = js.native
-  var numDmlAffectedRows: js.UndefOr[String] = js.native
-  var pageToken: js.UndefOr[String] = js.native
-  var rows: js.UndefOr[js.Array[TableRow]] = js.native
-  var schema: js.UndefOr[TableSchema] = js.native
-  var totalBytesProcessed: js.UndefOr[String] = js.native
-  var totalRows: js.UndefOr[String] = js.native
+  var cacheHit: js.UndefOr[Boolean] = js.undefined
+  var errors: js.UndefOr[js.Array[ErrorProto]] = js.undefined
+  var jobComplete: js.UndefOr[Boolean] = js.undefined
+  var jobReference: js.UndefOr[JobReference] = js.undefined
+  var kind: js.UndefOr[String] = js.undefined
+  var numDmlAffectedRows: js.UndefOr[String] = js.undefined
+  var pageToken: js.UndefOr[String] = js.undefined
+  var rows: js.UndefOr[js.Array[TableRow]] = js.undefined
+  var schema: js.UndefOr[TableSchema] = js.undefined
+  var totalBytesProcessed: js.UndefOr[String] = js.undefined
+  var totalRows: js.UndefOr[String] = js.undefined
 }
 
 object QueryResponse {
   @scala.inline
-  def apply(): QueryResponse = {
+  def apply(
+    cacheHit: js.UndefOr[Boolean] = js.undefined,
+    errors: js.Array[ErrorProto] = null,
+    jobComplete: js.UndefOr[Boolean] = js.undefined,
+    jobReference: JobReference = null,
+    kind: String = null,
+    numDmlAffectedRows: String = null,
+    pageToken: String = null,
+    rows: js.Array[TableRow] = null,
+    schema: TableSchema = null,
+    totalBytesProcessed: String = null,
+    totalRows: String = null
+  ): QueryResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cacheHit)) __obj.updateDynamic("cacheHit")(cacheHit.get.asInstanceOf[js.Any])
+    if (errors != null) __obj.updateDynamic("errors")(errors.asInstanceOf[js.Any])
+    if (!js.isUndefined(jobComplete)) __obj.updateDynamic("jobComplete")(jobComplete.get.asInstanceOf[js.Any])
+    if (jobReference != null) __obj.updateDynamic("jobReference")(jobReference.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (numDmlAffectedRows != null) __obj.updateDynamic("numDmlAffectedRows")(numDmlAffectedRows.asInstanceOf[js.Any])
+    if (pageToken != null) __obj.updateDynamic("pageToken")(pageToken.asInstanceOf[js.Any])
+    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
+    if (schema != null) __obj.updateDynamic("schema")(schema.asInstanceOf[js.Any])
+    if (totalBytesProcessed != null) __obj.updateDynamic("totalBytesProcessed")(totalBytesProcessed.asInstanceOf[js.Any])
+    if (totalRows != null) __obj.updateDynamic("totalRows")(totalRows.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryResponse]
   }
-  @scala.inline
-  implicit class QueryResponseOps[Self <: QueryResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCacheHit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheHit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheHit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheHit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrors(value: js.Array[ErrorProto]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobComplete(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobComplete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobComplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobReference(value: JobReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobReference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumDmlAffectedRows(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numDmlAffectedRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumDmlAffectedRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numDmlAffectedRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRows(value: js.Array[TableRow]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchema(value: TableSchema): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchema: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalBytesProcessed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalBytesProcessed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalBytesProcessed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalBytesProcessed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalRows(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalRows")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

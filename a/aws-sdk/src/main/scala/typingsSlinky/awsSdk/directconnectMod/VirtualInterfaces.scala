@@ -14,29 +14,10 @@ trait VirtualInterfaces extends js.Object {
 
 object VirtualInterfaces {
   @scala.inline
-  def apply(): VirtualInterfaces = {
+  def apply(virtualInterfaces: VirtualInterfaceList = null): VirtualInterfaces = {
     val __obj = js.Dynamic.literal()
+    if (virtualInterfaces != null) __obj.updateDynamic("virtualInterfaces")(virtualInterfaces.asInstanceOf[js.Any])
     __obj.asInstanceOf[VirtualInterfaces]
   }
-  @scala.inline
-  implicit class VirtualInterfacesOps[Self <: VirtualInterfaces] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVirtualInterfaces(value: VirtualInterfaceList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualInterfaces")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualInterfaces: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualInterfaces")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

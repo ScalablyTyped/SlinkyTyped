@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.UI.ViewManagement.ApplicationViewConsolidatedEventArgs")
 @js.native
 abstract class ApplicationViewConsolidatedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.UI.ViewManagement.ApplicationViewConsolidatedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.UI.ViewManagement.ApplicationViewConsolidatedEventArgs {
+  /** Indicates whether the window consolidation was user- or system-initiated. */
+  /* CompleteClass */
+  override var isUserInitiated: Boolean = js.native
+}
 

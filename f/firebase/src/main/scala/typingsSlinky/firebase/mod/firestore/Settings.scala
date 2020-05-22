@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Settings extends js.Object {
   /**
     * An approximate cache size threshold for the on-disk data. If the cache grows beyond this
@@ -15,7 +14,7 @@ trait Settings extends js.Object {
     * The default value is 40 MB. The threshold must be set to at least 1 MB, and can be set to
     * CACHE_SIZE_UNLIMITED to disable garbage collection.
     */
-  var cacheSizeBytes: js.UndefOr[Double] = js.native
+  var cacheSizeBytes: js.UndefOr[Double] = js.undefined
   /**
     * Forces the SDK’s underlying network transport (WebChannel) to use
     * long-polling. Each response from the backend will be closed immediately
@@ -32,11 +31,11 @@ trait Settings extends js.Object {
     *
     * @webonly
     */
-  var experimentalForceLongPolling: js.UndefOr[Boolean] = js.native
+  var experimentalForceLongPolling: js.UndefOr[Boolean] = js.undefined
   /** The hostname to connect to. */
-  var host: js.UndefOr[String] = js.native
+  var host: js.UndefOr[String] = js.undefined
   /** Whether to use SSL when connecting. */
-  var ssl: js.UndefOr[Boolean] = js.native
+  var ssl: js.UndefOr[Boolean] = js.undefined
   /**
     * Specifies whether to use `Timestamp` objects for timestamp fields in
     * `DocumentSnapshot`s. This is enabled by default and should not be
@@ -47,92 +46,47 @@ trait Settings extends js.Object {
     * causes unexpected behavior when using a timestamp from a snapshot as a
     * part of a subsequent query.
     *
-    * So now Firestore returns `Timestamp` values instead of `Date`, avoiding
-    * this kind of problem.
+    * Now, Firestore returns `Timestamp` values for all timestamp values stored
+    * in Cloud Firestore instead of system `Date` objects, avoiding this kind
+    * of problem. Consequently, you must update your code to handle `Timestamp`
+    * objects instead of `Date` objects.
     *
-    * To opt into the old behavior of returning `Date` objects, you can
-    * temporarily set `timestampsInSnapshots` to false.
+    * If you want to **temporarily** opt into the old behavior of returning
+    * `Date` objects, you may **temporarily** set `timestampsInSnapshots` to
+    * false. Opting into this behavior will no longer be possible in the next
+    * major release of Firestore, after which code that expects Date objects
+    * **will break**.
+    *
+    * @example **Using Date objects in Firestore.**
+    * // With deprecated setting `timestampsInSnapshot: true`:
+    * const date : Date = snapshot.get('created_at');
+    * // With new default behavior:
+    * const timestamp : Timestamp = snapshot.get('created_at');
+    * const date : Date = timestamp.toDate();
     *
     * @deprecated This setting will be removed in a future release. You should
     * update your code to expect `Timestamp` objects and stop using the
     * `timestampsInSnapshots` setting.
     */
-  var timestampsInSnapshots: js.UndefOr[Boolean] = js.native
+  var timestampsInSnapshots: js.UndefOr[Boolean] = js.undefined
 }
 
 object Settings {
   @scala.inline
-  def apply(): Settings = {
+  def apply(
+    cacheSizeBytes: js.UndefOr[Double] = js.undefined,
+    experimentalForceLongPolling: js.UndefOr[Boolean] = js.undefined,
+    host: String = null,
+    ssl: js.UndefOr[Boolean] = js.undefined,
+    timestampsInSnapshots: js.UndefOr[Boolean] = js.undefined
+  ): Settings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cacheSizeBytes)) __obj.updateDynamic("cacheSizeBytes")(cacheSizeBytes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(experimentalForceLongPolling)) __obj.updateDynamic("experimentalForceLongPolling")(experimentalForceLongPolling.get.asInstanceOf[js.Any])
+    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
+    if (!js.isUndefined(ssl)) __obj.updateDynamic("ssl")(ssl.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timestampsInSnapshots)) __obj.updateDynamic("timestampsInSnapshots")(timestampsInSnapshots.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Settings]
   }
-  @scala.inline
-  implicit class SettingsOps[Self <: Settings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCacheSizeBytes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheSizeBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheSizeBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheSizeBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExperimentalForceLongPolling(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experimentalForceLongPolling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExperimentalForceLongPolling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experimentalForceLongPolling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSsl(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSsl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestampsInSnapshots(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampsInSnapshots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestampsInSnapshots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampsInSnapshots")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

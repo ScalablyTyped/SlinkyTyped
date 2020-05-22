@@ -8,7 +8,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Service of {@link Encryptor} */
-@js.native
 trait Encryptor
   extends XReferenceResolvedListener
      with XReferenceCollector

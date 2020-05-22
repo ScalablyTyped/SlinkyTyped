@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 package object mod {
   type AdaptorPrefixer = js.Function1[/* map */ typingsSlinky.ractive.mod.ValueMap, typingsSlinky.ractive.mod.ValueMap]
+  type Component = typingsSlinky.ractive.mod.Static[typingsSlinky.ractive.mod.Ractive[typingsSlinky.ractive.mod.Ractive[js.Any]]] | (js.Promise[
+    typingsSlinky.ractive.mod.Static[typingsSlinky.ractive.mod.Ractive[typingsSlinky.ractive.mod.Ractive[js.Any]]]
+  ])
+  type Computation[T /* <: typingsSlinky.ractive.mod.Ractive[T] */] = java.lang.String | typingsSlinky.ractive.mod.ComputationFn[T] | typingsSlinky.ractive.mod.ComputationDescriptor[T]
   type ComputationFn[T /* <: typingsSlinky.ractive.mod.Ractive[T] */] = js.ThisFunction0[/* this */ T, js.Any]
   type CssFn = js.Function1[/* data */ typingsSlinky.ractive.mod.DataGetFn, java.lang.String]
   type Data = typingsSlinky.ractive.mod.ValueMap
@@ -55,6 +59,7 @@ package object mod {
     /* helper */ typingsSlinky.ractive.mod.ParseHelper, 
     java.lang.String | (js.Array[js.Object | java.lang.String]) | typingsSlinky.ractive.mod.ParsedTemplate
   ]
+  type Partial = java.lang.String | js.Array[js.Any] | typingsSlinky.ractive.mod.ParseFn | typingsSlinky.ractive.mod.Macro
   type PartialMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.ractive.mod.Partial]
   type Plugin = js.Function1[/* PluginArgsBase */ js.Any, scala.Unit]
   type PluginExtend = js.Function1[/* PluginArgsExtend */ js.Any, scala.Unit]
@@ -65,6 +70,9 @@ package object mod {
     /* right */ js.Any, 
     typingsSlinky.ractive.ractiveNumbers.`1` | typingsSlinky.ractive.ractiveNumbers.`0` | typingsSlinky.ractive.ractiveNumbers.`-1`
   ]
+  type Shuffler = scala.Boolean | java.lang.String | typingsSlinky.ractive.mod.ShuffleFn
+  type Target = java.lang.String | org.scalajs.dom.raw.HTMLElement | typingsSlinky.std.ArrayLike[js.Any]
+  type Template = typingsSlinky.ractive.mod.ParsedTemplate | java.lang.String | js.Array[js.Any] | typingsSlinky.ractive.mod.ParseFn
   type Transition = js.Function2[
     /* helper */ typingsSlinky.ractive.mod.TransitionHelper, 
     /* repeated */ js.Any, 

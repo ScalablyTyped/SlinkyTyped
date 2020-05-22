@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OnSendHeadersFilter extends js.Object {
   /**
     * Array of URL patterns that will be used to filter out the requests that do not
     * match the URL patterns.
     */
-  var urls: js.Array[String] = js.native
+  var urls: js.Array[String]
 }
 
 object OnSendHeadersFilter {
@@ -19,19 +18,5 @@ object OnSendHeadersFilter {
     val __obj = js.Dynamic.literal(urls = urls.asInstanceOf[js.Any])
     __obj.asInstanceOf[OnSendHeadersFilter]
   }
-  @scala.inline
-  implicit class OnSendHeadersFilterOps[Self <: OnSendHeadersFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUrls(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urls")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

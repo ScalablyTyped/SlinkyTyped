@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TSUnionType
   extends Node
      with TSType {
   @JSName("type")
-  var type_TSUnionType: typingsSlinky.babelTypes.babelTypesStrings.TSUnionType = js.native
-  var types: js.Array[TSType] = js.native
+  var type_TSUnionType: typingsSlinky.babelTypes.babelTypesStrings.TSUnionType
+  var types: js.Array[TSType]
 }
 
 @JSImport("babel-types", "TSUnionType")

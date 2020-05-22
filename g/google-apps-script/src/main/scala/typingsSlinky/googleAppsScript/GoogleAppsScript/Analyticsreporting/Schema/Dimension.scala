@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Dimension extends js.Object {
-  var histogramBuckets: js.UndefOr[js.Array[String]] = js.native
-  var name: js.UndefOr[String] = js.native
+  var histogramBuckets: js.UndefOr[js.Array[String]] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
 }
 
 object Dimension {
   @scala.inline
-  def apply(): Dimension = {
+  def apply(histogramBuckets: js.Array[String] = null, name: String = null): Dimension = {
     val __obj = js.Dynamic.literal()
+    if (histogramBuckets != null) __obj.updateDynamic("histogramBuckets")(histogramBuckets.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[Dimension]
   }
-  @scala.inline
-  implicit class DimensionOps[Self <: Dimension] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHistogramBuckets(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("histogramBuckets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHistogramBuckets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("histogramBuckets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

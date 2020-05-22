@@ -30,77 +30,20 @@ trait DescribeHomeRegionControlsRequest extends js.Object {
 
 object DescribeHomeRegionControlsRequest {
   @scala.inline
-  def apply(): DescribeHomeRegionControlsRequest = {
+  def apply(
+    ControlId: ControlId = null,
+    HomeRegion: HomeRegion = null,
+    MaxResults: js.UndefOr[DescribeHomeRegionControlsMaxResults] = js.undefined,
+    NextToken: Token = null,
+    Target: Target = null
+  ): DescribeHomeRegionControlsRequest = {
     val __obj = js.Dynamic.literal()
+    if (ControlId != null) __obj.updateDynamic("ControlId")(ControlId.asInstanceOf[js.Any])
+    if (HomeRegion != null) __obj.updateDynamic("HomeRegion")(HomeRegion.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxResults)) __obj.updateDynamic("MaxResults")(MaxResults.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (Target != null) __obj.updateDynamic("Target")(Target.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeHomeRegionControlsRequest]
   }
-  @scala.inline
-  implicit class DescribeHomeRegionControlsRequestOps[Self <: DescribeHomeRegionControlsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withControlId(value: ControlId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ControlId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControlId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ControlId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHomeRegion(value: HomeRegion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HomeRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHomeRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HomeRegion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: DescribeHomeRegionControlsMaxResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: Token): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: Target): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Target")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

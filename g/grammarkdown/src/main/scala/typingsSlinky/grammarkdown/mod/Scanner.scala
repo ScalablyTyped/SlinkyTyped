@@ -1,5 +1,6 @@
 package typingsSlinky.grammarkdown.mod
 
+import typingsSlinky.esfxCancelable.distMod.Cancelable
 import typingsSlinky.prex.mod.CancellationToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +19,13 @@ class Scanner protected ()
     filename: String,
     text: String,
     diagnostics: typingsSlinky.grammarkdown.diagnosticsMod.DiagnosticMessages,
-    cancellationToken: CancellationToken
+    cancelable: Cancelable
+  ) = this()
+  def this(
+    filename: String,
+    text: String,
+    diagnostics: typingsSlinky.grammarkdown.diagnosticsMod.DiagnosticMessages,
+    cancelable: CancellationToken
   ) = this()
 }
 

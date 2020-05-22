@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VersionUpgradeEventObject extends js.Object {
-  val DocumentVersion: String = js.native
+  val DocumentVersion: String
   @JSName("InfoPath.VersionUpgradeEventObject_typekey")
-  var InfoPathDotVersionUpgradeEventObject_typekey: VersionUpgradeEventObject = js.native
-  var ReturnStatus: Boolean = js.native
-  val SolutionVersion: String = js.native
-  val XDocument: _XDocument = js.native
+  var InfoPathDotVersionUpgradeEventObject_typekey: VersionUpgradeEventObject
+  var ReturnStatus: Boolean
+  val SolutionVersion: String
+  val XDocument: _XDocument
 }
 
 object VersionUpgradeEventObject {
@@ -27,43 +26,5 @@ object VersionUpgradeEventObject {
     __obj.updateDynamic("InfoPath.VersionUpgradeEventObject_typekey")(InfoPathDotVersionUpgradeEventObject_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[VersionUpgradeEventObject]
   }
-  @scala.inline
-  implicit class VersionUpgradeEventObjectOps[Self <: VersionUpgradeEventObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocumentVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInfoPathDotVersionUpgradeEventObject_typekey(value: VersionUpgradeEventObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InfoPath.VersionUpgradeEventObject_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReturnStatus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSolutionVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SolutionVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withXDocument(value: _XDocument): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("XDocument")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

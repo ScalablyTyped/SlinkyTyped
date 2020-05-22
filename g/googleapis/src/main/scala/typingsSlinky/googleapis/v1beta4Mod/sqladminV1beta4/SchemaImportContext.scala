@@ -1,6 +1,6 @@
 package typingsSlinky.googleapis.v1beta4Mod.sqladminV1beta4
 
-import typingsSlinky.googleapis.AnonColumns
+import typingsSlinky.googleapis.anon.Columns
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait SchemaImportContext extends js.Object {
   /**
     * Options for importing data as CSV.
     */
-  var csvImportOptions: js.UndefOr[AnonColumns] = js.native
+  var csvImportOptions: js.UndefOr[Columns] = js.native
   /**
     * The target database for the import. If fileType is SQL, this field is
     * required only if the import file does not specify a database, and is
@@ -45,89 +45,22 @@ trait SchemaImportContext extends js.Object {
 
 object SchemaImportContext {
   @scala.inline
-  def apply(): SchemaImportContext = {
+  def apply(
+    csvImportOptions: Columns = null,
+    database: String = null,
+    fileType: String = null,
+    importUser: String = null,
+    kind: String = null,
+    uri: String = null
+  ): SchemaImportContext = {
     val __obj = js.Dynamic.literal()
+    if (csvImportOptions != null) __obj.updateDynamic("csvImportOptions")(csvImportOptions.asInstanceOf[js.Any])
+    if (database != null) __obj.updateDynamic("database")(database.asInstanceOf[js.Any])
+    if (fileType != null) __obj.updateDynamic("fileType")(fileType.asInstanceOf[js.Any])
+    if (importUser != null) __obj.updateDynamic("importUser")(importUser.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (uri != null) __obj.updateDynamic("uri")(uri.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaImportContext]
   }
-  @scala.inline
-  implicit class SchemaImportContextOps[Self <: SchemaImportContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCsvImportOptions(value: AnonColumns): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csvImportOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCsvImportOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csvImportOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatabase(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatabase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportUser(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importUser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

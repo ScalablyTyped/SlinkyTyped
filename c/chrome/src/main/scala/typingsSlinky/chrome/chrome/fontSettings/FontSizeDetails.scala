@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FontSizeDetails extends js.Object {
   /** The level of control this extension has over the setting. */
-  var levelOfControl: String = js.native
+  var levelOfControl: String
   /** The font size in pixels. */
-  var pixelSize: Double = js.native
+  var pixelSize: Double
 }
 
 object FontSizeDetails {
@@ -18,25 +17,5 @@ object FontSizeDetails {
     val __obj = js.Dynamic.literal(levelOfControl = levelOfControl.asInstanceOf[js.Any], pixelSize = pixelSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[FontSizeDetails]
   }
-  @scala.inline
-  implicit class FontSizeDetailsOps[Self <: FontSizeDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLevelOfControl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("levelOfControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPixelSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

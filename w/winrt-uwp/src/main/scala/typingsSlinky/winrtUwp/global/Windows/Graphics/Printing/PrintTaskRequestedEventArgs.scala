@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Graphics.Printing.PrintTaskRequestedEventArgs")
 @js.native
 abstract class PrintTaskRequestedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Graphics.Printing.PrintTaskRequestedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.Graphics.Printing.PrintTaskRequestedEventArgs {
+  /** Gets the PrintTaskRequest object for a print task. */
+  /* CompleteClass */
+  override var request: typingsSlinky.winrtUwp.Windows.Graphics.Printing.PrintTaskRequest = js.native
+}
 

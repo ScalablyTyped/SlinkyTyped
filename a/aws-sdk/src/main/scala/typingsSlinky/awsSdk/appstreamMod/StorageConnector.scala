@@ -22,47 +22,15 @@ trait StorageConnector extends js.Object {
 
 object StorageConnector {
   @scala.inline
-  def apply(ConnectorType: StorageConnectorType): StorageConnector = {
+  def apply(
+    ConnectorType: StorageConnectorType,
+    Domains: DomainList = null,
+    ResourceIdentifier: ResourceIdentifier = null
+  ): StorageConnector = {
     val __obj = js.Dynamic.literal(ConnectorType = ConnectorType.asInstanceOf[js.Any])
+    if (Domains != null) __obj.updateDynamic("Domains")(Domains.asInstanceOf[js.Any])
+    if (ResourceIdentifier != null) __obj.updateDynamic("ResourceIdentifier")(ResourceIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[StorageConnector]
   }
-  @scala.inline
-  implicit class StorageConnectorOps[Self <: StorageConnector] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConnectorType(value: StorageConnectorType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectorType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDomains(value: DomainList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Domains")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomains: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Domains")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceIdentifier(value: ResourceIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceIdentifier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

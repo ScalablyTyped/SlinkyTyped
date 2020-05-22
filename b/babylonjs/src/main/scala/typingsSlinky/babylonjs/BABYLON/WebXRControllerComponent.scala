@@ -5,73 +5,72 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WebXRControllerComponent extends IDisposable {
-  var _axes: js.Any = js.native
-  var _axesIndices: js.Any = js.native
-  var _buttonIndex: js.Any = js.native
-  var _changes: js.Any = js.native
-  var _currentValue: js.Any = js.native
-  var _hasChanges: js.Any = js.native
-  var _pressed: js.Any = js.native
-  var _touched: js.Any = js.native
+  var _axes: js.Any
+  var _axesIndices: js.Any
+  var _buttonIndex: js.Any
+  var _changes: js.Any
+  var _currentValue: js.Any
+  var _hasChanges: js.Any
+  var _pressed: js.Any
+  var _touched: js.Any
   /**
     * the id of this component
     */
-  var id: String = js.native
+  var id: String
   /**
     * If axes are available for this component (like a touchpad or thumbstick) the observers will be notified when
     * the axes data changes
     */
-  var onAxisValueChangedObservable: Observable[Y] = js.native
+  var onAxisValueChangedObservable: Observable[Y]
   /**
     * Observers registered here will be triggered when the state of a button changes
     * State change is either pressed / touched / value
     */
-  var onButtonStateChangedObservable: Observable[WebXRControllerComponent] = js.native
+  var onButtonStateChangedObservable: Observable[WebXRControllerComponent]
   /**
     * the type of the component
     */
-  var `type`: MotionControllerComponentType = js.native
+  var `type`: MotionControllerComponentType
   /**
     * The current axes data. If this component has no axes it will still return an object { x: 0, y: 0 }
     */
-  def axes: IWebXRMotionControllerAxesValue = js.native
+  def axes: IWebXRMotionControllerAxesValue
   /**
     * Get the changes. Elements will be populated only if they changed with their previous and current value
     */
-  def changes: IWebXRMotionControllerComponentChanges = js.native
+  def changes: IWebXRMotionControllerComponentChanges
   /**
     * Return whether or not the component changed the last frame
     */
-  def hasChanges: Boolean = js.native
+  def hasChanges: Boolean
   /**
     * Are there axes correlating to this component
     * @return true is axes data is available
     */
-  def isAxes(): Boolean = js.native
+  def isAxes(): Boolean
   /**
     * Is this component a button (hence - pressable)
     * @returns true if can be pressed
     */
-  def isButton(): Boolean = js.native
+  def isButton(): Boolean
   /**
     * is the button currently pressed
     */
-  def pressed: Boolean = js.native
+  def pressed: Boolean
   /**
     * is the button currently touched
     */
-  def touched: Boolean = js.native
+  def touched: Boolean
   /**
     * update this component using the gamepad object it is in. Called on every frame
     * @param nativeController the native gamepad controller object
     */
-  def update(nativeController: IMinimalMotionControllerObject): Unit = js.native
+  def update(nativeController: IMinimalMotionControllerObject): Unit
   /**
     * Get the current value of this component
     */
-  def value: Double = js.native
+  def value: Double
 }
 
 object WebXRControllerComponent {
@@ -104,139 +103,5 @@ object WebXRControllerComponent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebXRControllerComponent]
   }
-  @scala.inline
-  implicit class WebXRControllerComponentOps[Self <: WebXRControllerComponent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_axes(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_axes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_axesIndices(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_axesIndices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_buttonIndex(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_buttonIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_changes(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_changes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_currentValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_currentValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_hasChanges(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_hasChanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_pressed(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_pressed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_touched(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_touched")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAxes(value: () => IWebXRMotionControllerAxesValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axes")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withChanges(value: () => IWebXRMotionControllerComponentChanges): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changes")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHasChanges(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasChanges")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsAxes(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAxes")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsButton(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isButton")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOnAxisValueChangedObservable(value: Observable[Y]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAxisValueChangedObservable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnButtonStateChangedObservable(value: Observable[WebXRControllerComponent]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onButtonStateChangedObservable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPressed(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pressed")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withTouched(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touched")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withType(value: MotionControllerComponentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: IMinimalMotionControllerObject => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withValue(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

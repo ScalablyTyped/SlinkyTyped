@@ -14,29 +14,10 @@ trait CreateDocumentResult extends js.Object {
 
 object CreateDocumentResult {
   @scala.inline
-  def apply(): CreateDocumentResult = {
+  def apply(DocumentDescription: DocumentDescription = null): CreateDocumentResult = {
     val __obj = js.Dynamic.literal()
+    if (DocumentDescription != null) __obj.updateDynamic("DocumentDescription")(DocumentDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDocumentResult]
   }
-  @scala.inline
-  implicit class CreateDocumentResultOps[Self <: CreateDocumentResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocumentDescription(value: DocumentDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentDescription")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

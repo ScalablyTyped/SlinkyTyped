@@ -4,92 +4,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StockToolsGuiDefinitionsFlagsOptions extends js.Object {
-  var flagCirclepin: js.UndefOr[StockToolsGuiDefinitionsFlagsFlagCirclepinOptions] = js.native
-  var flagDiamondpin: js.UndefOr[StockToolsGuiDefinitionsFlagsFlagDiamondpinOptions] = js.native
-  var flagSimplepin: js.UndefOr[StockToolsGuiDefinitionsFlagsFlagSimplepinOptions] = js.native
-  var flagSquarepin: js.UndefOr[StockToolsGuiDefinitionsFlagsFlagSquarepinOptions] = js.native
+  var flagCirclepin: js.UndefOr[StockToolsGuiDefinitionsFlagsFlagCirclepinOptions] = js.undefined
+  var flagDiamondpin: js.UndefOr[StockToolsGuiDefinitionsFlagsFlagDiamondpinOptions] = js.undefined
+  var flagSimplepin: js.UndefOr[StockToolsGuiDefinitionsFlagsFlagSimplepinOptions] = js.undefined
+  var flagSquarepin: js.UndefOr[StockToolsGuiDefinitionsFlagsFlagSquarepinOptions] = js.undefined
   /**
     * (Highstock) A collection of strings pointing to config options for the
     * items.
     */
-  var items: js.UndefOr[js.Array[_]] = js.native
+  var items: js.UndefOr[js.Array[_]] = js.undefined
 }
 
 object StockToolsGuiDefinitionsFlagsOptions {
   @scala.inline
-  def apply(): StockToolsGuiDefinitionsFlagsOptions = {
+  def apply(
+    flagCirclepin: StockToolsGuiDefinitionsFlagsFlagCirclepinOptions = null,
+    flagDiamondpin: StockToolsGuiDefinitionsFlagsFlagDiamondpinOptions = null,
+    flagSimplepin: StockToolsGuiDefinitionsFlagsFlagSimplepinOptions = null,
+    flagSquarepin: StockToolsGuiDefinitionsFlagsFlagSquarepinOptions = null,
+    items: js.Array[_] = null
+  ): StockToolsGuiDefinitionsFlagsOptions = {
     val __obj = js.Dynamic.literal()
+    if (flagCirclepin != null) __obj.updateDynamic("flagCirclepin")(flagCirclepin.asInstanceOf[js.Any])
+    if (flagDiamondpin != null) __obj.updateDynamic("flagDiamondpin")(flagDiamondpin.asInstanceOf[js.Any])
+    if (flagSimplepin != null) __obj.updateDynamic("flagSimplepin")(flagSimplepin.asInstanceOf[js.Any])
+    if (flagSquarepin != null) __obj.updateDynamic("flagSquarepin")(flagSquarepin.asInstanceOf[js.Any])
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
     __obj.asInstanceOf[StockToolsGuiDefinitionsFlagsOptions]
   }
-  @scala.inline
-  implicit class StockToolsGuiDefinitionsFlagsOptionsOps[Self <: StockToolsGuiDefinitionsFlagsOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFlagCirclepin(value: StockToolsGuiDefinitionsFlagsFlagCirclepinOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flagCirclepin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlagCirclepin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flagCirclepin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlagDiamondpin(value: StockToolsGuiDefinitionsFlagsFlagDiamondpinOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flagDiamondpin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlagDiamondpin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flagDiamondpin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlagSimplepin(value: StockToolsGuiDefinitionsFlagsFlagSimplepinOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flagSimplepin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlagSimplepin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flagSimplepin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlagSquarepin(value: StockToolsGuiDefinitionsFlagsFlagSquarepinOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flagSquarepin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlagSquarepin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flagSquarepin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItems(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

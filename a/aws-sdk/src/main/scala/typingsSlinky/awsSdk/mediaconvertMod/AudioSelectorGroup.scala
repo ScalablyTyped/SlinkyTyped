@@ -14,29 +14,10 @@ trait AudioSelectorGroup extends js.Object {
 
 object AudioSelectorGroup {
   @scala.inline
-  def apply(): AudioSelectorGroup = {
+  def apply(AudioSelectorNames: listOfStringMin1 = null): AudioSelectorGroup = {
     val __obj = js.Dynamic.literal()
+    if (AudioSelectorNames != null) __obj.updateDynamic("AudioSelectorNames")(AudioSelectorNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[AudioSelectorGroup]
   }
-  @scala.inline
-  implicit class AudioSelectorGroupOps[Self <: AudioSelectorGroup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudioSelectorNames(value: listOfStringMin1): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioSelectorNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioSelectorNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioSelectorNames")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

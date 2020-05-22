@@ -1,10 +1,10 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FeatureTemplatesProperties extends WidgetProperties {
   /**
     * When `true`, displays the template [filter](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTemplates.html#filterFunction).  ![featureTemplatesFilter](https://developers.arcgis.com/javascript/assets/img/apiref/widgets/featureTemplatesFilter.png)
@@ -13,19 +13,19 @@ trait FeatureTemplatesProperties extends WidgetProperties {
     *
     * @default true
     */
-  var filterEnabled: js.UndefOr[Boolean] = js.native
+  var filterEnabled: js.UndefOr[Boolean] = js.undefined
   /**
     * [Function](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTemplates.html#FilterFunction) can be defined to help filter [template items](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTemplates-TemplateItem.html) within the widget. A custom function can be used to aid when searching for templates. It takes a function which passes in an object containing a [name](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTemplates-TemplateItem.html#label) property of the [template item](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTemplates-TemplateItem.html).  ![featureTemplatesFilterFunction](https://developers.arcgis.com/javascript/assets/img/apiref/widgets/featureTemplatesFilterFunction.png)
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTemplates.html#filterFunction)
     */
-  var filterFunction: js.UndefOr[FilterFunction] = js.native
+  var filterFunction: js.UndefOr[FilterFunction] = js.undefined
   /**
     * Text used to filter items.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTemplates.html#filterText)
     */
-  var filterText: js.UndefOr[String] = js.native
+  var filterText: js.UndefOr[String] = js.undefined
   /**
     * It is possible to group [template items](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTemplates-TemplateItem.html). This can aid in managing various template items and how they display within the widget. The values are discussed below.
     *
@@ -41,131 +41,56 @@ trait FeatureTemplatesProperties extends WidgetProperties {
     *
     * @default layer
     */
-  var groupBy: js.UndefOr[String | GroupByFunction] = js.native
+  var groupBy: js.UndefOr[String | GroupByFunction] = js.undefined
   /**
     * An array of [Featurelayers](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html) to display within the widget. The order in which these layers are set in the array dictates how they display within the widget.
     * > The widget is designed to only display layers that are enabled for editing. It will not display layers that are enabled to only edit attributes.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTemplates.html#layers)
     */
-  var layers: js.UndefOr[js.Array[FeatureLayerProperties]] = js.native
+  var layers: js.UndefOr[js.Array[FeatureLayerProperties]] = js.undefined
   /**
     * The view model for this widget. This is a class that contains all the logic (properties and methods) that controls this widget's behavior. See the [FeatureTemplatesViewModel](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTemplates-FeatureTemplatesViewModel.html) class to access all properties and methods on the widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTemplates.html#viewModel)
     */
-  var viewModel: js.UndefOr[FeatureTemplatesViewModelProperties] = js.native
+  var viewModel: js.UndefOr[FeatureTemplatesViewModelProperties] = js.undefined
   /**
     * The visible elements that are displayed within the widget. This property provides the ability to turn individual elements of the widget's display on/off.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTemplates.html#visibleElements)
     */
-  var visibleElements: js.UndefOr[FeatureTemplatesVisibleElements] = js.native
+  var visibleElements: js.UndefOr[FeatureTemplatesVisibleElements] = js.undefined
 }
 
 object FeatureTemplatesProperties {
   @scala.inline
-  def apply(): FeatureTemplatesProperties = {
+  def apply(
+    container: String | HTMLElement = null,
+    destroyed: js.UndefOr[Boolean] = js.undefined,
+    filterEnabled: js.UndefOr[Boolean] = js.undefined,
+    filterFunction: /* filterName */ js.Any => Boolean = null,
+    filterText: String = null,
+    groupBy: String | GroupByFunction = null,
+    id: String = null,
+    label: String = null,
+    layers: js.Array[FeatureLayerProperties] = null,
+    viewModel: FeatureTemplatesViewModelProperties = null,
+    visibleElements: FeatureTemplatesVisibleElements = null
+  ): FeatureTemplatesProperties = {
     val __obj = js.Dynamic.literal()
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (!js.isUndefined(destroyed)) __obj.updateDynamic("destroyed")(destroyed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(filterEnabled)) __obj.updateDynamic("filterEnabled")(filterEnabled.get.asInstanceOf[js.Any])
+    if (filterFunction != null) __obj.updateDynamic("filterFunction")(js.Any.fromFunction1(filterFunction))
+    if (filterText != null) __obj.updateDynamic("filterText")(filterText.asInstanceOf[js.Any])
+    if (groupBy != null) __obj.updateDynamic("groupBy")(groupBy.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (layers != null) __obj.updateDynamic("layers")(layers.asInstanceOf[js.Any])
+    if (viewModel != null) __obj.updateDynamic("viewModel")(viewModel.asInstanceOf[js.Any])
+    if (visibleElements != null) __obj.updateDynamic("visibleElements")(visibleElements.asInstanceOf[js.Any])
     __obj.asInstanceOf[FeatureTemplatesProperties]
   }
-  @scala.inline
-  implicit class FeatureTemplatesPropertiesOps[Self <: FeatureTemplatesProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilterEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterFunction(value: /* filterName */ js.Any => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterFunction")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFilterFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterFunction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupByFunction1(value: /* grouping */ js.Any => String | js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupBy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGroupBy(value: String | GroupByFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayers(value: js.Array[FeatureLayerProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewModel(value: FeatureTemplatesViewModelProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewModel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibleElements(value: FeatureTemplatesVisibleElements): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleElements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibleElements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleElements")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -13,20 +13,19 @@ import scala.scalajs.js.annotation._
 /**
   * A factory for creating notebook model content.
   */
-@js.native
 trait IContentFactory extends js.Object {
   /**
     * The factory for output area models.
     */
-  val codeCellContentFactory: typingsSlinky.jupyterlabCells.modelMod.CodeCellModel.IContentFactory = js.native
+  val codeCellContentFactory: typingsSlinky.jupyterlabCells.modelMod.CodeCellModel.IContentFactory
   /**
     * The IModelDB in which to put data for the notebook model.
     */
-  var modelDB: IModelDB = js.native
+  var modelDB: IModelDB
   /**
     * Clone the content factory with a new IModelDB.
     */
-  def clone(modelDB: IModelDB): IContentFactory = js.native
+  def clone(modelDB: IModelDB): IContentFactory
   /**
     * Create a new cell by cell type.
     *
@@ -38,7 +37,7 @@ trait IContentFactory extends js.Object {
     * This method is intended to be a convenience method to programmaticaly
     * call the other cell creation methods in the factory.
     */
-  def createCell(`type`: CellType, opts: typingsSlinky.jupyterlabCells.modelMod.CellModel.IOptions): ICellModel = js.native
+  def createCell(`type`: CellType, opts: typingsSlinky.jupyterlabCells.modelMod.CellModel.IOptions): ICellModel
   /**
     * Create a new code cell.
     *
@@ -47,7 +46,7 @@ trait IContentFactory extends js.Object {
     * @returns A new code cell. If a source cell is provided, the
     *   new cell will be initialized with the data from the source.
     */
-  def createCodeCell(options: typingsSlinky.jupyterlabCells.modelMod.CodeCellModel.IOptions): ICodeCellModel = js.native
+  def createCodeCell(options: typingsSlinky.jupyterlabCells.modelMod.CodeCellModel.IOptions): ICodeCellModel
   /**
     * Create a new markdown cell.
     *
@@ -56,7 +55,7 @@ trait IContentFactory extends js.Object {
     * @returns A new markdown cell. If a source cell is provided, the
     *   new cell will be initialized with the data from the source.
     */
-  def createMarkdownCell(options: typingsSlinky.jupyterlabCells.modelMod.CellModel.IOptions): IMarkdownCellModel = js.native
+  def createMarkdownCell(options: typingsSlinky.jupyterlabCells.modelMod.CellModel.IOptions): IMarkdownCellModel
   /**
     * Create a new raw cell.
     *
@@ -65,7 +64,7 @@ trait IContentFactory extends js.Object {
     * @returns A new raw cell. If a source cell is provided, the
     *   new cell will be initialized with the data from the source.
     */
-  def createRawCell(options: typingsSlinky.jupyterlabCells.modelMod.CellModel.IOptions): IRawCellModel = js.native
+  def createRawCell(options: typingsSlinky.jupyterlabCells.modelMod.CellModel.IOptions): IRawCellModel
 }
 
 object IContentFactory {
@@ -82,55 +81,5 @@ object IContentFactory {
     val __obj = js.Dynamic.literal(clone = js.Any.fromFunction1(clone), codeCellContentFactory = codeCellContentFactory.asInstanceOf[js.Any], createCell = js.Any.fromFunction2(createCell), createCodeCell = js.Any.fromFunction1(createCodeCell), createMarkdownCell = js.Any.fromFunction1(createMarkdownCell), createRawCell = js.Any.fromFunction1(createRawCell), modelDB = modelDB.asInstanceOf[js.Any])
     __obj.asInstanceOf[IContentFactory]
   }
-  @scala.inline
-  implicit class IContentFactoryOps[Self <: IContentFactory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClone(value: IModelDB => IContentFactory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clone")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCodeCellContentFactory(value: typingsSlinky.jupyterlabCells.modelMod.CodeCellModel.IContentFactory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("codeCellContentFactory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreateCell(value: (CellType, typingsSlinky.jupyterlabCells.modelMod.CellModel.IOptions) => ICellModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createCell")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withCreateCodeCell(value: typingsSlinky.jupyterlabCells.modelMod.CodeCellModel.IOptions => ICodeCellModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createCodeCell")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreateMarkdownCell(value: typingsSlinky.jupyterlabCells.modelMod.CellModel.IOptions => IMarkdownCellModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createMarkdownCell")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreateRawCell(value: typingsSlinky.jupyterlabCells.modelMod.CellModel.IOptions => IRawCellModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createRawCell")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withModelDB(value: IModelDB): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelDB")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

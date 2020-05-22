@@ -24,41 +24,11 @@ trait SchemaDiskMoveRequest extends js.Object {
 
 object SchemaDiskMoveRequest {
   @scala.inline
-  def apply(): SchemaDiskMoveRequest = {
+  def apply(destinationZone: String = null, targetDisk: String = null): SchemaDiskMoveRequest = {
     val __obj = js.Dynamic.literal()
+    if (destinationZone != null) __obj.updateDynamic("destinationZone")(destinationZone.asInstanceOf[js.Any])
+    if (targetDisk != null) __obj.updateDynamic("targetDisk")(targetDisk.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDiskMoveRequest]
   }
-  @scala.inline
-  implicit class SchemaDiskMoveRequestOps[Self <: SchemaDiskMoveRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestinationZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationZone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetDisk(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetDisk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetDisk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetDisk")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

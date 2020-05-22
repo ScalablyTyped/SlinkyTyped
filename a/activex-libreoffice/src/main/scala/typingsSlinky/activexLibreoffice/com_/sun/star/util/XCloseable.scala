@@ -19,7 +19,6 @@ import scala.scalajs.js.annotation._
   * @see XCloseBroadcaster
   * @see XCloseListener
   */
-@js.native
 trait XCloseable extends XCloseBroadcaster {
   /**
     * try to close the object
@@ -50,7 +49,7 @@ trait XCloseable extends XCloseBroadcaster {
     * @see com.sun.star.lang.DisposedException
     * @throws CloseVetoException indicates that the closing object itself or any of its currently registered listeners disagree with this {@link close()} request.
     */
-  def close(DeliverOwnership: Boolean): Unit = js.native
+  def close(DeliverOwnership: Boolean): Unit
 }
 
 object XCloseable {
@@ -66,19 +65,5 @@ object XCloseable {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addCloseListener = js.Any.fromFunction1(addCloseListener), close = js.Any.fromFunction1(close), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeCloseListener = js.Any.fromFunction1(removeCloseListener))
     __obj.asInstanceOf[XCloseable]
   }
-  @scala.inline
-  implicit class XCloseableOps[Self <: XCloseable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClose(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -10,220 +10,59 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VectorOptions extends js.Object {
-  var declutter: js.UndefOr[Boolean] = js.native
-  var extent: js.UndefOr[Extent_] = js.native
-  var map: js.UndefOr[Map] = js.native
-  var maxResolution: js.UndefOr[Double] = js.native
-  var minResolution: js.UndefOr[Double] = js.native
-  var opacity: js.UndefOr[Double] = js.native
-  var renderBuffer: js.UndefOr[Double] = js.native
-  var renderMode: js.UndefOr[VectorRenderType | String] = js.native
-  var renderOrder: js.UndefOr[js.Function2[/* feature1 */ Feature, /* feature2 */ Feature, Double]] = js.native
-  var source: Vector = js.native
-  var style: js.UndefOr[Style | js.Array[Style] | StyleFunction] = js.native
-  var updateWhileAnimating: js.UndefOr[Boolean] = js.native
-  var updateWhileInteracting: js.UndefOr[Boolean] = js.native
-  var visible: js.UndefOr[Boolean] = js.native
-  var zIndex: js.UndefOr[Double] = js.native
+  var declutter: js.UndefOr[Boolean] = js.undefined
+  var extent: js.UndefOr[Extent_] = js.undefined
+  var map: js.UndefOr[Map] = js.undefined
+  var maxResolution: js.UndefOr[Double] = js.undefined
+  var minResolution: js.UndefOr[Double] = js.undefined
+  var opacity: js.UndefOr[Double] = js.undefined
+  var renderBuffer: js.UndefOr[Double] = js.undefined
+  var renderMode: js.UndefOr[VectorRenderType | String] = js.undefined
+  var renderOrder: js.UndefOr[js.Function2[/* feature1 */ Feature, /* feature2 */ Feature, Double]] = js.undefined
+  var source: Vector
+  var style: js.UndefOr[Style | js.Array[Style] | StyleFunction] = js.undefined
+  var updateWhileAnimating: js.UndefOr[Boolean] = js.undefined
+  var updateWhileInteracting: js.UndefOr[Boolean] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.undefined
+  var zIndex: js.UndefOr[Double] = js.undefined
 }
 
 object VectorOptions {
   @scala.inline
-  def apply(source: Vector): VectorOptions = {
+  def apply(
+    source: Vector,
+    declutter: js.UndefOr[Boolean] = js.undefined,
+    extent: Extent_ = null,
+    map: Map = null,
+    maxResolution: js.UndefOr[Double] = js.undefined,
+    minResolution: js.UndefOr[Double] = js.undefined,
+    opacity: js.UndefOr[Double] = js.undefined,
+    renderBuffer: js.UndefOr[Double] = js.undefined,
+    renderMode: VectorRenderType | String = null,
+    renderOrder: (/* feature1 */ Feature, /* feature2 */ Feature) => Double = null,
+    style: Style | js.Array[Style] | StyleFunction = null,
+    updateWhileAnimating: js.UndefOr[Boolean] = js.undefined,
+    updateWhileInteracting: js.UndefOr[Boolean] = js.undefined,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    zIndex: js.UndefOr[Double] = js.undefined
+  ): VectorOptions = {
     val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any])
+    if (!js.isUndefined(declutter)) __obj.updateDynamic("declutter")(declutter.get.asInstanceOf[js.Any])
+    if (extent != null) __obj.updateDynamic("extent")(extent.asInstanceOf[js.Any])
+    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxResolution)) __obj.updateDynamic("maxResolution")(maxResolution.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minResolution)) __obj.updateDynamic("minResolution")(minResolution.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(renderBuffer)) __obj.updateDynamic("renderBuffer")(renderBuffer.get.asInstanceOf[js.Any])
+    if (renderMode != null) __obj.updateDynamic("renderMode")(renderMode.asInstanceOf[js.Any])
+    if (renderOrder != null) __obj.updateDynamic("renderOrder")(js.Any.fromFunction2(renderOrder))
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(updateWhileAnimating)) __obj.updateDynamic("updateWhileAnimating")(updateWhileAnimating.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(updateWhileInteracting)) __obj.updateDynamic("updateWhileInteracting")(updateWhileInteracting.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zIndex)) __obj.updateDynamic("zIndex")(zIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[VectorOptions]
   }
-  @scala.inline
-  implicit class VectorOptionsOps[Self <: VectorOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSource(value: Vector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeclutter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("declutter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeclutter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("declutter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtent(value: Extent_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMap(value: Map): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResolution(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResolution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResolution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinResolution(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minResolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinResolution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minResolution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderBuffer(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderBuffer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderBuffer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderBuffer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderMode(value: VectorRenderType | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderOrder(value: (/* feature1 */ Feature, /* feature2 */ Feature) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderOrder")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderOrder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyleFunction2(
-      value: (/* feature */ Feature | typingsSlinky.openlayers.mod.render.Feature, /* resolution */ Double) => Style | js.Array[Style] | Null
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withStyle(value: Style | js.Array[Style] | StyleFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateWhileAnimating(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateWhileAnimating")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateWhileAnimating: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateWhileAnimating")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateWhileInteracting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateWhileInteracting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateWhileInteracting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateWhileInteracting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

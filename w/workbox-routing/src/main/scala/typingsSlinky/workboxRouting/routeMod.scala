@@ -1,7 +1,6 @@
 package typingsSlinky.workboxRouting
 
 import typingsSlinky.workboxRouting.httpmethodMod.HTTPMethod
-import typingsSlinky.workboxRouting.registerRouteMod.RegisterRouteCapture
 import typingsSlinky.workboxRouting.routeHandlerMod.RouteHandler
 import typingsSlinky.workboxRouting.routeMatchCallbackMod.RouteMatchCallback
 import typingsSlinky.workboxRouting.routeMatchCallbackMod.RouteMatchCallbackOptions
@@ -13,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object routeMod extends js.Object {
   @js.native
-  class Route[MatchReturn] protected () extends RegisterRouteCapture {
+  class Route[MatchReturn] protected () extends js.Object {
     def this(`match`: RouteMatchCallback[MatchReturn], handler: RouteHandler) = this()
     def this(`match`: RouteMatchCallback[MatchReturn], handler: RouteHandler, method: HTTPMethod) = this()
     val handler: RouteHandler = js.native

@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IGridEditApi[TEntity] extends js.Object {
-  var on: AfterCellEdit[TEntity] = js.native
+  var on: AfterCellEdit[TEntity]
 }
 
 object IGridEditApi {
@@ -16,19 +15,5 @@ object IGridEditApi {
     val __obj = js.Dynamic.literal(on = on.asInstanceOf[js.Any])
     __obj.asInstanceOf[IGridEditApi[TEntity]]
   }
-  @scala.inline
-  implicit class IGridEditApiOps[Self[tentity] <: IGridEditApi[tentity], TEntity] (val x: Self[TEntity]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TEntity] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TEntity]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[TEntity] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TEntity] with Other]
-    @scala.inline
-    def withOn(value: AfterCellEdit[TEntity]): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

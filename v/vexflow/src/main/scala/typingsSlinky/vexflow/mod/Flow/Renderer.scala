@@ -13,6 +13,10 @@ import scala.scalajs.js.annotation._
 class Renderer protected ()
   extends typingsSlinky.vexflow.Vex.Flow.Renderer {
   def this(sel: HTMLElement, backend: Backends) = this()
+  /* CompleteClass */
+  override def getContext(): IRenderContext = js.native
+  /* CompleteClass */
+  override def resize(width: Double, height: Double): typingsSlinky.vexflow.Vex.Flow.Renderer = js.native
 }
 
 /* static members */
@@ -45,5 +49,24 @@ object Renderer extends js.Object {
   def getSVGContext(sel: HTMLElement, backend: Backends, width: Double): typingsSlinky.vexflow.Vex.Flow.SVGContext = js.native
   def getSVGContext(sel: HTMLElement, backend: Backends, width: Double, height: Double): typingsSlinky.vexflow.Vex.Flow.SVGContext = js.native
   def getSVGContext(sel: HTMLElement, backend: Backends, width: Double, height: Double, background: String): typingsSlinky.vexflow.Vex.Flow.SVGContext = js.native
+  @js.native
+  object Backends extends js.Object {
+    /* 1 */ val CANVAS: typingsSlinky.vexflow.Vex.Flow.Renderer.Backends.CANVAS with Double = js.native
+    /* 0 */ val RAPHAEL: typingsSlinky.vexflow.Vex.Flow.Renderer.Backends.RAPHAEL with Double = js.native
+    /* 1 */ val SVG: typingsSlinky.vexflow.Vex.Flow.Renderer.Backends.SVG with Double = js.native
+    /* 2 */ val VML: typingsSlinky.vexflow.Vex.Flow.Renderer.Backends.VML with Double = js.native
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[typingsSlinky.vexflow.Vex.Flow.Renderer.Backends with Double] = js.native
+  }
+  
+  @js.native
+  object LineEndType extends js.Object {
+    /* 1 */ val DOWN: typingsSlinky.vexflow.Vex.Flow.Renderer.LineEndType.DOWN with Double = js.native
+    /* 1 */ val NONE: typingsSlinky.vexflow.Vex.Flow.Renderer.LineEndType.NONE with Double = js.native
+    /* 0 */ val UP: typingsSlinky.vexflow.Vex.Flow.Renderer.LineEndType.UP with Double = js.native
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[typingsSlinky.vexflow.Vex.Flow.Renderer.LineEndType with Double] = js.native
+  }
+  
 }
 

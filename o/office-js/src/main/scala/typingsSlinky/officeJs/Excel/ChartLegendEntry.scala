@@ -23,28 +23,28 @@ trait ChartLegendEntry extends ClientObject {
   var context_ChartLegendEntry: RequestContext = js.native
   /**
     *
-    * Represents the height of the legendEntry on the chart legend.
+    * Specifies the height of the legendEntry on the chart legend.
     *
     * [Api set: ExcelApi 1.8]
     */
   val height: Double = js.native
   /**
     *
-    * Represents the index of the legendEntry in the chart legend.
+    * Specifies the index of the legendEntry in the chart legend.
     *
     * [Api set: ExcelApi 1.8]
     */
   val index: Double = js.native
   /**
     *
-    * Represents the left of a chart legendEntry.
+    * Specifies the left of a chart legendEntry.
     *
     * [Api set: ExcelApi 1.8]
     */
   val left: Double = js.native
   /**
     *
-    * Represents the top of a chart legendEntry.
+    * Specifies the top of a chart legendEntry.
     *
     * [Api set: ExcelApi 1.8]
     */

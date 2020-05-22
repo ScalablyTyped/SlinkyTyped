@@ -11,26 +11,25 @@ import scala.scalajs.js.annotation._
   * provides methods to query data of the annotation and to show and hide it.
   * @see com.sun.star.sheet.CellAnnotation
   */
-@js.native
 trait XSheetAnnotation extends XInterface {
   /** returns the name of the user who last changed the annotation. */
-  val Author: String = js.native
+  val Author: String
   /** returns a formatted string representing the date when the annotation was last changed. */
-  val Date: String = js.native
+  val Date: String
   /** returns, whether the annotation is permanently visible. */
-  var IsVisible: Boolean = js.native
+  var IsVisible: Boolean
   /** returns the position of cell in the spreadsheet document that contains this annotation. */
-  val Position: CellAddress = js.native
+  val Position: CellAddress
   /** returns the name of the user who last changed the annotation. */
-  def getAuthor(): String = js.native
+  def getAuthor(): String
   /** returns a formatted string representing the date when the annotation was last changed. */
-  def getDate(): String = js.native
+  def getDate(): String
   /** returns, whether the annotation is permanently visible. */
-  def getIsVisible(): Boolean = js.native
+  def getIsVisible(): Boolean
   /** returns the position of cell in the spreadsheet document that contains this annotation. */
-  def getPosition(): CellAddress = js.native
+  def getPosition(): CellAddress
   /** specifies whether the annotation is permanently visible. */
-  def setIsVisible(bIsVisible: Boolean): Unit = js.native
+  def setIsVisible(bIsVisible: Boolean): Unit
 }
 
 object XSheetAnnotation {
@@ -52,67 +51,5 @@ object XSheetAnnotation {
     val __obj = js.Dynamic.literal(Author = Author.asInstanceOf[js.Any], Date = Date.asInstanceOf[js.Any], IsVisible = IsVisible.asInstanceOf[js.Any], Position = Position.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getAuthor = js.Any.fromFunction0(getAuthor), getDate = js.Any.fromFunction0(getDate), getIsVisible = js.Any.fromFunction0(getIsVisible), getPosition = js.Any.fromFunction0(getPosition), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setIsVisible = js.Any.fromFunction1(setIsVisible))
     __obj.asInstanceOf[XSheetAnnotation]
   }
-  @scala.inline
-  implicit class XSheetAnnotationOps[Self <: XSheetAnnotation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Author")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPosition(value: CellAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetAuthor(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAuthor")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDate(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetIsVisible(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getIsVisible")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetPosition(value: () => CellAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPosition")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetIsVisible(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setIsVisible")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

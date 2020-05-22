@@ -56,101 +56,24 @@ trait SchemaLintResult extends js.Object {
 
 object SchemaLintResult {
   @scala.inline
-  def apply(): SchemaLintResult = {
+  def apply(
+    bindingOrdinal: js.UndefOr[Double] = js.undefined,
+    debugMessage: String = null,
+    fieldName: String = null,
+    level: String = null,
+    locationOffset: js.UndefOr[Double] = js.undefined,
+    severity: String = null,
+    validationUnitName: String = null
+  ): SchemaLintResult = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(bindingOrdinal)) __obj.updateDynamic("bindingOrdinal")(bindingOrdinal.get.asInstanceOf[js.Any])
+    if (debugMessage != null) __obj.updateDynamic("debugMessage")(debugMessage.asInstanceOf[js.Any])
+    if (fieldName != null) __obj.updateDynamic("fieldName")(fieldName.asInstanceOf[js.Any])
+    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
+    if (!js.isUndefined(locationOffset)) __obj.updateDynamic("locationOffset")(locationOffset.get.asInstanceOf[js.Any])
+    if (severity != null) __obj.updateDynamic("severity")(severity.asInstanceOf[js.Any])
+    if (validationUnitName != null) __obj.updateDynamic("validationUnitName")(validationUnitName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLintResult]
   }
-  @scala.inline
-  implicit class SchemaLintResultOps[Self <: SchemaLintResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBindingOrdinal(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bindingOrdinal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBindingOrdinal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bindingOrdinal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebugMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebugMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFieldName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocationOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocationOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeverity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("severity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeverity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("severity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidationUnitName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationUnitName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidationUnitName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationUnitName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

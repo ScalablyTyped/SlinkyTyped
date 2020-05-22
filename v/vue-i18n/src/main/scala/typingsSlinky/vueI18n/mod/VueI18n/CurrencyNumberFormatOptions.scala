@@ -5,83 +5,47 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CurrencyNumberFormatOptions
   extends typingsSlinky.std.Intl.NumberFormatOptions
-     with NumberFormatOptions {
+     with _NumberFormatOptions {
    // Obligatory if style is 'currency'
   @JSName("currencyDisplay")
-  var currencyDisplay_CurrencyNumberFormatOptions: js.UndefOr[CurrencyDisplay] = js.native
+  var currencyDisplay_CurrencyNumberFormatOptions: js.UndefOr[CurrencyDisplay] = js.undefined
   @JSName("currency")
-  var currency_CurrencyNumberFormatOptions: String = js.native
-  var formatMatcher: js.UndefOr[FormatMatcher] = js.native
+  var currency_CurrencyNumberFormatOptions: String
+  var formatMatcher: js.UndefOr[FormatMatcher] = js.undefined
   @JSName("localeMatcher")
-  var localeMatcher_CurrencyNumberFormatOptions: js.UndefOr[LocaleMatcher] = js.native
+  var localeMatcher_CurrencyNumberFormatOptions: js.UndefOr[LocaleMatcher] = js.undefined
   @JSName("style")
-  var style_CurrencyNumberFormatOptions: currency = js.native
+  var style_CurrencyNumberFormatOptions: currency
 }
 
 object CurrencyNumberFormatOptions {
   @scala.inline
-  def apply(currency: String, style: currency): CurrencyNumberFormatOptions = {
+  def apply(
+    currency: String,
+    style: currency,
+    currencyDisplay: CurrencyDisplay = null,
+    formatMatcher: FormatMatcher = null,
+    localeMatcher: LocaleMatcher = null,
+    maximumFractionDigits: js.UndefOr[Double] = js.undefined,
+    maximumSignificantDigits: js.UndefOr[Double] = js.undefined,
+    minimumFractionDigits: js.UndefOr[Double] = js.undefined,
+    minimumIntegerDigits: js.UndefOr[Double] = js.undefined,
+    minimumSignificantDigits: js.UndefOr[Double] = js.undefined,
+    useGrouping: js.UndefOr[Boolean] = js.undefined
+  ): CurrencyNumberFormatOptions = {
     val __obj = js.Dynamic.literal(currency = currency.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any])
+    if (currencyDisplay != null) __obj.updateDynamic("currencyDisplay")(currencyDisplay.asInstanceOf[js.Any])
+    if (formatMatcher != null) __obj.updateDynamic("formatMatcher")(formatMatcher.asInstanceOf[js.Any])
+    if (localeMatcher != null) __obj.updateDynamic("localeMatcher")(localeMatcher.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximumFractionDigits)) __obj.updateDynamic("maximumFractionDigits")(maximumFractionDigits.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximumSignificantDigits)) __obj.updateDynamic("maximumSignificantDigits")(maximumSignificantDigits.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimumFractionDigits)) __obj.updateDynamic("minimumFractionDigits")(minimumFractionDigits.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimumIntegerDigits)) __obj.updateDynamic("minimumIntegerDigits")(minimumIntegerDigits.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimumSignificantDigits)) __obj.updateDynamic("minimumSignificantDigits")(minimumSignificantDigits.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useGrouping)) __obj.updateDynamic("useGrouping")(useGrouping.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CurrencyNumberFormatOptions]
   }
-  @scala.inline
-  implicit class CurrencyNumberFormatOptionsOps[Self <: CurrencyNumberFormatOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStyle(value: currency): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrencyDisplay(value: CurrencyDisplay): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currencyDisplay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrencyDisplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currencyDisplay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatMatcher(value: FormatMatcher): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatMatcher")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormatMatcher: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatMatcher")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocaleMatcher(value: LocaleMatcher): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localeMatcher")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocaleMatcher: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localeMatcher")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

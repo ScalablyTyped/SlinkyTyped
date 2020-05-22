@@ -173,6 +173,8 @@ class SharedBuilder_BasicLayoutProps_97420028 (val args: js.Array[js.Any])
   @scala.inline
   def rightContentRender(value: WithFalse[js.Function1[BasicLayoutProps, TagMod[Any]]]): this.type = set("rightContentRender", value.asInstanceOf[js.Any])
   @scala.inline
+  def siderMenuStyle(value: CSSProperties): this.type = set("siderMenuStyle", value.asInstanceOf[js.Any])
+  @scala.inline
   def siderWidth(value: Double): this.type = set("siderWidth", value.asInstanceOf[js.Any])
   @scala.inline
   def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])

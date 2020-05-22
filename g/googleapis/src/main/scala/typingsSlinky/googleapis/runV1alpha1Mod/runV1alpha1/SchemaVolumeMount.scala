@@ -39,77 +39,20 @@ trait SchemaVolumeMount extends js.Object {
 
 object SchemaVolumeMount {
   @scala.inline
-  def apply(): SchemaVolumeMount = {
+  def apply(
+    mountPath: String = null,
+    mountPropagation: String = null,
+    name: String = null,
+    readOnly: js.UndefOr[Boolean] = js.undefined,
+    subPath: String = null
+  ): SchemaVolumeMount = {
     val __obj = js.Dynamic.literal()
+    if (mountPath != null) __obj.updateDynamic("mountPath")(mountPath.asInstanceOf[js.Any])
+    if (mountPropagation != null) __obj.updateDynamic("mountPropagation")(mountPropagation.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(readOnly)) __obj.updateDynamic("readOnly")(readOnly.get.asInstanceOf[js.Any])
+    if (subPath != null) __obj.updateDynamic("subPath")(subPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaVolumeMount]
   }
-  @scala.inline
-  implicit class SchemaVolumeMountOps[Self <: SchemaVolumeMount] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMountPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMountPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMountPropagation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountPropagation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMountPropagation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountPropagation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subPath")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

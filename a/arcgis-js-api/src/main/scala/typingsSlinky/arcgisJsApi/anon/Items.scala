@@ -5,36 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Items[T /* <: Base */, Base] extends js.Object {
-  var items: js.UndefOr[js.Array[T] | Collection[T]] = js.native
+  var items: js.UndefOr[js.Array[T] | Collection[T]] = js.undefined
 }
 
 object Items {
   @scala.inline
-  def apply[T, Base](): Items[T, Base] = {
+  def apply[T, Base](items: js.Array[T] | Collection[T] = null): Items[T, Base] = {
     val __obj = js.Dynamic.literal()
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
     __obj.asInstanceOf[Items[T, Base]]
   }
-  @scala.inline
-  implicit class ItemsOps[Self[t, base] <: Items[t, base], T, Base] (val x: Self[T, Base]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T, Base] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T, Base]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[T, Base]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[T, Base]) with Other]
-    @scala.inline
-    def withItems(value: js.Array[T] | Collection[T]): Self[T, Base] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self[T, Base] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

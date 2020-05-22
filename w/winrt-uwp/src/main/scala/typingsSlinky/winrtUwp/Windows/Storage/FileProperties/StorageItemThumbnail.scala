@@ -12,50 +12,49 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the thumbnail image associated with a system resource (like a file or folder). */
-@js.native
 trait StorageItemThumbnail extends js.Object {
   /** Gets a value that indicates whether the thumbnail stream can be read from. */
-  var canRead: Boolean = js.native
+  var canRead: Boolean
   /** Gets a value that indicates whether the thumbnail stream can be written to. */
-  var canWrite: Boolean = js.native
+  var canWrite: Boolean
   /** Gets the MIME content type of the thumbnail image. */
-  var contentType: String = js.native
+  var contentType: String
   /** Gets the original (not scaled) height of the thumbnail image. */
-  var originalHeight: Double = js.native
+  var originalHeight: Double
   /** Gets the original (not scaled) width of the thumbnail image. */
-  var originalWidth: Double = js.native
+  var originalWidth: Double
   /** Gets the byte offset of the thumbnail stream. */
-  var position: Double = js.native
+  var position: Double
   /** Gets a value that indicates whether the thumbnail image returned was a cached version with a smaller size. */
-  var returnedSmallerCachedSize: Boolean = js.native
+  var returnedSmallerCachedSize: Boolean
   /** Gets or sets the size of the thumbnail image. */
-  var size: Double = js.native
+  var size: Double
   /** Gets a value that indicates if the thumbnail is an icon or an image. */
-  var `type`: ThumbnailType = js.native
+  var `type`: ThumbnailType
   /**
     * Creates a new stream over the thumbnail that is represented by the current storageItemThumbnail object.
     * @return The new thumbnail stream. The initial, internal position of the stream is 0.
     */
-  def cloneStream(): IRandomAccessStream = js.native
+  def cloneStream(): IRandomAccessStream
   /** Releases system resources that are exposed by a Windows Runtime object. */
-  def close(): Unit = js.native
+  def close(): Unit
   /**
     * Flushes data asynchronously in a sequential stream.
     * @return The stream flush operation.
     */
-  def flushAsync(): IPromiseWithIAsyncOperation[Boolean] = js.native
+  def flushAsync(): IPromiseWithIAsyncOperation[Boolean]
   /**
     * Retrieves the thumbnail image data as an undecoded stream.
     * @param position The position in the storage item to start reading thumbnail image data.
     * @return An object for reading the thumbnail image data.
     */
-  def getInputStreamAt(position: Double): IInputStream = js.native
+  def getInputStreamAt(position: Double): IInputStream
   /**
     * Retrieves an output stream object for writing thumbnail image data to a storage item.
     * @param position The position in the storage item to start writing thumbnail image data.
     * @return The output stream.
     */
-  def getOutputStreamAt(position: Double): IOutputStream = js.native
+  def getOutputStreamAt(position: Double): IOutputStream
   /**
     * Returns an asynchronous byte reader object.
     * @param buffer The buffer into which the asynchronous read operation places the bytes that are read.
@@ -63,18 +62,18 @@ trait StorageItemThumbnail extends js.Object {
     * @param options Specifies the type of the asynchronous read operation.
     * @return The asynchronous operation.
     */
-  def readAsync(buffer: IBuffer, count: Double, options: InputStreamOptions): IPromiseWithIAsyncOperationWithProgress[IBuffer, Double] = js.native
+  def readAsync(buffer: IBuffer, count: Double, options: InputStreamOptions): IPromiseWithIAsyncOperationWithProgress[IBuffer, Double]
   /**
     * Sets the offset of the thumbnail stream to the specified value.
     * @param position The number of bytes from the start of the thumbnail stream where the position of the thumbnail stream is set.
     */
-  def seek(position: Double): Unit = js.native
+  def seek(position: Double): Unit
   /**
     * Writes data asynchronously in a sequential stream.
     * @param buffer The buffer into which the asynchronous writer operation writes.
     * @return The byte writer operation.
     */
-  def writeAsync(buffer: IBuffer): IPromiseWithIAsyncOperationWithProgress[Double, Double] = js.native
+  def writeAsync(buffer: IBuffer): IPromiseWithIAsyncOperationWithProgress[Double, Double]
 }
 
 object StorageItemThumbnail {
@@ -102,117 +101,5 @@ object StorageItemThumbnail {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[StorageItemThumbnail]
   }
-  @scala.inline
-  implicit class StorageItemThumbnailOps[Self <: StorageItemThumbnail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCanRead(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canRead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCanWrite(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canWrite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCloneStream(value: () => IRandomAccessStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloneStream")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withClose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withContentType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFlushAsync(value: () => IPromiseWithIAsyncOperation[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flushAsync")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetInputStreamAt(value: Double => IInputStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getInputStreamAt")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetOutputStreamAt(value: Double => IOutputStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOutputStreamAt")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOriginalHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOriginalWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReadAsync(
-      value: (IBuffer, Double, InputStreamOptions) => IPromiseWithIAsyncOperationWithProgress[IBuffer, Double]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readAsync")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withReturnedSmallerCachedSize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnedSmallerCachedSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSeek(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seek")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: ThumbnailType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWriteAsync(value: IBuffer => IPromiseWithIAsyncOperationWithProgress[Double, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeAsync")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

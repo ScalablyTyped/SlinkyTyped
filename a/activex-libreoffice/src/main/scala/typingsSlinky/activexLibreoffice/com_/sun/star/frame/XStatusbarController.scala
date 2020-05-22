@@ -24,7 +24,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.frame.XDispatchProvider
   * @since OOo 2.0
   */
-@js.native
 trait XStatusbarController
   extends XStatusListener
      with XComponent
@@ -34,7 +33,7 @@ trait XStatusbarController
     * is called by a status bar if the user clicked with mouse into the field of the corresponding control.
     * @param aPos the current mouse position in pixel.
     */
-  def click(aPos: Point): Unit = js.native
+  def click(aPos: Point): Unit
   /**
     * is called by a status bar if a command event is available for a controller.
     * @param aPos the current mouse position in pixel.
@@ -42,40 +41,40 @@ trait XStatusbarController
     * @param bMouseEvent `TRUE` if the command is based on a mouse event, otherwise `FALSE` .
     * @param aData for future use only.
     */
-  def command(aPos: Point, nCommand: Double, bMouseEvent: Boolean, aData: js.Any): Unit = js.native
+  def command(aPos: Point, nCommand: Double, bMouseEvent: Boolean, aData: js.Any): Unit
   /**
     * is called by a status bar if the user double-clicked with mouse into the field of the corresponding control.
     * @param aPos the current mouse position in pixel.
     */
-  def doubleClick(aPos: Point): Unit = js.native
+  def doubleClick(aPos: Point): Unit
   /**
     * is called by a status bar if the mouse position is within the controller and a mouse button has been pressed. If the controller has captured the mouse
     * input this function is also called when the mouse position is not within the controller.
     * @param aMouseEvent current information about the mouse pointer.
     * @returns return `TRUE` if the event should not be processed and `FALSE` if the event should be processed by the status bar.
     */
-  def mouseButtonDown(aMouseEvent: MouseEvent): Boolean = js.native
+  def mouseButtonDown(aMouseEvent: MouseEvent): Boolean
   /**
     * is called by a status bar if the mouse position is within the controller and a mouse button has been released. If the controller has captured the
     * mouse input this function is also called when the mouse position is not within the controller.
     * @param aMouseEvent current information about the mouse pointer.
     * @returns return `TRUE` if the event should not be processed and `FALSE` if the event should be processed by the status bar.
     */
-  def mouseButtonUp(aMouseEvent: MouseEvent): Boolean = js.native
+  def mouseButtonUp(aMouseEvent: MouseEvent): Boolean
   /**
     * is called by a status bar if the mouse position is within the controller and a mouse has been moved. If the controller has captured the mouse input
     * this function is also called when the mouse position is not within the controller.
     * @param aMouseEvent current information about the mouse pointer.
     * @returns return `TRUE` if the event should not be processed and `FALSE` if the event should be processed by the status bar.
     */
-  def mouseMove(aMouseEvent: MouseEvent): Boolean = js.native
+  def mouseMove(aMouseEvent: MouseEvent): Boolean
   /**
     * is called by a status bar if the controller has to update the visual representation.
     * @param xGraphics a reference to a {@link com.sun.star.awt.XGraphics} which has to be used to update the visual representation.
     * @param OutputRectangle a {@link com.sun.star.awt.Rectangle} which determine the output rectangle for all drawing operations
     * @param nStyle reserved for future use.
     */
-  def paint(xGraphics: XGraphics, OutputRectangle: Rectangle, nStyle: Double): Unit = js.native
+  def paint(xGraphics: XGraphics, OutputRectangle: Rectangle, nStyle: Double): Unit
 }
 
 object XStatusbarController {
@@ -102,55 +101,5 @@ object XStatusbarController {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), click = js.Any.fromFunction1(click), command = js.Any.fromFunction4(command), dispose = js.Any.fromFunction0(dispose), disposing = js.Any.fromFunction1(disposing), doubleClick = js.Any.fromFunction1(doubleClick), initialize = js.Any.fromFunction1(initialize), mouseButtonDown = js.Any.fromFunction1(mouseButtonDown), mouseButtonUp = js.Any.fromFunction1(mouseButtonUp), mouseMove = js.Any.fromFunction1(mouseMove), paint = js.Any.fromFunction3(paint), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), statusChanged = js.Any.fromFunction1(statusChanged), update = js.Any.fromFunction0(update))
     __obj.asInstanceOf[XStatusbarController]
   }
-  @scala.inline
-  implicit class XStatusbarControllerOps[Self <: XStatusbarController] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClick(value: Point => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("click")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCommand(value: (Point, Double, Boolean, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withDoubleClick(value: Point => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMouseButtonDown(value: MouseEvent => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseButtonDown")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMouseButtonUp(value: MouseEvent => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseButtonUp")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMouseMove(value: MouseEvent => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseMove")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPaint(value: (XGraphics, Rectangle, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paint")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

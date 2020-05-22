@@ -4,23 +4,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Bulkloadedcursorinsertcalls extends js.Object {
-  var `bulk-loaded cursor-insert calls`: Double = js.native
-  var `create calls`: Double = js.native
-  var `cursor-insert key and value bytes inserted`: Double = js.native
-  var `cursor-remove key bytes removed`: Double = js.native
-  var `cursor-update value bytes updated`: Double = js.native
-  var `insert calls`: Double = js.native
-  var `next calls`: Double = js.native
-  var `prev calls`: Double = js.native
-  var `remove calls`: Double = js.native
-  var `reset calls`: Double = js.native
-  var `restarted searches`: Double = js.native
-  var `search calls`: Double = js.native
-  var `search near calls`: Double = js.native
-  var `truncate calls`: Double = js.native
-  var `update calls`: Double = js.native
+  var `bulk-loaded cursor-insert calls`: Double
+  var `create calls`: Double
+  var `cursor-insert key and value bytes inserted`: Double
+  var `cursor-remove key bytes removed`: Double
+  var `cursor-update value bytes updated`: Double
+  var `insert calls`: Double
+  var `next calls`: Double
+  var `prev calls`: Double
+  var `remove calls`: Double
+  var `reset calls`: Double
+  var `restarted searches`: Double
+  var `search calls`: Double
+  var `search near calls`: Double
+  var `truncate calls`: Double
+  var `update calls`: Double
 }
 
 object Bulkloadedcursorinsertcalls {
@@ -60,103 +59,5 @@ object Bulkloadedcursorinsertcalls {
     __obj.updateDynamic("update calls")((`update calls`).asInstanceOf[js.Any])
     __obj.asInstanceOf[Bulkloadedcursorinsertcalls]
   }
-  @scala.inline
-  implicit class BulkloadedcursorinsertcallsOps[Self <: Bulkloadedcursorinsertcalls] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withBulk-loaded cursor-insert calls`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bulk-loaded cursor-insert calls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCreate calls`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create calls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCursor-insert key and value bytes inserted`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor-insert key and value bytes inserted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCursor-remove key bytes removed`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor-remove key bytes removed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCursor-update value bytes updated`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor-update value bytes updated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withInsert calls`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert calls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withNext calls`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next calls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withPrev calls`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prev calls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withRemove calls`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove calls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withReset calls`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reset calls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withRestarted searches`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restarted searches")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withSearch calls`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("search calls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withSearch near calls`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("search near calls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withTruncate calls`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("truncate calls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withUpdate calls`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update calls")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

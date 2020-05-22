@@ -2,8 +2,6 @@ package typingsSlinky.reactDayPicker
 
 import org.scalajs.dom.raw.HTMLDivElement
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactDayPicker.anon.AddDayToRange
-import typingsSlinky.reactDayPicker.anon.DayMatchesModifier
 import typingsSlinky.reactDayPicker.propsMod.DayPickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +13,7 @@ object dayPickerMod extends js.Object {
   @js.native
   trait DayPicker
     extends Component[DayPickerProps, js.Any, js.Any] {
-    val dayPicker: HTMLDivElement = js.native
+    var dayPicker: HTMLDivElement = js.native
     def focus(): Unit = js.native
     def showMonth(month: js.Date): Unit = js.native
     def showNextMonth(): Unit = js.native
@@ -30,11 +28,11 @@ object dayPickerMod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    var DateUtils: AddDayToRange = js.native
-    var DayModifiers: typingsSlinky.reactDayPicker.commonMod.DayModifiers = js.native
-    var LocaleUtils: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof LocaleUtils */ js.Any = js.native
-    var Modifiers: typingsSlinky.reactDayPicker.commonMod.Modifiers = js.native
-    var ModifiersUtils: DayMatchesModifier = js.native
+    var DateUtils: typingsSlinky.reactDayPicker.dateUtilsMod.DateUtils = js.native
+    var DayModifiers: typingsSlinky.reactDayPicker.modifiersMod.DayModifiers = js.native
+    var LocaleUtils: typingsSlinky.reactDayPicker.localeUtilsMod.LocaleUtils = js.native
+    var Modifiers: typingsSlinky.reactDayPicker.modifiersMod.Modifiers = js.native
+    var ModifiersUtils: typingsSlinky.reactDayPicker.modifiersMod.ModifiersUtils = js.native
     var VERSION: String = js.native
   }
   

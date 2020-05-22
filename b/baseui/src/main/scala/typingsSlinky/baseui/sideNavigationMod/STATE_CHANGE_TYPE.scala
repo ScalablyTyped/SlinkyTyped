@@ -6,9 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait STATE_CHANGE_TYPE extends js.Object {
-  var change: change_ = js.native
+  var change: change_
 }
 
 @JSImport("baseui/side-navigation", "STATE_CHANGE_TYPE")

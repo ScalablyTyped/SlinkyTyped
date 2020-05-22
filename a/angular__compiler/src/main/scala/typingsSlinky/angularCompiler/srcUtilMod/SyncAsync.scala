@@ -4,12 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Rewritten from type alias, can be one of: 
-  - T
-  - js.Promise[T]
-*/
-trait SyncAsync[T] extends js.Object
-
 @JSImport("@angular/compiler/src/util", "SyncAsync")
 @js.native
 object SyncAsync extends js.Object {

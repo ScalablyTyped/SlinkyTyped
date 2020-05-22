@@ -14,6 +14,8 @@ trait VTTCue extends TextTrackCue {
   var region: VTTRegion | Null = js.native
   var size: Double = js.native
   var snapToLines: scala.Boolean = js.native
+  var text: java.lang.String = js.native
   var vertical: DirectionSetting = js.native
+  def getCueAsHTML(): org.scalajs.dom.raw.DocumentFragment = js.native
 }
 

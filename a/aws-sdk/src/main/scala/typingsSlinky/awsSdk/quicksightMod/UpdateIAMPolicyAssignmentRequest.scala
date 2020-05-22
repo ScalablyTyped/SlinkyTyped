@@ -34,71 +34,19 @@ trait UpdateIAMPolicyAssignmentRequest extends js.Object {
 
 object UpdateIAMPolicyAssignmentRequest {
   @scala.inline
-  def apply(AssignmentName: IAMPolicyAssignmentName, AwsAccountId: AwsAccountId, Namespace: Namespace): UpdateIAMPolicyAssignmentRequest = {
+  def apply(
+    AssignmentName: IAMPolicyAssignmentName,
+    AwsAccountId: AwsAccountId,
+    Namespace: Namespace,
+    AssignmentStatus: AssignmentStatus = null,
+    Identities: IdentityMap = null,
+    PolicyArn: Arn = null
+  ): UpdateIAMPolicyAssignmentRequest = {
     val __obj = js.Dynamic.literal(AssignmentName = AssignmentName.asInstanceOf[js.Any], AwsAccountId = AwsAccountId.asInstanceOf[js.Any], Namespace = Namespace.asInstanceOf[js.Any])
+    if (AssignmentStatus != null) __obj.updateDynamic("AssignmentStatus")(AssignmentStatus.asInstanceOf[js.Any])
+    if (Identities != null) __obj.updateDynamic("Identities")(Identities.asInstanceOf[js.Any])
+    if (PolicyArn != null) __obj.updateDynamic("PolicyArn")(PolicyArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateIAMPolicyAssignmentRequest]
   }
-  @scala.inline
-  implicit class UpdateIAMPolicyAssignmentRequestOps[Self <: UpdateIAMPolicyAssignmentRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssignmentName(value: IAMPolicyAssignmentName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAwsAccountId(value: AwsAccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsAccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNamespace(value: Namespace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Namespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAssignmentStatus(value: AssignmentStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssignmentStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentities(value: IdentityMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Identities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Identities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicyArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

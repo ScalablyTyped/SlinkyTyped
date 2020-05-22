@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DataSelectorRenderedEventUIParam extends js.Object {
   /**
-  	 * Gets a reference to the data selector.
-  	 */
-  var owner: js.UndefOr[js.Any] = js.native
+    * Gets a reference to the data selector.
+    */
+  var owner: js.UndefOr[js.Any] = js.undefined
 }
 
 object DataSelectorRenderedEventUIParam {
   @scala.inline
-  def apply(): DataSelectorRenderedEventUIParam = {
+  def apply(owner: js.Any = null): DataSelectorRenderedEventUIParam = {
     val __obj = js.Dynamic.literal()
+    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataSelectorRenderedEventUIParam]
   }
-  @scala.inline
-  implicit class DataSelectorRenderedEventUIParamOps[Self <: DataSelectorRenderedEventUIParam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOwner(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

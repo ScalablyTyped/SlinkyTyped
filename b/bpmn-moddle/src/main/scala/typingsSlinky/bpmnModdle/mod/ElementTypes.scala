@@ -4,334 +4,333 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ElementTypes extends js.Object {
   @JSName("bioc:ColoredEdge")
-  var biocColonColoredEdge: ColoredEdge = js.native
+  var biocColonColoredEdge: ColoredEdge
   @JSName("bioc:ColoredShape")
-  var biocColonColoredShape: ColoredShape = js.native
+  var biocColonColoredShape: ColoredShape
   @JSName("bpmn:Activity")
-  var bpmnColonActivity: Activity = js.native
+  var bpmnColonActivity: Activity
   @JSName("bpmn:AdHocSubProcess")
-  var bpmnColonAdHocSubProcess: AdHocSubProcess = js.native
+  var bpmnColonAdHocSubProcess: AdHocSubProcess
   @JSName("bpmn:Artifact")
-  var bpmnColonArtifact: Artifact = js.native
+  var bpmnColonArtifact: Artifact
   @JSName("bpmn:Assignment")
-  var bpmnColonAssignment: Assignment = js.native
+  var bpmnColonAssignment: Assignment
   @JSName("bpmn:Association")
-  var bpmnColonAssociation: Association = js.native
+  var bpmnColonAssociation: Association
   @JSName("bpmn:Auditing")
-  var bpmnColonAuditing: Auditing = js.native
+  var bpmnColonAuditing: Auditing
   @JSName("bpmn:BaseElement")
-  var bpmnColonBaseElement: BaseElement = js.native
+  var bpmnColonBaseElement: BaseElement
   @JSName("bpmn:BoundaryEvent")
-  var bpmnColonBoundaryEvent: BoundaryEvent = js.native
+  var bpmnColonBoundaryEvent: BoundaryEvent
   @JSName("bpmn:BusinessRuleTask")
-  var bpmnColonBusinessRuleTask: BusinessRuleTask = js.native
+  var bpmnColonBusinessRuleTask: BusinessRuleTask
   @JSName("bpmn:CallActivity")
-  var bpmnColonCallActivity: CallActivity = js.native
+  var bpmnColonCallActivity: CallActivity
   @JSName("bpmn:CallChoreography")
-  var bpmnColonCallChoreography: CallChoreography = js.native
+  var bpmnColonCallChoreography: CallChoreography
   @JSName("bpmn:CallConversation")
-  var bpmnColonCallConversation: CallConversation = js.native
+  var bpmnColonCallConversation: CallConversation
   @JSName("bpmn:CallableElement")
-  var bpmnColonCallableElement: CallableElement = js.native
+  var bpmnColonCallableElement: CallableElement
   @JSName("bpmn:CancelEventDefinition")
-  var bpmnColonCancelEventDefinition: CancelEventDefinition = js.native
+  var bpmnColonCancelEventDefinition: CancelEventDefinition
   @JSName("bpmn:CatchEvent")
-  var bpmnColonCatchEvent: CatchEvent = js.native
+  var bpmnColonCatchEvent: CatchEvent
   @JSName("bpmn:Category")
-  var bpmnColonCategory: Category = js.native
+  var bpmnColonCategory: Category
   @JSName("bpmn:CategoryValue")
-  var bpmnColonCategoryValue: CategoryValue = js.native
+  var bpmnColonCategoryValue: CategoryValue
   @JSName("bpmn:Choreography")
-  var bpmnColonChoreography: Choreography = js.native
+  var bpmnColonChoreography: Choreography
   @JSName("bpmn:ChoreographyActivity")
-  var bpmnColonChoreographyActivity: ChoreographyActivity = js.native
+  var bpmnColonChoreographyActivity: ChoreographyActivity
   @JSName("bpmn:ChoreographyTask")
-  var bpmnColonChoreographyTask: ChoreographyTask = js.native
+  var bpmnColonChoreographyTask: ChoreographyTask
   @JSName("bpmn:Collaboration")
-  var bpmnColonCollaboration: Collaboration = js.native
+  var bpmnColonCollaboration: Collaboration
   @JSName("bpmn:CompensateEventDefinition")
-  var bpmnColonCompensateEventDefinition: CompensateEventDefinition = js.native
+  var bpmnColonCompensateEventDefinition: CompensateEventDefinition
   @JSName("bpmn:ComplexBehaviorDefinition")
-  var bpmnColonComplexBehaviorDefinition: ComplexBehaviorDefinition = js.native
+  var bpmnColonComplexBehaviorDefinition: ComplexBehaviorDefinition
   @JSName("bpmn:ComplexGateway")
-  var bpmnColonComplexGateway: ComplexGateway = js.native
+  var bpmnColonComplexGateway: ComplexGateway
   @JSName("bpmn:ConditionalEventDefinition")
-  var bpmnColonConditionalEventDefinition: ConditionalEventDefinition = js.native
+  var bpmnColonConditionalEventDefinition: ConditionalEventDefinition
   @JSName("bpmn:Conversation")
-  var bpmnColonConversation: Conversation = js.native
+  var bpmnColonConversation: Conversation
   @JSName("bpmn:ConversationAssociation")
-  var bpmnColonConversationAssociation: ConversationAssociation = js.native
+  var bpmnColonConversationAssociation: ConversationAssociation
   @JSName("bpmn:ConversationLink")
-  var bpmnColonConversationLink: ConversationLink = js.native
+  var bpmnColonConversationLink: ConversationLink
   @JSName("bpmn:ConversationNode")
-  var bpmnColonConversationNode: ConversationNode = js.native
+  var bpmnColonConversationNode: ConversationNode
   @JSName("bpmn:CorrelationKey")
-  var bpmnColonCorrelationKey: CorrelationKey = js.native
+  var bpmnColonCorrelationKey: CorrelationKey
   @JSName("bpmn:CorrelationProperty")
-  var bpmnColonCorrelationProperty: CorrelationProperty = js.native
+  var bpmnColonCorrelationProperty: CorrelationProperty
   @JSName("bpmn:CorrelationPropertyBinding")
-  var bpmnColonCorrelationPropertyBinding: CorrelationPropertyBinding = js.native
+  var bpmnColonCorrelationPropertyBinding: CorrelationPropertyBinding
   @JSName("bpmn:CorrelationPropertyRetrievalExpression")
-  var bpmnColonCorrelationPropertyRetrievalExpression: CorrelationPropertyRetrievalExpression = js.native
+  var bpmnColonCorrelationPropertyRetrievalExpression: CorrelationPropertyRetrievalExpression
   @JSName("bpmn:CorrelationSubscription")
-  var bpmnColonCorrelationSubscription: CorrelationSubscription = js.native
+  var bpmnColonCorrelationSubscription: CorrelationSubscription
   @JSName("bpmn:DataAssociation")
-  var bpmnColonDataAssociation: DataAssociation = js.native
+  var bpmnColonDataAssociation: DataAssociation
   @JSName("bpmn:DataInput")
-  var bpmnColonDataInput: DataInput = js.native
+  var bpmnColonDataInput: DataInput
   @JSName("bpmn:DataInputAssociation")
-  var bpmnColonDataInputAssociation: DataInputAssociation = js.native
+  var bpmnColonDataInputAssociation: DataInputAssociation
   @JSName("bpmn:DataObject")
-  var bpmnColonDataObject: DataObject = js.native
+  var bpmnColonDataObject: DataObject
   @JSName("bpmn:DataObjectReference")
-  var bpmnColonDataObjectReference: DataObjectReference = js.native
+  var bpmnColonDataObjectReference: DataObjectReference
   @JSName("bpmn:DataOutput")
-  var bpmnColonDataOutput: DataOutput = js.native
+  var bpmnColonDataOutput: DataOutput
   @JSName("bpmn:DataOutputAssociation")
-  var bpmnColonDataOutputAssociation: DataOutputAssociation = js.native
+  var bpmnColonDataOutputAssociation: DataOutputAssociation
   @JSName("bpmn:DataState")
-  var bpmnColonDataState: DataState = js.native
+  var bpmnColonDataState: DataState
   @JSName("bpmn:DataStore")
-  var bpmnColonDataStore: DataStore = js.native
+  var bpmnColonDataStore: DataStore
   @JSName("bpmn:DataStoreReference")
-  var bpmnColonDataStoreReference: DataStoreReference = js.native
+  var bpmnColonDataStoreReference: DataStoreReference
   @JSName("bpmn:Definitions")
-  var bpmnColonDefinitions: Definitions = js.native
+  var bpmnColonDefinitions: Definitions
   @JSName("bpmn:Documentation")
-  var bpmnColonDocumentation: Documentation = js.native
+  var bpmnColonDocumentation: Documentation
   @JSName("bpmn:EndEvent")
-  var bpmnColonEndEvent: EndEvent = js.native
+  var bpmnColonEndEvent: EndEvent
   @JSName("bpmn:EndPoint")
-  var bpmnColonEndPoint: EndPoint = js.native
+  var bpmnColonEndPoint: EndPoint
   @JSName("bpmn:Error")
-  var bpmnColonError: ErrorElement = js.native
+  var bpmnColonError: ErrorElement
   @JSName("bpmn:ErrorEventDefinition")
-  var bpmnColonErrorEventDefinition: ErrorEventDefinition = js.native
+  var bpmnColonErrorEventDefinition: ErrorEventDefinition
   @JSName("bpmn:Escalation")
-  var bpmnColonEscalation: Escalation = js.native
+  var bpmnColonEscalation: Escalation
   @JSName("bpmn:EscalationEventDefinition")
-  var bpmnColonEscalationEventDefinition: EscalationEventDefinition = js.native
+  var bpmnColonEscalationEventDefinition: EscalationEventDefinition
   @JSName("bpmn:Event")
-  var bpmnColonEvent: Event = js.native
+  var bpmnColonEvent: Event
   @JSName("bpmn:EventBasedGateway")
-  var bpmnColonEventBasedGateway: EventBasedGateway = js.native
+  var bpmnColonEventBasedGateway: EventBasedGateway
   @JSName("bpmn:EventDefinition")
-  var bpmnColonEventDefinition: EventDefinition = js.native
+  var bpmnColonEventDefinition: EventDefinition
   @JSName("bpmn:ExclusiveGateway")
-  var bpmnColonExclusiveGateway: ExclusiveGateway = js.native
+  var bpmnColonExclusiveGateway: ExclusiveGateway
   @JSName("bpmn:Expression")
-  var bpmnColonExpression: Expression = js.native
+  var bpmnColonExpression: Expression
   @JSName("bpmn:Extension")
-  var bpmnColonExtension: Extension = js.native
+  var bpmnColonExtension: Extension
   @JSName("bpmn:ExtensionAttributeDefinition")
-  var bpmnColonExtensionAttributeDefinition: ExtensionAttributeDefinition = js.native
+  var bpmnColonExtensionAttributeDefinition: ExtensionAttributeDefinition
   @JSName("bpmn:ExtensionDefinition")
-  var bpmnColonExtensionDefinition: ExtensionDefinition = js.native
+  var bpmnColonExtensionDefinition: ExtensionDefinition
   @JSName("bpmn:ExtensionElements")
-  var bpmnColonExtensionElements: ExtensionElements = js.native
+  var bpmnColonExtensionElements: ExtensionElements
   @JSName("bpmn:FlowElement")
-  var bpmnColonFlowElement: FlowElement = js.native
+  var bpmnColonFlowElement: FlowElement
   @JSName("bpmn:FlowElementsContainer")
-  var bpmnColonFlowElementsContainer: FlowElementsContainer = js.native
+  var bpmnColonFlowElementsContainer: FlowElementsContainer
   @JSName("bpmn:FlowNode")
-  var bpmnColonFlowNode: FlowNode = js.native
+  var bpmnColonFlowNode: FlowNode
   @JSName("bpmn:FormalExpression")
-  var bpmnColonFormalExpression: FormalExpression = js.native
+  var bpmnColonFormalExpression: FormalExpression
   @JSName("bpmn:Gateway")
-  var bpmnColonGateway: Gateway = js.native
+  var bpmnColonGateway: Gateway
   @JSName("bpmn:GlobalBusinessRuleTask")
-  var bpmnColonGlobalBusinessRuleTask: GlobalBusinessRuleTask = js.native
+  var bpmnColonGlobalBusinessRuleTask: GlobalBusinessRuleTask
   @JSName("bpmn:GlobalChoreographyTask")
-  var bpmnColonGlobalChoreographyTask: GlobalChoreographyTask = js.native
+  var bpmnColonGlobalChoreographyTask: GlobalChoreographyTask
   @JSName("bpmn:GlobalConversation")
-  var bpmnColonGlobalConversation: GlobalConversation = js.native
+  var bpmnColonGlobalConversation: GlobalConversation
   @JSName("bpmn:GlobalManualTask")
-  var bpmnColonGlobalManualTask: GlobalManualTask = js.native
+  var bpmnColonGlobalManualTask: GlobalManualTask
   @JSName("bpmn:GlobalScriptTask")
-  var bpmnColonGlobalScriptTask: GlobalScriptTask = js.native
+  var bpmnColonGlobalScriptTask: GlobalScriptTask
   @JSName("bpmn:GlobalTask")
-  var bpmnColonGlobalTask: GlobalTask = js.native
+  var bpmnColonGlobalTask: GlobalTask
   @JSName("bpmn:GlobalUserTask")
-  var bpmnColonGlobalUserTask: GlobalUserTask = js.native
+  var bpmnColonGlobalUserTask: GlobalUserTask
   @JSName("bpmn:Group")
-  var bpmnColonGroup: Group = js.native
+  var bpmnColonGroup: Group
   @JSName("bpmn:HumanPerformer")
-  var bpmnColonHumanPerformer: HumanPerformer = js.native
+  var bpmnColonHumanPerformer: HumanPerformer
   @JSName("bpmn:ImplicitThrowEvent")
-  var bpmnColonImplicitThrowEvent: ImplicitThrowEvent = js.native
+  var bpmnColonImplicitThrowEvent: ImplicitThrowEvent
   @JSName("bpmn:Import")
-  var bpmnColonImport: Import = js.native
+  var bpmnColonImport: Import
   @JSName("bpmn:InclusiveGateway")
-  var bpmnColonInclusiveGateway: InclusiveGateway = js.native
+  var bpmnColonInclusiveGateway: InclusiveGateway
   @JSName("bpmn:InputOutputBinding")
-  var bpmnColonInputOutputBinding: InputOutputBinding = js.native
+  var bpmnColonInputOutputBinding: InputOutputBinding
   @JSName("bpmn:InputOutputSpecification")
-  var bpmnColonInputOutputSpecification: InputOutputSpecification = js.native
+  var bpmnColonInputOutputSpecification: InputOutputSpecification
   @JSName("bpmn:InputSet")
-  var bpmnColonInputSet: InputSet = js.native
+  var bpmnColonInputSet: InputSet
   @JSName("bpmn:InteractionNode")
-  var bpmnColonInteractionNode: InteractionNode = js.native
+  var bpmnColonInteractionNode: InteractionNode
   @JSName("bpmn:Interface")
-  var bpmnColonInterface: Interface = js.native
+  var bpmnColonInterface: Interface
   @JSName("bpmn:IntermediateCatchEvent")
-  var bpmnColonIntermediateCatchEvent: IntermediateCatchEvent = js.native
+  var bpmnColonIntermediateCatchEvent: IntermediateCatchEvent
   @JSName("bpmn:IntermediateThrowEvent")
-  var bpmnColonIntermediateThrowEvent: IntermediateThrowEvent = js.native
+  var bpmnColonIntermediateThrowEvent: IntermediateThrowEvent
   @JSName("bpmn:ItemAwareElement")
-  var bpmnColonItemAwareElement: ItemAwareElement = js.native
+  var bpmnColonItemAwareElement: ItemAwareElement
   @JSName("bpmn:ItemDefinition")
-  var bpmnColonItemDefinition: ItemDefinition = js.native
+  var bpmnColonItemDefinition: ItemDefinition
   @JSName("bpmn:Lane")
-  var bpmnColonLane: Lane = js.native
+  var bpmnColonLane: Lane
   @JSName("bpmn:LaneSet")
-  var bpmnColonLaneSet: LaneSet = js.native
+  var bpmnColonLaneSet: LaneSet
   @JSName("bpmn:LinkEventDefinition")
-  var bpmnColonLinkEventDefinition: LinkEventDefinition = js.native
+  var bpmnColonLinkEventDefinition: LinkEventDefinition
   @JSName("bpmn:LoopCharacteristics")
-  var bpmnColonLoopCharacteristics: LoopCharacteristics = js.native
+  var bpmnColonLoopCharacteristics: LoopCharacteristics
   @JSName("bpmn:ManualTask")
-  var bpmnColonManualTask: ManualTask = js.native
+  var bpmnColonManualTask: ManualTask
   @JSName("bpmn:Message")
-  var bpmnColonMessage: Message = js.native
+  var bpmnColonMessage: Message
   @JSName("bpmn:MessageEventDefinition")
-  var bpmnColonMessageEventDefinition: MessageEventDefinition = js.native
+  var bpmnColonMessageEventDefinition: MessageEventDefinition
   @JSName("bpmn:MessageFlow")
-  var bpmnColonMessageFlow: MessageFlow = js.native
+  var bpmnColonMessageFlow: MessageFlow
   @JSName("bpmn:MessageFlowAssociation")
-  var bpmnColonMessageFlowAssociation: MessageFlowAssociation = js.native
+  var bpmnColonMessageFlowAssociation: MessageFlowAssociation
   @JSName("bpmn:Monitoring")
-  var bpmnColonMonitoring: Monitoring = js.native
+  var bpmnColonMonitoring: Monitoring
   @JSName("bpmn:MultiInstanceLoopCharacteristics")
-  var bpmnColonMultiInstanceLoopCharacteristics: MultiInstanceLoopCharacteristics = js.native
+  var bpmnColonMultiInstanceLoopCharacteristics: MultiInstanceLoopCharacteristics
   @JSName("bpmn:Operation")
-  var bpmnColonOperation: Operation = js.native
+  var bpmnColonOperation: Operation
   @JSName("bpmn:OutputSet")
-  var bpmnColonOutputSet: OutputSet = js.native
+  var bpmnColonOutputSet: OutputSet
   @JSName("bpmn:ParallelGateway")
-  var bpmnColonParallelGateway: ParallelGateway = js.native
+  var bpmnColonParallelGateway: ParallelGateway
   @JSName("bpmn:Participant")
-  var bpmnColonParticipant: Participant = js.native
+  var bpmnColonParticipant: Participant
   @JSName("bpmn:ParticipantAssociation")
-  var bpmnColonParticipantAssociation: ParticipantAssociation = js.native
+  var bpmnColonParticipantAssociation: ParticipantAssociation
   @JSName("bpmn:ParticipantMultiplicity")
-  var bpmnColonParticipantMultiplicity: ParticipantMultiplicity = js.native
+  var bpmnColonParticipantMultiplicity: ParticipantMultiplicity
   @JSName("bpmn:PartnerEntity")
-  var bpmnColonPartnerEntity: PartnerEntity = js.native
+  var bpmnColonPartnerEntity: PartnerEntity
   @JSName("bpmn:PartnerRole")
-  var bpmnColonPartnerRole: PartnerRole = js.native
+  var bpmnColonPartnerRole: PartnerRole
   @JSName("bpmn:Performer")
-  var bpmnColonPerformer: Performer = js.native
+  var bpmnColonPerformer: Performer
   @JSName("bpmn:PotentialOwner")
-  var bpmnColonPotentialOwner: PotentialOwner = js.native
+  var bpmnColonPotentialOwner: PotentialOwner
   @JSName("bpmn:Process")
-  var bpmnColonProcess: Process = js.native
+  var bpmnColonProcess: Process
   @JSName("bpmn:Property")
-  var bpmnColonProperty: Property = js.native
+  var bpmnColonProperty: Property
   @JSName("bpmn:ReceiveTask")
-  var bpmnColonReceiveTask: ReceiveTask = js.native
+  var bpmnColonReceiveTask: ReceiveTask
   @JSName("bpmn:Relationship")
-  var bpmnColonRelationship: Relationship = js.native
+  var bpmnColonRelationship: Relationship
   @JSName("bpmn:Rendering")
-  var bpmnColonRendering: Rendering = js.native
+  var bpmnColonRendering: Rendering
   @JSName("bpmn:Resource")
-  var bpmnColonResource: Resource = js.native
+  var bpmnColonResource: Resource
   @JSName("bpmn:ResourceAssignmentExpression")
-  var bpmnColonResourceAssignmentExpression: ResourceAssignmentExpression = js.native
+  var bpmnColonResourceAssignmentExpression: ResourceAssignmentExpression
   @JSName("bpmn:ResourceParameter")
-  var bpmnColonResourceParameter: ResourceParameter = js.native
+  var bpmnColonResourceParameter: ResourceParameter
   @JSName("bpmn:ResourceParameterBinding")
-  var bpmnColonResourceParameterBinding: ResourceParameterBinding = js.native
+  var bpmnColonResourceParameterBinding: ResourceParameterBinding
   @JSName("bpmn:ResourceRole")
-  var bpmnColonResourceRole: ResourceRole = js.native
+  var bpmnColonResourceRole: ResourceRole
   @JSName("bpmn:RootElement")
-  var bpmnColonRootElement: RootElement = js.native
+  var bpmnColonRootElement: RootElement
   @JSName("bpmn:ScriptTask")
-  var bpmnColonScriptTask: ScriptTask = js.native
+  var bpmnColonScriptTask: ScriptTask
   @JSName("bpmn:SendTask")
-  var bpmnColonSendTask: SendTask = js.native
+  var bpmnColonSendTask: SendTask
   @JSName("bpmn:SequenceFlow")
-  var bpmnColonSequenceFlow: SequenceFlow = js.native
+  var bpmnColonSequenceFlow: SequenceFlow
   @JSName("bpmn:ServiceTask")
-  var bpmnColonServiceTask: ServiceTask = js.native
+  var bpmnColonServiceTask: ServiceTask
   @JSName("bpmn:Signal")
-  var bpmnColonSignal: Signal = js.native
+  var bpmnColonSignal: Signal
   @JSName("bpmn:SignalEventDefinition")
-  var bpmnColonSignalEventDefinition: SignalEventDefinition = js.native
+  var bpmnColonSignalEventDefinition: SignalEventDefinition
   @JSName("bpmn:StandardLoopCharacteristics")
-  var bpmnColonStandardLoopCharacteristics: StandardLoopCharacteristics = js.native
+  var bpmnColonStandardLoopCharacteristics: StandardLoopCharacteristics
   @JSName("bpmn:StartEvent")
-  var bpmnColonStartEvent: StartEvent = js.native
+  var bpmnColonStartEvent: StartEvent
   @JSName("bpmn:SubChoreography")
-  var bpmnColonSubChoreography: SubChoreography = js.native
+  var bpmnColonSubChoreography: SubChoreography
   @JSName("bpmn:SubConversation")
-  var bpmnColonSubConversation: SubConversation = js.native
+  var bpmnColonSubConversation: SubConversation
   @JSName("bpmn:SubProcess")
-  var bpmnColonSubProcess: SubProcess = js.native
+  var bpmnColonSubProcess: SubProcess
   @JSName("bpmn:Task")
-  var bpmnColonTask: Task = js.native
+  var bpmnColonTask: Task
   @JSName("bpmn:TerminateEventDefinition")
-  var bpmnColonTerminateEventDefinition: TerminateEventDefinition = js.native
+  var bpmnColonTerminateEventDefinition: TerminateEventDefinition
   @JSName("bpmn:TextAnnotation")
-  var bpmnColonTextAnnotation: TextAnnotation = js.native
+  var bpmnColonTextAnnotation: TextAnnotation
   @JSName("bpmn:ThrowEvent")
-  var bpmnColonThrowEvent: ThrowEvent = js.native
+  var bpmnColonThrowEvent: ThrowEvent
   @JSName("bpmn:TimerEventDefinition")
-  var bpmnColonTimerEventDefinition: TimerEventDefinition = js.native
+  var bpmnColonTimerEventDefinition: TimerEventDefinition
   @JSName("bpmn:Transaction")
-  var bpmnColonTransaction: Transaction = js.native
+  var bpmnColonTransaction: Transaction
   @JSName("bpmn:UserTask")
-  var bpmnColonUserTask: UserTask = js.native
+  var bpmnColonUserTask: UserTask
   @JSName("bpmndi:BPMNDiagram")
-  var bpmndiColonBPMNDiagram: BPMNDiagram = js.native
+  var bpmndiColonBPMNDiagram: BPMNDiagram
   @JSName("bpmndi:BPMNEdge")
-  var bpmndiColonBPMNEdge: BPMNEdge = js.native
+  var bpmndiColonBPMNEdge: BPMNEdge
   @JSName("bpmndi:BPMNLabel")
-  var bpmndiColonBPMNLabel: BPMNLabel = js.native
+  var bpmndiColonBPMNLabel: BPMNLabel
   @JSName("bpmndi:BPMNLabelStyle")
-  var bpmndiColonBPMNLabelStyle: BPMNLabelStyle = js.native
+  var bpmndiColonBPMNLabelStyle: BPMNLabelStyle
   @JSName("bpmndi:BPMNPlane")
-  var bpmndiColonBPMNPlane: BPMNPlane = js.native
+  var bpmndiColonBPMNPlane: BPMNPlane
   @JSName("bpmndi:BPMNShape")
-  var bpmndiColonBPMNShape: BPMNShape = js.native
+  var bpmndiColonBPMNShape: BPMNShape
   @JSName("dc:Bounds")
-  var dcColonBounds: Bounds = js.native
+  var dcColonBounds: Bounds
   @JSName("dc:Font")
-  var dcColonFont: Font = js.native
+  var dcColonFont: Font
   @JSName("dc:Point")
-  var dcColonPoint: Point = js.native
+  var dcColonPoint: Point
   @JSName("dc:Real")
-  var dcColonReal: js.Any = js.native
+  var dcColonReal: js.Any
   @JSName("dc:boolean")
-  var dcColonboolean: Boolean = js.native
+  var dcColonboolean: Boolean
   @JSName("dc:number")
-  var dcColonnumber: Double = js.native
+  var dcColonnumber: Double
   @JSName("dc:string")
-  var dcColonstring: String = js.native
+  var dcColonstring: String
   @JSName("di:Diagram")
-  var diColonDiagram: Diagram = js.native
+  var diColonDiagram: Diagram
   @JSName("di:DiagramElement")
-  var diColonDiagramElement: DiagramElement = js.native
+  var diColonDiagramElement: DiagramElement
   @JSName("di:Edge")
-  var diColonEdge: Edge = js.native
+  var diColonEdge: Edge
   @JSName("di:Extension")
-  var diColonExtension: Extension = js.native
+  var diColonExtension: Extension
   @JSName("di:Label")
-  var diColonLabel: Label = js.native
+  var diColonLabel: Label
   @JSName("di:LabeledEdge")
-  var diColonLabeledEdge: LabeledEdge = js.native
+  var diColonLabeledEdge: LabeledEdge
   @JSName("di:LabeledShape")
-  var diColonLabeledShape: LabeledShape = js.native
+  var diColonLabeledShape: LabeledShape
   @JSName("di:Node")
-  var diColonNode: Node = js.native
+  var diColonNode: Node
   @JSName("di:Plane")
-  var diColonPlane: Plane = js.native
+  var diColonPlane: Plane
   @JSName("di:Shape")
-  var diColonShape: Shape = js.native
+  var diColonShape: Shape
   @JSName("di:Style")
-  var diColonStyle: Style = js.native
+  var diColonStyle: Style
 }
 
 object ElementTypes {
@@ -667,991 +666,5 @@ object ElementTypes {
     __obj.updateDynamic("di:Style")(diColonStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElementTypes]
   }
-  @scala.inline
-  implicit class ElementTypesOps[Self <: ElementTypes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBiocColonColoredEdge(value: ColoredEdge): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bioc:ColoredEdge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBiocColonColoredShape(value: ColoredShape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bioc:ColoredShape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonActivity(value: Activity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Activity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonAdHocSubProcess(value: AdHocSubProcess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:AdHocSubProcess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonArtifact(value: Artifact): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Artifact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonAssignment(value: Assignment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Assignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonAssociation(value: Association): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Association")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonAuditing(value: Auditing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Auditing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonBaseElement(value: BaseElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:BaseElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonBoundaryEvent(value: BoundaryEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:BoundaryEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonBusinessRuleTask(value: BusinessRuleTask): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:BusinessRuleTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonCallActivity(value: CallActivity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:CallActivity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonCallChoreography(value: CallChoreography): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:CallChoreography")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonCallConversation(value: CallConversation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:CallConversation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonCallableElement(value: CallableElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:CallableElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonCancelEventDefinition(value: CancelEventDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:CancelEventDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonCatchEvent(value: CatchEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:CatchEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonCategory(value: Category): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Category")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonCategoryValue(value: CategoryValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:CategoryValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonChoreography(value: Choreography): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Choreography")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonChoreographyActivity(value: ChoreographyActivity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ChoreographyActivity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonChoreographyTask(value: ChoreographyTask): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ChoreographyTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonCollaboration(value: Collaboration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Collaboration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonCompensateEventDefinition(value: CompensateEventDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:CompensateEventDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonComplexBehaviorDefinition(value: ComplexBehaviorDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ComplexBehaviorDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonComplexGateway(value: ComplexGateway): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ComplexGateway")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonConditionalEventDefinition(value: ConditionalEventDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ConditionalEventDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonConversation(value: Conversation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Conversation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonConversationAssociation(value: ConversationAssociation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ConversationAssociation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonConversationLink(value: ConversationLink): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ConversationLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonConversationNode(value: ConversationNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ConversationNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonCorrelationKey(value: CorrelationKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:CorrelationKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonCorrelationProperty(value: CorrelationProperty): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:CorrelationProperty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonCorrelationPropertyBinding(value: CorrelationPropertyBinding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:CorrelationPropertyBinding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonCorrelationPropertyRetrievalExpression(value: CorrelationPropertyRetrievalExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:CorrelationPropertyRetrievalExpression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonCorrelationSubscription(value: CorrelationSubscription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:CorrelationSubscription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonDataAssociation(value: DataAssociation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:DataAssociation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonDataInput(value: DataInput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:DataInput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonDataInputAssociation(value: DataInputAssociation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:DataInputAssociation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonDataObject(value: DataObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:DataObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonDataObjectReference(value: DataObjectReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:DataObjectReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonDataOutput(value: DataOutput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:DataOutput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonDataOutputAssociation(value: DataOutputAssociation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:DataOutputAssociation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonDataState(value: DataState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:DataState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonDataStore(value: DataStore): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:DataStore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonDataStoreReference(value: DataStoreReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:DataStoreReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonDefinitions(value: Definitions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Definitions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonDocumentation(value: Documentation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Documentation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonEndEvent(value: EndEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:EndEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonEndPoint(value: EndPoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:EndPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonError(value: ErrorElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonErrorEventDefinition(value: ErrorEventDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ErrorEventDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonEscalation(value: Escalation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Escalation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonEscalationEventDefinition(value: EscalationEventDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:EscalationEventDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonEvent(value: Event): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Event")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonEventBasedGateway(value: EventBasedGateway): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:EventBasedGateway")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonEventDefinition(value: EventDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:EventDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonExclusiveGateway(value: ExclusiveGateway): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ExclusiveGateway")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonExpression(value: Expression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Expression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonExtension(value: Extension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Extension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonExtensionAttributeDefinition(value: ExtensionAttributeDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ExtensionAttributeDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonExtensionDefinition(value: ExtensionDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ExtensionDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonExtensionElements(value: ExtensionElements): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ExtensionElements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonFlowElement(value: FlowElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:FlowElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonFlowElementsContainer(value: FlowElementsContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:FlowElementsContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonFlowNode(value: FlowNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:FlowNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonFormalExpression(value: FormalExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:FormalExpression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonGateway(value: Gateway): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Gateway")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonGlobalBusinessRuleTask(value: GlobalBusinessRuleTask): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:GlobalBusinessRuleTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonGlobalChoreographyTask(value: GlobalChoreographyTask): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:GlobalChoreographyTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonGlobalConversation(value: GlobalConversation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:GlobalConversation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonGlobalManualTask(value: GlobalManualTask): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:GlobalManualTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonGlobalScriptTask(value: GlobalScriptTask): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:GlobalScriptTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonGlobalTask(value: GlobalTask): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:GlobalTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonGlobalUserTask(value: GlobalUserTask): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:GlobalUserTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonGroup(value: Group): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonHumanPerformer(value: HumanPerformer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:HumanPerformer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonImplicitThrowEvent(value: ImplicitThrowEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ImplicitThrowEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonImport(value: Import): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Import")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonInclusiveGateway(value: InclusiveGateway): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:InclusiveGateway")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonInputOutputBinding(value: InputOutputBinding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:InputOutputBinding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonInputOutputSpecification(value: InputOutputSpecification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:InputOutputSpecification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonInputSet(value: InputSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:InputSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonInteractionNode(value: InteractionNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:InteractionNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonInterface(value: Interface): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Interface")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonIntermediateCatchEvent(value: IntermediateCatchEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:IntermediateCatchEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonIntermediateThrowEvent(value: IntermediateThrowEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:IntermediateThrowEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonItemAwareElement(value: ItemAwareElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ItemAwareElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonItemDefinition(value: ItemDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ItemDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonLane(value: Lane): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Lane")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonLaneSet(value: LaneSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:LaneSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonLinkEventDefinition(value: LinkEventDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:LinkEventDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonLoopCharacteristics(value: LoopCharacteristics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:LoopCharacteristics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonManualTask(value: ManualTask): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ManualTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonMessage(value: Message): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonMessageEventDefinition(value: MessageEventDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:MessageEventDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonMessageFlow(value: MessageFlow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:MessageFlow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonMessageFlowAssociation(value: MessageFlowAssociation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:MessageFlowAssociation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonMonitoring(value: Monitoring): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Monitoring")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonMultiInstanceLoopCharacteristics(value: MultiInstanceLoopCharacteristics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:MultiInstanceLoopCharacteristics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonOperation(value: Operation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Operation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonOutputSet(value: OutputSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:OutputSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonParallelGateway(value: ParallelGateway): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ParallelGateway")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonParticipant(value: Participant): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Participant")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonParticipantAssociation(value: ParticipantAssociation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ParticipantAssociation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonParticipantMultiplicity(value: ParticipantMultiplicity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ParticipantMultiplicity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonPartnerEntity(value: PartnerEntity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:PartnerEntity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonPartnerRole(value: PartnerRole): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:PartnerRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonPerformer(value: Performer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Performer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonPotentialOwner(value: PotentialOwner): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:PotentialOwner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonProcess(value: Process): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Process")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonProperty(value: Property): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Property")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonReceiveTask(value: ReceiveTask): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ReceiveTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonRelationship(value: Relationship): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Relationship")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonRendering(value: Rendering): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Rendering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonResource(value: Resource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Resource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonResourceAssignmentExpression(value: ResourceAssignmentExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ResourceAssignmentExpression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonResourceParameter(value: ResourceParameter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ResourceParameter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonResourceParameterBinding(value: ResourceParameterBinding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ResourceParameterBinding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonResourceRole(value: ResourceRole): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ResourceRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonRootElement(value: RootElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:RootElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonScriptTask(value: ScriptTask): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ScriptTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonSendTask(value: SendTask): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:SendTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonSequenceFlow(value: SequenceFlow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:SequenceFlow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonServiceTask(value: ServiceTask): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ServiceTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonSignal(value: Signal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Signal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonSignalEventDefinition(value: SignalEventDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:SignalEventDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonStandardLoopCharacteristics(value: StandardLoopCharacteristics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:StandardLoopCharacteristics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonStartEvent(value: StartEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:StartEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonSubChoreography(value: SubChoreography): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:SubChoreography")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonSubConversation(value: SubConversation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:SubConversation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonSubProcess(value: SubProcess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:SubProcess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonTask(value: Task): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Task")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonTerminateEventDefinition(value: TerminateEventDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:TerminateEventDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonTextAnnotation(value: TextAnnotation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:TextAnnotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonThrowEvent(value: ThrowEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:ThrowEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonTimerEventDefinition(value: TimerEventDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:TimerEventDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonTransaction(value: Transaction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:Transaction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmnColonUserTask(value: UserTask): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmn:UserTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmndiColonBPMNDiagram(value: BPMNDiagram): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmndi:BPMNDiagram")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmndiColonBPMNEdge(value: BPMNEdge): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmndi:BPMNEdge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmndiColonBPMNLabel(value: BPMNLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmndi:BPMNLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmndiColonBPMNLabelStyle(value: BPMNLabelStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmndi:BPMNLabelStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmndiColonBPMNPlane(value: BPMNPlane): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmndi:BPMNPlane")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBpmndiColonBPMNShape(value: BPMNShape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bpmndi:BPMNShape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDcColonBounds(value: Bounds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dc:Bounds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDcColonFont(value: Font): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dc:Font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDcColonPoint(value: Point): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dc:Point")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDcColonReal(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dc:Real")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDcColonboolean(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dc:boolean")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDcColonnumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dc:number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDcColonstring(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dc:string")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDiColonDiagram(value: Diagram): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("di:Diagram")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDiColonDiagramElement(value: DiagramElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("di:DiagramElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDiColonEdge(value: Edge): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("di:Edge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDiColonExtension(value: Extension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("di:Extension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDiColonLabel(value: Label): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("di:Label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDiColonLabeledEdge(value: LabeledEdge): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("di:LabeledEdge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDiColonLabeledShape(value: LabeledShape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("di:LabeledShape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDiColonNode(value: Node): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("di:Node")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDiColonPlane(value: Plane): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("di:Plane")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDiColonShape(value: Shape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("di:Shape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDiColonStyle(value: Style): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("di:Style")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

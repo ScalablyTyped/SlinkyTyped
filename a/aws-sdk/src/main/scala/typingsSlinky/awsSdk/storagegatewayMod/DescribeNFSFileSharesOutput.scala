@@ -14,29 +14,10 @@ trait DescribeNFSFileSharesOutput extends js.Object {
 
 object DescribeNFSFileSharesOutput {
   @scala.inline
-  def apply(): DescribeNFSFileSharesOutput = {
+  def apply(NFSFileShareInfoList: NFSFileShareInfoList = null): DescribeNFSFileSharesOutput = {
     val __obj = js.Dynamic.literal()
+    if (NFSFileShareInfoList != null) __obj.updateDynamic("NFSFileShareInfoList")(NFSFileShareInfoList.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeNFSFileSharesOutput]
   }
-  @scala.inline
-  implicit class DescribeNFSFileSharesOutputOps[Self <: DescribeNFSFileSharesOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNFSFileShareInfoList(value: NFSFileShareInfoList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NFSFileShareInfoList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNFSFileShareInfoList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NFSFileShareInfoList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

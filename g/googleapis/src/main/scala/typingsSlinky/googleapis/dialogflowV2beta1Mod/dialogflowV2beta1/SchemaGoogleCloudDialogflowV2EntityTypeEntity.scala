@@ -29,41 +29,11 @@ trait SchemaGoogleCloudDialogflowV2EntityTypeEntity extends js.Object {
 
 object SchemaGoogleCloudDialogflowV2EntityTypeEntity {
   @scala.inline
-  def apply(): SchemaGoogleCloudDialogflowV2EntityTypeEntity = {
+  def apply(synonyms: js.Array[String] = null, value: String = null): SchemaGoogleCloudDialogflowV2EntityTypeEntity = {
     val __obj = js.Dynamic.literal()
+    if (synonyms != null) __obj.updateDynamic("synonyms")(synonyms.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2EntityTypeEntity]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudDialogflowV2EntityTypeEntityOps[Self <: SchemaGoogleCloudDialogflowV2EntityTypeEntity] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSynonyms(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("synonyms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSynonyms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("synonyms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

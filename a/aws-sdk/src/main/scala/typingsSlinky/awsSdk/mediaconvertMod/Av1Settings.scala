@@ -58,161 +58,34 @@ trait Av1Settings extends js.Object {
 
 object Av1Settings {
   @scala.inline
-  def apply(): Av1Settings = {
+  def apply(
+    AdaptiveQuantization: Av1AdaptiveQuantization = null,
+    FramerateControl: Av1FramerateControl = null,
+    FramerateConversionAlgorithm: Av1FramerateConversionAlgorithm = null,
+    FramerateDenominator: js.UndefOr[integerMin1Max2147483647] = js.undefined,
+    FramerateNumerator: js.UndefOr[integerMin1Max2147483647] = js.undefined,
+    GopSize: js.UndefOr[doubleMin0] = js.undefined,
+    MaxBitrate: js.UndefOr[integerMin1000Max1152000000] = js.undefined,
+    NumberBFramesBetweenReferenceFrames: js.UndefOr[integerMin7Max15] = js.undefined,
+    QvbrSettings: Av1QvbrSettings = null,
+    RateControlMode: Av1RateControlMode = null,
+    Slices: js.UndefOr[integerMin1Max32] = js.undefined,
+    SpatialAdaptiveQuantization: Av1SpatialAdaptiveQuantization = null
+  ): Av1Settings = {
     val __obj = js.Dynamic.literal()
+    if (AdaptiveQuantization != null) __obj.updateDynamic("AdaptiveQuantization")(AdaptiveQuantization.asInstanceOf[js.Any])
+    if (FramerateControl != null) __obj.updateDynamic("FramerateControl")(FramerateControl.asInstanceOf[js.Any])
+    if (FramerateConversionAlgorithm != null) __obj.updateDynamic("FramerateConversionAlgorithm")(FramerateConversionAlgorithm.asInstanceOf[js.Any])
+    if (!js.isUndefined(FramerateDenominator)) __obj.updateDynamic("FramerateDenominator")(FramerateDenominator.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(FramerateNumerator)) __obj.updateDynamic("FramerateNumerator")(FramerateNumerator.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(GopSize)) __obj.updateDynamic("GopSize")(GopSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxBitrate)) __obj.updateDynamic("MaxBitrate")(MaxBitrate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(NumberBFramesBetweenReferenceFrames)) __obj.updateDynamic("NumberBFramesBetweenReferenceFrames")(NumberBFramesBetweenReferenceFrames.get.asInstanceOf[js.Any])
+    if (QvbrSettings != null) __obj.updateDynamic("QvbrSettings")(QvbrSettings.asInstanceOf[js.Any])
+    if (RateControlMode != null) __obj.updateDynamic("RateControlMode")(RateControlMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(Slices)) __obj.updateDynamic("Slices")(Slices.get.asInstanceOf[js.Any])
+    if (SpatialAdaptiveQuantization != null) __obj.updateDynamic("SpatialAdaptiveQuantization")(SpatialAdaptiveQuantization.asInstanceOf[js.Any])
     __obj.asInstanceOf[Av1Settings]
   }
-  @scala.inline
-  implicit class Av1SettingsOps[Self <: Av1Settings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdaptiveQuantization(value: Av1AdaptiveQuantization): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdaptiveQuantization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdaptiveQuantization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdaptiveQuantization")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFramerateControl(value: Av1FramerateControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFramerateControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFramerateConversionAlgorithm(value: Av1FramerateConversionAlgorithm): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateConversionAlgorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFramerateConversionAlgorithm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateConversionAlgorithm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFramerateDenominator(value: integerMin1Max2147483647): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateDenominator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFramerateDenominator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateDenominator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFramerateNumerator(value: integerMin1Max2147483647): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateNumerator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFramerateNumerator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateNumerator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGopSize(value: doubleMin0): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GopSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGopSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GopSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxBitrate(value: integerMin1000Max1152000000): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxBitrate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxBitrate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxBitrate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberBFramesBetweenReferenceFrames(value: integerMin7Max15): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberBFramesBetweenReferenceFrames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberBFramesBetweenReferenceFrames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberBFramesBetweenReferenceFrames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQvbrSettings(value: Av1QvbrSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QvbrSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQvbrSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QvbrSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRateControlMode(value: Av1RateControlMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RateControlMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRateControlMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RateControlMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlices(value: integerMin1Max32): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Slices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Slices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpatialAdaptiveQuantization(value: Av1SpatialAdaptiveQuantization): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpatialAdaptiveQuantization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpatialAdaptiveQuantization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpatialAdaptiveQuantization")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

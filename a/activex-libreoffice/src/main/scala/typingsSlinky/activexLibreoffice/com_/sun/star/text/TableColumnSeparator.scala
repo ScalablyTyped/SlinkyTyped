@@ -22,12 +22,11 @@ import scala.scalajs.js.annotation._
   * and they cannot be overtaken by visible separators.
   * @see com.sun.star.text.TextTable
   */
-@js.native
 trait TableColumnSeparator extends js.Object {
   /** determines if the separator is visible. */
-  var IsVisible: Boolean = js.native
+  var IsVisible: Boolean
   /** contains the position of the separator. */
-  var Position: Double = js.native
+  var Position: Double
 }
 
 object TableColumnSeparator {
@@ -36,25 +35,5 @@ object TableColumnSeparator {
     val __obj = js.Dynamic.literal(IsVisible = IsVisible.asInstanceOf[js.Any], Position = Position.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableColumnSeparator]
   }
-  @scala.inline
-  implicit class TableColumnSeparatorOps[Self <: TableColumnSeparator] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Position")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

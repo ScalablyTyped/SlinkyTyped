@@ -14,12 +14,12 @@ import scala.scalajs.js.annotation._
 @JSImport("graphql/type/definition", "GraphQLScalarType")
 @js.native
 class GraphQLScalarType protected ()
-  extends GraphQLInputType
-     with GraphQLLeafType
-     with GraphQLNamedType
-     with GraphQLNullableType
-     with GraphQLOutputType
-     with GraphQLType {
+  extends GraphQLLeafType
+     with _GraphQLInputType
+     with _GraphQLNamedType
+     with _GraphQLNullableType
+     with _GraphQLOutputType
+     with _GraphQLType {
   def this(config: GraphQLScalarTypeConfig[_, _]) = this()
   var astNode: Maybe[ScalarTypeDefinitionNode] = js.native
   var description: Maybe[String] = js.native

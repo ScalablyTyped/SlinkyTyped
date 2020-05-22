@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IAutomationProviderRequestedEventArgs extends ICoreWindowEventArgs {
-  var automationProvider: js.Any = js.native
+  var automationProvider: js.Any
 }
 
 object IAutomationProviderRequestedEventArgs {
@@ -15,19 +14,5 @@ object IAutomationProviderRequestedEventArgs {
     val __obj = js.Dynamic.literal(automationProvider = automationProvider.asInstanceOf[js.Any], handled = handled.asInstanceOf[js.Any])
     __obj.asInstanceOf[IAutomationProviderRequestedEventArgs]
   }
-  @scala.inline
-  implicit class IAutomationProviderRequestedEventArgsOps[Self <: IAutomationProviderRequestedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutomationProvider(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("automationProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -30,83 +30,20 @@ trait TypedAttributeValue extends js.Object {
 
 object TypedAttributeValue {
   @scala.inline
-  def apply(): TypedAttributeValue = {
+  def apply(
+    BinaryValue: BinaryAttributeValue = null,
+    BooleanValue: js.UndefOr[BooleanAttributeValue] = js.undefined,
+    DatetimeValue: js.Date = null,
+    NumberValue: NumberAttributeValue = null,
+    StringValue: StringAttributeValue = null
+  ): TypedAttributeValue = {
     val __obj = js.Dynamic.literal()
+    if (BinaryValue != null) __obj.updateDynamic("BinaryValue")(BinaryValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(BooleanValue)) __obj.updateDynamic("BooleanValue")(BooleanValue.get.asInstanceOf[js.Any])
+    if (DatetimeValue != null) __obj.updateDynamic("DatetimeValue")(DatetimeValue.asInstanceOf[js.Any])
+    if (NumberValue != null) __obj.updateDynamic("NumberValue")(NumberValue.asInstanceOf[js.Any])
+    if (StringValue != null) __obj.updateDynamic("StringValue")(StringValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[TypedAttributeValue]
   }
-  @scala.inline
-  implicit class TypedAttributeValueOps[Self <: TypedAttributeValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBinaryValueUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBinaryValue(value: BinaryAttributeValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBinaryValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBooleanValue(value: BooleanAttributeValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BooleanValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBooleanValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BooleanValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatetimeValue(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatetimeValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatetimeValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatetimeValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberValue(value: NumberAttributeValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringValue(value: StringAttributeValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStringValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

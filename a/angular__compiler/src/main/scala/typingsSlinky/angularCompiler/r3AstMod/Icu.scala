@@ -29,6 +29,10 @@ class Icu protected () extends Node {
   ) = this()
   var i18n: js.UndefOr[Message | typingsSlinky.angularCompiler.i18nAstMod.Node] = js.native
   var placeholders: StringDictionary[Text | BoundText] = js.native
+  /* CompleteClass */
+  override var sourceSpan: ParseSourceSpan = js.native
   var vars: StringDictionary[BoundText] = js.native
+  /* CompleteClass */
+  override def visit[Result](visitor: Visitor[Result]): Result = js.native
 }
 

@@ -18,7 +18,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.configuration.backend.XSingleLayerStratum
   * @since OOo 1.1.2
   */
-@js.native
 trait XMultiLayerStratum extends XInterface {
   /**
     * retrieves a layer associated to a layer id, if newer than indicated.
@@ -31,7 +30,7 @@ trait XMultiLayerStratum extends XInterface {
     * @throws com::sun::star::lang::IllegalArgumentException if the layer id is invalid or if the timestamp is invalid
     * @throws com::sun::star::configuration::backend::BackendAccessException if an error occurs while accessing the data.
     */
-  def getLayer(aLayerId: String, aTimestamp: String): XLayer = js.native
+  def getLayer(aLayerId: String, aTimestamp: String): XLayer
   /**
     * retrieves the layers associated to a series of layer ids, if newer than indicated.
     *
@@ -44,7 +43,7 @@ trait XMultiLayerStratum extends XInterface {
     * @throws com::sun::star::lang::IllegalArgumentException if one of the layer ids is invalid or if the timestamp is invalid
     * @throws com::sun::star::configuration::backend::BackendAccessException if an error occurs while accessing the data.
     */
-  def getLayers(aLayerIds: SeqEquiv[String], aTimestamp: String): SafeArray[XLayer] = js.native
+  def getLayers(aLayerIds: SeqEquiv[String], aTimestamp: String): SafeArray[XLayer]
   /**
     * retrieves the layers associated to a series of layer ids, if newer than indicated for each layer.
     *
@@ -57,7 +56,7 @@ trait XMultiLayerStratum extends XInterface {
     * @throws com::sun::star::lang::IllegalArgumentException if one of the layer ids is invalid or if one of the timestamps is invalid or if the lengths of the
     * @throws com::sun::star::configuration::backend::BackendAccessException if an error occurs while accessing the data.
     */
-  def getMultipleLayers(aLayerIds: SeqEquiv[String], aTimestamps: SeqEquiv[String]): SafeArray[XLayer] = js.native
+  def getMultipleLayers(aLayerIds: SeqEquiv[String], aTimestamps: SeqEquiv[String]): SafeArray[XLayer]
   /**
     * retrieves a writable representation of the layer associated to a layer id.
     * @param aLayerId identifier of the layer to be accessed for writing. A layer id for writing can be obtained from {@link XMultiLayerStratum.getUpdateLayer
@@ -66,7 +65,7 @@ trait XMultiLayerStratum extends XInterface {
     * @throws com::sun::star::lang::NoSupportException if the implementation does not support updates.
     * @throws com::sun::star::configuration::backend::BackendAccessException if an error occurs while accessing the data.
     */
-  def getUpdatableLayer(aLayerId: String): XUpdatableLayer = js.native
+  def getUpdatableLayer(aLayerId: String): XUpdatableLayer
   /**
     * identifies the layer which should be modified to update data of a component on behalf of an entity.
     *
@@ -80,7 +79,7 @@ trait XMultiLayerStratum extends XInterface {
     * @throws com::sun::star::lang::NoSupportException if the implementation does not support updates.
     * @throws com::sun::star::configuration::backend::BackendAccessException if an error occurs while accessing the data.
     */
-  def getUpdateLayerId(aComponent: String, aEntity: String): String = js.native
+  def getUpdateLayerId(aComponent: String, aEntity: String): String
   /**
     * identifies the layers within this stratum which should be read and merged to determine data of a component for an entity
     * @param aComponent The name of the component to access.
@@ -93,7 +92,7 @@ trait XMultiLayerStratum extends XInterface {
     * @throws com::sun::star::lang::IllegalArgumentException if the component identifier is invalid or if the entity doesn't exist.
     * @throws com::sun::star::configuration::backend::BackendAccessException if an error occurs while accessing the data.
     */
-  def listLayerIds(aComponent: String, aEntity: String): SafeArray[String] = js.native
+  def listLayerIds(aComponent: String, aEntity: String): SafeArray[String]
 }
 
 object XMultiLayerStratum {
@@ -112,49 +111,5 @@ object XMultiLayerStratum {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), getLayer = js.Any.fromFunction2(getLayer), getLayers = js.Any.fromFunction2(getLayers), getMultipleLayers = js.Any.fromFunction2(getMultipleLayers), getUpdatableLayer = js.Any.fromFunction1(getUpdatableLayer), getUpdateLayerId = js.Any.fromFunction2(getUpdateLayerId), listLayerIds = js.Any.fromFunction2(listLayerIds), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XMultiLayerStratum]
   }
-  @scala.inline
-  implicit class XMultiLayerStratumOps[Self <: XMultiLayerStratum] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetLayer(value: (String, String) => XLayer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLayer")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetLayers(value: (SeqEquiv[String], String) => SafeArray[XLayer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLayers")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetMultipleLayers(value: (SeqEquiv[String], SeqEquiv[String]) => SafeArray[XLayer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMultipleLayers")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetUpdatableLayer(value: String => XUpdatableLayer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getUpdatableLayer")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetUpdateLayerId(value: (String, String) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getUpdateLayerId")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withListLayerIds(value: (String, String) => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listLayerIds")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

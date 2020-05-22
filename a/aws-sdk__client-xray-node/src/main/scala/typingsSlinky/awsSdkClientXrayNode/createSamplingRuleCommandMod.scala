@@ -26,9 +26,16 @@ object createSamplingRuleCommandMod extends js.Object {
           Readable
         ] {
     def this(input: CreateSamplingRuleInput) = this()
+    /* CompleteClass */
+    override val input: CreateSamplingRuleInput = js.native
     val middlewareStack: MiddlewareStack[CreateSamplingRuleInput, CreateSamplingRuleOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: XRayResolvedConfiguration
+    ): Handler[CreateSamplingRuleInput, CreateSamplingRuleOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: XRayResolvedConfiguration
     ): Handler[CreateSamplingRuleInput, CreateSamplingRuleOutput] = js.native
   }

@@ -11,49 +11,48 @@ import scala.scalajs.js.annotation._
 /**
   * As a card issuer, you can dispute transactions that you do not recognize, suspect to be fraudulent, or have some other issue.
   */
-@js.native
 trait IIssuingDispute extends IResourceObject {
   /**
     * Disputed amount. Usually the amount of the disputed_transaction, but can differ (usually because of currency fluctuation or because only part of the order is disputed).
     */
-  var amount: Double = js.native
+  var amount: Double
   /**
     * Time at which the object was created. Measured in seconds since the Unix epoch.
     */
-  var created: Double = js.native
+  var created: Double
   /**
     * The currency the disputed_transaction was made in.
     */
-  var currency: String = js.native
+  var currency: String
   /**
     * The transaction being disputed.
     */
-  var disputed_transaction: String | ITransaction = js.native
+  var disputed_transaction: String | ITransaction
   /**
     * Evidence related to the dispute. This hash will contain exactly one non-null value, containing an evidence object that matches its reason
     */
-  var evidence: IIssuingDisputeEvidence = js.native
+  var evidence: IIssuingDisputeEvidence
   /**
     * Has the value true if the object exists in live mode or the value false if the object exists in test mode.
     */
-  var livemode: Boolean = js.native
+  var livemode: Boolean
   /**
     * Set of key-value pairs that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to metadata.
     */
-  var metadata: IMetadata = js.native
+  var metadata: IMetadata
   /**
     * String representing the object’s type. Objects of the same type share the same value.
     */
   @JSName("object")
-  var object_IIssuingDispute: issuingDotdispute = js.native
+  var object_IIssuingDispute: issuingDotdispute
   /**
     * Reason for this dispute. One of other or fraudulent.
     */
-  var reason: IssuingDisputeReason = js.native
+  var reason: IssuingDisputeReason
   /**
     * Current status of dispute. One of lost, under_review, unsubmitted, or won.
     */
-  var status: IssuingDisputeStatus = js.native
+  var status: IssuingDisputeStatus
 }
 
 object IIssuingDispute {
@@ -75,73 +74,5 @@ object IIssuingDispute {
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IIssuingDispute]
   }
-  @scala.inline
-  implicit class IIssuingDisputeOps[Self <: IIssuingDispute] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreated(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisputed_transaction(value: String | ITransaction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disputed_transaction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEvidence(value: IIssuingDisputeEvidence): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLivemode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("livemode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: IMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObject(value: issuingDotdispute): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReason(value: IssuingDisputeReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: IssuingDisputeStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

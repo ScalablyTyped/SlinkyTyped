@@ -14,29 +14,10 @@ trait DescribeTableOutput extends js.Object {
 
 object DescribeTableOutput {
   @scala.inline
-  def apply(): DescribeTableOutput = {
+  def apply(Table: TableDescription = null): DescribeTableOutput = {
     val __obj = js.Dynamic.literal()
+    if (Table != null) __obj.updateDynamic("Table")(Table.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeTableOutput]
   }
-  @scala.inline
-  implicit class DescribeTableOutputOps[Self <: DescribeTableOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTable(value: TableDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Table")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Table")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,41 +22,11 @@ trait SchemaCpuUtilization extends js.Object {
 
 object SchemaCpuUtilization {
   @scala.inline
-  def apply(): SchemaCpuUtilization = {
+  def apply(aggregationWindowLength: String = null, targetUtilization: js.UndefOr[Double] = js.undefined): SchemaCpuUtilization = {
     val __obj = js.Dynamic.literal()
+    if (aggregationWindowLength != null) __obj.updateDynamic("aggregationWindowLength")(aggregationWindowLength.asInstanceOf[js.Any])
+    if (!js.isUndefined(targetUtilization)) __obj.updateDynamic("targetUtilization")(targetUtilization.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCpuUtilization]
   }
-  @scala.inline
-  implicit class SchemaCpuUtilizationOps[Self <: SchemaCpuUtilization] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAggregationWindowLength(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationWindowLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAggregationWindowLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationWindowLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetUtilization(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetUtilization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetUtilization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetUtilization")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

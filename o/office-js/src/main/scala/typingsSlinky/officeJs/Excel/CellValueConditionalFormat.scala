@@ -30,7 +30,7 @@ trait CellValueConditionalFormat extends ClientObject {
   val format: ConditionalRangeFormat = js.native
   /**
     *
-    * Represents the Rule object on this conditional format.
+    * Specifies the Rule object on this conditional format.
     *
     * [Api set: ExcelApi 1.6]
     */

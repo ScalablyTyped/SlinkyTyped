@@ -43,65 +43,18 @@ trait SchemaAttestorPublicKey extends js.Object {
 
 object SchemaAttestorPublicKey {
   @scala.inline
-  def apply(): SchemaAttestorPublicKey = {
+  def apply(
+    asciiArmoredPgpPublicKey: String = null,
+    comment: String = null,
+    id: String = null,
+    pkixPublicKey: SchemaPkixPublicKey = null
+  ): SchemaAttestorPublicKey = {
     val __obj = js.Dynamic.literal()
+    if (asciiArmoredPgpPublicKey != null) __obj.updateDynamic("asciiArmoredPgpPublicKey")(asciiArmoredPgpPublicKey.asInstanceOf[js.Any])
+    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (pkixPublicKey != null) __obj.updateDynamic("pkixPublicKey")(pkixPublicKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAttestorPublicKey]
   }
-  @scala.inline
-  implicit class SchemaAttestorPublicKeyOps[Self <: SchemaAttestorPublicKey] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAsciiArmoredPgpPublicKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asciiArmoredPgpPublicKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAsciiArmoredPgpPublicKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asciiArmoredPgpPublicKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPkixPublicKey(value: SchemaPkixPublicKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pkixPublicKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPkixPublicKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pkixPublicKey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

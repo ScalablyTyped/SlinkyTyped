@@ -11,7 +11,7 @@ trait CreateIPSetRequest extends js.Object {
     */
   var Addresses: IPAddresses = js.native
   /**
-    * A friendly description of the IP set. You cannot change the description of an IP set after you create it.
+    * A description of the IP set that helps with identification. You cannot change the description of an IP set after you create it.
     */
   var Description: js.UndefOr[EntityDescription] = js.native
   /**
@@ -19,11 +19,11 @@ trait CreateIPSetRequest extends js.Object {
     */
   var IPAddressVersion: typingsSlinky.awsSdk.wafv2Mod.IPAddressVersion = js.native
   /**
-    * A friendly name of the IP set. You cannot change the name of an IPSet after you create it.
+    * The name of the IP set. You cannot change the name of an IPSet after you create it.
     */
   var Name: EntityName = js.native
   /**
-    * Specifies whether this is for an AWS CloudFront distribution or for a regional application. A regional application can be an Application Load Balancer (ALB) or an API Gateway stage.  To work with CloudFront, you must also specify the Region US East (N. Virginia) as follows:    CLI - Specify the region when you use the CloudFront scope: --scope=CLOUDFRONT --region=us-east-1.    API and SDKs - For all calls, use the Region endpoint us-east-1.   
+    * Specifies whether this is for an AWS CloudFront distribution or for a regional application. A regional application can be an Application Load Balancer (ALB) or an API Gateway stage.  To work with CloudFront, you must also specify the Region US East (N. Virginia) as follows:    CLI - Specify the Region when you use the CloudFront scope: --scope=CLOUDFRONT --region=us-east-1.    API and SDKs - For all calls, use the Region endpoint us-east-1.   
     */
   var Scope: typingsSlinky.awsSdk.wafv2Mod.Scope = js.native
   /**
@@ -34,65 +34,18 @@ trait CreateIPSetRequest extends js.Object {
 
 object CreateIPSetRequest {
   @scala.inline
-  def apply(Addresses: IPAddresses, IPAddressVersion: IPAddressVersion, Name: EntityName, Scope: Scope): CreateIPSetRequest = {
+  def apply(
+    Addresses: IPAddresses,
+    IPAddressVersion: IPAddressVersion,
+    Name: EntityName,
+    Scope: Scope,
+    Description: EntityDescription = null,
+    Tags: TagList = null
+  ): CreateIPSetRequest = {
     val __obj = js.Dynamic.literal(Addresses = Addresses.asInstanceOf[js.Any], IPAddressVersion = IPAddressVersion.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Scope = Scope.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateIPSetRequest]
   }
-  @scala.inline
-  implicit class CreateIPSetRequestOps[Self <: CreateIPSetRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddresses(value: IPAddresses): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Addresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIPAddressVersion(value: IPAddressVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IPAddressVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: EntityName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScope(value: Scope): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: EntityDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

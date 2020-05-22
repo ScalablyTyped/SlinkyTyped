@@ -14,29 +14,10 @@ trait GetXssMatchSetResponse extends js.Object {
 
 object GetXssMatchSetResponse {
   @scala.inline
-  def apply(): GetXssMatchSetResponse = {
+  def apply(XssMatchSet: XssMatchSet = null): GetXssMatchSetResponse = {
     val __obj = js.Dynamic.literal()
+    if (XssMatchSet != null) __obj.updateDynamic("XssMatchSet")(XssMatchSet.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetXssMatchSetResponse]
   }
-  @scala.inline
-  implicit class GetXssMatchSetResponseOps[Self <: GetXssMatchSetResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withXssMatchSet(value: XssMatchSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("XssMatchSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXssMatchSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("XssMatchSet")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,99 +4,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BasicChartAxis extends js.Object {
   /**
     * The format of the title.
     * Only valid if the axis is not associated with the domain.
     */
-  var format: js.UndefOr[TextFormat] = js.native
+  var format: js.UndefOr[TextFormat] = js.undefined
   /** The position of this axis. */
-  var position: js.UndefOr[String] = js.native
+  var position: js.UndefOr[String] = js.undefined
   /**
     * The title of this axis. If set, this overrides any title inferred
     * from headers of the data.
     */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
   /** The axis title text position. */
-  var titleTextPosition: js.UndefOr[TextPosition] = js.native
+  var titleTextPosition: js.UndefOr[TextPosition] = js.undefined
   /** The view window options for this axis. */
-  var viewWindowOptions: js.UndefOr[ChartAxisViewWindowOptions] = js.native
+  var viewWindowOptions: js.UndefOr[ChartAxisViewWindowOptions] = js.undefined
 }
 
 object BasicChartAxis {
   @scala.inline
-  def apply(): BasicChartAxis = {
+  def apply(
+    format: TextFormat = null,
+    position: String = null,
+    title: String = null,
+    titleTextPosition: TextPosition = null,
+    viewWindowOptions: ChartAxisViewWindowOptions = null
+  ): BasicChartAxis = {
     val __obj = js.Dynamic.literal()
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (titleTextPosition != null) __obj.updateDynamic("titleTextPosition")(titleTextPosition.asInstanceOf[js.Any])
+    if (viewWindowOptions != null) __obj.updateDynamic("viewWindowOptions")(viewWindowOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[BasicChartAxis]
   }
-  @scala.inline
-  implicit class BasicChartAxisOps[Self <: BasicChartAxis] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormat(value: TextFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleTextPosition(value: TextPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleTextPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitleTextPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleTextPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewWindowOptions(value: ChartAxisViewWindowOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewWindowOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewWindowOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewWindowOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

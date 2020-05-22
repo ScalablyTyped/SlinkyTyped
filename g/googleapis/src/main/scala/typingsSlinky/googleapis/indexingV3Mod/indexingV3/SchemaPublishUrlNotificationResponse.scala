@@ -17,29 +17,10 @@ trait SchemaPublishUrlNotificationResponse extends js.Object {
 
 object SchemaPublishUrlNotificationResponse {
   @scala.inline
-  def apply(): SchemaPublishUrlNotificationResponse = {
+  def apply(urlNotificationMetadata: SchemaUrlNotificationMetadata = null): SchemaPublishUrlNotificationResponse = {
     val __obj = js.Dynamic.literal()
+    if (urlNotificationMetadata != null) __obj.updateDynamic("urlNotificationMetadata")(urlNotificationMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPublishUrlNotificationResponse]
   }
-  @scala.inline
-  implicit class SchemaPublishUrlNotificationResponseOps[Self <: SchemaPublishUrlNotificationResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUrlNotificationMetadata(value: SchemaUrlNotificationMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlNotificationMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrlNotificationMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlNotificationMetadata")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

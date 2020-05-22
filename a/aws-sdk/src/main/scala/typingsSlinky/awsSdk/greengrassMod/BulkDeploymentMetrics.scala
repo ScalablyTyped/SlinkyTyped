@@ -22,53 +22,16 @@ trait BulkDeploymentMetrics extends js.Object {
 
 object BulkDeploymentMetrics {
   @scala.inline
-  def apply(): BulkDeploymentMetrics = {
+  def apply(
+    InvalidInputRecords: js.UndefOr[integer] = js.undefined,
+    RecordsProcessed: js.UndefOr[integer] = js.undefined,
+    RetryAttempts: js.UndefOr[integer] = js.undefined
+  ): BulkDeploymentMetrics = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(InvalidInputRecords)) __obj.updateDynamic("InvalidInputRecords")(InvalidInputRecords.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(RecordsProcessed)) __obj.updateDynamic("RecordsProcessed")(RecordsProcessed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(RetryAttempts)) __obj.updateDynamic("RetryAttempts")(RetryAttempts.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BulkDeploymentMetrics]
   }
-  @scala.inline
-  implicit class BulkDeploymentMetricsOps[Self <: BulkDeploymentMetrics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInvalidInputRecords(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvalidInputRecords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvalidInputRecords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvalidInputRecords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecordsProcessed(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordsProcessed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecordsProcessed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordsProcessed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetryAttempts(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RetryAttempts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetryAttempts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RetryAttempts")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

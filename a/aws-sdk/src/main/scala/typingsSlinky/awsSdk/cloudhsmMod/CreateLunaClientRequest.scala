@@ -18,35 +18,10 @@ trait CreateLunaClientRequest extends js.Object {
 
 object CreateLunaClientRequest {
   @scala.inline
-  def apply(Certificate: Certificate): CreateLunaClientRequest = {
+  def apply(Certificate: Certificate, Label: ClientLabel = null): CreateLunaClientRequest = {
     val __obj = js.Dynamic.literal(Certificate = Certificate.asInstanceOf[js.Any])
+    if (Label != null) __obj.updateDynamic("Label")(Label.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateLunaClientRequest]
   }
-  @scala.inline
-  implicit class CreateLunaClientRequestOps[Self <: CreateLunaClientRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificate(value: Certificate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabel(value: ClientLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Label")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

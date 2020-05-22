@@ -83,7 +83,7 @@ trait KPainter extends js.Object {
   var rightDoubleClickZoomRate: Double = js.native
   // # Basic Editor
   /**
-  	* The can - not - store step(freeTransform, brush) will generate a step image.If the step images' count over `stepImgsGCThreshold`, oldest not protected one would be GC.
+    * The can - not - store step(freeTransform, brush) will generate a step image.If the step images' count over `stepImgsGCThreshold`, oldest not protected one would be GC.
     
     * Syntax:* `.stepImgsGCThreshold = 10;`
     */

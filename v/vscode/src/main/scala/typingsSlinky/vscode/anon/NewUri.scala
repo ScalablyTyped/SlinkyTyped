@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NewUri extends js.Object {
-  var newUri: Uri = js.native
-  var oldUri: Uri = js.native
+  var newUri: Uri
+  var oldUri: Uri
 }
 
 object NewUri {
@@ -17,25 +16,5 @@ object NewUri {
     val __obj = js.Dynamic.literal(newUri = newUri.asInstanceOf[js.Any], oldUri = oldUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[NewUri]
   }
-  @scala.inline
-  implicit class NewUriOps[Self <: NewUri] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNewUri(value: Uri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOldUri(value: Uri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

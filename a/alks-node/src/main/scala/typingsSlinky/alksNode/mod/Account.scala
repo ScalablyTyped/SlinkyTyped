@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Account extends js.Object {
-  var alksAccount: String = js.native
-  var alksRole: String = js.native
-  var server: String = js.native
-  var userid: String = js.native
+  var alksAccount: String
+  var alksRole: String
+  var server: String
+  var userid: String
 }
 
 object Account {
@@ -18,37 +17,5 @@ object Account {
     val __obj = js.Dynamic.literal(alksAccount = alksAccount.asInstanceOf[js.Any], alksRole = alksRole.asInstanceOf[js.Any], server = server.asInstanceOf[js.Any], userid = userid.asInstanceOf[js.Any])
     __obj.asInstanceOf[Account]
   }
-  @scala.inline
-  implicit class AccountOps[Self <: Account] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlksAccount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alksAccount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAlksRole(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alksRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userid")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

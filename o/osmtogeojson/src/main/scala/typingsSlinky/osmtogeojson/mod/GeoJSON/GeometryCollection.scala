@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GeometryCollection extends GeoJSONObject {
-  var geometries: js.Array[Geometry] = js.native
+  var geometries: js.Array[Geometry]
 }
 
 object GeometryCollection {
@@ -16,19 +15,5 @@ object GeometryCollection {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeometryCollection]
   }
-  @scala.inline
-  implicit class GeometryCollectionOps[Self <: GeometryCollection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGeometries(value: js.Array[Geometry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geometries")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

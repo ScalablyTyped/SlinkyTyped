@@ -12,8 +12,16 @@ trait NormalizationArgumentDefinition extends js.Object
 
 object NormalizationArgumentDefinition {
   @scala.inline
-  implicit def apply(value: NormalizationLocalArgument): NormalizationArgumentDefinition = value.asInstanceOf[NormalizationArgumentDefinition]
+  def NormalizationLocalArgument(defaultValue: js.Any, kind: String, name: String, `type`: String): NormalizationArgumentDefinition = {
+    val __obj = js.Dynamic.literal(defaultValue = defaultValue.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[NormalizationArgumentDefinition]
+  }
   @scala.inline
-  implicit def apply(value: NormalizationRootArgument): NormalizationArgumentDefinition = value.asInstanceOf[NormalizationArgumentDefinition]
+  def NormalizationRootArgument(kind: String, name: String, `type`: js.UndefOr[Null | String] = js.undefined): NormalizationArgumentDefinition = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (!js.isUndefined(`type`)) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[NormalizationArgumentDefinition]
+  }
 }
 

@@ -10,7 +10,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** offers statistical properties for the data in the chart. It is available for a single data row and for the whole diagram. */
-@js.native
 trait ChartStatistics extends XPropertySet {
   /**
     * specifies the upper limit of the error range of a data row.
@@ -19,7 +18,7 @@ trait ChartStatistics extends XPropertySet {
     * @see ConstantErrorLow
     * @see ErrorCategory
     */
-  var ConstantErrorHigh: Double = js.native
+  var ConstantErrorHigh: Double
   /**
     * specifies the lower limit of the error range of a data row.
     *
@@ -27,16 +26,16 @@ trait ChartStatistics extends XPropertySet {
     * @see ConstantErrorHigh
     * @see ErrorCategory
     */
-  var ConstantErrorLow: Double = js.native
+  var ConstantErrorLow: Double
   /** contains a cell range string for negative error bars. This property is used when the ErrorBarCategory is set to ErrorBarCategory::FROM_DATA. */
-  var ErrorBarRangeNegative: String = js.native
+  var ErrorBarRangeNegative: String
   /** contains a cell range string for positive error bars. This property is used when the ErrorBarCategory is set to ErrorBarCategory::FROM_DATA. */
-  var ErrorBarRangePositive: String = js.native
+  var ErrorBarRangePositive: String
   /**
     * determines the style of the error bars. Use this instead of ErrorCategory
     * @see ErrorBarStyle
     */
-  var ErrorBarStyle: Double = js.native
+  var ErrorBarStyle: Double
   /**
     * determines the type of error to indicate.
     * @deprecated Deprecated
@@ -47,14 +46,14 @@ trait ChartStatistics extends XPropertySet {
     * @see ConstantErrorHigh
     * @see ErrorIndicator
     */
-  var ErrorCategory: ChartErrorCategory = js.native
+  var ErrorCategory: ChartErrorCategory
   /**
     * determines how the error is indicated.
     *
     * You can enable indicators pointing up, down or both.
     * @see ErrorCategory
     */
-  var ErrorIndicator: ChartErrorIndicatorType = js.native
+  var ErrorIndicator: ChartErrorIndicatorType
   /**
     * specifies the percentage for the margin of errors.
     *
@@ -63,9 +62,9 @@ trait ChartStatistics extends XPropertySet {
     * this setting is effective if the {@link ChartStatistics.ErrorCategory} is set to ChartErrorCategory::ERROR_MARGIN.
     * @see ErrorCategory
     */
-  var ErrorMargin: Double = js.native
+  var ErrorMargin: Double
   /** determines if the mean value for a data row is displayed as a line. */
-  var MeanValue: Boolean = js.native
+  var MeanValue: Boolean
   /**
     * specifies the percentage that is used to display error bars.
     *
@@ -74,12 +73,12 @@ trait ChartStatistics extends XPropertySet {
     * this setting is effective if the {@link ChartStatistics.ErrorCategory} is set to ChartErrorCategory::PERCENT.
     * @see ErrorCategory
     */
-  var PercentageError: Double = js.native
+  var PercentageError: Double
   /**
     * determines a type of regression for the data row values.
     * @see ChartRegressionCurveType
     */
-  var RegressionCurves: ChartRegressionCurveType = js.native
+  var RegressionCurves: ChartRegressionCurveType
 }
 
 object ChartStatistics {
@@ -111,79 +110,5 @@ object ChartStatistics {
     val __obj = js.Dynamic.literal(ConstantErrorHigh = ConstantErrorHigh.asInstanceOf[js.Any], ConstantErrorLow = ConstantErrorLow.asInstanceOf[js.Any], ErrorBarRangeNegative = ErrorBarRangeNegative.asInstanceOf[js.Any], ErrorBarRangePositive = ErrorBarRangePositive.asInstanceOf[js.Any], ErrorBarStyle = ErrorBarStyle.asInstanceOf[js.Any], ErrorCategory = ErrorCategory.asInstanceOf[js.Any], ErrorIndicator = ErrorIndicator.asInstanceOf[js.Any], ErrorMargin = ErrorMargin.asInstanceOf[js.Any], MeanValue = MeanValue.asInstanceOf[js.Any], PercentageError = PercentageError.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], RegressionCurves = RegressionCurves.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue))
     __obj.asInstanceOf[ChartStatistics]
   }
-  @scala.inline
-  implicit class ChartStatisticsOps[Self <: ChartStatistics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConstantErrorHigh(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConstantErrorHigh")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConstantErrorLow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConstantErrorLow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withErrorBarRangeNegative(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorBarRangeNegative")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withErrorBarRangePositive(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorBarRangePositive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withErrorBarStyle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorBarStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withErrorCategory(value: ChartErrorCategory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorCategory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withErrorIndicator(value: ChartErrorIndicatorType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorIndicator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withErrorMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMeanValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MeanValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPercentageError(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PercentageError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRegressionCurves(value: ChartRegressionCurveType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegressionCurves")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

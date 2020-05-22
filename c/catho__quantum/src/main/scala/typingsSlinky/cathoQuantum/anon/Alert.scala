@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Alert extends js.Object {
-  var alert: js.UndefOr[js.Object] = js.native
-  var button: js.UndefOr[js.Object] = js.native
+  var alert: js.UndefOr[js.Object] = js.undefined
+  var button: js.UndefOr[js.Object] = js.undefined
 }
 
 object Alert {
   @scala.inline
-  def apply(): Alert = {
+  def apply(alert: js.Object = null, button: js.Object = null): Alert = {
     val __obj = js.Dynamic.literal()
+    if (alert != null) __obj.updateDynamic("alert")(alert.asInstanceOf[js.Any])
+    if (button != null) __obj.updateDynamic("button")(button.asInstanceOf[js.Any])
     __obj.asInstanceOf[Alert]
   }
-  @scala.inline
-  implicit class AlertOps[Self <: Alert] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlert(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alert")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButton(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

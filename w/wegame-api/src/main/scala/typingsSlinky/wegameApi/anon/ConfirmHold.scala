@@ -9,97 +9,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConfirmHold extends js.Object {
   /**
     * 当点击完成时键盘是否收起
     */
-  var confirmHold: js.UndefOr[Boolean] = js.native
+  var confirmHold: js.UndefOr[Boolean] = js.undefined
   /**
     * 键盘右下角 confirm 按钮的类型，只影响按钮的文本内容
     */
-  var confirmType: js.UndefOr[done | next | search | go | send] = js.native
+  var confirmType: js.UndefOr[done | next | search | go | send] = js.undefined
   /**
     * 键盘输入框显示的默认值
     */
-  var defaultValue: String = js.native
+  var defaultValue: String
   /**
     * 键盘中文本的最大长度
     */
-  var maxLength: js.UndefOr[Double] = js.native
+  var maxLength: js.UndefOr[Double] = js.undefined
   /**
     * 是否为多行输入
     */
-  var multiple: js.UndefOr[Boolean] = js.native
+  var multiple: js.UndefOr[Boolean] = js.undefined
 }
 
 object ConfirmHold {
   @scala.inline
-  def apply(defaultValue: String): ConfirmHold = {
+  def apply(
+    defaultValue: String,
+    confirmHold: js.UndefOr[Boolean] = js.undefined,
+    confirmType: done | next | search | go | send = null,
+    maxLength: js.UndefOr[Double] = js.undefined,
+    multiple: js.UndefOr[Boolean] = js.undefined
+  ): ConfirmHold = {
     val __obj = js.Dynamic.literal(defaultValue = defaultValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(confirmHold)) __obj.updateDynamic("confirmHold")(confirmHold.get.asInstanceOf[js.Any])
+    if (confirmType != null) __obj.updateDynamic("confirmType")(confirmType.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxLength)) __obj.updateDynamic("maxLength")(maxLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiple)) __obj.updateDynamic("multiple")(multiple.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfirmHold]
   }
-  @scala.inline
-  implicit class ConfirmHoldOps[Self <: ConfirmHold] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConfirmHold(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("confirmHold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfirmHold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("confirmHold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfirmType(value: done | next | search | go | send): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("confirmType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfirmType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("confirmType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiple(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiple: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

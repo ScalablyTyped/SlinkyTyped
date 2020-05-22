@@ -18,29 +18,10 @@ trait SchemaDetectLanguageRequest extends js.Object {
 
 object SchemaDetectLanguageRequest {
   @scala.inline
-  def apply(): SchemaDetectLanguageRequest = {
+  def apply(q: js.Array[String] = null): SchemaDetectLanguageRequest = {
     val __obj = js.Dynamic.literal()
+    if (q != null) __obj.updateDynamic("q")(q.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDetectLanguageRequest]
   }
-  @scala.inline
-  implicit class SchemaDetectLanguageRequestOps[Self <: SchemaDetectLanguageRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQ(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

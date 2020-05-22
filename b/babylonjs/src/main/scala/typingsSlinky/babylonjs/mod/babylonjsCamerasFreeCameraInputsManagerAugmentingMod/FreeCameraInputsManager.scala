@@ -9,27 +9,26 @@ import scala.scalajs.js.annotation._
 /**
   * Interface representing a free camera inputs manager
   */
-@js.native
 trait FreeCameraInputsManager extends js.Object {
   /**
     * @hidden
     */
-  var _deviceOrientationInput: Nullable[FreeCameraDeviceOrientationInput] = js.native
+  var _deviceOrientationInput: Nullable[FreeCameraDeviceOrientationInput]
   /**
     * Add orientation input support to the input manager.
     * @returns the current input manager
     */
-  def addDeviceOrientation(): typingsSlinky.babylonjs.freeCameraDeviceOrientationInputMod.babylonjsCamerasFreeCameraInputsManagerAugmentingMod.FreeCameraInputsManager = js.native
+  def addDeviceOrientation(): typingsSlinky.babylonjs.freeCameraDeviceOrientationInputMod.babylonjsCamerasFreeCameraInputsManagerAugmentingMod.FreeCameraInputsManager
   /**
     * Adds gamepad input support to the FreeCameraInputsManager.
     * @returns the FreeCameraInputsManager
     */
-  def addGamepad(): typingsSlinky.babylonjs.gamepadSceneComponentMod.babylonjsCamerasFreeCameraInputsManagerAugmentingMod.FreeCameraInputsManager = js.native
+  def addGamepad(): typingsSlinky.babylonjs.gamepadSceneComponentMod.babylonjsCamerasFreeCameraInputsManagerAugmentingMod.FreeCameraInputsManager
   /**
     * Add virtual joystick input support to the input manager.
     * @returns the current input manager
     */
-  def addVirtualJoystick(): typingsSlinky.babylonjs.freeCameraVirtualJoystickInputMod.babylonjsCamerasFreeCameraInputsManagerAugmentingMod.FreeCameraInputsManager = js.native
+  def addVirtualJoystick(): typingsSlinky.babylonjs.freeCameraVirtualJoystickInputMod.babylonjsCamerasFreeCameraInputsManagerAugmentingMod.FreeCameraInputsManager
 }
 
 object FreeCameraInputsManager {
@@ -37,54 +36,11 @@ object FreeCameraInputsManager {
   def apply(
     addDeviceOrientation: () => typingsSlinky.babylonjs.freeCameraDeviceOrientationInputMod.babylonjsCamerasFreeCameraInputsManagerAugmentingMod.FreeCameraInputsManager,
     addGamepad: () => typingsSlinky.babylonjs.gamepadSceneComponentMod.babylonjsCamerasFreeCameraInputsManagerAugmentingMod.FreeCameraInputsManager,
-    addVirtualJoystick: () => typingsSlinky.babylonjs.freeCameraVirtualJoystickInputMod.babylonjsCamerasFreeCameraInputsManagerAugmentingMod.FreeCameraInputsManager
+    addVirtualJoystick: () => typingsSlinky.babylonjs.freeCameraVirtualJoystickInputMod.babylonjsCamerasFreeCameraInputsManagerAugmentingMod.FreeCameraInputsManager,
+    _deviceOrientationInput: Nullable[FreeCameraDeviceOrientationInput] = null
   ): FreeCameraInputsManager = {
-    val __obj = js.Dynamic.literal(addDeviceOrientation = js.Any.fromFunction0(addDeviceOrientation), addGamepad = js.Any.fromFunction0(addGamepad), addVirtualJoystick = js.Any.fromFunction0(addVirtualJoystick))
+    val __obj = js.Dynamic.literal(addDeviceOrientation = js.Any.fromFunction0(addDeviceOrientation), addGamepad = js.Any.fromFunction0(addGamepad), addVirtualJoystick = js.Any.fromFunction0(addVirtualJoystick), _deviceOrientationInput = _deviceOrientationInput.asInstanceOf[js.Any])
     __obj.asInstanceOf[FreeCameraInputsManager]
   }
-  @scala.inline
-  implicit class FreeCameraInputsManagerOps[Self <: FreeCameraInputsManager] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddDeviceOrientation(
-      value: () => typingsSlinky.babylonjs.freeCameraDeviceOrientationInputMod.babylonjsCamerasFreeCameraInputsManagerAugmentingMod.FreeCameraInputsManager
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addDeviceOrientation")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withAddGamepad(
-      value: () => typingsSlinky.babylonjs.gamepadSceneComponentMod.babylonjsCamerasFreeCameraInputsManagerAugmentingMod.FreeCameraInputsManager
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addGamepad")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withAddVirtualJoystick(
-      value: () => typingsSlinky.babylonjs.freeCameraVirtualJoystickInputMod.babylonjsCamerasFreeCameraInputsManagerAugmentingMod.FreeCameraInputsManager
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addVirtualJoystick")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def with_deviceOrientationInput(value: Nullable[FreeCameraDeviceOrientationInput]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_deviceOrientationInput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_deviceOrientationInputNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_deviceOrientationInput")(null)
-        ret
-    }
-  }
-  
 }
 

@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StateInfo
   extends /**
   * Gets the additional state attributes
@@ -14,125 +13,55 @@ trait StateInfo
   /**
     * Gets the default NavigationData Types for  this State
     */
-  var defaultTypes: js.UndefOr[js.Any] = js.native
+  var defaultTypes: js.UndefOr[js.Any] = js.undefined
   /**
     * Gets the default NavigationData for this State
     */
-  var defaults: js.UndefOr[js.Any] = js.native
+  var defaults: js.UndefOr[js.Any] = js.undefined
   /**
     * Gets the unique key
     */
-  var key: String = js.native
+  var key: String
   /**
     * Gets the route Url patterns
     */
-  var route: js.UndefOr[String | js.Array[String]] = js.native
+  var route: js.UndefOr[String | js.Array[String]] = js.undefined
   /**
     * Gets the textual description of the state
     */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
   /**
     * Gets a value that indicates whether to maintain the crumb trail
     */
-  var trackCrumbTrail: js.UndefOr[Boolean | String] = js.native
+  var trackCrumbTrail: js.UndefOr[Boolean | String] = js.undefined
   /**
     * Gets a value that indicates whether NavigationData Types are
     * preserved when navigating
     */
-  var trackTypes: js.UndefOr[Boolean] = js.native
+  var trackTypes: js.UndefOr[Boolean] = js.undefined
 }
 
 object StateInfo {
   @scala.inline
-  def apply(key: String): StateInfo = {
+  def apply(
+    key: String,
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    defaultTypes: js.Any = null,
+    defaults: js.Any = null,
+    route: String | js.Array[String] = null,
+    title: String = null,
+    trackCrumbTrail: Boolean | String = null,
+    trackTypes: js.UndefOr[Boolean] = js.undefined
+  ): StateInfo = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (defaultTypes != null) __obj.updateDynamic("defaultTypes")(defaultTypes.asInstanceOf[js.Any])
+    if (defaults != null) __obj.updateDynamic("defaults")(defaults.asInstanceOf[js.Any])
+    if (route != null) __obj.updateDynamic("route")(route.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (trackCrumbTrail != null) __obj.updateDynamic("trackCrumbTrail")(trackCrumbTrail.asInstanceOf[js.Any])
+    if (!js.isUndefined(trackTypes)) __obj.updateDynamic("trackTypes")(trackTypes.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StateInfo]
   }
-  @scala.inline
-  implicit class StateInfoOps[Self <: StateInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultTypes(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaults(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoute(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("route")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("route")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrackCrumbTrail(value: Boolean | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackCrumbTrail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrackCrumbTrail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackCrumbTrail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrackTypes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrackTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackTypes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

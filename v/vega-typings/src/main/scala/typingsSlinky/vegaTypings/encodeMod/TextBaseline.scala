@@ -1,6 +1,5 @@
 package typingsSlinky.vegaTypings.encodeMod
 
-import typingsSlinky.vegaTypings.valuesMod.TextBaselineValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +12,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.vegaTypings.vegaTypingsStrings.middle
   - typingsSlinky.vegaTypings.vegaTypingsStrings.bottom
 */
-trait TextBaseline extends TextBaselineValue
+trait TextBaseline extends js.Object
 
 object TextBaseline {
   @scala.inline

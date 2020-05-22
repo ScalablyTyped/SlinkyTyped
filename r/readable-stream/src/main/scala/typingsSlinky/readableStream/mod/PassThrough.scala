@@ -1,5 +1,6 @@
 package typingsSlinky.readableStream.mod
 
+import typingsSlinky.node.BufferEncoding
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +12,7 @@ class PassThrough () extends Transform {
   def this(options: TransformOptions) = this()
   def _transform[T](
     chunk: T,
-    encoding: js.UndefOr[Null | String],
+    encoding: js.UndefOr[BufferEncoding | Null],
     callback: js.Function2[/* error */ js.Any, /* data */ T, Unit]
   ): Unit = js.native
 }

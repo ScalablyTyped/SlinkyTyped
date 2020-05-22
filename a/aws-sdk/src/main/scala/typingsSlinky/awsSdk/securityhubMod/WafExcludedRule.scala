@@ -14,29 +14,10 @@ trait WafExcludedRule extends js.Object {
 
 object WafExcludedRule {
   @scala.inline
-  def apply(): WafExcludedRule = {
+  def apply(RuleId: NonEmptyString = null): WafExcludedRule = {
     val __obj = js.Dynamic.literal()
+    if (RuleId != null) __obj.updateDynamic("RuleId")(RuleId.asInstanceOf[js.Any])
     __obj.asInstanceOf[WafExcludedRule]
   }
-  @scala.inline
-  implicit class WafExcludedRuleOps[Self <: WafExcludedRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRuleId(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuleId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

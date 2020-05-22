@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HistoryOptions extends js.Object {
-  var httpCache: js.UndefOr[Boolean] = js.native
-  var limit: js.UndefOr[Double] = js.native
+  var httpCache: js.UndefOr[Boolean] = js.undefined
+  var limit: js.UndefOr[Double] = js.undefined
 }
 
 object HistoryOptions {
   @scala.inline
-  def apply(): HistoryOptions = {
+  def apply(httpCache: js.UndefOr[Boolean] = js.undefined, limit: js.UndefOr[Double] = js.undefined): HistoryOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(httpCache)) __obj.updateDynamic("httpCache")(httpCache.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[HistoryOptions]
   }
-  @scala.inline
-  implicit class HistoryOptionsOps[Self <: HistoryOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHttpCache(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpCache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpCache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -42,10 +42,10 @@ object ^ extends js.Object {
     callback: js.Function1[/* err */ js.Error | js.Array[js.Error] | WriteStream | Null, Unit]
   ): Unit = js.native
   /**
-  	 * **NOTE:** This function provides design-time support for util.promisify.
-  	 *
-  	 * It does not exist at runtime.
-  	 */
+    * **NOTE:** This function provides design-time support for util.promisify.
+    *
+    * It does not exist at runtime.
+    */
   def __promisify__(source: String, destination: String): js.Promise[Unit] = js.native
   def __promisify__(source: String, destination: String, options: Options): js.Promise[Unit] = js.native
 }

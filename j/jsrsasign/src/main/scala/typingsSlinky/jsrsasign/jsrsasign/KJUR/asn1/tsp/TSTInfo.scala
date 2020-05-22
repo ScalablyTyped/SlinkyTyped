@@ -33,7 +33,6 @@ import scala.scalajs.js.annotation._
   *     tsa:       {str: '/C=US/O=TSA1'}   // OPTION
   * });
   */
-@js.native
 trait TSTInfo extends ASN1Object
 
 object TSTInfo {

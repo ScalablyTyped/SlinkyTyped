@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Broadcast extends js.Object {
-  val Application: typingsSlinky.activexPowerpoint.PowerPoint.Application = js.native
-  val AttendeeUrl: String = js.native
-  val IsBroadcasting: Boolean = js.native
-  val Parent: js.Any = js.native
+  val Application: typingsSlinky.activexPowerpoint.PowerPoint.Application
+  val AttendeeUrl: String
+  val IsBroadcasting: Boolean
+  val Parent: js.Any
   @JSName("PowerPoint.Broadcast_typekey")
-  var PowerPointDotBroadcast_typekey: Broadcast = js.native
-  def End(): Unit = js.native
-  def Start(serverUrl: String): Unit = js.native
+  var PowerPointDotBroadcast_typekey: Broadcast
+  def End(): Unit
+  def Start(serverUrl: String): Unit
 }
 
 object Broadcast {
@@ -31,55 +30,5 @@ object Broadcast {
     __obj.updateDynamic("PowerPoint.Broadcast_typekey")(PowerPointDotBroadcast_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[Broadcast]
   }
-  @scala.inline
-  implicit class BroadcastOps[Self <: Broadcast] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttendeeUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttendeeUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnd(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("End")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsBroadcasting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsBroadcasting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPowerPointDotBroadcast_typekey(value: Broadcast): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PowerPoint.Broadcast_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStart(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Start")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

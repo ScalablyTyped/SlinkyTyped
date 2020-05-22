@@ -4,54 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Links extends js.Object {
   /**
     * The number of dropped links after the maximum size was enforced. If
     * this value is 0, then no links were dropped.
     */
-  var droppedLinksCount: js.UndefOr[Double] = js.native
+  var droppedLinksCount: js.UndefOr[Double] = js.undefined
   /** A collection of links. */
-  var link: js.UndefOr[js.Array[Link]] = js.native
+  var link: js.UndefOr[js.Array[Link]] = js.undefined
 }
 
 object Links {
   @scala.inline
-  def apply(): Links = {
+  def apply(droppedLinksCount: js.UndefOr[Double] = js.undefined, link: js.Array[Link] = null): Links = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(droppedLinksCount)) __obj.updateDynamic("droppedLinksCount")(droppedLinksCount.get.asInstanceOf[js.Any])
+    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
     __obj.asInstanceOf[Links]
   }
-  @scala.inline
-  implicit class LinksOps[Self <: Links] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDroppedLinksCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("droppedLinksCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDroppedLinksCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("droppedLinksCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLink(value: js.Array[Link]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

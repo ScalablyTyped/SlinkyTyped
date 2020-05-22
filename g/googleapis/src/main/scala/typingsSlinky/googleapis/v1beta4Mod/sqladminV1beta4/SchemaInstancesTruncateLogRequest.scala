@@ -17,29 +17,10 @@ trait SchemaInstancesTruncateLogRequest extends js.Object {
 
 object SchemaInstancesTruncateLogRequest {
   @scala.inline
-  def apply(): SchemaInstancesTruncateLogRequest = {
+  def apply(truncateLogContext: SchemaTruncateLogContext = null): SchemaInstancesTruncateLogRequest = {
     val __obj = js.Dynamic.literal()
+    if (truncateLogContext != null) __obj.updateDynamic("truncateLogContext")(truncateLogContext.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstancesTruncateLogRequest]
   }
-  @scala.inline
-  implicit class SchemaInstancesTruncateLogRequestOps[Self <: SchemaInstancesTruncateLogRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTruncateLogContext(value: SchemaTruncateLogContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("truncateLogContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTruncateLogContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("truncateLogContext")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

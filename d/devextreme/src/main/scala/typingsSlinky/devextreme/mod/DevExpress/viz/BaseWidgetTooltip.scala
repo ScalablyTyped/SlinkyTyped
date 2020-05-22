@@ -9,218 +9,68 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/** Configures tooltips - small pop-up rectangles that display information about a data-visualizing widget element being pressed or hovered over with the mouse pointer. */
-@js.native
+/** @name BaseWidget.Options.tooltip */
 trait BaseWidgetTooltip extends js.Object {
-  /** Specifies the length of a tooltip's arrow in pixels. */
-  var arrowLength: js.UndefOr[Double] = js.native
-  /** Configures a tooltip's border. */
-  var border: js.UndefOr[DashStyleOpacity] = js.native
-  /** Colors all tooltips. */
-  var color: js.UndefOr[String] = js.native
-  /** Specifies the container in which to draw tooltips. The default container is the HTML DOM `` element. */
-  var container: js.UndefOr[String | Element | JQuery] = js.native
-  /** Makes all the tooltip's corners rounded. */
-  var cornerRadius: js.UndefOr[Double] = js.native
-  /** Enables tooltips. */
-  var enabled: js.UndefOr[Boolean] = js.native
-  /** Specifies tooltips' font options. */
-  var font: js.UndefOr[Font] = js.native
-  /** Formats a value before it is displayed it in a tooltip. */
-  var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.native
-  /** Specifies tooltips' transparency. */
-  var opacity: js.UndefOr[Double] = js.native
-  /** Generates an empty space, measured in pixels, between a tooltip's left/right border and its text. */
-  var paddingLeftRight: js.UndefOr[Double] = js.native
-  /** Generates an empty space, measured in pixels, between a tooltip's top/bottom border and its text. */
-  var paddingTopBottom: js.UndefOr[Double] = js.native
-  /** Configures a tooltip's shadow. */
-  var shadow: js.UndefOr[Blur] = js.native
-  /** Specifies a tooltip's z-index. */
-  var zIndex: js.UndefOr[Double] = js.native
+  /** @name BaseWidget.Options.tooltip.arrowLength */
+  var arrowLength: js.UndefOr[Double] = js.undefined
+  /** @name BaseWidget.Options.tooltip.border */
+  var border: js.UndefOr[DashStyleOpacity] = js.undefined
+  /** @name BaseWidget.Options.tooltip.color */
+  var color: js.UndefOr[String] = js.undefined
+  /** @name BaseWidget.Options.tooltip.container */
+  var container: js.UndefOr[String | Element | JQuery] = js.undefined
+  /** @name BaseWidget.Options.tooltip.cornerRadius */
+  var cornerRadius: js.UndefOr[Double] = js.undefined
+  /** @name BaseWidget.Options.tooltip.enabled */
+  var enabled: js.UndefOr[Boolean] = js.undefined
+  /** @name BaseWidget.Options.tooltip.font */
+  var font: js.UndefOr[Font] = js.undefined
+  /** @name BaseWidget.Options.tooltip.format */
+  var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.undefined
+  /** @name BaseWidget.Options.tooltip.opacity */
+  var opacity: js.UndefOr[Double] = js.undefined
+  /** @name BaseWidget.Options.tooltip.paddingLeftRight */
+  var paddingLeftRight: js.UndefOr[Double] = js.undefined
+  /** @name BaseWidget.Options.tooltip.paddingTopBottom */
+  var paddingTopBottom: js.UndefOr[Double] = js.undefined
+  /** @name BaseWidget.Options.tooltip.shadow */
+  var shadow: js.UndefOr[Blur] = js.undefined
+  /** @name BaseWidget.Options.tooltip.zIndex */
+  var zIndex: js.UndefOr[Double] = js.undefined
 }
 
 object BaseWidgetTooltip {
   @scala.inline
-  def apply(): BaseWidgetTooltip = {
+  def apply(
+    arrowLength: js.UndefOr[Double] = js.undefined,
+    border: DashStyleOpacity = null,
+    color: String = null,
+    container: String | Element | JQuery = null,
+    cornerRadius: js.UndefOr[Double] = js.undefined,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    font: Font = null,
+    format: format = null,
+    opacity: js.UndefOr[Double] = js.undefined,
+    paddingLeftRight: js.UndefOr[Double] = js.undefined,
+    paddingTopBottom: js.UndefOr[Double] = js.undefined,
+    shadow: Blur = null,
+    zIndex: js.UndefOr[Double] = js.undefined
+  ): BaseWidgetTooltip = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(arrowLength)) __obj.updateDynamic("arrowLength")(arrowLength.get.asInstanceOf[js.Any])
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (!js.isUndefined(cornerRadius)) __obj.updateDynamic("cornerRadius")(cornerRadius.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(paddingLeftRight)) __obj.updateDynamic("paddingLeftRight")(paddingLeftRight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(paddingTopBottom)) __obj.updateDynamic("paddingTopBottom")(paddingTopBottom.get.asInstanceOf[js.Any])
+    if (shadow != null) __obj.updateDynamic("shadow")(shadow.asInstanceOf[js.Any])
+    if (!js.isUndefined(zIndex)) __obj.updateDynamic("zIndex")(zIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseWidgetTooltip]
   }
-  @scala.inline
-  implicit class BaseWidgetTooltipOps[Self <: BaseWidgetTooltip] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArrowLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArrowLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorder(value: DashStyleOpacity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerElement(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainer(value: String | Element | JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCornerRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cornerRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCornerRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cornerRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFont(value: Font): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatFunction1(value: /* value */ Double | js.Date => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFormat(value: format): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaddingLeftRight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingLeftRight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaddingLeftRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingLeftRight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaddingTopBottom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingTopBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaddingTopBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingTopBottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadow(value: Blur): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

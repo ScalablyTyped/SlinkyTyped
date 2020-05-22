@@ -7,8 +7,8 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.antdBooleans.`false`
-import typingsSlinky.antd.buttonButtonMod.ButtonType
-import typingsSlinky.antd.buttonButtonMod.NativeButtonProps
+import typingsSlinky.antd.buttonButtonMod.ButtonProps
+import typingsSlinky.antd.buttonButtonMod.LegacyButtonType
 import typingsSlinky.antd.modalModalMod.getContainerFunc
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -24,7 +24,7 @@ class SharedBuilder_ModalProps_568751350[R <: js.Object] (val args: js.Array[js.
   @scala.inline
   def bodyStyle(value: CSSProperties): this.type = set("bodyStyle", value.asInstanceOf[js.Any])
   @scala.inline
-  def cancelButtonProps(value: NativeButtonProps): this.type = set("cancelButtonProps", value.asInstanceOf[js.Any])
+  def cancelButtonProps(value: ButtonProps): this.type = set("cancelButtonProps", value.asInstanceOf[js.Any])
   @scala.inline
   def cancelTextReactElement(value: ReactElement): this.type = set("cancelText", value.asInstanceOf[js.Any])
   @scala.inline
@@ -68,13 +68,13 @@ class SharedBuilder_ModalProps_568751350[R <: js.Object] (val args: js.Array[js.
   @scala.inline
   def maskTransitionName(value: String): this.type = set("maskTransitionName", value.asInstanceOf[js.Any])
   @scala.inline
-  def okButtonProps(value: NativeButtonProps): this.type = set("okButtonProps", value.asInstanceOf[js.Any])
+  def okButtonProps(value: ButtonProps): this.type = set("okButtonProps", value.asInstanceOf[js.Any])
   @scala.inline
   def okTextReactElement(value: ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
   @scala.inline
   def okText(value: TagMod[Any]): this.type = set("okText", value.asInstanceOf[js.Any])
   @scala.inline
-  def okType(value: ButtonType): this.type = set("okType", value.asInstanceOf[js.Any])
+  def okType(value: LegacyButtonType): this.type = set("okType", value.asInstanceOf[js.Any])
   @scala.inline
   def onCancel(value: /* e */ SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onCancel", js.Any.fromFunction1(value))
   @scala.inline

@@ -26,47 +26,15 @@ trait GetDimensionValuesResponse extends js.Object {
 
 object GetDimensionValuesResponse {
   @scala.inline
-  def apply(DimensionValues: DimensionValuesWithAttributesList, ReturnSize: PageSize, TotalSize: PageSize): GetDimensionValuesResponse = {
+  def apply(
+    DimensionValues: DimensionValuesWithAttributesList,
+    ReturnSize: PageSize,
+    TotalSize: PageSize,
+    NextPageToken: NextPageToken = null
+  ): GetDimensionValuesResponse = {
     val __obj = js.Dynamic.literal(DimensionValues = DimensionValues.asInstanceOf[js.Any], ReturnSize = ReturnSize.asInstanceOf[js.Any], TotalSize = TotalSize.asInstanceOf[js.Any])
+    if (NextPageToken != null) __obj.updateDynamic("NextPageToken")(NextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetDimensionValuesResponse]
   }
-  @scala.inline
-  implicit class GetDimensionValuesResponseOps[Self <: GetDimensionValuesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDimensionValues(value: DimensionValuesWithAttributesList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DimensionValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReturnSize(value: PageSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotalSize(value: PageSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: NextPageToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,6 +6,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.rcNotification.noticeMod.DivProps
 import typingsSlinky.rcNotification.noticeMod.NoticeProps
 import typingsSlinky.rcNotification.noticeMod.default
 import typingsSlinky.react.mod.CSSProperties
@@ -40,6 +41,8 @@ object Notice {
     def onClick(value: SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
     def onClose(value: () => Unit): this.type = set("onClose", js.Any.fromFunction0(value))
+    @scala.inline
+    def props(value: DivProps): this.type = set("props", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

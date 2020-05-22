@@ -10,5 +10,11 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ShowHiddenSymbolsCommand")
 @js.native
 class ShowHiddenSymbolsCommand ()
-  extends typingsSlinky.devexpressWeb.ShowHiddenSymbolsCommand
+  extends typingsSlinky.devexpressWeb.ShowHiddenSymbolsCommand {
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.CommandState[Boolean] = js.native
+}
 

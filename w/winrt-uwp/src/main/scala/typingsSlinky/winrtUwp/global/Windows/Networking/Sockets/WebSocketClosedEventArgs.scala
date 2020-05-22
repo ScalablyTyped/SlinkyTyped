@@ -8,5 +8,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Networking.Sockets.WebSocketClosedEventArgs")
 @js.native
 abstract class WebSocketClosedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Networking.Sockets.WebSocketClosedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.Networking.Sockets.WebSocketClosedEventArgs {
+  /** Gets information about the reason that a WebSocket object was closed. */
+  /* CompleteClass */
+  override var code: Double = js.native
+  /** Gets additional details about the reason that a WebSocket object was closed. */
+  /* CompleteClass */
+  override var reason: String = js.native
+}
 

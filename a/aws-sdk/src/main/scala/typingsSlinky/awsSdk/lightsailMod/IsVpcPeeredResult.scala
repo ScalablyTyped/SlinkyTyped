@@ -14,29 +14,10 @@ trait IsVpcPeeredResult extends js.Object {
 
 object IsVpcPeeredResult {
   @scala.inline
-  def apply(): IsVpcPeeredResult = {
+  def apply(isPeered: js.UndefOr[Boolean] = js.undefined): IsVpcPeeredResult = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(isPeered)) __obj.updateDynamic("isPeered")(isPeered.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IsVpcPeeredResult]
   }
-  @scala.inline
-  implicit class IsVpcPeeredResultOps[Self <: IsVpcPeeredResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsPeered(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPeered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsPeered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPeered")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

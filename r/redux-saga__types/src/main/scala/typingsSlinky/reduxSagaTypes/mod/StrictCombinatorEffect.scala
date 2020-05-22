@@ -5,10 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait StrictCombinatorEffect[T]
-  extends CombinatorEffect[T, StrictEffect[T]]
-     with StrictEffect[T]
+trait StrictCombinatorEffect[T] extends CombinatorEffect[T, StrictEffect[T]]
 
 object StrictCombinatorEffect {
   @scala.inline

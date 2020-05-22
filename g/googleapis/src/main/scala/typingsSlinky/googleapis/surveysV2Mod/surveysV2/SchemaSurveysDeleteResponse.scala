@@ -15,29 +15,10 @@ trait SchemaSurveysDeleteResponse extends js.Object {
 
 object SchemaSurveysDeleteResponse {
   @scala.inline
-  def apply(): SchemaSurveysDeleteResponse = {
+  def apply(requestId: String = null): SchemaSurveysDeleteResponse = {
     val __obj = js.Dynamic.literal()
+    if (requestId != null) __obj.updateDynamic("requestId")(requestId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSurveysDeleteResponse]
   }
-  @scala.inline
-  implicit class SchemaSurveysDeleteResponseOps[Self <: SchemaSurveysDeleteResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRequestId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

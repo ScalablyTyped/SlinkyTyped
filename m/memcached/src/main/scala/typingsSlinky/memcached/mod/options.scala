@@ -4,263 +4,105 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait options extends js.Object {
   /**
     * md5, the hashing algorithm used to generate the hashRing values.
     */
-  var algorithm: js.UndefOr[String] = js.native
+  var algorithm: js.UndefOr[String] = js.undefined
   /**
     * undefined, an array of server_locations to replace servers that fail and that are removed from the consistent hashing scheme.
     */
-  var failOverServers: js.UndefOr[String | js.Array[String]] = js.native
+  var failOverServers: js.UndefOr[String | js.Array[String]] = js.undefined
   /**
     * 5, the number of failed-attempts to a server before it is regarded as 'dead'.
     */
-  var failures: js.UndefOr[Double] = js.native
+  var failures: js.UndefOr[Double] = js.undefined
   /**
     * 5000, the idle timeout for the connections.
     */
-  var idle: js.UndefOr[Double] = js.native
+  var idle: js.UndefOr[Double] = js.undefined
   /**
     * true, whether to use md5 as hashing scheme when keys exceed maxKeySize.
     */
-  var keyCompression: js.UndefOr[Boolean] = js.native
+  var keyCompression: js.UndefOr[Boolean] = js.undefined
   /**
     * 2592000, the maximum expiration time of keys (in seconds).
     */
-  var maxExpiration: js.UndefOr[Double] = js.native
+  var maxExpiration: js.UndefOr[Double] = js.undefined
   /**
     * 250, the maximum key size allowed.
     */
-  var maxKeySize: js.UndefOr[Double] = js.native
+  var maxKeySize: js.UndefOr[Double] = js.undefined
   /**
     * 1048576, the maximum size of a value.
     */
-  var maxValue: js.UndefOr[Double] = js.native
+  var maxValue: js.UndefOr[Double] = js.undefined
   /**
     * '', sentinel to prepend to all memcache keys for namespacing the entries.
     */
-  var namespace: js.UndefOr[String] = js.native
+  var namespace: js.UndefOr[String] = js.undefined
   /**
     * 10, the maximum size of the connection pool.
     */
-  var poolSize: js.UndefOr[Double] = js.native
+  var poolSize: js.UndefOr[Double] = js.undefined
   /**
     * 18000000, the time between reconnection attempts (in milliseconds).
     */
-  var reconnect: js.UndefOr[Double] = js.native
+  var reconnect: js.UndefOr[Double] = js.undefined
   /**
     * false, if true, authorizes the automatic removal of dead servers from the pool.
     */
-  var remove: js.UndefOr[Boolean] = js.native
+  var remove: js.UndefOr[Boolean] = js.undefined
   /**
     * 5, the number of socket allocation retries per request.
     */
-  var retries: js.UndefOr[Double] = js.native
+  var retries: js.UndefOr[Double] = js.undefined
   /**
     * 30000, the time between a server failure and an attempt to set it up back in service.
     */
-  var retry: js.UndefOr[Double] = js.native
+  var retry: js.UndefOr[Double] = js.undefined
   /**
     * 5000, the time after which Memcached sends a connection timeout (in milliseconds).
     */
-  var timeout: js.UndefOr[Double] = js.native
+  var timeout: js.UndefOr[Double] = js.undefined
 }
 
 object options {
   @scala.inline
-  def apply(): options = {
+  def apply(
+    algorithm: String = null,
+    failOverServers: String | js.Array[String] = null,
+    failures: js.UndefOr[Double] = js.undefined,
+    idle: js.UndefOr[Double] = js.undefined,
+    keyCompression: js.UndefOr[Boolean] = js.undefined,
+    maxExpiration: js.UndefOr[Double] = js.undefined,
+    maxKeySize: js.UndefOr[Double] = js.undefined,
+    maxValue: js.UndefOr[Double] = js.undefined,
+    namespace: String = null,
+    poolSize: js.UndefOr[Double] = js.undefined,
+    reconnect: js.UndefOr[Double] = js.undefined,
+    remove: js.UndefOr[Boolean] = js.undefined,
+    retries: js.UndefOr[Double] = js.undefined,
+    retry: js.UndefOr[Double] = js.undefined,
+    timeout: js.UndefOr[Double] = js.undefined
+  ): options = {
     val __obj = js.Dynamic.literal()
+    if (algorithm != null) __obj.updateDynamic("algorithm")(algorithm.asInstanceOf[js.Any])
+    if (failOverServers != null) __obj.updateDynamic("failOverServers")(failOverServers.asInstanceOf[js.Any])
+    if (!js.isUndefined(failures)) __obj.updateDynamic("failures")(failures.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(idle)) __obj.updateDynamic("idle")(idle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(keyCompression)) __obj.updateDynamic("keyCompression")(keyCompression.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxExpiration)) __obj.updateDynamic("maxExpiration")(maxExpiration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxKeySize)) __obj.updateDynamic("maxKeySize")(maxKeySize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxValue)) __obj.updateDynamic("maxValue")(maxValue.get.asInstanceOf[js.Any])
+    if (namespace != null) __obj.updateDynamic("namespace")(namespace.asInstanceOf[js.Any])
+    if (!js.isUndefined(poolSize)) __obj.updateDynamic("poolSize")(poolSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(reconnect)) __obj.updateDynamic("reconnect")(reconnect.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(remove)) __obj.updateDynamic("remove")(remove.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(retries)) __obj.updateDynamic("retries")(retries.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(retry)) __obj.updateDynamic("retry")(retry.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[options]
   }
-  @scala.inline
-  implicit class optionsOps[Self <: options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlgorithm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlgorithm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailOverServers(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failOverServers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailOverServers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failOverServers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailures(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyCompression(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyCompression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyCompression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyCompression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxExpiration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxExpiration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxExpiration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxExpiration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxKeySize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxKeySize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxKeySize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxKeySize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNamespace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPoolSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("poolSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPoolSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("poolSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReconnect(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reconnect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReconnect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reconnect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemove(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetry(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retry")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

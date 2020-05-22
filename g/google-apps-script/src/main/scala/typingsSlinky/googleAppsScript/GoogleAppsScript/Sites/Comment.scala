@@ -12,17 +12,16 @@ import scala.scalajs.js.annotation._
   * modify Sites made with this version, but script can still access
   * classic Sites.
   */
-@js.native
 trait Comment extends js.Object {
-  def deleteComment(): Unit = js.native
-  def getAuthorEmail(): String = js.native
-  def getAuthorName(): String = js.native
-  def getContent(): String = js.native
-  def getDatePublished(): Date = js.native
-  def getLastUpdated(): Date = js.native
-  def getParent(): Page = js.native
-  def setContent(content: String): Comment = js.native
-  def setParent(parent: Page): Comment = js.native
+  def deleteComment(): Unit
+  def getAuthorEmail(): String
+  def getAuthorName(): String
+  def getContent(): String
+  def getDatePublished(): Date
+  def getLastUpdated(): Date
+  def getParent(): Page
+  def setContent(content: String): Comment
+  def setParent(parent: Page): Comment
 }
 
 object Comment {
@@ -41,67 +40,5 @@ object Comment {
     val __obj = js.Dynamic.literal(deleteComment = js.Any.fromFunction0(deleteComment), getAuthorEmail = js.Any.fromFunction0(getAuthorEmail), getAuthorName = js.Any.fromFunction0(getAuthorName), getContent = js.Any.fromFunction0(getContent), getDatePublished = js.Any.fromFunction0(getDatePublished), getLastUpdated = js.Any.fromFunction0(getLastUpdated), getParent = js.Any.fromFunction0(getParent), setContent = js.Any.fromFunction1(setContent), setParent = js.Any.fromFunction1(setParent))
     __obj.asInstanceOf[Comment]
   }
-  @scala.inline
-  implicit class CommentOps[Self <: Comment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeleteComment(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteComment")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetAuthorEmail(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAuthorEmail")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetAuthorName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAuthorName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetContent(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContent")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDatePublished(value: () => Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDatePublished")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetLastUpdated(value: () => Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLastUpdated")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetParent(value: () => Page): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getParent")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetContent(value: String => Comment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setContent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetParent(value: Page => Comment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setParent")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TSInterfaceDeclaration
   extends Node
      with Declaration
      with Statement {
-  var body: TSInterfaceBody = js.native
-  var declare: Boolean | Null = js.native
-  var `extends`: js.Array[TSExpressionWithTypeArguments] | Null = js.native
-  var id: Identifier_ = js.native
-  var typeParameters: TypeParameterDeclaration_ | Null = js.native
+  var body: TSInterfaceBody
+  var declare: Boolean | Null
+  var `extends`: js.Array[TSExpressionWithTypeArguments] | Null
+  var id: Identifier_
+  var typeParameters: TypeParameterDeclaration_ | Null
   @JSName("type")
-  var type_TSInterfaceDeclaration: typingsSlinky.babelTypes.babelTypesStrings.TSInterfaceDeclaration = js.native
+  var type_TSInterfaceDeclaration: typingsSlinky.babelTypes.babelTypesStrings.TSInterfaceDeclaration
 }
 
 @JSImport("babel-types", "TSInterfaceDeclaration")

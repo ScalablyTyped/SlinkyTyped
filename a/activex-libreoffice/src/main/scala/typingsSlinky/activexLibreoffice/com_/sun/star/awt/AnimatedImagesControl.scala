@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * is the default control used for an {@link AnimatedImagesControlModel} , displayed a series of images.
   * @since OOo 3.4
   */
-@js.native
 trait AnimatedImagesControl
   extends XControl
      with XWindow

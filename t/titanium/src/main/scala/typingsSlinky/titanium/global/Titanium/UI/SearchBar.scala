@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * A specialized text field for entering search text.
-		 */
+  * A specialized text field for entering search text.
+  */
 @JSGlobal("Titanium.UI.SearchBar")
 @js.native
 class SearchBar ()

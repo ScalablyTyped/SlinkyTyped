@@ -6,15 +6,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ITableInputAttributes extends IAttributes {
-  var disableFilter: js.UndefOr[String] = js.native
-  var ngTable: js.UndefOr[String] = js.native
-  var ngTableDynamic: js.UndefOr[String] = js.native
-  var showFilter: js.UndefOr[String] = js.native
-  var showGroup: js.UndefOr[String] = js.native
-  var templateHeader: js.UndefOr[String] = js.native
-  var templatePagination: js.UndefOr[String] = js.native
+  var disableFilter: js.UndefOr[String] = js.undefined
+  var ngTable: js.UndefOr[String] = js.undefined
+  var ngTableDynamic: js.UndefOr[String] = js.undefined
+  var showFilter: js.UndefOr[String] = js.undefined
+  var showGroup: js.UndefOr[String] = js.undefined
+  var templateHeader: js.UndefOr[String] = js.undefined
+  var templatePagination: js.UndefOr[String] = js.undefined
 }
 
 object ITableInputAttributes {
@@ -26,102 +25,24 @@ object ITableInputAttributes {
     $observe: (String, js.Function1[/* value */ js.UndefOr[js.Any], _]) => Function,
     $removeClass: String => Unit,
     $set: (String, js.Any) => Unit,
-    $updateClass: (String, String) => Unit
+    $updateClass: (String, String) => Unit,
+    disableFilter: String = null,
+    ngTable: String = null,
+    ngTableDynamic: String = null,
+    showFilter: String = null,
+    showGroup: String = null,
+    templateHeader: String = null,
+    templatePagination: String = null
   ): ITableInputAttributes = {
     val __obj = js.Dynamic.literal($addClass = js.Any.fromFunction1($addClass), $attr = $attr.asInstanceOf[js.Any], $normalize = js.Any.fromFunction1($normalize), $observe = js.Any.fromFunction2($observe), $removeClass = js.Any.fromFunction1($removeClass), $set = js.Any.fromFunction2($set), $updateClass = js.Any.fromFunction2($updateClass))
+    if (disableFilter != null) __obj.updateDynamic("disableFilter")(disableFilter.asInstanceOf[js.Any])
+    if (ngTable != null) __obj.updateDynamic("ngTable")(ngTable.asInstanceOf[js.Any])
+    if (ngTableDynamic != null) __obj.updateDynamic("ngTableDynamic")(ngTableDynamic.asInstanceOf[js.Any])
+    if (showFilter != null) __obj.updateDynamic("showFilter")(showFilter.asInstanceOf[js.Any])
+    if (showGroup != null) __obj.updateDynamic("showGroup")(showGroup.asInstanceOf[js.Any])
+    if (templateHeader != null) __obj.updateDynamic("templateHeader")(templateHeader.asInstanceOf[js.Any])
+    if (templatePagination != null) __obj.updateDynamic("templatePagination")(templatePagination.asInstanceOf[js.Any])
     __obj.asInstanceOf[ITableInputAttributes]
   }
-  @scala.inline
-  implicit class ITableInputAttributesOps[Self <: ITableInputAttributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisableFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNgTable(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ngTable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNgTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ngTable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNgTableDynamic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ngTableDynamic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNgTableDynamic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ngTableDynamic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowGroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateHeader(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplatePagination(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templatePagination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplatePagination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templatePagination")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -8,16 +8,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DesignPackageInfo extends ClientValueObject {
-  def get_majorVersion(): Double = js.native
-  def get_minorVersion(): Double = js.native
-  def get_packageGuid(): Guid = js.native
-  def get_packageName(): String = js.native
-  def set_majorVersion(value: Double): Double = js.native
-  def set_minorVersion(value: Double): Double = js.native
-  def set_packageGuid(value: Guid): Guid = js.native
-  def set_packageName(value: String): String = js.native
+  def get_majorVersion(): Double
+  def get_minorVersion(): Double
+  def get_packageGuid(): Guid
+  def get_packageName(): String
+  def set_majorVersion(value: Double): Double
+  def set_minorVersion(value: Double): Double
+  def set_packageGuid(value: Guid): Guid
+  def set_packageName(value: String): String
 }
 
 object DesignPackageInfo {
@@ -40,61 +39,5 @@ object DesignPackageInfo {
     val __obj = js.Dynamic.literal(customFromJson = js.Any.fromFunction1(customFromJson), customWriteToXml = js.Any.fromFunction2(customWriteToXml), fromJson = js.Any.fromFunction1(fromJson), get_majorVersion = js.Any.fromFunction0(get_majorVersion), get_minorVersion = js.Any.fromFunction0(get_minorVersion), get_packageGuid = js.Any.fromFunction0(get_packageGuid), get_packageName = js.Any.fromFunction0(get_packageName), get_typeId = js.Any.fromFunction0(get_typeId), set_majorVersion = js.Any.fromFunction1(set_majorVersion), set_minorVersion = js.Any.fromFunction1(set_minorVersion), set_packageGuid = js.Any.fromFunction1(set_packageGuid), set_packageName = js.Any.fromFunction1(set_packageName), writeToXml = js.Any.fromFunction2(writeToXml))
     __obj.asInstanceOf[DesignPackageInfo]
   }
-  @scala.inline
-  implicit class DesignPackageInfoOps[Self <: DesignPackageInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet_majorVersion(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_majorVersion")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_minorVersion(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_minorVersion")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_packageGuid(value: () => Guid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_packageGuid")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_packageName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_packageName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSet_majorVersion(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_majorVersion")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_minorVersion(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_minorVersion")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_packageGuid(value: Guid => Guid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_packageGuid")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_packageName(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_packageName")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

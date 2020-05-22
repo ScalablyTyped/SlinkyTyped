@@ -3,10 +3,10 @@ package typingsSlinky.antd.components
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antd.anon.Lang
 import typingsSlinky.antd.anon.OnChange
 import typingsSlinky.antd.generateCalendarMod.CalendarMode
 import typingsSlinky.antd.generateCalendarMod.CalendarProps
+import typingsSlinky.antd.generatePickerMod.PickerLocale
 import typingsSlinky.moment.mod.Moment
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -37,7 +37,7 @@ object Calendar {
     @scala.inline
     def headerRender(value: /* config */ OnChange[Moment] => TagMod[Any]): this.type = set("headerRender", js.Any.fromFunction1(value))
     @scala.inline
-    def locale(value: Lang): this.type = set("locale", value.asInstanceOf[js.Any])
+    def locale(value: PickerLocale): this.type = set("locale", value.asInstanceOf[js.Any])
     @scala.inline
     def mode(value: CalendarMode): this.type = set("mode", value.asInstanceOf[js.Any])
     @scala.inline

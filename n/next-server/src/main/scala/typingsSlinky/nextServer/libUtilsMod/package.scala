@@ -10,6 +10,9 @@ package object libUtilsMod {
     typingsSlinky.nextServer.libUtilsMod.AppInitialProps, 
     typingsSlinky.nextServer.libUtilsMod.AppPropsType[typingsSlinky.nextServer.routerMod.NextRouter, js.Object]
   ]
+  type ComponentsEnhancer = typingsSlinky.nextServer.anon.EnhanceApp | (typingsSlinky.nextServer.libUtilsMod.Enhancer[
+    typingsSlinky.nextServer.libUtilsMod.NextComponentType[typingsSlinky.nextServer.libUtilsMod.NextPageContext, js.Object, js.Object]
+  ])
   type DocumentType = typingsSlinky.nextServer.libUtilsMod.NextComponentType[
     typingsSlinky.nextServer.libUtilsMod.DocumentContext, 
     typingsSlinky.nextServer.libUtilsMod.DocumentInitialProps, 

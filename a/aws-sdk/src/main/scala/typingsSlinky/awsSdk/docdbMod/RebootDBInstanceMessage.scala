@@ -18,35 +18,10 @@ trait RebootDBInstanceMessage extends js.Object {
 
 object RebootDBInstanceMessage {
   @scala.inline
-  def apply(DBInstanceIdentifier: String): RebootDBInstanceMessage = {
+  def apply(DBInstanceIdentifier: String, ForceFailover: js.UndefOr[BooleanOptional] = js.undefined): RebootDBInstanceMessage = {
     val __obj = js.Dynamic.literal(DBInstanceIdentifier = DBInstanceIdentifier.asInstanceOf[js.Any])
+    if (!js.isUndefined(ForceFailover)) __obj.updateDynamic("ForceFailover")(ForceFailover.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RebootDBInstanceMessage]
   }
-  @scala.inline
-  implicit class RebootDBInstanceMessageOps[Self <: RebootDBInstanceMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDBInstanceIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBInstanceIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForceFailover(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForceFailover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceFailover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForceFailover")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

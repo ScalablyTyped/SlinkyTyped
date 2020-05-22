@@ -25,7 +25,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.vegaTypings.vegaTypingsStrings.touchstart
   - typingsSlinky.vegaTypings.vegaTypingsStrings.wheel
 */
-trait EventType extends WindowEventType
+trait EventType extends js.Object
 
 object EventType {
   @scala.inline

@@ -40,6 +40,15 @@ object util extends js.Object {
   class Long protected ()
     extends typingsSlinky.protobufjs.mod.Long {
     def this(params: js.Any*) = this()
+    /** High bits */
+    /* CompleteClass */
+    override var high: Double = js.native
+    /** Low bits */
+    /* CompleteClass */
+    override var low: Double = js.native
+    /** Whether unsigned or not */
+    /* CompleteClass */
+    override var unsigned: Boolean = js.native
   }
   
   /** Helper class for working with the low and high bits of a 64 bit value. */

@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MerchantOrderReturnItem extends js.Object {
-  var customerReturnReason: js.UndefOr[CustomerReturnReason] = js.native
-  var itemId: js.UndefOr[String] = js.native
-  var merchantReturnReason: js.UndefOr[RefundReason] = js.native
-  var product: js.UndefOr[OrderLineItemProduct] = js.native
-  var returnShipmentIds: js.UndefOr[js.Array[String]] = js.native
-  var state: js.UndefOr[String] = js.native
+  var customerReturnReason: js.UndefOr[CustomerReturnReason] = js.undefined
+  var itemId: js.UndefOr[String] = js.undefined
+  var merchantReturnReason: js.UndefOr[RefundReason] = js.undefined
+  var product: js.UndefOr[OrderLineItemProduct] = js.undefined
+  var returnShipmentIds: js.UndefOr[js.Array[String]] = js.undefined
+  var state: js.UndefOr[String] = js.undefined
 }
 
 object MerchantOrderReturnItem {
   @scala.inline
-  def apply(): MerchantOrderReturnItem = {
+  def apply(
+    customerReturnReason: CustomerReturnReason = null,
+    itemId: String = null,
+    merchantReturnReason: RefundReason = null,
+    product: OrderLineItemProduct = null,
+    returnShipmentIds: js.Array[String] = null,
+    state: String = null
+  ): MerchantOrderReturnItem = {
     val __obj = js.Dynamic.literal()
+    if (customerReturnReason != null) __obj.updateDynamic("customerReturnReason")(customerReturnReason.asInstanceOf[js.Any])
+    if (itemId != null) __obj.updateDynamic("itemId")(itemId.asInstanceOf[js.Any])
+    if (merchantReturnReason != null) __obj.updateDynamic("merchantReturnReason")(merchantReturnReason.asInstanceOf[js.Any])
+    if (product != null) __obj.updateDynamic("product")(product.asInstanceOf[js.Any])
+    if (returnShipmentIds != null) __obj.updateDynamic("returnShipmentIds")(returnShipmentIds.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[MerchantOrderReturnItem]
   }
-  @scala.inline
-  implicit class MerchantOrderReturnItemOps[Self <: MerchantOrderReturnItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomerReturnReason(value: CustomerReturnReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerReturnReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomerReturnReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerReturnReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMerchantReturnReason(value: RefundReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("merchantReturnReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMerchantReturnReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("merchantReturnReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProduct(value: OrderLineItemProduct): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("product")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProduct: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("product")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnShipmentIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnShipmentIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturnShipmentIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnShipmentIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

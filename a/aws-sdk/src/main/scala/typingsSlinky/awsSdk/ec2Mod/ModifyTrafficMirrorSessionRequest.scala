@@ -46,119 +46,27 @@ trait ModifyTrafficMirrorSessionRequest extends js.Object {
 
 object ModifyTrafficMirrorSessionRequest {
   @scala.inline
-  def apply(TrafficMirrorSessionId: TrafficMirrorSessionId): ModifyTrafficMirrorSessionRequest = {
+  def apply(
+    TrafficMirrorSessionId: TrafficMirrorSessionId,
+    Description: String = null,
+    DryRun: js.UndefOr[Boolean] = js.undefined,
+    PacketLength: js.UndefOr[Integer] = js.undefined,
+    RemoveFields: TrafficMirrorSessionFieldList = null,
+    SessionNumber: js.UndefOr[Integer] = js.undefined,
+    TrafficMirrorFilterId: TrafficMirrorFilterId = null,
+    TrafficMirrorTargetId: TrafficMirrorTargetId = null,
+    VirtualNetworkId: js.UndefOr[Integer] = js.undefined
+  ): ModifyTrafficMirrorSessionRequest = {
     val __obj = js.Dynamic.literal(TrafficMirrorSessionId = TrafficMirrorSessionId.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(PacketLength)) __obj.updateDynamic("PacketLength")(PacketLength.get.asInstanceOf[js.Any])
+    if (RemoveFields != null) __obj.updateDynamic("RemoveFields")(RemoveFields.asInstanceOf[js.Any])
+    if (!js.isUndefined(SessionNumber)) __obj.updateDynamic("SessionNumber")(SessionNumber.get.asInstanceOf[js.Any])
+    if (TrafficMirrorFilterId != null) __obj.updateDynamic("TrafficMirrorFilterId")(TrafficMirrorFilterId.asInstanceOf[js.Any])
+    if (TrafficMirrorTargetId != null) __obj.updateDynamic("TrafficMirrorTargetId")(TrafficMirrorTargetId.asInstanceOf[js.Any])
+    if (!js.isUndefined(VirtualNetworkId)) __obj.updateDynamic("VirtualNetworkId")(VirtualNetworkId.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyTrafficMirrorSessionRequest]
   }
-  @scala.inline
-  implicit class ModifyTrafficMirrorSessionRequestOps[Self <: ModifyTrafficMirrorSessionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTrafficMirrorSessionId(value: TrafficMirrorSessionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficMirrorSessionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPacketLength(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PacketLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPacketLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PacketLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveFields(value: TrafficMirrorSessionFieldList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoveFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionNumber(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SessionNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SessionNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrafficMirrorFilterId(value: TrafficMirrorFilterId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficMirrorFilterId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrafficMirrorFilterId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficMirrorFilterId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrafficMirrorTargetId(value: TrafficMirrorTargetId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficMirrorTargetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrafficMirrorTargetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficMirrorTargetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVirtualNetworkId(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VirtualNetworkId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualNetworkId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VirtualNetworkId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,6 +7,5 @@ import scala.scalajs.js.annotation._
 
 @JSImport("@tensorflow/tfjs-core", "version_core")
 @js.native
-object versionCore
-  extends TopLevel[/* "1.7.0" */ String]
+object versionCore extends TopLevel[/* "Identity" */ String]
 

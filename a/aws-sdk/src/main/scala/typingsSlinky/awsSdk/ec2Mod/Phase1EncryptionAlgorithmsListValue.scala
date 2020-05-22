@@ -14,29 +14,10 @@ trait Phase1EncryptionAlgorithmsListValue extends js.Object {
 
 object Phase1EncryptionAlgorithmsListValue {
   @scala.inline
-  def apply(): Phase1EncryptionAlgorithmsListValue = {
+  def apply(Value: String = null): Phase1EncryptionAlgorithmsListValue = {
     val __obj = js.Dynamic.literal()
+    if (Value != null) __obj.updateDynamic("Value")(Value.asInstanceOf[js.Any])
     __obj.asInstanceOf[Phase1EncryptionAlgorithmsListValue]
   }
-  @scala.inline
-  implicit class Phase1EncryptionAlgorithmsListValueOps[Self <: Phase1EncryptionAlgorithmsListValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

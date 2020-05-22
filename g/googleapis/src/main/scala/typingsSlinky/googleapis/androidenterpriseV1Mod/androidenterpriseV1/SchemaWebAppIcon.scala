@@ -20,29 +20,10 @@ trait SchemaWebAppIcon extends js.Object {
 
 object SchemaWebAppIcon {
   @scala.inline
-  def apply(): SchemaWebAppIcon = {
+  def apply(imageData: String = null): SchemaWebAppIcon = {
     val __obj = js.Dynamic.literal()
+    if (imageData != null) __obj.updateDynamic("imageData")(imageData.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWebAppIcon]
   }
-  @scala.inline
-  implicit class SchemaWebAppIconOps[Self <: SchemaWebAppIcon] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImageData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageData")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

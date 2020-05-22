@@ -21,41 +21,11 @@ trait SchemaGdataDiffVersionResponse extends js.Object {
 
 object SchemaGdataDiffVersionResponse {
   @scala.inline
-  def apply(): SchemaGdataDiffVersionResponse = {
+  def apply(objectSizeBytes: String = null, objectVersion: String = null): SchemaGdataDiffVersionResponse = {
     val __obj = js.Dynamic.literal()
+    if (objectSizeBytes != null) __obj.updateDynamic("objectSizeBytes")(objectSizeBytes.asInstanceOf[js.Any])
+    if (objectVersion != null) __obj.updateDynamic("objectVersion")(objectVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGdataDiffVersionResponse]
   }
-  @scala.inline
-  implicit class SchemaGdataDiffVersionResponseOps[Self <: SchemaGdataDiffVersionResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withObjectSizeBytes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectSizeBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectSizeBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectSizeBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

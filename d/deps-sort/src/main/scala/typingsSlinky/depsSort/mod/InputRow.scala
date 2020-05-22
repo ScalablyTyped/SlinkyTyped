@@ -7,20 +7,19 @@ import scala.scalajs.js.annotation._
 /**
   * Input objects are file objects in the module-deps shape. They must at least have these properties:
   */
-@js.native
 trait InputRow extends js.Object {
   /**
     * dependencies for this file, mapping strings as used in require() to row IDs
     */
-  var deps: js.Array[String] = js.native
+  var deps: js.Array[String]
   /**
     * a unique identifier for the file
     */
-  var id: String = js.native
+  var id: String
   /**
     * the file contents
     */
-  var source: String = js.native
+  var source: String
 }
 
 object InputRow {
@@ -29,31 +28,5 @@ object InputRow {
     val __obj = js.Dynamic.literal(deps = deps.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputRow]
   }
-  @scala.inline
-  implicit class InputRowOps[Self <: InputRow] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeps(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

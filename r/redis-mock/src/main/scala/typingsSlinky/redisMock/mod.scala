@@ -24,7 +24,12 @@ object mod extends js.Object {
     extends typingsSlinky.redis.mod.ParserError
   
   @js.native
-  class RedisError () extends Error
+  class RedisError () extends Error {
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+  }
   
   @js.native
   class ReplyError ()

@@ -7,12 +7,11 @@ import scala.scalajs.js.annotation._
 /**
   * A command to move the cursor backwards and erase the character in that space.
   */
-@js.native
 trait BackspaceCommand extends CommandWithSimpleStateBase {
   /**
     * Executes the BackspaceCommand command.
     */
-  def execute(): Boolean = js.native
+  def execute(): Boolean
 }
 
 object BackspaceCommand {
@@ -21,19 +20,5 @@ object BackspaceCommand {
     val __obj = js.Dynamic.literal(execute = js.Any.fromFunction0(execute), getState = js.Any.fromFunction0(getState))
     __obj.asInstanceOf[BackspaceCommand]
   }
-  @scala.inline
-  implicit class BackspaceCommandOps[Self <: BackspaceCommand] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecute(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

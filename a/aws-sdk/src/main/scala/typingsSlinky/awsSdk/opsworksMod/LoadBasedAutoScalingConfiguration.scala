@@ -26,65 +26,18 @@ trait LoadBasedAutoScalingConfiguration extends js.Object {
 
 object LoadBasedAutoScalingConfiguration {
   @scala.inline
-  def apply(): LoadBasedAutoScalingConfiguration = {
+  def apply(
+    DownScaling: AutoScalingThresholds = null,
+    Enable: js.UndefOr[Boolean] = js.undefined,
+    LayerId: String = null,
+    UpScaling: AutoScalingThresholds = null
+  ): LoadBasedAutoScalingConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (DownScaling != null) __obj.updateDynamic("DownScaling")(DownScaling.asInstanceOf[js.Any])
+    if (!js.isUndefined(Enable)) __obj.updateDynamic("Enable")(Enable.get.asInstanceOf[js.Any])
+    if (LayerId != null) __obj.updateDynamic("LayerId")(LayerId.asInstanceOf[js.Any])
+    if (UpScaling != null) __obj.updateDynamic("UpScaling")(UpScaling.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoadBasedAutoScalingConfiguration]
   }
-  @scala.inline
-  implicit class LoadBasedAutoScalingConfigurationOps[Self <: LoadBasedAutoScalingConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDownScaling(value: AutoScalingThresholds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DownScaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDownScaling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DownScaling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LayerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LayerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpScaling(value: AutoScalingThresholds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpScaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpScaling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpScaling")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

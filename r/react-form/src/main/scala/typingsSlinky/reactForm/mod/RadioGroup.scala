@@ -11,5 +11,8 @@ import scala.scalajs.js.annotation._
 @js.native
 class RadioGroup ()
   extends Component[FieldPropschildrenpropsFi, js.Object, js.Any]
-     with ChildContextProvider[RadioGroupContext]
+     with ChildContextProvider[RadioGroupContext] {
+  /* CompleteClass */
+  override def getChildContext(): RadioGroupContext = js.native
+}
 

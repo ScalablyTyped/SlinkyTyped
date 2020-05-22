@@ -4,66 +4,65 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Appsettingcontentwidth extends js.Object {
   @JSName("app.setting.content-width")
-  var `appDotsettingDotcontent-width`: String = js.native
+  var `appDotsettingDotcontent-width`: String
   @JSName("app.setting.content-width.fixed")
-  var `appDotsettingDotcontent-widthDotfixed`: String = js.native
+  var `appDotsettingDotcontent-widthDotfixed`: String
   @JSName("app.setting.content-width.fluid")
-  var `appDotsettingDotcontent-widthDotfluid`: String = js.native
+  var `appDotsettingDotcontent-widthDotfluid`: String
   @JSName("app.setting.copy")
-  var appDotsettingDotcopy: String = js.native
+  var appDotsettingDotcopy: String
   @JSName("app.setting.copyinfo")
-  var appDotsettingDotcopyinfo: String = js.native
+  var appDotsettingDotcopyinfo: String
   @JSName("app.setting.fixedheader")
-  var appDotsettingDotfixedheader: String = js.native
+  var appDotsettingDotfixedheader: String
   @JSName("app.setting.fixedsidebar")
-  var appDotsettingDotfixedsidebar: String = js.native
+  var appDotsettingDotfixedsidebar: String
   @JSName("app.setting.fixedsidebar.hint")
-  var appDotsettingDotfixedsidebarDothint: String = js.native
+  var appDotsettingDotfixedsidebarDothint: String
   @JSName("app.setting.hideheader")
-  var appDotsettingDothideheader: String = js.native
+  var appDotsettingDothideheader: String
   @JSName("app.setting.hideheader.hint")
-  var appDotsettingDothideheaderDothint: String = js.native
+  var appDotsettingDothideheaderDothint: String
   @JSName("app.setting.loading")
-  var appDotsettingDotloading: String = js.native
+  var appDotsettingDotloading: String
   @JSName("app.setting.navigationmode")
-  var appDotsettingDotnavigationmode: String = js.native
+  var appDotsettingDotnavigationmode: String
   @JSName("app.setting.othersettings")
-  var appDotsettingDotothersettings: String = js.native
+  var appDotsettingDotothersettings: String
   @JSName("app.setting.pagestyle")
-  var appDotsettingDotpagestyle: String = js.native
+  var appDotsettingDotpagestyle: String
   @JSName("app.setting.pagestyle.dark")
-  var appDotsettingDotpagestyleDotdark: String = js.native
+  var appDotsettingDotpagestyleDotdark: String
   @JSName("app.setting.pagestyle.light")
-  var appDotsettingDotpagestyleDotlight: String = js.native
+  var appDotsettingDotpagestyleDotlight: String
   @JSName("app.setting.production.hint")
-  var appDotsettingDotproductionDothint: String = js.native
+  var appDotsettingDotproductionDothint: String
   @JSName("app.setting.sidemenu")
-  var appDotsettingDotsidemenu: String = js.native
+  var appDotsettingDotsidemenu: String
   @JSName("app.setting.themecolor")
-  var appDotsettingDotthemecolor: String = js.native
+  var appDotsettingDotthemecolor: String
   @JSName("app.setting.themecolor.cyan")
-  var appDotsettingDotthemecolorDotcyan: String = js.native
+  var appDotsettingDotthemecolorDotcyan: String
   @JSName("app.setting.themecolor.daybreak")
-  var appDotsettingDotthemecolorDotdaybreak: String = js.native
+  var appDotsettingDotthemecolorDotdaybreak: String
   @JSName("app.setting.themecolor.dust")
-  var appDotsettingDotthemecolorDotdust: String = js.native
+  var appDotsettingDotthemecolorDotdust: String
   @JSName("app.setting.themecolor.geekblue")
-  var appDotsettingDotthemecolorDotgeekblue: String = js.native
+  var appDotsettingDotthemecolorDotgeekblue: String
   @JSName("app.setting.themecolor.green")
-  var appDotsettingDotthemecolorDotgreen: String = js.native
+  var appDotsettingDotthemecolorDotgreen: String
   @JSName("app.setting.themecolor.purple")
-  var appDotsettingDotthemecolorDotpurple: String = js.native
+  var appDotsettingDotthemecolorDotpurple: String
   @JSName("app.setting.themecolor.sunset")
-  var appDotsettingDotthemecolorDotsunset: String = js.native
+  var appDotsettingDotthemecolorDotsunset: String
   @JSName("app.setting.themecolor.volcano")
-  var appDotsettingDotthemecolorDotvolcano: String = js.native
+  var appDotsettingDotthemecolorDotvolcano: String
   @JSName("app.setting.topmenu")
-  var appDotsettingDottopmenu: String = js.native
+  var appDotsettingDottopmenu: String
   @JSName("app.setting.weakmode")
-  var appDotsettingDotweakmode: String = js.native
+  var appDotsettingDotweakmode: String
 }
 
 object Appsettingcontentwidth {
@@ -131,187 +130,5 @@ object Appsettingcontentwidth {
     __obj.updateDynamic("app.setting.weakmode")(appDotsettingDotweakmode.asInstanceOf[js.Any])
     __obj.asInstanceOf[Appsettingcontentwidth]
   }
-  @scala.inline
-  implicit class AppsettingcontentwidthOps[Self <: Appsettingcontentwidth] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withAppDotsettingDotcontent-width`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.content-width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withAppDotsettingDotcontent-widthDotfixed`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.content-width.fixed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withAppDotsettingDotcontent-widthDotfluid`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.content-width.fluid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDotcopy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.copy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDotcopyinfo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.copyinfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDotfixedheader(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.fixedheader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDotfixedsidebar(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.fixedsidebar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDotfixedsidebarDothint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.fixedsidebar.hint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDothideheader(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.hideheader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDothideheaderDothint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.hideheader.hint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDotloading(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.loading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDotnavigationmode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.navigationmode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDotothersettings(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.othersettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDotpagestyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.pagestyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDotpagestyleDotdark(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.pagestyle.dark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDotpagestyleDotlight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.pagestyle.light")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDotproductionDothint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.production.hint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDotsidemenu(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.sidemenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDotthemecolor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.themecolor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDotthemecolorDotcyan(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.themecolor.cyan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDotthemecolorDotdaybreak(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.themecolor.daybreak")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDotthemecolorDotdust(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.themecolor.dust")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDotthemecolorDotgeekblue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.themecolor.geekblue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDotthemecolorDotgreen(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.themecolor.green")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDotthemecolorDotpurple(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.themecolor.purple")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDotthemecolorDotsunset(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.themecolor.sunset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDotthemecolorDotvolcano(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.themecolor.volcano")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDottopmenu(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.topmenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppDotsettingDotweakmode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app.setting.weakmode")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -7,10 +7,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Node extends Printable {
-  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
-  var `type`: String = js.native
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.undefined
+  var `type`: String
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.Node")

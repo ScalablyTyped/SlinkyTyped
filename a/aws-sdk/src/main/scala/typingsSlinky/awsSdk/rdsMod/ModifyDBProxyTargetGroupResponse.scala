@@ -14,29 +14,10 @@ trait ModifyDBProxyTargetGroupResponse extends js.Object {
 
 object ModifyDBProxyTargetGroupResponse {
   @scala.inline
-  def apply(): ModifyDBProxyTargetGroupResponse = {
+  def apply(DBProxyTargetGroup: DBProxyTargetGroup = null): ModifyDBProxyTargetGroupResponse = {
     val __obj = js.Dynamic.literal()
+    if (DBProxyTargetGroup != null) __obj.updateDynamic("DBProxyTargetGroup")(DBProxyTargetGroup.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyDBProxyTargetGroupResponse]
   }
-  @scala.inline
-  implicit class ModifyDBProxyTargetGroupResponseOps[Self <: ModifyDBProxyTargetGroupResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDBProxyTargetGroup(value: DBProxyTargetGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBProxyTargetGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDBProxyTargetGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBProxyTargetGroup")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

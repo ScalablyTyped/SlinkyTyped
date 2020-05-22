@@ -8,33 +8,32 @@ import scala.scalajs.js.annotation._
 /**
   * Middleware configration options.
   */
-@js.native
 trait Options extends js.Object {
   /**
     * `Access-Control-Allow-Headers`
     */
-  var allowHeaders: js.UndefOr[js.Array[String] | String] = js.native
+  var allowHeaders: js.UndefOr[js.Array[String] | String] = js.undefined
   /**
     * `Access-Control-Allow-Methods`, default is
     * 'GET,HEAD,PUT,POST,DELETE,PATCH'
     */
-  var allowMethods: js.UndefOr[js.Array[String] | String] = js.native
+  var allowMethods: js.UndefOr[js.Array[String] | String] = js.undefined
   /**
     * `Access-Control-Allow-Credentials`
     */
-  var credentials: js.UndefOr[Boolean] = js.native
+  var credentials: js.UndefOr[Boolean] = js.undefined
   /**
     * `Access-Control-Expose-Headers`
     */
-  var exposeHeaders: js.UndefOr[js.Array[String] | String] = js.native
+  var exposeHeaders: js.UndefOr[js.Array[String] | String] = js.undefined
   /**
     * Add set headers to `err.header` if an error is thrown
     */
-  var keepHeadersOnError: js.UndefOr[Boolean] = js.native
+  var keepHeadersOnError: js.UndefOr[Boolean] = js.undefined
   /**
     * `Access-Control-Max-Age` in seconds
     */
-  var maxAge: js.UndefOr[Double | String] = js.native
+  var maxAge: js.UndefOr[Double | String] = js.undefined
   /**
     * `Access-Control-Allow-Origin`, default is request Origin header.
     *
@@ -43,112 +42,29 @@ trait Options extends js.Object {
     * the koa context object. It may return a string or a promise that
     * will resolve with a string.
     */
-  var origin: js.UndefOr[(js.Function1[/* ctx */ Context, String | js.Thenable[String]]) | String] = js.native
+  var origin: js.UndefOr[(js.Function1[/* ctx */ Context, String | js.Thenable[String]]) | String] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    allowHeaders: js.Array[String] | String = null,
+    allowMethods: js.Array[String] | String = null,
+    credentials: js.UndefOr[Boolean] = js.undefined,
+    exposeHeaders: js.Array[String] | String = null,
+    keepHeadersOnError: js.UndefOr[Boolean] = js.undefined,
+    maxAge: Double | String = null,
+    origin: (js.Function1[/* ctx */ Context, String | js.Thenable[String]]) | String = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (allowHeaders != null) __obj.updateDynamic("allowHeaders")(allowHeaders.asInstanceOf[js.Any])
+    if (allowMethods != null) __obj.updateDynamic("allowMethods")(allowMethods.asInstanceOf[js.Any])
+    if (!js.isUndefined(credentials)) __obj.updateDynamic("credentials")(credentials.get.asInstanceOf[js.Any])
+    if (exposeHeaders != null) __obj.updateDynamic("exposeHeaders")(exposeHeaders.asInstanceOf[js.Any])
+    if (!js.isUndefined(keepHeadersOnError)) __obj.updateDynamic("keepHeadersOnError")(keepHeadersOnError.get.asInstanceOf[js.Any])
+    if (maxAge != null) __obj.updateDynamic("maxAge")(maxAge.asInstanceOf[js.Any])
+    if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowHeaders(value: js.Array[String] | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowMethods(value: js.Array[String] | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMethods")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowMethods: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMethods")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCredentials(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExposeHeaders(value: js.Array[String] | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exposeHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExposeHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exposeHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeepHeadersOnError(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepHeadersOnError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeepHeadersOnError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepHeadersOnError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxAge(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxAge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginFunction1(value: /* ctx */ Context => String | js.Thenable[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOrigin(value: (js.Function1[/* ctx */ Context, String | js.Thenable[String]]) | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

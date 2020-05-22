@@ -18,116 +18,58 @@ import scala.scalajs.js.annotation._
   * For example, one can remove the `q` and `type` by annotating the type
   * as `Omit<SpotifyApi.SearchForItemParameterObject, "q" | "type">`.
   */
-@js.native
 trait SearchForItemParameterObject extends js.Object {
   /**
     * Possible values: `audio`.
     * If `include_external=audio` is specified, the response will include any relevant audio content that is hosted externally.
     * By default external content is filtered out from responses.
     */
-  var include_external: js.UndefOr[String] = js.native
+  var include_external: js.UndefOr[String] = js.undefined
   /**
     * The maximum number of results to return.
     * Default: `20`. Minimum: `1`. Maximum: `50`.
     */
-  var limit: js.UndefOr[Double] = js.native
+  var limit: js.UndefOr[Double] = js.undefined
   /**
     * An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) or the string `from_token`.
     * If a country code is specified, only artists, albums, and tracks with content that is playable in that market is returned.
     */
-  var market: js.UndefOr[String] = js.native
+  var market: js.UndefOr[String] = js.undefined
   /**
     * The index of the first result to return.
     * Default: `0` (first result). Maximum offset (including limit): `2,000`.
     * Use with limit to get the next page of search results.
     */
-  var offset: js.UndefOr[Double] = js.native
+  var offset: js.UndefOr[Double] = js.undefined
   /**
     * The search query's keywords (and optional field filters and operators).
     */
-  var q: String = js.native
+  var q: String
   /**
     * A comma-separated list of item types to search across. Valid types are: `album`, `artist`, `playlist`, and `track`.
     * Search results include hits from all the specified item types.
     * For example: `q=name:abacab&type=album,track` returns both albums and tracks with `“abacab”` included in their name.
     */
-  var `type`: String = js.native
+  var `type`: String
 }
 
 object SearchForItemParameterObject {
   @scala.inline
-  def apply(q: String, `type`: String): SearchForItemParameterObject = {
+  def apply(
+    q: String,
+    `type`: String,
+    include_external: String = null,
+    limit: js.UndefOr[Double] = js.undefined,
+    market: String = null,
+    offset: js.UndefOr[Double] = js.undefined
+  ): SearchForItemParameterObject = {
     val __obj = js.Dynamic.literal(q = q.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (include_external != null) __obj.updateDynamic("include_external")(include_external.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (market != null) __obj.updateDynamic("market")(market.asInstanceOf[js.Any])
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchForItemParameterObject]
   }
-  @scala.inline
-  implicit class SearchForItemParameterObjectOps[Self <: SearchForItemParameterObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQ(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInclude_external(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_external")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInclude_external: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_external")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarket(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("market")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarket: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("market")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

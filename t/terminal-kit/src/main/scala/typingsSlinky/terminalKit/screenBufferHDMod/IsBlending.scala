@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait IsBlending extends js.Object
 
-object IsBlending {
-  @scala.inline
-  def `false`: typingsSlinky.terminalKit.terminalKitBooleans.`false` = false.asInstanceOf[typingsSlinky.terminalKit.terminalKitBooleans.`false`]
-  @scala.inline
-  implicit def apply(value: Blending): IsBlending = value.asInstanceOf[IsBlending]
-}
-

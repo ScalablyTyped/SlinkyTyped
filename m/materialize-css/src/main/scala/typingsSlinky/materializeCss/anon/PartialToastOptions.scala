@@ -5,114 +5,36 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<materialize-css.M.ToastOptions> */
-@js.native
 trait PartialToastOptions extends js.Object {
-  var activationPercent: js.UndefOr[Double] = js.native
-  var classes: js.UndefOr[String] = js.native
-  var completeCallback: js.UndefOr[js.Function0[Unit]] = js.native
-  var displayLength: js.UndefOr[Double] = js.native
-  var html: js.UndefOr[String] = js.native
-  var inDuration: js.UndefOr[Double] = js.native
-  var outDuration: js.UndefOr[Double] = js.native
+  var activationPercent: js.UndefOr[Double] = js.undefined
+  var classes: js.UndefOr[String] = js.undefined
+  var completeCallback: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var displayLength: js.UndefOr[Double] = js.undefined
+  var html: js.UndefOr[String] = js.undefined
+  var inDuration: js.UndefOr[Double] = js.undefined
+  var outDuration: js.UndefOr[Double] = js.undefined
 }
 
 object PartialToastOptions {
   @scala.inline
-  def apply(): PartialToastOptions = {
+  def apply(
+    activationPercent: js.UndefOr[Double] = js.undefined,
+    classes: String = null,
+    completeCallback: () => Unit = null,
+    displayLength: js.UndefOr[Double] = js.undefined,
+    html: String = null,
+    inDuration: js.UndefOr[Double] = js.undefined,
+    outDuration: js.UndefOr[Double] = js.undefined
+  ): PartialToastOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(activationPercent)) __obj.updateDynamic("activationPercent")(activationPercent.get.asInstanceOf[js.Any])
+    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
+    if (completeCallback != null) __obj.updateDynamic("completeCallback")(js.Any.fromFunction0(completeCallback))
+    if (!js.isUndefined(displayLength)) __obj.updateDynamic("displayLength")(displayLength.get.asInstanceOf[js.Any])
+    if (html != null) __obj.updateDynamic("html")(html.asInstanceOf[js.Any])
+    if (!js.isUndefined(inDuration)) __obj.updateDynamic("inDuration")(inDuration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(outDuration)) __obj.updateDynamic("outDuration")(outDuration.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialToastOptions]
   }
-  @scala.inline
-  implicit class PartialToastOptionsOps[Self <: PartialToastOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivationPercent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activationPercent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivationPercent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activationPercent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClasses(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClasses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompleteCallback(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completeCallback")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutCompleteCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completeCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHtml(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHtml: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outDuration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

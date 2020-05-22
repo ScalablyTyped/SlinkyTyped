@@ -14,29 +14,10 @@ trait ConfirmPrivateVirtualInterfaceResponse extends js.Object {
 
 object ConfirmPrivateVirtualInterfaceResponse {
   @scala.inline
-  def apply(): ConfirmPrivateVirtualInterfaceResponse = {
+  def apply(virtualInterfaceState: VirtualInterfaceState = null): ConfirmPrivateVirtualInterfaceResponse = {
     val __obj = js.Dynamic.literal()
+    if (virtualInterfaceState != null) __obj.updateDynamic("virtualInterfaceState")(virtualInterfaceState.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfirmPrivateVirtualInterfaceResponse]
   }
-  @scala.inline
-  implicit class ConfirmPrivateVirtualInterfaceResponseOps[Self <: ConfirmPrivateVirtualInterfaceResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVirtualInterfaceState(value: VirtualInterfaceState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualInterfaceState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualInterfaceState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualInterfaceState")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

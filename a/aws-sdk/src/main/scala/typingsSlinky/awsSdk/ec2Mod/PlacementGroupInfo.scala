@@ -14,29 +14,10 @@ trait PlacementGroupInfo extends js.Object {
 
 object PlacementGroupInfo {
   @scala.inline
-  def apply(): PlacementGroupInfo = {
+  def apply(SupportedStrategies: PlacementGroupStrategyList = null): PlacementGroupInfo = {
     val __obj = js.Dynamic.literal()
+    if (SupportedStrategies != null) __obj.updateDynamic("SupportedStrategies")(SupportedStrategies.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlacementGroupInfo]
   }
-  @scala.inline
-  implicit class PlacementGroupInfoOps[Self <: PlacementGroupInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSupportedStrategies(value: PlacementGroupStrategyList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedStrategies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportedStrategies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedStrategies")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

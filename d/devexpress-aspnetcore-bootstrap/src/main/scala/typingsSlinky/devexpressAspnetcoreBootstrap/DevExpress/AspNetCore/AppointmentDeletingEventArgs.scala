@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AppointmentDeletingEventArgs extends CancelEventArgs {
-  val appointmentIds: js.Array[js.Object] = js.native
+  val appointmentIds: js.Array[js.Object]
 }
 
 object AppointmentDeletingEventArgs {
@@ -15,19 +14,5 @@ object AppointmentDeletingEventArgs {
     val __obj = js.Dynamic.literal(appointmentIds = appointmentIds.asInstanceOf[js.Any], cancel = cancel.asInstanceOf[js.Any], sender = sender.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppointmentDeletingEventArgs]
   }
-  @scala.inline
-  implicit class AppointmentDeletingEventArgsOps[Self <: AppointmentDeletingEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppointmentIds(value: js.Array[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

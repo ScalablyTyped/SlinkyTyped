@@ -4,35 +4,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LoginItemSettings extends js.Object {
   /**
     * true if the app is set to open as hidden at login. This setting is not available
     * on .
     */
-  var openAsHidden: Boolean = js.native
+  var openAsHidden: Boolean
   /**
     * true if the app is set to open at login.
     */
-  var openAtLogin: Boolean = js.native
-  var options: js.UndefOr[Options] = js.native
+  var openAtLogin: Boolean
+  var options: js.UndefOr[Options] = js.undefined
   /**
     * true if the app was opened as a login item that should restore the state from
     * the previous session. This indicates that the app should restore the windows
     * that were open the last time the app was closed. This setting is not available
     * on .
     */
-  var restoreState: Boolean = js.native
+  var restoreState: Boolean
   /**
     * true if the app was opened as a hidden login item. This indicates that the app
     * should not open any windows at startup. This setting is not available on .
     */
-  var wasOpenedAsHidden: Boolean = js.native
+  var wasOpenedAsHidden: Boolean
   /**
     * true if the app was opened at login automatically. This setting is not available
     * on .
     */
-  var wasOpenedAtLogin: Boolean = js.native
+  var wasOpenedAtLogin: Boolean
 }
 
 object LoginItemSettings {
@@ -42,60 +41,12 @@ object LoginItemSettings {
     openAtLogin: Boolean,
     restoreState: Boolean,
     wasOpenedAsHidden: Boolean,
-    wasOpenedAtLogin: Boolean
+    wasOpenedAtLogin: Boolean,
+    options: Options = null
   ): LoginItemSettings = {
     val __obj = js.Dynamic.literal(openAsHidden = openAsHidden.asInstanceOf[js.Any], openAtLogin = openAtLogin.asInstanceOf[js.Any], restoreState = restoreState.asInstanceOf[js.Any], wasOpenedAsHidden = wasOpenedAsHidden.asInstanceOf[js.Any], wasOpenedAtLogin = wasOpenedAtLogin.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoginItemSettings]
   }
-  @scala.inline
-  implicit class LoginItemSettingsOps[Self <: LoginItemSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOpenAsHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openAsHidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpenAtLogin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openAtLogin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRestoreState(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restoreState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWasOpenedAsHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wasOpenedAsHidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWasOpenedAtLogin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wasOpenedAtLogin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptions(value: Options): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

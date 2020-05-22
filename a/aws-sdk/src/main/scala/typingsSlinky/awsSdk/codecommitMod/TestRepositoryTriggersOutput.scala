@@ -18,41 +18,14 @@ trait TestRepositoryTriggersOutput extends js.Object {
 
 object TestRepositoryTriggersOutput {
   @scala.inline
-  def apply(): TestRepositoryTriggersOutput = {
+  def apply(
+    failedExecutions: RepositoryTriggerExecutionFailureList = null,
+    successfulExecutions: RepositoryTriggerNameList = null
+  ): TestRepositoryTriggersOutput = {
     val __obj = js.Dynamic.literal()
+    if (failedExecutions != null) __obj.updateDynamic("failedExecutions")(failedExecutions.asInstanceOf[js.Any])
+    if (successfulExecutions != null) __obj.updateDynamic("successfulExecutions")(successfulExecutions.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestRepositoryTriggersOutput]
   }
-  @scala.inline
-  implicit class TestRepositoryTriggersOutputOps[Self <: TestRepositoryTriggersOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFailedExecutions(value: RepositoryTriggerExecutionFailureList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failedExecutions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailedExecutions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failedExecutions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccessfulExecutions(value: RepositoryTriggerNameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successfulExecutions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuccessfulExecutions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successfulExecutions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,15 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BigInteger extends js.Object {
-  def abs(): BigInteger = js.native
-  def bitLength(): Double = js.native
-  def compareTo(a: BigInteger): Double = js.native
-  def mod(a: BigInteger): BigInteger = js.native
-  def modPowInt(e: Double, m: BigInteger): BigInteger = js.native
-  def negate(): BigInteger = js.native
-  def toString(b: Double): String = js.native
+  def abs(): BigInteger
+  def bitLength(): Double
+  def compareTo(a: BigInteger): Double
+  def mod(a: BigInteger): BigInteger
+  def modPowInt(e: Double, m: BigInteger): BigInteger
+  def negate(): BigInteger
+  def toString(b: Double): String
 }
 
 object BigInteger {
@@ -29,55 +28,5 @@ object BigInteger {
     val __obj = js.Dynamic.literal(abs = js.Any.fromFunction0(abs), bitLength = js.Any.fromFunction0(bitLength), compareTo = js.Any.fromFunction1(compareTo), mod = js.Any.fromFunction1(mod), modPowInt = js.Any.fromFunction2(modPowInt), negate = js.Any.fromFunction0(negate), toString = js.Any.fromFunction1(toString))
     __obj.asInstanceOf[BigInteger]
   }
-  @scala.inline
-  implicit class BigIntegerOps[Self <: BigInteger] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbs(value: () => BigInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abs")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withBitLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bitLength")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCompareTo(value: BigInteger => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compareTo")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMod(value: BigInteger => BigInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mod")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withModPowInt(value: (Double, BigInteger) => BigInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modPowInt")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withNegate(value: () => BigInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withToString(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toString")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

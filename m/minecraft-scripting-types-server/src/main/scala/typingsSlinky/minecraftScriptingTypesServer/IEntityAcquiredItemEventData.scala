@@ -9,28 +9,27 @@ import scala.scalajs.js.annotation._
 /**
   * This event is triggered whenever an entity acquires an item.
   */
-@js.native
 trait IEntityAcquiredItemEventData extends js.Object {
   /**
     * The total number of items acquired by the entity during this event
     */
-  var acquired_amount: Double = js.native
+  var acquired_amount: Double
   /**
     * The way the entity acquired the item
     */
-  var acquisition_method: String = js.native
+  var acquisition_method: String
   /**
     * The entity who acquired the item
     */
-  var entity: IEntity = js.native
+  var entity: IEntity
   /**
     * The item that was acquired
     */
-  var item_stack: IItemStack = js.native
+  var item_stack: IItemStack
   /**
     * If it exists, the entity that affected the item before it was acquired. Example: A player completes a trade with a villager. The `entity` property would be the player and the `secondary_entity` would be the villager
     */
-  var secondary_entity: IEntity = js.native
+  var secondary_entity: IEntity
 }
 
 object IEntityAcquiredItemEventData {
@@ -45,43 +44,5 @@ object IEntityAcquiredItemEventData {
     val __obj = js.Dynamic.literal(acquired_amount = acquired_amount.asInstanceOf[js.Any], acquisition_method = acquisition_method.asInstanceOf[js.Any], entity = entity.asInstanceOf[js.Any], item_stack = item_stack.asInstanceOf[js.Any], secondary_entity = secondary_entity.asInstanceOf[js.Any])
     __obj.asInstanceOf[IEntityAcquiredItemEventData]
   }
-  @scala.inline
-  implicit class IEntityAcquiredItemEventDataOps[Self <: IEntityAcquiredItemEventData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAcquired_amount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acquired_amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAcquisition_method(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acquisition_method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEntity(value: IEntity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItem_stack(value: IItemStack): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item_stack")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSecondary_entity(value: IEntity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondary_entity")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -89,149 +89,32 @@ trait SchemaBeacon extends js.Object {
 
 object SchemaBeacon {
   @scala.inline
-  def apply(): SchemaBeacon = {
+  def apply(
+    advertisedId: SchemaAdvertisedId = null,
+    beaconName: String = null,
+    description: String = null,
+    ephemeralIdRegistration: SchemaEphemeralIdRegistration = null,
+    expectedStability: String = null,
+    indoorLevel: SchemaIndoorLevel = null,
+    latLng: SchemaLatLng = null,
+    placeId: String = null,
+    properties: StringDictionary[String] = null,
+    provisioningKey: String = null,
+    status: String = null
+  ): SchemaBeacon = {
     val __obj = js.Dynamic.literal()
+    if (advertisedId != null) __obj.updateDynamic("advertisedId")(advertisedId.asInstanceOf[js.Any])
+    if (beaconName != null) __obj.updateDynamic("beaconName")(beaconName.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (ephemeralIdRegistration != null) __obj.updateDynamic("ephemeralIdRegistration")(ephemeralIdRegistration.asInstanceOf[js.Any])
+    if (expectedStability != null) __obj.updateDynamic("expectedStability")(expectedStability.asInstanceOf[js.Any])
+    if (indoorLevel != null) __obj.updateDynamic("indoorLevel")(indoorLevel.asInstanceOf[js.Any])
+    if (latLng != null) __obj.updateDynamic("latLng")(latLng.asInstanceOf[js.Any])
+    if (placeId != null) __obj.updateDynamic("placeId")(placeId.asInstanceOf[js.Any])
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
+    if (provisioningKey != null) __obj.updateDynamic("provisioningKey")(provisioningKey.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBeacon]
   }
-  @scala.inline
-  implicit class SchemaBeaconOps[Self <: SchemaBeacon] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdvertisedId(value: SchemaAdvertisedId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertisedId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdvertisedId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertisedId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeaconName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beaconName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBeaconName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beaconName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEphemeralIdRegistration(value: SchemaEphemeralIdRegistration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ephemeralIdRegistration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEphemeralIdRegistration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ephemeralIdRegistration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpectedStability(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedStability")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpectedStability: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedStability")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndoorLevel(value: SchemaIndoorLevel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indoorLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndoorLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indoorLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLatLng(value: SchemaLatLng): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latLng")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatLng: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latLng")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProvisioningKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provisioningKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProvisioningKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provisioningKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

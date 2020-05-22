@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Transport extends js.Object {
-  var name: String = js.native
-  def abort(connection: Connection, async: Boolean): Unit = js.native
-  def lostConnection(connection: Connection): Unit = js.native
-  def reconnect(connection: Connection): Unit = js.native
-  def send(connection: Connection, data: js.Any): Unit = js.native
+  var name: String
+  def abort(connection: Connection, async: Boolean): Unit
+  def lostConnection(connection: Connection): Unit
+  def reconnect(connection: Connection): Unit
+  def send(connection: Connection, data: js.Any): Unit
   def start(
     connection: Connection,
     onSuccess: js.Function0[Unit],
     onFailed: js.Function1[/* error */ js.UndefOr[ConnectionError], Unit]
-  ): Unit = js.native
-  def stop(connection: Connection): Unit = js.native
-  def supportsKeepAlive(): Boolean = js.native
+  ): Unit
+  def stop(connection: Connection): Unit
+  def supportsKeepAlive(): Boolean
 }
 
 object Transport {
@@ -35,63 +34,5 @@ object Transport {
     val __obj = js.Dynamic.literal(abort = js.Any.fromFunction2(abort), lostConnection = js.Any.fromFunction1(lostConnection), name = name.asInstanceOf[js.Any], reconnect = js.Any.fromFunction1(reconnect), send = js.Any.fromFunction2(send), start = js.Any.fromFunction3(start), stop = js.Any.fromFunction1(stop), supportsKeepAlive = js.Any.fromFunction0(supportsKeepAlive))
     __obj.asInstanceOf[Transport]
   }
-  @scala.inline
-  implicit class TransportOps[Self <: Transport] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbort(value: (Connection, Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abort")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withLostConnection(value: Connection => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lostConnection")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReconnect(value: Connection => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reconnect")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSend(value: (Connection, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("send")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withStart(
-      value: (Connection, js.Function0[Unit], js.Function1[/* error */ js.UndefOr[ConnectionError], Unit]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withStop(value: Connection => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsKeepAlive(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsKeepAlive")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

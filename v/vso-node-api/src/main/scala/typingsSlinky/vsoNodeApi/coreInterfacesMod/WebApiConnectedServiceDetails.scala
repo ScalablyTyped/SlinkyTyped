@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WebApiConnectedServiceDetails extends WebApiConnectedServiceRef {
   /**
     * Meta data for service connection
     */
-  var connectedServiceMetaData: WebApiConnectedService = js.native
+  var connectedServiceMetaData: WebApiConnectedService
   /**
     * Credential info
     */
-  var credentialsXml: String = js.native
+  var credentialsXml: String
   /**
     * Optional uri to connect directly to the service such as https://windows.azure.com
     */
-  var endPoint: String = js.native
+  var endPoint: String
 }
 
 object WebApiConnectedServiceDetails {
@@ -32,31 +31,5 @@ object WebApiConnectedServiceDetails {
     val __obj = js.Dynamic.literal(connectedServiceMetaData = connectedServiceMetaData.asInstanceOf[js.Any], credentialsXml = credentialsXml.asInstanceOf[js.Any], endPoint = endPoint.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebApiConnectedServiceDetails]
   }
-  @scala.inline
-  implicit class WebApiConnectedServiceDetailsOps[Self <: WebApiConnectedServiceDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConnectedServiceMetaData(value: WebApiConnectedService): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectedServiceMetaData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCredentialsXml(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentialsXml")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndPoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

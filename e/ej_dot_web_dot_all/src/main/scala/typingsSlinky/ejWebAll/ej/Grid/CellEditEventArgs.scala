@@ -4,173 +4,65 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CellEditEventArgs extends js.Object {
   /** Returns the cell object.
     */
-  var cell: js.UndefOr[js.Any] = js.native
+  var cell: js.UndefOr[js.Any] = js.undefined
   /** Returns the column name.
     */
-  var columnName: js.UndefOr[String] = js.native
+  var columnName: js.UndefOr[String] = js.undefined
   /** Returns the column object.
     */
-  var columnObject: js.UndefOr[js.Any] = js.native
+  var columnObject: js.UndefOr[js.Any] = js.undefined
   /** Returns isForeignKey option value.
     */
-  var isForeignKey: js.UndefOr[Boolean] = js.native
+  var isForeignKey: js.UndefOr[Boolean] = js.undefined
   /** Returns the grid model.
     */
-  var model: js.UndefOr[js.Any] = js.native
+  var model: js.UndefOr[js.Any] = js.undefined
   /** Returns the previous value of the cell.
     */
-  var previousValue: js.UndefOr[String] = js.native
+  var previousValue: js.UndefOr[String] = js.undefined
   /** Returns the row data object.
     */
-  var rowData: js.UndefOr[js.Any] = js.native
+  var rowData: js.UndefOr[js.Any] = js.undefined
   /** Returns the name of the event.
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
   /** Returns the validation rules.
     */
-  var validationRules: js.UndefOr[js.Any] = js.native
+  var validationRules: js.UndefOr[js.Any] = js.undefined
   /** Returns the cell value.
     */
-  var value: js.UndefOr[String] = js.native
+  var value: js.UndefOr[String] = js.undefined
 }
 
 object CellEditEventArgs {
   @scala.inline
-  def apply(): CellEditEventArgs = {
+  def apply(
+    cell: js.Any = null,
+    columnName: String = null,
+    columnObject: js.Any = null,
+    isForeignKey: js.UndefOr[Boolean] = js.undefined,
+    model: js.Any = null,
+    previousValue: String = null,
+    rowData: js.Any = null,
+    `type`: String = null,
+    validationRules: js.Any = null,
+    value: String = null
+  ): CellEditEventArgs = {
     val __obj = js.Dynamic.literal()
+    if (cell != null) __obj.updateDynamic("cell")(cell.asInstanceOf[js.Any])
+    if (columnName != null) __obj.updateDynamic("columnName")(columnName.asInstanceOf[js.Any])
+    if (columnObject != null) __obj.updateDynamic("columnObject")(columnObject.asInstanceOf[js.Any])
+    if (!js.isUndefined(isForeignKey)) __obj.updateDynamic("isForeignKey")(isForeignKey.get.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (previousValue != null) __obj.updateDynamic("previousValue")(previousValue.asInstanceOf[js.Any])
+    if (rowData != null) __obj.updateDynamic("rowData")(rowData.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (validationRules != null) __obj.updateDynamic("validationRules")(validationRules.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[CellEditEventArgs]
   }
-  @scala.inline
-  implicit class CellEditEventArgsOps[Self <: CellEditEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCell(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cell")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCell: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cell")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnObject(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnObject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnObject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsForeignKey(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isForeignKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsForeignKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isForeignKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidationRules(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidationRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationRules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

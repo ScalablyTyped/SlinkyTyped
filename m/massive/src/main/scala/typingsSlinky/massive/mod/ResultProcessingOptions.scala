@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ResultProcessingOptions extends js.Object {
-  var build: js.UndefOr[Boolean] = js.native
-  var decompose: js.UndefOr[DecomposeOptions] = js.native
-  var document: js.UndefOr[Boolean] = js.native
-  var single: js.UndefOr[Boolean] = js.native
-  var stream: js.UndefOr[Boolean] = js.native
+  var build: js.UndefOr[Boolean] = js.undefined
+  var decompose: js.UndefOr[DecomposeOptions] = js.undefined
+  var document: js.UndefOr[Boolean] = js.undefined
+  var single: js.UndefOr[Boolean] = js.undefined
+  var stream: js.UndefOr[Boolean] = js.undefined
 }
 
 object ResultProcessingOptions {
   @scala.inline
-  def apply(): ResultProcessingOptions = {
+  def apply(
+    build: js.UndefOr[Boolean] = js.undefined,
+    decompose: DecomposeOptions = null,
+    document: js.UndefOr[Boolean] = js.undefined,
+    single: js.UndefOr[Boolean] = js.undefined,
+    stream: js.UndefOr[Boolean] = js.undefined
+  ): ResultProcessingOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(build)) __obj.updateDynamic("build")(build.get.asInstanceOf[js.Any])
+    if (decompose != null) __obj.updateDynamic("decompose")(decompose.asInstanceOf[js.Any])
+    if (!js.isUndefined(document)) __obj.updateDynamic("document")(document.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(single)) __obj.updateDynamic("single")(single.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stream)) __obj.updateDynamic("stream")(stream.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResultProcessingOptions]
   }
-  @scala.inline
-  implicit class ResultProcessingOptionsOps[Self <: ResultProcessingOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBuild(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuild: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecompose(value: DecomposeOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decompose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecompose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decompose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocument(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocument: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSingle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("single")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSingle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("single")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStream(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStream: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stream")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -122,7 +122,7 @@ trait Configuration extends Object {
     * valid ISO639 two-letter languagesand as such are valid BCP47 language tags. For better BCP47
     * compliance, the frameworkmaps the following non-BCP47 SAP logon codes to a BCP47 substitute:<pre>  
     * "ZH"  -->  "zh-Hans"         // script 'Hans' added to distinguish it from zh-Hant   "ZF"  --> 
-    * "zh-Hant"         // ZF ist not a valid ISO639 code, use the compliant language + script 'Hant'		 " 
+    * "zh-Hant"         // ZF ist not a valid ISO639 code, use the compliant language + script 'Hant'         " 
     *   "1Q"  -->  "en-US-x-saptrc"  // special language code for supportability (tracing),               
     *                    represented as en-US with a priate extension   "2Q"  -->  "en-US-x-sappsd"  //
     * special language code for supportability (pseudo translation),                                  

@@ -1,9 +1,23 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
+import typingsSlinky.echarts.anon.Max
 import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis
+import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.DataObject
+import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.Label
+import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.MinorSplitLine
+import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.MinorTick
+import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.Pointer
+import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.SplitArea
+import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.SplitLine
+import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.Tick
 import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.Type
+import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.Line
+import typingsSlinky.echarts.echartsStrings.center
+import typingsSlinky.echarts.echartsStrings.end
 import typingsSlinky.echarts.echartsStrings.left
+import typingsSlinky.echarts.echartsStrings.middle
 import typingsSlinky.echarts.echartsStrings.right
+import typingsSlinky.echarts.echartsStrings.start
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,14 +30,13 @@ import scala.scalajs.js.annotation._
   *
   * @see https://echarts.apache.org/en/option.html#yAxis
   */
-@js.native
 trait YAxis extends CartesianAxis {
   /**
     * The first y axis in grid defaults to be the left (`'left'`)
     * of the grid, and the second y axis is on the other side
     * against the first y axis.
     */
-  var position: js.UndefOr[left | right] = js.native
+  var position: js.UndefOr[left | right] = js.undefined
   /**
     * Options:
     * + 'value' - Numerical axis, suitable for continuous data.
@@ -39,46 +52,81 @@ trait YAxis extends CartesianAxis {
     * @default 'value'
     * @see https://echarts.apache.org/en/option.html#yAxis.type
     */
-  var `type`: js.UndefOr[Type] = js.native
+  var `type`: js.UndefOr[Type] = js.undefined
 }
 
 object YAxis {
   @scala.inline
-  def apply(): YAxis = {
+  def apply(
+    axisLabel: Label = null,
+    axisLine: Line = null,
+    axisPointer: Pointer = null,
+    axisTick: Tick = null,
+    boundaryGap: Boolean | (js.Array[String | Double]) = null,
+    data: js.Array[String | Double | DataObject] = null,
+    gridIndex: js.UndefOr[Double] = js.undefined,
+    id: String = null,
+    interval: js.UndefOr[Double] = js.undefined,
+    inverse: js.UndefOr[Boolean] = js.undefined,
+    logBase: js.UndefOr[Double] = js.undefined,
+    max: Double | String | (js.Function1[/* value */ Max, Double]) = null,
+    min: Double | String | (js.Function1[/* value */ Max, Double]) = null,
+    minInterval: js.Any = null,
+    minorSplitLine: MinorSplitLine = null,
+    minorTick: MinorTick = null,
+    name: String = null,
+    nameGap: js.UndefOr[Double] = js.undefined,
+    nameLocation: start | middle | center | end = null,
+    nameRotate: js.UndefOr[Double] = js.undefined,
+    nameTextStyle: TextStyleWithRich = null,
+    offset: js.UndefOr[Double] = js.undefined,
+    position: left | right = null,
+    scale: js.UndefOr[Boolean] = js.undefined,
+    show: js.UndefOr[Boolean] = js.undefined,
+    silent: js.UndefOr[Boolean] = js.undefined,
+    splitArea: SplitArea = null,
+    splitLine: SplitLine = null,
+    splitNumber: js.UndefOr[Double] = js.undefined,
+    triggerEvent: js.UndefOr[Boolean] = js.undefined,
+    `type`: Type = null,
+    z: js.UndefOr[Double] = js.undefined,
+    zlevel: js.UndefOr[Double] = js.undefined
+  ): YAxis = {
     val __obj = js.Dynamic.literal()
+    if (axisLabel != null) __obj.updateDynamic("axisLabel")(axisLabel.asInstanceOf[js.Any])
+    if (axisLine != null) __obj.updateDynamic("axisLine")(axisLine.asInstanceOf[js.Any])
+    if (axisPointer != null) __obj.updateDynamic("axisPointer")(axisPointer.asInstanceOf[js.Any])
+    if (axisTick != null) __obj.updateDynamic("axisTick")(axisTick.asInstanceOf[js.Any])
+    if (boundaryGap != null) __obj.updateDynamic("boundaryGap")(boundaryGap.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (!js.isUndefined(gridIndex)) __obj.updateDynamic("gridIndex")(gridIndex.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(interval)) __obj.updateDynamic("interval")(interval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(inverse)) __obj.updateDynamic("inverse")(inverse.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(logBase)) __obj.updateDynamic("logBase")(logBase.get.asInstanceOf[js.Any])
+    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
+    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
+    if (minInterval != null) __obj.updateDynamic("minInterval")(minInterval.asInstanceOf[js.Any])
+    if (minorSplitLine != null) __obj.updateDynamic("minorSplitLine")(minorSplitLine.asInstanceOf[js.Any])
+    if (minorTick != null) __obj.updateDynamic("minorTick")(minorTick.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(nameGap)) __obj.updateDynamic("nameGap")(nameGap.get.asInstanceOf[js.Any])
+    if (nameLocation != null) __obj.updateDynamic("nameLocation")(nameLocation.asInstanceOf[js.Any])
+    if (!js.isUndefined(nameRotate)) __obj.updateDynamic("nameRotate")(nameRotate.get.asInstanceOf[js.Any])
+    if (nameTextStyle != null) __obj.updateDynamic("nameTextStyle")(nameTextStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (!js.isUndefined(scale)) __obj.updateDynamic("scale")(scale.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
+    if (splitArea != null) __obj.updateDynamic("splitArea")(splitArea.asInstanceOf[js.Any])
+    if (splitLine != null) __obj.updateDynamic("splitLine")(splitLine.asInstanceOf[js.Any])
+    if (!js.isUndefined(splitNumber)) __obj.updateDynamic("splitNumber")(splitNumber.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(triggerEvent)) __obj.updateDynamic("triggerEvent")(triggerEvent.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(z)) __obj.updateDynamic("z")(z.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zlevel)) __obj.updateDynamic("zlevel")(zlevel.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[YAxis]
   }
-  @scala.inline
-  implicit class YAxisOps[Self <: YAxis] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPosition(value: left | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

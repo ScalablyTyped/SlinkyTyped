@@ -38,66 +38,14 @@ object SelfManagedActiveDirectoryConfiguration {
     DnsIps: DnsIps,
     DomainName: ActiveDirectoryFullyQualifiedName,
     Password: DirectoryPassword,
-    UserName: DirectoryUserName
+    UserName: DirectoryUserName,
+    FileSystemAdministratorsGroup: FileSystemAdministratorsGroupName = null,
+    OrganizationalUnitDistinguishedName: OrganizationalUnitDistinguishedName = null
   ): SelfManagedActiveDirectoryConfiguration = {
     val __obj = js.Dynamic.literal(DnsIps = DnsIps.asInstanceOf[js.Any], DomainName = DomainName.asInstanceOf[js.Any], Password = Password.asInstanceOf[js.Any], UserName = UserName.asInstanceOf[js.Any])
+    if (FileSystemAdministratorsGroup != null) __obj.updateDynamic("FileSystemAdministratorsGroup")(FileSystemAdministratorsGroup.asInstanceOf[js.Any])
+    if (OrganizationalUnitDistinguishedName != null) __obj.updateDynamic("OrganizationalUnitDistinguishedName")(OrganizationalUnitDistinguishedName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SelfManagedActiveDirectoryConfiguration]
   }
-  @scala.inline
-  implicit class SelfManagedActiveDirectoryConfigurationOps[Self <: SelfManagedActiveDirectoryConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDnsIps(value: DnsIps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsIps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDomainName(value: ActiveDirectoryFullyQualifiedName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPassword(value: DirectoryPassword): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Password")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserName(value: DirectoryUserName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFileSystemAdministratorsGroup(value: FileSystemAdministratorsGroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSystemAdministratorsGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileSystemAdministratorsGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSystemAdministratorsGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrganizationalUnitDistinguishedName(value: OrganizationalUnitDistinguishedName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationalUnitDistinguishedName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrganizationalUnitDistinguishedName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationalUnitDistinguishedName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -2,13 +2,10 @@ package typingsSlinky.reactTransitionGroup.transitionMod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BaseTransitionProps
   extends /* prop */ StringDictionary[js.Any] {
   /**
@@ -24,11 +21,11 @@ trait BaseTransitionProps
     *    </Transition>
     * ```
     */
-  var children: js.UndefOr[TransitionChildren] = js.native
+  var children: js.UndefOr[TransitionChildren] = js.undefined
   /**
     * Show the component; triggers the enter or exit states
     */
-  var in: js.UndefOr[Boolean] = js.native
+  var in: js.UndefOr[Boolean] = js.undefined
   /**
     * By default the child component is mounted immediately along with the
     * parent Transition component. If you want to "lazy mount" the component on
@@ -36,190 +33,73 @@ trait BaseTransitionProps
     * transition the component will stay mounted, even on "exited", unless you
     * also specify `unmountOnExit`.
     */
-  var mountOnEnter: js.UndefOr[Boolean] = js.native
+  var mountOnEnter: js.UndefOr[Boolean] = js.undefined
   /**
     * Callback fired before the "entering" status is applied. An extra
     * parameter `isAppearing` is supplied to indicate if the enter stage is
     * occurring on the initial mount
     */
-  var onEnter: js.UndefOr[EnterHandler] = js.native
+  var onEnter: js.UndefOr[EnterHandler] = js.undefined
   /**
     * Callback fired after the "entered" status is applied. An extra parameter
     * isAppearing is supplied to indicate if the enter stage is occurring on
     * the initial mount
     */
-  var onEntered: js.UndefOr[EnterHandler] = js.native
+  var onEntered: js.UndefOr[EnterHandler] = js.undefined
   /**
     * Callback fired after the "entering" status is applied. An extra parameter
     * isAppearing is supplied to indicate if the enter stage is occurring on
     * the initial mount
     */
-  var onEntering: js.UndefOr[EnterHandler] = js.native
+  var onEntering: js.UndefOr[EnterHandler] = js.undefined
   /**
     * Callback fired before the "exiting" status is applied.
     */
-  var onExit: js.UndefOr[ExitHandler] = js.native
+  var onExit: js.UndefOr[ExitHandler] = js.undefined
   /**
     * Callback fired after the "exited" status is applied.
     */
-  var onExited: js.UndefOr[ExitHandler] = js.native
+  var onExited: js.UndefOr[ExitHandler] = js.undefined
   /**
     * Callback fired after the "exiting" status is applied.
     */
-  var onExiting: js.UndefOr[ExitHandler] = js.native
+  var onExiting: js.UndefOr[ExitHandler] = js.undefined
   /**
     * By default the child component stays mounted after it reaches the
     * 'exited' state. Set `unmountOnExit` if you'd prefer to unmount the
     * component after it finishes exiting.
     */
-  var unmountOnExit: js.UndefOr[Boolean] = js.native
+  var unmountOnExit: js.UndefOr[Boolean] = js.undefined
 }
 
 object BaseTransitionProps {
   @scala.inline
-  def apply(): BaseTransitionProps = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    children: TransitionChildren = null,
+    in: js.UndefOr[Boolean] = js.undefined,
+    mountOnEnter: js.UndefOr[Boolean] = js.undefined,
+    onEnter: (/* node */ HTMLElement, /* isAppearing */ Boolean) => Unit = null,
+    onEntered: (/* node */ HTMLElement, /* isAppearing */ Boolean) => Unit = null,
+    onEntering: (/* node */ HTMLElement, /* isAppearing */ Boolean) => Unit = null,
+    onExit: /* node */ HTMLElement => Unit = null,
+    onExited: /* node */ HTMLElement => Unit = null,
+    onExiting: /* node */ HTMLElement => Unit = null,
+    unmountOnExit: js.UndefOr[Boolean] = js.undefined
+  ): BaseTransitionProps = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (!js.isUndefined(in)) __obj.updateDynamic("in")(in.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mountOnEnter)) __obj.updateDynamic("mountOnEnter")(mountOnEnter.get.asInstanceOf[js.Any])
+    if (onEnter != null) __obj.updateDynamic("onEnter")(js.Any.fromFunction2(onEnter))
+    if (onEntered != null) __obj.updateDynamic("onEntered")(js.Any.fromFunction2(onEntered))
+    if (onEntering != null) __obj.updateDynamic("onEntering")(js.Any.fromFunction2(onEntering))
+    if (onExit != null) __obj.updateDynamic("onExit")(js.Any.fromFunction1(onExit))
+    if (onExited != null) __obj.updateDynamic("onExited")(js.Any.fromFunction1(onExited))
+    if (onExiting != null) __obj.updateDynamic("onExiting")(js.Any.fromFunction1(onExiting))
+    if (!js.isUndefined(unmountOnExit)) __obj.updateDynamic("unmountOnExit")(unmountOnExit.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseTransitionProps]
   }
-  @scala.inline
-  implicit class BaseTransitionPropsOps[Self <: BaseTransitionProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildrenFunction1(value: /* status */ TransitionStatus => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TransitionChildren): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("in")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("in")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMountOnEnter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountOnEnter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMountOnEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountOnEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEnter(value: (/* node */ HTMLElement, /* isAppearing */ Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnter")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEntered(value: (/* node */ HTMLElement, /* isAppearing */ Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEntered")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEntered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEntered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEntering(value: (/* node */ HTMLElement, /* isAppearing */ Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEntering")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEntering: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEntering")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnExit(value: /* node */ HTMLElement => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onExit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnExit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onExit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnExited(value: /* node */ HTMLElement => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onExited")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnExited: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onExited")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnExiting(value: /* node */ HTMLElement => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onExiting")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnExiting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onExiting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnmountOnExit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unmountOnExit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnmountOnExit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unmountOnExit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

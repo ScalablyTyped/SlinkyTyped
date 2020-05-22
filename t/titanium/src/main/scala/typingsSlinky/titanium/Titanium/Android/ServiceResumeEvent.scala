@@ -5,18 +5,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * For JavaScript-based Services which you create, `resume` fires each time the JavaScript
-		 * code executes.
-		 */
-@js.native
+  * For JavaScript-based Services which you create, `resume` fires each time the JavaScript
+  * code executes.
+  */
 trait ServiceResumeEvent extends ServiceBaseEvent {
   /**
-  			 * Incrementing integer indicating which iteration of an interval-based Service is pausing.
-  			 * For example, if you have an interval-based Service running every 10 seconds, iteration
-  			 * 3 would occur at about 30 seconds after you start the instance (assuming your service
-  			 * code runs quickly).
-  			 */
-  var iteration: Double = js.native
+    * Incrementing integer indicating which iteration of an interval-based Service is pausing.
+    * For example, if you have an interval-based Service running every 10 seconds, iteration
+    * 3 would occur at about 30 seconds after you start the instance (assuming your service
+    * code runs quickly).
+    */
+  var iteration: Double
 }
 
 object ServiceResumeEvent {
@@ -25,19 +24,5 @@ object ServiceResumeEvent {
     val __obj = js.Dynamic.literal(iteration = iteration.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceResumeEvent]
   }
-  @scala.inline
-  implicit class ServiceResumeEventOps[Self <: ServiceResumeEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIteration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iteration")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

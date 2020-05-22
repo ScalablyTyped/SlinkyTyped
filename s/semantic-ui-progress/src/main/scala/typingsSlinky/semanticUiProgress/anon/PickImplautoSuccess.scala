@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<semantic-ui-progress.SemanticUI.ProgressSettings._Impl, 'autoSuccess'> */
-@js.native
 trait PickImplautoSuccess extends js.Object {
-  var autoSuccess: Boolean = js.native
+  var autoSuccess: Boolean
 }
 
 object PickImplautoSuccess {
@@ -16,19 +15,5 @@ object PickImplautoSuccess {
     val __obj = js.Dynamic.literal(autoSuccess = autoSuccess.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickImplautoSuccess]
   }
-  @scala.inline
-  implicit class PickImplautoSuccessOps[Self <: PickImplautoSuccess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoSuccess(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSuccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

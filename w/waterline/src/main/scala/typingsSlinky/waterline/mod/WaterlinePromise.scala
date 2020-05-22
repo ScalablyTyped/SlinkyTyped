@@ -37,11 +37,21 @@ trait WaterlinePromise[T] extends js.Object {
     * Same as calling `Promise.all(thisPromise)`. With the exception that if this promise is bound to a value, the returned promise is bound to that value too.
     */
   def all(): Bluebird[scala.Nothing] = js.native
+  @JSName("all")
+  def all_R[R](): Bluebird[js.Array[R]] = js.native
+  @JSName("all")
+  def all_T1[T1](): Bluebird[js.Array[T1]] = js.native
+  @JSName("all")
+  def all_T1T2[T1, T2](): Bluebird[js.Tuple2[T1, T2]] = js.native
+  @JSName("all")
+  def all_T1T2T3[T1, T2, T3](): Bluebird[js.Tuple3[T1, T2, T3]] = js.native
+  @JSName("all")
+  def all_T1T2T3T4[T1, T2, T3, T4](): Bluebird[js.Tuple4[T1, T2, T3, T4]] = js.native
   /**
     * Same as calling `Promise.all(thisPromise)`. With the exception that if this promise is bound to a value, the returned promise is bound to that value too.
     */
   @JSName("all")
-  def all_Q[Q](): Bluebird[T] = js.native
+  def all_T1T2T3T4T5[T1, T2, T3, T4, T5](): Bluebird[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
   /**
     * Same as calling `Promise.any(thisPromise)`. With the exception that if this promise is bound to a value, the returned promise is bound to that value too.
     */

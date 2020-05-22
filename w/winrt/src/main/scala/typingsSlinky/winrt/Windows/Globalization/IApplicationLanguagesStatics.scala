@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IApplicationLanguagesStatics extends js.Object {
-  var languages: IVectorView[String] = js.native
-  var manifestLanguages: IVectorView[String] = js.native
-  var primaryLanguageOverride: String = js.native
+  var languages: IVectorView[String]
+  var manifestLanguages: IVectorView[String]
+  var primaryLanguageOverride: String
 }
 
 object IApplicationLanguagesStatics {
@@ -22,31 +21,5 @@ object IApplicationLanguagesStatics {
     val __obj = js.Dynamic.literal(languages = languages.asInstanceOf[js.Any], manifestLanguages = manifestLanguages.asInstanceOf[js.Any], primaryLanguageOverride = primaryLanguageOverride.asInstanceOf[js.Any])
     __obj.asInstanceOf[IApplicationLanguagesStatics]
   }
-  @scala.inline
-  implicit class IApplicationLanguagesStaticsOps[Self <: IApplicationLanguagesStatics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLanguages(value: IVectorView[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withManifestLanguages(value: IVectorView[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manifestLanguages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrimaryLanguageOverride(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryLanguageOverride")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

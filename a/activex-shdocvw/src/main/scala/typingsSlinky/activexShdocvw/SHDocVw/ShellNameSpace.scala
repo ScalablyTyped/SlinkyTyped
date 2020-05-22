@@ -4,57 +4,56 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ShellNameSpace extends js.Object {
-  var Columns: String = js.native
+  var Columns: String
   /** number of view types */
-  val CountViewTypes: Double = js.native
-  var Depth: Double = js.native
+  val CountViewTypes: Double
+  var Depth: Double
   /** options  */
-  var EnumOptions: Double = js.native
-  var Flags: Double = js.native
-  var Mode: Double = js.native
+  var EnumOptions: Double
+  var Flags: Double
+  var Mode: Double
   /** get the root item */
-  var Root: js.Any = js.native
+  var Root: js.Any
   @JSName("SHDocVw.ShellNameSpace_typekey")
-  var SHDocVwDotShellNameSpace_typekey: ShellNameSpace = js.native
+  var SHDocVwDotShellNameSpace_typekey: ShellNameSpace
   /** get the selected item */
-  var SelectedItem: js.Any = js.native
+  var SelectedItem: js.Any
   /** Query to see if subscriptions are enabled */
-  val SubscriptionsEnabled: Boolean = js.native
-  var TVFlags: Double = js.native
+  val SubscriptionsEnabled: Boolean
+  var TVFlags: Double
   /** method CreateSubscriptionForSelection */
-  def CreateSubscriptionForSelection(): Boolean = js.native
+  def CreateSubscriptionForSelection(): Boolean
   /** method DeleteSubscriptionForSelection */
-  def DeleteSubscriptionForSelection(): Boolean = js.native
+  def DeleteSubscriptionForSelection(): Boolean
   /** expands item specified depth */
-  def Expand(var_0: js.Any, iDepth: Double): Unit = js.native
+  def Expand(var_0: js.Any, iDepth: Double): Unit
   /** method Export */
-  def Export(): Unit = js.native
+  def Export(): Unit
   /** method Import */
-  def Import(): Unit = js.native
+  def Import(): Unit
   /** method InvokeContextMenuCommand */
-  def InvokeContextMenuCommand(strCommand: String): Unit = js.native
+  def InvokeContextMenuCommand(strCommand: String): Unit
   /** method MoveSelectionDown */
-  def MoveSelectionDown(): Unit = js.native
+  def MoveSelectionDown(): Unit
   /** method MoveSelectionTo */
-  def MoveSelectionTo(): Unit = js.native
+  def MoveSelectionTo(): Unit
   /** method MoveSelectionUp */
-  def MoveSelectionUp(): Unit = js.native
+  def MoveSelectionUp(): Unit
   /** method NewFolder */
-  def NewFolder(): Unit = js.native
+  def NewFolder(): Unit
   /** method ResetSort */
-  def ResetSort(): Unit = js.native
+  def ResetSort(): Unit
   /** collection of selected items */
-  def SelectedItems(): js.Any = js.native
+  def SelectedItems(): js.Any
   /** old, use put_Root() instead */
-  def SetRoot(bstrFullPath: String): Unit = js.native
+  def SetRoot(bstrFullPath: String): Unit
   /** set view type */
-  def SetViewType(iType: Double): Unit = js.native
+  def SetViewType(iType: Double): Unit
   /** method Synchronize */
-  def Synchronize(): Unit = js.native
+  def Synchronize(): Unit
   /** unselects all items */
-  def UnselectAll(): Unit = js.native
+  def UnselectAll(): Unit
 }
 
 object ShellNameSpace {
@@ -92,175 +91,5 @@ object ShellNameSpace {
     __obj.updateDynamic("SHDocVw.ShellNameSpace_typekey")(SHDocVwDotShellNameSpace_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShellNameSpace]
   }
-  @scala.inline
-  implicit class ShellNameSpaceOps[Self <: ShellNameSpace] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumns(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCountViewTypes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CountViewTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreateSubscriptionForSelection(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateSubscriptionForSelection")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDeleteSubscriptionForSelection(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteSubscriptionForSelection")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDepth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Depth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnumOptions(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnumOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExpand(value: (js.Any, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Expand")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withExport(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Export")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFlags(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Flags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImport(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Import")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withInvokeContextMenuCommand(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvokeContextMenuCommand")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMoveSelectionDown(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MoveSelectionDown")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withMoveSelectionTo(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MoveSelectionTo")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withMoveSelectionUp(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MoveSelectionUp")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewFolder(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewFolder")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withResetSort(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResetSort")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRoot(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSHDocVwDotShellNameSpace_typekey(value: ShellNameSpace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SHDocVw.ShellNameSpace_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelectedItem(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectedItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelectedItems(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectedItems")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetRoot(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetRoot")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetViewType(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetViewType")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSubscriptionsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSynchronize(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Synchronize")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withTVFlags(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TVFlags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnselectAll(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnselectAll")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

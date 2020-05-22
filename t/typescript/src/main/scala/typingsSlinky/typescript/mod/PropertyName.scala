@@ -13,16 +13,3 @@ import scala.scalajs.js.annotation._
 */
 trait PropertyName extends js.Object
 
-object PropertyName {
-  @scala.inline
-  implicit def apply(value: ComputedPropertyName): PropertyName = value.asInstanceOf[PropertyName]
-  @scala.inline
-  implicit def apply(value: Identifier): PropertyName = value.asInstanceOf[PropertyName]
-  @scala.inline
-  implicit def apply(value: NumericLiteral): PropertyName = value.asInstanceOf[PropertyName]
-  @scala.inline
-  implicit def apply(value: PrivateIdentifier): PropertyName = value.asInstanceOf[PropertyName]
-  @scala.inline
-  implicit def apply(value: StringLiteral): PropertyName = value.asInstanceOf[PropertyName]
-}
-

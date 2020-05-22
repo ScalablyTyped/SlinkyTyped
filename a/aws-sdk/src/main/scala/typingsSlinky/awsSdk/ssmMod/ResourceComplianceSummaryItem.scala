@@ -42,113 +42,26 @@ trait ResourceComplianceSummaryItem extends js.Object {
 
 object ResourceComplianceSummaryItem {
   @scala.inline
-  def apply(): ResourceComplianceSummaryItem = {
+  def apply(
+    ComplianceType: ComplianceTypeName = null,
+    CompliantSummary: CompliantSummary = null,
+    ExecutionSummary: ComplianceExecutionSummary = null,
+    NonCompliantSummary: NonCompliantSummary = null,
+    OverallSeverity: ComplianceSeverity = null,
+    ResourceId: ComplianceResourceId = null,
+    ResourceType: ComplianceResourceType = null,
+    Status: ComplianceStatus = null
+  ): ResourceComplianceSummaryItem = {
     val __obj = js.Dynamic.literal()
+    if (ComplianceType != null) __obj.updateDynamic("ComplianceType")(ComplianceType.asInstanceOf[js.Any])
+    if (CompliantSummary != null) __obj.updateDynamic("CompliantSummary")(CompliantSummary.asInstanceOf[js.Any])
+    if (ExecutionSummary != null) __obj.updateDynamic("ExecutionSummary")(ExecutionSummary.asInstanceOf[js.Any])
+    if (NonCompliantSummary != null) __obj.updateDynamic("NonCompliantSummary")(NonCompliantSummary.asInstanceOf[js.Any])
+    if (OverallSeverity != null) __obj.updateDynamic("OverallSeverity")(OverallSeverity.asInstanceOf[js.Any])
+    if (ResourceId != null) __obj.updateDynamic("ResourceId")(ResourceId.asInstanceOf[js.Any])
+    if (ResourceType != null) __obj.updateDynamic("ResourceType")(ResourceType.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceComplianceSummaryItem]
   }
-  @scala.inline
-  implicit class ResourceComplianceSummaryItemOps[Self <: ResourceComplianceSummaryItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComplianceType(value: ComplianceTypeName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComplianceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompliantSummary(value: CompliantSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CompliantSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompliantSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CompliantSummary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecutionSummary(value: ComplianceExecutionSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionSummary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNonCompliantSummary(value: NonCompliantSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NonCompliantSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNonCompliantSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NonCompliantSummary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverallSeverity(value: ComplianceSeverity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OverallSeverity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverallSeverity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OverallSeverity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceId(value: ComplianceResourceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceType(value: ComplianceResourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: ComplianceStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

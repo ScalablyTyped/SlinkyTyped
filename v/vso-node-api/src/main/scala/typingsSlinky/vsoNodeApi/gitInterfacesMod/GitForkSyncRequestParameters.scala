@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GitForkSyncRequestParameters extends js.Object {
   /**
     * Fully-qualified identifier for the source repository.
     */
-  var source: GlobalGitRepositoryKey = js.native
+  var source: GlobalGitRepositoryKey
   /**
     * If supplied, the set of ref mappings to use when performing a "sync" or create. If missing, all refs will be synchronized.
     */
-  var sourceToTargetRefs: js.Array[SourceToTargetRef] = js.native
+  var sourceToTargetRefs: js.Array[SourceToTargetRef]
 }
 
 object GitForkSyncRequestParameters {
@@ -22,25 +21,5 @@ object GitForkSyncRequestParameters {
     val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any], sourceToTargetRefs = sourceToTargetRefs.asInstanceOf[js.Any])
     __obj.asInstanceOf[GitForkSyncRequestParameters]
   }
-  @scala.inline
-  implicit class GitForkSyncRequestParametersOps[Self <: GitForkSyncRequestParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSource(value: GlobalGitRepositoryKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceToTargetRefs(value: js.Array[SourceToTargetRef]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceToTargetRefs")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

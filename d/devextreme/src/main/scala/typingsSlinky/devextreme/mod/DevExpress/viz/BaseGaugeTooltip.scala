@@ -1,76 +1,63 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
 import org.scalajs.dom.raw.Element
+import typingsSlinky.devextreme.anon.Blur
+import typingsSlinky.devextreme.anon.DashStyleOpacity
 import typingsSlinky.devextreme.anon.ValueText
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.core.template
+import typingsSlinky.devextreme.mod.DevExpress.ui.format
 import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/** Configures tooltips. */
-@js.native
+/** @name BaseGauge.Options.tooltip */
 trait BaseGaugeTooltip extends BaseWidgetTooltip {
-  /** Specifies a custom template for a tooltip. */
+  /** @name BaseGauge.Options.tooltip.contentTemplate */
   var contentTemplate: js.UndefOr[
     template | (js.Function2[/* scaleValue */ ValueText, /* element */ dxElement, String | Element | JQuery])
-  ] = js.native
-  /** Allows you to change the appearance of specified tooltips. */
-  var customizeTooltip: js.UndefOr[js.Function1[/* scaleValue */ ValueText, _]] = js.native
+  ] = js.undefined
+  /** @name BaseGauge.Options.tooltip.customizeTooltip */
+  var customizeTooltip: js.UndefOr[js.Function1[/* scaleValue */ ValueText, _]] = js.undefined
 }
 
 object BaseGaugeTooltip {
   @scala.inline
-  def apply(): BaseGaugeTooltip = {
+  def apply(
+    arrowLength: js.UndefOr[Double] = js.undefined,
+    border: DashStyleOpacity = null,
+    color: String = null,
+    container: String | Element | JQuery = null,
+    contentTemplate: template | (js.Function2[/* scaleValue */ ValueText, /* element */ dxElement, String | Element | JQuery]) = null,
+    cornerRadius: js.UndefOr[Double] = js.undefined,
+    customizeTooltip: /* scaleValue */ ValueText => _ = null,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    font: Font = null,
+    format: format = null,
+    opacity: js.UndefOr[Double] = js.undefined,
+    paddingLeftRight: js.UndefOr[Double] = js.undefined,
+    paddingTopBottom: js.UndefOr[Double] = js.undefined,
+    shadow: Blur = null,
+    zIndex: js.UndefOr[Double] = js.undefined
+  ): BaseGaugeTooltip = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(arrowLength)) __obj.updateDynamic("arrowLength")(arrowLength.get.asInstanceOf[js.Any])
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (contentTemplate != null) __obj.updateDynamic("contentTemplate")(contentTemplate.asInstanceOf[js.Any])
+    if (!js.isUndefined(cornerRadius)) __obj.updateDynamic("cornerRadius")(cornerRadius.get.asInstanceOf[js.Any])
+    if (customizeTooltip != null) __obj.updateDynamic("customizeTooltip")(js.Any.fromFunction1(customizeTooltip))
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(paddingLeftRight)) __obj.updateDynamic("paddingLeftRight")(paddingLeftRight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(paddingTopBottom)) __obj.updateDynamic("paddingTopBottom")(paddingTopBottom.get.asInstanceOf[js.Any])
+    if (shadow != null) __obj.updateDynamic("shadow")(shadow.asInstanceOf[js.Any])
+    if (!js.isUndefined(zIndex)) __obj.updateDynamic("zIndex")(zIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseGaugeTooltip]
   }
-  @scala.inline
-  implicit class BaseGaugeTooltipOps[Self <: BaseGaugeTooltip] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentTemplateFunction2(value: (/* scaleValue */ ValueText, /* element */ dxElement) => String | Element | JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentTemplate")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withContentTemplateElement(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContentTemplate(
-      value: template | (js.Function2[/* scaleValue */ ValueText, /* element */ dxElement, String | Element | JQuery])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomizeTooltip(value: /* scaleValue */ ValueText => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeTooltip")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCustomizeTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeTooltip")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

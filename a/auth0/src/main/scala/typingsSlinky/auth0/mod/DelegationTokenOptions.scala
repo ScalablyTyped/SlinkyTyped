@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DelegationTokenOptions extends js.Object {
-  var api_type: String = js.native
-  var grant_type: String = js.native
-  var id_token: String = js.native
-  var scope: String = js.native
-  var target: String = js.native
+  var api_type: String
+  var grant_type: String
+  var id_token: String
+  var scope: String
+  var target: String
 }
 
 object DelegationTokenOptions {
@@ -19,43 +18,5 @@ object DelegationTokenOptions {
     val __obj = js.Dynamic.literal(api_type = api_type.asInstanceOf[js.Any], grant_type = grant_type.asInstanceOf[js.Any], id_token = id_token.asInstanceOf[js.Any], scope = scope.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
     __obj.asInstanceOf[DelegationTokenOptions]
   }
-  @scala.inline
-  implicit class DelegationTokenOptionsOps[Self <: DelegationTokenOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApi_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("api_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGrant_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grant_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId_token(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id_token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScope(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTarget(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

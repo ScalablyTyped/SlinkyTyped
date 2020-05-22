@@ -58,155 +58,33 @@ trait UpdateStackRequest extends js.Object {
 
 object UpdateStackRequest {
   @scala.inline
-  def apply(Name: String): UpdateStackRequest = {
+  def apply(
+    Name: String,
+    AccessEndpoints: AccessEndpointList = null,
+    ApplicationSettings: ApplicationSettings = null,
+    AttributesToDelete: StackAttributes = null,
+    DeleteStorageConnectors: js.UndefOr[Boolean] = js.undefined,
+    Description: Description = null,
+    DisplayName: DisplayName = null,
+    EmbedHostDomains: EmbedHostDomains = null,
+    FeedbackURL: FeedbackURL = null,
+    RedirectURL: RedirectURL = null,
+    StorageConnectors: StorageConnectorList = null,
+    UserSettings: UserSettingList = null
+  ): UpdateStackRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
+    if (AccessEndpoints != null) __obj.updateDynamic("AccessEndpoints")(AccessEndpoints.asInstanceOf[js.Any])
+    if (ApplicationSettings != null) __obj.updateDynamic("ApplicationSettings")(ApplicationSettings.asInstanceOf[js.Any])
+    if (AttributesToDelete != null) __obj.updateDynamic("AttributesToDelete")(AttributesToDelete.asInstanceOf[js.Any])
+    if (!js.isUndefined(DeleteStorageConnectors)) __obj.updateDynamic("DeleteStorageConnectors")(DeleteStorageConnectors.get.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (DisplayName != null) __obj.updateDynamic("DisplayName")(DisplayName.asInstanceOf[js.Any])
+    if (EmbedHostDomains != null) __obj.updateDynamic("EmbedHostDomains")(EmbedHostDomains.asInstanceOf[js.Any])
+    if (FeedbackURL != null) __obj.updateDynamic("FeedbackURL")(FeedbackURL.asInstanceOf[js.Any])
+    if (RedirectURL != null) __obj.updateDynamic("RedirectURL")(RedirectURL.asInstanceOf[js.Any])
+    if (StorageConnectors != null) __obj.updateDynamic("StorageConnectors")(StorageConnectors.asInstanceOf[js.Any])
+    if (UserSettings != null) __obj.updateDynamic("UserSettings")(UserSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateStackRequest]
   }
-  @scala.inline
-  implicit class UpdateStackRequestOps[Self <: UpdateStackRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccessEndpoints(value: AccessEndpointList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessEndpoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessEndpoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessEndpoints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApplicationSettings(value: ApplicationSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttributesToDelete(value: StackAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributesToDelete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributesToDelete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributesToDelete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteStorageConnectors(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteStorageConnectors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteStorageConnectors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteStorageConnectors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: Description): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: DisplayName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmbedHostDomains(value: EmbedHostDomains): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmbedHostDomains")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmbedHostDomains: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmbedHostDomains")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeedbackURL(value: FeedbackURL): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FeedbackURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeedbackURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FeedbackURL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedirectURL(value: RedirectURL): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RedirectURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedirectURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RedirectURL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageConnectors(value: StorageConnectorList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageConnectors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageConnectors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageConnectors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserSettings(value: UserSettingList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserSettings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

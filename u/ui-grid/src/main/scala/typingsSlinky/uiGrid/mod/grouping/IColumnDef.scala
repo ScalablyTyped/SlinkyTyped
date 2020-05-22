@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IColumnDef extends js.Object {
   /** Enable grouping on this column.  Defaults to true. */
-  var enableGrouping: js.UndefOr[Boolean] = js.native
+  var enableGrouping: js.UndefOr[Boolean] = js.undefined
   /**
     * Set the grouping for a column.
     * Note that aggregation used to be included in grouping, but is now separately set on the column via
@@ -26,80 +25,33 @@ trait IColumnDef extends js.Object {
     * we'll renumber them to be sequential.
     * Defaults to undefined.
     */
-  var grouping: js.UndefOr[GroupPriority] = js.native
+  var grouping: js.UndefOr[GroupPriority] = js.undefined
   /**
     * Show the aggregation menu on this column.  Defaults to true
     * @default true
     */
-  var groupingShowAggregationMenu: js.UndefOr[Boolean] = js.native
+  var groupingShowAggregationMenu: js.UndefOr[Boolean] = js.undefined
   /**
     * Show the grouping (group and ungroup items) menu on this column.  Defaults to true
     * @default true
     */
-  var groupingShowGroupingMenu: js.UndefOr[Boolean] = js.native
+  var groupingShowGroupingMenu: js.UndefOr[Boolean] = js.undefined
 }
 
 object IColumnDef {
   @scala.inline
-  def apply(): IColumnDef = {
+  def apply(
+    enableGrouping: js.UndefOr[Boolean] = js.undefined,
+    grouping: GroupPriority = null,
+    groupingShowAggregationMenu: js.UndefOr[Boolean] = js.undefined,
+    groupingShowGroupingMenu: js.UndefOr[Boolean] = js.undefined
+  ): IColumnDef = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(enableGrouping)) __obj.updateDynamic("enableGrouping")(enableGrouping.get.asInstanceOf[js.Any])
+    if (grouping != null) __obj.updateDynamic("grouping")(grouping.asInstanceOf[js.Any])
+    if (!js.isUndefined(groupingShowAggregationMenu)) __obj.updateDynamic("groupingShowAggregationMenu")(groupingShowAggregationMenu.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(groupingShowGroupingMenu)) __obj.updateDynamic("groupingShowGroupingMenu")(groupingShowGroupingMenu.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IColumnDef]
   }
-  @scala.inline
-  implicit class IColumnDefOps[Self <: IColumnDef] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnableGrouping(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGrouping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableGrouping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGrouping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrouping(value: GroupPriority): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grouping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrouping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grouping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupingShowAggregationMenu(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupingShowAggregationMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupingShowAggregationMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupingShowAggregationMenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupingShowGroupingMenu(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupingShowGroupingMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupingShowGroupingMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupingShowGroupingMenu")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

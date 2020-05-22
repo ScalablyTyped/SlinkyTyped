@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChartSourceRange extends js.Object {
-  var sources: js.UndefOr[js.Array[GridRange]] = js.native
+  var sources: js.UndefOr[js.Array[GridRange]] = js.undefined
 }
 
 object ChartSourceRange {
   @scala.inline
-  def apply(): ChartSourceRange = {
+  def apply(sources: js.Array[GridRange] = null): ChartSourceRange = {
     val __obj = js.Dynamic.literal()
+    if (sources != null) __obj.updateDynamic("sources")(sources.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartSourceRange]
   }
-  @scala.inline
-  implicit class ChartSourceRangeOps[Self <: ChartSourceRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSources(value: js.Array[GridRange]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sources")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

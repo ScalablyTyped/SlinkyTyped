@@ -17,29 +17,10 @@ trait SchemaPlaylistItemStatus extends js.Object {
 
 object SchemaPlaylistItemStatus {
   @scala.inline
-  def apply(): SchemaPlaylistItemStatus = {
+  def apply(privacyStatus: String = null): SchemaPlaylistItemStatus = {
     val __obj = js.Dynamic.literal()
+    if (privacyStatus != null) __obj.updateDynamic("privacyStatus")(privacyStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPlaylistItemStatus]
   }
-  @scala.inline
-  implicit class SchemaPlaylistItemStatusOps[Self <: SchemaPlaylistItemStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrivacyStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privacyStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivacyStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privacyStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

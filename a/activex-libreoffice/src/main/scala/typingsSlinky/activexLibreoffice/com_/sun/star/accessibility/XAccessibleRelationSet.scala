@@ -15,36 +15,35 @@ import scala.scalajs.js.annotation._
   * achieve a greater conformance with the other accessibility interfaces.
   * @since OOo 1.1.2
   */
-@js.native
 trait XAccessibleRelationSet extends XInterface {
   /**
     * Returns the number of relations in this relation set.
     * @returns Returns the number of relations or zero if there are none.
     */
-  val RelationCount: Double = js.native
+  val RelationCount: Double
   /**
     * Tests whether the relation set contains a relation matching the specified key.
     * @param aRelationType The type of relation to look for in this set of relations. This has to be one of the constants of {@link AccessibleRelationType} .
     * @returns Returns `TRUE` if there is a (at least one) relation of the given type and `FALSE` if there is no such relation in the set.
     */
-  def containsRelation(aRelationType: Double): Boolean = js.native
+  def containsRelation(aRelationType: Double): Boolean
   /**
     * Returns the relation of this relation set that is specified by the given index.
     * @param nIndex This index specifies the relation to return.
     * @returns For a valid index, i.e. inside the range 0 to the number of relations minus one, the returned value is the requested relation. If the index is in
     */
-  def getRelation(nIndex: Double): AccessibleRelation = js.native
+  def getRelation(nIndex: Double): AccessibleRelation
   /**
     * Retrieve and return the relation with the given relation type.
     * @param aRelationType The type of the relation to return. This has to be one of the constants of {@link AccessibleRelationType} .
     * @returns If a relation with the given type could be found than (a copy of) this relation is returned. Otherwise a relation with the type INVALID is returned.
     */
-  def getRelationByType(aRelationType: Double): AccessibleRelation = js.native
+  def getRelationByType(aRelationType: Double): AccessibleRelation
   /**
     * Returns the number of relations in this relation set.
     * @returns Returns the number of relations or zero if there are none.
     */
-  def getRelationCount(): Double = js.native
+  def getRelationCount(): Double
 }
 
 object XAccessibleRelationSet {
@@ -62,43 +61,5 @@ object XAccessibleRelationSet {
     val __obj = js.Dynamic.literal(RelationCount = RelationCount.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), containsRelation = js.Any.fromFunction1(containsRelation), getRelation = js.Any.fromFunction1(getRelation), getRelationByType = js.Any.fromFunction1(getRelationByType), getRelationCount = js.Any.fromFunction0(getRelationCount), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XAccessibleRelationSet]
   }
-  @scala.inline
-  implicit class XAccessibleRelationSetOps[Self <: XAccessibleRelationSet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRelationCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RelationCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainsRelation(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containsRelation")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetRelation(value: Double => AccessibleRelation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRelation")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetRelationByType(value: Double => AccessibleRelation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRelationByType")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetRelationCount(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRelationCount")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

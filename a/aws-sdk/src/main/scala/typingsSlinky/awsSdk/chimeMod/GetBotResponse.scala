@@ -14,29 +14,10 @@ trait GetBotResponse extends js.Object {
 
 object GetBotResponse {
   @scala.inline
-  def apply(): GetBotResponse = {
+  def apply(Bot: Bot = null): GetBotResponse = {
     val __obj = js.Dynamic.literal()
+    if (Bot != null) __obj.updateDynamic("Bot")(Bot.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetBotResponse]
   }
-  @scala.inline
-  implicit class GetBotResponseOps[Self <: GetBotResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBot(value: Bot): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bot")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,78 +7,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MenuItemProps[T /* <: HTMLElement */]
   extends AllHTMLAttributes[T]
      with ClassAttributes[T] {
   /**
-  	 * The HTML tag for this element. Default: 'span'.
-  	 */
+    * The HTML tag for this element. Default: 'span'.
+    */
   var tag: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: T['tagName'] */ js.Any
-  ] = js.native
+  ] = js.undefined
   /**
-  	 * If `text` has a value, its first letter will be the letter a user can
-  	 * type to navigate to that item.
-  	 */
-  var text: js.UndefOr[String] = js.native
+    * If `text` has a value, its first letter will be the letter a user can
+    * type to navigate to that item.
+    */
+  var text: js.UndefOr[String] = js.undefined
   /**
-  	 * If value has a value, it will be passed to the onSelection handler
-  	 * when the `MenuItem` is selected
-  	 */
+    * If value has a value, it will be passed to the onSelection handler
+    * when the `MenuItem` is selected
+    */
   @JSName("value")
-  var value_MenuItemProps: js.UndefOr[js.Any] = js.native
+  var value_MenuItemProps: js.UndefOr[js.Any] = js.undefined
 }
 
 object MenuItemProps {
   @scala.inline
-  def apply[T](): MenuItemProps[T] = {
+  def apply[T](
+    AllHTMLAttributes: AllHTMLAttributes[T] = null,
+    ClassAttributes: ClassAttributes[T] = null,
+    tag: /* import warning: importer.ImportType#apply Failed type conversion: T['tagName'] */ js.Any = null,
+    text: String = null,
+    value: js.Any = null
+  ): MenuItemProps[T] = {
     val __obj = js.Dynamic.literal()
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[MenuItemProps[T]]
   }
-  @scala.inline
-  implicit class MenuItemPropsOps[Self[t] <: MenuItemProps[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withTag(value: /* import warning: importer.ImportType#apply Failed type conversion: T['tagName'] */ js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTag: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

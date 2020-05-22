@@ -12,14 +12,3 @@ import scala.scalajs.js.annotation._
 */
 trait XmlNode extends js.Object
 
-object XmlNode {
-  @scala.inline
-  implicit def apply(value: XmlCDataNode): XmlNode = value.asInstanceOf[XmlNode]
-  @scala.inline
-  implicit def apply(value: XmlCommentNode): XmlNode = value.asInstanceOf[XmlNode]
-  @scala.inline
-  implicit def apply(value: XmlElement): XmlNode = value.asInstanceOf[XmlNode]
-  @scala.inline
-  implicit def apply(value: XmlTextNode): XmlNode = value.asInstanceOf[XmlNode]
-}
-

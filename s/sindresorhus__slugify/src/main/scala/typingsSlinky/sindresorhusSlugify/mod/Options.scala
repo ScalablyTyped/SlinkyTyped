@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /**
   		Specifying this only replaces the default if you set an item with the same key, like `&`.
@@ -28,7 +27,7 @@ trait Options extends js.Object {
   		//=> 'foo-at-unicorn'
   		```
   		*/
-  val customReplacements: js.UndefOr[js.Array[js.Tuple2[String, String]]] = js.native
+  val customReplacements: js.UndefOr[js.Array[js.Tuple2[String, String]]] = js.undefined
   /**
   		Convert camelcase to separate words. Internally it does `fooBar` → `foo bar`.
   		@default true
@@ -41,7 +40,7 @@ trait Options extends js.Object {
   		//=> 'foobar'
   		```
   		*/
-  val decamelize: js.UndefOr[Boolean] = js.native
+  val decamelize: js.UndefOr[Boolean] = js.undefined
   /**
   		Make the slug lowercase.
   		@default true
@@ -54,7 +53,7 @@ trait Options extends js.Object {
   		//=> 'Deja-Vu'
   		```
   		*/
-  val lowercase: js.UndefOr[Boolean] = js.native
+  val lowercase: js.UndefOr[Boolean] = js.undefined
   /**
   		@default '-'
   		@example
@@ -66,70 +65,23 @@ trait Options extends js.Object {
   		//=> 'bar_and_baz'
   		```
   		*/
-  val separator: js.UndefOr[String] = js.native
+  val separator: js.UndefOr[String] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    customReplacements: js.Array[js.Tuple2[String, String]] = null,
+    decamelize: js.UndefOr[Boolean] = js.undefined,
+    lowercase: js.UndefOr[Boolean] = js.undefined,
+    separator: String = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (customReplacements != null) __obj.updateDynamic("customReplacements")(customReplacements.asInstanceOf[js.Any])
+    if (!js.isUndefined(decamelize)) __obj.updateDynamic("decamelize")(decamelize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lowercase)) __obj.updateDynamic("lowercase")(lowercase.get.asInstanceOf[js.Any])
+    if (separator != null) __obj.updateDynamic("separator")(separator.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomReplacements(value: js.Array[js.Tuple2[String, String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customReplacements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomReplacements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customReplacements")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecamelize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decamelize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecamelize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decamelize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLowercase(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowercase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLowercase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowercase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeparator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

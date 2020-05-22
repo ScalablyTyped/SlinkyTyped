@@ -1,11 +1,11 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
+import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait CustomElementConstructor
-  extends Instantiable0[org.scalajs.dom.raw.HTMLElement]
+  extends Instantiable1[/* params (repeated) */ js.Any, org.scalajs.dom.raw.HTMLElement]
 

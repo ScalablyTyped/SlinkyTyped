@@ -1,54 +1,64 @@
 package typingsSlinky.agGrid.iExcelCreatorMod
 
+import typingsSlinky.agGrid.columnMod.Column
 import typingsSlinky.agGrid.exportParamsMod.ExportParams
+import typingsSlinky.agGrid.exportParamsMod.ProcessCellForExportParams
+import typingsSlinky.agGrid.exportParamsMod.ProcessHeaderForExportParams
+import typingsSlinky.agGrid.exportParamsMod.ShouldRowBeSkippedParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExcelExportParams
   extends ExportParams[js.Array[js.Array[ExcelCell]]] {
-  var sheetName: js.UndefOr[String] = js.native
-  var suppressTextAsCDATA: js.UndefOr[Boolean] = js.native
+  var sheetName: js.UndefOr[String] = js.undefined
+  var suppressTextAsCDATA: js.UndefOr[Boolean] = js.undefined
 }
 
 object ExcelExportParams {
   @scala.inline
-  def apply(): ExcelExportParams = {
+  def apply(
+    allColumns: js.UndefOr[Boolean] = js.undefined,
+    columnGroups: js.UndefOr[Boolean] = js.undefined,
+    columnKeys: js.Array[String | Column] = null,
+    customFooter: js.Array[js.Array[ExcelCell]] = null,
+    customHeader: js.Array[js.Array[ExcelCell]] = null,
+    fileName: String = null,
+    onlySelected: js.UndefOr[Boolean] = js.undefined,
+    onlySelectedAllPages: js.UndefOr[Boolean] = js.undefined,
+    processCellCallback: /* params */ ProcessCellForExportParams => String = null,
+    processHeaderCallback: /* params */ ProcessHeaderForExportParams => String = null,
+    sheetName: String = null,
+    shouldRowBeSkipped: /* params */ ShouldRowBeSkippedParams => Boolean = null,
+    skipFooters: js.UndefOr[Boolean] = js.undefined,
+    skipGroups: js.UndefOr[Boolean] = js.undefined,
+    skipHeader: js.UndefOr[Boolean] = js.undefined,
+    skipPinnedBottom: js.UndefOr[Boolean] = js.undefined,
+    skipPinnedTop: js.UndefOr[Boolean] = js.undefined,
+    suppressQuotes: js.UndefOr[Boolean] = js.undefined,
+    suppressTextAsCDATA: js.UndefOr[Boolean] = js.undefined
+  ): ExcelExportParams = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allColumns)) __obj.updateDynamic("allColumns")(allColumns.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(columnGroups)) __obj.updateDynamic("columnGroups")(columnGroups.get.asInstanceOf[js.Any])
+    if (columnKeys != null) __obj.updateDynamic("columnKeys")(columnKeys.asInstanceOf[js.Any])
+    if (customFooter != null) __obj.updateDynamic("customFooter")(customFooter.asInstanceOf[js.Any])
+    if (customHeader != null) __obj.updateDynamic("customHeader")(customHeader.asInstanceOf[js.Any])
+    if (fileName != null) __obj.updateDynamic("fileName")(fileName.asInstanceOf[js.Any])
+    if (!js.isUndefined(onlySelected)) __obj.updateDynamic("onlySelected")(onlySelected.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(onlySelectedAllPages)) __obj.updateDynamic("onlySelectedAllPages")(onlySelectedAllPages.get.asInstanceOf[js.Any])
+    if (processCellCallback != null) __obj.updateDynamic("processCellCallback")(js.Any.fromFunction1(processCellCallback))
+    if (processHeaderCallback != null) __obj.updateDynamic("processHeaderCallback")(js.Any.fromFunction1(processHeaderCallback))
+    if (sheetName != null) __obj.updateDynamic("sheetName")(sheetName.asInstanceOf[js.Any])
+    if (shouldRowBeSkipped != null) __obj.updateDynamic("shouldRowBeSkipped")(js.Any.fromFunction1(shouldRowBeSkipped))
+    if (!js.isUndefined(skipFooters)) __obj.updateDynamic("skipFooters")(skipFooters.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipGroups)) __obj.updateDynamic("skipGroups")(skipGroups.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipHeader)) __obj.updateDynamic("skipHeader")(skipHeader.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipPinnedBottom)) __obj.updateDynamic("skipPinnedBottom")(skipPinnedBottom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipPinnedTop)) __obj.updateDynamic("skipPinnedTop")(skipPinnedTop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(suppressQuotes)) __obj.updateDynamic("suppressQuotes")(suppressQuotes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(suppressTextAsCDATA)) __obj.updateDynamic("suppressTextAsCDATA")(suppressTextAsCDATA.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExcelExportParams]
   }
-  @scala.inline
-  implicit class ExcelExportParamsOps[Self <: ExcelExportParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSheetName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSheetName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuppressTextAsCDATA(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressTextAsCDATA")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressTextAsCDATA: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressTextAsCDATA")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

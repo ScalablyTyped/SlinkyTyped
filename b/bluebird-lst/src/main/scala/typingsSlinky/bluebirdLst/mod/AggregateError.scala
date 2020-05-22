@@ -19,6 +19,12 @@ import scala.scalajs.js.annotation._
 class AggregateError ()
   extends ArrayLike[js.Error]
      with Error {
+  /* CompleteClass */
+  override val length: Double = js.native
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
   def every(callback: js.Function3[/* element */ js.Error, /* index */ Double, /* array */ this.type, Boolean]): Boolean = js.native
   def every(
     callback: js.Function3[/* element */ js.Error, /* index */ Double, /* array */ this.type, Boolean],

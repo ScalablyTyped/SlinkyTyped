@@ -1,5 +1,8 @@
 package typingsSlinky.pkijs.ocspresponseMod
 
+import typingsSlinky.asn1js.mod.Enumerated
+import typingsSlinky.pkijs.basicOCSPResponseMod.GetCertificateStatusResult
+import typingsSlinky.pkijs.certIDMod.CreateFroCertificateParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +11,33 @@ import scala.scalajs.js.annotation._
 @js.native
 class default () extends OCSPResponse {
   def this(params: js.Any) = this()
+  /* CompleteClass */
+  override var responseStatus: Enumerated = js.native
+  /**
+    * Making OCSP Request for specific certificate
+    * @param {Certificate} certificate Certificate making OCSP Request for
+    * @param {CreateFroCertificateParams} parameters Additional parameters
+    * @returns {Promise}
+    */
+  /* CompleteClass */
+  override def createForCertificate(certificate: typingsSlinky.pkijs.certificateMod.default, parameters: CreateFroCertificateParams): js.Thenable[Unit] = js.native
+  /* CompleteClass */
+  override def fromSchema(schema: js.Any): Unit = js.native
+  /**
+    * Get OCSP response status for specific certificate
+    * @param {Certificate} certificate
+    * @param {Certificate} issuerCertificate
+    * @returns {*}
+    */
+  /* CompleteClass */
+  override def getCertificateStatus(
+    certificate: typingsSlinky.pkijs.certificateMod.default,
+    issuerCertificate: typingsSlinky.pkijs.certificateMod.default
+  ): js.Thenable[GetCertificateStatusResult] = js.native
+  /* CompleteClass */
+  override def toJSON(): js.Any = js.native
+  /* CompleteClass */
+  override def toSchema(): js.Any = js.native
 }
 
 /* static members */

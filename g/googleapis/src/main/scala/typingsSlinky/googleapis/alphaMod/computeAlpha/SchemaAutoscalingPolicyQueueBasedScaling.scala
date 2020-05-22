@@ -32,53 +32,16 @@ trait SchemaAutoscalingPolicyQueueBasedScaling extends js.Object {
 
 object SchemaAutoscalingPolicyQueueBasedScaling {
   @scala.inline
-  def apply(): SchemaAutoscalingPolicyQueueBasedScaling = {
+  def apply(
+    acceptableBacklogPerInstance: js.UndefOr[Double] = js.undefined,
+    cloudPubSub: SchemaAutoscalingPolicyQueueBasedScalingCloudPubSub = null,
+    singleWorkerThroughputPerSec: js.UndefOr[Double] = js.undefined
+  ): SchemaAutoscalingPolicyQueueBasedScaling = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(acceptableBacklogPerInstance)) __obj.updateDynamic("acceptableBacklogPerInstance")(acceptableBacklogPerInstance.get.asInstanceOf[js.Any])
+    if (cloudPubSub != null) __obj.updateDynamic("cloudPubSub")(cloudPubSub.asInstanceOf[js.Any])
+    if (!js.isUndefined(singleWorkerThroughputPerSec)) __obj.updateDynamic("singleWorkerThroughputPerSec")(singleWorkerThroughputPerSec.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAutoscalingPolicyQueueBasedScaling]
   }
-  @scala.inline
-  implicit class SchemaAutoscalingPolicyQueueBasedScalingOps[Self <: SchemaAutoscalingPolicyQueueBasedScaling] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAcceptableBacklogPerInstance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptableBacklogPerInstance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcceptableBacklogPerInstance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptableBacklogPerInstance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloudPubSub(value: SchemaAutoscalingPolicyQueueBasedScalingCloudPubSub): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudPubSub")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudPubSub: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudPubSub")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSingleWorkerThroughputPerSec(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleWorkerThroughputPerSec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSingleWorkerThroughputPerSec: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleWorkerThroughputPerSec")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

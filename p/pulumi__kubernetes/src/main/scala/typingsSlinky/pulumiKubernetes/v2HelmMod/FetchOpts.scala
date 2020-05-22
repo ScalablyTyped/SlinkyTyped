@@ -5,242 +5,84 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FetchOpts extends js.Object {
   /** Verify certificates of HTTPS-enabled servers using this CA bundle. */
-  var caFile: js.UndefOr[Input[String]] = js.native
+  var caFile: js.UndefOr[Input[String]] = js.undefined
   /** Identify HTTPS client using this SSL certificate file. */
-  var certFile: js.UndefOr[Input[String]] = js.native
+  var certFile: js.UndefOr[Input[String]] = js.undefined
   /**
     * Location to write the chart. If this and tardir are specified, tardir is appended to this
     * (default ".").
     */
-  var destination: js.UndefOr[Input[String]] = js.native
+  var destination: js.UndefOr[Input[String]] = js.undefined
   /**
     * Use development versions, too. Equivalent to version '>0.0.0-0'. If --version is set, this is
     * ignored.
     */
-  var devel: js.UndefOr[Input[Boolean]] = js.native
+  var devel: js.UndefOr[Input[Boolean]] = js.undefined
   /** Location of your Helm config. Overrides $HELM_HOME (default "/Users/alex/.helm"). */
-  var home: js.UndefOr[Input[String]] = js.native
+  var home: js.UndefOr[Input[String]] = js.undefined
   /** Identify HTTPS client using this SSL key file. */
-  var keyFile: js.UndefOr[Input[String]] = js.native
+  var keyFile: js.UndefOr[Input[String]] = js.undefined
   /** Keyring containing public keys (default "/Users/alex/.gnupg/pubring.gpg"). */
-  var keyring: js.UndefOr[Input[String]] = js.native
+  var keyring: js.UndefOr[Input[String]] = js.undefined
   /** Chart repository password. */
-  var password: js.UndefOr[Input[String]] = js.native
+  var password: js.UndefOr[Input[String]] = js.undefined
   /** Fetch the provenance file, but don't perform verification. */
-  var prov: js.UndefOr[Input[Boolean]] = js.native
+  var prov: js.UndefOr[Input[Boolean]] = js.undefined
   /** Chart repository url where to locate the requested chart. */
-  var repo: js.UndefOr[Input[String]] = js.native
+  var repo: js.UndefOr[Input[String]] = js.undefined
   /** If set to false, will leave the chart as a tarball after downloading. */
-  var untar: js.UndefOr[Input[Boolean]] = js.native
+  var untar: js.UndefOr[Input[Boolean]] = js.undefined
   /**
     * If untar is specified, this flag specifies the name of the directory into which the chart is
     * expanded (default ".").
     */
-  var untardir: js.UndefOr[Input[String]] = js.native
+  var untardir: js.UndefOr[Input[String]] = js.undefined
   /** Chart repository username. */
-  var username: js.UndefOr[Input[String]] = js.native
+  var username: js.UndefOr[Input[String]] = js.undefined
   /** Verify the package against its signature. */
-  var verify: js.UndefOr[Input[Boolean]] = js.native
+  var verify: js.UndefOr[Input[Boolean]] = js.undefined
   /** Specific version of a chart. Without this, the latest version is fetched. */
-  var version: js.UndefOr[Input[String]] = js.native
+  var version: js.UndefOr[Input[String]] = js.undefined
 }
 
 object FetchOpts {
   @scala.inline
-  def apply(): FetchOpts = {
+  def apply(
+    caFile: Input[String] = null,
+    certFile: Input[String] = null,
+    destination: Input[String] = null,
+    devel: Input[Boolean] = null,
+    home: Input[String] = null,
+    keyFile: Input[String] = null,
+    keyring: Input[String] = null,
+    password: Input[String] = null,
+    prov: Input[Boolean] = null,
+    repo: Input[String] = null,
+    untar: Input[Boolean] = null,
+    untardir: Input[String] = null,
+    username: Input[String] = null,
+    verify: Input[Boolean] = null,
+    version: Input[String] = null
+  ): FetchOpts = {
     val __obj = js.Dynamic.literal()
+    if (caFile != null) __obj.updateDynamic("caFile")(caFile.asInstanceOf[js.Any])
+    if (certFile != null) __obj.updateDynamic("certFile")(certFile.asInstanceOf[js.Any])
+    if (destination != null) __obj.updateDynamic("destination")(destination.asInstanceOf[js.Any])
+    if (devel != null) __obj.updateDynamic("devel")(devel.asInstanceOf[js.Any])
+    if (home != null) __obj.updateDynamic("home")(home.asInstanceOf[js.Any])
+    if (keyFile != null) __obj.updateDynamic("keyFile")(keyFile.asInstanceOf[js.Any])
+    if (keyring != null) __obj.updateDynamic("keyring")(keyring.asInstanceOf[js.Any])
+    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
+    if (prov != null) __obj.updateDynamic("prov")(prov.asInstanceOf[js.Any])
+    if (repo != null) __obj.updateDynamic("repo")(repo.asInstanceOf[js.Any])
+    if (untar != null) __obj.updateDynamic("untar")(untar.asInstanceOf[js.Any])
+    if (untardir != null) __obj.updateDynamic("untardir")(untardir.asInstanceOf[js.Any])
+    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
+    if (verify != null) __obj.updateDynamic("verify")(verify.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[FetchOpts]
   }
-  @scala.inline
-  implicit class FetchOptsOps[Self <: FetchOpts] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaFile(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCertFile(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestination(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDevel(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("devel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("devel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHome(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("home")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHome: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("home")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyFile(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyring(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyring")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyring: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyring")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPassword(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProv(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prov")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prov")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepo(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUntar(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("untar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUntar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("untar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUntardir(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("untardir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUntardir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("untardir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsername(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsername: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerify(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verify")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerify: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verify")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

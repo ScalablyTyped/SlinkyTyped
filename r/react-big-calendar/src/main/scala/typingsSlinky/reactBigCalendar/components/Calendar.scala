@@ -1,19 +1,21 @@
 package typingsSlinky.reactBigCalendar.components
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.HTMLAttributes
+import typingsSlinky.reactBigCalendar.anon.Accessors
 import typingsSlinky.reactBigCalendar.anon.Action
+import typingsSlinky.reactBigCalendar.anon.Event
 import typingsSlinky.reactBigCalendar.anon.Start
 import typingsSlinky.reactBigCalendar.anon.X
 import typingsSlinky.reactBigCalendar.mod.CalendarProps
 import typingsSlinky.reactBigCalendar.mod.Components_
 import typingsSlinky.reactBigCalendar.mod.DateLocalizer
 import typingsSlinky.reactBigCalendar.mod.DayLayoutAlgorithm
+import typingsSlinky.reactBigCalendar.mod.DayLayoutFunction
 import typingsSlinky.reactBigCalendar.mod.Formats
 import typingsSlinky.reactBigCalendar.mod.Messages
 import typingsSlinky.reactBigCalendar.mod.NavigateAction
@@ -49,7 +51,9 @@ object Calendar {
     @scala.inline
     def date(value: stringOrDate): this.type = set("date", value.asInstanceOf[js.Any])
     @scala.inline
-    def dayLayoutAlgorithm(value: DayLayoutAlgorithm): this.type = set("dayLayoutAlgorithm", value.asInstanceOf[js.Any])
+    def dayLayoutAlgorithmFunction1(value: /* _ */ Accessors[TEvent] => js.Array[Event[TEvent]]): this.type = set("dayLayoutAlgorithm", js.Any.fromFunction1(value))
+    @scala.inline
+    def dayLayoutAlgorithm(value: DayLayoutAlgorithm | DayLayoutFunction[TEvent]): this.type = set("dayLayoutAlgorithm", value.asInstanceOf[js.Any])
     @scala.inline
     def dayPropGetter(
       value: (/* date */ js.Date, /* resourceId */ js.UndefOr[Double | String]) => HTMLAttributes[HTMLDivElement]
@@ -99,7 +103,7 @@ object Calendar {
     @scala.inline
     def min(value: stringOrDate): this.type = set("min", value.asInstanceOf[js.Any])
     @scala.inline
-    def onDoubleClickEvent(value: (TEvent, /* e */ SyntheticEvent[Event, HTMLElement]) => Unit): this.type = set("onDoubleClickEvent", js.Any.fromFunction2(value))
+    def onDoubleClickEvent(value: (TEvent, /* e */ SyntheticEvent[org.scalajs.dom.raw.Event, HTMLElement]) => Unit): this.type = set("onDoubleClickEvent", js.Any.fromFunction2(value))
     @scala.inline
     def onDrillDown(value: (/* date */ js.Date, /* view */ View) => Unit): this.type = set("onDrillDown", js.Any.fromFunction2(value))
     @scala.inline
@@ -107,7 +111,7 @@ object Calendar {
     @scala.inline
     def onRangeChange(value: /* range */ js.Array[js.Date] | Start => Unit): this.type = set("onRangeChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onSelectEvent(value: (TEvent, /* e */ SyntheticEvent[Event, HTMLElement]) => Unit): this.type = set("onSelectEvent", js.Any.fromFunction2(value))
+    def onSelectEvent(value: (TEvent, /* e */ SyntheticEvent[org.scalajs.dom.raw.Event, HTMLElement]) => Unit): this.type = set("onSelectEvent", js.Any.fromFunction2(value))
     @scala.inline
     def onSelectSlot(value: /* slotInfo */ Action => Unit): this.type = set("onSelectSlot", js.Any.fromFunction1(value))
     @scala.inline

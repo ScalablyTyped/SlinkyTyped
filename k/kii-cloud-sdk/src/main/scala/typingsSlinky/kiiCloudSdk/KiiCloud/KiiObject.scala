@@ -311,8 +311,8 @@ trait KiiObject extends js.Object {
     * @return A KiiACL object associated with this KiiObject
     *
     * @example
-    *     	var obj = . . .; // a KiiObject
-    *     	var acl = obj.objectACL();
+    *         var obj = . . .; // a KiiObject
+    *         var acl = obj.objectACL();
     */
   def objectACL(): KiiACL = js.native
   /**

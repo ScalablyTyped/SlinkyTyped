@@ -4,270 +4,72 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProgressBarOptions extends js.Object {
-  var barBracketStyle: js.UndefOr[CTerminal] = js.native
-  var barChar: js.UndefOr[String] = js.native
-  var barHeadChar: js.UndefOr[String] = js.native
-  var barStyle: js.UndefOr[CTerminal] = js.native
-  var eta: js.UndefOr[Boolean] = js.native
-  var etaStyle: js.UndefOr[CTerminal] = js.native
-  var `inline`: js.UndefOr[Boolean] = js.native
-  var itemSize: js.UndefOr[Double] = js.native
-  var itemStyle: js.UndefOr[CTerminal] = js.native
-  var items: js.UndefOr[Double] = js.native
-  var maxRefreshTime: js.UndefOr[Double] = js.native
-  var minRefreshTime: js.UndefOr[Double] = js.native
-  var percent: js.UndefOr[Boolean] = js.native
-  var percentStyle: js.UndefOr[CTerminal] = js.native
-  var syncMode: js.UndefOr[Boolean] = js.native
-  var title: js.UndefOr[String] = js.native
-  var titleSize: js.UndefOr[Double] = js.native
-  var titleStyle: js.UndefOr[CTerminal] = js.native
-  var width: js.UndefOr[Double] = js.native
+  var barBracketStyle: js.UndefOr[CTerminal] = js.undefined
+  var barChar: js.UndefOr[String] = js.undefined
+  var barHeadChar: js.UndefOr[String] = js.undefined
+  var barStyle: js.UndefOr[CTerminal] = js.undefined
+  var eta: js.UndefOr[Boolean] = js.undefined
+  var etaStyle: js.UndefOr[CTerminal] = js.undefined
+  var `inline`: js.UndefOr[Boolean] = js.undefined
+  var itemSize: js.UndefOr[Double] = js.undefined
+  var itemStyle: js.UndefOr[CTerminal] = js.undefined
+  var items: js.UndefOr[Double] = js.undefined
+  var maxRefreshTime: js.UndefOr[Double] = js.undefined
+  var minRefreshTime: js.UndefOr[Double] = js.undefined
+  var percent: js.UndefOr[Boolean] = js.undefined
+  var percentStyle: js.UndefOr[CTerminal] = js.undefined
+  var syncMode: js.UndefOr[Boolean] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
+  var titleSize: js.UndefOr[Double] = js.undefined
+  var titleStyle: js.UndefOr[CTerminal] = js.undefined
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object ProgressBarOptions {
   @scala.inline
-  def apply(): ProgressBarOptions = {
+  def apply(
+    barBracketStyle: CTerminal = null,
+    barChar: String = null,
+    barHeadChar: String = null,
+    barStyle: CTerminal = null,
+    eta: js.UndefOr[Boolean] = js.undefined,
+    etaStyle: CTerminal = null,
+    `inline`: js.UndefOr[Boolean] = js.undefined,
+    itemSize: js.UndefOr[Double] = js.undefined,
+    itemStyle: CTerminal = null,
+    items: js.UndefOr[Double] = js.undefined,
+    maxRefreshTime: js.UndefOr[Double] = js.undefined,
+    minRefreshTime: js.UndefOr[Double] = js.undefined,
+    percent: js.UndefOr[Boolean] = js.undefined,
+    percentStyle: CTerminal = null,
+    syncMode: js.UndefOr[Boolean] = js.undefined,
+    title: String = null,
+    titleSize: js.UndefOr[Double] = js.undefined,
+    titleStyle: CTerminal = null,
+    width: js.UndefOr[Double] = js.undefined
+  ): ProgressBarOptions = {
     val __obj = js.Dynamic.literal()
+    if (barBracketStyle != null) __obj.updateDynamic("barBracketStyle")(barBracketStyle.asInstanceOf[js.Any])
+    if (barChar != null) __obj.updateDynamic("barChar")(barChar.asInstanceOf[js.Any])
+    if (barHeadChar != null) __obj.updateDynamic("barHeadChar")(barHeadChar.asInstanceOf[js.Any])
+    if (barStyle != null) __obj.updateDynamic("barStyle")(barStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(eta)) __obj.updateDynamic("eta")(eta.get.asInstanceOf[js.Any])
+    if (etaStyle != null) __obj.updateDynamic("etaStyle")(etaStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(itemSize)) __obj.updateDynamic("itemSize")(itemSize.get.asInstanceOf[js.Any])
+    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(items)) __obj.updateDynamic("items")(items.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxRefreshTime)) __obj.updateDynamic("maxRefreshTime")(maxRefreshTime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minRefreshTime)) __obj.updateDynamic("minRefreshTime")(minRefreshTime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(percent)) __obj.updateDynamic("percent")(percent.get.asInstanceOf[js.Any])
+    if (percentStyle != null) __obj.updateDynamic("percentStyle")(percentStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(syncMode)) __obj.updateDynamic("syncMode")(syncMode.get.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (!js.isUndefined(titleSize)) __obj.updateDynamic("titleSize")(titleSize.get.asInstanceOf[js.Any])
+    if (titleStyle != null) __obj.updateDynamic("titleStyle")(titleStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProgressBarOptions]
   }
-  @scala.inline
-  implicit class ProgressBarOptionsOps[Self <: ProgressBarOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBarBracketStyle(value: CTerminal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barBracketStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBarBracketStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barBracketStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBarChar(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barChar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBarChar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barChar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBarHeadChar(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barHeadChar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBarHeadChar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barHeadChar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBarStyle(value: CTerminal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBarStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEta(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eta")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEtaStyle(value: CTerminal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etaStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtaStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etaStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemStyle(value: CTerminal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItems(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxRefreshTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRefreshTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxRefreshTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRefreshTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinRefreshTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minRefreshTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinRefreshTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minRefreshTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPercent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPercent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPercentStyle(value: CTerminal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percentStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPercentStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percentStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSyncMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSyncMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitleSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleStyle(value: CTerminal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitleStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

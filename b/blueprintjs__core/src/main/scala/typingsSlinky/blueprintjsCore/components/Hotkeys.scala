@@ -2,7 +2,7 @@ package typingsSlinky.blueprintjsCore.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.blueprintjsCore.hotkeysMod.IHotkeysProps
+import typingsSlinky.blueprintjsCore.hotkeysTypesMod.IHotkeysProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

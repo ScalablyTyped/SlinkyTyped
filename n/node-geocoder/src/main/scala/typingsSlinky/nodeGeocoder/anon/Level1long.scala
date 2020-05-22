@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Level1long extends js.Object {
-  var level1long: js.UndefOr[String] = js.native
-  var level1short: js.UndefOr[String] = js.native
-  var level2long: js.UndefOr[String] = js.native
-  var level2short: js.UndefOr[String] = js.native
+  var level1long: js.UndefOr[String] = js.undefined
+  var level1short: js.UndefOr[String] = js.undefined
+  var level2long: js.UndefOr[String] = js.undefined
+  var level2short: js.UndefOr[String] = js.undefined
 }
 
 object Level1long {
   @scala.inline
-  def apply(): Level1long = {
+  def apply(
+    level1long: String = null,
+    level1short: String = null,
+    level2long: String = null,
+    level2short: String = null
+  ): Level1long = {
     val __obj = js.Dynamic.literal()
+    if (level1long != null) __obj.updateDynamic("level1long")(level1long.asInstanceOf[js.Any])
+    if (level1short != null) __obj.updateDynamic("level1short")(level1short.asInstanceOf[js.Any])
+    if (level2long != null) __obj.updateDynamic("level2long")(level2long.asInstanceOf[js.Any])
+    if (level2short != null) __obj.updateDynamic("level2short")(level2short.asInstanceOf[js.Any])
     __obj.asInstanceOf[Level1long]
   }
-  @scala.inline
-  implicit class Level1longOps[Self <: Level1long] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLevel1long(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level1long")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel1long: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level1long")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel1short(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level1short")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel1short: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level1short")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel2long(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level2long")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel2long: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level2long")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel2short(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level2short")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel2short: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level2short")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

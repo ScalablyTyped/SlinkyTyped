@@ -4,114 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExternalProcessRequestType extends js.Object {
-  var alias: js.UndefOr[String] = js.native
-  var arguments: js.UndefOr[String] = js.native
-  var certificate: js.UndefOr[CertificationInfo] = js.native
-  var lifetime: js.UndefOr[String] = js.native
-  var listener: js.UndefOr[LaunchExternalProcessListener] = js.native
-  var path: js.UndefOr[String] = js.native
-  var uuid: js.UndefOr[String] = js.native
+  var alias: js.UndefOr[String] = js.undefined
+  var arguments: js.UndefOr[String] = js.undefined
+  var certificate: js.UndefOr[CertificationInfo] = js.undefined
+  var lifetime: js.UndefOr[String] = js.undefined
+  var listener: js.UndefOr[LaunchExternalProcessListener] = js.undefined
+  var path: js.UndefOr[String] = js.undefined
+  var uuid: js.UndefOr[String] = js.undefined
 }
 
 object ExternalProcessRequestType {
   @scala.inline
-  def apply(): ExternalProcessRequestType = {
+  def apply(
+    alias: String = null,
+    arguments: String = null,
+    certificate: CertificationInfo = null,
+    lifetime: String = null,
+    listener: /* code */ ExitCode => Unit = null,
+    path: String = null,
+    uuid: String = null
+  ): ExternalProcessRequestType = {
     val __obj = js.Dynamic.literal()
+    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (arguments != null) __obj.updateDynamic("arguments")(arguments.asInstanceOf[js.Any])
+    if (certificate != null) __obj.updateDynamic("certificate")(certificate.asInstanceOf[js.Any])
+    if (lifetime != null) __obj.updateDynamic("lifetime")(lifetime.asInstanceOf[js.Any])
+    if (listener != null) __obj.updateDynamic("listener")(js.Any.fromFunction1(listener))
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (uuid != null) __obj.updateDynamic("uuid")(uuid.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExternalProcessRequestType]
   }
-  @scala.inline
-  implicit class ExternalProcessRequestTypeOps[Self <: ExternalProcessRequestType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlias(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlias: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArguments(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArguments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCertificate(value: CertificationInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLifetime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lifetime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLifetime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lifetime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListener(value: /* code */ ExitCode => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutListener: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listener")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUuid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uuid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUuid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uuid")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

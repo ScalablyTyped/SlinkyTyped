@@ -26,53 +26,16 @@ trait SchemaBatchUpdateDocumentResponse extends js.Object {
 
 object SchemaBatchUpdateDocumentResponse {
   @scala.inline
-  def apply(): SchemaBatchUpdateDocumentResponse = {
+  def apply(
+    documentId: String = null,
+    replies: js.Array[SchemaResponse] = null,
+    writeControl: SchemaWriteControl = null
+  ): SchemaBatchUpdateDocumentResponse = {
     val __obj = js.Dynamic.literal()
+    if (documentId != null) __obj.updateDynamic("documentId")(documentId.asInstanceOf[js.Any])
+    if (replies != null) __obj.updateDynamic("replies")(replies.asInstanceOf[js.Any])
+    if (writeControl != null) __obj.updateDynamic("writeControl")(writeControl.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBatchUpdateDocumentResponse]
   }
-  @scala.inline
-  implicit class SchemaBatchUpdateDocumentResponseOps[Self <: SchemaBatchUpdateDocumentResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocumentId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplies(value: js.Array[SchemaResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriteControl(value: SchemaWriteControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeControl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

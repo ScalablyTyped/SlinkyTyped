@@ -19,13 +19,12 @@ import scala.scalajs.js.annotation._
   * To implement inaccurate name access, you must support the interface {@link XExactName} .
   * @see com.sun.star.beans.XExactName
   */
-@js.native
 trait XPropertySet extends XInterface {
   /**
     * @returns the {@link XPropertySetInfo} interface, which describes all properties of the object which supplies this interface.
     * @returns NULL if the implementation cannot or will not provide information about the properties; otherwise the interface {@link XPropertySetInfo} is returned.
     */
-  val PropertySetInfo: XPropertySetInfo = js.native
+  val PropertySetInfo: XPropertySetInfo
   /**
     * adds an {@link XPropertyChangeListener} to the specified property.
     *
@@ -34,26 +33,26 @@ trait XPropertySet extends XInterface {
     * It is suggested to allow multiple registration of the same listener, thus for each time a listener is added, it has to be removed.
     * @see removePropertyChangeListener
     */
-  def addPropertyChangeListener(aPropertyName: String, xListener: XPropertyChangeListener): Unit = js.native
+  def addPropertyChangeListener(aPropertyName: String, xListener: XPropertyChangeListener): Unit
   /**
     * adds an {@link XVetoableChangeListener} to the specified property with the name PropertyName.
     *
     * An empty name ("") registers the listener to all constrained properties. If the property is not constrained, the behavior is not specified.
     * @see removeVetoableChangeListener
     */
-  def addVetoableChangeListener(PropertyName: String, aListener: XVetoableChangeListener): Unit = js.native
+  def addVetoableChangeListener(PropertyName: String, aListener: XVetoableChangeListener): Unit
   /**
     * @returns the {@link XPropertySetInfo} interface, which describes all properties of the object which supplies this interface.
     * @returns NULL if the implementation cannot or will not provide information about the properties; otherwise the interface {@link XPropertySetInfo} is returned.
     */
-  def getPropertySetInfo(): XPropertySetInfo = js.native
+  def getPropertySetInfo(): XPropertySetInfo
   /**
     * @param PropertyName This parameter specifies the name of the property.
     * @returns the value of the property with the specified name.
     * @throws UnknownPropertyException if the property does not exist.
     * @throws com::sun::star::lang::WrappedTargetException if the implementation has an internal reason for the exception. In this case the original exception
     */
-  def getPropertyValue(PropertyName: String): js.Any = js.native
+  def getPropertyValue(PropertyName: String): js.Any
   /**
     * removes an {@link XPropertyChangeListener} from the listener list.
     *
@@ -62,14 +61,14 @@ trait XPropertySet extends XInterface {
     * It is suggested to allow multiple registration of the same listener, thus for each time a listener is added, it has to be removed.
     * @see addPropertyChangeListener
     */
-  def removePropertyChangeListener(aPropertyName: String, aListener: XPropertyChangeListener): Unit = js.native
+  def removePropertyChangeListener(aPropertyName: String, aListener: XPropertyChangeListener): Unit
   /**
     * removes an {@link XVetoableChangeListener} from the listener list.
     *
     * It is a "noop" if the listener is not registered.
     * @see addVetoableChangeListener
     */
-  def removeVetoableChangeListener(PropertyName: String, aListener: XVetoableChangeListener): Unit = js.native
+  def removeVetoableChangeListener(PropertyName: String, aListener: XVetoableChangeListener): Unit
   /**
     * sets the value of the property with the specified name.
     *
@@ -77,7 +76,7 @@ trait XPropertySet extends XInterface {
     * the property value can be changed.
     * @throws com::sun::star::beans::PropertyVetoException if the property is read-only or vetoable and one of the listeners throws this exception because of a
     */
-  def setPropertyValue(aPropertyName: String, aValue: js.Any): Unit = js.native
+  def setPropertyValue(aPropertyName: String, aValue: js.Any): Unit
 }
 
 object XPropertySet {
@@ -98,61 +97,5 @@ object XPropertySet {
     val __obj = js.Dynamic.literal(PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue))
     __obj.asInstanceOf[XPropertySet]
   }
-  @scala.inline
-  implicit class XPropertySetOps[Self <: XPropertySet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPropertySetInfo(value: XPropertySetInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PropertySetInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddPropertyChangeListener(value: (String, XPropertyChangeListener) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addPropertyChangeListener")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withAddVetoableChangeListener(value: (String, XVetoableChangeListener) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addVetoableChangeListener")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetPropertySetInfo(value: () => XPropertySetInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPropertySetInfo")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetPropertyValue(value: String => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPropertyValue")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemovePropertyChangeListener(value: (String, XPropertyChangeListener) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removePropertyChangeListener")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveVetoableChangeListener(value: (String, XVetoableChangeListener) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeVetoableChangeListener")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetPropertyValue(value: (String, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPropertyValue")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

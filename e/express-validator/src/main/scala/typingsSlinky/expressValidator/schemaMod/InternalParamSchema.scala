@@ -17,21 +17,26 @@ import typingsSlinky.expressValidator.expressValidatorStrings.isBase32
 import typingsSlinky.expressValidator.expressValidatorStrings.isBase64
 import typingsSlinky.expressValidator.expressValidatorStrings.isBefore
 import typingsSlinky.expressValidator.expressValidatorStrings.isBoolean
+import typingsSlinky.expressValidator.expressValidatorStrings.isBtcAddress
 import typingsSlinky.expressValidator.expressValidatorStrings.isByteLength
 import typingsSlinky.expressValidator.expressValidatorStrings.isCreditCard
 import typingsSlinky.expressValidator.expressValidatorStrings.isCurrency
 import typingsSlinky.expressValidator.expressValidatorStrings.isDataURI
 import typingsSlinky.expressValidator.expressValidatorStrings.isDecimal
 import typingsSlinky.expressValidator.expressValidatorStrings.isDivisibleBy
+import typingsSlinky.expressValidator.expressValidatorStrings.isEAN
 import typingsSlinky.expressValidator.expressValidatorStrings.isEmail
 import typingsSlinky.expressValidator.expressValidatorStrings.isEmpty
+import typingsSlinky.expressValidator.expressValidatorStrings.isEthereumAddress
 import typingsSlinky.expressValidator.expressValidatorStrings.isFQDN
 import typingsSlinky.expressValidator.expressValidatorStrings.isFloat
 import typingsSlinky.expressValidator.expressValidatorStrings.isFullWidth
+import typingsSlinky.expressValidator.expressValidatorStrings.isHSL
 import typingsSlinky.expressValidator.expressValidatorStrings.isHalfWidth
 import typingsSlinky.expressValidator.expressValidatorStrings.isHash
 import typingsSlinky.expressValidator.expressValidatorStrings.isHexColor
 import typingsSlinky.expressValidator.expressValidatorStrings.isHexadecimal
+import typingsSlinky.expressValidator.expressValidatorStrings.isIBAN
 import typingsSlinky.expressValidator.expressValidatorStrings.isIP
 import typingsSlinky.expressValidator.expressValidatorStrings.isIPRange
 import typingsSlinky.expressValidator.expressValidatorStrings.isISBN
@@ -48,6 +53,7 @@ import typingsSlinky.expressValidator.expressValidatorStrings.isJSON
 import typingsSlinky.expressValidator.expressValidatorStrings.isJWT
 import typingsSlinky.expressValidator.expressValidatorStrings.isLatLong
 import typingsSlinky.expressValidator.expressValidatorStrings.isLength
+import typingsSlinky.expressValidator.expressValidatorStrings.isLocale
 import typingsSlinky.expressValidator.expressValidatorStrings.isLowercase
 import typingsSlinky.expressValidator.expressValidatorStrings.isMACAddress
 import typingsSlinky.expressValidator.expressValidatorStrings.isMD5
@@ -58,9 +64,12 @@ import typingsSlinky.expressValidator.expressValidatorStrings.isMongoId
 import typingsSlinky.expressValidator.expressValidatorStrings.isMultibyte
 import typingsSlinky.expressValidator.expressValidatorStrings.isNumeric
 import typingsSlinky.expressValidator.expressValidatorStrings.isOctal
+import typingsSlinky.expressValidator.expressValidatorStrings.isPassportNumber
 import typingsSlinky.expressValidator.expressValidatorStrings.isPort
 import typingsSlinky.expressValidator.expressValidatorStrings.isPostalCode
 import typingsSlinky.expressValidator.expressValidatorStrings.isRFC3339
+import typingsSlinky.expressValidator.expressValidatorStrings.isRgbColor
+import typingsSlinky.expressValidator.expressValidatorStrings.isSemVer
 import typingsSlinky.expressValidator.expressValidatorStrings.isSlug
 import typingsSlinky.expressValidator.expressValidatorStrings.isString
 import typingsSlinky.expressValidator.expressValidatorStrings.isSurrogatePair
@@ -90,1297 +99,484 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined express-validator.express-validator/src/middlewares/schema.ValidatorsSchema & express-validator.express-validator/src/middlewares/schema.SanitizersSchema */
-@js.native
 trait InternalParamSchema extends js.Object {
   var blacklist: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.blacklist]
-  ] = js.native
+  ] = js.undefined
   var contains: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.contains]
-  ] = js.native
+  ] = js.undefined
   var custom: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.custom]
-  ] = js.native
+  ] = js.undefined
   var customSanitizer: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.customSanitizer]
-  ] = js.native
+  ] = js.undefined
   @JSName("equals")
-  var equals_FInternalParamSchema: js.UndefOr[ValidatorSchemaOptions[equals]] = js.native
+  var equals_FInternalParamSchema: js.UndefOr[ValidatorSchemaOptions[equals]] = js.undefined
   var escape: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.escape]
-  ] = js.native
+  ] = js.undefined
   var exists: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.exists]
-  ] = js.native
+  ] = js.undefined
   var isAfter: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isAfter]
-  ] = js.native
+  ] = js.undefined
   var isAlpha: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isAlpha]
-  ] = js.native
+  ] = js.undefined
   var isAlphanumeric: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isAlphanumeric]
-  ] = js.native
+  ] = js.undefined
   var isArray: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isArray]
-  ] = js.native
+  ] = js.undefined
   var isAscii: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isAscii]
-  ] = js.native
+  ] = js.undefined
   var isBIC: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isBIC]
-  ] = js.native
+  ] = js.undefined
   var isBase32: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isBase32]
-  ] = js.native
+  ] = js.undefined
   var isBase64: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isBase64]
-  ] = js.native
+  ] = js.undefined
   var isBefore: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isBefore]
-  ] = js.native
+  ] = js.undefined
   var isBoolean: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isBoolean]
-  ] = js.native
+  ] = js.undefined
+  var isBtcAddress: js.UndefOr[
+    ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isBtcAddress]
+  ] = js.undefined
   var isByteLength: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isByteLength]
-  ] = js.native
+  ] = js.undefined
   var isCreditCard: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isCreditCard]
-  ] = js.native
+  ] = js.undefined
   var isCurrency: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isCurrency]
-  ] = js.native
+  ] = js.undefined
   var isDataURI: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isDataURI]
-  ] = js.native
+  ] = js.undefined
   var isDecimal: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isDecimal]
-  ] = js.native
+  ] = js.undefined
   var isDivisibleBy: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isDivisibleBy]
-  ] = js.native
+  ] = js.undefined
+  var isEAN: js.UndefOr[
+    ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isEAN]
+  ] = js.undefined
   var isEmail: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isEmail]
-  ] = js.native
+  ] = js.undefined
   var isEmpty: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isEmpty]
-  ] = js.native
+  ] = js.undefined
+  var isEthereumAddress: js.UndefOr[
+    ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isEthereumAddress]
+  ] = js.undefined
   var isFQDN: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isFQDN]
-  ] = js.native
+  ] = js.undefined
   var isFloat: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isFloat]
-  ] = js.native
+  ] = js.undefined
   var isFullWidth: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isFullWidth]
-  ] = js.native
+  ] = js.undefined
+  var isHSL: js.UndefOr[
+    ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isHSL]
+  ] = js.undefined
   var isHalfWidth: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isHalfWidth]
-  ] = js.native
+  ] = js.undefined
   var isHash: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isHash]
-  ] = js.native
+  ] = js.undefined
   var isHexColor: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isHexColor]
-  ] = js.native
+  ] = js.undefined
   var isHexadecimal: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isHexadecimal]
-  ] = js.native
+  ] = js.undefined
+  var isIBAN: js.UndefOr[
+    ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isIBAN]
+  ] = js.undefined
   var isIP: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isIP]
-  ] = js.native
+  ] = js.undefined
   var isIPRange: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isIPRange]
-  ] = js.native
+  ] = js.undefined
   var isISBN: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isISBN]
-  ] = js.native
+  ] = js.undefined
   var isISIN: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isISIN]
-  ] = js.native
+  ] = js.undefined
   var isISO31661Alpha2: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isISO31661Alpha2]
-  ] = js.native
+  ] = js.undefined
   var isISO31661Alpha3: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isISO31661Alpha3]
-  ] = js.native
+  ] = js.undefined
   var isISO8601: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isISO8601]
-  ] = js.native
+  ] = js.undefined
   var isISRC: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isISRC]
-  ] = js.native
+  ] = js.undefined
   var isISSN: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isISSN]
-  ] = js.native
+  ] = js.undefined
   var isIdentityCard: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isIdentityCard]
-  ] = js.native
+  ] = js.undefined
   var isIn: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isIn]
-  ] = js.native
+  ] = js.undefined
   var isInt: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isInt]
-  ] = js.native
+  ] = js.undefined
   var isJSON: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isJSON]
-  ] = js.native
+  ] = js.undefined
   var isJWT: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isJWT]
-  ] = js.native
+  ] = js.undefined
   var isLatLong: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isLatLong]
-  ] = js.native
+  ] = js.undefined
   var isLength: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isLength]
-  ] = js.native
+  ] = js.undefined
+  var isLocale: js.UndefOr[
+    ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isLocale]
+  ] = js.undefined
   var isLowercase: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isLowercase]
-  ] = js.native
+  ] = js.undefined
   var isMACAddress: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isMACAddress]
-  ] = js.native
+  ] = js.undefined
   var isMD5: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isMD5]
-  ] = js.native
+  ] = js.undefined
   var isMagnetURI: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isMagnetURI]
-  ] = js.native
+  ] = js.undefined
   var isMimeType: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isMimeType]
-  ] = js.native
+  ] = js.undefined
   var isMobilePhone: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isMobilePhone]
-  ] = js.native
+  ] = js.undefined
   var isMongoId: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isMongoId]
-  ] = js.native
+  ] = js.undefined
   var isMultibyte: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isMultibyte]
-  ] = js.native
+  ] = js.undefined
   var isNumeric: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isNumeric]
-  ] = js.native
+  ] = js.undefined
   var isOctal: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isOctal]
-  ] = js.native
+  ] = js.undefined
+  var isPassportNumber: js.UndefOr[
+    ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isPassportNumber]
+  ] = js.undefined
   var isPort: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isPort]
-  ] = js.native
+  ] = js.undefined
   var isPostalCode: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isPostalCode]
-  ] = js.native
+  ] = js.undefined
   var isRFC3339: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isRFC3339]
-  ] = js.native
+  ] = js.undefined
+  var isRgbColor: js.UndefOr[
+    ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isRgbColor]
+  ] = js.undefined
+  var isSemVer: js.UndefOr[
+    ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isSemVer]
+  ] = js.undefined
   var isSlug: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isSlug]
-  ] = js.native
+  ] = js.undefined
   var isString: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isString]
-  ] = js.native
+  ] = js.undefined
   var isSurrogatePair: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isSurrogatePair]
-  ] = js.native
+  ] = js.undefined
   var isURL: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isURL]
-  ] = js.native
+  ] = js.undefined
   var isUUID: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isUUID]
-  ] = js.native
+  ] = js.undefined
   var isUppercase: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isUppercase]
-  ] = js.native
+  ] = js.undefined
   var isVariableWidth: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isVariableWidth]
-  ] = js.native
+  ] = js.undefined
   var isWhitelisted: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.isWhitelisted]
-  ] = js.native
+  ] = js.undefined
   var ltrim: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.ltrim]
-  ] = js.native
+  ] = js.undefined
   var matches: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.matches]
-  ] = js.native
+  ] = js.undefined
   var normalizeEmail: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.normalizeEmail]
-  ] = js.native
+  ] = js.undefined
   var not: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.not]
-  ] = js.native
+  ] = js.undefined
   var notEmpty: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.notEmpty]
-  ] = js.native
+  ] = js.undefined
   var rtrim: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.rtrim]
-  ] = js.native
+  ] = js.undefined
   var stripLow: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.stripLow]
-  ] = js.native
+  ] = js.undefined
   var toArray: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.toArray]
-  ] = js.native
+  ] = js.undefined
   var toBoolean: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.toBoolean]
-  ] = js.native
+  ] = js.undefined
   var toDate: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.toDate]
-  ] = js.native
+  ] = js.undefined
   var toFloat: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.toFloat]
-  ] = js.native
+  ] = js.undefined
   var toInt: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.toInt]
-  ] = js.native
+  ] = js.undefined
   var trim: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.trim]
-  ] = js.native
+  ] = js.undefined
   var unescape: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.unescape]
-  ] = js.native
+  ] = js.undefined
   var whitelist: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.whitelist]
-  ] = js.native
+  ] = js.undefined
   var withMessage: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.withMessage]
-  ] = js.native
+  ] = js.undefined
 }
 
 object InternalParamSchema {
   @scala.inline
-  def apply(): InternalParamSchema = {
+  def apply(
+    blacklist: SanitizerSchemaOptions[blacklist] = null,
+    contains: ValidatorSchemaOptions[contains] = null,
+    custom: ValidatorSchemaOptions[custom] = null,
+    customSanitizer: SanitizerSchemaOptions[customSanitizer] = null,
+    equals: ValidatorSchemaOptions[equals] = null,
+    escape: SanitizerSchemaOptions[escape] = null,
+    exists: ValidatorSchemaOptions[exists] = null,
+    isAfter: ValidatorSchemaOptions[isAfter] = null,
+    isAlpha: ValidatorSchemaOptions[isAlpha] = null,
+    isAlphanumeric: ValidatorSchemaOptions[isAlphanumeric] = null,
+    isArray: ValidatorSchemaOptions[isArray] = null,
+    isAscii: ValidatorSchemaOptions[isAscii] = null,
+    isBIC: ValidatorSchemaOptions[isBIC] = null,
+    isBase32: ValidatorSchemaOptions[isBase32] = null,
+    isBase64: ValidatorSchemaOptions[isBase64] = null,
+    isBefore: ValidatorSchemaOptions[isBefore] = null,
+    isBoolean: ValidatorSchemaOptions[isBoolean] = null,
+    isBtcAddress: ValidatorSchemaOptions[isBtcAddress] = null,
+    isByteLength: ValidatorSchemaOptions[isByteLength] = null,
+    isCreditCard: ValidatorSchemaOptions[isCreditCard] = null,
+    isCurrency: ValidatorSchemaOptions[isCurrency] = null,
+    isDataURI: ValidatorSchemaOptions[isDataURI] = null,
+    isDecimal: ValidatorSchemaOptions[isDecimal] = null,
+    isDivisibleBy: ValidatorSchemaOptions[isDivisibleBy] = null,
+    isEAN: ValidatorSchemaOptions[isEAN] = null,
+    isEmail: ValidatorSchemaOptions[isEmail] = null,
+    isEmpty: ValidatorSchemaOptions[isEmpty] = null,
+    isEthereumAddress: ValidatorSchemaOptions[isEthereumAddress] = null,
+    isFQDN: ValidatorSchemaOptions[isFQDN] = null,
+    isFloat: ValidatorSchemaOptions[isFloat] = null,
+    isFullWidth: ValidatorSchemaOptions[isFullWidth] = null,
+    isHSL: ValidatorSchemaOptions[isHSL] = null,
+    isHalfWidth: ValidatorSchemaOptions[isHalfWidth] = null,
+    isHash: ValidatorSchemaOptions[isHash] = null,
+    isHexColor: ValidatorSchemaOptions[isHexColor] = null,
+    isHexadecimal: ValidatorSchemaOptions[isHexadecimal] = null,
+    isIBAN: ValidatorSchemaOptions[isIBAN] = null,
+    isIP: ValidatorSchemaOptions[isIP] = null,
+    isIPRange: ValidatorSchemaOptions[isIPRange] = null,
+    isISBN: ValidatorSchemaOptions[isISBN] = null,
+    isISIN: ValidatorSchemaOptions[isISIN] = null,
+    isISO31661Alpha2: ValidatorSchemaOptions[isISO31661Alpha2] = null,
+    isISO31661Alpha3: ValidatorSchemaOptions[isISO31661Alpha3] = null,
+    isISO8601: ValidatorSchemaOptions[isISO8601] = null,
+    isISRC: ValidatorSchemaOptions[isISRC] = null,
+    isISSN: ValidatorSchemaOptions[isISSN] = null,
+    isIdentityCard: ValidatorSchemaOptions[isIdentityCard] = null,
+    isIn: ValidatorSchemaOptions[isIn] = null,
+    isInt: ValidatorSchemaOptions[isInt] = null,
+    isJSON: ValidatorSchemaOptions[isJSON] = null,
+    isJWT: ValidatorSchemaOptions[isJWT] = null,
+    isLatLong: ValidatorSchemaOptions[isLatLong] = null,
+    isLength: ValidatorSchemaOptions[isLength] = null,
+    isLocale: ValidatorSchemaOptions[isLocale] = null,
+    isLowercase: ValidatorSchemaOptions[isLowercase] = null,
+    isMACAddress: ValidatorSchemaOptions[isMACAddress] = null,
+    isMD5: ValidatorSchemaOptions[isMD5] = null,
+    isMagnetURI: ValidatorSchemaOptions[isMagnetURI] = null,
+    isMimeType: ValidatorSchemaOptions[isMimeType] = null,
+    isMobilePhone: ValidatorSchemaOptions[isMobilePhone] = null,
+    isMongoId: ValidatorSchemaOptions[isMongoId] = null,
+    isMultibyte: ValidatorSchemaOptions[isMultibyte] = null,
+    isNumeric: ValidatorSchemaOptions[isNumeric] = null,
+    isOctal: ValidatorSchemaOptions[isOctal] = null,
+    isPassportNumber: ValidatorSchemaOptions[isPassportNumber] = null,
+    isPort: ValidatorSchemaOptions[isPort] = null,
+    isPostalCode: ValidatorSchemaOptions[isPostalCode] = null,
+    isRFC3339: ValidatorSchemaOptions[isRFC3339] = null,
+    isRgbColor: ValidatorSchemaOptions[isRgbColor] = null,
+    isSemVer: ValidatorSchemaOptions[isSemVer] = null,
+    isSlug: ValidatorSchemaOptions[isSlug] = null,
+    isString: ValidatorSchemaOptions[isString] = null,
+    isSurrogatePair: ValidatorSchemaOptions[isSurrogatePair] = null,
+    isURL: ValidatorSchemaOptions[isURL] = null,
+    isUUID: ValidatorSchemaOptions[isUUID] = null,
+    isUppercase: ValidatorSchemaOptions[isUppercase] = null,
+    isVariableWidth: ValidatorSchemaOptions[isVariableWidth] = null,
+    isWhitelisted: ValidatorSchemaOptions[isWhitelisted] = null,
+    ltrim: SanitizerSchemaOptions[ltrim] = null,
+    matches: ValidatorSchemaOptions[matches] = null,
+    normalizeEmail: SanitizerSchemaOptions[normalizeEmail] = null,
+    not: ValidatorSchemaOptions[not] = null,
+    notEmpty: ValidatorSchemaOptions[notEmpty] = null,
+    rtrim: SanitizerSchemaOptions[rtrim] = null,
+    stripLow: SanitizerSchemaOptions[stripLow] = null,
+    toArray: SanitizerSchemaOptions[toArray] = null,
+    toBoolean: SanitizerSchemaOptions[toBoolean] = null,
+    toDate: SanitizerSchemaOptions[toDate] = null,
+    toFloat: SanitizerSchemaOptions[toFloat] = null,
+    toInt: SanitizerSchemaOptions[toInt] = null,
+    trim: SanitizerSchemaOptions[trim] = null,
+    unescape: SanitizerSchemaOptions[unescape] = null,
+    whitelist: SanitizerSchemaOptions[whitelist] = null,
+    withMessage: ValidatorSchemaOptions[withMessage] = null
+  ): InternalParamSchema = {
     val __obj = js.Dynamic.literal()
+    if (blacklist != null) __obj.updateDynamic("blacklist")(blacklist.asInstanceOf[js.Any])
+    if (contains != null) __obj.updateDynamic("contains")(contains.asInstanceOf[js.Any])
+    if (custom != null) __obj.updateDynamic("custom")(custom.asInstanceOf[js.Any])
+    if (customSanitizer != null) __obj.updateDynamic("customSanitizer")(customSanitizer.asInstanceOf[js.Any])
+    if (equals != null) __obj.updateDynamic("equals")(equals.asInstanceOf[js.Any])
+    if (escape != null) __obj.updateDynamic("escape")(escape.asInstanceOf[js.Any])
+    if (exists != null) __obj.updateDynamic("exists")(exists.asInstanceOf[js.Any])
+    if (isAfter != null) __obj.updateDynamic("isAfter")(isAfter.asInstanceOf[js.Any])
+    if (isAlpha != null) __obj.updateDynamic("isAlpha")(isAlpha.asInstanceOf[js.Any])
+    if (isAlphanumeric != null) __obj.updateDynamic("isAlphanumeric")(isAlphanumeric.asInstanceOf[js.Any])
+    if (isArray != null) __obj.updateDynamic("isArray")(isArray.asInstanceOf[js.Any])
+    if (isAscii != null) __obj.updateDynamic("isAscii")(isAscii.asInstanceOf[js.Any])
+    if (isBIC != null) __obj.updateDynamic("isBIC")(isBIC.asInstanceOf[js.Any])
+    if (isBase32 != null) __obj.updateDynamic("isBase32")(isBase32.asInstanceOf[js.Any])
+    if (isBase64 != null) __obj.updateDynamic("isBase64")(isBase64.asInstanceOf[js.Any])
+    if (isBefore != null) __obj.updateDynamic("isBefore")(isBefore.asInstanceOf[js.Any])
+    if (isBoolean != null) __obj.updateDynamic("isBoolean")(isBoolean.asInstanceOf[js.Any])
+    if (isBtcAddress != null) __obj.updateDynamic("isBtcAddress")(isBtcAddress.asInstanceOf[js.Any])
+    if (isByteLength != null) __obj.updateDynamic("isByteLength")(isByteLength.asInstanceOf[js.Any])
+    if (isCreditCard != null) __obj.updateDynamic("isCreditCard")(isCreditCard.asInstanceOf[js.Any])
+    if (isCurrency != null) __obj.updateDynamic("isCurrency")(isCurrency.asInstanceOf[js.Any])
+    if (isDataURI != null) __obj.updateDynamic("isDataURI")(isDataURI.asInstanceOf[js.Any])
+    if (isDecimal != null) __obj.updateDynamic("isDecimal")(isDecimal.asInstanceOf[js.Any])
+    if (isDivisibleBy != null) __obj.updateDynamic("isDivisibleBy")(isDivisibleBy.asInstanceOf[js.Any])
+    if (isEAN != null) __obj.updateDynamic("isEAN")(isEAN.asInstanceOf[js.Any])
+    if (isEmail != null) __obj.updateDynamic("isEmail")(isEmail.asInstanceOf[js.Any])
+    if (isEmpty != null) __obj.updateDynamic("isEmpty")(isEmpty.asInstanceOf[js.Any])
+    if (isEthereumAddress != null) __obj.updateDynamic("isEthereumAddress")(isEthereumAddress.asInstanceOf[js.Any])
+    if (isFQDN != null) __obj.updateDynamic("isFQDN")(isFQDN.asInstanceOf[js.Any])
+    if (isFloat != null) __obj.updateDynamic("isFloat")(isFloat.asInstanceOf[js.Any])
+    if (isFullWidth != null) __obj.updateDynamic("isFullWidth")(isFullWidth.asInstanceOf[js.Any])
+    if (isHSL != null) __obj.updateDynamic("isHSL")(isHSL.asInstanceOf[js.Any])
+    if (isHalfWidth != null) __obj.updateDynamic("isHalfWidth")(isHalfWidth.asInstanceOf[js.Any])
+    if (isHash != null) __obj.updateDynamic("isHash")(isHash.asInstanceOf[js.Any])
+    if (isHexColor != null) __obj.updateDynamic("isHexColor")(isHexColor.asInstanceOf[js.Any])
+    if (isHexadecimal != null) __obj.updateDynamic("isHexadecimal")(isHexadecimal.asInstanceOf[js.Any])
+    if (isIBAN != null) __obj.updateDynamic("isIBAN")(isIBAN.asInstanceOf[js.Any])
+    if (isIP != null) __obj.updateDynamic("isIP")(isIP.asInstanceOf[js.Any])
+    if (isIPRange != null) __obj.updateDynamic("isIPRange")(isIPRange.asInstanceOf[js.Any])
+    if (isISBN != null) __obj.updateDynamic("isISBN")(isISBN.asInstanceOf[js.Any])
+    if (isISIN != null) __obj.updateDynamic("isISIN")(isISIN.asInstanceOf[js.Any])
+    if (isISO31661Alpha2 != null) __obj.updateDynamic("isISO31661Alpha2")(isISO31661Alpha2.asInstanceOf[js.Any])
+    if (isISO31661Alpha3 != null) __obj.updateDynamic("isISO31661Alpha3")(isISO31661Alpha3.asInstanceOf[js.Any])
+    if (isISO8601 != null) __obj.updateDynamic("isISO8601")(isISO8601.asInstanceOf[js.Any])
+    if (isISRC != null) __obj.updateDynamic("isISRC")(isISRC.asInstanceOf[js.Any])
+    if (isISSN != null) __obj.updateDynamic("isISSN")(isISSN.asInstanceOf[js.Any])
+    if (isIdentityCard != null) __obj.updateDynamic("isIdentityCard")(isIdentityCard.asInstanceOf[js.Any])
+    if (isIn != null) __obj.updateDynamic("isIn")(isIn.asInstanceOf[js.Any])
+    if (isInt != null) __obj.updateDynamic("isInt")(isInt.asInstanceOf[js.Any])
+    if (isJSON != null) __obj.updateDynamic("isJSON")(isJSON.asInstanceOf[js.Any])
+    if (isJWT != null) __obj.updateDynamic("isJWT")(isJWT.asInstanceOf[js.Any])
+    if (isLatLong != null) __obj.updateDynamic("isLatLong")(isLatLong.asInstanceOf[js.Any])
+    if (isLength != null) __obj.updateDynamic("isLength")(isLength.asInstanceOf[js.Any])
+    if (isLocale != null) __obj.updateDynamic("isLocale")(isLocale.asInstanceOf[js.Any])
+    if (isLowercase != null) __obj.updateDynamic("isLowercase")(isLowercase.asInstanceOf[js.Any])
+    if (isMACAddress != null) __obj.updateDynamic("isMACAddress")(isMACAddress.asInstanceOf[js.Any])
+    if (isMD5 != null) __obj.updateDynamic("isMD5")(isMD5.asInstanceOf[js.Any])
+    if (isMagnetURI != null) __obj.updateDynamic("isMagnetURI")(isMagnetURI.asInstanceOf[js.Any])
+    if (isMimeType != null) __obj.updateDynamic("isMimeType")(isMimeType.asInstanceOf[js.Any])
+    if (isMobilePhone != null) __obj.updateDynamic("isMobilePhone")(isMobilePhone.asInstanceOf[js.Any])
+    if (isMongoId != null) __obj.updateDynamic("isMongoId")(isMongoId.asInstanceOf[js.Any])
+    if (isMultibyte != null) __obj.updateDynamic("isMultibyte")(isMultibyte.asInstanceOf[js.Any])
+    if (isNumeric != null) __obj.updateDynamic("isNumeric")(isNumeric.asInstanceOf[js.Any])
+    if (isOctal != null) __obj.updateDynamic("isOctal")(isOctal.asInstanceOf[js.Any])
+    if (isPassportNumber != null) __obj.updateDynamic("isPassportNumber")(isPassportNumber.asInstanceOf[js.Any])
+    if (isPort != null) __obj.updateDynamic("isPort")(isPort.asInstanceOf[js.Any])
+    if (isPostalCode != null) __obj.updateDynamic("isPostalCode")(isPostalCode.asInstanceOf[js.Any])
+    if (isRFC3339 != null) __obj.updateDynamic("isRFC3339")(isRFC3339.asInstanceOf[js.Any])
+    if (isRgbColor != null) __obj.updateDynamic("isRgbColor")(isRgbColor.asInstanceOf[js.Any])
+    if (isSemVer != null) __obj.updateDynamic("isSemVer")(isSemVer.asInstanceOf[js.Any])
+    if (isSlug != null) __obj.updateDynamic("isSlug")(isSlug.asInstanceOf[js.Any])
+    if (isString != null) __obj.updateDynamic("isString")(isString.asInstanceOf[js.Any])
+    if (isSurrogatePair != null) __obj.updateDynamic("isSurrogatePair")(isSurrogatePair.asInstanceOf[js.Any])
+    if (isURL != null) __obj.updateDynamic("isURL")(isURL.asInstanceOf[js.Any])
+    if (isUUID != null) __obj.updateDynamic("isUUID")(isUUID.asInstanceOf[js.Any])
+    if (isUppercase != null) __obj.updateDynamic("isUppercase")(isUppercase.asInstanceOf[js.Any])
+    if (isVariableWidth != null) __obj.updateDynamic("isVariableWidth")(isVariableWidth.asInstanceOf[js.Any])
+    if (isWhitelisted != null) __obj.updateDynamic("isWhitelisted")(isWhitelisted.asInstanceOf[js.Any])
+    if (ltrim != null) __obj.updateDynamic("ltrim")(ltrim.asInstanceOf[js.Any])
+    if (matches != null) __obj.updateDynamic("matches")(matches.asInstanceOf[js.Any])
+    if (normalizeEmail != null) __obj.updateDynamic("normalizeEmail")(normalizeEmail.asInstanceOf[js.Any])
+    if (not != null) __obj.updateDynamic("not")(not.asInstanceOf[js.Any])
+    if (notEmpty != null) __obj.updateDynamic("notEmpty")(notEmpty.asInstanceOf[js.Any])
+    if (rtrim != null) __obj.updateDynamic("rtrim")(rtrim.asInstanceOf[js.Any])
+    if (stripLow != null) __obj.updateDynamic("stripLow")(stripLow.asInstanceOf[js.Any])
+    if (toArray != null) __obj.updateDynamic("toArray")(toArray.asInstanceOf[js.Any])
+    if (toBoolean != null) __obj.updateDynamic("toBoolean")(toBoolean.asInstanceOf[js.Any])
+    if (toDate != null) __obj.updateDynamic("toDate")(toDate.asInstanceOf[js.Any])
+    if (toFloat != null) __obj.updateDynamic("toFloat")(toFloat.asInstanceOf[js.Any])
+    if (toInt != null) __obj.updateDynamic("toInt")(toInt.asInstanceOf[js.Any])
+    if (trim != null) __obj.updateDynamic("trim")(trim.asInstanceOf[js.Any])
+    if (unescape != null) __obj.updateDynamic("unescape")(unescape.asInstanceOf[js.Any])
+    if (whitelist != null) __obj.updateDynamic("whitelist")(whitelist.asInstanceOf[js.Any])
+    if (withMessage != null) __obj.updateDynamic("withMessage")(withMessage.asInstanceOf[js.Any])
     __obj.asInstanceOf[InternalParamSchema]
   }
-  @scala.inline
-  implicit class InternalParamSchemaOps[Self <: InternalParamSchema] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlacklist(value: SanitizerSchemaOptions[blacklist]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blacklist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlacklist: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blacklist")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContains(value: ValidatorSchemaOptions[contains]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContains: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustom(value: ValidatorSchemaOptions[custom]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomSanitizer(value: SanitizerSchemaOptions[customSanitizer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customSanitizer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomSanitizer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customSanitizer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEquals(value: ValidatorSchemaOptions[equals]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEquals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEscape(value: SanitizerSchemaOptions[escape]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("escape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEscape: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("escape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExists(value: ValidatorSchemaOptions[exists]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exists")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExists: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exists")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsAfter(value: ValidatorSchemaOptions[isAfter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAfter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsAfter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAfter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsAlpha(value: ValidatorSchemaOptions[isAlpha]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAlpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsAlpha: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAlpha")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsAlphanumeric(value: ValidatorSchemaOptions[isAlphanumeric]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAlphanumeric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsAlphanumeric: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAlphanumeric")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsArray(value: ValidatorSchemaOptions[isArray]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isArray")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsArray: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isArray")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsAscii(value: ValidatorSchemaOptions[isAscii]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAscii")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsAscii: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAscii")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsBIC(value: ValidatorSchemaOptions[isBIC]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBIC")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsBIC: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBIC")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsBase32(value: ValidatorSchemaOptions[isBase32]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBase32")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsBase32: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBase32")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsBase64(value: ValidatorSchemaOptions[isBase64]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBase64")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsBase64: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBase64")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsBefore(value: ValidatorSchemaOptions[isBefore]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBefore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsBefore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBefore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsBoolean(value: ValidatorSchemaOptions[isBoolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBoolean")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsBoolean: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBoolean")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsByteLength(value: ValidatorSchemaOptions[isByteLength]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isByteLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsByteLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isByteLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsCreditCard(value: ValidatorSchemaOptions[isCreditCard]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCreditCard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsCreditCard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCreditCard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsCurrency(value: ValidatorSchemaOptions[isCurrency]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCurrency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsCurrency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCurrency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsDataURI(value: ValidatorSchemaOptions[isDataURI]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDataURI")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDataURI: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDataURI")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsDecimal(value: ValidatorSchemaOptions[isDecimal]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDecimal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDecimal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDecimal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsDivisibleBy(value: ValidatorSchemaOptions[isDivisibleBy]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDivisibleBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDivisibleBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDivisibleBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsEmail(value: ValidatorSchemaOptions[isEmail]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsEmpty(value: ValidatorSchemaOptions[isEmpty]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEmpty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsEmpty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEmpty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsFQDN(value: ValidatorSchemaOptions[isFQDN]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFQDN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsFQDN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFQDN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsFloat(value: ValidatorSchemaOptions[isFloat]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFloat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsFloat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFloat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsFullWidth(value: ValidatorSchemaOptions[isFullWidth]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFullWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsFullWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFullWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsHalfWidth(value: ValidatorSchemaOptions[isHalfWidth]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHalfWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsHalfWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHalfWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsHash(value: ValidatorSchemaOptions[isHash]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsHash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsHexColor(value: ValidatorSchemaOptions[isHexColor]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHexColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsHexColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHexColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsHexadecimal(value: ValidatorSchemaOptions[isHexadecimal]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHexadecimal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsHexadecimal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHexadecimal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsIP(value: ValidatorSchemaOptions[isIP]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isIP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsIP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isIP")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsIPRange(value: ValidatorSchemaOptions[isIPRange]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isIPRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsIPRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isIPRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsISBN(value: ValidatorSchemaOptions[isISBN]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isISBN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsISBN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isISBN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsISIN(value: ValidatorSchemaOptions[isISIN]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isISIN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsISIN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isISIN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsISO31661Alpha2(value: ValidatorSchemaOptions[isISO31661Alpha2]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isISO31661Alpha2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsISO31661Alpha2: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isISO31661Alpha2")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsISO31661Alpha3(value: ValidatorSchemaOptions[isISO31661Alpha3]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isISO31661Alpha3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsISO31661Alpha3: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isISO31661Alpha3")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsISO8601(value: ValidatorSchemaOptions[isISO8601]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isISO8601")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsISO8601: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isISO8601")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsISRC(value: ValidatorSchemaOptions[isISRC]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isISRC")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsISRC: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isISRC")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsISSN(value: ValidatorSchemaOptions[isISSN]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isISSN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsISSN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isISSN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsIdentityCard(value: ValidatorSchemaOptions[isIdentityCard]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isIdentityCard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsIdentityCard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isIdentityCard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsIn(value: ValidatorSchemaOptions[isIn]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsInt(value: ValidatorSchemaOptions[isInt]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isInt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsInt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isInt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsJSON(value: ValidatorSchemaOptions[isJSON]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isJSON")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsJSON: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isJSON")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsJWT(value: ValidatorSchemaOptions[isJWT]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isJWT")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsJWT: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isJWT")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsLatLong(value: ValidatorSchemaOptions[isLatLong]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLatLong")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsLatLong: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLatLong")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsLength(value: ValidatorSchemaOptions[isLength]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsLowercase(value: ValidatorSchemaOptions[isLowercase]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLowercase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsLowercase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLowercase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsMACAddress(value: ValidatorSchemaOptions[isMACAddress]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMACAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsMACAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMACAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsMD5(value: ValidatorSchemaOptions[isMD5]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMD5")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsMD5: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMD5")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsMagnetURI(value: ValidatorSchemaOptions[isMagnetURI]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMagnetURI")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsMagnetURI: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMagnetURI")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsMimeType(value: ValidatorSchemaOptions[isMimeType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMimeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsMimeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMimeType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsMobilePhone(value: ValidatorSchemaOptions[isMobilePhone]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMobilePhone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsMobilePhone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMobilePhone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsMongoId(value: ValidatorSchemaOptions[isMongoId]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMongoId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsMongoId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMongoId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsMultibyte(value: ValidatorSchemaOptions[isMultibyte]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMultibyte")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsMultibyte: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMultibyte")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsNumeric(value: ValidatorSchemaOptions[isNumeric]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isNumeric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsNumeric: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isNumeric")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsOctal(value: ValidatorSchemaOptions[isOctal]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOctal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsOctal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOctal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsPort(value: ValidatorSchemaOptions[isPort]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsPostalCode(value: ValidatorSchemaOptions[isPostalCode]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPostalCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsPostalCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPostalCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsRFC3339(value: ValidatorSchemaOptions[isRFC3339]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isRFC3339")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsRFC3339: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isRFC3339")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsSlug(value: ValidatorSchemaOptions[isSlug]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSlug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsSlug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSlug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsString(value: ValidatorSchemaOptions[isString]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsSurrogatePair(value: ValidatorSchemaOptions[isSurrogatePair]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSurrogatePair")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsSurrogatePair: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSurrogatePair")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsURL(value: ValidatorSchemaOptions[isURL]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isURL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsUUID(value: ValidatorSchemaOptions[isUUID]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isUUID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsUUID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isUUID")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsUppercase(value: ValidatorSchemaOptions[isUppercase]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isUppercase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsUppercase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isUppercase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsVariableWidth(value: ValidatorSchemaOptions[isVariableWidth]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVariableWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsVariableWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVariableWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsWhitelisted(value: ValidatorSchemaOptions[isWhitelisted]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isWhitelisted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsWhitelisted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isWhitelisted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLtrim(value: SanitizerSchemaOptions[ltrim]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ltrim")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLtrim: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ltrim")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatches(value: ValidatorSchemaOptions[matches]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matches")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatches: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matches")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNormalizeEmail(value: SanitizerSchemaOptions[normalizeEmail]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizeEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNormalizeEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizeEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNot(value: ValidatorSchemaOptions[not]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("not")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("not")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotEmpty(value: ValidatorSchemaOptions[notEmpty]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notEmpty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotEmpty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notEmpty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRtrim(value: SanitizerSchemaOptions[rtrim]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rtrim")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRtrim: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rtrim")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStripLow(value: SanitizerSchemaOptions[stripLow]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripLow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStripLow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripLow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToArray(value: SanitizerSchemaOptions[toArray]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toArray")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToArray: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toArray")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToBoolean(value: SanitizerSchemaOptions[toBoolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toBoolean")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToBoolean: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toBoolean")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToDate(value: SanitizerSchemaOptions[toDate]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToFloat(value: SanitizerSchemaOptions[toFloat]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toFloat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToFloat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toFloat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToInt(value: SanitizerSchemaOptions[toInt]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toInt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToInt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toInt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrim(value: SanitizerSchemaOptions[trim]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trim")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrim: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trim")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnescape(value: SanitizerSchemaOptions[unescape]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unescape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnescape: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unescape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWhitelist(value: SanitizerSchemaOptions[whitelist]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("whitelist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWhitelist: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("whitelist")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWithMessage(value: ValidatorSchemaOptions[withMessage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWithMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withMessage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

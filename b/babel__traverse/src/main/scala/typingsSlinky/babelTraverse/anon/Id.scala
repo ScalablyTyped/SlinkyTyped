@@ -9,69 +9,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Id extends js.Object {
-  var id: LVal = js.native
-  var init: js.UndefOr[Expression] = js.native
-  var kind: js.UndefOr[`var` | let | const] = js.native
-  var unique: js.UndefOr[Boolean] = js.native
+  var id: LVal
+  var init: js.UndefOr[Expression] = js.undefined
+  var kind: js.UndefOr[`var` | let | const] = js.undefined
+  var unique: js.UndefOr[Boolean] = js.undefined
 }
 
 object Id {
   @scala.inline
-  def apply(id: LVal): Id = {
+  def apply(
+    id: LVal,
+    init: Expression = null,
+    kind: `var` | let | const = null,
+    unique: js.UndefOr[Boolean] = js.undefined
+  ): Id = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    if (init != null) __obj.updateDynamic("init")(init.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (!js.isUndefined(unique)) __obj.updateDynamic("unique")(unique.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Id]
   }
-  @scala.inline
-  implicit class IdOps[Self <: Id] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: LVal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInit(value: Expression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: `var` | let | const): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnique(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unique")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnique: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unique")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

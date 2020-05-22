@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * of sequences as either a Multi-Dimensional array or array of arrays. This structure allows a preference for a Multi-Dimensional array representation
   * to be specified.
   */
-@js.native
 trait ArrayWrapper extends js.Object {
   /**
     * Contains the Array to be passed.
@@ -22,9 +21,9 @@ trait ArrayWrapper extends js.Object {
     * are possible, where N is the number of dimensions. Note: its perfectly legal to use this structure with a single dimensioned array just to indicate
     * the array indexing.
     */
-  var Array: js.Any = js.native
+  var Array: js.Any
   /** Indicates whether the Array should be have 1 or 0 based indexing. */
-  var IsZeroIndex: Boolean = js.native
+  var IsZeroIndex: Boolean
 }
 
 object ArrayWrapper {
@@ -33,25 +32,5 @@ object ArrayWrapper {
     val __obj = js.Dynamic.literal(Array = Array.asInstanceOf[js.Any], IsZeroIndex = IsZeroIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArrayWrapper]
   }
-  @scala.inline
-  implicit class ArrayWrapperOps[Self <: ArrayWrapper] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArray(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Array")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsZeroIndex(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsZeroIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

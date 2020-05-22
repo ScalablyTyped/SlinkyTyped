@@ -1,6 +1,8 @@
 package typingsSlinky.googleGax
 
+import typingsSlinky.googleGax.apiCallerMod.APICaller
 import typingsSlinky.googleGax.descriptorMod.Descriptor
+import typingsSlinky.googleGax.gaxMod.CallSettings
 import typingsSlinky.googleGax.operationsClientMod.OperationsClient
 import typingsSlinky.protobufjs.mod.Message
 import typingsSlinky.protobufjs.mod.Reader
@@ -19,6 +21,8 @@ object longRunningDescriptorMod extends js.Object {
     var operationsClient: OperationsClient = js.native
     @JSName("responseDecoder")
     var responseDecoder_Original: AnyDecoder = js.native
+    /* CompleteClass */
+    override def getApiCaller(settings: CallSettings): APICaller = js.native
     def metadataDecoder(reader: Reader): Message[js.Object] = js.native
     def metadataDecoder(reader: Reader, length: Double): Message[js.Object] = js.native
     def metadataDecoder(reader: js.typedarray.Uint8Array): Message[js.Object] = js.native

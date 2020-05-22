@@ -7,7 +7,7 @@ import typingsSlinky.antd.anon.Cancel
 import typingsSlinky.antd.anon.InsertExtraNode
 import typingsSlinky.antd.antdStrings.`ant-click-animating-without-extra-node`
 import typingsSlinky.antd.antdStrings.`ant-click-animating`
-import typingsSlinky.antd.contextMod.ConfigConsumerProps
+import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

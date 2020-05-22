@@ -13,7 +13,7 @@ import typingsSlinky.officeUiFabricReact.facepileTypesMod.IFacepileStyles
 import typingsSlinky.officeUiFabricReact.facepileTypesMod.OverflowButtonType
 import typingsSlinky.officeUiFabricReact.personaTypesMod.IPersonaSharedProps
 import typingsSlinky.officeUiFabricReact.personaTypesMod.PersonaSize
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -69,7 +69,7 @@ object FacepileBase {
     @scala.inline
     def showAddButton(value: Boolean): this.type = set("showAddButton", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IFacepileStyleProps => Partial[IFacepileStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IFacepileStyleProps => DeepPartial[IFacepileStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IFacepileStyleProps, IFacepileStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

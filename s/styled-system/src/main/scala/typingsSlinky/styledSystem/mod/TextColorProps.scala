@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TextColorProps[ThemeType /* <: Theme[TLengthStyledSystem] */, TVal] extends js.Object {
   /**
     * The color utility parses a component's `color` and `bg` props and converts them into CSS declarations.
@@ -15,40 +14,15 @@ trait TextColorProps[ThemeType /* <: Theme[TLengthStyledSystem] */, TVal] extend
     *
     * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
     */
-  var color: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.native
+  var color: js.UndefOr[ResponsiveValue[TVal, ThemeType]] = js.undefined
 }
 
 object TextColorProps {
   @scala.inline
-  def apply[ThemeType, TVal](): TextColorProps[ThemeType, TVal] = {
+  def apply[ThemeType, TVal](color: js.UndefOr[Null | (ResponsiveValue[TVal, ThemeType])] = js.undefined): TextColorProps[ThemeType, TVal] = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(color)) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextColorProps[ThemeType, TVal]]
   }
-  @scala.inline
-  implicit class TextColorPropsOps[Self[themetype, tval] <: TextColorProps[themetype, tval], ThemeType, TVal] (val x: Self[ThemeType, TVal]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[ThemeType, TVal] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[ThemeType, TVal]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[ThemeType, TVal]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[ThemeType, TVal]) with Other]
-    @scala.inline
-    def withColor(value: ResponsiveValue[TVal, ThemeType]): Self[ThemeType, TVal] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self[ThemeType, TVal] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorNull: Self[ThemeType, TVal] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(null)
-        ret
-    }
-  }
-  
 }
 

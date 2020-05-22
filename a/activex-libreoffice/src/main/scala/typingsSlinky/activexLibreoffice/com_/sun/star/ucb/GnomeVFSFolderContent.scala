@@ -21,7 +21,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.ucb.GnomeVFSContentProvider
   * @see com.sun.star.ucb.GnomeVFSDocumentContent
   */
-@js.native
 trait GnomeVFSFolderContent
   extends XCommandProcessor2
      with XComponent

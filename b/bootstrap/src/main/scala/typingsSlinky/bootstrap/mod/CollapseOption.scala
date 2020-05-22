@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CollapseOption extends js.Object {
   /**
     * If parent is provided, then all collapsible elements under the specified parent will be closed when
@@ -16,58 +15,22 @@ trait CollapseOption extends js.Object {
     *
     * @default ""
     */
-  var parent: js.UndefOr[String | JQuery[HTMLElement] | Element] = js.native
+  var parent: js.UndefOr[String | JQuery[HTMLElement] | Element] = js.undefined
   /**
     * Toggles the collapsible element on invocation.
     *
     * @default true
     */
-  var toggle: js.UndefOr[Boolean] = js.native
+  var toggle: js.UndefOr[Boolean] = js.undefined
 }
 
 object CollapseOption {
   @scala.inline
-  def apply(): CollapseOption = {
+  def apply(parent: String | JQuery[HTMLElement] | Element = null, toggle: js.UndefOr[Boolean] = js.undefined): CollapseOption = {
     val __obj = js.Dynamic.literal()
+    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
+    if (!js.isUndefined(toggle)) __obj.updateDynamic("toggle")(toggle.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CollapseOption]
   }
-  @scala.inline
-  implicit class CollapseOptionOps[Self <: CollapseOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParentElement(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: String | JQuery[HTMLElement] | Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToggle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToggle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

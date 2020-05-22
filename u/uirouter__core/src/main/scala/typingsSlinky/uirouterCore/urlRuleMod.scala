@@ -1,6 +1,7 @@
 package typingsSlinky.uirouterCore
 
 import typingsSlinky.uirouterCore.routerMod.UIRouter
+import typingsSlinky.uirouterCore.stateInterfaceMod.StateDeclaration
 import typingsSlinky.uirouterCore.stateObjectMod.StateObject
 import typingsSlinky.uirouterCore.urlInterfaceMod.MatcherUrlRule
 import typingsSlinky.uirouterCore.urlInterfaceMod.RegExpRule
@@ -33,6 +34,9 @@ object urlRuleMod extends js.Object {
     def create(what: js.RegExp): UrlRule = js.native
     def create(what: js.RegExp, handler: String): UrlRule = js.native
     def create(what: js.RegExp, handler: UrlRuleHandlerFn): UrlRule = js.native
+    def create(what: StateDeclaration): UrlRule = js.native
+    def create(what: StateDeclaration, handler: String): UrlRule = js.native
+    def create(what: StateDeclaration, handler: UrlRuleHandlerFn): UrlRule = js.native
     def create(what: StateObject): UrlRule = js.native
     def create(what: StateObject, handler: String): UrlRule = js.native
     def create(what: StateObject, handler: UrlRuleHandlerFn): UrlRule = js.native
@@ -76,6 +80,7 @@ object urlRuleMod extends js.Object {
       */
     def fromRegExp(regexp: js.RegExp, handler: String): RegExpRule = js.native
     def fromRegExp(regexp: js.RegExp, handler: UrlRuleHandlerFn): RegExpRule = js.native
+    def fromState(stateOrDecl: StateDeclaration, router: UIRouter): StateRule = js.native
     /**
       * A UrlRule which matches a state by its url
       *
@@ -87,7 +92,7 @@ object urlRuleMod extends js.Object {
       * // Starts a transition to 'foo' with params: { fooId: '123', barId: '456' }
       * ```
       */
-    def fromState(state: StateObject, router: UIRouter): StateRule = js.native
+    def fromState(stateOrDecl: StateObject, router: UIRouter): StateRule = js.native
     /**
       * A UrlRule which matches based on a UrlMatcher
       *

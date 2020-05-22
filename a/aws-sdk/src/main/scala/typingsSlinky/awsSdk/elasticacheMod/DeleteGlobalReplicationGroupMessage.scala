@@ -11,7 +11,7 @@ trait DeleteGlobalReplicationGroupMessage extends js.Object {
     */
   var GlobalReplicationGroupId: String = js.native
   /**
-    * If set to true, the primary replication is retained as a standalone replication group. 
+    * The primary replication group is retained as a standalone replication group. 
     */
   var RetainPrimaryReplicationGroup: Boolean = js.native
 }
@@ -22,25 +22,5 @@ object DeleteGlobalReplicationGroupMessage {
     val __obj = js.Dynamic.literal(GlobalReplicationGroupId = GlobalReplicationGroupId.asInstanceOf[js.Any], RetainPrimaryReplicationGroup = RetainPrimaryReplicationGroup.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteGlobalReplicationGroupMessage]
   }
-  @scala.inline
-  implicit class DeleteGlobalReplicationGroupMessageOps[Self <: DeleteGlobalReplicationGroupMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGlobalReplicationGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalReplicationGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRetainPrimaryReplicationGroup(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RetainPrimaryReplicationGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

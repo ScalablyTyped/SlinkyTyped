@@ -4,121 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Quota extends js.Object {
   /** Identifies what kind of resource this is. Value: the fixed string "dns#quota". */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /** Maximum allowed number of managed zones in the project. */
-  var managedZones: js.UndefOr[Double] = js.native
+  var managedZones: js.UndefOr[Double] = js.undefined
   /** Maximum allowed number of ResourceRecords per ResourceRecordSet. */
-  var resourceRecordsPerRrset: js.UndefOr[Double] = js.native
+  var resourceRecordsPerRrset: js.UndefOr[Double] = js.undefined
   /** Maximum allowed number of ResourceRecordSets to add per ChangesCreateRequest. */
-  var rrsetAdditionsPerChange: js.UndefOr[Double] = js.native
+  var rrsetAdditionsPerChange: js.UndefOr[Double] = js.undefined
   /** Maximum allowed number of ResourceRecordSets to delete per ChangesCreateRequest. */
-  var rrsetDeletionsPerChange: js.UndefOr[Double] = js.native
+  var rrsetDeletionsPerChange: js.UndefOr[Double] = js.undefined
   /** Maximum allowed number of ResourceRecordSets per zone in the project. */
-  var rrsetsPerManagedZone: js.UndefOr[Double] = js.native
+  var rrsetsPerManagedZone: js.UndefOr[Double] = js.undefined
   /** Maximum allowed size for total rrdata in one ChangesCreateRequest in bytes. */
-  var totalRrdataSizePerChange: js.UndefOr[Double] = js.native
+  var totalRrdataSizePerChange: js.UndefOr[Double] = js.undefined
 }
 
 object Quota {
   @scala.inline
-  def apply(): Quota = {
+  def apply(
+    kind: String = null,
+    managedZones: js.UndefOr[Double] = js.undefined,
+    resourceRecordsPerRrset: js.UndefOr[Double] = js.undefined,
+    rrsetAdditionsPerChange: js.UndefOr[Double] = js.undefined,
+    rrsetDeletionsPerChange: js.UndefOr[Double] = js.undefined,
+    rrsetsPerManagedZone: js.UndefOr[Double] = js.undefined,
+    totalRrdataSizePerChange: js.UndefOr[Double] = js.undefined
+  ): Quota = {
     val __obj = js.Dynamic.literal()
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (!js.isUndefined(managedZones)) __obj.updateDynamic("managedZones")(managedZones.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(resourceRecordsPerRrset)) __obj.updateDynamic("resourceRecordsPerRrset")(resourceRecordsPerRrset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rrsetAdditionsPerChange)) __obj.updateDynamic("rrsetAdditionsPerChange")(rrsetAdditionsPerChange.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rrsetDeletionsPerChange)) __obj.updateDynamic("rrsetDeletionsPerChange")(rrsetDeletionsPerChange.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rrsetsPerManagedZone)) __obj.updateDynamic("rrsetsPerManagedZone")(rrsetsPerManagedZone.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(totalRrdataSizePerChange)) __obj.updateDynamic("totalRrdataSizePerChange")(totalRrdataSizePerChange.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Quota]
   }
-  @scala.inline
-  implicit class QuotaOps[Self <: Quota] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManagedZones(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedZones")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManagedZones: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedZones")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceRecordsPerRrset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceRecordsPerRrset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceRecordsPerRrset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceRecordsPerRrset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRrsetAdditionsPerChange(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rrsetAdditionsPerChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRrsetAdditionsPerChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rrsetAdditionsPerChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRrsetDeletionsPerChange(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rrsetDeletionsPerChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRrsetDeletionsPerChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rrsetDeletionsPerChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRrsetsPerManagedZone(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rrsetsPerManagedZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRrsetsPerManagedZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rrsetsPerManagedZone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalRrdataSizePerChange(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalRrdataSizePerChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalRrdataSizePerChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalRrdataSizePerChange")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExportingOptions extends js.Object {
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Accessibility options for the
     * exporting menu. Requires the Accessibility module.
     */
-  var accessibility: js.UndefOr[js.Object | ExportingAccessibilityOptions] = js.native
+  var accessibility: js.UndefOr[js.Object | ExportingAccessibilityOptions] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Experimental setting to allow
     * HTML inside the chart (added through the `useHTML` options), directly in
@@ -23,14 +22,14 @@ trait ExportingOptions extends js.Object {
     * This also applies to downloaded SVG that you want to open in a desktop
     * client.
     */
-  var allowHTML: js.UndefOr[Boolean] = js.native
+  var allowHTML: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Options for the export related
     * buttons, print and export. In addition to the default buttons listed
     * here, custom buttons can be added. See navigation.buttonOptions for
     * general options.
     */
-  var buttons: js.UndefOr[ExportingButtonsOptions | Dictionary[ExportingButtonsContextButtonOptions]] = js.native
+  var buttons: js.UndefOr[ExportingButtonsOptions | Dictionary[ExportingButtonsContextButtonOptions]] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Additional chart options to be
     * merged into the chart before exporting to an image format. This does not
@@ -40,7 +39,7 @@ trait ExportingOptions extends js.Object {
     * readability of the exported chart, or to add a printer-friendly color
     * scheme to exported PDFs.
     */
-  var chartOptions: js.UndefOr[Options] = js.native
+  var chartOptions: js.UndefOr[Options] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Options for exporting data to
     * CSV or ExCel, or displaying the data in a HTML table or a JavaScript
@@ -55,13 +54,13 @@ trait ExportingOptions extends js.Object {
     * The workaround for this is to use a third party XLSX converter, as
     * demonstrated in the sample below.
     */
-  var csv: js.UndefOr[ExportingCsvOptions] = js.native
+  var csv: js.UndefOr[ExportingCsvOptions] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Whether to enable the exporting
     * module. Disabling the module will hide the context button, but API
     * methods will still be available.
     */
-  var enabled: js.UndefOr[Boolean] = js.native
+  var enabled: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Function to call if the
     * offline-exporting module fails to export a chart on the client side, and
@@ -69,7 +68,7 @@ trait ExportingOptions extends js.Object {
     * thrown instead. Receives two parameters, the exporting options, and the
     * error from the module.
     */
-  var error: js.UndefOr[ExportingErrorCallbackFunction] = js.native
+  var error: js.UndefOr[ExportingErrorCallbackFunction] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Whether or not to fall back to
     * the export server if the offline-exporting module is unable to export the
@@ -80,12 +79,12 @@ trait ExportingOptions extends js.Object {
     * recommended to define the exporting.error handler if disabling fallback,
     * in order to notify users in case export fails.
     */
-  var fallbackToExportServer: js.UndefOr[Boolean] = js.native
+  var fallbackToExportServer: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The filename, without extension,
     * to use for the exported chart.
     */
-  var filename: js.UndefOr[String] = js.native
+  var filename: js.UndefOr[String] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) An object containing additional
     * key value data for the POST form that sends the SVG to the export server.
@@ -93,7 +92,7 @@ trait ExportingOptions extends js.Object {
     * received in another frame, or a custom `enctype` or `encoding` can be
     * set.
     */
-  var formAttributes: js.UndefOr[HTMLAttributes] = js.native
+  var formAttributes: js.UndefOr[HTMLAttributes] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Path where Highcharts will look
     * for export module dependencies to load on demand if they don't already
@@ -101,7 +100,7 @@ trait ExportingOptions extends js.Object {
     * RGBColor.js, jsPDF and svg2pdf.js, required for client side export in
     * certain browsers.
     */
-  var libURL: js.UndefOr[String] = js.native
+  var libURL: js.UndefOr[String] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) An object consisting of
     * definitions for the menu items in the context menu. Each key value pair
@@ -115,7 +114,7 @@ trait ExportingOptions extends js.Object {
     * - **textKey:** If internationalization is required, the key to a language
     * string
     */
-  var menuItemDefinitions: js.UndefOr[Dictionary[ExportingMenuObject]] = js.native
+  var menuItemDefinitions: js.UndefOr[Dictionary[ExportingMenuObject]] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) When printing the chart from the
     * menu item in the burger menu, if the on-screen chart exceeds this width,
@@ -123,7 +122,7 @@ trait ExportingOptions extends js.Object {
     * width makes the chart fit into typical paper format. Note that this does
     * not affect the chart when printing the web page as a whole.
     */
-  var printMaxWidth: js.UndefOr[Double] = js.native
+  var printMaxWidth: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Defines the scale or zoom factor
     * for the exported image compared to the on-screen display. While for
@@ -131,350 +130,113 @@ trait ExportingOptions extends js.Object {
     * in print. The default scale of 2 makes this chart export to a 1200px PNG
     * or JPG.
     */
-  var scale: js.UndefOr[Double] = js.native
+  var scale: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Show a HTML table below the
     * chart with the chart's current data.
     */
-  var showTable: js.UndefOr[Boolean] = js.native
+  var showTable: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Analogous to sourceWidth.
     */
-  var sourceHeight: js.UndefOr[Double] = js.native
+  var sourceHeight: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The width of the original chart
     * when exported, unless an explicit chart.width is set, or a pixel width is
     * set on the container. The width exported raster image is then multiplied
     * by scale.
     */
-  var sourceWidth: js.UndefOr[Double] = js.native
+  var sourceWidth: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Caption for the data table. Same
     * as chart title by default. Set to `false` to disable.
     */
-  var tableCaption: js.UndefOr[Boolean | String] = js.native
+  var tableCaption: js.UndefOr[Boolean | String] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Default MIME type for exporting
     * if `chart.exportChart()` is called without specifying a `type` option.
     * Possible values are `image/png`, `image/jpeg`, `application/pdf` and
     * `image/svg+xml`.
     */
-  var `type`: js.UndefOr[ExportingMimeTypeValue] = js.native
+  var `type`: js.UndefOr[ExportingMimeTypeValue] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The URL for the server module
     * converting the SVG string to an image format. By default this points to
     * Highchart's free web service.
     */
-  var url: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Use multi level headers in data
     * table. If csv.columnHeaderFormatter is defined, it has to return objects
     * in order for multi level headers to work.
     */
-  var useMultiLevelHeaders: js.UndefOr[Boolean] = js.native
+  var useMultiLevelHeaders: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) If using multi level table
     * headers, use rowspans for headers that have only one level.
     */
-  var useRowspanHeaders: js.UndefOr[Boolean] = js.native
+  var useRowspanHeaders: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The pixel width of charts
     * exported to PNG or JPG. As of Highcharts 3.0, the default pixel width is
     * a function of the chart.width or exporting.sourceWidth and the
     * exporting.scale.
     */
-  var width: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object ExportingOptions {
   @scala.inline
-  def apply(): ExportingOptions = {
+  def apply(
+    accessibility: js.Object | ExportingAccessibilityOptions = null,
+    allowHTML: js.UndefOr[Boolean] = js.undefined,
+    buttons: ExportingButtonsOptions | Dictionary[ExportingButtonsContextButtonOptions] = null,
+    chartOptions: Options = null,
+    csv: ExportingCsvOptions = null,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    error: (/* options */ ExportingOptions, /* err */ js.Error) => Unit = null,
+    fallbackToExportServer: js.UndefOr[Boolean] = js.undefined,
+    filename: String = null,
+    formAttributes: HTMLAttributes = null,
+    libURL: String = null,
+    menuItemDefinitions: Dictionary[ExportingMenuObject] = null,
+    printMaxWidth: js.UndefOr[Double] = js.undefined,
+    scale: js.UndefOr[Double] = js.undefined,
+    showTable: js.UndefOr[Boolean] = js.undefined,
+    sourceHeight: js.UndefOr[Double] = js.undefined,
+    sourceWidth: js.UndefOr[Double] = js.undefined,
+    tableCaption: Boolean | String = null,
+    `type`: ExportingMimeTypeValue = null,
+    url: String = null,
+    useMultiLevelHeaders: js.UndefOr[Boolean] = js.undefined,
+    useRowspanHeaders: js.UndefOr[Boolean] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): ExportingOptions = {
     val __obj = js.Dynamic.literal()
+    if (accessibility != null) __obj.updateDynamic("accessibility")(accessibility.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowHTML)) __obj.updateDynamic("allowHTML")(allowHTML.get.asInstanceOf[js.Any])
+    if (buttons != null) __obj.updateDynamic("buttons")(buttons.asInstanceOf[js.Any])
+    if (chartOptions != null) __obj.updateDynamic("chartOptions")(chartOptions.asInstanceOf[js.Any])
+    if (csv != null) __obj.updateDynamic("csv")(csv.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(js.Any.fromFunction2(error))
+    if (!js.isUndefined(fallbackToExportServer)) __obj.updateDynamic("fallbackToExportServer")(fallbackToExportServer.get.asInstanceOf[js.Any])
+    if (filename != null) __obj.updateDynamic("filename")(filename.asInstanceOf[js.Any])
+    if (formAttributes != null) __obj.updateDynamic("formAttributes")(formAttributes.asInstanceOf[js.Any])
+    if (libURL != null) __obj.updateDynamic("libURL")(libURL.asInstanceOf[js.Any])
+    if (menuItemDefinitions != null) __obj.updateDynamic("menuItemDefinitions")(menuItemDefinitions.asInstanceOf[js.Any])
+    if (!js.isUndefined(printMaxWidth)) __obj.updateDynamic("printMaxWidth")(printMaxWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scale)) __obj.updateDynamic("scale")(scale.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showTable)) __obj.updateDynamic("showTable")(showTable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sourceHeight)) __obj.updateDynamic("sourceHeight")(sourceHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sourceWidth)) __obj.updateDynamic("sourceWidth")(sourceWidth.get.asInstanceOf[js.Any])
+    if (tableCaption != null) __obj.updateDynamic("tableCaption")(tableCaption.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
+    if (!js.isUndefined(useMultiLevelHeaders)) __obj.updateDynamic("useMultiLevelHeaders")(useMultiLevelHeaders.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useRowspanHeaders)) __obj.updateDynamic("useRowspanHeaders")(useRowspanHeaders.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExportingOptions]
   }
-  @scala.inline
-  implicit class ExportingOptionsOps[Self <: ExportingOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessibility(value: js.Object | ExportingAccessibilityOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowHTML(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowHTML")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowHTML: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowHTML")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtons(value: ExportingButtonsOptions | Dictionary[ExportingButtonsContextButtonOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChartOptions(value: Options): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chartOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChartOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chartOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCsv(value: ExportingCsvOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csv")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCsv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csv")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: (/* options */ ExportingOptions, /* err */ js.Error) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFallbackToExportServer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackToExportServer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFallbackToExportServer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackToExportServer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilename(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilename: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormAttributes(value: HTMLAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLibURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("libURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLibURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("libURL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuItemDefinitions(value: Dictionary[ExportingMenuObject]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItemDefinitions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuItemDefinitions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItemDefinitions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrintMaxWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printMaxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrintMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printMaxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowTable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableCaption(value: Boolean | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCaption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableCaption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCaption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: ExportingMimeTypeValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseMultiLevelHeaders(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useMultiLevelHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseMultiLevelHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useMultiLevelHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseRowspanHeaders(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useRowspanHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseRowspanHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useRowspanHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

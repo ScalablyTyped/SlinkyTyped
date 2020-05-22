@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TestDetails extends js.Object {
   /**
     * If the TestState is ERROR, then this string will contain human-readable
     * details about the error.
     * @OutputOnly
     */
-  var errorMessage: js.UndefOr[String] = js.native
+  var errorMessage: js.UndefOr[String] = js.undefined
   /**
     * Human-readable, detailed descriptions of the test's progress.
     * For example: "Provisioning a device", "Starting Test".
@@ -20,46 +19,16 @@ trait TestDetails extends js.Object {
     * to the end of progress_messages.
     * @OutputOnly
     */
-  var progressMessages: js.UndefOr[js.Array[String]] = js.native
+  var progressMessages: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object TestDetails {
   @scala.inline
-  def apply(): TestDetails = {
+  def apply(errorMessage: String = null, progressMessages: js.Array[String] = null): TestDetails = {
     val __obj = js.Dynamic.literal()
+    if (errorMessage != null) __obj.updateDynamic("errorMessage")(errorMessage.asInstanceOf[js.Any])
+    if (progressMessages != null) __obj.updateDynamic("progressMessages")(progressMessages.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestDetails]
   }
-  @scala.inline
-  implicit class TestDetailsOps[Self <: TestDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrorMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgressMessages(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progressMessages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgressMessages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progressMessages")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

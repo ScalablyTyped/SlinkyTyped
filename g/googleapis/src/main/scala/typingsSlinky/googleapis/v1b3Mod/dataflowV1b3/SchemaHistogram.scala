@@ -31,41 +31,11 @@ trait SchemaHistogram extends js.Object {
 
 object SchemaHistogram {
   @scala.inline
-  def apply(): SchemaHistogram = {
+  def apply(bucketCounts: js.Array[String] = null, firstBucketOffset: js.UndefOr[Double] = js.undefined): SchemaHistogram = {
     val __obj = js.Dynamic.literal()
+    if (bucketCounts != null) __obj.updateDynamic("bucketCounts")(bucketCounts.asInstanceOf[js.Any])
+    if (!js.isUndefined(firstBucketOffset)) __obj.updateDynamic("firstBucketOffset")(firstBucketOffset.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHistogram]
   }
-  @scala.inline
-  implicit class SchemaHistogramOps[Self <: SchemaHistogram] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucketCounts(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketCounts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucketCounts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketCounts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstBucketOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstBucketOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstBucketOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstBucketOffset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

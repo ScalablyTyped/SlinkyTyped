@@ -28,47 +28,46 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.frame.XFrame
   * @since OOo 2.0
   */
-@js.native
 trait XLayoutManager extends XInterface {
   /**
     * provides the current docking area size of the layout manager.
     * @returns The {@link com.sun.star.awt.Rectangle} contains pixel values. The members of {@link com.sun.star.awt.Rectangle} are filled as following: X = dock
     */
-  val CurrentDockingArea: Rectangle = js.native
+  val CurrentDockingArea: Rectangle
   /**
     * retrieves the current docking area acceptor that controls the border space of the frame's container window.
     * @returns current docking area acceptor which controls the border space of frame's container window.  A docking area acceptor retrieved by this method is o
     */
-  var DockingAreaAcceptor: XDockingAreaAcceptor = js.native
+  var DockingAreaAcceptor: XDockingAreaAcceptor
   /**
     * retrieves all user interface elements which are currently instantiated.
     * @returns a sequence of user interface elements providing {@link com.sun.star.ui.XUIElement} interface.  The layout manager instance is owner of the return
     */
-  val Elements: SafeArray[XUIElement] = js.native
+  val Elements: SafeArray[XUIElement]
   /**
     * attaches a {@link com.sun.star.frame.XFrame} to a layout manager.
     * @param Frame specifies the frame that should be attached to the layout manager  A layout manager needs a {@link com.sun.star.frame.XFrame} to be able to
     */
-  def attachFrame(Frame: XFrame): Unit = js.native
+  def attachFrame(Frame: XFrame): Unit
   /**
     * creates a new user interface element.
     * @param ResourceURL specifies which user interface element should be created. A resource URL must meet the following syntax: "private:resource/$type/$nam
     */
-  def createElement(ResourceURL: String): Unit = js.native
+  def createElement(ResourceURL: String): Unit
   /**
     * destroys a user interface element.
     * @param ResourceURL specifies which user interface element should be destroyed. A resource URL must meet the following syntax: "private:resource/$type/$n
     */
-  def destroyElement(ResourceURL: String): Unit = js.native
+  def destroyElement(ResourceURL: String): Unit
   /** forces a complete new layouting of all user interface elements. */
-  def doLayout(): Unit = js.native
+  def doLayout(): Unit
   /**
     * docks all windows which are member of the provided user interface element type.
     * @param nElementType specifies which user interface element type should be docked.
     * @returns returns `TRUE` if all user interface elements of the requested type could be docked, otherwise `FALSE` will be returned.
     * @see com.sun.star.ui.UIElementType
     */
-  def dockAllWindows(nElementType: Double): Boolean = js.native
+  def dockAllWindows(nElementType: Double): Boolean
   /**
     * docks a window based user interface element to a specified docking area.
     * @param ResourceURL specifies which user interface element should be docked. A resource URL must meet the following syntax: "private:resource/$type/$name
@@ -77,101 +76,101 @@ trait XLayoutManager extends XInterface {
     * @returns returns `TRUE` if the user interface element has been docked, otherwise `FALSE` will be returned.
     * @see com.sun.star.ui.DockingArea
     */
-  def dockWindow(ResourceURL: String, DockingArea: DockingArea, Pos: Point): Boolean = js.native
+  def dockWindow(ResourceURL: String, DockingArea: DockingArea, Pos: Point): Boolean
   /**
     * forces a window based user interface element to float.
     * @param ResourceURL specifies which user interface element should be float. A resource URL must meet the following syntax: "private:resource/$type/$name"
     * @returns returns `TRUE` if the user interface element has been docked, otherwise `FALSE` will be returned.
     */
-  def floatWindow(ResourceURL: String): Boolean = js.native
+  def floatWindow(ResourceURL: String): Boolean
   /**
     * provides the current docking area size of the layout manager.
     * @returns The {@link com.sun.star.awt.Rectangle} contains pixel values. The members of {@link com.sun.star.awt.Rectangle} are filled as following: X = dock
     */
-  def getCurrentDockingArea(): Rectangle = js.native
+  def getCurrentDockingArea(): Rectangle
   /**
     * retrieves the current docking area acceptor that controls the border space of the frame's container window.
     * @returns current docking area acceptor which controls the border space of frame's container window.  A docking area acceptor retrieved by this method is o
     */
-  def getDockingAreaAcceptor(): XDockingAreaAcceptor = js.native
+  def getDockingAreaAcceptor(): XDockingAreaAcceptor
   /**
     * retrieves a user interface element which has been created before.
     * @param ResourceURL specifies which user interface element should be retrieved. A resource URL must meet the following syntax: "private:resource/$type/$n
     */
-  def getElement(ResourceURL: String): XUIElement = js.native
+  def getElement(ResourceURL: String): XUIElement
   /**
     * retrieves the current pixel position of a window based user interface element.
     * @param ResourceURL specifies for which user interface element the current position should be retrieved. A resource URL must meet the following syntax: "
     * @returns the size in pixel of the user interface element. A non-window based user interface element provides a zero size.
     */
-  def getElementPos(ResourceURL: String): Point = js.native
+  def getElementPos(ResourceURL: String): Point
   /**
     * retrieves the current size of a window based user interface element.
     * @param ResourceURL specifies for which user interface element the current size should be retrieved. A resource URL must meet the following syntax: "priv
     * @returns the size in pixel of the user interface element. A non-window based user interface element provides a zero size.
     */
-  def getElementSize(ResourceURL: String): Size = js.native
+  def getElementSize(ResourceURL: String): Size
   /**
     * retrieves all user interface elements which are currently instantiated.
     * @returns a sequence of user interface elements providing {@link com.sun.star.ui.XUIElement} interface.  The layout manager instance is owner of the return
     */
-  def getElements(): SafeArray[XUIElement] = js.native
+  def getElements(): SafeArray[XUIElement]
   /**
     * hides a user interface element.
     * @param ResourceURL specifies which user interface element should be hidden. A resource URL must meet the following syntax: "private:resource/$type/$name
     * @returns returns `TRUE` if the user interface element has been hidden, otherwise `FALSE` will be returned.
     */
-  def hideElement(ResourceURL: String): Boolean = js.native
+  def hideElement(ResourceURL: String): Boolean
   /**
     * retrieves the current docking state of a window based user interface element.
     * @param ResourceURL specifies for which user interface element the docking state should be retrieved. A resource URL must meet the following syntax: "pri
     * @returns `TRUE` if the user interface element is docked, otherwise `FALSE` .
     */
-  def isElementDocked(ResourceURL: String): Boolean = js.native
+  def isElementDocked(ResourceURL: String): Boolean
   /**
     * retrieves the current floating state of a window based user interface element.
     * @param ResourceURL specifies for which user interface element the floating state should be retrieved. A resource URL must meet the following syntax: "pr
     * @returns `TRUE` if the user interface element is floating, otherwise `FALSE` .
     */
-  def isElementFloating(ResourceURL: String): Boolean = js.native
+  def isElementFloating(ResourceURL: String): Boolean
   /**
     * retrieves the current lock state of a window based user interface element.
     * @param ResourceURL specifies for which user interface element the lock state should be retrieved. A resource URL must meet the following syntax: "privat
     * @returns `TRUE` if the user interface element is locked, otherwise `FALSE` .
     */
-  def isElementLocked(ResourceURL: String): Boolean = js.native
+  def isElementLocked(ResourceURL: String): Boolean
   /**
     * retrieves the current visibility state of a window based user interface element.
     * @param ResourceURL specifies for which user interface element the visibility state should be retrieved. A resource URL must meet the following syntax: "
     * @returns `TRUE` if the user interface element is visible, otherwise `FALSE` .
     */
-  def isElementVisible(ResourceURL: String): Boolean = js.native
+  def isElementVisible(ResourceURL: String): Boolean
   /**
     * retrieves the visibility state of a layout manager.
     *
     * A layout manager can be set to invisible state to force it to hide all of its user interface elements. If another component wants to use the window
     * for its own user interface elements it can use this function. This function is normally used to implement inplace editing.
     */
-  def isVisible(): Boolean = js.native
+  def isVisible(): Boolean
   /**
     * prohibit all layout updates until unlock is called again.
     *
     * This call can be used to speed up the creation process of several user interface elements. Otherwise the layout manager would calculate the layout for
     * every creation.
     */
-  def lock(): Unit = js.native
+  def lock(): Unit
   /**
     * locks a window based user interface element if it's in a docked state.
     * @param ResourceURL specifies which user interface element should be locked. A resource URL must meet the following syntax: "private:resource/$type/$name
     * @returns returns `TRUE` if the user interface element has been locked, otherwise `FALSE` will be returned.
     */
-  def lockWindow(ResourceURL: String): Boolean = js.native
+  def lockWindow(ResourceURL: String): Boolean
   /**
     * request to make a user interface element visible if it is not in hidden state.
     * @param ResourceURL specifies which user interface element should be made visible. A resource URL must meet the following syntax: "private:resource/$type
     * @returns returns `TRUE` if the user interface element could be made visible, otherwise `FALSE` will be returned.  If a user interface element should force
     */
-  def requestElement(ResourceURL: String): Boolean = js.native
+  def requestElement(ResourceURL: String): Boolean
   /**
     * resets the layout manager and remove all of its internal user interface elements.
     *
@@ -179,31 +178,31 @@ trait XLayoutManager extends XInterface {
     * attachFrame()} has been made. That means an attached frame which has been set by {@link attachFrame()} is not released. The layout manager itself
     * calls reset after a component has been attached or reattached to a frame.
     */
-  def reset(): Unit = js.native
+  def reset(): Unit
   /**
     * sets a docking area acceptor that controls the border space of the frame's container window.
     * @param xDockingAreaAcceptor a docking area acceptor which controls the border space of frame's container window.  A docking area acceptor decides if the
     */
-  def setDockingAreaAcceptor(xDockingAreaAcceptor: XDockingAreaAcceptor): Unit = js.native
+  def setDockingAreaAcceptor(xDockingAreaAcceptor: XDockingAreaAcceptor): Unit
   /**
     * sets a new position for a window based user interface element.
     * @param ResourceURL specifies which user interface element should be moved. A resource URL must meet the following syntax: "private:resource/$type/$name"
     * @param Pos specifies the new position in pixel.  It is up to the layout manager to decide if the user interface element can be moved. The new position c
     */
-  def setElementPos(ResourceURL: String, Pos: Point): Unit = js.native
+  def setElementPos(ResourceURL: String, Pos: Point): Unit
   /**
     * sets a new position and size for a window based user interface element.
     * @param ResourceURL specifies which user interface element should be moved and resized. A resource URL must meet the following syntax: "private:resource/
     * @param Pos specifies the new position in pixel.
     * @param Size specifies the new position in pixel.  It is up to the layout manager to decide if the user interface element can be moved and resized. The n
     */
-  def setElementPosSize(ResourceURL: String, Pos: Point, Size: Size): Unit = js.native
+  def setElementPosSize(ResourceURL: String, Pos: Point, Size: Size): Unit
   /**
     * sets a new size for a window based user interface element.
     * @param ResourceURL specifies which user interface element should be resized. A resource URL must meet the following syntax: "private:resource/$type/$nam
     * @param Size specifies the new size in pixel.  It is up to the layout manager to decide if the user interface element can be resized. The new size can be
     */
-  def setElementSize(ResourceURL: String, Size: Size): Unit = js.native
+  def setElementSize(ResourceURL: String, Size: Size): Unit
   /**
     * sets the layout manager to invisible state and hides all user interface elements.
     *
@@ -211,25 +210,25 @@ trait XLayoutManager extends XInterface {
     * for its own user interface elements it can use this function. This function is normally used to implement inplace editing.
     * @param Visible provide `FALSE` to make layout manager invisible otherwise this must be set to `TRUE` .
     */
-  def setVisible(Visible: Boolean): Unit = js.native
+  def setVisible(Visible: Boolean): Unit
   /**
     * shows a user interface element.
     * @param ResourceURL specifies which user interface element should be shown. A resource URL must meet the following syntax: "private:resource/$type/$name"
     * @returns returns `TRUE` if the user interface element has been shown, otherwise `FALSE` will be returned.
     */
-  def showElement(ResourceURL: String): Boolean = js.native
+  def showElement(ResourceURL: String): Boolean
   /**
     * permit layout updates again.
     *
     * This function should be called to permit layout updates. The layout manager starts to calculate the new layout after this call.
     */
-  def unlock(): Unit = js.native
+  def unlock(): Unit
   /**
     * unlocks a window based user interface element if it's in a docked state.
     * @param ResourceURL specifies which user interface element should be unlocked. A resource URL must meet the following syntax: "private:resource/$type/$na
     * @returns returns `TRUE` if the user interface element has been unlocked, otherwise `FALSE` will be returned.
     */
-  def unlockWindow(ResourceURL: String): Boolean = js.native
+  def unlockWindow(ResourceURL: String): Boolean
 }
 
 object XLayoutManager {
@@ -276,217 +275,5 @@ object XLayoutManager {
     val __obj = js.Dynamic.literal(CurrentDockingArea = CurrentDockingArea.asInstanceOf[js.Any], DockingAreaAcceptor = DockingAreaAcceptor.asInstanceOf[js.Any], Elements = Elements.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), attachFrame = js.Any.fromFunction1(attachFrame), createElement = js.Any.fromFunction1(createElement), destroyElement = js.Any.fromFunction1(destroyElement), doLayout = js.Any.fromFunction0(doLayout), dockAllWindows = js.Any.fromFunction1(dockAllWindows), dockWindow = js.Any.fromFunction3(dockWindow), floatWindow = js.Any.fromFunction1(floatWindow), getCurrentDockingArea = js.Any.fromFunction0(getCurrentDockingArea), getDockingAreaAcceptor = js.Any.fromFunction0(getDockingAreaAcceptor), getElement = js.Any.fromFunction1(getElement), getElementPos = js.Any.fromFunction1(getElementPos), getElementSize = js.Any.fromFunction1(getElementSize), getElements = js.Any.fromFunction0(getElements), hideElement = js.Any.fromFunction1(hideElement), isElementDocked = js.Any.fromFunction1(isElementDocked), isElementFloating = js.Any.fromFunction1(isElementFloating), isElementLocked = js.Any.fromFunction1(isElementLocked), isElementVisible = js.Any.fromFunction1(isElementVisible), isVisible = js.Any.fromFunction0(isVisible), lock = js.Any.fromFunction0(lock), lockWindow = js.Any.fromFunction1(lockWindow), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), requestElement = js.Any.fromFunction1(requestElement), reset = js.Any.fromFunction0(reset), setDockingAreaAcceptor = js.Any.fromFunction1(setDockingAreaAcceptor), setElementPos = js.Any.fromFunction2(setElementPos), setElementPosSize = js.Any.fromFunction3(setElementPosSize), setElementSize = js.Any.fromFunction2(setElementSize), setVisible = js.Any.fromFunction1(setVisible), showElement = js.Any.fromFunction1(showElement), unlock = js.Any.fromFunction0(unlock), unlockWindow = js.Any.fromFunction1(unlockWindow))
     __obj.asInstanceOf[XLayoutManager]
   }
-  @scala.inline
-  implicit class XLayoutManagerOps[Self <: XLayoutManager] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentDockingArea(value: Rectangle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentDockingArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDockingAreaAcceptor(value: XDockingAreaAcceptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DockingAreaAcceptor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withElements(value: SafeArray[XUIElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Elements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttachFrame(value: XFrame => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachFrame")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreateElement(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createElement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDestroyElement(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroyElement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDoLayout(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doLayout")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDockAllWindows(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dockAllWindows")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDockWindow(value: (String, DockingArea, Point) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dockWindow")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withFloatWindow(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatWindow")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetCurrentDockingArea(value: () => Rectangle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentDockingArea")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDockingAreaAcceptor(value: () => XDockingAreaAcceptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDockingAreaAcceptor")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetElement(value: String => XUIElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getElement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetElementPos(value: String => Point): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getElementPos")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetElementSize(value: String => Size): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getElementSize")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetElements(value: () => SafeArray[XUIElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getElements")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHideElement(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideElement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsElementDocked(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isElementDocked")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsElementFloating(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isElementFloating")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsElementLocked(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isElementLocked")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsElementVisible(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isElementVisible")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsVisible(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVisible")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withLock(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lock")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withLockWindow(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockWindow")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRequestElement(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestElement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withReset(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetDockingAreaAcceptor(value: XDockingAreaAcceptor => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDockingAreaAcceptor")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetElementPos(value: (String, Point) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setElementPos")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetElementPosSize(value: (String, Point, Size) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setElementPosSize")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withSetElementSize(value: (String, Size) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setElementSize")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetVisible(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setVisible")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withShowElement(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showElement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUnlock(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unlock")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withUnlockWindow(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unlockWindow")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

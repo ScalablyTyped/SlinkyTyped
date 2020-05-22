@@ -8,7 +8,6 @@ import scala.scalajs.js.annotation._
 /**
   * CSIDriverSpec is the specification of a CSIDriver.
   */
-@js.native
 trait CSIDriverSpec extends js.Object {
   /**
     * attachRequired indicates this CSI volume driver requires an attach operation (because it
@@ -20,7 +19,7 @@ trait CSIDriverSpec extends js.Object {
     * enabled and the value is specified to false, the attach operation will be skipped.
     * Otherwise the attach operation will be called.
     */
-  var attachRequired: js.UndefOr[Input[Boolean]] = js.native
+  var attachRequired: js.UndefOr[Input[Boolean]] = js.undefined
   /**
     * If set to true, podInfoOnMount indicates this CSI volume driver requires additional pod
     * information (like podName, podUID, etc.) during mount operations. If set to false, pod
@@ -42,7 +41,7 @@ trait CSIDriverSpec extends js.Object {
     * the deployment determines which mode that is, for example via a command line parameter of
     * the driver.
     */
-  var podInfoOnMount: js.UndefOr[Input[Boolean]] = js.native
+  var podInfoOnMount: js.UndefOr[Input[Boolean]] = js.undefined
   /**
     * VolumeLifecycleModes defines what kind of volumes this CSI volume driver supports. The
     * default if the list is empty is "Persistent", which is the usage defined by the CSI
@@ -54,58 +53,21 @@ trait CSIDriverSpec extends js.Object {
     * https://kubernetes-csi.github.io/docs/ephemeral-local-volumes.html A driver can support one
     * or more of these modes and more modes may be added in the future.
     */
-  var volumeLifecycleModes: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
+  var volumeLifecycleModes: js.UndefOr[Input[js.Array[Input[String]]]] = js.undefined
 }
 
 object CSIDriverSpec {
   @scala.inline
-  def apply(): CSIDriverSpec = {
+  def apply(
+    attachRequired: Input[Boolean] = null,
+    podInfoOnMount: Input[Boolean] = null,
+    volumeLifecycleModes: Input[js.Array[Input[String]]] = null
+  ): CSIDriverSpec = {
     val __obj = js.Dynamic.literal()
+    if (attachRequired != null) __obj.updateDynamic("attachRequired")(attachRequired.asInstanceOf[js.Any])
+    if (podInfoOnMount != null) __obj.updateDynamic("podInfoOnMount")(podInfoOnMount.asInstanceOf[js.Any])
+    if (volumeLifecycleModes != null) __obj.updateDynamic("volumeLifecycleModes")(volumeLifecycleModes.asInstanceOf[js.Any])
     __obj.asInstanceOf[CSIDriverSpec]
   }
-  @scala.inline
-  implicit class CSIDriverSpecOps[Self <: CSIDriverSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttachRequired(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachRequired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachRequired")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPodInfoOnMount(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("podInfoOnMount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPodInfoOnMount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("podInfoOnMount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolumeLifecycleModes(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeLifecycleModes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolumeLifecycleModes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeLifecycleModes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

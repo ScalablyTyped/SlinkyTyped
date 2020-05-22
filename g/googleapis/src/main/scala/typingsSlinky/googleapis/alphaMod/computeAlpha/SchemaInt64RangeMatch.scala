@@ -22,41 +22,11 @@ trait SchemaInt64RangeMatch extends js.Object {
 
 object SchemaInt64RangeMatch {
   @scala.inline
-  def apply(): SchemaInt64RangeMatch = {
+  def apply(rangeEnd: String = null, rangeStart: String = null): SchemaInt64RangeMatch = {
     val __obj = js.Dynamic.literal()
+    if (rangeEnd != null) __obj.updateDynamic("rangeEnd")(rangeEnd.asInstanceOf[js.Any])
+    if (rangeStart != null) __obj.updateDynamic("rangeStart")(rangeStart.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInt64RangeMatch]
   }
-  @scala.inline
-  implicit class SchemaInt64RangeMatchOps[Self <: SchemaInt64RangeMatch] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRangeEnd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRangeEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRangeStart(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRangeStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeStart")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

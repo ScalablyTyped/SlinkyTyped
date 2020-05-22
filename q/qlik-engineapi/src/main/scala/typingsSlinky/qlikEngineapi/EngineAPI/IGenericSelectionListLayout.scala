@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * GenericSelectionListLayout width extend GenericObjectLayout
   */
-@js.native
 trait IGenericSelectionListLayout extends IGenericObjectLayout {
-  var qSelectionObject: ISelectionListObject = js.native
+  var qSelectionObject: ISelectionListObject
 }
 
 object IGenericSelectionListLayout {
@@ -21,24 +20,12 @@ object IGenericSelectionListLayout {
     qMeta: INxMeta,
     qSelectionInfo: INxSelectionInfo,
     qSelectionObject: ISelectionListObject,
-    qStateName: String
+    qStateName: String,
+    qError: INxLayoutErrors = null
   ): IGenericSelectionListLayout = {
     val __obj = js.Dynamic.literal(qExtendsId = qExtendsId.asInstanceOf[js.Any], qHasSoftPatches = qHasSoftPatches.asInstanceOf[js.Any], qInfo = qInfo.asInstanceOf[js.Any], qMeta = qMeta.asInstanceOf[js.Any], qSelectionInfo = qSelectionInfo.asInstanceOf[js.Any], qSelectionObject = qSelectionObject.asInstanceOf[js.Any], qStateName = qStateName.asInstanceOf[js.Any])
+    if (qError != null) __obj.updateDynamic("qError")(qError.asInstanceOf[js.Any])
     __obj.asInstanceOf[IGenericSelectionListLayout]
   }
-  @scala.inline
-  implicit class IGenericSelectionListLayoutOps[Self <: IGenericSelectionListLayout] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQSelectionObject(value: ISelectionListObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qSelectionObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -6,26 +6,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ArcGISMapServiceCapabilities extends Object {
   /**
     * Indicates options supported by the exportMap operation. Will be `null` if the `supportsExportMap` is `false`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISMapService.html#capabilities)
     */
-  var exportMap: ArcGISMapServiceCapabilitiesExportMap = js.native
+  var exportMap: ArcGISMapServiceCapabilitiesExportMap
   /**
     * Indicates options supported by the exportTiles operation. Will be `null` if the `supportsExportTiles` is `false`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISMapService.html#capabilities)
     */
-  var exportTiles: ArcGISMapServiceCapabilitiesExportTiles = js.native
+  var exportTiles: ArcGISMapServiceCapabilitiesExportTiles
   /**
     * Indicates operations that can be performed on the service.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISMapService.html#capabilities)
     */
-  var operations: ArcGISMapServiceCapabilitiesOperations = js.native
+  var operations: ArcGISMapServiceCapabilitiesOperations
 }
 
 object ArcGISMapServiceCapabilities {
@@ -41,31 +40,5 @@ object ArcGISMapServiceCapabilities {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], exportMap = exportMap.asInstanceOf[js.Any], exportTiles = exportTiles.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), operations = operations.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
     __obj.asInstanceOf[ArcGISMapServiceCapabilities]
   }
-  @scala.inline
-  implicit class ArcGISMapServiceCapabilitiesOps[Self <: ArcGISMapServiceCapabilities] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExportMap(value: ArcGISMapServiceCapabilitiesExportMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExportTiles(value: ArcGISMapServiceCapabilitiesExportTiles): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportTiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOperations(value: ArcGISMapServiceCapabilitiesOperations): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operations")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

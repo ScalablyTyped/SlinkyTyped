@@ -4,367 +4,93 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StockChartNavigatorCategoryAxis extends js.Object {
-  var autoBaseUnitSteps: js.UndefOr[StockChartNavigatorCategoryAxisAutoBaseUnitSteps] = js.native
-  var axisCrossingValue: js.UndefOr[js.Any | js.Date] = js.native
-  var background: js.UndefOr[String] = js.native
-  var baseUnit: js.UndefOr[String] = js.native
-  var baseUnitStep: js.UndefOr[js.Any] = js.native
-  var categories: js.UndefOr[js.Any] = js.native
-  var color: js.UndefOr[String] = js.native
-  var crosshair: js.UndefOr[StockChartNavigatorCategoryAxisCrosshair] = js.native
-  var field: js.UndefOr[String] = js.native
-  var justified: js.UndefOr[Boolean] = js.native
-  var labels: js.UndefOr[StockChartNavigatorCategoryAxisLabels] = js.native
-  var line: js.UndefOr[StockChartNavigatorCategoryAxisLine] = js.native
-  var majorGridLines: js.UndefOr[StockChartNavigatorCategoryAxisMajorGridLines] = js.native
-  var majorTicks: js.UndefOr[StockChartNavigatorCategoryAxisMajorTicks] = js.native
-  var max: js.UndefOr[js.Any] = js.native
-  var maxDateGroups: js.UndefOr[Double] = js.native
-  var min: js.UndefOr[js.Any] = js.native
-  var minorGridLines: js.UndefOr[StockChartNavigatorCategoryAxisMinorGridLines] = js.native
-  var minorTicks: js.UndefOr[StockChartNavigatorCategoryAxisMinorTicks] = js.native
-  var notes: js.UndefOr[StockChartNavigatorCategoryAxisNotes] = js.native
-  var plotBands: js.UndefOr[js.Array[StockChartNavigatorCategoryAxisPlotBand]] = js.native
-  var reverse: js.UndefOr[Boolean] = js.native
-  var roundToBaseUnit: js.UndefOr[Boolean] = js.native
-  var title: js.UndefOr[StockChartNavigatorCategoryAxisTitle] = js.native
-  var visible: js.UndefOr[Boolean] = js.native
-  var weekStartDay: js.UndefOr[Double] = js.native
+  var autoBaseUnitSteps: js.UndefOr[StockChartNavigatorCategoryAxisAutoBaseUnitSteps] = js.undefined
+  var axisCrossingValue: js.UndefOr[js.Any | js.Date] = js.undefined
+  var background: js.UndefOr[String] = js.undefined
+  var baseUnit: js.UndefOr[String] = js.undefined
+  var baseUnitStep: js.UndefOr[js.Any] = js.undefined
+  var categories: js.UndefOr[js.Any] = js.undefined
+  var color: js.UndefOr[String] = js.undefined
+  var crosshair: js.UndefOr[StockChartNavigatorCategoryAxisCrosshair] = js.undefined
+  var field: js.UndefOr[String] = js.undefined
+  var justified: js.UndefOr[Boolean] = js.undefined
+  var labels: js.UndefOr[StockChartNavigatorCategoryAxisLabels] = js.undefined
+  var line: js.UndefOr[StockChartNavigatorCategoryAxisLine] = js.undefined
+  var majorGridLines: js.UndefOr[StockChartNavigatorCategoryAxisMajorGridLines] = js.undefined
+  var majorTicks: js.UndefOr[StockChartNavigatorCategoryAxisMajorTicks] = js.undefined
+  var max: js.UndefOr[js.Any] = js.undefined
+  var maxDateGroups: js.UndefOr[Double] = js.undefined
+  var min: js.UndefOr[js.Any] = js.undefined
+  var minorGridLines: js.UndefOr[StockChartNavigatorCategoryAxisMinorGridLines] = js.undefined
+  var minorTicks: js.UndefOr[StockChartNavigatorCategoryAxisMinorTicks] = js.undefined
+  var notes: js.UndefOr[StockChartNavigatorCategoryAxisNotes] = js.undefined
+  var plotBands: js.UndefOr[js.Array[StockChartNavigatorCategoryAxisPlotBand]] = js.undefined
+  var reverse: js.UndefOr[Boolean] = js.undefined
+  var roundToBaseUnit: js.UndefOr[Boolean] = js.undefined
+  var title: js.UndefOr[StockChartNavigatorCategoryAxisTitle] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.undefined
+  var weekStartDay: js.UndefOr[Double] = js.undefined
 }
 
 object StockChartNavigatorCategoryAxis {
   @scala.inline
-  def apply(): StockChartNavigatorCategoryAxis = {
+  def apply(
+    autoBaseUnitSteps: StockChartNavigatorCategoryAxisAutoBaseUnitSteps = null,
+    axisCrossingValue: js.Any | js.Date = null,
+    background: String = null,
+    baseUnit: String = null,
+    baseUnitStep: js.Any = null,
+    categories: js.Any = null,
+    color: String = null,
+    crosshair: StockChartNavigatorCategoryAxisCrosshair = null,
+    field: String = null,
+    justified: js.UndefOr[Boolean] = js.undefined,
+    labels: StockChartNavigatorCategoryAxisLabels = null,
+    line: StockChartNavigatorCategoryAxisLine = null,
+    majorGridLines: StockChartNavigatorCategoryAxisMajorGridLines = null,
+    majorTicks: StockChartNavigatorCategoryAxisMajorTicks = null,
+    max: js.Any = null,
+    maxDateGroups: js.UndefOr[Double] = js.undefined,
+    min: js.Any = null,
+    minorGridLines: StockChartNavigatorCategoryAxisMinorGridLines = null,
+    minorTicks: StockChartNavigatorCategoryAxisMinorTicks = null,
+    notes: StockChartNavigatorCategoryAxisNotes = null,
+    plotBands: js.Array[StockChartNavigatorCategoryAxisPlotBand] = null,
+    reverse: js.UndefOr[Boolean] = js.undefined,
+    roundToBaseUnit: js.UndefOr[Boolean] = js.undefined,
+    title: StockChartNavigatorCategoryAxisTitle = null,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    weekStartDay: js.UndefOr[Double] = js.undefined
+  ): StockChartNavigatorCategoryAxis = {
     val __obj = js.Dynamic.literal()
+    if (autoBaseUnitSteps != null) __obj.updateDynamic("autoBaseUnitSteps")(autoBaseUnitSteps.asInstanceOf[js.Any])
+    if (axisCrossingValue != null) __obj.updateDynamic("axisCrossingValue")(axisCrossingValue.asInstanceOf[js.Any])
+    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
+    if (baseUnit != null) __obj.updateDynamic("baseUnit")(baseUnit.asInstanceOf[js.Any])
+    if (baseUnitStep != null) __obj.updateDynamic("baseUnitStep")(baseUnitStep.asInstanceOf[js.Any])
+    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (crosshair != null) __obj.updateDynamic("crosshair")(crosshair.asInstanceOf[js.Any])
+    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
+    if (!js.isUndefined(justified)) __obj.updateDynamic("justified")(justified.get.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (line != null) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
+    if (majorGridLines != null) __obj.updateDynamic("majorGridLines")(majorGridLines.asInstanceOf[js.Any])
+    if (majorTicks != null) __obj.updateDynamic("majorTicks")(majorTicks.asInstanceOf[js.Any])
+    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxDateGroups)) __obj.updateDynamic("maxDateGroups")(maxDateGroups.get.asInstanceOf[js.Any])
+    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
+    if (minorGridLines != null) __obj.updateDynamic("minorGridLines")(minorGridLines.asInstanceOf[js.Any])
+    if (minorTicks != null) __obj.updateDynamic("minorTicks")(minorTicks.asInstanceOf[js.Any])
+    if (notes != null) __obj.updateDynamic("notes")(notes.asInstanceOf[js.Any])
+    if (plotBands != null) __obj.updateDynamic("plotBands")(plotBands.asInstanceOf[js.Any])
+    if (!js.isUndefined(reverse)) __obj.updateDynamic("reverse")(reverse.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(roundToBaseUnit)) __obj.updateDynamic("roundToBaseUnit")(roundToBaseUnit.get.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(weekStartDay)) __obj.updateDynamic("weekStartDay")(weekStartDay.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StockChartNavigatorCategoryAxis]
   }
-  @scala.inline
-  implicit class StockChartNavigatorCategoryAxisOps[Self <: StockChartNavigatorCategoryAxis] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoBaseUnitSteps(value: StockChartNavigatorCategoryAxisAutoBaseUnitSteps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBaseUnitSteps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoBaseUnitSteps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBaseUnitSteps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxisCrossingValueDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisCrossingValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAxisCrossingValue(value: js.Any | js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisCrossingValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxisCrossingValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisCrossingValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseUnit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUnit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUnit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseUnitStep(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUnitStep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseUnitStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUnitStep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCategories(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrosshair(value: StockChartNavigatorCategoryAxisCrosshair): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crosshair")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrosshair: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crosshair")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJustified(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("justified")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJustified: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("justified")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: StockChartNavigatorCategoryAxisLabels): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLine(value: StockChartNavigatorCategoryAxisLine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMajorGridLines(value: StockChartNavigatorCategoryAxisMajorGridLines): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("majorGridLines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMajorGridLines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("majorGridLines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMajorTicks(value: StockChartNavigatorCategoryAxisMajorTicks): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("majorTicks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMajorTicks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("majorTicks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDateGroups(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDateGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDateGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDateGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinorGridLines(value: StockChartNavigatorCategoryAxisMinorGridLines): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorGridLines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinorGridLines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorGridLines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinorTicks(value: StockChartNavigatorCategoryAxisMinorTicks): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTicks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinorTicks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTicks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotes(value: StockChartNavigatorCategoryAxisNotes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlotBands(value: js.Array[StockChartNavigatorCategoryAxisPlotBand]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plotBands")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlotBands: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plotBands")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReverse(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReverse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoundToBaseUnit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roundToBaseUnit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoundToBaseUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roundToBaseUnit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: StockChartNavigatorCategoryAxisTitle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeekStartDay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weekStartDay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeekStartDay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weekStartDay")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

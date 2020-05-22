@@ -18,41 +18,11 @@ trait Point extends js.Object {
 
 object Point {
   @scala.inline
-  def apply(): Point = {
+  def apply(X: js.UndefOr[Float] = js.undefined, Y: js.UndefOr[Float] = js.undefined): Point = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(X)) __obj.updateDynamic("X")(X.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Y)) __obj.updateDynamic("Y")(Y.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Point]
   }
-  @scala.inline
-  implicit class PointOps[Self <: Point] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withX(value: Float): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("X")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("X")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY(value: Float): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Y")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

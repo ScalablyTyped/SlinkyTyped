@@ -15,18 +15,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Statement, 'type'> */
-@js.native
 trait ForOfStatement
   extends ASTNode
      with NodeKind
      with PrintableKind
      with StatementKind {
-  var body: StatementKind = js.native
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var left: VariableDeclarationKind | PatternKind = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var right: ExpressionKind = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.ForOfStatement = js.native
+  var body: StatementKind
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var left: VariableDeclarationKind | PatternKind
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var right: ExpressionKind
+  var `type`: typingsSlinky.astTypes.astTypesStrings.ForOfStatement
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.ForOfStatement")

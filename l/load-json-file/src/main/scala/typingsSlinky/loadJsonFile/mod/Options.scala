@@ -4,56 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /**
   		Applies a function to the JSON string before parsing.
   		*/
-  val beforeParse: js.UndefOr[BeforeParse] = js.native
+  val beforeParse: js.UndefOr[BeforeParse] = js.undefined
   /**
   		Prescribes how the value originally produced by parsing is transformed, before being returned.
   		See the [`JSON.parse` docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#Using_the_reviver_parameter) for more.
   		*/
-  val reviver: js.UndefOr[Reviver] = js.native
+  val reviver: js.UndefOr[Reviver] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(beforeParse: /* data */ String => String = null, reviver: Reviver = null): Options = {
     val __obj = js.Dynamic.literal()
+    if (beforeParse != null) __obj.updateDynamic("beforeParse")(js.Any.fromFunction1(beforeParse))
+    if (reviver != null) __obj.updateDynamic("reviver")(reviver.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBeforeParse(value: /* data */ String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeParse")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBeforeParse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeParse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReviver(value: Reviver): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reviver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReviver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reviver")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

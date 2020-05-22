@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.grommet.grommetStrings.all
   - typingsSlinky.grommet.grommetStrings.between
 */
-trait BoxSideType extends BorderType
+trait BoxSideType extends _BorderType
 
 object BoxSideType {
   @scala.inline

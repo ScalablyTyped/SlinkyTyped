@@ -25,35 +25,6 @@ import scala.scalajs.js.annotation._
 @JSImport("@jimp/plugins", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
-  /**
-    * This is made union and not intersection to avoid issues with
-    * `IllformedPlugin` and `WellFormedPlugin` when using typings with Jimp
-    * generic
-    *
-    * In reality, this should be an intersection but our type data isn't
-    * clever enough to figure out what's a class and what's not/etc
-    */
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.jimpPlugins.mod.DitherRet
-    - typingsSlinky.jimpPlugins.mod.ResizeRet
-    - typingsSlinky.jimpPlugins.mod.BlitRet
-    - typingsSlinky.jimpPlugins.mod.RotateRet
-    - typingsSlinky.jimpPlugins.mod.ColorRet
-    - typingsSlinky.jimpPlugins.mod.PrintRet
-    - typingsSlinky.jimpPlugins.mod.BlurRet
-    - typingsSlinky.jimpPlugins.mod.CropRet
-    - typingsSlinky.jimpPlugins.mod.NormalizeRet
-    - typingsSlinky.jimpPlugins.mod.InvertRet
-    - typingsSlinky.jimpPlugins.mod.GaussianRet
-    - typingsSlinky.jimpPlugins.mod.FlipRet
-    - typingsSlinky.jimpPlugins.mod.MaskRet
-    - typingsSlinky.jimpPlugins.mod.ScaleRet
-    - typingsSlinky.jimpPlugins.mod.DisplaceRet
-    - typingsSlinky.jimpPlugins.mod.ContainRet
-    - typingsSlinky.jimpPlugins.mod.CoverRet
-  */
-  trait Plugins extends js.Object
-  
   def default(): Plugins = js.native
   type BlitRet = ReturnType[js.Function0[Blit]]
   type BlurRet = ReturnType[js.Function0[Blur]]
@@ -68,6 +39,15 @@ object mod extends js.Object {
   type InvertRet = ReturnType[js.Function0[Invert]]
   type MaskRet = ReturnType[js.Function0[Mask]]
   type NormalizeRet = ReturnType[js.Function0[Normalize]]
+  /**
+    * This is made union and not intersection to avoid issues with
+    * `IllformedPlugin` and `WellFormedPlugin` when using typings with Jimp
+    * generic
+    *
+    * In reality, this should be an intersection but our type data isn't
+    * clever enough to figure out what's a class and what's not/etc
+    */
+  type Plugins = DitherRet | ResizeRet | BlitRet | RotateRet | ColorRet | PrintRet | BlurRet | CropRet | NormalizeRet | InvertRet | GaussianRet | FlipRet | MaskRet | ScaleRet | DisplaceRet | ContainRet | CoverRet
   type PrintRet = ReturnType[js.Function0[Print]]
   type ResizeRet = ReturnType[js.Function0[Resize]]
   type RotateRet = ReturnType[js.Function0[Rotate]]

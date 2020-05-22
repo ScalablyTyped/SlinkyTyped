@@ -15,26 +15,25 @@ import scala.scalajs.js.annotation._
   * 
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
   */
-@js.native
 trait EmailAddressDetails extends js.Object {
   /**
     * Gets the response that an attendee returned for an appointment. 
     * This property applies to only an attendee of an appointment, as represented by the `optionalAttendees` or `requiredAttendees` property. 
     * This property returns undefined in other scenarios.
     */
-  var appointmentResponse: ResponseType | String = js.native
+  var appointmentResponse: ResponseType | String
   /**
     * Gets the display name associated with an email address.
     */
-  var displayName: String = js.native
+  var displayName: String
   /**
     * Gets the SMTP email address.
     */
-  var emailAddress: String = js.native
+  var emailAddress: String
   /**
     * Gets the email address type of a recipient.
     */
-  var recipientType: RecipientType | String = js.native
+  var recipientType: RecipientType | String
 }
 
 object EmailAddressDetails {
@@ -48,37 +47,5 @@ object EmailAddressDetails {
     val __obj = js.Dynamic.literal(appointmentResponse = appointmentResponse.asInstanceOf[js.Any], displayName = displayName.asInstanceOf[js.Any], emailAddress = emailAddress.asInstanceOf[js.Any], recipientType = recipientType.asInstanceOf[js.Any])
     __obj.asInstanceOf[EmailAddressDetails]
   }
-  @scala.inline
-  implicit class EmailAddressDetailsOps[Self <: EmailAddressDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppointmentResponse(value: ResponseType | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentResponse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEmailAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRecipientType(value: RecipientType | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recipientType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

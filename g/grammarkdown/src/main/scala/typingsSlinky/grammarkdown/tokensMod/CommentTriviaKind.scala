@@ -1,7 +1,5 @@
 package typingsSlinky.grammarkdown.tokensMod
 
-import typingsSlinky.grammarkdown.tokensMod.SyntaxKind.MultiLineCommentTrivia
-import typingsSlinky.grammarkdown.tokensMod.SyntaxKind.SingleLineCommentTrivia
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,11 +9,4 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.grammarkdown.tokensMod.SyntaxKind.MultiLineCommentTrivia
 */
 trait CommentTriviaKind extends TriviaKind
-
-object CommentTriviaKind {
-  @scala.inline
-  implicit def apply(value: MultiLineCommentTrivia): CommentTriviaKind = value.asInstanceOf[CommentTriviaKind]
-  @scala.inline
-  implicit def apply(value: SingleLineCommentTrivia): CommentTriviaKind = value.asInstanceOf[CommentTriviaKind]
-}
 

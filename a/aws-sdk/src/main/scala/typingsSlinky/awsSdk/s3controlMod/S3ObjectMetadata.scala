@@ -54,149 +54,32 @@ trait S3ObjectMetadata extends js.Object {
 
 object S3ObjectMetadata {
   @scala.inline
-  def apply(): S3ObjectMetadata = {
+  def apply(
+    CacheControl: NonEmptyMaxLength1024String = null,
+    ContentDisposition: NonEmptyMaxLength1024String = null,
+    ContentEncoding: NonEmptyMaxLength1024String = null,
+    ContentLanguage: NonEmptyMaxLength1024String = null,
+    ContentLength: js.UndefOr[S3ContentLength] = js.undefined,
+    ContentMD5: NonEmptyMaxLength1024String = null,
+    ContentType: NonEmptyMaxLength1024String = null,
+    HttpExpiresDate: js.Date = null,
+    RequesterCharged: js.UndefOr[Boolean] = js.undefined,
+    SSEAlgorithm: S3SSEAlgorithm = null,
+    UserMetadata: S3UserMetadata = null
+  ): S3ObjectMetadata = {
     val __obj = js.Dynamic.literal()
+    if (CacheControl != null) __obj.updateDynamic("CacheControl")(CacheControl.asInstanceOf[js.Any])
+    if (ContentDisposition != null) __obj.updateDynamic("ContentDisposition")(ContentDisposition.asInstanceOf[js.Any])
+    if (ContentEncoding != null) __obj.updateDynamic("ContentEncoding")(ContentEncoding.asInstanceOf[js.Any])
+    if (ContentLanguage != null) __obj.updateDynamic("ContentLanguage")(ContentLanguage.asInstanceOf[js.Any])
+    if (!js.isUndefined(ContentLength)) __obj.updateDynamic("ContentLength")(ContentLength.get.asInstanceOf[js.Any])
+    if (ContentMD5 != null) __obj.updateDynamic("ContentMD5")(ContentMD5.asInstanceOf[js.Any])
+    if (ContentType != null) __obj.updateDynamic("ContentType")(ContentType.asInstanceOf[js.Any])
+    if (HttpExpiresDate != null) __obj.updateDynamic("HttpExpiresDate")(HttpExpiresDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(RequesterCharged)) __obj.updateDynamic("RequesterCharged")(RequesterCharged.get.asInstanceOf[js.Any])
+    if (SSEAlgorithm != null) __obj.updateDynamic("SSEAlgorithm")(SSEAlgorithm.asInstanceOf[js.Any])
+    if (UserMetadata != null) __obj.updateDynamic("UserMetadata")(UserMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3ObjectMetadata]
   }
-  @scala.inline
-  implicit class S3ObjectMetadataOps[Self <: S3ObjectMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCacheControl(value: NonEmptyMaxLength1024String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentDisposition(value: NonEmptyMaxLength1024String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentDisposition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentDisposition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentDisposition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentEncoding(value: NonEmptyMaxLength1024String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentEncoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentEncoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentLanguage(value: NonEmptyMaxLength1024String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentLanguage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentLanguage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentLength(value: S3ContentLength): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentMD5(value: NonEmptyMaxLength1024String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentMD5")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentMD5: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentMD5")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentType(value: NonEmptyMaxLength1024String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpExpiresDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpExpiresDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpExpiresDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpExpiresDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequesterCharged(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterCharged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequesterCharged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterCharged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSEAlgorithm(value: S3SSEAlgorithm): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSEAlgorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSEAlgorithm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSEAlgorithm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserMetadata(value: S3UserMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserMetadata")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

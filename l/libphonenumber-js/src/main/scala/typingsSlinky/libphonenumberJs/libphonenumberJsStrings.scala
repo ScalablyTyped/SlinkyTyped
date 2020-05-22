@@ -2,7 +2,7 @@ package typingsSlinky.libphonenumberJs
 
 import typingsSlinky.libphonenumberJs.typesMod.CountryCode
 import typingsSlinky.libphonenumberJs.typesMod.NumberFormat
-import typingsSlinky.libphonenumberJs.typesMod.NumberType
+import typingsSlinky.libphonenumberJs.typesMod._NumberType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -222,10 +222,10 @@ object libphonenumberJsStrings {
   sealed trait FI extends CountryCode
   
   @js.native
-  sealed trait FIXED_LINE extends NumberType
+  sealed trait FIXED_LINE extends _NumberType
   
   @js.native
-  sealed trait FIXED_LINE_OR_MOBILE extends NumberType
+  sealed trait FIXED_LINE_OR_MOBILE extends _NumberType
   
   @js.native
   sealed trait FJ extends CountryCode
@@ -465,7 +465,7 @@ object libphonenumberJsStrings {
   sealed trait MO extends CountryCode
   
   @js.native
-  sealed trait MOBILE extends NumberType
+  sealed trait MOBILE extends _NumberType
   
   @js.native
   sealed trait MP extends CountryCode
@@ -549,13 +549,13 @@ object libphonenumberJsStrings {
   sealed trait PA extends CountryCode
   
   @js.native
-  sealed trait PAGER extends NumberType
+  sealed trait PAGER extends _NumberType
   
   @js.native
   sealed trait PE extends CountryCode
   
   @js.native
-  sealed trait PERSONAL_NUMBER extends NumberType
+  sealed trait PERSONAL_NUMBER extends _NumberType
   
   @js.native
   sealed trait PF extends CountryCode
@@ -579,7 +579,7 @@ object libphonenumberJsStrings {
   sealed trait PR extends CountryCode
   
   @js.native
-  sealed trait PREMIUM_RATE extends NumberType
+  sealed trait PREMIUM_RATE extends _NumberType
   
   @js.native
   sealed trait PS extends CountryCode
@@ -636,7 +636,7 @@ object libphonenumberJsStrings {
   sealed trait SH extends CountryCode
   
   @js.native
-  sealed trait SHARED_COST extends NumberType
+  sealed trait SHARED_COST extends _NumberType
   
   @js.native
   sealed trait SI extends CountryCode
@@ -714,7 +714,7 @@ object libphonenumberJsStrings {
   sealed trait TO extends CountryCode
   
   @js.native
-  sealed trait TOLL_FREE extends NumberType
+  sealed trait TOLL_FREE extends _NumberType
   
   @js.native
   sealed trait TR extends CountryCode
@@ -735,7 +735,7 @@ object libphonenumberJsStrings {
   sealed trait UA extends CountryCode
   
   @js.native
-  sealed trait UAN extends NumberType
+  sealed trait UAN extends _NumberType
   
   @js.native
   sealed trait UG extends CountryCode
@@ -768,10 +768,10 @@ object libphonenumberJsStrings {
   sealed trait VN extends CountryCode
   
   @js.native
-  sealed trait VOICEMAIL extends NumberType
+  sealed trait VOICEMAIL extends _NumberType
   
   @js.native
-  sealed trait VOIP extends NumberType
+  sealed trait VOIP extends _NumberType
   
   @js.native
   sealed trait VU extends CountryCode

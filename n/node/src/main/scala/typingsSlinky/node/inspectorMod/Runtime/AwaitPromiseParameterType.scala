@@ -4,65 +4,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AwaitPromiseParameterType extends js.Object {
   /**
     * Whether preview should be generated for the result.
     */
-  var generatePreview: js.UndefOr[Boolean] = js.native
+  var generatePreview: js.UndefOr[Boolean] = js.undefined
   /**
     * Identifier of the promise.
     */
-  var promiseObjectId: RemoteObjectId = js.native
+  var promiseObjectId: RemoteObjectId
   /**
     * Whether the result is expected to be a JSON object that should be sent by value.
     */
-  var returnByValue: js.UndefOr[Boolean] = js.native
+  var returnByValue: js.UndefOr[Boolean] = js.undefined
 }
 
 object AwaitPromiseParameterType {
   @scala.inline
-  def apply(promiseObjectId: RemoteObjectId): AwaitPromiseParameterType = {
+  def apply(
+    promiseObjectId: RemoteObjectId,
+    generatePreview: js.UndefOr[Boolean] = js.undefined,
+    returnByValue: js.UndefOr[Boolean] = js.undefined
+  ): AwaitPromiseParameterType = {
     val __obj = js.Dynamic.literal(promiseObjectId = promiseObjectId.asInstanceOf[js.Any])
+    if (!js.isUndefined(generatePreview)) __obj.updateDynamic("generatePreview")(generatePreview.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(returnByValue)) __obj.updateDynamic("returnByValue")(returnByValue.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwaitPromiseParameterType]
   }
-  @scala.inline
-  implicit class AwaitPromiseParameterTypeOps[Self <: AwaitPromiseParameterType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPromiseObjectId(value: RemoteObjectId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promiseObjectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGeneratePreview(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generatePreview")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeneratePreview: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generatePreview")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnByValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnByValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturnByValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnByValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 
