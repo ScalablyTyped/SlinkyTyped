@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "mobx-react"
-version := "6.2.2-f0ee58"
+version := "6.2.2-56865f"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
@@ -8,9 +8,9 @@ libraryDependencies ++= Seq(
   "me.shadaj" %%% "slinky-web" % "0.6.5",
   "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-6e65be",
   "org.scalablytyped.slinky" %%% "mobx" % "5.15.4-7ce1a6",
-  "org.scalablytyped.slinky" %%% "mobx-react-lite" % "2.0.7-2c3024",
+  "org.scalablytyped.slinky" %%% "mobx-react-lite" % "2.0.7-13260c",
   "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ecc9ab",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200515Z-b103c7",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200515Z-5c4f6b",
   "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")

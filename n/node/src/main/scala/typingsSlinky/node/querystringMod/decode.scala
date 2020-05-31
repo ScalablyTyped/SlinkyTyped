@@ -1,23 +1,18 @@
 package typingsSlinky.node.querystringMod
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/**
-  * The querystring.decode() function is an alias for querystring.parse().
-  */
 @JSImport("querystring", "decode")
 @js.native
-object decode
-  extends TopLevel[
-      js.Function4[
-        /* str */ String, 
-        /* sep */ js.UndefOr[String], 
-        /* eq */ js.UndefOr[String], 
-        /* options */ js.UndefOr[ParseOptions], 
-        ParsedUrlQuery
-      ]
-    ]
+object decode extends js.Object {
+  /**
+    * The querystring.decode() function is an alias for querystring.parse().
+    */
+  def apply(str: String): ParsedUrlQuery = js.native
+  def apply(str: String, sep: String): ParsedUrlQuery = js.native
+  def apply(str: String, sep: String, eq: String): ParsedUrlQuery = js.native
+  def apply(str: String, sep: String, eq: String, options: ParseOptions): ParsedUrlQuery = js.native
+}
 

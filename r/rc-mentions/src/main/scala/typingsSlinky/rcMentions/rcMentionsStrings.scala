@@ -104,6 +104,9 @@ object rcMentionsStrings {
   sealed trait off extends js.Object
   
   @js.native
+  sealed trait omit extends js.Object
+  
+  @js.native
   sealed trait on extends js.Object
   
   @js.native
@@ -221,6 +224,8 @@ object rcMentionsStrings {
   def numeric: numeric = "numeric".asInstanceOf[numeric]
   @scala.inline
   def off: off = "off".asInstanceOf[off]
+  @scala.inline
+  def omit: omit = "omit".asInstanceOf[omit]
   @scala.inline
   def on: on = "on".asInstanceOf[on]
   @scala.inline

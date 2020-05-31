@@ -20,7 +20,7 @@ trait MetaDefinition extends /* ns */ StringDictionary[String] {
 object MetaDefinition {
   @scala.inline
   def apply(
-    StringDictionary: /* name */ StringDictionary[String] = null,
+    StringDictionary: /* ns */ StringDictionary[String] = null,
     charset: String = null,
     content: String = null,
     httpEquiv: String = null,

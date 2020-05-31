@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "react-navigation-drawer"
-version := "2.4.13-659853"
+version := "2.4.13-96839d"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
@@ -8,10 +8,10 @@ libraryDependencies ++= Seq(
   "me.shadaj" %%% "slinky-web" % "0.6.5",
   "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-6e65be",
   "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ecc9ab",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200515Z-b103c7",
-  "org.scalablytyped.slinky" %%% "react-native" % "0.62-dt-20200515Z-a82205",
-  "org.scalablytyped.slinky" %%% "react-native-gesture-handler" % "1.6.1-0f37fd",
-  "org.scalablytyped.slinky" %%% "react-navigation" % "4.3.9-9b3cf0",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200515Z-5c4f6b",
+  "org.scalablytyped.slinky" %%% "react-native" % "0.62-dt-20200515Z-d9be0e",
+  "org.scalablytyped.slinky" %%% "react-native-gesture-handler" % "1.6.1-430a24",
+  "org.scalablytyped.slinky" %%% "react-navigation" % "4.3.9-f1b160",
   "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")

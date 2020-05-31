@@ -12,5 +12,11 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("repl", "writer")
 @js.native
-object writer extends TopLevel[REPLWriter with Options]
+object writer extends TopLevel[Options] {
+  /**
+    * This is the default "writer" value, if none is passed in the REPL options,
+    * and it can be overridden by custom print functions.
+    */
+  def apply(obj: js.Any): String = js.native
+}
 

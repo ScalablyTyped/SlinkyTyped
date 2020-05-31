@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "react-router-native"
-version := "5.1-dt-20200515Z-d7717d"
+version := "5.1-dt-20200515Z-a6491a"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
@@ -9,8 +9,8 @@ libraryDependencies ++= Seq(
   "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-6e65be",
   "org.scalablytyped.slinky" %%% "history" % "4.7.2-dt-20200518Z-c625cf",
   "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ecc9ab",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200515Z-b103c7",
-  "org.scalablytyped.slinky" %%% "react-router" % "5.1-dt-20200515Z-3235d6",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200515Z-5c4f6b",
+  "org.scalablytyped.slinky" %%% "react-router" % "5.1-dt-20200515Z-134fcd",
   "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")

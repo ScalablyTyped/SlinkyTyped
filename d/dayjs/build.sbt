@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "dayjs"
-version := "1.8.27-7851a2"
+version := "1.8.27-1def79"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

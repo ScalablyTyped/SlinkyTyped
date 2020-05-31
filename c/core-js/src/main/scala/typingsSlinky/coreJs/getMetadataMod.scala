@@ -1,19 +1,14 @@
 package typingsSlinky.coreJs
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("core-js/library/fn/reflect/es7/get-metadata", JSImport.Namespace)
 @js.native
-object getMetadataMod
-  extends TopLevel[
-      js.Function3[
-        /* metadataKey */ js.Any, 
-        /* target */ Object, 
-        /* targetKey */ js.UndefOr[java.lang.String | js.Symbol], 
-        js.Any
-      ]
-    ]
+object getMetadataMod extends js.Object {
+  def apply(metadataKey: js.Any, target: Object): js.Any = js.native
+  def apply(metadataKey: js.Any, target: Object, targetKey: java.lang.String): js.Any = js.native
+  def apply(metadataKey: js.Any, target: Object, targetKey: js.Symbol): js.Any = js.native
+}
 

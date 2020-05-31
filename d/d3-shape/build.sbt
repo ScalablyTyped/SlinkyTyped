@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "d3-shape"
-version := "1.3-dt-20200515Z-9986de"
+version := "1.3-dt-20200515Z-096146"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

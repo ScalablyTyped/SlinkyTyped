@@ -1,23 +1,19 @@
 package typingsSlinky.node.querystringMod
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/**
-  * The querystring.encode() function is an alias for querystring.stringify().
-  */
 @JSImport("querystring", "encode")
 @js.native
-object encode
-  extends TopLevel[
-      js.Function4[
-        /* obj */ js.UndefOr[ParsedUrlQueryInput], 
-        /* sep */ js.UndefOr[String], 
-        /* eq */ js.UndefOr[String], 
-        /* options */ js.UndefOr[StringifyOptions], 
-        String
-      ]
-    ]
+object encode extends js.Object {
+  /**
+    * The querystring.encode() function is an alias for querystring.stringify().
+    */
+  def apply(): String = js.native
+  def apply(obj: ParsedUrlQueryInput): String = js.native
+  def apply(obj: ParsedUrlQueryInput, sep: String): String = js.native
+  def apply(obj: ParsedUrlQueryInput, sep: String, eq: String): String = js.native
+  def apply(obj: ParsedUrlQueryInput, sep: String, eq: String, options: StringifyOptions): String = js.native
+}
 
