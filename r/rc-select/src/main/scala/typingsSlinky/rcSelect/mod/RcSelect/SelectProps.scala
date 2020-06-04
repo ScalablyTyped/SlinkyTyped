@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.Node
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -56,94 +57,194 @@ trait SelectProps extends js.Object {
 
 object SelectProps {
   @scala.inline
-  def apply(
-    allowClear: js.UndefOr[Boolean] = js.undefined,
-    animation: String = null,
-    choiceTransitionName: String = null,
-    className: String = null,
-    combobox: js.UndefOr[Boolean] = js.undefined,
-    defaultActiveFirstOption: js.UndefOr[Boolean] = js.undefined,
-    defaultLabel: String | js.Array[String] = null,
-    defaultValue: String | js.Array[String] = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    dropdownClassName: String = null,
-    dropdownMatchSelectWidth: js.UndefOr[Boolean] = js.undefined,
-    dropdownMenuStyle: StringDictionary[String] = null,
-    dropdownStyle: StringDictionary[String] = null,
-    filterOption: js.UndefOr[Boolean] = js.undefined,
-    getInputElement: () => Node = null,
-    getPopupContainer: /* trigger */ Node => Node = null,
-    id: String = null,
-    labelInValue: js.UndefOr[Boolean] = js.undefined,
-    maxTagCount: js.UndefOr[Double] = js.undefined,
-    maxTagPlaceholder: TagMod[Any] | js.Function = null,
-    maxTagTextLength: js.UndefOr[Double] = js.undefined,
-    multiple: js.UndefOr[Boolean] = js.undefined,
-    notFoundContent: String = null,
-    onBlur: () => Unit = null,
-    onChange: (/* value */ String, /* label */ String) => Unit = null,
-    onDeselect: (/* value */ String, ReactComponentClass[OptionProps]) => Unit = null,
-    onFocus: () => Unit = null,
-    onInputKeyDown: /* e */ Event => Unit = null,
-    onPopupScroll: () => Unit = null,
-    onSearch: () => Unit = null,
-    onSelect: (/* value */ String, ReactComponentClass[OptionProps]) => Unit = null,
-    optionFilterProp: String = null,
-    optionLabelProp: String = null,
-    placeholder: TagMod[Any] = null,
-    prefixCls: String = null,
-    showAction: js.Array[String] = null,
-    showArrow: js.UndefOr[Boolean] = js.undefined,
-    showSearch: js.UndefOr[Boolean] = js.undefined,
-    tags: js.UndefOr[Boolean] = js.undefined,
-    tokenSeparators: js.Array[String] = null,
-    transitionName: String = null,
-    value: String | js.Array[String] = null
-  ): SelectProps = {
+  def apply(): SelectProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowClear)) __obj.updateDynamic("allowClear")(allowClear.get.asInstanceOf[js.Any])
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (choiceTransitionName != null) __obj.updateDynamic("choiceTransitionName")(choiceTransitionName.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(combobox)) __obj.updateDynamic("combobox")(combobox.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultActiveFirstOption)) __obj.updateDynamic("defaultActiveFirstOption")(defaultActiveFirstOption.get.asInstanceOf[js.Any])
-    if (defaultLabel != null) __obj.updateDynamic("defaultLabel")(defaultLabel.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (dropdownClassName != null) __obj.updateDynamic("dropdownClassName")(dropdownClassName.asInstanceOf[js.Any])
-    if (!js.isUndefined(dropdownMatchSelectWidth)) __obj.updateDynamic("dropdownMatchSelectWidth")(dropdownMatchSelectWidth.get.asInstanceOf[js.Any])
-    if (dropdownMenuStyle != null) __obj.updateDynamic("dropdownMenuStyle")(dropdownMenuStyle.asInstanceOf[js.Any])
-    if (dropdownStyle != null) __obj.updateDynamic("dropdownStyle")(dropdownStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(filterOption)) __obj.updateDynamic("filterOption")(filterOption.get.asInstanceOf[js.Any])
-    if (getInputElement != null) __obj.updateDynamic("getInputElement")(js.Any.fromFunction0(getInputElement))
-    if (getPopupContainer != null) __obj.updateDynamic("getPopupContainer")(js.Any.fromFunction1(getPopupContainer))
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(labelInValue)) __obj.updateDynamic("labelInValue")(labelInValue.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(maxTagCount)) __obj.updateDynamic("maxTagCount")(maxTagCount.get.asInstanceOf[js.Any])
-    if (maxTagPlaceholder != null) __obj.updateDynamic("maxTagPlaceholder")(maxTagPlaceholder.asInstanceOf[js.Any])
-    if (!js.isUndefined(maxTagTextLength)) __obj.updateDynamic("maxTagTextLength")(maxTagTextLength.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(multiple)) __obj.updateDynamic("multiple")(multiple.get.asInstanceOf[js.Any])
-    if (notFoundContent != null) __obj.updateDynamic("notFoundContent")(notFoundContent.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction0(onBlur))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onDeselect != null) __obj.updateDynamic("onDeselect")(js.Any.fromFunction2(onDeselect))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction0(onFocus))
-    if (onInputKeyDown != null) __obj.updateDynamic("onInputKeyDown")(js.Any.fromFunction1(onInputKeyDown))
-    if (onPopupScroll != null) __obj.updateDynamic("onPopupScroll")(js.Any.fromFunction0(onPopupScroll))
-    if (onSearch != null) __obj.updateDynamic("onSearch")(js.Any.fromFunction0(onSearch))
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction2(onSelect))
-    if (optionFilterProp != null) __obj.updateDynamic("optionFilterProp")(optionFilterProp.asInstanceOf[js.Any])
-    if (optionLabelProp != null) __obj.updateDynamic("optionLabelProp")(optionLabelProp.asInstanceOf[js.Any])
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (showAction != null) __obj.updateDynamic("showAction")(showAction.asInstanceOf[js.Any])
-    if (!js.isUndefined(showArrow)) __obj.updateDynamic("showArrow")(showArrow.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(showSearch)) __obj.updateDynamic("showSearch")(showSearch.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(tags)) __obj.updateDynamic("tags")(tags.get.asInstanceOf[js.Any])
-    if (tokenSeparators != null) __obj.updateDynamic("tokenSeparators")(tokenSeparators.asInstanceOf[js.Any])
-    if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[SelectProps]
   }
+  @scala.inline
+  implicit class SelectPropsOps[Self <: SelectProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAllowClear(value: Boolean): Self = this.set("allowClear", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAllowClear: Self = this.set("allowClear", js.undefined)
+    @scala.inline
+    def setAnimation(value: String): Self = this.set("animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAnimation: Self = this.set("animation", js.undefined)
+    @scala.inline
+    def setChoiceTransitionName(value: String): Self = this.set("choiceTransitionName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChoiceTransitionName: Self = this.set("choiceTransitionName", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setCombobox(value: Boolean): Self = this.set("combobox", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCombobox: Self = this.set("combobox", js.undefined)
+    @scala.inline
+    def setDefaultActiveFirstOption(value: Boolean): Self = this.set("defaultActiveFirstOption", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultActiveFirstOption: Self = this.set("defaultActiveFirstOption", js.undefined)
+    @scala.inline
+    def setDefaultLabel(value: String | js.Array[String]): Self = this.set("defaultLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultLabel: Self = this.set("defaultLabel", js.undefined)
+    @scala.inline
+    def setDefaultValue(value: String | js.Array[String]): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setDropdownClassName(value: String): Self = this.set("dropdownClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDropdownClassName: Self = this.set("dropdownClassName", js.undefined)
+    @scala.inline
+    def setDropdownMatchSelectWidth(value: Boolean): Self = this.set("dropdownMatchSelectWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDropdownMatchSelectWidth: Self = this.set("dropdownMatchSelectWidth", js.undefined)
+    @scala.inline
+    def setDropdownMenuStyle(value: StringDictionary[String]): Self = this.set("dropdownMenuStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDropdownMenuStyle: Self = this.set("dropdownMenuStyle", js.undefined)
+    @scala.inline
+    def setDropdownStyle(value: StringDictionary[String]): Self = this.set("dropdownStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDropdownStyle: Self = this.set("dropdownStyle", js.undefined)
+    @scala.inline
+    def setFilterOption(value: Boolean): Self = this.set("filterOption", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFilterOption: Self = this.set("filterOption", js.undefined)
+    @scala.inline
+    def setGetInputElement(value: () => Node): Self = this.set("getInputElement", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteGetInputElement: Self = this.set("getInputElement", js.undefined)
+    @scala.inline
+    def setGetPopupContainer(value: /* trigger */ Node => Node): Self = this.set("getPopupContainer", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteGetPopupContainer: Self = this.set("getPopupContainer", js.undefined)
+    @scala.inline
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteId: Self = this.set("id", js.undefined)
+    @scala.inline
+    def setLabelInValue(value: Boolean): Self = this.set("labelInValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLabelInValue: Self = this.set("labelInValue", js.undefined)
+    @scala.inline
+    def setMaxTagCount(value: Double): Self = this.set("maxTagCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxTagCount: Self = this.set("maxTagCount", js.undefined)
+    @scala.inline
+    def setMaxTagPlaceholderReactElement(value: ReactElement): Self = this.set("maxTagPlaceholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMaxTagPlaceholder(value: TagMod[Any] | js.Function): Self = this.set("maxTagPlaceholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxTagPlaceholder: Self = this.set("maxTagPlaceholder", js.undefined)
+    @scala.inline
+    def setMaxTagTextLength(value: Double): Self = this.set("maxTagTextLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxTagTextLength: Self = this.set("maxTagTextLength", js.undefined)
+    @scala.inline
+    def setMultiple(value: Boolean): Self = this.set("multiple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMultiple: Self = this.set("multiple", js.undefined)
+    @scala.inline
+    def setNotFoundContent(value: String): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNotFoundContent: Self = this.set("notFoundContent", js.undefined)
+    @scala.inline
+    def setOnBlur(value: () => Unit): Self = this.set("onBlur", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnBlur: Self = this.set("onBlur", js.undefined)
+    @scala.inline
+    def setOnChange(value: (/* value */ String, /* label */ String) => Unit): Self = this.set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnChange: Self = this.set("onChange", js.undefined)
+    @scala.inline
+    def setOnDeselect(value: (/* value */ String, ReactComponentClass[OptionProps]) => Unit): Self = this.set("onDeselect", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnDeselect: Self = this.set("onDeselect", js.undefined)
+    @scala.inline
+    def setOnFocus(value: () => Unit): Self = this.set("onFocus", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnFocus: Self = this.set("onFocus", js.undefined)
+    @scala.inline
+    def setOnInputKeyDown(value: /* e */ Event => Unit): Self = this.set("onInputKeyDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnInputKeyDown: Self = this.set("onInputKeyDown", js.undefined)
+    @scala.inline
+    def setOnPopupScroll(value: () => Unit): Self = this.set("onPopupScroll", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnPopupScroll: Self = this.set("onPopupScroll", js.undefined)
+    @scala.inline
+    def setOnSearch(value: () => Unit): Self = this.set("onSearch", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnSearch: Self = this.set("onSearch", js.undefined)
+    @scala.inline
+    def setOnSelect(value: (/* value */ String, ReactComponentClass[OptionProps]) => Unit): Self = this.set("onSelect", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnSelect: Self = this.set("onSelect", js.undefined)
+    @scala.inline
+    def setOptionFilterProp(value: String): Self = this.set("optionFilterProp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOptionFilterProp: Self = this.set("optionFilterProp", js.undefined)
+    @scala.inline
+    def setOptionLabelProp(value: String): Self = this.set("optionLabelProp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOptionLabelProp: Self = this.set("optionLabelProp", js.undefined)
+    @scala.inline
+    def setPlaceholderReactElement(value: ReactElement): Self = this.set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPlaceholder(value: TagMod[Any]): Self = this.set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePlaceholder: Self = this.set("placeholder", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    @scala.inline
+    def setShowAction(value: js.Array[String]): Self = this.set("showAction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowAction: Self = this.set("showAction", js.undefined)
+    @scala.inline
+    def setShowArrow(value: Boolean): Self = this.set("showArrow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowArrow: Self = this.set("showArrow", js.undefined)
+    @scala.inline
+    def setShowSearch(value: Boolean): Self = this.set("showSearch", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowSearch: Self = this.set("showSearch", js.undefined)
+    @scala.inline
+    def setTags(value: Boolean): Self = this.set("tags", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTags: Self = this.set("tags", js.undefined)
+    @scala.inline
+    def setTokenSeparators(value: js.Array[String]): Self = this.set("tokenSeparators", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTokenSeparators: Self = this.set("tokenSeparators", js.undefined)
+    @scala.inline
+    def setTransitionName(value: String): Self = this.set("transitionName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTransitionName: Self = this.set("transitionName", js.undefined)
+    @scala.inline
+    def setValue(value: String | js.Array[String]): Self = this.set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
+  }
+  
 }
 

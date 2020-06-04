@@ -496,98 +496,198 @@ trait StandardShorthandPropertiesHyphen[TLength] extends js.Object {
 
 object StandardShorthandPropertiesHyphen {
   @scala.inline
-  def apply[TLength](
-    all: Globals = null,
-    animation: AnimationProperty = null,
-    background: BackgroundProperty[TLength] = null,
-    border: BorderProperty[TLength] = null,
-    `border-block`: BorderBlockProperty[TLength] = null,
-    `border-block-end`: BorderBlockEndProperty[TLength] = null,
-    `border-block-start`: BorderBlockStartProperty[TLength] = null,
-    `border-bottom`: BorderBottomProperty[TLength] = null,
-    `border-color`: BorderColorProperty = null,
-    `border-image`: BorderImageProperty = null,
-    `border-inline`: BorderInlineProperty[TLength] = null,
-    `border-inline-end`: BorderInlineEndProperty[TLength] = null,
-    `border-inline-start`: BorderInlineStartProperty[TLength] = null,
-    `border-left`: BorderLeftProperty[TLength] = null,
-    `border-radius`: BorderRadiusProperty[TLength] = null,
-    `border-right`: BorderRightProperty[TLength] = null,
-    `border-style`: BorderStyleProperty = null,
-    `border-top`: BorderTopProperty[TLength] = null,
-    `border-width`: BorderWidthProperty[TLength] = null,
-    `column-rule`: ColumnRuleProperty[TLength] = null,
-    columns: ColumnsProperty[TLength] = null,
-    flex: FlexProperty[TLength] = null,
-    `flex-flow`: FlexFlowProperty = null,
-    font: FontProperty = null,
-    gap: GapProperty[TLength] = null,
-    grid: GridProperty = null,
-    `grid-area`: GridAreaProperty = null,
-    `grid-column`: GridColumnProperty = null,
-    `grid-row`: GridRowProperty = null,
-    `grid-template`: GridTemplateProperty = null,
-    `line-clamp`: LineClampProperty = null,
-    `list-style`: ListStyleProperty = null,
-    margin: MarginProperty[TLength] = null,
-    mask: MaskProperty[TLength] = null,
-    `mask-border`: MaskBorderProperty = null,
-    motion: OffsetProperty[TLength] = null,
-    offset: OffsetProperty[TLength] = null,
-    outline: OutlineProperty[TLength] = null,
-    padding: PaddingProperty[TLength] = null,
-    `place-items`: PlaceItemsProperty = null,
-    `place-self`: PlaceSelfProperty = null,
-    `text-decoration`: TextDecorationProperty = null,
-    `text-emphasis`: TextEmphasisProperty = null,
-    transition: TransitionProperty = null
-  ): StandardShorthandPropertiesHyphen[TLength] = {
+  def apply[TLength](): StandardShorthandPropertiesHyphen[TLength] = {
     val __obj = js.Dynamic.literal()
-    if (all != null) __obj.updateDynamic("all")(all.asInstanceOf[js.Any])
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
-    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
-    if (`border-block` != null) __obj.updateDynamic("border-block")(`border-block`.asInstanceOf[js.Any])
-    if (`border-block-end` != null) __obj.updateDynamic("border-block-end")(`border-block-end`.asInstanceOf[js.Any])
-    if (`border-block-start` != null) __obj.updateDynamic("border-block-start")(`border-block-start`.asInstanceOf[js.Any])
-    if (`border-bottom` != null) __obj.updateDynamic("border-bottom")(`border-bottom`.asInstanceOf[js.Any])
-    if (`border-color` != null) __obj.updateDynamic("border-color")(`border-color`.asInstanceOf[js.Any])
-    if (`border-image` != null) __obj.updateDynamic("border-image")(`border-image`.asInstanceOf[js.Any])
-    if (`border-inline` != null) __obj.updateDynamic("border-inline")(`border-inline`.asInstanceOf[js.Any])
-    if (`border-inline-end` != null) __obj.updateDynamic("border-inline-end")(`border-inline-end`.asInstanceOf[js.Any])
-    if (`border-inline-start` != null) __obj.updateDynamic("border-inline-start")(`border-inline-start`.asInstanceOf[js.Any])
-    if (`border-left` != null) __obj.updateDynamic("border-left")(`border-left`.asInstanceOf[js.Any])
-    if (`border-radius` != null) __obj.updateDynamic("border-radius")(`border-radius`.asInstanceOf[js.Any])
-    if (`border-right` != null) __obj.updateDynamic("border-right")(`border-right`.asInstanceOf[js.Any])
-    if (`border-style` != null) __obj.updateDynamic("border-style")(`border-style`.asInstanceOf[js.Any])
-    if (`border-top` != null) __obj.updateDynamic("border-top")(`border-top`.asInstanceOf[js.Any])
-    if (`border-width` != null) __obj.updateDynamic("border-width")(`border-width`.asInstanceOf[js.Any])
-    if (`column-rule` != null) __obj.updateDynamic("column-rule")(`column-rule`.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (flex != null) __obj.updateDynamic("flex")(flex.asInstanceOf[js.Any])
-    if (`flex-flow` != null) __obj.updateDynamic("flex-flow")(`flex-flow`.asInstanceOf[js.Any])
-    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
-    if (gap != null) __obj.updateDynamic("gap")(gap.asInstanceOf[js.Any])
-    if (grid != null) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
-    if (`grid-area` != null) __obj.updateDynamic("grid-area")(`grid-area`.asInstanceOf[js.Any])
-    if (`grid-column` != null) __obj.updateDynamic("grid-column")(`grid-column`.asInstanceOf[js.Any])
-    if (`grid-row` != null) __obj.updateDynamic("grid-row")(`grid-row`.asInstanceOf[js.Any])
-    if (`grid-template` != null) __obj.updateDynamic("grid-template")(`grid-template`.asInstanceOf[js.Any])
-    if (`line-clamp` != null) __obj.updateDynamic("line-clamp")(`line-clamp`.asInstanceOf[js.Any])
-    if (`list-style` != null) __obj.updateDynamic("list-style")(`list-style`.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (mask != null) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
-    if (`mask-border` != null) __obj.updateDynamic("mask-border")(`mask-border`.asInstanceOf[js.Any])
-    if (motion != null) __obj.updateDynamic("motion")(motion.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (outline != null) __obj.updateDynamic("outline")(outline.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (`place-items` != null) __obj.updateDynamic("place-items")(`place-items`.asInstanceOf[js.Any])
-    if (`place-self` != null) __obj.updateDynamic("place-self")(`place-self`.asInstanceOf[js.Any])
-    if (`text-decoration` != null) __obj.updateDynamic("text-decoration")(`text-decoration`.asInstanceOf[js.Any])
-    if (`text-emphasis` != null) __obj.updateDynamic("text-emphasis")(`text-emphasis`.asInstanceOf[js.Any])
-    if (transition != null) __obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
     __obj.asInstanceOf[StandardShorthandPropertiesHyphen[TLength]]
   }
+  @scala.inline
+  implicit class StandardShorthandPropertiesHyphenOps[Self <: StandardShorthandPropertiesHyphen[_], TLength] (val x: Self with StandardShorthandPropertiesHyphen[TLength]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAll(value: Globals): Self = this.set("all", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAll: Self = this.set("all", js.undefined)
+    @scala.inline
+    def setAnimation(value: AnimationProperty): Self = this.set("animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAnimation: Self = this.set("animation", js.undefined)
+    @scala.inline
+    def setBackground(value: BackgroundProperty[TLength]): Self = this.set("background", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBackground: Self = this.set("background", js.undefined)
+    @scala.inline
+    def setBorder(value: BorderProperty[TLength]): Self = this.set("border", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorder: Self = this.set("border", js.undefined)
+    @scala.inline
+    def `setBorder-block`(value: BorderBlockProperty[TLength]): Self = this.set("border-block", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBorder-block`: Self = this.set("border-block", js.undefined)
+    @scala.inline
+    def `setBorder-block-end`(value: BorderBlockEndProperty[TLength]): Self = this.set("border-block-end", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBorder-block-end`: Self = this.set("border-block-end", js.undefined)
+    @scala.inline
+    def `setBorder-block-start`(value: BorderBlockStartProperty[TLength]): Self = this.set("border-block-start", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBorder-block-start`: Self = this.set("border-block-start", js.undefined)
+    @scala.inline
+    def `setBorder-bottom`(value: BorderBottomProperty[TLength]): Self = this.set("border-bottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBorder-bottom`: Self = this.set("border-bottom", js.undefined)
+    @scala.inline
+    def `setBorder-color`(value: BorderColorProperty): Self = this.set("border-color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBorder-color`: Self = this.set("border-color", js.undefined)
+    @scala.inline
+    def `setBorder-image`(value: BorderImageProperty): Self = this.set("border-image", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBorder-image`: Self = this.set("border-image", js.undefined)
+    @scala.inline
+    def `setBorder-inline`(value: BorderInlineProperty[TLength]): Self = this.set("border-inline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBorder-inline`: Self = this.set("border-inline", js.undefined)
+    @scala.inline
+    def `setBorder-inline-end`(value: BorderInlineEndProperty[TLength]): Self = this.set("border-inline-end", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBorder-inline-end`: Self = this.set("border-inline-end", js.undefined)
+    @scala.inline
+    def `setBorder-inline-start`(value: BorderInlineStartProperty[TLength]): Self = this.set("border-inline-start", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBorder-inline-start`: Self = this.set("border-inline-start", js.undefined)
+    @scala.inline
+    def `setBorder-left`(value: BorderLeftProperty[TLength]): Self = this.set("border-left", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBorder-left`: Self = this.set("border-left", js.undefined)
+    @scala.inline
+    def `setBorder-radius`(value: BorderRadiusProperty[TLength]): Self = this.set("border-radius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBorder-radius`: Self = this.set("border-radius", js.undefined)
+    @scala.inline
+    def `setBorder-right`(value: BorderRightProperty[TLength]): Self = this.set("border-right", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBorder-right`: Self = this.set("border-right", js.undefined)
+    @scala.inline
+    def `setBorder-style`(value: BorderStyleProperty): Self = this.set("border-style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBorder-style`: Self = this.set("border-style", js.undefined)
+    @scala.inline
+    def `setBorder-top`(value: BorderTopProperty[TLength]): Self = this.set("border-top", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBorder-top`: Self = this.set("border-top", js.undefined)
+    @scala.inline
+    def `setBorder-width`(value: BorderWidthProperty[TLength]): Self = this.set("border-width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBorder-width`: Self = this.set("border-width", js.undefined)
+    @scala.inline
+    def `setColumn-rule`(value: ColumnRuleProperty[TLength]): Self = this.set("column-rule", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteColumn-rule`: Self = this.set("column-rule", js.undefined)
+    @scala.inline
+    def setColumns(value: ColumnsProperty[TLength]): Self = this.set("columns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteColumns: Self = this.set("columns", js.undefined)
+    @scala.inline
+    def setFlex(value: FlexProperty[TLength]): Self = this.set("flex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFlex: Self = this.set("flex", js.undefined)
+    @scala.inline
+    def `setFlex-flow`(value: FlexFlowProperty): Self = this.set("flex-flow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteFlex-flow`: Self = this.set("flex-flow", js.undefined)
+    @scala.inline
+    def setFont(value: FontProperty): Self = this.set("font", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFont: Self = this.set("font", js.undefined)
+    @scala.inline
+    def setGap(value: GapProperty[TLength]): Self = this.set("gap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGap: Self = this.set("gap", js.undefined)
+    @scala.inline
+    def setGrid(value: GridProperty): Self = this.set("grid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGrid: Self = this.set("grid", js.undefined)
+    @scala.inline
+    def `setGrid-area`(value: GridAreaProperty): Self = this.set("grid-area", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteGrid-area`: Self = this.set("grid-area", js.undefined)
+    @scala.inline
+    def `setGrid-column`(value: GridColumnProperty): Self = this.set("grid-column", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteGrid-column`: Self = this.set("grid-column", js.undefined)
+    @scala.inline
+    def `setGrid-row`(value: GridRowProperty): Self = this.set("grid-row", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteGrid-row`: Self = this.set("grid-row", js.undefined)
+    @scala.inline
+    def `setGrid-template`(value: GridTemplateProperty): Self = this.set("grid-template", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteGrid-template`: Self = this.set("grid-template", js.undefined)
+    @scala.inline
+    def `setLine-clamp`(value: LineClampProperty): Self = this.set("line-clamp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteLine-clamp`: Self = this.set("line-clamp", js.undefined)
+    @scala.inline
+    def `setList-style`(value: ListStyleProperty): Self = this.set("list-style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteList-style`: Self = this.set("list-style", js.undefined)
+    @scala.inline
+    def setMargin(value: MarginProperty[TLength]): Self = this.set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMargin: Self = this.set("margin", js.undefined)
+    @scala.inline
+    def setMask(value: MaskProperty[TLength]): Self = this.set("mask", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMask: Self = this.set("mask", js.undefined)
+    @scala.inline
+    def `setMask-border`(value: MaskBorderProperty): Self = this.set("mask-border", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteMask-border`: Self = this.set("mask-border", js.undefined)
+    @scala.inline
+    def setMotion(value: OffsetProperty[TLength]): Self = this.set("motion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMotion: Self = this.set("motion", js.undefined)
+    @scala.inline
+    def setOffset(value: OffsetProperty[TLength]): Self = this.set("offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOffset: Self = this.set("offset", js.undefined)
+    @scala.inline
+    def setOutline(value: OutlineProperty[TLength]): Self = this.set("outline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOutline: Self = this.set("outline", js.undefined)
+    @scala.inline
+    def setPadding(value: PaddingProperty[TLength]): Self = this.set("padding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePadding: Self = this.set("padding", js.undefined)
+    @scala.inline
+    def `setPlace-items`(value: PlaceItemsProperty): Self = this.set("place-items", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deletePlace-items`: Self = this.set("place-items", js.undefined)
+    @scala.inline
+    def `setPlace-self`(value: PlaceSelfProperty): Self = this.set("place-self", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deletePlace-self`: Self = this.set("place-self", js.undefined)
+    @scala.inline
+    def `setText-decoration`(value: TextDecorationProperty): Self = this.set("text-decoration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteText-decoration`: Self = this.set("text-decoration", js.undefined)
+    @scala.inline
+    def `setText-emphasis`(value: TextEmphasisProperty): Self = this.set("text-emphasis", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteText-emphasis`: Self = this.set("text-emphasis", js.undefined)
+    @scala.inline
+    def setTransition(value: TransitionProperty): Self = this.set("transition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTransition: Self = this.set("transition", js.undefined)
+  }
+  
 }
 

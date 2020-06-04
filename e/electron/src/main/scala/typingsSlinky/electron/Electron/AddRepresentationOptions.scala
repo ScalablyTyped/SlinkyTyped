@@ -30,19 +30,40 @@ trait AddRepresentationOptions extends js.Object {
 
 object AddRepresentationOptions {
   @scala.inline
-  def apply(
-    scaleFactor: Double,
-    buffer: Buffer = null,
-    dataURL: String = null,
-    height: js.UndefOr[Double] = js.undefined,
-    width: js.UndefOr[Double] = js.undefined
-  ): AddRepresentationOptions = {
+  def apply(scaleFactor: Double): AddRepresentationOptions = {
     val __obj = js.Dynamic.literal(scaleFactor = scaleFactor.asInstanceOf[js.Any])
-    if (buffer != null) __obj.updateDynamic("buffer")(buffer.asInstanceOf[js.Any])
-    if (dataURL != null) __obj.updateDynamic("dataURL")(dataURL.asInstanceOf[js.Any])
-    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddRepresentationOptions]
   }
+  @scala.inline
+  implicit class AddRepresentationOptionsOps[Self <: AddRepresentationOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setScaleFactor(value: Double): Self = this.set("scaleFactor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBuffer(value: Buffer): Self = this.set("buffer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBuffer: Self = this.set("buffer", js.undefined)
+    @scala.inline
+    def setDataURL(value: String): Self = this.set("dataURL", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDataURL: Self = this.set("dataURL", js.undefined)
+    @scala.inline
+    def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeight: Self = this.set("height", js.undefined)
+    @scala.inline
+    def setWidth(value: Double): Self = this.set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWidth: Self = this.set("width", js.undefined)
+  }
+  
 }
 

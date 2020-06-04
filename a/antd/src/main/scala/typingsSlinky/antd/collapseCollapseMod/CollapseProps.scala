@@ -23,32 +23,66 @@ trait CollapseProps extends js.Object {
 
 object CollapseProps {
   @scala.inline
-  def apply(
-    accordion: js.UndefOr[Boolean] = js.undefined,
-    activeKey: (js.Array[String | Double]) | String | Double = null,
-    bordered: js.UndefOr[Boolean] = js.undefined,
-    className: String = null,
-    defaultActiveKey: (js.Array[String | Double]) | String | Double = null,
-    destroyInactivePanel: js.UndefOr[Boolean] = js.undefined,
-    expandIcon: /* panelProps */ PanelProps => TagMod[Any] = null,
-    expandIconPosition: ExpandIconPosition = null,
-    onChange: /* key */ String | js.Array[String] => Unit = null,
-    prefixCls: String = null,
-    style: CSSProperties = null
-  ): CollapseProps = {
+  def apply(): CollapseProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(accordion)) __obj.updateDynamic("accordion")(accordion.get.asInstanceOf[js.Any])
-    if (activeKey != null) __obj.updateDynamic("activeKey")(activeKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(bordered)) __obj.updateDynamic("bordered")(bordered.get.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (defaultActiveKey != null) __obj.updateDynamic("defaultActiveKey")(defaultActiveKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(destroyInactivePanel)) __obj.updateDynamic("destroyInactivePanel")(destroyInactivePanel.get.asInstanceOf[js.Any])
-    if (expandIcon != null) __obj.updateDynamic("expandIcon")(js.Any.fromFunction1(expandIcon))
-    if (expandIconPosition != null) __obj.updateDynamic("expandIconPosition")(expandIconPosition.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[CollapseProps]
   }
+  @scala.inline
+  implicit class CollapsePropsOps[Self <: CollapseProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAccordion(value: Boolean): Self = this.set("accordion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccordion: Self = this.set("accordion", js.undefined)
+    @scala.inline
+    def setActiveKey(value: (js.Array[String | Double]) | String | Double): Self = this.set("activeKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteActiveKey: Self = this.set("activeKey", js.undefined)
+    @scala.inline
+    def setBordered(value: Boolean): Self = this.set("bordered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBordered: Self = this.set("bordered", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setDefaultActiveKey(value: (js.Array[String | Double]) | String | Double): Self = this.set("defaultActiveKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultActiveKey: Self = this.set("defaultActiveKey", js.undefined)
+    @scala.inline
+    def setDestroyInactivePanel(value: Boolean): Self = this.set("destroyInactivePanel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDestroyInactivePanel: Self = this.set("destroyInactivePanel", js.undefined)
+    @scala.inline
+    def setExpandIcon(value: /* panelProps */ PanelProps => TagMod[Any]): Self = this.set("expandIcon", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteExpandIcon: Self = this.set("expandIcon", js.undefined)
+    @scala.inline
+    def setExpandIconPosition(value: ExpandIconPosition): Self = this.set("expandIconPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteExpandIconPosition: Self = this.set("expandIconPosition", js.undefined)
+    @scala.inline
+    def setOnChange(value: /* key */ String | js.Array[String] => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnChange: Self = this.set("onChange", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+  }
+  
 }
 

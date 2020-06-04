@@ -13,12 +13,34 @@ trait SliderUIParams extends js.Object {
 
 object SliderUIParams {
   @scala.inline
-  def apply(handle: JQuery = null, value: js.UndefOr[Double] = js.undefined, values: js.Array[Double] = null): SliderUIParams = {
+  def apply(): SliderUIParams = {
     val __obj = js.Dynamic.literal()
-    if (handle != null) __obj.updateDynamic("handle")(handle.asInstanceOf[js.Any])
-    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
-    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
     __obj.asInstanceOf[SliderUIParams]
   }
+  @scala.inline
+  implicit class SliderUIParamsOps[Self <: SliderUIParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setHandle(value: JQuery): Self = this.set("handle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHandle: Self = this.set("handle", js.undefined)
+    @scala.inline
+    def setValue(value: Double): Self = this.set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
+    @scala.inline
+    def setValues(value: js.Array[Double]): Self = this.set("values", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValues: Self = this.set("values", js.undefined)
+  }
+  
 }
 

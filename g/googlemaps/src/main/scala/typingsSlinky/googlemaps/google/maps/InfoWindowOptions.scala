@@ -49,22 +49,48 @@ trait InfoWindowOptions extends js.Object {
 
 object InfoWindowOptions {
   @scala.inline
-  def apply(
-    content: String | Node = null,
-    disableAutoPan: js.UndefOr[Boolean] = js.undefined,
-    maxWidth: js.UndefOr[Double] = js.undefined,
-    pixelOffset: Size = null,
-    position: LatLng | LatLngLiteral = null,
-    zIndex: js.UndefOr[Double] = js.undefined
-  ): InfoWindowOptions = {
+  def apply(): InfoWindowOptions = {
     val __obj = js.Dynamic.literal()
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableAutoPan)) __obj.updateDynamic("disableAutoPan")(disableAutoPan.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(maxWidth)) __obj.updateDynamic("maxWidth")(maxWidth.get.asInstanceOf[js.Any])
-    if (pixelOffset != null) __obj.updateDynamic("pixelOffset")(pixelOffset.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (!js.isUndefined(zIndex)) __obj.updateDynamic("zIndex")(zIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[InfoWindowOptions]
   }
+  @scala.inline
+  implicit class InfoWindowOptionsOps[Self <: InfoWindowOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setContentNode(value: Node): Self = this.set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContent(value: String | Node): Self = this.set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContent: Self = this.set("content", js.undefined)
+    @scala.inline
+    def setDisableAutoPan(value: Boolean): Self = this.set("disableAutoPan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisableAutoPan: Self = this.set("disableAutoPan", js.undefined)
+    @scala.inline
+    def setMaxWidth(value: Double): Self = this.set("maxWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxWidth: Self = this.set("maxWidth", js.undefined)
+    @scala.inline
+    def setPixelOffset(value: Size): Self = this.set("pixelOffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePixelOffset: Self = this.set("pixelOffset", js.undefined)
+    @scala.inline
+    def setPosition(value: LatLng | LatLngLiteral): Self = this.set("position", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePosition: Self = this.set("position", js.undefined)
+    @scala.inline
+    def setZIndex(value: Double): Self = this.set("zIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteZIndex: Self = this.set("zIndex", js.undefined)
+  }
+  
 }
 

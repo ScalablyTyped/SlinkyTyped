@@ -3,7 +3,6 @@ package typingsSlinky.materialUiCore.tablePaginationTablePaginationMod
 import org.scalajs.dom.raw.HTMLButtonElement
 import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
-import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
@@ -83,6 +82,7 @@ import typingsSlinky.react.mod.KeyboardEventHandler
 import typingsSlinky.react.mod.MouseEventHandler
 import typingsSlinky.react.mod.PointerEventHandler
 import typingsSlinky.react.mod.ReactEventHandler
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
@@ -96,7 +96,7 @@ import scala.scalajs.js.annotation._
 /* Inlined parent @material-ui/core.@material-ui/core.StandardProps<@material-ui/core.@material-ui/core/TablePagination/TablePagination.TablePaginationBaseProps, @material-ui/core.@material-ui/core/TablePagination/TablePagination.TablePaginationClassKey, 'component'> */
 @js.native
 trait TablePaginationProps extends js.Object {
-  var ActionsComponent: js.UndefOr[ReactComponentClass[TablePaginationActionsProps]] = js.native
+  var ActionsComponent: js.UndefOr[ReactType[TablePaginationActionsProps]] = js.native
   var SelectProps: js.UndefOr[PartialSelectProps] = js.native
   var abbr: js.UndefOr[String] = js.native
   var about: js.UndefOr[String] = js.native
@@ -159,7 +159,7 @@ trait TablePaginationProps extends js.Object {
   var classes: js.UndefOr[PartialClassNameMapTableP] = js.native
   var colSpan: js.UndefOr[Double] = js.native
   var color: js.UndefOr[String] = js.native
-  var component: js.UndefOr[ReactComponentClass[TablePaginationBaseProps]] = js.native
+  var component: js.UndefOr[ReactType[TablePaginationBaseProps]] = js.native
   var contentEditable: js.UndefOr[Booleanish | inherit] = js.native
   var contextMenu: js.UndefOr[String] = js.native
   var count: Double = js.native

@@ -13,14 +13,30 @@ trait EmitResult extends js.Object {
 
 object EmitResult {
   @scala.inline
-  def apply(
-    diagnostics: js.Array[Diagnostic],
-    emitSkipped: Boolean,
-    emittedFiles: js.Array[java.lang.String] = null
-  ): EmitResult = {
+  def apply(diagnostics: js.Array[Diagnostic], emitSkipped: Boolean): EmitResult = {
     val __obj = js.Dynamic.literal(diagnostics = diagnostics.asInstanceOf[js.Any], emitSkipped = emitSkipped.asInstanceOf[js.Any])
-    if (emittedFiles != null) __obj.updateDynamic("emittedFiles")(emittedFiles.asInstanceOf[js.Any])
     __obj.asInstanceOf[EmitResult]
   }
+  @scala.inline
+  implicit class EmitResultOps[Self <: EmitResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDiagnostics(value: js.Array[Diagnostic]): Self = this.set("diagnostics", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEmitSkipped(value: Boolean): Self = this.set("emitSkipped", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEmittedFiles(value: js.Array[java.lang.String]): Self = this.set("emittedFiles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEmittedFiles: Self = this.set("emittedFiles", js.undefined)
+  }
+  
 }
 

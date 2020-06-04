@@ -22,5 +22,22 @@ object TemplateAst {
     val __obj = js.Dynamic.literal(sourceSpan = sourceSpan.asInstanceOf[js.Any], visit = js.Any.fromFunction2(visit))
     __obj.asInstanceOf[TemplateAst]
   }
+  @scala.inline
+  implicit class TemplateAstOps[Self <: TemplateAst] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setSourceSpan(value: ParseSourceSpan): Self = this.set("sourceSpan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setVisit(value: (TemplateAstVisitor, js.Any) => js.Any): Self = this.set("visit", js.Any.fromFunction2(value))
+  }
+  
 }
 

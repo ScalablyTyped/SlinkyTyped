@@ -20,25 +20,50 @@ trait TcpSocketConnectOpts
 
 object TcpSocketConnectOpts {
   @scala.inline
-  def apply(
-    port: Double,
-    family: js.UndefOr[Double] = js.undefined,
-    hints: js.UndefOr[Double] = js.undefined,
-    host: String = null,
-    localAddress: String = null,
-    localPort: js.UndefOr[Double] = js.undefined,
-    lookup: (/* hostname */ String, /* options */ LookupOneOptions, /* callback */ js.Function3[/* err */ ErrnoException | Null, /* address */ String, /* family */ Double, Unit]) => Unit = null,
-    onread: OnReadOpts = null
-  ): TcpSocketConnectOpts = {
+  def apply(port: Double): TcpSocketConnectOpts = {
     val __obj = js.Dynamic.literal(port = port.asInstanceOf[js.Any])
-    if (!js.isUndefined(family)) __obj.updateDynamic("family")(family.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(hints)) __obj.updateDynamic("hints")(hints.get.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (localAddress != null) __obj.updateDynamic("localAddress")(localAddress.asInstanceOf[js.Any])
-    if (!js.isUndefined(localPort)) __obj.updateDynamic("localPort")(localPort.get.asInstanceOf[js.Any])
-    if (lookup != null) __obj.updateDynamic("lookup")(js.Any.fromFunction3(lookup))
-    if (onread != null) __obj.updateDynamic("onread")(onread.asInstanceOf[js.Any])
     __obj.asInstanceOf[TcpSocketConnectOpts]
   }
+  @scala.inline
+  implicit class TcpSocketConnectOptsOps[Self <: TcpSocketConnectOpts] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setPort(value: Double): Self = this.set("port", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFamily(value: Double): Self = this.set("family", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFamily: Self = this.set("family", js.undefined)
+    @scala.inline
+    def setHints(value: Double): Self = this.set("hints", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHints: Self = this.set("hints", js.undefined)
+    @scala.inline
+    def setHost(value: String): Self = this.set("host", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHost: Self = this.set("host", js.undefined)
+    @scala.inline
+    def setLocalAddress(value: String): Self = this.set("localAddress", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLocalAddress: Self = this.set("localAddress", js.undefined)
+    @scala.inline
+    def setLocalPort(value: Double): Self = this.set("localPort", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLocalPort: Self = this.set("localPort", js.undefined)
+    @scala.inline
+    def setLookup(
+      value: (/* hostname */ String, /* options */ LookupOneOptions, /* callback */ js.Function3[/* err */ ErrnoException | Null, /* address */ String, /* family */ Double, Unit]) => Unit
+    ): Self = this.set("lookup", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteLookup: Self = this.set("lookup", js.undefined)
+  }
+  
 }
 

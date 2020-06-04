@@ -13,18 +13,40 @@ trait SorterResult[RecordType] extends js.Object {
 
 object SorterResult {
   @scala.inline
-  def apply[RecordType](
-    column: ColumnType[RecordType] = null,
-    columnKey: Key = null,
-    field: Key | js.Array[Key] = null,
-    order: js.UndefOr[Null | SortOrder] = js.undefined
-  ): SorterResult[RecordType] = {
+  def apply[RecordType](): SorterResult[RecordType] = {
     val __obj = js.Dynamic.literal()
-    if (column != null) __obj.updateDynamic("column")(column.asInstanceOf[js.Any])
-    if (columnKey != null) __obj.updateDynamic("columnKey")(columnKey.asInstanceOf[js.Any])
-    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
-    if (!js.isUndefined(order)) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
     __obj.asInstanceOf[SorterResult[RecordType]]
   }
+  @scala.inline
+  implicit class SorterResultOps[Self <: SorterResult[_], RecordType] (val x: Self with SorterResult[RecordType]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setColumn(value: ColumnType[RecordType]): Self = this.set("column", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteColumn: Self = this.set("column", js.undefined)
+    @scala.inline
+    def setColumnKey(value: Key): Self = this.set("columnKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteColumnKey: Self = this.set("columnKey", js.undefined)
+    @scala.inline
+    def setField(value: Key | js.Array[Key]): Self = this.set("field", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteField: Self = this.set("field", js.undefined)
+    @scala.inline
+    def setOrder(value: SortOrder): Self = this.set("order", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOrder: Self = this.set("order", js.undefined)
+    @scala.inline
+    def setOrderNull: Self = this.set("order", null)
+  }
+  
 }
 

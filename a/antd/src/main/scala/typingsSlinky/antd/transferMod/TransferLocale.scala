@@ -1,6 +1,7 @@
 package typingsSlinky.antd.transferMod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,16 +16,36 @@ trait TransferLocale extends js.Object {
 
 object TransferLocale {
   @scala.inline
-  def apply(
-    itemUnit: String,
-    itemsUnit: String,
-    searchPlaceholder: String,
-    titles: js.Array[String],
-    notFoundContent: TagMod[Any] = null
-  ): TransferLocale = {
+  def apply(itemUnit: String, itemsUnit: String, searchPlaceholder: String, titles: js.Array[String]): TransferLocale = {
     val __obj = js.Dynamic.literal(itemUnit = itemUnit.asInstanceOf[js.Any], itemsUnit = itemsUnit.asInstanceOf[js.Any], searchPlaceholder = searchPlaceholder.asInstanceOf[js.Any], titles = titles.asInstanceOf[js.Any])
-    if (notFoundContent != null) __obj.updateDynamic("notFoundContent")(notFoundContent.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransferLocale]
   }
+  @scala.inline
+  implicit class TransferLocaleOps[Self <: TransferLocale] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setItemUnit(value: String): Self = this.set("itemUnit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setItemsUnit(value: String): Self = this.set("itemsUnit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSearchPlaceholder(value: String): Self = this.set("searchPlaceholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTitles(value: js.Array[String]): Self = this.set("titles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNotFoundContentReactElement(value: ReactElement): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNotFoundContent(value: TagMod[Any]): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNotFoundContent: Self = this.set("notFoundContent", js.undefined)
+  }
+  
 }
 

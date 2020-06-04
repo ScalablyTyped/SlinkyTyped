@@ -22,16 +22,34 @@ trait TextPropsIOS extends js.Object {
 
 object TextPropsIOS {
   @scala.inline
-  def apply(
-    adjustsFontSizeToFit: js.UndefOr[Boolean] = js.undefined,
-    minimumFontScale: js.UndefOr[Double] = js.undefined,
-    suppressHighlighting: js.UndefOr[Boolean] = js.undefined
-  ): TextPropsIOS = {
+  def apply(): TextPropsIOS = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(adjustsFontSizeToFit)) __obj.updateDynamic("adjustsFontSizeToFit")(adjustsFontSizeToFit.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(minimumFontScale)) __obj.updateDynamic("minimumFontScale")(minimumFontScale.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(suppressHighlighting)) __obj.updateDynamic("suppressHighlighting")(suppressHighlighting.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextPropsIOS]
   }
+  @scala.inline
+  implicit class TextPropsIOSOps[Self <: TextPropsIOS] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAdjustsFontSizeToFit(value: Boolean): Self = this.set("adjustsFontSizeToFit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAdjustsFontSizeToFit: Self = this.set("adjustsFontSizeToFit", js.undefined)
+    @scala.inline
+    def setMinimumFontScale(value: Double): Self = this.set("minimumFontScale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinimumFontScale: Self = this.set("minimumFontScale", js.undefined)
+    @scala.inline
+    def setSuppressHighlighting(value: Boolean): Self = this.set("suppressHighlighting", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSuppressHighlighting: Self = this.set("suppressHighlighting", js.undefined)
+  }
+  
 }
 

@@ -28,5 +28,24 @@ object FunctionCoverage {
     val __obj = js.Dynamic.literal(functionName = functionName.asInstanceOf[js.Any], isBlockCoverage = isBlockCoverage.asInstanceOf[js.Any], ranges = ranges.asInstanceOf[js.Any])
     __obj.asInstanceOf[FunctionCoverage]
   }
+  @scala.inline
+  implicit class FunctionCoverageOps[Self <: FunctionCoverage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setFunctionName(value: String): Self = this.set("functionName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIsBlockCoverage(value: Boolean): Self = this.set("isBlockCoverage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRanges(value: js.Array[CoverageRange]): Self = this.set("ranges", value.asInstanceOf[js.Any])
+  }
+  
 }
 

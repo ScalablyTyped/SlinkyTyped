@@ -11,11 +11,30 @@ trait AutocompleteClasses extends js.Object {
 
 object AutocompleteClasses {
   @scala.inline
-  def apply(`ui-autocomplete`: String = null, `ui-autocomplete-input`: String = null): AutocompleteClasses = {
+  def apply(): AutocompleteClasses = {
     val __obj = js.Dynamic.literal()
-    if (`ui-autocomplete` != null) __obj.updateDynamic("ui-autocomplete")(`ui-autocomplete`.asInstanceOf[js.Any])
-    if (`ui-autocomplete-input` != null) __obj.updateDynamic("ui-autocomplete-input")(`ui-autocomplete-input`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutocompleteClasses]
   }
+  @scala.inline
+  implicit class AutocompleteClassesOps[Self <: AutocompleteClasses] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def `setUi-autocomplete`(value: String): Self = this.set("ui-autocomplete", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteUi-autocomplete`: Self = this.set("ui-autocomplete", js.undefined)
+    @scala.inline
+    def `setUi-autocomplete-input`(value: String): Self = this.set("ui-autocomplete-input", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteUi-autocomplete-input`: Self = this.set("ui-autocomplete-input", js.undefined)
+  }
+  
 }
 

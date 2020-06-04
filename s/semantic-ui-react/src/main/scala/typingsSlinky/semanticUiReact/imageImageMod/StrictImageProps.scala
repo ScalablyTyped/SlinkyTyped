@@ -1,6 +1,9 @@
 package typingsSlinky.semanticUiReact.imageImageMod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
+import typingsSlinky.react.mod.ReactNodeArray
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.dimmerDimmerMod.DimmerProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticFLOATS
 import typingsSlinky.semanticUiReact.genericMod.SemanticSIZES
@@ -63,54 +66,126 @@ trait StrictImageProps extends js.Object {
 
 object StrictImageProps {
   @scala.inline
-  def apply(
-    as: js.Any = null,
-    avatar: js.UndefOr[Boolean] = js.undefined,
-    bordered: js.UndefOr[Boolean] = js.undefined,
-    centered: js.UndefOr[Boolean] = js.undefined,
-    children: TagMod[Any] = null,
-    circular: js.UndefOr[Boolean] = js.undefined,
-    className: String = null,
-    content: SemanticShorthandContent = null,
-    dimmer: SemanticShorthandItem[DimmerProps] = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    floated: SemanticFLOATS = null,
-    fluid: js.UndefOr[Boolean] = js.undefined,
-    hidden: js.UndefOr[Boolean] = js.undefined,
-    href: String = null,
-    `inline`: js.UndefOr[Boolean] = js.undefined,
-    label: SemanticShorthandItem[LabelProps] = null,
-    rounded: js.UndefOr[Boolean] = js.undefined,
-    size: SemanticSIZES = null,
-    spaced: Boolean | left | right = null,
-    ui: js.UndefOr[Boolean] = js.undefined,
-    verticalAlign: SemanticVERTICALALIGNMENTS = null,
-    wrapped: js.UndefOr[Boolean] = js.undefined
-  ): StrictImageProps = {
+  def apply(): StrictImageProps = {
     val __obj = js.Dynamic.literal()
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (!js.isUndefined(avatar)) __obj.updateDynamic("avatar")(avatar.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(bordered)) __obj.updateDynamic("bordered")(bordered.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(centered)) __obj.updateDynamic("centered")(centered.get.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (!js.isUndefined(circular)) __obj.updateDynamic("circular")(circular.get.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (dimmer != null) __obj.updateDynamic("dimmer")(dimmer.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (floated != null) __obj.updateDynamic("floated")(floated.asInstanceOf[js.Any])
-    if (!js.isUndefined(fluid)) __obj.updateDynamic("fluid")(fluid.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.get.asInstanceOf[js.Any])
-    if (href != null) __obj.updateDynamic("href")(href.asInstanceOf[js.Any])
-    if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.get.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (!js.isUndefined(rounded)) __obj.updateDynamic("rounded")(rounded.get.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (spaced != null) __obj.updateDynamic("spaced")(spaced.asInstanceOf[js.Any])
-    if (!js.isUndefined(ui)) __obj.updateDynamic("ui")(ui.get.asInstanceOf[js.Any])
-    if (verticalAlign != null) __obj.updateDynamic("verticalAlign")(verticalAlign.asInstanceOf[js.Any])
-    if (!js.isUndefined(wrapped)) __obj.updateDynamic("wrapped")(wrapped.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictImageProps]
   }
+  @scala.inline
+  implicit class StrictImagePropsOps[Self <: StrictImageProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAs(value: js.Any): Self = this.set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAs: Self = this.set("as", js.undefined)
+    @scala.inline
+    def setAvatar(value: Boolean): Self = this.set("avatar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAvatar: Self = this.set("avatar", js.undefined)
+    @scala.inline
+    def setBordered(value: Boolean): Self = this.set("bordered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBordered: Self = this.set("bordered", js.undefined)
+    @scala.inline
+    def setCentered(value: Boolean): Self = this.set("centered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCentered: Self = this.set("centered", js.undefined)
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setCircular(value: Boolean): Self = this.set("circular", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCircular: Self = this.set("circular", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setContentReactElement(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContent(value: SemanticShorthandContent): Self = this.set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContent: Self = this.set("content", js.undefined)
+    @scala.inline
+    def setDimmerReactElement(value: ReactElement): Self = this.set("dimmer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDimmerFunction3(
+      value: (/* component */ ReactType[DimmerProps], DimmerProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): Self = this.set("dimmer", js.Any.fromFunction3(value))
+    @scala.inline
+    def setDimmer(value: SemanticShorthandItem[DimmerProps]): Self = this.set("dimmer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDimmer: Self = this.set("dimmer", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setFloated(value: SemanticFLOATS): Self = this.set("floated", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFloated: Self = this.set("floated", js.undefined)
+    @scala.inline
+    def setFluid(value: Boolean): Self = this.set("fluid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFluid: Self = this.set("fluid", js.undefined)
+    @scala.inline
+    def setHidden(value: Boolean): Self = this.set("hidden", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHidden: Self = this.set("hidden", js.undefined)
+    @scala.inline
+    def setHref(value: String): Self = this.set("href", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHref: Self = this.set("href", js.undefined)
+    @scala.inline
+    def setInline(value: Boolean): Self = this.set("inline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInline: Self = this.set("inline", js.undefined)
+    @scala.inline
+    def setLabelReactElement(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLabelFunction3(
+      value: (/* component */ ReactType[LabelProps], LabelProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): Self = this.set("label", js.Any.fromFunction3(value))
+    @scala.inline
+    def setLabel(value: SemanticShorthandItem[LabelProps]): Self = this.set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLabel: Self = this.set("label", js.undefined)
+    @scala.inline
+    def setRounded(value: Boolean): Self = this.set("rounded", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRounded: Self = this.set("rounded", js.undefined)
+    @scala.inline
+    def setSize(value: SemanticSIZES): Self = this.set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
+    @scala.inline
+    def setSpaced(value: Boolean | left | right): Self = this.set("spaced", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSpaced: Self = this.set("spaced", js.undefined)
+    @scala.inline
+    def setUi(value: Boolean): Self = this.set("ui", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUi: Self = this.set("ui", js.undefined)
+    @scala.inline
+    def setVerticalAlign(value: SemanticVERTICALALIGNMENTS): Self = this.set("verticalAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVerticalAlign: Self = this.set("verticalAlign", js.undefined)
+    @scala.inline
+    def setWrapped(value: Boolean): Self = this.set("wrapped", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWrapped: Self = this.set("wrapped", js.undefined)
+  }
+  
 }
 

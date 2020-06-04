@@ -57,5 +57,34 @@ object Product {
     val __obj = js.Dynamic.literal(contentLengths = contentLengths.asInstanceOf[js.Any], contentVersion = contentVersion.asInstanceOf[js.Any], formattedPrice = formattedPrice.asInstanceOf[js.Any], isDownloadable = isDownloadable.asInstanceOf[js.Any], localizedDescription = localizedDescription.asInstanceOf[js.Any], localizedTitle = localizedTitle.asInstanceOf[js.Any], price = price.asInstanceOf[js.Any], productIdentifier = productIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[Product]
   }
+  @scala.inline
+  implicit class ProductOps[Self <: Product] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setContentLengths(value: js.Array[Double]): Self = this.set("contentLengths", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContentVersion(value: String): Self = this.set("contentVersion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFormattedPrice(value: String): Self = this.set("formattedPrice", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIsDownloadable(value: Boolean): Self = this.set("isDownloadable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLocalizedDescription(value: String): Self = this.set("localizedDescription", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLocalizedTitle(value: String): Self = this.set("localizedTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPrice(value: Double): Self = this.set("price", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setProductIdentifier(value: String): Self = this.set("productIdentifier", value.asInstanceOf[js.Any])
+  }
+  
 }
 

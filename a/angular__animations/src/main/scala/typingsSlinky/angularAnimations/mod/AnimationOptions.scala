@@ -23,11 +23,30 @@ trait AnimationOptions extends js.Object {
 
 object AnimationOptions {
   @scala.inline
-  def apply(delay: Double | String = null, params: StringDictionary[js.Any] = null): AnimationOptions = {
+  def apply(): AnimationOptions = {
     val __obj = js.Dynamic.literal()
-    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
-    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnimationOptions]
   }
+  @scala.inline
+  implicit class AnimationOptionsOps[Self <: AnimationOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDelay(value: Double | String): Self = this.set("delay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDelay: Self = this.set("delay", js.undefined)
+    @scala.inline
+    def setParams(value: StringDictionary[js.Any]): Self = this.set("params", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteParams: Self = this.set("params", js.undefined)
+  }
+  
 }
 

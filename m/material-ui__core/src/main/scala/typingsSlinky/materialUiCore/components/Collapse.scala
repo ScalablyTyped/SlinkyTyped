@@ -10,6 +10,7 @@ import typingsSlinky.materialUiCore.collapseMod.default
 import typingsSlinky.materialUiCore.createMuiThemeMod.Theme
 import typingsSlinky.materialUiCore.materialUiCoreStrings.auto
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -39,7 +40,7 @@ object Collapse {
     @scala.inline
     def componentComponentClass(value: ReactComponentClass[CollapseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
-    def component(value: ReactComponentClass[CollapseProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: ReactType[CollapseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
     def enter(value: Boolean): this.type = set("enter", value.asInstanceOf[js.Any])
     @scala.inline

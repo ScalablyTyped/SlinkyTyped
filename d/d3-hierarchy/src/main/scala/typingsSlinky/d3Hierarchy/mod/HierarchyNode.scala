@@ -125,17 +125,69 @@ object HierarchyNode {
     links: () => js.Array[HierarchyLink[Datum]],
     path: HierarchyNode[Datum] => js.Array[HierarchyNode[Datum]],
     sort: js.Function2[HierarchyNode[Datum], HierarchyNode[Datum], Double] => HierarchyNode[Datum],
-    sum: js.Function1[/* d */ Datum, Double] => HierarchyNode[Datum],
-    children: js.Array[HierarchyNode[Datum]] = null,
-    id: String = null,
-    parent: HierarchyNode[Datum] = null,
-    value: js.UndefOr[Double] = js.undefined
+    sum: js.Function1[/* d */ Datum, Double] => HierarchyNode[Datum]
   ): HierarchyNode[Datum] = {
-    val __obj = js.Dynamic.literal(ancestors = js.Any.fromFunction0(ancestors), copy = js.Any.fromFunction0(copy), count = js.Any.fromFunction0(count), data = data.asInstanceOf[js.Any], depth = depth.asInstanceOf[js.Any], descendants = js.Any.fromFunction0(descendants), each = js.Any.fromFunction1(each), eachAfter = js.Any.fromFunction1(eachAfter), eachBefore = js.Any.fromFunction1(eachBefore), height = height.asInstanceOf[js.Any], leaves = js.Any.fromFunction0(leaves), links = js.Any.fromFunction0(links), path = js.Any.fromFunction1(path), sort = js.Any.fromFunction1(sort), sum = js.Any.fromFunction1(sum), parent = parent.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(ancestors = js.Any.fromFunction0(ancestors), copy = js.Any.fromFunction0(copy), count = js.Any.fromFunction0(count), data = data.asInstanceOf[js.Any], depth = depth.asInstanceOf[js.Any], descendants = js.Any.fromFunction0(descendants), each = js.Any.fromFunction1(each), eachAfter = js.Any.fromFunction1(eachAfter), eachBefore = js.Any.fromFunction1(eachBefore), height = height.asInstanceOf[js.Any], leaves = js.Any.fromFunction0(leaves), links = js.Any.fromFunction0(links), path = js.Any.fromFunction1(path), sort = js.Any.fromFunction1(sort), sum = js.Any.fromFunction1(sum))
     __obj.asInstanceOf[HierarchyNode[Datum]]
   }
+  @scala.inline
+  implicit class HierarchyNodeOps[Self <: HierarchyNode[_], Datum] (val x: Self with HierarchyNode[Datum]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAncestors(value: () => js.Array[HierarchyNode[Datum]]): Self = this.set("ancestors", js.Any.fromFunction0(value))
+    @scala.inline
+    def setCopy(value: () => HierarchyNode[Datum]): Self = this.set("copy", js.Any.fromFunction0(value))
+    @scala.inline
+    def setCount(value: () => HierarchyNode[Datum]): Self = this.set("count", js.Any.fromFunction0(value))
+    @scala.inline
+    def setData(value: Datum): Self = this.set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDepth(value: Double): Self = this.set("depth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDescendants(value: () => js.Array[HierarchyNode[Datum]]): Self = this.set("descendants", js.Any.fromFunction0(value))
+    @scala.inline
+    def setEach(value: js.Function1[HierarchyNode[Datum], Unit] => HierarchyNode[Datum]): Self = this.set("each", js.Any.fromFunction1(value))
+    @scala.inline
+    def setEachAfter(value: js.Function1[HierarchyNode[Datum], Unit] => HierarchyNode[Datum]): Self = this.set("eachAfter", js.Any.fromFunction1(value))
+    @scala.inline
+    def setEachBefore(value: js.Function1[HierarchyNode[Datum], Unit] => HierarchyNode[Datum]): Self = this.set("eachBefore", js.Any.fromFunction1(value))
+    @scala.inline
+    def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLeaves(value: () => js.Array[HierarchyNode[Datum]]): Self = this.set("leaves", js.Any.fromFunction0(value))
+    @scala.inline
+    def setLinks(value: () => js.Array[HierarchyLink[Datum]]): Self = this.set("links", js.Any.fromFunction0(value))
+    @scala.inline
+    def setPath(value: HierarchyNode[Datum] => js.Array[HierarchyNode[Datum]]): Self = this.set("path", js.Any.fromFunction1(value))
+    @scala.inline
+    def setSort(value: js.Function2[HierarchyNode[Datum], HierarchyNode[Datum], Double] => HierarchyNode[Datum]): Self = this.set("sort", js.Any.fromFunction1(value))
+    @scala.inline
+    def setSum(value: js.Function1[/* d */ Datum, Double] => HierarchyNode[Datum]): Self = this.set("sum", js.Any.fromFunction1(value))
+    @scala.inline
+    def setChildren(value: js.Array[HierarchyNode[Datum]]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteId: Self = this.set("id", js.undefined)
+    @scala.inline
+    def setParent(value: HierarchyNode[Datum]): Self = this.set("parent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setParentNull: Self = this.set("parent", null)
+    @scala.inline
+    def setValue(value: Double): Self = this.set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
+  }
+  
 }
 

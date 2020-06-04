@@ -14,11 +14,27 @@ trait Point
 
 object Point {
   @scala.inline
-  def apply(coordinates: Position, `type`: typingsSlinky.geojson.geojsonStrings.Point, bbox: BBox = null): Point = {
+  def apply(coordinates: Position, `type`: typingsSlinky.geojson.geojsonStrings.Point): Point = {
     val __obj = js.Dynamic.literal(coordinates = coordinates.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (bbox != null) __obj.updateDynamic("bbox")(bbox.asInstanceOf[js.Any])
     __obj.asInstanceOf[Point]
   }
+  @scala.inline
+  implicit class PointOps[Self <: Point] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCoordinates(value: Position): Self = this.set("coordinates", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setType(value: typingsSlinky.geojson.geojsonStrings.Point): Self = this.set("type", value.asInstanceOf[js.Any])
+  }
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.rcMentions.components
 
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcMentions.mentionsContextMod.MentionsContextProps
@@ -22,6 +23,10 @@ object MentionsContextConsumer {
   }
   
   def withProps(p: ConsumerProps[MentionsContextProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: MentionsContextConsumer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: MentionsContextProps => TagMod[Any]): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ConsumerProps[MentionsContextProps]]))
+  }
 }
 

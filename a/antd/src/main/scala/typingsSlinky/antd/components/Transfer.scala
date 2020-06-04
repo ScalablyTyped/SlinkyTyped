@@ -7,6 +7,7 @@ import slinky.core.TagMod
 import slinky.web.html.ul.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.anon.PartialTransferLocale
+import typingsSlinky.antd.renderListBodyMod.TransferListBodyProps
 import typingsSlinky.antd.transferListMod.TransferListProps
 import typingsSlinky.antd.transferMod.ListStyle
 import typingsSlinky.antd.transferMod.RenderResult
@@ -29,6 +30,8 @@ object Transfer {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def children(value: /* props */ TransferListBodyProps => TagMod[Any]): this.type = set("children", js.Any.fromFunction1(value))
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

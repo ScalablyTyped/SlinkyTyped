@@ -45,42 +45,90 @@ trait IStringifyOptions extends js.Object {
 
 object IStringifyOptions {
   @scala.inline
-  def apply(
-    addQueryPrefix: js.UndefOr[Boolean] = js.undefined,
-    allowDots: js.UndefOr[Boolean] = js.undefined,
-    arrayFormat: indices | brackets | repeat | comma = null,
-    charset: `utf-8` | `iso-8859-1` = null,
-    charsetSentinel: js.UndefOr[Boolean] = js.undefined,
-    delimiter: String = null,
-    encode: js.UndefOr[Boolean] = js.undefined,
-    encodeValuesOnly: js.UndefOr[Boolean] = js.undefined,
-    encoder: (/* str */ js.Any, /* defaultEncoder */ defaultEncoder, /* charset */ String, /* type */ key | value) => String = null,
-    filter: (js.Array[String | Double]) | (js.Function2[/* prefix */ String, /* value */ js.Any, _]) = null,
-    format: RFC1738 | RFC3986 = null,
-    indices: js.UndefOr[Boolean] = js.undefined,
-    serializeDate: /* d */ js.Date => String = null,
-    skipNulls: js.UndefOr[Boolean] = js.undefined,
-    sort: (/* a */ js.Any, /* b */ js.Any) => Double = null,
-    strictNullHandling: js.UndefOr[Boolean] = js.undefined
-  ): IStringifyOptions = {
+  def apply(): IStringifyOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(addQueryPrefix)) __obj.updateDynamic("addQueryPrefix")(addQueryPrefix.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowDots)) __obj.updateDynamic("allowDots")(allowDots.get.asInstanceOf[js.Any])
-    if (arrayFormat != null) __obj.updateDynamic("arrayFormat")(arrayFormat.asInstanceOf[js.Any])
-    if (charset != null) __obj.updateDynamic("charset")(charset.asInstanceOf[js.Any])
-    if (!js.isUndefined(charsetSentinel)) __obj.updateDynamic("charsetSentinel")(charsetSentinel.get.asInstanceOf[js.Any])
-    if (delimiter != null) __obj.updateDynamic("delimiter")(delimiter.asInstanceOf[js.Any])
-    if (!js.isUndefined(encode)) __obj.updateDynamic("encode")(encode.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(encodeValuesOnly)) __obj.updateDynamic("encodeValuesOnly")(encodeValuesOnly.get.asInstanceOf[js.Any])
-    if (encoder != null) __obj.updateDynamic("encoder")(js.Any.fromFunction4(encoder))
-    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (!js.isUndefined(indices)) __obj.updateDynamic("indices")(indices.get.asInstanceOf[js.Any])
-    if (serializeDate != null) __obj.updateDynamic("serializeDate")(js.Any.fromFunction1(serializeDate))
-    if (!js.isUndefined(skipNulls)) __obj.updateDynamic("skipNulls")(skipNulls.get.asInstanceOf[js.Any])
-    if (sort != null) __obj.updateDynamic("sort")(js.Any.fromFunction2(sort))
-    if (!js.isUndefined(strictNullHandling)) __obj.updateDynamic("strictNullHandling")(strictNullHandling.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IStringifyOptions]
   }
+  @scala.inline
+  implicit class IStringifyOptionsOps[Self <: IStringifyOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAddQueryPrefix(value: Boolean): Self = this.set("addQueryPrefix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAddQueryPrefix: Self = this.set("addQueryPrefix", js.undefined)
+    @scala.inline
+    def setAllowDots(value: Boolean): Self = this.set("allowDots", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAllowDots: Self = this.set("allowDots", js.undefined)
+    @scala.inline
+    def setArrayFormat(value: indices | brackets | repeat | comma): Self = this.set("arrayFormat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteArrayFormat: Self = this.set("arrayFormat", js.undefined)
+    @scala.inline
+    def setCharset(value: `utf-8` | `iso-8859-1`): Self = this.set("charset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCharset: Self = this.set("charset", js.undefined)
+    @scala.inline
+    def setCharsetSentinel(value: Boolean): Self = this.set("charsetSentinel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCharsetSentinel: Self = this.set("charsetSentinel", js.undefined)
+    @scala.inline
+    def setDelimiter(value: String): Self = this.set("delimiter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDelimiter: Self = this.set("delimiter", js.undefined)
+    @scala.inline
+    def setEncode(value: Boolean): Self = this.set("encode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEncode: Self = this.set("encode", js.undefined)
+    @scala.inline
+    def setEncodeValuesOnly(value: Boolean): Self = this.set("encodeValuesOnly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEncodeValuesOnly: Self = this.set("encodeValuesOnly", js.undefined)
+    @scala.inline
+    def setEncoder(
+      value: (/* str */ js.Any, /* defaultEncoder */ defaultEncoder, /* charset */ String, /* type */ key | value) => String
+    ): Self = this.set("encoder", js.Any.fromFunction4(value))
+    @scala.inline
+    def deleteEncoder: Self = this.set("encoder", js.undefined)
+    @scala.inline
+    def setFilterFunction2(value: (/* prefix */ String, /* value */ js.Any) => _): Self = this.set("filter", js.Any.fromFunction2(value))
+    @scala.inline
+    def setFilter(value: (js.Array[String | Double]) | (js.Function2[/* prefix */ String, /* value */ js.Any, _])): Self = this.set("filter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFilter: Self = this.set("filter", js.undefined)
+    @scala.inline
+    def setFormat(value: RFC1738 | RFC3986): Self = this.set("format", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFormat: Self = this.set("format", js.undefined)
+    @scala.inline
+    def setIndices(value: Boolean): Self = this.set("indices", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIndices: Self = this.set("indices", js.undefined)
+    @scala.inline
+    def setSerializeDate(value: /* d */ js.Date => String): Self = this.set("serializeDate", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteSerializeDate: Self = this.set("serializeDate", js.undefined)
+    @scala.inline
+    def setSkipNulls(value: Boolean): Self = this.set("skipNulls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSkipNulls: Self = this.set("skipNulls", js.undefined)
+    @scala.inline
+    def setSort(value: (/* a */ js.Any, /* b */ js.Any) => Double): Self = this.set("sort", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteSort: Self = this.set("sort", js.undefined)
+    @scala.inline
+    def setStrictNullHandling(value: Boolean): Self = this.set("strictNullHandling", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStrictNullHandling: Self = this.set("strictNullHandling", js.undefined)
+  }
+  
 }
 

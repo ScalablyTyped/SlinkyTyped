@@ -157,10 +157,12 @@
 | 0.26203342060754486 | [expo-constants](./e/expo-constants) | Provides system information that remains constant 
 | 0.2577927483098601 | [expo-location](./e/expo-location) | Allows reading geolocation information from the de
 | 0.2560528019393487 | [expo-font](./e/expo-font) | Load fonts at runtime and use them in React Native
+| 0.2361095013320803 | [material-ui](./m/material-ui) | React Components that Implement Google's Material 
 | 0.22019693469489737 | [expo-sqlite](./e/expo-sqlite) | Provides access to a database that can be queried 
 | 0.21992616373341264 | [expo-linear-gradient](./e/expo-linear-gradient) | Provides a React component that renders a gradient
 | 0.20661994071176643 | [unimodules__react-native-](./u/unimodules__react-native-adapter) | The adapter to use universal modules with the Reac
 | 0.20576323795327237 | [unimodules__core](./u/unimodules__core) | Universal modules core
 | 0.159193066296015 | [jqueryui](./j/jqueryui) | A curated set of user interface interactions, effe
 | 0.14917273480925705 | [reveal](./r/reveal) | The HTML presentation framework
-| 0.1336116771095324 | [express-serve-static-core](./e/express-serve-static-core) | only here to make types work |
+| 0.1336116771095324 | [express-serve-static-core](./e/express-serve-static-core) | only here to make types work
+| 0.106963476988581 | [react-addons-linked-state](./r/react-addons-linked-state-mixin) | >**Note:** >This is a legacy React addon, and is n |

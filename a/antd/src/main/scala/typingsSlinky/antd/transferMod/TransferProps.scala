@@ -62,54 +62,123 @@ object TransferProps {
   @scala.inline
   def apply(
     dataSource: js.Array[TransferItem],
-    listStyle: (js.Function1[/* style */ ListStyle, CSSProperties]) | CSSProperties,
-    children: /* props */ TransferListBodyProps => TagMod[Any] = null,
-    className: String = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    filterOption: (/* inputValue */ String, /* item */ TransferItem) => Boolean = null,
-    footer: /* props */ TransferListProps => TagMod[Any] = null,
-    locale: PartialTransferLocale = null,
-    onChange: (/* targetKeys */ js.Array[String], /* direction */ String, /* moveKeys */ js.Array[String]) => Unit = null,
-    onScroll: (/* direction */ TransferDirection, /* e */ SyntheticEvent[Event, HTMLUListElement]) => Unit = null,
-    onSearch: (/* direction */ TransferDirection, /* value */ String) => Unit = null,
-    onSelectChange: (/* sourceSelectedKeys */ js.Array[String], /* targetSelectedKeys */ js.Array[String]) => Unit = null,
-    operationStyle: CSSProperties = null,
-    operations: js.Array[String] = null,
-    prefixCls: String = null,
-    render: /* item */ TransferItem => RenderResult = null,
-    rowKey: /* record */ TransferItem => String = null,
-    selectAllLabels: js.Array[SelectAllLabel] = null,
-    selectedKeys: js.Array[String] = null,
-    showSearch: js.UndefOr[Boolean] = js.undefined,
-    showSelectAll: js.UndefOr[Boolean] = js.undefined,
-    style: CSSProperties = null,
-    targetKeys: js.Array[String] = null,
-    titles: js.Array[String] = null
+    listStyle: (js.Function1[/* style */ ListStyle, CSSProperties]) | CSSProperties
   ): TransferProps = {
     val __obj = js.Dynamic.literal(dataSource = dataSource.asInstanceOf[js.Any], listStyle = listStyle.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(js.Any.fromFunction1(children))
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (filterOption != null) __obj.updateDynamic("filterOption")(js.Any.fromFunction2(filterOption))
-    if (footer != null) __obj.updateDynamic("footer")(js.Any.fromFunction1(footer))
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction3(onChange))
-    if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction2(onScroll))
-    if (onSearch != null) __obj.updateDynamic("onSearch")(js.Any.fromFunction2(onSearch))
-    if (onSelectChange != null) __obj.updateDynamic("onSelectChange")(js.Any.fromFunction2(onSelectChange))
-    if (operationStyle != null) __obj.updateDynamic("operationStyle")(operationStyle.asInstanceOf[js.Any])
-    if (operations != null) __obj.updateDynamic("operations")(operations.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (render != null) __obj.updateDynamic("render")(js.Any.fromFunction1(render))
-    if (rowKey != null) __obj.updateDynamic("rowKey")(js.Any.fromFunction1(rowKey))
-    if (selectAllLabels != null) __obj.updateDynamic("selectAllLabels")(selectAllLabels.asInstanceOf[js.Any])
-    if (selectedKeys != null) __obj.updateDynamic("selectedKeys")(selectedKeys.asInstanceOf[js.Any])
-    if (!js.isUndefined(showSearch)) __obj.updateDynamic("showSearch")(showSearch.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(showSelectAll)) __obj.updateDynamic("showSelectAll")(showSelectAll.get.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (targetKeys != null) __obj.updateDynamic("targetKeys")(targetKeys.asInstanceOf[js.Any])
-    if (titles != null) __obj.updateDynamic("titles")(titles.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransferProps]
   }
+  @scala.inline
+  implicit class TransferPropsOps[Self <: TransferProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDataSource(value: js.Array[TransferItem]): Self = this.set("dataSource", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setListStyleFunction1(value: /* style */ ListStyle => CSSProperties): Self = this.set("listStyle", js.Any.fromFunction1(value))
+    @scala.inline
+    def setListStyle(value: (js.Function1[/* style */ ListStyle, CSSProperties]) | CSSProperties): Self = this.set("listStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: /* props */ TransferListBodyProps => TagMod[Any]): Self = this.set("children", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setFilterOption(value: (/* inputValue */ String, /* item */ TransferItem) => Boolean): Self = this.set("filterOption", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteFilterOption: Self = this.set("filterOption", js.undefined)
+    @scala.inline
+    def setFooter(value: /* props */ TransferListProps => TagMod[Any]): Self = this.set("footer", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteFooter: Self = this.set("footer", js.undefined)
+    @scala.inline
+    def setLocale(value: PartialTransferLocale): Self = this.set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLocale: Self = this.set("locale", js.undefined)
+    @scala.inline
+    def setOnChange(
+      value: (/* targetKeys */ js.Array[String], /* direction */ String, /* moveKeys */ js.Array[String]) => Unit
+    ): Self = this.set("onChange", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteOnChange: Self = this.set("onChange", js.undefined)
+    @scala.inline
+    def setOnScroll(
+      value: (/* direction */ TransferDirection, /* e */ SyntheticEvent[Event, HTMLUListElement]) => Unit
+    ): Self = this.set("onScroll", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnScroll: Self = this.set("onScroll", js.undefined)
+    @scala.inline
+    def setOnSearch(value: (/* direction */ TransferDirection, /* value */ String) => Unit): Self = this.set("onSearch", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnSearch: Self = this.set("onSearch", js.undefined)
+    @scala.inline
+    def setOnSelectChange(
+      value: (/* sourceSelectedKeys */ js.Array[String], /* targetSelectedKeys */ js.Array[String]) => Unit
+    ): Self = this.set("onSelectChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnSelectChange: Self = this.set("onSelectChange", js.undefined)
+    @scala.inline
+    def setOperationStyle(value: CSSProperties): Self = this.set("operationStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOperationStyle: Self = this.set("operationStyle", js.undefined)
+    @scala.inline
+    def setOperations(value: js.Array[String]): Self = this.set("operations", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOperations: Self = this.set("operations", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    @scala.inline
+    def setRender(value: /* item */ TransferItem => RenderResult): Self = this.set("render", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteRender: Self = this.set("render", js.undefined)
+    @scala.inline
+    def setRowKey(value: /* record */ TransferItem => String): Self = this.set("rowKey", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteRowKey: Self = this.set("rowKey", js.undefined)
+    @scala.inline
+    def setSelectAllLabels(value: js.Array[SelectAllLabel]): Self = this.set("selectAllLabels", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelectAllLabels: Self = this.set("selectAllLabels", js.undefined)
+    @scala.inline
+    def setSelectedKeys(value: js.Array[String]): Self = this.set("selectedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelectedKeys: Self = this.set("selectedKeys", js.undefined)
+    @scala.inline
+    def setShowSearch(value: Boolean): Self = this.set("showSearch", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowSearch: Self = this.set("showSearch", js.undefined)
+    @scala.inline
+    def setShowSelectAll(value: Boolean): Self = this.set("showSelectAll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowSelectAll: Self = this.set("showSelectAll", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+    @scala.inline
+    def setTargetKeys(value: js.Array[String]): Self = this.set("targetKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTargetKeys: Self = this.set("targetKeys", js.undefined)
+    @scala.inline
+    def setTitles(value: js.Array[String]): Self = this.set("titles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitles: Self = this.set("titles", js.undefined)
+  }
+  
 }
 

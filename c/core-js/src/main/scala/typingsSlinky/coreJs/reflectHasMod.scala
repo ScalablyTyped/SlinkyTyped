@@ -1,13 +1,14 @@
 package typingsSlinky.coreJs
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("core-js/library/fn/reflect/has", JSImport.Namespace)
 @js.native
-object reflectHasMod extends js.Object {
-  def apply(target: js.Any, propertyKey: java.lang.String): Boolean = js.native
-  def apply(target: js.Any, propertyKey: js.Symbol): Boolean = js.native
-}
+object reflectHasMod
+  extends TopLevel[
+      js.Function2[/* target */ js.Any, /* propertyKey */ java.lang.String | js.Symbol, Boolean]
+    ]
 

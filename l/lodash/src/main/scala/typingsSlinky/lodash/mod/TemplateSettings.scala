@@ -33,20 +33,42 @@ trait TemplateSettings extends js.Object {
 
 object TemplateSettings {
   @scala.inline
-  def apply(
-    escape: js.RegExp = null,
-    evaluate: js.RegExp = null,
-    imports: Dictionary[_] = null,
-    interpolate: js.RegExp = null,
-    variable: String = null
-  ): TemplateSettings = {
+  def apply(): TemplateSettings = {
     val __obj = js.Dynamic.literal()
-    if (escape != null) __obj.updateDynamic("escape")(escape.asInstanceOf[js.Any])
-    if (evaluate != null) __obj.updateDynamic("evaluate")(evaluate.asInstanceOf[js.Any])
-    if (imports != null) __obj.updateDynamic("imports")(imports.asInstanceOf[js.Any])
-    if (interpolate != null) __obj.updateDynamic("interpolate")(interpolate.asInstanceOf[js.Any])
-    if (variable != null) __obj.updateDynamic("variable")(variable.asInstanceOf[js.Any])
     __obj.asInstanceOf[TemplateSettings]
   }
+  @scala.inline
+  implicit class TemplateSettingsOps[Self <: TemplateSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setEscape(value: js.RegExp): Self = this.set("escape", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEscape: Self = this.set("escape", js.undefined)
+    @scala.inline
+    def setEvaluate(value: js.RegExp): Self = this.set("evaluate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEvaluate: Self = this.set("evaluate", js.undefined)
+    @scala.inline
+    def setImports(value: Dictionary[_]): Self = this.set("imports", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteImports: Self = this.set("imports", js.undefined)
+    @scala.inline
+    def setInterpolate(value: js.RegExp): Self = this.set("interpolate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInterpolate: Self = this.set("interpolate", js.undefined)
+    @scala.inline
+    def setVariable(value: String): Self = this.set("variable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVariable: Self = this.set("variable", js.undefined)
+  }
+  
 }
 

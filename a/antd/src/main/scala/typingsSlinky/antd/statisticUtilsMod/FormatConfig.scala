@@ -1,5 +1,6 @@
 package typingsSlinky.antd.statisticUtilsMod
 
+import slinky.core.TagMod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,20 +15,44 @@ trait FormatConfig extends js.Object {
 
 object FormatConfig {
   @scala.inline
-  def apply(
-    decimalSeparator: String = null,
-    formatter: Formatter = null,
-    groupSeparator: String = null,
-    precision: js.UndefOr[Double] = js.undefined,
-    prefixCls: String = null
-  ): FormatConfig = {
+  def apply(): FormatConfig = {
     val __obj = js.Dynamic.literal()
-    if (decimalSeparator != null) __obj.updateDynamic("decimalSeparator")(decimalSeparator.asInstanceOf[js.Any])
-    if (formatter != null) __obj.updateDynamic("formatter")(formatter.asInstanceOf[js.Any])
-    if (groupSeparator != null) __obj.updateDynamic("groupSeparator")(groupSeparator.asInstanceOf[js.Any])
-    if (!js.isUndefined(precision)) __obj.updateDynamic("precision")(precision.get.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
     __obj.asInstanceOf[FormatConfig]
   }
+  @scala.inline
+  implicit class FormatConfigOps[Self <: FormatConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDecimalSeparator(value: String): Self = this.set("decimalSeparator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDecimalSeparator: Self = this.set("decimalSeparator", js.undefined)
+    @scala.inline
+    def setFormatterFunction2(value: (/* value */ valueType, /* config */ js.UndefOr[FormatConfig]) => TagMod[Any]): Self = this.set("formatter", js.Any.fromFunction2(value))
+    @scala.inline
+    def setFormatter(value: Formatter): Self = this.set("formatter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFormatter: Self = this.set("formatter", js.undefined)
+    @scala.inline
+    def setGroupSeparator(value: String): Self = this.set("groupSeparator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGroupSeparator: Self = this.set("groupSeparator", js.undefined)
+    @scala.inline
+    def setPrecision(value: Double): Self = this.set("precision", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrecision: Self = this.set("precision", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+  }
+  
 }
 

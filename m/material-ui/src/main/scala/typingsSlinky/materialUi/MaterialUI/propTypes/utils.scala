@@ -30,5 +30,34 @@ object utils {
     val __obj = js.Dynamic.literal(addDays = js.Any.fromFunction2(addDays), addMonths = js.Any.fromFunction2(addMonths), addYears = js.Any.fromFunction2(addYears), getFirstDayOfMonth = js.Any.fromFunction1(getFirstDayOfMonth), getWeekArray = js.Any.fromFunction2(getWeekArray), getYear = js.Any.fromFunction1(getYear), monthDiff = js.Any.fromFunction2(monthDiff), setYear = js.Any.fromFunction2(setYear))
     __obj.asInstanceOf[utils]
   }
+  @scala.inline
+  implicit class utilsOps[Self <: utils] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAddDays(value: (js.Date, Double) => js.Date): Self = this.set("addDays", js.Any.fromFunction2(value))
+    @scala.inline
+    def setAddMonths(value: (js.Date, Double) => js.Date): Self = this.set("addMonths", js.Any.fromFunction2(value))
+    @scala.inline
+    def setAddYears(value: (js.Date, Double) => js.Date): Self = this.set("addYears", js.Any.fromFunction2(value))
+    @scala.inline
+    def setGetFirstDayOfMonth(value: js.Date => js.Date): Self = this.set("getFirstDayOfMonth", js.Any.fromFunction1(value))
+    @scala.inline
+    def setGetWeekArray(value: (js.Date, Double) => js.Array[js.Array[js.Date | Null]]): Self = this.set("getWeekArray", js.Any.fromFunction2(value))
+    @scala.inline
+    def setGetYear(value: js.Date => Double): Self = this.set("getYear", js.Any.fromFunction1(value))
+    @scala.inline
+    def setMonthDiff(value: (js.Date, js.Date) => Double): Self = this.set("monthDiff", js.Any.fromFunction2(value))
+    @scala.inline
+    def setSetYear(value: (js.Date, Double) => js.Date): Self = this.set("setYear", js.Any.fromFunction2(value))
+  }
+  
 }
 

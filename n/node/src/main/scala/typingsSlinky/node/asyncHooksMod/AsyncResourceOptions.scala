@@ -22,14 +22,30 @@ trait AsyncResourceOptions extends js.Object {
 
 object AsyncResourceOptions {
   @scala.inline
-  def apply(
-    requireManualDestroy: js.UndefOr[Boolean] = js.undefined,
-    triggerAsyncId: js.UndefOr[Double] = js.undefined
-  ): AsyncResourceOptions = {
+  def apply(): AsyncResourceOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(requireManualDestroy)) __obj.updateDynamic("requireManualDestroy")(requireManualDestroy.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(triggerAsyncId)) __obj.updateDynamic("triggerAsyncId")(triggerAsyncId.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AsyncResourceOptions]
   }
+  @scala.inline
+  implicit class AsyncResourceOptionsOps[Self <: AsyncResourceOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setRequireManualDestroy(value: Boolean): Self = this.set("requireManualDestroy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRequireManualDestroy: Self = this.set("requireManualDestroy", js.undefined)
+    @scala.inline
+    def setTriggerAsyncId(value: Double): Self = this.set("triggerAsyncId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTriggerAsyncId: Self = this.set("triggerAsyncId", js.undefined)
+  }
+  
 }
 

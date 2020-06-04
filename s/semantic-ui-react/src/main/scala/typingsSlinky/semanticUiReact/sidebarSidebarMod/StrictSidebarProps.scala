@@ -2,6 +2,7 @@ package typingsSlinky.semanticUiReact.sidebarSidebarMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
@@ -82,36 +83,80 @@ trait StrictSidebarProps extends js.Object {
 
 object StrictSidebarProps {
   @scala.inline
-  def apply(
-    animation: overlay | push | (`scale down`) | uncover | (`slide out`) | (`slide along`) = null,
-    as: js.Any = null,
-    children: TagMod[Any] = null,
-    className: String = null,
-    content: SemanticShorthandContent = null,
-    direction: top | right | bottom | left = null,
-    onHidden: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SidebarProps) => Unit = null,
-    onHide: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SidebarProps) => Unit = null,
-    onShow: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SidebarProps) => Unit = null,
-    onVisible: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SidebarProps) => Unit = null,
-    target: js.Object | ReactRef[HTMLElement] = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    width: (`very thin`) | thin | wide | (`very wide`) = null
-  ): StrictSidebarProps = {
+  def apply(): StrictSidebarProps = {
     val __obj = js.Dynamic.literal()
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (onHidden != null) __obj.updateDynamic("onHidden")(js.Any.fromFunction2(onHidden))
-    if (onHide != null) __obj.updateDynamic("onHide")(js.Any.fromFunction2(onHide))
-    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction2(onShow))
-    if (onVisible != null) __obj.updateDynamic("onVisible")(js.Any.fromFunction2(onVisible))
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictSidebarProps]
   }
+  @scala.inline
+  implicit class StrictSidebarPropsOps[Self <: StrictSidebarProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAnimation(value: overlay | push | (`scale down`) | uncover | (`slide out`) | (`slide along`)): Self = this.set("animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAnimation: Self = this.set("animation", js.undefined)
+    @scala.inline
+    def setAs(value: js.Any): Self = this.set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAs: Self = this.set("as", js.undefined)
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setContentReactElement(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContent(value: SemanticShorthandContent): Self = this.set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContent: Self = this.set("content", js.undefined)
+    @scala.inline
+    def setDirection(value: top | right | bottom | left): Self = this.set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDirection: Self = this.set("direction", js.undefined)
+    @scala.inline
+    def setOnHidden(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SidebarProps) => Unit): Self = this.set("onHidden", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnHidden: Self = this.set("onHidden", js.undefined)
+    @scala.inline
+    def setOnHide(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SidebarProps) => Unit): Self = this.set("onHide", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnHide: Self = this.set("onHide", js.undefined)
+    @scala.inline
+    def setOnShow(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SidebarProps) => Unit): Self = this.set("onShow", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnShow: Self = this.set("onShow", js.undefined)
+    @scala.inline
+    def setOnVisible(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SidebarProps) => Unit): Self = this.set("onVisible", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnVisible: Self = this.set("onVisible", js.undefined)
+    @scala.inline
+    def setTargetRefObject(value: ReactRef[HTMLElement]): Self = this.set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTarget(value: js.Object | ReactRef[HTMLElement]): Self = this.set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTarget: Self = this.set("target", js.undefined)
+    @scala.inline
+    def setVisible(value: Boolean): Self = this.set("visible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVisible: Self = this.set("visible", js.undefined)
+    @scala.inline
+    def setWidth(value: (`very thin`) | thin | wide | (`very wide`)): Self = this.set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWidth: Self = this.set("width", js.undefined)
+  }
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.semanticUiReact.components
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
@@ -10,6 +9,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ReactNodeArray
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.modalActionsMod.ModalActionsProps
 import typingsSlinky.semanticUiReact.modalContentMod.ModalContentProps
@@ -41,7 +41,7 @@ object Modal {
     def actionsReactElement(value: ReactElement): this.type = set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def actionsFunction3(
-      value: (/* component */ ReactComponentClass[ModalActionsProps], ModalActionsProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ModalActionsProps], ModalActionsProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("actions", js.Any.fromFunction3(value))
     @scala.inline
     def actions(value: SemanticShorthandItem[ModalActionsProps]): this.type = set("actions", value.asInstanceOf[js.Any])
@@ -73,7 +73,7 @@ object Modal {
     def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     @scala.inline
     def contentFunction3(
-      value: (/* component */ ReactComponentClass[ModalContentProps], ModalContentProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ModalContentProps], ModalContentProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("content", js.Any.fromFunction3(value))
     @scala.inline
     def content(value: SemanticShorthandItem[ModalContentProps]): this.type = set("content", value.asInstanceOf[js.Any])
@@ -87,7 +87,7 @@ object Modal {
     def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     @scala.inline
     def headerFunction3(
-      value: (/* component */ ReactComponentClass[ModalHeaderProps], ModalHeaderProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ModalHeaderProps], ModalHeaderProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("header", js.Any.fromFunction3(value))
     @scala.inline
     def header(value: SemanticShorthandItem[ModalHeaderProps]): this.type = set("header", value.asInstanceOf[js.Any])

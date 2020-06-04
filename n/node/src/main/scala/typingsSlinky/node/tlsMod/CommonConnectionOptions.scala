@@ -53,22 +53,50 @@ trait CommonConnectionOptions extends js.Object {
 
 object CommonConnectionOptions {
   @scala.inline
-  def apply(
-    ALPNProtocols: (js.Array[String | js.typedarray.Uint8Array]) | js.typedarray.Uint8Array = null,
-    SNICallback: (/* servername */ String, /* cb */ js.Function2[/* err */ js.Error | Null, /* ctx */ SecureContext, Unit]) => Unit = null,
-    enableTrace: js.UndefOr[Boolean] = js.undefined,
-    rejectUnauthorized: js.UndefOr[Boolean] = js.undefined,
-    requestCert: js.UndefOr[Boolean] = js.undefined,
-    secureContext: SecureContext = null
-  ): CommonConnectionOptions = {
+  def apply(): CommonConnectionOptions = {
     val __obj = js.Dynamic.literal()
-    if (ALPNProtocols != null) __obj.updateDynamic("ALPNProtocols")(ALPNProtocols.asInstanceOf[js.Any])
-    if (SNICallback != null) __obj.updateDynamic("SNICallback")(js.Any.fromFunction2(SNICallback))
-    if (!js.isUndefined(enableTrace)) __obj.updateDynamic("enableTrace")(enableTrace.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(rejectUnauthorized)) __obj.updateDynamic("rejectUnauthorized")(rejectUnauthorized.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(requestCert)) __obj.updateDynamic("requestCert")(requestCert.get.asInstanceOf[js.Any])
-    if (secureContext != null) __obj.updateDynamic("secureContext")(secureContext.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommonConnectionOptions]
   }
+  @scala.inline
+  implicit class CommonConnectionOptionsOps[Self <: CommonConnectionOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setALPNProtocolsUint8Array(value: js.typedarray.Uint8Array): Self = this.set("ALPNProtocols", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setALPNProtocols(value: (js.Array[String | js.typedarray.Uint8Array]) | js.typedarray.Uint8Array): Self = this.set("ALPNProtocols", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteALPNProtocols: Self = this.set("ALPNProtocols", js.undefined)
+    @scala.inline
+    def setSNICallback(
+      value: (/* servername */ String, /* cb */ js.Function2[/* err */ js.Error | Null, /* ctx */ SecureContext, Unit]) => Unit
+    ): Self = this.set("SNICallback", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteSNICallback: Self = this.set("SNICallback", js.undefined)
+    @scala.inline
+    def setEnableTrace(value: Boolean): Self = this.set("enableTrace", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEnableTrace: Self = this.set("enableTrace", js.undefined)
+    @scala.inline
+    def setRejectUnauthorized(value: Boolean): Self = this.set("rejectUnauthorized", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRejectUnauthorized: Self = this.set("rejectUnauthorized", js.undefined)
+    @scala.inline
+    def setRequestCert(value: Boolean): Self = this.set("requestCert", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRequestCert: Self = this.set("requestCert", js.undefined)
+    @scala.inline
+    def setSecureContext(value: SecureContext): Self = this.set("secureContext", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSecureContext: Self = this.set("secureContext", js.undefined)
+  }
+  
 }
 

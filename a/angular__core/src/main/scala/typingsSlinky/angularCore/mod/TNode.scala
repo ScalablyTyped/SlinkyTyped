@@ -267,28 +267,104 @@ object TNode {
     propertyMetadataEndIndex: Double,
     propertyMetadataStartIndex: Double,
     providerIndexes: TNodeProviderIndexes,
-    `type`: TNodeType,
-    attrs: TAttributes = null,
-    child: TNode = null,
-    classes: StylingMapArray | TStylingContext = null,
-    initialInputs: js.UndefOr[Null | InitialInputData] = js.undefined,
-    inputs: js.UndefOr[Null | PropertyAliases] = js.undefined,
-    localNames: js.Array[String | Double] = null,
-    next: TNode = null,
-    outputs: js.UndefOr[Null | PropertyAliases] = js.undefined,
-    parent: ɵangularPackagesCoreCoreBf | TContainerNode = null,
-    projection: (js.Array[TNode | js.Array[RNode]]) | Double = null,
-    projectionNext: TNode = null,
-    styles: StylingMapArray | TStylingContext = null,
-    tViews: TView | js.Array[TView] = null,
-    tagName: String = null
+    `type`: TNodeType
   ): TNode = {
-    val __obj = js.Dynamic.literal(directiveEnd = directiveEnd.asInstanceOf[js.Any], directiveStart = directiveStart.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], injectorIndex = injectorIndex.asInstanceOf[js.Any], propertyMetadataEndIndex = propertyMetadataEndIndex.asInstanceOf[js.Any], propertyMetadataStartIndex = propertyMetadataStartIndex.asInstanceOf[js.Any], providerIndexes = providerIndexes.asInstanceOf[js.Any], attrs = attrs.asInstanceOf[js.Any], child = child.asInstanceOf[js.Any], classes = classes.asInstanceOf[js.Any], localNames = localNames.asInstanceOf[js.Any], next = next.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], projection = projection.asInstanceOf[js.Any], projectionNext = projectionNext.asInstanceOf[js.Any], styles = styles.asInstanceOf[js.Any], tViews = tViews.asInstanceOf[js.Any], tagName = tagName.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(directiveEnd = directiveEnd.asInstanceOf[js.Any], directiveStart = directiveStart.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], injectorIndex = injectorIndex.asInstanceOf[js.Any], propertyMetadataEndIndex = propertyMetadataEndIndex.asInstanceOf[js.Any], propertyMetadataStartIndex = propertyMetadataStartIndex.asInstanceOf[js.Any], providerIndexes = providerIndexes.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(initialInputs)) __obj.updateDynamic("initialInputs")(initialInputs.asInstanceOf[js.Any])
-    if (!js.isUndefined(inputs)) __obj.updateDynamic("inputs")(inputs.asInstanceOf[js.Any])
-    if (!js.isUndefined(outputs)) __obj.updateDynamic("outputs")(outputs.asInstanceOf[js.Any])
     __obj.asInstanceOf[TNode]
   }
+  @scala.inline
+  implicit class TNodeOps[Self <: TNode] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDirectiveEnd(value: Double): Self = this.set("directiveEnd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDirectiveStart(value: Double): Self = this.set("directiveStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFlags(value: TNodeFlags): Self = this.set("flags", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIndex(value: Double): Self = this.set("index", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInjectorIndex(value: Double): Self = this.set("injectorIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPropertyMetadataEndIndex(value: Double): Self = this.set("propertyMetadataEndIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPropertyMetadataStartIndex(value: Double): Self = this.set("propertyMetadataStartIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setProviderIndexes(value: TNodeProviderIndexes): Self = this.set("providerIndexes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setType(value: TNodeType): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAttrs(value: TAttributes): Self = this.set("attrs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAttrsNull: Self = this.set("attrs", null)
+    @scala.inline
+    def setChild(value: TNode): Self = this.set("child", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildNull: Self = this.set("child", null)
+    @scala.inline
+    def setClasses(value: StylingMapArray | TStylingContext): Self = this.set("classes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setClassesNull: Self = this.set("classes", null)
+    @scala.inline
+    def setInitialInputs(value: InitialInputData): Self = this.set("initialInputs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInitialInputs: Self = this.set("initialInputs", js.undefined)
+    @scala.inline
+    def setInitialInputsNull: Self = this.set("initialInputs", null)
+    @scala.inline
+    def setInputs(value: PropertyAliases): Self = this.set("inputs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInputs: Self = this.set("inputs", js.undefined)
+    @scala.inline
+    def setInputsNull: Self = this.set("inputs", null)
+    @scala.inline
+    def setLocalNames(value: js.Array[String | Double]): Self = this.set("localNames", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLocalNamesNull: Self = this.set("localNames", null)
+    @scala.inline
+    def setNext(value: TNode): Self = this.set("next", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNextNull: Self = this.set("next", null)
+    @scala.inline
+    def setOutputs(value: PropertyAliases): Self = this.set("outputs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOutputs: Self = this.set("outputs", js.undefined)
+    @scala.inline
+    def setOutputsNull: Self = this.set("outputs", null)
+    @scala.inline
+    def setParent(value: ɵangularPackagesCoreCoreBf | TContainerNode): Self = this.set("parent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setParentNull: Self = this.set("parent", null)
+    @scala.inline
+    def setProjection(value: (js.Array[TNode | js.Array[RNode]]) | Double): Self = this.set("projection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setProjectionNull: Self = this.set("projection", null)
+    @scala.inline
+    def setProjectionNext(value: TNode): Self = this.set("projectionNext", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setProjectionNextNull: Self = this.set("projectionNext", null)
+    @scala.inline
+    def setStyles(value: StylingMapArray | TStylingContext): Self = this.set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStylesNull: Self = this.set("styles", null)
+    @scala.inline
+    def setTViews(value: TView | js.Array[TView]): Self = this.set("tViews", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTViewsNull: Self = this.set("tViews", null)
+    @scala.inline
+    def setTagName(value: String): Self = this.set("tagName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTagNameNull: Self = this.set("tagName", null)
+  }
+  
 }
 

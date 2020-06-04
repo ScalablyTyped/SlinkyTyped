@@ -182,128 +182,259 @@ object AccessibilityActions {
     colors: Validator[js.Array[String]],
     end: Requireable[js.Object],
     locations: Requireable[js.Array[js.UndefOr[Double | Null]]],
-    start: Requireable[js.Object],
-    accessibilityActions: Validator[js.UndefOr[js.Array[String]]] = null,
-    accessibilityComponentType: Validator[js.UndefOr[button | none | radiobutton_checked | radiobutton_unchecked]] = null,
-    accessibilityElementsHidden: Validator[js.UndefOr[Boolean]] = null,
-    accessibilityHint: Validator[js.UndefOr[String]] = null,
-    accessibilityIgnoresInvertColors: Validator[js.UndefOr[Boolean]] = null,
-    accessibilityLabel: Validator[js.UndefOr[String]] = null,
-    accessibilityLiveRegion: Validator[js.UndefOr[none | polite | assertive]] = null,
-    accessibilityRole: Validator[
-      js.UndefOr[
-        button | header | link | menu | menuitem | summary | image | switch | text | none | search | keyboardkey | adjustable | imagebutton | alert | checkbox | combobox | menubar | progressbar | radio | radiogroup | scrollbar | spinbutton | tab | tablist | timer | toolbar
-      ]
-    ] = null,
-    accessibilityState: Validator[js.UndefOr[AccessibilityState]] = null,
-    accessibilityStates: Validator[
-      js.UndefOr[
-        js.Array[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify imported_react-native.AccessibilityStates */ _
-        ]
-      ]
-    ] = null,
-    accessibilityTraits: Validator[
-      js.UndefOr[
-        button | header | link | summary | image | text | none | search | adjustable | disabled | selected | plays | key | frequentUpdates | startsMedia | allowsDirectInteraction | pageTurn | js.Array[AccessibilityTrait]
-      ]
-    ] = null,
-    accessibilityViewIsModal: Validator[js.UndefOr[Boolean]] = null,
-    accessible: Validator[js.UndefOr[Boolean]] = null,
-    collapsable: Validator[js.UndefOr[Boolean]] = null,
-    hasTVPreferredFocus: Validator[js.UndefOr[Boolean]] = null,
-    hitSlop: Validator[js.UndefOr[Insets]] = null,
-    importantForAccessibility: Validator[js.UndefOr[auto | yes | no | `no-hide-descendants`]] = null,
-    isTVSelectable: Validator[js.UndefOr[Boolean]] = null,
-    nativeID: Validator[js.UndefOr[String]] = null,
-    needsOffscreenAlphaCompositing: Validator[js.UndefOr[Boolean]] = null,
-    onAccessibilityAction: Validator[js.UndefOr[js.Function0[Unit]]] = null,
-    onAccessibilityTap: Validator[js.UndefOr[js.Function0[Unit]]] = null,
-    onLayout: Validator[js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]]] = null,
-    onMagicTap: Validator[js.UndefOr[js.Function0[Unit]]] = null,
-    onMoveShouldSetResponder: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]]] = null,
-    onMoveShouldSetResponderCapture: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]]] = null,
-    onResponderEnd: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
-    onResponderGrant: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
-    onResponderMove: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
-    onResponderReject: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
-    onResponderRelease: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
-    onResponderStart: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
-    onResponderTerminate: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
-    onResponderTerminationRequest: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]]] = null,
-    onStartShouldSetResponder: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]]] = null,
-    onStartShouldSetResponderCapture: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]]] = null,
-    onTouchCancel: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
-    onTouchEnd: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
-    onTouchEndCapture: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
-    onTouchMove: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
-    onTouchStart: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]] = null,
-    pointerEvents: Validator[js.UndefOr[`box-none` | none | `box-only` | auto]] = null,
-    removeClippedSubviews: Validator[js.UndefOr[Boolean]] = null,
-    renderToHardwareTextureAndroid: Validator[js.UndefOr[Boolean]] = null,
-    shouldRasterizeIOS: Validator[js.UndefOr[Boolean]] = null,
-    style: Validator[StyleProp[ViewStyle]] = null,
-    testID: Validator[js.UndefOr[String]] = null,
-    tvParallaxMagnification: Validator[js.UndefOr[Double]] = null,
-    tvParallaxProperties: Validator[js.UndefOr[TVParallaxProperties]] = null,
-    tvParallaxShiftDistanceX: Validator[js.UndefOr[Double]] = null,
-    tvParallaxShiftDistanceY: Validator[js.UndefOr[Double]] = null,
-    tvParallaxTiltAngle: Validator[js.UndefOr[Double]] = null
+    start: Requireable[js.Object]
   ): AccessibilityActions = {
     val __obj = js.Dynamic.literal(colors = colors.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], locations = locations.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    if (accessibilityActions != null) __obj.updateDynamic("accessibilityActions")(accessibilityActions.asInstanceOf[js.Any])
-    if (accessibilityComponentType != null) __obj.updateDynamic("accessibilityComponentType")(accessibilityComponentType.asInstanceOf[js.Any])
-    if (accessibilityElementsHidden != null) __obj.updateDynamic("accessibilityElementsHidden")(accessibilityElementsHidden.asInstanceOf[js.Any])
-    if (accessibilityHint != null) __obj.updateDynamic("accessibilityHint")(accessibilityHint.asInstanceOf[js.Any])
-    if (accessibilityIgnoresInvertColors != null) __obj.updateDynamic("accessibilityIgnoresInvertColors")(accessibilityIgnoresInvertColors.asInstanceOf[js.Any])
-    if (accessibilityLabel != null) __obj.updateDynamic("accessibilityLabel")(accessibilityLabel.asInstanceOf[js.Any])
-    if (accessibilityLiveRegion != null) __obj.updateDynamic("accessibilityLiveRegion")(accessibilityLiveRegion.asInstanceOf[js.Any])
-    if (accessibilityRole != null) __obj.updateDynamic("accessibilityRole")(accessibilityRole.asInstanceOf[js.Any])
-    if (accessibilityState != null) __obj.updateDynamic("accessibilityState")(accessibilityState.asInstanceOf[js.Any])
-    if (accessibilityStates != null) __obj.updateDynamic("accessibilityStates")(accessibilityStates.asInstanceOf[js.Any])
-    if (accessibilityTraits != null) __obj.updateDynamic("accessibilityTraits")(accessibilityTraits.asInstanceOf[js.Any])
-    if (accessibilityViewIsModal != null) __obj.updateDynamic("accessibilityViewIsModal")(accessibilityViewIsModal.asInstanceOf[js.Any])
-    if (accessible != null) __obj.updateDynamic("accessible")(accessible.asInstanceOf[js.Any])
-    if (collapsable != null) __obj.updateDynamic("collapsable")(collapsable.asInstanceOf[js.Any])
-    if (hasTVPreferredFocus != null) __obj.updateDynamic("hasTVPreferredFocus")(hasTVPreferredFocus.asInstanceOf[js.Any])
-    if (hitSlop != null) __obj.updateDynamic("hitSlop")(hitSlop.asInstanceOf[js.Any])
-    if (importantForAccessibility != null) __obj.updateDynamic("importantForAccessibility")(importantForAccessibility.asInstanceOf[js.Any])
-    if (isTVSelectable != null) __obj.updateDynamic("isTVSelectable")(isTVSelectable.asInstanceOf[js.Any])
-    if (nativeID != null) __obj.updateDynamic("nativeID")(nativeID.asInstanceOf[js.Any])
-    if (needsOffscreenAlphaCompositing != null) __obj.updateDynamic("needsOffscreenAlphaCompositing")(needsOffscreenAlphaCompositing.asInstanceOf[js.Any])
-    if (onAccessibilityAction != null) __obj.updateDynamic("onAccessibilityAction")(onAccessibilityAction.asInstanceOf[js.Any])
-    if (onAccessibilityTap != null) __obj.updateDynamic("onAccessibilityTap")(onAccessibilityTap.asInstanceOf[js.Any])
-    if (onLayout != null) __obj.updateDynamic("onLayout")(onLayout.asInstanceOf[js.Any])
-    if (onMagicTap != null) __obj.updateDynamic("onMagicTap")(onMagicTap.asInstanceOf[js.Any])
-    if (onMoveShouldSetResponder != null) __obj.updateDynamic("onMoveShouldSetResponder")(onMoveShouldSetResponder.asInstanceOf[js.Any])
-    if (onMoveShouldSetResponderCapture != null) __obj.updateDynamic("onMoveShouldSetResponderCapture")(onMoveShouldSetResponderCapture.asInstanceOf[js.Any])
-    if (onResponderEnd != null) __obj.updateDynamic("onResponderEnd")(onResponderEnd.asInstanceOf[js.Any])
-    if (onResponderGrant != null) __obj.updateDynamic("onResponderGrant")(onResponderGrant.asInstanceOf[js.Any])
-    if (onResponderMove != null) __obj.updateDynamic("onResponderMove")(onResponderMove.asInstanceOf[js.Any])
-    if (onResponderReject != null) __obj.updateDynamic("onResponderReject")(onResponderReject.asInstanceOf[js.Any])
-    if (onResponderRelease != null) __obj.updateDynamic("onResponderRelease")(onResponderRelease.asInstanceOf[js.Any])
-    if (onResponderStart != null) __obj.updateDynamic("onResponderStart")(onResponderStart.asInstanceOf[js.Any])
-    if (onResponderTerminate != null) __obj.updateDynamic("onResponderTerminate")(onResponderTerminate.asInstanceOf[js.Any])
-    if (onResponderTerminationRequest != null) __obj.updateDynamic("onResponderTerminationRequest")(onResponderTerminationRequest.asInstanceOf[js.Any])
-    if (onStartShouldSetResponder != null) __obj.updateDynamic("onStartShouldSetResponder")(onStartShouldSetResponder.asInstanceOf[js.Any])
-    if (onStartShouldSetResponderCapture != null) __obj.updateDynamic("onStartShouldSetResponderCapture")(onStartShouldSetResponderCapture.asInstanceOf[js.Any])
-    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(onTouchCancel.asInstanceOf[js.Any])
-    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(onTouchEnd.asInstanceOf[js.Any])
-    if (onTouchEndCapture != null) __obj.updateDynamic("onTouchEndCapture")(onTouchEndCapture.asInstanceOf[js.Any])
-    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(onTouchMove.asInstanceOf[js.Any])
-    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(onTouchStart.asInstanceOf[js.Any])
-    if (pointerEvents != null) __obj.updateDynamic("pointerEvents")(pointerEvents.asInstanceOf[js.Any])
-    if (removeClippedSubviews != null) __obj.updateDynamic("removeClippedSubviews")(removeClippedSubviews.asInstanceOf[js.Any])
-    if (renderToHardwareTextureAndroid != null) __obj.updateDynamic("renderToHardwareTextureAndroid")(renderToHardwareTextureAndroid.asInstanceOf[js.Any])
-    if (shouldRasterizeIOS != null) __obj.updateDynamic("shouldRasterizeIOS")(shouldRasterizeIOS.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (testID != null) __obj.updateDynamic("testID")(testID.asInstanceOf[js.Any])
-    if (tvParallaxMagnification != null) __obj.updateDynamic("tvParallaxMagnification")(tvParallaxMagnification.asInstanceOf[js.Any])
-    if (tvParallaxProperties != null) __obj.updateDynamic("tvParallaxProperties")(tvParallaxProperties.asInstanceOf[js.Any])
-    if (tvParallaxShiftDistanceX != null) __obj.updateDynamic("tvParallaxShiftDistanceX")(tvParallaxShiftDistanceX.asInstanceOf[js.Any])
-    if (tvParallaxShiftDistanceY != null) __obj.updateDynamic("tvParallaxShiftDistanceY")(tvParallaxShiftDistanceY.asInstanceOf[js.Any])
-    if (tvParallaxTiltAngle != null) __obj.updateDynamic("tvParallaxTiltAngle")(tvParallaxTiltAngle.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccessibilityActions]
   }
+  @scala.inline
+  implicit class AccessibilityActionsOps[Self <: AccessibilityActions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setColors(value: Validator[js.Array[String]]): Self = this.set("colors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEnd(value: Requireable[js.Object]): Self = this.set("end", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLocations(value: Requireable[js.Array[js.UndefOr[Double | Null]]]): Self = this.set("locations", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStart(value: Requireable[js.Object]): Self = this.set("start", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAccessibilityActions(value: Validator[js.UndefOr[js.Array[String]]]): Self = this.set("accessibilityActions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityActions: Self = this.set("accessibilityActions", js.undefined)
+    @scala.inline
+    def setAccessibilityComponentType(value: Validator[js.UndefOr[button | none | radiobutton_checked | radiobutton_unchecked]]): Self = this.set("accessibilityComponentType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityComponentType: Self = this.set("accessibilityComponentType", js.undefined)
+    @scala.inline
+    def setAccessibilityElementsHidden(value: Validator[js.UndefOr[Boolean]]): Self = this.set("accessibilityElementsHidden", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityElementsHidden: Self = this.set("accessibilityElementsHidden", js.undefined)
+    @scala.inline
+    def setAccessibilityHint(value: Validator[js.UndefOr[String]]): Self = this.set("accessibilityHint", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityHint: Self = this.set("accessibilityHint", js.undefined)
+    @scala.inline
+    def setAccessibilityIgnoresInvertColors(value: Validator[js.UndefOr[Boolean]]): Self = this.set("accessibilityIgnoresInvertColors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityIgnoresInvertColors: Self = this.set("accessibilityIgnoresInvertColors", js.undefined)
+    @scala.inline
+    def setAccessibilityLabel(value: Validator[js.UndefOr[String]]): Self = this.set("accessibilityLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityLabel: Self = this.set("accessibilityLabel", js.undefined)
+    @scala.inline
+    def setAccessibilityLiveRegion(value: Validator[js.UndefOr[none | polite | assertive]]): Self = this.set("accessibilityLiveRegion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityLiveRegion: Self = this.set("accessibilityLiveRegion", js.undefined)
+    @scala.inline
+    def setAccessibilityRole(
+      value: Validator[
+          js.UndefOr[
+            button | header | link | menu | menuitem | summary | image | switch | text | none | search | keyboardkey | adjustable | imagebutton | alert | checkbox | combobox | menubar | progressbar | radio | radiogroup | scrollbar | spinbutton | tab | tablist | timer | toolbar
+          ]
+        ]
+    ): Self = this.set("accessibilityRole", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityRole: Self = this.set("accessibilityRole", js.undefined)
+    @scala.inline
+    def setAccessibilityState(value: Validator[js.UndefOr[AccessibilityState]]): Self = this.set("accessibilityState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityState: Self = this.set("accessibilityState", js.undefined)
+    @scala.inline
+    def setAccessibilityStates(
+      value: Validator[
+          js.UndefOr[
+            js.Array[
+              /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify imported_react-native.AccessibilityStates */ _
+            ]
+          ]
+        ]
+    ): Self = this.set("accessibilityStates", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityStates: Self = this.set("accessibilityStates", js.undefined)
+    @scala.inline
+    def setAccessibilityTraits(
+      value: Validator[
+          js.UndefOr[
+            button | header | link | summary | image | text | none | search | adjustable | disabled | selected | plays | key | frequentUpdates | startsMedia | allowsDirectInteraction | pageTurn | js.Array[AccessibilityTrait]
+          ]
+        ]
+    ): Self = this.set("accessibilityTraits", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityTraits: Self = this.set("accessibilityTraits", js.undefined)
+    @scala.inline
+    def setAccessibilityViewIsModal(value: Validator[js.UndefOr[Boolean]]): Self = this.set("accessibilityViewIsModal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityViewIsModal: Self = this.set("accessibilityViewIsModal", js.undefined)
+    @scala.inline
+    def setAccessible(value: Validator[js.UndefOr[Boolean]]): Self = this.set("accessible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessible: Self = this.set("accessible", js.undefined)
+    @scala.inline
+    def setCollapsable(value: Validator[js.UndefOr[Boolean]]): Self = this.set("collapsable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCollapsable: Self = this.set("collapsable", js.undefined)
+    @scala.inline
+    def setHasTVPreferredFocus(value: Validator[js.UndefOr[Boolean]]): Self = this.set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHasTVPreferredFocus: Self = this.set("hasTVPreferredFocus", js.undefined)
+    @scala.inline
+    def setHitSlop(value: Validator[js.UndefOr[Insets]]): Self = this.set("hitSlop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHitSlop: Self = this.set("hitSlop", js.undefined)
+    @scala.inline
+    def setImportantForAccessibility(value: Validator[js.UndefOr[auto | yes | no | `no-hide-descendants`]]): Self = this.set("importantForAccessibility", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteImportantForAccessibility: Self = this.set("importantForAccessibility", js.undefined)
+    @scala.inline
+    def setIsTVSelectable(value: Validator[js.UndefOr[Boolean]]): Self = this.set("isTVSelectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIsTVSelectable: Self = this.set("isTVSelectable", js.undefined)
+    @scala.inline
+    def setNativeID(value: Validator[js.UndefOr[String]]): Self = this.set("nativeID", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNativeID: Self = this.set("nativeID", js.undefined)
+    @scala.inline
+    def setNeedsOffscreenAlphaCompositing(value: Validator[js.UndefOr[Boolean]]): Self = this.set("needsOffscreenAlphaCompositing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNeedsOffscreenAlphaCompositing: Self = this.set("needsOffscreenAlphaCompositing", js.undefined)
+    @scala.inline
+    def setOnAccessibilityAction(value: Validator[js.UndefOr[js.Function0[Unit]]]): Self = this.set("onAccessibilityAction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnAccessibilityAction: Self = this.set("onAccessibilityAction", js.undefined)
+    @scala.inline
+    def setOnAccessibilityTap(value: Validator[js.UndefOr[js.Function0[Unit]]]): Self = this.set("onAccessibilityTap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnAccessibilityTap: Self = this.set("onAccessibilityTap", js.undefined)
+    @scala.inline
+    def setOnLayout(value: Validator[js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]]]): Self = this.set("onLayout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnLayout: Self = this.set("onLayout", js.undefined)
+    @scala.inline
+    def setOnMagicTap(value: Validator[js.UndefOr[js.Function0[Unit]]]): Self = this.set("onMagicTap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnMagicTap: Self = this.set("onMagicTap", js.undefined)
+    @scala.inline
+    def setOnMoveShouldSetResponder(value: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]]]): Self = this.set("onMoveShouldSetResponder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnMoveShouldSetResponder: Self = this.set("onMoveShouldSetResponder", js.undefined)
+    @scala.inline
+    def setOnMoveShouldSetResponderCapture(value: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]]]): Self = this.set("onMoveShouldSetResponderCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnMoveShouldSetResponderCapture: Self = this.set("onMoveShouldSetResponderCapture", js.undefined)
+    @scala.inline
+    def setOnResponderEnd(value: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]): Self = this.set("onResponderEnd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnResponderEnd: Self = this.set("onResponderEnd", js.undefined)
+    @scala.inline
+    def setOnResponderGrant(value: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]): Self = this.set("onResponderGrant", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnResponderGrant: Self = this.set("onResponderGrant", js.undefined)
+    @scala.inline
+    def setOnResponderMove(value: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]): Self = this.set("onResponderMove", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnResponderMove: Self = this.set("onResponderMove", js.undefined)
+    @scala.inline
+    def setOnResponderReject(value: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]): Self = this.set("onResponderReject", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnResponderReject: Self = this.set("onResponderReject", js.undefined)
+    @scala.inline
+    def setOnResponderRelease(value: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]): Self = this.set("onResponderRelease", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnResponderRelease: Self = this.set("onResponderRelease", js.undefined)
+    @scala.inline
+    def setOnResponderStart(value: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]): Self = this.set("onResponderStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnResponderStart: Self = this.set("onResponderStart", js.undefined)
+    @scala.inline
+    def setOnResponderTerminate(value: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]): Self = this.set("onResponderTerminate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnResponderTerminate: Self = this.set("onResponderTerminate", js.undefined)
+    @scala.inline
+    def setOnResponderTerminationRequest(value: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]]]): Self = this.set("onResponderTerminationRequest", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnResponderTerminationRequest: Self = this.set("onResponderTerminationRequest", js.undefined)
+    @scala.inline
+    def setOnStartShouldSetResponder(value: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]]]): Self = this.set("onStartShouldSetResponder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnStartShouldSetResponder: Self = this.set("onStartShouldSetResponder", js.undefined)
+    @scala.inline
+    def setOnStartShouldSetResponderCapture(value: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Boolean]]]): Self = this.set("onStartShouldSetResponderCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnStartShouldSetResponderCapture: Self = this.set("onStartShouldSetResponderCapture", js.undefined)
+    @scala.inline
+    def setOnTouchCancel(value: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]): Self = this.set("onTouchCancel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnTouchCancel: Self = this.set("onTouchCancel", js.undefined)
+    @scala.inline
+    def setOnTouchEnd(value: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]): Self = this.set("onTouchEnd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnTouchEnd: Self = this.set("onTouchEnd", js.undefined)
+    @scala.inline
+    def setOnTouchEndCapture(value: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]): Self = this.set("onTouchEndCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnTouchEndCapture: Self = this.set("onTouchEndCapture", js.undefined)
+    @scala.inline
+    def setOnTouchMove(value: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]): Self = this.set("onTouchMove", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnTouchMove: Self = this.set("onTouchMove", js.undefined)
+    @scala.inline
+    def setOnTouchStart(value: Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]): Self = this.set("onTouchStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnTouchStart: Self = this.set("onTouchStart", js.undefined)
+    @scala.inline
+    def setPointerEvents(value: Validator[js.UndefOr[`box-none` | none | `box-only` | auto]]): Self = this.set("pointerEvents", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePointerEvents: Self = this.set("pointerEvents", js.undefined)
+    @scala.inline
+    def setRemoveClippedSubviews(value: Validator[js.UndefOr[Boolean]]): Self = this.set("removeClippedSubviews", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRemoveClippedSubviews: Self = this.set("removeClippedSubviews", js.undefined)
+    @scala.inline
+    def setRenderToHardwareTextureAndroid(value: Validator[js.UndefOr[Boolean]]): Self = this.set("renderToHardwareTextureAndroid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRenderToHardwareTextureAndroid: Self = this.set("renderToHardwareTextureAndroid", js.undefined)
+    @scala.inline
+    def setShouldRasterizeIOS(value: Validator[js.UndefOr[Boolean]]): Self = this.set("shouldRasterizeIOS", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShouldRasterizeIOS: Self = this.set("shouldRasterizeIOS", js.undefined)
+    @scala.inline
+    def setStyle(value: Validator[StyleProp[ViewStyle]]): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+    @scala.inline
+    def setTestID(value: Validator[js.UndefOr[String]]): Self = this.set("testID", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTestID: Self = this.set("testID", js.undefined)
+    @scala.inline
+    def setTvParallaxMagnification(value: Validator[js.UndefOr[Double]]): Self = this.set("tvParallaxMagnification", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTvParallaxMagnification: Self = this.set("tvParallaxMagnification", js.undefined)
+    @scala.inline
+    def setTvParallaxProperties(value: Validator[js.UndefOr[TVParallaxProperties]]): Self = this.set("tvParallaxProperties", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTvParallaxProperties: Self = this.set("tvParallaxProperties", js.undefined)
+    @scala.inline
+    def setTvParallaxShiftDistanceX(value: Validator[js.UndefOr[Double]]): Self = this.set("tvParallaxShiftDistanceX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTvParallaxShiftDistanceX: Self = this.set("tvParallaxShiftDistanceX", js.undefined)
+    @scala.inline
+    def setTvParallaxShiftDistanceY(value: Validator[js.UndefOr[Double]]): Self = this.set("tvParallaxShiftDistanceY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTvParallaxShiftDistanceY: Self = this.set("tvParallaxShiftDistanceY", js.undefined)
+    @scala.inline
+    def setTvParallaxTiltAngle(value: Validator[js.UndefOr[Double]]): Self = this.set("tvParallaxTiltAngle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTvParallaxTiltAngle: Self = this.set("tvParallaxTiltAngle", js.undefined)
+  }
+  
 }
 

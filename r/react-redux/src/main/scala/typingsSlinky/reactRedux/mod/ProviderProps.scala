@@ -23,10 +23,28 @@ trait ProviderProps[A /* <: Action[_] */] extends js.Object {
 
 object ProviderProps {
   @scala.inline
-  def apply[A](store: Store[_, A], context: Context[ReactReduxContextValue[_, AnyAction]] = null): ProviderProps[A] = {
+  def apply[/* <: typingsSlinky.redux.mod.Action[_] */ A](store: Store[_, A]): ProviderProps[A] = {
     val __obj = js.Dynamic.literal(store = store.asInstanceOf[js.Any])
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProviderProps[A]]
   }
+  @scala.inline
+  implicit class ProviderPropsOps[Self <: ProviderProps[_], /* <: typingsSlinky.redux.mod.Action[_] */ A] (val x: Self with ProviderProps[A]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setStore(value: Store[_, A]): Self = this.set("store", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContext(value: Context[ReactReduxContextValue[_, AnyAction]]): Self = this.set("context", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContext: Self = this.set("context", js.undefined)
+  }
+  
 }
 

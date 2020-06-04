@@ -23,5 +23,20 @@ object Trigger {
     val __obj = js.Dynamic.literal(trigger = js.Any.fromFunction2(trigger))
     __obj.asInstanceOf[Trigger[TTarget, TData]]
   }
+  @scala.inline
+  implicit class TriggerOps[Self <: Trigger[_, _], TTarget, TData] (val x: Self with (Trigger[TTarget, TData])) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setTrigger(value: (Event, TData) => Unit | `false`): Self = this.set("trigger", js.Any.fromFunction2(value))
+  }
+  
 }
 

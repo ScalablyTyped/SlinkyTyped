@@ -1,5 +1,6 @@
 package typingsSlinky.storybookApi.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.storybookApi.mod.Combo
@@ -25,6 +26,10 @@ object Consumer {
   }
   
   def withProps(p: ConsumerProps[SubState, Combo]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Consumer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: Combo | SubState => ReactElement | Null): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ConsumerProps[SubState, Combo]]))
+  }
 }
 

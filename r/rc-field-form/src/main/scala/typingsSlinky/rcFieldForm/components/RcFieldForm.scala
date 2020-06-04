@@ -5,6 +5,8 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLFormElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
+import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
@@ -19,6 +21,7 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.form.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcFieldForm.formMod.FormProps
+import typingsSlinky.rcFieldForm.formMod.RenderProps
 import typingsSlinky.rcFieldForm.interfaceMod.FieldData
 import typingsSlinky.rcFieldForm.interfaceMod.FormInstance
 import typingsSlinky.rcFieldForm.interfaceMod.Store
@@ -201,6 +204,12 @@ object RcFieldForm {
     def autoCorrect(value: String): this.type = set("autoCorrect", value.asInstanceOf[js.Any])
     @scala.inline
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenFunction2(value: (/* values */ Store, /* form */ FormInstance) => ReactElement | TagMod[Any]): this.type = set("children", js.Any.fromFunction2(value))
+    @scala.inline
+    def children(value: RenderProps | TagMod[Any]): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

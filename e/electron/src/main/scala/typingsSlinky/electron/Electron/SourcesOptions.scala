@@ -27,15 +27,32 @@ trait SourcesOptions extends js.Object {
 
 object SourcesOptions {
   @scala.inline
-  def apply(
-    types: js.Array[String],
-    fetchWindowIcons: js.UndefOr[Boolean] = js.undefined,
-    thumbnailSize: Size = null
-  ): SourcesOptions = {
+  def apply(types: js.Array[String]): SourcesOptions = {
     val __obj = js.Dynamic.literal(types = types.asInstanceOf[js.Any])
-    if (!js.isUndefined(fetchWindowIcons)) __obj.updateDynamic("fetchWindowIcons")(fetchWindowIcons.get.asInstanceOf[js.Any])
-    if (thumbnailSize != null) __obj.updateDynamic("thumbnailSize")(thumbnailSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[SourcesOptions]
   }
+  @scala.inline
+  implicit class SourcesOptionsOps[Self <: SourcesOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setTypes(value: js.Array[String]): Self = this.set("types", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFetchWindowIcons(value: Boolean): Self = this.set("fetchWindowIcons", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFetchWindowIcons: Self = this.set("fetchWindowIcons", js.undefined)
+    @scala.inline
+    def setThumbnailSize(value: Size): Self = this.set("thumbnailSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteThumbnailSize: Self = this.set("thumbnailSize", js.undefined)
+  }
+  
 }
 

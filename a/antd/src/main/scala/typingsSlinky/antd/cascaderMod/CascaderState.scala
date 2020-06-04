@@ -15,18 +15,38 @@ trait CascaderState extends js.Object {
 
 object CascaderState {
   @scala.inline
-  def apply(
-    inputFocused: Boolean,
-    inputValue: String,
-    prevProps: CascaderProps,
-    value: js.Array[String],
-    flattenOptions: js.Array[js.Array[CascaderOptionType]] = null,
-    popupVisible: js.UndefOr[Boolean] = js.undefined
-  ): CascaderState = {
+  def apply(inputFocused: Boolean, inputValue: String, prevProps: CascaderProps, value: js.Array[String]): CascaderState = {
     val __obj = js.Dynamic.literal(inputFocused = inputFocused.asInstanceOf[js.Any], inputValue = inputValue.asInstanceOf[js.Any], prevProps = prevProps.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    if (flattenOptions != null) __obj.updateDynamic("flattenOptions")(flattenOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(popupVisible)) __obj.updateDynamic("popupVisible")(popupVisible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CascaderState]
   }
+  @scala.inline
+  implicit class CascaderStateOps[Self <: CascaderState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setInputFocused(value: Boolean): Self = this.set("inputFocused", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInputValue(value: String): Self = this.set("inputValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPrevProps(value: CascaderProps): Self = this.set("prevProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setValue(value: js.Array[String]): Self = this.set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFlattenOptions(value: js.Array[js.Array[CascaderOptionType]]): Self = this.set("flattenOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFlattenOptions: Self = this.set("flattenOptions", js.undefined)
+    @scala.inline
+    def setPopupVisible(value: Boolean): Self = this.set("popupVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePopupVisible: Self = this.set("popupVisible", js.undefined)
+  }
+  
 }
 

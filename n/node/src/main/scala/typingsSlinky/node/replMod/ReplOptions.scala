@@ -4,6 +4,7 @@ import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.node.readlineMod.AsyncCompleter
 import typingsSlinky.node.readlineMod.Completer
+import typingsSlinky.node.readlineMod.CompleterResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -98,36 +99,84 @@ trait ReplOptions extends js.Object {
 
 object ReplOptions {
   @scala.inline
-  def apply(
-    breakEvalOnSigint: js.UndefOr[Boolean] = js.undefined,
-    completer: Completer | AsyncCompleter = null,
-    eval: REPLEval = null,
-    ignoreUndefined: js.UndefOr[Boolean] = js.undefined,
-    input: ReadableStream = null,
-    output: WritableStream = null,
-    preview: js.UndefOr[Boolean] = js.undefined,
-    prompt: String = null,
-    replMode: js.Symbol = null,
-    terminal: js.UndefOr[Boolean] = js.undefined,
-    useColors: js.UndefOr[Boolean] = js.undefined,
-    useGlobal: js.UndefOr[Boolean] = js.undefined,
-    writer: REPLWriter = null
-  ): ReplOptions = {
+  def apply(): ReplOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(breakEvalOnSigint)) __obj.updateDynamic("breakEvalOnSigint")(breakEvalOnSigint.get.asInstanceOf[js.Any])
-    if (completer != null) __obj.updateDynamic("completer")(completer.asInstanceOf[js.Any])
-    if (eval != null) __obj.updateDynamic("eval")(eval.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreUndefined)) __obj.updateDynamic("ignoreUndefined")(ignoreUndefined.get.asInstanceOf[js.Any])
-    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
-    if (output != null) __obj.updateDynamic("output")(output.asInstanceOf[js.Any])
-    if (!js.isUndefined(preview)) __obj.updateDynamic("preview")(preview.get.asInstanceOf[js.Any])
-    if (prompt != null) __obj.updateDynamic("prompt")(prompt.asInstanceOf[js.Any])
-    if (replMode != null) __obj.updateDynamic("replMode")(replMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(terminal)) __obj.updateDynamic("terminal")(terminal.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(useColors)) __obj.updateDynamic("useColors")(useColors.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(useGlobal)) __obj.updateDynamic("useGlobal")(useGlobal.get.asInstanceOf[js.Any])
-    if (writer != null) __obj.updateDynamic("writer")(writer.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplOptions]
   }
+  @scala.inline
+  implicit class ReplOptionsOps[Self <: ReplOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBreakEvalOnSigint(value: Boolean): Self = this.set("breakEvalOnSigint", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBreakEvalOnSigint: Self = this.set("breakEvalOnSigint", js.undefined)
+    @scala.inline
+    def setCompleterFunction2(
+      value: (/* line */ String, /* callback */ js.Function2[
+          /* err */ js.UndefOr[Null | js.Error], 
+          /* result */ js.UndefOr[CompleterResult], 
+          Unit
+        ]) => js.Any
+    ): Self = this.set("completer", js.Any.fromFunction2(value))
+    @scala.inline
+    def setCompleterFunction1(value: /* line */ String => CompleterResult): Self = this.set("completer", js.Any.fromFunction1(value))
+    @scala.inline
+    def setCompleter(value: Completer | AsyncCompleter): Self = this.set("completer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCompleter: Self = this.set("completer", js.undefined)
+    @scala.inline
+    def setEval(value: REPLEval): Self = this.set("eval", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEval: Self = this.set("eval", js.undefined)
+    @scala.inline
+    def setIgnoreUndefined(value: Boolean): Self = this.set("ignoreUndefined", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIgnoreUndefined: Self = this.set("ignoreUndefined", js.undefined)
+    @scala.inline
+    def setInput(value: ReadableStream): Self = this.set("input", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInput: Self = this.set("input", js.undefined)
+    @scala.inline
+    def setOutput(value: WritableStream): Self = this.set("output", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOutput: Self = this.set("output", js.undefined)
+    @scala.inline
+    def setPreview(value: Boolean): Self = this.set("preview", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePreview: Self = this.set("preview", js.undefined)
+    @scala.inline
+    def setPrompt(value: String): Self = this.set("prompt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrompt: Self = this.set("prompt", js.undefined)
+    @scala.inline
+    def setReplMode(value: js.Symbol): Self = this.set("replMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteReplMode: Self = this.set("replMode", js.undefined)
+    @scala.inline
+    def setTerminal(value: Boolean): Self = this.set("terminal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTerminal: Self = this.set("terminal", js.undefined)
+    @scala.inline
+    def setUseColors(value: Boolean): Self = this.set("useColors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUseColors: Self = this.set("useColors", js.undefined)
+    @scala.inline
+    def setUseGlobal(value: Boolean): Self = this.set("useGlobal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUseGlobal: Self = this.set("useGlobal", js.undefined)
+    @scala.inline
+    def setWriter(value: REPLWriter): Self = this.set("writer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWriter: Self = this.set("writer", js.undefined)
+  }
+  
 }
 

@@ -10,17 +10,24 @@ trait OfflineAudioCompletionEventInit extends EventInit {
 
 object OfflineAudioCompletionEventInit {
   @scala.inline
-  def apply(
-    renderedBuffer: org.scalajs.dom.raw.AudioBuffer,
-    bubbles: js.UndefOr[scala.Boolean] = js.undefined,
-    cancelable: js.UndefOr[scala.Boolean] = js.undefined,
-    composed: js.UndefOr[scala.Boolean] = js.undefined
-  ): OfflineAudioCompletionEventInit = {
+  def apply(renderedBuffer: org.scalajs.dom.raw.AudioBuffer): OfflineAudioCompletionEventInit = {
     val __obj = js.Dynamic.literal(renderedBuffer = renderedBuffer.asInstanceOf[js.Any])
-    if (!js.isUndefined(bubbles)) __obj.updateDynamic("bubbles")(bubbles.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(cancelable)) __obj.updateDynamic("cancelable")(cancelable.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(composed)) __obj.updateDynamic("composed")(composed.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[OfflineAudioCompletionEventInit]
   }
+  @scala.inline
+  implicit class OfflineAudioCompletionEventInitOps[Self <: OfflineAudioCompletionEventInit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setRenderedBuffer(value: org.scalajs.dom.raw.AudioBuffer): Self = this.set("renderedBuffer", value.asInstanceOf[js.Any])
+  }
+  
 }
 

@@ -12,16 +12,34 @@ trait EditConfig extends js.Object {
 
 object EditConfig {
   @scala.inline
-  def apply(
-    editing: js.UndefOr[Boolean] = js.undefined,
-    onChange: /* value */ String => Unit = null,
-    onStart: () => Unit = null
-  ): EditConfig = {
+  def apply(): EditConfig = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(editing)) __obj.updateDynamic("editing")(editing.get.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onStart != null) __obj.updateDynamic("onStart")(js.Any.fromFunction0(onStart))
     __obj.asInstanceOf[EditConfig]
   }
+  @scala.inline
+  implicit class EditConfigOps[Self <: EditConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setEditing(value: Boolean): Self = this.set("editing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEditing: Self = this.set("editing", js.undefined)
+    @scala.inline
+    def setOnChange(value: /* value */ String => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnChange: Self = this.set("onChange", js.undefined)
+    @scala.inline
+    def setOnStart(value: () => Unit): Self = this.set("onStart", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnStart: Self = this.set("onStart", js.undefined)
+  }
+  
 }
 

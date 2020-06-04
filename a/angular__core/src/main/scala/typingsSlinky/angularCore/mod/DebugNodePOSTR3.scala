@@ -20,11 +20,25 @@ object DebugNodePOSTR3 {
     listeners: js.Array[DebugEventListener],
     nativeNode: Node,
     providerTokens: js.Array[_],
-    references: StringDictionary[js.Any],
-    parent: DebugElement = null
+    references: StringDictionary[js.Any]
   ): DebugNodePOSTR3 = {
-    val __obj = js.Dynamic.literal(componentInstance = componentInstance.asInstanceOf[js.Any], context = context.asInstanceOf[js.Any], injector = injector.asInstanceOf[js.Any], listeners = listeners.asInstanceOf[js.Any], nativeNode = nativeNode.asInstanceOf[js.Any], providerTokens = providerTokens.asInstanceOf[js.Any], references = references.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(componentInstance = componentInstance.asInstanceOf[js.Any], context = context.asInstanceOf[js.Any], injector = injector.asInstanceOf[js.Any], listeners = listeners.asInstanceOf[js.Any], nativeNode = nativeNode.asInstanceOf[js.Any], providerTokens = providerTokens.asInstanceOf[js.Any], references = references.asInstanceOf[js.Any])
     __obj.asInstanceOf[DebugNodePOSTR3]
   }
+  @scala.inline
+  implicit class DebugNodePOSTR3Ops[Self <: DebugNodePOSTR3] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setNativeNode(value: Node): Self = this.set("nativeNode", value.asInstanceOf[js.Any])
+  }
+  
 }
 

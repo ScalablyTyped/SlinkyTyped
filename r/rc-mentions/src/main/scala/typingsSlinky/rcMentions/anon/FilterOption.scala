@@ -30,5 +30,32 @@ object FilterOption {
     val __obj = js.Dynamic.literal(filterOption = js.Any.fromFunction2(filterOption), notFoundContent = notFoundContent.asInstanceOf[js.Any], prefix = prefix.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], rows = rows.asInstanceOf[js.Any], split = split.asInstanceOf[js.Any], validateSearch = js.Any.fromFunction2(validateSearch))
     __obj.asInstanceOf[FilterOption]
   }
+  @scala.inline
+  implicit class FilterOptionOps[Self <: FilterOption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setFilterOption(value: (/* input */ String, /* hasValue */ OptionProps) => Boolean): Self = this.set("filterOption", js.Any.fromFunction2(value))
+    @scala.inline
+    def setNotFoundContent(value: String): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPrefix(value: String): Self = this.set("prefix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRows(value: Double): Self = this.set("rows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSplit(value: String): Self = this.set("split", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setValidateSearch(value: (/* text */ String, /* props */ MentionsProps) => Boolean): Self = this.set("validateSearch", js.Any.fromFunction2(value))
+  }
+  
 }
 

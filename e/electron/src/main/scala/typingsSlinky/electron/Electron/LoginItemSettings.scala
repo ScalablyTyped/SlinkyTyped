@@ -41,12 +41,37 @@ object LoginItemSettings {
     openAtLogin: Boolean,
     restoreState: Boolean,
     wasOpenedAsHidden: Boolean,
-    wasOpenedAtLogin: Boolean,
-    options: Options = null
+    wasOpenedAtLogin: Boolean
   ): LoginItemSettings = {
     val __obj = js.Dynamic.literal(openAsHidden = openAsHidden.asInstanceOf[js.Any], openAtLogin = openAtLogin.asInstanceOf[js.Any], restoreState = restoreState.asInstanceOf[js.Any], wasOpenedAsHidden = wasOpenedAsHidden.asInstanceOf[js.Any], wasOpenedAtLogin = wasOpenedAtLogin.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoginItemSettings]
   }
+  @scala.inline
+  implicit class LoginItemSettingsOps[Self <: LoginItemSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setOpenAsHidden(value: Boolean): Self = this.set("openAsHidden", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOpenAtLogin(value: Boolean): Self = this.set("openAtLogin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRestoreState(value: Boolean): Self = this.set("restoreState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWasOpenedAsHidden(value: Boolean): Self = this.set("wasOpenedAsHidden", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWasOpenedAtLogin(value: Boolean): Self = this.set("wasOpenedAtLogin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOptions(value: Options): Self = this.set("options", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOptions: Self = this.set("options", js.undefined)
+  }
+  
 }
 

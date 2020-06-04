@@ -22,12 +22,34 @@ trait ClearStorageDataOptions extends js.Object {
 
 object ClearStorageDataOptions {
   @scala.inline
-  def apply(origin: String = null, quotas: js.Array[String] = null, storages: js.Array[String] = null): ClearStorageDataOptions = {
+  def apply(): ClearStorageDataOptions = {
     val __obj = js.Dynamic.literal()
-    if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
-    if (quotas != null) __obj.updateDynamic("quotas")(quotas.asInstanceOf[js.Any])
-    if (storages != null) __obj.updateDynamic("storages")(storages.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClearStorageDataOptions]
   }
+  @scala.inline
+  implicit class ClearStorageDataOptionsOps[Self <: ClearStorageDataOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setOrigin(value: String): Self = this.set("origin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOrigin: Self = this.set("origin", js.undefined)
+    @scala.inline
+    def setQuotas(value: js.Array[String]): Self = this.set("quotas", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteQuotas: Self = this.set("quotas", js.undefined)
+    @scala.inline
+    def setStorages(value: js.Array[String]): Self = this.set("storages", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStorages: Self = this.set("storages", js.undefined)
+  }
+  
 }
 

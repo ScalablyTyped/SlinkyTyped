@@ -12,9 +12,28 @@ trait Name extends js.Object {
 
 object Name {
   @scala.inline
-  def apply(size: Size, name: String = null): Name = {
-    val __obj = js.Dynamic.literal(size = size.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(size: Size): Name = {
+    val __obj = js.Dynamic.literal(size = size.asInstanceOf[js.Any])
     __obj.asInstanceOf[Name]
   }
+  @scala.inline
+  implicit class NameOps[Self <: Name] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setSize(value: Size): Self = this.set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNameNull: Self = this.set("name", null)
+  }
+  
 }
 

@@ -24,5 +24,28 @@ object Cflags {
     val __obj = js.Dynamic.literal(cflags = cflags.asInstanceOf[js.Any], default_configuration = default_configuration.asInstanceOf[js.Any], defines = defines.asInstanceOf[js.Any], include_dirs = include_dirs.asInstanceOf[js.Any], libraries = libraries.asInstanceOf[js.Any])
     __obj.asInstanceOf[Cflags]
   }
+  @scala.inline
+  implicit class CflagsOps[Self <: Cflags] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCflags(value: js.Array[_]): Self = this.set("cflags", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDefault_configuration(value: String): Self = this.set("default_configuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDefines(value: js.Array[String]): Self = this.set("defines", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInclude_dirs(value: js.Array[String]): Self = this.set("include_dirs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLibraries(value: js.Array[String]): Self = this.set("libraries", value.asInstanceOf[js.Any])
+  }
+  
 }
 

@@ -20,13 +20,37 @@ object StylingInstruction {
   def apply(
     allocateBindingSlots: Double,
     params: js.Function1[/* value */ js.Any, Expression | js.Array[Expression]] => js.Array[Expression],
-    reference: ExternalReference,
-    sourceSpan: ParseSourceSpan = null,
-    supportsInterpolation: js.UndefOr[Boolean] = js.undefined
+    reference: ExternalReference
   ): StylingInstruction = {
-    val __obj = js.Dynamic.literal(allocateBindingSlots = allocateBindingSlots.asInstanceOf[js.Any], params = js.Any.fromFunction1(params), reference = reference.asInstanceOf[js.Any], sourceSpan = sourceSpan.asInstanceOf[js.Any])
-    if (!js.isUndefined(supportsInterpolation)) __obj.updateDynamic("supportsInterpolation")(supportsInterpolation.get.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(allocateBindingSlots = allocateBindingSlots.asInstanceOf[js.Any], params = js.Any.fromFunction1(params), reference = reference.asInstanceOf[js.Any])
     __obj.asInstanceOf[StylingInstruction]
   }
+  @scala.inline
+  implicit class StylingInstructionOps[Self <: StylingInstruction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAllocateBindingSlots(value: Double): Self = this.set("allocateBindingSlots", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setParams(value: js.Function1[/* value */ js.Any, Expression | js.Array[Expression]] => js.Array[Expression]): Self = this.set("params", js.Any.fromFunction1(value))
+    @scala.inline
+    def setReference(value: ExternalReference): Self = this.set("reference", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSourceSpan(value: ParseSourceSpan): Self = this.set("sourceSpan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSourceSpanNull: Self = this.set("sourceSpan", null)
+    @scala.inline
+    def setSupportsInterpolation(value: Boolean): Self = this.set("supportsInterpolation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSupportsInterpolation: Self = this.set("supportsInterpolation", js.undefined)
+  }
+  
 }
 

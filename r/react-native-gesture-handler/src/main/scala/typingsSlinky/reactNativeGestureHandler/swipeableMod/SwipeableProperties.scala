@@ -1,6 +1,7 @@
 package typingsSlinky.reactNativeGestureHandler.swipeableMod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactNative.mod.Animated.AnimatedInterpolation
 import typingsSlinky.reactNative.mod.StyleProp
@@ -94,94 +95,210 @@ trait SwipeableProperties extends js.Object {
 
 object SwipeableProperties {
   @scala.inline
-  def apply(
-    activeOffsetX: Double | js.Array[Double] = null,
-    activeOffsetY: Double | js.Array[Double] = null,
-    avgTouches: js.UndefOr[Boolean] = js.undefined,
-    childrenContainerStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
-    containerStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    failOffsetX: Double | js.Array[Double] = null,
-    failOffsetY: Double | js.Array[Double] = null,
-    friction: js.UndefOr[Double] = js.undefined,
-    hitSlop: Double | Bottom | Left | Right | Height | BottomHeight = null,
-    id: String = null,
-    leftThreshold: js.UndefOr[Double] = js.undefined,
-    maxDeltaX: js.UndefOr[Double] = js.undefined,
-    maxDeltaY: js.UndefOr[Double] = js.undefined,
-    maxPointers: js.UndefOr[Double] = js.undefined,
-    minDeltaX: js.UndefOr[Double] = js.undefined,
-    minDeltaY: js.UndefOr[Double] = js.undefined,
-    minDist: js.UndefOr[Double] = js.undefined,
-    minOffsetX: js.UndefOr[Double] = js.undefined,
-    minOffsetY: js.UndefOr[Double] = js.undefined,
-    minPointers: js.UndefOr[Double] = js.undefined,
-    minVelocity: js.UndefOr[Double] = js.undefined,
-    minVelocityX: js.UndefOr[Double] = js.undefined,
-    minVelocityY: js.UndefOr[Double] = js.undefined,
-    onSwipeableClose: () => Unit = null,
-    onSwipeableLeftOpen: () => Unit = null,
-    onSwipeableLeftWillOpen: () => Unit = null,
-    onSwipeableOpen: () => Unit = null,
-    onSwipeableRightOpen: () => Unit = null,
-    onSwipeableRightWillOpen: () => Unit = null,
-    onSwipeableWillClose: () => Unit = null,
-    onSwipeableWillOpen: () => Unit = null,
-    overshootFriction: js.UndefOr[Double] = js.undefined,
-    overshootLeft: js.UndefOr[Boolean] = js.undefined,
-    overshootRight: js.UndefOr[Boolean] = js.undefined,
-    renderLeftActions: (/* progressAnimatedValue */ AnimatedInterpolation, /* dragAnimatedValue */ AnimatedInterpolation) => TagMod[Any] = null,
-    renderRightActions: (/* progressAnimatedValue */ AnimatedInterpolation, /* dragAnimatedValue */ AnimatedInterpolation) => TagMod[Any] = null,
-    rightThreshold: js.UndefOr[Double] = js.undefined,
-    shouldCancelWhenOutside: js.UndefOr[Boolean] = js.undefined,
-    simultaneousHandlers: js.UndefOr[Null | Ref[_] | js.Array[Ref[_]]] = js.undefined,
-    useNativeAnimations: js.UndefOr[Boolean] = js.undefined,
-    waitFor: js.UndefOr[Null | Ref[_] | js.Array[Ref[_]]] = js.undefined
-  ): SwipeableProperties = {
+  def apply(): SwipeableProperties = {
     val __obj = js.Dynamic.literal()
-    if (activeOffsetX != null) __obj.updateDynamic("activeOffsetX")(activeOffsetX.asInstanceOf[js.Any])
-    if (activeOffsetY != null) __obj.updateDynamic("activeOffsetY")(activeOffsetY.asInstanceOf[js.Any])
-    if (!js.isUndefined(avgTouches)) __obj.updateDynamic("avgTouches")(avgTouches.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(childrenContainerStyle)) __obj.updateDynamic("childrenContainerStyle")(childrenContainerStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(containerStyle)) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
-    if (failOffsetX != null) __obj.updateDynamic("failOffsetX")(failOffsetX.asInstanceOf[js.Any])
-    if (failOffsetY != null) __obj.updateDynamic("failOffsetY")(failOffsetY.asInstanceOf[js.Any])
-    if (!js.isUndefined(friction)) __obj.updateDynamic("friction")(friction.get.asInstanceOf[js.Any])
-    if (hitSlop != null) __obj.updateDynamic("hitSlop")(hitSlop.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(leftThreshold)) __obj.updateDynamic("leftThreshold")(leftThreshold.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(maxDeltaX)) __obj.updateDynamic("maxDeltaX")(maxDeltaX.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(maxDeltaY)) __obj.updateDynamic("maxDeltaY")(maxDeltaY.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(maxPointers)) __obj.updateDynamic("maxPointers")(maxPointers.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(minDeltaX)) __obj.updateDynamic("minDeltaX")(minDeltaX.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(minDeltaY)) __obj.updateDynamic("minDeltaY")(minDeltaY.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(minDist)) __obj.updateDynamic("minDist")(minDist.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(minOffsetX)) __obj.updateDynamic("minOffsetX")(minOffsetX.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(minOffsetY)) __obj.updateDynamic("minOffsetY")(minOffsetY.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(minPointers)) __obj.updateDynamic("minPointers")(minPointers.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(minVelocity)) __obj.updateDynamic("minVelocity")(minVelocity.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(minVelocityX)) __obj.updateDynamic("minVelocityX")(minVelocityX.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(minVelocityY)) __obj.updateDynamic("minVelocityY")(minVelocityY.get.asInstanceOf[js.Any])
-    if (onSwipeableClose != null) __obj.updateDynamic("onSwipeableClose")(js.Any.fromFunction0(onSwipeableClose))
-    if (onSwipeableLeftOpen != null) __obj.updateDynamic("onSwipeableLeftOpen")(js.Any.fromFunction0(onSwipeableLeftOpen))
-    if (onSwipeableLeftWillOpen != null) __obj.updateDynamic("onSwipeableLeftWillOpen")(js.Any.fromFunction0(onSwipeableLeftWillOpen))
-    if (onSwipeableOpen != null) __obj.updateDynamic("onSwipeableOpen")(js.Any.fromFunction0(onSwipeableOpen))
-    if (onSwipeableRightOpen != null) __obj.updateDynamic("onSwipeableRightOpen")(js.Any.fromFunction0(onSwipeableRightOpen))
-    if (onSwipeableRightWillOpen != null) __obj.updateDynamic("onSwipeableRightWillOpen")(js.Any.fromFunction0(onSwipeableRightWillOpen))
-    if (onSwipeableWillClose != null) __obj.updateDynamic("onSwipeableWillClose")(js.Any.fromFunction0(onSwipeableWillClose))
-    if (onSwipeableWillOpen != null) __obj.updateDynamic("onSwipeableWillOpen")(js.Any.fromFunction0(onSwipeableWillOpen))
-    if (!js.isUndefined(overshootFriction)) __obj.updateDynamic("overshootFriction")(overshootFriction.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(overshootLeft)) __obj.updateDynamic("overshootLeft")(overshootLeft.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(overshootRight)) __obj.updateDynamic("overshootRight")(overshootRight.get.asInstanceOf[js.Any])
-    if (renderLeftActions != null) __obj.updateDynamic("renderLeftActions")(js.Any.fromFunction2(renderLeftActions))
-    if (renderRightActions != null) __obj.updateDynamic("renderRightActions")(js.Any.fromFunction2(renderRightActions))
-    if (!js.isUndefined(rightThreshold)) __obj.updateDynamic("rightThreshold")(rightThreshold.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(shouldCancelWhenOutside)) __obj.updateDynamic("shouldCancelWhenOutside")(shouldCancelWhenOutside.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(simultaneousHandlers)) __obj.updateDynamic("simultaneousHandlers")(simultaneousHandlers.asInstanceOf[js.Any])
-    if (!js.isUndefined(useNativeAnimations)) __obj.updateDynamic("useNativeAnimations")(useNativeAnimations.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(waitFor)) __obj.updateDynamic("waitFor")(waitFor.asInstanceOf[js.Any])
     __obj.asInstanceOf[SwipeableProperties]
   }
+  @scala.inline
+  implicit class SwipeablePropertiesOps[Self <: SwipeableProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setActiveOffsetX(value: Double | js.Array[Double]): Self = this.set("activeOffsetX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteActiveOffsetX: Self = this.set("activeOffsetX", js.undefined)
+    @scala.inline
+    def setActiveOffsetY(value: Double | js.Array[Double]): Self = this.set("activeOffsetY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteActiveOffsetY: Self = this.set("activeOffsetY", js.undefined)
+    @scala.inline
+    def setAvgTouches(value: Boolean): Self = this.set("avgTouches", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAvgTouches: Self = this.set("avgTouches", js.undefined)
+    @scala.inline
+    def setChildrenContainerStyle(value: StyleProp[ViewStyle]): Self = this.set("childrenContainerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildrenContainerStyle: Self = this.set("childrenContainerStyle", js.undefined)
+    @scala.inline
+    def setChildrenContainerStyleNull: Self = this.set("childrenContainerStyle", null)
+    @scala.inline
+    def setContainerStyle(value: StyleProp[ViewStyle]): Self = this.set("containerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContainerStyle: Self = this.set("containerStyle", js.undefined)
+    @scala.inline
+    def setContainerStyleNull: Self = this.set("containerStyle", null)
+    @scala.inline
+    def setEnabled(value: Boolean): Self = this.set("enabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEnabled: Self = this.set("enabled", js.undefined)
+    @scala.inline
+    def setFailOffsetX(value: Double | js.Array[Double]): Self = this.set("failOffsetX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFailOffsetX: Self = this.set("failOffsetX", js.undefined)
+    @scala.inline
+    def setFailOffsetY(value: Double | js.Array[Double]): Self = this.set("failOffsetY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFailOffsetY: Self = this.set("failOffsetY", js.undefined)
+    @scala.inline
+    def setFriction(value: Double): Self = this.set("friction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFriction: Self = this.set("friction", js.undefined)
+    @scala.inline
+    def setHitSlop(value: Double | Bottom | Left | Right | Height | BottomHeight): Self = this.set("hitSlop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHitSlop: Self = this.set("hitSlop", js.undefined)
+    @scala.inline
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteId: Self = this.set("id", js.undefined)
+    @scala.inline
+    def setLeftThreshold(value: Double): Self = this.set("leftThreshold", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLeftThreshold: Self = this.set("leftThreshold", js.undefined)
+    @scala.inline
+    def setMaxDeltaX(value: Double): Self = this.set("maxDeltaX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxDeltaX: Self = this.set("maxDeltaX", js.undefined)
+    @scala.inline
+    def setMaxDeltaY(value: Double): Self = this.set("maxDeltaY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxDeltaY: Self = this.set("maxDeltaY", js.undefined)
+    @scala.inline
+    def setMaxPointers(value: Double): Self = this.set("maxPointers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxPointers: Self = this.set("maxPointers", js.undefined)
+    @scala.inline
+    def setMinDeltaX(value: Double): Self = this.set("minDeltaX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinDeltaX: Self = this.set("minDeltaX", js.undefined)
+    @scala.inline
+    def setMinDeltaY(value: Double): Self = this.set("minDeltaY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinDeltaY: Self = this.set("minDeltaY", js.undefined)
+    @scala.inline
+    def setMinDist(value: Double): Self = this.set("minDist", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinDist: Self = this.set("minDist", js.undefined)
+    @scala.inline
+    def setMinOffsetX(value: Double): Self = this.set("minOffsetX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinOffsetX: Self = this.set("minOffsetX", js.undefined)
+    @scala.inline
+    def setMinOffsetY(value: Double): Self = this.set("minOffsetY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinOffsetY: Self = this.set("minOffsetY", js.undefined)
+    @scala.inline
+    def setMinPointers(value: Double): Self = this.set("minPointers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinPointers: Self = this.set("minPointers", js.undefined)
+    @scala.inline
+    def setMinVelocity(value: Double): Self = this.set("minVelocity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinVelocity: Self = this.set("minVelocity", js.undefined)
+    @scala.inline
+    def setMinVelocityX(value: Double): Self = this.set("minVelocityX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinVelocityX: Self = this.set("minVelocityX", js.undefined)
+    @scala.inline
+    def setMinVelocityY(value: Double): Self = this.set("minVelocityY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinVelocityY: Self = this.set("minVelocityY", js.undefined)
+    @scala.inline
+    def setOnSwipeableClose(value: () => Unit): Self = this.set("onSwipeableClose", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnSwipeableClose: Self = this.set("onSwipeableClose", js.undefined)
+    @scala.inline
+    def setOnSwipeableLeftOpen(value: () => Unit): Self = this.set("onSwipeableLeftOpen", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnSwipeableLeftOpen: Self = this.set("onSwipeableLeftOpen", js.undefined)
+    @scala.inline
+    def setOnSwipeableLeftWillOpen(value: () => Unit): Self = this.set("onSwipeableLeftWillOpen", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnSwipeableLeftWillOpen: Self = this.set("onSwipeableLeftWillOpen", js.undefined)
+    @scala.inline
+    def setOnSwipeableOpen(value: () => Unit): Self = this.set("onSwipeableOpen", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnSwipeableOpen: Self = this.set("onSwipeableOpen", js.undefined)
+    @scala.inline
+    def setOnSwipeableRightOpen(value: () => Unit): Self = this.set("onSwipeableRightOpen", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnSwipeableRightOpen: Self = this.set("onSwipeableRightOpen", js.undefined)
+    @scala.inline
+    def setOnSwipeableRightWillOpen(value: () => Unit): Self = this.set("onSwipeableRightWillOpen", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnSwipeableRightWillOpen: Self = this.set("onSwipeableRightWillOpen", js.undefined)
+    @scala.inline
+    def setOnSwipeableWillClose(value: () => Unit): Self = this.set("onSwipeableWillClose", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnSwipeableWillClose: Self = this.set("onSwipeableWillClose", js.undefined)
+    @scala.inline
+    def setOnSwipeableWillOpen(value: () => Unit): Self = this.set("onSwipeableWillOpen", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnSwipeableWillOpen: Self = this.set("onSwipeableWillOpen", js.undefined)
+    @scala.inline
+    def setOvershootFriction(value: Double): Self = this.set("overshootFriction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOvershootFriction: Self = this.set("overshootFriction", js.undefined)
+    @scala.inline
+    def setOvershootLeft(value: Boolean): Self = this.set("overshootLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOvershootLeft: Self = this.set("overshootLeft", js.undefined)
+    @scala.inline
+    def setOvershootRight(value: Boolean): Self = this.set("overshootRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOvershootRight: Self = this.set("overshootRight", js.undefined)
+    @scala.inline
+    def setRenderLeftActions(
+      value: (/* progressAnimatedValue */ AnimatedInterpolation, /* dragAnimatedValue */ AnimatedInterpolation) => TagMod[Any]
+    ): Self = this.set("renderLeftActions", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteRenderLeftActions: Self = this.set("renderLeftActions", js.undefined)
+    @scala.inline
+    def setRenderRightActions(
+      value: (/* progressAnimatedValue */ AnimatedInterpolation, /* dragAnimatedValue */ AnimatedInterpolation) => TagMod[Any]
+    ): Self = this.set("renderRightActions", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteRenderRightActions: Self = this.set("renderRightActions", js.undefined)
+    @scala.inline
+    def setRightThreshold(value: Double): Self = this.set("rightThreshold", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRightThreshold: Self = this.set("rightThreshold", js.undefined)
+    @scala.inline
+    def setShouldCancelWhenOutside(value: Boolean): Self = this.set("shouldCancelWhenOutside", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShouldCancelWhenOutside: Self = this.set("shouldCancelWhenOutside", js.undefined)
+    @scala.inline
+    def setSimultaneousHandlersRefObject(value: ReactRef[_]): Self = this.set("simultaneousHandlers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSimultaneousHandlersFunction1(value: /* instance */ _ | Null => Unit): Self = this.set("simultaneousHandlers", js.Any.fromFunction1(value))
+    @scala.inline
+    def setSimultaneousHandlers(value: Ref[_] | js.Array[Ref[_]]): Self = this.set("simultaneousHandlers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSimultaneousHandlers: Self = this.set("simultaneousHandlers", js.undefined)
+    @scala.inline
+    def setSimultaneousHandlersNull: Self = this.set("simultaneousHandlers", null)
+    @scala.inline
+    def setUseNativeAnimations(value: Boolean): Self = this.set("useNativeAnimations", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUseNativeAnimations: Self = this.set("useNativeAnimations", js.undefined)
+    @scala.inline
+    def setWaitForRefObject(value: ReactRef[_]): Self = this.set("waitFor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWaitForFunction1(value: /* instance */ _ | Null => Unit): Self = this.set("waitFor", js.Any.fromFunction1(value))
+    @scala.inline
+    def setWaitFor(value: Ref[_] | js.Array[Ref[_]]): Self = this.set("waitFor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWaitFor: Self = this.set("waitFor", js.undefined)
+    @scala.inline
+    def setWaitForNull: Self = this.set("waitFor", null)
+  }
+  
 }
 

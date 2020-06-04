@@ -1,6 +1,5 @@
 package typingsSlinky.rcTable.components
 
-import typingsSlinky.rcTable.interfaceMod.DefaultRecordType
 import typingsSlinky.rcTable.tableMod.TableProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,12 +10,12 @@ object Lib {
   @js.native
   object component extends js.Object
   
-  def withProps[RecordType <: DefaultRecordType](p: TableProps[RecordType]): SharedBuilder_TableProps1251172539[RecordType] = new SharedBuilder_TableProps1251172539[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[/* <: typingsSlinky.rcTable.interfaceMod.DefaultRecordType */ RecordType](p: TableProps[RecordType]): SharedBuilder_TableProps_175475921[RecordType] = new SharedBuilder_TableProps_175475921[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[RecordType <: DefaultRecordType](): SharedBuilder_TableProps1251172539[RecordType] = {
+  def apply[/* <: typingsSlinky.rcTable.interfaceMod.DefaultRecordType */ RecordType](): SharedBuilder_TableProps_175475921[RecordType] = {
     val __props = js.Dynamic.literal()
-    new SharedBuilder_TableProps1251172539[RecordType](js.Array(this.component, __props.asInstanceOf[TableProps[RecordType]]))
+    new SharedBuilder_TableProps_175475921[RecordType](js.Array(this.component, __props.asInstanceOf[TableProps[RecordType]]))
   }
-  implicit def make[RecordType <: DefaultRecordType](companion: Lib.type): SharedBuilder_TableProps1251172539[RecordType] = new SharedBuilder_TableProps1251172539[RecordType](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make[/* <: typingsSlinky.rcTable.interfaceMod.DefaultRecordType */ RecordType](companion: Lib.type): SharedBuilder_TableProps_175475921[RecordType] = new SharedBuilder_TableProps_175475921[RecordType](js.Array(this.component, js.Dictionary.empty))()
 }
 

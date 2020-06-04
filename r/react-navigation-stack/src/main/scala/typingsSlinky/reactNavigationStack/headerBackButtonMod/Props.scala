@@ -25,31 +25,66 @@ trait Props extends js.Object {
 
 object Props {
   @scala.inline
-  def apply(
-    onPress: () => Unit,
-    allowFontScaling: js.UndefOr[Boolean] = js.undefined,
-    backImage: /* props */ TintColor => TagMod[Any] = null,
-    backTitleVisible: js.UndefOr[Boolean] = js.undefined,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    pressColorAndroid: String = null,
-    tintColor: String = null,
-    title: String = null,
-    titleStyle: js.UndefOr[Null | StyleProp[TextStyle]] = js.undefined,
-    truncatedTitle: String = null,
-    width: js.UndefOr[Double] = js.undefined
-  ): Props = {
+  def apply(onPress: () => Unit): Props = {
     val __obj = js.Dynamic.literal(onPress = js.Any.fromFunction0(onPress))
-    if (!js.isUndefined(allowFontScaling)) __obj.updateDynamic("allowFontScaling")(allowFontScaling.get.asInstanceOf[js.Any])
-    if (backImage != null) __obj.updateDynamic("backImage")(js.Any.fromFunction1(backImage))
-    if (!js.isUndefined(backTitleVisible)) __obj.updateDynamic("backTitleVisible")(backTitleVisible.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (pressColorAndroid != null) __obj.updateDynamic("pressColorAndroid")(pressColorAndroid.asInstanceOf[js.Any])
-    if (tintColor != null) __obj.updateDynamic("tintColor")(tintColor.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (!js.isUndefined(titleStyle)) __obj.updateDynamic("titleStyle")(titleStyle.asInstanceOf[js.Any])
-    if (truncatedTitle != null) __obj.updateDynamic("truncatedTitle")(truncatedTitle.asInstanceOf[js.Any])
-    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Props]
   }
+  @scala.inline
+  implicit class PropsOps[Self <: Props] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setOnPress(value: () => Unit): Self = this.set("onPress", js.Any.fromFunction0(value))
+    @scala.inline
+    def setAllowFontScaling(value: Boolean): Self = this.set("allowFontScaling", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAllowFontScaling: Self = this.set("allowFontScaling", js.undefined)
+    @scala.inline
+    def setBackImage(value: /* props */ TintColor => TagMod[Any]): Self = this.set("backImage", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteBackImage: Self = this.set("backImage", js.undefined)
+    @scala.inline
+    def setBackTitleVisible(value: Boolean): Self = this.set("backTitleVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBackTitleVisible: Self = this.set("backTitleVisible", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setPressColorAndroid(value: String): Self = this.set("pressColorAndroid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePressColorAndroid: Self = this.set("pressColorAndroid", js.undefined)
+    @scala.inline
+    def setTintColor(value: String): Self = this.set("tintColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTintColor: Self = this.set("tintColor", js.undefined)
+    @scala.inline
+    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
+    @scala.inline
+    def setTitleStyle(value: StyleProp[TextStyle]): Self = this.set("titleStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitleStyle: Self = this.set("titleStyle", js.undefined)
+    @scala.inline
+    def setTitleStyleNull: Self = this.set("titleStyle", null)
+    @scala.inline
+    def setTruncatedTitle(value: String): Self = this.set("truncatedTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTruncatedTitle: Self = this.set("truncatedTitle", js.undefined)
+    @scala.inline
+    def setWidth(value: Double): Self = this.set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWidth: Self = this.set("width", js.undefined)
+  }
+  
 }
 

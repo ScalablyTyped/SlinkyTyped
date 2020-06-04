@@ -82,60 +82,128 @@ trait PluginServiceRegistrationOptions extends js.Object {
 
 object PluginServiceRegistrationOptions {
   @scala.inline
-  def apply(
-    afterDatasetDraw: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    afterDatasetUpdate: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    afterDatasetsDraw: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    afterDatasetsUpdate: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    afterDraw: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    afterEvent: (/* chartInstance */ Chart, /* event */ Event, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    afterInit: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    afterLayout: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    afterRender: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    afterScaleUpdate: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    afterTooltipDraw: (/* chartInstance */ Chart, /* tooltipData */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
-    afterUpdate: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    beforeDatasetDraw: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    beforeDatasetUpdate: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    beforeDatasetsDraw: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    beforeDatasetsUpdate: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    beforeDraw: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    beforeEvent: (/* chartInstance */ Chart, /* event */ Event, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    beforeInit: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    beforeLayout: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    beforeRender: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    beforeTooltipDraw: (/* chartInstance */ Chart, /* tooltipData */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
-    beforeUpdate: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    destroy: /* chartInstance */ Chart => Unit = null,
-    resize: (/* chartInstance */ Chart, /* newChartSize */ ChartSize, /* options */ js.UndefOr[js.Any]) => Unit = null
-  ): PluginServiceRegistrationOptions = {
+  def apply(): PluginServiceRegistrationOptions = {
     val __obj = js.Dynamic.literal()
-    if (afterDatasetDraw != null) __obj.updateDynamic("afterDatasetDraw")(js.Any.fromFunction3(afterDatasetDraw))
-    if (afterDatasetUpdate != null) __obj.updateDynamic("afterDatasetUpdate")(js.Any.fromFunction2(afterDatasetUpdate))
-    if (afterDatasetsDraw != null) __obj.updateDynamic("afterDatasetsDraw")(js.Any.fromFunction3(afterDatasetsDraw))
-    if (afterDatasetsUpdate != null) __obj.updateDynamic("afterDatasetsUpdate")(js.Any.fromFunction2(afterDatasetsUpdate))
-    if (afterDraw != null) __obj.updateDynamic("afterDraw")(js.Any.fromFunction3(afterDraw))
-    if (afterEvent != null) __obj.updateDynamic("afterEvent")(js.Any.fromFunction3(afterEvent))
-    if (afterInit != null) __obj.updateDynamic("afterInit")(js.Any.fromFunction2(afterInit))
-    if (afterLayout != null) __obj.updateDynamic("afterLayout")(js.Any.fromFunction2(afterLayout))
-    if (afterRender != null) __obj.updateDynamic("afterRender")(js.Any.fromFunction2(afterRender))
-    if (afterScaleUpdate != null) __obj.updateDynamic("afterScaleUpdate")(js.Any.fromFunction2(afterScaleUpdate))
-    if (afterTooltipDraw != null) __obj.updateDynamic("afterTooltipDraw")(js.Any.fromFunction3(afterTooltipDraw))
-    if (afterUpdate != null) __obj.updateDynamic("afterUpdate")(js.Any.fromFunction2(afterUpdate))
-    if (beforeDatasetDraw != null) __obj.updateDynamic("beforeDatasetDraw")(js.Any.fromFunction3(beforeDatasetDraw))
-    if (beforeDatasetUpdate != null) __obj.updateDynamic("beforeDatasetUpdate")(js.Any.fromFunction2(beforeDatasetUpdate))
-    if (beforeDatasetsDraw != null) __obj.updateDynamic("beforeDatasetsDraw")(js.Any.fromFunction3(beforeDatasetsDraw))
-    if (beforeDatasetsUpdate != null) __obj.updateDynamic("beforeDatasetsUpdate")(js.Any.fromFunction2(beforeDatasetsUpdate))
-    if (beforeDraw != null) __obj.updateDynamic("beforeDraw")(js.Any.fromFunction3(beforeDraw))
-    if (beforeEvent != null) __obj.updateDynamic("beforeEvent")(js.Any.fromFunction3(beforeEvent))
-    if (beforeInit != null) __obj.updateDynamic("beforeInit")(js.Any.fromFunction2(beforeInit))
-    if (beforeLayout != null) __obj.updateDynamic("beforeLayout")(js.Any.fromFunction2(beforeLayout))
-    if (beforeRender != null) __obj.updateDynamic("beforeRender")(js.Any.fromFunction2(beforeRender))
-    if (beforeTooltipDraw != null) __obj.updateDynamic("beforeTooltipDraw")(js.Any.fromFunction3(beforeTooltipDraw))
-    if (beforeUpdate != null) __obj.updateDynamic("beforeUpdate")(js.Any.fromFunction2(beforeUpdate))
-    if (destroy != null) __obj.updateDynamic("destroy")(js.Any.fromFunction1(destroy))
-    if (resize != null) __obj.updateDynamic("resize")(js.Any.fromFunction3(resize))
     __obj.asInstanceOf[PluginServiceRegistrationOptions]
   }
+  @scala.inline
+  implicit class PluginServiceRegistrationOptionsOps[Self <: PluginServiceRegistrationOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAfterDatasetDraw(value: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit): Self = this.set("afterDatasetDraw", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteAfterDatasetDraw: Self = this.set("afterDatasetDraw", js.undefined)
+    @scala.inline
+    def setAfterDatasetUpdate(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = this.set("afterDatasetUpdate", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteAfterDatasetUpdate: Self = this.set("afterDatasetUpdate", js.undefined)
+    @scala.inline
+    def setAfterDatasetsDraw(value: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit): Self = this.set("afterDatasetsDraw", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteAfterDatasetsDraw: Self = this.set("afterDatasetsDraw", js.undefined)
+    @scala.inline
+    def setAfterDatasetsUpdate(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = this.set("afterDatasetsUpdate", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteAfterDatasetsUpdate: Self = this.set("afterDatasetsUpdate", js.undefined)
+    @scala.inline
+    def setAfterDraw(value: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit): Self = this.set("afterDraw", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteAfterDraw: Self = this.set("afterDraw", js.undefined)
+    @scala.inline
+    def setAfterEvent(value: (/* chartInstance */ Chart, /* event */ Event, /* options */ js.UndefOr[js.Any]) => Unit): Self = this.set("afterEvent", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteAfterEvent: Self = this.set("afterEvent", js.undefined)
+    @scala.inline
+    def setAfterInit(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = this.set("afterInit", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteAfterInit: Self = this.set("afterInit", js.undefined)
+    @scala.inline
+    def setAfterLayout(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = this.set("afterLayout", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteAfterLayout: Self = this.set("afterLayout", js.undefined)
+    @scala.inline
+    def setAfterRender(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = this.set("afterRender", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteAfterRender: Self = this.set("afterRender", js.undefined)
+    @scala.inline
+    def setAfterScaleUpdate(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = this.set("afterScaleUpdate", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteAfterScaleUpdate: Self = this.set("afterScaleUpdate", js.undefined)
+    @scala.inline
+    def setAfterTooltipDraw(
+      value: (/* chartInstance */ Chart, /* tooltipData */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit
+    ): Self = this.set("afterTooltipDraw", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteAfterTooltipDraw: Self = this.set("afterTooltipDraw", js.undefined)
+    @scala.inline
+    def setAfterUpdate(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = this.set("afterUpdate", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteAfterUpdate: Self = this.set("afterUpdate", js.undefined)
+    @scala.inline
+    def setBeforeDatasetDraw(value: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit): Self = this.set("beforeDatasetDraw", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteBeforeDatasetDraw: Self = this.set("beforeDatasetDraw", js.undefined)
+    @scala.inline
+    def setBeforeDatasetUpdate(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = this.set("beforeDatasetUpdate", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteBeforeDatasetUpdate: Self = this.set("beforeDatasetUpdate", js.undefined)
+    @scala.inline
+    def setBeforeDatasetsDraw(value: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit): Self = this.set("beforeDatasetsDraw", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteBeforeDatasetsDraw: Self = this.set("beforeDatasetsDraw", js.undefined)
+    @scala.inline
+    def setBeforeDatasetsUpdate(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = this.set("beforeDatasetsUpdate", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteBeforeDatasetsUpdate: Self = this.set("beforeDatasetsUpdate", js.undefined)
+    @scala.inline
+    def setBeforeDraw(value: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit): Self = this.set("beforeDraw", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteBeforeDraw: Self = this.set("beforeDraw", js.undefined)
+    @scala.inline
+    def setBeforeEvent(value: (/* chartInstance */ Chart, /* event */ Event, /* options */ js.UndefOr[js.Any]) => Unit): Self = this.set("beforeEvent", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteBeforeEvent: Self = this.set("beforeEvent", js.undefined)
+    @scala.inline
+    def setBeforeInit(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = this.set("beforeInit", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteBeforeInit: Self = this.set("beforeInit", js.undefined)
+    @scala.inline
+    def setBeforeLayout(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = this.set("beforeLayout", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteBeforeLayout: Self = this.set("beforeLayout", js.undefined)
+    @scala.inline
+    def setBeforeRender(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = this.set("beforeRender", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteBeforeRender: Self = this.set("beforeRender", js.undefined)
+    @scala.inline
+    def setBeforeTooltipDraw(
+      value: (/* chartInstance */ Chart, /* tooltipData */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit
+    ): Self = this.set("beforeTooltipDraw", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteBeforeTooltipDraw: Self = this.set("beforeTooltipDraw", js.undefined)
+    @scala.inline
+    def setBeforeUpdate(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = this.set("beforeUpdate", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteBeforeUpdate: Self = this.set("beforeUpdate", js.undefined)
+    @scala.inline
+    def setDestroy(value: /* chartInstance */ Chart => Unit): Self = this.set("destroy", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteDestroy: Self = this.set("destroy", js.undefined)
+    @scala.inline
+    def setResize(
+      value: (/* chartInstance */ Chart, /* newChartSize */ ChartSize, /* options */ js.UndefOr[js.Any]) => Unit
+    ): Self = this.set("resize", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteResize: Self = this.set("resize", js.undefined)
+  }
+  
 }
 

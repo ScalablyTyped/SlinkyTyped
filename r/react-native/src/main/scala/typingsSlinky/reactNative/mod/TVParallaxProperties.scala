@@ -41,26 +41,54 @@ trait TVParallaxProperties extends js.Object {
 
 object TVParallaxProperties {
   @scala.inline
-  def apply(
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    magnification: js.UndefOr[Double] = js.undefined,
-    pressDelay: js.UndefOr[Double] = js.undefined,
-    pressDuration: js.UndefOr[Double] = js.undefined,
-    pressMagnification: js.UndefOr[Double] = js.undefined,
-    shiftDistanceX: js.UndefOr[Double] = js.undefined,
-    shiftDistanceY: js.UndefOr[Double] = js.undefined,
-    tiltAngle: js.UndefOr[Double] = js.undefined
-  ): TVParallaxProperties = {
+  def apply(): TVParallaxProperties = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(magnification)) __obj.updateDynamic("magnification")(magnification.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(pressDelay)) __obj.updateDynamic("pressDelay")(pressDelay.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(pressDuration)) __obj.updateDynamic("pressDuration")(pressDuration.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(pressMagnification)) __obj.updateDynamic("pressMagnification")(pressMagnification.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(shiftDistanceX)) __obj.updateDynamic("shiftDistanceX")(shiftDistanceX.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(shiftDistanceY)) __obj.updateDynamic("shiftDistanceY")(shiftDistanceY.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(tiltAngle)) __obj.updateDynamic("tiltAngle")(tiltAngle.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TVParallaxProperties]
   }
+  @scala.inline
+  implicit class TVParallaxPropertiesOps[Self <: TVParallaxProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setEnabled(value: Boolean): Self = this.set("enabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEnabled: Self = this.set("enabled", js.undefined)
+    @scala.inline
+    def setMagnification(value: Double): Self = this.set("magnification", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMagnification: Self = this.set("magnification", js.undefined)
+    @scala.inline
+    def setPressDelay(value: Double): Self = this.set("pressDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePressDelay: Self = this.set("pressDelay", js.undefined)
+    @scala.inline
+    def setPressDuration(value: Double): Self = this.set("pressDuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePressDuration: Self = this.set("pressDuration", js.undefined)
+    @scala.inline
+    def setPressMagnification(value: Double): Self = this.set("pressMagnification", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePressMagnification: Self = this.set("pressMagnification", js.undefined)
+    @scala.inline
+    def setShiftDistanceX(value: Double): Self = this.set("shiftDistanceX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShiftDistanceX: Self = this.set("shiftDistanceX", js.undefined)
+    @scala.inline
+    def setShiftDistanceY(value: Double): Self = this.set("shiftDistanceY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShiftDistanceY: Self = this.set("shiftDistanceY", js.undefined)
+    @scala.inline
+    def setTiltAngle(value: Double): Self = this.set("tiltAngle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTiltAngle: Self = this.set("tiltAngle", js.undefined)
+  }
+  
 }
 

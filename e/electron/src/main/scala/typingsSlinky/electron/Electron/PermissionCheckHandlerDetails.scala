@@ -37,5 +37,26 @@ object PermissionCheckHandlerDetails {
     val __obj = js.Dynamic.literal(isMainFrame = isMainFrame.asInstanceOf[js.Any], mediaType = mediaType.asInstanceOf[js.Any], requestingUrl = requestingUrl.asInstanceOf[js.Any], securityOrigin = securityOrigin.asInstanceOf[js.Any])
     __obj.asInstanceOf[PermissionCheckHandlerDetails]
   }
+  @scala.inline
+  implicit class PermissionCheckHandlerDetailsOps[Self <: PermissionCheckHandlerDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setIsMainFrame(value: Boolean): Self = this.set("isMainFrame", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMediaType(value: video | audio | unknown_): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRequestingUrl(value: String): Self = this.set("requestingUrl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSecurityOrigin(value: String): Self = this.set("securityOrigin", value.asInstanceOf[js.Any])
+  }
+  
 }
 

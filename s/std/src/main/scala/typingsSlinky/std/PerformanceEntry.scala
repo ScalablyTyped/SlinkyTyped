@@ -25,5 +25,28 @@ object PerformanceEntry {
     val __obj = js.Dynamic.literal(duration = duration.asInstanceOf[js.Any], entryType = entryType.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], startTime = startTime.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON))
     __obj.asInstanceOf[PerformanceEntry]
   }
+  @scala.inline
+  implicit class PerformanceEntryOps[Self <: org.scalajs.dom.raw.PerformanceEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDuration(value: Double): Self = this.set("duration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEntryType(value: java.lang.String): Self = this.set("entryType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setName(value: java.lang.String): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStartTime(value: Double): Self = this.set("startTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setToJSON(value: () => js.Any): Self = this.set("toJSON", js.Any.fromFunction0(value))
+  }
+  
 }
 

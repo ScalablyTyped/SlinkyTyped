@@ -46,27 +46,56 @@ trait EvaluateParameterType extends js.Object {
 
 object EvaluateParameterType {
   @scala.inline
-  def apply(
-    expression: String,
-    awaitPromise: js.UndefOr[Boolean] = js.undefined,
-    contextId: js.UndefOr[ExecutionContextId] = js.undefined,
-    generatePreview: js.UndefOr[Boolean] = js.undefined,
-    includeCommandLineAPI: js.UndefOr[Boolean] = js.undefined,
-    objectGroup: String = null,
-    returnByValue: js.UndefOr[Boolean] = js.undefined,
-    silent: js.UndefOr[Boolean] = js.undefined,
-    userGesture: js.UndefOr[Boolean] = js.undefined
-  ): EvaluateParameterType = {
+  def apply(expression: String): EvaluateParameterType = {
     val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any])
-    if (!js.isUndefined(awaitPromise)) __obj.updateDynamic("awaitPromise")(awaitPromise.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(contextId)) __obj.updateDynamic("contextId")(contextId.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(generatePreview)) __obj.updateDynamic("generatePreview")(generatePreview.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeCommandLineAPI)) __obj.updateDynamic("includeCommandLineAPI")(includeCommandLineAPI.get.asInstanceOf[js.Any])
-    if (objectGroup != null) __obj.updateDynamic("objectGroup")(objectGroup.asInstanceOf[js.Any])
-    if (!js.isUndefined(returnByValue)) __obj.updateDynamic("returnByValue")(returnByValue.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(userGesture)) __obj.updateDynamic("userGesture")(userGesture.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[EvaluateParameterType]
   }
+  @scala.inline
+  implicit class EvaluateParameterTypeOps[Self <: EvaluateParameterType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setExpression(value: String): Self = this.set("expression", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAwaitPromise(value: Boolean): Self = this.set("awaitPromise", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAwaitPromise: Self = this.set("awaitPromise", js.undefined)
+    @scala.inline
+    def setContextId(value: ExecutionContextId): Self = this.set("contextId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContextId: Self = this.set("contextId", js.undefined)
+    @scala.inline
+    def setGeneratePreview(value: Boolean): Self = this.set("generatePreview", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGeneratePreview: Self = this.set("generatePreview", js.undefined)
+    @scala.inline
+    def setIncludeCommandLineAPI(value: Boolean): Self = this.set("includeCommandLineAPI", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIncludeCommandLineAPI: Self = this.set("includeCommandLineAPI", js.undefined)
+    @scala.inline
+    def setObjectGroup(value: String): Self = this.set("objectGroup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteObjectGroup: Self = this.set("objectGroup", js.undefined)
+    @scala.inline
+    def setReturnByValue(value: Boolean): Self = this.set("returnByValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteReturnByValue: Self = this.set("returnByValue", js.undefined)
+    @scala.inline
+    def setSilent(value: Boolean): Self = this.set("silent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSilent: Self = this.set("silent", js.undefined)
+    @scala.inline
+    def setUserGesture(value: Boolean): Self = this.set("userGesture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUserGesture: Self = this.set("userGesture", js.undefined)
+  }
+  
 }
 

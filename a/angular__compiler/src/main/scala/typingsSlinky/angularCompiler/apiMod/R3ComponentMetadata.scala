@@ -8,7 +8,6 @@ import typingsSlinky.angularCompiler.coreMod.ChangeDetectionStrategy
 import typingsSlinky.angularCompiler.coreMod.ViewEncapsulation
 import typingsSlinky.angularCompiler.interpolationConfigMod.InterpolationConfig
 import typingsSlinky.angularCompiler.outputAstMod.Expression
-import typingsSlinky.angularCompiler.r3FactoryMod.R3DependencyMetadata
 import typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
 import typingsSlinky.std.Map
 import scala.scalajs.js
@@ -101,19 +100,54 @@ object R3ComponentMetadata {
     typeSourceSpan: ParseSourceSpan,
     usesInheritance: Boolean,
     viewQueries: js.Array[R3QueryMetadata],
-    wrapDirectivesAndPipesInClosure: Boolean,
-    animations: Expression = null,
-    changeDetection: ChangeDetectionStrategy = null,
-    deps: js.Array[R3DependencyMetadata] = null,
-    exportAs: js.Array[String] = null,
-    providers: Expression = null,
-    selector: String = null,
-    viewProviders: Expression = null
+    wrapDirectivesAndPipesInClosure: Boolean
   ): R3ComponentMetadata = {
-    val __obj = js.Dynamic.literal(directives = directives.asInstanceOf[js.Any], encapsulation = encapsulation.asInstanceOf[js.Any], host = host.asInstanceOf[js.Any], i18nUseExternalIds = i18nUseExternalIds.asInstanceOf[js.Any], inputs = inputs.asInstanceOf[js.Any], interpolation = interpolation.asInstanceOf[js.Any], lifecycle = lifecycle.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], outputs = outputs.asInstanceOf[js.Any], pipes = pipes.asInstanceOf[js.Any], queries = queries.asInstanceOf[js.Any], relativeContextFilePath = relativeContextFilePath.asInstanceOf[js.Any], styles = styles.asInstanceOf[js.Any], template = template.asInstanceOf[js.Any], typeArgumentCount = typeArgumentCount.asInstanceOf[js.Any], typeSourceSpan = typeSourceSpan.asInstanceOf[js.Any], usesInheritance = usesInheritance.asInstanceOf[js.Any], viewQueries = viewQueries.asInstanceOf[js.Any], wrapDirectivesAndPipesInClosure = wrapDirectivesAndPipesInClosure.asInstanceOf[js.Any], animations = animations.asInstanceOf[js.Any], deps = deps.asInstanceOf[js.Any], exportAs = exportAs.asInstanceOf[js.Any], providers = providers.asInstanceOf[js.Any], selector = selector.asInstanceOf[js.Any], viewProviders = viewProviders.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(directives = directives.asInstanceOf[js.Any], encapsulation = encapsulation.asInstanceOf[js.Any], host = host.asInstanceOf[js.Any], i18nUseExternalIds = i18nUseExternalIds.asInstanceOf[js.Any], inputs = inputs.asInstanceOf[js.Any], interpolation = interpolation.asInstanceOf[js.Any], lifecycle = lifecycle.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], outputs = outputs.asInstanceOf[js.Any], pipes = pipes.asInstanceOf[js.Any], queries = queries.asInstanceOf[js.Any], relativeContextFilePath = relativeContextFilePath.asInstanceOf[js.Any], styles = styles.asInstanceOf[js.Any], template = template.asInstanceOf[js.Any], typeArgumentCount = typeArgumentCount.asInstanceOf[js.Any], typeSourceSpan = typeSourceSpan.asInstanceOf[js.Any], usesInheritance = usesInheritance.asInstanceOf[js.Any], viewQueries = viewQueries.asInstanceOf[js.Any], wrapDirectivesAndPipesInClosure = wrapDirectivesAndPipesInClosure.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (changeDetection != null) __obj.updateDynamic("changeDetection")(changeDetection.asInstanceOf[js.Any])
     __obj.asInstanceOf[R3ComponentMetadata]
   }
+  @scala.inline
+  implicit class R3ComponentMetadataOps[Self <: R3ComponentMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDirectives(value: js.Array[ExpressionSelector]): Self = this.set("directives", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEncapsulation(value: ViewEncapsulation): Self = this.set("encapsulation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setI18nUseExternalIds(value: Boolean): Self = this.set("i18nUseExternalIds", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInterpolation(value: InterpolationConfig): Self = this.set("interpolation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPipes(value: Map[String, Expression]): Self = this.set("pipes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRelativeContextFilePath(value: String): Self = this.set("relativeContextFilePath", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStyles(value: js.Array[String]): Self = this.set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTemplate(value: Nodes): Self = this.set("template", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWrapDirectivesAndPipesInClosure(value: Boolean): Self = this.set("wrapDirectivesAndPipesInClosure", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAnimations(value: Expression): Self = this.set("animations", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAnimationsNull: Self = this.set("animations", null)
+    @scala.inline
+    def setChangeDetection(value: ChangeDetectionStrategy): Self = this.set("changeDetection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChangeDetection: Self = this.set("changeDetection", js.undefined)
+    @scala.inline
+    def setViewProviders(value: Expression): Self = this.set("viewProviders", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setViewProvidersNull: Self = this.set("viewProviders", null)
+  }
+  
 }
 

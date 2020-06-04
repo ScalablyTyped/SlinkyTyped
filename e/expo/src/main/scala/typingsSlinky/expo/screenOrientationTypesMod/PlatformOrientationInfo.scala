@@ -12,16 +12,34 @@ trait PlatformOrientationInfo extends js.Object {
 
 object PlatformOrientationInfo {
   @scala.inline
-  def apply(
-    screenOrientationArrayIOS: js.Array[Orientation] = null,
-    screenOrientationConstantAndroid: js.UndefOr[Double] = js.undefined,
-    screenOrientationLockWeb: WebOrientationLock = null
-  ): PlatformOrientationInfo = {
+  def apply(): PlatformOrientationInfo = {
     val __obj = js.Dynamic.literal()
-    if (screenOrientationArrayIOS != null) __obj.updateDynamic("screenOrientationArrayIOS")(screenOrientationArrayIOS.asInstanceOf[js.Any])
-    if (!js.isUndefined(screenOrientationConstantAndroid)) __obj.updateDynamic("screenOrientationConstantAndroid")(screenOrientationConstantAndroid.get.asInstanceOf[js.Any])
-    if (screenOrientationLockWeb != null) __obj.updateDynamic("screenOrientationLockWeb")(screenOrientationLockWeb.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlatformOrientationInfo]
   }
+  @scala.inline
+  implicit class PlatformOrientationInfoOps[Self <: PlatformOrientationInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setScreenOrientationArrayIOS(value: js.Array[Orientation]): Self = this.set("screenOrientationArrayIOS", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScreenOrientationArrayIOS: Self = this.set("screenOrientationArrayIOS", js.undefined)
+    @scala.inline
+    def setScreenOrientationConstantAndroid(value: Double): Self = this.set("screenOrientationConstantAndroid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScreenOrientationConstantAndroid: Self = this.set("screenOrientationConstantAndroid", js.undefined)
+    @scala.inline
+    def setScreenOrientationLockWeb(value: WebOrientationLock): Self = this.set("screenOrientationLockWeb", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScreenOrientationLockWeb: Self = this.set("screenOrientationLockWeb", js.undefined)
+  }
+  
 }
 

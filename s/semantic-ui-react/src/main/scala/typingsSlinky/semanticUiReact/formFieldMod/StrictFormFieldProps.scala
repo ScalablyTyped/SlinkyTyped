@@ -1,6 +1,9 @@
 package typingsSlinky.semanticUiReact.formFieldMod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
+import typingsSlinky.react.mod.ReactNodeArray
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.HtmlLabelProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
@@ -45,36 +48,90 @@ trait StrictFormFieldProps extends js.Object {
 
 object StrictFormFieldProps {
   @scala.inline
-  def apply(
-    as: js.Any = null,
-    children: TagMod[Any] = null,
-    className: String = null,
-    content: SemanticShorthandContent = null,
-    control: js.Any = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    error: Boolean | SemanticShorthandItem[LabelProps] = null,
-    id: Double | String = null,
-    `inline`: js.UndefOr[Boolean] = js.undefined,
-    label: SemanticShorthandItem[HtmlLabelProps] = null,
-    required: js.Any = null,
-    `type`: String = null,
-    width: SemanticWIDTHS = null
-  ): StrictFormFieldProps = {
+  def apply(): StrictFormFieldProps = {
     val __obj = js.Dynamic.literal()
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (control != null) __obj.updateDynamic("control")(control.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.get.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (required != null) __obj.updateDynamic("required")(required.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictFormFieldProps]
   }
+  @scala.inline
+  implicit class StrictFormFieldPropsOps[Self <: StrictFormFieldProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAs(value: js.Any): Self = this.set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAs: Self = this.set("as", js.undefined)
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setContentReactElement(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContent(value: SemanticShorthandContent): Self = this.set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContent: Self = this.set("content", js.undefined)
+    @scala.inline
+    def setControl(value: js.Any): Self = this.set("control", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteControl: Self = this.set("control", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setErrorReactElement(value: ReactElement): Self = this.set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setErrorFunction3(
+      value: (/* component */ ReactType[LabelProps], LabelProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): Self = this.set("error", js.Any.fromFunction3(value))
+    @scala.inline
+    def setError(value: Boolean | SemanticShorthandItem[LabelProps]): Self = this.set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteError: Self = this.set("error", js.undefined)
+    @scala.inline
+    def setId(value: Double | String): Self = this.set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteId: Self = this.set("id", js.undefined)
+    @scala.inline
+    def setInline(value: Boolean): Self = this.set("inline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInline: Self = this.set("inline", js.undefined)
+    @scala.inline
+    def setLabelReactElement(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLabelFunction3(
+      value: (/* component */ ReactType[HtmlLabelProps], HtmlLabelProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): Self = this.set("label", js.Any.fromFunction3(value))
+    @scala.inline
+    def setLabel(value: SemanticShorthandItem[HtmlLabelProps]): Self = this.set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLabel: Self = this.set("label", js.undefined)
+    @scala.inline
+    def setRequired(value: js.Any): Self = this.set("required", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRequired: Self = this.set("required", js.undefined)
+    @scala.inline
+    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteType: Self = this.set("type", js.undefined)
+    @scala.inline
+    def setWidth(value: SemanticWIDTHS): Self = this.set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWidth: Self = this.set("width", js.undefined)
+  }
+  
 }
 

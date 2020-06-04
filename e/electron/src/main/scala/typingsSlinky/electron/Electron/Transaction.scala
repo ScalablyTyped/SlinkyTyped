@@ -53,5 +53,32 @@ object Transaction {
     val __obj = js.Dynamic.literal(errorCode = errorCode.asInstanceOf[js.Any], errorMessage = errorMessage.asInstanceOf[js.Any], originalTransactionIdentifier = originalTransactionIdentifier.asInstanceOf[js.Any], payment = payment.asInstanceOf[js.Any], transactionDate = transactionDate.asInstanceOf[js.Any], transactionIdentifier = transactionIdentifier.asInstanceOf[js.Any], transactionState = transactionState.asInstanceOf[js.Any])
     __obj.asInstanceOf[Transaction]
   }
+  @scala.inline
+  implicit class TransactionOps[Self <: Transaction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setErrorCode(value: Double): Self = this.set("errorCode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setErrorMessage(value: String): Self = this.set("errorMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOriginalTransactionIdentifier(value: String): Self = this.set("originalTransactionIdentifier", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPayment(value: Payment): Self = this.set("payment", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTransactionDate(value: String): Self = this.set("transactionDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTransactionIdentifier(value: String): Self = this.set("transactionIdentifier", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTransactionState(value: purchasing | purchased | failed | restored | deferred): Self = this.set("transactionState", value.asInstanceOf[js.Any])
+  }
+  
 }
 

@@ -101,5 +101,81 @@ object MainInterface {
     val __obj = js.Dynamic.literal(BrowserView = BrowserView.asInstanceOf[js.Any], BrowserWindow = BrowserWindow.asInstanceOf[js.Any], ClientRequest = ClientRequest.asInstanceOf[js.Any], Cookies = Cookies.asInstanceOf[js.Any], Debugger = Debugger.asInstanceOf[js.Any], DownloadItem = DownloadItem.asInstanceOf[js.Any], IncomingMessage = IncomingMessage.asInstanceOf[js.Any], Menu = Menu.asInstanceOf[js.Any], MenuItem = MenuItem.asInstanceOf[js.Any], Notification = Notification.asInstanceOf[js.Any], TouchBar = TouchBar.asInstanceOf[js.Any], Tray = Tray.asInstanceOf[js.Any], WebRequest = WebRequest.asInstanceOf[js.Any], app = app.asInstanceOf[js.Any], autoUpdater = autoUpdater.asInstanceOf[js.Any], clipboard = clipboard.asInstanceOf[js.Any], contentTracing = contentTracing.asInstanceOf[js.Any], crashReporter = crashReporter.asInstanceOf[js.Any], dialog = dialog.asInstanceOf[js.Any], globalShortcut = globalShortcut.asInstanceOf[js.Any], inAppPurchase = inAppPurchase.asInstanceOf[js.Any], ipcMain = ipcMain.asInstanceOf[js.Any], nativeImage = nativeImage.asInstanceOf[js.Any], net = net.asInstanceOf[js.Any], netLog = netLog.asInstanceOf[js.Any], powerMonitor = powerMonitor.asInstanceOf[js.Any], powerSaveBlocker = powerSaveBlocker.asInstanceOf[js.Any], protocol = protocol.asInstanceOf[js.Any], screen = screen.asInstanceOf[js.Any], session = session.asInstanceOf[js.Any], shell = shell.asInstanceOf[js.Any], systemPreferences = systemPreferences.asInstanceOf[js.Any], webContents = webContents.asInstanceOf[js.Any])
     __obj.asInstanceOf[MainInterface]
   }
+  @scala.inline
+  implicit class MainInterfaceOps[Self <: MainInterface] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBrowserView(value: TypeofBrowserView): Self = this.set("BrowserView", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBrowserWindow(value: TypeofBrowserWindow): Self = this.set("BrowserWindow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setClientRequest(
+      value: Instantiable1[
+          /* options */ method | url | typingsSlinky.electron.electronStrings.session | partition | protocol | host | hostname | port | path | redirect, 
+          ClientRequest
+        ]
+    ): Self = this.set("ClientRequest", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCookies(value: Instantiable0[Cookies]): Self = this.set("Cookies", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDebugger(value: Instantiable0[Debugger]): Self = this.set("Debugger", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDownloadItem(value: Instantiable0[DownloadItem]): Self = this.set("DownloadItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIncomingMessage(value: Instantiable0[IncomingMessage]): Self = this.set("IncomingMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMenu(value: TypeofMenu): Self = this.set("Menu", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMenuItem(value: Instantiable1[/* options */ MenuItemConstructorOptions, MenuItem]): Self = this.set("MenuItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNotification(value: TypeofNotification): Self = this.set("Notification", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTouchBar(value: TypeofTouchBar): Self = this.set("TouchBar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTray(value: Instantiable1[/* image */ NativeImage_ | String, Tray]): Self = this.set("Tray", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWebRequest(value: Instantiable0[WebRequest]): Self = this.set("WebRequest", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setApp(value: App): Self = this.set("app", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAutoUpdater(value: AutoUpdater): Self = this.set("autoUpdater", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContentTracing(value: ContentTracing): Self = this.set("contentTracing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDialog(value: Dialog): Self = this.set("dialog", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setGlobalShortcut(value: GlobalShortcut): Self = this.set("globalShortcut", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInAppPurchase(value: InAppPurchase): Self = this.set("inAppPurchase", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIpcMain(value: IpcMain): Self = this.set("ipcMain", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNet(value: Net): Self = this.set("net", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNetLog(value: NetLog): Self = this.set("netLog", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPowerMonitor(value: PowerMonitor): Self = this.set("powerMonitor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPowerSaveBlocker(value: PowerSaveBlocker): Self = this.set("powerSaveBlocker", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setProtocol(value: Protocol): Self = this.set("protocol", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setScreen(value: Screen): Self = this.set("screen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSession(value: TypeofSession): Self = this.set("session", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSystemPreferences(value: SystemPreferences): Self = this.set("systemPreferences", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWebContents(value: TypeofWebContents): Self = this.set("webContents", value.asInstanceOf[js.Any])
+  }
+  
 }
 

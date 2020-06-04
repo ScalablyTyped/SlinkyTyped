@@ -1,13 +1,13 @@
 package typingsSlinky.semanticUiReact.components
 
 import org.scalajs.dom.raw.HTMLAnchorElement
-import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.a.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.imageImageMod.ImageProps
 import typingsSlinky.semanticUiReact.listContentMod.ListContentProps
@@ -38,7 +38,7 @@ object ListItem {
     def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     @scala.inline
     def contentFunction3(
-      value: (/* component */ ReactComponentClass[ListContentProps], ListContentProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ListContentProps], ListContentProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("content", js.Any.fromFunction3(value))
     @scala.inline
     def content(value: SemanticShorthandItem[ListContentProps]): this.type = set("content", value.asInstanceOf[js.Any])
@@ -46,7 +46,7 @@ object ListItem {
     def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
     @scala.inline
     def descriptionFunction3(
-      value: (/* component */ ReactComponentClass[ListDescriptionProps], ListDescriptionProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ListDescriptionProps], ListDescriptionProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("description", js.Any.fromFunction3(value))
     @scala.inline
     def description(value: SemanticShorthandItem[ListDescriptionProps]): this.type = set("description", value.asInstanceOf[js.Any])
@@ -56,7 +56,7 @@ object ListItem {
     def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     @scala.inline
     def headerFunction3(
-      value: (/* component */ ReactComponentClass[ListHeaderProps], ListHeaderProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ListHeaderProps], ListHeaderProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("header", js.Any.fromFunction3(value))
     @scala.inline
     def header(value: SemanticShorthandItem[ListHeaderProps]): this.type = set("header", value.asInstanceOf[js.Any])
@@ -64,7 +64,7 @@ object ListItem {
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def iconFunction3(
-      value: (/* component */ ReactComponentClass[ListIconProps], ListIconProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ListIconProps], ListIconProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("icon", js.Any.fromFunction3(value))
     @scala.inline
     def icon(value: SemanticShorthandItem[ListIconProps]): this.type = set("icon", value.asInstanceOf[js.Any])
@@ -72,7 +72,7 @@ object ListItem {
     def imageReactElement(value: ReactElement): this.type = set("image", value.asInstanceOf[js.Any])
     @scala.inline
     def imageFunction3(
-      value: (/* component */ ReactComponentClass[ImageProps], ImageProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ImageProps], ImageProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("image", js.Any.fromFunction3(value))
     @scala.inline
     def image(value: SemanticShorthandItem[ImageProps]): this.type = set("image", value.asInstanceOf[js.Any])

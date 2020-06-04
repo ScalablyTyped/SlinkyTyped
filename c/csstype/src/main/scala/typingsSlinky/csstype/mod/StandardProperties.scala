@@ -10,13 +10,8 @@ trait StandardProperties[TLength]
 
 object StandardProperties {
   @scala.inline
-  def apply[TLength](
-    StandardLonghandProperties: StandardLonghandProperties[TLength] = null,
-    StandardShorthandProperties: StandardShorthandProperties[TLength] = null
-  ): StandardProperties[TLength] = {
+  def apply[TLength](): StandardProperties[TLength] = {
     val __obj = js.Dynamic.literal()
-    if (StandardLonghandProperties != null) js.Dynamic.global.Object.assign(__obj, StandardLonghandProperties)
-    if (StandardShorthandProperties != null) js.Dynamic.global.Object.assign(__obj, StandardShorthandProperties)
     __obj.asInstanceOf[StandardProperties[TLength]]
   }
 }

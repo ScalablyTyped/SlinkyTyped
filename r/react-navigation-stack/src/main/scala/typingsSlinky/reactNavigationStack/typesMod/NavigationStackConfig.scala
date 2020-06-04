@@ -34,38 +34,82 @@ trait NavigationStackConfig extends js.Object {
 
 object NavigationStackConfig {
   @scala.inline
-  def apply(
-    cardOverlayEnabled: js.UndefOr[Boolean] = js.undefined,
-    cardShadowEnabled: js.UndefOr[Boolean] = js.undefined,
-    cardStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
-    disableKeyboardHandling: js.UndefOr[Boolean] = js.undefined,
-    headerBackTitleVisible: js.UndefOr[Boolean] = js.undefined,
-    headerBackgroundTransitionPreset: HeaderBackgroundTransitionPreset = null,
-    headerLayoutPreset: HeaderLayoutPreset = null,
-    headerMode: HeaderMode = null,
-    headerTransitionPreset: HeaderTransitionPreset = null,
-    mode: card | modal = null,
-    onTransitionEnd: () => Unit = null,
-    onTransitionStart: () => Unit = null,
-    transitionConfig: (/* transitionProps */ TransitionProps, /* prevTransitionProps */ js.UndefOr[TransitionProps], /* isModal */ js.UndefOr[Boolean]) => TransitionConfig with HeaderTransitionConfig = null,
-    transparentCard: js.UndefOr[Boolean] = js.undefined
-  ): NavigationStackConfig = {
+  def apply(): NavigationStackConfig = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(cardOverlayEnabled)) __obj.updateDynamic("cardOverlayEnabled")(cardOverlayEnabled.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(cardShadowEnabled)) __obj.updateDynamic("cardShadowEnabled")(cardShadowEnabled.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(cardStyle)) __obj.updateDynamic("cardStyle")(cardStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableKeyboardHandling)) __obj.updateDynamic("disableKeyboardHandling")(disableKeyboardHandling.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(headerBackTitleVisible)) __obj.updateDynamic("headerBackTitleVisible")(headerBackTitleVisible.get.asInstanceOf[js.Any])
-    if (headerBackgroundTransitionPreset != null) __obj.updateDynamic("headerBackgroundTransitionPreset")(headerBackgroundTransitionPreset.asInstanceOf[js.Any])
-    if (headerLayoutPreset != null) __obj.updateDynamic("headerLayoutPreset")(headerLayoutPreset.asInstanceOf[js.Any])
-    if (headerMode != null) __obj.updateDynamic("headerMode")(headerMode.asInstanceOf[js.Any])
-    if (headerTransitionPreset != null) __obj.updateDynamic("headerTransitionPreset")(headerTransitionPreset.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (onTransitionEnd != null) __obj.updateDynamic("onTransitionEnd")(js.Any.fromFunction0(onTransitionEnd))
-    if (onTransitionStart != null) __obj.updateDynamic("onTransitionStart")(js.Any.fromFunction0(onTransitionStart))
-    if (transitionConfig != null) __obj.updateDynamic("transitionConfig")(js.Any.fromFunction3(transitionConfig))
-    if (!js.isUndefined(transparentCard)) __obj.updateDynamic("transparentCard")(transparentCard.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavigationStackConfig]
   }
+  @scala.inline
+  implicit class NavigationStackConfigOps[Self <: NavigationStackConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCardOverlayEnabled(value: Boolean): Self = this.set("cardOverlayEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCardOverlayEnabled: Self = this.set("cardOverlayEnabled", js.undefined)
+    @scala.inline
+    def setCardShadowEnabled(value: Boolean): Self = this.set("cardShadowEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCardShadowEnabled: Self = this.set("cardShadowEnabled", js.undefined)
+    @scala.inline
+    def setCardStyle(value: StyleProp[ViewStyle]): Self = this.set("cardStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCardStyle: Self = this.set("cardStyle", js.undefined)
+    @scala.inline
+    def setCardStyleNull: Self = this.set("cardStyle", null)
+    @scala.inline
+    def setDisableKeyboardHandling(value: Boolean): Self = this.set("disableKeyboardHandling", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisableKeyboardHandling: Self = this.set("disableKeyboardHandling", js.undefined)
+    @scala.inline
+    def setHeaderBackTitleVisible(value: Boolean): Self = this.set("headerBackTitleVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeaderBackTitleVisible: Self = this.set("headerBackTitleVisible", js.undefined)
+    @scala.inline
+    def setHeaderBackgroundTransitionPreset(value: HeaderBackgroundTransitionPreset): Self = this.set("headerBackgroundTransitionPreset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeaderBackgroundTransitionPreset: Self = this.set("headerBackgroundTransitionPreset", js.undefined)
+    @scala.inline
+    def setHeaderLayoutPreset(value: HeaderLayoutPreset): Self = this.set("headerLayoutPreset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeaderLayoutPreset: Self = this.set("headerLayoutPreset", js.undefined)
+    @scala.inline
+    def setHeaderMode(value: HeaderMode): Self = this.set("headerMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeaderMode: Self = this.set("headerMode", js.undefined)
+    @scala.inline
+    def setHeaderTransitionPreset(value: HeaderTransitionPreset): Self = this.set("headerTransitionPreset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeaderTransitionPreset: Self = this.set("headerTransitionPreset", js.undefined)
+    @scala.inline
+    def setMode(value: card | modal): Self = this.set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMode: Self = this.set("mode", js.undefined)
+    @scala.inline
+    def setOnTransitionEnd(value: () => Unit): Self = this.set("onTransitionEnd", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnTransitionEnd: Self = this.set("onTransitionEnd", js.undefined)
+    @scala.inline
+    def setOnTransitionStart(value: () => Unit): Self = this.set("onTransitionStart", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnTransitionStart: Self = this.set("onTransitionStart", js.undefined)
+    @scala.inline
+    def setTransitionConfig(
+      value: (/* transitionProps */ TransitionProps, /* prevTransitionProps */ js.UndefOr[TransitionProps], /* isModal */ js.UndefOr[Boolean]) => TransitionConfig with HeaderTransitionConfig
+    ): Self = this.set("transitionConfig", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteTransitionConfig: Self = this.set("transitionConfig", js.undefined)
+    @scala.inline
+    def setTransparentCard(value: Boolean): Self = this.set("transparentCard", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTransparentCard: Self = this.set("transparentCard", js.undefined)
+  }
+  
 }
 

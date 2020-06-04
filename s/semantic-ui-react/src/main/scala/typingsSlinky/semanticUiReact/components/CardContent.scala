@@ -1,11 +1,11 @@
 package typingsSlinky.semanticUiReact.components
 
-import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.cardContentMod.CardContentProps
 import typingsSlinky.semanticUiReact.cardDescriptionMod.CardDescriptionProps
 import typingsSlinky.semanticUiReact.cardHeaderMod.CardHeaderProps
@@ -40,7 +40,7 @@ object CardContent {
     def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
     @scala.inline
     def descriptionFunction3(
-      value: (/* component */ ReactComponentClass[CardDescriptionProps], CardDescriptionProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[CardDescriptionProps], CardDescriptionProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("description", js.Any.fromFunction3(value))
     @scala.inline
     def description(value: SemanticShorthandItem[CardDescriptionProps]): this.type = set("description", value.asInstanceOf[js.Any])
@@ -50,7 +50,7 @@ object CardContent {
     def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     @scala.inline
     def headerFunction3(
-      value: (/* component */ ReactComponentClass[CardHeaderProps], CardHeaderProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[CardHeaderProps], CardHeaderProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("header", js.Any.fromFunction3(value))
     @scala.inline
     def header(value: SemanticShorthandItem[CardHeaderProps]): this.type = set("header", value.asInstanceOf[js.Any])
@@ -58,7 +58,7 @@ object CardContent {
     def metaReactElement(value: ReactElement): this.type = set("meta", value.asInstanceOf[js.Any])
     @scala.inline
     def metaFunction3(
-      value: (/* component */ ReactComponentClass[CardMetaProps], CardMetaProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[CardMetaProps], CardMetaProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("meta", js.Any.fromFunction3(value))
     @scala.inline
     def meta(value: SemanticShorthandItem[CardMetaProps]): this.type = set("meta", value.asInstanceOf[js.Any])

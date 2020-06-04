@@ -1,6 +1,5 @@
 package typingsSlinky.jquery.JQuery
 
-import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -89,55 +88,95 @@ trait EffectsOptions[TElement]
 
 object EffectsOptions {
   @scala.inline
-  def apply[TElement](
-    StringDictionary: StringDictionary[js.Any] = null,
-    always: js.ThisFunction2[
-      /* this */ TElement, 
-      /* animation */ Animation[TElement], 
-      /* jumpedToEnd */ Boolean, 
-      Unit
-    ] = null,
-    complete: js.ThisFunction0[/* this */ TElement, Unit] = null,
-    done: js.ThisFunction2[
-      /* this */ TElement, 
-      /* animation */ Animation[TElement], 
-      /* jumpedToEnd */ Boolean, 
-      Unit
-    ] = null,
-    duration: Duration = null,
-    easing: String = null,
-    fail: js.ThisFunction2[
-      /* this */ TElement, 
-      /* animation */ Animation[TElement], 
-      /* jumpedToEnd */ Boolean, 
-      Unit
-    ] = null,
-    progress: js.ThisFunction3[
-      /* this */ TElement, 
-      /* animation */ Animation[TElement], 
-      /* progress */ Double, 
-      /* remainingMs */ Double, 
-      Unit
-    ] = null,
-    queue: Boolean | String = null,
-    specialEasing: PlainObject[String] = null,
-    start: js.ThisFunction1[/* this */ TElement, /* animation */ Animation[TElement], Unit] = null,
-    step: js.ThisFunction2[/* this */ TElement, /* now */ Double, /* tween */ Tween[TElement], Unit] = null
-  ): EffectsOptions[TElement] = {
+  def apply[TElement](): EffectsOptions[TElement] = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (always != null) __obj.updateDynamic("always")(always.asInstanceOf[js.Any])
-    if (complete != null) __obj.updateDynamic("complete")(complete.asInstanceOf[js.Any])
-    if (done != null) __obj.updateDynamic("done")(done.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
-    if (fail != null) __obj.updateDynamic("fail")(fail.asInstanceOf[js.Any])
-    if (progress != null) __obj.updateDynamic("progress")(progress.asInstanceOf[js.Any])
-    if (queue != null) __obj.updateDynamic("queue")(queue.asInstanceOf[js.Any])
-    if (specialEasing != null) __obj.updateDynamic("specialEasing")(specialEasing.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
-    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
     __obj.asInstanceOf[EffectsOptions[TElement]]
   }
+  @scala.inline
+  implicit class EffectsOptionsOps[Self <: EffectsOptions[_], TElement] (val x: Self with EffectsOptions[TElement]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAlways(
+      value: js.ThisFunction2[
+          /* this */ TElement, 
+          /* animation */ Animation[TElement], 
+          /* jumpedToEnd */ Boolean, 
+          Unit
+        ]
+    ): Self = this.set("always", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAlways: Self = this.set("always", js.undefined)
+    @scala.inline
+    def setComplete(value: js.ThisFunction0[/* this */ TElement, Unit]): Self = this.set("complete", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteComplete: Self = this.set("complete", js.undefined)
+    @scala.inline
+    def setDone(
+      value: js.ThisFunction2[
+          /* this */ TElement, 
+          /* animation */ Animation[TElement], 
+          /* jumpedToEnd */ Boolean, 
+          Unit
+        ]
+    ): Self = this.set("done", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDone: Self = this.set("done", js.undefined)
+    @scala.inline
+    def setDuration(value: Duration): Self = this.set("duration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDuration: Self = this.set("duration", js.undefined)
+    @scala.inline
+    def setEasing(value: String): Self = this.set("easing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEasing: Self = this.set("easing", js.undefined)
+    @scala.inline
+    def setFail(
+      value: js.ThisFunction2[
+          /* this */ TElement, 
+          /* animation */ Animation[TElement], 
+          /* jumpedToEnd */ Boolean, 
+          Unit
+        ]
+    ): Self = this.set("fail", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFail: Self = this.set("fail", js.undefined)
+    @scala.inline
+    def setProgress(
+      value: js.ThisFunction3[
+          /* this */ TElement, 
+          /* animation */ Animation[TElement], 
+          /* progress */ Double, 
+          /* remainingMs */ Double, 
+          Unit
+        ]
+    ): Self = this.set("progress", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteProgress: Self = this.set("progress", js.undefined)
+    @scala.inline
+    def setQueue(value: Boolean | String): Self = this.set("queue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteQueue: Self = this.set("queue", js.undefined)
+    @scala.inline
+    def setSpecialEasing(value: PlainObject[String]): Self = this.set("specialEasing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSpecialEasing: Self = this.set("specialEasing", js.undefined)
+    @scala.inline
+    def setStart(value: js.ThisFunction1[/* this */ TElement, /* animation */ Animation[TElement], Unit]): Self = this.set("start", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStart: Self = this.set("start", js.undefined)
+    @scala.inline
+    def setStep(value: js.ThisFunction2[/* this */ TElement, /* now */ Double, /* tween */ Tween[TElement], Unit]): Self = this.set("step", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStep: Self = this.set("step", js.undefined)
+  }
+  
 }
 

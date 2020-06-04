@@ -69,130 +69,262 @@ trait SvgPropertiesHyphen[TLength] extends js.Object {
 
 object SvgPropertiesHyphen {
   @scala.inline
-  def apply[TLength](
-    `alignment-baseline`: AlignmentBaselineProperty = null,
-    `baseline-shift`: BaselineShiftProperty[TLength] = null,
-    clip: ClipProperty = null,
-    `clip-path`: ClipPathProperty = null,
-    `clip-rule`: ClipRuleProperty = null,
-    color: ColorProperty = null,
-    `color-interpolation`: ColorInterpolationProperty = null,
-    `color-rendering`: ColorRenderingProperty = null,
-    cursor: CursorProperty = null,
-    direction: DirectionProperty = null,
-    display: DisplayProperty = null,
-    `dominant-baseline`: DominantBaselineProperty = null,
-    fill: FillProperty = null,
-    `fill-opacity`: GlobalsNumber = null,
-    `fill-rule`: FillRuleProperty = null,
-    filter: FilterProperty = null,
-    `flood-color`: FloodColorProperty = null,
-    `flood-opacity`: GlobalsNumber = null,
-    font: FontProperty = null,
-    `font-family`: FontFamilyProperty = null,
-    `font-size`: FontSizeProperty[TLength] = null,
-    `font-size-adjust`: FontSizeAdjustProperty = null,
-    `font-stretch`: FontStretchProperty = null,
-    `font-style`: FontStyleProperty = null,
-    `font-variant`: FontVariantProperty = null,
-    `font-weight`: FontWeightProperty = null,
-    `glyph-orientation-vertical`: GlyphOrientationVerticalProperty = null,
-    `image-rendering`: ImageRenderingProperty = null,
-    `letter-spacing`: LetterSpacingProperty[TLength] = null,
-    `lighting-color`: LightingColorProperty = null,
-    `line-height`: LineHeightProperty[TLength] = null,
-    marker: MarkerProperty = null,
-    `marker-end`: MarkerEndProperty = null,
-    `marker-mid`: MarkerMidProperty = null,
-    `marker-start`: MarkerStartProperty = null,
-    mask: MaskProperty[TLength] = null,
-    opacity: GlobalsNumber = null,
-    overflow: OverflowProperty = null,
-    `paint-order`: PaintOrderProperty = null,
-    `pointer-events`: PointerEventsProperty = null,
-    `shape-rendering`: ShapeRenderingProperty = null,
-    `stop-color`: StopColorProperty = null,
-    `stop-opacity`: GlobalsNumber = null,
-    stroke: StrokeProperty = null,
-    `stroke-dasharray`: StrokeDasharrayProperty[TLength] = null,
-    `stroke-dashoffset`: StrokeDashoffsetProperty[TLength] = null,
-    `stroke-linecap`: StrokeLinecapProperty = null,
-    `stroke-linejoin`: StrokeLinejoinProperty = null,
-    `stroke-miterlimit`: GlobalsNumber = null,
-    `stroke-opacity`: GlobalsNumber = null,
-    `stroke-width`: StrokeWidthProperty[TLength] = null,
-    `text-anchor`: TextAnchorProperty = null,
-    `text-decoration`: TextDecorationProperty = null,
-    `text-rendering`: TextRenderingProperty = null,
-    `unicode-bidi`: UnicodeBidiProperty = null,
-    `vector-effect`: VectorEffectProperty = null,
-    visibility: VisibilityProperty = null,
-    `white-space`: WhiteSpaceProperty = null,
-    `word-spacing`: WordSpacingProperty[TLength] = null,
-    `writing-mode`: WritingModeProperty = null
-  ): SvgPropertiesHyphen[TLength] = {
+  def apply[TLength](): SvgPropertiesHyphen[TLength] = {
     val __obj = js.Dynamic.literal()
-    if (`alignment-baseline` != null) __obj.updateDynamic("alignment-baseline")(`alignment-baseline`.asInstanceOf[js.Any])
-    if (`baseline-shift` != null) __obj.updateDynamic("baseline-shift")(`baseline-shift`.asInstanceOf[js.Any])
-    if (clip != null) __obj.updateDynamic("clip")(clip.asInstanceOf[js.Any])
-    if (`clip-path` != null) __obj.updateDynamic("clip-path")(`clip-path`.asInstanceOf[js.Any])
-    if (`clip-rule` != null) __obj.updateDynamic("clip-rule")(`clip-rule`.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (`color-interpolation` != null) __obj.updateDynamic("color-interpolation")(`color-interpolation`.asInstanceOf[js.Any])
-    if (`color-rendering` != null) __obj.updateDynamic("color-rendering")(`color-rendering`.asInstanceOf[js.Any])
-    if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (display != null) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
-    if (`dominant-baseline` != null) __obj.updateDynamic("dominant-baseline")(`dominant-baseline`.asInstanceOf[js.Any])
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (`fill-opacity` != null) __obj.updateDynamic("fill-opacity")(`fill-opacity`.asInstanceOf[js.Any])
-    if (`fill-rule` != null) __obj.updateDynamic("fill-rule")(`fill-rule`.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
-    if (`flood-color` != null) __obj.updateDynamic("flood-color")(`flood-color`.asInstanceOf[js.Any])
-    if (`flood-opacity` != null) __obj.updateDynamic("flood-opacity")(`flood-opacity`.asInstanceOf[js.Any])
-    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
-    if (`font-family` != null) __obj.updateDynamic("font-family")(`font-family`.asInstanceOf[js.Any])
-    if (`font-size` != null) __obj.updateDynamic("font-size")(`font-size`.asInstanceOf[js.Any])
-    if (`font-size-adjust` != null) __obj.updateDynamic("font-size-adjust")(`font-size-adjust`.asInstanceOf[js.Any])
-    if (`font-stretch` != null) __obj.updateDynamic("font-stretch")(`font-stretch`.asInstanceOf[js.Any])
-    if (`font-style` != null) __obj.updateDynamic("font-style")(`font-style`.asInstanceOf[js.Any])
-    if (`font-variant` != null) __obj.updateDynamic("font-variant")(`font-variant`.asInstanceOf[js.Any])
-    if (`font-weight` != null) __obj.updateDynamic("font-weight")(`font-weight`.asInstanceOf[js.Any])
-    if (`glyph-orientation-vertical` != null) __obj.updateDynamic("glyph-orientation-vertical")(`glyph-orientation-vertical`.asInstanceOf[js.Any])
-    if (`image-rendering` != null) __obj.updateDynamic("image-rendering")(`image-rendering`.asInstanceOf[js.Any])
-    if (`letter-spacing` != null) __obj.updateDynamic("letter-spacing")(`letter-spacing`.asInstanceOf[js.Any])
-    if (`lighting-color` != null) __obj.updateDynamic("lighting-color")(`lighting-color`.asInstanceOf[js.Any])
-    if (`line-height` != null) __obj.updateDynamic("line-height")(`line-height`.asInstanceOf[js.Any])
-    if (marker != null) __obj.updateDynamic("marker")(marker.asInstanceOf[js.Any])
-    if (`marker-end` != null) __obj.updateDynamic("marker-end")(`marker-end`.asInstanceOf[js.Any])
-    if (`marker-mid` != null) __obj.updateDynamic("marker-mid")(`marker-mid`.asInstanceOf[js.Any])
-    if (`marker-start` != null) __obj.updateDynamic("marker-start")(`marker-start`.asInstanceOf[js.Any])
-    if (mask != null) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (overflow != null) __obj.updateDynamic("overflow")(overflow.asInstanceOf[js.Any])
-    if (`paint-order` != null) __obj.updateDynamic("paint-order")(`paint-order`.asInstanceOf[js.Any])
-    if (`pointer-events` != null) __obj.updateDynamic("pointer-events")(`pointer-events`.asInstanceOf[js.Any])
-    if (`shape-rendering` != null) __obj.updateDynamic("shape-rendering")(`shape-rendering`.asInstanceOf[js.Any])
-    if (`stop-color` != null) __obj.updateDynamic("stop-color")(`stop-color`.asInstanceOf[js.Any])
-    if (`stop-opacity` != null) __obj.updateDynamic("stop-opacity")(`stop-opacity`.asInstanceOf[js.Any])
-    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
-    if (`stroke-dasharray` != null) __obj.updateDynamic("stroke-dasharray")(`stroke-dasharray`.asInstanceOf[js.Any])
-    if (`stroke-dashoffset` != null) __obj.updateDynamic("stroke-dashoffset")(`stroke-dashoffset`.asInstanceOf[js.Any])
-    if (`stroke-linecap` != null) __obj.updateDynamic("stroke-linecap")(`stroke-linecap`.asInstanceOf[js.Any])
-    if (`stroke-linejoin` != null) __obj.updateDynamic("stroke-linejoin")(`stroke-linejoin`.asInstanceOf[js.Any])
-    if (`stroke-miterlimit` != null) __obj.updateDynamic("stroke-miterlimit")(`stroke-miterlimit`.asInstanceOf[js.Any])
-    if (`stroke-opacity` != null) __obj.updateDynamic("stroke-opacity")(`stroke-opacity`.asInstanceOf[js.Any])
-    if (`stroke-width` != null) __obj.updateDynamic("stroke-width")(`stroke-width`.asInstanceOf[js.Any])
-    if (`text-anchor` != null) __obj.updateDynamic("text-anchor")(`text-anchor`.asInstanceOf[js.Any])
-    if (`text-decoration` != null) __obj.updateDynamic("text-decoration")(`text-decoration`.asInstanceOf[js.Any])
-    if (`text-rendering` != null) __obj.updateDynamic("text-rendering")(`text-rendering`.asInstanceOf[js.Any])
-    if (`unicode-bidi` != null) __obj.updateDynamic("unicode-bidi")(`unicode-bidi`.asInstanceOf[js.Any])
-    if (`vector-effect` != null) __obj.updateDynamic("vector-effect")(`vector-effect`.asInstanceOf[js.Any])
-    if (visibility != null) __obj.updateDynamic("visibility")(visibility.asInstanceOf[js.Any])
-    if (`white-space` != null) __obj.updateDynamic("white-space")(`white-space`.asInstanceOf[js.Any])
-    if (`word-spacing` != null) __obj.updateDynamic("word-spacing")(`word-spacing`.asInstanceOf[js.Any])
-    if (`writing-mode` != null) __obj.updateDynamic("writing-mode")(`writing-mode`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SvgPropertiesHyphen[TLength]]
   }
+  @scala.inline
+  implicit class SvgPropertiesHyphenOps[Self <: SvgPropertiesHyphen[_], TLength] (val x: Self with SvgPropertiesHyphen[TLength]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def `setAlignment-baseline`(value: AlignmentBaselineProperty): Self = this.set("alignment-baseline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteAlignment-baseline`: Self = this.set("alignment-baseline", js.undefined)
+    @scala.inline
+    def `setBaseline-shift`(value: BaselineShiftProperty[TLength]): Self = this.set("baseline-shift", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBaseline-shift`: Self = this.set("baseline-shift", js.undefined)
+    @scala.inline
+    def setClip(value: ClipProperty): Self = this.set("clip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClip: Self = this.set("clip", js.undefined)
+    @scala.inline
+    def `setClip-path`(value: ClipPathProperty): Self = this.set("clip-path", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteClip-path`: Self = this.set("clip-path", js.undefined)
+    @scala.inline
+    def `setClip-rule`(value: ClipRuleProperty): Self = this.set("clip-rule", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteClip-rule`: Self = this.set("clip-rule", js.undefined)
+    @scala.inline
+    def setColor(value: ColorProperty): Self = this.set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteColor: Self = this.set("color", js.undefined)
+    @scala.inline
+    def `setColor-interpolation`(value: ColorInterpolationProperty): Self = this.set("color-interpolation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteColor-interpolation`: Self = this.set("color-interpolation", js.undefined)
+    @scala.inline
+    def `setColor-rendering`(value: ColorRenderingProperty): Self = this.set("color-rendering", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteColor-rendering`: Self = this.set("color-rendering", js.undefined)
+    @scala.inline
+    def setCursor(value: CursorProperty): Self = this.set("cursor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCursor: Self = this.set("cursor", js.undefined)
+    @scala.inline
+    def setDirection(value: DirectionProperty): Self = this.set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDirection: Self = this.set("direction", js.undefined)
+    @scala.inline
+    def setDisplay(value: DisplayProperty): Self = this.set("display", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisplay: Self = this.set("display", js.undefined)
+    @scala.inline
+    def `setDominant-baseline`(value: DominantBaselineProperty): Self = this.set("dominant-baseline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteDominant-baseline`: Self = this.set("dominant-baseline", js.undefined)
+    @scala.inline
+    def setFill(value: FillProperty): Self = this.set("fill", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFill: Self = this.set("fill", js.undefined)
+    @scala.inline
+    def `setFill-opacity`(value: GlobalsNumber): Self = this.set("fill-opacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteFill-opacity`: Self = this.set("fill-opacity", js.undefined)
+    @scala.inline
+    def `setFill-rule`(value: FillRuleProperty): Self = this.set("fill-rule", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteFill-rule`: Self = this.set("fill-rule", js.undefined)
+    @scala.inline
+    def setFilter(value: FilterProperty): Self = this.set("filter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFilter: Self = this.set("filter", js.undefined)
+    @scala.inline
+    def `setFlood-color`(value: FloodColorProperty): Self = this.set("flood-color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteFlood-color`: Self = this.set("flood-color", js.undefined)
+    @scala.inline
+    def `setFlood-opacity`(value: GlobalsNumber): Self = this.set("flood-opacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteFlood-opacity`: Self = this.set("flood-opacity", js.undefined)
+    @scala.inline
+    def setFont(value: FontProperty): Self = this.set("font", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFont: Self = this.set("font", js.undefined)
+    @scala.inline
+    def `setFont-family`(value: FontFamilyProperty): Self = this.set("font-family", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteFont-family`: Self = this.set("font-family", js.undefined)
+    @scala.inline
+    def `setFont-size`(value: FontSizeProperty[TLength]): Self = this.set("font-size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteFont-size`: Self = this.set("font-size", js.undefined)
+    @scala.inline
+    def `setFont-size-adjust`(value: FontSizeAdjustProperty): Self = this.set("font-size-adjust", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteFont-size-adjust`: Self = this.set("font-size-adjust", js.undefined)
+    @scala.inline
+    def `setFont-stretch`(value: FontStretchProperty): Self = this.set("font-stretch", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteFont-stretch`: Self = this.set("font-stretch", js.undefined)
+    @scala.inline
+    def `setFont-style`(value: FontStyleProperty): Self = this.set("font-style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteFont-style`: Self = this.set("font-style", js.undefined)
+    @scala.inline
+    def `setFont-variant`(value: FontVariantProperty): Self = this.set("font-variant", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteFont-variant`: Self = this.set("font-variant", js.undefined)
+    @scala.inline
+    def `setFont-weight`(value: FontWeightProperty): Self = this.set("font-weight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteFont-weight`: Self = this.set("font-weight", js.undefined)
+    @scala.inline
+    def `setGlyph-orientation-vertical`(value: GlyphOrientationVerticalProperty): Self = this.set("glyph-orientation-vertical", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteGlyph-orientation-vertical`: Self = this.set("glyph-orientation-vertical", js.undefined)
+    @scala.inline
+    def `setImage-rendering`(value: ImageRenderingProperty): Self = this.set("image-rendering", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteImage-rendering`: Self = this.set("image-rendering", js.undefined)
+    @scala.inline
+    def `setLetter-spacing`(value: LetterSpacingProperty[TLength]): Self = this.set("letter-spacing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteLetter-spacing`: Self = this.set("letter-spacing", js.undefined)
+    @scala.inline
+    def `setLighting-color`(value: LightingColorProperty): Self = this.set("lighting-color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteLighting-color`: Self = this.set("lighting-color", js.undefined)
+    @scala.inline
+    def `setLine-height`(value: LineHeightProperty[TLength]): Self = this.set("line-height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteLine-height`: Self = this.set("line-height", js.undefined)
+    @scala.inline
+    def setMarker(value: MarkerProperty): Self = this.set("marker", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMarker: Self = this.set("marker", js.undefined)
+    @scala.inline
+    def `setMarker-end`(value: MarkerEndProperty): Self = this.set("marker-end", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteMarker-end`: Self = this.set("marker-end", js.undefined)
+    @scala.inline
+    def `setMarker-mid`(value: MarkerMidProperty): Self = this.set("marker-mid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteMarker-mid`: Self = this.set("marker-mid", js.undefined)
+    @scala.inline
+    def `setMarker-start`(value: MarkerStartProperty): Self = this.set("marker-start", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteMarker-start`: Self = this.set("marker-start", js.undefined)
+    @scala.inline
+    def setMask(value: MaskProperty[TLength]): Self = this.set("mask", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMask: Self = this.set("mask", js.undefined)
+    @scala.inline
+    def setOpacity(value: GlobalsNumber): Self = this.set("opacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOpacity: Self = this.set("opacity", js.undefined)
+    @scala.inline
+    def setOverflow(value: OverflowProperty): Self = this.set("overflow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOverflow: Self = this.set("overflow", js.undefined)
+    @scala.inline
+    def `setPaint-order`(value: PaintOrderProperty): Self = this.set("paint-order", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deletePaint-order`: Self = this.set("paint-order", js.undefined)
+    @scala.inline
+    def `setPointer-events`(value: PointerEventsProperty): Self = this.set("pointer-events", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deletePointer-events`: Self = this.set("pointer-events", js.undefined)
+    @scala.inline
+    def `setShape-rendering`(value: ShapeRenderingProperty): Self = this.set("shape-rendering", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteShape-rendering`: Self = this.set("shape-rendering", js.undefined)
+    @scala.inline
+    def `setStop-color`(value: StopColorProperty): Self = this.set("stop-color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteStop-color`: Self = this.set("stop-color", js.undefined)
+    @scala.inline
+    def `setStop-opacity`(value: GlobalsNumber): Self = this.set("stop-opacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteStop-opacity`: Self = this.set("stop-opacity", js.undefined)
+    @scala.inline
+    def setStroke(value: StrokeProperty): Self = this.set("stroke", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStroke: Self = this.set("stroke", js.undefined)
+    @scala.inline
+    def `setStroke-dasharray`(value: StrokeDasharrayProperty[TLength]): Self = this.set("stroke-dasharray", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteStroke-dasharray`: Self = this.set("stroke-dasharray", js.undefined)
+    @scala.inline
+    def `setStroke-dashoffset`(value: StrokeDashoffsetProperty[TLength]): Self = this.set("stroke-dashoffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteStroke-dashoffset`: Self = this.set("stroke-dashoffset", js.undefined)
+    @scala.inline
+    def `setStroke-linecap`(value: StrokeLinecapProperty): Self = this.set("stroke-linecap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteStroke-linecap`: Self = this.set("stroke-linecap", js.undefined)
+    @scala.inline
+    def `setStroke-linejoin`(value: StrokeLinejoinProperty): Self = this.set("stroke-linejoin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteStroke-linejoin`: Self = this.set("stroke-linejoin", js.undefined)
+    @scala.inline
+    def `setStroke-miterlimit`(value: GlobalsNumber): Self = this.set("stroke-miterlimit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteStroke-miterlimit`: Self = this.set("stroke-miterlimit", js.undefined)
+    @scala.inline
+    def `setStroke-opacity`(value: GlobalsNumber): Self = this.set("stroke-opacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteStroke-opacity`: Self = this.set("stroke-opacity", js.undefined)
+    @scala.inline
+    def `setStroke-width`(value: StrokeWidthProperty[TLength]): Self = this.set("stroke-width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteStroke-width`: Self = this.set("stroke-width", js.undefined)
+    @scala.inline
+    def `setText-anchor`(value: TextAnchorProperty): Self = this.set("text-anchor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteText-anchor`: Self = this.set("text-anchor", js.undefined)
+    @scala.inline
+    def `setText-decoration`(value: TextDecorationProperty): Self = this.set("text-decoration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteText-decoration`: Self = this.set("text-decoration", js.undefined)
+    @scala.inline
+    def `setText-rendering`(value: TextRenderingProperty): Self = this.set("text-rendering", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteText-rendering`: Self = this.set("text-rendering", js.undefined)
+    @scala.inline
+    def `setUnicode-bidi`(value: UnicodeBidiProperty): Self = this.set("unicode-bidi", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteUnicode-bidi`: Self = this.set("unicode-bidi", js.undefined)
+    @scala.inline
+    def `setVector-effect`(value: VectorEffectProperty): Self = this.set("vector-effect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteVector-effect`: Self = this.set("vector-effect", js.undefined)
+    @scala.inline
+    def setVisibility(value: VisibilityProperty): Self = this.set("visibility", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVisibility: Self = this.set("visibility", js.undefined)
+    @scala.inline
+    def `setWhite-space`(value: WhiteSpaceProperty): Self = this.set("white-space", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteWhite-space`: Self = this.set("white-space", js.undefined)
+    @scala.inline
+    def `setWord-spacing`(value: WordSpacingProperty[TLength]): Self = this.set("word-spacing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteWord-spacing`: Self = this.set("word-spacing", js.undefined)
+    @scala.inline
+    def `setWriting-mode`(value: WritingModeProperty): Self = this.set("writing-mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteWriting-mode`: Self = this.set("writing-mode", js.undefined)
+  }
+  
 }
 

@@ -23,38 +23,78 @@ trait NotificationOptions extends js.Object {
 
 object NotificationOptions {
   @scala.inline
-  def apply(
-    actions: js.Array[NotificationAction] = null,
-    badge: java.lang.String = null,
-    body: java.lang.String = null,
-    data: js.Any = null,
-    dir: NotificationDirection = null,
-    icon: java.lang.String = null,
-    image: java.lang.String = null,
-    lang: java.lang.String = null,
-    renotify: js.UndefOr[scala.Boolean] = js.undefined,
-    requireInteraction: js.UndefOr[scala.Boolean] = js.undefined,
-    silent: js.UndefOr[scala.Boolean] = js.undefined,
-    tag: java.lang.String = null,
-    timestamp: js.UndefOr[Double] = js.undefined,
-    vibrate: VibratePattern = null
-  ): NotificationOptions = {
+  def apply(): NotificationOptions = {
     val __obj = js.Dynamic.literal()
-    if (actions != null) __obj.updateDynamic("actions")(actions.asInstanceOf[js.Any])
-    if (badge != null) __obj.updateDynamic("badge")(badge.asInstanceOf[js.Any])
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (dir != null) __obj.updateDynamic("dir")(dir.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (lang != null) __obj.updateDynamic("lang")(lang.asInstanceOf[js.Any])
-    if (!js.isUndefined(renotify)) __obj.updateDynamic("renotify")(renotify.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(requireInteraction)) __obj.updateDynamic("requireInteraction")(requireInteraction.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
-    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
-    if (!js.isUndefined(timestamp)) __obj.updateDynamic("timestamp")(timestamp.get.asInstanceOf[js.Any])
-    if (vibrate != null) __obj.updateDynamic("vibrate")(vibrate.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotificationOptions]
   }
+  @scala.inline
+  implicit class NotificationOptionsOps[Self <: org.scalajs.dom.experimental.NotificationOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setActions(value: js.Array[NotificationAction]): Self = this.set("actions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteActions: Self = this.set("actions", js.undefined)
+    @scala.inline
+    def setBadge(value: java.lang.String): Self = this.set("badge", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBadge: Self = this.set("badge", js.undefined)
+    @scala.inline
+    def setBody(value: java.lang.String): Self = this.set("body", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBody: Self = this.set("body", js.undefined)
+    @scala.inline
+    def setData(value: js.Any): Self = this.set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteData: Self = this.set("data", js.undefined)
+    @scala.inline
+    def setDir(value: NotificationDirection): Self = this.set("dir", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDir: Self = this.set("dir", js.undefined)
+    @scala.inline
+    def setIcon(value: java.lang.String): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIcon: Self = this.set("icon", js.undefined)
+    @scala.inline
+    def setImage(value: java.lang.String): Self = this.set("image", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteImage: Self = this.set("image", js.undefined)
+    @scala.inline
+    def setLang(value: java.lang.String): Self = this.set("lang", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLang: Self = this.set("lang", js.undefined)
+    @scala.inline
+    def setRenotify(value: scala.Boolean): Self = this.set("renotify", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRenotify: Self = this.set("renotify", js.undefined)
+    @scala.inline
+    def setRequireInteraction(value: scala.Boolean): Self = this.set("requireInteraction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRequireInteraction: Self = this.set("requireInteraction", js.undefined)
+    @scala.inline
+    def setSilent(value: scala.Boolean): Self = this.set("silent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSilent: Self = this.set("silent", js.undefined)
+    @scala.inline
+    def setTag(value: java.lang.String): Self = this.set("tag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTag: Self = this.set("tag", js.undefined)
+    @scala.inline
+    def setTimestamp(value: Double): Self = this.set("timestamp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTimestamp: Self = this.set("timestamp", js.undefined)
+    @scala.inline
+    def setVibrate(value: VibratePattern): Self = this.set("vibrate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVibrate: Self = this.set("vibrate", js.undefined)
+  }
+  
 }
 

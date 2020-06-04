@@ -15,22 +15,46 @@ trait TimeUnitColumnProps extends js.Object {
 
 object TimeUnitColumnProps {
   @scala.inline
-  def apply(
-    active: js.UndefOr[Boolean] = js.undefined,
-    hideDisabledOptions: js.UndefOr[Boolean] = js.undefined,
-    onSelect: /* value */ Double => scala.Unit = null,
-    prefixCls: String = null,
-    units: js.Array[Unit] = null,
-    value: js.UndefOr[Double] = js.undefined
-  ): TimeUnitColumnProps = {
+  def apply(): TimeUnitColumnProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideDisabledOptions)) __obj.updateDynamic("hideDisabledOptions")(hideDisabledOptions.get.asInstanceOf[js.Any])
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (units != null) __obj.updateDynamic("units")(units.asInstanceOf[js.Any])
-    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimeUnitColumnProps]
   }
+  @scala.inline
+  implicit class TimeUnitColumnPropsOps[Self <: TimeUnitColumnProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setActive(value: Boolean): Self = this.set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteActive: Self = this.set("active", js.undefined)
+    @scala.inline
+    def setHideDisabledOptions(value: Boolean): Self = this.set("hideDisabledOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHideDisabledOptions: Self = this.set("hideDisabledOptions", js.undefined)
+    @scala.inline
+    def setOnSelect(value: /* value */ Double => scala.Unit): Self = this.set("onSelect", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnSelect: Self = this.set("onSelect", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    @scala.inline
+    def setUnits(value: js.Array[Unit]): Self = this.set("units", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUnits: Self = this.set("units", js.undefined)
+    @scala.inline
+    def setValue(value: Double): Self = this.set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
+  }
+  
 }
 

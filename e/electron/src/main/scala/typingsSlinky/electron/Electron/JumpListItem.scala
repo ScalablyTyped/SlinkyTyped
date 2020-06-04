@@ -58,28 +58,58 @@ trait JumpListItem extends js.Object {
 
 object JumpListItem {
   @scala.inline
-  def apply(
-    args: String = null,
-    description: String = null,
-    iconIndex: js.UndefOr[Double] = js.undefined,
-    iconPath: String = null,
-    path: String = null,
-    program: String = null,
-    title: String = null,
-    `type`: task | separator | file = null,
-    workingDirectory: String = null
-  ): JumpListItem = {
+  def apply(): JumpListItem = {
     val __obj = js.Dynamic.literal()
-    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (!js.isUndefined(iconIndex)) __obj.updateDynamic("iconIndex")(iconIndex.get.asInstanceOf[js.Any])
-    if (iconPath != null) __obj.updateDynamic("iconPath")(iconPath.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (program != null) __obj.updateDynamic("program")(program.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (workingDirectory != null) __obj.updateDynamic("workingDirectory")(workingDirectory.asInstanceOf[js.Any])
     __obj.asInstanceOf[JumpListItem]
   }
+  @scala.inline
+  implicit class JumpListItemOps[Self <: JumpListItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setArgs(value: String): Self = this.set("args", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteArgs: Self = this.set("args", js.undefined)
+    @scala.inline
+    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDescription: Self = this.set("description", js.undefined)
+    @scala.inline
+    def setIconIndex(value: Double): Self = this.set("iconIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIconIndex: Self = this.set("iconIndex", js.undefined)
+    @scala.inline
+    def setIconPath(value: String): Self = this.set("iconPath", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIconPath: Self = this.set("iconPath", js.undefined)
+    @scala.inline
+    def setPath(value: String): Self = this.set("path", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePath: Self = this.set("path", js.undefined)
+    @scala.inline
+    def setProgram(value: String): Self = this.set("program", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteProgram: Self = this.set("program", js.undefined)
+    @scala.inline
+    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
+    @scala.inline
+    def setType(value: task | separator | file): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteType: Self = this.set("type", js.undefined)
+    @scala.inline
+    def setWorkingDirectory(value: String): Self = this.set("workingDirectory", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWorkingDirectory: Self = this.set("workingDirectory", js.undefined)
+  }
+  
 }
 

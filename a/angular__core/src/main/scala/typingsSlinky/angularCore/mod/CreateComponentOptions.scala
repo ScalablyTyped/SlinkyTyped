@@ -49,24 +49,50 @@ trait CreateComponentOptions extends js.Object {
 
 object CreateComponentOptions {
   @scala.inline
-  def apply(
-    host: RElement | String = null,
-    hostFeatures: js.Array[HostFeature] = null,
-    injector: Injector = null,
-    playerHandler: ɵPlayerHandler = null,
-    rendererFactory: RendererFactory3 = null,
-    sanitizer: Sanitizer = null,
-    scheduler: /* work */ js.Function0[Unit] => Unit = null
-  ): CreateComponentOptions = {
+  def apply(): CreateComponentOptions = {
     val __obj = js.Dynamic.literal()
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (hostFeatures != null) __obj.updateDynamic("hostFeatures")(hostFeatures.asInstanceOf[js.Any])
-    if (injector != null) __obj.updateDynamic("injector")(injector.asInstanceOf[js.Any])
-    if (playerHandler != null) __obj.updateDynamic("playerHandler")(playerHandler.asInstanceOf[js.Any])
-    if (rendererFactory != null) __obj.updateDynamic("rendererFactory")(rendererFactory.asInstanceOf[js.Any])
-    if (sanitizer != null) __obj.updateDynamic("sanitizer")(sanitizer.asInstanceOf[js.Any])
-    if (scheduler != null) __obj.updateDynamic("scheduler")(js.Any.fromFunction1(scheduler))
     __obj.asInstanceOf[CreateComponentOptions]
   }
+  @scala.inline
+  implicit class CreateComponentOptionsOps[Self <: CreateComponentOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setHost(value: RElement | String): Self = this.set("host", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHost: Self = this.set("host", js.undefined)
+    @scala.inline
+    def setHostFeatures(value: js.Array[HostFeature]): Self = this.set("hostFeatures", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHostFeatures: Self = this.set("hostFeatures", js.undefined)
+    @scala.inline
+    def setInjector(value: Injector): Self = this.set("injector", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInjector: Self = this.set("injector", js.undefined)
+    @scala.inline
+    def setPlayerHandler(value: ɵPlayerHandler): Self = this.set("playerHandler", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePlayerHandler: Self = this.set("playerHandler", js.undefined)
+    @scala.inline
+    def setRendererFactory(value: RendererFactory3): Self = this.set("rendererFactory", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRendererFactory: Self = this.set("rendererFactory", js.undefined)
+    @scala.inline
+    def setSanitizer(value: Sanitizer): Self = this.set("sanitizer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSanitizer: Self = this.set("sanitizer", js.undefined)
+    @scala.inline
+    def setScheduler(value: /* work */ js.Function0[Unit] => Unit): Self = this.set("scheduler", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteScheduler: Self = this.set("scheduler", js.undefined)
+  }
+  
 }
 

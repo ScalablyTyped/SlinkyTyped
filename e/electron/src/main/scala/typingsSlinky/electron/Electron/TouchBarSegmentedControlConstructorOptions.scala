@@ -43,18 +43,40 @@ trait TouchBarSegmentedControlConstructorOptions extends js.Object {
 
 object TouchBarSegmentedControlConstructorOptions {
   @scala.inline
-  def apply(
-    change: (Double, Boolean) => Unit,
-    segments: js.Array[SegmentedControlSegment],
-    mode: single | multiple | buttons = null,
-    segmentStyle: automatic | rounded | `textured-rounded` | `round-rect` | `textured-square` | capsule | `small-square` | separated = null,
-    selectedIndex: js.UndefOr[Double] = js.undefined
-  ): TouchBarSegmentedControlConstructorOptions = {
+  def apply(change: (Double, Boolean) => Unit, segments: js.Array[SegmentedControlSegment]): TouchBarSegmentedControlConstructorOptions = {
     val __obj = js.Dynamic.literal(change = js.Any.fromFunction2(change), segments = segments.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (segmentStyle != null) __obj.updateDynamic("segmentStyle")(segmentStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectedIndex)) __obj.updateDynamic("selectedIndex")(selectedIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TouchBarSegmentedControlConstructorOptions]
   }
+  @scala.inline
+  implicit class TouchBarSegmentedControlConstructorOptionsOps[Self <: TouchBarSegmentedControlConstructorOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setChange(value: (Double, Boolean) => Unit): Self = this.set("change", js.Any.fromFunction2(value))
+    @scala.inline
+    def setSegments(value: js.Array[SegmentedControlSegment]): Self = this.set("segments", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMode(value: single | multiple | buttons): Self = this.set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMode: Self = this.set("mode", js.undefined)
+    @scala.inline
+    def setSegmentStyle(
+      value: automatic | rounded | `textured-rounded` | `round-rect` | `textured-square` | capsule | `small-square` | separated
+    ): Self = this.set("segmentStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSegmentStyle: Self = this.set("segmentStyle", js.undefined)
+    @scala.inline
+    def setSelectedIndex(value: Double): Self = this.set("selectedIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelectedIndex: Self = this.set("selectedIndex", js.undefined)
+  }
+  
 }
 

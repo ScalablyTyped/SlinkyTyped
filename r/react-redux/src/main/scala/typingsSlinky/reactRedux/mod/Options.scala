@@ -1,7 +1,5 @@
 package typingsSlinky.reactRedux.mod
 
-import typingsSlinky.react.mod.Context
-import typingsSlinky.redux.mod.AnyAction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -51,36 +49,46 @@ trait Options[State, TStateProps, TOwnProps, TMergedProps] extends ConnectOption
 
 object Options {
   @scala.inline
-  def apply[State, TStateProps, TOwnProps, TMergedProps](
-    areMergedPropsEqual: (/* nextMergedProps */ TMergedProps, /* prevMergedProps */ TMergedProps) => Boolean = null,
-    areOwnPropsEqual: (/* nextOwnProps */ TOwnProps, /* prevOwnProps */ TOwnProps) => Boolean = null,
-    areStatePropsEqual: (/* nextStateProps */ TStateProps, /* prevStateProps */ TStateProps) => Boolean = null,
-    areStatesEqual: (/* nextState */ State, /* prevState */ State) => Boolean = null,
-    context: Context[ReactReduxContextValue[_, AnyAction]] = null,
-    forwardRef: js.UndefOr[Boolean] = js.undefined,
-    getDisplayName: /* componentName */ String => String = null,
-    methodName: String = null,
-    pure: js.UndefOr[Boolean] = js.undefined,
-    renderCountProp: String = null,
-    shouldHandleStateChanges: js.UndefOr[Boolean] = js.undefined,
-    storeKey: String = null,
-    withRef: js.UndefOr[Boolean] = js.undefined
-  ): Options[State, TStateProps, TOwnProps, TMergedProps] = {
+  def apply[State, TStateProps, TOwnProps, TMergedProps](): Options[State, TStateProps, TOwnProps, TMergedProps] = {
     val __obj = js.Dynamic.literal()
-    if (areMergedPropsEqual != null) __obj.updateDynamic("areMergedPropsEqual")(js.Any.fromFunction2(areMergedPropsEqual))
-    if (areOwnPropsEqual != null) __obj.updateDynamic("areOwnPropsEqual")(js.Any.fromFunction2(areOwnPropsEqual))
-    if (areStatePropsEqual != null) __obj.updateDynamic("areStatePropsEqual")(js.Any.fromFunction2(areStatePropsEqual))
-    if (areStatesEqual != null) __obj.updateDynamic("areStatesEqual")(js.Any.fromFunction2(areStatesEqual))
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (!js.isUndefined(forwardRef)) __obj.updateDynamic("forwardRef")(forwardRef.get.asInstanceOf[js.Any])
-    if (getDisplayName != null) __obj.updateDynamic("getDisplayName")(js.Any.fromFunction1(getDisplayName))
-    if (methodName != null) __obj.updateDynamic("methodName")(methodName.asInstanceOf[js.Any])
-    if (!js.isUndefined(pure)) __obj.updateDynamic("pure")(pure.get.asInstanceOf[js.Any])
-    if (renderCountProp != null) __obj.updateDynamic("renderCountProp")(renderCountProp.asInstanceOf[js.Any])
-    if (!js.isUndefined(shouldHandleStateChanges)) __obj.updateDynamic("shouldHandleStateChanges")(shouldHandleStateChanges.get.asInstanceOf[js.Any])
-    if (storeKey != null) __obj.updateDynamic("storeKey")(storeKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(withRef)) __obj.updateDynamic("withRef")(withRef.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options[State, TStateProps, TOwnProps, TMergedProps]]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options[_, _, _, _], State, TStateProps, TOwnProps, TMergedProps] (val x: Self with (Options[State, TStateProps, TOwnProps, TMergedProps])) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAreMergedPropsEqual(value: (/* nextMergedProps */ TMergedProps, /* prevMergedProps */ TMergedProps) => Boolean): Self = this.set("areMergedPropsEqual", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteAreMergedPropsEqual: Self = this.set("areMergedPropsEqual", js.undefined)
+    @scala.inline
+    def setAreOwnPropsEqual(value: (/* nextOwnProps */ TOwnProps, /* prevOwnProps */ TOwnProps) => Boolean): Self = this.set("areOwnPropsEqual", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteAreOwnPropsEqual: Self = this.set("areOwnPropsEqual", js.undefined)
+    @scala.inline
+    def setAreStatePropsEqual(value: (/* nextStateProps */ TStateProps, /* prevStateProps */ TStateProps) => Boolean): Self = this.set("areStatePropsEqual", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteAreStatePropsEqual: Self = this.set("areStatePropsEqual", js.undefined)
+    @scala.inline
+    def setAreStatesEqual(value: (/* nextState */ State, /* prevState */ State) => Boolean): Self = this.set("areStatesEqual", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteAreStatesEqual: Self = this.set("areStatesEqual", js.undefined)
+    @scala.inline
+    def setForwardRef(value: Boolean): Self = this.set("forwardRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteForwardRef: Self = this.set("forwardRef", js.undefined)
+    @scala.inline
+    def setPure(value: Boolean): Self = this.set("pure", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePure: Self = this.set("pure", js.undefined)
+  }
+  
 }
 

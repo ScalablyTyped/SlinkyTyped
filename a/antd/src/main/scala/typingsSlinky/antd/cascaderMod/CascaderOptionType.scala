@@ -2,6 +2,7 @@ package typingsSlinky.antd.cascaderMod
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,24 +19,48 @@ trait CascaderOptionType
 
 object CascaderOptionType {
   @scala.inline
-  def apply(
-    StringDictionary: /* name */ StringDictionary[js.Any] = null,
-    children: js.Array[CascaderOptionType] = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    isLeaf: js.UndefOr[Boolean] = js.undefined,
-    label: TagMod[Any] = null,
-    loading: js.UndefOr[Boolean] = js.undefined,
-    value: String = null
-  ): CascaderOptionType = {
+  def apply(): CascaderOptionType = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(isLeaf)) __obj.updateDynamic("isLeaf")(isLeaf.get.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.get.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[CascaderOptionType]
   }
+  @scala.inline
+  implicit class CascaderOptionTypeOps[Self <: CascaderOptionType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setChildren(value: js.Array[CascaderOptionType]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setIsLeaf(value: Boolean): Self = this.set("isLeaf", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIsLeaf: Self = this.set("isLeaf", js.undefined)
+    @scala.inline
+    def setLabelReactElement(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLabel(value: TagMod[Any]): Self = this.set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLabel: Self = this.set("label", js.undefined)
+    @scala.inline
+    def setLoading(value: Boolean): Self = this.set("loading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLoading: Self = this.set("loading", js.undefined)
+    @scala.inline
+    def setValue(value: String): Self = this.set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
+  }
+  
 }
 

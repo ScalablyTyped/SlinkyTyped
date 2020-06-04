@@ -1,10 +1,7 @@
 package typingsSlinky.materialUi.slideInMod
 
-import slinky.core.TagMod
 import typingsSlinky.materialUi.MaterialUI.propTypes.direction
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.Key
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.mod.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,24 +16,38 @@ trait SlideInProps extends Props[SlideIn] {
 
 object SlideInProps {
   @scala.inline
-  def apply(
-    childStyle: CSSProperties = null,
-    children: TagMod[Any] = null,
-    direction: direction = null,
-    enterDelay: js.UndefOr[Double] = js.undefined,
-    key: Key = null,
-    ref: js.UndefOr[Null | LegacyRef[SlideIn]] = js.undefined,
-    style: CSSProperties = null
-  ): SlideInProps = {
+  def apply(): SlideInProps = {
     val __obj = js.Dynamic.literal()
-    if (childStyle != null) __obj.updateDynamic("childStyle")(childStyle.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (!js.isUndefined(enterDelay)) __obj.updateDynamic("enterDelay")(enterDelay.get.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[SlideInProps]
   }
+  @scala.inline
+  implicit class SlideInPropsOps[Self <: SlideInProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setChildStyle(value: CSSProperties): Self = this.set("childStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildStyle: Self = this.set("childStyle", js.undefined)
+    @scala.inline
+    def setDirection(value: direction): Self = this.set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDirection: Self = this.set("direction", js.undefined)
+    @scala.inline
+    def setEnterDelay(value: Double): Self = this.set("enterDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEnterDelay: Self = this.set("enterDelay", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+  }
+  
 }
 

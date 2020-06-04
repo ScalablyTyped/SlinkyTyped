@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import typingsSlinky.react.mod.CSSProperties
@@ -63,96 +64,200 @@ trait TextFieldProps extends js.Object {
 
 object TextFieldProps {
   @scala.inline
-  def apply(
-    autoComplete: String = null,
-    autoFocus: js.UndefOr[Boolean] = js.undefined,
-    className: String = null,
-    defaultValue: String | Double = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    errorStyle: CSSProperties = null,
-    errorText: TagMod[Any] = null,
-    floatingLabelFixed: js.UndefOr[Boolean] = js.undefined,
-    floatingLabelFocusStyle: CSSProperties = null,
-    floatingLabelShrinkStyle: CSSProperties = null,
-    floatingLabelStyle: CSSProperties = null,
-    floatingLabelText: TagMod[Any] = null,
-    fullWidth: js.UndefOr[Boolean] = js.undefined,
-    hintStyle: CSSProperties = null,
-    hintText: TagMod[Any] = null,
-    id: String = null,
-    inputStyle: CSSProperties = null,
-    max: js.UndefOr[Double] = js.undefined,
-    maxlength: String = null,
-    min: js.UndefOr[Double] = js.undefined,
-    minlength: String = null,
-    multiLine: js.UndefOr[Boolean] = js.undefined,
-    name: String = null,
-    onBlur: SyntheticFocusEvent[js.Object] => Unit = null,
-    onChange: (SyntheticEvent[EventTarget with js.Object, Event], /* newValue */ String) => Unit = null,
-    onFocus: SyntheticFocusEvent[js.Object] => Unit = null,
-    onKeyDown: SyntheticKeyboardEvent[js.Object] => Unit = null,
-    onKeyPress: SyntheticKeyboardEvent[js.Object] => Unit = null,
-    onKeyUp: SyntheticKeyboardEvent[js.Object] => Unit = null,
-    placeholder: String = null,
-    required: js.UndefOr[Boolean] = js.undefined,
-    rows: js.UndefOr[Double] = js.undefined,
-    rowsMax: js.UndefOr[Double] = js.undefined,
-    step: js.UndefOr[Double] = js.undefined,
-    style: CSSProperties = null,
-    textareaStyle: CSSProperties = null,
-    title: String = null,
-    `type`: String = null,
-    underlineDisabledStyle: CSSProperties = null,
-    underlineFocusStyle: CSSProperties = null,
-    underlineShow: js.UndefOr[Boolean] = js.undefined,
-    underlineStyle: CSSProperties = null,
-    value: String | Double = null
-  ): TextFieldProps = {
+  def apply(): TextFieldProps = {
     val __obj = js.Dynamic.literal()
-    if (autoComplete != null) __obj.updateDynamic("autoComplete")(autoComplete.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.get.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (errorStyle != null) __obj.updateDynamic("errorStyle")(errorStyle.asInstanceOf[js.Any])
-    if (errorText != null) __obj.updateDynamic("errorText")(errorText.asInstanceOf[js.Any])
-    if (!js.isUndefined(floatingLabelFixed)) __obj.updateDynamic("floatingLabelFixed")(floatingLabelFixed.get.asInstanceOf[js.Any])
-    if (floatingLabelFocusStyle != null) __obj.updateDynamic("floatingLabelFocusStyle")(floatingLabelFocusStyle.asInstanceOf[js.Any])
-    if (floatingLabelShrinkStyle != null) __obj.updateDynamic("floatingLabelShrinkStyle")(floatingLabelShrinkStyle.asInstanceOf[js.Any])
-    if (floatingLabelStyle != null) __obj.updateDynamic("floatingLabelStyle")(floatingLabelStyle.asInstanceOf[js.Any])
-    if (floatingLabelText != null) __obj.updateDynamic("floatingLabelText")(floatingLabelText.asInstanceOf[js.Any])
-    if (!js.isUndefined(fullWidth)) __obj.updateDynamic("fullWidth")(fullWidth.get.asInstanceOf[js.Any])
-    if (hintStyle != null) __obj.updateDynamic("hintStyle")(hintStyle.asInstanceOf[js.Any])
-    if (hintText != null) __obj.updateDynamic("hintText")(hintText.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (inputStyle != null) __obj.updateDynamic("inputStyle")(inputStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
-    if (maxlength != null) __obj.updateDynamic("maxlength")(maxlength.asInstanceOf[js.Any])
-    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
-    if (minlength != null) __obj.updateDynamic("minlength")(minlength.asInstanceOf[js.Any])
-    if (!js.isUndefined(multiLine)) __obj.updateDynamic("multiLine")(multiLine.get.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
-    if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(js.Any.fromFunction1(onKeyPress))
-    if (onKeyUp != null) __obj.updateDynamic("onKeyUp")(js.Any.fromFunction1(onKeyUp))
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
-    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(rows)) __obj.updateDynamic("rows")(rows.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(rowsMax)) __obj.updateDynamic("rowsMax")(rowsMax.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(step)) __obj.updateDynamic("step")(step.get.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (textareaStyle != null) __obj.updateDynamic("textareaStyle")(textareaStyle.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (underlineDisabledStyle != null) __obj.updateDynamic("underlineDisabledStyle")(underlineDisabledStyle.asInstanceOf[js.Any])
-    if (underlineFocusStyle != null) __obj.updateDynamic("underlineFocusStyle")(underlineFocusStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(underlineShow)) __obj.updateDynamic("underlineShow")(underlineShow.get.asInstanceOf[js.Any])
-    if (underlineStyle != null) __obj.updateDynamic("underlineStyle")(underlineStyle.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextFieldProps]
   }
+  @scala.inline
+  implicit class TextFieldPropsOps[Self <: TextFieldProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAutoComplete(value: String): Self = this.set("autoComplete", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAutoComplete: Self = this.set("autoComplete", js.undefined)
+    @scala.inline
+    def setAutoFocus(value: Boolean): Self = this.set("autoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAutoFocus: Self = this.set("autoFocus", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setDefaultValue(value: String | Double): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setErrorStyle(value: CSSProperties): Self = this.set("errorStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteErrorStyle: Self = this.set("errorStyle", js.undefined)
+    @scala.inline
+    def setErrorTextReactElement(value: ReactElement): Self = this.set("errorText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setErrorText(value: TagMod[Any]): Self = this.set("errorText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteErrorText: Self = this.set("errorText", js.undefined)
+    @scala.inline
+    def setFloatingLabelFixed(value: Boolean): Self = this.set("floatingLabelFixed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFloatingLabelFixed: Self = this.set("floatingLabelFixed", js.undefined)
+    @scala.inline
+    def setFloatingLabelFocusStyle(value: CSSProperties): Self = this.set("floatingLabelFocusStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFloatingLabelFocusStyle: Self = this.set("floatingLabelFocusStyle", js.undefined)
+    @scala.inline
+    def setFloatingLabelShrinkStyle(value: CSSProperties): Self = this.set("floatingLabelShrinkStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFloatingLabelShrinkStyle: Self = this.set("floatingLabelShrinkStyle", js.undefined)
+    @scala.inline
+    def setFloatingLabelStyle(value: CSSProperties): Self = this.set("floatingLabelStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFloatingLabelStyle: Self = this.set("floatingLabelStyle", js.undefined)
+    @scala.inline
+    def setFloatingLabelTextReactElement(value: ReactElement): Self = this.set("floatingLabelText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFloatingLabelText(value: TagMod[Any]): Self = this.set("floatingLabelText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFloatingLabelText: Self = this.set("floatingLabelText", js.undefined)
+    @scala.inline
+    def setFullWidth(value: Boolean): Self = this.set("fullWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFullWidth: Self = this.set("fullWidth", js.undefined)
+    @scala.inline
+    def setHintStyle(value: CSSProperties): Self = this.set("hintStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHintStyle: Self = this.set("hintStyle", js.undefined)
+    @scala.inline
+    def setHintTextReactElement(value: ReactElement): Self = this.set("hintText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHintText(value: TagMod[Any]): Self = this.set("hintText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHintText: Self = this.set("hintText", js.undefined)
+    @scala.inline
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteId: Self = this.set("id", js.undefined)
+    @scala.inline
+    def setInputStyle(value: CSSProperties): Self = this.set("inputStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInputStyle: Self = this.set("inputStyle", js.undefined)
+    @scala.inline
+    def setMax(value: Double): Self = this.set("max", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMax: Self = this.set("max", js.undefined)
+    @scala.inline
+    def setMaxlength(value: String): Self = this.set("maxlength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxlength: Self = this.set("maxlength", js.undefined)
+    @scala.inline
+    def setMin(value: Double): Self = this.set("min", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMin: Self = this.set("min", js.undefined)
+    @scala.inline
+    def setMinlength(value: String): Self = this.set("minlength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinlength: Self = this.set("minlength", js.undefined)
+    @scala.inline
+    def setMultiLine(value: Boolean): Self = this.set("multiLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMultiLine: Self = this.set("multiLine", js.undefined)
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteName: Self = this.set("name", js.undefined)
+    @scala.inline
+    def setOnBlur(value: SyntheticFocusEvent[js.Object] => Unit): Self = this.set("onBlur", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnBlur: Self = this.set("onBlur", js.undefined)
+    @scala.inline
+    def setOnChange(value: (SyntheticEvent[EventTarget with js.Object, Event], /* newValue */ String) => Unit): Self = this.set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnChange: Self = this.set("onChange", js.undefined)
+    @scala.inline
+    def setOnFocus(value: SyntheticFocusEvent[js.Object] => Unit): Self = this.set("onFocus", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnFocus: Self = this.set("onFocus", js.undefined)
+    @scala.inline
+    def setOnKeyDown(value: SyntheticKeyboardEvent[js.Object] => Unit): Self = this.set("onKeyDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnKeyDown: Self = this.set("onKeyDown", js.undefined)
+    @scala.inline
+    def setOnKeyPress(value: SyntheticKeyboardEvent[js.Object] => Unit): Self = this.set("onKeyPress", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnKeyPress: Self = this.set("onKeyPress", js.undefined)
+    @scala.inline
+    def setOnKeyUp(value: SyntheticKeyboardEvent[js.Object] => Unit): Self = this.set("onKeyUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnKeyUp: Self = this.set("onKeyUp", js.undefined)
+    @scala.inline
+    def setPlaceholder(value: String): Self = this.set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePlaceholder: Self = this.set("placeholder", js.undefined)
+    @scala.inline
+    def setRequired(value: Boolean): Self = this.set("required", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRequired: Self = this.set("required", js.undefined)
+    @scala.inline
+    def setRows(value: Double): Self = this.set("rows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRows: Self = this.set("rows", js.undefined)
+    @scala.inline
+    def setRowsMax(value: Double): Self = this.set("rowsMax", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRowsMax: Self = this.set("rowsMax", js.undefined)
+    @scala.inline
+    def setStep(value: Double): Self = this.set("step", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStep: Self = this.set("step", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+    @scala.inline
+    def setTextareaStyle(value: CSSProperties): Self = this.set("textareaStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTextareaStyle: Self = this.set("textareaStyle", js.undefined)
+    @scala.inline
+    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
+    @scala.inline
+    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteType: Self = this.set("type", js.undefined)
+    @scala.inline
+    def setUnderlineDisabledStyle(value: CSSProperties): Self = this.set("underlineDisabledStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUnderlineDisabledStyle: Self = this.set("underlineDisabledStyle", js.undefined)
+    @scala.inline
+    def setUnderlineFocusStyle(value: CSSProperties): Self = this.set("underlineFocusStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUnderlineFocusStyle: Self = this.set("underlineFocusStyle", js.undefined)
+    @scala.inline
+    def setUnderlineShow(value: Boolean): Self = this.set("underlineShow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUnderlineShow: Self = this.set("underlineShow", js.undefined)
+    @scala.inline
+    def setUnderlineStyle(value: CSSProperties): Self = this.set("underlineStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUnderlineStyle: Self = this.set("underlineStyle", js.undefined)
+    @scala.inline
+    def setValue(value: String | Double): Self = this.set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
+  }
+  
 }
 

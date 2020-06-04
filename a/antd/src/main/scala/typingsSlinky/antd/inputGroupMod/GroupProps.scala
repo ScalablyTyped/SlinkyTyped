@@ -2,6 +2,7 @@ package typingsSlinky.antd.inputGroupMod
 
 import org.scalajs.dom.raw.HTMLSpanElement
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.antdStrings.large
@@ -28,30 +29,64 @@ trait GroupProps extends js.Object {
 
 object GroupProps {
   @scala.inline
-  def apply(
-    children: TagMod[Any] = null,
-    className: String = null,
-    compact: js.UndefOr[Boolean] = js.undefined,
-    onBlur: SyntheticFocusEvent[HTMLSpanElement] => Unit = null,
-    onFocus: SyntheticFocusEvent[HTMLSpanElement] => Unit = null,
-    onMouseEnter: SyntheticMouseEvent[HTMLSpanElement] => Unit = null,
-    onMouseLeave: SyntheticMouseEvent[HTMLSpanElement] => Unit = null,
-    prefixCls: String = null,
-    size: large | small | typingsSlinky.antd.antdStrings.default = null,
-    style: CSSProperties = null
-  ): GroupProps = {
+  def apply(): GroupProps = {
     val __obj = js.Dynamic.literal()
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.get.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
-    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[GroupProps]
   }
+  @scala.inline
+  implicit class GroupPropsOps[Self <: GroupProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setCompact(value: Boolean): Self = this.set("compact", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCompact: Self = this.set("compact", js.undefined)
+    @scala.inline
+    def setOnBlur(value: SyntheticFocusEvent[HTMLSpanElement] => Unit): Self = this.set("onBlur", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnBlur: Self = this.set("onBlur", js.undefined)
+    @scala.inline
+    def setOnFocus(value: SyntheticFocusEvent[HTMLSpanElement] => Unit): Self = this.set("onFocus", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnFocus: Self = this.set("onFocus", js.undefined)
+    @scala.inline
+    def setOnMouseEnter(value: SyntheticMouseEvent[HTMLSpanElement] => Unit): Self = this.set("onMouseEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnMouseEnter: Self = this.set("onMouseEnter", js.undefined)
+    @scala.inline
+    def setOnMouseLeave(value: SyntheticMouseEvent[HTMLSpanElement] => Unit): Self = this.set("onMouseLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnMouseLeave: Self = this.set("onMouseLeave", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    @scala.inline
+    def setSize(value: large | small | typingsSlinky.antd.antdStrings.default): Self = this.set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+  }
+  
 }
 

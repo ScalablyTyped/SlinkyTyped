@@ -2,6 +2,7 @@ package typingsSlinky.antd.switchMod
 
 import org.scalajs.dom.raw.MouseEvent
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,38 +27,82 @@ trait SwitchProps extends js.Object {
 
 object SwitchProps {
   @scala.inline
-  def apply(
-    autoFocus: js.UndefOr[Boolean] = js.undefined,
-    checked: js.UndefOr[Boolean] = js.undefined,
-    checkedChildren: TagMod[Any] = null,
-    className: String = null,
-    defaultChecked: js.UndefOr[Boolean] = js.undefined,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    loading: js.UndefOr[Boolean] = js.undefined,
-    onChange: (/* checked */ Boolean, /* event */ MouseEvent) => Unit = null,
-    onClick: (/* checked */ Boolean, /* event */ MouseEvent) => Unit = null,
-    prefixCls: String = null,
-    size: SwitchSize = null,
-    style: CSSProperties = null,
-    title: String = null,
-    unCheckedChildren: TagMod[Any] = null
-  ): SwitchProps = {
+  def apply(): SwitchProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(checked)) __obj.updateDynamic("checked")(checked.get.asInstanceOf[js.Any])
-    if (checkedChildren != null) __obj.updateDynamic("checkedChildren")(checkedChildren.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultChecked)) __obj.updateDynamic("defaultChecked")(defaultChecked.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.get.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (unCheckedChildren != null) __obj.updateDynamic("unCheckedChildren")(unCheckedChildren.asInstanceOf[js.Any])
     __obj.asInstanceOf[SwitchProps]
   }
+  @scala.inline
+  implicit class SwitchPropsOps[Self <: SwitchProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAutoFocus(value: Boolean): Self = this.set("autoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAutoFocus: Self = this.set("autoFocus", js.undefined)
+    @scala.inline
+    def setChecked(value: Boolean): Self = this.set("checked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChecked: Self = this.set("checked", js.undefined)
+    @scala.inline
+    def setCheckedChildrenReactElement(value: ReactElement): Self = this.set("checkedChildren", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCheckedChildren(value: TagMod[Any]): Self = this.set("checkedChildren", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCheckedChildren: Self = this.set("checkedChildren", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setDefaultChecked(value: Boolean): Self = this.set("defaultChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultChecked: Self = this.set("defaultChecked", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setLoading(value: Boolean): Self = this.set("loading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLoading: Self = this.set("loading", js.undefined)
+    @scala.inline
+    def setOnChange(value: (/* checked */ Boolean, /* event */ MouseEvent) => Unit): Self = this.set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnChange: Self = this.set("onChange", js.undefined)
+    @scala.inline
+    def setOnClick(value: (/* checked */ Boolean, /* event */ MouseEvent) => Unit): Self = this.set("onClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnClick: Self = this.set("onClick", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    @scala.inline
+    def setSize(value: SwitchSize): Self = this.set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+    @scala.inline
+    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
+    @scala.inline
+    def setUnCheckedChildrenReactElement(value: ReactElement): Self = this.set("unCheckedChildren", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUnCheckedChildren(value: TagMod[Any]): Self = this.set("unCheckedChildren", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUnCheckedChildren: Self = this.set("unCheckedChildren", js.undefined)
+  }
+  
 }
 

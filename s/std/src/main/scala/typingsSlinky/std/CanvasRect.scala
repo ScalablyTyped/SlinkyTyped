@@ -20,5 +20,24 @@ object CanvasRect {
     val __obj = js.Dynamic.literal(clearRect = js.Any.fromFunction4(clearRect), fillRect = js.Any.fromFunction4(fillRect), strokeRect = js.Any.fromFunction4(strokeRect))
     __obj.asInstanceOf[CanvasRect]
   }
+  @scala.inline
+  implicit class CanvasRectOps[Self <: CanvasRect] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setClearRect(value: (Double, Double, Double, Double) => Unit): Self = this.set("clearRect", js.Any.fromFunction4(value))
+    @scala.inline
+    def setFillRect(value: (Double, Double, Double, Double) => Unit): Self = this.set("fillRect", js.Any.fromFunction4(value))
+    @scala.inline
+    def setStrokeRect(value: (Double, Double, Double, Double) => Unit): Self = this.set("strokeRect", js.Any.fromFunction4(value))
+  }
+  
 }
 

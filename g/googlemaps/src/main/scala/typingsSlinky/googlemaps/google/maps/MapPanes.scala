@@ -58,5 +58,28 @@ object MapPanes {
     val __obj = js.Dynamic.literal(floatPane = floatPane.asInstanceOf[js.Any], mapPane = mapPane.asInstanceOf[js.Any], markerLayer = markerLayer.asInstanceOf[js.Any], overlayLayer = overlayLayer.asInstanceOf[js.Any], overlayMouseTarget = overlayMouseTarget.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapPanes]
   }
+  @scala.inline
+  implicit class MapPanesOps[Self <: MapPanes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setFloatPane(value: Element): Self = this.set("floatPane", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMapPane(value: Element): Self = this.set("mapPane", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMarkerLayer(value: Element): Self = this.set("markerLayer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOverlayLayer(value: Element): Self = this.set("overlayLayer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOverlayMouseTarget(value: Element): Self = this.set("overlayMouseTarget", value.asInstanceOf[js.Any])
+  }
+  
 }
 

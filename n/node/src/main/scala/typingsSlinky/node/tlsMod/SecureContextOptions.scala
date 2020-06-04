@@ -156,48 +156,98 @@ trait SecureContextOptions extends js.Object {
 
 object SecureContextOptions {
   @scala.inline
-  def apply(
-    ca: String | Buffer | (js.Array[String | Buffer]) = null,
-    cert: String | Buffer | (js.Array[String | Buffer]) = null,
-    ciphers: String = null,
-    clientCertEngine: String = null,
-    crl: String | Buffer | (js.Array[String | Buffer]) = null,
-    dhparam: String | Buffer = null,
-    ecdhCurve: String = null,
-    honorCipherOrder: js.UndefOr[Boolean] = js.undefined,
-    key: String | Buffer | (js.Array[Buffer | KeyObject]) = null,
-    maxVersion: SecureVersion = null,
-    minVersion: SecureVersion = null,
-    passphrase: String = null,
-    pfx: String | Buffer | (js.Array[String | Buffer | PxfObject]) = null,
-    privateKeyEngine: String = null,
-    privateKeyIdentifier: String = null,
-    secureOptions: js.UndefOr[Double] = js.undefined,
-    secureProtocol: String = null,
-    sessionIdContext: String = null,
-    sigalgs: String = null
-  ): SecureContextOptions = {
+  def apply(): SecureContextOptions = {
     val __obj = js.Dynamic.literal()
-    if (ca != null) __obj.updateDynamic("ca")(ca.asInstanceOf[js.Any])
-    if (cert != null) __obj.updateDynamic("cert")(cert.asInstanceOf[js.Any])
-    if (ciphers != null) __obj.updateDynamic("ciphers")(ciphers.asInstanceOf[js.Any])
-    if (clientCertEngine != null) __obj.updateDynamic("clientCertEngine")(clientCertEngine.asInstanceOf[js.Any])
-    if (crl != null) __obj.updateDynamic("crl")(crl.asInstanceOf[js.Any])
-    if (dhparam != null) __obj.updateDynamic("dhparam")(dhparam.asInstanceOf[js.Any])
-    if (ecdhCurve != null) __obj.updateDynamic("ecdhCurve")(ecdhCurve.asInstanceOf[js.Any])
-    if (!js.isUndefined(honorCipherOrder)) __obj.updateDynamic("honorCipherOrder")(honorCipherOrder.get.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (maxVersion != null) __obj.updateDynamic("maxVersion")(maxVersion.asInstanceOf[js.Any])
-    if (minVersion != null) __obj.updateDynamic("minVersion")(minVersion.asInstanceOf[js.Any])
-    if (passphrase != null) __obj.updateDynamic("passphrase")(passphrase.asInstanceOf[js.Any])
-    if (pfx != null) __obj.updateDynamic("pfx")(pfx.asInstanceOf[js.Any])
-    if (privateKeyEngine != null) __obj.updateDynamic("privateKeyEngine")(privateKeyEngine.asInstanceOf[js.Any])
-    if (privateKeyIdentifier != null) __obj.updateDynamic("privateKeyIdentifier")(privateKeyIdentifier.asInstanceOf[js.Any])
-    if (!js.isUndefined(secureOptions)) __obj.updateDynamic("secureOptions")(secureOptions.get.asInstanceOf[js.Any])
-    if (secureProtocol != null) __obj.updateDynamic("secureProtocol")(secureProtocol.asInstanceOf[js.Any])
-    if (sessionIdContext != null) __obj.updateDynamic("sessionIdContext")(sessionIdContext.asInstanceOf[js.Any])
-    if (sigalgs != null) __obj.updateDynamic("sigalgs")(sigalgs.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecureContextOptions]
   }
+  @scala.inline
+  implicit class SecureContextOptionsOps[Self <: SecureContextOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCa(value: String | Buffer | (js.Array[String | Buffer])): Self = this.set("ca", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCa: Self = this.set("ca", js.undefined)
+    @scala.inline
+    def setCert(value: String | Buffer | (js.Array[String | Buffer])): Self = this.set("cert", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCert: Self = this.set("cert", js.undefined)
+    @scala.inline
+    def setCiphers(value: String): Self = this.set("ciphers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCiphers: Self = this.set("ciphers", js.undefined)
+    @scala.inline
+    def setClientCertEngine(value: String): Self = this.set("clientCertEngine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClientCertEngine: Self = this.set("clientCertEngine", js.undefined)
+    @scala.inline
+    def setCrl(value: String | Buffer | (js.Array[String | Buffer])): Self = this.set("crl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCrl: Self = this.set("crl", js.undefined)
+    @scala.inline
+    def setDhparam(value: String | Buffer): Self = this.set("dhparam", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDhparam: Self = this.set("dhparam", js.undefined)
+    @scala.inline
+    def setEcdhCurve(value: String): Self = this.set("ecdhCurve", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEcdhCurve: Self = this.set("ecdhCurve", js.undefined)
+    @scala.inline
+    def setHonorCipherOrder(value: Boolean): Self = this.set("honorCipherOrder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHonorCipherOrder: Self = this.set("honorCipherOrder", js.undefined)
+    @scala.inline
+    def setKey(value: String | Buffer | (js.Array[Buffer | KeyObject])): Self = this.set("key", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKey: Self = this.set("key", js.undefined)
+    @scala.inline
+    def setMaxVersion(value: SecureVersion): Self = this.set("maxVersion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxVersion: Self = this.set("maxVersion", js.undefined)
+    @scala.inline
+    def setMinVersion(value: SecureVersion): Self = this.set("minVersion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinVersion: Self = this.set("minVersion", js.undefined)
+    @scala.inline
+    def setPassphrase(value: String): Self = this.set("passphrase", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePassphrase: Self = this.set("passphrase", js.undefined)
+    @scala.inline
+    def setPfx(value: String | Buffer | (js.Array[String | Buffer | PxfObject])): Self = this.set("pfx", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePfx: Self = this.set("pfx", js.undefined)
+    @scala.inline
+    def setPrivateKeyEngine(value: String): Self = this.set("privateKeyEngine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrivateKeyEngine: Self = this.set("privateKeyEngine", js.undefined)
+    @scala.inline
+    def setPrivateKeyIdentifier(value: String): Self = this.set("privateKeyIdentifier", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrivateKeyIdentifier: Self = this.set("privateKeyIdentifier", js.undefined)
+    @scala.inline
+    def setSecureOptions(value: Double): Self = this.set("secureOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSecureOptions: Self = this.set("secureOptions", js.undefined)
+    @scala.inline
+    def setSecureProtocol(value: String): Self = this.set("secureProtocol", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSecureProtocol: Self = this.set("secureProtocol", js.undefined)
+    @scala.inline
+    def setSessionIdContext(value: String): Self = this.set("sessionIdContext", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSessionIdContext: Self = this.set("sessionIdContext", js.undefined)
+    @scala.inline
+    def setSigalgs(value: String): Self = this.set("sigalgs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSigalgs: Self = this.set("sigalgs", js.undefined)
+  }
+  
 }
 

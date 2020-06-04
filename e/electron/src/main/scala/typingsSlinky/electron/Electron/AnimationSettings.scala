@@ -32,5 +32,24 @@ object AnimationSettings {
     val __obj = js.Dynamic.literal(prefersReducedMotion = prefersReducedMotion.asInstanceOf[js.Any], scrollAnimationsEnabledBySystem = scrollAnimationsEnabledBySystem.asInstanceOf[js.Any], shouldRenderRichAnimation = shouldRenderRichAnimation.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnimationSettings]
   }
+  @scala.inline
+  implicit class AnimationSettingsOps[Self <: AnimationSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setPrefersReducedMotion(value: Boolean): Self = this.set("prefersReducedMotion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setScrollAnimationsEnabledBySystem(value: Boolean): Self = this.set("scrollAnimationsEnabledBySystem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setShouldRenderRichAnimation(value: Boolean): Self = this.set("shouldRenderRichAnimation", value.asInstanceOf[js.Any])
+  }
+  
 }
 

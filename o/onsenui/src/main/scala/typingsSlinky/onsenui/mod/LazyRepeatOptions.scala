@@ -30,20 +30,42 @@ trait LazyRepeatOptions extends js.Object {
 
 object LazyRepeatOptions {
   @scala.inline
-  def apply(
-    calculateItemHeight: js.UndefOr[Double] = js.undefined,
-    configureItemScope: js.UndefOr[Double] = js.undefined,
-    countItems: js.UndefOr[Double] = js.undefined,
-    createItemContent: HTMLElement = null,
-    destroyItem: String = null
-  ): LazyRepeatOptions = {
+  def apply(): LazyRepeatOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(calculateItemHeight)) __obj.updateDynamic("calculateItemHeight")(calculateItemHeight.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(configureItemScope)) __obj.updateDynamic("configureItemScope")(configureItemScope.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(countItems)) __obj.updateDynamic("countItems")(countItems.get.asInstanceOf[js.Any])
-    if (createItemContent != null) __obj.updateDynamic("createItemContent")(createItemContent.asInstanceOf[js.Any])
-    if (destroyItem != null) __obj.updateDynamic("destroyItem")(destroyItem.asInstanceOf[js.Any])
     __obj.asInstanceOf[LazyRepeatOptions]
   }
+  @scala.inline
+  implicit class LazyRepeatOptionsOps[Self <: LazyRepeatOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCalculateItemHeight(value: Double): Self = this.set("calculateItemHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCalculateItemHeight: Self = this.set("calculateItemHeight", js.undefined)
+    @scala.inline
+    def setConfigureItemScope(value: Double): Self = this.set("configureItemScope", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteConfigureItemScope: Self = this.set("configureItemScope", js.undefined)
+    @scala.inline
+    def setCountItems(value: Double): Self = this.set("countItems", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCountItems: Self = this.set("countItems", js.undefined)
+    @scala.inline
+    def setCreateItemContent(value: HTMLElement): Self = this.set("createItemContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCreateItemContent: Self = this.set("createItemContent", js.undefined)
+    @scala.inline
+    def setDestroyItem(value: String): Self = this.set("destroyItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDestroyItem: Self = this.set("destroyItem", js.undefined)
+  }
+  
 }
 

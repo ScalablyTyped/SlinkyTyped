@@ -30,14 +30,30 @@ trait TouchableWithoutFeedbackPropsIOS extends js.Object {
 
 object TouchableWithoutFeedbackPropsIOS {
   @scala.inline
-  def apply(
-    hasTVPreferredFocus: js.UndefOr[Boolean] = js.undefined,
-    tvParallaxProperties: TVParallaxProperties = null
-  ): TouchableWithoutFeedbackPropsIOS = {
+  def apply(): TouchableWithoutFeedbackPropsIOS = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(hasTVPreferredFocus)) __obj.updateDynamic("hasTVPreferredFocus")(hasTVPreferredFocus.get.asInstanceOf[js.Any])
-    if (tvParallaxProperties != null) __obj.updateDynamic("tvParallaxProperties")(tvParallaxProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[TouchableWithoutFeedbackPropsIOS]
   }
+  @scala.inline
+  implicit class TouchableWithoutFeedbackPropsIOSOps[Self <: TouchableWithoutFeedbackPropsIOS] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setHasTVPreferredFocus(value: Boolean): Self = this.set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHasTVPreferredFocus: Self = this.set("hasTVPreferredFocus", js.undefined)
+    @scala.inline
+    def setTvParallaxProperties(value: TVParallaxProperties): Self = this.set("tvParallaxProperties", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTvParallaxProperties: Self = this.set("tvParallaxProperties", js.undefined)
+  }
+  
 }
 

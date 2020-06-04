@@ -152,32 +152,72 @@ trait TextInputIOSProps extends js.Object {
 
 object TextInputIOSProps {
   @scala.inline
-  def apply(
-    clearButtonMode: never | `while-editing` | `unless-editing` | always = null,
-    clearTextOnFocus: js.UndefOr[Boolean] = js.undefined,
-    dataDetectorTypes: DataDetectorTypes | js.Array[DataDetectorTypes] = null,
-    enablesReturnKeyAutomatically: js.UndefOr[Boolean] = js.undefined,
-    keyboardAppearance: default | light | dark = null,
-    passwordRules: js.UndefOr[Null | String] = js.undefined,
-    rejectResponderTermination: js.UndefOr[Null | Boolean] = js.undefined,
-    scrollEnabled: js.UndefOr[Boolean] = js.undefined,
-    selectionState: DocumentSelectionState = null,
-    spellCheck: js.UndefOr[Boolean] = js.undefined,
-    textContentType: none | URL | addressCity | addressCityAndState | addressState | countryName | creditCardNumber | emailAddress | familyName | fullStreetAddress | givenName | jobTitle | location | middleName | name | namePrefix | nameSuffix | nickname | organizationName | postalCode | streetAddressLine1 | streetAddressLine2 | sublocality | telephoneNumber | username | password | newPassword | oneTimeCode = null
-  ): TextInputIOSProps = {
+  def apply(): TextInputIOSProps = {
     val __obj = js.Dynamic.literal()
-    if (clearButtonMode != null) __obj.updateDynamic("clearButtonMode")(clearButtonMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(clearTextOnFocus)) __obj.updateDynamic("clearTextOnFocus")(clearTextOnFocus.get.asInstanceOf[js.Any])
-    if (dataDetectorTypes != null) __obj.updateDynamic("dataDetectorTypes")(dataDetectorTypes.asInstanceOf[js.Any])
-    if (!js.isUndefined(enablesReturnKeyAutomatically)) __obj.updateDynamic("enablesReturnKeyAutomatically")(enablesReturnKeyAutomatically.get.asInstanceOf[js.Any])
-    if (keyboardAppearance != null) __obj.updateDynamic("keyboardAppearance")(keyboardAppearance.asInstanceOf[js.Any])
-    if (!js.isUndefined(passwordRules)) __obj.updateDynamic("passwordRules")(passwordRules.asInstanceOf[js.Any])
-    if (!js.isUndefined(rejectResponderTermination)) __obj.updateDynamic("rejectResponderTermination")(rejectResponderTermination.asInstanceOf[js.Any])
-    if (!js.isUndefined(scrollEnabled)) __obj.updateDynamic("scrollEnabled")(scrollEnabled.get.asInstanceOf[js.Any])
-    if (selectionState != null) __obj.updateDynamic("selectionState")(selectionState.asInstanceOf[js.Any])
-    if (!js.isUndefined(spellCheck)) __obj.updateDynamic("spellCheck")(spellCheck.get.asInstanceOf[js.Any])
-    if (textContentType != null) __obj.updateDynamic("textContentType")(textContentType.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextInputIOSProps]
   }
+  @scala.inline
+  implicit class TextInputIOSPropsOps[Self <: TextInputIOSProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setClearButtonMode(value: never | `while-editing` | `unless-editing` | always): Self = this.set("clearButtonMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClearButtonMode: Self = this.set("clearButtonMode", js.undefined)
+    @scala.inline
+    def setClearTextOnFocus(value: Boolean): Self = this.set("clearTextOnFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClearTextOnFocus: Self = this.set("clearTextOnFocus", js.undefined)
+    @scala.inline
+    def setDataDetectorTypes(value: DataDetectorTypes | js.Array[DataDetectorTypes]): Self = this.set("dataDetectorTypes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDataDetectorTypes: Self = this.set("dataDetectorTypes", js.undefined)
+    @scala.inline
+    def setEnablesReturnKeyAutomatically(value: Boolean): Self = this.set("enablesReturnKeyAutomatically", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEnablesReturnKeyAutomatically: Self = this.set("enablesReturnKeyAutomatically", js.undefined)
+    @scala.inline
+    def setKeyboardAppearance(value: default | light | dark): Self = this.set("keyboardAppearance", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKeyboardAppearance: Self = this.set("keyboardAppearance", js.undefined)
+    @scala.inline
+    def setPasswordRules(value: String): Self = this.set("passwordRules", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePasswordRules: Self = this.set("passwordRules", js.undefined)
+    @scala.inline
+    def setPasswordRulesNull: Self = this.set("passwordRules", null)
+    @scala.inline
+    def setRejectResponderTermination(value: Boolean): Self = this.set("rejectResponderTermination", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRejectResponderTermination: Self = this.set("rejectResponderTermination", js.undefined)
+    @scala.inline
+    def setRejectResponderTerminationNull: Self = this.set("rejectResponderTermination", null)
+    @scala.inline
+    def setScrollEnabled(value: Boolean): Self = this.set("scrollEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScrollEnabled: Self = this.set("scrollEnabled", js.undefined)
+    @scala.inline
+    def setSelectionState(value: DocumentSelectionState): Self = this.set("selectionState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelectionState: Self = this.set("selectionState", js.undefined)
+    @scala.inline
+    def setSpellCheck(value: Boolean): Self = this.set("spellCheck", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSpellCheck: Self = this.set("spellCheck", js.undefined)
+    @scala.inline
+    def setTextContentType(
+      value: none | URL | addressCity | addressCityAndState | addressState | countryName | creditCardNumber | emailAddress | familyName | fullStreetAddress | givenName | jobTitle | location | middleName | name | namePrefix | nameSuffix | nickname | organizationName | postalCode | streetAddressLine1 | streetAddressLine2 | sublocality | telephoneNumber | username | password | newPassword | oneTimeCode
+    ): Self = this.set("textContentType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTextContentType: Self = this.set("textContentType", js.undefined)
+  }
+  
 }
 

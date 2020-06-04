@@ -150,78 +150,164 @@ trait TreeProps extends js.Object {
 
 object TreeProps {
   @scala.inline
-  def apply(
-    autoExpandParent: js.UndefOr[Boolean] = js.undefined,
-    checkStrictly: js.UndefOr[Boolean] = js.undefined,
-    checkable: Boolean | ReactElement = null,
-    checkedKeys: js.Array[String] | Checked = null,
-    className: String = null,
-    defaultCheckedKeys: js.Array[String] = null,
-    defaultExpandAll: js.UndefOr[Boolean] = js.undefined,
-    defaultExpandParent: js.UndefOr[Boolean] = js.undefined,
-    defaultExpandedKeys: js.Array[String] = null,
-    defaultSelectedKeys: js.Array[String] = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    draggable: js.UndefOr[Boolean] = js.undefined,
-    expandedKeys: js.Array[String] = null,
-    filterTreeNode: ReactComponentClass[InternalTreeNodeProps] => Boolean = null,
-    icon: ReactElement | (js.Function1[/* props */ InternalTreeNodeProps, ReactElement]) = null,
-    loadData: ReactComponentClass[InternalTreeNodeProps] => js.Promise[_] = null,
-    multiple: js.UndefOr[Boolean] = js.undefined,
-    onCheck: (/* checkedKeys */ js.Array[String], /* e */ CheckData) => Unit = null,
-    onDragEnd: /* props */ OnDragEndData => Unit = null,
-    onDragEnter: /* props */ OnDragEnterData => Unit = null,
-    onDragLeave: /* props */ OnDragLeaveData => Unit = null,
-    onDragOver: /* props */ OnDragOverData => Unit = null,
-    onDragStart: /* props */ OnDragStartData => Unit = null,
-    onDrop: /* props */ OnDropData => Unit = null,
-    onExpand: (/* expandedKeys */ js.Array[String], /* e */ ExpandData) => Unit = null,
-    onMouseEnter: /* props */ OnMouseEnterData => Unit = null,
-    onMouseLeave: /* props */ OnMouseLeaveData => Unit = null,
-    onRightClick: /* props */ OnRightClickData => Unit = null,
-    onSelect: (/* selectedKeys */ js.Array[String], /* e */ SelectData) => Unit = null,
-    prefixCls: String = null,
-    selectable: js.UndefOr[Boolean] = js.undefined,
-    selectedKeys: js.Array[String] = null,
-    showIcon: js.UndefOr[Boolean] = js.undefined,
-    showLine: js.UndefOr[Boolean] = js.undefined
-  ): TreeProps = {
+  def apply(): TreeProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoExpandParent)) __obj.updateDynamic("autoExpandParent")(autoExpandParent.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(checkStrictly)) __obj.updateDynamic("checkStrictly")(checkStrictly.get.asInstanceOf[js.Any])
-    if (checkable != null) __obj.updateDynamic("checkable")(checkable.asInstanceOf[js.Any])
-    if (checkedKeys != null) __obj.updateDynamic("checkedKeys")(checkedKeys.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (defaultCheckedKeys != null) __obj.updateDynamic("defaultCheckedKeys")(defaultCheckedKeys.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultExpandAll)) __obj.updateDynamic("defaultExpandAll")(defaultExpandAll.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultExpandParent)) __obj.updateDynamic("defaultExpandParent")(defaultExpandParent.get.asInstanceOf[js.Any])
-    if (defaultExpandedKeys != null) __obj.updateDynamic("defaultExpandedKeys")(defaultExpandedKeys.asInstanceOf[js.Any])
-    if (defaultSelectedKeys != null) __obj.updateDynamic("defaultSelectedKeys")(defaultSelectedKeys.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(draggable)) __obj.updateDynamic("draggable")(draggable.get.asInstanceOf[js.Any])
-    if (expandedKeys != null) __obj.updateDynamic("expandedKeys")(expandedKeys.asInstanceOf[js.Any])
-    if (filterTreeNode != null) __obj.updateDynamic("filterTreeNode")(js.Any.fromFunction1(filterTreeNode))
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (loadData != null) __obj.updateDynamic("loadData")(js.Any.fromFunction1(loadData))
-    if (!js.isUndefined(multiple)) __obj.updateDynamic("multiple")(multiple.get.asInstanceOf[js.Any])
-    if (onCheck != null) __obj.updateDynamic("onCheck")(js.Any.fromFunction2(onCheck))
-    if (onDragEnd != null) __obj.updateDynamic("onDragEnd")(js.Any.fromFunction1(onDragEnd))
-    if (onDragEnter != null) __obj.updateDynamic("onDragEnter")(js.Any.fromFunction1(onDragEnter))
-    if (onDragLeave != null) __obj.updateDynamic("onDragLeave")(js.Any.fromFunction1(onDragLeave))
-    if (onDragOver != null) __obj.updateDynamic("onDragOver")(js.Any.fromFunction1(onDragOver))
-    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction1(onDragStart))
-    if (onDrop != null) __obj.updateDynamic("onDrop")(js.Any.fromFunction1(onDrop))
-    if (onExpand != null) __obj.updateDynamic("onExpand")(js.Any.fromFunction2(onExpand))
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
-    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
-    if (onRightClick != null) __obj.updateDynamic("onRightClick")(js.Any.fromFunction1(onRightClick))
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction2(onSelect))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectable)) __obj.updateDynamic("selectable")(selectable.get.asInstanceOf[js.Any])
-    if (selectedKeys != null) __obj.updateDynamic("selectedKeys")(selectedKeys.asInstanceOf[js.Any])
-    if (!js.isUndefined(showIcon)) __obj.updateDynamic("showIcon")(showIcon.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(showLine)) __obj.updateDynamic("showLine")(showLine.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TreeProps]
   }
+  @scala.inline
+  implicit class TreePropsOps[Self <: TreeProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAutoExpandParent(value: Boolean): Self = this.set("autoExpandParent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAutoExpandParent: Self = this.set("autoExpandParent", js.undefined)
+    @scala.inline
+    def setCheckStrictly(value: Boolean): Self = this.set("checkStrictly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCheckStrictly: Self = this.set("checkStrictly", js.undefined)
+    @scala.inline
+    def setCheckableReactElement(value: ReactElement): Self = this.set("checkable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCheckable(value: Boolean | ReactElement): Self = this.set("checkable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCheckable: Self = this.set("checkable", js.undefined)
+    @scala.inline
+    def setCheckedKeys(value: js.Array[String] | Checked): Self = this.set("checkedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCheckedKeys: Self = this.set("checkedKeys", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setDefaultCheckedKeys(value: js.Array[String]): Self = this.set("defaultCheckedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultCheckedKeys: Self = this.set("defaultCheckedKeys", js.undefined)
+    @scala.inline
+    def setDefaultExpandAll(value: Boolean): Self = this.set("defaultExpandAll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultExpandAll: Self = this.set("defaultExpandAll", js.undefined)
+    @scala.inline
+    def setDefaultExpandParent(value: Boolean): Self = this.set("defaultExpandParent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultExpandParent: Self = this.set("defaultExpandParent", js.undefined)
+    @scala.inline
+    def setDefaultExpandedKeys(value: js.Array[String]): Self = this.set("defaultExpandedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultExpandedKeys: Self = this.set("defaultExpandedKeys", js.undefined)
+    @scala.inline
+    def setDefaultSelectedKeys(value: js.Array[String]): Self = this.set("defaultSelectedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultSelectedKeys: Self = this.set("defaultSelectedKeys", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setDraggable(value: Boolean): Self = this.set("draggable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDraggable: Self = this.set("draggable", js.undefined)
+    @scala.inline
+    def setExpandedKeys(value: js.Array[String]): Self = this.set("expandedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteExpandedKeys: Self = this.set("expandedKeys", js.undefined)
+    @scala.inline
+    def setFilterTreeNode(value: ReactComponentClass[InternalTreeNodeProps] => Boolean): Self = this.set("filterTreeNode", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteFilterTreeNode: Self = this.set("filterTreeNode", js.undefined)
+    @scala.inline
+    def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIconFunction1(value: /* props */ InternalTreeNodeProps => ReactElement): Self = this.set("icon", js.Any.fromFunction1(value))
+    @scala.inline
+    def setIcon(value: ReactElement | (js.Function1[/* props */ InternalTreeNodeProps, ReactElement])): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIcon: Self = this.set("icon", js.undefined)
+    @scala.inline
+    def setLoadData(value: ReactComponentClass[InternalTreeNodeProps] => js.Promise[_]): Self = this.set("loadData", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteLoadData: Self = this.set("loadData", js.undefined)
+    @scala.inline
+    def setMultiple(value: Boolean): Self = this.set("multiple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMultiple: Self = this.set("multiple", js.undefined)
+    @scala.inline
+    def setOnCheck(value: (/* checkedKeys */ js.Array[String], /* e */ CheckData) => Unit): Self = this.set("onCheck", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnCheck: Self = this.set("onCheck", js.undefined)
+    @scala.inline
+    def setOnDragEnd(value: /* props */ OnDragEndData => Unit): Self = this.set("onDragEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnDragEnd: Self = this.set("onDragEnd", js.undefined)
+    @scala.inline
+    def setOnDragEnter(value: /* props */ OnDragEnterData => Unit): Self = this.set("onDragEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnDragEnter: Self = this.set("onDragEnter", js.undefined)
+    @scala.inline
+    def setOnDragLeave(value: /* props */ OnDragLeaveData => Unit): Self = this.set("onDragLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnDragLeave: Self = this.set("onDragLeave", js.undefined)
+    @scala.inline
+    def setOnDragOver(value: /* props */ OnDragOverData => Unit): Self = this.set("onDragOver", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnDragOver: Self = this.set("onDragOver", js.undefined)
+    @scala.inline
+    def setOnDragStart(value: /* props */ OnDragStartData => Unit): Self = this.set("onDragStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnDragStart: Self = this.set("onDragStart", js.undefined)
+    @scala.inline
+    def setOnDrop(value: /* props */ OnDropData => Unit): Self = this.set("onDrop", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnDrop: Self = this.set("onDrop", js.undefined)
+    @scala.inline
+    def setOnExpand(value: (/* expandedKeys */ js.Array[String], /* e */ ExpandData) => Unit): Self = this.set("onExpand", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnExpand: Self = this.set("onExpand", js.undefined)
+    @scala.inline
+    def setOnMouseEnter(value: /* props */ OnMouseEnterData => Unit): Self = this.set("onMouseEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnMouseEnter: Self = this.set("onMouseEnter", js.undefined)
+    @scala.inline
+    def setOnMouseLeave(value: /* props */ OnMouseLeaveData => Unit): Self = this.set("onMouseLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnMouseLeave: Self = this.set("onMouseLeave", js.undefined)
+    @scala.inline
+    def setOnRightClick(value: /* props */ OnRightClickData => Unit): Self = this.set("onRightClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnRightClick: Self = this.set("onRightClick", js.undefined)
+    @scala.inline
+    def setOnSelect(value: (/* selectedKeys */ js.Array[String], /* e */ SelectData) => Unit): Self = this.set("onSelect", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnSelect: Self = this.set("onSelect", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    @scala.inline
+    def setSelectable(value: Boolean): Self = this.set("selectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelectable: Self = this.set("selectable", js.undefined)
+    @scala.inline
+    def setSelectedKeys(value: js.Array[String]): Self = this.set("selectedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelectedKeys: Self = this.set("selectedKeys", js.undefined)
+    @scala.inline
+    def setShowIcon(value: Boolean): Self = this.set("showIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowIcon: Self = this.set("showIcon", js.undefined)
+    @scala.inline
+    def setShowLine(value: Boolean): Self = this.set("showLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowLine: Self = this.set("showLine", js.undefined)
+  }
+  
 }
 

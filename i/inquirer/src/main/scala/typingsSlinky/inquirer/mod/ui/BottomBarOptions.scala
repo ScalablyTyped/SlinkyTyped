@@ -1,8 +1,6 @@
 package typingsSlinky.inquirer.mod.ui
 
 import typingsSlinky.inquirer.mod.StreamOptions
-import typingsSlinky.node.processMod.global.NodeJS.ReadStream
-import typingsSlinky.node.processMod.global.NodeJS.WriteStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,12 +17,26 @@ trait BottomBarOptions extends StreamOptions {
 
 object BottomBarOptions {
   @scala.inline
-  def apply(bottomBar: String = null, input: ReadStream = null, output: WriteStream = null): BottomBarOptions = {
+  def apply(): BottomBarOptions = {
     val __obj = js.Dynamic.literal()
-    if (bottomBar != null) __obj.updateDynamic("bottomBar")(bottomBar.asInstanceOf[js.Any])
-    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
-    if (output != null) __obj.updateDynamic("output")(output.asInstanceOf[js.Any])
     __obj.asInstanceOf[BottomBarOptions]
   }
+  @scala.inline
+  implicit class BottomBarOptionsOps[Self <: BottomBarOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBottomBar(value: String): Self = this.set("bottomBar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBottomBar: Self = this.set("bottomBar", js.undefined)
+  }
+  
 }
 

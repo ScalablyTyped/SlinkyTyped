@@ -32,17 +32,36 @@ trait Profile extends js.Object {
 
 object Profile {
   @scala.inline
-  def apply(
-    endTime: Double,
-    nodes: js.Array[ProfileNode],
-    startTime: Double,
-    samples: js.Array[Double] = null,
-    timeDeltas: js.Array[Double] = null
-  ): Profile = {
+  def apply(endTime: Double, nodes: js.Array[ProfileNode], startTime: Double): Profile = {
     val __obj = js.Dynamic.literal(endTime = endTime.asInstanceOf[js.Any], nodes = nodes.asInstanceOf[js.Any], startTime = startTime.asInstanceOf[js.Any])
-    if (samples != null) __obj.updateDynamic("samples")(samples.asInstanceOf[js.Any])
-    if (timeDeltas != null) __obj.updateDynamic("timeDeltas")(timeDeltas.asInstanceOf[js.Any])
     __obj.asInstanceOf[Profile]
   }
+  @scala.inline
+  implicit class ProfileOps[Self <: Profile] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setEndTime(value: Double): Self = this.set("endTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNodes(value: js.Array[ProfileNode]): Self = this.set("nodes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStartTime(value: Double): Self = this.set("startTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSamples(value: js.Array[Double]): Self = this.set("samples", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSamples: Self = this.set("samples", js.undefined)
+    @scala.inline
+    def setTimeDeltas(value: js.Array[Double]): Self = this.set("timeDeltas", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTimeDeltas: Self = this.set("timeDeltas", js.undefined)
+  }
+  
 }
 

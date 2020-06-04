@@ -54,25 +54,58 @@ object HotNotifierInfo {
   @scala.inline
   def apply(
     moduleId: Double,
-    `type`: `self-declined` | declined | unaccepted | accepted | disposed | `accept-errored` | `self-accept-errored` | `self-accept-error-handler-errored`,
-    chain: js.Array[Double] = null,
-    dependencyId: js.UndefOr[Double] = js.undefined,
-    error: js.Error = null,
-    originalError: js.Error = null,
-    outdatedDependencies: NumberDictionary[js.Array[Double]] = null,
-    outdatedModules: js.Array[Double] = null,
-    parentId: js.UndefOr[Double] = js.undefined
+    `type`: `self-declined` | declined | unaccepted | accepted | disposed | `accept-errored` | `self-accept-errored` | `self-accept-error-handler-errored`
   ): HotNotifierInfo = {
     val __obj = js.Dynamic.literal(moduleId = moduleId.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (chain != null) __obj.updateDynamic("chain")(chain.asInstanceOf[js.Any])
-    if (!js.isUndefined(dependencyId)) __obj.updateDynamic("dependencyId")(dependencyId.get.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (originalError != null) __obj.updateDynamic("originalError")(originalError.asInstanceOf[js.Any])
-    if (outdatedDependencies != null) __obj.updateDynamic("outdatedDependencies")(outdatedDependencies.asInstanceOf[js.Any])
-    if (outdatedModules != null) __obj.updateDynamic("outdatedModules")(outdatedModules.asInstanceOf[js.Any])
-    if (!js.isUndefined(parentId)) __obj.updateDynamic("parentId")(parentId.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[HotNotifierInfo]
   }
+  @scala.inline
+  implicit class HotNotifierInfoOps[Self <: HotNotifierInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setModuleId(value: Double): Self = this.set("moduleId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setType(
+      value: `self-declined` | declined | unaccepted | accepted | disposed | `accept-errored` | `self-accept-errored` | `self-accept-error-handler-errored`
+    ): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChain(value: js.Array[Double]): Self = this.set("chain", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChain: Self = this.set("chain", js.undefined)
+    @scala.inline
+    def setDependencyId(value: Double): Self = this.set("dependencyId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDependencyId: Self = this.set("dependencyId", js.undefined)
+    @scala.inline
+    def setError(value: js.Error): Self = this.set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteError: Self = this.set("error", js.undefined)
+    @scala.inline
+    def setOriginalError(value: js.Error): Self = this.set("originalError", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOriginalError: Self = this.set("originalError", js.undefined)
+    @scala.inline
+    def setOutdatedDependencies(value: NumberDictionary[js.Array[Double]]): Self = this.set("outdatedDependencies", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOutdatedDependencies: Self = this.set("outdatedDependencies", js.undefined)
+    @scala.inline
+    def setOutdatedModules(value: js.Array[Double]): Self = this.set("outdatedModules", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOutdatedModules: Self = this.set("outdatedModules", js.undefined)
+    @scala.inline
+    def setParentId(value: Double): Self = this.set("parentId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteParentId: Self = this.set("parentId", js.undefined)
+  }
+  
 }
 

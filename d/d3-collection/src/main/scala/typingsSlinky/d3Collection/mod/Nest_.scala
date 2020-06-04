@@ -162,5 +162,32 @@ object Nest_ {
     __obj.updateDynamic("object")(js.Any.fromFunction1(`object`))
     __obj.asInstanceOf[Nest_[Datum, RollupType]]
   }
+  @scala.inline
+  implicit class Nest_Ops[Self <: Nest_[_, _], Datum, RollupType] (val x: Self with (Nest_[Datum, RollupType])) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setEntries(value: js.Array[Datum] => js.Array[KeyValue[RollupType]]): Self = this.set("entries", js.Any.fromFunction1(value))
+    @scala.inline
+    def setKey(value: js.Function1[/* datum */ Datum, String] => Nest_[Datum, RollupType]): Self = this.set("key", js.Any.fromFunction1(value))
+    @scala.inline
+    def setMap(value: js.Array[Datum] => Map_[_]): Self = this.set("map", js.Any.fromFunction1(value))
+    @scala.inline
+    def setObject(value: js.Array[Datum] => StringDictionary[js.Any]): Self = this.set("object", js.Any.fromFunction1(value))
+    @scala.inline
+    def setRollup(value: js.Function1[/* values */ js.Array[Datum], RollupType] => Nest_[Datum, RollupType]): Self = this.set("rollup", js.Any.fromFunction1(value))
+    @scala.inline
+    def setSortKeys(value: js.Function2[/* a */ String, /* b */ String, Double] => Nest_[Datum, RollupType]): Self = this.set("sortKeys", js.Any.fromFunction1(value))
+    @scala.inline
+    def setSortValues(value: js.Function2[/* a */ Datum, /* b */ Datum, Double] => Nest_[Datum, RollupType]): Self = this.set("sortValues", js.Any.fromFunction1(value))
+  }
+  
 }
 

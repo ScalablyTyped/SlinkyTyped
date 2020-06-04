@@ -8,7 +8,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcTable.anon.X
 import typingsSlinky.rcTable.interfaceMod.ColumnType
 import typingsSlinky.rcTable.interfaceMod.ColumnsType
-import typingsSlinky.rcTable.interfaceMod.DefaultRecordType
 import typingsSlinky.rcTable.interfaceMod.ExpandableConfig
 import typingsSlinky.rcTable.interfaceMod.GetRowKey
 import typingsSlinky.rcTable.interfaceMod.Key
@@ -25,7 +24,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @scala.inline
-class SharedBuilder_TableProps1251172539[RecordType <: DefaultRecordType] (val args: js.Array[js.Any])
+class SharedBuilder_TableProps_175475921[/* <: typingsSlinky.rcTable.interfaceMod.DefaultRecordType */ RecordType] (val args: js.Array[js.Any])
   extends AnyVal
      with StBuildingComponent[tag.type, scala.Nothing] {
   @scala.inline

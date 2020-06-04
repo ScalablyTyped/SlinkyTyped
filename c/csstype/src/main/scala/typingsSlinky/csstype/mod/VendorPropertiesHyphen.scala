@@ -8,3 +8,11 @@ trait VendorPropertiesHyphen[TLength]
   extends VendorLonghandPropertiesHyphen[TLength]
      with VendorShorthandPropertiesHyphen[TLength]
 
+object VendorPropertiesHyphen {
+  @scala.inline
+  def apply[TLength](): VendorPropertiesHyphen[TLength] = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[VendorPropertiesHyphen[TLength]]
+  }
+}
+

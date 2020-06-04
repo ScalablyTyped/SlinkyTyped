@@ -1,11 +1,11 @@
 package typingsSlinky.semanticUiReact.components
 
-import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.feedDateMod.FeedDateProps
 import typingsSlinky.semanticUiReact.feedSummaryMod.FeedSummaryProps
 import typingsSlinky.semanticUiReact.feedUserMod.FeedUserProps
@@ -36,7 +36,7 @@ object FeedSummary {
     def dateReactElement(value: ReactElement): this.type = set("date", value.asInstanceOf[js.Any])
     @scala.inline
     def dateFunction3(
-      value: (/* component */ ReactComponentClass[FeedDateProps], FeedDateProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[FeedDateProps], FeedDateProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("date", js.Any.fromFunction3(value))
     @scala.inline
     def date(value: SemanticShorthandItem[FeedDateProps]): this.type = set("date", value.asInstanceOf[js.Any])
@@ -44,7 +44,7 @@ object FeedSummary {
     def userReactElement(value: ReactElement): this.type = set("user", value.asInstanceOf[js.Any])
     @scala.inline
     def userFunction3(
-      value: (/* component */ ReactComponentClass[FeedUserProps], FeedUserProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[FeedUserProps], FeedUserProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("user", js.Any.fromFunction3(value))
     @scala.inline
     def user(value: SemanticShorthandItem[FeedUserProps]): this.type = set("user", value.asInstanceOf[js.Any])

@@ -34,12 +34,51 @@ object TemplateAstVisitor {
     visitNgContent: (NgContentAst, js.Any) => js.Any,
     visitReference: (ReferenceAst, js.Any) => js.Any,
     visitText: (TextAst, js.Any) => js.Any,
-    visitVariable: (VariableAst, js.Any) => js.Any,
-    visit: (/* ast */ TemplateAst, /* context */ js.Any) => _ = null
+    visitVariable: (VariableAst, js.Any) => js.Any
   ): TemplateAstVisitor = {
     val __obj = js.Dynamic.literal(visitAttr = js.Any.fromFunction2(visitAttr), visitBoundText = js.Any.fromFunction2(visitBoundText), visitDirective = js.Any.fromFunction2(visitDirective), visitDirectiveProperty = js.Any.fromFunction2(visitDirectiveProperty), visitElement = js.Any.fromFunction2(visitElement), visitElementProperty = js.Any.fromFunction2(visitElementProperty), visitEmbeddedTemplate = js.Any.fromFunction2(visitEmbeddedTemplate), visitEvent = js.Any.fromFunction2(visitEvent), visitNgContent = js.Any.fromFunction2(visitNgContent), visitReference = js.Any.fromFunction2(visitReference), visitText = js.Any.fromFunction2(visitText), visitVariable = js.Any.fromFunction2(visitVariable))
-    if (visit != null) __obj.updateDynamic("visit")(js.Any.fromFunction2(visit))
     __obj.asInstanceOf[TemplateAstVisitor]
   }
+  @scala.inline
+  implicit class TemplateAstVisitorOps[Self <: TemplateAstVisitor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setVisitAttr(value: (AttrAst, js.Any) => js.Any): Self = this.set("visitAttr", js.Any.fromFunction2(value))
+    @scala.inline
+    def setVisitBoundText(value: (BoundTextAst, js.Any) => js.Any): Self = this.set("visitBoundText", js.Any.fromFunction2(value))
+    @scala.inline
+    def setVisitDirective(value: (DirectiveAst, js.Any) => js.Any): Self = this.set("visitDirective", js.Any.fromFunction2(value))
+    @scala.inline
+    def setVisitDirectiveProperty(value: (BoundDirectivePropertyAst, js.Any) => js.Any): Self = this.set("visitDirectiveProperty", js.Any.fromFunction2(value))
+    @scala.inline
+    def setVisitElement(value: (ElementAst, js.Any) => js.Any): Self = this.set("visitElement", js.Any.fromFunction2(value))
+    @scala.inline
+    def setVisitElementProperty(value: (BoundElementPropertyAst, js.Any) => js.Any): Self = this.set("visitElementProperty", js.Any.fromFunction2(value))
+    @scala.inline
+    def setVisitEmbeddedTemplate(value: (EmbeddedTemplateAst, js.Any) => js.Any): Self = this.set("visitEmbeddedTemplate", js.Any.fromFunction2(value))
+    @scala.inline
+    def setVisitEvent(value: (BoundEventAst, js.Any) => js.Any): Self = this.set("visitEvent", js.Any.fromFunction2(value))
+    @scala.inline
+    def setVisitNgContent(value: (NgContentAst, js.Any) => js.Any): Self = this.set("visitNgContent", js.Any.fromFunction2(value))
+    @scala.inline
+    def setVisitReference(value: (ReferenceAst, js.Any) => js.Any): Self = this.set("visitReference", js.Any.fromFunction2(value))
+    @scala.inline
+    def setVisitText(value: (TextAst, js.Any) => js.Any): Self = this.set("visitText", js.Any.fromFunction2(value))
+    @scala.inline
+    def setVisitVariable(value: (VariableAst, js.Any) => js.Any): Self = this.set("visitVariable", js.Any.fromFunction2(value))
+    @scala.inline
+    def setVisit(value: (/* ast */ TemplateAst, /* context */ js.Any) => _): Self = this.set("visit", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteVisit: Self = this.set("visit", js.undefined)
+  }
+  
 }
 

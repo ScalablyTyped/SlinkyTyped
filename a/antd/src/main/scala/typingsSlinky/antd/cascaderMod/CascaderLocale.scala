@@ -10,10 +10,26 @@ trait CascaderLocale extends js.Object {
 
 object CascaderLocale {
   @scala.inline
-  def apply(placeholder: String = null): CascaderLocale = {
+  def apply(): CascaderLocale = {
     val __obj = js.Dynamic.literal()
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
     __obj.asInstanceOf[CascaderLocale]
   }
+  @scala.inline
+  implicit class CascaderLocaleOps[Self <: CascaderLocale] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setPlaceholder(value: String): Self = this.set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePlaceholder: Self = this.set("placeholder", js.undefined)
+  }
+  
 }
 

@@ -28,28 +28,58 @@ trait ChartLegendOptions extends js.Object {
 
 object ChartLegendOptions {
   @scala.inline
-  def apply(
-    align: center | end | start = null,
-    display: js.UndefOr[Boolean] = js.undefined,
-    fullWidth: js.UndefOr[Boolean] = js.undefined,
-    labels: ChartLegendLabelOptions = null,
-    onClick: (/* event */ MouseEvent, /* legendItem */ ChartLegendLabelItem) => Unit = null,
-    onHover: (/* event */ MouseEvent, /* legendItem */ ChartLegendLabelItem) => Unit = null,
-    onLeave: (/* event */ MouseEvent, /* legendItem */ ChartLegendLabelItem) => Unit = null,
-    position: PositionType = null,
-    reverse: js.UndefOr[Boolean] = js.undefined
-  ): ChartLegendOptions = {
+  def apply(): ChartLegendOptions = {
     val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (!js.isUndefined(display)) __obj.updateDynamic("display")(display.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(fullWidth)) __obj.updateDynamic("fullWidth")(fullWidth.get.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (onHover != null) __obj.updateDynamic("onHover")(js.Any.fromFunction2(onHover))
-    if (onLeave != null) __obj.updateDynamic("onLeave")(js.Any.fromFunction2(onLeave))
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (!js.isUndefined(reverse)) __obj.updateDynamic("reverse")(reverse.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartLegendOptions]
   }
+  @scala.inline
+  implicit class ChartLegendOptionsOps[Self <: ChartLegendOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAlign(value: center | end | start): Self = this.set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAlign: Self = this.set("align", js.undefined)
+    @scala.inline
+    def setDisplay(value: Boolean): Self = this.set("display", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisplay: Self = this.set("display", js.undefined)
+    @scala.inline
+    def setFullWidth(value: Boolean): Self = this.set("fullWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFullWidth: Self = this.set("fullWidth", js.undefined)
+    @scala.inline
+    def setLabels(value: ChartLegendLabelOptions): Self = this.set("labels", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLabels: Self = this.set("labels", js.undefined)
+    @scala.inline
+    def setOnClick(value: (/* event */ MouseEvent, /* legendItem */ ChartLegendLabelItem) => Unit): Self = this.set("onClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnClick: Self = this.set("onClick", js.undefined)
+    @scala.inline
+    def setOnHover(value: (/* event */ MouseEvent, /* legendItem */ ChartLegendLabelItem) => Unit): Self = this.set("onHover", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnHover: Self = this.set("onHover", js.undefined)
+    @scala.inline
+    def setOnLeave(value: (/* event */ MouseEvent, /* legendItem */ ChartLegendLabelItem) => Unit): Self = this.set("onLeave", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnLeave: Self = this.set("onLeave", js.undefined)
+    @scala.inline
+    def setPosition(value: PositionType): Self = this.set("position", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePosition: Self = this.set("position", js.undefined)
+    @scala.inline
+    def setReverse(value: Boolean): Self = this.set("reverse", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteReverse: Self = this.set("reverse", js.undefined)
+  }
+  
 }
 

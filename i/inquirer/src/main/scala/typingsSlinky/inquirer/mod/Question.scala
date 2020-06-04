@@ -69,28 +69,66 @@ trait Question[T /* <: Answers */] extends js.Object {
 
 object Question {
   @scala.inline
-  def apply[T](
-    default: AsyncDynamicQuestionProperty[_, T] = null,
-    filter: /* input */ js.Any => _ = null,
-    message: AsyncDynamicQuestionProperty[String, T] = null,
-    name: KeyUnion[T] = null,
-    prefix: String = null,
-    suffix: String = null,
-    `type`: String = null,
-    validate: (/* input */ js.Any, /* answers */ js.UndefOr[T]) => Boolean | String | (js.Promise[Boolean | String]) = null,
-    when: AsyncDynamicQuestionProperty[Boolean, T] = null
-  ): Question[T] = {
+  def apply[/* <: typingsSlinky.inquirer.mod.Answers */ T](): Question[T] = {
     val __obj = js.Dynamic.literal()
-    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction1(filter))
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
-    if (suffix != null) __obj.updateDynamic("suffix")(suffix.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (validate != null) __obj.updateDynamic("validate")(js.Any.fromFunction2(validate))
-    if (when != null) __obj.updateDynamic("when")(when.asInstanceOf[js.Any])
     __obj.asInstanceOf[Question[T]]
   }
+  @scala.inline
+  implicit class QuestionOps[Self <: Question[_], /* <: typingsSlinky.inquirer.mod.Answers */ T] (val x: Self with Question[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDefaultFunction1(value: T => _ | js.Promise[_]): Self = this.set("default", js.Any.fromFunction1(value))
+    @scala.inline
+    def setDefault(value: AsyncDynamicQuestionProperty[_, T]): Self = this.set("default", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefault: Self = this.set("default", js.undefined)
+    @scala.inline
+    def setFilter(value: /* input */ js.Any => _): Self = this.set("filter", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteFilter: Self = this.set("filter", js.undefined)
+    @scala.inline
+    def setMessageFunction1(value: T => String | js.Promise[String]): Self = this.set("message", js.Any.fromFunction1(value))
+    @scala.inline
+    def setMessage(value: AsyncDynamicQuestionProperty[String, T]): Self = this.set("message", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMessage: Self = this.set("message", js.undefined)
+    @scala.inline
+    def setName(value: KeyUnion[T]): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteName: Self = this.set("name", js.undefined)
+    @scala.inline
+    def setPrefix(value: String): Self = this.set("prefix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefix: Self = this.set("prefix", js.undefined)
+    @scala.inline
+    def setSuffix(value: String): Self = this.set("suffix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSuffix: Self = this.set("suffix", js.undefined)
+    @scala.inline
+    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteType: Self = this.set("type", js.undefined)
+    @scala.inline
+    def setValidate(
+      value: (/* input */ js.Any, /* answers */ js.UndefOr[T]) => Boolean | String | (js.Promise[Boolean | String])
+    ): Self = this.set("validate", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteValidate: Self = this.set("validate", js.undefined)
+    @scala.inline
+    def setWhenFunction1(value: T => Boolean | js.Promise[Boolean]): Self = this.set("when", js.Any.fromFunction1(value))
+    @scala.inline
+    def setWhen(value: AsyncDynamicQuestionProperty[Boolean, T]): Self = this.set("when", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWhen: Self = this.set("when", js.undefined)
+  }
+  
 }
 

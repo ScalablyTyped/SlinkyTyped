@@ -20,15 +20,36 @@ trait SuspenseProps extends js.Object {
 
 object SuspenseProps {
   @scala.inline
-  def apply(
-    children: TagMod[Any] = null,
-    fallback: NonNullable[TagMod[Any]] = null,
-    unstable_avoidThisFallback: js.UndefOr[Boolean] = js.undefined
-  ): SuspenseProps = {
-    val __obj = js.Dynamic.literal(fallback = fallback.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (!js.isUndefined(unstable_avoidThisFallback)) __obj.updateDynamic("unstable_avoidThisFallback")(unstable_avoidThisFallback.get.asInstanceOf[js.Any])
+  def apply(): SuspenseProps = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[SuspenseProps]
   }
+  @scala.inline
+  implicit class SuspensePropsOps[Self <: SuspenseProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setChildrenReactElement(value: slinky.core.facade.ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setFallback(value: NonNullable[TagMod[Any]]): Self = this.set("fallback", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFallbackNull: Self = this.set("fallback", null)
+    @scala.inline
+    def setUnstable_avoidThisFallback(value: Boolean): Self = this.set("unstable_avoidThisFallback", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUnstable_avoidThisFallback: Self = this.set("unstable_avoidThisFallback", js.undefined)
+  }
+  
 }
 

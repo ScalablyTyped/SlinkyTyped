@@ -19,18 +19,38 @@ trait DirectoryTreeState extends js.Object {
 
 object DirectoryTreeState {
   @scala.inline
-  def apply(
-    expandedKeys: js.Array[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
-    ] = null,
-    selectedKeys: js.Array[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
-    ] = null
-  ): DirectoryTreeState = {
+  def apply(): DirectoryTreeState = {
     val __obj = js.Dynamic.literal()
-    if (expandedKeys != null) __obj.updateDynamic("expandedKeys")(expandedKeys.asInstanceOf[js.Any])
-    if (selectedKeys != null) __obj.updateDynamic("selectedKeys")(selectedKeys.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectoryTreeState]
   }
+  @scala.inline
+  implicit class DirectoryTreeStateOps[Self <: DirectoryTreeState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setExpandedKeys(
+      value: js.Array[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
+        ]
+    ): Self = this.set("expandedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteExpandedKeys: Self = this.set("expandedKeys", js.undefined)
+    @scala.inline
+    def setSelectedKeys(
+      value: js.Array[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
+        ]
+    ): Self = this.set("selectedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelectedKeys: Self = this.set("selectedKeys", js.undefined)
+  }
+  
 }
 

@@ -92,5 +92,38 @@ object ScreenManager {
     val __obj = js.Dynamic.literal(breakLines = js.Any.fromFunction2(breakLines), clean = js.Any.fromFunction1(clean), done = js.Any.fromFunction0(done), extraLinesUnderPrompt = extraLinesUnderPrompt.asInstanceOf[js.Any], forceLineReturn = js.Any.fromFunction2(forceLineReturn), height = height.asInstanceOf[js.Any], normalizedCliWidth = js.Any.fromFunction0(normalizedCliWidth), releaseCursor = js.Any.fromFunction0(releaseCursor), render = js.Any.fromFunction2(render), rl = rl.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScreenManager]
   }
+  @scala.inline
+  implicit class ScreenManagerOps[Self <: ScreenManager] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBreakLines(value: (String, Double) => js.Array[String]): Self = this.set("breakLines", js.Any.fromFunction2(value))
+    @scala.inline
+    def setClean(value: Double => Unit): Self = this.set("clean", js.Any.fromFunction1(value))
+    @scala.inline
+    def setDone(value: () => Unit): Self = this.set("done", js.Any.fromFunction0(value))
+    @scala.inline
+    def setExtraLinesUnderPrompt(value: Double): Self = this.set("extraLinesUnderPrompt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setForceLineReturn(value: (String, Double) => String): Self = this.set("forceLineReturn", js.Any.fromFunction2(value))
+    @scala.inline
+    def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNormalizedCliWidth(value: () => Double): Self = this.set("normalizedCliWidth", js.Any.fromFunction0(value))
+    @scala.inline
+    def setReleaseCursor(value: () => Unit): Self = this.set("releaseCursor", js.Any.fromFunction0(value))
+    @scala.inline
+    def setRender(value: (String, String) => Unit): Self = this.set("render", js.Any.fromFunction2(value))
+    @scala.inline
+    def setRl(value: Interface): Self = this.set("rl", value.asInstanceOf[js.Any])
+  }
+  
 }
 

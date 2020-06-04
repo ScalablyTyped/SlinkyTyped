@@ -20,12 +20,37 @@ object PreProcessedFileInfo {
     isLibFile: Boolean,
     libReferenceDirectives: js.Array[FileReference],
     referencedFiles: js.Array[FileReference],
-    typeReferenceDirectives: js.Array[FileReference],
-    ambientExternalModules: js.Array[java.lang.String] = null
+    typeReferenceDirectives: js.Array[FileReference]
   ): PreProcessedFileInfo = {
     val __obj = js.Dynamic.literal(importedFiles = importedFiles.asInstanceOf[js.Any], isLibFile = isLibFile.asInstanceOf[js.Any], libReferenceDirectives = libReferenceDirectives.asInstanceOf[js.Any], referencedFiles = referencedFiles.asInstanceOf[js.Any], typeReferenceDirectives = typeReferenceDirectives.asInstanceOf[js.Any])
-    if (ambientExternalModules != null) __obj.updateDynamic("ambientExternalModules")(ambientExternalModules.asInstanceOf[js.Any])
     __obj.asInstanceOf[PreProcessedFileInfo]
   }
+  @scala.inline
+  implicit class PreProcessedFileInfoOps[Self <: PreProcessedFileInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setImportedFiles(value: js.Array[FileReference]): Self = this.set("importedFiles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIsLibFile(value: Boolean): Self = this.set("isLibFile", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLibReferenceDirectives(value: js.Array[FileReference]): Self = this.set("libReferenceDirectives", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setReferencedFiles(value: js.Array[FileReference]): Self = this.set("referencedFiles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTypeReferenceDirectives(value: js.Array[FileReference]): Self = this.set("typeReferenceDirectives", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAmbientExternalModules(value: js.Array[java.lang.String]): Self = this.set("ambientExternalModules", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAmbientExternalModules: Self = this.set("ambientExternalModules", js.undefined)
+  }
+  
 }
 

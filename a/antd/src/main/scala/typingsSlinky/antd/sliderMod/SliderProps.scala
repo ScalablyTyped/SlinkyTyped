@@ -36,56 +36,118 @@ trait SliderProps extends js.Object {
 
 object SliderProps {
   @scala.inline
-  def apply(
-    className: String = null,
-    defaultValue: SliderValue = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    dots: js.UndefOr[Boolean] = js.undefined,
-    getTooltipPopupContainer: /* triggerNode */ HTMLElement => HTMLElement = null,
-    id: String = null,
-    included: js.UndefOr[Boolean] = js.undefined,
-    marks: SliderMarks = null,
-    max: js.UndefOr[Double] = js.undefined,
-    min: js.UndefOr[Double] = js.undefined,
-    onAfterChange: /* value */ SliderValue => Unit = null,
-    onChange: /* value */ SliderValue => Unit = null,
-    prefixCls: String = null,
-    range: js.UndefOr[Boolean] = js.undefined,
-    reverse: js.UndefOr[Boolean] = js.undefined,
-    step: js.UndefOr[Null | Double] = js.undefined,
-    style: CSSProperties = null,
-    tipFormatter: js.UndefOr[Null | (/* value */ Double => TagMod[Any])] = js.undefined,
-    tooltipPlacement: TooltipPlacement = null,
-    tooltipPrefixCls: String = null,
-    tooltipVisible: js.UndefOr[Boolean] = js.undefined,
-    value: SliderValue = null,
-    vertical: js.UndefOr[Boolean] = js.undefined
-  ): SliderProps = {
+  def apply(): SliderProps = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(dots)) __obj.updateDynamic("dots")(dots.get.asInstanceOf[js.Any])
-    if (getTooltipPopupContainer != null) __obj.updateDynamic("getTooltipPopupContainer")(js.Any.fromFunction1(getTooltipPopupContainer))
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(included)) __obj.updateDynamic("included")(included.get.asInstanceOf[js.Any])
-    if (marks != null) __obj.updateDynamic("marks")(marks.asInstanceOf[js.Any])
-    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
-    if (onAfterChange != null) __obj.updateDynamic("onAfterChange")(js.Any.fromFunction1(onAfterChange))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (!js.isUndefined(range)) __obj.updateDynamic("range")(range.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(reverse)) __obj.updateDynamic("reverse")(reverse.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(step)) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(tipFormatter)) __obj.updateDynamic("tipFormatter")(if (tipFormatter != null) js.Any.fromFunction1(tipFormatter.asInstanceOf[/* value */ Double => TagMod[Any]]) else null)
-    if (tooltipPlacement != null) __obj.updateDynamic("tooltipPlacement")(tooltipPlacement.asInstanceOf[js.Any])
-    if (tooltipPrefixCls != null) __obj.updateDynamic("tooltipPrefixCls")(tooltipPrefixCls.asInstanceOf[js.Any])
-    if (!js.isUndefined(tooltipVisible)) __obj.updateDynamic("tooltipVisible")(tooltipVisible.get.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (!js.isUndefined(vertical)) __obj.updateDynamic("vertical")(vertical.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SliderProps]
   }
+  @scala.inline
+  implicit class SliderPropsOps[Self <: SliderProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setDefaultValue(value: SliderValue): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setDots(value: Boolean): Self = this.set("dots", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDots: Self = this.set("dots", js.undefined)
+    @scala.inline
+    def setGetTooltipPopupContainer(value: /* triggerNode */ HTMLElement => HTMLElement): Self = this.set("getTooltipPopupContainer", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteGetTooltipPopupContainer: Self = this.set("getTooltipPopupContainer", js.undefined)
+    @scala.inline
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteId: Self = this.set("id", js.undefined)
+    @scala.inline
+    def setIncluded(value: Boolean): Self = this.set("included", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIncluded: Self = this.set("included", js.undefined)
+    @scala.inline
+    def setMarks(value: SliderMarks): Self = this.set("marks", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMarks: Self = this.set("marks", js.undefined)
+    @scala.inline
+    def setMax(value: Double): Self = this.set("max", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMax: Self = this.set("max", js.undefined)
+    @scala.inline
+    def setMin(value: Double): Self = this.set("min", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMin: Self = this.set("min", js.undefined)
+    @scala.inline
+    def setOnAfterChange(value: /* value */ SliderValue => Unit): Self = this.set("onAfterChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnAfterChange: Self = this.set("onAfterChange", js.undefined)
+    @scala.inline
+    def setOnChange(value: /* value */ SliderValue => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnChange: Self = this.set("onChange", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    @scala.inline
+    def setRange(value: Boolean): Self = this.set("range", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRange: Self = this.set("range", js.undefined)
+    @scala.inline
+    def setReverse(value: Boolean): Self = this.set("reverse", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteReverse: Self = this.set("reverse", js.undefined)
+    @scala.inline
+    def setStep(value: Double): Self = this.set("step", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStep: Self = this.set("step", js.undefined)
+    @scala.inline
+    def setStepNull: Self = this.set("step", null)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+    @scala.inline
+    def setTipFormatter(value: /* value */ Double => TagMod[Any]): Self = this.set("tipFormatter", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteTipFormatter: Self = this.set("tipFormatter", js.undefined)
+    @scala.inline
+    def setTipFormatterNull: Self = this.set("tipFormatter", null)
+    @scala.inline
+    def setTooltipPlacement(value: TooltipPlacement): Self = this.set("tooltipPlacement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTooltipPlacement: Self = this.set("tooltipPlacement", js.undefined)
+    @scala.inline
+    def setTooltipPrefixCls(value: String): Self = this.set("tooltipPrefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTooltipPrefixCls: Self = this.set("tooltipPrefixCls", js.undefined)
+    @scala.inline
+    def setTooltipVisible(value: Boolean): Self = this.set("tooltipVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTooltipVisible: Self = this.set("tooltipVisible", js.undefined)
+    @scala.inline
+    def setValue(value: SliderValue): Self = this.set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
+    @scala.inline
+    def setVertical(value: Boolean): Self = this.set("vertical", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVertical: Self = this.set("vertical", js.undefined)
+  }
+  
 }
 

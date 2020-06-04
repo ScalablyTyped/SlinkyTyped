@@ -60,5 +60,32 @@ object TextStreamReader {
     val __obj = js.Dynamic.literal(AtEndOfLine = AtEndOfLine.asInstanceOf[js.Any], AtEndOfStream = AtEndOfStream.asInstanceOf[js.Any], Close = js.Any.fromFunction0(Close), Column = Column.asInstanceOf[js.Any], Line = Line.asInstanceOf[js.Any], Read = js.Any.fromFunction1(Read), ReadAll = js.Any.fromFunction0(ReadAll), ReadLine = js.Any.fromFunction0(ReadLine), Skip = js.Any.fromFunction1(Skip), SkipLine = js.Any.fromFunction0(SkipLine))
     __obj.asInstanceOf[TextStreamReader]
   }
+  @scala.inline
+  implicit class TextStreamReaderOps[Self <: TextStreamReader] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAtEndOfLine(value: scala.Boolean): Self = this.set("AtEndOfLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAtEndOfStream(value: scala.Boolean): Self = this.set("AtEndOfStream", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRead(value: Double => java.lang.String): Self = this.set("Read", js.Any.fromFunction1(value))
+    @scala.inline
+    def setReadAll(value: () => java.lang.String): Self = this.set("ReadAll", js.Any.fromFunction0(value))
+    @scala.inline
+    def setReadLine(value: () => java.lang.String): Self = this.set("ReadLine", js.Any.fromFunction0(value))
+    @scala.inline
+    def setSkip(value: Double => Unit): Self = this.set("Skip", js.Any.fromFunction1(value))
+    @scala.inline
+    def setSkipLine(value: () => Unit): Self = this.set("SkipLine", js.Any.fromFunction0(value))
+  }
+  
 }
 

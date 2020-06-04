@@ -100,6 +100,7 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -283,7 +284,7 @@ object SvgIcon {
     @scala.inline
     def componentComponentClass(value: ReactComponentClass[SvgIconProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
-    def component(value: ReactComponentClass[SvgIconProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: ReactType[SvgIconProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
     def contentScriptType(value: Double | String): this.type = set("contentScriptType", value.asInstanceOf[js.Any])
     @scala.inline

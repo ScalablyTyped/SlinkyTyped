@@ -17,18 +17,49 @@ trait StyleSheet extends js.Object {
 
 object StyleSheet {
   @scala.inline
-  def apply(
-    disabled: scala.Boolean,
-    media: org.scalajs.dom.raw.MediaList,
-    `type`: java.lang.String,
-    href: java.lang.String = null,
-    ownerNode: org.scalajs.dom.raw.Element | org.scalajs.dom.raw.ProcessingInstruction = null,
-    parentStyleSheet: org.scalajs.dom.raw.CSSStyleSheet = null,
-    title: java.lang.String = null
-  ): StyleSheet = {
-    val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], media = media.asInstanceOf[js.Any], href = href.asInstanceOf[js.Any], ownerNode = ownerNode.asInstanceOf[js.Any], parentStyleSheet = parentStyleSheet.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
+  def apply(disabled: scala.Boolean, media: org.scalajs.dom.raw.MediaList, `type`: java.lang.String): StyleSheet = {
+    val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], media = media.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[StyleSheet]
   }
+  @scala.inline
+  implicit class StyleSheetOps[Self <: org.scalajs.dom.raw.StyleSheet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDisabled(value: scala.Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMedia(value: org.scalajs.dom.raw.MediaList): Self = this.set("media", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setType(value: java.lang.String): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHref(value: java.lang.String): Self = this.set("href", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHrefNull: Self = this.set("href", null)
+    @scala.inline
+    def setOwnerNodeElement(value: org.scalajs.dom.raw.Element): Self = this.set("ownerNode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOwnerNodeProcessingInstruction(value: org.scalajs.dom.raw.ProcessingInstruction): Self = this.set("ownerNode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOwnerNode(value: org.scalajs.dom.raw.Element | org.scalajs.dom.raw.ProcessingInstruction): Self = this.set("ownerNode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOwnerNodeNull: Self = this.set("ownerNode", null)
+    @scala.inline
+    def setParentStyleSheet(value: org.scalajs.dom.raw.CSSStyleSheet): Self = this.set("parentStyleSheet", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setParentStyleSheetNull: Self = this.set("parentStyleSheet", null)
+    @scala.inline
+    def setTitle(value: java.lang.String): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTitleNull: Self = this.set("title", null)
+  }
+  
 }
 

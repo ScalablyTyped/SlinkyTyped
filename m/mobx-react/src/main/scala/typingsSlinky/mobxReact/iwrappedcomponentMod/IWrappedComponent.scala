@@ -1,5 +1,6 @@
 package typingsSlinky.mobxReact.iwrappedcomponentMod
 
+import slinky.core.ReactComponentClass
 import typingsSlinky.mobxReact.ireactcomponentMod.IReactComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,5 +16,26 @@ object IWrappedComponent {
     val __obj = js.Dynamic.literal(wrappedComponent = wrappedComponent.asInstanceOf[js.Any])
     __obj.asInstanceOf[IWrappedComponent[P]]
   }
+  @scala.inline
+  implicit class IWrappedComponentOps[Self <: IWrappedComponent[_], P] (val x: Self with IWrappedComponent[P]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setWrappedComponentClassicComponentClass(value: ReactComponentClass[P]): Self = this.set("wrappedComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWrappedComponentFunctionComponent(value: ReactComponentClass[P]): Self = this.set("wrappedComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWrappedComponentComponentClass(value: ReactComponentClass[P]): Self = this.set("wrappedComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWrappedComponent(value: IReactComponent[P]): Self = this.set("wrappedComponent", value.asInstanceOf[js.Any])
+  }
+  
 }
 

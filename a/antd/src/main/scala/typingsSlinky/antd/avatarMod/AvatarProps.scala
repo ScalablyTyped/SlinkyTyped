@@ -1,6 +1,7 @@
 package typingsSlinky.antd.avatarMod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.antdStrings.circle
 import typingsSlinky.antd.antdStrings.large
 import typingsSlinky.antd.antdStrings.small
@@ -30,32 +31,70 @@ trait AvatarProps extends js.Object {
 
 object AvatarProps {
   @scala.inline
-  def apply(
-    alt: String = null,
-    children: TagMod[Any] = null,
-    className: String = null,
-    icon: TagMod[Any] = null,
-    onError: () => Boolean = null,
-    prefixCls: String = null,
-    shape: circle | square = null,
-    size: large | small | typingsSlinky.antd.antdStrings.default | Double = null,
-    src: String = null,
-    srcSet: String = null,
-    style: CSSProperties = null
-  ): AvatarProps = {
+  def apply(): AvatarProps = {
     val __obj = js.Dynamic.literal()
-    if (alt != null) __obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction0(onError))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (shape != null) __obj.updateDynamic("shape")(shape.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (src != null) __obj.updateDynamic("src")(src.asInstanceOf[js.Any])
-    if (srcSet != null) __obj.updateDynamic("srcSet")(srcSet.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[AvatarProps]
   }
+  @scala.inline
+  implicit class AvatarPropsOps[Self <: AvatarProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAlt(value: String): Self = this.set("alt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAlt: Self = this.set("alt", js.undefined)
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIcon(value: TagMod[Any]): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIcon: Self = this.set("icon", js.undefined)
+    @scala.inline
+    def setOnError(value: () => Boolean): Self = this.set("onError", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnError: Self = this.set("onError", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    @scala.inline
+    def setShape(value: circle | square): Self = this.set("shape", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShape: Self = this.set("shape", js.undefined)
+    @scala.inline
+    def setSize(value: large | small | typingsSlinky.antd.antdStrings.default | Double): Self = this.set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
+    @scala.inline
+    def setSrc(value: String): Self = this.set("src", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSrc: Self = this.set("src", js.undefined)
+    @scala.inline
+    def setSrcSet(value: String): Self = this.set("srcSet", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSrcSet: Self = this.set("srcSet", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+  }
+  
 }
 

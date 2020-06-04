@@ -13,16 +13,34 @@ trait TraceConfig extends js.Object {
 
 object TraceConfig {
   @scala.inline
-  def apply(
-    excluded_categories: js.Array[String] = null,
-    included_categories: js.Array[String] = null,
-    memory_dump_config: MemoryDumpConfig = null
-  ): TraceConfig = {
+  def apply(): TraceConfig = {
     val __obj = js.Dynamic.literal()
-    if (excluded_categories != null) __obj.updateDynamic("excluded_categories")(excluded_categories.asInstanceOf[js.Any])
-    if (included_categories != null) __obj.updateDynamic("included_categories")(included_categories.asInstanceOf[js.Any])
-    if (memory_dump_config != null) __obj.updateDynamic("memory_dump_config")(memory_dump_config.asInstanceOf[js.Any])
     __obj.asInstanceOf[TraceConfig]
   }
+  @scala.inline
+  implicit class TraceConfigOps[Self <: TraceConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setExcluded_categories(value: js.Array[String]): Self = this.set("excluded_categories", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteExcluded_categories: Self = this.set("excluded_categories", js.undefined)
+    @scala.inline
+    def setIncluded_categories(value: js.Array[String]): Self = this.set("included_categories", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIncluded_categories: Self = this.set("included_categories", js.undefined)
+    @scala.inline
+    def setMemory_dump_config(value: MemoryDumpConfig): Self = this.set("memory_dump_config", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMemory_dump_config: Self = this.set("memory_dump_config", js.undefined)
+  }
+  
 }
 

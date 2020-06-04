@@ -20,20 +20,42 @@ trait ParamsReportProgressResponseTypeWithCredentials extends js.Object {
 
 object ParamsReportProgressResponseTypeWithCredentials {
   @scala.inline
-  def apply(
-    observe: events,
-    responseType: blob,
-    headers: HttpHeaders | (StringDictionary[String | js.Array[String]]) = null,
-    params: HttpParams | (StringDictionary[String | js.Array[String]]) = null,
-    reportProgress: js.UndefOr[Boolean] = js.undefined,
-    withCredentials: js.UndefOr[Boolean] = js.undefined
-  ): ParamsReportProgressResponseTypeWithCredentials = {
+  def apply(observe: events, responseType: blob): ParamsReportProgressResponseTypeWithCredentials = {
     val __obj = js.Dynamic.literal(observe = observe.asInstanceOf[js.Any], responseType = responseType.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
-    if (!js.isUndefined(reportProgress)) __obj.updateDynamic("reportProgress")(reportProgress.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(withCredentials)) __obj.updateDynamic("withCredentials")(withCredentials.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParamsReportProgressResponseTypeWithCredentials]
   }
+  @scala.inline
+  implicit class ParamsReportProgressResponseTypeWithCredentialsOps[Self <: ParamsReportProgressResponseTypeWithCredentials] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setObserve(value: events): Self = this.set("observe", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setResponseType(value: blob): Self = this.set("responseType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHeaders(value: HttpHeaders | (StringDictionary[String | js.Array[String]])): Self = this.set("headers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeaders: Self = this.set("headers", js.undefined)
+    @scala.inline
+    def setParams(value: HttpParams | (StringDictionary[String | js.Array[String]])): Self = this.set("params", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteParams: Self = this.set("params", js.undefined)
+    @scala.inline
+    def setReportProgress(value: Boolean): Self = this.set("reportProgress", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteReportProgress: Self = this.set("reportProgress", js.undefined)
+    @scala.inline
+    def setWithCredentials(value: Boolean): Self = this.set("withCredentials", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWithCredentials: Self = this.set("withCredentials", js.undefined)
+  }
+  
 }
 

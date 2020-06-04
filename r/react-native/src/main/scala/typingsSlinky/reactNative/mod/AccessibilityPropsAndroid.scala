@@ -46,16 +46,34 @@ trait AccessibilityPropsAndroid extends js.Object {
 
 object AccessibilityPropsAndroid {
   @scala.inline
-  def apply(
-    accessibilityComponentType: none | button | radiobutton_checked | radiobutton_unchecked = null,
-    accessibilityLiveRegion: none | polite | assertive = null,
-    importantForAccessibility: auto | yes | no | `no-hide-descendants` = null
-  ): AccessibilityPropsAndroid = {
+  def apply(): AccessibilityPropsAndroid = {
     val __obj = js.Dynamic.literal()
-    if (accessibilityComponentType != null) __obj.updateDynamic("accessibilityComponentType")(accessibilityComponentType.asInstanceOf[js.Any])
-    if (accessibilityLiveRegion != null) __obj.updateDynamic("accessibilityLiveRegion")(accessibilityLiveRegion.asInstanceOf[js.Any])
-    if (importantForAccessibility != null) __obj.updateDynamic("importantForAccessibility")(importantForAccessibility.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccessibilityPropsAndroid]
   }
+  @scala.inline
+  implicit class AccessibilityPropsAndroidOps[Self <: AccessibilityPropsAndroid] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAccessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): Self = this.set("accessibilityComponentType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityComponentType: Self = this.set("accessibilityComponentType", js.undefined)
+    @scala.inline
+    def setAccessibilityLiveRegion(value: none | polite | assertive): Self = this.set("accessibilityLiveRegion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityLiveRegion: Self = this.set("accessibilityLiveRegion", js.undefined)
+    @scala.inline
+    def setImportantForAccessibility(value: auto | yes | no | `no-hide-descendants`): Self = this.set("importantForAccessibility", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteImportantForAccessibility: Self = this.set("importantForAccessibility", js.undefined)
+  }
+  
 }
 

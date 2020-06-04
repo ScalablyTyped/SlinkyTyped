@@ -46,24 +46,50 @@ trait AccessibilityPropsIOS extends js.Object {
 
 object AccessibilityPropsIOS {
   @scala.inline
-  def apply(
-    accessibilityElementsHidden: js.UndefOr[Boolean] = js.undefined,
-    accessibilityIgnoresInvertColors: js.UndefOr[Boolean] = js.undefined,
-    accessibilityTraits: AccessibilityTrait | js.Array[AccessibilityTrait] = null,
-    accessibilityViewIsModal: js.UndefOr[Boolean] = js.undefined,
-    onAccessibilityEscape: () => Unit = null,
-    onAccessibilityTap: () => Unit = null,
-    onMagicTap: () => Unit = null
-  ): AccessibilityPropsIOS = {
+  def apply(): AccessibilityPropsIOS = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(accessibilityElementsHidden)) __obj.updateDynamic("accessibilityElementsHidden")(accessibilityElementsHidden.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessibilityIgnoresInvertColors)) __obj.updateDynamic("accessibilityIgnoresInvertColors")(accessibilityIgnoresInvertColors.get.asInstanceOf[js.Any])
-    if (accessibilityTraits != null) __obj.updateDynamic("accessibilityTraits")(accessibilityTraits.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessibilityViewIsModal)) __obj.updateDynamic("accessibilityViewIsModal")(accessibilityViewIsModal.get.asInstanceOf[js.Any])
-    if (onAccessibilityEscape != null) __obj.updateDynamic("onAccessibilityEscape")(js.Any.fromFunction0(onAccessibilityEscape))
-    if (onAccessibilityTap != null) __obj.updateDynamic("onAccessibilityTap")(js.Any.fromFunction0(onAccessibilityTap))
-    if (onMagicTap != null) __obj.updateDynamic("onMagicTap")(js.Any.fromFunction0(onMagicTap))
     __obj.asInstanceOf[AccessibilityPropsIOS]
   }
+  @scala.inline
+  implicit class AccessibilityPropsIOSOps[Self <: AccessibilityPropsIOS] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAccessibilityElementsHidden(value: Boolean): Self = this.set("accessibilityElementsHidden", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityElementsHidden: Self = this.set("accessibilityElementsHidden", js.undefined)
+    @scala.inline
+    def setAccessibilityIgnoresInvertColors(value: Boolean): Self = this.set("accessibilityIgnoresInvertColors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityIgnoresInvertColors: Self = this.set("accessibilityIgnoresInvertColors", js.undefined)
+    @scala.inline
+    def setAccessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): Self = this.set("accessibilityTraits", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityTraits: Self = this.set("accessibilityTraits", js.undefined)
+    @scala.inline
+    def setAccessibilityViewIsModal(value: Boolean): Self = this.set("accessibilityViewIsModal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityViewIsModal: Self = this.set("accessibilityViewIsModal", js.undefined)
+    @scala.inline
+    def setOnAccessibilityEscape(value: () => Unit): Self = this.set("onAccessibilityEscape", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnAccessibilityEscape: Self = this.set("onAccessibilityEscape", js.undefined)
+    @scala.inline
+    def setOnAccessibilityTap(value: () => Unit): Self = this.set("onAccessibilityTap", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnAccessibilityTap: Self = this.set("onAccessibilityTap", js.undefined)
+    @scala.inline
+    def setOnMagicTap(value: () => Unit): Self = this.set("onMagicTap", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnMagicTap: Self = this.set("onMagicTap", js.undefined)
+  }
+  
 }
 

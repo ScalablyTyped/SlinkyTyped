@@ -14,18 +14,38 @@ trait FusionTablesMouseEvent extends js.Object {
 
 object FusionTablesMouseEvent {
   @scala.inline
-  def apply(
-    infoWindowHtml: String = null,
-    latLng: LatLng = null,
-    pixelOffset: Size = null,
-    row: js.Object = null
-  ): FusionTablesMouseEvent = {
+  def apply(): FusionTablesMouseEvent = {
     val __obj = js.Dynamic.literal()
-    if (infoWindowHtml != null) __obj.updateDynamic("infoWindowHtml")(infoWindowHtml.asInstanceOf[js.Any])
-    if (latLng != null) __obj.updateDynamic("latLng")(latLng.asInstanceOf[js.Any])
-    if (pixelOffset != null) __obj.updateDynamic("pixelOffset")(pixelOffset.asInstanceOf[js.Any])
-    if (row != null) __obj.updateDynamic("row")(row.asInstanceOf[js.Any])
     __obj.asInstanceOf[FusionTablesMouseEvent]
   }
+  @scala.inline
+  implicit class FusionTablesMouseEventOps[Self <: FusionTablesMouseEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setInfoWindowHtml(value: String): Self = this.set("infoWindowHtml", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInfoWindowHtml: Self = this.set("infoWindowHtml", js.undefined)
+    @scala.inline
+    def setLatLng(value: LatLng): Self = this.set("latLng", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLatLng: Self = this.set("latLng", js.undefined)
+    @scala.inline
+    def setPixelOffset(value: Size): Self = this.set("pixelOffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePixelOffset: Self = this.set("pixelOffset", js.undefined)
+    @scala.inline
+    def setRow(value: js.Object): Self = this.set("row", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRow: Self = this.set("row", js.undefined)
+  }
+  
 }
 

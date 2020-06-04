@@ -11,11 +11,30 @@ trait RTCDtlsFingerprint extends js.Object {
 
 object RTCDtlsFingerprint {
   @scala.inline
-  def apply(algorithm: java.lang.String = null, value: java.lang.String = null): RTCDtlsFingerprint = {
+  def apply(): RTCDtlsFingerprint = {
     val __obj = js.Dynamic.literal()
-    if (algorithm != null) __obj.updateDynamic("algorithm")(algorithm.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCDtlsFingerprint]
   }
+  @scala.inline
+  implicit class RTCDtlsFingerprintOps[Self <: RTCDtlsFingerprint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAlgorithm(value: java.lang.String): Self = this.set("algorithm", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAlgorithm: Self = this.set("algorithm", js.undefined)
+    @scala.inline
+    def setValue(value: java.lang.String): Self = this.set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
+  }
+  
 }
 

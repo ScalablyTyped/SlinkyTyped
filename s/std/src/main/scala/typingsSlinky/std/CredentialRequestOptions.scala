@@ -12,16 +12,34 @@ trait CredentialRequestOptions extends js.Object {
 
 object CredentialRequestOptions {
   @scala.inline
-  def apply(
-    mediation: CredentialMediationRequirement = null,
-    publicKey: PublicKeyCredentialRequestOptions = null,
-    signal: org.scalajs.dom.experimental.AbortSignal = null
-  ): CredentialRequestOptions = {
+  def apply(): CredentialRequestOptions = {
     val __obj = js.Dynamic.literal()
-    if (mediation != null) __obj.updateDynamic("mediation")(mediation.asInstanceOf[js.Any])
-    if (publicKey != null) __obj.updateDynamic("publicKey")(publicKey.asInstanceOf[js.Any])
-    if (signal != null) __obj.updateDynamic("signal")(signal.asInstanceOf[js.Any])
     __obj.asInstanceOf[CredentialRequestOptions]
   }
+  @scala.inline
+  implicit class CredentialRequestOptionsOps[Self <: CredentialRequestOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setMediation(value: CredentialMediationRequirement): Self = this.set("mediation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMediation: Self = this.set("mediation", js.undefined)
+    @scala.inline
+    def setPublicKey(value: PublicKeyCredentialRequestOptions): Self = this.set("publicKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePublicKey: Self = this.set("publicKey", js.undefined)
+    @scala.inline
+    def setSignal(value: org.scalajs.dom.experimental.AbortSignal): Self = this.set("signal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSignal: Self = this.set("signal", js.undefined)
+  }
+  
 }
 

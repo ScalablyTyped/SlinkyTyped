@@ -10,10 +10,26 @@ trait ParamsParams[Params] extends js.Object {
 
 object ParamsParams {
   @scala.inline
-  def apply[Params](params: Params = null): ParamsParams[Params] = {
+  def apply[Params](): ParamsParams[Params] = {
     val __obj = js.Dynamic.literal()
-    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParamsParams[Params]]
   }
+  @scala.inline
+  implicit class ParamsParamsOps[Self <: ParamsParams[_], Params] (val x: Self with ParamsParams[Params]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setParams(value: Params): Self = this.set("params", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteParams: Self = this.set("params", js.undefined)
+  }
+  
 }
 

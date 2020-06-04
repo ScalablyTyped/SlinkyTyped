@@ -27,10 +27,26 @@ trait ConstructorSansProvider extends js.Object {
 
 object ConstructorSansProvider {
   @scala.inline
-  def apply(deps: js.Array[_] = null): ConstructorSansProvider = {
+  def apply(): ConstructorSansProvider = {
     val __obj = js.Dynamic.literal()
-    if (deps != null) __obj.updateDynamic("deps")(deps.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConstructorSansProvider]
   }
+  @scala.inline
+  implicit class ConstructorSansProviderOps[Self <: ConstructorSansProvider] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDeps(value: js.Array[_]): Self = this.set("deps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDeps: Self = this.set("deps", js.undefined)
+  }
+  
 }
 

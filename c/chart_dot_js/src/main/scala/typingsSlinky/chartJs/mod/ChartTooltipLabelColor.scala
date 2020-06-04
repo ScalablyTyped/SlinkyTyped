@@ -1,5 +1,7 @@
 package typingsSlinky.chartJs.mod
 
+import org.scalajs.dom.raw.CanvasGradient
+import org.scalajs.dom.raw.CanvasPattern
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,5 +17,30 @@ object ChartTooltipLabelColor {
     val __obj = js.Dynamic.literal(backgroundColor = backgroundColor.asInstanceOf[js.Any], borderColor = borderColor.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartTooltipLabelColor]
   }
+  @scala.inline
+  implicit class ChartTooltipLabelColorOps[Self <: ChartTooltipLabelColor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBackgroundColorCanvasPattern(value: CanvasPattern): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBackgroundColorCanvasGradient(value: CanvasGradient): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBackgroundColor(value: ChartColor): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBorderColorCanvasPattern(value: CanvasPattern): Self = this.set("borderColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBorderColorCanvasGradient(value: CanvasGradient): Self = this.set("borderColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBorderColor(value: ChartColor): Self = this.set("borderColor", value.asInstanceOf[js.Any])
+  }
+  
 }
 

@@ -81,5 +81,44 @@ object GPUFeatureStatus {
     __obj.updateDynamic("2d_canvas")(`2d_canvas`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GPUFeatureStatus]
   }
+  @scala.inline
+  implicit class GPUFeatureStatusOps[Self <: GPUFeatureStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def set2d_canvas(value: String): Self = this.set("2d_canvas", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFlash_3d(value: String): Self = this.set("flash_3d", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFlash_stage3d(value: String): Self = this.set("flash_stage3d", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFlash_stage3d_baseline(value: String): Self = this.set("flash_stage3d_baseline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setGpu_compositing(value: String): Self = this.set("gpu_compositing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMultiple_raster_threads(value: String): Self = this.set("multiple_raster_threads", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNative_gpu_memory_buffers(value: String): Self = this.set("native_gpu_memory_buffers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRasterization(value: String): Self = this.set("rasterization", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setVideo_decode(value: String): Self = this.set("video_decode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setVideo_encode(value: String): Self = this.set("video_encode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setVpx_decode(value: String): Self = this.set("vpx_decode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWebgl(value: String): Self = this.set("webgl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWebgl2(value: String): Self = this.set("webgl2", value.asInstanceOf[js.Any])
+  }
+  
 }
 

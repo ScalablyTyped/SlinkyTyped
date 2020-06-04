@@ -15,10 +15,26 @@ trait ConnectOpts extends js.Object {
 
 object ConnectOpts {
   @scala.inline
-  def apply(onread: OnReadOpts = null): ConnectOpts = {
+  def apply(): ConnectOpts = {
     val __obj = js.Dynamic.literal()
-    if (onread != null) __obj.updateDynamic("onread")(onread.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectOpts]
   }
+  @scala.inline
+  implicit class ConnectOptsOps[Self <: ConnectOpts] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setOnread(value: OnReadOpts): Self = this.set("onread", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnread: Self = this.set("onread", js.undefined)
+  }
+  
 }
 

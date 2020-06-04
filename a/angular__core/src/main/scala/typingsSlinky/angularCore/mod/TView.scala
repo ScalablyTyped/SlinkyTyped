@@ -231,29 +231,115 @@ object TView {
     firstTemplatePass: Boolean,
     id: Double,
     staticContentQueries: Boolean,
-    staticViewQueries: Boolean,
-    cleanup: js.Array[_] = null,
-    components: js.Array[Double] = null,
-    contentCheckHooks: HookData = null,
-    contentHooks: HookData = null,
-    contentQueries: js.Array[Double] = null,
-    destroyHooks: HookData = null,
-    directiveRegistry: DirectiveDefList = null,
-    expandoInstructions: ExpandoInstructions = null,
-    firstChild: TNode = null,
-    node: TViewNode | ɵangularPackagesCoreCoreBf = null,
-    pipeRegistry: PipeDefList = null,
-    preOrderCheckHooks: HookData = null,
-    preOrderHooks: HookData = null,
-    queries: TQueries = null,
-    schemas: js.Array[SchemaMetadata] = null,
-    template: (/* rf */ ɵRenderFlags, js.Object) => Unit = null,
-    viewCheckHooks: HookData = null,
-    viewHooks: HookData = null,
-    viewQuery: (/* rf */ ɵRenderFlags, js.Object) => Unit = null
+    staticViewQueries: Boolean
   ): TView = {
-    val __obj = js.Dynamic.literal(bindingStartIndex = bindingStartIndex.asInstanceOf[js.Any], blueprint = blueprint.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], expandoStartIndex = expandoStartIndex.asInstanceOf[js.Any], firstTemplatePass = firstTemplatePass.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], staticContentQueries = staticContentQueries.asInstanceOf[js.Any], staticViewQueries = staticViewQueries.asInstanceOf[js.Any], cleanup = cleanup.asInstanceOf[js.Any], components = components.asInstanceOf[js.Any], contentCheckHooks = contentCheckHooks.asInstanceOf[js.Any], contentHooks = contentHooks.asInstanceOf[js.Any], contentQueries = contentQueries.asInstanceOf[js.Any], destroyHooks = destroyHooks.asInstanceOf[js.Any], directiveRegistry = directiveRegistry.asInstanceOf[js.Any], expandoInstructions = expandoInstructions.asInstanceOf[js.Any], firstChild = firstChild.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any], pipeRegistry = pipeRegistry.asInstanceOf[js.Any], preOrderCheckHooks = preOrderCheckHooks.asInstanceOf[js.Any], preOrderHooks = preOrderHooks.asInstanceOf[js.Any], queries = queries.asInstanceOf[js.Any], schemas = schemas.asInstanceOf[js.Any], template = js.Any.fromFunction2(template), viewCheckHooks = viewCheckHooks.asInstanceOf[js.Any], viewHooks = viewHooks.asInstanceOf[js.Any], viewQuery = js.Any.fromFunction2(viewQuery))
+    val __obj = js.Dynamic.literal(bindingStartIndex = bindingStartIndex.asInstanceOf[js.Any], blueprint = blueprint.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], expandoStartIndex = expandoStartIndex.asInstanceOf[js.Any], firstTemplatePass = firstTemplatePass.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], staticContentQueries = staticContentQueries.asInstanceOf[js.Any], staticViewQueries = staticViewQueries.asInstanceOf[js.Any])
     __obj.asInstanceOf[TView]
   }
+  @scala.inline
+  implicit class TViewOps[Self <: TView] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBindingStartIndex(value: Double): Self = this.set("bindingStartIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBlueprint(value: ɵangularPackagesCoreCoreBj): Self = this.set("blueprint", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setData(value: TData): Self = this.set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setExpandoStartIndex(value: Double): Self = this.set("expandoStartIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFirstTemplatePass(value: Boolean): Self = this.set("firstTemplatePass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setId(value: Double): Self = this.set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStaticContentQueries(value: Boolean): Self = this.set("staticContentQueries", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStaticViewQueries(value: Boolean): Self = this.set("staticViewQueries", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCleanup(value: js.Array[_]): Self = this.set("cleanup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCleanupNull: Self = this.set("cleanup", null)
+    @scala.inline
+    def setComponents(value: js.Array[Double]): Self = this.set("components", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setComponentsNull: Self = this.set("components", null)
+    @scala.inline
+    def setContentCheckHooks(value: HookData): Self = this.set("contentCheckHooks", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContentCheckHooksNull: Self = this.set("contentCheckHooks", null)
+    @scala.inline
+    def setContentHooks(value: HookData): Self = this.set("contentHooks", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContentHooksNull: Self = this.set("contentHooks", null)
+    @scala.inline
+    def setContentQueries(value: js.Array[Double]): Self = this.set("contentQueries", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContentQueriesNull: Self = this.set("contentQueries", null)
+    @scala.inline
+    def setDestroyHooks(value: HookData): Self = this.set("destroyHooks", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDestroyHooksNull: Self = this.set("destroyHooks", null)
+    @scala.inline
+    def setDirectiveRegistry(value: DirectiveDefList): Self = this.set("directiveRegistry", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDirectiveRegistryNull: Self = this.set("directiveRegistry", null)
+    @scala.inline
+    def setExpandoInstructions(value: ExpandoInstructions): Self = this.set("expandoInstructions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setExpandoInstructionsNull: Self = this.set("expandoInstructions", null)
+    @scala.inline
+    def setFirstChild(value: TNode): Self = this.set("firstChild", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFirstChildNull: Self = this.set("firstChild", null)
+    @scala.inline
+    def setNode(value: TViewNode | ɵangularPackagesCoreCoreBf): Self = this.set("node", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNodeNull: Self = this.set("node", null)
+    @scala.inline
+    def setPipeRegistry(value: PipeDefList): Self = this.set("pipeRegistry", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPipeRegistryNull: Self = this.set("pipeRegistry", null)
+    @scala.inline
+    def setPreOrderCheckHooks(value: HookData): Self = this.set("preOrderCheckHooks", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPreOrderCheckHooksNull: Self = this.set("preOrderCheckHooks", null)
+    @scala.inline
+    def setPreOrderHooks(value: HookData): Self = this.set("preOrderHooks", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPreOrderHooksNull: Self = this.set("preOrderHooks", null)
+    @scala.inline
+    def setQueries(value: TQueries): Self = this.set("queries", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setQueriesNull: Self = this.set("queries", null)
+    @scala.inline
+    def setSchemas(value: js.Array[SchemaMetadata]): Self = this.set("schemas", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSchemasNull: Self = this.set("schemas", null)
+    @scala.inline
+    def setTemplate(value: (/* rf */ ɵRenderFlags, js.Object) => Unit): Self = this.set("template", js.Any.fromFunction2(value))
+    @scala.inline
+    def setTemplateNull: Self = this.set("template", null)
+    @scala.inline
+    def setViewCheckHooks(value: HookData): Self = this.set("viewCheckHooks", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setViewCheckHooksNull: Self = this.set("viewCheckHooks", null)
+    @scala.inline
+    def setViewHooks(value: HookData): Self = this.set("viewHooks", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setViewHooksNull: Self = this.set("viewHooks", null)
+    @scala.inline
+    def setViewQuery(value: (/* rf */ ɵRenderFlags, js.Object) => Unit): Self = this.set("viewQuery", js.Any.fromFunction2(value))
+    @scala.inline
+    def setViewQueryNull: Self = this.set("viewQuery", null)
+  }
+  
 }
 

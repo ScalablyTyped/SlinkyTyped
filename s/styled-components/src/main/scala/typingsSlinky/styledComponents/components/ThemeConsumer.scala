@@ -1,5 +1,6 @@
 package typingsSlinky.styledComponents.components
 
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ConsumerProps
@@ -23,6 +24,10 @@ object ThemeConsumer {
   }
   
   def withProps(p: ConsumerProps[AnyIfEmpty[DefaultTheme]]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: ThemeConsumer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: AnyIfEmpty[DefaultTheme] => TagMod[Any]): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ConsumerProps[AnyIfEmpty[DefaultTheme]]]))
+  }
 }
 

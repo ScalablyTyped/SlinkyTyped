@@ -36,5 +36,34 @@ object LocationEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[LocationEvent]
   }
+  @scala.inline
+  implicit class LocationEventOps[Self <: LocationEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAccuracy(value: Double): Self = this.set("accuracy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAltitude(value: Double): Self = this.set("altitude", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAltitudeAccuracy(value: Double): Self = this.set("altitudeAccuracy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBounds(value: LatLngBounds_): Self = this.set("bounds", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHeading(value: Double): Self = this.set("heading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLatlng(value: LatLng_): Self = this.set("latlng", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSpeed(value: Double): Self = this.set("speed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTimestamp(value: Double): Self = this.set("timestamp", value.asInstanceOf[js.Any])
+  }
+  
 }
 

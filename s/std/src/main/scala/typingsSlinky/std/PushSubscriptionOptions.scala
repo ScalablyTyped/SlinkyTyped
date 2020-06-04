@@ -11,9 +11,28 @@ trait PushSubscriptionOptions extends js.Object {
 
 object PushSubscriptionOptions {
   @scala.inline
-  def apply(userVisibleOnly: scala.Boolean, applicationServerKey: js.typedarray.ArrayBuffer = null): PushSubscriptionOptions = {
-    val __obj = js.Dynamic.literal(userVisibleOnly = userVisibleOnly.asInstanceOf[js.Any], applicationServerKey = applicationServerKey.asInstanceOf[js.Any])
+  def apply(userVisibleOnly: scala.Boolean): PushSubscriptionOptions = {
+    val __obj = js.Dynamic.literal(userVisibleOnly = userVisibleOnly.asInstanceOf[js.Any])
     __obj.asInstanceOf[PushSubscriptionOptions]
   }
+  @scala.inline
+  implicit class PushSubscriptionOptionsOps[Self <: org.scalajs.dom.experimental.push.PushSubscriptionOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setUserVisibleOnly(value: scala.Boolean): Self = this.set("userVisibleOnly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setApplicationServerKey(value: js.typedarray.ArrayBuffer): Self = this.set("applicationServerKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setApplicationServerKeyNull: Self = this.set("applicationServerKey", null)
+  }
+  
 }
 

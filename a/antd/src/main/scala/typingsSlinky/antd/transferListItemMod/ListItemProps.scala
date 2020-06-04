@@ -18,21 +18,44 @@ trait ListItemProps extends js.Object {
 
 object ListItemProps {
   @scala.inline
-  def apply(
-    item: TransferItem,
-    onClick: TransferItem => Unit,
-    prefixCls: String,
-    checked: js.UndefOr[Boolean] = js.undefined,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    renderedEl: TagMod[Any] = null,
-    renderedText: String | Double = null
-  ): ListItemProps = {
+  def apply(item: TransferItem, onClick: TransferItem => Unit, prefixCls: String): ListItemProps = {
     val __obj = js.Dynamic.literal(item = item.asInstanceOf[js.Any], onClick = js.Any.fromFunction1(onClick), prefixCls = prefixCls.asInstanceOf[js.Any])
-    if (!js.isUndefined(checked)) __obj.updateDynamic("checked")(checked.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (renderedEl != null) __obj.updateDynamic("renderedEl")(renderedEl.asInstanceOf[js.Any])
-    if (renderedText != null) __obj.updateDynamic("renderedText")(renderedText.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListItemProps]
   }
+  @scala.inline
+  implicit class ListItemPropsOps[Self <: ListItemProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setItem(value: TransferItem): Self = this.set("item", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOnClick(value: TransferItem => Unit): Self = this.set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChecked(value: Boolean): Self = this.set("checked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChecked: Self = this.set("checked", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setRenderedEl(value: TagMod[Any]): Self = this.set("renderedEl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRenderedEl: Self = this.set("renderedEl", js.undefined)
+    @scala.inline
+    def setRenderedText(value: String | Double): Self = this.set("renderedText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRenderedText: Self = this.set("renderedText", js.undefined)
+  }
+  
 }
 

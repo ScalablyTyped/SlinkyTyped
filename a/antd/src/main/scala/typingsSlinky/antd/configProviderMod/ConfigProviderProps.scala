@@ -2,6 +2,7 @@ package typingsSlinky.antd.configProviderMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.AutoComplete
 import typingsSlinky.antd.anon.Ghost
 import typingsSlinky.antd.anon.Size
@@ -35,38 +36,80 @@ trait ConfigProviderProps extends js.Object {
 
 object ConfigProviderProps {
   @scala.inline
-  def apply(
-    autoInsertSpaceInButton: js.UndefOr[Boolean] = js.undefined,
-    children: TagMod[Any] = null,
-    componentSize: SizeType = null,
-    csp: CSPConfig = null,
-    direction: ltr | rtl = null,
-    form: ValidateMessages = null,
-    getPopupContainer: /* triggerNode */ HTMLElement => HTMLElement = null,
-    getTargetContainer: () => HTMLElement = null,
-    input: AutoComplete = null,
-    locale: Locale = null,
-    pageHeader: Ghost = null,
-    prefixCls: String = null,
-    renderEmpty: /* componentName */ js.UndefOr[String] => TagMod[Any] = null,
-    space: Size = null
-  ): ConfigProviderProps = {
+  def apply(): ConfigProviderProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoInsertSpaceInButton)) __obj.updateDynamic("autoInsertSpaceInButton")(autoInsertSpaceInButton.get.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (componentSize != null) __obj.updateDynamic("componentSize")(componentSize.asInstanceOf[js.Any])
-    if (csp != null) __obj.updateDynamic("csp")(csp.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
-    if (getPopupContainer != null) __obj.updateDynamic("getPopupContainer")(js.Any.fromFunction1(getPopupContainer))
-    if (getTargetContainer != null) __obj.updateDynamic("getTargetContainer")(js.Any.fromFunction0(getTargetContainer))
-    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (pageHeader != null) __obj.updateDynamic("pageHeader")(pageHeader.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (renderEmpty != null) __obj.updateDynamic("renderEmpty")(js.Any.fromFunction1(renderEmpty))
-    if (space != null) __obj.updateDynamic("space")(space.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigProviderProps]
   }
+  @scala.inline
+  implicit class ConfigProviderPropsOps[Self <: ConfigProviderProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAutoInsertSpaceInButton(value: Boolean): Self = this.set("autoInsertSpaceInButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAutoInsertSpaceInButton: Self = this.set("autoInsertSpaceInButton", js.undefined)
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setComponentSize(value: SizeType): Self = this.set("componentSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteComponentSize: Self = this.set("componentSize", js.undefined)
+    @scala.inline
+    def setCsp(value: CSPConfig): Self = this.set("csp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCsp: Self = this.set("csp", js.undefined)
+    @scala.inline
+    def setDirection(value: ltr | rtl): Self = this.set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDirection: Self = this.set("direction", js.undefined)
+    @scala.inline
+    def setForm(value: ValidateMessages): Self = this.set("form", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteForm: Self = this.set("form", js.undefined)
+    @scala.inline
+    def setGetPopupContainer(value: /* triggerNode */ HTMLElement => HTMLElement): Self = this.set("getPopupContainer", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteGetPopupContainer: Self = this.set("getPopupContainer", js.undefined)
+    @scala.inline
+    def setGetTargetContainer(value: () => HTMLElement): Self = this.set("getTargetContainer", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteGetTargetContainer: Self = this.set("getTargetContainer", js.undefined)
+    @scala.inline
+    def setInput(value: AutoComplete): Self = this.set("input", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInput: Self = this.set("input", js.undefined)
+    @scala.inline
+    def setLocale(value: Locale): Self = this.set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLocale: Self = this.set("locale", js.undefined)
+    @scala.inline
+    def setPageHeader(value: Ghost): Self = this.set("pageHeader", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePageHeader: Self = this.set("pageHeader", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    @scala.inline
+    def setRenderEmpty(value: /* componentName */ js.UndefOr[String] => TagMod[Any]): Self = this.set("renderEmpty", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteRenderEmpty: Self = this.set("renderEmpty", js.undefined)
+    @scala.inline
+    def setSpace(value: Size): Self = this.set("space", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSpace: Self = this.set("space", js.undefined)
+  }
+  
 }
 

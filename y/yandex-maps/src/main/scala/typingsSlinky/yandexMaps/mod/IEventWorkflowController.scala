@@ -15,18 +15,30 @@ trait IEventWorkflowController extends IEventController {
 
 object IEventWorkflowController {
   @scala.inline
-  def apply(
-    onAfterEventFiring: (/* events */ IEventManager, /* type */ String, /* event */ js.UndefOr[IEvent]) => Unit = null,
-    onBeforeEventFiring: (/* events */ IEventManager, /* type */ String, /* event */ js.UndefOr[IEvent]) => Unit = null,
-    onStartListening: (/* events */ IEventManager, /* type */ String) => Unit = null,
-    onStopListening: (/* events */ IEventManager, /* type */ String) => Unit = null
-  ): IEventWorkflowController = {
+  def apply(): IEventWorkflowController = {
     val __obj = js.Dynamic.literal()
-    if (onAfterEventFiring != null) __obj.updateDynamic("onAfterEventFiring")(js.Any.fromFunction3(onAfterEventFiring))
-    if (onBeforeEventFiring != null) __obj.updateDynamic("onBeforeEventFiring")(js.Any.fromFunction3(onBeforeEventFiring))
-    if (onStartListening != null) __obj.updateDynamic("onStartListening")(js.Any.fromFunction2(onStartListening))
-    if (onStopListening != null) __obj.updateDynamic("onStopListening")(js.Any.fromFunction2(onStopListening))
     __obj.asInstanceOf[IEventWorkflowController]
   }
+  @scala.inline
+  implicit class IEventWorkflowControllerOps[Self <: IEventWorkflowController] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setOnAfterEventFiring(value: (/* events */ IEventManager, /* type */ String, /* event */ js.UndefOr[IEvent]) => Unit): Self = this.set("onAfterEventFiring", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteOnAfterEventFiring: Self = this.set("onAfterEventFiring", js.undefined)
+    @scala.inline
+    def setOnBeforeEventFiring(value: (/* events */ IEventManager, /* type */ String, /* event */ js.UndefOr[IEvent]) => Unit): Self = this.set("onBeforeEventFiring", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteOnBeforeEventFiring: Self = this.set("onBeforeEventFiring", js.undefined)
+  }
+  
 }
 

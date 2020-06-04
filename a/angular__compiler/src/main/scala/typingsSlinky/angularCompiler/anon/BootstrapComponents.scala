@@ -41,12 +41,52 @@ object BootstrapComponents {
     providers: js.Array[CompileProviderMetadata],
     schemas: js.Array[SchemaMetadata],
     transitiveModule: TransitiveCompileNgModuleMetadata,
-    `type`: CompileTypeMetadata,
-    id: String = null
+    `type`: CompileTypeMetadata
   ): BootstrapComponents = {
-    val __obj = js.Dynamic.literal(bootstrapComponents = bootstrapComponents.asInstanceOf[js.Any], declaredDirectives = declaredDirectives.asInstanceOf[js.Any], declaredPipes = declaredPipes.asInstanceOf[js.Any], entryComponents = entryComponents.asInstanceOf[js.Any], exportedDirectives = exportedDirectives.asInstanceOf[js.Any], exportedModules = exportedModules.asInstanceOf[js.Any], exportedPipes = exportedPipes.asInstanceOf[js.Any], importedModules = importedModules.asInstanceOf[js.Any], providers = providers.asInstanceOf[js.Any], schemas = schemas.asInstanceOf[js.Any], transitiveModule = transitiveModule.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(bootstrapComponents = bootstrapComponents.asInstanceOf[js.Any], declaredDirectives = declaredDirectives.asInstanceOf[js.Any], declaredPipes = declaredPipes.asInstanceOf[js.Any], entryComponents = entryComponents.asInstanceOf[js.Any], exportedDirectives = exportedDirectives.asInstanceOf[js.Any], exportedModules = exportedModules.asInstanceOf[js.Any], exportedPipes = exportedPipes.asInstanceOf[js.Any], importedModules = importedModules.asInstanceOf[js.Any], providers = providers.asInstanceOf[js.Any], schemas = schemas.asInstanceOf[js.Any], transitiveModule = transitiveModule.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BootstrapComponents]
   }
+  @scala.inline
+  implicit class BootstrapComponentsOps[Self <: BootstrapComponents] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBootstrapComponents(value: js.Array[CompileIdentifierMetadata]): Self = this.set("bootstrapComponents", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDeclaredDirectives(value: js.Array[CompileIdentifierMetadata]): Self = this.set("declaredDirectives", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDeclaredPipes(value: js.Array[CompileIdentifierMetadata]): Self = this.set("declaredPipes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEntryComponents(value: js.Array[CompileEntryComponentMetadata]): Self = this.set("entryComponents", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setExportedDirectives(value: js.Array[CompileIdentifierMetadata]): Self = this.set("exportedDirectives", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setExportedModules(value: js.Array[CompileNgModuleSummary]): Self = this.set("exportedModules", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setExportedPipes(value: js.Array[CompileIdentifierMetadata]): Self = this.set("exportedPipes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setImportedModules(value: js.Array[CompileNgModuleSummary]): Self = this.set("importedModules", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setProviders(value: js.Array[CompileProviderMetadata]): Self = this.set("providers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSchemas(value: js.Array[SchemaMetadata]): Self = this.set("schemas", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTransitiveModule(value: TransitiveCompileNgModuleMetadata): Self = this.set("transitiveModule", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setType(value: CompileTypeMetadata): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIdNull: Self = this.set("id", null)
+  }
+  
 }
 

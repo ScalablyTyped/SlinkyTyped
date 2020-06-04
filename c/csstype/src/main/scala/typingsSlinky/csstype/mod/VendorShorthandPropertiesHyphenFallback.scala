@@ -59,58 +59,118 @@ trait VendorShorthandPropertiesHyphenFallback[TLength] extends js.Object {
 
 object VendorShorthandPropertiesHyphenFallback {
   @scala.inline
-  def apply[TLength](
-    `-moz-animation`: AnimationProperty | js.Array[AnimationProperty] = null,
-    `-moz-border-image`: BorderImageProperty | js.Array[BorderImageProperty] = null,
-    `-moz-column-rule`: ColumnRuleProperty[TLength] | js.Array[ColumnRuleProperty[TLength]] = null,
-    `-moz-columns`: ColumnsProperty[TLength] | js.Array[ColumnsProperty[TLength]] = null,
-    `-moz-transition`: TransitionProperty | js.Array[TransitionProperty] = null,
-    `-ms-content-zoom-limit`: GlobalsString | js.Array[GlobalsString] = null,
-    `-ms-content-zoom-snap`: MsContentZoomSnapProperty | js.Array[MsContentZoomSnapProperty] = null,
-    `-ms-flex`: FlexProperty[TLength] | js.Array[FlexProperty[TLength]] = null,
-    `-ms-scroll-limit`: GlobalsString | js.Array[GlobalsString] = null,
-    `-ms-scroll-snap-x`: GlobalsString | js.Array[GlobalsString] = null,
-    `-ms-scroll-snap-y`: GlobalsString | js.Array[GlobalsString] = null,
-    `-ms-transition`: TransitionProperty | js.Array[TransitionProperty] = null,
-    `-webkit-animation`: AnimationProperty | js.Array[AnimationProperty] = null,
-    `-webkit-border-before`: WebkitBorderBeforeProperty[TLength] | js.Array[WebkitBorderBeforeProperty[TLength]] = null,
-    `-webkit-border-image`: BorderImageProperty | js.Array[BorderImageProperty] = null,
-    `-webkit-border-radius`: BorderRadiusProperty[TLength] | js.Array[BorderRadiusProperty[TLength]] = null,
-    `-webkit-column-rule`: ColumnRuleProperty[TLength] | js.Array[ColumnRuleProperty[TLength]] = null,
-    `-webkit-columns`: ColumnsProperty[TLength] | js.Array[ColumnsProperty[TLength]] = null,
-    `-webkit-flex`: FlexProperty[TLength] | js.Array[FlexProperty[TLength]] = null,
-    `-webkit-flex-flow`: FlexFlowProperty | js.Array[FlexFlowProperty] = null,
-    `-webkit-mask`: WebkitMaskProperty[TLength] | js.Array[WebkitMaskProperty[TLength]] = null,
-    `-webkit-text-emphasis`: TextEmphasisProperty | js.Array[TextEmphasisProperty] = null,
-    `-webkit-text-stroke`: WebkitTextStrokeProperty[TLength] | js.Array[WebkitTextStrokeProperty[TLength]] = null,
-    `-webkit-transition`: TransitionProperty | js.Array[TransitionProperty] = null
-  ): VendorShorthandPropertiesHyphenFallback[TLength] = {
+  def apply[TLength](): VendorShorthandPropertiesHyphenFallback[TLength] = {
     val __obj = js.Dynamic.literal()
-    if (`-moz-animation` != null) __obj.updateDynamic("-moz-animation")(`-moz-animation`.asInstanceOf[js.Any])
-    if (`-moz-border-image` != null) __obj.updateDynamic("-moz-border-image")(`-moz-border-image`.asInstanceOf[js.Any])
-    if (`-moz-column-rule` != null) __obj.updateDynamic("-moz-column-rule")(`-moz-column-rule`.asInstanceOf[js.Any])
-    if (`-moz-columns` != null) __obj.updateDynamic("-moz-columns")(`-moz-columns`.asInstanceOf[js.Any])
-    if (`-moz-transition` != null) __obj.updateDynamic("-moz-transition")(`-moz-transition`.asInstanceOf[js.Any])
-    if (`-ms-content-zoom-limit` != null) __obj.updateDynamic("-ms-content-zoom-limit")(`-ms-content-zoom-limit`.asInstanceOf[js.Any])
-    if (`-ms-content-zoom-snap` != null) __obj.updateDynamic("-ms-content-zoom-snap")(`-ms-content-zoom-snap`.asInstanceOf[js.Any])
-    if (`-ms-flex` != null) __obj.updateDynamic("-ms-flex")(`-ms-flex`.asInstanceOf[js.Any])
-    if (`-ms-scroll-limit` != null) __obj.updateDynamic("-ms-scroll-limit")(`-ms-scroll-limit`.asInstanceOf[js.Any])
-    if (`-ms-scroll-snap-x` != null) __obj.updateDynamic("-ms-scroll-snap-x")(`-ms-scroll-snap-x`.asInstanceOf[js.Any])
-    if (`-ms-scroll-snap-y` != null) __obj.updateDynamic("-ms-scroll-snap-y")(`-ms-scroll-snap-y`.asInstanceOf[js.Any])
-    if (`-ms-transition` != null) __obj.updateDynamic("-ms-transition")(`-ms-transition`.asInstanceOf[js.Any])
-    if (`-webkit-animation` != null) __obj.updateDynamic("-webkit-animation")(`-webkit-animation`.asInstanceOf[js.Any])
-    if (`-webkit-border-before` != null) __obj.updateDynamic("-webkit-border-before")(`-webkit-border-before`.asInstanceOf[js.Any])
-    if (`-webkit-border-image` != null) __obj.updateDynamic("-webkit-border-image")(`-webkit-border-image`.asInstanceOf[js.Any])
-    if (`-webkit-border-radius` != null) __obj.updateDynamic("-webkit-border-radius")(`-webkit-border-radius`.asInstanceOf[js.Any])
-    if (`-webkit-column-rule` != null) __obj.updateDynamic("-webkit-column-rule")(`-webkit-column-rule`.asInstanceOf[js.Any])
-    if (`-webkit-columns` != null) __obj.updateDynamic("-webkit-columns")(`-webkit-columns`.asInstanceOf[js.Any])
-    if (`-webkit-flex` != null) __obj.updateDynamic("-webkit-flex")(`-webkit-flex`.asInstanceOf[js.Any])
-    if (`-webkit-flex-flow` != null) __obj.updateDynamic("-webkit-flex-flow")(`-webkit-flex-flow`.asInstanceOf[js.Any])
-    if (`-webkit-mask` != null) __obj.updateDynamic("-webkit-mask")(`-webkit-mask`.asInstanceOf[js.Any])
-    if (`-webkit-text-emphasis` != null) __obj.updateDynamic("-webkit-text-emphasis")(`-webkit-text-emphasis`.asInstanceOf[js.Any])
-    if (`-webkit-text-stroke` != null) __obj.updateDynamic("-webkit-text-stroke")(`-webkit-text-stroke`.asInstanceOf[js.Any])
-    if (`-webkit-transition` != null) __obj.updateDynamic("-webkit-transition")(`-webkit-transition`.asInstanceOf[js.Any])
     __obj.asInstanceOf[VendorShorthandPropertiesHyphenFallback[TLength]]
   }
+  @scala.inline
+  implicit class VendorShorthandPropertiesHyphenFallbackOps[Self <: VendorShorthandPropertiesHyphenFallback[_], TLength] (val x: Self with VendorShorthandPropertiesHyphenFallback[TLength]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def `set-moz-animation`(value: AnimationProperty | js.Array[AnimationProperty]): Self = this.set("-moz-animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-animation`: Self = this.set("-moz-animation", js.undefined)
+    @scala.inline
+    def `set-moz-border-image`(value: BorderImageProperty | js.Array[BorderImageProperty]): Self = this.set("-moz-border-image", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-border-image`: Self = this.set("-moz-border-image", js.undefined)
+    @scala.inline
+    def `set-moz-column-rule`(value: ColumnRuleProperty[TLength] | js.Array[ColumnRuleProperty[TLength]]): Self = this.set("-moz-column-rule", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-column-rule`: Self = this.set("-moz-column-rule", js.undefined)
+    @scala.inline
+    def `set-moz-columns`(value: ColumnsProperty[TLength] | js.Array[ColumnsProperty[TLength]]): Self = this.set("-moz-columns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-columns`: Self = this.set("-moz-columns", js.undefined)
+    @scala.inline
+    def `set-moz-transition`(value: TransitionProperty | js.Array[TransitionProperty]): Self = this.set("-moz-transition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-transition`: Self = this.set("-moz-transition", js.undefined)
+    @scala.inline
+    def `set-ms-content-zoom-limit`(value: GlobalsString | js.Array[GlobalsString]): Self = this.set("-ms-content-zoom-limit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-ms-content-zoom-limit`: Self = this.set("-ms-content-zoom-limit", js.undefined)
+    @scala.inline
+    def `set-ms-content-zoom-snap`(value: MsContentZoomSnapProperty | js.Array[MsContentZoomSnapProperty]): Self = this.set("-ms-content-zoom-snap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-ms-content-zoom-snap`: Self = this.set("-ms-content-zoom-snap", js.undefined)
+    @scala.inline
+    def `set-ms-flex`(value: FlexProperty[TLength] | js.Array[FlexProperty[TLength]]): Self = this.set("-ms-flex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-ms-flex`: Self = this.set("-ms-flex", js.undefined)
+    @scala.inline
+    def `set-ms-scroll-limit`(value: GlobalsString | js.Array[GlobalsString]): Self = this.set("-ms-scroll-limit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-ms-scroll-limit`: Self = this.set("-ms-scroll-limit", js.undefined)
+    @scala.inline
+    def `set-ms-scroll-snap-x`(value: GlobalsString | js.Array[GlobalsString]): Self = this.set("-ms-scroll-snap-x", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-ms-scroll-snap-x`: Self = this.set("-ms-scroll-snap-x", js.undefined)
+    @scala.inline
+    def `set-ms-scroll-snap-y`(value: GlobalsString | js.Array[GlobalsString]): Self = this.set("-ms-scroll-snap-y", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-ms-scroll-snap-y`: Self = this.set("-ms-scroll-snap-y", js.undefined)
+    @scala.inline
+    def `set-ms-transition`(value: TransitionProperty | js.Array[TransitionProperty]): Self = this.set("-ms-transition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-ms-transition`: Self = this.set("-ms-transition", js.undefined)
+    @scala.inline
+    def `set-webkit-animation`(value: AnimationProperty | js.Array[AnimationProperty]): Self = this.set("-webkit-animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-webkit-animation`: Self = this.set("-webkit-animation", js.undefined)
+    @scala.inline
+    def `set-webkit-border-before`(value: WebkitBorderBeforeProperty[TLength] | js.Array[WebkitBorderBeforeProperty[TLength]]): Self = this.set("-webkit-border-before", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-webkit-border-before`: Self = this.set("-webkit-border-before", js.undefined)
+    @scala.inline
+    def `set-webkit-border-image`(value: BorderImageProperty | js.Array[BorderImageProperty]): Self = this.set("-webkit-border-image", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-webkit-border-image`: Self = this.set("-webkit-border-image", js.undefined)
+    @scala.inline
+    def `set-webkit-border-radius`(value: BorderRadiusProperty[TLength] | js.Array[BorderRadiusProperty[TLength]]): Self = this.set("-webkit-border-radius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-webkit-border-radius`: Self = this.set("-webkit-border-radius", js.undefined)
+    @scala.inline
+    def `set-webkit-column-rule`(value: ColumnRuleProperty[TLength] | js.Array[ColumnRuleProperty[TLength]]): Self = this.set("-webkit-column-rule", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-webkit-column-rule`: Self = this.set("-webkit-column-rule", js.undefined)
+    @scala.inline
+    def `set-webkit-columns`(value: ColumnsProperty[TLength] | js.Array[ColumnsProperty[TLength]]): Self = this.set("-webkit-columns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-webkit-columns`: Self = this.set("-webkit-columns", js.undefined)
+    @scala.inline
+    def `set-webkit-flex`(value: FlexProperty[TLength] | js.Array[FlexProperty[TLength]]): Self = this.set("-webkit-flex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-webkit-flex`: Self = this.set("-webkit-flex", js.undefined)
+    @scala.inline
+    def `set-webkit-flex-flow`(value: FlexFlowProperty | js.Array[FlexFlowProperty]): Self = this.set("-webkit-flex-flow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-webkit-flex-flow`: Self = this.set("-webkit-flex-flow", js.undefined)
+    @scala.inline
+    def `set-webkit-mask`(value: WebkitMaskProperty[TLength] | js.Array[WebkitMaskProperty[TLength]]): Self = this.set("-webkit-mask", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-webkit-mask`: Self = this.set("-webkit-mask", js.undefined)
+    @scala.inline
+    def `set-webkit-text-emphasis`(value: TextEmphasisProperty | js.Array[TextEmphasisProperty]): Self = this.set("-webkit-text-emphasis", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-webkit-text-emphasis`: Self = this.set("-webkit-text-emphasis", js.undefined)
+    @scala.inline
+    def `set-webkit-text-stroke`(value: WebkitTextStrokeProperty[TLength] | js.Array[WebkitTextStrokeProperty[TLength]]): Self = this.set("-webkit-text-stroke", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-webkit-text-stroke`: Self = this.set("-webkit-text-stroke", js.undefined)
+    @scala.inline
+    def `set-webkit-transition`(value: TransitionProperty | js.Array[TransitionProperty]): Self = this.set("-webkit-transition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-webkit-transition`: Self = this.set("-webkit-transition", js.undefined)
+  }
+  
 }
 

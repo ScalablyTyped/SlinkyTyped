@@ -58,32 +58,68 @@ trait WebGLRendererParameters extends js.Object {
 
 object WebGLRendererParameters {
   @scala.inline
-  def apply(
-    alpha: js.UndefOr[Boolean] = js.undefined,
-    antialias: js.UndefOr[Boolean] = js.undefined,
-    canvas: HTMLCanvasElement | OffscreenCanvas = null,
-    context: WebGLRenderingContext = null,
-    depth: js.UndefOr[Boolean] = js.undefined,
-    logarithmicDepthBuffer: js.UndefOr[Boolean] = js.undefined,
-    powerPreference: String = null,
-    precision: String = null,
-    premultipliedAlpha: js.UndefOr[Boolean] = js.undefined,
-    preserveDrawingBuffer: js.UndefOr[Boolean] = js.undefined,
-    stencil: js.UndefOr[Boolean] = js.undefined
-  ): WebGLRendererParameters = {
+  def apply(): WebGLRendererParameters = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(alpha)) __obj.updateDynamic("alpha")(alpha.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(antialias)) __obj.updateDynamic("antialias")(antialias.get.asInstanceOf[js.Any])
-    if (canvas != null) __obj.updateDynamic("canvas")(canvas.asInstanceOf[js.Any])
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (!js.isUndefined(depth)) __obj.updateDynamic("depth")(depth.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(logarithmicDepthBuffer)) __obj.updateDynamic("logarithmicDepthBuffer")(logarithmicDepthBuffer.get.asInstanceOf[js.Any])
-    if (powerPreference != null) __obj.updateDynamic("powerPreference")(powerPreference.asInstanceOf[js.Any])
-    if (precision != null) __obj.updateDynamic("precision")(precision.asInstanceOf[js.Any])
-    if (!js.isUndefined(premultipliedAlpha)) __obj.updateDynamic("premultipliedAlpha")(premultipliedAlpha.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(preserveDrawingBuffer)) __obj.updateDynamic("preserveDrawingBuffer")(preserveDrawingBuffer.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(stencil)) __obj.updateDynamic("stencil")(stencil.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebGLRendererParameters]
   }
+  @scala.inline
+  implicit class WebGLRendererParametersOps[Self <: WebGLRendererParameters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAlpha(value: Boolean): Self = this.set("alpha", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAlpha: Self = this.set("alpha", js.undefined)
+    @scala.inline
+    def setAntialias(value: Boolean): Self = this.set("antialias", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAntialias: Self = this.set("antialias", js.undefined)
+    @scala.inline
+    def setCanvasHTMLCanvasElement(value: HTMLCanvasElement): Self = this.set("canvas", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCanvas(value: HTMLCanvasElement | OffscreenCanvas): Self = this.set("canvas", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCanvas: Self = this.set("canvas", js.undefined)
+    @scala.inline
+    def setContext(value: WebGLRenderingContext): Self = this.set("context", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContext: Self = this.set("context", js.undefined)
+    @scala.inline
+    def setDepth(value: Boolean): Self = this.set("depth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDepth: Self = this.set("depth", js.undefined)
+    @scala.inline
+    def setLogarithmicDepthBuffer(value: Boolean): Self = this.set("logarithmicDepthBuffer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLogarithmicDepthBuffer: Self = this.set("logarithmicDepthBuffer", js.undefined)
+    @scala.inline
+    def setPowerPreference(value: String): Self = this.set("powerPreference", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePowerPreference: Self = this.set("powerPreference", js.undefined)
+    @scala.inline
+    def setPrecision(value: String): Self = this.set("precision", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrecision: Self = this.set("precision", js.undefined)
+    @scala.inline
+    def setPremultipliedAlpha(value: Boolean): Self = this.set("premultipliedAlpha", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePremultipliedAlpha: Self = this.set("premultipliedAlpha", js.undefined)
+    @scala.inline
+    def setPreserveDrawingBuffer(value: Boolean): Self = this.set("preserveDrawingBuffer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePreserveDrawingBuffer: Self = this.set("preserveDrawingBuffer", js.undefined)
+    @scala.inline
+    def setStencil(value: Boolean): Self = this.set("stencil", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStencil: Self = this.set("stencil", js.undefined)
+  }
+  
 }
 

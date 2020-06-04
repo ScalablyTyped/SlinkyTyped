@@ -1,6 +1,7 @@
 package typingsSlinky.reactNavigation.anon
 
 import slinky.core.ReactComponentClass
+import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactNavigation.mod.NavigationFocusInjectedProps
 import scala.scalajs.js
@@ -13,12 +14,32 @@ trait `1`[T, P] extends js.Object {
 
 object `1` {
   @scala.inline
-  def apply[T, P](
-    onRef: js.UndefOr[Null | (Ref[ReactComponentClass[T with NavigationFocusInjectedProps[P]]])] = js.undefined
-  ): `1`[T, P] = {
+  def apply[T, P](): `1`[T, P] = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(onRef)) __obj.updateDynamic("onRef")(onRef.asInstanceOf[js.Any])
     __obj.asInstanceOf[`1`[T, P]]
   }
+  @scala.inline
+  implicit class `1Ops`[Self <: `1`[_, _], T, P] (val x: Self with (`1`[T, P])) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setOnRefRefObject(value: ReactRef[ReactComponentClass[T with NavigationFocusInjectedProps[P]]]): Self = this.set("onRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOnRefFunction1(value: /* instance */ (ReactComponentClass[T with NavigationFocusInjectedProps[P]]) | Null => Unit): Self = this.set("onRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def setOnRef(value: Ref[ReactComponentClass[T with NavigationFocusInjectedProps[P]]]): Self = this.set("onRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOnRef: Self = this.set("onRef", js.undefined)
+    @scala.inline
+    def setOnRefNull: Self = this.set("onRef", null)
+  }
+  
 }
 

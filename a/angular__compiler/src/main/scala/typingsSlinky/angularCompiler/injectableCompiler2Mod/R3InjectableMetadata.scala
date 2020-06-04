@@ -22,26 +22,55 @@ trait R3InjectableMetadata extends js.Object {
 
 object R3InjectableMetadata {
   @scala.inline
-  def apply(
-    name: String,
-    providedIn: Expression,
-    `type`: Expression,
-    typeArgumentCount: Double,
-    ctorDeps: js.Array[R3DependencyMetadata] | invalid = null,
-    useClass: Expression = null,
-    useExisting: Expression = null,
-    useFactory: Expression = null,
-    useValue: Expression = null,
-    userDeps: js.Array[R3DependencyMetadata] = null
-  ): R3InjectableMetadata = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], providedIn = providedIn.asInstanceOf[js.Any], typeArgumentCount = typeArgumentCount.asInstanceOf[js.Any], ctorDeps = ctorDeps.asInstanceOf[js.Any])
+  def apply(name: String, providedIn: Expression, `type`: Expression, typeArgumentCount: Double): R3InjectableMetadata = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], providedIn = providedIn.asInstanceOf[js.Any], typeArgumentCount = typeArgumentCount.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (useClass != null) __obj.updateDynamic("useClass")(useClass.asInstanceOf[js.Any])
-    if (useExisting != null) __obj.updateDynamic("useExisting")(useExisting.asInstanceOf[js.Any])
-    if (useFactory != null) __obj.updateDynamic("useFactory")(useFactory.asInstanceOf[js.Any])
-    if (useValue != null) __obj.updateDynamic("useValue")(useValue.asInstanceOf[js.Any])
-    if (userDeps != null) __obj.updateDynamic("userDeps")(userDeps.asInstanceOf[js.Any])
     __obj.asInstanceOf[R3InjectableMetadata]
   }
+  @scala.inline
+  implicit class R3InjectableMetadataOps[Self <: R3InjectableMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setProvidedIn(value: Expression): Self = this.set("providedIn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setType(value: Expression): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTypeArgumentCount(value: Double): Self = this.set("typeArgumentCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCtorDeps(value: js.Array[R3DependencyMetadata] | invalid): Self = this.set("ctorDeps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCtorDepsNull: Self = this.set("ctorDeps", null)
+    @scala.inline
+    def setUseClass(value: Expression): Self = this.set("useClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUseClass: Self = this.set("useClass", js.undefined)
+    @scala.inline
+    def setUseExisting(value: Expression): Self = this.set("useExisting", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUseExisting: Self = this.set("useExisting", js.undefined)
+    @scala.inline
+    def setUseFactory(value: Expression): Self = this.set("useFactory", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUseFactory: Self = this.set("useFactory", js.undefined)
+    @scala.inline
+    def setUseValue(value: Expression): Self = this.set("useValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUseValue: Self = this.set("useValue", js.undefined)
+    @scala.inline
+    def setUserDeps(value: js.Array[R3DependencyMetadata]): Self = this.set("userDeps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUserDeps: Self = this.set("userDeps", js.undefined)
+  }
+  
 }
 

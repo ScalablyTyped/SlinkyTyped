@@ -39,12 +39,44 @@ object AnimationTransitionMetadata {
       /* params */ js.UndefOr[StringDictionary[js.Any]], 
       Boolean
     ]),
-    `type`: AnimationMetadataType,
-    options: AnimationOptions = null
+    `type`: AnimationMetadataType
   ): AnimationTransitionMetadata = {
-    val __obj = js.Dynamic.literal(animation = animation.asInstanceOf[js.Any], expr = expr.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(animation = animation.asInstanceOf[js.Any], expr = expr.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnimationTransitionMetadata]
   }
+  @scala.inline
+  implicit class AnimationTransitionMetadataOps[Self <: AnimationTransitionMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAnimation(value: AnimationMetadata | js.Array[AnimationMetadata]): Self = this.set("animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setExprFunction4(
+      value: (/* fromState */ String, /* toState */ String, /* element */ js.UndefOr[js.Any], /* params */ js.UndefOr[StringDictionary[js.Any]]) => Boolean
+    ): Self = this.set("expr", js.Any.fromFunction4(value))
+    @scala.inline
+    def setExpr(
+      value: String | (js.Function4[
+          /* fromState */ String, 
+          /* toState */ String, 
+          /* element */ js.UndefOr[js.Any], 
+          /* params */ js.UndefOr[StringDictionary[js.Any]], 
+          Boolean
+        ])
+    ): Self = this.set("expr", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOptions(value: AnimationOptions): Self = this.set("options", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOptionsNull: Self = this.set("options", null)
+  }
+  
 }
 

@@ -29,16 +29,43 @@ object TypographyStyle {
     color: ColorProperty,
     fontFamily: FontFamilyProperty,
     fontSize: FontSizeProperty[Double | String],
-    fontWeight: FontWeightProperty,
-    letterSpacing: LetterSpacingProperty[Double | String] = null,
-    lineHeight: LineHeightProperty[Double | String] = null,
-    textTransform: TextTransformProperty = null
+    fontWeight: FontWeightProperty
   ): TypographyStyle = {
     val __obj = js.Dynamic.literal(color = color.asInstanceOf[js.Any], fontFamily = fontFamily.asInstanceOf[js.Any], fontSize = fontSize.asInstanceOf[js.Any], fontWeight = fontWeight.asInstanceOf[js.Any])
-    if (letterSpacing != null) __obj.updateDynamic("letterSpacing")(letterSpacing.asInstanceOf[js.Any])
-    if (lineHeight != null) __obj.updateDynamic("lineHeight")(lineHeight.asInstanceOf[js.Any])
-    if (textTransform != null) __obj.updateDynamic("textTransform")(textTransform.asInstanceOf[js.Any])
     __obj.asInstanceOf[TypographyStyle]
   }
+  @scala.inline
+  implicit class TypographyStyleOps[Self <: TypographyStyle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setColor(value: ColorProperty): Self = this.set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFontFamily(value: FontFamilyProperty): Self = this.set("fontFamily", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFontSize(value: FontSizeProperty[Double | String]): Self = this.set("fontSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFontWeight(value: FontWeightProperty): Self = this.set("fontWeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLetterSpacing(value: LetterSpacingProperty[Double | String]): Self = this.set("letterSpacing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLetterSpacing: Self = this.set("letterSpacing", js.undefined)
+    @scala.inline
+    def setLineHeight(value: LineHeightProperty[Double | String]): Self = this.set("lineHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLineHeight: Self = this.set("lineHeight", js.undefined)
+    @scala.inline
+    def setTextTransform(value: TextTransformProperty): Self = this.set("textTransform", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTextTransform: Self = this.set("textTransform", js.undefined)
+  }
+  
 }
 

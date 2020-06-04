@@ -16,10 +16,26 @@ trait TouchBarSpacerConstructorOptions extends js.Object {
 
 object TouchBarSpacerConstructorOptions {
   @scala.inline
-  def apply(size: small | large | flexible = null): TouchBarSpacerConstructorOptions = {
+  def apply(): TouchBarSpacerConstructorOptions = {
     val __obj = js.Dynamic.literal()
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[TouchBarSpacerConstructorOptions]
   }
+  @scala.inline
+  implicit class TouchBarSpacerConstructorOptionsOps[Self <: TouchBarSpacerConstructorOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setSize(value: small | large | flexible): Self = this.set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
+  }
+  
 }
 

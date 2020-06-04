@@ -49,32 +49,101 @@ object DrawerContentComponentProps {
     navigation: NavigationScreenProp[NavigationDrawerState, NavigationParams],
     onItemPress: Focused => Unit,
     renderIcon: Scene => TagMod[Any],
-    screenProps: js.Any,
-    activeBackgroundColor: String | ThemedColor = null,
-    activeItemKey: js.UndefOr[Null | String] = js.undefined,
-    activeLabelStyle: js.UndefOr[Null | StyleProp[TextStyle]] = js.undefined,
-    activeTintColor: String | ThemedColor = null,
-    iconContainerStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
-    inactiveBackgroundColor: String | ThemedColor = null,
-    inactiveLabelStyle: js.UndefOr[Null | StyleProp[TextStyle]] = js.undefined,
-    inactiveTintColor: String | ThemedColor = null,
-    itemStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
-    itemsContainerStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
-    labelStyle: js.UndefOr[Null | StyleProp[TextStyle]] = js.undefined
+    screenProps: js.Any
   ): DrawerContentComponentProps = {
     val __obj = js.Dynamic.literal(descriptors = descriptors.asInstanceOf[js.Any], drawerOpenProgress = drawerOpenProgress.asInstanceOf[js.Any], drawerPosition = drawerPosition.asInstanceOf[js.Any], getLabel = js.Any.fromFunction1(getLabel), items = items.asInstanceOf[js.Any], navigation = navigation.asInstanceOf[js.Any], onItemPress = js.Any.fromFunction1(onItemPress), renderIcon = js.Any.fromFunction1(renderIcon), screenProps = screenProps.asInstanceOf[js.Any])
-    if (activeBackgroundColor != null) __obj.updateDynamic("activeBackgroundColor")(activeBackgroundColor.asInstanceOf[js.Any])
-    if (!js.isUndefined(activeItemKey)) __obj.updateDynamic("activeItemKey")(activeItemKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(activeLabelStyle)) __obj.updateDynamic("activeLabelStyle")(activeLabelStyle.asInstanceOf[js.Any])
-    if (activeTintColor != null) __obj.updateDynamic("activeTintColor")(activeTintColor.asInstanceOf[js.Any])
-    if (!js.isUndefined(iconContainerStyle)) __obj.updateDynamic("iconContainerStyle")(iconContainerStyle.asInstanceOf[js.Any])
-    if (inactiveBackgroundColor != null) __obj.updateDynamic("inactiveBackgroundColor")(inactiveBackgroundColor.asInstanceOf[js.Any])
-    if (!js.isUndefined(inactiveLabelStyle)) __obj.updateDynamic("inactiveLabelStyle")(inactiveLabelStyle.asInstanceOf[js.Any])
-    if (inactiveTintColor != null) __obj.updateDynamic("inactiveTintColor")(inactiveTintColor.asInstanceOf[js.Any])
-    if (!js.isUndefined(itemStyle)) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(itemsContainerStyle)) __obj.updateDynamic("itemsContainerStyle")(itemsContainerStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(labelStyle)) __obj.updateDynamic("labelStyle")(labelStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[DrawerContentComponentProps]
   }
+  @scala.inline
+  implicit class DrawerContentComponentPropsOps[Self <: DrawerContentComponentProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDescriptors(value: SceneDescriptorMap): Self = this.set("descriptors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDrawerOpenProgress(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Animated.Node<number> */ js.Any
+    ): Self = this.set("drawerOpenProgress", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDrawerPosition(value: left | right): Self = this.set("drawerPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setGetLabel(value: Scene => TagMod[Any]): Self = this.set("getLabel", js.Any.fromFunction1(value))
+    @scala.inline
+    def setItems(value: js.Array[NavigationRoute[NavigationParams]]): Self = this.set("items", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNavigation(value: NavigationScreenProp[NavigationDrawerState, NavigationParams]): Self = this.set("navigation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOnItemPress(value: Focused => Unit): Self = this.set("onItemPress", js.Any.fromFunction1(value))
+    @scala.inline
+    def setRenderIcon(value: Scene => TagMod[Any]): Self = this.set("renderIcon", js.Any.fromFunction1(value))
+    @scala.inline
+    def setScreenProps(value: js.Any): Self = this.set("screenProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setActiveBackgroundColor(value: String | ThemedColor): Self = this.set("activeBackgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteActiveBackgroundColor: Self = this.set("activeBackgroundColor", js.undefined)
+    @scala.inline
+    def setActiveItemKey(value: String): Self = this.set("activeItemKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteActiveItemKey: Self = this.set("activeItemKey", js.undefined)
+    @scala.inline
+    def setActiveItemKeyNull: Self = this.set("activeItemKey", null)
+    @scala.inline
+    def setActiveLabelStyle(value: StyleProp[TextStyle]): Self = this.set("activeLabelStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteActiveLabelStyle: Self = this.set("activeLabelStyle", js.undefined)
+    @scala.inline
+    def setActiveLabelStyleNull: Self = this.set("activeLabelStyle", null)
+    @scala.inline
+    def setActiveTintColor(value: String | ThemedColor): Self = this.set("activeTintColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteActiveTintColor: Self = this.set("activeTintColor", js.undefined)
+    @scala.inline
+    def setIconContainerStyle(value: StyleProp[ViewStyle]): Self = this.set("iconContainerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIconContainerStyle: Self = this.set("iconContainerStyle", js.undefined)
+    @scala.inline
+    def setIconContainerStyleNull: Self = this.set("iconContainerStyle", null)
+    @scala.inline
+    def setInactiveBackgroundColor(value: String | ThemedColor): Self = this.set("inactiveBackgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInactiveBackgroundColor: Self = this.set("inactiveBackgroundColor", js.undefined)
+    @scala.inline
+    def setInactiveLabelStyle(value: StyleProp[TextStyle]): Self = this.set("inactiveLabelStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInactiveLabelStyle: Self = this.set("inactiveLabelStyle", js.undefined)
+    @scala.inline
+    def setInactiveLabelStyleNull: Self = this.set("inactiveLabelStyle", null)
+    @scala.inline
+    def setInactiveTintColor(value: String | ThemedColor): Self = this.set("inactiveTintColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInactiveTintColor: Self = this.set("inactiveTintColor", js.undefined)
+    @scala.inline
+    def setItemStyle(value: StyleProp[ViewStyle]): Self = this.set("itemStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteItemStyle: Self = this.set("itemStyle", js.undefined)
+    @scala.inline
+    def setItemStyleNull: Self = this.set("itemStyle", null)
+    @scala.inline
+    def setItemsContainerStyle(value: StyleProp[ViewStyle]): Self = this.set("itemsContainerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteItemsContainerStyle: Self = this.set("itemsContainerStyle", js.undefined)
+    @scala.inline
+    def setItemsContainerStyleNull: Self = this.set("itemsContainerStyle", null)
+    @scala.inline
+    def setLabelStyle(value: StyleProp[TextStyle]): Self = this.set("labelStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLabelStyle: Self = this.set("labelStyle", js.undefined)
+    @scala.inline
+    def setLabelStyleNull: Self = this.set("labelStyle", null)
+  }
+  
 }
 

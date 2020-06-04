@@ -49,20 +49,42 @@ trait TokenizeOptions extends js.Object {
 
 object TokenizeOptions {
   @scala.inline
-  def apply(
-    escapedString: js.UndefOr[Boolean] = js.undefined,
-    interpolationConfig: InterpolationConfig = null,
-    leadingTriviaChars: js.Array[String] = null,
-    range: LexerRange = null,
-    tokenizeExpansionForms: js.UndefOr[Boolean] = js.undefined
-  ): TokenizeOptions = {
+  def apply(): TokenizeOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(escapedString)) __obj.updateDynamic("escapedString")(escapedString.get.asInstanceOf[js.Any])
-    if (interpolationConfig != null) __obj.updateDynamic("interpolationConfig")(interpolationConfig.asInstanceOf[js.Any])
-    if (leadingTriviaChars != null) __obj.updateDynamic("leadingTriviaChars")(leadingTriviaChars.asInstanceOf[js.Any])
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    if (!js.isUndefined(tokenizeExpansionForms)) __obj.updateDynamic("tokenizeExpansionForms")(tokenizeExpansionForms.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TokenizeOptions]
   }
+  @scala.inline
+  implicit class TokenizeOptionsOps[Self <: TokenizeOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setEscapedString(value: Boolean): Self = this.set("escapedString", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEscapedString: Self = this.set("escapedString", js.undefined)
+    @scala.inline
+    def setInterpolationConfig(value: InterpolationConfig): Self = this.set("interpolationConfig", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInterpolationConfig: Self = this.set("interpolationConfig", js.undefined)
+    @scala.inline
+    def setLeadingTriviaChars(value: js.Array[String]): Self = this.set("leadingTriviaChars", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLeadingTriviaChars: Self = this.set("leadingTriviaChars", js.undefined)
+    @scala.inline
+    def setRange(value: LexerRange): Self = this.set("range", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRange: Self = this.set("range", js.undefined)
+    @scala.inline
+    def setTokenizeExpansionForms(value: Boolean): Self = this.set("tokenizeExpansionForms", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTokenizeExpansionForms: Self = this.set("tokenizeExpansionForms", js.undefined)
+  }
+  
 }
 

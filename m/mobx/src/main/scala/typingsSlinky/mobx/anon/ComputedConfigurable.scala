@@ -29,26 +29,54 @@ trait ComputedConfigurable extends js.Object {
 
 object ComputedConfigurable {
   @scala.inline
-  def apply(
-    computedConfigurable: js.UndefOr[Boolean] = js.undefined,
-    computedRequiresReaction: js.UndefOr[Boolean] = js.undefined,
-    disableErrorBoundaries: js.UndefOr[Boolean] = js.undefined,
-    enforceActions: Boolean | strict | never | always | observed = null,
-    isolateGlobalState: js.UndefOr[Boolean] = js.undefined,
-    observableRequiresReaction: js.UndefOr[Boolean] = js.undefined,
-    reactionRequiresObservable: js.UndefOr[Boolean] = js.undefined,
-    reactionScheduler: /* f */ js.Function0[Unit] => Unit = null
-  ): ComputedConfigurable = {
+  def apply(): ComputedConfigurable = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(computedConfigurable)) __obj.updateDynamic("computedConfigurable")(computedConfigurable.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(computedRequiresReaction)) __obj.updateDynamic("computedRequiresReaction")(computedRequiresReaction.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableErrorBoundaries)) __obj.updateDynamic("disableErrorBoundaries")(disableErrorBoundaries.get.asInstanceOf[js.Any])
-    if (enforceActions != null) __obj.updateDynamic("enforceActions")(enforceActions.asInstanceOf[js.Any])
-    if (!js.isUndefined(isolateGlobalState)) __obj.updateDynamic("isolateGlobalState")(isolateGlobalState.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(observableRequiresReaction)) __obj.updateDynamic("observableRequiresReaction")(observableRequiresReaction.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(reactionRequiresObservable)) __obj.updateDynamic("reactionRequiresObservable")(reactionRequiresObservable.get.asInstanceOf[js.Any])
-    if (reactionScheduler != null) __obj.updateDynamic("reactionScheduler")(js.Any.fromFunction1(reactionScheduler))
     __obj.asInstanceOf[ComputedConfigurable]
   }
+  @scala.inline
+  implicit class ComputedConfigurableOps[Self <: ComputedConfigurable] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setComputedConfigurable(value: Boolean): Self = this.set("computedConfigurable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteComputedConfigurable: Self = this.set("computedConfigurable", js.undefined)
+    @scala.inline
+    def setComputedRequiresReaction(value: Boolean): Self = this.set("computedRequiresReaction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteComputedRequiresReaction: Self = this.set("computedRequiresReaction", js.undefined)
+    @scala.inline
+    def setDisableErrorBoundaries(value: Boolean): Self = this.set("disableErrorBoundaries", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisableErrorBoundaries: Self = this.set("disableErrorBoundaries", js.undefined)
+    @scala.inline
+    def setEnforceActions(value: Boolean | strict | never | always | observed): Self = this.set("enforceActions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEnforceActions: Self = this.set("enforceActions", js.undefined)
+    @scala.inline
+    def setIsolateGlobalState(value: Boolean): Self = this.set("isolateGlobalState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIsolateGlobalState: Self = this.set("isolateGlobalState", js.undefined)
+    @scala.inline
+    def setObservableRequiresReaction(value: Boolean): Self = this.set("observableRequiresReaction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteObservableRequiresReaction: Self = this.set("observableRequiresReaction", js.undefined)
+    @scala.inline
+    def setReactionRequiresObservable(value: Boolean): Self = this.set("reactionRequiresObservable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteReactionRequiresObservable: Self = this.set("reactionRequiresObservable", js.undefined)
+    @scala.inline
+    def setReactionScheduler(value: /* f */ js.Function0[Unit] => Unit): Self = this.set("reactionScheduler", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteReactionScheduler: Self = this.set("reactionScheduler", js.undefined)
+  }
+  
 }
 

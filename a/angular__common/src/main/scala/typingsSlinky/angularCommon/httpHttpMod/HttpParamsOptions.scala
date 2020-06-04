@@ -23,16 +23,34 @@ trait HttpParamsOptions extends js.Object {
 
 object HttpParamsOptions {
   @scala.inline
-  def apply(
-    encoder: HttpParameterCodec = null,
-    fromObject: StringDictionary[String | js.Array[String]] = null,
-    fromString: String = null
-  ): HttpParamsOptions = {
+  def apply(): HttpParamsOptions = {
     val __obj = js.Dynamic.literal()
-    if (encoder != null) __obj.updateDynamic("encoder")(encoder.asInstanceOf[js.Any])
-    if (fromObject != null) __obj.updateDynamic("fromObject")(fromObject.asInstanceOf[js.Any])
-    if (fromString != null) __obj.updateDynamic("fromString")(fromString.asInstanceOf[js.Any])
     __obj.asInstanceOf[HttpParamsOptions]
   }
+  @scala.inline
+  implicit class HttpParamsOptionsOps[Self <: HttpParamsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setEncoder(value: HttpParameterCodec): Self = this.set("encoder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEncoder: Self = this.set("encoder", js.undefined)
+    @scala.inline
+    def setFromObject(value: StringDictionary[String | js.Array[String]]): Self = this.set("fromObject", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFromObject: Self = this.set("fromObject", js.undefined)
+    @scala.inline
+    def setFromString(value: String): Self = this.set("fromString", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFromString: Self = this.set("fromString", js.undefined)
+  }
+  
 }
 

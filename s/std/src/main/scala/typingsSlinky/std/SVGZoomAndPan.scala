@@ -15,5 +15,20 @@ object SVGZoomAndPan {
     val __obj = js.Dynamic.literal(zoomAndPan = zoomAndPan.asInstanceOf[js.Any])
     __obj.asInstanceOf[SVGZoomAndPan]
   }
+  @scala.inline
+  implicit class SVGZoomAndPanOps[Self <: org.scalajs.dom.raw.SVGZoomAndPan] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setZoomAndPan(value: Double): Self = this.set("zoomAndPan", value.asInstanceOf[js.Any])
+  }
+  
 }
 

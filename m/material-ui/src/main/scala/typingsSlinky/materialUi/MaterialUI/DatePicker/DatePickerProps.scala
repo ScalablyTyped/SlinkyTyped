@@ -1,6 +1,7 @@
 package typingsSlinky.materialUi.MaterialUI.DatePicker
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticTouchEvent
@@ -74,106 +75,224 @@ trait DatePickerProps extends js.Object {
 
 object DatePickerProps {
   @scala.inline
-  def apply(
-    DateTimeFormat: Call = null,
-    autoOk: js.UndefOr[Boolean] = js.undefined,
-    cancelLabel: TagMod[Any] = null,
-    className: String = null,
-    container: dialog | `inline` = null,
-    defaultDate: js.Date = null,
-    defaultValue: String = null,
-    dialogContainerStyle: CSSProperties = null,
-    disableYearSelection: js.UndefOr[Boolean] = js.undefined,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    errorStyle: CSSProperties = null,
-    errorText: TagMod[Any] = null,
-    firstDayOfWeek: js.UndefOr[Double] = js.undefined,
-    floatingLabelStyle: CSSProperties = null,
-    floatingLabelText: TagMod[Any] = null,
-    formatDate: /* date */ js.Date => String = null,
-    fullWidth: js.UndefOr[Boolean] = js.undefined,
-    hideCalendarDate: js.UndefOr[Boolean] = js.undefined,
-    hintStyle: CSSProperties = null,
-    hintText: TagMod[Any] = null,
-    id: String = null,
-    inputStyle: CSSProperties = null,
-    locale: String = null,
-    maxDate: js.Date = null,
-    minDate: js.Date = null,
-    mode: portrait | landscape = null,
-    name: String = null,
-    okLabel: TagMod[Any] = null,
-    onBlur: SyntheticFocusEvent[js.Object] => Unit = null,
-    onChange: (/* e */ js.Any, /* date */ js.Date) => Unit = null,
-    onClick: SyntheticTouchEvent[js.Object] => Unit = null,
-    onDismiss: () => Unit = null,
-    onFocus: SyntheticFocusEvent[js.Object] => Unit = null,
-    onKeyDown: SyntheticKeyboardEvent[js.Object] => Unit = null,
-    onShow: () => Unit = null,
-    openToYearSelection: js.UndefOr[Boolean] = js.undefined,
-    rows: js.UndefOr[Double] = js.undefined,
-    rowsMax: js.UndefOr[Double] = js.undefined,
-    shouldDisableDate: /* day */ js.Date => Boolean = null,
-    style: CSSProperties = null,
-    textFieldStyle: CSSProperties = null,
-    `type`: String = null,
-    underlineDisabledStyle: CSSProperties = null,
-    underlineFocusStyle: CSSProperties = null,
-    underlineShow: js.UndefOr[Boolean] = js.undefined,
-    underlineStyle: CSSProperties = null,
-    utils: utils = null,
-    value: js.Date = null
-  ): DatePickerProps = {
+  def apply(): DatePickerProps = {
     val __obj = js.Dynamic.literal()
-    if (DateTimeFormat != null) __obj.updateDynamic("DateTimeFormat")(DateTimeFormat.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoOk)) __obj.updateDynamic("autoOk")(autoOk.get.asInstanceOf[js.Any])
-    if (cancelLabel != null) __obj.updateDynamic("cancelLabel")(cancelLabel.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (defaultDate != null) __obj.updateDynamic("defaultDate")(defaultDate.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (dialogContainerStyle != null) __obj.updateDynamic("dialogContainerStyle")(dialogContainerStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableYearSelection)) __obj.updateDynamic("disableYearSelection")(disableYearSelection.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (errorStyle != null) __obj.updateDynamic("errorStyle")(errorStyle.asInstanceOf[js.Any])
-    if (errorText != null) __obj.updateDynamic("errorText")(errorText.asInstanceOf[js.Any])
-    if (!js.isUndefined(firstDayOfWeek)) __obj.updateDynamic("firstDayOfWeek")(firstDayOfWeek.get.asInstanceOf[js.Any])
-    if (floatingLabelStyle != null) __obj.updateDynamic("floatingLabelStyle")(floatingLabelStyle.asInstanceOf[js.Any])
-    if (floatingLabelText != null) __obj.updateDynamic("floatingLabelText")(floatingLabelText.asInstanceOf[js.Any])
-    if (formatDate != null) __obj.updateDynamic("formatDate")(js.Any.fromFunction1(formatDate))
-    if (!js.isUndefined(fullWidth)) __obj.updateDynamic("fullWidth")(fullWidth.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideCalendarDate)) __obj.updateDynamic("hideCalendarDate")(hideCalendarDate.get.asInstanceOf[js.Any])
-    if (hintStyle != null) __obj.updateDynamic("hintStyle")(hintStyle.asInstanceOf[js.Any])
-    if (hintText != null) __obj.updateDynamic("hintText")(hintText.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (inputStyle != null) __obj.updateDynamic("inputStyle")(inputStyle.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
-    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (okLabel != null) __obj.updateDynamic("okLabel")(okLabel.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onDismiss != null) __obj.updateDynamic("onDismiss")(js.Any.fromFunction0(onDismiss))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
-    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction0(onShow))
-    if (!js.isUndefined(openToYearSelection)) __obj.updateDynamic("openToYearSelection")(openToYearSelection.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(rows)) __obj.updateDynamic("rows")(rows.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(rowsMax)) __obj.updateDynamic("rowsMax")(rowsMax.get.asInstanceOf[js.Any])
-    if (shouldDisableDate != null) __obj.updateDynamic("shouldDisableDate")(js.Any.fromFunction1(shouldDisableDate))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (textFieldStyle != null) __obj.updateDynamic("textFieldStyle")(textFieldStyle.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (underlineDisabledStyle != null) __obj.updateDynamic("underlineDisabledStyle")(underlineDisabledStyle.asInstanceOf[js.Any])
-    if (underlineFocusStyle != null) __obj.updateDynamic("underlineFocusStyle")(underlineFocusStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(underlineShow)) __obj.updateDynamic("underlineShow")(underlineShow.get.asInstanceOf[js.Any])
-    if (underlineStyle != null) __obj.updateDynamic("underlineStyle")(underlineStyle.asInstanceOf[js.Any])
-    if (utils != null) __obj.updateDynamic("utils")(utils.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[DatePickerProps]
   }
+  @scala.inline
+  implicit class DatePickerPropsOps[Self <: DatePickerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDateTimeFormat(value: Call): Self = this.set("DateTimeFormat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDateTimeFormat: Self = this.set("DateTimeFormat", js.undefined)
+    @scala.inline
+    def setAutoOk(value: Boolean): Self = this.set("autoOk", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAutoOk: Self = this.set("autoOk", js.undefined)
+    @scala.inline
+    def setCancelLabelReactElement(value: ReactElement): Self = this.set("cancelLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCancelLabel(value: TagMod[Any]): Self = this.set("cancelLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCancelLabel: Self = this.set("cancelLabel", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setContainer(value: dialog | `inline`): Self = this.set("container", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContainer: Self = this.set("container", js.undefined)
+    @scala.inline
+    def setDefaultDate(value: js.Date): Self = this.set("defaultDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultDate: Self = this.set("defaultDate", js.undefined)
+    @scala.inline
+    def setDefaultValue(value: String): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
+    @scala.inline
+    def setDialogContainerStyle(value: CSSProperties): Self = this.set("dialogContainerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDialogContainerStyle: Self = this.set("dialogContainerStyle", js.undefined)
+    @scala.inline
+    def setDisableYearSelection(value: Boolean): Self = this.set("disableYearSelection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisableYearSelection: Self = this.set("disableYearSelection", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setErrorStyle(value: CSSProperties): Self = this.set("errorStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteErrorStyle: Self = this.set("errorStyle", js.undefined)
+    @scala.inline
+    def setErrorTextReactElement(value: ReactElement): Self = this.set("errorText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setErrorText(value: TagMod[Any]): Self = this.set("errorText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteErrorText: Self = this.set("errorText", js.undefined)
+    @scala.inline
+    def setFirstDayOfWeek(value: Double): Self = this.set("firstDayOfWeek", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFirstDayOfWeek: Self = this.set("firstDayOfWeek", js.undefined)
+    @scala.inline
+    def setFloatingLabelStyle(value: CSSProperties): Self = this.set("floatingLabelStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFloatingLabelStyle: Self = this.set("floatingLabelStyle", js.undefined)
+    @scala.inline
+    def setFloatingLabelTextReactElement(value: ReactElement): Self = this.set("floatingLabelText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFloatingLabelText(value: TagMod[Any]): Self = this.set("floatingLabelText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFloatingLabelText: Self = this.set("floatingLabelText", js.undefined)
+    @scala.inline
+    def setFormatDate(value: /* date */ js.Date => String): Self = this.set("formatDate", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteFormatDate: Self = this.set("formatDate", js.undefined)
+    @scala.inline
+    def setFullWidth(value: Boolean): Self = this.set("fullWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFullWidth: Self = this.set("fullWidth", js.undefined)
+    @scala.inline
+    def setHideCalendarDate(value: Boolean): Self = this.set("hideCalendarDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHideCalendarDate: Self = this.set("hideCalendarDate", js.undefined)
+    @scala.inline
+    def setHintStyle(value: CSSProperties): Self = this.set("hintStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHintStyle: Self = this.set("hintStyle", js.undefined)
+    @scala.inline
+    def setHintTextReactElement(value: ReactElement): Self = this.set("hintText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHintText(value: TagMod[Any]): Self = this.set("hintText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHintText: Self = this.set("hintText", js.undefined)
+    @scala.inline
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteId: Self = this.set("id", js.undefined)
+    @scala.inline
+    def setInputStyle(value: CSSProperties): Self = this.set("inputStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInputStyle: Self = this.set("inputStyle", js.undefined)
+    @scala.inline
+    def setLocale(value: String): Self = this.set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLocale: Self = this.set("locale", js.undefined)
+    @scala.inline
+    def setMaxDate(value: js.Date): Self = this.set("maxDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxDate: Self = this.set("maxDate", js.undefined)
+    @scala.inline
+    def setMinDate(value: js.Date): Self = this.set("minDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinDate: Self = this.set("minDate", js.undefined)
+    @scala.inline
+    def setMode(value: portrait | landscape): Self = this.set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMode: Self = this.set("mode", js.undefined)
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteName: Self = this.set("name", js.undefined)
+    @scala.inline
+    def setOkLabelReactElement(value: ReactElement): Self = this.set("okLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOkLabel(value: TagMod[Any]): Self = this.set("okLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOkLabel: Self = this.set("okLabel", js.undefined)
+    @scala.inline
+    def setOnBlur(value: SyntheticFocusEvent[js.Object] => Unit): Self = this.set("onBlur", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnBlur: Self = this.set("onBlur", js.undefined)
+    @scala.inline
+    def setOnChange(value: (/* e */ js.Any, /* date */ js.Date) => Unit): Self = this.set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnChange: Self = this.set("onChange", js.undefined)
+    @scala.inline
+    def setOnClick(value: SyntheticTouchEvent[js.Object] => Unit): Self = this.set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnClick: Self = this.set("onClick", js.undefined)
+    @scala.inline
+    def setOnDismiss(value: () => Unit): Self = this.set("onDismiss", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnDismiss: Self = this.set("onDismiss", js.undefined)
+    @scala.inline
+    def setOnFocus(value: SyntheticFocusEvent[js.Object] => Unit): Self = this.set("onFocus", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnFocus: Self = this.set("onFocus", js.undefined)
+    @scala.inline
+    def setOnKeyDown(value: SyntheticKeyboardEvent[js.Object] => Unit): Self = this.set("onKeyDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnKeyDown: Self = this.set("onKeyDown", js.undefined)
+    @scala.inline
+    def setOnShow(value: () => Unit): Self = this.set("onShow", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnShow: Self = this.set("onShow", js.undefined)
+    @scala.inline
+    def setOpenToYearSelection(value: Boolean): Self = this.set("openToYearSelection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOpenToYearSelection: Self = this.set("openToYearSelection", js.undefined)
+    @scala.inline
+    def setRows(value: Double): Self = this.set("rows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRows: Self = this.set("rows", js.undefined)
+    @scala.inline
+    def setRowsMax(value: Double): Self = this.set("rowsMax", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRowsMax: Self = this.set("rowsMax", js.undefined)
+    @scala.inline
+    def setShouldDisableDate(value: /* day */ js.Date => Boolean): Self = this.set("shouldDisableDate", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteShouldDisableDate: Self = this.set("shouldDisableDate", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+    @scala.inline
+    def setTextFieldStyle(value: CSSProperties): Self = this.set("textFieldStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTextFieldStyle: Self = this.set("textFieldStyle", js.undefined)
+    @scala.inline
+    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteType: Self = this.set("type", js.undefined)
+    @scala.inline
+    def setUnderlineDisabledStyle(value: CSSProperties): Self = this.set("underlineDisabledStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUnderlineDisabledStyle: Self = this.set("underlineDisabledStyle", js.undefined)
+    @scala.inline
+    def setUnderlineFocusStyle(value: CSSProperties): Self = this.set("underlineFocusStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUnderlineFocusStyle: Self = this.set("underlineFocusStyle", js.undefined)
+    @scala.inline
+    def setUnderlineShow(value: Boolean): Self = this.set("underlineShow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUnderlineShow: Self = this.set("underlineShow", js.undefined)
+    @scala.inline
+    def setUnderlineStyle(value: CSSProperties): Self = this.set("underlineStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUnderlineStyle: Self = this.set("underlineStyle", js.undefined)
+    @scala.inline
+    def setUtils(value: utils): Self = this.set("utils", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUtils: Self = this.set("utils", js.undefined)
+    @scala.inline
+    def setValue(value: js.Date): Self = this.set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
+  }
+  
 }
 

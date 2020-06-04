@@ -14,17 +14,36 @@ trait ShareReplayConfig extends js.Object {
 
 object ShareReplayConfig {
   @scala.inline
-  def apply(
-    refCount: Boolean,
-    bufferSize: js.UndefOr[Double] = js.undefined,
-    scheduler: SchedulerLike = null,
-    windowTime: js.UndefOr[Double] = js.undefined
-  ): ShareReplayConfig = {
+  def apply(refCount: Boolean): ShareReplayConfig = {
     val __obj = js.Dynamic.literal(refCount = refCount.asInstanceOf[js.Any])
-    if (!js.isUndefined(bufferSize)) __obj.updateDynamic("bufferSize")(bufferSize.get.asInstanceOf[js.Any])
-    if (scheduler != null) __obj.updateDynamic("scheduler")(scheduler.asInstanceOf[js.Any])
-    if (!js.isUndefined(windowTime)) __obj.updateDynamic("windowTime")(windowTime.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShareReplayConfig]
   }
+  @scala.inline
+  implicit class ShareReplayConfigOps[Self <: ShareReplayConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setRefCount(value: Boolean): Self = this.set("refCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBufferSize(value: Double): Self = this.set("bufferSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBufferSize: Self = this.set("bufferSize", js.undefined)
+    @scala.inline
+    def setScheduler(value: SchedulerLike): Self = this.set("scheduler", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScheduler: Self = this.set("scheduler", js.undefined)
+    @scala.inline
+    def setWindowTime(value: Double): Self = this.set("windowTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWindowTime: Self = this.set("windowTime", js.undefined)
+  }
+  
 }
 

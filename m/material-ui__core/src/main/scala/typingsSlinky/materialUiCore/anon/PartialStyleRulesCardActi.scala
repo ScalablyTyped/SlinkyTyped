@@ -15,16 +15,34 @@ trait PartialStyleRulesCardActi extends js.Object {
 
 object PartialStyleRulesCardActi {
   @scala.inline
-  def apply(
-    focusHighlight: CSSProperties = null,
-    focusVisible: CSSProperties = null,
-    root: CSSProperties = null
-  ): PartialStyleRulesCardActi = {
+  def apply(): PartialStyleRulesCardActi = {
     val __obj = js.Dynamic.literal()
-    if (focusHighlight != null) __obj.updateDynamic("focusHighlight")(focusHighlight.asInstanceOf[js.Any])
-    if (focusVisible != null) __obj.updateDynamic("focusVisible")(focusVisible.asInstanceOf[js.Any])
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialStyleRulesCardActi]
   }
+  @scala.inline
+  implicit class PartialStyleRulesCardActiOps[Self <: PartialStyleRulesCardActi] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setFocusHighlight(value: CSSProperties): Self = this.set("focusHighlight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFocusHighlight: Self = this.set("focusHighlight", js.undefined)
+    @scala.inline
+    def setFocusVisible(value: CSSProperties): Self = this.set("focusVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFocusVisible: Self = this.set("focusVisible", js.undefined)
+    @scala.inline
+    def setRoot(value: CSSProperties): Self = this.set("root", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRoot: Self = this.set("root", js.undefined)
+  }
+  
 }
 

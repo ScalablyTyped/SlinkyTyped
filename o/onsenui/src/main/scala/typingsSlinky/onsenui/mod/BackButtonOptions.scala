@@ -21,12 +21,34 @@ trait BackButtonOptions extends js.Object {
 
 object BackButtonOptions {
   @scala.inline
-  def apply(animation: String = null, animationOptions: String = null, callback: js.Function = null): BackButtonOptions = {
+  def apply(): BackButtonOptions = {
     val __obj = js.Dynamic.literal()
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (animationOptions != null) __obj.updateDynamic("animationOptions")(animationOptions.asInstanceOf[js.Any])
-    if (callback != null) __obj.updateDynamic("callback")(callback.asInstanceOf[js.Any])
     __obj.asInstanceOf[BackButtonOptions]
   }
+  @scala.inline
+  implicit class BackButtonOptionsOps[Self <: BackButtonOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAnimation(value: String): Self = this.set("animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAnimation: Self = this.set("animation", js.undefined)
+    @scala.inline
+    def setAnimationOptions(value: String): Self = this.set("animationOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAnimationOptions: Self = this.set("animationOptions", js.undefined)
+    @scala.inline
+    def setCallback(value: js.Function): Self = this.set("callback", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCallback: Self = this.set("callback", js.undefined)
+  }
+  
 }
 

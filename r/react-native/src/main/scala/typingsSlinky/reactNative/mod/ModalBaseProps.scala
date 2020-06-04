@@ -43,22 +43,46 @@ trait ModalBaseProps extends js.Object {
 
 object ModalBaseProps {
   @scala.inline
-  def apply(
-    animated: js.UndefOr[Boolean] = js.undefined,
-    animationType: none | slide | fade = null,
-    onRequestClose: () => Unit = null,
-    onShow: SyntheticEvent[NodeHandle, _] => Unit = null,
-    transparent: js.UndefOr[Boolean] = js.undefined,
-    visible: js.UndefOr[Boolean] = js.undefined
-  ): ModalBaseProps = {
+  def apply(): ModalBaseProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(animated)) __obj.updateDynamic("animated")(animated.get.asInstanceOf[js.Any])
-    if (animationType != null) __obj.updateDynamic("animationType")(animationType.asInstanceOf[js.Any])
-    if (onRequestClose != null) __obj.updateDynamic("onRequestClose")(js.Any.fromFunction0(onRequestClose))
-    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction1(onShow))
-    if (!js.isUndefined(transparent)) __obj.updateDynamic("transparent")(transparent.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModalBaseProps]
   }
+  @scala.inline
+  implicit class ModalBasePropsOps[Self <: ModalBaseProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAnimated(value: Boolean): Self = this.set("animated", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAnimated: Self = this.set("animated", js.undefined)
+    @scala.inline
+    def setAnimationType(value: none | slide | fade): Self = this.set("animationType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAnimationType: Self = this.set("animationType", js.undefined)
+    @scala.inline
+    def setOnRequestClose(value: () => Unit): Self = this.set("onRequestClose", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnRequestClose: Self = this.set("onRequestClose", js.undefined)
+    @scala.inline
+    def setOnShow(value: SyntheticEvent[NodeHandle, _] => Unit): Self = this.set("onShow", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnShow: Self = this.set("onShow", js.undefined)
+    @scala.inline
+    def setTransparent(value: Boolean): Self = this.set("transparent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTransparent: Self = this.set("transparent", js.undefined)
+    @scala.inline
+    def setVisible(value: Boolean): Self = this.set("visible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVisible: Self = this.set("visible", js.undefined)
+  }
+  
 }
 

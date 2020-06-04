@@ -1,11 +1,5 @@
 package typingsSlinky.reactNativeGestureHandler.mod
 
-import typingsSlinky.react.mod.Ref
-import typingsSlinky.reactNativeGestureHandler.anon.Bottom
-import typingsSlinky.reactNativeGestureHandler.anon.BottomHeight
-import typingsSlinky.reactNativeGestureHandler.anon.Height
-import typingsSlinky.reactNativeGestureHandler.anon.Left
-import typingsSlinky.reactNativeGestureHandler.anon.Right
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,30 +13,38 @@ trait NativeViewGestureHandlerProperties extends GestureHandlerProperties {
 
 object NativeViewGestureHandlerProperties {
   @scala.inline
-  def apply(
-    disallowInterruption: js.UndefOr[Boolean] = js.undefined,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    hitSlop: Double | Bottom | Left | Right | Height | BottomHeight = null,
-    id: String = null,
-    onGestureEvent: /* event */ NativeViewGestureHandlerGestureEvent => Unit = null,
-    onHandlerStateChange: /* event */ NativeViewGestureHandlerStateChangeEvent => Unit = null,
-    shouldActivateOnStart: js.UndefOr[Boolean] = js.undefined,
-    shouldCancelWhenOutside: js.UndefOr[Boolean] = js.undefined,
-    simultaneousHandlers: js.UndefOr[Null | Ref[_] | js.Array[Ref[_]]] = js.undefined,
-    waitFor: js.UndefOr[Null | Ref[_] | js.Array[Ref[_]]] = js.undefined
-  ): NativeViewGestureHandlerProperties = {
+  def apply(): NativeViewGestureHandlerProperties = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(disallowInterruption)) __obj.updateDynamic("disallowInterruption")(disallowInterruption.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
-    if (hitSlop != null) __obj.updateDynamic("hitSlop")(hitSlop.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (onGestureEvent != null) __obj.updateDynamic("onGestureEvent")(js.Any.fromFunction1(onGestureEvent))
-    if (onHandlerStateChange != null) __obj.updateDynamic("onHandlerStateChange")(js.Any.fromFunction1(onHandlerStateChange))
-    if (!js.isUndefined(shouldActivateOnStart)) __obj.updateDynamic("shouldActivateOnStart")(shouldActivateOnStart.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(shouldCancelWhenOutside)) __obj.updateDynamic("shouldCancelWhenOutside")(shouldCancelWhenOutside.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(simultaneousHandlers)) __obj.updateDynamic("simultaneousHandlers")(simultaneousHandlers.asInstanceOf[js.Any])
-    if (!js.isUndefined(waitFor)) __obj.updateDynamic("waitFor")(waitFor.asInstanceOf[js.Any])
     __obj.asInstanceOf[NativeViewGestureHandlerProperties]
   }
+  @scala.inline
+  implicit class NativeViewGestureHandlerPropertiesOps[Self <: NativeViewGestureHandlerProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDisallowInterruption(value: Boolean): Self = this.set("disallowInterruption", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisallowInterruption: Self = this.set("disallowInterruption", js.undefined)
+    @scala.inline
+    def setOnGestureEvent(value: /* event */ NativeViewGestureHandlerGestureEvent => Unit): Self = this.set("onGestureEvent", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnGestureEvent: Self = this.set("onGestureEvent", js.undefined)
+    @scala.inline
+    def setOnHandlerStateChange(value: /* event */ NativeViewGestureHandlerStateChangeEvent => Unit): Self = this.set("onHandlerStateChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnHandlerStateChange: Self = this.set("onHandlerStateChange", js.undefined)
+    @scala.inline
+    def setShouldActivateOnStart(value: Boolean): Self = this.set("shouldActivateOnStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShouldActivateOnStart: Self = this.set("shouldActivateOnStart", js.undefined)
+  }
+  
 }
 

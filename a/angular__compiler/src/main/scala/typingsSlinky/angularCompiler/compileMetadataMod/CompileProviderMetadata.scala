@@ -16,23 +16,48 @@ trait CompileProviderMetadata extends js.Object {
 
 object CompileProviderMetadata {
   @scala.inline
-  def apply(
-    token: CompileTokenMetadata,
-    deps: js.Array[CompileDiDependencyMetadata] = null,
-    multi: js.UndefOr[Boolean] = js.undefined,
-    useClass: CompileTypeMetadata = null,
-    useExisting: CompileTokenMetadata = null,
-    useFactory: CompileFactoryMetadata = null,
-    useValue: js.Any = null
-  ): CompileProviderMetadata = {
+  def apply(token: CompileTokenMetadata): CompileProviderMetadata = {
     val __obj = js.Dynamic.literal(token = token.asInstanceOf[js.Any])
-    if (deps != null) __obj.updateDynamic("deps")(deps.asInstanceOf[js.Any])
-    if (!js.isUndefined(multi)) __obj.updateDynamic("multi")(multi.get.asInstanceOf[js.Any])
-    if (useClass != null) __obj.updateDynamic("useClass")(useClass.asInstanceOf[js.Any])
-    if (useExisting != null) __obj.updateDynamic("useExisting")(useExisting.asInstanceOf[js.Any])
-    if (useFactory != null) __obj.updateDynamic("useFactory")(useFactory.asInstanceOf[js.Any])
-    if (useValue != null) __obj.updateDynamic("useValue")(useValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompileProviderMetadata]
   }
+  @scala.inline
+  implicit class CompileProviderMetadataOps[Self <: CompileProviderMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setToken(value: CompileTokenMetadata): Self = this.set("token", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDeps(value: js.Array[CompileDiDependencyMetadata]): Self = this.set("deps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDeps: Self = this.set("deps", js.undefined)
+    @scala.inline
+    def setMulti(value: Boolean): Self = this.set("multi", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMulti: Self = this.set("multi", js.undefined)
+    @scala.inline
+    def setUseClass(value: CompileTypeMetadata): Self = this.set("useClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUseClass: Self = this.set("useClass", js.undefined)
+    @scala.inline
+    def setUseExisting(value: CompileTokenMetadata): Self = this.set("useExisting", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUseExisting: Self = this.set("useExisting", js.undefined)
+    @scala.inline
+    def setUseFactory(value: CompileFactoryMetadata): Self = this.set("useFactory", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUseFactory: Self = this.set("useFactory", js.undefined)
+    @scala.inline
+    def setUseValue(value: js.Any): Self = this.set("useValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUseValue: Self = this.set("useValue", js.undefined)
+  }
+  
 }
 

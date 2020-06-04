@@ -18,14 +18,37 @@ object TouchBarConstructorOptions {
   def apply(
     items: js.Array[
       TouchBarButton | TouchBarColorPicker | TouchBarGroup | TouchBarLabel | TouchBarPopover | TouchBarScrubber | TouchBarSegmentedControl | TouchBarSlider | TouchBarSpacer
-    ],
-    escapeItem: js.UndefOr[
-      Null | TouchBarButton | TouchBarColorPicker | TouchBarGroup | TouchBarLabel | TouchBarPopover | TouchBarScrubber | TouchBarSegmentedControl | TouchBarSlider | TouchBarSpacer
-    ] = js.undefined
+    ]
   ): TouchBarConstructorOptions = {
     val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
-    if (!js.isUndefined(escapeItem)) __obj.updateDynamic("escapeItem")(escapeItem.asInstanceOf[js.Any])
     __obj.asInstanceOf[TouchBarConstructorOptions]
   }
+  @scala.inline
+  implicit class TouchBarConstructorOptionsOps[Self <: TouchBarConstructorOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setItems(
+      value: js.Array[
+          TouchBarButton | TouchBarColorPicker | TouchBarGroup | TouchBarLabel | TouchBarPopover | TouchBarScrubber | TouchBarSegmentedControl | TouchBarSlider | TouchBarSpacer
+        ]
+    ): Self = this.set("items", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEscapeItem(
+      value: TouchBarButton | TouchBarColorPicker | TouchBarGroup | TouchBarLabel | TouchBarPopover | TouchBarScrubber | TouchBarSegmentedControl | TouchBarSlider | TouchBarSpacer
+    ): Self = this.set("escapeItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEscapeItem: Self = this.set("escapeItem", js.undefined)
+    @scala.inline
+    def setEscapeItemNull: Self = this.set("escapeItem", null)
+  }
+  
 }
 

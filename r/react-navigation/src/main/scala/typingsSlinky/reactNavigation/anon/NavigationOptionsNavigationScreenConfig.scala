@@ -3,6 +3,7 @@ package typingsSlinky.reactNavigation.anon
 import typingsSlinky.reactNavigation.mod.NavigationParams
 import typingsSlinky.reactNavigation.mod.NavigationRoute
 import typingsSlinky.reactNavigation.mod.NavigationScreenConfig
+import typingsSlinky.reactNavigation.mod.NavigationScreenConfigProps
 import typingsSlinky.reactNavigation.mod.NavigationSwitchProp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,16 +21,36 @@ trait NavigationOptionsNavigationScreenConfig[Params, ScreenProps] extends js.Ob
 
 object NavigationOptionsNavigationScreenConfig {
   @scala.inline
-  def apply[Params, ScreenProps](
-    navigationOptions: NavigationScreenConfig[
-      js.Object, 
-      NavigationSwitchProp[NavigationRoute[NavigationParams], Params], 
-      ScreenProps
-    ] = null
-  ): NavigationOptionsNavigationScreenConfig[Params, ScreenProps] = {
+  def apply[Params, ScreenProps](): NavigationOptionsNavigationScreenConfig[Params, ScreenProps] = {
     val __obj = js.Dynamic.literal()
-    if (navigationOptions != null) __obj.updateDynamic("navigationOptions")(navigationOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavigationOptionsNavigationScreenConfig[Params, ScreenProps]]
   }
+  @scala.inline
+  implicit class NavigationOptionsNavigationScreenConfigOps[Self <: NavigationOptionsNavigationScreenConfig[_, _], Params, ScreenProps] (val x: Self with (NavigationOptionsNavigationScreenConfig[Params, ScreenProps])) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setNavigationOptionsFunction1(
+      value: /* navigationOptionsContainer */ (NavigationScreenConfigProps[NavigationSwitchProp[NavigationRoute[NavigationParams], Params], ScreenProps]) with NavigationOptionsOptions[js.Object] => js.Object
+    ): Self = this.set("navigationOptions", js.Any.fromFunction1(value))
+    @scala.inline
+    def setNavigationOptions(
+      value: NavigationScreenConfig[
+          js.Object, 
+          NavigationSwitchProp[NavigationRoute[NavigationParams], Params], 
+          ScreenProps
+        ]
+    ): Self = this.set("navigationOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNavigationOptions: Self = this.set("navigationOptions", js.undefined)
+  }
+  
 }
 

@@ -73,6 +73,7 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.HtmlHTMLAttributes
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -208,7 +209,7 @@ object Avatar {
     @scala.inline
     def componentComponentClass(value: ReactComponentClass[AvatarProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
-    def component(value: ReactComponentClass[AvatarProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: ReactType[AvatarProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
     @scala.inline

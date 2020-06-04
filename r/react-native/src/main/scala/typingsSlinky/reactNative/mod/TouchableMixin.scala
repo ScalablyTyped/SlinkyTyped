@@ -73,5 +73,36 @@ object TouchableMixin {
     val __obj = js.Dynamic.literal(touchableGetHighlightDelayMS = js.Any.fromFunction0(touchableGetHighlightDelayMS), touchableGetHitSlop = js.Any.fromFunction0(touchableGetHitSlop), touchableGetLongPressDelayMS = js.Any.fromFunction0(touchableGetLongPressDelayMS), touchableGetPressOutDelayMS = js.Any.fromFunction0(touchableGetPressOutDelayMS), touchableGetPressRectOffset = js.Any.fromFunction0(touchableGetPressRectOffset), touchableHandleActivePressIn = js.Any.fromFunction1(touchableHandleActivePressIn), touchableHandleActivePressOut = js.Any.fromFunction1(touchableHandleActivePressOut), touchableHandleLongPress = js.Any.fromFunction1(touchableHandleLongPress), touchableHandlePress = js.Any.fromFunction1(touchableHandlePress))
     __obj.asInstanceOf[TouchableMixin]
   }
+  @scala.inline
+  implicit class TouchableMixinOps[Self <: TouchableMixin] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setTouchableGetHighlightDelayMS(value: () => Double): Self = this.set("touchableGetHighlightDelayMS", js.Any.fromFunction0(value))
+    @scala.inline
+    def setTouchableGetHitSlop(value: () => Insets): Self = this.set("touchableGetHitSlop", js.Any.fromFunction0(value))
+    @scala.inline
+    def setTouchableGetLongPressDelayMS(value: () => Double): Self = this.set("touchableGetLongPressDelayMS", js.Any.fromFunction0(value))
+    @scala.inline
+    def setTouchableGetPressOutDelayMS(value: () => Double): Self = this.set("touchableGetPressOutDelayMS", js.Any.fromFunction0(value))
+    @scala.inline
+    def setTouchableGetPressRectOffset(value: () => Insets): Self = this.set("touchableGetPressRectOffset", js.Any.fromFunction0(value))
+    @scala.inline
+    def setTouchableHandleActivePressIn(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = this.set("touchableHandleActivePressIn", js.Any.fromFunction1(value))
+    @scala.inline
+    def setTouchableHandleActivePressOut(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = this.set("touchableHandleActivePressOut", js.Any.fromFunction1(value))
+    @scala.inline
+    def setTouchableHandleLongPress(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = this.set("touchableHandleLongPress", js.Any.fromFunction1(value))
+    @scala.inline
+    def setTouchableHandlePress(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = this.set("touchableHandlePress", js.Any.fromFunction1(value))
+  }
+  
 }
 

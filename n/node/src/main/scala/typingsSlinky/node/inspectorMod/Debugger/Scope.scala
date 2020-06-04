@@ -30,20 +30,40 @@ trait Scope extends js.Object {
 
 object Scope {
   @scala.inline
-  def apply(
-    `object`: RemoteObject,
-    `type`: String,
-    endLocation: Location = null,
-    name: String = null,
-    startLocation: Location = null
-  ): Scope = {
+  def apply(`object`: RemoteObject, `type`: String): Scope = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (endLocation != null) __obj.updateDynamic("endLocation")(endLocation.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (startLocation != null) __obj.updateDynamic("startLocation")(startLocation.asInstanceOf[js.Any])
     __obj.asInstanceOf[Scope]
   }
+  @scala.inline
+  implicit class ScopeOps[Self <: Scope] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setObject(value: RemoteObject): Self = this.set("object", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEndLocation(value: Location): Self = this.set("endLocation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEndLocation: Self = this.set("endLocation", js.undefined)
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteName: Self = this.set("name", js.undefined)
+    @scala.inline
+    def setStartLocation(value: Location): Self = this.set("startLocation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStartLocation: Self = this.set("startLocation", js.undefined)
+  }
+  
 }
 

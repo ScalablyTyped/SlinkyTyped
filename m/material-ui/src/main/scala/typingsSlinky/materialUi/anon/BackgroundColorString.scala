@@ -10,10 +10,26 @@ trait BackgroundColorString extends js.Object {
 
 object BackgroundColorString {
   @scala.inline
-  def apply(backgroundColor: String = null): BackgroundColorString = {
+  def apply(): BackgroundColorString = {
     val __obj = js.Dynamic.literal()
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
     __obj.asInstanceOf[BackgroundColorString]
   }
+  @scala.inline
+  implicit class BackgroundColorStringOps[Self <: BackgroundColorString] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBackgroundColor(value: String): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBackgroundColor: Self = this.set("backgroundColor", js.undefined)
+  }
+  
 }
 

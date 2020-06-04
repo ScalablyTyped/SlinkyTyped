@@ -49,39 +49,88 @@ trait ColumnGroupProps[RecordType] extends js.Object {
 
 object ColumnGroupProps {
   @scala.inline
-  def apply[RecordType](
-    children: ReactElement | js.Array[ReactElement],
-    align: AlignType = null,
-    className: String = null,
-    colSpan: js.UndefOr[Double] = js.undefined,
-    dataIndex: DataIndex = null,
-    ellipsis: js.UndefOr[Boolean] = js.undefined,
-    fixed: FixedType = null,
-    key: Key = null,
-    onCell: (RecordType, /* index */ js.UndefOr[Double]) => HTMLAttributes[HTMLElement] = null,
-    onCellClick: (/* record */ RecordType, /* e */ SyntheticMouseEvent[HTMLElement]) => Unit = null,
-    onHeaderCell: (/* import warning: importer.ImportType#apply Failed type conversion: rc-table.rc-table/lib/interface.ColumnsType<RecordType>[number] */ js.Any, /* index */ js.UndefOr[Double]) => HTMLAttributes[HTMLElement] = null,
-    render: (/* value */ js.Any, /* record */ RecordType, /* index */ Double) => TagMod[Any] | RenderedCell[RecordType] = null,
-    rowSpan: js.UndefOr[Double] = js.undefined,
-    title: TagMod[Any] = null,
-    width: Double | String = null
-  ): ColumnGroupProps[RecordType] = {
+  def apply[RecordType](children: ReactElement | js.Array[ReactElement]): ColumnGroupProps[RecordType] = {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(colSpan)) __obj.updateDynamic("colSpan")(colSpan.get.asInstanceOf[js.Any])
-    if (dataIndex != null) __obj.updateDynamic("dataIndex")(dataIndex.asInstanceOf[js.Any])
-    if (!js.isUndefined(ellipsis)) __obj.updateDynamic("ellipsis")(ellipsis.get.asInstanceOf[js.Any])
-    if (fixed != null) __obj.updateDynamic("fixed")(fixed.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (onCell != null) __obj.updateDynamic("onCell")(js.Any.fromFunction2(onCell))
-    if (onCellClick != null) __obj.updateDynamic("onCellClick")(js.Any.fromFunction2(onCellClick))
-    if (onHeaderCell != null) __obj.updateDynamic("onHeaderCell")(js.Any.fromFunction2(onHeaderCell))
-    if (render != null) __obj.updateDynamic("render")(js.Any.fromFunction3(render))
-    if (!js.isUndefined(rowSpan)) __obj.updateDynamic("rowSpan")(rowSpan.get.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnGroupProps[RecordType]]
   }
+  @scala.inline
+  implicit class ColumnGroupPropsOps[Self <: ColumnGroupProps[_], RecordType] (val x: Self with ColumnGroupProps[RecordType]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: ReactElement | js.Array[ReactElement]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAlign(value: AlignType): Self = this.set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAlign: Self = this.set("align", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setColSpan(value: Double): Self = this.set("colSpan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteColSpan: Self = this.set("colSpan", js.undefined)
+    @scala.inline
+    def setDataIndex(value: DataIndex): Self = this.set("dataIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDataIndex: Self = this.set("dataIndex", js.undefined)
+    @scala.inline
+    def setEllipsis(value: Boolean): Self = this.set("ellipsis", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEllipsis: Self = this.set("ellipsis", js.undefined)
+    @scala.inline
+    def setFixed(value: FixedType): Self = this.set("fixed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFixed: Self = this.set("fixed", js.undefined)
+    @scala.inline
+    def setKey(value: Key): Self = this.set("key", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKey: Self = this.set("key", js.undefined)
+    @scala.inline
+    def setOnCell(value: (RecordType, /* index */ js.UndefOr[Double]) => HTMLAttributes[HTMLElement]): Self = this.set("onCell", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnCell: Self = this.set("onCell", js.undefined)
+    @scala.inline
+    def setOnCellClick(value: (/* record */ RecordType, /* e */ SyntheticMouseEvent[HTMLElement]) => Unit): Self = this.set("onCellClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnCellClick: Self = this.set("onCellClick", js.undefined)
+    @scala.inline
+    def setOnHeaderCell(
+      value: (/* import warning: importer.ImportType#apply Failed type conversion: rc-table.rc-table/lib/interface.ColumnsType<RecordType>[number] */ js.Any, /* index */ js.UndefOr[Double]) => HTMLAttributes[HTMLElement]
+    ): Self = this.set("onHeaderCell", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnHeaderCell: Self = this.set("onHeaderCell", js.undefined)
+    @scala.inline
+    def setRender(
+      value: (/* value */ js.Any, /* record */ RecordType, /* index */ Double) => TagMod[Any] | RenderedCell[RecordType]
+    ): Self = this.set("render", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteRender: Self = this.set("render", js.undefined)
+    @scala.inline
+    def setRowSpan(value: Double): Self = this.set("rowSpan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRowSpan: Self = this.set("rowSpan", js.undefined)
+    @scala.inline
+    def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
+    @scala.inline
+    def setWidth(value: Double | String): Self = this.set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWidth: Self = this.set("width", js.undefined)
+  }
+  
 }
 

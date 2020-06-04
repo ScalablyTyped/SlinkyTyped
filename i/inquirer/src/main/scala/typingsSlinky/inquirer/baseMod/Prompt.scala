@@ -70,7 +70,7 @@ trait Prompt[TQuestion /* <: Question */] extends PromptBase {
 
 object Prompt {
   @scala.inline
-  def apply[TQuestion](
+  def apply[/* <: typingsSlinky.inquirer.baseMod.Question */ TQuestion](
     _run: js.Function1[/* callback */ js.Any, Unit] => Unit,
     answers: Answers,
     close: () => Unit,
@@ -86,5 +86,36 @@ object Prompt {
     val __obj = js.Dynamic.literal(_run = js.Any.fromFunction1(_run), answers = answers.asInstanceOf[js.Any], close = js.Any.fromFunction0(close), getQuestion = js.Any.fromFunction0(getQuestion), handleSubmitEvents = js.Any.fromFunction1(handleSubmitEvents), opt = opt.asInstanceOf[js.Any], rl = rl.asInstanceOf[js.Any], run = js.Any.fromFunction0(run), screen = screen.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], throwParamError = js.Any.fromFunction1(throwParamError))
     __obj.asInstanceOf[Prompt[TQuestion]]
   }
+  @scala.inline
+  implicit class PromptOps[Self <: Prompt[_], /* <: typingsSlinky.inquirer.baseMod.Question */ TQuestion] (val x: Self with Prompt[TQuestion]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def set_run(value: js.Function1[/* callback */ js.Any, Unit] => Unit): Self = this.set("_run", js.Any.fromFunction1(value))
+    @scala.inline
+    def setAnswers(value: Answers): Self = this.set("answers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setClose(value: () => Unit): Self = this.set("close", js.Any.fromFunction0(value))
+    @scala.inline
+    def setGetQuestion(value: () => String): Self = this.set("getQuestion", js.Any.fromFunction0(value))
+    @scala.inline
+    def setHandleSubmitEvents(value: Observable_[js.Any] => PromptEventPipes[js.Any]): Self = this.set("handleSubmitEvents", js.Any.fromFunction1(value))
+    @scala.inline
+    def setOpt(value: PromptOptions[TQuestion]): Self = this.set("opt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRl(value: Interface): Self = this.set("rl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setScreen(value: typingsSlinky.inquirer.screenManagerMod.^): Self = this.set("screen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setThrowParamError(value: String => Unit): Self = this.set("throwParamError", js.Any.fromFunction1(value))
+  }
+  
 }
 

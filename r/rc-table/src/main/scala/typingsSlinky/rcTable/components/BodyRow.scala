@@ -3,7 +3,6 @@ package typingsSlinky.rcTable.components
 import org.scalajs.dom.raw.HTMLElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.rcTable.anon.Children
 import typingsSlinky.rcTable.bodyRowMod.BodyRowProps
 import typingsSlinky.rcTable.interfaceMod.CustomizeComponent
 import typingsSlinky.rcTable.interfaceMod.Key
@@ -20,7 +19,7 @@ object BodyRow {
   object component extends js.Object
   
   @scala.inline
-  class Builder[RecordType <: Children[RecordType]] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.rcTable.anon.Children[RecordType] */ RecordType] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
@@ -31,9 +30,9 @@ object BodyRow {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps[RecordType <: Children[RecordType]](p: BodyRowProps[RecordType]): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[/* <: typingsSlinky.rcTable.anon.Children[RecordType] */ RecordType](p: BodyRowProps[RecordType]): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[RecordType <: Children[RecordType]](
+  def apply[/* <: typingsSlinky.rcTable.anon.Children[RecordType] */ RecordType](
     cellComponent: CustomizeComponent,
     childrenColumnName: String,
     expandedKeys: Set[Key],

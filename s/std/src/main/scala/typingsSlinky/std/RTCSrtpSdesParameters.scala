@@ -13,18 +13,38 @@ trait RTCSrtpSdesParameters extends js.Object {
 
 object RTCSrtpSdesParameters {
   @scala.inline
-  def apply(
-    cryptoSuite: java.lang.String = null,
-    keyParams: js.Array[RTCSrtpKeyParam] = null,
-    sessionParams: js.Array[java.lang.String] = null,
-    tag: js.UndefOr[Double] = js.undefined
-  ): RTCSrtpSdesParameters = {
+  def apply(): RTCSrtpSdesParameters = {
     val __obj = js.Dynamic.literal()
-    if (cryptoSuite != null) __obj.updateDynamic("cryptoSuite")(cryptoSuite.asInstanceOf[js.Any])
-    if (keyParams != null) __obj.updateDynamic("keyParams")(keyParams.asInstanceOf[js.Any])
-    if (sessionParams != null) __obj.updateDynamic("sessionParams")(sessionParams.asInstanceOf[js.Any])
-    if (!js.isUndefined(tag)) __obj.updateDynamic("tag")(tag.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCSrtpSdesParameters]
   }
+  @scala.inline
+  implicit class RTCSrtpSdesParametersOps[Self <: RTCSrtpSdesParameters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCryptoSuite(value: java.lang.String): Self = this.set("cryptoSuite", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCryptoSuite: Self = this.set("cryptoSuite", js.undefined)
+    @scala.inline
+    def setKeyParams(value: js.Array[RTCSrtpKeyParam]): Self = this.set("keyParams", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKeyParams: Self = this.set("keyParams", js.undefined)
+    @scala.inline
+    def setSessionParams(value: js.Array[java.lang.String]): Self = this.set("sessionParams", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSessionParams: Self = this.set("sessionParams", js.undefined)
+    @scala.inline
+    def setTag(value: Double): Self = this.set("tag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTag: Self = this.set("tag", js.undefined)
+  }
+  
 }
 

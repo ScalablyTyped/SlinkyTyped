@@ -37,60 +37,122 @@ trait StreetViewPanoramaOptions extends js.Object {
 
 object StreetViewPanoramaOptions {
   @scala.inline
-  def apply(
-    addressControl: js.UndefOr[Boolean] = js.undefined,
-    addressControlOptions: StreetViewAddressControlOptions = null,
-    clickToGo: js.UndefOr[Boolean] = js.undefined,
-    disableDefaultUI: js.UndefOr[Boolean] = js.undefined,
-    disableDoubleClickZoom: js.UndefOr[Boolean] = js.undefined,
-    enableCloseButton: js.UndefOr[Boolean] = js.undefined,
-    fullscreenControl: js.UndefOr[Boolean] = js.undefined,
-    fullscreenControlOptions: FullscreenControlOptions = null,
-    imageDateControl: js.UndefOr[Boolean] = js.undefined,
-    linksControl: js.UndefOr[Boolean] = js.undefined,
-    mode: html4 | html5 | webgl = null,
-    motionTracking: js.UndefOr[Boolean] = js.undefined,
-    motionTrackingControl: js.UndefOr[Boolean] = js.undefined,
-    motionTrackingControlOptions: MotionTrackingControlOptions = null,
-    panControl: js.UndefOr[Boolean] = js.undefined,
-    panControlOptions: PanControlOptions = null,
-    pano: String = null,
-    panoProvider: /* input */ String => StreetViewPanoramaData = null,
-    position: LatLng | LatLngLiteral = null,
-    pov: StreetViewPov = null,
-    scrollwheel: js.UndefOr[Boolean] = js.undefined,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    zoom: js.UndefOr[Double] = js.undefined,
-    zoomControl: js.UndefOr[Boolean] = js.undefined,
-    zoomControlOptions: ZoomControlOptions = null
-  ): StreetViewPanoramaOptions = {
+  def apply(): StreetViewPanoramaOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(addressControl)) __obj.updateDynamic("addressControl")(addressControl.get.asInstanceOf[js.Any])
-    if (addressControlOptions != null) __obj.updateDynamic("addressControlOptions")(addressControlOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(clickToGo)) __obj.updateDynamic("clickToGo")(clickToGo.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableDefaultUI)) __obj.updateDynamic("disableDefaultUI")(disableDefaultUI.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableDoubleClickZoom)) __obj.updateDynamic("disableDoubleClickZoom")(disableDoubleClickZoom.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableCloseButton)) __obj.updateDynamic("enableCloseButton")(enableCloseButton.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(fullscreenControl)) __obj.updateDynamic("fullscreenControl")(fullscreenControl.get.asInstanceOf[js.Any])
-    if (fullscreenControlOptions != null) __obj.updateDynamic("fullscreenControlOptions")(fullscreenControlOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(imageDateControl)) __obj.updateDynamic("imageDateControl")(imageDateControl.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(linksControl)) __obj.updateDynamic("linksControl")(linksControl.get.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (!js.isUndefined(motionTracking)) __obj.updateDynamic("motionTracking")(motionTracking.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(motionTrackingControl)) __obj.updateDynamic("motionTrackingControl")(motionTrackingControl.get.asInstanceOf[js.Any])
-    if (motionTrackingControlOptions != null) __obj.updateDynamic("motionTrackingControlOptions")(motionTrackingControlOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(panControl)) __obj.updateDynamic("panControl")(panControl.get.asInstanceOf[js.Any])
-    if (panControlOptions != null) __obj.updateDynamic("panControlOptions")(panControlOptions.asInstanceOf[js.Any])
-    if (pano != null) __obj.updateDynamic("pano")(pano.asInstanceOf[js.Any])
-    if (panoProvider != null) __obj.updateDynamic("panoProvider")(js.Any.fromFunction1(panoProvider))
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (pov != null) __obj.updateDynamic("pov")(pov.asInstanceOf[js.Any])
-    if (!js.isUndefined(scrollwheel)) __obj.updateDynamic("scrollwheel")(scrollwheel.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(zoom)) __obj.updateDynamic("zoom")(zoom.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(zoomControl)) __obj.updateDynamic("zoomControl")(zoomControl.get.asInstanceOf[js.Any])
-    if (zoomControlOptions != null) __obj.updateDynamic("zoomControlOptions")(zoomControlOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[StreetViewPanoramaOptions]
   }
+  @scala.inline
+  implicit class StreetViewPanoramaOptionsOps[Self <: StreetViewPanoramaOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAddressControl(value: Boolean): Self = this.set("addressControl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAddressControl: Self = this.set("addressControl", js.undefined)
+    @scala.inline
+    def setAddressControlOptions(value: StreetViewAddressControlOptions): Self = this.set("addressControlOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAddressControlOptions: Self = this.set("addressControlOptions", js.undefined)
+    @scala.inline
+    def setClickToGo(value: Boolean): Self = this.set("clickToGo", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClickToGo: Self = this.set("clickToGo", js.undefined)
+    @scala.inline
+    def setDisableDefaultUI(value: Boolean): Self = this.set("disableDefaultUI", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisableDefaultUI: Self = this.set("disableDefaultUI", js.undefined)
+    @scala.inline
+    def setDisableDoubleClickZoom(value: Boolean): Self = this.set("disableDoubleClickZoom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisableDoubleClickZoom: Self = this.set("disableDoubleClickZoom", js.undefined)
+    @scala.inline
+    def setEnableCloseButton(value: Boolean): Self = this.set("enableCloseButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEnableCloseButton: Self = this.set("enableCloseButton", js.undefined)
+    @scala.inline
+    def setFullscreenControl(value: Boolean): Self = this.set("fullscreenControl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFullscreenControl: Self = this.set("fullscreenControl", js.undefined)
+    @scala.inline
+    def setFullscreenControlOptions(value: FullscreenControlOptions): Self = this.set("fullscreenControlOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFullscreenControlOptions: Self = this.set("fullscreenControlOptions", js.undefined)
+    @scala.inline
+    def setImageDateControl(value: Boolean): Self = this.set("imageDateControl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteImageDateControl: Self = this.set("imageDateControl", js.undefined)
+    @scala.inline
+    def setLinksControl(value: Boolean): Self = this.set("linksControl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLinksControl: Self = this.set("linksControl", js.undefined)
+    @scala.inline
+    def setMode(value: html4 | html5 | webgl): Self = this.set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMode: Self = this.set("mode", js.undefined)
+    @scala.inline
+    def setMotionTracking(value: Boolean): Self = this.set("motionTracking", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMotionTracking: Self = this.set("motionTracking", js.undefined)
+    @scala.inline
+    def setMotionTrackingControl(value: Boolean): Self = this.set("motionTrackingControl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMotionTrackingControl: Self = this.set("motionTrackingControl", js.undefined)
+    @scala.inline
+    def setMotionTrackingControlOptions(value: MotionTrackingControlOptions): Self = this.set("motionTrackingControlOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMotionTrackingControlOptions: Self = this.set("motionTrackingControlOptions", js.undefined)
+    @scala.inline
+    def setPanControl(value: Boolean): Self = this.set("panControl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePanControl: Self = this.set("panControl", js.undefined)
+    @scala.inline
+    def setPanControlOptions(value: PanControlOptions): Self = this.set("panControlOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePanControlOptions: Self = this.set("panControlOptions", js.undefined)
+    @scala.inline
+    def setPano(value: String): Self = this.set("pano", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePano: Self = this.set("pano", js.undefined)
+    @scala.inline
+    def setPanoProvider(value: /* input */ String => StreetViewPanoramaData): Self = this.set("panoProvider", js.Any.fromFunction1(value))
+    @scala.inline
+    def deletePanoProvider: Self = this.set("panoProvider", js.undefined)
+    @scala.inline
+    def setPosition(value: LatLng | LatLngLiteral): Self = this.set("position", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePosition: Self = this.set("position", js.undefined)
+    @scala.inline
+    def setPov(value: StreetViewPov): Self = this.set("pov", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePov: Self = this.set("pov", js.undefined)
+    @scala.inline
+    def setScrollwheel(value: Boolean): Self = this.set("scrollwheel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScrollwheel: Self = this.set("scrollwheel", js.undefined)
+    @scala.inline
+    def setVisible(value: Boolean): Self = this.set("visible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVisible: Self = this.set("visible", js.undefined)
+    @scala.inline
+    def setZoom(value: Double): Self = this.set("zoom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteZoom: Self = this.set("zoom", js.undefined)
+    @scala.inline
+    def setZoomControl(value: Boolean): Self = this.set("zoomControl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteZoomControl: Self = this.set("zoomControl", js.undefined)
+    @scala.inline
+    def setZoomControlOptions(value: ZoomControlOptions): Self = this.set("zoomControlOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteZoomControlOptions: Self = this.set("zoomControlOptions", js.undefined)
+  }
+  
 }
 

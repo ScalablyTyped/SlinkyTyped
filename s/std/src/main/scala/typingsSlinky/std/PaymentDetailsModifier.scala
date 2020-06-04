@@ -13,17 +13,36 @@ trait PaymentDetailsModifier extends js.Object {
 
 object PaymentDetailsModifier {
   @scala.inline
-  def apply(
-    supportedMethods: java.lang.String | js.Array[java.lang.String],
-    additionalDisplayItems: js.Array[PaymentItem] = null,
-    data: js.Any = null,
-    total: PaymentItem = null
-  ): PaymentDetailsModifier = {
+  def apply(supportedMethods: java.lang.String | js.Array[java.lang.String]): PaymentDetailsModifier = {
     val __obj = js.Dynamic.literal(supportedMethods = supportedMethods.asInstanceOf[js.Any])
-    if (additionalDisplayItems != null) __obj.updateDynamic("additionalDisplayItems")(additionalDisplayItems.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (total != null) __obj.updateDynamic("total")(total.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaymentDetailsModifier]
   }
+  @scala.inline
+  implicit class PaymentDetailsModifierOps[Self <: PaymentDetailsModifier] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setSupportedMethods(value: java.lang.String | js.Array[java.lang.String]): Self = this.set("supportedMethods", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAdditionalDisplayItems(value: js.Array[PaymentItem]): Self = this.set("additionalDisplayItems", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAdditionalDisplayItems: Self = this.set("additionalDisplayItems", js.undefined)
+    @scala.inline
+    def setData(value: js.Any): Self = this.set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteData: Self = this.set("data", js.undefined)
+    @scala.inline
+    def setTotal(value: PaymentItem): Self = this.set("total", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTotal: Self = this.set("total", js.undefined)
+  }
+  
 }
 

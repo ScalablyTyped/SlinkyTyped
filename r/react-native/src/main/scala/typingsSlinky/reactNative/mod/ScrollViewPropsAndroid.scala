@@ -55,22 +55,46 @@ trait ScrollViewPropsAndroid extends js.Object {
 
 object ScrollViewPropsAndroid {
   @scala.inline
-  def apply(
-    endFillColor: String = null,
-    fadingEdgeLength: js.UndefOr[Double] = js.undefined,
-    nestedScrollEnabled: js.UndefOr[Boolean] = js.undefined,
-    overScrollMode: auto | always | never = null,
-    persistentScrollbar: js.UndefOr[Boolean] = js.undefined,
-    scrollPerfTag: String = null
-  ): ScrollViewPropsAndroid = {
+  def apply(): ScrollViewPropsAndroid = {
     val __obj = js.Dynamic.literal()
-    if (endFillColor != null) __obj.updateDynamic("endFillColor")(endFillColor.asInstanceOf[js.Any])
-    if (!js.isUndefined(fadingEdgeLength)) __obj.updateDynamic("fadingEdgeLength")(fadingEdgeLength.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(nestedScrollEnabled)) __obj.updateDynamic("nestedScrollEnabled")(nestedScrollEnabled.get.asInstanceOf[js.Any])
-    if (overScrollMode != null) __obj.updateDynamic("overScrollMode")(overScrollMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(persistentScrollbar)) __obj.updateDynamic("persistentScrollbar")(persistentScrollbar.get.asInstanceOf[js.Any])
-    if (scrollPerfTag != null) __obj.updateDynamic("scrollPerfTag")(scrollPerfTag.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScrollViewPropsAndroid]
   }
+  @scala.inline
+  implicit class ScrollViewPropsAndroidOps[Self <: ScrollViewPropsAndroid] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setEndFillColor(value: String): Self = this.set("endFillColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEndFillColor: Self = this.set("endFillColor", js.undefined)
+    @scala.inline
+    def setFadingEdgeLength(value: Double): Self = this.set("fadingEdgeLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFadingEdgeLength: Self = this.set("fadingEdgeLength", js.undefined)
+    @scala.inline
+    def setNestedScrollEnabled(value: Boolean): Self = this.set("nestedScrollEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNestedScrollEnabled: Self = this.set("nestedScrollEnabled", js.undefined)
+    @scala.inline
+    def setOverScrollMode(value: auto | always | never): Self = this.set("overScrollMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOverScrollMode: Self = this.set("overScrollMode", js.undefined)
+    @scala.inline
+    def setPersistentScrollbar(value: Boolean): Self = this.set("persistentScrollbar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePersistentScrollbar: Self = this.set("persistentScrollbar", js.undefined)
+    @scala.inline
+    def setScrollPerfTag(value: String): Self = this.set("scrollPerfTag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScrollPerfTag: Self = this.set("scrollPerfTag", js.undefined)
+  }
+  
 }
 

@@ -47,20 +47,44 @@ trait HookCallbacks extends js.Object {
 
 object HookCallbacks {
   @scala.inline
-  def apply(
-    after: /* asyncId */ Double => Unit = null,
-    before: /* asyncId */ Double => Unit = null,
-    destroy: /* asyncId */ Double => Unit = null,
-    init: (/* asyncId */ Double, /* type */ String, /* triggerAsyncId */ Double, /* resource */ js.Object) => Unit = null,
-    promiseResolve: /* asyncId */ Double => Unit = null
-  ): HookCallbacks = {
+  def apply(): HookCallbacks = {
     val __obj = js.Dynamic.literal()
-    if (after != null) __obj.updateDynamic("after")(js.Any.fromFunction1(after))
-    if (before != null) __obj.updateDynamic("before")(js.Any.fromFunction1(before))
-    if (destroy != null) __obj.updateDynamic("destroy")(js.Any.fromFunction1(destroy))
-    if (init != null) __obj.updateDynamic("init")(js.Any.fromFunction4(init))
-    if (promiseResolve != null) __obj.updateDynamic("promiseResolve")(js.Any.fromFunction1(promiseResolve))
     __obj.asInstanceOf[HookCallbacks]
   }
+  @scala.inline
+  implicit class HookCallbacksOps[Self <: HookCallbacks] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAfter(value: /* asyncId */ Double => Unit): Self = this.set("after", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteAfter: Self = this.set("after", js.undefined)
+    @scala.inline
+    def setBefore(value: /* asyncId */ Double => Unit): Self = this.set("before", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteBefore: Self = this.set("before", js.undefined)
+    @scala.inline
+    def setDestroy(value: /* asyncId */ Double => Unit): Self = this.set("destroy", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteDestroy: Self = this.set("destroy", js.undefined)
+    @scala.inline
+    def setInit(
+      value: (/* asyncId */ Double, /* type */ String, /* triggerAsyncId */ Double, /* resource */ js.Object) => Unit
+    ): Self = this.set("init", js.Any.fromFunction4(value))
+    @scala.inline
+    def deleteInit: Self = this.set("init", js.undefined)
+    @scala.inline
+    def setPromiseResolve(value: /* asyncId */ Double => Unit): Self = this.set("promiseResolve", js.Any.fromFunction1(value))
+    @scala.inline
+    def deletePromiseResolve: Self = this.set("promiseResolve", js.undefined)
+  }
+  
 }
 

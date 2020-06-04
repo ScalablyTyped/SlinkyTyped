@@ -32,5 +32,24 @@ object TextStreamWriter {
     val __obj = js.Dynamic.literal(Close = js.Any.fromFunction0(Close), Column = Column.asInstanceOf[js.Any], Line = Line.asInstanceOf[js.Any], Write = js.Any.fromFunction1(Write), WriteBlankLines = js.Any.fromFunction1(WriteBlankLines), WriteLine = js.Any.fromFunction1(WriteLine))
     __obj.asInstanceOf[TextStreamWriter]
   }
+  @scala.inline
+  implicit class TextStreamWriterOps[Self <: TextStreamWriter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setWrite(value: java.lang.String => Unit): Self = this.set("Write", js.Any.fromFunction1(value))
+    @scala.inline
+    def setWriteBlankLines(value: Double => Unit): Self = this.set("WriteBlankLines", js.Any.fromFunction1(value))
+    @scala.inline
+    def setWriteLine(value: java.lang.String => Unit): Self = this.set("WriteLine", js.Any.fromFunction1(value))
+  }
+  
 }
 

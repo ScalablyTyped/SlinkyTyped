@@ -122,15 +122,48 @@ object FormatSpecifier_ {
     symbol: $ | Numbersign | _empty,
     trim: Boolean,
     `type`: e | f | g | r | s | Percentsign | p | b | o | d | x_ | X | c | _empty | n,
-    zero: Boolean,
-    precision: js.UndefOr[Double] = js.undefined,
-    width: js.UndefOr[Double] = js.undefined
+    zero: Boolean
   ): FormatSpecifier_ = {
     val __obj = js.Dynamic.literal(align = align.asInstanceOf[js.Any], comma = comma.asInstanceOf[js.Any], fill = fill.asInstanceOf[js.Any], sign = sign.asInstanceOf[js.Any], symbol = symbol.asInstanceOf[js.Any], trim = trim.asInstanceOf[js.Any], zero = zero.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(precision)) __obj.updateDynamic("precision")(precision.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FormatSpecifier_]
   }
+  @scala.inline
+  implicit class FormatSpecifier_Ops[Self <: FormatSpecifier_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAlign(value: Greaterthansign | Lessthansign | ^  | Equalssign): Self = this.set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setComma(value: Boolean): Self = this.set("comma", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFill(value: String): Self = this.set("fill", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSign(value: `-_` | Plussign | Leftparenthesis | Space): Self = this.set("sign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSymbol(value: $ | Numbersign | _empty): Self = this.set("symbol", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTrim(value: Boolean): Self = this.set("trim", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setType(value: e | f | g | r | s | Percentsign | p | b | o | d | x_ | X | c | _empty | n): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setZero(value: Boolean): Self = this.set("zero", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPrecision(value: Double): Self = this.set("precision", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrecision: Self = this.set("precision", js.undefined)
+    @scala.inline
+    def setWidth(value: Double): Self = this.set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWidth: Self = this.set("width", js.undefined)
+  }
+  
 }
 

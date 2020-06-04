@@ -126,48 +126,100 @@ trait EnhancerOptions extends js.Object {
 
 object EnhancerOptions {
   @scala.inline
-  def apply(
-    actionCreators: js.Array[ActionCreator[_]] | StringDictionary[ActionCreator[_]] = null,
-    actionSanitizer: (/* action */ Action[_], /* id */ Double) => Action[_] = null,
-    actionsBlacklist: String | js.Array[String] = null,
-    actionsWhitelist: String | js.Array[String] = null,
-    autoPause: js.UndefOr[Boolean] = js.undefined,
-    features: Dispatch = null,
-    latency: js.UndefOr[Double] = js.undefined,
-    maxAge: js.UndefOr[Double] = js.undefined,
-    name: String = null,
-    pauseActionType: String = null,
-    predicate: (/* state */ js.Any, /* action */ Action[_]) => Boolean = null,
-    serialize: Boolean | Date = null,
-    shouldCatchErrors: js.UndefOr[Boolean] = js.undefined,
-    shouldHotReload: js.UndefOr[Boolean] = js.undefined,
-    shouldRecordChanges: js.UndefOr[Boolean] = js.undefined,
-    shouldStartLocked: js.UndefOr[Boolean] = js.undefined,
-    stateSanitizer: (/* state */ js.Any, /* index */ Double) => _ = null,
-    trace: Boolean | (js.Function1[/* action */ Action[_], String]) = null,
-    traceLimit: js.UndefOr[Double] = js.undefined
-  ): EnhancerOptions = {
+  def apply(): EnhancerOptions = {
     val __obj = js.Dynamic.literal()
-    if (actionCreators != null) __obj.updateDynamic("actionCreators")(actionCreators.asInstanceOf[js.Any])
-    if (actionSanitizer != null) __obj.updateDynamic("actionSanitizer")(js.Any.fromFunction2(actionSanitizer))
-    if (actionsBlacklist != null) __obj.updateDynamic("actionsBlacklist")(actionsBlacklist.asInstanceOf[js.Any])
-    if (actionsWhitelist != null) __obj.updateDynamic("actionsWhitelist")(actionsWhitelist.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoPause)) __obj.updateDynamic("autoPause")(autoPause.get.asInstanceOf[js.Any])
-    if (features != null) __obj.updateDynamic("features")(features.asInstanceOf[js.Any])
-    if (!js.isUndefined(latency)) __obj.updateDynamic("latency")(latency.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(maxAge)) __obj.updateDynamic("maxAge")(maxAge.get.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (pauseActionType != null) __obj.updateDynamic("pauseActionType")(pauseActionType.asInstanceOf[js.Any])
-    if (predicate != null) __obj.updateDynamic("predicate")(js.Any.fromFunction2(predicate))
-    if (serialize != null) __obj.updateDynamic("serialize")(serialize.asInstanceOf[js.Any])
-    if (!js.isUndefined(shouldCatchErrors)) __obj.updateDynamic("shouldCatchErrors")(shouldCatchErrors.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(shouldHotReload)) __obj.updateDynamic("shouldHotReload")(shouldHotReload.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(shouldRecordChanges)) __obj.updateDynamic("shouldRecordChanges")(shouldRecordChanges.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(shouldStartLocked)) __obj.updateDynamic("shouldStartLocked")(shouldStartLocked.get.asInstanceOf[js.Any])
-    if (stateSanitizer != null) __obj.updateDynamic("stateSanitizer")(js.Any.fromFunction2(stateSanitizer))
-    if (trace != null) __obj.updateDynamic("trace")(trace.asInstanceOf[js.Any])
-    if (!js.isUndefined(traceLimit)) __obj.updateDynamic("traceLimit")(traceLimit.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnhancerOptions]
   }
+  @scala.inline
+  implicit class EnhancerOptionsOps[Self <: EnhancerOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setActionCreators(value: js.Array[ActionCreator[_]] | StringDictionary[ActionCreator[_]]): Self = this.set("actionCreators", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteActionCreators: Self = this.set("actionCreators", js.undefined)
+    @scala.inline
+    def setActionSanitizer(value: (/* action */ Action[_], /* id */ Double) => Action[_]): Self = this.set("actionSanitizer", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteActionSanitizer: Self = this.set("actionSanitizer", js.undefined)
+    @scala.inline
+    def setActionsBlacklist(value: String | js.Array[String]): Self = this.set("actionsBlacklist", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteActionsBlacklist: Self = this.set("actionsBlacklist", js.undefined)
+    @scala.inline
+    def setActionsWhitelist(value: String | js.Array[String]): Self = this.set("actionsWhitelist", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteActionsWhitelist: Self = this.set("actionsWhitelist", js.undefined)
+    @scala.inline
+    def setAutoPause(value: Boolean): Self = this.set("autoPause", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAutoPause: Self = this.set("autoPause", js.undefined)
+    @scala.inline
+    def setFeatures(value: Dispatch): Self = this.set("features", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFeatures: Self = this.set("features", js.undefined)
+    @scala.inline
+    def setLatency(value: Double): Self = this.set("latency", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLatency: Self = this.set("latency", js.undefined)
+    @scala.inline
+    def setMaxAge(value: Double): Self = this.set("maxAge", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxAge: Self = this.set("maxAge", js.undefined)
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteName: Self = this.set("name", js.undefined)
+    @scala.inline
+    def setPauseActionType(value: String): Self = this.set("pauseActionType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePauseActionType: Self = this.set("pauseActionType", js.undefined)
+    @scala.inline
+    def setPredicate(value: (/* state */ js.Any, /* action */ Action[_]) => Boolean): Self = this.set("predicate", js.Any.fromFunction2(value))
+    @scala.inline
+    def deletePredicate: Self = this.set("predicate", js.undefined)
+    @scala.inline
+    def setSerialize(value: Boolean | Date): Self = this.set("serialize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSerialize: Self = this.set("serialize", js.undefined)
+    @scala.inline
+    def setShouldCatchErrors(value: Boolean): Self = this.set("shouldCatchErrors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShouldCatchErrors: Self = this.set("shouldCatchErrors", js.undefined)
+    @scala.inline
+    def setShouldHotReload(value: Boolean): Self = this.set("shouldHotReload", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShouldHotReload: Self = this.set("shouldHotReload", js.undefined)
+    @scala.inline
+    def setShouldRecordChanges(value: Boolean): Self = this.set("shouldRecordChanges", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShouldRecordChanges: Self = this.set("shouldRecordChanges", js.undefined)
+    @scala.inline
+    def setShouldStartLocked(value: Boolean): Self = this.set("shouldStartLocked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShouldStartLocked: Self = this.set("shouldStartLocked", js.undefined)
+    @scala.inline
+    def setStateSanitizer(value: (/* state */ js.Any, /* index */ Double) => _): Self = this.set("stateSanitizer", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteStateSanitizer: Self = this.set("stateSanitizer", js.undefined)
+    @scala.inline
+    def setTraceFunction1(value: /* action */ Action[_] => String): Self = this.set("trace", js.Any.fromFunction1(value))
+    @scala.inline
+    def setTrace(value: Boolean | (js.Function1[/* action */ Action[_], String])): Self = this.set("trace", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTrace: Self = this.set("trace", js.undefined)
+    @scala.inline
+    def setTraceLimit(value: Double): Self = this.set("traceLimit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTraceLimit: Self = this.set("traceLimit", js.undefined)
+  }
+  
 }
 

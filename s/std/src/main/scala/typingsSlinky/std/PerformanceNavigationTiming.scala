@@ -58,5 +58,38 @@ object PerformanceNavigationTiming {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PerformanceNavigationTiming]
   }
+  @scala.inline
+  implicit class PerformanceNavigationTimingOps[Self <: PerformanceNavigationTiming] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDomComplete(value: Double): Self = this.set("domComplete", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDomContentLoadedEventEnd(value: Double): Self = this.set("domContentLoadedEventEnd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDomContentLoadedEventStart(value: Double): Self = this.set("domContentLoadedEventStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDomInteractive(value: Double): Self = this.set("domInteractive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLoadEventEnd(value: Double): Self = this.set("loadEventEnd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLoadEventStart(value: Double): Self = this.set("loadEventStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRedirectCount(value: Double): Self = this.set("redirectCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setType(value: NavigationType): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUnloadEventEnd(value: Double): Self = this.set("unloadEventEnd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUnloadEventStart(value: Double): Self = this.set("unloadEventStart", value.asInstanceOf[js.Any])
+  }
+  
 }
 

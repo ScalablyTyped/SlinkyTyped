@@ -1,13 +1,13 @@
 package typingsSlinky.semanticUiReact.components
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.dropdownItemMod.DropdownItemProps
 import typingsSlinky.semanticUiReact.dropdownItemMod.default
 import typingsSlinky.semanticUiReact.flagFlagMod.FlagProps
@@ -44,7 +44,7 @@ object DropdownItem {
     def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
     @scala.inline
     def descriptionFunction3(
-      value: (/* component */ ReactComponentClass[HtmlSpanProps], HtmlSpanProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[HtmlSpanProps], HtmlSpanProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("description", js.Any.fromFunction3(value))
     @scala.inline
     def description(value: SemanticShorthandItem[HtmlSpanProps]): this.type = set("description", value.asInstanceOf[js.Any])
@@ -54,7 +54,7 @@ object DropdownItem {
     def flagReactElement(value: ReactElement): this.type = set("flag", value.asInstanceOf[js.Any])
     @scala.inline
     def flagFunction3(
-      value: (/* component */ ReactComponentClass[FlagProps], FlagProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[FlagProps], FlagProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("flag", js.Any.fromFunction3(value))
     @scala.inline
     def flag(value: SemanticShorthandItem[FlagProps]): this.type = set("flag", value.asInstanceOf[js.Any])
@@ -62,7 +62,7 @@ object DropdownItem {
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def iconFunction3(
-      value: (/* component */ ReactComponentClass[IconProps], IconProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("icon", js.Any.fromFunction3(value))
     @scala.inline
     def icon(value: SemanticShorthandItem[IconProps]): this.type = set("icon", value.asInstanceOf[js.Any])
@@ -70,7 +70,7 @@ object DropdownItem {
     def imageReactElement(value: ReactElement): this.type = set("image", value.asInstanceOf[js.Any])
     @scala.inline
     def imageFunction3(
-      value: (/* component */ ReactComponentClass[ImageProps], ImageProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ImageProps], ImageProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("image", js.Any.fromFunction3(value))
     @scala.inline
     def image(value: SemanticShorthandItem[ImageProps]): this.type = set("image", value.asInstanceOf[js.Any])
@@ -78,7 +78,7 @@ object DropdownItem {
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def labelFunction3(
-      value: (/* component */ ReactComponentClass[LabelProps], LabelProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[LabelProps], LabelProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("label", js.Any.fromFunction3(value))
     @scala.inline
     def label(value: SemanticShorthandItem[LabelProps]): this.type = set("label", value.asInstanceOf[js.Any])

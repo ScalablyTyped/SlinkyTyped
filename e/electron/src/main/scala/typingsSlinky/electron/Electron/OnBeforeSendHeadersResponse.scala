@@ -14,11 +14,30 @@ trait OnBeforeSendHeadersResponse extends js.Object {
 
 object OnBeforeSendHeadersResponse {
   @scala.inline
-  def apply(cancel: js.UndefOr[Boolean] = js.undefined, requestHeaders: RequestHeaders = null): OnBeforeSendHeadersResponse = {
+  def apply(): OnBeforeSendHeadersResponse = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(cancel)) __obj.updateDynamic("cancel")(cancel.get.asInstanceOf[js.Any])
-    if (requestHeaders != null) __obj.updateDynamic("requestHeaders")(requestHeaders.asInstanceOf[js.Any])
     __obj.asInstanceOf[OnBeforeSendHeadersResponse]
   }
+  @scala.inline
+  implicit class OnBeforeSendHeadersResponseOps[Self <: OnBeforeSendHeadersResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCancel(value: Boolean): Self = this.set("cancel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCancel: Self = this.set("cancel", js.undefined)
+    @scala.inline
+    def setRequestHeaders(value: RequestHeaders): Self = this.set("requestHeaders", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRequestHeaders: Self = this.set("requestHeaders", js.undefined)
+  }
+  
 }
 

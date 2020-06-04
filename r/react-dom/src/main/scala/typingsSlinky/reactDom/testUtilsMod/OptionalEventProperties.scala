@@ -23,34 +23,70 @@ trait OptionalEventProperties extends js.Object {
 
 object OptionalEventProperties {
   @scala.inline
-  def apply(
-    bubbles: js.UndefOr[Boolean] = js.undefined,
-    cancelable: js.UndefOr[Boolean] = js.undefined,
-    currentTarget: EventTarget = null,
-    defaultPrevented: js.UndefOr[Boolean] = js.undefined,
-    eventPhase: js.UndefOr[Double] = js.undefined,
-    isTrusted: js.UndefOr[Boolean] = js.undefined,
-    nativeEvent: Event = null,
-    preventDefault: () => Unit = null,
-    stopPropagation: () => Unit = null,
-    target: EventTarget = null,
-    timeStamp: js.Date = null,
-    `type`: String = null
-  ): OptionalEventProperties = {
+  def apply(): OptionalEventProperties = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(bubbles)) __obj.updateDynamic("bubbles")(bubbles.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(cancelable)) __obj.updateDynamic("cancelable")(cancelable.get.asInstanceOf[js.Any])
-    if (currentTarget != null) __obj.updateDynamic("currentTarget")(currentTarget.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultPrevented)) __obj.updateDynamic("defaultPrevented")(defaultPrevented.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(eventPhase)) __obj.updateDynamic("eventPhase")(eventPhase.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(isTrusted)) __obj.updateDynamic("isTrusted")(isTrusted.get.asInstanceOf[js.Any])
-    if (nativeEvent != null) __obj.updateDynamic("nativeEvent")(nativeEvent.asInstanceOf[js.Any])
-    if (preventDefault != null) __obj.updateDynamic("preventDefault")(js.Any.fromFunction0(preventDefault))
-    if (stopPropagation != null) __obj.updateDynamic("stopPropagation")(js.Any.fromFunction0(stopPropagation))
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (timeStamp != null) __obj.updateDynamic("timeStamp")(timeStamp.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionalEventProperties]
   }
+  @scala.inline
+  implicit class OptionalEventPropertiesOps[Self <: OptionalEventProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBubbles(value: Boolean): Self = this.set("bubbles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBubbles: Self = this.set("bubbles", js.undefined)
+    @scala.inline
+    def setCancelable(value: Boolean): Self = this.set("cancelable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCancelable: Self = this.set("cancelable", js.undefined)
+    @scala.inline
+    def setCurrentTarget(value: EventTarget): Self = this.set("currentTarget", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCurrentTarget: Self = this.set("currentTarget", js.undefined)
+    @scala.inline
+    def setDefaultPrevented(value: Boolean): Self = this.set("defaultPrevented", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultPrevented: Self = this.set("defaultPrevented", js.undefined)
+    @scala.inline
+    def setEventPhase(value: Double): Self = this.set("eventPhase", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEventPhase: Self = this.set("eventPhase", js.undefined)
+    @scala.inline
+    def setIsTrusted(value: Boolean): Self = this.set("isTrusted", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIsTrusted: Self = this.set("isTrusted", js.undefined)
+    @scala.inline
+    def setNativeEvent(value: Event): Self = this.set("nativeEvent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNativeEvent: Self = this.set("nativeEvent", js.undefined)
+    @scala.inline
+    def setPreventDefault(value: () => Unit): Self = this.set("preventDefault", js.Any.fromFunction0(value))
+    @scala.inline
+    def deletePreventDefault: Self = this.set("preventDefault", js.undefined)
+    @scala.inline
+    def setStopPropagation(value: () => Unit): Self = this.set("stopPropagation", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteStopPropagation: Self = this.set("stopPropagation", js.undefined)
+    @scala.inline
+    def setTarget(value: EventTarget): Self = this.set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTarget: Self = this.set("target", js.undefined)
+    @scala.inline
+    def setTimeStamp(value: js.Date): Self = this.set("timeStamp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTimeStamp: Self = this.set("timeStamp", js.undefined)
+    @scala.inline
+    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteType: Self = this.set("type", js.undefined)
+  }
+  
 }
 

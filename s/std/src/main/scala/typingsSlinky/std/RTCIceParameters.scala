@@ -11,11 +11,30 @@ trait RTCIceParameters extends js.Object {
 
 object RTCIceParameters {
   @scala.inline
-  def apply(password: java.lang.String = null, usernameFragment: java.lang.String = null): RTCIceParameters = {
+  def apply(): RTCIceParameters = {
     val __obj = js.Dynamic.literal()
-    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
-    if (usernameFragment != null) __obj.updateDynamic("usernameFragment")(usernameFragment.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCIceParameters]
   }
+  @scala.inline
+  implicit class RTCIceParametersOps[Self <: RTCIceParameters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setPassword(value: java.lang.String): Self = this.set("password", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePassword: Self = this.set("password", js.undefined)
+    @scala.inline
+    def setUsernameFragment(value: java.lang.String): Self = this.set("usernameFragment", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUsernameFragment: Self = this.set("usernameFragment", js.undefined)
+  }
+  
 }
 

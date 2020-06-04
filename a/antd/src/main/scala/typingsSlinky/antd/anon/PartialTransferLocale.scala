@@ -1,6 +1,7 @@
 package typingsSlinky.antd.anon
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,20 +17,44 @@ trait PartialTransferLocale extends js.Object {
 
 object PartialTransferLocale {
   @scala.inline
-  def apply(
-    itemUnit: String = null,
-    itemsUnit: String = null,
-    notFoundContent: TagMod[Any] = null,
-    searchPlaceholder: String = null,
-    titles: js.Array[String] = null
-  ): PartialTransferLocale = {
+  def apply(): PartialTransferLocale = {
     val __obj = js.Dynamic.literal()
-    if (itemUnit != null) __obj.updateDynamic("itemUnit")(itemUnit.asInstanceOf[js.Any])
-    if (itemsUnit != null) __obj.updateDynamic("itemsUnit")(itemsUnit.asInstanceOf[js.Any])
-    if (notFoundContent != null) __obj.updateDynamic("notFoundContent")(notFoundContent.asInstanceOf[js.Any])
-    if (searchPlaceholder != null) __obj.updateDynamic("searchPlaceholder")(searchPlaceholder.asInstanceOf[js.Any])
-    if (titles != null) __obj.updateDynamic("titles")(titles.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialTransferLocale]
   }
+  @scala.inline
+  implicit class PartialTransferLocaleOps[Self <: PartialTransferLocale] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setItemUnit(value: String): Self = this.set("itemUnit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteItemUnit: Self = this.set("itemUnit", js.undefined)
+    @scala.inline
+    def setItemsUnit(value: String): Self = this.set("itemsUnit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteItemsUnit: Self = this.set("itemsUnit", js.undefined)
+    @scala.inline
+    def setNotFoundContentReactElement(value: ReactElement): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNotFoundContent(value: TagMod[Any]): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNotFoundContent: Self = this.set("notFoundContent", js.undefined)
+    @scala.inline
+    def setSearchPlaceholder(value: String): Self = this.set("searchPlaceholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSearchPlaceholder: Self = this.set("searchPlaceholder", js.undefined)
+    @scala.inline
+    def setTitles(value: js.Array[String]): Self = this.set("titles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitles: Self = this.set("titles", js.undefined)
+  }
+  
 }
 

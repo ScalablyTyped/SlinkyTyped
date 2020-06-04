@@ -17,17 +17,36 @@ trait RefactorEditInfo extends js.Object {
 
 object RefactorEditInfo {
   @scala.inline
-  def apply(
-    edits: js.Array[FileTextChanges],
-    commands: js.Array[CodeActionCommand] = null,
-    renameFilename: java.lang.String = null,
-    renameLocation: js.UndefOr[Double] = js.undefined
-  ): RefactorEditInfo = {
+  def apply(edits: js.Array[FileTextChanges]): RefactorEditInfo = {
     val __obj = js.Dynamic.literal(edits = edits.asInstanceOf[js.Any])
-    if (commands != null) __obj.updateDynamic("commands")(commands.asInstanceOf[js.Any])
-    if (renameFilename != null) __obj.updateDynamic("renameFilename")(renameFilename.asInstanceOf[js.Any])
-    if (!js.isUndefined(renameLocation)) __obj.updateDynamic("renameLocation")(renameLocation.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RefactorEditInfo]
   }
+  @scala.inline
+  implicit class RefactorEditInfoOps[Self <: RefactorEditInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setEdits(value: js.Array[FileTextChanges]): Self = this.set("edits", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCommands(value: js.Array[CodeActionCommand]): Self = this.set("commands", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCommands: Self = this.set("commands", js.undefined)
+    @scala.inline
+    def setRenameFilename(value: java.lang.String): Self = this.set("renameFilename", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRenameFilename: Self = this.set("renameFilename", js.undefined)
+    @scala.inline
+    def setRenameLocation(value: Double): Self = this.set("renameLocation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRenameLocation: Self = this.set("renameLocation", js.undefined)
+  }
+  
 }
 

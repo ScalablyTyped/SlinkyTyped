@@ -34,22 +34,52 @@ trait TreeNodeProps extends js.Object {
 
 object TreeNodeProps {
   @scala.inline
-  def apply(
-    className: String = null,
-    disableCheckbox: js.UndefOr[Boolean] = js.undefined,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    icon: ReactElement | (js.Function1[/* props */ InternalTreeNodeProps, ReactElement]) = null,
-    isLeaf: js.UndefOr[Boolean] = js.undefined,
-    title: String | ReactElement = null
-  ): TreeNodeProps = {
+  def apply(): TreeNodeProps = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableCheckbox)) __obj.updateDynamic("disableCheckbox")(disableCheckbox.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (!js.isUndefined(isLeaf)) __obj.updateDynamic("isLeaf")(isLeaf.get.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[TreeNodeProps]
   }
+  @scala.inline
+  implicit class TreeNodePropsOps[Self <: TreeNodeProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setDisableCheckbox(value: Boolean): Self = this.set("disableCheckbox", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisableCheckbox: Self = this.set("disableCheckbox", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIconFunction1(value: /* props */ InternalTreeNodeProps => ReactElement): Self = this.set("icon", js.Any.fromFunction1(value))
+    @scala.inline
+    def setIcon(value: ReactElement | (js.Function1[/* props */ InternalTreeNodeProps, ReactElement])): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIcon: Self = this.set("icon", js.undefined)
+    @scala.inline
+    def setIsLeaf(value: Boolean): Self = this.set("isLeaf", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIsLeaf: Self = this.set("isLeaf", js.undefined)
+    @scala.inline
+    def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTitle(value: String | ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
+  }
+  
 }
 

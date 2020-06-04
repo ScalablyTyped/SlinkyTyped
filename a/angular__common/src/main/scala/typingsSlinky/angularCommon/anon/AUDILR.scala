@@ -28,5 +28,32 @@ object AUDILR {
     val __obj = js.Dynamic.literal(AUD = AUD.asInstanceOf[js.Any], ILR = ILR.asInstanceOf[js.Any], JPY = JPY.asInstanceOf[js.Any], KRW = KRW.asInstanceOf[js.Any], MOP = MOP.asInstanceOf[js.Any], TWD = TWD.asInstanceOf[js.Any], USD = USD.asInstanceOf[js.Any])
     __obj.asInstanceOf[AUDILR]
   }
+  @scala.inline
+  implicit class AUDILROps[Self <: AUDILR] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAUD(value: js.Array[String]): Self = this.set("AUD", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setILR(value: js.Array[String]): Self = this.set("ILR", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setJPY(value: js.Array[String]): Self = this.set("JPY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setKRW(value: js.Array[String]): Self = this.set("KRW", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMOP(value: js.Array[String]): Self = this.set("MOP", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTWD(value: js.Array[String]): Self = this.set("TWD", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUSD(value: js.Array[String]): Self = this.set("USD", value.asInstanceOf[js.Any])
+  }
+  
 }
 

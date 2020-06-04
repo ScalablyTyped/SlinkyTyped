@@ -25,36 +25,77 @@ trait ArrayRule extends RuleObject {
 
 object ArrayRule {
   @scala.inline
-  def apply(
-    `type`: array,
-    defaultField: RuleObject = null,
-    enum: js.Array[StoreValue] = null,
-    len: js.UndefOr[Double] = js.undefined,
-    max: js.UndefOr[Double] = js.undefined,
-    message: String | ReactElement = null,
-    min: js.UndefOr[Double] = js.undefined,
-    pattern: js.RegExp = null,
-    required: js.UndefOr[Boolean] = js.undefined,
-    transform: /* value */ StoreValue => StoreValue = null,
-    validateTrigger: String | js.Array[String] = null,
-    validator: (/* rule */ RuleObject, /* value */ StoreValue, /* callback */ js.Function1[/* error */ js.UndefOr[String], Unit]) => js.Promise[Unit] | Unit = null,
-    whitespace: js.UndefOr[Boolean] = js.undefined
-  ): ArrayRule = {
+  def apply(`type`: array): ArrayRule = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (defaultField != null) __obj.updateDynamic("defaultField")(defaultField.asInstanceOf[js.Any])
-    if (enum != null) __obj.updateDynamic("enum")(enum.asInstanceOf[js.Any])
-    if (!js.isUndefined(len)) __obj.updateDynamic("len")(len.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
-    if (pattern != null) __obj.updateDynamic("pattern")(pattern.asInstanceOf[js.Any])
-    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.get.asInstanceOf[js.Any])
-    if (transform != null) __obj.updateDynamic("transform")(js.Any.fromFunction1(transform))
-    if (validateTrigger != null) __obj.updateDynamic("validateTrigger")(validateTrigger.asInstanceOf[js.Any])
-    if (validator != null) __obj.updateDynamic("validator")(js.Any.fromFunction3(validator))
-    if (!js.isUndefined(whitespace)) __obj.updateDynamic("whitespace")(whitespace.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArrayRule]
   }
+  @scala.inline
+  implicit class ArrayRuleOps[Self <: ArrayRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setType(value: array): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDefaultField(value: RuleObject): Self = this.set("defaultField", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultField: Self = this.set("defaultField", js.undefined)
+    @scala.inline
+    def setEnum(value: js.Array[StoreValue]): Self = this.set("enum", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEnum: Self = this.set("enum", js.undefined)
+    @scala.inline
+    def setLen(value: Double): Self = this.set("len", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLen: Self = this.set("len", js.undefined)
+    @scala.inline
+    def setMax(value: Double): Self = this.set("max", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMax: Self = this.set("max", js.undefined)
+    @scala.inline
+    def setMessageReactElement(value: ReactElement): Self = this.set("message", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMessage(value: String | ReactElement): Self = this.set("message", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMessage: Self = this.set("message", js.undefined)
+    @scala.inline
+    def setMin(value: Double): Self = this.set("min", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMin: Self = this.set("min", js.undefined)
+    @scala.inline
+    def setPattern(value: js.RegExp): Self = this.set("pattern", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePattern: Self = this.set("pattern", js.undefined)
+    @scala.inline
+    def setRequired(value: Boolean): Self = this.set("required", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRequired: Self = this.set("required", js.undefined)
+    @scala.inline
+    def setTransform(value: /* value */ StoreValue => StoreValue): Self = this.set("transform", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteTransform: Self = this.set("transform", js.undefined)
+    @scala.inline
+    def setValidateTrigger(value: String | js.Array[String]): Self = this.set("validateTrigger", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValidateTrigger: Self = this.set("validateTrigger", js.undefined)
+    @scala.inline
+    def setValidator(
+      value: (/* rule */ RuleObject, /* value */ StoreValue, /* callback */ js.Function1[/* error */ js.UndefOr[String], Unit]) => js.Promise[Unit] | Unit
+    ): Self = this.set("validator", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteValidator: Self = this.set("validator", js.undefined)
+    @scala.inline
+    def setWhitespace(value: Boolean): Self = this.set("whitespace", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWhitespace: Self = this.set("whitespace", js.undefined)
+  }
+  
 }
 

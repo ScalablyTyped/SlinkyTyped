@@ -15,16 +15,34 @@ trait CustomTransformers extends js.Object {
 
 object CustomTransformers {
   @scala.inline
-  def apply(
-    after: js.Array[TransformerFactory[SourceFile] | CustomTransformerFactory] = null,
-    afterDeclarations: js.Array[(TransformerFactory[Bundle | SourceFile]) | CustomTransformerFactory] = null,
-    before: js.Array[TransformerFactory[SourceFile] | CustomTransformerFactory] = null
-  ): CustomTransformers = {
+  def apply(): CustomTransformers = {
     val __obj = js.Dynamic.literal()
-    if (after != null) __obj.updateDynamic("after")(after.asInstanceOf[js.Any])
-    if (afterDeclarations != null) __obj.updateDynamic("afterDeclarations")(afterDeclarations.asInstanceOf[js.Any])
-    if (before != null) __obj.updateDynamic("before")(before.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomTransformers]
   }
+  @scala.inline
+  implicit class CustomTransformersOps[Self <: CustomTransformers] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAfter(value: js.Array[TransformerFactory[SourceFile] | CustomTransformerFactory]): Self = this.set("after", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAfter: Self = this.set("after", js.undefined)
+    @scala.inline
+    def setAfterDeclarations(value: js.Array[(TransformerFactory[Bundle | SourceFile]) | CustomTransformerFactory]): Self = this.set("afterDeclarations", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAfterDeclarations: Self = this.set("afterDeclarations", js.undefined)
+    @scala.inline
+    def setBefore(value: js.Array[TransformerFactory[SourceFile] | CustomTransformerFactory]): Self = this.set("before", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBefore: Self = this.set("before", js.undefined)
+  }
+  
 }
 

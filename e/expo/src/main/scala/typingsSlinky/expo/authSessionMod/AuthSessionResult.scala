@@ -24,8 +24,8 @@ object AuthSessionResult {
     __obj.asInstanceOf[AuthSessionResult]
   }
   @scala.inline
-  def ErrorCode(params: StringDictionary[String], `type`: error | success, url: String, errorCode: String = null): AuthSessionResult = {
-    val __obj = js.Dynamic.literal(params = params.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], errorCode = errorCode.asInstanceOf[js.Any])
+  def ErrorCode(params: StringDictionary[String], `type`: error | success, url: String): AuthSessionResult = {
+    val __obj = js.Dynamic.literal(params = params.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthSessionResult]
   }

@@ -31,10 +31,28 @@ trait MapRestriction extends js.Object {
 
 object MapRestriction {
   @scala.inline
-  def apply(latLngBounds: LatLngBounds | LatLngBoundsLiteral, strictBounds: js.UndefOr[Boolean] = js.undefined): MapRestriction = {
+  def apply(latLngBounds: LatLngBounds | LatLngBoundsLiteral): MapRestriction = {
     val __obj = js.Dynamic.literal(latLngBounds = latLngBounds.asInstanceOf[js.Any])
-    if (!js.isUndefined(strictBounds)) __obj.updateDynamic("strictBounds")(strictBounds.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapRestriction]
   }
+  @scala.inline
+  implicit class MapRestrictionOps[Self <: MapRestriction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setLatLngBounds(value: LatLngBounds | LatLngBoundsLiteral): Self = this.set("latLngBounds", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStrictBounds(value: Boolean): Self = this.set("strictBounds", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStrictBounds: Self = this.set("strictBounds", js.undefined)
+  }
+  
 }
 

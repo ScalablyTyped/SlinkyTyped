@@ -1,6 +1,7 @@
 package typingsSlinky.rcPicker.headerMod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,29 +25,70 @@ trait HeaderProps extends js.Object {
 
 object HeaderProps {
   @scala.inline
-  def apply(
-    prefixCls: String,
-    children: TagMod[Any] = null,
-    nextIcon: TagMod[Any] = null,
-    onNext: () => Unit = null,
-    onPrev: () => Unit = null,
-    onSuperNext: () => Unit = null,
-    onSuperPrev: () => Unit = null,
-    prevIcon: TagMod[Any] = null,
-    superNextIcon: TagMod[Any] = null,
-    superPrevIcon: TagMod[Any] = null
-  ): HeaderProps = {
+  def apply(prefixCls: String): HeaderProps = {
     val __obj = js.Dynamic.literal(prefixCls = prefixCls.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (nextIcon != null) __obj.updateDynamic("nextIcon")(nextIcon.asInstanceOf[js.Any])
-    if (onNext != null) __obj.updateDynamic("onNext")(js.Any.fromFunction0(onNext))
-    if (onPrev != null) __obj.updateDynamic("onPrev")(js.Any.fromFunction0(onPrev))
-    if (onSuperNext != null) __obj.updateDynamic("onSuperNext")(js.Any.fromFunction0(onSuperNext))
-    if (onSuperPrev != null) __obj.updateDynamic("onSuperPrev")(js.Any.fromFunction0(onSuperPrev))
-    if (prevIcon != null) __obj.updateDynamic("prevIcon")(prevIcon.asInstanceOf[js.Any])
-    if (superNextIcon != null) __obj.updateDynamic("superNextIcon")(superNextIcon.asInstanceOf[js.Any])
-    if (superPrevIcon != null) __obj.updateDynamic("superPrevIcon")(superPrevIcon.asInstanceOf[js.Any])
     __obj.asInstanceOf[HeaderProps]
   }
+  @scala.inline
+  implicit class HeaderPropsOps[Self <: HeaderProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setNextIconReactElement(value: ReactElement): Self = this.set("nextIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNextIcon(value: TagMod[Any]): Self = this.set("nextIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNextIcon: Self = this.set("nextIcon", js.undefined)
+    @scala.inline
+    def setOnNext(value: () => Unit): Self = this.set("onNext", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnNext: Self = this.set("onNext", js.undefined)
+    @scala.inline
+    def setOnPrev(value: () => Unit): Self = this.set("onPrev", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnPrev: Self = this.set("onPrev", js.undefined)
+    @scala.inline
+    def setOnSuperNext(value: () => Unit): Self = this.set("onSuperNext", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnSuperNext: Self = this.set("onSuperNext", js.undefined)
+    @scala.inline
+    def setOnSuperPrev(value: () => Unit): Self = this.set("onSuperPrev", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnSuperPrev: Self = this.set("onSuperPrev", js.undefined)
+    @scala.inline
+    def setPrevIconReactElement(value: ReactElement): Self = this.set("prevIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPrevIcon(value: TagMod[Any]): Self = this.set("prevIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrevIcon: Self = this.set("prevIcon", js.undefined)
+    @scala.inline
+    def setSuperNextIconReactElement(value: ReactElement): Self = this.set("superNextIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSuperNextIcon(value: TagMod[Any]): Self = this.set("superNextIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSuperNextIcon: Self = this.set("superNextIcon", js.undefined)
+    @scala.inline
+    def setSuperPrevIconReactElement(value: ReactElement): Self = this.set("superPrevIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSuperPrevIcon(value: TagMod[Any]): Self = this.set("superPrevIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSuperPrevIcon: Self = this.set("superPrevIcon", js.undefined)
+  }
+  
 }
 

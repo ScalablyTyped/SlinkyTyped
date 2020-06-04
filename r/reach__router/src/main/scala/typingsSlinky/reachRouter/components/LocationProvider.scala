@@ -1,9 +1,13 @@
 package typingsSlinky.reachRouter.components
 
+import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reachRouter.mod.History
+import typingsSlinky.reachRouter.mod.LocationContext
 import typingsSlinky.reachRouter.mod.LocationProviderProps
+import typingsSlinky.reachRouter.mod.LocationProviderRenderFn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,6 +21,12 @@ object LocationProvider {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reachRouter.mod.LocationProvider] {
+    @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenFunction1(value: /* context */ LocationContext => TagMod[Any]): this.type = set("children", js.Any.fromFunction1(value))
+    @scala.inline
+    def children(value: TagMod[Any] | LocationProviderRenderFn): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def history(value: History): this.type = set("history", value.asInstanceOf[js.Any])
   }

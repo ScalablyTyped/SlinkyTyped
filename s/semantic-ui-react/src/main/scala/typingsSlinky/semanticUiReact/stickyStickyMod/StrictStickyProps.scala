@@ -2,6 +2,8 @@ package typingsSlinky.semanticUiReact.stickyStickyMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
@@ -69,38 +71,92 @@ trait StrictStickyProps extends js.Object {
 
 object StrictStickyProps {
   @scala.inline
-  def apply(
-    active: js.UndefOr[Boolean] = js.undefined,
-    as: js.Any = null,
-    bottomOffset: js.UndefOr[Double] = js.undefined,
-    children: TagMod[Any] = null,
-    className: String = null,
-    context: js.UndefOr[Null | js.Object | Ref[HTMLElement]] = js.undefined,
-    offset: js.UndefOr[Double] = js.undefined,
-    onBottom: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ StickyProps) => Unit = null,
-    onStick: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ StickyProps) => Unit = null,
-    onTop: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ StickyProps) => Unit = null,
-    onUnstick: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ StickyProps) => Unit = null,
-    pushing: js.UndefOr[Boolean] = js.undefined,
-    scrollContext: js.UndefOr[Null | js.Object | Ref[HTMLElement]] = js.undefined,
-    styleElement: js.Object = null
-  ): StrictStickyProps = {
+  def apply(): StrictStickyProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (!js.isUndefined(bottomOffset)) __obj.updateDynamic("bottomOffset")(bottomOffset.get.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(context)) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
-    if (onBottom != null) __obj.updateDynamic("onBottom")(js.Any.fromFunction2(onBottom))
-    if (onStick != null) __obj.updateDynamic("onStick")(js.Any.fromFunction2(onStick))
-    if (onTop != null) __obj.updateDynamic("onTop")(js.Any.fromFunction2(onTop))
-    if (onUnstick != null) __obj.updateDynamic("onUnstick")(js.Any.fromFunction2(onUnstick))
-    if (!js.isUndefined(pushing)) __obj.updateDynamic("pushing")(pushing.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(scrollContext)) __obj.updateDynamic("scrollContext")(scrollContext.asInstanceOf[js.Any])
-    if (styleElement != null) __obj.updateDynamic("styleElement")(styleElement.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictStickyProps]
   }
+  @scala.inline
+  implicit class StrictStickyPropsOps[Self <: StrictStickyProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setActive(value: Boolean): Self = this.set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteActive: Self = this.set("active", js.undefined)
+    @scala.inline
+    def setAs(value: js.Any): Self = this.set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAs: Self = this.set("as", js.undefined)
+    @scala.inline
+    def setBottomOffset(value: Double): Self = this.set("bottomOffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBottomOffset: Self = this.set("bottomOffset", js.undefined)
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setContextRefObject(value: ReactRef[HTMLElement]): Self = this.set("context", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContextFunction1(value: /* instance */ HTMLElement | Null => Unit): Self = this.set("context", js.Any.fromFunction1(value))
+    @scala.inline
+    def setContext(value: js.Object | Ref[HTMLElement]): Self = this.set("context", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContext: Self = this.set("context", js.undefined)
+    @scala.inline
+    def setContextNull: Self = this.set("context", null)
+    @scala.inline
+    def setOffset(value: Double): Self = this.set("offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOffset: Self = this.set("offset", js.undefined)
+    @scala.inline
+    def setOnBottom(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ StickyProps) => Unit): Self = this.set("onBottom", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnBottom: Self = this.set("onBottom", js.undefined)
+    @scala.inline
+    def setOnStick(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ StickyProps) => Unit): Self = this.set("onStick", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnStick: Self = this.set("onStick", js.undefined)
+    @scala.inline
+    def setOnTop(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ StickyProps) => Unit): Self = this.set("onTop", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnTop: Self = this.set("onTop", js.undefined)
+    @scala.inline
+    def setOnUnstick(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ StickyProps) => Unit): Self = this.set("onUnstick", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnUnstick: Self = this.set("onUnstick", js.undefined)
+    @scala.inline
+    def setPushing(value: Boolean): Self = this.set("pushing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePushing: Self = this.set("pushing", js.undefined)
+    @scala.inline
+    def setScrollContextRefObject(value: ReactRef[HTMLElement]): Self = this.set("scrollContext", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setScrollContextFunction1(value: /* instance */ HTMLElement | Null => Unit): Self = this.set("scrollContext", js.Any.fromFunction1(value))
+    @scala.inline
+    def setScrollContext(value: js.Object | Ref[HTMLElement]): Self = this.set("scrollContext", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScrollContext: Self = this.set("scrollContext", js.undefined)
+    @scala.inline
+    def setScrollContextNull: Self = this.set("scrollContext", null)
+    @scala.inline
+    def setStyleElement(value: js.Object): Self = this.set("styleElement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyleElement: Self = this.set("styleElement", js.undefined)
+  }
+  
 }
 

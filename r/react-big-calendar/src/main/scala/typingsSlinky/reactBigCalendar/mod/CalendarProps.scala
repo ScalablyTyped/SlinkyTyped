@@ -3,11 +3,9 @@ package typingsSlinky.reactBigCalendar.mod
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.react.mod.Key
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.mod.Props
+import typingsSlinky.reactBigCalendar.anon.Accessors
 import typingsSlinky.reactBigCalendar.anon.Action
 import typingsSlinky.reactBigCalendar.anon.Start
 import typingsSlinky.reactBigCalendar.anon.X
@@ -95,123 +93,272 @@ trait CalendarProps[TEvent /* <: js.Object */, TResource /* <: js.Object */] ext
 
 object CalendarProps {
   @scala.inline
-  def apply[TEvent, TResource](
-    localizer: DateLocalizer,
-    allDayAccessor: (/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, Boolean]) = null,
-    children: TagMod[Any] = null,
-    className: String = null,
-    components: Components_[TEvent] = null,
-    culture: String = null,
-    date: stringOrDate = null,
-    dayLayoutAlgorithm: DayLayoutAlgorithm | DayLayoutFunction[TEvent] = null,
-    dayPropGetter: (/* date */ js.Date, /* resourceId */ js.UndefOr[Double | String]) => HTMLAttributes[HTMLDivElement] = null,
-    defaultDate: js.Date = null,
-    defaultView: View = null,
-    drilldownView: js.UndefOr[Null | View] = js.undefined,
-    elementProps: HTMLAttributes[HTMLElement] = null,
-    endAccessor: (/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, js.Date]) = null,
-    eventPropGetter: (TEvent, /* start */ stringOrDate, /* end */ stringOrDate, /* isSelected */ Boolean) => HTMLAttributes[HTMLDivElement] = null,
-    events: js.Array[TEvent] = null,
-    formats: Formats = null,
-    getDrilldownView: js.UndefOr[
-      Null | ((/* targetDate */ js.Date, /* currentViewName */ View, /* configuredViewNames */ js.Array[View]) => Unit)
-    ] = js.undefined,
-    getNow: () => js.Date = null,
-    key: Key = null,
-    length: js.UndefOr[Double] = js.undefined,
-    longPressThreshold: js.UndefOr[Double] = js.undefined,
-    max: stringOrDate = null,
-    messages: Messages = null,
-    min: stringOrDate = null,
-    onDoubleClickEvent: (/* event */ TEvent, /* e */ SyntheticEvent[org.scalajs.dom.raw.Event, HTMLElement]) => Unit = null,
-    onDrillDown: (/* date */ js.Date, /* view */ View) => Unit = null,
-    onNavigate: (/* newDate */ js.Date, /* view */ View, /* action */ NavigateAction) => Unit = null,
-    onRangeChange: /* range */ js.Array[js.Date] | Start => Unit = null,
-    onSelectEvent: (/* event */ TEvent, /* e */ SyntheticEvent[org.scalajs.dom.raw.Event, HTMLElement]) => Unit = null,
-    onSelectSlot: /* slotInfo */ Action => Unit = null,
-    onSelecting: /* range */ Start => js.UndefOr[Boolean | Null] = null,
-    onShowMore: (/* events */ js.Array[TEvent], /* date */ js.Date) => Unit = null,
-    onView: /* view */ View => Unit = null,
-    popup: js.UndefOr[Boolean] = js.undefined,
-    popupOffset: Double | X = null,
-    ref: js.UndefOr[Null | (LegacyRef[Calendar[TEvent, TResource]])] = js.undefined,
-    resourceAccessor: (/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, _]) = null,
-    resourceIdAccessor: (/* keyof TResource */ String) | (js.Function1[/* resource */ TResource, _]) = null,
-    resourceTitleAccessor: (/* keyof TResource */ String) | (js.Function1[/* resource */ TResource, _]) = null,
-    resources: js.Array[TResource] = null,
-    rtl: js.UndefOr[Boolean] = js.undefined,
-    scrollToTime: js.Date = null,
-    selectable: Boolean | ignoreEvents = null,
-    selected: js.Any = null,
-    showMultiDayTimes: js.UndefOr[Boolean] = js.undefined,
-    slotGroupPropGetter: () => HTMLAttributes[HTMLDivElement] = null,
-    slotPropGetter: (/* date */ js.Date, /* resourceId */ js.UndefOr[Double | String]) => HTMLAttributes[HTMLDivElement] = null,
-    startAccessor: (/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, js.Date]) = null,
-    step: js.UndefOr[Double] = js.undefined,
-    timeslots: js.UndefOr[Double] = js.undefined,
-    titleAccessor: (/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, String]) = null,
-    toolbar: js.UndefOr[Boolean] = js.undefined,
-    tooltipAccessor: (/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, String]) = null,
-    view: View = null,
-    views: ViewsProps = null
-  ): CalendarProps[TEvent, TResource] = {
+  def apply[/* <: js.Object */ TEvent, /* <: js.Object */ TResource](localizer: DateLocalizer): CalendarProps[TEvent, TResource] = {
     val __obj = js.Dynamic.literal(localizer = localizer.asInstanceOf[js.Any])
-    if (allDayAccessor != null) __obj.updateDynamic("allDayAccessor")(allDayAccessor.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (components != null) __obj.updateDynamic("components")(components.asInstanceOf[js.Any])
-    if (culture != null) __obj.updateDynamic("culture")(culture.asInstanceOf[js.Any])
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (dayLayoutAlgorithm != null) __obj.updateDynamic("dayLayoutAlgorithm")(dayLayoutAlgorithm.asInstanceOf[js.Any])
-    if (dayPropGetter != null) __obj.updateDynamic("dayPropGetter")(js.Any.fromFunction2(dayPropGetter))
-    if (defaultDate != null) __obj.updateDynamic("defaultDate")(defaultDate.asInstanceOf[js.Any])
-    if (defaultView != null) __obj.updateDynamic("defaultView")(defaultView.asInstanceOf[js.Any])
-    if (!js.isUndefined(drilldownView)) __obj.updateDynamic("drilldownView")(drilldownView.asInstanceOf[js.Any])
-    if (elementProps != null) __obj.updateDynamic("elementProps")(elementProps.asInstanceOf[js.Any])
-    if (endAccessor != null) __obj.updateDynamic("endAccessor")(endAccessor.asInstanceOf[js.Any])
-    if (eventPropGetter != null) __obj.updateDynamic("eventPropGetter")(js.Any.fromFunction4(eventPropGetter))
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (formats != null) __obj.updateDynamic("formats")(formats.asInstanceOf[js.Any])
-    if (!js.isUndefined(getDrilldownView)) __obj.updateDynamic("getDrilldownView")(if (getDrilldownView != null) js.Any.fromFunction3(getDrilldownView.asInstanceOf[(/* targetDate */ js.Date, /* currentViewName */ View, /* configuredViewNames */ js.Array[View]) => Unit]) else null)
-    if (getNow != null) __obj.updateDynamic("getNow")(js.Any.fromFunction0(getNow))
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (!js.isUndefined(length)) __obj.updateDynamic("length")(length.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(longPressThreshold)) __obj.updateDynamic("longPressThreshold")(longPressThreshold.get.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (messages != null) __obj.updateDynamic("messages")(messages.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (onDoubleClickEvent != null) __obj.updateDynamic("onDoubleClickEvent")(js.Any.fromFunction2(onDoubleClickEvent))
-    if (onDrillDown != null) __obj.updateDynamic("onDrillDown")(js.Any.fromFunction2(onDrillDown))
-    if (onNavigate != null) __obj.updateDynamic("onNavigate")(js.Any.fromFunction3(onNavigate))
-    if (onRangeChange != null) __obj.updateDynamic("onRangeChange")(js.Any.fromFunction1(onRangeChange))
-    if (onSelectEvent != null) __obj.updateDynamic("onSelectEvent")(js.Any.fromFunction2(onSelectEvent))
-    if (onSelectSlot != null) __obj.updateDynamic("onSelectSlot")(js.Any.fromFunction1(onSelectSlot))
-    if (onSelecting != null) __obj.updateDynamic("onSelecting")(js.Any.fromFunction1(onSelecting))
-    if (onShowMore != null) __obj.updateDynamic("onShowMore")(js.Any.fromFunction2(onShowMore))
-    if (onView != null) __obj.updateDynamic("onView")(js.Any.fromFunction1(onView))
-    if (!js.isUndefined(popup)) __obj.updateDynamic("popup")(popup.get.asInstanceOf[js.Any])
-    if (popupOffset != null) __obj.updateDynamic("popupOffset")(popupOffset.asInstanceOf[js.Any])
-    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
-    if (resourceAccessor != null) __obj.updateDynamic("resourceAccessor")(resourceAccessor.asInstanceOf[js.Any])
-    if (resourceIdAccessor != null) __obj.updateDynamic("resourceIdAccessor")(resourceIdAccessor.asInstanceOf[js.Any])
-    if (resourceTitleAccessor != null) __obj.updateDynamic("resourceTitleAccessor")(resourceTitleAccessor.asInstanceOf[js.Any])
-    if (resources != null) __obj.updateDynamic("resources")(resources.asInstanceOf[js.Any])
-    if (!js.isUndefined(rtl)) __obj.updateDynamic("rtl")(rtl.get.asInstanceOf[js.Any])
-    if (scrollToTime != null) __obj.updateDynamic("scrollToTime")(scrollToTime.asInstanceOf[js.Any])
-    if (selectable != null) __obj.updateDynamic("selectable")(selectable.asInstanceOf[js.Any])
-    if (selected != null) __obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
-    if (!js.isUndefined(showMultiDayTimes)) __obj.updateDynamic("showMultiDayTimes")(showMultiDayTimes.get.asInstanceOf[js.Any])
-    if (slotGroupPropGetter != null) __obj.updateDynamic("slotGroupPropGetter")(js.Any.fromFunction0(slotGroupPropGetter))
-    if (slotPropGetter != null) __obj.updateDynamic("slotPropGetter")(js.Any.fromFunction2(slotPropGetter))
-    if (startAccessor != null) __obj.updateDynamic("startAccessor")(startAccessor.asInstanceOf[js.Any])
-    if (!js.isUndefined(step)) __obj.updateDynamic("step")(step.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(timeslots)) __obj.updateDynamic("timeslots")(timeslots.get.asInstanceOf[js.Any])
-    if (titleAccessor != null) __obj.updateDynamic("titleAccessor")(titleAccessor.asInstanceOf[js.Any])
-    if (!js.isUndefined(toolbar)) __obj.updateDynamic("toolbar")(toolbar.get.asInstanceOf[js.Any])
-    if (tooltipAccessor != null) __obj.updateDynamic("tooltipAccessor")(tooltipAccessor.asInstanceOf[js.Any])
-    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
-    if (views != null) __obj.updateDynamic("views")(views.asInstanceOf[js.Any])
     __obj.asInstanceOf[CalendarProps[TEvent, TResource]]
   }
+  @scala.inline
+  implicit class CalendarPropsOps[Self <: CalendarProps[_, _], /* <: js.Object */ TEvent, /* <: js.Object */ TResource] (val x: Self with (CalendarProps[TEvent, TResource])) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setLocalizer(value: DateLocalizer): Self = this.set("localizer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAllDayAccessorFunction1(value: /* event */ TEvent => Boolean): Self = this.set("allDayAccessor", js.Any.fromFunction1(value))
+    @scala.inline
+    def setAllDayAccessor(value: (/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, Boolean])): Self = this.set("allDayAccessor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAllDayAccessor: Self = this.set("allDayAccessor", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setComponents(value: Components_[TEvent]): Self = this.set("components", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteComponents: Self = this.set("components", js.undefined)
+    @scala.inline
+    def setCulture(value: String): Self = this.set("culture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCulture: Self = this.set("culture", js.undefined)
+    @scala.inline
+    def setDateDate(value: js.Date): Self = this.set("date", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDate(value: stringOrDate): Self = this.set("date", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDate: Self = this.set("date", js.undefined)
+    @scala.inline
+    def setDayLayoutAlgorithmFunction1(value: /* _ */ Accessors[TEvent] => js.Array[typingsSlinky.reactBigCalendar.anon.Event[TEvent]]): Self = this.set("dayLayoutAlgorithm", js.Any.fromFunction1(value))
+    @scala.inline
+    def setDayLayoutAlgorithm(value: DayLayoutAlgorithm | DayLayoutFunction[TEvent]): Self = this.set("dayLayoutAlgorithm", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDayLayoutAlgorithm: Self = this.set("dayLayoutAlgorithm", js.undefined)
+    @scala.inline
+    def setDayPropGetter(
+      value: (/* date */ js.Date, /* resourceId */ js.UndefOr[Double | String]) => HTMLAttributes[HTMLDivElement]
+    ): Self = this.set("dayPropGetter", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteDayPropGetter: Self = this.set("dayPropGetter", js.undefined)
+    @scala.inline
+    def setDefaultDate(value: js.Date): Self = this.set("defaultDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultDate: Self = this.set("defaultDate", js.undefined)
+    @scala.inline
+    def setDefaultView(value: View): Self = this.set("defaultView", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultView: Self = this.set("defaultView", js.undefined)
+    @scala.inline
+    def setDrilldownView(value: View): Self = this.set("drilldownView", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDrilldownView: Self = this.set("drilldownView", js.undefined)
+    @scala.inline
+    def setDrilldownViewNull: Self = this.set("drilldownView", null)
+    @scala.inline
+    def setElementProps(value: HTMLAttributes[HTMLElement]): Self = this.set("elementProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteElementProps: Self = this.set("elementProps", js.undefined)
+    @scala.inline
+    def setEndAccessorFunction1(value: /* event */ TEvent => js.Date): Self = this.set("endAccessor", js.Any.fromFunction1(value))
+    @scala.inline
+    def setEndAccessor(value: (/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, js.Date])): Self = this.set("endAccessor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEndAccessor: Self = this.set("endAccessor", js.undefined)
+    @scala.inline
+    def setEventPropGetter(
+      value: (TEvent, /* start */ stringOrDate, /* end */ stringOrDate, /* isSelected */ Boolean) => HTMLAttributes[HTMLDivElement]
+    ): Self = this.set("eventPropGetter", js.Any.fromFunction4(value))
+    @scala.inline
+    def deleteEventPropGetter: Self = this.set("eventPropGetter", js.undefined)
+    @scala.inline
+    def setEvents(value: js.Array[TEvent]): Self = this.set("events", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEvents: Self = this.set("events", js.undefined)
+    @scala.inline
+    def setFormats(value: Formats): Self = this.set("formats", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFormats: Self = this.set("formats", js.undefined)
+    @scala.inline
+    def setGetDrilldownView(
+      value: (/* targetDate */ js.Date, /* currentViewName */ View, /* configuredViewNames */ js.Array[View]) => Unit
+    ): Self = this.set("getDrilldownView", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteGetDrilldownView: Self = this.set("getDrilldownView", js.undefined)
+    @scala.inline
+    def setGetDrilldownViewNull: Self = this.set("getDrilldownView", null)
+    @scala.inline
+    def setGetNow(value: () => js.Date): Self = this.set("getNow", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteGetNow: Self = this.set("getNow", js.undefined)
+    @scala.inline
+    def setLength(value: Double): Self = this.set("length", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLength: Self = this.set("length", js.undefined)
+    @scala.inline
+    def setLongPressThreshold(value: Double): Self = this.set("longPressThreshold", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLongPressThreshold: Self = this.set("longPressThreshold", js.undefined)
+    @scala.inline
+    def setMaxDate(value: js.Date): Self = this.set("max", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMax(value: stringOrDate): Self = this.set("max", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMax: Self = this.set("max", js.undefined)
+    @scala.inline
+    def setMessages(value: Messages): Self = this.set("messages", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMessages: Self = this.set("messages", js.undefined)
+    @scala.inline
+    def setMinDate(value: js.Date): Self = this.set("min", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMin(value: stringOrDate): Self = this.set("min", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMin: Self = this.set("min", js.undefined)
+    @scala.inline
+    def setOnDoubleClickEvent(
+      value: (/* event */ TEvent, /* e */ SyntheticEvent[org.scalajs.dom.raw.Event, HTMLElement]) => Unit
+    ): Self = this.set("onDoubleClickEvent", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnDoubleClickEvent: Self = this.set("onDoubleClickEvent", js.undefined)
+    @scala.inline
+    def setOnDrillDown(value: (/* date */ js.Date, /* view */ View) => Unit): Self = this.set("onDrillDown", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnDrillDown: Self = this.set("onDrillDown", js.undefined)
+    @scala.inline
+    def setOnNavigate(value: (/* newDate */ js.Date, /* view */ View, /* action */ NavigateAction) => Unit): Self = this.set("onNavigate", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteOnNavigate: Self = this.set("onNavigate", js.undefined)
+    @scala.inline
+    def setOnRangeChange(value: /* range */ js.Array[js.Date] | Start => Unit): Self = this.set("onRangeChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnRangeChange: Self = this.set("onRangeChange", js.undefined)
+    @scala.inline
+    def setOnSelectEvent(
+      value: (/* event */ TEvent, /* e */ SyntheticEvent[org.scalajs.dom.raw.Event, HTMLElement]) => Unit
+    ): Self = this.set("onSelectEvent", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnSelectEvent: Self = this.set("onSelectEvent", js.undefined)
+    @scala.inline
+    def setOnSelectSlot(value: /* slotInfo */ Action => Unit): Self = this.set("onSelectSlot", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnSelectSlot: Self = this.set("onSelectSlot", js.undefined)
+    @scala.inline
+    def setOnSelecting(value: /* range */ Start => js.UndefOr[Boolean | Null]): Self = this.set("onSelecting", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnSelecting: Self = this.set("onSelecting", js.undefined)
+    @scala.inline
+    def setOnShowMore(value: (/* events */ js.Array[TEvent], /* date */ js.Date) => Unit): Self = this.set("onShowMore", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnShowMore: Self = this.set("onShowMore", js.undefined)
+    @scala.inline
+    def setOnView(value: /* view */ View => Unit): Self = this.set("onView", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnView: Self = this.set("onView", js.undefined)
+    @scala.inline
+    def setPopup(value: Boolean): Self = this.set("popup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePopup: Self = this.set("popup", js.undefined)
+    @scala.inline
+    def setPopupOffset(value: Double | X): Self = this.set("popupOffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePopupOffset: Self = this.set("popupOffset", js.undefined)
+    @scala.inline
+    def setResourceAccessorFunction1(value: /* event */ TEvent => _): Self = this.set("resourceAccessor", js.Any.fromFunction1(value))
+    @scala.inline
+    def setResourceAccessor(value: (/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, _])): Self = this.set("resourceAccessor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteResourceAccessor: Self = this.set("resourceAccessor", js.undefined)
+    @scala.inline
+    def setResourceIdAccessorFunction1(value: /* resource */ TResource => _): Self = this.set("resourceIdAccessor", js.Any.fromFunction1(value))
+    @scala.inline
+    def setResourceIdAccessor(value: (/* keyof TResource */ String) | (js.Function1[/* resource */ TResource, _])): Self = this.set("resourceIdAccessor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteResourceIdAccessor: Self = this.set("resourceIdAccessor", js.undefined)
+    @scala.inline
+    def setResourceTitleAccessorFunction1(value: /* resource */ TResource => _): Self = this.set("resourceTitleAccessor", js.Any.fromFunction1(value))
+    @scala.inline
+    def setResourceTitleAccessor(value: (/* keyof TResource */ String) | (js.Function1[/* resource */ TResource, _])): Self = this.set("resourceTitleAccessor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteResourceTitleAccessor: Self = this.set("resourceTitleAccessor", js.undefined)
+    @scala.inline
+    def setResources(value: js.Array[TResource]): Self = this.set("resources", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteResources: Self = this.set("resources", js.undefined)
+    @scala.inline
+    def setRtl(value: Boolean): Self = this.set("rtl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRtl: Self = this.set("rtl", js.undefined)
+    @scala.inline
+    def setScrollToTime(value: js.Date): Self = this.set("scrollToTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScrollToTime: Self = this.set("scrollToTime", js.undefined)
+    @scala.inline
+    def setSelectable(value: Boolean | ignoreEvents): Self = this.set("selectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelectable: Self = this.set("selectable", js.undefined)
+    @scala.inline
+    def setSelected(value: js.Any): Self = this.set("selected", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelected: Self = this.set("selected", js.undefined)
+    @scala.inline
+    def setShowMultiDayTimes(value: Boolean): Self = this.set("showMultiDayTimes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowMultiDayTimes: Self = this.set("showMultiDayTimes", js.undefined)
+    @scala.inline
+    def setSlotGroupPropGetter(value: () => HTMLAttributes[HTMLDivElement]): Self = this.set("slotGroupPropGetter", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteSlotGroupPropGetter: Self = this.set("slotGroupPropGetter", js.undefined)
+    @scala.inline
+    def setSlotPropGetter(
+      value: (/* date */ js.Date, /* resourceId */ js.UndefOr[Double | String]) => HTMLAttributes[HTMLDivElement]
+    ): Self = this.set("slotPropGetter", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteSlotPropGetter: Self = this.set("slotPropGetter", js.undefined)
+    @scala.inline
+    def setStartAccessorFunction1(value: /* event */ TEvent => js.Date): Self = this.set("startAccessor", js.Any.fromFunction1(value))
+    @scala.inline
+    def setStartAccessor(value: (/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, js.Date])): Self = this.set("startAccessor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStartAccessor: Self = this.set("startAccessor", js.undefined)
+    @scala.inline
+    def setStep(value: Double): Self = this.set("step", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStep: Self = this.set("step", js.undefined)
+    @scala.inline
+    def setTimeslots(value: Double): Self = this.set("timeslots", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTimeslots: Self = this.set("timeslots", js.undefined)
+    @scala.inline
+    def setTitleAccessorFunction1(value: /* event */ TEvent => String): Self = this.set("titleAccessor", js.Any.fromFunction1(value))
+    @scala.inline
+    def setTitleAccessor(value: (/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, String])): Self = this.set("titleAccessor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitleAccessor: Self = this.set("titleAccessor", js.undefined)
+    @scala.inline
+    def setToolbar(value: Boolean): Self = this.set("toolbar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteToolbar: Self = this.set("toolbar", js.undefined)
+    @scala.inline
+    def setTooltipAccessorFunction1(value: /* event */ TEvent => String): Self = this.set("tooltipAccessor", js.Any.fromFunction1(value))
+    @scala.inline
+    def setTooltipAccessor(value: (/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, String])): Self = this.set("tooltipAccessor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTooltipAccessor: Self = this.set("tooltipAccessor", js.undefined)
+    @scala.inline
+    def setView(value: View): Self = this.set("view", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteView: Self = this.set("view", js.undefined)
+    @scala.inline
+    def setViews(value: ViewsProps): Self = this.set("views", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteViews: Self = this.set("views", js.undefined)
+  }
+  
 }
 

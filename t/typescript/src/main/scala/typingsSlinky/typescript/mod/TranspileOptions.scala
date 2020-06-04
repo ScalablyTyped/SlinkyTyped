@@ -15,22 +15,46 @@ trait TranspileOptions extends js.Object {
 
 object TranspileOptions {
   @scala.inline
-  def apply(
-    compilerOptions: CompilerOptions = null,
-    fileName: java.lang.String = null,
-    moduleName: java.lang.String = null,
-    renamedDependencies: MapLike[java.lang.String] = null,
-    reportDiagnostics: js.UndefOr[Boolean] = js.undefined,
-    transformers: CustomTransformers = null
-  ): TranspileOptions = {
+  def apply(): TranspileOptions = {
     val __obj = js.Dynamic.literal()
-    if (compilerOptions != null) __obj.updateDynamic("compilerOptions")(compilerOptions.asInstanceOf[js.Any])
-    if (fileName != null) __obj.updateDynamic("fileName")(fileName.asInstanceOf[js.Any])
-    if (moduleName != null) __obj.updateDynamic("moduleName")(moduleName.asInstanceOf[js.Any])
-    if (renamedDependencies != null) __obj.updateDynamic("renamedDependencies")(renamedDependencies.asInstanceOf[js.Any])
-    if (!js.isUndefined(reportDiagnostics)) __obj.updateDynamic("reportDiagnostics")(reportDiagnostics.get.asInstanceOf[js.Any])
-    if (transformers != null) __obj.updateDynamic("transformers")(transformers.asInstanceOf[js.Any])
     __obj.asInstanceOf[TranspileOptions]
   }
+  @scala.inline
+  implicit class TranspileOptionsOps[Self <: TranspileOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCompilerOptions(value: CompilerOptions): Self = this.set("compilerOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCompilerOptions: Self = this.set("compilerOptions", js.undefined)
+    @scala.inline
+    def setFileName(value: java.lang.String): Self = this.set("fileName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFileName: Self = this.set("fileName", js.undefined)
+    @scala.inline
+    def setModuleName(value: java.lang.String): Self = this.set("moduleName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteModuleName: Self = this.set("moduleName", js.undefined)
+    @scala.inline
+    def setRenamedDependencies(value: MapLike[java.lang.String]): Self = this.set("renamedDependencies", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRenamedDependencies: Self = this.set("renamedDependencies", js.undefined)
+    @scala.inline
+    def setReportDiagnostics(value: Boolean): Self = this.set("reportDiagnostics", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteReportDiagnostics: Self = this.set("reportDiagnostics", js.undefined)
+    @scala.inline
+    def setTransformers(value: CustomTransformers): Self = this.set("transformers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTransformers: Self = this.set("transformers", js.undefined)
+  }
+  
 }
 

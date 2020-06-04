@@ -59,58 +59,118 @@ trait VendorShorthandPropertiesFallback[TLength] extends js.Object {
 
 object VendorShorthandPropertiesFallback {
   @scala.inline
-  def apply[TLength](
-    MozAnimation: AnimationProperty | js.Array[AnimationProperty] = null,
-    MozBorderImage: BorderImageProperty | js.Array[BorderImageProperty] = null,
-    MozColumnRule: ColumnRuleProperty[TLength] | js.Array[ColumnRuleProperty[TLength]] = null,
-    MozColumns: ColumnsProperty[TLength] | js.Array[ColumnsProperty[TLength]] = null,
-    MozTransition: TransitionProperty | js.Array[TransitionProperty] = null,
-    WebkitAnimation: AnimationProperty | js.Array[AnimationProperty] = null,
-    WebkitBorderBefore: WebkitBorderBeforeProperty[TLength] | js.Array[WebkitBorderBeforeProperty[TLength]] = null,
-    WebkitBorderImage: BorderImageProperty | js.Array[BorderImageProperty] = null,
-    WebkitBorderRadius: BorderRadiusProperty[TLength] | js.Array[BorderRadiusProperty[TLength]] = null,
-    WebkitColumnRule: ColumnRuleProperty[TLength] | js.Array[ColumnRuleProperty[TLength]] = null,
-    WebkitColumns: ColumnsProperty[TLength] | js.Array[ColumnsProperty[TLength]] = null,
-    WebkitFlex: FlexProperty[TLength] | js.Array[FlexProperty[TLength]] = null,
-    WebkitFlexFlow: FlexFlowProperty | js.Array[FlexFlowProperty] = null,
-    WebkitMask: WebkitMaskProperty[TLength] | js.Array[WebkitMaskProperty[TLength]] = null,
-    WebkitTextEmphasis: TextEmphasisProperty | js.Array[TextEmphasisProperty] = null,
-    WebkitTextStroke: WebkitTextStrokeProperty[TLength] | js.Array[WebkitTextStrokeProperty[TLength]] = null,
-    WebkitTransition: TransitionProperty | js.Array[TransitionProperty] = null,
-    msContentZoomLimit: GlobalsString | js.Array[GlobalsString] = null,
-    msContentZoomSnap: MsContentZoomSnapProperty | js.Array[MsContentZoomSnapProperty] = null,
-    msFlex: FlexProperty[TLength] | js.Array[FlexProperty[TLength]] = null,
-    msScrollLimit: GlobalsString | js.Array[GlobalsString] = null,
-    msScrollSnapX: GlobalsString | js.Array[GlobalsString] = null,
-    msScrollSnapY: GlobalsString | js.Array[GlobalsString] = null,
-    msTransition: TransitionProperty | js.Array[TransitionProperty] = null
-  ): VendorShorthandPropertiesFallback[TLength] = {
+  def apply[TLength](): VendorShorthandPropertiesFallback[TLength] = {
     val __obj = js.Dynamic.literal()
-    if (MozAnimation != null) __obj.updateDynamic("MozAnimation")(MozAnimation.asInstanceOf[js.Any])
-    if (MozBorderImage != null) __obj.updateDynamic("MozBorderImage")(MozBorderImage.asInstanceOf[js.Any])
-    if (MozColumnRule != null) __obj.updateDynamic("MozColumnRule")(MozColumnRule.asInstanceOf[js.Any])
-    if (MozColumns != null) __obj.updateDynamic("MozColumns")(MozColumns.asInstanceOf[js.Any])
-    if (MozTransition != null) __obj.updateDynamic("MozTransition")(MozTransition.asInstanceOf[js.Any])
-    if (WebkitAnimation != null) __obj.updateDynamic("WebkitAnimation")(WebkitAnimation.asInstanceOf[js.Any])
-    if (WebkitBorderBefore != null) __obj.updateDynamic("WebkitBorderBefore")(WebkitBorderBefore.asInstanceOf[js.Any])
-    if (WebkitBorderImage != null) __obj.updateDynamic("WebkitBorderImage")(WebkitBorderImage.asInstanceOf[js.Any])
-    if (WebkitBorderRadius != null) __obj.updateDynamic("WebkitBorderRadius")(WebkitBorderRadius.asInstanceOf[js.Any])
-    if (WebkitColumnRule != null) __obj.updateDynamic("WebkitColumnRule")(WebkitColumnRule.asInstanceOf[js.Any])
-    if (WebkitColumns != null) __obj.updateDynamic("WebkitColumns")(WebkitColumns.asInstanceOf[js.Any])
-    if (WebkitFlex != null) __obj.updateDynamic("WebkitFlex")(WebkitFlex.asInstanceOf[js.Any])
-    if (WebkitFlexFlow != null) __obj.updateDynamic("WebkitFlexFlow")(WebkitFlexFlow.asInstanceOf[js.Any])
-    if (WebkitMask != null) __obj.updateDynamic("WebkitMask")(WebkitMask.asInstanceOf[js.Any])
-    if (WebkitTextEmphasis != null) __obj.updateDynamic("WebkitTextEmphasis")(WebkitTextEmphasis.asInstanceOf[js.Any])
-    if (WebkitTextStroke != null) __obj.updateDynamic("WebkitTextStroke")(WebkitTextStroke.asInstanceOf[js.Any])
-    if (WebkitTransition != null) __obj.updateDynamic("WebkitTransition")(WebkitTransition.asInstanceOf[js.Any])
-    if (msContentZoomLimit != null) __obj.updateDynamic("msContentZoomLimit")(msContentZoomLimit.asInstanceOf[js.Any])
-    if (msContentZoomSnap != null) __obj.updateDynamic("msContentZoomSnap")(msContentZoomSnap.asInstanceOf[js.Any])
-    if (msFlex != null) __obj.updateDynamic("msFlex")(msFlex.asInstanceOf[js.Any])
-    if (msScrollLimit != null) __obj.updateDynamic("msScrollLimit")(msScrollLimit.asInstanceOf[js.Any])
-    if (msScrollSnapX != null) __obj.updateDynamic("msScrollSnapX")(msScrollSnapX.asInstanceOf[js.Any])
-    if (msScrollSnapY != null) __obj.updateDynamic("msScrollSnapY")(msScrollSnapY.asInstanceOf[js.Any])
-    if (msTransition != null) __obj.updateDynamic("msTransition")(msTransition.asInstanceOf[js.Any])
     __obj.asInstanceOf[VendorShorthandPropertiesFallback[TLength]]
   }
+  @scala.inline
+  implicit class VendorShorthandPropertiesFallbackOps[Self <: VendorShorthandPropertiesFallback[_], TLength] (val x: Self with VendorShorthandPropertiesFallback[TLength]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setMozAnimation(value: AnimationProperty | js.Array[AnimationProperty]): Self = this.set("MozAnimation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozAnimation: Self = this.set("MozAnimation", js.undefined)
+    @scala.inline
+    def setMozBorderImage(value: BorderImageProperty | js.Array[BorderImageProperty]): Self = this.set("MozBorderImage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozBorderImage: Self = this.set("MozBorderImage", js.undefined)
+    @scala.inline
+    def setMozColumnRule(value: ColumnRuleProperty[TLength] | js.Array[ColumnRuleProperty[TLength]]): Self = this.set("MozColumnRule", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozColumnRule: Self = this.set("MozColumnRule", js.undefined)
+    @scala.inline
+    def setMozColumns(value: ColumnsProperty[TLength] | js.Array[ColumnsProperty[TLength]]): Self = this.set("MozColumns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozColumns: Self = this.set("MozColumns", js.undefined)
+    @scala.inline
+    def setMozTransition(value: TransitionProperty | js.Array[TransitionProperty]): Self = this.set("MozTransition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozTransition: Self = this.set("MozTransition", js.undefined)
+    @scala.inline
+    def setWebkitAnimation(value: AnimationProperty | js.Array[AnimationProperty]): Self = this.set("WebkitAnimation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebkitAnimation: Self = this.set("WebkitAnimation", js.undefined)
+    @scala.inline
+    def setWebkitBorderBefore(value: WebkitBorderBeforeProperty[TLength] | js.Array[WebkitBorderBeforeProperty[TLength]]): Self = this.set("WebkitBorderBefore", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebkitBorderBefore: Self = this.set("WebkitBorderBefore", js.undefined)
+    @scala.inline
+    def setWebkitBorderImage(value: BorderImageProperty | js.Array[BorderImageProperty]): Self = this.set("WebkitBorderImage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebkitBorderImage: Self = this.set("WebkitBorderImage", js.undefined)
+    @scala.inline
+    def setWebkitBorderRadius(value: BorderRadiusProperty[TLength] | js.Array[BorderRadiusProperty[TLength]]): Self = this.set("WebkitBorderRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebkitBorderRadius: Self = this.set("WebkitBorderRadius", js.undefined)
+    @scala.inline
+    def setWebkitColumnRule(value: ColumnRuleProperty[TLength] | js.Array[ColumnRuleProperty[TLength]]): Self = this.set("WebkitColumnRule", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebkitColumnRule: Self = this.set("WebkitColumnRule", js.undefined)
+    @scala.inline
+    def setWebkitColumns(value: ColumnsProperty[TLength] | js.Array[ColumnsProperty[TLength]]): Self = this.set("WebkitColumns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebkitColumns: Self = this.set("WebkitColumns", js.undefined)
+    @scala.inline
+    def setWebkitFlex(value: FlexProperty[TLength] | js.Array[FlexProperty[TLength]]): Self = this.set("WebkitFlex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebkitFlex: Self = this.set("WebkitFlex", js.undefined)
+    @scala.inline
+    def setWebkitFlexFlow(value: FlexFlowProperty | js.Array[FlexFlowProperty]): Self = this.set("WebkitFlexFlow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebkitFlexFlow: Self = this.set("WebkitFlexFlow", js.undefined)
+    @scala.inline
+    def setWebkitMask(value: WebkitMaskProperty[TLength] | js.Array[WebkitMaskProperty[TLength]]): Self = this.set("WebkitMask", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebkitMask: Self = this.set("WebkitMask", js.undefined)
+    @scala.inline
+    def setWebkitTextEmphasis(value: TextEmphasisProperty | js.Array[TextEmphasisProperty]): Self = this.set("WebkitTextEmphasis", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebkitTextEmphasis: Self = this.set("WebkitTextEmphasis", js.undefined)
+    @scala.inline
+    def setWebkitTextStroke(value: WebkitTextStrokeProperty[TLength] | js.Array[WebkitTextStrokeProperty[TLength]]): Self = this.set("WebkitTextStroke", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebkitTextStroke: Self = this.set("WebkitTextStroke", js.undefined)
+    @scala.inline
+    def setWebkitTransition(value: TransitionProperty | js.Array[TransitionProperty]): Self = this.set("WebkitTransition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebkitTransition: Self = this.set("WebkitTransition", js.undefined)
+    @scala.inline
+    def setMsContentZoomLimit(value: GlobalsString | js.Array[GlobalsString]): Self = this.set("msContentZoomLimit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMsContentZoomLimit: Self = this.set("msContentZoomLimit", js.undefined)
+    @scala.inline
+    def setMsContentZoomSnap(value: MsContentZoomSnapProperty | js.Array[MsContentZoomSnapProperty]): Self = this.set("msContentZoomSnap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMsContentZoomSnap: Self = this.set("msContentZoomSnap", js.undefined)
+    @scala.inline
+    def setMsFlex(value: FlexProperty[TLength] | js.Array[FlexProperty[TLength]]): Self = this.set("msFlex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMsFlex: Self = this.set("msFlex", js.undefined)
+    @scala.inline
+    def setMsScrollLimit(value: GlobalsString | js.Array[GlobalsString]): Self = this.set("msScrollLimit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMsScrollLimit: Self = this.set("msScrollLimit", js.undefined)
+    @scala.inline
+    def setMsScrollSnapX(value: GlobalsString | js.Array[GlobalsString]): Self = this.set("msScrollSnapX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMsScrollSnapX: Self = this.set("msScrollSnapX", js.undefined)
+    @scala.inline
+    def setMsScrollSnapY(value: GlobalsString | js.Array[GlobalsString]): Self = this.set("msScrollSnapY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMsScrollSnapY: Self = this.set("msScrollSnapY", js.undefined)
+    @scala.inline
+    def setMsTransition(value: TransitionProperty | js.Array[TransitionProperty]): Self = this.set("msTransition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMsTransition: Self = this.set("msTransition", js.undefined)
+  }
+  
 }
 

@@ -773,3 +773,410 @@ trait ObsoletePropertiesFallback[TLength] extends js.Object {
   var textCombineHorizontal: js.UndefOr[TextCombineUprightProperty | js.Array[TextCombineUprightProperty]] = js.undefined
 }
 
+object ObsoletePropertiesFallback {
+  @scala.inline
+  def apply[TLength](): ObsoletePropertiesFallback[TLength] = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ObsoletePropertiesFallback[TLength]]
+  }
+  @scala.inline
+  implicit class ObsoletePropertiesFallbackOps[Self <: ObsoletePropertiesFallback[_], TLength] (val x: Self with ObsoletePropertiesFallback[TLength]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setKhtmlBoxAlign(value: BoxAlignProperty | js.Array[BoxAlignProperty]): Self = this.set("KhtmlBoxAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKhtmlBoxAlign: Self = this.set("KhtmlBoxAlign", js.undefined)
+    @scala.inline
+    def setKhtmlBoxDirection(value: BoxDirectionProperty | js.Array[BoxDirectionProperty]): Self = this.set("KhtmlBoxDirection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKhtmlBoxDirection: Self = this.set("KhtmlBoxDirection", js.undefined)
+    @scala.inline
+    def setKhtmlBoxFlex(value: GlobalsNumber | js.Array[GlobalsNumber]): Self = this.set("KhtmlBoxFlex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKhtmlBoxFlex: Self = this.set("KhtmlBoxFlex", js.undefined)
+    @scala.inline
+    def setKhtmlBoxFlexGroup(value: GlobalsNumber | js.Array[GlobalsNumber]): Self = this.set("KhtmlBoxFlexGroup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKhtmlBoxFlexGroup: Self = this.set("KhtmlBoxFlexGroup", js.undefined)
+    @scala.inline
+    def setKhtmlBoxLines(value: BoxLinesProperty | js.Array[BoxLinesProperty]): Self = this.set("KhtmlBoxLines", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKhtmlBoxLines: Self = this.set("KhtmlBoxLines", js.undefined)
+    @scala.inline
+    def setKhtmlBoxOrdinalGroup(value: GlobalsNumber | js.Array[GlobalsNumber]): Self = this.set("KhtmlBoxOrdinalGroup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKhtmlBoxOrdinalGroup: Self = this.set("KhtmlBoxOrdinalGroup", js.undefined)
+    @scala.inline
+    def setKhtmlBoxOrient(value: BoxOrientProperty | js.Array[BoxOrientProperty]): Self = this.set("KhtmlBoxOrient", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKhtmlBoxOrient: Self = this.set("KhtmlBoxOrient", js.undefined)
+    @scala.inline
+    def setKhtmlBoxPack(value: BoxPackProperty | js.Array[BoxPackProperty]): Self = this.set("KhtmlBoxPack", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKhtmlBoxPack: Self = this.set("KhtmlBoxPack", js.undefined)
+    @scala.inline
+    def setKhtmlLineBreak(value: LineBreakProperty | js.Array[LineBreakProperty]): Self = this.set("KhtmlLineBreak", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKhtmlLineBreak: Self = this.set("KhtmlLineBreak", js.undefined)
+    @scala.inline
+    def setKhtmlOpacity(value: GlobalsNumber | js.Array[GlobalsNumber]): Self = this.set("KhtmlOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKhtmlOpacity: Self = this.set("KhtmlOpacity", js.undefined)
+    @scala.inline
+    def setKhtmlUserSelect(value: UserSelectProperty | js.Array[UserSelectProperty]): Self = this.set("KhtmlUserSelect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKhtmlUserSelect: Self = this.set("KhtmlUserSelect", js.undefined)
+    @scala.inline
+    def setMozBackgroundClip(value: BackgroundClipProperty | js.Array[BackgroundClipProperty]): Self = this.set("MozBackgroundClip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozBackgroundClip: Self = this.set("MozBackgroundClip", js.undefined)
+    @scala.inline
+    def setMozBackgroundInlinePolicy(value: BoxDecorationBreakProperty | js.Array[BoxDecorationBreakProperty]): Self = this.set("MozBackgroundInlinePolicy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozBackgroundInlinePolicy: Self = this.set("MozBackgroundInlinePolicy", js.undefined)
+    @scala.inline
+    def setMozBackgroundOrigin(value: BackgroundOriginProperty | js.Array[BackgroundOriginProperty]): Self = this.set("MozBackgroundOrigin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozBackgroundOrigin: Self = this.set("MozBackgroundOrigin", js.undefined)
+    @scala.inline
+    def setMozBackgroundSize(value: BackgroundSizeProperty[TLength] | js.Array[BackgroundSizeProperty[TLength]]): Self = this.set("MozBackgroundSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozBackgroundSize: Self = this.set("MozBackgroundSize", js.undefined)
+    @scala.inline
+    def setMozBinding(value: MozBindingProperty | js.Array[MozBindingProperty]): Self = this.set("MozBinding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozBinding: Self = this.set("MozBinding", js.undefined)
+    @scala.inline
+    def setMozBorderRadius(value: BorderRadiusProperty[TLength] | js.Array[BorderRadiusProperty[TLength]]): Self = this.set("MozBorderRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozBorderRadius: Self = this.set("MozBorderRadius", js.undefined)
+    @scala.inline
+    def setMozBorderRadiusBottomleft(value: BorderBottomLeftRadiusProperty[TLength] | js.Array[BorderBottomLeftRadiusProperty[TLength]]): Self = this.set("MozBorderRadiusBottomleft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozBorderRadiusBottomleft: Self = this.set("MozBorderRadiusBottomleft", js.undefined)
+    @scala.inline
+    def setMozBorderRadiusBottomright(
+      value: BorderBottomRightRadiusProperty[TLength] | js.Array[BorderBottomRightRadiusProperty[TLength]]
+    ): Self = this.set("MozBorderRadiusBottomright", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozBorderRadiusBottomright: Self = this.set("MozBorderRadiusBottomright", js.undefined)
+    @scala.inline
+    def setMozBorderRadiusTopleft(value: BorderTopLeftRadiusProperty[TLength] | js.Array[BorderTopLeftRadiusProperty[TLength]]): Self = this.set("MozBorderRadiusTopleft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozBorderRadiusTopleft: Self = this.set("MozBorderRadiusTopleft", js.undefined)
+    @scala.inline
+    def setMozBorderRadiusTopright(value: BorderTopRightRadiusProperty[TLength] | js.Array[BorderTopRightRadiusProperty[TLength]]): Self = this.set("MozBorderRadiusTopright", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozBorderRadiusTopright: Self = this.set("MozBorderRadiusTopright", js.undefined)
+    @scala.inline
+    def setMozBoxAlign(value: BoxAlignProperty | js.Array[BoxAlignProperty]): Self = this.set("MozBoxAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozBoxAlign: Self = this.set("MozBoxAlign", js.undefined)
+    @scala.inline
+    def setMozBoxDirection(value: BoxDirectionProperty | js.Array[BoxDirectionProperty]): Self = this.set("MozBoxDirection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozBoxDirection: Self = this.set("MozBoxDirection", js.undefined)
+    @scala.inline
+    def setMozBoxFlex(value: GlobalsNumber | js.Array[GlobalsNumber]): Self = this.set("MozBoxFlex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozBoxFlex: Self = this.set("MozBoxFlex", js.undefined)
+    @scala.inline
+    def setMozBoxOrdinalGroup(value: GlobalsNumber | js.Array[GlobalsNumber]): Self = this.set("MozBoxOrdinalGroup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozBoxOrdinalGroup: Self = this.set("MozBoxOrdinalGroup", js.undefined)
+    @scala.inline
+    def setMozBoxOrient(value: BoxOrientProperty | js.Array[BoxOrientProperty]): Self = this.set("MozBoxOrient", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozBoxOrient: Self = this.set("MozBoxOrient", js.undefined)
+    @scala.inline
+    def setMozBoxPack(value: BoxPackProperty | js.Array[BoxPackProperty]): Self = this.set("MozBoxPack", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozBoxPack: Self = this.set("MozBoxPack", js.undefined)
+    @scala.inline
+    def setMozBoxShadow(value: BoxShadowProperty | js.Array[BoxShadowProperty]): Self = this.set("MozBoxShadow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozBoxShadow: Self = this.set("MozBoxShadow", js.undefined)
+    @scala.inline
+    def setMozOpacity(value: GlobalsNumber | js.Array[GlobalsNumber]): Self = this.set("MozOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozOpacity: Self = this.set("MozOpacity", js.undefined)
+    @scala.inline
+    def setMozOutline(value: OutlineProperty[TLength] | js.Array[OutlineProperty[TLength]]): Self = this.set("MozOutline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozOutline: Self = this.set("MozOutline", js.undefined)
+    @scala.inline
+    def setMozOutlineColor(value: OutlineColorProperty | js.Array[OutlineColorProperty]): Self = this.set("MozOutlineColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozOutlineColor: Self = this.set("MozOutlineColor", js.undefined)
+    @scala.inline
+    def setMozOutlineRadius(value: MozOutlineRadiusProperty[TLength] | js.Array[MozOutlineRadiusProperty[TLength]]): Self = this.set("MozOutlineRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozOutlineRadius: Self = this.set("MozOutlineRadius", js.undefined)
+    @scala.inline
+    def setMozOutlineStyle(value: OutlineStyleProperty | js.Array[OutlineStyleProperty]): Self = this.set("MozOutlineStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozOutlineStyle: Self = this.set("MozOutlineStyle", js.undefined)
+    @scala.inline
+    def setMozOutlineWidth(value: OutlineWidthProperty[TLength] | js.Array[OutlineWidthProperty[TLength]]): Self = this.set("MozOutlineWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozOutlineWidth: Self = this.set("MozOutlineWidth", js.undefined)
+    @scala.inline
+    def setMozTextAlignLast(value: TextAlignLastProperty | js.Array[TextAlignLastProperty]): Self = this.set("MozTextAlignLast", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozTextAlignLast: Self = this.set("MozTextAlignLast", js.undefined)
+    @scala.inline
+    def setMozTextBlink(value: MozTextBlinkProperty | js.Array[MozTextBlinkProperty]): Self = this.set("MozTextBlink", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozTextBlink: Self = this.set("MozTextBlink", js.undefined)
+    @scala.inline
+    def setMozTextDecorationColor(value: TextDecorationColorProperty | js.Array[TextDecorationColorProperty]): Self = this.set("MozTextDecorationColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozTextDecorationColor: Self = this.set("MozTextDecorationColor", js.undefined)
+    @scala.inline
+    def setMozTextDecorationLine(value: TextDecorationLineProperty | js.Array[TextDecorationLineProperty]): Self = this.set("MozTextDecorationLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozTextDecorationLine: Self = this.set("MozTextDecorationLine", js.undefined)
+    @scala.inline
+    def setMozTextDecorationStyle(value: TextDecorationStyleProperty | js.Array[TextDecorationStyleProperty]): Self = this.set("MozTextDecorationStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozTextDecorationStyle: Self = this.set("MozTextDecorationStyle", js.undefined)
+    @scala.inline
+    def setMozUserInput(value: MozUserInputProperty | js.Array[MozUserInputProperty]): Self = this.set("MozUserInput", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozUserInput: Self = this.set("MozUserInput", js.undefined)
+    @scala.inline
+    def setMozWindowShadow(value: MozWindowShadowProperty | js.Array[MozWindowShadowProperty]): Self = this.set("MozWindowShadow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMozWindowShadow: Self = this.set("MozWindowShadow", js.undefined)
+    @scala.inline
+    def setOAnimation(value: AnimationProperty | js.Array[AnimationProperty]): Self = this.set("OAnimation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOAnimation: Self = this.set("OAnimation", js.undefined)
+    @scala.inline
+    def setOAnimationDelay(value: GlobalsString | js.Array[GlobalsString]): Self = this.set("OAnimationDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOAnimationDelay: Self = this.set("OAnimationDelay", js.undefined)
+    @scala.inline
+    def setOAnimationDirection(value: AnimationDirectionProperty | js.Array[AnimationDirectionProperty]): Self = this.set("OAnimationDirection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOAnimationDirection: Self = this.set("OAnimationDirection", js.undefined)
+    @scala.inline
+    def setOAnimationDuration(value: GlobalsString | js.Array[GlobalsString]): Self = this.set("OAnimationDuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOAnimationDuration: Self = this.set("OAnimationDuration", js.undefined)
+    @scala.inline
+    def setOAnimationFillMode(value: AnimationFillModeProperty | js.Array[AnimationFillModeProperty]): Self = this.set("OAnimationFillMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOAnimationFillMode: Self = this.set("OAnimationFillMode", js.undefined)
+    @scala.inline
+    def setOAnimationIterationCount(value: AnimationIterationCountProperty | js.Array[AnimationIterationCountProperty]): Self = this.set("OAnimationIterationCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOAnimationIterationCount: Self = this.set("OAnimationIterationCount", js.undefined)
+    @scala.inline
+    def setOAnimationName(value: AnimationNameProperty | js.Array[AnimationNameProperty]): Self = this.set("OAnimationName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOAnimationName: Self = this.set("OAnimationName", js.undefined)
+    @scala.inline
+    def setOAnimationPlayState(value: AnimationPlayStateProperty | js.Array[AnimationPlayStateProperty]): Self = this.set("OAnimationPlayState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOAnimationPlayState: Self = this.set("OAnimationPlayState", js.undefined)
+    @scala.inline
+    def setOAnimationTimingFunction(value: AnimationTimingFunctionProperty | js.Array[AnimationTimingFunctionProperty]): Self = this.set("OAnimationTimingFunction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOAnimationTimingFunction: Self = this.set("OAnimationTimingFunction", js.undefined)
+    @scala.inline
+    def setOBackgroundSize(value: BackgroundSizeProperty[TLength] | js.Array[BackgroundSizeProperty[TLength]]): Self = this.set("OBackgroundSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOBackgroundSize: Self = this.set("OBackgroundSize", js.undefined)
+    @scala.inline
+    def setOBorderImage(value: BorderImageProperty | js.Array[BorderImageProperty]): Self = this.set("OBorderImage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOBorderImage: Self = this.set("OBorderImage", js.undefined)
+    @scala.inline
+    def setOTransform(value: TransformProperty | js.Array[TransformProperty]): Self = this.set("OTransform", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOTransform: Self = this.set("OTransform", js.undefined)
+    @scala.inline
+    def setOTransition(value: TransitionProperty | js.Array[TransitionProperty]): Self = this.set("OTransition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOTransition: Self = this.set("OTransition", js.undefined)
+    @scala.inline
+    def setOTransitionDelay(value: GlobalsString | js.Array[GlobalsString]): Self = this.set("OTransitionDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOTransitionDelay: Self = this.set("OTransitionDelay", js.undefined)
+    @scala.inline
+    def setOTransitionDuration(value: GlobalsString | js.Array[GlobalsString]): Self = this.set("OTransitionDuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOTransitionDuration: Self = this.set("OTransitionDuration", js.undefined)
+    @scala.inline
+    def setOTransitionProperty(value: TransitionPropertyProperty | js.Array[TransitionPropertyProperty]): Self = this.set("OTransitionProperty", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOTransitionProperty: Self = this.set("OTransitionProperty", js.undefined)
+    @scala.inline
+    def setOTransitionTimingFunction(value: TransitionTimingFunctionProperty | js.Array[TransitionTimingFunctionProperty]): Self = this.set("OTransitionTimingFunction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOTransitionTimingFunction: Self = this.set("OTransitionTimingFunction", js.undefined)
+    @scala.inline
+    def setWebkitBoxAlign(value: BoxAlignProperty | js.Array[BoxAlignProperty]): Self = this.set("WebkitBoxAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebkitBoxAlign: Self = this.set("WebkitBoxAlign", js.undefined)
+    @scala.inline
+    def setWebkitBoxDirection(value: BoxDirectionProperty | js.Array[BoxDirectionProperty]): Self = this.set("WebkitBoxDirection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebkitBoxDirection: Self = this.set("WebkitBoxDirection", js.undefined)
+    @scala.inline
+    def setWebkitBoxFlex(value: GlobalsNumber | js.Array[GlobalsNumber]): Self = this.set("WebkitBoxFlex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebkitBoxFlex: Self = this.set("WebkitBoxFlex", js.undefined)
+    @scala.inline
+    def setWebkitBoxFlexGroup(value: GlobalsNumber | js.Array[GlobalsNumber]): Self = this.set("WebkitBoxFlexGroup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebkitBoxFlexGroup: Self = this.set("WebkitBoxFlexGroup", js.undefined)
+    @scala.inline
+    def setWebkitBoxLines(value: BoxLinesProperty | js.Array[BoxLinesProperty]): Self = this.set("WebkitBoxLines", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebkitBoxLines: Self = this.set("WebkitBoxLines", js.undefined)
+    @scala.inline
+    def setWebkitBoxOrdinalGroup(value: GlobalsNumber | js.Array[GlobalsNumber]): Self = this.set("WebkitBoxOrdinalGroup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebkitBoxOrdinalGroup: Self = this.set("WebkitBoxOrdinalGroup", js.undefined)
+    @scala.inline
+    def setWebkitBoxOrient(value: BoxOrientProperty | js.Array[BoxOrientProperty]): Self = this.set("WebkitBoxOrient", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebkitBoxOrient: Self = this.set("WebkitBoxOrient", js.undefined)
+    @scala.inline
+    def setWebkitBoxPack(value: BoxPackProperty | js.Array[BoxPackProperty]): Self = this.set("WebkitBoxPack", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebkitBoxPack: Self = this.set("WebkitBoxPack", js.undefined)
+    @scala.inline
+    def setWebkitScrollSnapPointsX(value: ScrollSnapPointsXProperty | js.Array[ScrollSnapPointsXProperty]): Self = this.set("WebkitScrollSnapPointsX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebkitScrollSnapPointsX: Self = this.set("WebkitScrollSnapPointsX", js.undefined)
+    @scala.inline
+    def setWebkitScrollSnapPointsY(value: ScrollSnapPointsYProperty | js.Array[ScrollSnapPointsYProperty]): Self = this.set("WebkitScrollSnapPointsY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebkitScrollSnapPointsY: Self = this.set("WebkitScrollSnapPointsY", js.undefined)
+    @scala.inline
+    def setBoxAlign(value: BoxAlignProperty | js.Array[BoxAlignProperty]): Self = this.set("boxAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBoxAlign: Self = this.set("boxAlign", js.undefined)
+    @scala.inline
+    def setBoxDirection(value: BoxDirectionProperty | js.Array[BoxDirectionProperty]): Self = this.set("boxDirection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBoxDirection: Self = this.set("boxDirection", js.undefined)
+    @scala.inline
+    def setBoxFlex(value: GlobalsNumber | js.Array[GlobalsNumber]): Self = this.set("boxFlex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBoxFlex: Self = this.set("boxFlex", js.undefined)
+    @scala.inline
+    def setBoxFlexGroup(value: GlobalsNumber | js.Array[GlobalsNumber]): Self = this.set("boxFlexGroup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBoxFlexGroup: Self = this.set("boxFlexGroup", js.undefined)
+    @scala.inline
+    def setBoxLines(value: BoxLinesProperty | js.Array[BoxLinesProperty]): Self = this.set("boxLines", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBoxLines: Self = this.set("boxLines", js.undefined)
+    @scala.inline
+    def setBoxOrdinalGroup(value: GlobalsNumber | js.Array[GlobalsNumber]): Self = this.set("boxOrdinalGroup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBoxOrdinalGroup: Self = this.set("boxOrdinalGroup", js.undefined)
+    @scala.inline
+    def setBoxOrient(value: BoxOrientProperty | js.Array[BoxOrientProperty]): Self = this.set("boxOrient", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBoxOrient: Self = this.set("boxOrient", js.undefined)
+    @scala.inline
+    def setBoxPack(value: BoxPackProperty | js.Array[BoxPackProperty]): Self = this.set("boxPack", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBoxPack: Self = this.set("boxPack", js.undefined)
+    @scala.inline
+    def setClip(value: ClipProperty | js.Array[ClipProperty]): Self = this.set("clip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClip: Self = this.set("clip", js.undefined)
+    @scala.inline
+    def setFontVariantAlternates(value: FontVariantAlternatesProperty | js.Array[FontVariantAlternatesProperty]): Self = this.set("fontVariantAlternates", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFontVariantAlternates: Self = this.set("fontVariantAlternates", js.undefined)
+    @scala.inline
+    def setGridColumnGap(value: GridColumnGapProperty[TLength] | js.Array[GridColumnGapProperty[TLength]]): Self = this.set("gridColumnGap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGridColumnGap: Self = this.set("gridColumnGap", js.undefined)
+    @scala.inline
+    def setGridGap(value: GridGapProperty[TLength] | js.Array[GridGapProperty[TLength]]): Self = this.set("gridGap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGridGap: Self = this.set("gridGap", js.undefined)
+    @scala.inline
+    def setGridRowGap(value: GridRowGapProperty[TLength] | js.Array[GridRowGapProperty[TLength]]): Self = this.set("gridRowGap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGridRowGap: Self = this.set("gridRowGap", js.undefined)
+    @scala.inline
+    def setImeMode(value: ImeModeProperty | js.Array[ImeModeProperty]): Self = this.set("imeMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteImeMode: Self = this.set("imeMode", js.undefined)
+    @scala.inline
+    def setMsImeMode(value: ImeModeProperty | js.Array[ImeModeProperty]): Self = this.set("msImeMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMsImeMode: Self = this.set("msImeMode", js.undefined)
+    @scala.inline
+    def setOffsetBlock(value: InsetBlockProperty[TLength] | js.Array[InsetBlockProperty[TLength]]): Self = this.set("offsetBlock", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOffsetBlock: Self = this.set("offsetBlock", js.undefined)
+    @scala.inline
+    def setOffsetBlockEnd(value: InsetBlockEndProperty[TLength] | js.Array[InsetBlockEndProperty[TLength]]): Self = this.set("offsetBlockEnd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOffsetBlockEnd: Self = this.set("offsetBlockEnd", js.undefined)
+    @scala.inline
+    def setOffsetBlockStart(value: InsetBlockStartProperty[TLength] | js.Array[InsetBlockStartProperty[TLength]]): Self = this.set("offsetBlockStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOffsetBlockStart: Self = this.set("offsetBlockStart", js.undefined)
+    @scala.inline
+    def setOffsetInline(value: InsetInlineProperty[TLength] | js.Array[InsetInlineProperty[TLength]]): Self = this.set("offsetInline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOffsetInline: Self = this.set("offsetInline", js.undefined)
+    @scala.inline
+    def setOffsetInlineEnd(value: InsetInlineEndProperty[TLength] | js.Array[InsetInlineEndProperty[TLength]]): Self = this.set("offsetInlineEnd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOffsetInlineEnd: Self = this.set("offsetInlineEnd", js.undefined)
+    @scala.inline
+    def setOffsetInlineStart(value: InsetInlineStartProperty[TLength] | js.Array[InsetInlineStartProperty[TLength]]): Self = this.set("offsetInlineStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOffsetInlineStart: Self = this.set("offsetInlineStart", js.undefined)
+    @scala.inline
+    def setScrollSnapCoordinate(value: ScrollSnapCoordinateProperty[TLength] | js.Array[ScrollSnapCoordinateProperty[TLength]]): Self = this.set("scrollSnapCoordinate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScrollSnapCoordinate: Self = this.set("scrollSnapCoordinate", js.undefined)
+    @scala.inline
+    def setScrollSnapDestination(value: ScrollSnapDestinationProperty[TLength] | js.Array[ScrollSnapDestinationProperty[TLength]]): Self = this.set("scrollSnapDestination", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScrollSnapDestination: Self = this.set("scrollSnapDestination", js.undefined)
+    @scala.inline
+    def setScrollSnapPointsX(value: ScrollSnapPointsXProperty | js.Array[ScrollSnapPointsXProperty]): Self = this.set("scrollSnapPointsX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScrollSnapPointsX: Self = this.set("scrollSnapPointsX", js.undefined)
+    @scala.inline
+    def setScrollSnapPointsY(value: ScrollSnapPointsYProperty | js.Array[ScrollSnapPointsYProperty]): Self = this.set("scrollSnapPointsY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScrollSnapPointsY: Self = this.set("scrollSnapPointsY", js.undefined)
+    @scala.inline
+    def setScrollSnapTypeX(value: ScrollSnapTypeXProperty | js.Array[ScrollSnapTypeXProperty]): Self = this.set("scrollSnapTypeX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScrollSnapTypeX: Self = this.set("scrollSnapTypeX", js.undefined)
+    @scala.inline
+    def setScrollSnapTypeY(value: ScrollSnapTypeYProperty | js.Array[ScrollSnapTypeYProperty]): Self = this.set("scrollSnapTypeY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScrollSnapTypeY: Self = this.set("scrollSnapTypeY", js.undefined)
+    @scala.inline
+    def setTextCombineHorizontal(value: TextCombineUprightProperty | js.Array[TextCombineUprightProperty]): Self = this.set("textCombineHorizontal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTextCombineHorizontal: Self = this.set("textCombineHorizontal", js.undefined)
+  }
+  
+}
+

@@ -17,11 +17,30 @@ trait OpenExternalSyncOptions extends js.Object {
 
 object OpenExternalSyncOptions {
   @scala.inline
-  def apply(activate: js.UndefOr[Boolean] = js.undefined, workingDirectory: String = null): OpenExternalSyncOptions = {
+  def apply(): OpenExternalSyncOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(activate)) __obj.updateDynamic("activate")(activate.get.asInstanceOf[js.Any])
-    if (workingDirectory != null) __obj.updateDynamic("workingDirectory")(workingDirectory.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpenExternalSyncOptions]
   }
+  @scala.inline
+  implicit class OpenExternalSyncOptionsOps[Self <: OpenExternalSyncOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setActivate(value: Boolean): Self = this.set("activate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteActivate: Self = this.set("activate", js.undefined)
+    @scala.inline
+    def setWorkingDirectory(value: String): Self = this.set("workingDirectory", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWorkingDirectory: Self = this.set("workingDirectory", js.undefined)
+  }
+  
 }
 

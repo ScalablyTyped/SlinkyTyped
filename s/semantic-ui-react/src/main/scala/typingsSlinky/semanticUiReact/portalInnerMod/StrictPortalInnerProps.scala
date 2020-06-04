@@ -1,6 +1,7 @@
 package typingsSlinky.semanticUiReact.portalInnerMod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -31,20 +32,48 @@ trait StrictPortalInnerProps extends js.Object {
 
 object StrictPortalInnerProps {
   @scala.inline
-  def apply(
-    children: TagMod[Any] = null,
-    innerRef: js.UndefOr[Null | Ref[_]] = js.undefined,
-    mountNode: js.Any = null,
-    onMount: (/* nothing */ Null, /* data */ PortalInnerProps) => Unit = null,
-    onUnmount: (/* nothing */ Null, /* data */ PortalInnerProps) => Unit = null
-  ): StrictPortalInnerProps = {
+  def apply(): StrictPortalInnerProps = {
     val __obj = js.Dynamic.literal()
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (!js.isUndefined(innerRef)) __obj.updateDynamic("innerRef")(innerRef.asInstanceOf[js.Any])
-    if (mountNode != null) __obj.updateDynamic("mountNode")(mountNode.asInstanceOf[js.Any])
-    if (onMount != null) __obj.updateDynamic("onMount")(js.Any.fromFunction2(onMount))
-    if (onUnmount != null) __obj.updateDynamic("onUnmount")(js.Any.fromFunction2(onUnmount))
     __obj.asInstanceOf[StrictPortalInnerProps]
   }
+  @scala.inline
+  implicit class StrictPortalInnerPropsOps[Self <: StrictPortalInnerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setInnerRefRefObject(value: ReactRef[_]): Self = this.set("innerRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInnerRefFunction1(value: /* instance */ _ | Null => Unit): Self = this.set("innerRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def setInnerRef(value: Ref[_]): Self = this.set("innerRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInnerRef: Self = this.set("innerRef", js.undefined)
+    @scala.inline
+    def setInnerRefNull: Self = this.set("innerRef", null)
+    @scala.inline
+    def setMountNode(value: js.Any): Self = this.set("mountNode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMountNode: Self = this.set("mountNode", js.undefined)
+    @scala.inline
+    def setOnMount(value: (/* nothing */ Null, /* data */ PortalInnerProps) => Unit): Self = this.set("onMount", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnMount: Self = this.set("onMount", js.undefined)
+    @scala.inline
+    def setOnUnmount(value: (/* nothing */ Null, /* data */ PortalInnerProps) => Unit): Self = this.set("onUnmount", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnUnmount: Self = this.set("onUnmount", js.undefined)
+  }
+  
 }
 

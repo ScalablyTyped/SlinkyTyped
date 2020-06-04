@@ -12,11 +12,30 @@ trait PartialRadioGroupState extends js.Object {
 
 object PartialRadioGroupState {
   @scala.inline
-  def apply(prevPropValue: js.Any = null, value: js.Any = null): PartialRadioGroupState = {
+  def apply(): PartialRadioGroupState = {
     val __obj = js.Dynamic.literal()
-    if (prevPropValue != null) __obj.updateDynamic("prevPropValue")(prevPropValue.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialRadioGroupState]
   }
+  @scala.inline
+  implicit class PartialRadioGroupStateOps[Self <: PartialRadioGroupState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setPrevPropValue(value: js.Any): Self = this.set("prevPropValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrevPropValue: Self = this.set("prevPropValue", js.undefined)
+    @scala.inline
+    def setValue(value: js.Any): Self = this.set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
+  }
+  
 }
 

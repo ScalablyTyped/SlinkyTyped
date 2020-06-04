@@ -54,13 +54,46 @@ object R3NgModuleMetadata {
     emitInline: Boolean,
     exports: js.Array[R3Reference],
     imports: js.Array[R3Reference],
-    `type`: Expression,
-    id: Expression = null,
-    schemas: js.Array[R3Reference] = null
+    `type`: Expression
   ): R3NgModuleMetadata = {
-    val __obj = js.Dynamic.literal(bootstrap = bootstrap.asInstanceOf[js.Any], containsForwardDecls = containsForwardDecls.asInstanceOf[js.Any], declarations = declarations.asInstanceOf[js.Any], emitInline = emitInline.asInstanceOf[js.Any], exports = exports.asInstanceOf[js.Any], imports = imports.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], schemas = schemas.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(bootstrap = bootstrap.asInstanceOf[js.Any], containsForwardDecls = containsForwardDecls.asInstanceOf[js.Any], declarations = declarations.asInstanceOf[js.Any], emitInline = emitInline.asInstanceOf[js.Any], exports = exports.asInstanceOf[js.Any], imports = imports.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[R3NgModuleMetadata]
   }
+  @scala.inline
+  implicit class R3NgModuleMetadataOps[Self <: R3NgModuleMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBootstrap(value: js.Array[R3Reference]): Self = this.set("bootstrap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContainsForwardDecls(value: Boolean): Self = this.set("containsForwardDecls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDeclarations(value: js.Array[R3Reference]): Self = this.set("declarations", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEmitInline(value: Boolean): Self = this.set("emitInline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setExports(value: js.Array[R3Reference]): Self = this.set("exports", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setImports(value: js.Array[R3Reference]): Self = this.set("imports", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setType(value: Expression): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setId(value: Expression): Self = this.set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIdNull: Self = this.set("id", null)
+    @scala.inline
+    def setSchemas(value: js.Array[R3Reference]): Self = this.set("schemas", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSchemasNull: Self = this.set("schemas", null)
+  }
+  
 }
 

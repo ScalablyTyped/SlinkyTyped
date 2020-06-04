@@ -121,5 +121,54 @@ object ContextMenuParams {
     val __obj = js.Dynamic.literal(editFlags = editFlags.asInstanceOf[js.Any], frameCharset = frameCharset.asInstanceOf[js.Any], frameURL = frameURL.asInstanceOf[js.Any], hasImageContents = hasImageContents.asInstanceOf[js.Any], inputFieldType = inputFieldType.asInstanceOf[js.Any], isEditable = isEditable.asInstanceOf[js.Any], linkText = linkText.asInstanceOf[js.Any], linkURL = linkURL.asInstanceOf[js.Any], mediaFlags = mediaFlags.asInstanceOf[js.Any], mediaType = mediaType.asInstanceOf[js.Any], menuSourceType = menuSourceType.asInstanceOf[js.Any], misspelledWord = misspelledWord.asInstanceOf[js.Any], pageURL = pageURL.asInstanceOf[js.Any], selectionText = selectionText.asInstanceOf[js.Any], srcURL = srcURL.asInstanceOf[js.Any], titleText = titleText.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContextMenuParams]
   }
+  @scala.inline
+  implicit class ContextMenuParamsOps[Self <: ContextMenuParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setEditFlags(value: EditFlags): Self = this.set("editFlags", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFrameCharset(value: String): Self = this.set("frameCharset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFrameURL(value: String): Self = this.set("frameURL", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHasImageContents(value: Boolean): Self = this.set("hasImageContents", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInputFieldType(value: String): Self = this.set("inputFieldType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIsEditable(value: Boolean): Self = this.set("isEditable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLinkText(value: String): Self = this.set("linkText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLinkURL(value: String): Self = this.set("linkURL", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMediaFlags(value: MediaFlags): Self = this.set("mediaFlags", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMediaType(value: none | image | audio | video | canvas | file | plugin): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMenuSourceType(value: none | mouse | keyboard | touch | touchMenu): Self = this.set("menuSourceType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMisspelledWord(value: String): Self = this.set("misspelledWord", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPageURL(value: String): Self = this.set("pageURL", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSelectionText(value: String): Self = this.set("selectionText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSrcURL(value: String): Self = this.set("srcURL", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTitleText(value: String): Self = this.set("titleText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setX(value: Double): Self = this.set("x", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setY(value: Double): Self = this.set("y", value.asInstanceOf[js.Any])
+  }
+  
 }
 

@@ -216,5 +216,127 @@ object TypeofElectron {
     val __obj = js.Dynamic.literal(Accelerator = Accelerator.asInstanceOf[js.Any], BrowserView = BrowserView.asInstanceOf[js.Any], BrowserWindow = BrowserWindow.asInstanceOf[js.Any], BrowserWindowProxy = BrowserWindowProxy.asInstanceOf[js.Any], ClientRequest = ClientRequest.asInstanceOf[js.Any], Cookies = Cookies.asInstanceOf[js.Any], Debugger = Debugger.asInstanceOf[js.Any], DownloadItem = DownloadItem.asInstanceOf[js.Any], EventEmitter = EventEmitter.asInstanceOf[js.Any], IncomingMessage = IncomingMessage.asInstanceOf[js.Any], Menu = Menu.asInstanceOf[js.Any], MenuItem = MenuItem.asInstanceOf[js.Any], NativeImage = NativeImage.asInstanceOf[js.Any], Notification = Notification.asInstanceOf[js.Any], Session = Session.asInstanceOf[js.Any], TouchBar = TouchBar.asInstanceOf[js.Any], TouchBarButton = TouchBarButton.asInstanceOf[js.Any], TouchBarColorPicker = TouchBarColorPicker.asInstanceOf[js.Any], TouchBarGroup = TouchBarGroup.asInstanceOf[js.Any], TouchBarLabel = TouchBarLabel.asInstanceOf[js.Any], TouchBarPopover = TouchBarPopover.asInstanceOf[js.Any], TouchBarScrubber = TouchBarScrubber.asInstanceOf[js.Any], TouchBarSegmentedControl = TouchBarSegmentedControl.asInstanceOf[js.Any], TouchBarSlider = TouchBarSlider.asInstanceOf[js.Any], TouchBarSpacer = TouchBarSpacer.asInstanceOf[js.Any], Tray = Tray.asInstanceOf[js.Any], WebContents = WebContents.asInstanceOf[js.Any], WebRequest = WebRequest.asInstanceOf[js.Any], app = app.asInstanceOf[js.Any], autoUpdater = autoUpdater.asInstanceOf[js.Any], clipboard = clipboard.asInstanceOf[js.Any], contentTracing = contentTracing.asInstanceOf[js.Any], contextBridge = contextBridge.asInstanceOf[js.Any], crashReporter = crashReporter.asInstanceOf[js.Any], desktopCapturer = desktopCapturer.asInstanceOf[js.Any], dialog = dialog.asInstanceOf[js.Any], globalShortcut = globalShortcut.asInstanceOf[js.Any], inAppPurchase = inAppPurchase.asInstanceOf[js.Any], ipcMain = ipcMain.asInstanceOf[js.Any], ipcRenderer = ipcRenderer.asInstanceOf[js.Any], net = net.asInstanceOf[js.Any], netLog = netLog.asInstanceOf[js.Any], powerMonitor = powerMonitor.asInstanceOf[js.Any], powerSaveBlocker = powerSaveBlocker.asInstanceOf[js.Any], protocol = protocol.asInstanceOf[js.Any], remote = remote.asInstanceOf[js.Any], screen = screen.asInstanceOf[js.Any], shell = shell.asInstanceOf[js.Any], systemPreferences = systemPreferences.asInstanceOf[js.Any], webFrame = webFrame.asInstanceOf[js.Any], webviewTag = webviewTag.asInstanceOf[js.Any])
     __obj.asInstanceOf[TypeofElectron]
   }
+  @scala.inline
+  implicit class TypeofElectronOps[Self <: TypeofElectron] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAccelerator(value: Instantiable0[Accelerator]): Self = this.set("Accelerator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBrowserView(value: TypeofBrowserView): Self = this.set("BrowserView", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBrowserWindow(value: TypeofBrowserWindow): Self = this.set("BrowserWindow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBrowserWindowProxy(value: Instantiable0[BrowserWindowProxy]): Self = this.set("BrowserWindowProxy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setClientRequest(
+      value: Instantiable1[
+          /* options */ method | url | session | partition | protocol | host | hostname | port | path | redirect, 
+          ClientRequest
+        ]
+    ): Self = this.set("ClientRequest", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCookies(value: Instantiable0[Cookies]): Self = this.set("Cookies", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDebugger(value: Instantiable0[Debugger]): Self = this.set("Debugger", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDownloadItem(value: Instantiable0[DownloadItem]): Self = this.set("DownloadItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEventEmitter(value: Instantiable0[EventEmitter]): Self = this.set("EventEmitter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIncomingMessage(value: Instantiable0[IncomingMessage]): Self = this.set("IncomingMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMenu(value: TypeofMenu): Self = this.set("Menu", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMenuItem(value: Instantiable1[/* options */ MenuItemConstructorOptions, MenuItem]): Self = this.set("MenuItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNativeImage(value: TypeofNativeImage): Self = this.set("NativeImage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNotification(value: TypeofNotification): Self = this.set("Notification", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSession(value: TypeofSession): Self = this.set("Session", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTouchBar(value: TypeofTouchBar): Self = this.set("TouchBar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTouchBarButton(value: Instantiable1[/* options */ TouchBarButtonConstructorOptions, TouchBarButton]): Self = this.set("TouchBarButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTouchBarColorPicker(value: Instantiable1[/* options */ TouchBarColorPickerConstructorOptions, TouchBarColorPicker]): Self = this.set("TouchBarColorPicker", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTouchBarGroup(value: Instantiable1[/* options */ TouchBarGroupConstructorOptions, TouchBarGroup]): Self = this.set("TouchBarGroup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTouchBarLabel(value: Instantiable1[/* options */ TouchBarLabelConstructorOptions, TouchBarLabel]): Self = this.set("TouchBarLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTouchBarPopover(value: Instantiable1[/* options */ TouchBarPopoverConstructorOptions, TouchBarPopover]): Self = this.set("TouchBarPopover", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTouchBarScrubber(value: Instantiable1[/* options */ TouchBarScrubberConstructorOptions, TouchBarScrubber]): Self = this.set("TouchBarScrubber", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTouchBarSegmentedControl(
+      value: Instantiable1[/* options */ TouchBarSegmentedControlConstructorOptions, TouchBarSegmentedControl]
+    ): Self = this.set("TouchBarSegmentedControl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTouchBarSlider(value: Instantiable1[/* options */ TouchBarSliderConstructorOptions, TouchBarSlider]): Self = this.set("TouchBarSlider", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTouchBarSpacer(value: Instantiable1[/* options */ TouchBarSpacerConstructorOptions, TouchBarSpacer]): Self = this.set("TouchBarSpacer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTray(value: Instantiable1[/* image */ NativeImage_ | String, Tray]): Self = this.set("Tray", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWebContents(value: TypeofWebContents): Self = this.set("WebContents", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWebRequest(value: Instantiable0[WebRequest]): Self = this.set("WebRequest", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setApp(value: App): Self = this.set("app", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAutoUpdater(value: AutoUpdater): Self = this.set("autoUpdater", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setClipboard(value: Clipboard): Self = this.set("clipboard", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContentTracing(value: ContentTracing): Self = this.set("contentTracing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContextBridge(value: ContextBridge): Self = this.set("contextBridge", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCrashReporter(value: CrashReporter): Self = this.set("crashReporter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDesktopCapturer(value: DesktopCapturer): Self = this.set("desktopCapturer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDialog(value: Dialog): Self = this.set("dialog", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setGlobalShortcut(value: GlobalShortcut): Self = this.set("globalShortcut", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInAppPurchase(value: InAppPurchase): Self = this.set("inAppPurchase", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIpcMain(value: IpcMain): Self = this.set("ipcMain", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIpcRenderer(value: IpcRenderer): Self = this.set("ipcRenderer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNet(value: Net): Self = this.set("net", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNetLog(value: NetLog): Self = this.set("netLog", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPowerMonitor(value: PowerMonitor): Self = this.set("powerMonitor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPowerSaveBlocker(value: PowerSaveBlocker): Self = this.set("powerSaveBlocker", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setProtocol(value: Protocol): Self = this.set("protocol", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRemote(value: Remote): Self = this.set("remote", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setScreen(value: Screen): Self = this.set("screen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setShell(value: Shell): Self = this.set("shell", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSystemPreferences(value: SystemPreferences): Self = this.set("systemPreferences", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWebFrame(value: WebFrame): Self = this.set("webFrame", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWebviewTag(value: WebviewTag): Self = this.set("webviewTag", value.asInstanceOf[js.Any])
+  }
+  
 }
 

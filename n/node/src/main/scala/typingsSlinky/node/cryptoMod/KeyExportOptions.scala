@@ -18,17 +18,35 @@ trait KeyExportOptions[T /* <: KeyFormat */] extends js.Object {
 
 object KeyExportOptions {
   @scala.inline
-  def apply[T](
-    format: T,
-    `type`: pkcs1 | spki | pkcs8 | sec1,
-    cipher: String = null,
-    passphrase: String | Buffer = null
-  ): KeyExportOptions[T] = {
+  def apply[/* <: typingsSlinky.node.cryptoMod.KeyFormat */ T](format: T, `type`: pkcs1 | spki | pkcs8 | sec1): KeyExportOptions[T] = {
     val __obj = js.Dynamic.literal(format = format.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (cipher != null) __obj.updateDynamic("cipher")(cipher.asInstanceOf[js.Any])
-    if (passphrase != null) __obj.updateDynamic("passphrase")(passphrase.asInstanceOf[js.Any])
     __obj.asInstanceOf[KeyExportOptions[T]]
   }
+  @scala.inline
+  implicit class KeyExportOptionsOps[Self <: KeyExportOptions[_], /* <: typingsSlinky.node.cryptoMod.KeyFormat */ T] (val x: Self with KeyExportOptions[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setFormat(value: T): Self = this.set("format", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setType(value: pkcs1 | spki | pkcs8 | sec1): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCipher(value: String): Self = this.set("cipher", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCipher: Self = this.set("cipher", js.undefined)
+    @scala.inline
+    def setPassphrase(value: String | Buffer): Self = this.set("passphrase", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePassphrase: Self = this.set("passphrase", js.undefined)
+  }
+  
 }
 

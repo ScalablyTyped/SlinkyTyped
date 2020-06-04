@@ -14,26 +14,44 @@ trait FocusNavigationEventInit extends EventInit {
 
 object FocusNavigationEventInit {
   @scala.inline
-  def apply(
-    bubbles: js.UndefOr[scala.Boolean] = js.undefined,
-    cancelable: js.UndefOr[scala.Boolean] = js.undefined,
-    composed: js.UndefOr[scala.Boolean] = js.undefined,
-    navigationReason: js.UndefOr[Null | java.lang.String] = js.undefined,
-    originHeight: js.UndefOr[Double] = js.undefined,
-    originLeft: js.UndefOr[Double] = js.undefined,
-    originTop: js.UndefOr[Double] = js.undefined,
-    originWidth: js.UndefOr[Double] = js.undefined
-  ): FocusNavigationEventInit = {
+  def apply(): FocusNavigationEventInit = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(bubbles)) __obj.updateDynamic("bubbles")(bubbles.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(cancelable)) __obj.updateDynamic("cancelable")(cancelable.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(composed)) __obj.updateDynamic("composed")(composed.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(navigationReason)) __obj.updateDynamic("navigationReason")(navigationReason.asInstanceOf[js.Any])
-    if (!js.isUndefined(originHeight)) __obj.updateDynamic("originHeight")(originHeight.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(originLeft)) __obj.updateDynamic("originLeft")(originLeft.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(originTop)) __obj.updateDynamic("originTop")(originTop.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(originWidth)) __obj.updateDynamic("originWidth")(originWidth.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FocusNavigationEventInit]
   }
+  @scala.inline
+  implicit class FocusNavigationEventInitOps[Self <: FocusNavigationEventInit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setNavigationReason(value: java.lang.String): Self = this.set("navigationReason", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNavigationReason: Self = this.set("navigationReason", js.undefined)
+    @scala.inline
+    def setNavigationReasonNull: Self = this.set("navigationReason", null)
+    @scala.inline
+    def setOriginHeight(value: Double): Self = this.set("originHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOriginHeight: Self = this.set("originHeight", js.undefined)
+    @scala.inline
+    def setOriginLeft(value: Double): Self = this.set("originLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOriginLeft: Self = this.set("originLeft", js.undefined)
+    @scala.inline
+    def setOriginTop(value: Double): Self = this.set("originTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOriginTop: Self = this.set("originTop", js.undefined)
+    @scala.inline
+    def setOriginWidth(value: Double): Self = this.set("originWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOriginWidth: Self = this.set("originWidth", js.undefined)
+  }
+  
 }
 

@@ -16,11 +16,30 @@ trait Shape extends js.Object {
 
 object Shape {
   @scala.inline
-  def apply(shape: circle | square = null, size: Double | small | large | default = null): Shape = {
+  def apply(): Shape = {
     val __obj = js.Dynamic.literal()
-    if (shape != null) __obj.updateDynamic("shape")(shape.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[Shape]
   }
+  @scala.inline
+  implicit class ShapeOps[Self <: Shape] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setShape(value: circle | square): Self = this.set("shape", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShape: Self = this.set("shape", js.undefined)
+    @scala.inline
+    def setSize(value: Double | small | large | default): Self = this.set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
+  }
+  
 }
 

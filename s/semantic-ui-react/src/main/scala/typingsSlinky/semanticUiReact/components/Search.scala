@@ -2,13 +2,13 @@ package typingsSlinky.semanticUiReact.components
 
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.inputInputMod.InputProps
 import typingsSlinky.semanticUiReact.searchCategoryMod.SearchCategoryProps
@@ -60,7 +60,7 @@ object Search {
     def inputReactElement(value: ReactElement): this.type = set("input", value.asInstanceOf[js.Any])
     @scala.inline
     def inputFunction3(
-      value: (/* component */ ReactComponentClass[InputProps], InputProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[InputProps], InputProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("input", js.Any.fromFunction3(value))
     @scala.inline
     def input(value: SemanticShorthandItem[InputProps]): this.type = set("input", value.asInstanceOf[js.Any])

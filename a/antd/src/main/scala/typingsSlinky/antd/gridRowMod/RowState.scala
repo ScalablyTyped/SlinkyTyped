@@ -15,5 +15,20 @@ object RowState {
     val __obj = js.Dynamic.literal(screens = screens.asInstanceOf[js.Any])
     __obj.asInstanceOf[RowState]
   }
+  @scala.inline
+  implicit class RowStateOps[Self <: RowState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setScreens(value: ScreenMap): Self = this.set("screens", value.asInstanceOf[js.Any])
+  }
+  
 }
 

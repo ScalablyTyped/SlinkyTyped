@@ -1,7 +1,9 @@
 package typingsSlinky.emotionCore.components
 
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.emotionCore.mod.ClassNamesContent
 import typingsSlinky.emotionCore.mod.ClassNamesProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,10 +21,9 @@ object ClassNames {
   
   def withProps[Theme](p: ClassNamesProps[Theme]): Builder[Theme] = new Builder[Theme](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[Theme](): Builder[Theme] = {
-    val __props = js.Dynamic.literal()
+  def apply[Theme](children: ClassNamesContent[Theme] => TagMod[Any]): Builder[Theme] = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
     new Builder[Theme](js.Array(this.component, __props.asInstanceOf[ClassNamesProps[Theme]]))
   }
-  implicit def make[Theme](companion: ClassNames.type): Builder[Theme] = new Builder[Theme](js.Array(this.component, js.Dictionary.empty))()
 }
 

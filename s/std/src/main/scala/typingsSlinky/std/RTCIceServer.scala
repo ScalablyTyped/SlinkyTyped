@@ -13,17 +13,36 @@ trait RTCIceServer extends js.Object {
 
 object RTCIceServer {
   @scala.inline
-  def apply(
-    urls: java.lang.String | js.Array[java.lang.String],
-    credential: java.lang.String | RTCOAuthCredential = null,
-    credentialType: RTCIceCredentialType = null,
-    username: java.lang.String = null
-  ): RTCIceServer = {
+  def apply(urls: java.lang.String | js.Array[java.lang.String]): RTCIceServer = {
     val __obj = js.Dynamic.literal(urls = urls.asInstanceOf[js.Any])
-    if (credential != null) __obj.updateDynamic("credential")(credential.asInstanceOf[js.Any])
-    if (credentialType != null) __obj.updateDynamic("credentialType")(credentialType.asInstanceOf[js.Any])
-    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCIceServer]
   }
+  @scala.inline
+  implicit class RTCIceServerOps[Self <: org.scalajs.dom.experimental.webrtc.RTCIceServer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setUrls(value: java.lang.String | js.Array[java.lang.String]): Self = this.set("urls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCredential(value: java.lang.String | RTCOAuthCredential): Self = this.set("credential", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCredential: Self = this.set("credential", js.undefined)
+    @scala.inline
+    def setCredentialType(value: RTCIceCredentialType): Self = this.set("credentialType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCredentialType: Self = this.set("credentialType", js.undefined)
+    @scala.inline
+    def setUsername(value: java.lang.String): Self = this.set("username", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUsername: Self = this.set("username", js.undefined)
+  }
+  
 }
 

@@ -22,28 +22,58 @@ trait AutoClose extends js.Object {
 
 object AutoClose {
   @scala.inline
-  def apply(
-    autoClose: js.UndefOr[Boolean] = js.undefined,
-    emitClose: js.UndefOr[Boolean] = js.undefined,
-    encoding: BufferEncoding = null,
-    end: js.UndefOr[Double] = js.undefined,
-    fd: js.UndefOr[Double] = js.undefined,
-    flags: String = null,
-    highWaterMark: js.UndefOr[Double] = js.undefined,
-    mode: js.UndefOr[Double] = js.undefined,
-    start: js.UndefOr[Double] = js.undefined
-  ): AutoClose = {
+  def apply(): AutoClose = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoClose)) __obj.updateDynamic("autoClose")(autoClose.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(emitClose)) __obj.updateDynamic("emitClose")(emitClose.get.asInstanceOf[js.Any])
-    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
-    if (!js.isUndefined(end)) __obj.updateDynamic("end")(end.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(fd)) __obj.updateDynamic("fd")(fd.get.asInstanceOf[js.Any])
-    if (flags != null) __obj.updateDynamic("flags")(flags.asInstanceOf[js.Any])
-    if (!js.isUndefined(highWaterMark)) __obj.updateDynamic("highWaterMark")(highWaterMark.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(mode)) __obj.updateDynamic("mode")(mode.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(start)) __obj.updateDynamic("start")(start.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoClose]
   }
+  @scala.inline
+  implicit class AutoCloseOps[Self <: AutoClose] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAutoClose(value: Boolean): Self = this.set("autoClose", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAutoClose: Self = this.set("autoClose", js.undefined)
+    @scala.inline
+    def setEmitClose(value: Boolean): Self = this.set("emitClose", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEmitClose: Self = this.set("emitClose", js.undefined)
+    @scala.inline
+    def setEncoding(value: BufferEncoding): Self = this.set("encoding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEncoding: Self = this.set("encoding", js.undefined)
+    @scala.inline
+    def setEnd(value: Double): Self = this.set("end", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEnd: Self = this.set("end", js.undefined)
+    @scala.inline
+    def setFd(value: Double): Self = this.set("fd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFd: Self = this.set("fd", js.undefined)
+    @scala.inline
+    def setFlags(value: String): Self = this.set("flags", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFlags: Self = this.set("flags", js.undefined)
+    @scala.inline
+    def setHighWaterMark(value: Double): Self = this.set("highWaterMark", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHighWaterMark: Self = this.set("highWaterMark", js.undefined)
+    @scala.inline
+    def setMode(value: Double): Self = this.set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMode: Self = this.set("mode", js.undefined)
+    @scala.inline
+    def setStart(value: Double): Self = this.set("start", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStart: Self = this.set("start", js.undefined)
+  }
+  
 }
 

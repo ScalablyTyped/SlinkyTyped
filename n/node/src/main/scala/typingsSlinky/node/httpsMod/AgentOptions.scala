@@ -1,16 +1,6 @@
 package typingsSlinky.node.httpsMod
 
-import typingsSlinky.node.Buffer
-import typingsSlinky.node.NodeJS.ErrnoException
-import typingsSlinky.node.dnsMod.LookupOneOptions
-import typingsSlinky.node.netMod.Socket
 import typingsSlinky.node.tlsMod.ConnectionOptions
-import typingsSlinky.node.tlsMod.KeyObject
-import typingsSlinky.node.tlsMod.PSKCallbackNegotation
-import typingsSlinky.node.tlsMod.PeerCertificate
-import typingsSlinky.node.tlsMod.PxfObject
-import typingsSlinky.node.tlsMod.SecureContext
-import typingsSlinky.node.tlsMod.SecureVersion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,92 +29,42 @@ import scala.scalajs.js.annotation._
 
 object AgentOptions {
   @scala.inline
-  def apply(
-    ALPNProtocols: (js.Array[String | js.typedarray.Uint8Array]) | js.typedarray.Uint8Array = null,
-    SNICallback: (/* servername */ String, /* cb */ js.Function2[/* err */ js.Error | Null, /* ctx */ SecureContext, Unit]) => Unit = null,
-    ca: String | Buffer | (js.Array[String | Buffer]) = null,
-    cert: String | Buffer | (js.Array[String | Buffer]) = null,
-    checkServerIdentity: (/* host */ String, /* cert */ PeerCertificate) => js.UndefOr[js.Error] = null,
-    ciphers: String = null,
-    clientCertEngine: String = null,
-    crl: String | Buffer | (js.Array[String | Buffer]) = null,
-    dhparam: String | Buffer = null,
-    ecdhCurve: String = null,
-    enableTrace: js.UndefOr[Boolean] = js.undefined,
-    honorCipherOrder: js.UndefOr[Boolean] = js.undefined,
-    host: String = null,
-    keepAlive: js.UndefOr[Boolean] = js.undefined,
-    keepAliveMsecs: js.UndefOr[Double] = js.undefined,
-    key: String | Buffer | (js.Array[Buffer | KeyObject]) = null,
-    lookup: (/* hostname */ String, /* options */ LookupOneOptions, /* callback */ js.Function3[/* err */ ErrnoException | Null, /* address */ String, /* family */ Double, Unit]) => Unit = null,
-    maxCachedSessions: js.UndefOr[Double] = js.undefined,
-    maxFreeSockets: js.UndefOr[Double] = js.undefined,
-    maxSockets: js.UndefOr[Double] = js.undefined,
-    maxVersion: SecureVersion = null,
-    minDHSize: js.UndefOr[Double] = js.undefined,
-    minVersion: SecureVersion = null,
-    passphrase: String = null,
-    path: String = null,
-    pfx: String | Buffer | (js.Array[String | Buffer | PxfObject]) = null,
-    port: js.UndefOr[Double] = js.undefined,
-    privateKeyEngine: String = null,
-    privateKeyIdentifier: String = null,
-    pskCallback: /* hint */ String | Null => PSKCallbackNegotation | Null = null,
-    rejectUnauthorized: js.UndefOr[Boolean] = js.undefined,
-    requestCert: js.UndefOr[Boolean] = js.undefined,
-    secureContext: SecureContext = null,
-    secureOptions: js.UndefOr[Double] = js.undefined,
-    secureProtocol: String = null,
-    servername: String = null,
-    session: Buffer = null,
-    sessionIdContext: String = null,
-    sigalgs: String = null,
-    socket: Socket = null,
-    timeout: js.UndefOr[Double] = js.undefined
-  ): AgentOptions = {
+  def apply(): AgentOptions = {
     val __obj = js.Dynamic.literal()
-    if (ALPNProtocols != null) __obj.updateDynamic("ALPNProtocols")(ALPNProtocols.asInstanceOf[js.Any])
-    if (SNICallback != null) __obj.updateDynamic("SNICallback")(js.Any.fromFunction2(SNICallback))
-    if (ca != null) __obj.updateDynamic("ca")(ca.asInstanceOf[js.Any])
-    if (cert != null) __obj.updateDynamic("cert")(cert.asInstanceOf[js.Any])
-    if (checkServerIdentity != null) __obj.updateDynamic("checkServerIdentity")(js.Any.fromFunction2(checkServerIdentity))
-    if (ciphers != null) __obj.updateDynamic("ciphers")(ciphers.asInstanceOf[js.Any])
-    if (clientCertEngine != null) __obj.updateDynamic("clientCertEngine")(clientCertEngine.asInstanceOf[js.Any])
-    if (crl != null) __obj.updateDynamic("crl")(crl.asInstanceOf[js.Any])
-    if (dhparam != null) __obj.updateDynamic("dhparam")(dhparam.asInstanceOf[js.Any])
-    if (ecdhCurve != null) __obj.updateDynamic("ecdhCurve")(ecdhCurve.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableTrace)) __obj.updateDynamic("enableTrace")(enableTrace.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(honorCipherOrder)) __obj.updateDynamic("honorCipherOrder")(honorCipherOrder.get.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepAlive)) __obj.updateDynamic("keepAlive")(keepAlive.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepAliveMsecs)) __obj.updateDynamic("keepAliveMsecs")(keepAliveMsecs.get.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (lookup != null) __obj.updateDynamic("lookup")(js.Any.fromFunction3(lookup))
-    if (!js.isUndefined(maxCachedSessions)) __obj.updateDynamic("maxCachedSessions")(maxCachedSessions.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(maxFreeSockets)) __obj.updateDynamic("maxFreeSockets")(maxFreeSockets.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(maxSockets)) __obj.updateDynamic("maxSockets")(maxSockets.get.asInstanceOf[js.Any])
-    if (maxVersion != null) __obj.updateDynamic("maxVersion")(maxVersion.asInstanceOf[js.Any])
-    if (!js.isUndefined(minDHSize)) __obj.updateDynamic("minDHSize")(minDHSize.get.asInstanceOf[js.Any])
-    if (minVersion != null) __obj.updateDynamic("minVersion")(minVersion.asInstanceOf[js.Any])
-    if (passphrase != null) __obj.updateDynamic("passphrase")(passphrase.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (pfx != null) __obj.updateDynamic("pfx")(pfx.asInstanceOf[js.Any])
-    if (!js.isUndefined(port)) __obj.updateDynamic("port")(port.get.asInstanceOf[js.Any])
-    if (privateKeyEngine != null) __obj.updateDynamic("privateKeyEngine")(privateKeyEngine.asInstanceOf[js.Any])
-    if (privateKeyIdentifier != null) __obj.updateDynamic("privateKeyIdentifier")(privateKeyIdentifier.asInstanceOf[js.Any])
-    if (pskCallback != null) __obj.updateDynamic("pskCallback")(js.Any.fromFunction1(pskCallback))
-    if (!js.isUndefined(rejectUnauthorized)) __obj.updateDynamic("rejectUnauthorized")(rejectUnauthorized.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(requestCert)) __obj.updateDynamic("requestCert")(requestCert.get.asInstanceOf[js.Any])
-    if (secureContext != null) __obj.updateDynamic("secureContext")(secureContext.asInstanceOf[js.Any])
-    if (!js.isUndefined(secureOptions)) __obj.updateDynamic("secureOptions")(secureOptions.get.asInstanceOf[js.Any])
-    if (secureProtocol != null) __obj.updateDynamic("secureProtocol")(secureProtocol.asInstanceOf[js.Any])
-    if (servername != null) __obj.updateDynamic("servername")(servername.asInstanceOf[js.Any])
-    if (session != null) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
-    if (sessionIdContext != null) __obj.updateDynamic("sessionIdContext")(sessionIdContext.asInstanceOf[js.Any])
-    if (sigalgs != null) __obj.updateDynamic("sigalgs")(sigalgs.asInstanceOf[js.Any])
-    if (socket != null) __obj.updateDynamic("socket")(socket.asInstanceOf[js.Any])
-    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AgentOptions]
   }
+  @scala.inline
+  implicit class AgentOptionsOps[Self <: AgentOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setKeepAlive(value: Boolean): Self = this.set("keepAlive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKeepAlive: Self = this.set("keepAlive", js.undefined)
+    @scala.inline
+    def setKeepAliveMsecs(value: Double): Self = this.set("keepAliveMsecs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKeepAliveMsecs: Self = this.set("keepAliveMsecs", js.undefined)
+    @scala.inline
+    def setMaxCachedSessions(value: Double): Self = this.set("maxCachedSessions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxCachedSessions: Self = this.set("maxCachedSessions", js.undefined)
+    @scala.inline
+    def setMaxFreeSockets(value: Double): Self = this.set("maxFreeSockets", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxFreeSockets: Self = this.set("maxFreeSockets", js.undefined)
+    @scala.inline
+    def setMaxSockets(value: Double): Self = this.set("maxSockets", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxSockets: Self = this.set("maxSockets", js.undefined)
+  }
+  
 }
 

@@ -24,16 +24,31 @@ trait AnimationStateMetadata extends AnimationMetadata {
 
 object AnimationStateMetadata {
   @scala.inline
-  def apply(
-    name: String,
-    styles: AnimationStyleMetadata,
-    `type`: AnimationMetadataType,
-    options: Params = null
-  ): AnimationStateMetadata = {
+  def apply(name: String, styles: AnimationStyleMetadata, `type`: AnimationMetadataType): AnimationStateMetadata = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], styles = styles.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnimationStateMetadata]
   }
+  @scala.inline
+  implicit class AnimationStateMetadataOps[Self <: AnimationStateMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStyles(value: AnimationStyleMetadata): Self = this.set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOptions(value: Params): Self = this.set("options", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOptions: Self = this.set("options", js.undefined)
+  }
+  
 }
 

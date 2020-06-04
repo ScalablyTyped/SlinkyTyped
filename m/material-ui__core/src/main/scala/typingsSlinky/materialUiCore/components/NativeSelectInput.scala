@@ -12,6 +12,7 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.standard
 import typingsSlinky.materialUiCore.nativeSelectInputMod.NativeSelectInputProps
 import typingsSlinky.materialUiCore.nativeSelectInputMod.default
 import typingsSlinky.react.mod.ChangeEvent
+import typingsSlinky.react.mod.ReactType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +31,7 @@ object NativeSelectInput {
     @scala.inline
     def IconComponentComponentClass(value: ReactComponentClass[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def IconComponent(value: ReactComponentClass[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
+    def IconComponent(value: ReactType[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline

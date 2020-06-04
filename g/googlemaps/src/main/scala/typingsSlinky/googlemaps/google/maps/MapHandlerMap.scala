@@ -145,5 +145,54 @@ object MapHandlerMap {
     val __obj = js.Dynamic.literal(bounds_changed = bounds_changed.asInstanceOf[js.Any], center_changed = center_changed.asInstanceOf[js.Any], click = click.asInstanceOf[js.Any], dblclick = dblclick.asInstanceOf[js.Any], drag = drag.asInstanceOf[js.Any], dragend = dragend.asInstanceOf[js.Any], dragstart = dragstart.asInstanceOf[js.Any], heading_changed = heading_changed.asInstanceOf[js.Any], idle = idle.asInstanceOf[js.Any], maptypeid_changed = maptypeid_changed.asInstanceOf[js.Any], mousemove = mousemove.asInstanceOf[js.Any], mouseout = mouseout.asInstanceOf[js.Any], mouseover = mouseover.asInstanceOf[js.Any], projection_changed = projection_changed.asInstanceOf[js.Any], rightclick = rightclick.asInstanceOf[js.Any], tilesloaded = tilesloaded.asInstanceOf[js.Any], tilt_changed = tilt_changed.asInstanceOf[js.Any], zoom_changed = zoom_changed.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapHandlerMap]
   }
+  @scala.inline
+  implicit class MapHandlerMapOps[Self <: MapHandlerMap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBounds_changed(value: js.Array[js.Any]): Self = this.set("bounds_changed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCenter_changed(value: js.Array[js.Any]): Self = this.set("center_changed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setClick(value: js.Array[MouseEvent | IconMouseEvent]): Self = this.set("click", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDblclick(value: js.Array[MouseEvent]): Self = this.set("dblclick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDrag(value: js.Array[js.Any]): Self = this.set("drag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDragend(value: js.Array[js.Any]): Self = this.set("dragend", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDragstart(value: js.Array[js.Any]): Self = this.set("dragstart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHeading_changed(value: js.Array[js.Any]): Self = this.set("heading_changed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIdle(value: js.Array[js.Any]): Self = this.set("idle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMaptypeid_changed(value: js.Array[js.Any]): Self = this.set("maptypeid_changed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMousemove(value: js.Array[MouseEvent]): Self = this.set("mousemove", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMouseout(value: js.Array[MouseEvent]): Self = this.set("mouseout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMouseover(value: js.Array[MouseEvent]): Self = this.set("mouseover", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setProjection_changed(value: js.Array[js.Any]): Self = this.set("projection_changed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRightclick(value: js.Array[MouseEvent]): Self = this.set("rightclick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTilesloaded(value: js.Array[js.Any]): Self = this.set("tilesloaded", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTilt_changed(value: js.Array[js.Any]): Self = this.set("tilt_changed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setZoom_changed(value: js.Array[js.Any]): Self = this.set("zoom_changed", value.asInstanceOf[js.Any])
+  }
+  
 }
 

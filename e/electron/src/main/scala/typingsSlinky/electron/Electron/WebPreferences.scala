@@ -222,86 +222,174 @@ trait WebPreferences extends js.Object {
 
 object WebPreferences {
   @scala.inline
-  def apply(
-    additionalArguments: js.Array[String] = null,
-    affinity: String = null,
-    allowRunningInsecureContent: js.UndefOr[Boolean] = js.undefined,
-    autoplayPolicy: `no-user-gesture-required` | `user-gesture-required` | `document-user-activation-required` = null,
-    backgroundThrottling: js.UndefOr[Boolean] = js.undefined,
-    contextIsolation: js.UndefOr[Boolean] = js.undefined,
-    defaultEncoding: String = null,
-    defaultFontFamily: DefaultFontFamily = null,
-    defaultFontSize: js.UndefOr[Double] = js.undefined,
-    defaultMonospaceFontSize: js.UndefOr[Double] = js.undefined,
-    devTools: js.UndefOr[Boolean] = js.undefined,
-    disableBlinkFeatures: String = null,
-    disableHtmlFullscreenWindowResize: js.UndefOr[Boolean] = js.undefined,
-    enableBlinkFeatures: String = null,
-    enableRemoteModule: js.UndefOr[Boolean] = js.undefined,
-    experimentalFeatures: js.UndefOr[Boolean] = js.undefined,
-    images: js.UndefOr[Boolean] = js.undefined,
-    javascript: js.UndefOr[Boolean] = js.undefined,
-    minimumFontSize: js.UndefOr[Double] = js.undefined,
-    nativeWindowOpen: js.UndefOr[Boolean] = js.undefined,
-    navigateOnDragDrop: js.UndefOr[Boolean] = js.undefined,
-    nodeIntegration: js.UndefOr[Boolean] = js.undefined,
-    nodeIntegrationInSubFrames: js.UndefOr[Boolean] = js.undefined,
-    nodeIntegrationInWorker: js.UndefOr[Boolean] = js.undefined,
-    offscreen: js.UndefOr[Boolean] = js.undefined,
-    partition: String = null,
-    plugins: js.UndefOr[Boolean] = js.undefined,
-    preload: String = null,
-    safeDialogs: js.UndefOr[Boolean] = js.undefined,
-    safeDialogsMessage: String = null,
-    sandbox: js.UndefOr[Boolean] = js.undefined,
-    scrollBounce: js.UndefOr[Boolean] = js.undefined,
-    session: Session_ = null,
-    textAreasAreResizable: js.UndefOr[Boolean] = js.undefined,
-    webSecurity: js.UndefOr[Boolean] = js.undefined,
-    webgl: js.UndefOr[Boolean] = js.undefined,
-    webviewTag: js.UndefOr[Boolean] = js.undefined,
-    zoomFactor: js.UndefOr[Double] = js.undefined
-  ): WebPreferences = {
+  def apply(): WebPreferences = {
     val __obj = js.Dynamic.literal()
-    if (additionalArguments != null) __obj.updateDynamic("additionalArguments")(additionalArguments.asInstanceOf[js.Any])
-    if (affinity != null) __obj.updateDynamic("affinity")(affinity.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowRunningInsecureContent)) __obj.updateDynamic("allowRunningInsecureContent")(allowRunningInsecureContent.get.asInstanceOf[js.Any])
-    if (autoplayPolicy != null) __obj.updateDynamic("autoplayPolicy")(autoplayPolicy.asInstanceOf[js.Any])
-    if (!js.isUndefined(backgroundThrottling)) __obj.updateDynamic("backgroundThrottling")(backgroundThrottling.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(contextIsolation)) __obj.updateDynamic("contextIsolation")(contextIsolation.get.asInstanceOf[js.Any])
-    if (defaultEncoding != null) __obj.updateDynamic("defaultEncoding")(defaultEncoding.asInstanceOf[js.Any])
-    if (defaultFontFamily != null) __obj.updateDynamic("defaultFontFamily")(defaultFontFamily.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultFontSize)) __obj.updateDynamic("defaultFontSize")(defaultFontSize.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultMonospaceFontSize)) __obj.updateDynamic("defaultMonospaceFontSize")(defaultMonospaceFontSize.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(devTools)) __obj.updateDynamic("devTools")(devTools.get.asInstanceOf[js.Any])
-    if (disableBlinkFeatures != null) __obj.updateDynamic("disableBlinkFeatures")(disableBlinkFeatures.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableHtmlFullscreenWindowResize)) __obj.updateDynamic("disableHtmlFullscreenWindowResize")(disableHtmlFullscreenWindowResize.get.asInstanceOf[js.Any])
-    if (enableBlinkFeatures != null) __obj.updateDynamic("enableBlinkFeatures")(enableBlinkFeatures.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableRemoteModule)) __obj.updateDynamic("enableRemoteModule")(enableRemoteModule.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(experimentalFeatures)) __obj.updateDynamic("experimentalFeatures")(experimentalFeatures.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(images)) __obj.updateDynamic("images")(images.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(javascript)) __obj.updateDynamic("javascript")(javascript.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(minimumFontSize)) __obj.updateDynamic("minimumFontSize")(minimumFontSize.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(nativeWindowOpen)) __obj.updateDynamic("nativeWindowOpen")(nativeWindowOpen.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(navigateOnDragDrop)) __obj.updateDynamic("navigateOnDragDrop")(navigateOnDragDrop.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(nodeIntegration)) __obj.updateDynamic("nodeIntegration")(nodeIntegration.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(nodeIntegrationInSubFrames)) __obj.updateDynamic("nodeIntegrationInSubFrames")(nodeIntegrationInSubFrames.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(nodeIntegrationInWorker)) __obj.updateDynamic("nodeIntegrationInWorker")(nodeIntegrationInWorker.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(offscreen)) __obj.updateDynamic("offscreen")(offscreen.get.asInstanceOf[js.Any])
-    if (partition != null) __obj.updateDynamic("partition")(partition.asInstanceOf[js.Any])
-    if (!js.isUndefined(plugins)) __obj.updateDynamic("plugins")(plugins.get.asInstanceOf[js.Any])
-    if (preload != null) __obj.updateDynamic("preload")(preload.asInstanceOf[js.Any])
-    if (!js.isUndefined(safeDialogs)) __obj.updateDynamic("safeDialogs")(safeDialogs.get.asInstanceOf[js.Any])
-    if (safeDialogsMessage != null) __obj.updateDynamic("safeDialogsMessage")(safeDialogsMessage.asInstanceOf[js.Any])
-    if (!js.isUndefined(sandbox)) __obj.updateDynamic("sandbox")(sandbox.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(scrollBounce)) __obj.updateDynamic("scrollBounce")(scrollBounce.get.asInstanceOf[js.Any])
-    if (session != null) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
-    if (!js.isUndefined(textAreasAreResizable)) __obj.updateDynamic("textAreasAreResizable")(textAreasAreResizable.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(webSecurity)) __obj.updateDynamic("webSecurity")(webSecurity.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(webgl)) __obj.updateDynamic("webgl")(webgl.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(webviewTag)) __obj.updateDynamic("webviewTag")(webviewTag.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(zoomFactor)) __obj.updateDynamic("zoomFactor")(zoomFactor.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebPreferences]
   }
+  @scala.inline
+  implicit class WebPreferencesOps[Self <: WebPreferences] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAdditionalArguments(value: js.Array[String]): Self = this.set("additionalArguments", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAdditionalArguments: Self = this.set("additionalArguments", js.undefined)
+    @scala.inline
+    def setAffinity(value: String): Self = this.set("affinity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAffinity: Self = this.set("affinity", js.undefined)
+    @scala.inline
+    def setAllowRunningInsecureContent(value: Boolean): Self = this.set("allowRunningInsecureContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAllowRunningInsecureContent: Self = this.set("allowRunningInsecureContent", js.undefined)
+    @scala.inline
+    def setAutoplayPolicy(value: `no-user-gesture-required` | `user-gesture-required` | `document-user-activation-required`): Self = this.set("autoplayPolicy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAutoplayPolicy: Self = this.set("autoplayPolicy", js.undefined)
+    @scala.inline
+    def setBackgroundThrottling(value: Boolean): Self = this.set("backgroundThrottling", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBackgroundThrottling: Self = this.set("backgroundThrottling", js.undefined)
+    @scala.inline
+    def setContextIsolation(value: Boolean): Self = this.set("contextIsolation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContextIsolation: Self = this.set("contextIsolation", js.undefined)
+    @scala.inline
+    def setDefaultEncoding(value: String): Self = this.set("defaultEncoding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultEncoding: Self = this.set("defaultEncoding", js.undefined)
+    @scala.inline
+    def setDefaultFontFamily(value: DefaultFontFamily): Self = this.set("defaultFontFamily", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultFontFamily: Self = this.set("defaultFontFamily", js.undefined)
+    @scala.inline
+    def setDefaultFontSize(value: Double): Self = this.set("defaultFontSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultFontSize: Self = this.set("defaultFontSize", js.undefined)
+    @scala.inline
+    def setDefaultMonospaceFontSize(value: Double): Self = this.set("defaultMonospaceFontSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultMonospaceFontSize: Self = this.set("defaultMonospaceFontSize", js.undefined)
+    @scala.inline
+    def setDevTools(value: Boolean): Self = this.set("devTools", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDevTools: Self = this.set("devTools", js.undefined)
+    @scala.inline
+    def setDisableBlinkFeatures(value: String): Self = this.set("disableBlinkFeatures", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisableBlinkFeatures: Self = this.set("disableBlinkFeatures", js.undefined)
+    @scala.inline
+    def setDisableHtmlFullscreenWindowResize(value: Boolean): Self = this.set("disableHtmlFullscreenWindowResize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisableHtmlFullscreenWindowResize: Self = this.set("disableHtmlFullscreenWindowResize", js.undefined)
+    @scala.inline
+    def setEnableBlinkFeatures(value: String): Self = this.set("enableBlinkFeatures", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEnableBlinkFeatures: Self = this.set("enableBlinkFeatures", js.undefined)
+    @scala.inline
+    def setEnableRemoteModule(value: Boolean): Self = this.set("enableRemoteModule", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEnableRemoteModule: Self = this.set("enableRemoteModule", js.undefined)
+    @scala.inline
+    def setExperimentalFeatures(value: Boolean): Self = this.set("experimentalFeatures", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteExperimentalFeatures: Self = this.set("experimentalFeatures", js.undefined)
+    @scala.inline
+    def setImages(value: Boolean): Self = this.set("images", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteImages: Self = this.set("images", js.undefined)
+    @scala.inline
+    def setJavascript(value: Boolean): Self = this.set("javascript", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteJavascript: Self = this.set("javascript", js.undefined)
+    @scala.inline
+    def setMinimumFontSize(value: Double): Self = this.set("minimumFontSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinimumFontSize: Self = this.set("minimumFontSize", js.undefined)
+    @scala.inline
+    def setNativeWindowOpen(value: Boolean): Self = this.set("nativeWindowOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNativeWindowOpen: Self = this.set("nativeWindowOpen", js.undefined)
+    @scala.inline
+    def setNavigateOnDragDrop(value: Boolean): Self = this.set("navigateOnDragDrop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNavigateOnDragDrop: Self = this.set("navigateOnDragDrop", js.undefined)
+    @scala.inline
+    def setNodeIntegration(value: Boolean): Self = this.set("nodeIntegration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNodeIntegration: Self = this.set("nodeIntegration", js.undefined)
+    @scala.inline
+    def setNodeIntegrationInSubFrames(value: Boolean): Self = this.set("nodeIntegrationInSubFrames", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNodeIntegrationInSubFrames: Self = this.set("nodeIntegrationInSubFrames", js.undefined)
+    @scala.inline
+    def setNodeIntegrationInWorker(value: Boolean): Self = this.set("nodeIntegrationInWorker", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNodeIntegrationInWorker: Self = this.set("nodeIntegrationInWorker", js.undefined)
+    @scala.inline
+    def setOffscreen(value: Boolean): Self = this.set("offscreen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOffscreen: Self = this.set("offscreen", js.undefined)
+    @scala.inline
+    def setPartition(value: String): Self = this.set("partition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePartition: Self = this.set("partition", js.undefined)
+    @scala.inline
+    def setPlugins(value: Boolean): Self = this.set("plugins", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePlugins: Self = this.set("plugins", js.undefined)
+    @scala.inline
+    def setPreload(value: String): Self = this.set("preload", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePreload: Self = this.set("preload", js.undefined)
+    @scala.inline
+    def setSafeDialogs(value: Boolean): Self = this.set("safeDialogs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSafeDialogs: Self = this.set("safeDialogs", js.undefined)
+    @scala.inline
+    def setSafeDialogsMessage(value: String): Self = this.set("safeDialogsMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSafeDialogsMessage: Self = this.set("safeDialogsMessage", js.undefined)
+    @scala.inline
+    def setSandbox(value: Boolean): Self = this.set("sandbox", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSandbox: Self = this.set("sandbox", js.undefined)
+    @scala.inline
+    def setScrollBounce(value: Boolean): Self = this.set("scrollBounce", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScrollBounce: Self = this.set("scrollBounce", js.undefined)
+    @scala.inline
+    def setSession(value: Session_): Self = this.set("session", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSession: Self = this.set("session", js.undefined)
+    @scala.inline
+    def setTextAreasAreResizable(value: Boolean): Self = this.set("textAreasAreResizable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTextAreasAreResizable: Self = this.set("textAreasAreResizable", js.undefined)
+    @scala.inline
+    def setWebSecurity(value: Boolean): Self = this.set("webSecurity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebSecurity: Self = this.set("webSecurity", js.undefined)
+    @scala.inline
+    def setWebgl(value: Boolean): Self = this.set("webgl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebgl: Self = this.set("webgl", js.undefined)
+    @scala.inline
+    def setWebviewTag(value: Boolean): Self = this.set("webviewTag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebviewTag: Self = this.set("webviewTag", js.undefined)
+    @scala.inline
+    def setZoomFactor(value: Double): Self = this.set("zoomFactor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteZoomFactor: Self = this.set("zoomFactor", js.undefined)
+  }
+  
 }
 

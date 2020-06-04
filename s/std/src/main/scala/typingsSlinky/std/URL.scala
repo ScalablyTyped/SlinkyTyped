@@ -41,5 +41,44 @@ object URL {
     val __obj = js.Dynamic.literal(hash = hash.asInstanceOf[js.Any], host = host.asInstanceOf[js.Any], hostname = hostname.asInstanceOf[js.Any], href = href.asInstanceOf[js.Any], origin = origin.asInstanceOf[js.Any], password = password.asInstanceOf[js.Any], pathname = pathname.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any], protocol = protocol.asInstanceOf[js.Any], search = search.asInstanceOf[js.Any], searchParams = searchParams.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON), username = username.asInstanceOf[js.Any])
     __obj.asInstanceOf[URL]
   }
+  @scala.inline
+  implicit class URLOps[Self <: org.scalajs.dom.experimental.URL] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setHash(value: java.lang.String): Self = this.set("hash", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHost(value: java.lang.String): Self = this.set("host", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHostname(value: java.lang.String): Self = this.set("hostname", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHref(value: java.lang.String): Self = this.set("href", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOrigin(value: java.lang.String): Self = this.set("origin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPassword(value: java.lang.String): Self = this.set("password", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPathname(value: java.lang.String): Self = this.set("pathname", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPort(value: java.lang.String): Self = this.set("port", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setProtocol(value: java.lang.String): Self = this.set("protocol", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSearch(value: java.lang.String): Self = this.set("search", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSearchParams(value: URLSearchParams): Self = this.set("searchParams", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setToJSON(value: () => java.lang.String): Self = this.set("toJSON", js.Any.fromFunction0(value))
+    @scala.inline
+    def setUsername(value: java.lang.String): Self = this.set("username", value.asInstanceOf[js.Any])
+  }
+  
 }
 

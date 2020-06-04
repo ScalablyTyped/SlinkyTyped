@@ -10,13 +10,8 @@ trait StandardPropertiesFallback[TLength]
 
 object StandardPropertiesFallback {
   @scala.inline
-  def apply[TLength](
-    StandardLonghandPropertiesFallback: StandardLonghandPropertiesFallback[TLength] = null,
-    StandardShorthandPropertiesFallback: StandardShorthandPropertiesFallback[TLength] = null
-  ): StandardPropertiesFallback[TLength] = {
+  def apply[TLength](): StandardPropertiesFallback[TLength] = {
     val __obj = js.Dynamic.literal()
-    if (StandardLonghandPropertiesFallback != null) js.Dynamic.global.Object.assign(__obj, StandardLonghandPropertiesFallback)
-    if (StandardShorthandPropertiesFallback != null) js.Dynamic.global.Object.assign(__obj, StandardShorthandPropertiesFallback)
     __obj.asInstanceOf[StandardPropertiesFallback[TLength]]
   }
 }

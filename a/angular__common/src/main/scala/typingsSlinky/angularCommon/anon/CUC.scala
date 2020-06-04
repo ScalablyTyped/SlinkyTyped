@@ -46,5 +46,50 @@ object CUC {
     val __obj = js.Dynamic.literal(ATS = ATS.asInstanceOf[js.Any], AUD = AUD.asInstanceOf[js.Any], BGM = BGM.asInstanceOf[js.Any], BGO = BGO.asInstanceOf[js.Any], CUC = CUC.asInstanceOf[js.Any], DEM = DEM.asInstanceOf[js.Any], FKP = FKP.asInstanceOf[js.Any], GNF = GNF.asInstanceOf[js.Any], KMF = KMF.asInstanceOf[js.Any], LUF = LUF.asInstanceOf[js.Any], RON = RON.asInstanceOf[js.Any], RWF = RWF.asInstanceOf[js.Any], SYP = SYP.asInstanceOf[js.Any], THB = THB.asInstanceOf[js.Any], TWD = TWD.asInstanceOf[js.Any], ZMW = ZMW.asInstanceOf[js.Any])
     __obj.asInstanceOf[CUC]
   }
+  @scala.inline
+  implicit class CUCOps[Self <: CUC] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setATS(value: js.Array[String]): Self = this.set("ATS", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAUD(value: js.Array[String]): Self = this.set("AUD", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBGM(value: js.Array[String]): Self = this.set("BGM", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBGO(value: js.Array[String]): Self = this.set("BGO", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCUC(value: js.Array[js.UndefOr[String]]): Self = this.set("CUC", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDEM(value: js.Array[String]): Self = this.set("DEM", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFKP(value: js.Array[js.UndefOr[String]]): Self = this.set("FKP", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setGNF(value: js.Array[js.UndefOr[String]]): Self = this.set("GNF", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setKMF(value: js.Array[js.UndefOr[String]]): Self = this.set("KMF", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLUF(value: js.Array[String]): Self = this.set("LUF", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRON(value: js.Array[js.UndefOr[String]]): Self = this.set("RON", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRWF(value: js.Array[js.UndefOr[String]]): Self = this.set("RWF", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSYP(value: js.Array[scala.Nothing]): Self = this.set("SYP", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTHB(value: js.Array[String]): Self = this.set("THB", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTWD(value: js.Array[String]): Self = this.set("TWD", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setZMW(value: js.Array[js.UndefOr[String]]): Self = this.set("ZMW", value.asInstanceOf[js.Any])
+  }
+  
 }
 

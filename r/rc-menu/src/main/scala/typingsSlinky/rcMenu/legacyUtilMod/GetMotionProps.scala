@@ -18,18 +18,42 @@ trait GetMotionProps extends js.Object {
 
 object GetMotionProps {
   @scala.inline
-  def apply(
-    motion: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any = null,
-    openAnimation: OpenAnimation = null,
-    openTransitionName: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionNameType */ js.Any = null,
-    prefixCls: String = null
-  ): GetMotionProps = {
+  def apply(): GetMotionProps = {
     val __obj = js.Dynamic.literal()
-    if (motion != null) __obj.updateDynamic("motion")(motion.asInstanceOf[js.Any])
-    if (openAnimation != null) __obj.updateDynamic("openAnimation")(openAnimation.asInstanceOf[js.Any])
-    if (openTransitionName != null) __obj.updateDynamic("openTransitionName")(openTransitionName.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetMotionProps]
   }
+  @scala.inline
+  implicit class GetMotionPropsOps[Self <: GetMotionProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setMotion(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
+    ): Self = this.set("motion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMotion: Self = this.set("motion", js.undefined)
+    @scala.inline
+    def setOpenAnimation(value: OpenAnimation): Self = this.set("openAnimation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOpenAnimation: Self = this.set("openAnimation", js.undefined)
+    @scala.inline
+    def setOpenTransitionName(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionNameType */ js.Any
+    ): Self = this.set("openTransitionName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOpenTransitionName: Self = this.set("openTransitionName", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+  }
+  
 }
 

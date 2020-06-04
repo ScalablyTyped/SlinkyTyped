@@ -2,6 +2,7 @@ package typingsSlinky.semanticUiReact.dimmerInnerMod
 
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.bottom
@@ -53,34 +54,74 @@ trait StrictDimmerInnerProps extends js.Object {
 
 object StrictDimmerInnerProps {
   @scala.inline
-  def apply(
-    active: js.UndefOr[Boolean] = js.undefined,
-    as: js.Any = null,
-    children: TagMod[Any] = null,
-    className: String = null,
-    content: SemanticShorthandContent = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    inverted: js.UndefOr[Boolean] = js.undefined,
-    onClick: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ DimmerInnerProps) => Unit = null,
-    onClickOutside: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ DimmerInnerProps) => Unit = null,
-    page: js.UndefOr[Boolean] = js.undefined,
-    simple: js.UndefOr[Boolean] = js.undefined,
-    verticalAlign: bottom | top = null
-  ): StrictDimmerInnerProps = {
+  def apply(): StrictDimmerInnerProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(inverted)) __obj.updateDynamic("inverted")(inverted.get.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (onClickOutside != null) __obj.updateDynamic("onClickOutside")(js.Any.fromFunction2(onClickOutside))
-    if (!js.isUndefined(page)) __obj.updateDynamic("page")(page.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(simple)) __obj.updateDynamic("simple")(simple.get.asInstanceOf[js.Any])
-    if (verticalAlign != null) __obj.updateDynamic("verticalAlign")(verticalAlign.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictDimmerInnerProps]
   }
+  @scala.inline
+  implicit class StrictDimmerInnerPropsOps[Self <: StrictDimmerInnerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setActive(value: Boolean): Self = this.set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteActive: Self = this.set("active", js.undefined)
+    @scala.inline
+    def setAs(value: js.Any): Self = this.set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAs: Self = this.set("as", js.undefined)
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setContentReactElement(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContent(value: SemanticShorthandContent): Self = this.set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContent: Self = this.set("content", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setInverted(value: Boolean): Self = this.set("inverted", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInverted: Self = this.set("inverted", js.undefined)
+    @scala.inline
+    def setOnClick(value: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ DimmerInnerProps) => Unit): Self = this.set("onClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnClick: Self = this.set("onClick", js.undefined)
+    @scala.inline
+    def setOnClickOutside(value: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ DimmerInnerProps) => Unit): Self = this.set("onClickOutside", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnClickOutside: Self = this.set("onClickOutside", js.undefined)
+    @scala.inline
+    def setPage(value: Boolean): Self = this.set("page", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePage: Self = this.set("page", js.undefined)
+    @scala.inline
+    def setSimple(value: Boolean): Self = this.set("simple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSimple: Self = this.set("simple", js.undefined)
+    @scala.inline
+    def setVerticalAlign(value: bottom | top): Self = this.set("verticalAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVerticalAlign: Self = this.set("verticalAlign", js.undefined)
+  }
+  
 }
 

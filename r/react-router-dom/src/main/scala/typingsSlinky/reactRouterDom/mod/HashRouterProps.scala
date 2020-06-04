@@ -17,16 +17,34 @@ trait HashRouterProps extends js.Object {
 
 object HashRouterProps {
   @scala.inline
-  def apply(
-    basename: String = null,
-    getUserConfirmation: (/* message */ String, /* callback */ js.Function1[/* ok */ Boolean, Unit]) => Unit = null,
-    hashType: slash | noslash | hashbang = null
-  ): HashRouterProps = {
+  def apply(): HashRouterProps = {
     val __obj = js.Dynamic.literal()
-    if (basename != null) __obj.updateDynamic("basename")(basename.asInstanceOf[js.Any])
-    if (getUserConfirmation != null) __obj.updateDynamic("getUserConfirmation")(js.Any.fromFunction2(getUserConfirmation))
-    if (hashType != null) __obj.updateDynamic("hashType")(hashType.asInstanceOf[js.Any])
     __obj.asInstanceOf[HashRouterProps]
   }
+  @scala.inline
+  implicit class HashRouterPropsOps[Self <: HashRouterProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBasename(value: String): Self = this.set("basename", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBasename: Self = this.set("basename", js.undefined)
+    @scala.inline
+    def setGetUserConfirmation(value: (/* message */ String, /* callback */ js.Function1[/* ok */ Boolean, Unit]) => Unit): Self = this.set("getUserConfirmation", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteGetUserConfirmation: Self = this.set("getUserConfirmation", js.undefined)
+    @scala.inline
+    def setHashType(value: slash | noslash | hashbang): Self = this.set("hashType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHashType: Self = this.set("hashType", js.undefined)
+  }
+  
 }
 

@@ -59,24 +59,50 @@ trait ConnectOptions extends js.Object {
 
 object ConnectOptions {
   @scala.inline
-  def apply(
-    context: Context[ReactReduxContextValue[_, AnyAction]] = null,
-    getDisplayName: /* componentName */ String => String = null,
-    methodName: String = null,
-    renderCountProp: String = null,
-    shouldHandleStateChanges: js.UndefOr[Boolean] = js.undefined,
-    storeKey: String = null,
-    withRef: js.UndefOr[Boolean] = js.undefined
-  ): ConnectOptions = {
+  def apply(): ConnectOptions = {
     val __obj = js.Dynamic.literal()
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (getDisplayName != null) __obj.updateDynamic("getDisplayName")(js.Any.fromFunction1(getDisplayName))
-    if (methodName != null) __obj.updateDynamic("methodName")(methodName.asInstanceOf[js.Any])
-    if (renderCountProp != null) __obj.updateDynamic("renderCountProp")(renderCountProp.asInstanceOf[js.Any])
-    if (!js.isUndefined(shouldHandleStateChanges)) __obj.updateDynamic("shouldHandleStateChanges")(shouldHandleStateChanges.get.asInstanceOf[js.Any])
-    if (storeKey != null) __obj.updateDynamic("storeKey")(storeKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(withRef)) __obj.updateDynamic("withRef")(withRef.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectOptions]
   }
+  @scala.inline
+  implicit class ConnectOptionsOps[Self <: ConnectOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setContext(value: Context[ReactReduxContextValue[_, AnyAction]]): Self = this.set("context", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContext: Self = this.set("context", js.undefined)
+    @scala.inline
+    def setGetDisplayName(value: /* componentName */ String => String): Self = this.set("getDisplayName", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteGetDisplayName: Self = this.set("getDisplayName", js.undefined)
+    @scala.inline
+    def setMethodName(value: String): Self = this.set("methodName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMethodName: Self = this.set("methodName", js.undefined)
+    @scala.inline
+    def setRenderCountProp(value: String): Self = this.set("renderCountProp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRenderCountProp: Self = this.set("renderCountProp", js.undefined)
+    @scala.inline
+    def setShouldHandleStateChanges(value: Boolean): Self = this.set("shouldHandleStateChanges", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShouldHandleStateChanges: Self = this.set("shouldHandleStateChanges", js.undefined)
+    @scala.inline
+    def setStoreKey(value: String): Self = this.set("storeKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStoreKey: Self = this.set("storeKey", js.undefined)
+    @scala.inline
+    def setWithRef(value: Boolean): Self = this.set("withRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWithRef: Self = this.set("withRef", js.undefined)
+  }
+  
 }
 

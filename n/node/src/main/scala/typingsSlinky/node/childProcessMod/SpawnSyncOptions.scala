@@ -2,7 +2,6 @@ package typingsSlinky.node.childProcessMod
 
 import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.ArrayBufferView
-import typingsSlinky.node.NodeJS.ProcessEnv
 import typingsSlinky.node.NodeJS.Signals
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,40 +16,58 @@ trait SpawnSyncOptions extends CommonSpawnOptions {
 
 object SpawnSyncOptions {
   @scala.inline
-  def apply(
-    argv0: String = null,
-    cwd: String = null,
-    encoding: BufferEncoding = null,
-    env: ProcessEnv = null,
-    gid: js.UndefOr[Double] = js.undefined,
-    input: String | ArrayBufferView = null,
-    killSignal: Signals | Double = null,
-    maxBuffer: js.UndefOr[Double] = js.undefined,
-    serialization: SerializationType = null,
-    shell: Boolean | String = null,
-    stdio: StdioOptions = null,
-    timeout: js.UndefOr[Double] = js.undefined,
-    uid: js.UndefOr[Double] = js.undefined,
-    windowsHide: js.UndefOr[Boolean] = js.undefined,
-    windowsVerbatimArguments: js.UndefOr[Boolean] = js.undefined
-  ): SpawnSyncOptions = {
+  def apply(): SpawnSyncOptions = {
     val __obj = js.Dynamic.literal()
-    if (argv0 != null) __obj.updateDynamic("argv0")(argv0.asInstanceOf[js.Any])
-    if (cwd != null) __obj.updateDynamic("cwd")(cwd.asInstanceOf[js.Any])
-    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
-    if (env != null) __obj.updateDynamic("env")(env.asInstanceOf[js.Any])
-    if (!js.isUndefined(gid)) __obj.updateDynamic("gid")(gid.get.asInstanceOf[js.Any])
-    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
-    if (killSignal != null) __obj.updateDynamic("killSignal")(killSignal.asInstanceOf[js.Any])
-    if (!js.isUndefined(maxBuffer)) __obj.updateDynamic("maxBuffer")(maxBuffer.get.asInstanceOf[js.Any])
-    if (serialization != null) __obj.updateDynamic("serialization")(serialization.asInstanceOf[js.Any])
-    if (shell != null) __obj.updateDynamic("shell")(shell.asInstanceOf[js.Any])
-    if (stdio != null) __obj.updateDynamic("stdio")(stdio.asInstanceOf[js.Any])
-    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(uid)) __obj.updateDynamic("uid")(uid.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(windowsHide)) __obj.updateDynamic("windowsHide")(windowsHide.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(windowsVerbatimArguments)) __obj.updateDynamic("windowsVerbatimArguments")(windowsVerbatimArguments.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpawnSyncOptions]
   }
+  @scala.inline
+  implicit class SpawnSyncOptionsOps[Self <: SpawnSyncOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setEncoding(value: BufferEncoding): Self = this.set("encoding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEncoding: Self = this.set("encoding", js.undefined)
+    @scala.inline
+    def setInputUint16Array(value: js.typedarray.Uint16Array): Self = this.set("input", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInputUint32Array(value: js.typedarray.Uint32Array): Self = this.set("input", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInputUint8Array(value: js.typedarray.Uint8Array): Self = this.set("input", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInputInt16Array(value: js.typedarray.Int16Array): Self = this.set("input", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInputDataView(value: js.typedarray.DataView): Self = this.set("input", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInput(value: String | ArrayBufferView): Self = this.set("input", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInputFloat32Array(value: js.typedarray.Float32Array): Self = this.set("input", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInputFloat64Array(value: js.typedarray.Float64Array): Self = this.set("input", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInputInt8Array(value: js.typedarray.Int8Array): Self = this.set("input", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInputInt32Array(value: js.typedarray.Int32Array): Self = this.set("input", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInputUint8ClampedArray(value: js.typedarray.Uint8ClampedArray): Self = this.set("input", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInput: Self = this.set("input", js.undefined)
+    @scala.inline
+    def setKillSignal(value: Signals | Double): Self = this.set("killSignal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKillSignal: Self = this.set("killSignal", js.undefined)
+    @scala.inline
+    def setMaxBuffer(value: Double): Self = this.set("maxBuffer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxBuffer: Self = this.set("maxBuffer", js.undefined)
+  }
+  
 }
 

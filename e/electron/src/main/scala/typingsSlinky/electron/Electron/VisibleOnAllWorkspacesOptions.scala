@@ -13,10 +13,26 @@ trait VisibleOnAllWorkspacesOptions extends js.Object {
 
 object VisibleOnAllWorkspacesOptions {
   @scala.inline
-  def apply(visibleOnFullScreen: js.UndefOr[Boolean] = js.undefined): VisibleOnAllWorkspacesOptions = {
+  def apply(): VisibleOnAllWorkspacesOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(visibleOnFullScreen)) __obj.updateDynamic("visibleOnFullScreen")(visibleOnFullScreen.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisibleOnAllWorkspacesOptions]
   }
+  @scala.inline
+  implicit class VisibleOnAllWorkspacesOptionsOps[Self <: VisibleOnAllWorkspacesOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setVisibleOnFullScreen(value: Boolean): Self = this.set("visibleOnFullScreen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVisibleOnFullScreen: Self = this.set("visibleOnFullScreen", js.undefined)
+  }
+  
 }
 

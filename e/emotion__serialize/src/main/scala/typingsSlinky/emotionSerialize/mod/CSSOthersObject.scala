@@ -9,9 +9,8 @@ trait CSSOthersObject[MP] extends /* propertiesName */ StringDictionary[Interpol
 
 object CSSOthersObject {
   @scala.inline
-  def apply[MP](StringDictionary: /* propertiesName */ StringDictionary[Interpolation[MP]] = null): CSSOthersObject[MP] = {
+  def apply[MP](): CSSOthersObject[MP] = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[CSSOthersObject[MP]]
   }
 }

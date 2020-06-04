@@ -1,6 +1,7 @@
 package typingsSlinky.semanticUiReact.tableRowMod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
 import typingsSlinky.semanticUiReact.genericMod.SemanticVERTICALALIGNMENTS
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.center
@@ -42,36 +43,76 @@ trait StrictTableRowProps extends js.Object {
 
 object StrictTableRowProps {
   @scala.inline
-  def apply(
-    active: js.UndefOr[Boolean] = js.undefined,
-    as: js.Any = null,
-    cellAs: js.Any = null,
-    cells: SemanticShorthandCollection[TableCellProps] = null,
-    children: TagMod[Any] = null,
-    className: String = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    error: js.UndefOr[Boolean] = js.undefined,
-    negative: js.UndefOr[Boolean] = js.undefined,
-    positive: js.UndefOr[Boolean] = js.undefined,
-    textAlign: center | left | right = null,
-    verticalAlign: SemanticVERTICALALIGNMENTS = null,
-    warning: js.UndefOr[Boolean] = js.undefined
-  ): StrictTableRowProps = {
+  def apply(): StrictTableRowProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (cellAs != null) __obj.updateDynamic("cellAs")(cellAs.asInstanceOf[js.Any])
-    if (cells != null) __obj.updateDynamic("cells")(cells.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(error)) __obj.updateDynamic("error")(error.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(negative)) __obj.updateDynamic("negative")(negative.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(positive)) __obj.updateDynamic("positive")(positive.get.asInstanceOf[js.Any])
-    if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
-    if (verticalAlign != null) __obj.updateDynamic("verticalAlign")(verticalAlign.asInstanceOf[js.Any])
-    if (!js.isUndefined(warning)) __obj.updateDynamic("warning")(warning.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictTableRowProps]
   }
+  @scala.inline
+  implicit class StrictTableRowPropsOps[Self <: StrictTableRowProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setActive(value: Boolean): Self = this.set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteActive: Self = this.set("active", js.undefined)
+    @scala.inline
+    def setAs(value: js.Any): Self = this.set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAs: Self = this.set("as", js.undefined)
+    @scala.inline
+    def setCellAs(value: js.Any): Self = this.set("cellAs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCellAs: Self = this.set("cellAs", js.undefined)
+    @scala.inline
+    def setCells(value: SemanticShorthandCollection[TableCellProps]): Self = this.set("cells", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCells: Self = this.set("cells", js.undefined)
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setError(value: Boolean): Self = this.set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteError: Self = this.set("error", js.undefined)
+    @scala.inline
+    def setNegative(value: Boolean): Self = this.set("negative", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNegative: Self = this.set("negative", js.undefined)
+    @scala.inline
+    def setPositive(value: Boolean): Self = this.set("positive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePositive: Self = this.set("positive", js.undefined)
+    @scala.inline
+    def setTextAlign(value: center | left | right): Self = this.set("textAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTextAlign: Self = this.set("textAlign", js.undefined)
+    @scala.inline
+    def setVerticalAlign(value: SemanticVERTICALALIGNMENTS): Self = this.set("verticalAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVerticalAlign: Self = this.set("verticalAlign", js.undefined)
+    @scala.inline
+    def setWarning(value: Boolean): Self = this.set("warning", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWarning: Self = this.set("warning", js.undefined)
+  }
+  
 }
 

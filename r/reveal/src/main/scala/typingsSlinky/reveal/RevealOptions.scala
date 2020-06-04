@@ -68,92 +68,186 @@ trait RevealOptions extends js.Object {
 
 object RevealOptions {
   @scala.inline
-  def apply(
-    autoSlide: js.UndefOr[Double] = js.undefined,
-    autoSlideMethod: js.Any = null,
-    autoSlideStoppable: js.UndefOr[Boolean] = js.undefined,
-    backgroundTransition: String = null,
-    center: js.UndefOr[Boolean] = js.undefined,
-    controls: js.UndefOr[Boolean] = js.undefined,
-    dependencies: js.Array[RevealDependency] = null,
-    embedded: js.UndefOr[Boolean] = js.undefined,
-    fragments: js.UndefOr[Boolean] = js.undefined,
-    height: Double | String = null,
-    help: js.UndefOr[Boolean] = js.undefined,
-    hideAddressBar: js.UndefOr[Boolean] = js.undefined,
-    history: js.UndefOr[Boolean] = js.undefined,
-    keyboard: js.Any = null,
-    loop: js.UndefOr[Boolean] = js.undefined,
-    margin: Double | String = null,
-    math: MathConfig = null,
-    maxScale: Double | String = null,
-    minScale: Double | String = null,
-    mouseWheel: js.UndefOr[Boolean] = js.undefined,
-    multiplex: MultiplexConfig = null,
-    overview: js.UndefOr[Boolean] = js.undefined,
-    parallaxBackgroundHorizontal: js.UndefOr[Double] = js.undefined,
-    parallaxBackgroundImage: String = null,
-    parallaxBackgroundSize: String = null,
-    parallaxBackgroundVertical: js.UndefOr[Double] = js.undefined,
-    postMessage: js.UndefOr[Boolean] = js.undefined,
-    postMessageEvents: js.UndefOr[Boolean] = js.undefined,
-    previewLinks: js.UndefOr[Boolean] = js.undefined,
-    progress: js.UndefOr[Boolean] = js.undefined,
-    rollingLinks: js.UndefOr[Boolean] = js.undefined,
-    rtl: js.UndefOr[Boolean] = js.undefined,
-    showNotes: js.UndefOr[Boolean] = js.undefined,
-    shuffle: js.UndefOr[Boolean] = js.undefined,
-    slideNumber: Boolean | String = null,
-    theme: String = null,
-    touch: js.UndefOr[Boolean] = js.undefined,
-    transition: String = null,
-    transitionSpeed: String = null,
-    viewDistance: js.UndefOr[Double] = js.undefined,
-    width: Double | String = null
-  ): RevealOptions = {
+  def apply(): RevealOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoSlide)) __obj.updateDynamic("autoSlide")(autoSlide.get.asInstanceOf[js.Any])
-    if (autoSlideMethod != null) __obj.updateDynamic("autoSlideMethod")(autoSlideMethod.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoSlideStoppable)) __obj.updateDynamic("autoSlideStoppable")(autoSlideStoppable.get.asInstanceOf[js.Any])
-    if (backgroundTransition != null) __obj.updateDynamic("backgroundTransition")(backgroundTransition.asInstanceOf[js.Any])
-    if (!js.isUndefined(center)) __obj.updateDynamic("center")(center.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(controls)) __obj.updateDynamic("controls")(controls.get.asInstanceOf[js.Any])
-    if (dependencies != null) __obj.updateDynamic("dependencies")(dependencies.asInstanceOf[js.Any])
-    if (!js.isUndefined(embedded)) __obj.updateDynamic("embedded")(embedded.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(fragments)) __obj.updateDynamic("fragments")(fragments.get.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(help)) __obj.updateDynamic("help")(help.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideAddressBar)) __obj.updateDynamic("hideAddressBar")(hideAddressBar.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(history)) __obj.updateDynamic("history")(history.get.asInstanceOf[js.Any])
-    if (keyboard != null) __obj.updateDynamic("keyboard")(keyboard.asInstanceOf[js.Any])
-    if (!js.isUndefined(loop)) __obj.updateDynamic("loop")(loop.get.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (math != null) __obj.updateDynamic("math")(math.asInstanceOf[js.Any])
-    if (maxScale != null) __obj.updateDynamic("maxScale")(maxScale.asInstanceOf[js.Any])
-    if (minScale != null) __obj.updateDynamic("minScale")(minScale.asInstanceOf[js.Any])
-    if (!js.isUndefined(mouseWheel)) __obj.updateDynamic("mouseWheel")(mouseWheel.get.asInstanceOf[js.Any])
-    if (multiplex != null) __obj.updateDynamic("multiplex")(multiplex.asInstanceOf[js.Any])
-    if (!js.isUndefined(overview)) __obj.updateDynamic("overview")(overview.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(parallaxBackgroundHorizontal)) __obj.updateDynamic("parallaxBackgroundHorizontal")(parallaxBackgroundHorizontal.get.asInstanceOf[js.Any])
-    if (parallaxBackgroundImage != null) __obj.updateDynamic("parallaxBackgroundImage")(parallaxBackgroundImage.asInstanceOf[js.Any])
-    if (parallaxBackgroundSize != null) __obj.updateDynamic("parallaxBackgroundSize")(parallaxBackgroundSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(parallaxBackgroundVertical)) __obj.updateDynamic("parallaxBackgroundVertical")(parallaxBackgroundVertical.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(postMessage)) __obj.updateDynamic("postMessage")(postMessage.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(postMessageEvents)) __obj.updateDynamic("postMessageEvents")(postMessageEvents.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(previewLinks)) __obj.updateDynamic("previewLinks")(previewLinks.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(progress)) __obj.updateDynamic("progress")(progress.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(rollingLinks)) __obj.updateDynamic("rollingLinks")(rollingLinks.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(rtl)) __obj.updateDynamic("rtl")(rtl.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(showNotes)) __obj.updateDynamic("showNotes")(showNotes.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(shuffle)) __obj.updateDynamic("shuffle")(shuffle.get.asInstanceOf[js.Any])
-    if (slideNumber != null) __obj.updateDynamic("slideNumber")(slideNumber.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (!js.isUndefined(touch)) __obj.updateDynamic("touch")(touch.get.asInstanceOf[js.Any])
-    if (transition != null) __obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
-    if (transitionSpeed != null) __obj.updateDynamic("transitionSpeed")(transitionSpeed.asInstanceOf[js.Any])
-    if (!js.isUndefined(viewDistance)) __obj.updateDynamic("viewDistance")(viewDistance.get.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[RevealOptions]
   }
+  @scala.inline
+  implicit class RevealOptionsOps[Self <: RevealOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAutoSlide(value: Double): Self = this.set("autoSlide", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAutoSlide: Self = this.set("autoSlide", js.undefined)
+    @scala.inline
+    def setAutoSlideMethod(value: js.Any): Self = this.set("autoSlideMethod", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAutoSlideMethod: Self = this.set("autoSlideMethod", js.undefined)
+    @scala.inline
+    def setAutoSlideStoppable(value: Boolean): Self = this.set("autoSlideStoppable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAutoSlideStoppable: Self = this.set("autoSlideStoppable", js.undefined)
+    @scala.inline
+    def setBackgroundTransition(value: String): Self = this.set("backgroundTransition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBackgroundTransition: Self = this.set("backgroundTransition", js.undefined)
+    @scala.inline
+    def setCenter(value: Boolean): Self = this.set("center", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCenter: Self = this.set("center", js.undefined)
+    @scala.inline
+    def setControls(value: Boolean): Self = this.set("controls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteControls: Self = this.set("controls", js.undefined)
+    @scala.inline
+    def setDependencies(value: js.Array[RevealDependency]): Self = this.set("dependencies", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDependencies: Self = this.set("dependencies", js.undefined)
+    @scala.inline
+    def setEmbedded(value: Boolean): Self = this.set("embedded", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEmbedded: Self = this.set("embedded", js.undefined)
+    @scala.inline
+    def setFragments(value: Boolean): Self = this.set("fragments", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFragments: Self = this.set("fragments", js.undefined)
+    @scala.inline
+    def setHeight(value: Double | String): Self = this.set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeight: Self = this.set("height", js.undefined)
+    @scala.inline
+    def setHelp(value: Boolean): Self = this.set("help", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHelp: Self = this.set("help", js.undefined)
+    @scala.inline
+    def setHideAddressBar(value: Boolean): Self = this.set("hideAddressBar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHideAddressBar: Self = this.set("hideAddressBar", js.undefined)
+    @scala.inline
+    def setHistory(value: Boolean): Self = this.set("history", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHistory: Self = this.set("history", js.undefined)
+    @scala.inline
+    def setKeyboard(value: js.Any): Self = this.set("keyboard", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKeyboard: Self = this.set("keyboard", js.undefined)
+    @scala.inline
+    def setLoop(value: Boolean): Self = this.set("loop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLoop: Self = this.set("loop", js.undefined)
+    @scala.inline
+    def setMargin(value: Double | String): Self = this.set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMargin: Self = this.set("margin", js.undefined)
+    @scala.inline
+    def setMath(value: MathConfig): Self = this.set("math", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMath: Self = this.set("math", js.undefined)
+    @scala.inline
+    def setMaxScale(value: Double | String): Self = this.set("maxScale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxScale: Self = this.set("maxScale", js.undefined)
+    @scala.inline
+    def setMinScale(value: Double | String): Self = this.set("minScale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinScale: Self = this.set("minScale", js.undefined)
+    @scala.inline
+    def setMouseWheel(value: Boolean): Self = this.set("mouseWheel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMouseWheel: Self = this.set("mouseWheel", js.undefined)
+    @scala.inline
+    def setMultiplex(value: MultiplexConfig): Self = this.set("multiplex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMultiplex: Self = this.set("multiplex", js.undefined)
+    @scala.inline
+    def setOverview(value: Boolean): Self = this.set("overview", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOverview: Self = this.set("overview", js.undefined)
+    @scala.inline
+    def setParallaxBackgroundHorizontal(value: Double): Self = this.set("parallaxBackgroundHorizontal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteParallaxBackgroundHorizontal: Self = this.set("parallaxBackgroundHorizontal", js.undefined)
+    @scala.inline
+    def setParallaxBackgroundImage(value: String): Self = this.set("parallaxBackgroundImage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteParallaxBackgroundImage: Self = this.set("parallaxBackgroundImage", js.undefined)
+    @scala.inline
+    def setParallaxBackgroundSize(value: String): Self = this.set("parallaxBackgroundSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteParallaxBackgroundSize: Self = this.set("parallaxBackgroundSize", js.undefined)
+    @scala.inline
+    def setParallaxBackgroundVertical(value: Double): Self = this.set("parallaxBackgroundVertical", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteParallaxBackgroundVertical: Self = this.set("parallaxBackgroundVertical", js.undefined)
+    @scala.inline
+    def setPostMessage(value: Boolean): Self = this.set("postMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePostMessage: Self = this.set("postMessage", js.undefined)
+    @scala.inline
+    def setPostMessageEvents(value: Boolean): Self = this.set("postMessageEvents", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePostMessageEvents: Self = this.set("postMessageEvents", js.undefined)
+    @scala.inline
+    def setPreviewLinks(value: Boolean): Self = this.set("previewLinks", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePreviewLinks: Self = this.set("previewLinks", js.undefined)
+    @scala.inline
+    def setProgress(value: Boolean): Self = this.set("progress", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteProgress: Self = this.set("progress", js.undefined)
+    @scala.inline
+    def setRollingLinks(value: Boolean): Self = this.set("rollingLinks", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRollingLinks: Self = this.set("rollingLinks", js.undefined)
+    @scala.inline
+    def setRtl(value: Boolean): Self = this.set("rtl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRtl: Self = this.set("rtl", js.undefined)
+    @scala.inline
+    def setShowNotes(value: Boolean): Self = this.set("showNotes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowNotes: Self = this.set("showNotes", js.undefined)
+    @scala.inline
+    def setShuffle(value: Boolean): Self = this.set("shuffle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShuffle: Self = this.set("shuffle", js.undefined)
+    @scala.inline
+    def setSlideNumber(value: Boolean | String): Self = this.set("slideNumber", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSlideNumber: Self = this.set("slideNumber", js.undefined)
+    @scala.inline
+    def setTheme(value: String): Self = this.set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTheme: Self = this.set("theme", js.undefined)
+    @scala.inline
+    def setTouch(value: Boolean): Self = this.set("touch", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTouch: Self = this.set("touch", js.undefined)
+    @scala.inline
+    def setTransition(value: String): Self = this.set("transition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTransition: Self = this.set("transition", js.undefined)
+    @scala.inline
+    def setTransitionSpeed(value: String): Self = this.set("transitionSpeed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTransitionSpeed: Self = this.set("transitionSpeed", js.undefined)
+    @scala.inline
+    def setViewDistance(value: Double): Self = this.set("viewDistance", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteViewDistance: Self = this.set("viewDistance", js.undefined)
+    @scala.inline
+    def setWidth(value: Double | String): Self = this.set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWidth: Self = this.set("width", js.undefined)
+  }
+  
 }
 

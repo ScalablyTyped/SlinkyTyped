@@ -30,20 +30,42 @@ trait PopupOptions extends js.Object {
 
 object PopupOptions {
   @scala.inline
-  def apply(
-    callback: () => Unit = null,
-    positioningItem: js.UndefOr[Double] = js.undefined,
-    window: BrowserWindow = null,
-    x: js.UndefOr[Double] = js.undefined,
-    y: js.UndefOr[Double] = js.undefined
-  ): PopupOptions = {
+  def apply(): PopupOptions = {
     val __obj = js.Dynamic.literal()
-    if (callback != null) __obj.updateDynamic("callback")(js.Any.fromFunction0(callback))
-    if (!js.isUndefined(positioningItem)) __obj.updateDynamic("positioningItem")(positioningItem.get.asInstanceOf[js.Any])
-    if (window != null) __obj.updateDynamic("window")(window.asInstanceOf[js.Any])
-    if (!js.isUndefined(x)) __obj.updateDynamic("x")(x.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(y)) __obj.updateDynamic("y")(y.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PopupOptions]
   }
+  @scala.inline
+  implicit class PopupOptionsOps[Self <: PopupOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCallback(value: () => Unit): Self = this.set("callback", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteCallback: Self = this.set("callback", js.undefined)
+    @scala.inline
+    def setPositioningItem(value: Double): Self = this.set("positioningItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePositioningItem: Self = this.set("positioningItem", js.undefined)
+    @scala.inline
+    def setWindow(value: BrowserWindow): Self = this.set("window", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWindow: Self = this.set("window", js.undefined)
+    @scala.inline
+    def setX(value: Double): Self = this.set("x", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteX: Self = this.set("x", js.undefined)
+    @scala.inline
+    def setY(value: Double): Self = this.set("y", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteY: Self = this.set("y", js.undefined)
+  }
+  
 }
 

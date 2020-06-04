@@ -2,6 +2,7 @@ package typingsSlinky.antd.libStepsMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.antdStrings.error
 import typingsSlinky.antd.antdStrings.finish
@@ -27,28 +28,66 @@ trait StepProps extends js.Object {
 
 object StepProps {
   @scala.inline
-  def apply(
-    className: String = null,
-    description: TagMod[Any] = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    icon: TagMod[Any] = null,
-    onClick: SyntheticMouseEvent[HTMLElement] => Unit = null,
-    status: wait | process | finish | error = null,
-    style: CSSProperties = null,
-    subTitle: TagMod[Any] = null,
-    title: TagMod[Any] = null
-  ): StepProps = {
+  def apply(): StepProps = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (subTitle != null) __obj.updateDynamic("subTitle")(subTitle.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[StepProps]
   }
+  @scala.inline
+  implicit class StepPropsOps[Self <: StepProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setDescriptionReactElement(value: ReactElement): Self = this.set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDescription(value: TagMod[Any]): Self = this.set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDescription: Self = this.set("description", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIcon(value: TagMod[Any]): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIcon: Self = this.set("icon", js.undefined)
+    @scala.inline
+    def setOnClick(value: SyntheticMouseEvent[HTMLElement] => Unit): Self = this.set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnClick: Self = this.set("onClick", js.undefined)
+    @scala.inline
+    def setStatus(value: wait | process | finish | error): Self = this.set("status", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStatus: Self = this.set("status", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+    @scala.inline
+    def setSubTitleReactElement(value: ReactElement): Self = this.set("subTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSubTitle(value: TagMod[Any]): Self = this.set("subTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSubTitle: Self = this.set("subTitle", js.undefined)
+    @scala.inline
+    def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
+  }
+  
 }
 

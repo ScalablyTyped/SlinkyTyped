@@ -80,6 +80,7 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.std.Partial
 import scala.scalajs.js
@@ -100,7 +101,7 @@ object Tabs {
     @scala.inline
     def ScrollButtonComponentComponentClass(value: ReactComponentClass[_]): this.type = set("ScrollButtonComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def ScrollButtonComponent(value: ReactComponentClass[_]): this.type = set("ScrollButtonComponent", value.asInstanceOf[js.Any])
+    def ScrollButtonComponent(value: ReactType[_]): this.type = set("ScrollButtonComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def TabIndicatorProps(value: PartialTabIndicatorProps): this.type = set("TabIndicatorProps", value.asInstanceOf[js.Any])
     @scala.inline
@@ -238,7 +239,7 @@ object Tabs {
     @scala.inline
     def componentComponentClass(value: ReactComponentClass[TabsProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
-    def component(value: ReactComponentClass[TabsProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: ReactType[TabsProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
     @scala.inline

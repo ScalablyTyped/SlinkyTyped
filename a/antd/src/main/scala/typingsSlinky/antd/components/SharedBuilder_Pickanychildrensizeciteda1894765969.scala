@@ -151,6 +151,8 @@ class SharedBuilder_Pickanychildrensizeciteda1894765969[R <: js.Object] (val arg
   @scala.inline
   def checked(value: js.Any): this.type = set("checked", value.asInstanceOf[js.Any])
   @scala.inline
+  def children(value: js.Any): this.type = set("children", value.asInstanceOf[js.Any])
+  @scala.inline
   def cite(value: js.Any): this.type = set("cite", value.asInstanceOf[js.Any])
   @scala.inline
   def classID(value: js.Any): this.type = set("classID", value.asInstanceOf[js.Any])

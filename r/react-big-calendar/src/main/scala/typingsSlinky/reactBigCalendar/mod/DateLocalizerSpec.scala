@@ -14,15 +14,32 @@ trait DateLocalizerSpec extends js.Object {
 
 object DateLocalizerSpec {
   @scala.inline
-  def apply(
-    firstOfWeek: Culture => Double,
-    format: (FormatInput, String, Culture) => String,
-    formats: Formats,
-    propType: Validator[_] = null
-  ): DateLocalizerSpec = {
+  def apply(firstOfWeek: Culture => Double, format: (FormatInput, String, Culture) => String, formats: Formats): DateLocalizerSpec = {
     val __obj = js.Dynamic.literal(firstOfWeek = js.Any.fromFunction1(firstOfWeek), format = js.Any.fromFunction3(format), formats = formats.asInstanceOf[js.Any])
-    if (propType != null) __obj.updateDynamic("propType")(propType.asInstanceOf[js.Any])
     __obj.asInstanceOf[DateLocalizerSpec]
   }
+  @scala.inline
+  implicit class DateLocalizerSpecOps[Self <: DateLocalizerSpec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setFirstOfWeek(value: Culture => Double): Self = this.set("firstOfWeek", js.Any.fromFunction1(value))
+    @scala.inline
+    def setFormat(value: (FormatInput, String, Culture) => String): Self = this.set("format", js.Any.fromFunction3(value))
+    @scala.inline
+    def setFormats(value: Formats): Self = this.set("formats", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPropType(value: Validator[_]): Self = this.set("propType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePropType: Self = this.set("propType", js.undefined)
+  }
+  
 }
 

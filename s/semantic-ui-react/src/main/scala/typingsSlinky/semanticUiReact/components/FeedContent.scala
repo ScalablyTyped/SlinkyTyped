@@ -1,11 +1,11 @@
 package typingsSlinky.semanticUiReact.components
 
-import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.feedContentMod.FeedContentProps
 import typingsSlinky.semanticUiReact.feedDateMod.FeedDateProps
 import typingsSlinky.semanticUiReact.feedExtraMod.FeedExtraProps
@@ -38,7 +38,7 @@ object FeedContent {
     def dateReactElement(value: ReactElement): this.type = set("date", value.asInstanceOf[js.Any])
     @scala.inline
     def dateFunction3(
-      value: (/* component */ ReactComponentClass[FeedDateProps], FeedDateProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[FeedDateProps], FeedDateProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("date", js.Any.fromFunction3(value))
     @scala.inline
     def date(value: SemanticShorthandItem[FeedDateProps]): this.type = set("date", value.asInstanceOf[js.Any])
@@ -46,7 +46,7 @@ object FeedContent {
     def extraImagesReactElement(value: ReactElement): this.type = set("extraImages", value.asInstanceOf[js.Any])
     @scala.inline
     def extraImagesFunction3(
-      value: (/* component */ ReactComponentClass[FeedExtraProps], FeedExtraProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[FeedExtraProps], FeedExtraProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("extraImages", js.Any.fromFunction3(value))
     @scala.inline
     def extraImages(value: SemanticShorthandItem[FeedExtraProps]): this.type = set("extraImages", value.asInstanceOf[js.Any])
@@ -54,7 +54,7 @@ object FeedContent {
     def extraTextReactElement(value: ReactElement): this.type = set("extraText", value.asInstanceOf[js.Any])
     @scala.inline
     def extraTextFunction3(
-      value: (/* component */ ReactComponentClass[FeedExtraProps], FeedExtraProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[FeedExtraProps], FeedExtraProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("extraText", js.Any.fromFunction3(value))
     @scala.inline
     def extraText(value: SemanticShorthandItem[FeedExtraProps]): this.type = set("extraText", value.asInstanceOf[js.Any])
@@ -62,7 +62,7 @@ object FeedContent {
     def metaReactElement(value: ReactElement): this.type = set("meta", value.asInstanceOf[js.Any])
     @scala.inline
     def metaFunction3(
-      value: (/* component */ ReactComponentClass[FeedMetaProps], FeedMetaProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[FeedMetaProps], FeedMetaProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("meta", js.Any.fromFunction3(value))
     @scala.inline
     def meta(value: SemanticShorthandItem[FeedMetaProps]): this.type = set("meta", value.asInstanceOf[js.Any])
@@ -70,7 +70,7 @@ object FeedContent {
     def summaryReactElement(value: ReactElement): this.type = set("summary", value.asInstanceOf[js.Any])
     @scala.inline
     def summaryFunction3(
-      value: (/* component */ ReactComponentClass[FeedSummaryProps], FeedSummaryProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[FeedSummaryProps], FeedSummaryProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("summary", js.Any.fromFunction3(value))
     @scala.inline
     def summary(value: SemanticShorthandItem[FeedSummaryProps]): this.type = set("summary", value.asInstanceOf[js.Any])

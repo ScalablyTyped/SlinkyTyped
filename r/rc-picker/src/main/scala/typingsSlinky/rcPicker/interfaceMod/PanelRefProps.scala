@@ -16,16 +16,34 @@ trait PanelRefProps extends js.Object {
 
 object PanelRefProps {
   @scala.inline
-  def apply(
-    onBlur: SyntheticFocusEvent[HTMLElement] => Unit = null,
-    onClose: () => Unit = null,
-    onKeyDown: /* e */ SyntheticKeyboardEvent[HTMLElement] => Boolean = null
-  ): PanelRefProps = {
+  def apply(): PanelRefProps = {
     val __obj = js.Dynamic.literal()
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction0(onClose))
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
     __obj.asInstanceOf[PanelRefProps]
   }
+  @scala.inline
+  implicit class PanelRefPropsOps[Self <: PanelRefProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setOnBlur(value: SyntheticFocusEvent[HTMLElement] => Unit): Self = this.set("onBlur", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnBlur: Self = this.set("onBlur", js.undefined)
+    @scala.inline
+    def setOnClose(value: () => Unit): Self = this.set("onClose", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnClose: Self = this.set("onClose", js.undefined)
+    @scala.inline
+    def setOnKeyDown(value: /* e */ SyntheticKeyboardEvent[HTMLElement] => Boolean): Self = this.set("onKeyDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnKeyDown: Self = this.set("onKeyDown", js.undefined)
+  }
+  
 }
 

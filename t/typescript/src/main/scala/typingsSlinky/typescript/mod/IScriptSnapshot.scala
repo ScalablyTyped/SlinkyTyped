@@ -31,12 +31,33 @@ object IScriptSnapshot {
   def apply(
     getChangeRange: IScriptSnapshot => js.UndefOr[TextChangeRange],
     getLength: () => Double,
-    getText: (Double, Double) => java.lang.String,
-    dispose: () => Unit = null
+    getText: (Double, Double) => java.lang.String
   ): IScriptSnapshot = {
     val __obj = js.Dynamic.literal(getChangeRange = js.Any.fromFunction1(getChangeRange), getLength = js.Any.fromFunction0(getLength), getText = js.Any.fromFunction2(getText))
-    if (dispose != null) __obj.updateDynamic("dispose")(js.Any.fromFunction0(dispose))
     __obj.asInstanceOf[IScriptSnapshot]
   }
+  @scala.inline
+  implicit class IScriptSnapshotOps[Self <: IScriptSnapshot] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setGetChangeRange(value: IScriptSnapshot => js.UndefOr[TextChangeRange]): Self = this.set("getChangeRange", js.Any.fromFunction1(value))
+    @scala.inline
+    def setGetLength(value: () => Double): Self = this.set("getLength", js.Any.fromFunction0(value))
+    @scala.inline
+    def setGetText(value: (Double, Double) => java.lang.String): Self = this.set("getText", js.Any.fromFunction2(value))
+    @scala.inline
+    def setDispose(value: () => Unit): Self = this.set("dispose", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteDispose: Self = this.set("dispose", js.undefined)
+  }
+  
 }
 

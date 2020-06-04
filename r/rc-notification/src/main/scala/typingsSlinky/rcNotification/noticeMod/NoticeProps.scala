@@ -2,6 +2,7 @@ package typingsSlinky.rcNotification.noticeMod
 
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.MouseEventHandler
@@ -27,33 +28,74 @@ trait NoticeProps extends js.Object {
 
 object NoticeProps {
   @scala.inline
-  def apply(
-    prefixCls: String,
-    children: TagMod[Any] = null,
-    className: String = null,
-    closable: js.UndefOr[Boolean] = js.undefined,
-    closeIcon: TagMod[Any] = null,
-    duration: js.UndefOr[Null | Double] = js.undefined,
-    holder: HTMLDivElement = null,
-    onClick: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
-    onClose: () => Unit = null,
-    props: DivProps = null,
-    style: CSSProperties = null,
-    update: js.UndefOr[Boolean] = js.undefined
-  ): NoticeProps = {
+  def apply(prefixCls: String): NoticeProps = {
     val __obj = js.Dynamic.literal(prefixCls = prefixCls.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(closable)) __obj.updateDynamic("closable")(closable.get.asInstanceOf[js.Any])
-    if (closeIcon != null) __obj.updateDynamic("closeIcon")(closeIcon.asInstanceOf[js.Any])
-    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (holder != null) __obj.updateDynamic("holder")(holder.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction0(onClose))
-    if (props != null) __obj.updateDynamic("props")(props.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(update)) __obj.updateDynamic("update")(update.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[NoticeProps]
   }
+  @scala.inline
+  implicit class NoticePropsOps[Self <: NoticeProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setClosable(value: Boolean): Self = this.set("closable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClosable: Self = this.set("closable", js.undefined)
+    @scala.inline
+    def setCloseIconReactElement(value: ReactElement): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCloseIcon(value: TagMod[Any]): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCloseIcon: Self = this.set("closeIcon", js.undefined)
+    @scala.inline
+    def setDuration(value: Double): Self = this.set("duration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDuration: Self = this.set("duration", js.undefined)
+    @scala.inline
+    def setDurationNull: Self = this.set("duration", null)
+    @scala.inline
+    def setHolder(value: HTMLDivElement): Self = this.set("holder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHolder: Self = this.set("holder", js.undefined)
+    @scala.inline
+    def setOnClick(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = this.set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnClick: Self = this.set("onClick", js.undefined)
+    @scala.inline
+    def setOnClose(value: () => Unit): Self = this.set("onClose", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnClose: Self = this.set("onClose", js.undefined)
+    @scala.inline
+    def setProps(value: DivProps): Self = this.set("props", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteProps: Self = this.set("props", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+    @scala.inline
+    def setUpdate(value: Boolean): Self = this.set("update", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUpdate: Self = this.set("update", js.undefined)
+  }
+  
 }
 

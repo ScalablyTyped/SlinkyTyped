@@ -16,22 +16,46 @@ trait PartialRecordBreakpointnu extends js.Object {
 
 object PartialRecordBreakpointnu {
   @scala.inline
-  def apply(
-    lg: js.UndefOr[Double] = js.undefined,
-    md: js.UndefOr[Double] = js.undefined,
-    sm: js.UndefOr[Double] = js.undefined,
-    xl: js.UndefOr[Double] = js.undefined,
-    xs: js.UndefOr[Double] = js.undefined,
-    xxl: js.UndefOr[Double] = js.undefined
-  ): PartialRecordBreakpointnu = {
+  def apply(): PartialRecordBreakpointnu = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(lg)) __obj.updateDynamic("lg")(lg.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(md)) __obj.updateDynamic("md")(md.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(sm)) __obj.updateDynamic("sm")(sm.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(xl)) __obj.updateDynamic("xl")(xl.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(xs)) __obj.updateDynamic("xs")(xs.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(xxl)) __obj.updateDynamic("xxl")(xxl.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialRecordBreakpointnu]
   }
+  @scala.inline
+  implicit class PartialRecordBreakpointnuOps[Self <: PartialRecordBreakpointnu] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setLg(value: Double): Self = this.set("lg", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLg: Self = this.set("lg", js.undefined)
+    @scala.inline
+    def setMd(value: Double): Self = this.set("md", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMd: Self = this.set("md", js.undefined)
+    @scala.inline
+    def setSm(value: Double): Self = this.set("sm", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSm: Self = this.set("sm", js.undefined)
+    @scala.inline
+    def setXl(value: Double): Self = this.set("xl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteXl: Self = this.set("xl", js.undefined)
+    @scala.inline
+    def setXs(value: Double): Self = this.set("xs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteXs: Self = this.set("xs", js.undefined)
+    @scala.inline
+    def setXxl(value: Double): Self = this.set("xxl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteXxl: Self = this.set("xxl", js.undefined)
+  }
+  
 }
 

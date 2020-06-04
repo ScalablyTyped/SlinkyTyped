@@ -9,3 +9,11 @@ trait ListIconProps
   extends StrictListIconProps
      with /* key */ StringDictionary[js.Any]
 
+object ListIconProps {
+  @scala.inline
+  def apply(): ListIconProps = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ListIconProps]
+  }
+}
+

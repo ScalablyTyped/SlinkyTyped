@@ -56,13 +56,53 @@ object ɵɵBaseDef {
     */ typingsSlinky.angularCore.angularCoreStrings.ɵɵBaseDef with TopLevel[js.Any],
     outputs: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]: string}
-    */ typingsSlinky.angularCore.angularCoreStrings.ɵɵBaseDef with TopLevel[js.Any],
-    contentQueries: (/* rf */ ɵRenderFlags, T, /* directiveIndex */ Double) => Unit = null,
-    hostBindings: (/* rf */ ɵRenderFlags, T, /* elementIndex */ Double) => Unit = null,
-    viewQuery: (/* rf */ ɵRenderFlags, T) => Unit = null
+    */ typingsSlinky.angularCore.angularCoreStrings.ɵɵBaseDef with TopLevel[js.Any]
   ): ɵɵBaseDef[T] = {
-    val __obj = js.Dynamic.literal(declaredInputs = declaredInputs.asInstanceOf[js.Any], inputs = inputs.asInstanceOf[js.Any], outputs = outputs.asInstanceOf[js.Any], contentQueries = js.Any.fromFunction3(contentQueries), hostBindings = js.Any.fromFunction3(hostBindings), viewQuery = js.Any.fromFunction2(viewQuery))
+    val __obj = js.Dynamic.literal(declaredInputs = declaredInputs.asInstanceOf[js.Any], inputs = inputs.asInstanceOf[js.Any], outputs = outputs.asInstanceOf[js.Any])
     __obj.asInstanceOf[ɵɵBaseDef[T]]
   }
+  @scala.inline
+  implicit class ɵɵBaseDefOps[Self <: ɵɵBaseDef[_], T] (val x: Self with ɵɵBaseDef[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDeclaredInputs(
+      value: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+    {[ P in keyof T ]: string}
+      */ typingsSlinky.angularCore.angularCoreStrings.ɵɵBaseDef with TopLevel[js.Any]
+    ): Self = this.set("declaredInputs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInputs(
+      value: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+    {[ P in keyof T ]: string}
+      */ typingsSlinky.angularCore.angularCoreStrings.ɵɵBaseDef with TopLevel[js.Any]
+    ): Self = this.set("inputs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOutputs(
+      value: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+    {[ P in keyof T ]: string}
+      */ typingsSlinky.angularCore.angularCoreStrings.ɵɵBaseDef with TopLevel[js.Any]
+    ): Self = this.set("outputs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContentQueries(value: (/* rf */ ɵRenderFlags, T, /* directiveIndex */ Double) => Unit): Self = this.set("contentQueries", js.Any.fromFunction3(value))
+    @scala.inline
+    def setContentQueriesNull: Self = this.set("contentQueries", null)
+    @scala.inline
+    def setHostBindings(value: (/* rf */ ɵRenderFlags, T, /* elementIndex */ Double) => Unit): Self = this.set("hostBindings", js.Any.fromFunction3(value))
+    @scala.inline
+    def setHostBindingsNull: Self = this.set("hostBindings", null)
+    @scala.inline
+    def setViewQuery(value: (/* rf */ ɵRenderFlags, T) => Unit): Self = this.set("viewQuery", js.Any.fromFunction2(value))
+    @scala.inline
+    def setViewQueryNull: Self = this.set("viewQuery", null)
+  }
+  
 }
 

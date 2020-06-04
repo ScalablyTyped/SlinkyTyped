@@ -45,12 +45,35 @@ object MapCache {
     delete: js.Any => Boolean,
     get: js.Any => js.Any,
     has: js.Any => Boolean,
-    set: (js.Any, js.Any) => MapCache,
-    clear: () => Unit = null
+    set: (js.Any, js.Any) => MapCache
   ): MapCache = {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), has = js.Any.fromFunction1(has), set = js.Any.fromFunction2(set))
-    if (clear != null) __obj.updateDynamic("clear")(js.Any.fromFunction0(clear))
     __obj.asInstanceOf[MapCache]
   }
+  @scala.inline
+  implicit class MapCacheOps[Self <: MapCache] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDelete(value: js.Any => Boolean): Self = this.set("delete", js.Any.fromFunction1(value))
+    @scala.inline
+    def setGet(value: js.Any => js.Any): Self = this.set("get", js.Any.fromFunction1(value))
+    @scala.inline
+    def setHas(value: js.Any => Boolean): Self = this.set("has", js.Any.fromFunction1(value))
+    @scala.inline
+    def setSet(value: (js.Any, js.Any) => MapCache): Self = this.set("set", js.Any.fromFunction2(value))
+    @scala.inline
+    def setClear(value: () => Unit): Self = this.set("clear", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteClear: Self = this.set("clear", js.undefined)
+  }
+  
 }
 

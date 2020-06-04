@@ -54,5 +54,34 @@ object TouchBarScrubberConstructorOptions {
     val __obj = js.Dynamic.literal(continuous = continuous.asInstanceOf[js.Any], highlight = js.Any.fromFunction1(highlight), items = items.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], overlayStyle = overlayStyle.asInstanceOf[js.Any], select = js.Any.fromFunction1(select), selectedStyle = selectedStyle.asInstanceOf[js.Any], showArrowButtons = showArrowButtons.asInstanceOf[js.Any])
     __obj.asInstanceOf[TouchBarScrubberConstructorOptions]
   }
+  @scala.inline
+  implicit class TouchBarScrubberConstructorOptionsOps[Self <: TouchBarScrubberConstructorOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setContinuous(value: Boolean): Self = this.set("continuous", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHighlight(value: Double => Unit): Self = this.set("highlight", js.Any.fromFunction1(value))
+    @scala.inline
+    def setItems(value: js.Array[ScrubberItem]): Self = this.set("items", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMode(value: String): Self = this.set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOverlayStyle(value: String): Self = this.set("overlayStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSelect(value: Double => Unit): Self = this.set("select", js.Any.fromFunction1(value))
+    @scala.inline
+    def setSelectedStyle(value: String): Self = this.set("selectedStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setShowArrowButtons(value: Boolean): Self = this.set("showArrowButtons", value.asInstanceOf[js.Any])
+  }
+  
 }
 

@@ -3,7 +3,6 @@ package typingsSlinky.semanticUiReact.components
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLButtonElement
-import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
@@ -25,6 +24,7 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.ReactNodeArray
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.additions
@@ -278,7 +278,7 @@ object Button {
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def iconFunction3(
-      value: (/* component */ ReactComponentClass[IconProps], IconProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("icon", js.Any.fromFunction3(value))
     @scala.inline
     def icon(value: Boolean | SemanticShorthandItem[IconProps]): this.type = set("icon", value.asInstanceOf[js.Any])
@@ -306,7 +306,7 @@ object Button {
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def labelFunction3(
-      value: (/* component */ ReactComponentClass[LabelProps], LabelProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[LabelProps], LabelProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("label", js.Any.fromFunction3(value))
     @scala.inline
     def label(value: SemanticShorthandItem[LabelProps]): this.type = set("label", value.asInstanceOf[js.Any])

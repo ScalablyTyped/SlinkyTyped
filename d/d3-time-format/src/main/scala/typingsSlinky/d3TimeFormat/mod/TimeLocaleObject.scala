@@ -103,5 +103,26 @@ object TimeLocaleObject {
     val __obj = js.Dynamic.literal(format = js.Any.fromFunction1(format), parse = js.Any.fromFunction1(parse), utcFormat = js.Any.fromFunction1(utcFormat), utcParse = js.Any.fromFunction1(utcParse))
     __obj.asInstanceOf[TimeLocaleObject]
   }
+  @scala.inline
+  implicit class TimeLocaleObjectOps[Self <: TimeLocaleObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setFormat(value: String => js.Function1[/* date */ js.Date, String]): Self = this.set("format", js.Any.fromFunction1(value))
+    @scala.inline
+    def setParse(value: String => js.Function1[/* dateString */ String, js.Date | Null]): Self = this.set("parse", js.Any.fromFunction1(value))
+    @scala.inline
+    def setUtcFormat(value: String => js.Function1[/* date */ js.Date, String]): Self = this.set("utcFormat", js.Any.fromFunction1(value))
+    @scala.inline
+    def setUtcParse(value: String => js.Function1[/* dateString */ String, js.Date | Null]): Self = this.set("utcParse", js.Any.fromFunction1(value))
+  }
+  
 }
 

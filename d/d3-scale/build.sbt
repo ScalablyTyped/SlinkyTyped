@@ -1,13 +1,13 @@
 organization := "org.scalablytyped.slinky"
 name := "d3-scale"
-version := "2.2-dt-20200515Z-cc2c8d"
+version := "2.2-dt-20200515Z-59616d"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "d3-time" % "1.0-dt-20200515Z-2edf0d",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
+  "org.scalablytyped.slinky" %%% "d3-time" % "1.0-dt-20200515Z-a72d00",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-ad7699")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

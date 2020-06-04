@@ -1,11 +1,8 @@
 package typingsSlinky.materialUi.tooltipMod
 
-import slinky.core.TagMod
 import typingsSlinky.materialUi.MaterialUI.propTypes.tooltipHorizontal
 import typingsSlinky.materialUi.MaterialUI.propTypes.vertical
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.Key
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.mod.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,29 +20,48 @@ trait TooltipProps extends Props[Tooltip] {
 
 object TooltipProps {
   @scala.inline
-  def apply(
-    label: js.Any,
-    children: TagMod[Any] = null,
-    className: String = null,
-    horizontalPosition: tooltipHorizontal = null,
-    key: Key = null,
-    ref: js.UndefOr[Null | LegacyRef[Tooltip]] = js.undefined,
-    show: js.UndefOr[Boolean] = js.undefined,
-    style: CSSProperties = null,
-    touch: js.UndefOr[Boolean] = js.undefined,
-    verticalPosition: vertical = null
-  ): TooltipProps = {
+  def apply(label: js.Any): TooltipProps = {
     val __obj = js.Dynamic.literal(label = label.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (horizontalPosition != null) __obj.updateDynamic("horizontalPosition")(horizontalPosition.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.get.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(touch)) __obj.updateDynamic("touch")(touch.get.asInstanceOf[js.Any])
-    if (verticalPosition != null) __obj.updateDynamic("verticalPosition")(verticalPosition.asInstanceOf[js.Any])
     __obj.asInstanceOf[TooltipProps]
   }
+  @scala.inline
+  implicit class TooltipPropsOps[Self <: TooltipProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setLabel(value: js.Any): Self = this.set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setHorizontalPosition(value: tooltipHorizontal): Self = this.set("horizontalPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHorizontalPosition: Self = this.set("horizontalPosition", js.undefined)
+    @scala.inline
+    def setShow(value: Boolean): Self = this.set("show", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShow: Self = this.set("show", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+    @scala.inline
+    def setTouch(value: Boolean): Self = this.set("touch", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTouch: Self = this.set("touch", js.undefined)
+    @scala.inline
+    def setVerticalPosition(value: vertical): Self = this.set("verticalPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVerticalPosition: Self = this.set("verticalPosition", js.undefined)
+  }
+  
 }
 

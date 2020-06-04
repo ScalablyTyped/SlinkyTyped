@@ -16,18 +16,38 @@ trait PartialStyleRulesExpansio extends js.Object {
 
 object PartialStyleRulesExpansio {
   @scala.inline
-  def apply(
-    disabled: CSSProperties = null,
-    expanded: CSSProperties = null,
-    root: CSSProperties = null,
-    rounded: CSSProperties = null
-  ): PartialStyleRulesExpansio = {
+  def apply(): PartialStyleRulesExpansio = {
     val __obj = js.Dynamic.literal()
-    if (disabled != null) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (expanded != null) __obj.updateDynamic("expanded")(expanded.asInstanceOf[js.Any])
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
-    if (rounded != null) __obj.updateDynamic("rounded")(rounded.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialStyleRulesExpansio]
   }
+  @scala.inline
+  implicit class PartialStyleRulesExpansioOps[Self <: PartialStyleRulesExpansio] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDisabled(value: CSSProperties): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setExpanded(value: CSSProperties): Self = this.set("expanded", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteExpanded: Self = this.set("expanded", js.undefined)
+    @scala.inline
+    def setRoot(value: CSSProperties): Self = this.set("root", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRoot: Self = this.set("root", js.undefined)
+    @scala.inline
+    def setRounded(value: CSSProperties): Self = this.set("rounded", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRounded: Self = this.set("rounded", js.undefined)
+  }
+  
 }
 

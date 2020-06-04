@@ -74,28 +74,58 @@ trait ImageURISource extends js.Object {
 
 object ImageURISource {
   @scala.inline
-  def apply(
-    body: String = null,
-    bundle: String = null,
-    cache: default | reload | `force-cache` | `only-if-cached` = null,
-    headers: StringDictionary[String] = null,
-    height: js.UndefOr[Double] = js.undefined,
-    method: String = null,
-    scale: js.UndefOr[Double] = js.undefined,
-    uri: String = null,
-    width: js.UndefOr[Double] = js.undefined
-  ): ImageURISource = {
+  def apply(): ImageURISource = {
     val __obj = js.Dynamic.literal()
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (bundle != null) __obj.updateDynamic("bundle")(bundle.asInstanceOf[js.Any])
-    if (cache != null) __obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (!js.isUndefined(scale)) __obj.updateDynamic("scale")(scale.get.asInstanceOf[js.Any])
-    if (uri != null) __obj.updateDynamic("uri")(uri.asInstanceOf[js.Any])
-    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImageURISource]
   }
+  @scala.inline
+  implicit class ImageURISourceOps[Self <: ImageURISource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBody(value: String): Self = this.set("body", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBody: Self = this.set("body", js.undefined)
+    @scala.inline
+    def setBundle(value: String): Self = this.set("bundle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBundle: Self = this.set("bundle", js.undefined)
+    @scala.inline
+    def setCache(value: default | reload | `force-cache` | `only-if-cached`): Self = this.set("cache", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCache: Self = this.set("cache", js.undefined)
+    @scala.inline
+    def setHeaders(value: StringDictionary[String]): Self = this.set("headers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeaders: Self = this.set("headers", js.undefined)
+    @scala.inline
+    def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeight: Self = this.set("height", js.undefined)
+    @scala.inline
+    def setMethod(value: String): Self = this.set("method", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMethod: Self = this.set("method", js.undefined)
+    @scala.inline
+    def setScale(value: Double): Self = this.set("scale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScale: Self = this.set("scale", js.undefined)
+    @scala.inline
+    def setUri(value: String): Self = this.set("uri", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUri: Self = this.set("uri", js.undefined)
+    @scala.inline
+    def setWidth(value: Double): Self = this.set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWidth: Self = this.set("width", js.undefined)
+  }
+  
 }
 

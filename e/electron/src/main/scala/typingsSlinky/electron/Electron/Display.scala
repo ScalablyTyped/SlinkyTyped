@@ -77,5 +77,46 @@ object Display {
     val __obj = js.Dynamic.literal(accelerometerSupport = accelerometerSupport.asInstanceOf[js.Any], bounds = bounds.asInstanceOf[js.Any], colorDepth = colorDepth.asInstanceOf[js.Any], colorSpace = colorSpace.asInstanceOf[js.Any], depthPerComponent = depthPerComponent.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], internal = internal.asInstanceOf[js.Any], monochrome = monochrome.asInstanceOf[js.Any], rotation = rotation.asInstanceOf[js.Any], scaleFactor = scaleFactor.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], touchSupport = touchSupport.asInstanceOf[js.Any], workArea = workArea.asInstanceOf[js.Any], workAreaSize = workAreaSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[Display]
   }
+  @scala.inline
+  implicit class DisplayOps[Self <: Display] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAccelerometerSupport(value: available | unavailable | unknown_): Self = this.set("accelerometerSupport", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBounds(value: Rectangle): Self = this.set("bounds", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setColorDepth(value: Double): Self = this.set("colorDepth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setColorSpace(value: String): Self = this.set("colorSpace", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDepthPerComponent(value: Double): Self = this.set("depthPerComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setId(value: Double): Self = this.set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInternal(value: Boolean): Self = this.set("internal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMonochrome(value: Boolean): Self = this.set("monochrome", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRotation(value: Double): Self = this.set("rotation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setScaleFactor(value: Double): Self = this.set("scaleFactor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSize(value: Size): Self = this.set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTouchSupport(value: available | unavailable | unknown_): Self = this.set("touchSupport", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWorkArea(value: Rectangle): Self = this.set("workArea", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWorkAreaSize(value: Size): Self = this.set("workAreaSize", value.asInstanceOf[js.Any])
+  }
+  
 }
 

@@ -7,6 +7,8 @@ import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
+import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
@@ -20,6 +22,7 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.materialUiCore.anon.Placement
 import typingsSlinky.materialUiCore.popperMod.default
 import typingsSlinky.materialUiCore.popperPopperMod.PopperPlacementType
 import typingsSlinky.materialUiCore.popperPopperMod.PopperProps
@@ -201,6 +204,12 @@ object Popper {
     def autoCorrect(value: String): this.type = set("autoCorrect", value.asInstanceOf[js.Any])
     @scala.inline
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenFunction1(value: /* props */ Placement => TagMod[Any]): this.type = set("children", js.Any.fromFunction1(value))
+    @scala.inline
+    def children(value: TagMod[Any] | (js.Function1[/* props */ Placement, TagMod[Any]])): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

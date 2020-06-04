@@ -1,6 +1,7 @@
 package typingsSlinky.antd.listMod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.antdBooleans.`false`
 import typingsSlinky.antd.paginationPaginationMod.PaginationConfig
 import typingsSlinky.antd.spinMod.SpinProps
@@ -34,50 +35,114 @@ trait ListProps[T] extends js.Object {
 
 object ListProps {
   @scala.inline
-  def apply[T](
-    bordered: js.UndefOr[Boolean] = js.undefined,
-    children: TagMod[Any] = null,
-    className: String = null,
-    dataSource: js.Array[T] = null,
-    extra: TagMod[Any] = null,
-    footer: TagMod[Any] = null,
-    grid: ListGridType = null,
-    header: TagMod[Any] = null,
-    id: String = null,
-    itemLayout: ListItemLayout = null,
-    loadMore: TagMod[Any] = null,
-    loading: Boolean | SpinProps = null,
-    locale: ListLocale = null,
-    pagination: PaginationConfig | `false` = null,
-    prefixCls: String = null,
-    renderItem: (/* item */ T, /* index */ Double) => TagMod[Any] = null,
-    rowKey: (js.Function1[/* item */ T, String]) | String = null,
-    size: ListSize = null,
-    split: js.UndefOr[Boolean] = js.undefined,
-    style: CSSProperties = null
-  ): ListProps[T] = {
+  def apply[T](): ListProps[T] = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(bordered)) __obj.updateDynamic("bordered")(bordered.get.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
-    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
-    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
-    if (grid != null) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
-    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (itemLayout != null) __obj.updateDynamic("itemLayout")(itemLayout.asInstanceOf[js.Any])
-    if (loadMore != null) __obj.updateDynamic("loadMore")(loadMore.asInstanceOf[js.Any])
-    if (loading != null) __obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (pagination != null) __obj.updateDynamic("pagination")(pagination.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (renderItem != null) __obj.updateDynamic("renderItem")(js.Any.fromFunction2(renderItem))
-    if (rowKey != null) __obj.updateDynamic("rowKey")(rowKey.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (!js.isUndefined(split)) __obj.updateDynamic("split")(split.get.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListProps[T]]
   }
+  @scala.inline
+  implicit class ListPropsOps[Self <: ListProps[_], T] (val x: Self with ListProps[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBordered(value: Boolean): Self = this.set("bordered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBordered: Self = this.set("bordered", js.undefined)
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setDataSource(value: js.Array[T]): Self = this.set("dataSource", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDataSource: Self = this.set("dataSource", js.undefined)
+    @scala.inline
+    def setExtraReactElement(value: ReactElement): Self = this.set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setExtra(value: TagMod[Any]): Self = this.set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteExtra: Self = this.set("extra", js.undefined)
+    @scala.inline
+    def setFooterReactElement(value: ReactElement): Self = this.set("footer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFooter(value: TagMod[Any]): Self = this.set("footer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFooter: Self = this.set("footer", js.undefined)
+    @scala.inline
+    def setGrid(value: ListGridType): Self = this.set("grid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGrid: Self = this.set("grid", js.undefined)
+    @scala.inline
+    def setHeaderReactElement(value: ReactElement): Self = this.set("header", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHeader(value: TagMod[Any]): Self = this.set("header", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeader: Self = this.set("header", js.undefined)
+    @scala.inline
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteId: Self = this.set("id", js.undefined)
+    @scala.inline
+    def setItemLayout(value: ListItemLayout): Self = this.set("itemLayout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteItemLayout: Self = this.set("itemLayout", js.undefined)
+    @scala.inline
+    def setLoadMoreReactElement(value: ReactElement): Self = this.set("loadMore", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLoadMore(value: TagMod[Any]): Self = this.set("loadMore", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLoadMore: Self = this.set("loadMore", js.undefined)
+    @scala.inline
+    def setLoading(value: Boolean | SpinProps): Self = this.set("loading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLoading: Self = this.set("loading", js.undefined)
+    @scala.inline
+    def setLocale(value: ListLocale): Self = this.set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLocale: Self = this.set("locale", js.undefined)
+    @scala.inline
+    def setPagination(value: PaginationConfig | `false`): Self = this.set("pagination", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePagination: Self = this.set("pagination", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    @scala.inline
+    def setRenderItem(value: (/* item */ T, /* index */ Double) => TagMod[Any]): Self = this.set("renderItem", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteRenderItem: Self = this.set("renderItem", js.undefined)
+    @scala.inline
+    def setRowKeyFunction1(value: /* item */ T => String): Self = this.set("rowKey", js.Any.fromFunction1(value))
+    @scala.inline
+    def setRowKey(value: (js.Function1[/* item */ T, String]) | String): Self = this.set("rowKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRowKey: Self = this.set("rowKey", js.undefined)
+    @scala.inline
+    def setSize(value: ListSize): Self = this.set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
+    @scala.inline
+    def setSplit(value: Boolean): Self = this.set("split", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSplit: Self = this.set("split", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+  }
+  
 }
 

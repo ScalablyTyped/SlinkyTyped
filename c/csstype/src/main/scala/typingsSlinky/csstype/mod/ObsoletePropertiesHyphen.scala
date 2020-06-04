@@ -763,202 +763,406 @@ trait ObsoletePropertiesHyphen[TLength] extends js.Object {
 
 object ObsoletePropertiesHyphen {
   @scala.inline
-  def apply[TLength](
-    `-khtml-box-align`: BoxAlignProperty = null,
-    `-khtml-box-direction`: BoxDirectionProperty = null,
-    `-khtml-box-flex`: GlobalsNumber = null,
-    `-khtml-box-flex-group`: GlobalsNumber = null,
-    `-khtml-box-lines`: BoxLinesProperty = null,
-    `-khtml-box-ordinal-group`: GlobalsNumber = null,
-    `-khtml-box-orient`: BoxOrientProperty = null,
-    `-khtml-box-pack`: BoxPackProperty = null,
-    `-khtml-line-break`: LineBreakProperty = null,
-    `-khtml-opacity`: GlobalsNumber = null,
-    `-khtml-user-select`: UserSelectProperty = null,
-    `-moz-background-clip`: BackgroundClipProperty = null,
-    `-moz-background-inline-policy`: BoxDecorationBreakProperty = null,
-    `-moz-background-origin`: BackgroundOriginProperty = null,
-    `-moz-background-size`: BackgroundSizeProperty[TLength] = null,
-    `-moz-binding`: MozBindingProperty = null,
-    `-moz-border-radius`: BorderRadiusProperty[TLength] = null,
-    `-moz-border-radius-bottomleft`: BorderBottomLeftRadiusProperty[TLength] = null,
-    `-moz-border-radius-bottomright`: BorderBottomRightRadiusProperty[TLength] = null,
-    `-moz-border-radius-topleft`: BorderTopLeftRadiusProperty[TLength] = null,
-    `-moz-border-radius-topright`: BorderTopRightRadiusProperty[TLength] = null,
-    `-moz-box-align`: BoxAlignProperty = null,
-    `-moz-box-direction`: BoxDirectionProperty = null,
-    `-moz-box-flex`: GlobalsNumber = null,
-    `-moz-box-ordinal-group`: GlobalsNumber = null,
-    `-moz-box-orient`: BoxOrientProperty = null,
-    `-moz-box-pack`: BoxPackProperty = null,
-    `-moz-box-shadow`: BoxShadowProperty = null,
-    `-moz-opacity`: GlobalsNumber = null,
-    `-moz-outline`: OutlineProperty[TLength] = null,
-    `-moz-outline-color`: OutlineColorProperty = null,
-    `-moz-outline-radius`: MozOutlineRadiusProperty[TLength] = null,
-    `-moz-outline-style`: OutlineStyleProperty = null,
-    `-moz-outline-width`: OutlineWidthProperty[TLength] = null,
-    `-moz-text-align-last`: TextAlignLastProperty = null,
-    `-moz-text-blink`: MozTextBlinkProperty = null,
-    `-moz-text-decoration-color`: TextDecorationColorProperty = null,
-    `-moz-text-decoration-line`: TextDecorationLineProperty = null,
-    `-moz-text-decoration-style`: TextDecorationStyleProperty = null,
-    `-moz-user-input`: MozUserInputProperty = null,
-    `-moz-window-shadow`: MozWindowShadowProperty = null,
-    `-ms-ime-mode`: ImeModeProperty = null,
-    `-o-animation`: AnimationProperty = null,
-    `-o-animation-delay`: GlobalsString = null,
-    `-o-animation-direction`: AnimationDirectionProperty = null,
-    `-o-animation-duration`: GlobalsString = null,
-    `-o-animation-fill-mode`: AnimationFillModeProperty = null,
-    `-o-animation-iteration-count`: AnimationIterationCountProperty = null,
-    `-o-animation-name`: AnimationNameProperty = null,
-    `-o-animation-play-state`: AnimationPlayStateProperty = null,
-    `-o-animation-timing-function`: AnimationTimingFunctionProperty = null,
-    `-o-background-size`: BackgroundSizeProperty[TLength] = null,
-    `-o-border-image`: BorderImageProperty = null,
-    `-o-transform`: TransformProperty = null,
-    `-o-transition`: TransitionProperty = null,
-    `-o-transition-delay`: GlobalsString = null,
-    `-o-transition-duration`: GlobalsString = null,
-    `-o-transition-property`: TransitionPropertyProperty = null,
-    `-o-transition-timing-function`: TransitionTimingFunctionProperty = null,
-    `-webkit-box-align`: BoxAlignProperty = null,
-    `-webkit-box-direction`: BoxDirectionProperty = null,
-    `-webkit-box-flex`: GlobalsNumber = null,
-    `-webkit-box-flex-group`: GlobalsNumber = null,
-    `-webkit-box-lines`: BoxLinesProperty = null,
-    `-webkit-box-ordinal-group`: GlobalsNumber = null,
-    `-webkit-box-orient`: BoxOrientProperty = null,
-    `-webkit-box-pack`: BoxPackProperty = null,
-    `-webkit-scroll-snap-points-x`: ScrollSnapPointsXProperty = null,
-    `-webkit-scroll-snap-points-y`: ScrollSnapPointsYProperty = null,
-    `box-align`: BoxAlignProperty = null,
-    `box-direction`: BoxDirectionProperty = null,
-    `box-flex`: GlobalsNumber = null,
-    `box-flex-group`: GlobalsNumber = null,
-    `box-lines`: BoxLinesProperty = null,
-    `box-ordinal-group`: GlobalsNumber = null,
-    `box-orient`: BoxOrientProperty = null,
-    `box-pack`: BoxPackProperty = null,
-    clip: ClipProperty = null,
-    `font-variant-alternates`: FontVariantAlternatesProperty = null,
-    `grid-column-gap`: GridColumnGapProperty[TLength] = null,
-    `grid-gap`: GridGapProperty[TLength] = null,
-    `grid-row-gap`: GridRowGapProperty[TLength] = null,
-    `ime-mode`: ImeModeProperty = null,
-    `offset-block`: InsetBlockProperty[TLength] = null,
-    `offset-block-end`: InsetBlockEndProperty[TLength] = null,
-    `offset-block-start`: InsetBlockStartProperty[TLength] = null,
-    `offset-inline`: InsetInlineProperty[TLength] = null,
-    `offset-inline-end`: InsetInlineEndProperty[TLength] = null,
-    `offset-inline-start`: InsetInlineStartProperty[TLength] = null,
-    `scroll-snap-coordinate`: ScrollSnapCoordinateProperty[TLength] = null,
-    `scroll-snap-destination`: ScrollSnapDestinationProperty[TLength] = null,
-    `scroll-snap-points-x`: ScrollSnapPointsXProperty = null,
-    `scroll-snap-points-y`: ScrollSnapPointsYProperty = null,
-    `scroll-snap-type-x`: ScrollSnapTypeXProperty = null,
-    `scroll-snap-type-y`: ScrollSnapTypeYProperty = null,
-    `text-combine-horizontal`: TextCombineUprightProperty = null
-  ): ObsoletePropertiesHyphen[TLength] = {
+  def apply[TLength](): ObsoletePropertiesHyphen[TLength] = {
     val __obj = js.Dynamic.literal()
-    if (`-khtml-box-align` != null) __obj.updateDynamic("-khtml-box-align")(`-khtml-box-align`.asInstanceOf[js.Any])
-    if (`-khtml-box-direction` != null) __obj.updateDynamic("-khtml-box-direction")(`-khtml-box-direction`.asInstanceOf[js.Any])
-    if (`-khtml-box-flex` != null) __obj.updateDynamic("-khtml-box-flex")(`-khtml-box-flex`.asInstanceOf[js.Any])
-    if (`-khtml-box-flex-group` != null) __obj.updateDynamic("-khtml-box-flex-group")(`-khtml-box-flex-group`.asInstanceOf[js.Any])
-    if (`-khtml-box-lines` != null) __obj.updateDynamic("-khtml-box-lines")(`-khtml-box-lines`.asInstanceOf[js.Any])
-    if (`-khtml-box-ordinal-group` != null) __obj.updateDynamic("-khtml-box-ordinal-group")(`-khtml-box-ordinal-group`.asInstanceOf[js.Any])
-    if (`-khtml-box-orient` != null) __obj.updateDynamic("-khtml-box-orient")(`-khtml-box-orient`.asInstanceOf[js.Any])
-    if (`-khtml-box-pack` != null) __obj.updateDynamic("-khtml-box-pack")(`-khtml-box-pack`.asInstanceOf[js.Any])
-    if (`-khtml-line-break` != null) __obj.updateDynamic("-khtml-line-break")(`-khtml-line-break`.asInstanceOf[js.Any])
-    if (`-khtml-opacity` != null) __obj.updateDynamic("-khtml-opacity")(`-khtml-opacity`.asInstanceOf[js.Any])
-    if (`-khtml-user-select` != null) __obj.updateDynamic("-khtml-user-select")(`-khtml-user-select`.asInstanceOf[js.Any])
-    if (`-moz-background-clip` != null) __obj.updateDynamic("-moz-background-clip")(`-moz-background-clip`.asInstanceOf[js.Any])
-    if (`-moz-background-inline-policy` != null) __obj.updateDynamic("-moz-background-inline-policy")(`-moz-background-inline-policy`.asInstanceOf[js.Any])
-    if (`-moz-background-origin` != null) __obj.updateDynamic("-moz-background-origin")(`-moz-background-origin`.asInstanceOf[js.Any])
-    if (`-moz-background-size` != null) __obj.updateDynamic("-moz-background-size")(`-moz-background-size`.asInstanceOf[js.Any])
-    if (`-moz-binding` != null) __obj.updateDynamic("-moz-binding")(`-moz-binding`.asInstanceOf[js.Any])
-    if (`-moz-border-radius` != null) __obj.updateDynamic("-moz-border-radius")(`-moz-border-radius`.asInstanceOf[js.Any])
-    if (`-moz-border-radius-bottomleft` != null) __obj.updateDynamic("-moz-border-radius-bottomleft")(`-moz-border-radius-bottomleft`.asInstanceOf[js.Any])
-    if (`-moz-border-radius-bottomright` != null) __obj.updateDynamic("-moz-border-radius-bottomright")(`-moz-border-radius-bottomright`.asInstanceOf[js.Any])
-    if (`-moz-border-radius-topleft` != null) __obj.updateDynamic("-moz-border-radius-topleft")(`-moz-border-radius-topleft`.asInstanceOf[js.Any])
-    if (`-moz-border-radius-topright` != null) __obj.updateDynamic("-moz-border-radius-topright")(`-moz-border-radius-topright`.asInstanceOf[js.Any])
-    if (`-moz-box-align` != null) __obj.updateDynamic("-moz-box-align")(`-moz-box-align`.asInstanceOf[js.Any])
-    if (`-moz-box-direction` != null) __obj.updateDynamic("-moz-box-direction")(`-moz-box-direction`.asInstanceOf[js.Any])
-    if (`-moz-box-flex` != null) __obj.updateDynamic("-moz-box-flex")(`-moz-box-flex`.asInstanceOf[js.Any])
-    if (`-moz-box-ordinal-group` != null) __obj.updateDynamic("-moz-box-ordinal-group")(`-moz-box-ordinal-group`.asInstanceOf[js.Any])
-    if (`-moz-box-orient` != null) __obj.updateDynamic("-moz-box-orient")(`-moz-box-orient`.asInstanceOf[js.Any])
-    if (`-moz-box-pack` != null) __obj.updateDynamic("-moz-box-pack")(`-moz-box-pack`.asInstanceOf[js.Any])
-    if (`-moz-box-shadow` != null) __obj.updateDynamic("-moz-box-shadow")(`-moz-box-shadow`.asInstanceOf[js.Any])
-    if (`-moz-opacity` != null) __obj.updateDynamic("-moz-opacity")(`-moz-opacity`.asInstanceOf[js.Any])
-    if (`-moz-outline` != null) __obj.updateDynamic("-moz-outline")(`-moz-outline`.asInstanceOf[js.Any])
-    if (`-moz-outline-color` != null) __obj.updateDynamic("-moz-outline-color")(`-moz-outline-color`.asInstanceOf[js.Any])
-    if (`-moz-outline-radius` != null) __obj.updateDynamic("-moz-outline-radius")(`-moz-outline-radius`.asInstanceOf[js.Any])
-    if (`-moz-outline-style` != null) __obj.updateDynamic("-moz-outline-style")(`-moz-outline-style`.asInstanceOf[js.Any])
-    if (`-moz-outline-width` != null) __obj.updateDynamic("-moz-outline-width")(`-moz-outline-width`.asInstanceOf[js.Any])
-    if (`-moz-text-align-last` != null) __obj.updateDynamic("-moz-text-align-last")(`-moz-text-align-last`.asInstanceOf[js.Any])
-    if (`-moz-text-blink` != null) __obj.updateDynamic("-moz-text-blink")(`-moz-text-blink`.asInstanceOf[js.Any])
-    if (`-moz-text-decoration-color` != null) __obj.updateDynamic("-moz-text-decoration-color")(`-moz-text-decoration-color`.asInstanceOf[js.Any])
-    if (`-moz-text-decoration-line` != null) __obj.updateDynamic("-moz-text-decoration-line")(`-moz-text-decoration-line`.asInstanceOf[js.Any])
-    if (`-moz-text-decoration-style` != null) __obj.updateDynamic("-moz-text-decoration-style")(`-moz-text-decoration-style`.asInstanceOf[js.Any])
-    if (`-moz-user-input` != null) __obj.updateDynamic("-moz-user-input")(`-moz-user-input`.asInstanceOf[js.Any])
-    if (`-moz-window-shadow` != null) __obj.updateDynamic("-moz-window-shadow")(`-moz-window-shadow`.asInstanceOf[js.Any])
-    if (`-ms-ime-mode` != null) __obj.updateDynamic("-ms-ime-mode")(`-ms-ime-mode`.asInstanceOf[js.Any])
-    if (`-o-animation` != null) __obj.updateDynamic("-o-animation")(`-o-animation`.asInstanceOf[js.Any])
-    if (`-o-animation-delay` != null) __obj.updateDynamic("-o-animation-delay")(`-o-animation-delay`.asInstanceOf[js.Any])
-    if (`-o-animation-direction` != null) __obj.updateDynamic("-o-animation-direction")(`-o-animation-direction`.asInstanceOf[js.Any])
-    if (`-o-animation-duration` != null) __obj.updateDynamic("-o-animation-duration")(`-o-animation-duration`.asInstanceOf[js.Any])
-    if (`-o-animation-fill-mode` != null) __obj.updateDynamic("-o-animation-fill-mode")(`-o-animation-fill-mode`.asInstanceOf[js.Any])
-    if (`-o-animation-iteration-count` != null) __obj.updateDynamic("-o-animation-iteration-count")(`-o-animation-iteration-count`.asInstanceOf[js.Any])
-    if (`-o-animation-name` != null) __obj.updateDynamic("-o-animation-name")(`-o-animation-name`.asInstanceOf[js.Any])
-    if (`-o-animation-play-state` != null) __obj.updateDynamic("-o-animation-play-state")(`-o-animation-play-state`.asInstanceOf[js.Any])
-    if (`-o-animation-timing-function` != null) __obj.updateDynamic("-o-animation-timing-function")(`-o-animation-timing-function`.asInstanceOf[js.Any])
-    if (`-o-background-size` != null) __obj.updateDynamic("-o-background-size")(`-o-background-size`.asInstanceOf[js.Any])
-    if (`-o-border-image` != null) __obj.updateDynamic("-o-border-image")(`-o-border-image`.asInstanceOf[js.Any])
-    if (`-o-transform` != null) __obj.updateDynamic("-o-transform")(`-o-transform`.asInstanceOf[js.Any])
-    if (`-o-transition` != null) __obj.updateDynamic("-o-transition")(`-o-transition`.asInstanceOf[js.Any])
-    if (`-o-transition-delay` != null) __obj.updateDynamic("-o-transition-delay")(`-o-transition-delay`.asInstanceOf[js.Any])
-    if (`-o-transition-duration` != null) __obj.updateDynamic("-o-transition-duration")(`-o-transition-duration`.asInstanceOf[js.Any])
-    if (`-o-transition-property` != null) __obj.updateDynamic("-o-transition-property")(`-o-transition-property`.asInstanceOf[js.Any])
-    if (`-o-transition-timing-function` != null) __obj.updateDynamic("-o-transition-timing-function")(`-o-transition-timing-function`.asInstanceOf[js.Any])
-    if (`-webkit-box-align` != null) __obj.updateDynamic("-webkit-box-align")(`-webkit-box-align`.asInstanceOf[js.Any])
-    if (`-webkit-box-direction` != null) __obj.updateDynamic("-webkit-box-direction")(`-webkit-box-direction`.asInstanceOf[js.Any])
-    if (`-webkit-box-flex` != null) __obj.updateDynamic("-webkit-box-flex")(`-webkit-box-flex`.asInstanceOf[js.Any])
-    if (`-webkit-box-flex-group` != null) __obj.updateDynamic("-webkit-box-flex-group")(`-webkit-box-flex-group`.asInstanceOf[js.Any])
-    if (`-webkit-box-lines` != null) __obj.updateDynamic("-webkit-box-lines")(`-webkit-box-lines`.asInstanceOf[js.Any])
-    if (`-webkit-box-ordinal-group` != null) __obj.updateDynamic("-webkit-box-ordinal-group")(`-webkit-box-ordinal-group`.asInstanceOf[js.Any])
-    if (`-webkit-box-orient` != null) __obj.updateDynamic("-webkit-box-orient")(`-webkit-box-orient`.asInstanceOf[js.Any])
-    if (`-webkit-box-pack` != null) __obj.updateDynamic("-webkit-box-pack")(`-webkit-box-pack`.asInstanceOf[js.Any])
-    if (`-webkit-scroll-snap-points-x` != null) __obj.updateDynamic("-webkit-scroll-snap-points-x")(`-webkit-scroll-snap-points-x`.asInstanceOf[js.Any])
-    if (`-webkit-scroll-snap-points-y` != null) __obj.updateDynamic("-webkit-scroll-snap-points-y")(`-webkit-scroll-snap-points-y`.asInstanceOf[js.Any])
-    if (`box-align` != null) __obj.updateDynamic("box-align")(`box-align`.asInstanceOf[js.Any])
-    if (`box-direction` != null) __obj.updateDynamic("box-direction")(`box-direction`.asInstanceOf[js.Any])
-    if (`box-flex` != null) __obj.updateDynamic("box-flex")(`box-flex`.asInstanceOf[js.Any])
-    if (`box-flex-group` != null) __obj.updateDynamic("box-flex-group")(`box-flex-group`.asInstanceOf[js.Any])
-    if (`box-lines` != null) __obj.updateDynamic("box-lines")(`box-lines`.asInstanceOf[js.Any])
-    if (`box-ordinal-group` != null) __obj.updateDynamic("box-ordinal-group")(`box-ordinal-group`.asInstanceOf[js.Any])
-    if (`box-orient` != null) __obj.updateDynamic("box-orient")(`box-orient`.asInstanceOf[js.Any])
-    if (`box-pack` != null) __obj.updateDynamic("box-pack")(`box-pack`.asInstanceOf[js.Any])
-    if (clip != null) __obj.updateDynamic("clip")(clip.asInstanceOf[js.Any])
-    if (`font-variant-alternates` != null) __obj.updateDynamic("font-variant-alternates")(`font-variant-alternates`.asInstanceOf[js.Any])
-    if (`grid-column-gap` != null) __obj.updateDynamic("grid-column-gap")(`grid-column-gap`.asInstanceOf[js.Any])
-    if (`grid-gap` != null) __obj.updateDynamic("grid-gap")(`grid-gap`.asInstanceOf[js.Any])
-    if (`grid-row-gap` != null) __obj.updateDynamic("grid-row-gap")(`grid-row-gap`.asInstanceOf[js.Any])
-    if (`ime-mode` != null) __obj.updateDynamic("ime-mode")(`ime-mode`.asInstanceOf[js.Any])
-    if (`offset-block` != null) __obj.updateDynamic("offset-block")(`offset-block`.asInstanceOf[js.Any])
-    if (`offset-block-end` != null) __obj.updateDynamic("offset-block-end")(`offset-block-end`.asInstanceOf[js.Any])
-    if (`offset-block-start` != null) __obj.updateDynamic("offset-block-start")(`offset-block-start`.asInstanceOf[js.Any])
-    if (`offset-inline` != null) __obj.updateDynamic("offset-inline")(`offset-inline`.asInstanceOf[js.Any])
-    if (`offset-inline-end` != null) __obj.updateDynamic("offset-inline-end")(`offset-inline-end`.asInstanceOf[js.Any])
-    if (`offset-inline-start` != null) __obj.updateDynamic("offset-inline-start")(`offset-inline-start`.asInstanceOf[js.Any])
-    if (`scroll-snap-coordinate` != null) __obj.updateDynamic("scroll-snap-coordinate")(`scroll-snap-coordinate`.asInstanceOf[js.Any])
-    if (`scroll-snap-destination` != null) __obj.updateDynamic("scroll-snap-destination")(`scroll-snap-destination`.asInstanceOf[js.Any])
-    if (`scroll-snap-points-x` != null) __obj.updateDynamic("scroll-snap-points-x")(`scroll-snap-points-x`.asInstanceOf[js.Any])
-    if (`scroll-snap-points-y` != null) __obj.updateDynamic("scroll-snap-points-y")(`scroll-snap-points-y`.asInstanceOf[js.Any])
-    if (`scroll-snap-type-x` != null) __obj.updateDynamic("scroll-snap-type-x")(`scroll-snap-type-x`.asInstanceOf[js.Any])
-    if (`scroll-snap-type-y` != null) __obj.updateDynamic("scroll-snap-type-y")(`scroll-snap-type-y`.asInstanceOf[js.Any])
-    if (`text-combine-horizontal` != null) __obj.updateDynamic("text-combine-horizontal")(`text-combine-horizontal`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ObsoletePropertiesHyphen[TLength]]
   }
+  @scala.inline
+  implicit class ObsoletePropertiesHyphenOps[Self <: ObsoletePropertiesHyphen[_], TLength] (val x: Self with ObsoletePropertiesHyphen[TLength]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def `set-khtml-box-align`(value: BoxAlignProperty): Self = this.set("-khtml-box-align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-khtml-box-align`: Self = this.set("-khtml-box-align", js.undefined)
+    @scala.inline
+    def `set-khtml-box-direction`(value: BoxDirectionProperty): Self = this.set("-khtml-box-direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-khtml-box-direction`: Self = this.set("-khtml-box-direction", js.undefined)
+    @scala.inline
+    def `set-khtml-box-flex`(value: GlobalsNumber): Self = this.set("-khtml-box-flex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-khtml-box-flex`: Self = this.set("-khtml-box-flex", js.undefined)
+    @scala.inline
+    def `set-khtml-box-flex-group`(value: GlobalsNumber): Self = this.set("-khtml-box-flex-group", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-khtml-box-flex-group`: Self = this.set("-khtml-box-flex-group", js.undefined)
+    @scala.inline
+    def `set-khtml-box-lines`(value: BoxLinesProperty): Self = this.set("-khtml-box-lines", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-khtml-box-lines`: Self = this.set("-khtml-box-lines", js.undefined)
+    @scala.inline
+    def `set-khtml-box-ordinal-group`(value: GlobalsNumber): Self = this.set("-khtml-box-ordinal-group", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-khtml-box-ordinal-group`: Self = this.set("-khtml-box-ordinal-group", js.undefined)
+    @scala.inline
+    def `set-khtml-box-orient`(value: BoxOrientProperty): Self = this.set("-khtml-box-orient", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-khtml-box-orient`: Self = this.set("-khtml-box-orient", js.undefined)
+    @scala.inline
+    def `set-khtml-box-pack`(value: BoxPackProperty): Self = this.set("-khtml-box-pack", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-khtml-box-pack`: Self = this.set("-khtml-box-pack", js.undefined)
+    @scala.inline
+    def `set-khtml-line-break`(value: LineBreakProperty): Self = this.set("-khtml-line-break", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-khtml-line-break`: Self = this.set("-khtml-line-break", js.undefined)
+    @scala.inline
+    def `set-khtml-opacity`(value: GlobalsNumber): Self = this.set("-khtml-opacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-khtml-opacity`: Self = this.set("-khtml-opacity", js.undefined)
+    @scala.inline
+    def `set-khtml-user-select`(value: UserSelectProperty): Self = this.set("-khtml-user-select", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-khtml-user-select`: Self = this.set("-khtml-user-select", js.undefined)
+    @scala.inline
+    def `set-moz-background-clip`(value: BackgroundClipProperty): Self = this.set("-moz-background-clip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-background-clip`: Self = this.set("-moz-background-clip", js.undefined)
+    @scala.inline
+    def `set-moz-background-inline-policy`(value: BoxDecorationBreakProperty): Self = this.set("-moz-background-inline-policy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-background-inline-policy`: Self = this.set("-moz-background-inline-policy", js.undefined)
+    @scala.inline
+    def `set-moz-background-origin`(value: BackgroundOriginProperty): Self = this.set("-moz-background-origin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-background-origin`: Self = this.set("-moz-background-origin", js.undefined)
+    @scala.inline
+    def `set-moz-background-size`(value: BackgroundSizeProperty[TLength]): Self = this.set("-moz-background-size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-background-size`: Self = this.set("-moz-background-size", js.undefined)
+    @scala.inline
+    def `set-moz-binding`(value: MozBindingProperty): Self = this.set("-moz-binding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-binding`: Self = this.set("-moz-binding", js.undefined)
+    @scala.inline
+    def `set-moz-border-radius`(value: BorderRadiusProperty[TLength]): Self = this.set("-moz-border-radius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-border-radius`: Self = this.set("-moz-border-radius", js.undefined)
+    @scala.inline
+    def `set-moz-border-radius-bottomleft`(value: BorderBottomLeftRadiusProperty[TLength]): Self = this.set("-moz-border-radius-bottomleft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-border-radius-bottomleft`: Self = this.set("-moz-border-radius-bottomleft", js.undefined)
+    @scala.inline
+    def `set-moz-border-radius-bottomright`(value: BorderBottomRightRadiusProperty[TLength]): Self = this.set("-moz-border-radius-bottomright", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-border-radius-bottomright`: Self = this.set("-moz-border-radius-bottomright", js.undefined)
+    @scala.inline
+    def `set-moz-border-radius-topleft`(value: BorderTopLeftRadiusProperty[TLength]): Self = this.set("-moz-border-radius-topleft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-border-radius-topleft`: Self = this.set("-moz-border-radius-topleft", js.undefined)
+    @scala.inline
+    def `set-moz-border-radius-topright`(value: BorderTopRightRadiusProperty[TLength]): Self = this.set("-moz-border-radius-topright", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-border-radius-topright`: Self = this.set("-moz-border-radius-topright", js.undefined)
+    @scala.inline
+    def `set-moz-box-align`(value: BoxAlignProperty): Self = this.set("-moz-box-align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-box-align`: Self = this.set("-moz-box-align", js.undefined)
+    @scala.inline
+    def `set-moz-box-direction`(value: BoxDirectionProperty): Self = this.set("-moz-box-direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-box-direction`: Self = this.set("-moz-box-direction", js.undefined)
+    @scala.inline
+    def `set-moz-box-flex`(value: GlobalsNumber): Self = this.set("-moz-box-flex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-box-flex`: Self = this.set("-moz-box-flex", js.undefined)
+    @scala.inline
+    def `set-moz-box-ordinal-group`(value: GlobalsNumber): Self = this.set("-moz-box-ordinal-group", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-box-ordinal-group`: Self = this.set("-moz-box-ordinal-group", js.undefined)
+    @scala.inline
+    def `set-moz-box-orient`(value: BoxOrientProperty): Self = this.set("-moz-box-orient", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-box-orient`: Self = this.set("-moz-box-orient", js.undefined)
+    @scala.inline
+    def `set-moz-box-pack`(value: BoxPackProperty): Self = this.set("-moz-box-pack", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-box-pack`: Self = this.set("-moz-box-pack", js.undefined)
+    @scala.inline
+    def `set-moz-box-shadow`(value: BoxShadowProperty): Self = this.set("-moz-box-shadow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-box-shadow`: Self = this.set("-moz-box-shadow", js.undefined)
+    @scala.inline
+    def `set-moz-opacity`(value: GlobalsNumber): Self = this.set("-moz-opacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-opacity`: Self = this.set("-moz-opacity", js.undefined)
+    @scala.inline
+    def `set-moz-outline`(value: OutlineProperty[TLength]): Self = this.set("-moz-outline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-outline`: Self = this.set("-moz-outline", js.undefined)
+    @scala.inline
+    def `set-moz-outline-color`(value: OutlineColorProperty): Self = this.set("-moz-outline-color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-outline-color`: Self = this.set("-moz-outline-color", js.undefined)
+    @scala.inline
+    def `set-moz-outline-radius`(value: MozOutlineRadiusProperty[TLength]): Self = this.set("-moz-outline-radius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-outline-radius`: Self = this.set("-moz-outline-radius", js.undefined)
+    @scala.inline
+    def `set-moz-outline-style`(value: OutlineStyleProperty): Self = this.set("-moz-outline-style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-outline-style`: Self = this.set("-moz-outline-style", js.undefined)
+    @scala.inline
+    def `set-moz-outline-width`(value: OutlineWidthProperty[TLength]): Self = this.set("-moz-outline-width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-outline-width`: Self = this.set("-moz-outline-width", js.undefined)
+    @scala.inline
+    def `set-moz-text-align-last`(value: TextAlignLastProperty): Self = this.set("-moz-text-align-last", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-text-align-last`: Self = this.set("-moz-text-align-last", js.undefined)
+    @scala.inline
+    def `set-moz-text-blink`(value: MozTextBlinkProperty): Self = this.set("-moz-text-blink", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-text-blink`: Self = this.set("-moz-text-blink", js.undefined)
+    @scala.inline
+    def `set-moz-text-decoration-color`(value: TextDecorationColorProperty): Self = this.set("-moz-text-decoration-color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-text-decoration-color`: Self = this.set("-moz-text-decoration-color", js.undefined)
+    @scala.inline
+    def `set-moz-text-decoration-line`(value: TextDecorationLineProperty): Self = this.set("-moz-text-decoration-line", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-text-decoration-line`: Self = this.set("-moz-text-decoration-line", js.undefined)
+    @scala.inline
+    def `set-moz-text-decoration-style`(value: TextDecorationStyleProperty): Self = this.set("-moz-text-decoration-style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-text-decoration-style`: Self = this.set("-moz-text-decoration-style", js.undefined)
+    @scala.inline
+    def `set-moz-user-input`(value: MozUserInputProperty): Self = this.set("-moz-user-input", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-user-input`: Self = this.set("-moz-user-input", js.undefined)
+    @scala.inline
+    def `set-moz-window-shadow`(value: MozWindowShadowProperty): Self = this.set("-moz-window-shadow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-moz-window-shadow`: Self = this.set("-moz-window-shadow", js.undefined)
+    @scala.inline
+    def `set-ms-ime-mode`(value: ImeModeProperty): Self = this.set("-ms-ime-mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-ms-ime-mode`: Self = this.set("-ms-ime-mode", js.undefined)
+    @scala.inline
+    def `set-o-animation`(value: AnimationProperty): Self = this.set("-o-animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-o-animation`: Self = this.set("-o-animation", js.undefined)
+    @scala.inline
+    def `set-o-animation-delay`(value: GlobalsString): Self = this.set("-o-animation-delay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-o-animation-delay`: Self = this.set("-o-animation-delay", js.undefined)
+    @scala.inline
+    def `set-o-animation-direction`(value: AnimationDirectionProperty): Self = this.set("-o-animation-direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-o-animation-direction`: Self = this.set("-o-animation-direction", js.undefined)
+    @scala.inline
+    def `set-o-animation-duration`(value: GlobalsString): Self = this.set("-o-animation-duration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-o-animation-duration`: Self = this.set("-o-animation-duration", js.undefined)
+    @scala.inline
+    def `set-o-animation-fill-mode`(value: AnimationFillModeProperty): Self = this.set("-o-animation-fill-mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-o-animation-fill-mode`: Self = this.set("-o-animation-fill-mode", js.undefined)
+    @scala.inline
+    def `set-o-animation-iteration-count`(value: AnimationIterationCountProperty): Self = this.set("-o-animation-iteration-count", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-o-animation-iteration-count`: Self = this.set("-o-animation-iteration-count", js.undefined)
+    @scala.inline
+    def `set-o-animation-name`(value: AnimationNameProperty): Self = this.set("-o-animation-name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-o-animation-name`: Self = this.set("-o-animation-name", js.undefined)
+    @scala.inline
+    def `set-o-animation-play-state`(value: AnimationPlayStateProperty): Self = this.set("-o-animation-play-state", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-o-animation-play-state`: Self = this.set("-o-animation-play-state", js.undefined)
+    @scala.inline
+    def `set-o-animation-timing-function`(value: AnimationTimingFunctionProperty): Self = this.set("-o-animation-timing-function", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-o-animation-timing-function`: Self = this.set("-o-animation-timing-function", js.undefined)
+    @scala.inline
+    def `set-o-background-size`(value: BackgroundSizeProperty[TLength]): Self = this.set("-o-background-size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-o-background-size`: Self = this.set("-o-background-size", js.undefined)
+    @scala.inline
+    def `set-o-border-image`(value: BorderImageProperty): Self = this.set("-o-border-image", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-o-border-image`: Self = this.set("-o-border-image", js.undefined)
+    @scala.inline
+    def `set-o-transform`(value: TransformProperty): Self = this.set("-o-transform", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-o-transform`: Self = this.set("-o-transform", js.undefined)
+    @scala.inline
+    def `set-o-transition`(value: TransitionProperty): Self = this.set("-o-transition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-o-transition`: Self = this.set("-o-transition", js.undefined)
+    @scala.inline
+    def `set-o-transition-delay`(value: GlobalsString): Self = this.set("-o-transition-delay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-o-transition-delay`: Self = this.set("-o-transition-delay", js.undefined)
+    @scala.inline
+    def `set-o-transition-duration`(value: GlobalsString): Self = this.set("-o-transition-duration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-o-transition-duration`: Self = this.set("-o-transition-duration", js.undefined)
+    @scala.inline
+    def `set-o-transition-property`(value: TransitionPropertyProperty): Self = this.set("-o-transition-property", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-o-transition-property`: Self = this.set("-o-transition-property", js.undefined)
+    @scala.inline
+    def `set-o-transition-timing-function`(value: TransitionTimingFunctionProperty): Self = this.set("-o-transition-timing-function", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-o-transition-timing-function`: Self = this.set("-o-transition-timing-function", js.undefined)
+    @scala.inline
+    def `set-webkit-box-align`(value: BoxAlignProperty): Self = this.set("-webkit-box-align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-webkit-box-align`: Self = this.set("-webkit-box-align", js.undefined)
+    @scala.inline
+    def `set-webkit-box-direction`(value: BoxDirectionProperty): Self = this.set("-webkit-box-direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-webkit-box-direction`: Self = this.set("-webkit-box-direction", js.undefined)
+    @scala.inline
+    def `set-webkit-box-flex`(value: GlobalsNumber): Self = this.set("-webkit-box-flex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-webkit-box-flex`: Self = this.set("-webkit-box-flex", js.undefined)
+    @scala.inline
+    def `set-webkit-box-flex-group`(value: GlobalsNumber): Self = this.set("-webkit-box-flex-group", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-webkit-box-flex-group`: Self = this.set("-webkit-box-flex-group", js.undefined)
+    @scala.inline
+    def `set-webkit-box-lines`(value: BoxLinesProperty): Self = this.set("-webkit-box-lines", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-webkit-box-lines`: Self = this.set("-webkit-box-lines", js.undefined)
+    @scala.inline
+    def `set-webkit-box-ordinal-group`(value: GlobalsNumber): Self = this.set("-webkit-box-ordinal-group", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-webkit-box-ordinal-group`: Self = this.set("-webkit-box-ordinal-group", js.undefined)
+    @scala.inline
+    def `set-webkit-box-orient`(value: BoxOrientProperty): Self = this.set("-webkit-box-orient", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-webkit-box-orient`: Self = this.set("-webkit-box-orient", js.undefined)
+    @scala.inline
+    def `set-webkit-box-pack`(value: BoxPackProperty): Self = this.set("-webkit-box-pack", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-webkit-box-pack`: Self = this.set("-webkit-box-pack", js.undefined)
+    @scala.inline
+    def `set-webkit-scroll-snap-points-x`(value: ScrollSnapPointsXProperty): Self = this.set("-webkit-scroll-snap-points-x", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-webkit-scroll-snap-points-x`: Self = this.set("-webkit-scroll-snap-points-x", js.undefined)
+    @scala.inline
+    def `set-webkit-scroll-snap-points-y`(value: ScrollSnapPointsYProperty): Self = this.set("-webkit-scroll-snap-points-y", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `delete-webkit-scroll-snap-points-y`: Self = this.set("-webkit-scroll-snap-points-y", js.undefined)
+    @scala.inline
+    def `setBox-align`(value: BoxAlignProperty): Self = this.set("box-align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBox-align`: Self = this.set("box-align", js.undefined)
+    @scala.inline
+    def `setBox-direction`(value: BoxDirectionProperty): Self = this.set("box-direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBox-direction`: Self = this.set("box-direction", js.undefined)
+    @scala.inline
+    def `setBox-flex`(value: GlobalsNumber): Self = this.set("box-flex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBox-flex`: Self = this.set("box-flex", js.undefined)
+    @scala.inline
+    def `setBox-flex-group`(value: GlobalsNumber): Self = this.set("box-flex-group", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBox-flex-group`: Self = this.set("box-flex-group", js.undefined)
+    @scala.inline
+    def `setBox-lines`(value: BoxLinesProperty): Self = this.set("box-lines", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBox-lines`: Self = this.set("box-lines", js.undefined)
+    @scala.inline
+    def `setBox-ordinal-group`(value: GlobalsNumber): Self = this.set("box-ordinal-group", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBox-ordinal-group`: Self = this.set("box-ordinal-group", js.undefined)
+    @scala.inline
+    def `setBox-orient`(value: BoxOrientProperty): Self = this.set("box-orient", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBox-orient`: Self = this.set("box-orient", js.undefined)
+    @scala.inline
+    def `setBox-pack`(value: BoxPackProperty): Self = this.set("box-pack", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteBox-pack`: Self = this.set("box-pack", js.undefined)
+    @scala.inline
+    def setClip(value: ClipProperty): Self = this.set("clip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClip: Self = this.set("clip", js.undefined)
+    @scala.inline
+    def `setFont-variant-alternates`(value: FontVariantAlternatesProperty): Self = this.set("font-variant-alternates", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteFont-variant-alternates`: Self = this.set("font-variant-alternates", js.undefined)
+    @scala.inline
+    def `setGrid-column-gap`(value: GridColumnGapProperty[TLength]): Self = this.set("grid-column-gap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteGrid-column-gap`: Self = this.set("grid-column-gap", js.undefined)
+    @scala.inline
+    def `setGrid-gap`(value: GridGapProperty[TLength]): Self = this.set("grid-gap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteGrid-gap`: Self = this.set("grid-gap", js.undefined)
+    @scala.inline
+    def `setGrid-row-gap`(value: GridRowGapProperty[TLength]): Self = this.set("grid-row-gap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteGrid-row-gap`: Self = this.set("grid-row-gap", js.undefined)
+    @scala.inline
+    def `setIme-mode`(value: ImeModeProperty): Self = this.set("ime-mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteIme-mode`: Self = this.set("ime-mode", js.undefined)
+    @scala.inline
+    def `setOffset-block`(value: InsetBlockProperty[TLength]): Self = this.set("offset-block", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteOffset-block`: Self = this.set("offset-block", js.undefined)
+    @scala.inline
+    def `setOffset-block-end`(value: InsetBlockEndProperty[TLength]): Self = this.set("offset-block-end", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteOffset-block-end`: Self = this.set("offset-block-end", js.undefined)
+    @scala.inline
+    def `setOffset-block-start`(value: InsetBlockStartProperty[TLength]): Self = this.set("offset-block-start", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteOffset-block-start`: Self = this.set("offset-block-start", js.undefined)
+    @scala.inline
+    def `setOffset-inline`(value: InsetInlineProperty[TLength]): Self = this.set("offset-inline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteOffset-inline`: Self = this.set("offset-inline", js.undefined)
+    @scala.inline
+    def `setOffset-inline-end`(value: InsetInlineEndProperty[TLength]): Self = this.set("offset-inline-end", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteOffset-inline-end`: Self = this.set("offset-inline-end", js.undefined)
+    @scala.inline
+    def `setOffset-inline-start`(value: InsetInlineStartProperty[TLength]): Self = this.set("offset-inline-start", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteOffset-inline-start`: Self = this.set("offset-inline-start", js.undefined)
+    @scala.inline
+    def `setScroll-snap-coordinate`(value: ScrollSnapCoordinateProperty[TLength]): Self = this.set("scroll-snap-coordinate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteScroll-snap-coordinate`: Self = this.set("scroll-snap-coordinate", js.undefined)
+    @scala.inline
+    def `setScroll-snap-destination`(value: ScrollSnapDestinationProperty[TLength]): Self = this.set("scroll-snap-destination", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteScroll-snap-destination`: Self = this.set("scroll-snap-destination", js.undefined)
+    @scala.inline
+    def `setScroll-snap-points-x`(value: ScrollSnapPointsXProperty): Self = this.set("scroll-snap-points-x", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteScroll-snap-points-x`: Self = this.set("scroll-snap-points-x", js.undefined)
+    @scala.inline
+    def `setScroll-snap-points-y`(value: ScrollSnapPointsYProperty): Self = this.set("scroll-snap-points-y", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteScroll-snap-points-y`: Self = this.set("scroll-snap-points-y", js.undefined)
+    @scala.inline
+    def `setScroll-snap-type-x`(value: ScrollSnapTypeXProperty): Self = this.set("scroll-snap-type-x", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteScroll-snap-type-x`: Self = this.set("scroll-snap-type-x", js.undefined)
+    @scala.inline
+    def `setScroll-snap-type-y`(value: ScrollSnapTypeYProperty): Self = this.set("scroll-snap-type-y", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteScroll-snap-type-y`: Self = this.set("scroll-snap-type-y", js.undefined)
+    @scala.inline
+    def `setText-combine-horizontal`(value: TextCombineUprightProperty): Self = this.set("text-combine-horizontal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteText-combine-horizontal`: Self = this.set("text-combine-horizontal", js.undefined)
+  }
+  
 }
 

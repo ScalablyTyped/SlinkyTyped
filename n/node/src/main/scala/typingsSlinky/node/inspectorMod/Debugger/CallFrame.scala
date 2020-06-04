@@ -51,15 +51,44 @@ object CallFrame {
     location: Location,
     scopeChain: js.Array[Scope],
     `this`: RemoteObject,
-    url: String,
-    functionLocation: Location = null,
-    returnValue: RemoteObject = null
+    url: String
   ): CallFrame = {
     val __obj = js.Dynamic.literal(callFrameId = callFrameId.asInstanceOf[js.Any], functionName = functionName.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], scopeChain = scopeChain.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.updateDynamic("this")(`this`.asInstanceOf[js.Any])
-    if (functionLocation != null) __obj.updateDynamic("functionLocation")(functionLocation.asInstanceOf[js.Any])
-    if (returnValue != null) __obj.updateDynamic("returnValue")(returnValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[CallFrame]
   }
+  @scala.inline
+  implicit class CallFrameOps[Self <: CallFrame] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCallFrameId(value: CallFrameId): Self = this.set("callFrameId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFunctionName(value: String): Self = this.set("functionName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLocation(value: Location): Self = this.set("location", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setScopeChain(value: js.Array[Scope]): Self = this.set("scopeChain", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setThis(value: RemoteObject): Self = this.set("this", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUrl(value: String): Self = this.set("url", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFunctionLocation(value: Location): Self = this.set("functionLocation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFunctionLocation: Self = this.set("functionLocation", js.undefined)
+    @scala.inline
+    def setReturnValue(value: RemoteObject): Self = this.set("returnValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteReturnValue: Self = this.set("returnValue", js.undefined)
+  }
+  
 }
 

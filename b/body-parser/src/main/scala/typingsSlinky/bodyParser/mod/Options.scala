@@ -37,18 +37,42 @@ trait Options extends js.Object {
 
 object Options {
   @scala.inline
-  def apply(
-    inflate: js.UndefOr[Boolean] = js.undefined,
-    limit: Double | String = null,
-    `type`: String | js.Array[String] | (js.Function1[/* req */ IncomingMessage, _]) = null,
-    verify: (/* req */ IncomingMessage, /* res */ ServerResponse, /* buf */ Buffer, /* encoding */ String) => Unit = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(inflate)) __obj.updateDynamic("inflate")(inflate.get.asInstanceOf[js.Any])
-    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (verify != null) __obj.updateDynamic("verify")(js.Any.fromFunction4(verify))
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setInflate(value: Boolean): Self = this.set("inflate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInflate: Self = this.set("inflate", js.undefined)
+    @scala.inline
+    def setLimit(value: Double | String): Self = this.set("limit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLimit: Self = this.set("limit", js.undefined)
+    @scala.inline
+    def setTypeFunction1(value: /* req */ IncomingMessage => _): Self = this.set("type", js.Any.fromFunction1(value))
+    @scala.inline
+    def setType(value: String | js.Array[String] | (js.Function1[/* req */ IncomingMessage, _])): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteType: Self = this.set("type", js.undefined)
+    @scala.inline
+    def setVerify(
+      value: (/* req */ IncomingMessage, /* res */ ServerResponse, /* buf */ Buffer, /* encoding */ String) => Unit
+    ): Self = this.set("verify", js.Any.fromFunction4(value))
+    @scala.inline
+    def deleteVerify: Self = this.set("verify", js.undefined)
+  }
+  
 }
 

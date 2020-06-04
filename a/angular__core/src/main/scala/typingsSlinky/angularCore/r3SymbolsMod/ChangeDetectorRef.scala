@@ -70,5 +70,28 @@ object ChangeDetectorRef {
     val __obj = js.Dynamic.literal(checkNoChanges = js.Any.fromFunction0(checkNoChanges), detach = js.Any.fromFunction0(detach), detectChanges = js.Any.fromFunction0(detectChanges), markForCheck = js.Any.fromFunction0(markForCheck), reattach = js.Any.fromFunction0(reattach))
     __obj.asInstanceOf[ChangeDetectorRef]
   }
+  @scala.inline
+  implicit class ChangeDetectorRefOps[Self <: ChangeDetectorRef] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCheckNoChanges(value: () => Unit): Self = this.set("checkNoChanges", js.Any.fromFunction0(value))
+    @scala.inline
+    def setDetach(value: () => Unit): Self = this.set("detach", js.Any.fromFunction0(value))
+    @scala.inline
+    def setDetectChanges(value: () => Unit): Self = this.set("detectChanges", js.Any.fromFunction0(value))
+    @scala.inline
+    def setMarkForCheck(value: () => Unit): Self = this.set("markForCheck", js.Any.fromFunction0(value))
+    @scala.inline
+    def setReattach(value: () => Unit): Self = this.set("reattach", js.Any.fromFunction0(value))
+  }
+  
 }
 

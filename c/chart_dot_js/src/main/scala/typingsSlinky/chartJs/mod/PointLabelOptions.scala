@@ -1,5 +1,7 @@
 package typingsSlinky.chartJs.mod
 
+import org.scalajs.dom.raw.CanvasGradient
+import org.scalajs.dom.raw.CanvasPattern
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,22 +17,50 @@ trait PointLabelOptions extends js.Object {
 
 object PointLabelOptions {
   @scala.inline
-  def apply(
-    callback: /* arg */ js.Any => _ = null,
-    fontColor: ChartColor = null,
-    fontFamily: String = null,
-    fontSize: js.UndefOr[Double] = js.undefined,
-    fontStyle: String = null,
-    lineHeight: Double | String = null
-  ): PointLabelOptions = {
+  def apply(): PointLabelOptions = {
     val __obj = js.Dynamic.literal()
-    if (callback != null) __obj.updateDynamic("callback")(js.Any.fromFunction1(callback))
-    if (fontColor != null) __obj.updateDynamic("fontColor")(fontColor.asInstanceOf[js.Any])
-    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
-    if (!js.isUndefined(fontSize)) __obj.updateDynamic("fontSize")(fontSize.get.asInstanceOf[js.Any])
-    if (fontStyle != null) __obj.updateDynamic("fontStyle")(fontStyle.asInstanceOf[js.Any])
-    if (lineHeight != null) __obj.updateDynamic("lineHeight")(lineHeight.asInstanceOf[js.Any])
     __obj.asInstanceOf[PointLabelOptions]
   }
+  @scala.inline
+  implicit class PointLabelOptionsOps[Self <: PointLabelOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCallback(value: /* arg */ js.Any => _): Self = this.set("callback", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteCallback: Self = this.set("callback", js.undefined)
+    @scala.inline
+    def setFontColorCanvasPattern(value: CanvasPattern): Self = this.set("fontColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFontColorCanvasGradient(value: CanvasGradient): Self = this.set("fontColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFontColor(value: ChartColor): Self = this.set("fontColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFontColor: Self = this.set("fontColor", js.undefined)
+    @scala.inline
+    def setFontFamily(value: String): Self = this.set("fontFamily", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFontFamily: Self = this.set("fontFamily", js.undefined)
+    @scala.inline
+    def setFontSize(value: Double): Self = this.set("fontSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFontSize: Self = this.set("fontSize", js.undefined)
+    @scala.inline
+    def setFontStyle(value: String): Self = this.set("fontStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFontStyle: Self = this.set("fontStyle", js.undefined)
+    @scala.inline
+    def setLineHeight(value: Double | String): Self = this.set("lineHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLineHeight: Self = this.set("lineHeight", js.undefined)
+  }
+  
 }
 

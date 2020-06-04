@@ -127,5 +127,44 @@ object ZoomTransform_ {
     val __obj = js.Dynamic.literal(apply = js.Any.fromFunction1(apply), applyX = js.Any.fromFunction1(applyX), applyY = js.Any.fromFunction1(applyY), invert = js.Any.fromFunction1(invert), invertX = js.Any.fromFunction1(invertX), invertY = js.Any.fromFunction1(invertY), k = k.asInstanceOf[js.Any], rescaleX = js.Any.fromFunction1(rescaleX), rescaleY = js.Any.fromFunction1(rescaleY), scale = js.Any.fromFunction1(scale), translate = js.Any.fromFunction2(translate), x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
     __obj.asInstanceOf[ZoomTransform_]
   }
+  @scala.inline
+  implicit class ZoomTransform_Ops[Self <: ZoomTransform_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setApply(value: js.Tuple2[Double, Double] => js.Tuple2[Double, Double]): Self = this.set("apply", js.Any.fromFunction1(value))
+    @scala.inline
+    def setApplyX(value: Double => Double): Self = this.set("applyX", js.Any.fromFunction1(value))
+    @scala.inline
+    def setApplyY(value: Double => Double): Self = this.set("applyY", js.Any.fromFunction1(value))
+    @scala.inline
+    def setInvert(value: js.Tuple2[Double, Double] => js.Tuple2[Double, Double]): Self = this.set("invert", js.Any.fromFunction1(value))
+    @scala.inline
+    def setInvertX(value: Double => Double): Self = this.set("invertX", js.Any.fromFunction1(value))
+    @scala.inline
+    def setInvertY(value: Double => Double): Self = this.set("invertY", js.Any.fromFunction1(value))
+    @scala.inline
+    def setK(value: Double): Self = this.set("k", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRescaleX(value: js.Any => js.Any): Self = this.set("rescaleX", js.Any.fromFunction1(value))
+    @scala.inline
+    def setRescaleY(value: js.Any => js.Any): Self = this.set("rescaleY", js.Any.fromFunction1(value))
+    @scala.inline
+    def setScale(value: Double => ZoomTransform_): Self = this.set("scale", js.Any.fromFunction1(value))
+    @scala.inline
+    def setTranslate(value: (Double, Double) => ZoomTransform_): Self = this.set("translate", js.Any.fromFunction2(value))
+    @scala.inline
+    def setX(value: Double): Self = this.set("x", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setY(value: Double): Self = this.set("y", value.asInstanceOf[js.Any])
+  }
+  
 }
 

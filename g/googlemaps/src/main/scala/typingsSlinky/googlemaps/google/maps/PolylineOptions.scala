@@ -57,34 +57,70 @@ trait PolylineOptions extends js.Object {
 
 object PolylineOptions {
   @scala.inline
-  def apply(
-    clickable: js.UndefOr[Boolean] = js.undefined,
-    draggable: js.UndefOr[Boolean] = js.undefined,
-    editable: js.UndefOr[Boolean] = js.undefined,
-    geodesic: js.UndefOr[Boolean] = js.undefined,
-    icons: js.Array[IconSequence] = null,
-    map: Map[Element] = null,
-    path: MVCArray[LatLng] | (js.Array[LatLng | LatLngLiteral]) = null,
-    strokeColor: String = null,
-    strokeOpacity: js.UndefOr[Double] = js.undefined,
-    strokeWeight: js.UndefOr[Double] = js.undefined,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    zIndex: js.UndefOr[Double] = js.undefined
-  ): PolylineOptions = {
+  def apply(): PolylineOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(clickable)) __obj.updateDynamic("clickable")(clickable.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(draggable)) __obj.updateDynamic("draggable")(draggable.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(editable)) __obj.updateDynamic("editable")(editable.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(geodesic)) __obj.updateDynamic("geodesic")(geodesic.get.asInstanceOf[js.Any])
-    if (icons != null) __obj.updateDynamic("icons")(icons.asInstanceOf[js.Any])
-    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (strokeColor != null) __obj.updateDynamic("strokeColor")(strokeColor.asInstanceOf[js.Any])
-    if (!js.isUndefined(strokeOpacity)) __obj.updateDynamic("strokeOpacity")(strokeOpacity.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(strokeWeight)) __obj.updateDynamic("strokeWeight")(strokeWeight.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(zIndex)) __obj.updateDynamic("zIndex")(zIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolylineOptions]
   }
+  @scala.inline
+  implicit class PolylineOptionsOps[Self <: PolylineOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setClickable(value: Boolean): Self = this.set("clickable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClickable: Self = this.set("clickable", js.undefined)
+    @scala.inline
+    def setDraggable(value: Boolean): Self = this.set("draggable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDraggable: Self = this.set("draggable", js.undefined)
+    @scala.inline
+    def setEditable(value: Boolean): Self = this.set("editable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEditable: Self = this.set("editable", js.undefined)
+    @scala.inline
+    def setGeodesic(value: Boolean): Self = this.set("geodesic", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGeodesic: Self = this.set("geodesic", js.undefined)
+    @scala.inline
+    def setIcons(value: js.Array[IconSequence]): Self = this.set("icons", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIcons: Self = this.set("icons", js.undefined)
+    @scala.inline
+    def setMap(value: Map[Element]): Self = this.set("map", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMap: Self = this.set("map", js.undefined)
+    @scala.inline
+    def setPath(value: MVCArray[LatLng] | (js.Array[LatLng | LatLngLiteral])): Self = this.set("path", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePath: Self = this.set("path", js.undefined)
+    @scala.inline
+    def setStrokeColor(value: String): Self = this.set("strokeColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStrokeColor: Self = this.set("strokeColor", js.undefined)
+    @scala.inline
+    def setStrokeOpacity(value: Double): Self = this.set("strokeOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStrokeOpacity: Self = this.set("strokeOpacity", js.undefined)
+    @scala.inline
+    def setStrokeWeight(value: Double): Self = this.set("strokeWeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStrokeWeight: Self = this.set("strokeWeight", js.undefined)
+    @scala.inline
+    def setVisible(value: Boolean): Self = this.set("visible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVisible: Self = this.set("visible", js.undefined)
+    @scala.inline
+    def setZIndex(value: Double): Self = this.set("zIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteZIndex: Self = this.set("zIndex", js.undefined)
+  }
+  
 }
 

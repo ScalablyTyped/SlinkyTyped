@@ -55,74 +55,154 @@ trait UploadProps[T] extends js.Object {
 
 object UploadProps {
   @scala.inline
-  def apply[T](
-    accept: String = null,
-    action: String | (js.Function1[/* file */ RcFile, String | js.Thenable[String]]) = null,
-    beforeUpload: (/* file */ RcFile, /* FileList */ js.Array[RcFile]) => Boolean | js.Thenable[Unit] = null,
-    className: String = null,
-    customRequest: /* options */ RcCustomRequestOptions => Unit = null,
-    data: js.Object | (js.Function1[/* file */ UploadFile[T], js.Object]) = null,
-    defaultFileList: js.Array[UploadFile[T]] = null,
-    directory: js.UndefOr[Boolean] = js.undefined,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    fileList: js.Array[UploadFile[T]] = null,
-    headers: HttpRequestHeader = null,
-    iconRender: (/* file */ UploadFile[T], /* listType */ js.UndefOr[UploadListType]) => TagMod[Any] = null,
-    id: String = null,
-    isImageUrl: /* file */ UploadFile[_] => Boolean = null,
-    listType: UploadListType = null,
-    locale: UploadLocale = null,
-    method: POST | PUT | post_ | put_ = null,
-    multiple: js.UndefOr[Boolean] = js.undefined,
-    name: String = null,
-    onChange: /* info */ UploadChangeParam[UploadFile[_]] => Unit = null,
-    onDownload: /* file */ UploadFile[T] => Unit = null,
-    onPreview: /* file */ UploadFile[T] => Unit = null,
-    onRemove: /* file */ UploadFile[T] => Unit | Boolean | (js.Promise[Unit | Boolean]) = null,
-    openFileDialogOnClick: js.UndefOr[Boolean] = js.undefined,
-    prefixCls: String = null,
-    previewFile: /* file */ File | Blob => js.Thenable[String] = null,
-    showUploadList: Boolean | ShowUploadListInterface = null,
-    style: CSSProperties = null,
-    supportServerRender: js.UndefOr[Boolean] = js.undefined,
-    transformFile: /* file */ RcFile => String | Blob | File | (js.Thenable[String | Blob | File]) = null,
-    `type`: UploadType = null,
-    withCredentials: js.UndefOr[Boolean] = js.undefined
-  ): UploadProps[T] = {
+  def apply[T](): UploadProps[T] = {
     val __obj = js.Dynamic.literal()
-    if (accept != null) __obj.updateDynamic("accept")(accept.asInstanceOf[js.Any])
-    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
-    if (beforeUpload != null) __obj.updateDynamic("beforeUpload")(js.Any.fromFunction2(beforeUpload))
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (customRequest != null) __obj.updateDynamic("customRequest")(js.Any.fromFunction1(customRequest))
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (defaultFileList != null) __obj.updateDynamic("defaultFileList")(defaultFileList.asInstanceOf[js.Any])
-    if (!js.isUndefined(directory)) __obj.updateDynamic("directory")(directory.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (fileList != null) __obj.updateDynamic("fileList")(fileList.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (iconRender != null) __obj.updateDynamic("iconRender")(js.Any.fromFunction2(iconRender))
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (isImageUrl != null) __obj.updateDynamic("isImageUrl")(js.Any.fromFunction1(isImageUrl))
-    if (listType != null) __obj.updateDynamic("listType")(listType.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (!js.isUndefined(multiple)) __obj.updateDynamic("multiple")(multiple.get.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onDownload != null) __obj.updateDynamic("onDownload")(js.Any.fromFunction1(onDownload))
-    if (onPreview != null) __obj.updateDynamic("onPreview")(js.Any.fromFunction1(onPreview))
-    if (onRemove != null) __obj.updateDynamic("onRemove")(js.Any.fromFunction1(onRemove))
-    if (!js.isUndefined(openFileDialogOnClick)) __obj.updateDynamic("openFileDialogOnClick")(openFileDialogOnClick.get.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (previewFile != null) __obj.updateDynamic("previewFile")(js.Any.fromFunction1(previewFile))
-    if (showUploadList != null) __obj.updateDynamic("showUploadList")(showUploadList.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(supportServerRender)) __obj.updateDynamic("supportServerRender")(supportServerRender.get.asInstanceOf[js.Any])
-    if (transformFile != null) __obj.updateDynamic("transformFile")(js.Any.fromFunction1(transformFile))
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(withCredentials)) __obj.updateDynamic("withCredentials")(withCredentials.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UploadProps[T]]
   }
+  @scala.inline
+  implicit class UploadPropsOps[Self <: UploadProps[_], T] (val x: Self with UploadProps[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAccept(value: String): Self = this.set("accept", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccept: Self = this.set("accept", js.undefined)
+    @scala.inline
+    def setActionFunction1(value: /* file */ RcFile => String | js.Thenable[String]): Self = this.set("action", js.Any.fromFunction1(value))
+    @scala.inline
+    def setAction(value: String | (js.Function1[/* file */ RcFile, String | js.Thenable[String]])): Self = this.set("action", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAction: Self = this.set("action", js.undefined)
+    @scala.inline
+    def setBeforeUpload(value: (/* file */ RcFile, /* FileList */ js.Array[RcFile]) => Boolean | js.Thenable[Unit]): Self = this.set("beforeUpload", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteBeforeUpload: Self = this.set("beforeUpload", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setCustomRequest(value: /* options */ RcCustomRequestOptions => Unit): Self = this.set("customRequest", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteCustomRequest: Self = this.set("customRequest", js.undefined)
+    @scala.inline
+    def setDataFunction1(value: /* file */ UploadFile[T] => js.Object): Self = this.set("data", js.Any.fromFunction1(value))
+    @scala.inline
+    def setData(value: js.Object | (js.Function1[/* file */ UploadFile[T], js.Object])): Self = this.set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteData: Self = this.set("data", js.undefined)
+    @scala.inline
+    def setDefaultFileList(value: js.Array[UploadFile[T]]): Self = this.set("defaultFileList", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultFileList: Self = this.set("defaultFileList", js.undefined)
+    @scala.inline
+    def setDirectory(value: Boolean): Self = this.set("directory", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDirectory: Self = this.set("directory", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setFileList(value: js.Array[UploadFile[T]]): Self = this.set("fileList", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFileList: Self = this.set("fileList", js.undefined)
+    @scala.inline
+    def setHeaders(value: HttpRequestHeader): Self = this.set("headers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeaders: Self = this.set("headers", js.undefined)
+    @scala.inline
+    def setIconRender(value: (/* file */ UploadFile[T], /* listType */ js.UndefOr[UploadListType]) => TagMod[Any]): Self = this.set("iconRender", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteIconRender: Self = this.set("iconRender", js.undefined)
+    @scala.inline
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteId: Self = this.set("id", js.undefined)
+    @scala.inline
+    def setIsImageUrl(value: /* file */ UploadFile[_] => Boolean): Self = this.set("isImageUrl", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteIsImageUrl: Self = this.set("isImageUrl", js.undefined)
+    @scala.inline
+    def setListType(value: UploadListType): Self = this.set("listType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteListType: Self = this.set("listType", js.undefined)
+    @scala.inline
+    def setLocale(value: UploadLocale): Self = this.set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLocale: Self = this.set("locale", js.undefined)
+    @scala.inline
+    def setMethod(value: POST | PUT | post_ | put_): Self = this.set("method", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMethod: Self = this.set("method", js.undefined)
+    @scala.inline
+    def setMultiple(value: Boolean): Self = this.set("multiple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMultiple: Self = this.set("multiple", js.undefined)
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteName: Self = this.set("name", js.undefined)
+    @scala.inline
+    def setOnChange(value: /* info */ UploadChangeParam[UploadFile[_]] => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnChange: Self = this.set("onChange", js.undefined)
+    @scala.inline
+    def setOnDownload(value: /* file */ UploadFile[T] => Unit): Self = this.set("onDownload", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnDownload: Self = this.set("onDownload", js.undefined)
+    @scala.inline
+    def setOnPreview(value: /* file */ UploadFile[T] => Unit): Self = this.set("onPreview", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnPreview: Self = this.set("onPreview", js.undefined)
+    @scala.inline
+    def setOnRemove(value: /* file */ UploadFile[T] => Unit | Boolean | (js.Promise[Unit | Boolean])): Self = this.set("onRemove", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnRemove: Self = this.set("onRemove", js.undefined)
+    @scala.inline
+    def setOpenFileDialogOnClick(value: Boolean): Self = this.set("openFileDialogOnClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOpenFileDialogOnClick: Self = this.set("openFileDialogOnClick", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    @scala.inline
+    def setPreviewFile(value: /* file */ File | Blob => js.Thenable[String]): Self = this.set("previewFile", js.Any.fromFunction1(value))
+    @scala.inline
+    def deletePreviewFile: Self = this.set("previewFile", js.undefined)
+    @scala.inline
+    def setShowUploadList(value: Boolean | ShowUploadListInterface): Self = this.set("showUploadList", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowUploadList: Self = this.set("showUploadList", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+    @scala.inline
+    def setSupportServerRender(value: Boolean): Self = this.set("supportServerRender", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSupportServerRender: Self = this.set("supportServerRender", js.undefined)
+    @scala.inline
+    def setTransformFile(value: /* file */ RcFile => String | Blob | File | (js.Thenable[String | Blob | File])): Self = this.set("transformFile", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteTransformFile: Self = this.set("transformFile", js.undefined)
+    @scala.inline
+    def setType(value: UploadType): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteType: Self = this.set("type", js.undefined)
+    @scala.inline
+    def setWithCredentials(value: Boolean): Self = this.set("withCredentials", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWithCredentials: Self = this.set("withCredentials", js.undefined)
+  }
+  
 }
 

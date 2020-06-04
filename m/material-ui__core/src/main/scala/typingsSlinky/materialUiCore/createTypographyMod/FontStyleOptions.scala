@@ -22,26 +22,54 @@ trait FontStyleOptions extends js.Object {
 
 object FontStyleOptions {
   @scala.inline
-  def apply(
-    allVariants: CSSProperties = null,
-    fontFamily: FontFamilyProperty = null,
-    fontSize: js.UndefOr[Double] = js.undefined,
-    fontWeightLight: FontWeightProperty = null,
-    fontWeightMedium: FontWeightProperty = null,
-    fontWeightRegular: FontWeightProperty = null,
-    htmlFontSize: js.UndefOr[Double] = js.undefined,
-    useNextVariants: js.UndefOr[Boolean] = js.undefined
-  ): FontStyleOptions = {
+  def apply(): FontStyleOptions = {
     val __obj = js.Dynamic.literal()
-    if (allVariants != null) __obj.updateDynamic("allVariants")(allVariants.asInstanceOf[js.Any])
-    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
-    if (!js.isUndefined(fontSize)) __obj.updateDynamic("fontSize")(fontSize.get.asInstanceOf[js.Any])
-    if (fontWeightLight != null) __obj.updateDynamic("fontWeightLight")(fontWeightLight.asInstanceOf[js.Any])
-    if (fontWeightMedium != null) __obj.updateDynamic("fontWeightMedium")(fontWeightMedium.asInstanceOf[js.Any])
-    if (fontWeightRegular != null) __obj.updateDynamic("fontWeightRegular")(fontWeightRegular.asInstanceOf[js.Any])
-    if (!js.isUndefined(htmlFontSize)) __obj.updateDynamic("htmlFontSize")(htmlFontSize.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(useNextVariants)) __obj.updateDynamic("useNextVariants")(useNextVariants.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FontStyleOptions]
   }
+  @scala.inline
+  implicit class FontStyleOptionsOps[Self <: FontStyleOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAllVariants(value: CSSProperties): Self = this.set("allVariants", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAllVariants: Self = this.set("allVariants", js.undefined)
+    @scala.inline
+    def setFontFamily(value: FontFamilyProperty): Self = this.set("fontFamily", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFontFamily: Self = this.set("fontFamily", js.undefined)
+    @scala.inline
+    def setFontSize(value: Double): Self = this.set("fontSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFontSize: Self = this.set("fontSize", js.undefined)
+    @scala.inline
+    def setFontWeightLight(value: FontWeightProperty): Self = this.set("fontWeightLight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFontWeightLight: Self = this.set("fontWeightLight", js.undefined)
+    @scala.inline
+    def setFontWeightMedium(value: FontWeightProperty): Self = this.set("fontWeightMedium", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFontWeightMedium: Self = this.set("fontWeightMedium", js.undefined)
+    @scala.inline
+    def setFontWeightRegular(value: FontWeightProperty): Self = this.set("fontWeightRegular", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFontWeightRegular: Self = this.set("fontWeightRegular", js.undefined)
+    @scala.inline
+    def setHtmlFontSize(value: Double): Self = this.set("htmlFontSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHtmlFontSize: Self = this.set("htmlFontSize", js.undefined)
+    @scala.inline
+    def setUseNextVariants(value: Boolean): Self = this.set("useNextVariants", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUseNextVariants: Self = this.set("useNextVariants", js.undefined)
+  }
+  
 }
 

@@ -2,16 +2,6 @@ package typingsSlinky.reactNative.mod
 
 import slinky.core.SyntheticEvent
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
-import typingsSlinky.reactNative.reactNativeStrings.`no-hide-descendants`
-import typingsSlinky.reactNative.reactNativeStrings.assertive
-import typingsSlinky.reactNative.reactNativeStrings.auto
-import typingsSlinky.reactNative.reactNativeStrings.button
-import typingsSlinky.reactNative.reactNativeStrings.no
-import typingsSlinky.reactNative.reactNativeStrings.none
-import typingsSlinky.reactNative.reactNativeStrings.polite
-import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
-import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
-import typingsSlinky.reactNative.reactNativeStrings.yes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -58,46 +48,54 @@ trait AccessibilityProps
 
 object AccessibilityProps {
   @scala.inline
-  def apply(
-    accessibilityActions: js.Array[AccessibilityActionInfo] = null,
-    accessibilityComponentType: none | button | radiobutton_checked | radiobutton_unchecked = null,
-    accessibilityElementsHidden: js.UndefOr[Boolean] = js.undefined,
-    accessibilityHint: String = null,
-    accessibilityIgnoresInvertColors: js.UndefOr[Boolean] = js.undefined,
-    accessibilityLabel: String = null,
-    accessibilityLiveRegion: none | polite | assertive = null,
-    accessibilityRole: AccessibilityRole = null,
-    accessibilityState: AccessibilityState = null,
-    accessibilityTraits: AccessibilityTrait | js.Array[AccessibilityTrait] = null,
-    accessibilityValue: AccessibilityValue = null,
-    accessibilityViewIsModal: js.UndefOr[Boolean] = js.undefined,
-    accessible: js.UndefOr[Boolean] = js.undefined,
-    importantForAccessibility: auto | yes | no | `no-hide-descendants` = null,
-    onAccessibilityAction: SyntheticEvent[NodeHandle, ReadonlyactionNamestring] => Unit = null,
-    onAccessibilityEscape: () => Unit = null,
-    onAccessibilityTap: () => Unit = null,
-    onMagicTap: () => Unit = null
-  ): AccessibilityProps = {
+  def apply(): AccessibilityProps = {
     val __obj = js.Dynamic.literal()
-    if (accessibilityActions != null) __obj.updateDynamic("accessibilityActions")(accessibilityActions.asInstanceOf[js.Any])
-    if (accessibilityComponentType != null) __obj.updateDynamic("accessibilityComponentType")(accessibilityComponentType.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessibilityElementsHidden)) __obj.updateDynamic("accessibilityElementsHidden")(accessibilityElementsHidden.get.asInstanceOf[js.Any])
-    if (accessibilityHint != null) __obj.updateDynamic("accessibilityHint")(accessibilityHint.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessibilityIgnoresInvertColors)) __obj.updateDynamic("accessibilityIgnoresInvertColors")(accessibilityIgnoresInvertColors.get.asInstanceOf[js.Any])
-    if (accessibilityLabel != null) __obj.updateDynamic("accessibilityLabel")(accessibilityLabel.asInstanceOf[js.Any])
-    if (accessibilityLiveRegion != null) __obj.updateDynamic("accessibilityLiveRegion")(accessibilityLiveRegion.asInstanceOf[js.Any])
-    if (accessibilityRole != null) __obj.updateDynamic("accessibilityRole")(accessibilityRole.asInstanceOf[js.Any])
-    if (accessibilityState != null) __obj.updateDynamic("accessibilityState")(accessibilityState.asInstanceOf[js.Any])
-    if (accessibilityTraits != null) __obj.updateDynamic("accessibilityTraits")(accessibilityTraits.asInstanceOf[js.Any])
-    if (accessibilityValue != null) __obj.updateDynamic("accessibilityValue")(accessibilityValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessibilityViewIsModal)) __obj.updateDynamic("accessibilityViewIsModal")(accessibilityViewIsModal.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessible)) __obj.updateDynamic("accessible")(accessible.get.asInstanceOf[js.Any])
-    if (importantForAccessibility != null) __obj.updateDynamic("importantForAccessibility")(importantForAccessibility.asInstanceOf[js.Any])
-    if (onAccessibilityAction != null) __obj.updateDynamic("onAccessibilityAction")(js.Any.fromFunction1(onAccessibilityAction))
-    if (onAccessibilityEscape != null) __obj.updateDynamic("onAccessibilityEscape")(js.Any.fromFunction0(onAccessibilityEscape))
-    if (onAccessibilityTap != null) __obj.updateDynamic("onAccessibilityTap")(js.Any.fromFunction0(onAccessibilityTap))
-    if (onMagicTap != null) __obj.updateDynamic("onMagicTap")(js.Any.fromFunction0(onMagicTap))
     __obj.asInstanceOf[AccessibilityProps]
   }
+  @scala.inline
+  implicit class AccessibilityPropsOps[Self <: AccessibilityProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAccessibilityActions(value: js.Array[AccessibilityActionInfo]): Self = this.set("accessibilityActions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityActions: Self = this.set("accessibilityActions", js.undefined)
+    @scala.inline
+    def setAccessibilityHint(value: String): Self = this.set("accessibilityHint", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityHint: Self = this.set("accessibilityHint", js.undefined)
+    @scala.inline
+    def setAccessibilityLabel(value: String): Self = this.set("accessibilityLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityLabel: Self = this.set("accessibilityLabel", js.undefined)
+    @scala.inline
+    def setAccessibilityRole(value: AccessibilityRole): Self = this.set("accessibilityRole", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityRole: Self = this.set("accessibilityRole", js.undefined)
+    @scala.inline
+    def setAccessibilityState(value: AccessibilityState): Self = this.set("accessibilityState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityState: Self = this.set("accessibilityState", js.undefined)
+    @scala.inline
+    def setAccessibilityValue(value: AccessibilityValue): Self = this.set("accessibilityValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessibilityValue: Self = this.set("accessibilityValue", js.undefined)
+    @scala.inline
+    def setAccessible(value: Boolean): Self = this.set("accessible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccessible: Self = this.set("accessible", js.undefined)
+    @scala.inline
+    def setOnAccessibilityAction(value: SyntheticEvent[NodeHandle, ReadonlyactionNamestring] => Unit): Self = this.set("onAccessibilityAction", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnAccessibilityAction: Self = this.set("onAccessibilityAction", js.undefined)
+  }
+  
 }
 

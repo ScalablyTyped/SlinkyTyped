@@ -11,16 +11,8 @@ trait FlagProps
 
 object FlagProps {
   @scala.inline
-  def apply(
-    name: FlagNameValues,
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
-    as: js.Any = null,
-    className: String = null
-  ): FlagProps = {
+  def apply(name: FlagNameValues): FlagProps = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlagProps]
   }
 }

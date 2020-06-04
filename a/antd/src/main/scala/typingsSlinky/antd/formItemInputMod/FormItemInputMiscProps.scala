@@ -17,19 +17,40 @@ trait FormItemInputMiscProps extends js.Object {
 
 object FormItemInputMiscProps {
   @scala.inline
-  def apply(
-    errors: js.Array[TagMod[Any]],
-    onDomErrorVisibleChange: Boolean => Unit,
-    prefixCls: String,
-    children: TagMod[Any] = null,
-    hasFeedback: js.UndefOr[Boolean] = js.undefined,
-    validateStatus: ValidateStatus = null
-  ): FormItemInputMiscProps = {
+  def apply(errors: js.Array[TagMod[Any]], onDomErrorVisibleChange: Boolean => Unit, prefixCls: String): FormItemInputMiscProps = {
     val __obj = js.Dynamic.literal(errors = errors.asInstanceOf[js.Any], onDomErrorVisibleChange = js.Any.fromFunction1(onDomErrorVisibleChange), prefixCls = prefixCls.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasFeedback)) __obj.updateDynamic("hasFeedback")(hasFeedback.get.asInstanceOf[js.Any])
-    if (validateStatus != null) __obj.updateDynamic("validateStatus")(validateStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[FormItemInputMiscProps]
   }
+  @scala.inline
+  implicit class FormItemInputMiscPropsOps[Self <: FormItemInputMiscProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setErrors(value: js.Array[TagMod[Any]]): Self = this.set("errors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOnDomErrorVisibleChange(value: Boolean => Unit): Self = this.set("onDomErrorVisibleChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setHasFeedback(value: Boolean): Self = this.set("hasFeedback", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHasFeedback: Self = this.set("hasFeedback", js.undefined)
+    @scala.inline
+    def setValidateStatus(value: ValidateStatus): Self = this.set("validateStatus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValidateStatus: Self = this.set("validateStatus", js.undefined)
+  }
+  
 }
 

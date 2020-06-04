@@ -11,11 +11,30 @@ trait RTCRtcpFeedback extends js.Object {
 
 object RTCRtcpFeedback {
   @scala.inline
-  def apply(parameter: java.lang.String = null, `type`: java.lang.String = null): RTCRtcpFeedback = {
+  def apply(): RTCRtcpFeedback = {
     val __obj = js.Dynamic.literal()
-    if (parameter != null) __obj.updateDynamic("parameter")(parameter.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCRtcpFeedback]
   }
+  @scala.inline
+  implicit class RTCRtcpFeedbackOps[Self <: RTCRtcpFeedback] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setParameter(value: java.lang.String): Self = this.set("parameter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteParameter: Self = this.set("parameter", js.undefined)
+    @scala.inline
+    def setType(value: java.lang.String): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteType: Self = this.set("type", js.undefined)
+  }
+  
 }
 

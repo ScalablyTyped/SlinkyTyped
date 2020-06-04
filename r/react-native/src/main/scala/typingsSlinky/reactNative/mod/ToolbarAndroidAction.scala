@@ -28,17 +28,36 @@ trait ToolbarAndroidAction extends js.Object {
 
 object ToolbarAndroidAction {
   @scala.inline
-  def apply(
-    title: String,
-    icon: ImageURISource = null,
-    show: always | ifRoom | never = null,
-    showWithText: js.UndefOr[Boolean] = js.undefined
-  ): ToolbarAndroidAction = {
+  def apply(title: String): ToolbarAndroidAction = {
     val __obj = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (show != null) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (!js.isUndefined(showWithText)) __obj.updateDynamic("showWithText")(showWithText.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ToolbarAndroidAction]
   }
+  @scala.inline
+  implicit class ToolbarAndroidActionOps[Self <: ToolbarAndroidAction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIcon(value: ImageURISource): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIcon: Self = this.set("icon", js.undefined)
+    @scala.inline
+    def setShow(value: always | ifRoom | never): Self = this.set("show", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShow: Self = this.set("show", js.undefined)
+    @scala.inline
+    def setShowWithText(value: Boolean): Self = this.set("showWithText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowWithText: Self = this.set("showWithText", js.undefined)
+  }
+  
 }
 

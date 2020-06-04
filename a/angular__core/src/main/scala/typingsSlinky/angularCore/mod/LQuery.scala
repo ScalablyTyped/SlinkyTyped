@@ -28,9 +28,30 @@ trait LQuery[T] extends js.Object {
 
 object LQuery {
   @scala.inline
-  def apply[T](queryList: QueryList[T], setDirty: () => Unit, matches: js.Array[T | Null] = null): LQuery[T] = {
-    val __obj = js.Dynamic.literal(queryList = queryList.asInstanceOf[js.Any], setDirty = js.Any.fromFunction0(setDirty), matches = matches.asInstanceOf[js.Any])
+  def apply[T](queryList: QueryList[T], setDirty: () => Unit): LQuery[T] = {
+    val __obj = js.Dynamic.literal(queryList = queryList.asInstanceOf[js.Any], setDirty = js.Any.fromFunction0(setDirty))
     __obj.asInstanceOf[LQuery[T]]
   }
+  @scala.inline
+  implicit class LQueryOps[Self <: LQuery[_], T] (val x: Self with LQuery[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setQueryList(value: QueryList[T]): Self = this.set("queryList", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSetDirty(value: () => Unit): Self = this.set("setDirty", js.Any.fromFunction0(value))
+    @scala.inline
+    def setMatches(value: js.Array[T | Null]): Self = this.set("matches", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMatchesNull: Self = this.set("matches", null)
+  }
+  
 }
 

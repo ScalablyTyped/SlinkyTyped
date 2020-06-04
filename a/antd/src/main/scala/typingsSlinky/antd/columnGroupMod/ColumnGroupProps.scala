@@ -8,6 +8,7 @@ import typingsSlinky.antd.anon.Compare
 import typingsSlinky.antd.responsiveObserveMod.Breakpoint
 import typingsSlinky.antd.tableInterfaceMod.ColumnFilterItem
 import typingsSlinky.antd.tableInterfaceMod.ColumnTitle
+import typingsSlinky.antd.tableInterfaceMod.ColumnTitleProps
 import typingsSlinky.antd.tableInterfaceMod.CompareFn
 import typingsSlinky.antd.tableInterfaceMod.FilterDropdownProps
 import typingsSlinky.antd.tableInterfaceMod.Key
@@ -74,71 +75,168 @@ trait ColumnGroupProps[RecordType] extends js.Object {
 
 object ColumnGroupProps {
   @scala.inline
-  def apply[RecordType](
-    children: ReactElement | js.Array[ReactElement],
-    align: AlignType = null,
-    className: String = null,
-    colSpan: js.UndefOr[Double] = js.undefined,
-    dataIndex: DataIndex = null,
-    defaultFilteredValue: js.Array[Key] = null,
-    defaultSortOrder: js.UndefOr[Null | SortOrder] = js.undefined,
-    ellipsis: js.UndefOr[Boolean] = js.undefined,
-    filterDropdown: TagMod[Any] | (js.Function1[/* props */ FilterDropdownProps, TagMod[Any]]) = null,
-    filterDropdownVisible: js.UndefOr[Boolean] = js.undefined,
-    filterIcon: TagMod[Any] | (js.Function1[/* filtered */ Boolean, TagMod[Any]]) = null,
-    filterMultiple: js.UndefOr[Boolean] = js.undefined,
-    filtered: js.UndefOr[Boolean] = js.undefined,
-    filteredValue: js.Array[Key] = null,
-    filters: js.Array[ColumnFilterItem] = null,
-    fixed: FixedType = null,
-    key: typingsSlinky.rcTable.interfaceMod.Key = null,
-    onCell: (RecordType, /* index */ js.UndefOr[Double]) => HTMLAttributes[HTMLElement] = null,
-    onCellClick: (/* record */ RecordType, /* e */ SyntheticMouseEvent[HTMLElement]) => Unit = null,
-    onFilter: (/* value */ String | Double | Boolean, /* record */ RecordType) => Boolean = null,
-    onFilterDropdownVisibleChange: /* visible */ Boolean => Unit = null,
-    onHeaderCell: (/* import warning: importer.ImportType#apply Failed type conversion: rc-table.rc-table/lib/interface.ColumnsType<RecordType>[number] */ js.Any, /* index */ js.UndefOr[Double]) => HTMLAttributes[HTMLElement] = null,
-    render: (/* value */ js.Any, /* record */ RecordType, /* index */ Double) => TagMod[Any] | RenderedCell[RecordType] = null,
-    responsive: js.Array[Breakpoint] = null,
-    rowSpan: js.UndefOr[Double] = js.undefined,
-    showSorterTooltip: js.UndefOr[Boolean] = js.undefined,
-    sortDirections: js.Array[SortOrder] = null,
-    sortOrder: js.UndefOr[Null | SortOrder] = js.undefined,
-    sorter: Boolean | CompareFn[RecordType] | Compare[RecordType] = null,
-    title: ColumnTitle[RecordType] = null,
-    width: Double | String = null
-  ): ColumnGroupProps[RecordType] = {
+  def apply[RecordType](children: ReactElement | js.Array[ReactElement]): ColumnGroupProps[RecordType] = {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(colSpan)) __obj.updateDynamic("colSpan")(colSpan.get.asInstanceOf[js.Any])
-    if (dataIndex != null) __obj.updateDynamic("dataIndex")(dataIndex.asInstanceOf[js.Any])
-    if (defaultFilteredValue != null) __obj.updateDynamic("defaultFilteredValue")(defaultFilteredValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultSortOrder)) __obj.updateDynamic("defaultSortOrder")(defaultSortOrder.asInstanceOf[js.Any])
-    if (!js.isUndefined(ellipsis)) __obj.updateDynamic("ellipsis")(ellipsis.get.asInstanceOf[js.Any])
-    if (filterDropdown != null) __obj.updateDynamic("filterDropdown")(filterDropdown.asInstanceOf[js.Any])
-    if (!js.isUndefined(filterDropdownVisible)) __obj.updateDynamic("filterDropdownVisible")(filterDropdownVisible.get.asInstanceOf[js.Any])
-    if (filterIcon != null) __obj.updateDynamic("filterIcon")(filterIcon.asInstanceOf[js.Any])
-    if (!js.isUndefined(filterMultiple)) __obj.updateDynamic("filterMultiple")(filterMultiple.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(filtered)) __obj.updateDynamic("filtered")(filtered.get.asInstanceOf[js.Any])
-    if (filteredValue != null) __obj.updateDynamic("filteredValue")(filteredValue.asInstanceOf[js.Any])
-    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
-    if (fixed != null) __obj.updateDynamic("fixed")(fixed.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (onCell != null) __obj.updateDynamic("onCell")(js.Any.fromFunction2(onCell))
-    if (onCellClick != null) __obj.updateDynamic("onCellClick")(js.Any.fromFunction2(onCellClick))
-    if (onFilter != null) __obj.updateDynamic("onFilter")(js.Any.fromFunction2(onFilter))
-    if (onFilterDropdownVisibleChange != null) __obj.updateDynamic("onFilterDropdownVisibleChange")(js.Any.fromFunction1(onFilterDropdownVisibleChange))
-    if (onHeaderCell != null) __obj.updateDynamic("onHeaderCell")(js.Any.fromFunction2(onHeaderCell))
-    if (render != null) __obj.updateDynamic("render")(js.Any.fromFunction3(render))
-    if (responsive != null) __obj.updateDynamic("responsive")(responsive.asInstanceOf[js.Any])
-    if (!js.isUndefined(rowSpan)) __obj.updateDynamic("rowSpan")(rowSpan.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(showSorterTooltip)) __obj.updateDynamic("showSorterTooltip")(showSorterTooltip.get.asInstanceOf[js.Any])
-    if (sortDirections != null) __obj.updateDynamic("sortDirections")(sortDirections.asInstanceOf[js.Any])
-    if (!js.isUndefined(sortOrder)) __obj.updateDynamic("sortOrder")(sortOrder.asInstanceOf[js.Any])
-    if (sorter != null) __obj.updateDynamic("sorter")(sorter.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnGroupProps[RecordType]]
   }
+  @scala.inline
+  implicit class ColumnGroupPropsOps[Self <: ColumnGroupProps[_], RecordType] (val x: Self with ColumnGroupProps[RecordType]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: ReactElement | js.Array[ReactElement]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAlign(value: AlignType): Self = this.set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAlign: Self = this.set("align", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setColSpan(value: Double): Self = this.set("colSpan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteColSpan: Self = this.set("colSpan", js.undefined)
+    @scala.inline
+    def setDataIndex(value: DataIndex): Self = this.set("dataIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDataIndex: Self = this.set("dataIndex", js.undefined)
+    @scala.inline
+    def setDefaultFilteredValue(value: js.Array[Key]): Self = this.set("defaultFilteredValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultFilteredValue: Self = this.set("defaultFilteredValue", js.undefined)
+    @scala.inline
+    def setDefaultSortOrder(value: SortOrder): Self = this.set("defaultSortOrder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultSortOrder: Self = this.set("defaultSortOrder", js.undefined)
+    @scala.inline
+    def setDefaultSortOrderNull: Self = this.set("defaultSortOrder", null)
+    @scala.inline
+    def setEllipsis(value: Boolean): Self = this.set("ellipsis", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEllipsis: Self = this.set("ellipsis", js.undefined)
+    @scala.inline
+    def setFilterDropdownReactElement(value: ReactElement): Self = this.set("filterDropdown", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFilterDropdownFunction1(value: /* props */ FilterDropdownProps => TagMod[Any]): Self = this.set("filterDropdown", js.Any.fromFunction1(value))
+    @scala.inline
+    def setFilterDropdown(value: TagMod[Any] | (js.Function1[/* props */ FilterDropdownProps, TagMod[Any]])): Self = this.set("filterDropdown", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFilterDropdown: Self = this.set("filterDropdown", js.undefined)
+    @scala.inline
+    def setFilterDropdownVisible(value: Boolean): Self = this.set("filterDropdownVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFilterDropdownVisible: Self = this.set("filterDropdownVisible", js.undefined)
+    @scala.inline
+    def setFilterIconReactElement(value: ReactElement): Self = this.set("filterIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFilterIconFunction1(value: /* filtered */ Boolean => TagMod[Any]): Self = this.set("filterIcon", js.Any.fromFunction1(value))
+    @scala.inline
+    def setFilterIcon(value: TagMod[Any] | (js.Function1[/* filtered */ Boolean, TagMod[Any]])): Self = this.set("filterIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFilterIcon: Self = this.set("filterIcon", js.undefined)
+    @scala.inline
+    def setFilterMultiple(value: Boolean): Self = this.set("filterMultiple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFilterMultiple: Self = this.set("filterMultiple", js.undefined)
+    @scala.inline
+    def setFiltered(value: Boolean): Self = this.set("filtered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFiltered: Self = this.set("filtered", js.undefined)
+    @scala.inline
+    def setFilteredValue(value: js.Array[Key]): Self = this.set("filteredValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFilteredValue: Self = this.set("filteredValue", js.undefined)
+    @scala.inline
+    def setFilters(value: js.Array[ColumnFilterItem]): Self = this.set("filters", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFilters: Self = this.set("filters", js.undefined)
+    @scala.inline
+    def setFixed(value: FixedType): Self = this.set("fixed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFixed: Self = this.set("fixed", js.undefined)
+    @scala.inline
+    def setKey(value: typingsSlinky.rcTable.interfaceMod.Key): Self = this.set("key", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKey: Self = this.set("key", js.undefined)
+    @scala.inline
+    def setOnCell(value: (RecordType, /* index */ js.UndefOr[Double]) => HTMLAttributes[HTMLElement]): Self = this.set("onCell", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnCell: Self = this.set("onCell", js.undefined)
+    @scala.inline
+    def setOnCellClick(value: (/* record */ RecordType, /* e */ SyntheticMouseEvent[HTMLElement]) => Unit): Self = this.set("onCellClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnCellClick: Self = this.set("onCellClick", js.undefined)
+    @scala.inline
+    def setOnFilter(value: (/* value */ String | Double | Boolean, /* record */ RecordType) => Boolean): Self = this.set("onFilter", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnFilter: Self = this.set("onFilter", js.undefined)
+    @scala.inline
+    def setOnFilterDropdownVisibleChange(value: /* visible */ Boolean => Unit): Self = this.set("onFilterDropdownVisibleChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnFilterDropdownVisibleChange: Self = this.set("onFilterDropdownVisibleChange", js.undefined)
+    @scala.inline
+    def setOnHeaderCell(
+      value: (/* import warning: importer.ImportType#apply Failed type conversion: rc-table.rc-table/lib/interface.ColumnsType<RecordType>[number] */ js.Any, /* index */ js.UndefOr[Double]) => HTMLAttributes[HTMLElement]
+    ): Self = this.set("onHeaderCell", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnHeaderCell: Self = this.set("onHeaderCell", js.undefined)
+    @scala.inline
+    def setRender(
+      value: (/* value */ js.Any, /* record */ RecordType, /* index */ Double) => TagMod[Any] | RenderedCell[RecordType]
+    ): Self = this.set("render", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteRender: Self = this.set("render", js.undefined)
+    @scala.inline
+    def setResponsive(value: js.Array[Breakpoint]): Self = this.set("responsive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteResponsive: Self = this.set("responsive", js.undefined)
+    @scala.inline
+    def setRowSpan(value: Double): Self = this.set("rowSpan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRowSpan: Self = this.set("rowSpan", js.undefined)
+    @scala.inline
+    def setShowSorterTooltip(value: Boolean): Self = this.set("showSorterTooltip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowSorterTooltip: Self = this.set("showSorterTooltip", js.undefined)
+    @scala.inline
+    def setSortDirections(value: js.Array[SortOrder]): Self = this.set("sortDirections", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSortDirections: Self = this.set("sortDirections", js.undefined)
+    @scala.inline
+    def setSortOrder(value: SortOrder): Self = this.set("sortOrder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSortOrder: Self = this.set("sortOrder", js.undefined)
+    @scala.inline
+    def setSortOrderNull: Self = this.set("sortOrder", null)
+    @scala.inline
+    def setSorterFunction3(value: (RecordType, RecordType, /* sortOrder */ js.UndefOr[SortOrder]) => Double): Self = this.set("sorter", js.Any.fromFunction3(value))
+    @scala.inline
+    def setSorter(value: Boolean | CompareFn[RecordType] | Compare[RecordType]): Self = this.set("sorter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSorter: Self = this.set("sorter", js.undefined)
+    @scala.inline
+    def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTitleFunction1(value: /* props */ ColumnTitleProps[RecordType] => TagMod[Any]): Self = this.set("title", js.Any.fromFunction1(value))
+    @scala.inline
+    def setTitle(value: ColumnTitle[RecordType]): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
+    @scala.inline
+    def setWidth(value: Double | String): Self = this.set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWidth: Self = this.set("width", js.undefined)
+  }
+  
 }
 

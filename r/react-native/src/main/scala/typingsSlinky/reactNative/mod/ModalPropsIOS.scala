@@ -41,20 +41,42 @@ trait ModalPropsIOS extends js.Object {
 
 object ModalPropsIOS {
   @scala.inline
-  def apply(
-    onDismiss: () => Unit = null,
-    onOrientationChange: SyntheticEvent[NodeHandle, _] => Unit = null,
-    presentationStyle: fullScreen | pageSheet | formSheet | overFullScreen = null,
-    supportedOrientations: js.Array[
-      portrait | `portrait-upside-down` | landscape | `landscape-left` | `landscape-right`
-    ] = null
-  ): ModalPropsIOS = {
+  def apply(): ModalPropsIOS = {
     val __obj = js.Dynamic.literal()
-    if (onDismiss != null) __obj.updateDynamic("onDismiss")(js.Any.fromFunction0(onDismiss))
-    if (onOrientationChange != null) __obj.updateDynamic("onOrientationChange")(js.Any.fromFunction1(onOrientationChange))
-    if (presentationStyle != null) __obj.updateDynamic("presentationStyle")(presentationStyle.asInstanceOf[js.Any])
-    if (supportedOrientations != null) __obj.updateDynamic("supportedOrientations")(supportedOrientations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModalPropsIOS]
   }
+  @scala.inline
+  implicit class ModalPropsIOSOps[Self <: ModalPropsIOS] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setOnDismiss(value: () => Unit): Self = this.set("onDismiss", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnDismiss: Self = this.set("onDismiss", js.undefined)
+    @scala.inline
+    def setOnOrientationChange(value: SyntheticEvent[NodeHandle, _] => Unit): Self = this.set("onOrientationChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnOrientationChange: Self = this.set("onOrientationChange", js.undefined)
+    @scala.inline
+    def setPresentationStyle(value: fullScreen | pageSheet | formSheet | overFullScreen): Self = this.set("presentationStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePresentationStyle: Self = this.set("presentationStyle", js.undefined)
+    @scala.inline
+    def setSupportedOrientations(
+      value: js.Array[
+          portrait | `portrait-upside-down` | landscape | `landscape-left` | `landscape-right`
+        ]
+    ): Self = this.set("supportedOrientations", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSupportedOrientations: Self = this.set("supportedOrientations", js.undefined)
+  }
+  
 }
 

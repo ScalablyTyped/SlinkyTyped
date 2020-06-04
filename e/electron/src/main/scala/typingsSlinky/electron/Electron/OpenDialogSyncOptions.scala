@@ -42,26 +42,54 @@ trait OpenDialogSyncOptions extends js.Object {
 
 object OpenDialogSyncOptions {
   @scala.inline
-  def apply(
-    buttonLabel: String = null,
-    defaultPath: String = null,
-    filters: js.Array[FileFilter] = null,
-    message: String = null,
-    properties: js.Array[
-      openFile | openDirectory | multiSelections | showHiddenFiles | createDirectory | promptToCreate | noResolveAliases | treatPackageAsDirectory
-    ] = null,
-    securityScopedBookmarks: js.UndefOr[Boolean] = js.undefined,
-    title: String = null
-  ): OpenDialogSyncOptions = {
+  def apply(): OpenDialogSyncOptions = {
     val __obj = js.Dynamic.literal()
-    if (buttonLabel != null) __obj.updateDynamic("buttonLabel")(buttonLabel.asInstanceOf[js.Any])
-    if (defaultPath != null) __obj.updateDynamic("defaultPath")(defaultPath.asInstanceOf[js.Any])
-    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
-    if (!js.isUndefined(securityScopedBookmarks)) __obj.updateDynamic("securityScopedBookmarks")(securityScopedBookmarks.get.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpenDialogSyncOptions]
   }
+  @scala.inline
+  implicit class OpenDialogSyncOptionsOps[Self <: OpenDialogSyncOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setButtonLabel(value: String): Self = this.set("buttonLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteButtonLabel: Self = this.set("buttonLabel", js.undefined)
+    @scala.inline
+    def setDefaultPath(value: String): Self = this.set("defaultPath", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultPath: Self = this.set("defaultPath", js.undefined)
+    @scala.inline
+    def setFilters(value: js.Array[FileFilter]): Self = this.set("filters", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFilters: Self = this.set("filters", js.undefined)
+    @scala.inline
+    def setMessage(value: String): Self = this.set("message", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMessage: Self = this.set("message", js.undefined)
+    @scala.inline
+    def setProperties(
+      value: js.Array[
+          openFile | openDirectory | multiSelections | showHiddenFiles | createDirectory | promptToCreate | noResolveAliases | treatPackageAsDirectory
+        ]
+    ): Self = this.set("properties", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteProperties: Self = this.set("properties", js.undefined)
+    @scala.inline
+    def setSecurityScopedBookmarks(value: Boolean): Self = this.set("securityScopedBookmarks", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSecurityScopedBookmarks: Self = this.set("securityScopedBookmarks", js.undefined)
+    @scala.inline
+    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
+  }
+  
 }
 

@@ -45,5 +45,28 @@ object DesktopCapturerSource {
     val __obj = js.Dynamic.literal(appIcon = appIcon.asInstanceOf[js.Any], display_id = display_id.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], thumbnail = thumbnail.asInstanceOf[js.Any])
     __obj.asInstanceOf[DesktopCapturerSource]
   }
+  @scala.inline
+  implicit class DesktopCapturerSourceOps[Self <: DesktopCapturerSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAppIcon(value: NativeImage_): Self = this.set("appIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDisplay_id(value: String): Self = this.set("display_id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setThumbnail(value: NativeImage_): Self = this.set("thumbnail", value.asInstanceOf[js.Any])
+  }
+  
 }
 

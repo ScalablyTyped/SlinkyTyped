@@ -54,20 +54,42 @@ trait ParseTemplateOptions extends js.Object {
 
 object ParseTemplateOptions {
   @scala.inline
-  def apply(
-    escapedString: js.UndefOr[Boolean] = js.undefined,
-    interpolationConfig: InterpolationConfig = null,
-    leadingTriviaChars: js.Array[String] = null,
-    preserveWhitespaces: js.UndefOr[Boolean] = js.undefined,
-    range: LexerRange = null
-  ): ParseTemplateOptions = {
+  def apply(): ParseTemplateOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(escapedString)) __obj.updateDynamic("escapedString")(escapedString.get.asInstanceOf[js.Any])
-    if (interpolationConfig != null) __obj.updateDynamic("interpolationConfig")(interpolationConfig.asInstanceOf[js.Any])
-    if (leadingTriviaChars != null) __obj.updateDynamic("leadingTriviaChars")(leadingTriviaChars.asInstanceOf[js.Any])
-    if (!js.isUndefined(preserveWhitespaces)) __obj.updateDynamic("preserveWhitespaces")(preserveWhitespaces.get.asInstanceOf[js.Any])
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParseTemplateOptions]
   }
+  @scala.inline
+  implicit class ParseTemplateOptionsOps[Self <: ParseTemplateOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setEscapedString(value: Boolean): Self = this.set("escapedString", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEscapedString: Self = this.set("escapedString", js.undefined)
+    @scala.inline
+    def setInterpolationConfig(value: InterpolationConfig): Self = this.set("interpolationConfig", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInterpolationConfig: Self = this.set("interpolationConfig", js.undefined)
+    @scala.inline
+    def setLeadingTriviaChars(value: js.Array[String]): Self = this.set("leadingTriviaChars", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLeadingTriviaChars: Self = this.set("leadingTriviaChars", js.undefined)
+    @scala.inline
+    def setPreserveWhitespaces(value: Boolean): Self = this.set("preserveWhitespaces", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePreserveWhitespaces: Self = this.set("preserveWhitespaces", js.undefined)
+    @scala.inline
+    def setRange(value: LexerRange): Self = this.set("range", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRange: Self = this.set("range", js.undefined)
+  }
+  
 }
 

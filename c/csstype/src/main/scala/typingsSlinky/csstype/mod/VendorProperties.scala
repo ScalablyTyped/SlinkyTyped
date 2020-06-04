@@ -8,3 +8,11 @@ trait VendorProperties[TLength]
   extends VendorLonghandProperties[TLength]
      with VendorShorthandProperties[TLength]
 
+object VendorProperties {
+  @scala.inline
+  def apply[TLength](): VendorProperties[TLength] = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[VendorProperties[TLength]]
+  }
+}
+

@@ -70,5 +70,34 @@ object DirectionsRoute {
     val __obj = js.Dynamic.literal(bounds = bounds.asInstanceOf[js.Any], copyrights = copyrights.asInstanceOf[js.Any], fare = fare.asInstanceOf[js.Any], legs = legs.asInstanceOf[js.Any], overview_path = overview_path.asInstanceOf[js.Any], overview_polyline = overview_polyline.asInstanceOf[js.Any], warnings = warnings.asInstanceOf[js.Any], waypoint_order = waypoint_order.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectionsRoute]
   }
+  @scala.inline
+  implicit class DirectionsRouteOps[Self <: DirectionsRoute] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBounds(value: LatLngBounds): Self = this.set("bounds", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCopyrights(value: String): Self = this.set("copyrights", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFare(value: TransitFare): Self = this.set("fare", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLegs(value: js.Array[DirectionsLeg]): Self = this.set("legs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOverview_path(value: js.Array[LatLng]): Self = this.set("overview_path", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOverview_polyline(value: String): Self = this.set("overview_polyline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWarnings(value: js.Array[String]): Self = this.set("warnings", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWaypoint_order(value: js.Array[Double]): Self = this.set("waypoint_order", value.asInstanceOf[js.Any])
+  }
+  
 }
 

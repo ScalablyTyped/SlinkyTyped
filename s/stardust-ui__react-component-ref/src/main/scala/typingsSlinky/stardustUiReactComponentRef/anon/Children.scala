@@ -18,5 +18,22 @@ object Children {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], innerRef = innerRef.asInstanceOf[js.Any])
     __obj.asInstanceOf[Children]
   }
+  @scala.inline
+  implicit class ChildrenOps[Self <: Children] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setChildren(value: Validator[ReactElementLike]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInnerRef(value: Validator[Ref[_]]): Self = this.set("innerRef", value.asInstanceOf[js.Any])
+  }
+  
 }
 

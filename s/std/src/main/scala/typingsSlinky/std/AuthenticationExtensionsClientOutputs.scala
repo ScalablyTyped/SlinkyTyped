@@ -17,26 +17,54 @@ trait AuthenticationExtensionsClientOutputs extends js.Object {
 
 object AuthenticationExtensionsClientOutputs {
   @scala.inline
-  def apply(
-    appid: js.UndefOr[scala.Boolean] = js.undefined,
-    authnSel: js.UndefOr[scala.Boolean] = js.undefined,
-    exts: AuthenticationExtensionsSupported = null,
-    loc: org.scalajs.dom.raw.Coordinates = null,
-    txAuthGeneric: js.typedarray.ArrayBuffer = null,
-    txAuthSimple: java.lang.String = null,
-    uvi: js.typedarray.ArrayBuffer = null,
-    uvm: UvmEntries = null
-  ): AuthenticationExtensionsClientOutputs = {
+  def apply(): AuthenticationExtensionsClientOutputs = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(appid)) __obj.updateDynamic("appid")(appid.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(authnSel)) __obj.updateDynamic("authnSel")(authnSel.get.asInstanceOf[js.Any])
-    if (exts != null) __obj.updateDynamic("exts")(exts.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (txAuthGeneric != null) __obj.updateDynamic("txAuthGeneric")(txAuthGeneric.asInstanceOf[js.Any])
-    if (txAuthSimple != null) __obj.updateDynamic("txAuthSimple")(txAuthSimple.asInstanceOf[js.Any])
-    if (uvi != null) __obj.updateDynamic("uvi")(uvi.asInstanceOf[js.Any])
-    if (uvm != null) __obj.updateDynamic("uvm")(uvm.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthenticationExtensionsClientOutputs]
   }
+  @scala.inline
+  implicit class AuthenticationExtensionsClientOutputsOps[Self <: AuthenticationExtensionsClientOutputs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAppid(value: scala.Boolean): Self = this.set("appid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAppid: Self = this.set("appid", js.undefined)
+    @scala.inline
+    def setAuthnSel(value: scala.Boolean): Self = this.set("authnSel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAuthnSel: Self = this.set("authnSel", js.undefined)
+    @scala.inline
+    def setExts(value: AuthenticationExtensionsSupported): Self = this.set("exts", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteExts: Self = this.set("exts", js.undefined)
+    @scala.inline
+    def setLoc(value: org.scalajs.dom.raw.Coordinates): Self = this.set("loc", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLoc: Self = this.set("loc", js.undefined)
+    @scala.inline
+    def setTxAuthGeneric(value: js.typedarray.ArrayBuffer): Self = this.set("txAuthGeneric", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTxAuthGeneric: Self = this.set("txAuthGeneric", js.undefined)
+    @scala.inline
+    def setTxAuthSimple(value: java.lang.String): Self = this.set("txAuthSimple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTxAuthSimple: Self = this.set("txAuthSimple", js.undefined)
+    @scala.inline
+    def setUvi(value: js.typedarray.ArrayBuffer): Self = this.set("uvi", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUvi: Self = this.set("uvi", js.undefined)
+    @scala.inline
+    def setUvm(value: UvmEntries): Self = this.set("uvm", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUvm: Self = this.set("uvm", js.undefined)
+  }
+  
 }
 

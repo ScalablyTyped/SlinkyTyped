@@ -12,11 +12,30 @@ trait CurrentTarget extends js.Object {
 
 object CurrentTarget {
   @scala.inline
-  def apply(currentTarget: HTMLElement = null, scrollLeft: js.UndefOr[Double] = js.undefined): CurrentTarget = {
+  def apply(): CurrentTarget = {
     val __obj = js.Dynamic.literal()
-    if (currentTarget != null) __obj.updateDynamic("currentTarget")(currentTarget.asInstanceOf[js.Any])
-    if (!js.isUndefined(scrollLeft)) __obj.updateDynamic("scrollLeft")(scrollLeft.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CurrentTarget]
   }
+  @scala.inline
+  implicit class CurrentTargetOps[Self <: CurrentTarget] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCurrentTarget(value: HTMLElement): Self = this.set("currentTarget", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCurrentTarget: Self = this.set("currentTarget", js.undefined)
+    @scala.inline
+    def setScrollLeft(value: Double): Self = this.set("scrollLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScrollLeft: Self = this.set("scrollLeft", js.undefined)
+  }
+  
 }
 

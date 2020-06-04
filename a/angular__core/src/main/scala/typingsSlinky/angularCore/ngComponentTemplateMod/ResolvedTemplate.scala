@@ -39,5 +39,30 @@ object ResolvedTemplate {
     __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResolvedTemplate]
   }
+  @scala.inline
+  implicit class ResolvedTemplateOps[Self <: ResolvedTemplate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setContainer(value: ClassDeclaration): Self = this.set("container", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContent(value: String): Self = this.set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFilePath(value: String): Self = this.set("filePath", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setGetCharacterAndLineOfPosition(value: Double => Character): Self = this.set("getCharacterAndLineOfPosition", js.Any.fromFunction1(value))
+    @scala.inline
+    def setInline(value: Boolean): Self = this.set("inline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStart(value: Double): Self = this.set("start", value.asInstanceOf[js.Any])
+  }
+  
 }
 

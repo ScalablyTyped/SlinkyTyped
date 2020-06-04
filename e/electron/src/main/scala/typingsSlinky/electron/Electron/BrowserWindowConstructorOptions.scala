@@ -241,100 +241,204 @@ trait BrowserWindowConstructorOptions extends js.Object {
 
 object BrowserWindowConstructorOptions {
   @scala.inline
-  def apply(
-    acceptFirstMouse: js.UndefOr[Boolean] = js.undefined,
-    alwaysOnTop: js.UndefOr[Boolean] = js.undefined,
-    autoHideMenuBar: js.UndefOr[Boolean] = js.undefined,
-    backgroundColor: String = null,
-    center: js.UndefOr[Boolean] = js.undefined,
-    closable: js.UndefOr[Boolean] = js.undefined,
-    darkTheme: js.UndefOr[Boolean] = js.undefined,
-    disableAutoHideCursor: js.UndefOr[Boolean] = js.undefined,
-    enableLargerThanScreen: js.UndefOr[Boolean] = js.undefined,
-    focusable: js.UndefOr[Boolean] = js.undefined,
-    frame: js.UndefOr[Boolean] = js.undefined,
-    fullscreen: js.UndefOr[Boolean] = js.undefined,
-    fullscreenWindowTitle: js.UndefOr[Boolean] = js.undefined,
-    fullscreenable: js.UndefOr[Boolean] = js.undefined,
-    hasShadow: js.UndefOr[Boolean] = js.undefined,
-    height: js.UndefOr[Double] = js.undefined,
-    icon: NativeImage_ | String = null,
-    kiosk: js.UndefOr[Boolean] = js.undefined,
-    maxHeight: js.UndefOr[Double] = js.undefined,
-    maxWidth: js.UndefOr[Double] = js.undefined,
-    maximizable: js.UndefOr[Boolean] = js.undefined,
-    minHeight: js.UndefOr[Double] = js.undefined,
-    minWidth: js.UndefOr[Double] = js.undefined,
-    minimizable: js.UndefOr[Boolean] = js.undefined,
-    modal: js.UndefOr[Boolean] = js.undefined,
-    movable: js.UndefOr[Boolean] = js.undefined,
-    opacity: js.UndefOr[Double] = js.undefined,
-    parent: BrowserWindow = null,
-    resizable: js.UndefOr[Boolean] = js.undefined,
-    show: js.UndefOr[Boolean] = js.undefined,
-    simpleFullscreen: js.UndefOr[Boolean] = js.undefined,
-    skipTaskbar: js.UndefOr[Boolean] = js.undefined,
-    tabbingIdentifier: String = null,
-    thickFrame: js.UndefOr[Boolean] = js.undefined,
-    title: String = null,
-    titleBarStyle: default | hidden | hiddenInset | customButtonsOnHover = null,
-    transparent: js.UndefOr[Boolean] = js.undefined,
-    `type`: String = null,
-    useContentSize: js.UndefOr[Boolean] = js.undefined,
-    vibrancy: `appearance-based` | light | dark | titlebar | selection | menu | popover | sidebar | `medium-light` | `ultra-dark` = null,
-    webPreferences: WebPreferences = null,
-    width: js.UndefOr[Double] = js.undefined,
-    x: js.UndefOr[Double] = js.undefined,
-    y: js.UndefOr[Double] = js.undefined,
-    zoomToPageWidth: js.UndefOr[Boolean] = js.undefined
-  ): BrowserWindowConstructorOptions = {
+  def apply(): BrowserWindowConstructorOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(acceptFirstMouse)) __obj.updateDynamic("acceptFirstMouse")(acceptFirstMouse.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(alwaysOnTop)) __obj.updateDynamic("alwaysOnTop")(alwaysOnTop.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoHideMenuBar)) __obj.updateDynamic("autoHideMenuBar")(autoHideMenuBar.get.asInstanceOf[js.Any])
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (!js.isUndefined(center)) __obj.updateDynamic("center")(center.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(closable)) __obj.updateDynamic("closable")(closable.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(darkTheme)) __obj.updateDynamic("darkTheme")(darkTheme.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableAutoHideCursor)) __obj.updateDynamic("disableAutoHideCursor")(disableAutoHideCursor.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableLargerThanScreen)) __obj.updateDynamic("enableLargerThanScreen")(enableLargerThanScreen.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(focusable)) __obj.updateDynamic("focusable")(focusable.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(frame)) __obj.updateDynamic("frame")(frame.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(fullscreen)) __obj.updateDynamic("fullscreen")(fullscreen.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(fullscreenWindowTitle)) __obj.updateDynamic("fullscreenWindowTitle")(fullscreenWindowTitle.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(fullscreenable)) __obj.updateDynamic("fullscreenable")(fullscreenable.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasShadow)) __obj.updateDynamic("hasShadow")(hasShadow.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (!js.isUndefined(kiosk)) __obj.updateDynamic("kiosk")(kiosk.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(maxHeight)) __obj.updateDynamic("maxHeight")(maxHeight.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(maxWidth)) __obj.updateDynamic("maxWidth")(maxWidth.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(maximizable)) __obj.updateDynamic("maximizable")(maximizable.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(minHeight)) __obj.updateDynamic("minHeight")(minHeight.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(minWidth)) __obj.updateDynamic("minWidth")(minWidth.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(minimizable)) __obj.updateDynamic("minimizable")(minimizable.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(modal)) __obj.updateDynamic("modal")(modal.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(movable)) __obj.updateDynamic("movable")(movable.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
-    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
-    if (!js.isUndefined(resizable)) __obj.updateDynamic("resizable")(resizable.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(simpleFullscreen)) __obj.updateDynamic("simpleFullscreen")(simpleFullscreen.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipTaskbar)) __obj.updateDynamic("skipTaskbar")(skipTaskbar.get.asInstanceOf[js.Any])
-    if (tabbingIdentifier != null) __obj.updateDynamic("tabbingIdentifier")(tabbingIdentifier.asInstanceOf[js.Any])
-    if (!js.isUndefined(thickFrame)) __obj.updateDynamic("thickFrame")(thickFrame.get.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (titleBarStyle != null) __obj.updateDynamic("titleBarStyle")(titleBarStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(transparent)) __obj.updateDynamic("transparent")(transparent.get.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(useContentSize)) __obj.updateDynamic("useContentSize")(useContentSize.get.asInstanceOf[js.Any])
-    if (vibrancy != null) __obj.updateDynamic("vibrancy")(vibrancy.asInstanceOf[js.Any])
-    if (webPreferences != null) __obj.updateDynamic("webPreferences")(webPreferences.asInstanceOf[js.Any])
-    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(x)) __obj.updateDynamic("x")(x.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(y)) __obj.updateDynamic("y")(y.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(zoomToPageWidth)) __obj.updateDynamic("zoomToPageWidth")(zoomToPageWidth.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BrowserWindowConstructorOptions]
   }
+  @scala.inline
+  implicit class BrowserWindowConstructorOptionsOps[Self <: BrowserWindowConstructorOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAcceptFirstMouse(value: Boolean): Self = this.set("acceptFirstMouse", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAcceptFirstMouse: Self = this.set("acceptFirstMouse", js.undefined)
+    @scala.inline
+    def setAlwaysOnTop(value: Boolean): Self = this.set("alwaysOnTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAlwaysOnTop: Self = this.set("alwaysOnTop", js.undefined)
+    @scala.inline
+    def setAutoHideMenuBar(value: Boolean): Self = this.set("autoHideMenuBar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAutoHideMenuBar: Self = this.set("autoHideMenuBar", js.undefined)
+    @scala.inline
+    def setBackgroundColor(value: String): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBackgroundColor: Self = this.set("backgroundColor", js.undefined)
+    @scala.inline
+    def setCenter(value: Boolean): Self = this.set("center", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCenter: Self = this.set("center", js.undefined)
+    @scala.inline
+    def setClosable(value: Boolean): Self = this.set("closable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClosable: Self = this.set("closable", js.undefined)
+    @scala.inline
+    def setDarkTheme(value: Boolean): Self = this.set("darkTheme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDarkTheme: Self = this.set("darkTheme", js.undefined)
+    @scala.inline
+    def setDisableAutoHideCursor(value: Boolean): Self = this.set("disableAutoHideCursor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisableAutoHideCursor: Self = this.set("disableAutoHideCursor", js.undefined)
+    @scala.inline
+    def setEnableLargerThanScreen(value: Boolean): Self = this.set("enableLargerThanScreen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEnableLargerThanScreen: Self = this.set("enableLargerThanScreen", js.undefined)
+    @scala.inline
+    def setFocusable(value: Boolean): Self = this.set("focusable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFocusable: Self = this.set("focusable", js.undefined)
+    @scala.inline
+    def setFrame(value: Boolean): Self = this.set("frame", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFrame: Self = this.set("frame", js.undefined)
+    @scala.inline
+    def setFullscreen(value: Boolean): Self = this.set("fullscreen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFullscreen: Self = this.set("fullscreen", js.undefined)
+    @scala.inline
+    def setFullscreenWindowTitle(value: Boolean): Self = this.set("fullscreenWindowTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFullscreenWindowTitle: Self = this.set("fullscreenWindowTitle", js.undefined)
+    @scala.inline
+    def setFullscreenable(value: Boolean): Self = this.set("fullscreenable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFullscreenable: Self = this.set("fullscreenable", js.undefined)
+    @scala.inline
+    def setHasShadow(value: Boolean): Self = this.set("hasShadow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHasShadow: Self = this.set("hasShadow", js.undefined)
+    @scala.inline
+    def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeight: Self = this.set("height", js.undefined)
+    @scala.inline
+    def setIcon(value: NativeImage_ | String): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIcon: Self = this.set("icon", js.undefined)
+    @scala.inline
+    def setKiosk(value: Boolean): Self = this.set("kiosk", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKiosk: Self = this.set("kiosk", js.undefined)
+    @scala.inline
+    def setMaxHeight(value: Double): Self = this.set("maxHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxHeight: Self = this.set("maxHeight", js.undefined)
+    @scala.inline
+    def setMaxWidth(value: Double): Self = this.set("maxWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxWidth: Self = this.set("maxWidth", js.undefined)
+    @scala.inline
+    def setMaximizable(value: Boolean): Self = this.set("maximizable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaximizable: Self = this.set("maximizable", js.undefined)
+    @scala.inline
+    def setMinHeight(value: Double): Self = this.set("minHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinHeight: Self = this.set("minHeight", js.undefined)
+    @scala.inline
+    def setMinWidth(value: Double): Self = this.set("minWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinWidth: Self = this.set("minWidth", js.undefined)
+    @scala.inline
+    def setMinimizable(value: Boolean): Self = this.set("minimizable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinimizable: Self = this.set("minimizable", js.undefined)
+    @scala.inline
+    def setModal(value: Boolean): Self = this.set("modal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteModal: Self = this.set("modal", js.undefined)
+    @scala.inline
+    def setMovable(value: Boolean): Self = this.set("movable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMovable: Self = this.set("movable", js.undefined)
+    @scala.inline
+    def setOpacity(value: Double): Self = this.set("opacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOpacity: Self = this.set("opacity", js.undefined)
+    @scala.inline
+    def setParent(value: BrowserWindow): Self = this.set("parent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteParent: Self = this.set("parent", js.undefined)
+    @scala.inline
+    def setResizable(value: Boolean): Self = this.set("resizable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteResizable: Self = this.set("resizable", js.undefined)
+    @scala.inline
+    def setShow(value: Boolean): Self = this.set("show", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShow: Self = this.set("show", js.undefined)
+    @scala.inline
+    def setSimpleFullscreen(value: Boolean): Self = this.set("simpleFullscreen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSimpleFullscreen: Self = this.set("simpleFullscreen", js.undefined)
+    @scala.inline
+    def setSkipTaskbar(value: Boolean): Self = this.set("skipTaskbar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSkipTaskbar: Self = this.set("skipTaskbar", js.undefined)
+    @scala.inline
+    def setTabbingIdentifier(value: String): Self = this.set("tabbingIdentifier", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTabbingIdentifier: Self = this.set("tabbingIdentifier", js.undefined)
+    @scala.inline
+    def setThickFrame(value: Boolean): Self = this.set("thickFrame", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteThickFrame: Self = this.set("thickFrame", js.undefined)
+    @scala.inline
+    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
+    @scala.inline
+    def setTitleBarStyle(value: default | hidden | hiddenInset | customButtonsOnHover): Self = this.set("titleBarStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitleBarStyle: Self = this.set("titleBarStyle", js.undefined)
+    @scala.inline
+    def setTransparent(value: Boolean): Self = this.set("transparent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTransparent: Self = this.set("transparent", js.undefined)
+    @scala.inline
+    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteType: Self = this.set("type", js.undefined)
+    @scala.inline
+    def setUseContentSize(value: Boolean): Self = this.set("useContentSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUseContentSize: Self = this.set("useContentSize", js.undefined)
+    @scala.inline
+    def setVibrancy(
+      value: `appearance-based` | light | dark | titlebar | selection | menu | popover | sidebar | `medium-light` | `ultra-dark`
+    ): Self = this.set("vibrancy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVibrancy: Self = this.set("vibrancy", js.undefined)
+    @scala.inline
+    def setWebPreferences(value: WebPreferences): Self = this.set("webPreferences", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebPreferences: Self = this.set("webPreferences", js.undefined)
+    @scala.inline
+    def setWidth(value: Double): Self = this.set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWidth: Self = this.set("width", js.undefined)
+    @scala.inline
+    def setX(value: Double): Self = this.set("x", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteX: Self = this.set("x", js.undefined)
+    @scala.inline
+    def setY(value: Double): Self = this.set("y", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteY: Self = this.set("y", js.undefined)
+    @scala.inline
+    def setZoomToPageWidth(value: Boolean): Self = this.set("zoomToPageWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteZoomToPageWidth: Self = this.set("zoomToPageWidth", js.undefined)
+  }
+  
 }
 

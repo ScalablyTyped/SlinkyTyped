@@ -21,10 +21,28 @@ trait SignatureHelpRetriggeredReason extends SignatureHelpTriggerReason {
 
 object SignatureHelpRetriggeredReason {
   @scala.inline
-  def apply(kind: retrigger, triggerCharacter: SignatureHelpRetriggerCharacter = null): SignatureHelpRetriggeredReason = {
+  def apply(kind: retrigger): SignatureHelpRetriggeredReason = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
-    if (triggerCharacter != null) __obj.updateDynamic("triggerCharacter")(triggerCharacter.asInstanceOf[js.Any])
     __obj.asInstanceOf[SignatureHelpRetriggeredReason]
   }
+  @scala.inline
+  implicit class SignatureHelpRetriggeredReasonOps[Self <: SignatureHelpRetriggeredReason] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setKind(value: retrigger): Self = this.set("kind", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTriggerCharacter(value: SignatureHelpRetriggerCharacter): Self = this.set("triggerCharacter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTriggerCharacter: Self = this.set("triggerCharacter", js.undefined)
+  }
+  
 }
 

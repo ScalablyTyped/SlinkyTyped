@@ -53,28 +53,58 @@ trait NotificationConstructorOptions extends js.Object {
 
 object NotificationConstructorOptions {
   @scala.inline
-  def apply(
-    body: String,
-    title: String,
-    actions: js.Array[NotificationAction] = null,
-    closeButtonText: String = null,
-    hasReply: js.UndefOr[Boolean] = js.undefined,
-    icon: String | NativeImage_ = null,
-    replyPlaceholder: String = null,
-    silent: js.UndefOr[Boolean] = js.undefined,
-    sound: String = null,
-    subtitle: String = null
-  ): NotificationConstructorOptions = {
+  def apply(body: String, title: String): NotificationConstructorOptions = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
-    if (actions != null) __obj.updateDynamic("actions")(actions.asInstanceOf[js.Any])
-    if (closeButtonText != null) __obj.updateDynamic("closeButtonText")(closeButtonText.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasReply)) __obj.updateDynamic("hasReply")(hasReply.get.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (replyPlaceholder != null) __obj.updateDynamic("replyPlaceholder")(replyPlaceholder.asInstanceOf[js.Any])
-    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
-    if (sound != null) __obj.updateDynamic("sound")(sound.asInstanceOf[js.Any])
-    if (subtitle != null) __obj.updateDynamic("subtitle")(subtitle.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotificationConstructorOptions]
   }
+  @scala.inline
+  implicit class NotificationConstructorOptionsOps[Self <: NotificationConstructorOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBody(value: String): Self = this.set("body", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setActions(value: js.Array[NotificationAction]): Self = this.set("actions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteActions: Self = this.set("actions", js.undefined)
+    @scala.inline
+    def setCloseButtonText(value: String): Self = this.set("closeButtonText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCloseButtonText: Self = this.set("closeButtonText", js.undefined)
+    @scala.inline
+    def setHasReply(value: Boolean): Self = this.set("hasReply", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHasReply: Self = this.set("hasReply", js.undefined)
+    @scala.inline
+    def setIcon(value: String | NativeImage_): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIcon: Self = this.set("icon", js.undefined)
+    @scala.inline
+    def setReplyPlaceholder(value: String): Self = this.set("replyPlaceholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteReplyPlaceholder: Self = this.set("replyPlaceholder", js.undefined)
+    @scala.inline
+    def setSilent(value: Boolean): Self = this.set("silent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSilent: Self = this.set("silent", js.undefined)
+    @scala.inline
+    def setSound(value: String): Self = this.set("sound", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSound: Self = this.set("sound", js.undefined)
+    @scala.inline
+    def setSubtitle(value: String): Self = this.set("subtitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSubtitle: Self = this.set("subtitle", js.undefined)
+  }
+  
 }
 

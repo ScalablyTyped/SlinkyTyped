@@ -77,5 +77,48 @@ object TransformationContext {
     val __obj = js.Dynamic.literal(enableEmitNotification = js.Any.fromFunction1(enableEmitNotification), enableSubstitution = js.Any.fromFunction1(enableSubstitution), endLexicalEnvironment = js.Any.fromFunction0(endLexicalEnvironment), getCompilerOptions = js.Any.fromFunction0(getCompilerOptions), hoistFunctionDeclaration = js.Any.fromFunction1(hoistFunctionDeclaration), hoistVariableDeclaration = js.Any.fromFunction1(hoistVariableDeclaration), isEmitNotificationEnabled = js.Any.fromFunction1(isEmitNotificationEnabled), isSubstitutionEnabled = js.Any.fromFunction1(isSubstitutionEnabled), onEmitNode = js.Any.fromFunction3(onEmitNode), onSubstituteNode = js.Any.fromFunction2(onSubstituteNode), readEmitHelpers = js.Any.fromFunction0(readEmitHelpers), requestEmitHelper = js.Any.fromFunction1(requestEmitHelper), resumeLexicalEnvironment = js.Any.fromFunction0(resumeLexicalEnvironment), startLexicalEnvironment = js.Any.fromFunction0(startLexicalEnvironment), suspendLexicalEnvironment = js.Any.fromFunction0(suspendLexicalEnvironment))
     __obj.asInstanceOf[TransformationContext]
   }
+  @scala.inline
+  implicit class TransformationContextOps[Self <: TransformationContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setEnableEmitNotification(value: SyntaxKind => Unit): Self = this.set("enableEmitNotification", js.Any.fromFunction1(value))
+    @scala.inline
+    def setEnableSubstitution(value: SyntaxKind => Unit): Self = this.set("enableSubstitution", js.Any.fromFunction1(value))
+    @scala.inline
+    def setEndLexicalEnvironment(value: () => js.UndefOr[js.Array[Statement]]): Self = this.set("endLexicalEnvironment", js.Any.fromFunction0(value))
+    @scala.inline
+    def setGetCompilerOptions(value: () => CompilerOptions): Self = this.set("getCompilerOptions", js.Any.fromFunction0(value))
+    @scala.inline
+    def setHoistFunctionDeclaration(value: FunctionDeclaration => Unit): Self = this.set("hoistFunctionDeclaration", js.Any.fromFunction1(value))
+    @scala.inline
+    def setHoistVariableDeclaration(value: Identifier => Unit): Self = this.set("hoistVariableDeclaration", js.Any.fromFunction1(value))
+    @scala.inline
+    def setIsEmitNotificationEnabled(value: Node => Boolean): Self = this.set("isEmitNotificationEnabled", js.Any.fromFunction1(value))
+    @scala.inline
+    def setIsSubstitutionEnabled(value: Node => Boolean): Self = this.set("isSubstitutionEnabled", js.Any.fromFunction1(value))
+    @scala.inline
+    def setOnEmitNode(value: (EmitHint, Node, js.Function2[/* hint */ EmitHint, /* node */ Node, Unit]) => Unit): Self = this.set("onEmitNode", js.Any.fromFunction3(value))
+    @scala.inline
+    def setOnSubstituteNode(value: (EmitHint, Node) => Node): Self = this.set("onSubstituteNode", js.Any.fromFunction2(value))
+    @scala.inline
+    def setReadEmitHelpers(value: () => js.UndefOr[js.Array[EmitHelper]]): Self = this.set("readEmitHelpers", js.Any.fromFunction0(value))
+    @scala.inline
+    def setRequestEmitHelper(value: EmitHelper => Unit): Self = this.set("requestEmitHelper", js.Any.fromFunction1(value))
+    @scala.inline
+    def setResumeLexicalEnvironment(value: () => Unit): Self = this.set("resumeLexicalEnvironment", js.Any.fromFunction0(value))
+    @scala.inline
+    def setStartLexicalEnvironment(value: () => Unit): Self = this.set("startLexicalEnvironment", js.Any.fromFunction0(value))
+    @scala.inline
+    def setSuspendLexicalEnvironment(value: () => Unit): Self = this.set("suspendLexicalEnvironment", js.Any.fromFunction0(value))
+  }
+  
 }
 

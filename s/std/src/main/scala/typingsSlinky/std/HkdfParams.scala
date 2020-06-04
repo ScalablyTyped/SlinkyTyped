@@ -21,5 +21,74 @@ object HkdfParams {
     val __obj = js.Dynamic.literal(hash = hash.asInstanceOf[js.Any], info = info.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], salt = salt.asInstanceOf[js.Any])
     __obj.asInstanceOf[HkdfParams]
   }
+  @scala.inline
+  implicit class HkdfParamsOps[Self <: HkdfParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setHashAlgorithm(value: org.scalajs.dom.crypto.Algorithm): Self = this.set("hash", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHash(value: HashAlgorithmIdentifier): Self = this.set("hash", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInfoUint8ClampedArray(value: js.typedarray.Uint8ClampedArray): Self = this.set("info", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInfoFloat32Array(value: js.typedarray.Float32Array): Self = this.set("info", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInfoInt32Array(value: js.typedarray.Int32Array): Self = this.set("info", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInfoDataView(value: js.typedarray.DataView): Self = this.set("info", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInfoUint32Array(value: js.typedarray.Uint32Array): Self = this.set("info", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInfoFloat64Array(value: js.typedarray.Float64Array): Self = this.set("info", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInfoUint16Array(value: js.typedarray.Uint16Array): Self = this.set("info", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInfoInt16Array(value: js.typedarray.Int16Array): Self = this.set("info", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInfoUint8Array(value: js.typedarray.Uint8Array): Self = this.set("info", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInfoArrayBuffer(value: js.typedarray.ArrayBuffer): Self = this.set("info", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInfo(
+      value: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
+    ): Self = this.set("info", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInfoInt8Array(value: js.typedarray.Int8Array): Self = this.set("info", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSaltFloat64Array(value: js.typedarray.Float64Array): Self = this.set("salt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSaltUint8Array(value: js.typedarray.Uint8Array): Self = this.set("salt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSaltDataView(value: js.typedarray.DataView): Self = this.set("salt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSaltUint32Array(value: js.typedarray.Uint32Array): Self = this.set("salt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSaltInt16Array(value: js.typedarray.Int16Array): Self = this.set("salt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSaltUint8ClampedArray(value: js.typedarray.Uint8ClampedArray): Self = this.set("salt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSaltUint16Array(value: js.typedarray.Uint16Array): Self = this.set("salt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSaltFloat32Array(value: js.typedarray.Float32Array): Self = this.set("salt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSaltInt32Array(value: js.typedarray.Int32Array): Self = this.set("salt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSaltInt8Array(value: js.typedarray.Int8Array): Self = this.set("salt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSaltArrayBuffer(value: js.typedarray.ArrayBuffer): Self = this.set("salt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSalt(
+      value: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
+    ): Self = this.set("salt", value.asInstanceOf[js.Any])
+  }
+  
 }
 

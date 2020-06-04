@@ -84,5 +84,34 @@ object CrashReporter {
     val __obj = js.Dynamic.literal(addExtraParameter = js.Any.fromFunction2(addExtraParameter), getLastCrashReport = js.Any.fromFunction0(getLastCrashReport), getParameters = js.Any.fromFunction0(getParameters), getUploadToServer = js.Any.fromFunction0(getUploadToServer), getUploadedReports = js.Any.fromFunction0(getUploadedReports), removeExtraParameter = js.Any.fromFunction1(removeExtraParameter), setUploadToServer = js.Any.fromFunction1(setUploadToServer), start = js.Any.fromFunction1(start))
     __obj.asInstanceOf[CrashReporter]
   }
+  @scala.inline
+  implicit class CrashReporterOps[Self <: CrashReporter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAddExtraParameter(value: (String, String) => Unit): Self = this.set("addExtraParameter", js.Any.fromFunction2(value))
+    @scala.inline
+    def setGetLastCrashReport(value: () => CrashReport): Self = this.set("getLastCrashReport", js.Any.fromFunction0(value))
+    @scala.inline
+    def setGetParameters(value: () => Unit): Self = this.set("getParameters", js.Any.fromFunction0(value))
+    @scala.inline
+    def setGetUploadToServer(value: () => Boolean): Self = this.set("getUploadToServer", js.Any.fromFunction0(value))
+    @scala.inline
+    def setGetUploadedReports(value: () => js.Array[CrashReport]): Self = this.set("getUploadedReports", js.Any.fromFunction0(value))
+    @scala.inline
+    def setRemoveExtraParameter(value: String => Unit): Self = this.set("removeExtraParameter", js.Any.fromFunction1(value))
+    @scala.inline
+    def setSetUploadToServer(value: Boolean => Unit): Self = this.set("setUploadToServer", js.Any.fromFunction1(value))
+    @scala.inline
+    def setStart(value: CrashReporterStartOptions => Unit): Self = this.set("start", js.Any.fromFunction1(value))
+  }
+  
 }
 

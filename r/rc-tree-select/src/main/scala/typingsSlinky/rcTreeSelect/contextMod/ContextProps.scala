@@ -1,6 +1,7 @@
 package typingsSlinky.rcTreeSelect.contextMod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.rcTreeSelect.interfaceMod.Key
 import typingsSlinky.rcTreeSelect.interfaceMod.LegacyDataNode
 import scala.scalajs.js
@@ -43,12 +44,63 @@ object ContextProps {
     treeLine: Boolean,
     treeLoadedKeys: js.Array[Key],
     treeMotion: js.Any,
-    treeNodeFilterProp: String,
-    checkable: Boolean | TagMod[Any] = null
+    treeNodeFilterProp: String
   ): ContextProps = {
     val __obj = js.Dynamic.literal(checkedKeys = checkedKeys.asInstanceOf[js.Any], halfCheckedKeys = halfCheckedKeys.asInstanceOf[js.Any], loadData = js.Any.fromFunction1(loadData), onTreeExpand = js.Any.fromFunction1(onTreeExpand), onTreeLoad = js.Any.fromFunction1(onTreeLoad), showTreeIcon = showTreeIcon.asInstanceOf[js.Any], switcherIcon = switcherIcon.asInstanceOf[js.Any], treeDefaultExpandAll = treeDefaultExpandAll.asInstanceOf[js.Any], treeDefaultExpandedKeys = treeDefaultExpandedKeys.asInstanceOf[js.Any], treeExpandedKeys = treeExpandedKeys.asInstanceOf[js.Any], treeIcon = treeIcon.asInstanceOf[js.Any], treeLine = treeLine.asInstanceOf[js.Any], treeLoadedKeys = treeLoadedKeys.asInstanceOf[js.Any], treeMotion = treeMotion.asInstanceOf[js.Any], treeNodeFilterProp = treeNodeFilterProp.asInstanceOf[js.Any])
-    if (checkable != null) __obj.updateDynamic("checkable")(checkable.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContextProps]
   }
+  @scala.inline
+  implicit class ContextPropsOps[Self <: ContextProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCheckedKeys(value: js.Array[Key]): Self = this.set("checkedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHalfCheckedKeys(value: js.Array[Key]): Self = this.set("halfCheckedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLoadData(value: LegacyDataNode => js.Promise[_]): Self = this.set("loadData", js.Any.fromFunction1(value))
+    @scala.inline
+    def setOnTreeExpand(value: js.Array[Key] => Unit): Self = this.set("onTreeExpand", js.Any.fromFunction1(value))
+    @scala.inline
+    def setOnTreeLoad(value: js.Array[Key] => Unit): Self = this.set("onTreeLoad", js.Any.fromFunction1(value))
+    @scala.inline
+    def setShowTreeIcon(value: Boolean): Self = this.set("showTreeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSwitcherIcon(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconType */ js.Any
+    ): Self = this.set("switcherIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTreeDefaultExpandAll(value: Boolean): Self = this.set("treeDefaultExpandAll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTreeDefaultExpandedKeys(value: js.Array[Key]): Self = this.set("treeDefaultExpandedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTreeExpandedKeys(value: js.Array[Key]): Self = this.set("treeExpandedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTreeIcon(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconType */ js.Any
+    ): Self = this.set("treeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTreeLine(value: Boolean): Self = this.set("treeLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTreeLoadedKeys(value: js.Array[Key]): Self = this.set("treeLoadedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTreeMotion(value: js.Any): Self = this.set("treeMotion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTreeNodeFilterProp(value: String): Self = this.set("treeNodeFilterProp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCheckableReactElement(value: ReactElement): Self = this.set("checkable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCheckable(value: Boolean | TagMod[Any]): Self = this.set("checkable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCheckable: Self = this.set("checkable", js.undefined)
+  }
+  
 }
 

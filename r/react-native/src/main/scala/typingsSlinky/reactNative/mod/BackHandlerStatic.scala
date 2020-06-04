@@ -20,5 +20,24 @@ object BackHandlerStatic {
     val __obj = js.Dynamic.literal(addEventListener = js.Any.fromFunction2(addEventListener), exitApp = js.Any.fromFunction0(exitApp), removeEventListener = js.Any.fromFunction2(removeEventListener))
     __obj.asInstanceOf[BackHandlerStatic]
   }
+  @scala.inline
+  implicit class BackHandlerStaticOps[Self <: BackHandlerStatic] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAddEventListener(value: (BackPressEventName, js.Function0[js.UndefOr[Boolean | Null]]) => NativeEventSubscription): Self = this.set("addEventListener", js.Any.fromFunction2(value))
+    @scala.inline
+    def setExitApp(value: () => Unit): Self = this.set("exitApp", js.Any.fromFunction0(value))
+    @scala.inline
+    def setRemoveEventListener(value: (BackPressEventName, js.Function0[js.UndefOr[Boolean | Null]]) => Unit): Self = this.set("removeEventListener", js.Any.fromFunction2(value))
+  }
+  
 }
 

@@ -1,6 +1,7 @@
 package typingsSlinky.rcTreeSelect.treeSelectMod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.rcTreeSelect.interfaceMod.ChangeEventExtra
 import typingsSlinky.rcTreeSelect.interfaceMod.DataNode
 import typingsSlinky.rcTreeSelect.interfaceMod.Key
@@ -73,90 +74,198 @@ import scala.scalajs.js.annotation._
 
 object TreeSelectProps {
   @scala.inline
-  def apply[ValueType](
-    autoClearSearchValue: js.UndefOr[Boolean] = js.undefined,
-    children: TagMod[Any] = null,
-    defaultOpen: js.UndefOr[Boolean] = js.undefined,
-    defaultValue: ValueType = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    dropdownPopupAlign: js.Any = null,
-    filterTreeNode: Boolean | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify FilterFunc<LegacyDataNode> */ js.Any) = null,
-    inputValue: String = null,
-    loadData: /* dataNode */ LegacyDataNode => js.Promise[_] = null,
-    maxTagCount: js.UndefOr[Double] = js.undefined,
-    maxTagPlaceholder: /* omittedValues */ js.Array[LabelValueType] => TagMod[Any] = null,
-    maxTagTextLength: js.UndefOr[Double] = js.undefined,
-    multiple: js.UndefOr[Boolean] = js.undefined,
-    onChange: (/* value */ ValueType, /* labelList */ js.Array[TagMod[Any]], /* extra */ ChangeEventExtra) => Unit = null,
-    onSearch: /* value */ String => Unit = null,
-    onTreeExpand: /* expandedKeys */ js.Array[Key] => Unit = null,
-    onTreeLoad: /* loadedKeys */ js.Array[Key] => Unit = null,
-    open: js.UndefOr[Boolean] = js.undefined,
-    placeholder: TagMod[Any] = null,
-    searchPlaceholder: TagMod[Any] = null,
-    searchValue: String = null,
-    showArrow: js.UndefOr[Boolean] = js.undefined,
-    showCheckedStrategy: CheckedStrategy = null,
-    showSearch: js.UndefOr[Boolean] = js.undefined,
-    showTreeIcon: js.UndefOr[Boolean] = js.undefined,
-    switcherIcon: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconType */ js.Any = null,
-    treeCheckStrictly: js.UndefOr[Boolean] = js.undefined,
-    treeCheckable: Boolean | TagMod[Any] = null,
-    treeData: js.Array[DataNode] = null,
-    treeDataSimpleMode: Boolean | SimpleModeConfig = null,
-    treeDefaultExpandAll: js.UndefOr[Boolean] = js.undefined,
-    treeDefaultExpandedKeys: js.Array[Key] = null,
-    treeExpandedKeys: js.Array[Key] = null,
-    treeIcon: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconType */ js.Any = null,
-    treeLine: js.UndefOr[Boolean] = js.undefined,
-    treeLoadedKeys: js.Array[Key] = null,
-    treeMotion: js.Any = null,
-    treeNodeFilterProp: String = null,
-    treeNodeLabelProp: String = null,
-    value: ValueType = null
-  ): TreeSelectProps[ValueType] = {
+  def apply[ValueType](): TreeSelectProps[ValueType] = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoClearSearchValue)) __obj.updateDynamic("autoClearSearchValue")(autoClearSearchValue.get.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultOpen)) __obj.updateDynamic("defaultOpen")(defaultOpen.get.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (dropdownPopupAlign != null) __obj.updateDynamic("dropdownPopupAlign")(dropdownPopupAlign.asInstanceOf[js.Any])
-    if (filterTreeNode != null) __obj.updateDynamic("filterTreeNode")(filterTreeNode.asInstanceOf[js.Any])
-    if (inputValue != null) __obj.updateDynamic("inputValue")(inputValue.asInstanceOf[js.Any])
-    if (loadData != null) __obj.updateDynamic("loadData")(js.Any.fromFunction1(loadData))
-    if (!js.isUndefined(maxTagCount)) __obj.updateDynamic("maxTagCount")(maxTagCount.get.asInstanceOf[js.Any])
-    if (maxTagPlaceholder != null) __obj.updateDynamic("maxTagPlaceholder")(js.Any.fromFunction1(maxTagPlaceholder))
-    if (!js.isUndefined(maxTagTextLength)) __obj.updateDynamic("maxTagTextLength")(maxTagTextLength.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(multiple)) __obj.updateDynamic("multiple")(multiple.get.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction3(onChange))
-    if (onSearch != null) __obj.updateDynamic("onSearch")(js.Any.fromFunction1(onSearch))
-    if (onTreeExpand != null) __obj.updateDynamic("onTreeExpand")(js.Any.fromFunction1(onTreeExpand))
-    if (onTreeLoad != null) __obj.updateDynamic("onTreeLoad")(js.Any.fromFunction1(onTreeLoad))
-    if (!js.isUndefined(open)) __obj.updateDynamic("open")(open.get.asInstanceOf[js.Any])
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
-    if (searchPlaceholder != null) __obj.updateDynamic("searchPlaceholder")(searchPlaceholder.asInstanceOf[js.Any])
-    if (searchValue != null) __obj.updateDynamic("searchValue")(searchValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(showArrow)) __obj.updateDynamic("showArrow")(showArrow.get.asInstanceOf[js.Any])
-    if (showCheckedStrategy != null) __obj.updateDynamic("showCheckedStrategy")(showCheckedStrategy.asInstanceOf[js.Any])
-    if (!js.isUndefined(showSearch)) __obj.updateDynamic("showSearch")(showSearch.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(showTreeIcon)) __obj.updateDynamic("showTreeIcon")(showTreeIcon.get.asInstanceOf[js.Any])
-    if (switcherIcon != null) __obj.updateDynamic("switcherIcon")(switcherIcon.asInstanceOf[js.Any])
-    if (!js.isUndefined(treeCheckStrictly)) __obj.updateDynamic("treeCheckStrictly")(treeCheckStrictly.get.asInstanceOf[js.Any])
-    if (treeCheckable != null) __obj.updateDynamic("treeCheckable")(treeCheckable.asInstanceOf[js.Any])
-    if (treeData != null) __obj.updateDynamic("treeData")(treeData.asInstanceOf[js.Any])
-    if (treeDataSimpleMode != null) __obj.updateDynamic("treeDataSimpleMode")(treeDataSimpleMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(treeDefaultExpandAll)) __obj.updateDynamic("treeDefaultExpandAll")(treeDefaultExpandAll.get.asInstanceOf[js.Any])
-    if (treeDefaultExpandedKeys != null) __obj.updateDynamic("treeDefaultExpandedKeys")(treeDefaultExpandedKeys.asInstanceOf[js.Any])
-    if (treeExpandedKeys != null) __obj.updateDynamic("treeExpandedKeys")(treeExpandedKeys.asInstanceOf[js.Any])
-    if (treeIcon != null) __obj.updateDynamic("treeIcon")(treeIcon.asInstanceOf[js.Any])
-    if (!js.isUndefined(treeLine)) __obj.updateDynamic("treeLine")(treeLine.get.asInstanceOf[js.Any])
-    if (treeLoadedKeys != null) __obj.updateDynamic("treeLoadedKeys")(treeLoadedKeys.asInstanceOf[js.Any])
-    if (treeMotion != null) __obj.updateDynamic("treeMotion")(treeMotion.asInstanceOf[js.Any])
-    if (treeNodeFilterProp != null) __obj.updateDynamic("treeNodeFilterProp")(treeNodeFilterProp.asInstanceOf[js.Any])
-    if (treeNodeLabelProp != null) __obj.updateDynamic("treeNodeLabelProp")(treeNodeLabelProp.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[TreeSelectProps[ValueType]]
   }
+  @scala.inline
+  implicit class TreeSelectPropsOps[Self <: TreeSelectProps[_], ValueType] (val x: Self with TreeSelectProps[ValueType]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAutoClearSearchValue(value: Boolean): Self = this.set("autoClearSearchValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAutoClearSearchValue: Self = this.set("autoClearSearchValue", js.undefined)
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setDefaultOpen(value: Boolean): Self = this.set("defaultOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultOpen: Self = this.set("defaultOpen", js.undefined)
+    @scala.inline
+    def setDefaultValue(value: ValueType): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setDropdownPopupAlign(value: js.Any): Self = this.set("dropdownPopupAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDropdownPopupAlign: Self = this.set("dropdownPopupAlign", js.undefined)
+    @scala.inline
+    def setFilterTreeNode(
+      value: Boolean | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify FilterFunc<LegacyDataNode> */ js.Any)
+    ): Self = this.set("filterTreeNode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFilterTreeNode: Self = this.set("filterTreeNode", js.undefined)
+    @scala.inline
+    def setInputValue(value: String): Self = this.set("inputValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInputValue: Self = this.set("inputValue", js.undefined)
+    @scala.inline
+    def setLoadData(value: /* dataNode */ LegacyDataNode => js.Promise[_]): Self = this.set("loadData", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteLoadData: Self = this.set("loadData", js.undefined)
+    @scala.inline
+    def setMaxTagCount(value: Double): Self = this.set("maxTagCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxTagCount: Self = this.set("maxTagCount", js.undefined)
+    @scala.inline
+    def setMaxTagPlaceholder(value: /* omittedValues */ js.Array[LabelValueType] => TagMod[Any]): Self = this.set("maxTagPlaceholder", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteMaxTagPlaceholder: Self = this.set("maxTagPlaceholder", js.undefined)
+    @scala.inline
+    def setMaxTagTextLength(value: Double): Self = this.set("maxTagTextLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxTagTextLength: Self = this.set("maxTagTextLength", js.undefined)
+    @scala.inline
+    def setMultiple(value: Boolean): Self = this.set("multiple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMultiple: Self = this.set("multiple", js.undefined)
+    @scala.inline
+    def setOnChange(
+      value: (/* value */ ValueType, /* labelList */ js.Array[TagMod[Any]], /* extra */ ChangeEventExtra) => Unit
+    ): Self = this.set("onChange", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteOnChange: Self = this.set("onChange", js.undefined)
+    @scala.inline
+    def setOnSearch(value: /* value */ String => Unit): Self = this.set("onSearch", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnSearch: Self = this.set("onSearch", js.undefined)
+    @scala.inline
+    def setOnTreeExpand(value: /* expandedKeys */ js.Array[Key] => Unit): Self = this.set("onTreeExpand", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnTreeExpand: Self = this.set("onTreeExpand", js.undefined)
+    @scala.inline
+    def setOnTreeLoad(value: /* loadedKeys */ js.Array[Key] => Unit): Self = this.set("onTreeLoad", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnTreeLoad: Self = this.set("onTreeLoad", js.undefined)
+    @scala.inline
+    def setOpen(value: Boolean): Self = this.set("open", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOpen: Self = this.set("open", js.undefined)
+    @scala.inline
+    def setPlaceholderReactElement(value: ReactElement): Self = this.set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPlaceholder(value: TagMod[Any]): Self = this.set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePlaceholder: Self = this.set("placeholder", js.undefined)
+    @scala.inline
+    def setSearchPlaceholderReactElement(value: ReactElement): Self = this.set("searchPlaceholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSearchPlaceholder(value: TagMod[Any]): Self = this.set("searchPlaceholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSearchPlaceholder: Self = this.set("searchPlaceholder", js.undefined)
+    @scala.inline
+    def setSearchValue(value: String): Self = this.set("searchValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSearchValue: Self = this.set("searchValue", js.undefined)
+    @scala.inline
+    def setShowArrow(value: Boolean): Self = this.set("showArrow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowArrow: Self = this.set("showArrow", js.undefined)
+    @scala.inline
+    def setShowCheckedStrategy(value: CheckedStrategy): Self = this.set("showCheckedStrategy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowCheckedStrategy: Self = this.set("showCheckedStrategy", js.undefined)
+    @scala.inline
+    def setShowSearch(value: Boolean): Self = this.set("showSearch", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowSearch: Self = this.set("showSearch", js.undefined)
+    @scala.inline
+    def setShowTreeIcon(value: Boolean): Self = this.set("showTreeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowTreeIcon: Self = this.set("showTreeIcon", js.undefined)
+    @scala.inline
+    def setSwitcherIcon(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconType */ js.Any
+    ): Self = this.set("switcherIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSwitcherIcon: Self = this.set("switcherIcon", js.undefined)
+    @scala.inline
+    def setTreeCheckStrictly(value: Boolean): Self = this.set("treeCheckStrictly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTreeCheckStrictly: Self = this.set("treeCheckStrictly", js.undefined)
+    @scala.inline
+    def setTreeCheckableReactElement(value: ReactElement): Self = this.set("treeCheckable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTreeCheckable(value: Boolean | TagMod[Any]): Self = this.set("treeCheckable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTreeCheckable: Self = this.set("treeCheckable", js.undefined)
+    @scala.inline
+    def setTreeData(value: js.Array[DataNode]): Self = this.set("treeData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTreeData: Self = this.set("treeData", js.undefined)
+    @scala.inline
+    def setTreeDataSimpleMode(value: Boolean | SimpleModeConfig): Self = this.set("treeDataSimpleMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTreeDataSimpleMode: Self = this.set("treeDataSimpleMode", js.undefined)
+    @scala.inline
+    def setTreeDefaultExpandAll(value: Boolean): Self = this.set("treeDefaultExpandAll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTreeDefaultExpandAll: Self = this.set("treeDefaultExpandAll", js.undefined)
+    @scala.inline
+    def setTreeDefaultExpandedKeys(value: js.Array[Key]): Self = this.set("treeDefaultExpandedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTreeDefaultExpandedKeys: Self = this.set("treeDefaultExpandedKeys", js.undefined)
+    @scala.inline
+    def setTreeExpandedKeys(value: js.Array[Key]): Self = this.set("treeExpandedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTreeExpandedKeys: Self = this.set("treeExpandedKeys", js.undefined)
+    @scala.inline
+    def setTreeIcon(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconType */ js.Any
+    ): Self = this.set("treeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTreeIcon: Self = this.set("treeIcon", js.undefined)
+    @scala.inline
+    def setTreeLine(value: Boolean): Self = this.set("treeLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTreeLine: Self = this.set("treeLine", js.undefined)
+    @scala.inline
+    def setTreeLoadedKeys(value: js.Array[Key]): Self = this.set("treeLoadedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTreeLoadedKeys: Self = this.set("treeLoadedKeys", js.undefined)
+    @scala.inline
+    def setTreeMotion(value: js.Any): Self = this.set("treeMotion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTreeMotion: Self = this.set("treeMotion", js.undefined)
+    @scala.inline
+    def setTreeNodeFilterProp(value: String): Self = this.set("treeNodeFilterProp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTreeNodeFilterProp: Self = this.set("treeNodeFilterProp", js.undefined)
+    @scala.inline
+    def setTreeNodeLabelProp(value: String): Self = this.set("treeNodeLabelProp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTreeNodeLabelProp: Self = this.set("treeNodeLabelProp", js.undefined)
+    @scala.inline
+    def setValue(value: ValueType): Self = this.set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
+  }
+  
 }
 

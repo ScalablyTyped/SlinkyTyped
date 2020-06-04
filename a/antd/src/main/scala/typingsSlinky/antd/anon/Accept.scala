@@ -37,5 +37,38 @@ object Accept {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Accept]
   }
+  @scala.inline
+  implicit class AcceptOps[Self <: Accept] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAccept(value: String): Self = this.set("accept", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAction(value: String): Self = this.set("action", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBeforeUpload(value: () => Boolean): Self = this.set("beforeUpload", js.Any.fromFunction0(value))
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setListType(value: UploadListType): Self = this.set("listType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMultiple(value: Boolean): Self = this.set("multiple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setShowUploadList(value: Boolean): Self = this.set("showUploadList", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSupportServerRender(value: Boolean): Self = this.set("supportServerRender", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setType(value: UploadType): Self = this.set("type", value.asInstanceOf[js.Any])
+  }
+  
 }
 

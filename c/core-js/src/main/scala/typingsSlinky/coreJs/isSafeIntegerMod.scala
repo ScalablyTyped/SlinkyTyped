@@ -1,12 +1,12 @@
 package typingsSlinky.coreJs
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("core-js/fn/number/is-safe-integer", JSImport.Namespace)
 @js.native
-object isSafeIntegerMod extends js.Object {
-  def apply(number: Double): Boolean = js.native
-}
+object isSafeIntegerMod
+  extends TopLevel[js.Function1[/* number */ Double, Boolean]]
 

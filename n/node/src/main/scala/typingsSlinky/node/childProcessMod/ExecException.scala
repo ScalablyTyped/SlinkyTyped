@@ -15,22 +15,38 @@ trait ExecException extends Error {
 
 object ExecException {
   @scala.inline
-  def apply(
-    message: String,
-    name: String,
-    cmd: String = null,
-    code: js.UndefOr[Double] = js.undefined,
-    killed: js.UndefOr[Boolean] = js.undefined,
-    signal: Signals = null,
-    stack: String = null
-  ): ExecException = {
+  def apply(message: String, name: String): ExecException = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    if (cmd != null) __obj.updateDynamic("cmd")(cmd.asInstanceOf[js.Any])
-    if (!js.isUndefined(code)) __obj.updateDynamic("code")(code.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(killed)) __obj.updateDynamic("killed")(killed.get.asInstanceOf[js.Any])
-    if (signal != null) __obj.updateDynamic("signal")(signal.asInstanceOf[js.Any])
-    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecException]
   }
+  @scala.inline
+  implicit class ExecExceptionOps[Self <: ExecException] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCmd(value: String): Self = this.set("cmd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCmd: Self = this.set("cmd", js.undefined)
+    @scala.inline
+    def setCode(value: Double): Self = this.set("code", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCode: Self = this.set("code", js.undefined)
+    @scala.inline
+    def setKilled(value: Boolean): Self = this.set("killed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKilled: Self = this.set("killed", js.undefined)
+    @scala.inline
+    def setSignal(value: Signals): Self = this.set("signal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSignal: Self = this.set("signal", js.undefined)
+  }
+  
 }
 

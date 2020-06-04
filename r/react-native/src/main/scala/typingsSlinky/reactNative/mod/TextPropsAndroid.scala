@@ -25,16 +25,34 @@ trait TextPropsAndroid extends js.Object {
 
 object TextPropsAndroid {
   @scala.inline
-  def apply(
-    selectable: js.UndefOr[Boolean] = js.undefined,
-    selectionColor: String = null,
-    textBreakStrategy: simple | highQuality | balanced = null
-  ): TextPropsAndroid = {
+  def apply(): TextPropsAndroid = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(selectable)) __obj.updateDynamic("selectable")(selectable.get.asInstanceOf[js.Any])
-    if (selectionColor != null) __obj.updateDynamic("selectionColor")(selectionColor.asInstanceOf[js.Any])
-    if (textBreakStrategy != null) __obj.updateDynamic("textBreakStrategy")(textBreakStrategy.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextPropsAndroid]
   }
+  @scala.inline
+  implicit class TextPropsAndroidOps[Self <: TextPropsAndroid] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setSelectable(value: Boolean): Self = this.set("selectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelectable: Self = this.set("selectable", js.undefined)
+    @scala.inline
+    def setSelectionColor(value: String): Self = this.set("selectionColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelectionColor: Self = this.set("selectionColor", js.undefined)
+    @scala.inline
+    def setTextBreakStrategy(value: simple | highQuality | balanced): Self = this.set("textBreakStrategy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTextBreakStrategy: Self = this.set("textBreakStrategy", js.undefined)
+  }
+  
 }
 

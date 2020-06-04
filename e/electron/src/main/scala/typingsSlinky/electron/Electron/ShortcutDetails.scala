@@ -40,23 +40,48 @@ trait ShortcutDetails extends js.Object {
 
 object ShortcutDetails {
   @scala.inline
-  def apply(
-    target: String,
-    appUserModelId: String = null,
-    args: String = null,
-    cwd: String = null,
-    description: String = null,
-    icon: String = null,
-    iconIndex: js.UndefOr[Double] = js.undefined
-  ): ShortcutDetails = {
+  def apply(target: String): ShortcutDetails = {
     val __obj = js.Dynamic.literal(target = target.asInstanceOf[js.Any])
-    if (appUserModelId != null) __obj.updateDynamic("appUserModelId")(appUserModelId.asInstanceOf[js.Any])
-    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
-    if (cwd != null) __obj.updateDynamic("cwd")(cwd.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (!js.isUndefined(iconIndex)) __obj.updateDynamic("iconIndex")(iconIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShortcutDetails]
   }
+  @scala.inline
+  implicit class ShortcutDetailsOps[Self <: ShortcutDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setTarget(value: String): Self = this.set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAppUserModelId(value: String): Self = this.set("appUserModelId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAppUserModelId: Self = this.set("appUserModelId", js.undefined)
+    @scala.inline
+    def setArgs(value: String): Self = this.set("args", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteArgs: Self = this.set("args", js.undefined)
+    @scala.inline
+    def setCwd(value: String): Self = this.set("cwd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCwd: Self = this.set("cwd", js.undefined)
+    @scala.inline
+    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDescription: Self = this.set("description", js.undefined)
+    @scala.inline
+    def setIcon(value: String): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIcon: Self = this.set("icon", js.undefined)
+    @scala.inline
+    def setIconIndex(value: Double): Self = this.set("iconIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIconIndex: Self = this.set("iconIndex", js.undefined)
+  }
+  
 }
 

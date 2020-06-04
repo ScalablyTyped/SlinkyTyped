@@ -1,6 +1,7 @@
 package typingsSlinky.semanticUiReact.segmentGroupMod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.segmentSegmentMod.SegmentSizeProp
 import scala.scalajs.js
@@ -32,30 +33,66 @@ trait StrictSegmentGroupProps extends js.Object {
 
 object StrictSegmentGroupProps {
   @scala.inline
-  def apply(
-    as: js.Any = null,
-    children: TagMod[Any] = null,
-    className: String = null,
-    compact: js.UndefOr[Boolean] = js.undefined,
-    content: SemanticShorthandContent = null,
-    horizontal: js.UndefOr[Boolean] = js.undefined,
-    piled: js.UndefOr[Boolean] = js.undefined,
-    raised: js.UndefOr[Boolean] = js.undefined,
-    size: SegmentSizeProp = null,
-    stacked: js.UndefOr[Boolean] = js.undefined
-  ): StrictSegmentGroupProps = {
+  def apply(): StrictSegmentGroupProps = {
     val __obj = js.Dynamic.literal()
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.get.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (!js.isUndefined(horizontal)) __obj.updateDynamic("horizontal")(horizontal.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(piled)) __obj.updateDynamic("piled")(piled.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(raised)) __obj.updateDynamic("raised")(raised.get.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (!js.isUndefined(stacked)) __obj.updateDynamic("stacked")(stacked.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictSegmentGroupProps]
   }
+  @scala.inline
+  implicit class StrictSegmentGroupPropsOps[Self <: StrictSegmentGroupProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAs(value: js.Any): Self = this.set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAs: Self = this.set("as", js.undefined)
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setCompact(value: Boolean): Self = this.set("compact", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCompact: Self = this.set("compact", js.undefined)
+    @scala.inline
+    def setContentReactElement(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContent(value: SemanticShorthandContent): Self = this.set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContent: Self = this.set("content", js.undefined)
+    @scala.inline
+    def setHorizontal(value: Boolean): Self = this.set("horizontal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHorizontal: Self = this.set("horizontal", js.undefined)
+    @scala.inline
+    def setPiled(value: Boolean): Self = this.set("piled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePiled: Self = this.set("piled", js.undefined)
+    @scala.inline
+    def setRaised(value: Boolean): Self = this.set("raised", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRaised: Self = this.set("raised", js.undefined)
+    @scala.inline
+    def setSize(value: SegmentSizeProp): Self = this.set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
+    @scala.inline
+    def setStacked(value: Boolean): Self = this.set("stacked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStacked: Self = this.set("stacked", js.undefined)
+  }
+  
 }
 

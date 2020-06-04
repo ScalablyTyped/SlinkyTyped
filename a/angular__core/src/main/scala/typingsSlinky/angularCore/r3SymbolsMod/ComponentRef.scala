@@ -65,5 +65,34 @@ object ComponentRef {
     val __obj = js.Dynamic.literal(changeDetectorRef = changeDetectorRef.asInstanceOf[js.Any], componentType = componentType.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), hostView = hostView.asInstanceOf[js.Any], injector = injector.asInstanceOf[js.Any], instance = instance.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], onDestroy = js.Any.fromFunction1(onDestroy))
     __obj.asInstanceOf[ComponentRef[C]]
   }
+  @scala.inline
+  implicit class ComponentRefOps[Self <: ComponentRef[_], C] (val x: Self with ComponentRef[C]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setChangeDetectorRef(value: ChangeDetectorRef): Self = this.set("changeDetectorRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setComponentType(value: Type[_]): Self = this.set("componentType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDestroy(value: () => Unit): Self = this.set("destroy", js.Any.fromFunction0(value))
+    @scala.inline
+    def setHostView(value: ViewRef): Self = this.set("hostView", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInjector(value: Injector): Self = this.set("injector", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInstance(value: C): Self = this.set("instance", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLocation(value: ElementRef[_]): Self = this.set("location", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOnDestroy(value: js.Function => Unit): Self = this.set("onDestroy", js.Any.fromFunction1(value))
+  }
+  
 }
 

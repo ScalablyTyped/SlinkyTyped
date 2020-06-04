@@ -16,18 +16,33 @@ object RTCTrackEventInit {
   def apply(
     receiver: RTCRtpReceiver,
     track: org.scalajs.dom.experimental.mediastream.MediaStreamTrack,
-    transceiver: RTCRtpTransceiver,
-    bubbles: js.UndefOr[scala.Boolean] = js.undefined,
-    cancelable: js.UndefOr[scala.Boolean] = js.undefined,
-    composed: js.UndefOr[scala.Boolean] = js.undefined,
-    streams: js.Array[org.scalajs.dom.experimental.mediastream.MediaStream] = null
+    transceiver: RTCRtpTransceiver
   ): RTCTrackEventInit = {
     val __obj = js.Dynamic.literal(receiver = receiver.asInstanceOf[js.Any], track = track.asInstanceOf[js.Any], transceiver = transceiver.asInstanceOf[js.Any])
-    if (!js.isUndefined(bubbles)) __obj.updateDynamic("bubbles")(bubbles.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(cancelable)) __obj.updateDynamic("cancelable")(cancelable.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(composed)) __obj.updateDynamic("composed")(composed.get.asInstanceOf[js.Any])
-    if (streams != null) __obj.updateDynamic("streams")(streams.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCTrackEventInit]
   }
+  @scala.inline
+  implicit class RTCTrackEventInitOps[Self <: RTCTrackEventInit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setReceiver(value: RTCRtpReceiver): Self = this.set("receiver", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTrack(value: org.scalajs.dom.experimental.mediastream.MediaStreamTrack): Self = this.set("track", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTransceiver(value: RTCRtpTransceiver): Self = this.set("transceiver", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStreams(value: js.Array[org.scalajs.dom.experimental.mediastream.MediaStream]): Self = this.set("streams", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStreams: Self = this.set("streams", js.undefined)
+  }
+  
 }
 

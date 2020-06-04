@@ -17,18 +17,44 @@ trait TransitionConfig extends js.Object {
 
 object TransitionConfig {
   @scala.inline
-  def apply(
-    screenInterpolator: /* props */ SceneInterpolatorProps => js.Any,
-    transitionSpec: TimingFunction,
-    containerStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
-    containerStyleDark: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
-    containerStyleLight: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined
-  ): TransitionConfig = {
+  def apply(screenInterpolator: /* props */ SceneInterpolatorProps => js.Any, transitionSpec: TimingFunction): TransitionConfig = {
     val __obj = js.Dynamic.literal(screenInterpolator = js.Any.fromFunction1(screenInterpolator), transitionSpec = transitionSpec.asInstanceOf[js.Any])
-    if (!js.isUndefined(containerStyle)) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(containerStyleDark)) __obj.updateDynamic("containerStyleDark")(containerStyleDark.asInstanceOf[js.Any])
-    if (!js.isUndefined(containerStyleLight)) __obj.updateDynamic("containerStyleLight")(containerStyleLight.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransitionConfig]
   }
+  @scala.inline
+  implicit class TransitionConfigOps[Self <: TransitionConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setScreenInterpolator(value: /* props */ SceneInterpolatorProps => js.Any): Self = this.set("screenInterpolator", js.Any.fromFunction1(value))
+    @scala.inline
+    def setTransitionSpec(value: TimingFunction): Self = this.set("transitionSpec", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContainerStyle(value: StyleProp[ViewStyle]): Self = this.set("containerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContainerStyle: Self = this.set("containerStyle", js.undefined)
+    @scala.inline
+    def setContainerStyleNull: Self = this.set("containerStyle", null)
+    @scala.inline
+    def setContainerStyleDark(value: StyleProp[ViewStyle]): Self = this.set("containerStyleDark", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContainerStyleDark: Self = this.set("containerStyleDark", js.undefined)
+    @scala.inline
+    def setContainerStyleDarkNull: Self = this.set("containerStyleDark", null)
+    @scala.inline
+    def setContainerStyleLight(value: StyleProp[ViewStyle]): Self = this.set("containerStyleLight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContainerStyleLight: Self = this.set("containerStyleLight", js.undefined)
+    @scala.inline
+    def setContainerStyleLightNull: Self = this.set("containerStyleLight", null)
+  }
+  
 }
 

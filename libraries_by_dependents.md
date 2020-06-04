@@ -49,6 +49,7 @@
 | 1329 | [emotion__core](./e/emotion__core) | > Simple styling in React.
 | 1117 | [material-ui__icons](./m/material-ui__icons) | Material Design Svg Icons converted to Material-UI
 | 1061 | [mobx](./m/mobx) | Simple, scalable state management.
+| 951 | [material-ui](./m/material-ui) | React Components that Implement Google's Material 
 | 940 | [fortawesome__fontawesome-](./f/fortawesome__fontawesome-svg-core) | The iconic font, CSS, and SVG framework
 | 884 | [emotion__styled](./e/emotion__styled) | styled API for emotion
 | 866 | [dayjs](./d/dayjs) | 2KB immutable date time library alternative to Mom
@@ -148,6 +149,7 @@
 | 13 | [storybook__channels](./s/storybook__channels) | Storybook Channel is similar to an EventEmitter. C
 | 12 | [onsenui](./o/onsenui) | HTML5 Mobile Framework & UI Components
 | 10 | [expo-asset](./e/expo-asset) | An Expo universal module to download assets and pa
+| 10 | [react-addons-linked-state](./r/react-addons-linked-state-mixin) | >**Note:** >This is a legacy React addon, and is n
 | 10 | [react-navigation-drawer](./r/react-navigation-drawer) | Drawer navigator component for React Navigation
 | 9 | [ant-design__react-slick](./a/ant-design__react-slick) | React port of slick carousel
 | 9 | [expo-constants](./e/expo-constants) | Provides system information that remains constant 

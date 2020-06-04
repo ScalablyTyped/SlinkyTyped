@@ -17,20 +17,42 @@ trait EllipsisConfig extends js.Object {
 
 object EllipsisConfig {
   @scala.inline
-  def apply(
-    expandable: js.UndefOr[Boolean] = js.undefined,
-    onEllipsis: /* ellipsis */ Boolean => Unit = null,
-    onExpand: SyntheticMouseEvent[HTMLElement] => Unit = null,
-    rows: js.UndefOr[Double] = js.undefined,
-    suffix: String = null
-  ): EllipsisConfig = {
+  def apply(): EllipsisConfig = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(expandable)) __obj.updateDynamic("expandable")(expandable.get.asInstanceOf[js.Any])
-    if (onEllipsis != null) __obj.updateDynamic("onEllipsis")(js.Any.fromFunction1(onEllipsis))
-    if (onExpand != null) __obj.updateDynamic("onExpand")(js.Any.fromFunction1(onExpand))
-    if (!js.isUndefined(rows)) __obj.updateDynamic("rows")(rows.get.asInstanceOf[js.Any])
-    if (suffix != null) __obj.updateDynamic("suffix")(suffix.asInstanceOf[js.Any])
     __obj.asInstanceOf[EllipsisConfig]
   }
+  @scala.inline
+  implicit class EllipsisConfigOps[Self <: EllipsisConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setExpandable(value: Boolean): Self = this.set("expandable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteExpandable: Self = this.set("expandable", js.undefined)
+    @scala.inline
+    def setOnEllipsis(value: /* ellipsis */ Boolean => Unit): Self = this.set("onEllipsis", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnEllipsis: Self = this.set("onEllipsis", js.undefined)
+    @scala.inline
+    def setOnExpand(value: SyntheticMouseEvent[HTMLElement] => Unit): Self = this.set("onExpand", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnExpand: Self = this.set("onExpand", js.undefined)
+    @scala.inline
+    def setRows(value: Double): Self = this.set("rows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRows: Self = this.set("rows", js.undefined)
+    @scala.inline
+    def setSuffix(value: String): Self = this.set("suffix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSuffix: Self = this.set("suffix", js.undefined)
+  }
+  
 }
 

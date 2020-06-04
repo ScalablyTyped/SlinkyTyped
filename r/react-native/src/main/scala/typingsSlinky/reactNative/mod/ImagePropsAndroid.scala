@@ -42,18 +42,38 @@ trait ImagePropsAndroid extends js.Object {
 
 object ImagePropsAndroid {
   @scala.inline
-  def apply(
-    fadeDuration: js.UndefOr[Double] = js.undefined,
-    height: js.UndefOr[Double] = js.undefined,
-    resizeMethod: auto | resize | scale = null,
-    width: js.UndefOr[Double] = js.undefined
-  ): ImagePropsAndroid = {
+  def apply(): ImagePropsAndroid = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(fadeDuration)) __obj.updateDynamic("fadeDuration")(fadeDuration.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
-    if (resizeMethod != null) __obj.updateDynamic("resizeMethod")(resizeMethod.asInstanceOf[js.Any])
-    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImagePropsAndroid]
   }
+  @scala.inline
+  implicit class ImagePropsAndroidOps[Self <: ImagePropsAndroid] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setFadeDuration(value: Double): Self = this.set("fadeDuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFadeDuration: Self = this.set("fadeDuration", js.undefined)
+    @scala.inline
+    def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeight: Self = this.set("height", js.undefined)
+    @scala.inline
+    def setResizeMethod(value: auto | resize | scale): Self = this.set("resizeMethod", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteResizeMethod: Self = this.set("resizeMethod", js.undefined)
+    @scala.inline
+    def setWidth(value: Double): Self = this.set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWidth: Self = this.set("width", js.undefined)
+  }
+  
 }
 

@@ -87,6 +87,7 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.ReactInstance
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -106,7 +107,7 @@ object Drawer {
     @scala.inline
     def BackdropComponentComponentClass(value: ReactComponentClass[BackdropProps]): this.type = set("BackdropComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def BackdropComponent(value: ReactComponentClass[BackdropProps]): this.type = set("BackdropComponent", value.asInstanceOf[js.Any])
+    def BackdropComponent(value: ReactType[BackdropProps]): this.type = set("BackdropComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def BackdropProps(value: PartialBackdropProps): this.type = set("BackdropProps", value.asInstanceOf[js.Any])
     @scala.inline

@@ -2,7 +2,10 @@ package typingsSlinky.semanticUiReact.stepStepMod
 
 import org.scalajs.dom.raw.HTMLAnchorElement
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
+import typingsSlinky.react.mod.ReactNodeArray
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.iconIconMod.IconProps
@@ -53,38 +56,100 @@ trait StrictStepProps extends js.Object {
 
 object StrictStepProps {
   @scala.inline
-  def apply(
-    active: js.UndefOr[Boolean] = js.undefined,
-    as: js.Any = null,
-    children: TagMod[Any] = null,
-    className: String = null,
-    completed: js.UndefOr[Boolean] = js.undefined,
-    content: SemanticShorthandContent = null,
-    description: SemanticShorthandItem[StepDescriptionProps] = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    href: String = null,
-    icon: SemanticShorthandItem[IconProps] = null,
-    link: js.UndefOr[Boolean] = js.undefined,
-    onClick: (/* event */ SyntheticMouseEvent[HTMLAnchorElement], /* data */ StepProps) => Unit = null,
-    ordered: js.UndefOr[Boolean] = js.undefined,
-    title: SemanticShorthandItem[StepTitleProps] = null
-  ): StrictStepProps = {
+  def apply(): StrictStepProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(completed)) __obj.updateDynamic("completed")(completed.get.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (href != null) __obj.updateDynamic("href")(href.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (!js.isUndefined(link)) __obj.updateDynamic("link")(link.get.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (!js.isUndefined(ordered)) __obj.updateDynamic("ordered")(ordered.get.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictStepProps]
   }
+  @scala.inline
+  implicit class StrictStepPropsOps[Self <: StrictStepProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setActive(value: Boolean): Self = this.set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteActive: Self = this.set("active", js.undefined)
+    @scala.inline
+    def setAs(value: js.Any): Self = this.set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAs: Self = this.set("as", js.undefined)
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setCompleted(value: Boolean): Self = this.set("completed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCompleted: Self = this.set("completed", js.undefined)
+    @scala.inline
+    def setContentReactElement(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContent(value: SemanticShorthandContent): Self = this.set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContent: Self = this.set("content", js.undefined)
+    @scala.inline
+    def setDescriptionReactElement(value: ReactElement): Self = this.set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDescriptionFunction3(
+      value: (/* component */ ReactType[StepDescriptionProps], StepDescriptionProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): Self = this.set("description", js.Any.fromFunction3(value))
+    @scala.inline
+    def setDescription(value: SemanticShorthandItem[StepDescriptionProps]): Self = this.set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDescription: Self = this.set("description", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setHref(value: String): Self = this.set("href", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHref: Self = this.set("href", js.undefined)
+    @scala.inline
+    def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIconFunction3(
+      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): Self = this.set("icon", js.Any.fromFunction3(value))
+    @scala.inline
+    def setIcon(value: SemanticShorthandItem[IconProps]): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIcon: Self = this.set("icon", js.undefined)
+    @scala.inline
+    def setLink(value: Boolean): Self = this.set("link", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLink: Self = this.set("link", js.undefined)
+    @scala.inline
+    def setOnClick(value: (/* event */ SyntheticMouseEvent[HTMLAnchorElement], /* data */ StepProps) => Unit): Self = this.set("onClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnClick: Self = this.set("onClick", js.undefined)
+    @scala.inline
+    def setOrdered(value: Boolean): Self = this.set("ordered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOrdered: Self = this.set("ordered", js.undefined)
+    @scala.inline
+    def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTitleFunction3(
+      value: (/* component */ ReactType[StepTitleProps], StepTitleProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): Self = this.set("title", js.Any.fromFunction3(value))
+    @scala.inline
+    def setTitle(value: SemanticShorthandItem[StepTitleProps]): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
+  }
+  
 }
 

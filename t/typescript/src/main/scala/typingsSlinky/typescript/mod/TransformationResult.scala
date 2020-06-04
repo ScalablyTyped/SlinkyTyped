@@ -38,18 +38,43 @@ trait TransformationResult[T /* <: Node */] extends js.Object {
 
 object TransformationResult {
   @scala.inline
-  def apply[T](
+  def apply[/* <: typingsSlinky.typescript.mod.Node */ T](
     dispose: () => Unit,
     emitNodeWithNotification: (EmitHint, Node, js.Function2[/* hint */ EmitHint, /* node */ Node, Unit]) => Unit,
     substituteNode: (EmitHint, Node) => Node,
-    transformed: js.Array[T],
-    diagnostics: js.Array[DiagnosticWithLocation] = null,
-    isEmitNotificationEnabled: /* node */ Node => Boolean = null
+    transformed: js.Array[T]
   ): TransformationResult[T] = {
     val __obj = js.Dynamic.literal(dispose = js.Any.fromFunction0(dispose), emitNodeWithNotification = js.Any.fromFunction3(emitNodeWithNotification), substituteNode = js.Any.fromFunction2(substituteNode), transformed = transformed.asInstanceOf[js.Any])
-    if (diagnostics != null) __obj.updateDynamic("diagnostics")(diagnostics.asInstanceOf[js.Any])
-    if (isEmitNotificationEnabled != null) __obj.updateDynamic("isEmitNotificationEnabled")(js.Any.fromFunction1(isEmitNotificationEnabled))
     __obj.asInstanceOf[TransformationResult[T]]
   }
+  @scala.inline
+  implicit class TransformationResultOps[Self <: TransformationResult[_], /* <: typingsSlinky.typescript.mod.Node */ T] (val x: Self with TransformationResult[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDispose(value: () => Unit): Self = this.set("dispose", js.Any.fromFunction0(value))
+    @scala.inline
+    def setEmitNodeWithNotification(value: (EmitHint, Node, js.Function2[/* hint */ EmitHint, /* node */ Node, Unit]) => Unit): Self = this.set("emitNodeWithNotification", js.Any.fromFunction3(value))
+    @scala.inline
+    def setSubstituteNode(value: (EmitHint, Node) => Node): Self = this.set("substituteNode", js.Any.fromFunction2(value))
+    @scala.inline
+    def setTransformed(value: js.Array[T]): Self = this.set("transformed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDiagnostics(value: js.Array[DiagnosticWithLocation]): Self = this.set("diagnostics", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDiagnostics: Self = this.set("diagnostics", js.undefined)
+    @scala.inline
+    def setIsEmitNotificationEnabled(value: /* node */ Node => Boolean): Self = this.set("isEmitNotificationEnabled", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteIsEmitNotificationEnabled: Self = this.set("isEmitNotificationEnabled", js.undefined)
+  }
+  
 }
 

@@ -16,6 +16,7 @@ import typingsSlinky.materialUiCore.selectInputMod.SelectInputProps
 import typingsSlinky.materialUiCore.selectInputMod.default
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.HTMLAttributes
+import typingsSlinky.react.mod.ReactType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,7 +35,7 @@ object SelectInput {
     @scala.inline
     def IconComponentComponentClass(value: ReactComponentClass[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def IconComponent(value: ReactComponentClass[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
+    def IconComponent(value: ReactType[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def MenuProps(value: PartialMenuProps): this.type = set("MenuProps", value.asInstanceOf[js.Any])
     @scala.inline

@@ -11,10 +11,26 @@ trait RefExclude extends js.Object {
 
 object RefExclude {
   @scala.inline
-  def apply(ref: Exclude[_, String] = null): RefExclude = {
+  def apply(): RefExclude = {
     val __obj = js.Dynamic.literal()
-    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
     __obj.asInstanceOf[RefExclude]
   }
+  @scala.inline
+  implicit class RefExcludeOps[Self <: RefExclude] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setRef(value: Exclude[_, String]): Self = this.set("ref", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRef: Self = this.set("ref", js.undefined)
+  }
+  
 }
 

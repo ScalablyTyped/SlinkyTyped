@@ -30,5 +30,32 @@ object PerformanceNavigation {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PerformanceNavigation]
   }
+  @scala.inline
+  implicit class PerformanceNavigationOps[Self <: org.scalajs.dom.raw.PerformanceNavigation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setTYPE_BACK_FORWARD(value: Double): Self = this.set("TYPE_BACK_FORWARD", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTYPE_NAVIGATE(value: Double): Self = this.set("TYPE_NAVIGATE", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTYPE_RELOAD(value: Double): Self = this.set("TYPE_RELOAD", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTYPE_RESERVED(value: Double): Self = this.set("TYPE_RESERVED", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRedirectCount(value: Double): Self = this.set("redirectCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setToJSON(value: () => js.Any): Self = this.set("toJSON", js.Any.fromFunction0(value))
+    @scala.inline
+    def setType(value: Double): Self = this.set("type", value.asInstanceOf[js.Any])
+  }
+  
 }
 

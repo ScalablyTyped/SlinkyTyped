@@ -12,12 +12,34 @@ trait RawTheme extends js.Object {
 
 object RawTheme {
   @scala.inline
-  def apply(fontFamily: String = null, palette: ThemePalette = null, spacing: Spacing = null): RawTheme = {
+  def apply(): RawTheme = {
     val __obj = js.Dynamic.literal()
-    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
-    if (palette != null) __obj.updateDynamic("palette")(palette.asInstanceOf[js.Any])
-    if (spacing != null) __obj.updateDynamic("spacing")(spacing.asInstanceOf[js.Any])
     __obj.asInstanceOf[RawTheme]
   }
+  @scala.inline
+  implicit class RawThemeOps[Self <: RawTheme] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setFontFamily(value: String): Self = this.set("fontFamily", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFontFamily: Self = this.set("fontFamily", js.undefined)
+    @scala.inline
+    def setPalette(value: ThemePalette): Self = this.set("palette", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePalette: Self = this.set("palette", js.undefined)
+    @scala.inline
+    def setSpacing(value: Spacing): Self = this.set("spacing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSpacing: Self = this.set("spacing", js.undefined)
+  }
+  
 }
 

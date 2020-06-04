@@ -88,17 +88,52 @@ object Task {
     source: String,
     state: TaskState,
     `type`: TaskType,
-    zone: Zone,
-    cancelFn: /* task */ Task => Unit = null,
-    data: TaskData = null,
-    scheduleFn: /* task */ Task => Unit = null
+    zone: Zone
   ): Task = {
     val __obj = js.Dynamic.literal(callback = callback.asInstanceOf[js.Any], cancelScheduleRequest = js.Any.fromFunction0(cancelScheduleRequest), invoke = invoke.asInstanceOf[js.Any], runCount = runCount.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any], zone = zone.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (cancelFn != null) __obj.updateDynamic("cancelFn")(js.Any.fromFunction1(cancelFn))
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (scheduleFn != null) __obj.updateDynamic("scheduleFn")(js.Any.fromFunction1(scheduleFn))
     __obj.asInstanceOf[Task]
   }
+  @scala.inline
+  implicit class TaskOps[Self <: Task] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCallback(value: js.Function): Self = this.set("callback", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCancelScheduleRequest(value: () => Unit): Self = this.set("cancelScheduleRequest", js.Any.fromFunction0(value))
+    @scala.inline
+    def setInvoke(value: js.Function): Self = this.set("invoke", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRunCount(value: Double): Self = this.set("runCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSource(value: String): Self = this.set("source", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setState(value: TaskState): Self = this.set("state", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setType(value: TaskType): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setZone(value: Zone): Self = this.set("zone", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCancelFn(value: /* task */ Task => Unit): Self = this.set("cancelFn", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteCancelFn: Self = this.set("cancelFn", js.undefined)
+    @scala.inline
+    def setData(value: TaskData): Self = this.set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteData: Self = this.set("data", js.undefined)
+    @scala.inline
+    def setScheduleFn(value: /* task */ Task => Unit): Self = this.set("scheduleFn", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteScheduleFn: Self = this.set("scheduleFn", js.undefined)
+  }
+  
 }
 

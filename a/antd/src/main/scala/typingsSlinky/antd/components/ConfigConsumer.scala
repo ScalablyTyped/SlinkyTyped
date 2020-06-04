@@ -1,5 +1,6 @@
 package typingsSlinky.antd.components
 
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
@@ -22,6 +23,10 @@ object ConfigConsumer {
   }
   
   def withProps(p: ConsumerProps[ConfigConsumerProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: ConfigConsumer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(children: ConfigConsumerProps => TagMod[Any]): Builder = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ConsumerProps[ConfigConsumerProps]]))
+  }
 }
 

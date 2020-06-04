@@ -37,14 +37,54 @@ object ɵNgModuleDef {
     declarations: js.Array[Type[_]] | js.Function0[js.Array[Type[_]]],
     exports: js.Array[Type[_]] | js.Function0[js.Array[Type[_]]],
     imports: js.Array[Type[_]] | js.Function0[js.Array[Type[_]]],
-    `type`: T,
-    id: String = null,
-    schemas: js.Array[SchemaMetadata] = null,
-    transitiveCompileScopes: ɵNgModuleTransitiveScopes = null
+    `type`: T
   ): ɵNgModuleDef[T] = {
-    val __obj = js.Dynamic.literal(bootstrap = bootstrap.asInstanceOf[js.Any], declarations = declarations.asInstanceOf[js.Any], exports = exports.asInstanceOf[js.Any], imports = imports.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], schemas = schemas.asInstanceOf[js.Any], transitiveCompileScopes = transitiveCompileScopes.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(bootstrap = bootstrap.asInstanceOf[js.Any], declarations = declarations.asInstanceOf[js.Any], exports = exports.asInstanceOf[js.Any], imports = imports.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ɵNgModuleDef[T]]
   }
+  @scala.inline
+  implicit class ɵNgModuleDefOps[Self <: ɵNgModuleDef[_], T] (val x: Self with ɵNgModuleDef[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBootstrapFunction0(value: () => js.Array[Type[_]]): Self = this.set("bootstrap", js.Any.fromFunction0(value))
+    @scala.inline
+    def setBootstrap(value: js.Array[Type[_]] | js.Function0[js.Array[Type[_]]]): Self = this.set("bootstrap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDeclarationsFunction0(value: () => js.Array[Type[_]]): Self = this.set("declarations", js.Any.fromFunction0(value))
+    @scala.inline
+    def setDeclarations(value: js.Array[Type[_]] | js.Function0[js.Array[Type[_]]]): Self = this.set("declarations", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setExportsFunction0(value: () => js.Array[Type[_]]): Self = this.set("exports", js.Any.fromFunction0(value))
+    @scala.inline
+    def setExports(value: js.Array[Type[_]] | js.Function0[js.Array[Type[_]]]): Self = this.set("exports", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setImportsFunction0(value: () => js.Array[Type[_]]): Self = this.set("imports", js.Any.fromFunction0(value))
+    @scala.inline
+    def setImports(value: js.Array[Type[_]] | js.Function0[js.Array[Type[_]]]): Self = this.set("imports", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setType(value: T): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIdNull: Self = this.set("id", null)
+    @scala.inline
+    def setSchemas(value: js.Array[SchemaMetadata]): Self = this.set("schemas", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSchemasNull: Self = this.set("schemas", null)
+    @scala.inline
+    def setTransitiveCompileScopes(value: ɵNgModuleTransitiveScopes): Self = this.set("transitiveCompileScopes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTransitiveCompileScopesNull: Self = this.set("transitiveCompileScopes", null)
+  }
+  
 }
 

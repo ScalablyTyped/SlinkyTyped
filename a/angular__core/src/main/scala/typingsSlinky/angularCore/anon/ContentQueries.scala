@@ -90,24 +90,54 @@ trait ContentQueries[T] extends js.Object {
 
 object ContentQueries {
   @scala.inline
-  def apply[T](
-    contentQueries: js.UndefOr[Null | ((/* rf */ ɵRenderFlags, T, /* directiveIndex */ Double) => Unit)] = js.undefined,
-    hostBindings: (/* rf */ ɵRenderFlags, T, /* elementIndex */ Double) => Unit = null,
-    inputs: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ P in keyof T ]:? string | [string, string]}
-    */ typingsSlinky.angularCore.angularCoreStrings.ContentQueries with TopLevel[js.Any] = null,
-    outputs: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ P in keyof T ]:? string}
-    */ typingsSlinky.angularCore.angularCoreStrings.ContentQueries with TopLevel[js.Any] = null,
-    viewQuery: js.UndefOr[Null | ((/* rf */ ɵRenderFlags, T) => Unit)] = js.undefined
-  ): ContentQueries[T] = {
+  def apply[T](): ContentQueries[T] = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(contentQueries)) __obj.updateDynamic("contentQueries")(if (contentQueries != null) js.Any.fromFunction3(contentQueries.asInstanceOf[(/* rf */ ɵRenderFlags, T, /* directiveIndex */ Double) => Unit]) else null)
-    if (hostBindings != null) __obj.updateDynamic("hostBindings")(js.Any.fromFunction3(hostBindings))
-    if (inputs != null) __obj.updateDynamic("inputs")(inputs.asInstanceOf[js.Any])
-    if (outputs != null) __obj.updateDynamic("outputs")(outputs.asInstanceOf[js.Any])
-    if (!js.isUndefined(viewQuery)) __obj.updateDynamic("viewQuery")(if (viewQuery != null) js.Any.fromFunction2(viewQuery.asInstanceOf[(/* rf */ ɵRenderFlags, T) => Unit]) else null)
     __obj.asInstanceOf[ContentQueries[T]]
   }
+  @scala.inline
+  implicit class ContentQueriesOps[Self <: ContentQueries[_], T] (val x: Self with ContentQueries[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setContentQueries(value: (/* rf */ ɵRenderFlags, T, /* directiveIndex */ Double) => Unit): Self = this.set("contentQueries", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteContentQueries: Self = this.set("contentQueries", js.undefined)
+    @scala.inline
+    def setContentQueriesNull: Self = this.set("contentQueries", null)
+    @scala.inline
+    def setHostBindings(value: (/* rf */ ɵRenderFlags, T, /* elementIndex */ Double) => Unit): Self = this.set("hostBindings", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteHostBindings: Self = this.set("hostBindings", js.undefined)
+    @scala.inline
+    def setInputs(
+      value: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+    {[ P in keyof T ]:? string | [string, string]}
+      */ typingsSlinky.angularCore.angularCoreStrings.ContentQueries with TopLevel[js.Any]
+    ): Self = this.set("inputs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInputs: Self = this.set("inputs", js.undefined)
+    @scala.inline
+    def setOutputs(
+      value: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+    {[ P in keyof T ]:? string}
+      */ typingsSlinky.angularCore.angularCoreStrings.ContentQueries with TopLevel[js.Any]
+    ): Self = this.set("outputs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOutputs: Self = this.set("outputs", js.undefined)
+    @scala.inline
+    def setViewQuery(value: (/* rf */ ɵRenderFlags, T) => Unit): Self = this.set("viewQuery", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteViewQuery: Self = this.set("viewQuery", js.undefined)
+    @scala.inline
+    def setViewQueryNull: Self = this.set("viewQuery", null)
+  }
+  
 }
 

@@ -10,13 +10,8 @@ trait StandardPropertiesHyphenFallback[TLength]
 
 object StandardPropertiesHyphenFallback {
   @scala.inline
-  def apply[TLength](
-    StandardLonghandPropertiesHyphenFallback: StandardLonghandPropertiesHyphenFallback[TLength] = null,
-    StandardShorthandPropertiesHyphenFallback: StandardShorthandPropertiesHyphenFallback[TLength] = null
-  ): StandardPropertiesHyphenFallback[TLength] = {
+  def apply[TLength](): StandardPropertiesHyphenFallback[TLength] = {
     val __obj = js.Dynamic.literal()
-    if (StandardLonghandPropertiesHyphenFallback != null) js.Dynamic.global.Object.assign(__obj, StandardLonghandPropertiesHyphenFallback)
-    if (StandardShorthandPropertiesHyphenFallback != null) js.Dynamic.global.Object.assign(__obj, StandardShorthandPropertiesHyphenFallback)
     __obj.asInstanceOf[StandardPropertiesHyphenFallback[TLength]]
   }
 }

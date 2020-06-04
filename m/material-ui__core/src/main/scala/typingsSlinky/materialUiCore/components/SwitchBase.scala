@@ -78,6 +78,7 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.InputHTMLAttributes
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.std.Partial
 import scala.scalajs.js
@@ -230,7 +231,7 @@ object SwitchBase {
     @scala.inline
     def componentComponentClass(value: ReactComponentClass[ButtonBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
-    def component(value: ReactComponentClass[ButtonBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: ReactType[ButtonBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
     @scala.inline

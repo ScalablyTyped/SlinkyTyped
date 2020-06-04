@@ -39,15 +39,64 @@ object R3DirectiveMetadataFacade {
     typeArgumentCount: Double,
     typeSourceSpan: ParseSourceSpan,
     usesInheritance: Boolean,
-    viewQueries: js.Array[R3QueryMetadataFacade],
-    deps: js.Array[R3DependencyMetadataFacade] = null,
-    exportAs: js.Array[String] = null,
-    providers: js.Array[Provider] = null,
-    selector: String = null
+    viewQueries: js.Array[R3QueryMetadataFacade]
   ): R3DirectiveMetadataFacade = {
-    val __obj = js.Dynamic.literal(host = host.asInstanceOf[js.Any], inputs = inputs.asInstanceOf[js.Any], lifecycle = lifecycle.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], outputs = outputs.asInstanceOf[js.Any], propMetadata = propMetadata.asInstanceOf[js.Any], queries = queries.asInstanceOf[js.Any], typeArgumentCount = typeArgumentCount.asInstanceOf[js.Any], typeSourceSpan = typeSourceSpan.asInstanceOf[js.Any], usesInheritance = usesInheritance.asInstanceOf[js.Any], viewQueries = viewQueries.asInstanceOf[js.Any], deps = deps.asInstanceOf[js.Any], exportAs = exportAs.asInstanceOf[js.Any], providers = providers.asInstanceOf[js.Any], selector = selector.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(host = host.asInstanceOf[js.Any], inputs = inputs.asInstanceOf[js.Any], lifecycle = lifecycle.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], outputs = outputs.asInstanceOf[js.Any], propMetadata = propMetadata.asInstanceOf[js.Any], queries = queries.asInstanceOf[js.Any], typeArgumentCount = typeArgumentCount.asInstanceOf[js.Any], typeSourceSpan = typeSourceSpan.asInstanceOf[js.Any], usesInheritance = usesInheritance.asInstanceOf[js.Any], viewQueries = viewQueries.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[R3DirectiveMetadataFacade]
   }
+  @scala.inline
+  implicit class R3DirectiveMetadataFacadeOps[Self <: R3DirectiveMetadataFacade] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setHost(value: StringDictionary[String]): Self = this.set("host", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInputs(value: js.Array[String]): Self = this.set("inputs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLifecycle(value: UsesOnChanges): Self = this.set("lifecycle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOutputs(value: js.Array[String]): Self = this.set("outputs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPropMetadata(value: StringDictionary[js.Array[_]]): Self = this.set("propMetadata", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setQueries(value: js.Array[R3QueryMetadataFacade]): Self = this.set("queries", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setType(value: js.Any): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTypeArgumentCount(value: Double): Self = this.set("typeArgumentCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTypeSourceSpan(value: ParseSourceSpan): Self = this.set("typeSourceSpan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUsesInheritance(value: Boolean): Self = this.set("usesInheritance", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setViewQueries(value: js.Array[R3QueryMetadataFacade]): Self = this.set("viewQueries", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDeps(value: js.Array[R3DependencyMetadataFacade]): Self = this.set("deps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDepsNull: Self = this.set("deps", null)
+    @scala.inline
+    def setExportAs(value: js.Array[String]): Self = this.set("exportAs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setExportAsNull: Self = this.set("exportAs", null)
+    @scala.inline
+    def setProviders(value: js.Array[Provider]): Self = this.set("providers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setProvidersNull: Self = this.set("providers", null)
+    @scala.inline
+    def setSelector(value: String): Self = this.set("selector", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSelectorNull: Self = this.set("selector", null)
+  }
+  
 }
 

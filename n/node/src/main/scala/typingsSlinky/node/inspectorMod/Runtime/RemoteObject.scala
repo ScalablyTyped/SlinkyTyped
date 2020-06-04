@@ -49,28 +49,57 @@ trait RemoteObject extends js.Object {
 
 object RemoteObject {
   @scala.inline
-  def apply(
-    `type`: String,
-    className: String = null,
-    customPreview: CustomPreview = null,
-    description: String = null,
-    objectId: RemoteObjectId = null,
-    preview: ObjectPreview = null,
-    subtype: String = null,
-    unserializableValue: UnserializableValue = null,
-    value: js.Any = null
-  ): RemoteObject = {
+  def apply(`type`: String): RemoteObject = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (customPreview != null) __obj.updateDynamic("customPreview")(customPreview.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (objectId != null) __obj.updateDynamic("objectId")(objectId.asInstanceOf[js.Any])
-    if (preview != null) __obj.updateDynamic("preview")(preview.asInstanceOf[js.Any])
-    if (subtype != null) __obj.updateDynamic("subtype")(subtype.asInstanceOf[js.Any])
-    if (unserializableValue != null) __obj.updateDynamic("unserializableValue")(unserializableValue.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[RemoteObject]
   }
+  @scala.inline
+  implicit class RemoteObjectOps[Self <: RemoteObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setCustomPreview(value: CustomPreview): Self = this.set("customPreview", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCustomPreview: Self = this.set("customPreview", js.undefined)
+    @scala.inline
+    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDescription: Self = this.set("description", js.undefined)
+    @scala.inline
+    def setObjectId(value: RemoteObjectId): Self = this.set("objectId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteObjectId: Self = this.set("objectId", js.undefined)
+    @scala.inline
+    def setPreview(value: ObjectPreview): Self = this.set("preview", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePreview: Self = this.set("preview", js.undefined)
+    @scala.inline
+    def setSubtype(value: String): Self = this.set("subtype", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSubtype: Self = this.set("subtype", js.undefined)
+    @scala.inline
+    def setUnserializableValue(value: UnserializableValue): Self = this.set("unserializableValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUnserializableValue: Self = this.set("unserializableValue", js.undefined)
+    @scala.inline
+    def setValue(value: js.Any): Self = this.set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
+  }
+  
 }
 

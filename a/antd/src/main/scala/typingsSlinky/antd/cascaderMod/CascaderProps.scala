@@ -2,6 +2,7 @@ package typingsSlinky.antd.cascaderMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -71,61 +72,132 @@ trait CascaderProps extends js.Object {
 
 object CascaderProps {
   @scala.inline
-  def apply(
-    options: js.Array[CascaderOptionType],
-    allowClear: js.UndefOr[Boolean] = js.undefined,
-    bordered: js.UndefOr[Boolean] = js.undefined,
-    changeOnSelect: js.UndefOr[Boolean] = js.undefined,
-    className: String = null,
-    defaultValue: js.Array[String] = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    displayRender: (/* label */ js.Array[String], /* selectedOptions */ js.UndefOr[js.Array[CascaderOptionType]]) => TagMod[Any] = null,
-    expandTrigger: CascaderExpandTrigger = null,
-    fieldNames: FieldNamesType = null,
-    getPopupContainer: /* triggerNode */ HTMLElement => HTMLElement = null,
-    inputPrefixCls: String = null,
-    loadData: /* selectedOptions */ js.UndefOr[js.Array[CascaderOptionType]] => Unit = null,
-    notFoundContent: TagMod[Any] = null,
-    onChange: (/* value */ js.Array[String], /* selectedOptions */ js.UndefOr[js.Array[CascaderOptionType]]) => Unit = null,
-    onPopupVisibleChange: /* popupVisible */ Boolean => Unit = null,
-    placeholder: String = null,
-    popupClassName: String = null,
-    popupPlacement: String = null,
-    popupVisible: js.UndefOr[Boolean] = js.undefined,
-    prefixCls: String = null,
-    showSearch: Boolean | ShowSearchType = null,
-    size: SizeType = null,
-    style: CSSProperties = null,
-    suffixIcon: TagMod[Any] = null,
-    value: js.Array[String] = null
-  ): CascaderProps = {
+  def apply(options: js.Array[CascaderOptionType]): CascaderProps = {
     val __obj = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowClear)) __obj.updateDynamic("allowClear")(allowClear.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(bordered)) __obj.updateDynamic("bordered")(bordered.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(changeOnSelect)) __obj.updateDynamic("changeOnSelect")(changeOnSelect.get.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (displayRender != null) __obj.updateDynamic("displayRender")(js.Any.fromFunction2(displayRender))
-    if (expandTrigger != null) __obj.updateDynamic("expandTrigger")(expandTrigger.asInstanceOf[js.Any])
-    if (fieldNames != null) __obj.updateDynamic("fieldNames")(fieldNames.asInstanceOf[js.Any])
-    if (getPopupContainer != null) __obj.updateDynamic("getPopupContainer")(js.Any.fromFunction1(getPopupContainer))
-    if (inputPrefixCls != null) __obj.updateDynamic("inputPrefixCls")(inputPrefixCls.asInstanceOf[js.Any])
-    if (loadData != null) __obj.updateDynamic("loadData")(js.Any.fromFunction1(loadData))
-    if (notFoundContent != null) __obj.updateDynamic("notFoundContent")(notFoundContent.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onPopupVisibleChange != null) __obj.updateDynamic("onPopupVisibleChange")(js.Any.fromFunction1(onPopupVisibleChange))
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
-    if (popupClassName != null) __obj.updateDynamic("popupClassName")(popupClassName.asInstanceOf[js.Any])
-    if (popupPlacement != null) __obj.updateDynamic("popupPlacement")(popupPlacement.asInstanceOf[js.Any])
-    if (!js.isUndefined(popupVisible)) __obj.updateDynamic("popupVisible")(popupVisible.get.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (showSearch != null) __obj.updateDynamic("showSearch")(showSearch.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (suffixIcon != null) __obj.updateDynamic("suffixIcon")(suffixIcon.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[CascaderProps]
   }
+  @scala.inline
+  implicit class CascaderPropsOps[Self <: CascaderProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setOptions(value: js.Array[CascaderOptionType]): Self = this.set("options", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAllowClear(value: Boolean): Self = this.set("allowClear", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAllowClear: Self = this.set("allowClear", js.undefined)
+    @scala.inline
+    def setBordered(value: Boolean): Self = this.set("bordered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBordered: Self = this.set("bordered", js.undefined)
+    @scala.inline
+    def setChangeOnSelect(value: Boolean): Self = this.set("changeOnSelect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChangeOnSelect: Self = this.set("changeOnSelect", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setDefaultValue(value: js.Array[String]): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setDisplayRender(
+      value: (/* label */ js.Array[String], /* selectedOptions */ js.UndefOr[js.Array[CascaderOptionType]]) => TagMod[Any]
+    ): Self = this.set("displayRender", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteDisplayRender: Self = this.set("displayRender", js.undefined)
+    @scala.inline
+    def setExpandTrigger(value: CascaderExpandTrigger): Self = this.set("expandTrigger", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteExpandTrigger: Self = this.set("expandTrigger", js.undefined)
+    @scala.inline
+    def setFieldNames(value: FieldNamesType): Self = this.set("fieldNames", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFieldNames: Self = this.set("fieldNames", js.undefined)
+    @scala.inline
+    def setGetPopupContainer(value: /* triggerNode */ HTMLElement => HTMLElement): Self = this.set("getPopupContainer", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteGetPopupContainer: Self = this.set("getPopupContainer", js.undefined)
+    @scala.inline
+    def setInputPrefixCls(value: String): Self = this.set("inputPrefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInputPrefixCls: Self = this.set("inputPrefixCls", js.undefined)
+    @scala.inline
+    def setLoadData(value: /* selectedOptions */ js.UndefOr[js.Array[CascaderOptionType]] => Unit): Self = this.set("loadData", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteLoadData: Self = this.set("loadData", js.undefined)
+    @scala.inline
+    def setNotFoundContentReactElement(value: ReactElement): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNotFoundContent(value: TagMod[Any]): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNotFoundContent: Self = this.set("notFoundContent", js.undefined)
+    @scala.inline
+    def setOnChange(
+      value: (/* value */ js.Array[String], /* selectedOptions */ js.UndefOr[js.Array[CascaderOptionType]]) => Unit
+    ): Self = this.set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnChange: Self = this.set("onChange", js.undefined)
+    @scala.inline
+    def setOnPopupVisibleChange(value: /* popupVisible */ Boolean => Unit): Self = this.set("onPopupVisibleChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnPopupVisibleChange: Self = this.set("onPopupVisibleChange", js.undefined)
+    @scala.inline
+    def setPlaceholder(value: String): Self = this.set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePlaceholder: Self = this.set("placeholder", js.undefined)
+    @scala.inline
+    def setPopupClassName(value: String): Self = this.set("popupClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePopupClassName: Self = this.set("popupClassName", js.undefined)
+    @scala.inline
+    def setPopupPlacement(value: String): Self = this.set("popupPlacement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePopupPlacement: Self = this.set("popupPlacement", js.undefined)
+    @scala.inline
+    def setPopupVisible(value: Boolean): Self = this.set("popupVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePopupVisible: Self = this.set("popupVisible", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    @scala.inline
+    def setShowSearch(value: Boolean | ShowSearchType): Self = this.set("showSearch", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowSearch: Self = this.set("showSearch", js.undefined)
+    @scala.inline
+    def setSize(value: SizeType): Self = this.set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+    @scala.inline
+    def setSuffixIconReactElement(value: ReactElement): Self = this.set("suffixIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSuffixIcon(value: TagMod[Any]): Self = this.set("suffixIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSuffixIcon: Self = this.set("suffixIcon", js.undefined)
+    @scala.inline
+    def setValue(value: js.Array[String]): Self = this.set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
+  }
+  
 }
 

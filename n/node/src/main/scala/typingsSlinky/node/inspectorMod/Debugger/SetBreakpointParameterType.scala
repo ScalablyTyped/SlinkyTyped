@@ -17,10 +17,28 @@ trait SetBreakpointParameterType extends js.Object {
 
 object SetBreakpointParameterType {
   @scala.inline
-  def apply(location: Location, condition: String = null): SetBreakpointParameterType = {
+  def apply(location: Location): SetBreakpointParameterType = {
     val __obj = js.Dynamic.literal(location = location.asInstanceOf[js.Any])
-    if (condition != null) __obj.updateDynamic("condition")(condition.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetBreakpointParameterType]
   }
+  @scala.inline
+  implicit class SetBreakpointParameterTypeOps[Self <: SetBreakpointParameterType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setLocation(value: Location): Self = this.set("location", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCondition(value: String): Self = this.set("condition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCondition: Self = this.set("condition", js.undefined)
+  }
+  
 }
 

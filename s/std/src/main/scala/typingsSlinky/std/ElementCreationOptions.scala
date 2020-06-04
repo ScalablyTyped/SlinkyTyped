@@ -10,10 +10,26 @@ trait ElementCreationOptions extends js.Object {
 
 object ElementCreationOptions {
   @scala.inline
-  def apply(is: java.lang.String = null): ElementCreationOptions = {
+  def apply(): ElementCreationOptions = {
     val __obj = js.Dynamic.literal()
-    if (is != null) __obj.updateDynamic("is")(is.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElementCreationOptions]
   }
+  @scala.inline
+  implicit class ElementCreationOptionsOps[Self <: ElementCreationOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setIs(value: java.lang.String): Self = this.set("is", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIs: Self = this.set("is", js.undefined)
+  }
+  
 }
 

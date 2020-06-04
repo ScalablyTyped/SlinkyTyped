@@ -38,20 +38,42 @@ trait ViewShotProperties extends js.Object {
 
 object ViewShotProperties {
   @scala.inline
-  def apply(
-    captureMode: mount | continuous | update = null,
-    onCapture: /* uri */ String => Unit = null,
-    onCaptureFailure: /* error */ js.Error => Unit = null,
-    options: CaptureOptions = null,
-    style: ViewStyle = null
-  ): ViewShotProperties = {
+  def apply(): ViewShotProperties = {
     val __obj = js.Dynamic.literal()
-    if (captureMode != null) __obj.updateDynamic("captureMode")(captureMode.asInstanceOf[js.Any])
-    if (onCapture != null) __obj.updateDynamic("onCapture")(js.Any.fromFunction1(onCapture))
-    if (onCaptureFailure != null) __obj.updateDynamic("onCaptureFailure")(js.Any.fromFunction1(onCaptureFailure))
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[ViewShotProperties]
   }
+  @scala.inline
+  implicit class ViewShotPropertiesOps[Self <: ViewShotProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCaptureMode(value: mount | continuous | update): Self = this.set("captureMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCaptureMode: Self = this.set("captureMode", js.undefined)
+    @scala.inline
+    def setOnCapture(value: /* uri */ String => Unit): Self = this.set("onCapture", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnCapture: Self = this.set("onCapture", js.undefined)
+    @scala.inline
+    def setOnCaptureFailure(value: /* error */ js.Error => Unit): Self = this.set("onCaptureFailure", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnCaptureFailure: Self = this.set("onCaptureFailure", js.undefined)
+    @scala.inline
+    def setOptions(value: CaptureOptions): Self = this.set("options", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOptions: Self = this.set("options", js.undefined)
+    @scala.inline
+    def setStyle(value: ViewStyle): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+  }
+  
 }
 

@@ -44,5 +44,28 @@ object Geometry {
     val __obj = js.Dynamic.literal(averageNormals = js.Any.fromFunction0(averageNormals), averagePoleNormals = js.Any.fromFunction0(averagePoleNormals), computeFaces = js.Any.fromFunction0(computeFaces), computeNormals = js.Any.fromFunction0(computeNormals), normalize = js.Any.fromFunction0(normalize))
     __obj.asInstanceOf[Geometry]
   }
+  @scala.inline
+  implicit class GeometryOps[Self <: Geometry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAverageNormals(value: () => Geometry): Self = this.set("averageNormals", js.Any.fromFunction0(value))
+    @scala.inline
+    def setAveragePoleNormals(value: () => Geometry): Self = this.set("averagePoleNormals", js.Any.fromFunction0(value))
+    @scala.inline
+    def setComputeFaces(value: () => Geometry): Self = this.set("computeFaces", js.Any.fromFunction0(value))
+    @scala.inline
+    def setComputeNormals(value: () => Geometry): Self = this.set("computeNormals", js.Any.fromFunction0(value))
+    @scala.inline
+    def setNormalize(value: () => Geometry): Self = this.set("normalize", js.Any.fromFunction0(value))
+  }
+  
 }
 

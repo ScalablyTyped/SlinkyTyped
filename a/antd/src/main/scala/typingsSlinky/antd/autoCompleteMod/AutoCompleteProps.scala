@@ -11,10 +11,26 @@ import scala.scalajs.js.annotation._
 
 object AutoCompleteProps {
   @scala.inline
-  def apply(dataSource: js.Array[DataSourceItemType] = null): AutoCompleteProps = {
+  def apply(): AutoCompleteProps = {
     val __obj = js.Dynamic.literal()
-    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoCompleteProps]
   }
+  @scala.inline
+  implicit class AutoCompletePropsOps[Self <: AutoCompleteProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDataSource(value: js.Array[DataSourceItemType]): Self = this.set("dataSource", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDataSource: Self = this.set("dataSource", js.undefined)
+  }
+  
 }
 

@@ -21,16 +21,34 @@ trait PrintOptions extends js.Object {
 
 object PrintOptions {
   @scala.inline
-  def apply(
-    deviceName: String = null,
-    printBackground: js.UndefOr[Boolean] = js.undefined,
-    silent: js.UndefOr[Boolean] = js.undefined
-  ): PrintOptions = {
+  def apply(): PrintOptions = {
     val __obj = js.Dynamic.literal()
-    if (deviceName != null) __obj.updateDynamic("deviceName")(deviceName.asInstanceOf[js.Any])
-    if (!js.isUndefined(printBackground)) __obj.updateDynamic("printBackground")(printBackground.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrintOptions]
   }
+  @scala.inline
+  implicit class PrintOptionsOps[Self <: PrintOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDeviceName(value: String): Self = this.set("deviceName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDeviceName: Self = this.set("deviceName", js.undefined)
+    @scala.inline
+    def setPrintBackground(value: Boolean): Self = this.set("printBackground", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrintBackground: Self = this.set("printBackground", js.undefined)
+    @scala.inline
+    def setSilent(value: Boolean): Self = this.set("silent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSilent: Self = this.set("silent", js.undefined)
+  }
+  
 }
 

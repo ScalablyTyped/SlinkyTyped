@@ -1,11 +1,11 @@
 package typingsSlinky.semanticUiReact.components
 
-import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticFLOATS
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
@@ -38,7 +38,7 @@ object ListContent {
     def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
     @scala.inline
     def descriptionFunction3(
-      value: (/* component */ ReactComponentClass[ListDescriptionProps], ListDescriptionProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ListDescriptionProps], ListDescriptionProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("description", js.Any.fromFunction3(value))
     @scala.inline
     def description(value: SemanticShorthandItem[ListDescriptionProps]): this.type = set("description", value.asInstanceOf[js.Any])
@@ -48,7 +48,7 @@ object ListContent {
     def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     @scala.inline
     def headerFunction3(
-      value: (/* component */ ReactComponentClass[ListHeaderProps], ListHeaderProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ListHeaderProps], ListHeaderProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("header", js.Any.fromFunction3(value))
     @scala.inline
     def header(value: SemanticShorthandItem[ListHeaderProps]): this.type = set("header", value.asInstanceOf[js.Any])

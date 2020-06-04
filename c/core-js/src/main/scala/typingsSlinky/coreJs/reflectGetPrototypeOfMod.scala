@@ -1,12 +1,12 @@
 package typingsSlinky.coreJs
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("core-js/fn/reflect/get-prototype-of", JSImport.Namespace)
 @js.native
-object reflectGetPrototypeOfMod extends js.Object {
-  def apply(target: js.Any): js.Any = js.native
-}
+object reflectGetPrototypeOfMod
+  extends TopLevel[js.Function1[/* o */ js.Any, js.Any]]
 

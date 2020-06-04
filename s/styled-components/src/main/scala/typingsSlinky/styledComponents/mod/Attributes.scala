@@ -24,10 +24,26 @@ trait Attributes extends js.Object {
 
 object Attributes {
   @scala.inline
-  def apply(css: CSSProp[AnyIfEmpty[DefaultTheme]] = null): Attributes = {
+  def apply(): Attributes = {
     val __obj = js.Dynamic.literal()
-    if (css != null) __obj.updateDynamic("css")(css.asInstanceOf[js.Any])
     __obj.asInstanceOf[Attributes]
   }
+  @scala.inline
+  implicit class AttributesOps[Self <: Attributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCss(value: CSSProp[AnyIfEmpty[DefaultTheme]]): Self = this.set("css", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCss: Self = this.set("css", js.undefined)
+  }
+  
 }
 

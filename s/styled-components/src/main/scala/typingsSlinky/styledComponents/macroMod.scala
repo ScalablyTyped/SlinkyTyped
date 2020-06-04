@@ -3,10 +3,8 @@ package typingsSlinky.styledComponents
 import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentPropsWithRef
 import typingsSlinky.react.mod.ConsumerProps
 import typingsSlinky.react.mod.Context
-import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.std.TemplateStringsArray
 import typingsSlinky.styledComponents.styledComponentsMod.AnyIfEmpty
 import typingsSlinky.styledComponents.styledComponentsMod.CSSKeyframes
@@ -22,7 +20,7 @@ import typingsSlinky.styledComponents.styledComponentsMod.ThemeProviderProps
 import typingsSlinky.styledComponents.styledComponentsMod.ThemedCssFunction
 import typingsSlinky.styledComponents.styledComponentsMod.ThemedGlobalStyledClassProps
 import typingsSlinky.styledComponents.styledComponentsMod.ThemedStyledProps
-import typingsSlinky.styledComponents.styledComponentsMod.WithOptionalTheme
+import typingsSlinky.styledComponents.styledComponentsMod.WithThemeFnInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -56,6 +54,7 @@ object macroMod extends js.Object {
   val ThemeContext: Context[AnyIfEmpty[DefaultTheme]] = js.native
   val css: ThemedCssFunction[DefaultTheme] = js.native
   val default: StyledInterface = js.native
+  val withTheme: WithThemeFnInterface[DefaultTheme] = js.native
   def createGlobalStyle[P /* <: js.Object */](first: TemplateStringsArray, interpolations: (Interpolation[ThemedStyledProps[P, DefaultTheme]])*): ReactComponentClass[ThemedGlobalStyledClassProps[P, DefaultTheme]] = js.native
   def createGlobalStyle[P /* <: js.Object */](first: CSSObject, interpolations: (Interpolation[ThemedStyledProps[P, DefaultTheme]])*): ReactComponentClass[ThemedGlobalStyledClassProps[P, DefaultTheme]] = js.native
   def createGlobalStyle[P /* <: js.Object */](
@@ -66,11 +65,6 @@ object macroMod extends js.Object {
   def keyframes(strings: TemplateStringsArray, interpolations: SimpleInterpolation*): Keyframes_ = js.native
   def keyframes(strings: CSSKeyframes, interpolations: SimpleInterpolation*): Keyframes_ = js.native
   def useTheme(): DefaultTheme = js.native
-  def withTheme[C /* <: ReactComponentClass[_] */](
-    // this check is roundabout because the extends clause above would
-  // not allow any component that accepts _more_ than theme as a prop
-  component: C
-  ): ForwardRefExoticComponent[WithOptionalTheme[ComponentPropsWithRef[C], AnyIfEmpty[DefaultTheme]]] = js.native
   @js.native
   object ThemeProvider extends TopLevel[
           ReactComponentClass[

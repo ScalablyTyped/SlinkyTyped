@@ -160,58 +160,118 @@ trait ScrollViewPropsIOS extends js.Object {
 
 object ScrollViewPropsIOS {
   @scala.inline
-  def apply(
-    alwaysBounceHorizontal: js.UndefOr[Boolean] = js.undefined,
-    alwaysBounceVertical: js.UndefOr[Boolean] = js.undefined,
-    automaticallyAdjustContentInsets: js.UndefOr[Boolean] = js.undefined,
-    bounces: js.UndefOr[Boolean] = js.undefined,
-    bouncesZoom: js.UndefOr[Boolean] = js.undefined,
-    canCancelContentTouches: js.UndefOr[Boolean] = js.undefined,
-    centerContent: js.UndefOr[Boolean] = js.undefined,
-    contentInset: Insets = null,
-    contentInsetAdjustmentBehavior: automatic | scrollableAxes | never | always = null,
-    contentOffset: PointPropType = null,
-    decelerationRate: fast | normal_ | Double = null,
-    directionalLockEnabled: js.UndefOr[Boolean] = js.undefined,
-    indicatorStyle: default | black | white = null,
-    maximumZoomScale: js.UndefOr[Double] = js.undefined,
-    minimumZoomScale: js.UndefOr[Double] = js.undefined,
-    onScrollAnimationEnd: () => Unit = null,
-    onScrollToTop: SyntheticEvent[NodeHandle, NativeScrollEvent] => Unit = null,
-    pinchGestureEnabled: js.UndefOr[Boolean] = js.undefined,
-    scrollEventThrottle: js.UndefOr[Double] = js.undefined,
-    scrollIndicatorInsets: Insets = null,
-    scrollToOverflowEnabled: js.UndefOr[Boolean] = js.undefined,
-    scrollsToTop: js.UndefOr[Boolean] = js.undefined,
-    stickyHeaderIndices: js.Array[Double] = null,
-    zoomScale: js.UndefOr[Double] = js.undefined
-  ): ScrollViewPropsIOS = {
+  def apply(): ScrollViewPropsIOS = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(alwaysBounceHorizontal)) __obj.updateDynamic("alwaysBounceHorizontal")(alwaysBounceHorizontal.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(alwaysBounceVertical)) __obj.updateDynamic("alwaysBounceVertical")(alwaysBounceVertical.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(automaticallyAdjustContentInsets)) __obj.updateDynamic("automaticallyAdjustContentInsets")(automaticallyAdjustContentInsets.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(bounces)) __obj.updateDynamic("bounces")(bounces.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(bouncesZoom)) __obj.updateDynamic("bouncesZoom")(bouncesZoom.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(canCancelContentTouches)) __obj.updateDynamic("canCancelContentTouches")(canCancelContentTouches.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(centerContent)) __obj.updateDynamic("centerContent")(centerContent.get.asInstanceOf[js.Any])
-    if (contentInset != null) __obj.updateDynamic("contentInset")(contentInset.asInstanceOf[js.Any])
-    if (contentInsetAdjustmentBehavior != null) __obj.updateDynamic("contentInsetAdjustmentBehavior")(contentInsetAdjustmentBehavior.asInstanceOf[js.Any])
-    if (contentOffset != null) __obj.updateDynamic("contentOffset")(contentOffset.asInstanceOf[js.Any])
-    if (decelerationRate != null) __obj.updateDynamic("decelerationRate")(decelerationRate.asInstanceOf[js.Any])
-    if (!js.isUndefined(directionalLockEnabled)) __obj.updateDynamic("directionalLockEnabled")(directionalLockEnabled.get.asInstanceOf[js.Any])
-    if (indicatorStyle != null) __obj.updateDynamic("indicatorStyle")(indicatorStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(maximumZoomScale)) __obj.updateDynamic("maximumZoomScale")(maximumZoomScale.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(minimumZoomScale)) __obj.updateDynamic("minimumZoomScale")(minimumZoomScale.get.asInstanceOf[js.Any])
-    if (onScrollAnimationEnd != null) __obj.updateDynamic("onScrollAnimationEnd")(js.Any.fromFunction0(onScrollAnimationEnd))
-    if (onScrollToTop != null) __obj.updateDynamic("onScrollToTop")(js.Any.fromFunction1(onScrollToTop))
-    if (!js.isUndefined(pinchGestureEnabled)) __obj.updateDynamic("pinchGestureEnabled")(pinchGestureEnabled.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(scrollEventThrottle)) __obj.updateDynamic("scrollEventThrottle")(scrollEventThrottle.get.asInstanceOf[js.Any])
-    if (scrollIndicatorInsets != null) __obj.updateDynamic("scrollIndicatorInsets")(scrollIndicatorInsets.asInstanceOf[js.Any])
-    if (!js.isUndefined(scrollToOverflowEnabled)) __obj.updateDynamic("scrollToOverflowEnabled")(scrollToOverflowEnabled.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(scrollsToTop)) __obj.updateDynamic("scrollsToTop")(scrollsToTop.get.asInstanceOf[js.Any])
-    if (stickyHeaderIndices != null) __obj.updateDynamic("stickyHeaderIndices")(stickyHeaderIndices.asInstanceOf[js.Any])
-    if (!js.isUndefined(zoomScale)) __obj.updateDynamic("zoomScale")(zoomScale.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScrollViewPropsIOS]
   }
+  @scala.inline
+  implicit class ScrollViewPropsIOSOps[Self <: ScrollViewPropsIOS] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAlwaysBounceHorizontal(value: Boolean): Self = this.set("alwaysBounceHorizontal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAlwaysBounceHorizontal: Self = this.set("alwaysBounceHorizontal", js.undefined)
+    @scala.inline
+    def setAlwaysBounceVertical(value: Boolean): Self = this.set("alwaysBounceVertical", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAlwaysBounceVertical: Self = this.set("alwaysBounceVertical", js.undefined)
+    @scala.inline
+    def setAutomaticallyAdjustContentInsets(value: Boolean): Self = this.set("automaticallyAdjustContentInsets", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAutomaticallyAdjustContentInsets: Self = this.set("automaticallyAdjustContentInsets", js.undefined)
+    @scala.inline
+    def setBounces(value: Boolean): Self = this.set("bounces", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBounces: Self = this.set("bounces", js.undefined)
+    @scala.inline
+    def setBouncesZoom(value: Boolean): Self = this.set("bouncesZoom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBouncesZoom: Self = this.set("bouncesZoom", js.undefined)
+    @scala.inline
+    def setCanCancelContentTouches(value: Boolean): Self = this.set("canCancelContentTouches", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCanCancelContentTouches: Self = this.set("canCancelContentTouches", js.undefined)
+    @scala.inline
+    def setCenterContent(value: Boolean): Self = this.set("centerContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCenterContent: Self = this.set("centerContent", js.undefined)
+    @scala.inline
+    def setContentInset(value: Insets): Self = this.set("contentInset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContentInset: Self = this.set("contentInset", js.undefined)
+    @scala.inline
+    def setContentInsetAdjustmentBehavior(value: automatic | scrollableAxes | never | always): Self = this.set("contentInsetAdjustmentBehavior", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContentInsetAdjustmentBehavior: Self = this.set("contentInsetAdjustmentBehavior", js.undefined)
+    @scala.inline
+    def setContentOffset(value: PointPropType): Self = this.set("contentOffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContentOffset: Self = this.set("contentOffset", js.undefined)
+    @scala.inline
+    def setDecelerationRate(value: fast | normal_ | Double): Self = this.set("decelerationRate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDecelerationRate: Self = this.set("decelerationRate", js.undefined)
+    @scala.inline
+    def setDirectionalLockEnabled(value: Boolean): Self = this.set("directionalLockEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDirectionalLockEnabled: Self = this.set("directionalLockEnabled", js.undefined)
+    @scala.inline
+    def setIndicatorStyle(value: default | black | white): Self = this.set("indicatorStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIndicatorStyle: Self = this.set("indicatorStyle", js.undefined)
+    @scala.inline
+    def setMaximumZoomScale(value: Double): Self = this.set("maximumZoomScale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaximumZoomScale: Self = this.set("maximumZoomScale", js.undefined)
+    @scala.inline
+    def setMinimumZoomScale(value: Double): Self = this.set("minimumZoomScale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinimumZoomScale: Self = this.set("minimumZoomScale", js.undefined)
+    @scala.inline
+    def setOnScrollAnimationEnd(value: () => Unit): Self = this.set("onScrollAnimationEnd", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnScrollAnimationEnd: Self = this.set("onScrollAnimationEnd", js.undefined)
+    @scala.inline
+    def setOnScrollToTop(value: SyntheticEvent[NodeHandle, NativeScrollEvent] => Unit): Self = this.set("onScrollToTop", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnScrollToTop: Self = this.set("onScrollToTop", js.undefined)
+    @scala.inline
+    def setPinchGestureEnabled(value: Boolean): Self = this.set("pinchGestureEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePinchGestureEnabled: Self = this.set("pinchGestureEnabled", js.undefined)
+    @scala.inline
+    def setScrollEventThrottle(value: Double): Self = this.set("scrollEventThrottle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScrollEventThrottle: Self = this.set("scrollEventThrottle", js.undefined)
+    @scala.inline
+    def setScrollIndicatorInsets(value: Insets): Self = this.set("scrollIndicatorInsets", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScrollIndicatorInsets: Self = this.set("scrollIndicatorInsets", js.undefined)
+    @scala.inline
+    def setScrollToOverflowEnabled(value: Boolean): Self = this.set("scrollToOverflowEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScrollToOverflowEnabled: Self = this.set("scrollToOverflowEnabled", js.undefined)
+    @scala.inline
+    def setScrollsToTop(value: Boolean): Self = this.set("scrollsToTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScrollsToTop: Self = this.set("scrollsToTop", js.undefined)
+    @scala.inline
+    def setStickyHeaderIndices(value: js.Array[Double]): Self = this.set("stickyHeaderIndices", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStickyHeaderIndices: Self = this.set("stickyHeaderIndices", js.undefined)
+    @scala.inline
+    def setZoomScale(value: Double): Self = this.set("zoomScale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteZoomScale: Self = this.set("zoomScale", js.undefined)
+  }
+  
 }
 

@@ -18,16 +18,40 @@ trait DayProp[TEvent /* <: js.Object */] extends js.Object {
 
 object DayProp {
   @scala.inline
-  def apply[TEvent](
-    dayProp: (/* date */ js.Date, /* resourceId */ js.UndefOr[Double | String]) => HTMLAttributes[HTMLDivElement] = null,
-    eventProp: (TEvent, /* start */ stringOrDate, /* end */ stringOrDate, /* isSelected */ Boolean) => HTMLAttributes[HTMLDivElement] = null,
-    slotProp: (/* date */ js.Date, /* resourceId */ js.UndefOr[Double | String]) => HTMLAttributes[HTMLDivElement] = null
-  ): DayProp[TEvent] = {
+  def apply[/* <: js.Object */ TEvent](): DayProp[TEvent] = {
     val __obj = js.Dynamic.literal()
-    if (dayProp != null) __obj.updateDynamic("dayProp")(js.Any.fromFunction2(dayProp))
-    if (eventProp != null) __obj.updateDynamic("eventProp")(js.Any.fromFunction4(eventProp))
-    if (slotProp != null) __obj.updateDynamic("slotProp")(js.Any.fromFunction2(slotProp))
     __obj.asInstanceOf[DayProp[TEvent]]
   }
+  @scala.inline
+  implicit class DayPropOps[Self <: DayProp[_], /* <: js.Object */ TEvent] (val x: Self with DayProp[TEvent]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDayProp(
+      value: (/* date */ js.Date, /* resourceId */ js.UndefOr[Double | String]) => HTMLAttributes[HTMLDivElement]
+    ): Self = this.set("dayProp", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteDayProp: Self = this.set("dayProp", js.undefined)
+    @scala.inline
+    def setEventProp(
+      value: (TEvent, /* start */ stringOrDate, /* end */ stringOrDate, /* isSelected */ Boolean) => HTMLAttributes[HTMLDivElement]
+    ): Self = this.set("eventProp", js.Any.fromFunction4(value))
+    @scala.inline
+    def deleteEventProp: Self = this.set("eventProp", js.undefined)
+    @scala.inline
+    def setSlotProp(
+      value: (/* date */ js.Date, /* resourceId */ js.UndefOr[Double | String]) => HTMLAttributes[HTMLDivElement]
+    ): Self = this.set("slotProp", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteSlotProp: Self = this.set("slotProp", js.undefined)
+  }
+  
 }
 

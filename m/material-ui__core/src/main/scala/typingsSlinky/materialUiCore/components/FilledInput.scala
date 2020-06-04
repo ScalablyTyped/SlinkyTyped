@@ -79,6 +79,7 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -256,7 +257,7 @@ object FilledInput {
     @scala.inline
     def inputComponentComponentClass(value: ReactComponentClass[InputBaseComponentProps]): this.type = set("inputComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def inputComponent(value: ReactComponentClass[InputBaseComponentProps]): this.type = set("inputComponent", value.asInstanceOf[js.Any])
+    def inputComponent(value: ReactType[InputBaseComponentProps]): this.type = set("inputComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
     @scala.inline

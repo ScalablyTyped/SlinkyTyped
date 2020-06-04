@@ -33,12 +33,27 @@ object DebugElementPOSTR3 {
     queryAllNodes: Predicate[DebugNode] => js.Array[DebugNode],
     references: StringDictionary[js.Any],
     styles: StringDictionary[String | Null],
-    triggerEventHandler: (String, js.Any) => Unit,
-    nativeElement: Element = null,
-    parent: DebugElement = null
+    triggerEventHandler: (String, js.Any) => Unit
   ): DebugElementPOSTR3 = {
-    val __obj = js.Dynamic.literal(attributes = attributes.asInstanceOf[js.Any], childNodes = childNodes.asInstanceOf[js.Any], children = children.asInstanceOf[js.Any], classes = classes.asInstanceOf[js.Any], componentInstance = componentInstance.asInstanceOf[js.Any], context = context.asInstanceOf[js.Any], injector = injector.asInstanceOf[js.Any], listeners = listeners.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], nativeNode = nativeNode.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], providerTokens = providerTokens.asInstanceOf[js.Any], query = js.Any.fromFunction1(query), queryAll = js.Any.fromFunction1(queryAll), queryAllNodes = js.Any.fromFunction1(queryAllNodes), references = references.asInstanceOf[js.Any], styles = styles.asInstanceOf[js.Any], triggerEventHandler = js.Any.fromFunction2(triggerEventHandler), nativeElement = nativeElement.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(attributes = attributes.asInstanceOf[js.Any], childNodes = childNodes.asInstanceOf[js.Any], children = children.asInstanceOf[js.Any], classes = classes.asInstanceOf[js.Any], componentInstance = componentInstance.asInstanceOf[js.Any], context = context.asInstanceOf[js.Any], injector = injector.asInstanceOf[js.Any], listeners = listeners.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], nativeNode = nativeNode.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], providerTokens = providerTokens.asInstanceOf[js.Any], query = js.Any.fromFunction1(query), queryAll = js.Any.fromFunction1(queryAll), queryAllNodes = js.Any.fromFunction1(queryAllNodes), references = references.asInstanceOf[js.Any], styles = styles.asInstanceOf[js.Any], triggerEventHandler = js.Any.fromFunction2(triggerEventHandler))
     __obj.asInstanceOf[DebugElementPOSTR3]
   }
+  @scala.inline
+  implicit class DebugElementPOSTR3Ops[Self <: DebugElementPOSTR3] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setNativeElement(value: Element): Self = this.set("nativeElement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNativeElementNull: Self = this.set("nativeElement", null)
+  }
+  
 }
 

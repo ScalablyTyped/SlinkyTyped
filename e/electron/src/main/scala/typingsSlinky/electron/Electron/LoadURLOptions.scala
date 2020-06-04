@@ -28,20 +28,42 @@ trait LoadURLOptions extends js.Object {
 
 object LoadURLOptions {
   @scala.inline
-  def apply(
-    baseURLForDataURL: String = null,
-    extraHeaders: String = null,
-    httpReferrer: String | Referrer = null,
-    postData: js.Array[UploadBlob | UploadFile | UploadRawData] = null,
-    userAgent: String = null
-  ): LoadURLOptions = {
+  def apply(): LoadURLOptions = {
     val __obj = js.Dynamic.literal()
-    if (baseURLForDataURL != null) __obj.updateDynamic("baseURLForDataURL")(baseURLForDataURL.asInstanceOf[js.Any])
-    if (extraHeaders != null) __obj.updateDynamic("extraHeaders")(extraHeaders.asInstanceOf[js.Any])
-    if (httpReferrer != null) __obj.updateDynamic("httpReferrer")(httpReferrer.asInstanceOf[js.Any])
-    if (postData != null) __obj.updateDynamic("postData")(postData.asInstanceOf[js.Any])
-    if (userAgent != null) __obj.updateDynamic("userAgent")(userAgent.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoadURLOptions]
   }
+  @scala.inline
+  implicit class LoadURLOptionsOps[Self <: LoadURLOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBaseURLForDataURL(value: String): Self = this.set("baseURLForDataURL", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBaseURLForDataURL: Self = this.set("baseURLForDataURL", js.undefined)
+    @scala.inline
+    def setExtraHeaders(value: String): Self = this.set("extraHeaders", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteExtraHeaders: Self = this.set("extraHeaders", js.undefined)
+    @scala.inline
+    def setHttpReferrer(value: String | Referrer): Self = this.set("httpReferrer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHttpReferrer: Self = this.set("httpReferrer", js.undefined)
+    @scala.inline
+    def setPostData(value: js.Array[UploadBlob | UploadFile | UploadRawData]): Self = this.set("postData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePostData: Self = this.set("postData", js.undefined)
+    @scala.inline
+    def setUserAgent(value: String): Self = this.set("userAgent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUserAgent: Self = this.set("userAgent", js.undefined)
+  }
+  
 }
 

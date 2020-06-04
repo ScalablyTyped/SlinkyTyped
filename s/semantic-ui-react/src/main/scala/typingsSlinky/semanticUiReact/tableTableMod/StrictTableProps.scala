@@ -1,6 +1,9 @@
 package typingsSlinky.semanticUiReact.tableTableMod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
+import typingsSlinky.react.mod.ReactNodeArray
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
@@ -91,68 +94,152 @@ trait StrictTableProps extends js.Object {
 
 object StrictTableProps {
   @scala.inline
-  def apply(
-    as: js.Any = null,
-    attached: Boolean | top | bottom = null,
-    basic: Boolean | very = null,
-    celled: Boolean | internally = null,
-    children: TagMod[Any] = null,
-    className: String = null,
-    collapsing: js.UndefOr[Boolean] = js.undefined,
-    color: SemanticCOLORS = null,
-    columns: SemanticWIDTHS = null,
-    compact: Boolean | very = null,
-    definition: js.UndefOr[Boolean] = js.undefined,
-    fixed: js.UndefOr[Boolean] = js.undefined,
-    footerRow: SemanticShorthandItem[TableRowProps] = null,
-    headerRow: SemanticShorthandItem[TableRowProps] = null,
-    headerRows: SemanticShorthandCollection[TableRowProps] = null,
-    inverted: js.UndefOr[Boolean] = js.undefined,
-    padded: Boolean | very = null,
-    renderBodyRow: (/* data */ js.Any, /* index */ Double) => _ = null,
-    selectable: js.UndefOr[Boolean] = js.undefined,
-    singleLine: js.UndefOr[Boolean] = js.undefined,
-    size: small | large = null,
-    sortable: js.UndefOr[Boolean] = js.undefined,
-    stackable: js.UndefOr[Boolean] = js.undefined,
-    striped: js.UndefOr[Boolean] = js.undefined,
-    structured: js.UndefOr[Boolean] = js.undefined,
-    tableData: js.Array[_] = null,
-    textAlign: center | left | right = null,
-    unstackable: js.UndefOr[Boolean] = js.undefined,
-    verticalAlign: SemanticVERTICALALIGNMENTS = null
-  ): StrictTableProps = {
+  def apply(): StrictTableProps = {
     val __obj = js.Dynamic.literal()
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (attached != null) __obj.updateDynamic("attached")(attached.asInstanceOf[js.Any])
-    if (basic != null) __obj.updateDynamic("basic")(basic.asInstanceOf[js.Any])
-    if (celled != null) __obj.updateDynamic("celled")(celled.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(collapsing)) __obj.updateDynamic("collapsing")(collapsing.get.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (compact != null) __obj.updateDynamic("compact")(compact.asInstanceOf[js.Any])
-    if (!js.isUndefined(definition)) __obj.updateDynamic("definition")(definition.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixed)) __obj.updateDynamic("fixed")(fixed.get.asInstanceOf[js.Any])
-    if (footerRow != null) __obj.updateDynamic("footerRow")(footerRow.asInstanceOf[js.Any])
-    if (headerRow != null) __obj.updateDynamic("headerRow")(headerRow.asInstanceOf[js.Any])
-    if (headerRows != null) __obj.updateDynamic("headerRows")(headerRows.asInstanceOf[js.Any])
-    if (!js.isUndefined(inverted)) __obj.updateDynamic("inverted")(inverted.get.asInstanceOf[js.Any])
-    if (padded != null) __obj.updateDynamic("padded")(padded.asInstanceOf[js.Any])
-    if (renderBodyRow != null) __obj.updateDynamic("renderBodyRow")(js.Any.fromFunction2(renderBodyRow))
-    if (!js.isUndefined(selectable)) __obj.updateDynamic("selectable")(selectable.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(singleLine)) __obj.updateDynamic("singleLine")(singleLine.get.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (!js.isUndefined(sortable)) __obj.updateDynamic("sortable")(sortable.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(stackable)) __obj.updateDynamic("stackable")(stackable.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(striped)) __obj.updateDynamic("striped")(striped.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(structured)) __obj.updateDynamic("structured")(structured.get.asInstanceOf[js.Any])
-    if (tableData != null) __obj.updateDynamic("tableData")(tableData.asInstanceOf[js.Any])
-    if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
-    if (!js.isUndefined(unstackable)) __obj.updateDynamic("unstackable")(unstackable.get.asInstanceOf[js.Any])
-    if (verticalAlign != null) __obj.updateDynamic("verticalAlign")(verticalAlign.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictTableProps]
   }
+  @scala.inline
+  implicit class StrictTablePropsOps[Self <: StrictTableProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAs(value: js.Any): Self = this.set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAs: Self = this.set("as", js.undefined)
+    @scala.inline
+    def setAttached(value: Boolean | top | bottom): Self = this.set("attached", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAttached: Self = this.set("attached", js.undefined)
+    @scala.inline
+    def setBasic(value: Boolean | very): Self = this.set("basic", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBasic: Self = this.set("basic", js.undefined)
+    @scala.inline
+    def setCelled(value: Boolean | internally): Self = this.set("celled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCelled: Self = this.set("celled", js.undefined)
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setCollapsing(value: Boolean): Self = this.set("collapsing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCollapsing: Self = this.set("collapsing", js.undefined)
+    @scala.inline
+    def setColor(value: SemanticCOLORS): Self = this.set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteColor: Self = this.set("color", js.undefined)
+    @scala.inline
+    def setColumns(value: SemanticWIDTHS): Self = this.set("columns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteColumns: Self = this.set("columns", js.undefined)
+    @scala.inline
+    def setCompact(value: Boolean | very): Self = this.set("compact", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCompact: Self = this.set("compact", js.undefined)
+    @scala.inline
+    def setDefinition(value: Boolean): Self = this.set("definition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefinition: Self = this.set("definition", js.undefined)
+    @scala.inline
+    def setFixed(value: Boolean): Self = this.set("fixed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFixed: Self = this.set("fixed", js.undefined)
+    @scala.inline
+    def setFooterRowReactElement(value: ReactElement): Self = this.set("footerRow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFooterRowFunction3(
+      value: (/* component */ ReactType[TableRowProps], TableRowProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): Self = this.set("footerRow", js.Any.fromFunction3(value))
+    @scala.inline
+    def setFooterRow(value: SemanticShorthandItem[TableRowProps]): Self = this.set("footerRow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFooterRow: Self = this.set("footerRow", js.undefined)
+    @scala.inline
+    def setHeaderRowReactElement(value: ReactElement): Self = this.set("headerRow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHeaderRowFunction3(
+      value: (/* component */ ReactType[TableRowProps], TableRowProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): Self = this.set("headerRow", js.Any.fromFunction3(value))
+    @scala.inline
+    def setHeaderRow(value: SemanticShorthandItem[TableRowProps]): Self = this.set("headerRow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeaderRow: Self = this.set("headerRow", js.undefined)
+    @scala.inline
+    def setHeaderRows(value: SemanticShorthandCollection[TableRowProps]): Self = this.set("headerRows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeaderRows: Self = this.set("headerRows", js.undefined)
+    @scala.inline
+    def setInverted(value: Boolean): Self = this.set("inverted", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInverted: Self = this.set("inverted", js.undefined)
+    @scala.inline
+    def setPadded(value: Boolean | very): Self = this.set("padded", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePadded: Self = this.set("padded", js.undefined)
+    @scala.inline
+    def setRenderBodyRow(value: (/* data */ js.Any, /* index */ Double) => _): Self = this.set("renderBodyRow", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteRenderBodyRow: Self = this.set("renderBodyRow", js.undefined)
+    @scala.inline
+    def setSelectable(value: Boolean): Self = this.set("selectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelectable: Self = this.set("selectable", js.undefined)
+    @scala.inline
+    def setSingleLine(value: Boolean): Self = this.set("singleLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSingleLine: Self = this.set("singleLine", js.undefined)
+    @scala.inline
+    def setSize(value: small | large): Self = this.set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
+    @scala.inline
+    def setSortable(value: Boolean): Self = this.set("sortable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSortable: Self = this.set("sortable", js.undefined)
+    @scala.inline
+    def setStackable(value: Boolean): Self = this.set("stackable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStackable: Self = this.set("stackable", js.undefined)
+    @scala.inline
+    def setStriped(value: Boolean): Self = this.set("striped", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStriped: Self = this.set("striped", js.undefined)
+    @scala.inline
+    def setStructured(value: Boolean): Self = this.set("structured", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStructured: Self = this.set("structured", js.undefined)
+    @scala.inline
+    def setTableData(value: js.Array[_]): Self = this.set("tableData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTableData: Self = this.set("tableData", js.undefined)
+    @scala.inline
+    def setTextAlign(value: center | left | right): Self = this.set("textAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTextAlign: Self = this.set("textAlign", js.undefined)
+    @scala.inline
+    def setUnstackable(value: Boolean): Self = this.set("unstackable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUnstackable: Self = this.set("unstackable", js.undefined)
+    @scala.inline
+    def setVerticalAlign(value: SemanticVERTICALALIGNMENTS): Self = this.set("verticalAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteVerticalAlign: Self = this.set("verticalAlign", js.undefined)
+  }
+  
 }
 

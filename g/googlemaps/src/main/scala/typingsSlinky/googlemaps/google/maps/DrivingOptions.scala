@@ -11,10 +11,28 @@ trait DrivingOptions extends js.Object {
 
 object DrivingOptions {
   @scala.inline
-  def apply(departureTime: js.Date, trafficModel: TrafficModel = null): DrivingOptions = {
+  def apply(departureTime: js.Date): DrivingOptions = {
     val __obj = js.Dynamic.literal(departureTime = departureTime.asInstanceOf[js.Any])
-    if (trafficModel != null) __obj.updateDynamic("trafficModel")(trafficModel.asInstanceOf[js.Any])
     __obj.asInstanceOf[DrivingOptions]
   }
+  @scala.inline
+  implicit class DrivingOptionsOps[Self <: DrivingOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDepartureTime(value: js.Date): Self = this.set("departureTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTrafficModel(value: TrafficModel): Self = this.set("trafficModel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTrafficModel: Self = this.set("trafficModel", js.undefined)
+  }
+  
 }
 

@@ -24,16 +24,34 @@ trait StatusBarPropsIOS extends js.Object {
 
 object StatusBarPropsIOS {
   @scala.inline
-  def apply(
-    barStyle: StatusBarStyle = null,
-    networkActivityIndicatorVisible: js.UndefOr[Boolean] = js.undefined,
-    showHideTransition: fade | slide = null
-  ): StatusBarPropsIOS = {
+  def apply(): StatusBarPropsIOS = {
     val __obj = js.Dynamic.literal()
-    if (barStyle != null) __obj.updateDynamic("barStyle")(barStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(networkActivityIndicatorVisible)) __obj.updateDynamic("networkActivityIndicatorVisible")(networkActivityIndicatorVisible.get.asInstanceOf[js.Any])
-    if (showHideTransition != null) __obj.updateDynamic("showHideTransition")(showHideTransition.asInstanceOf[js.Any])
     __obj.asInstanceOf[StatusBarPropsIOS]
   }
+  @scala.inline
+  implicit class StatusBarPropsIOSOps[Self <: StatusBarPropsIOS] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBarStyle(value: StatusBarStyle): Self = this.set("barStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBarStyle: Self = this.set("barStyle", js.undefined)
+    @scala.inline
+    def setNetworkActivityIndicatorVisible(value: Boolean): Self = this.set("networkActivityIndicatorVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNetworkActivityIndicatorVisible: Self = this.set("networkActivityIndicatorVisible", js.undefined)
+    @scala.inline
+    def setShowHideTransition(value: fade | slide): Self = this.set("showHideTransition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowHideTransition: Self = this.set("showHideTransition", js.undefined)
+  }
+  
 }
 

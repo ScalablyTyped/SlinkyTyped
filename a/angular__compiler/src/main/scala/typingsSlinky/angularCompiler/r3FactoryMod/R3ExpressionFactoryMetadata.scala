@@ -1,6 +1,5 @@
 package typingsSlinky.angularCompiler.r3FactoryMod
 
-import typingsSlinky.angularCompiler.angularCompilerStrings.invalid
 import typingsSlinky.angularCompiler.outputAstMod.Expression
 import typingsSlinky.angularCompiler.outputAstMod.ExternalReference
 import scala.scalajs.js
@@ -14,16 +13,25 @@ import scala.scalajs.js.annotation._
 
 object R3ExpressionFactoryMetadata {
   @scala.inline
-  def apply(
-    expression: Expression,
-    injectFn: ExternalReference,
-    name: String,
-    `type`: Expression,
-    deps: js.Array[R3DependencyMetadata] | invalid = null
-  ): R3ExpressionFactoryMetadata = {
-    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any], injectFn = injectFn.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], deps = deps.asInstanceOf[js.Any])
+  def apply(expression: Expression, injectFn: ExternalReference, name: String, `type`: Expression): R3ExpressionFactoryMetadata = {
+    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any], injectFn = injectFn.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[R3ExpressionFactoryMetadata]
   }
+  @scala.inline
+  implicit class R3ExpressionFactoryMetadataOps[Self <: R3ExpressionFactoryMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setExpression(value: Expression): Self = this.set("expression", value.asInstanceOf[js.Any])
+  }
+  
 }
 

@@ -21,18 +21,47 @@ object CompletionEntryDetails {
     displayParts: js.Array[SymbolDisplayPart],
     kind: ScriptElementKind,
     kindModifiers: java.lang.String,
-    name: java.lang.String,
-    codeActions: js.Array[CodeAction] = null,
-    documentation: js.Array[SymbolDisplayPart] = null,
-    source: js.Array[SymbolDisplayPart] = null,
-    tags: js.Array[JSDocTagInfo] = null
+    name: java.lang.String
   ): CompletionEntryDetails = {
     val __obj = js.Dynamic.literal(displayParts = displayParts.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], kindModifiers = kindModifiers.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    if (codeActions != null) __obj.updateDynamic("codeActions")(codeActions.asInstanceOf[js.Any])
-    if (documentation != null) __obj.updateDynamic("documentation")(documentation.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompletionEntryDetails]
   }
+  @scala.inline
+  implicit class CompletionEntryDetailsOps[Self <: CompletionEntryDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDisplayParts(value: js.Array[SymbolDisplayPart]): Self = this.set("displayParts", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setKind(value: ScriptElementKind): Self = this.set("kind", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setKindModifiers(value: java.lang.String): Self = this.set("kindModifiers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setName(value: java.lang.String): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCodeActions(value: js.Array[CodeAction]): Self = this.set("codeActions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCodeActions: Self = this.set("codeActions", js.undefined)
+    @scala.inline
+    def setDocumentation(value: js.Array[SymbolDisplayPart]): Self = this.set("documentation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDocumentation: Self = this.set("documentation", js.undefined)
+    @scala.inline
+    def setSource(value: js.Array[SymbolDisplayPart]): Self = this.set("source", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSource: Self = this.set("source", js.undefined)
+    @scala.inline
+    def setTags(value: js.Array[JSDocTagInfo]): Self = this.set("tags", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTags: Self = this.set("tags", js.undefined)
+  }
+  
 }
 

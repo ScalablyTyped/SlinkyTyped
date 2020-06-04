@@ -84,6 +84,7 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.std.HTMLTableHeaderCellElement
 import scala.scalajs.js
@@ -222,7 +223,7 @@ object TableCell {
     @scala.inline
     def componentComponentClass(value: ReactComponentClass[TableCellBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
-    def component(value: ReactComponentClass[TableCellBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: ReactType[TableCellBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
     @scala.inline

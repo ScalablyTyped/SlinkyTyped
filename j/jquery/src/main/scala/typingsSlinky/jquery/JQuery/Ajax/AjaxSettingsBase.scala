@@ -192,78 +192,160 @@ trait AjaxSettingsBase[TContext] extends js.Object {
 
 object AjaxSettingsBase {
   @scala.inline
-  def apply[TContext](
-    accepts: PlainObject[String] = null,
-    async: js.UndefOr[Boolean] = js.undefined,
-    beforeSend: js.ThisFunction2[/* this */ TContext, /* jqXHR */ jqXHR[_], AjaxSettingsBase[TContext], `false` | Unit] = null,
-    cache: js.UndefOr[Boolean] = js.undefined,
-    complete: TypeOrArray[CompleteCallback[TContext]] = null,
-    contentType: String | `false` = null,
-    contents: PlainObject[js.RegExp] = null,
-    context: TContext = null,
-    converters: PlainObject[(js.Function1[/* value */ _, _]) | `true`] = null,
-    crossDomain: js.UndefOr[Boolean] = js.undefined,
-    data: PlainObject[_] | String = null,
-    dataFilter: (/* data */ String, /* type */ String) => _ = null,
-    dataType: xml | html | script | json | jsonp | text | String = null,
-    enctype: `applicationSlashx-www-form-urlencoded` | `multipartSlashform-data` | textSlashplain = null,
-    error: TypeOrArray[ErrorCallback[TContext]] = null,
-    global: js.UndefOr[Boolean] = js.undefined,
-    headers: PlainObject[js.UndefOr[String | Null]] = null,
-    ifModified: js.UndefOr[Boolean] = js.undefined,
-    isLocal: js.UndefOr[Boolean] = js.undefined,
-    jsonp: String | `false` = null,
-    jsonpCallback: String | (js.ThisFunction0[/* this */ TContext, String]) = null,
-    method: String = null,
-    mimeType: String = null,
-    password: String = null,
-    processData: js.UndefOr[Boolean] = js.undefined,
-    scriptCharset: String = null,
-    statusCode: StatusCodeCallbacks[TContext] = null,
-    success: TypeOrArray[SuccessCallback[TContext]] = null,
-    timeout: js.UndefOr[Double] = js.undefined,
-    traditional: js.UndefOr[Boolean] = js.undefined,
-    `type`: String = null,
-    username: String = null,
-    xhr: () => XMLHttpRequest = null,
-    xhrFields: XHRFields = null
-  ): AjaxSettingsBase[TContext] = {
+  def apply[TContext](): AjaxSettingsBase[TContext] = {
     val __obj = js.Dynamic.literal()
-    if (accepts != null) __obj.updateDynamic("accepts")(accepts.asInstanceOf[js.Any])
-    if (!js.isUndefined(async)) __obj.updateDynamic("async")(async.get.asInstanceOf[js.Any])
-    if (beforeSend != null) __obj.updateDynamic("beforeSend")(beforeSend.asInstanceOf[js.Any])
-    if (!js.isUndefined(cache)) __obj.updateDynamic("cache")(cache.get.asInstanceOf[js.Any])
-    if (complete != null) __obj.updateDynamic("complete")(complete.asInstanceOf[js.Any])
-    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
-    if (contents != null) __obj.updateDynamic("contents")(contents.asInstanceOf[js.Any])
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (converters != null) __obj.updateDynamic("converters")(converters.asInstanceOf[js.Any])
-    if (!js.isUndefined(crossDomain)) __obj.updateDynamic("crossDomain")(crossDomain.get.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (dataFilter != null) __obj.updateDynamic("dataFilter")(js.Any.fromFunction2(dataFilter))
-    if (dataType != null) __obj.updateDynamic("dataType")(dataType.asInstanceOf[js.Any])
-    if (enctype != null) __obj.updateDynamic("enctype")(enctype.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (!js.isUndefined(global)) __obj.updateDynamic("global")(global.get.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (!js.isUndefined(ifModified)) __obj.updateDynamic("ifModified")(ifModified.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(isLocal)) __obj.updateDynamic("isLocal")(isLocal.get.asInstanceOf[js.Any])
-    if (jsonp != null) __obj.updateDynamic("jsonp")(jsonp.asInstanceOf[js.Any])
-    if (jsonpCallback != null) __obj.updateDynamic("jsonpCallback")(jsonpCallback.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (mimeType != null) __obj.updateDynamic("mimeType")(mimeType.asInstanceOf[js.Any])
-    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
-    if (!js.isUndefined(processData)) __obj.updateDynamic("processData")(processData.get.asInstanceOf[js.Any])
-    if (scriptCharset != null) __obj.updateDynamic("scriptCharset")(scriptCharset.asInstanceOf[js.Any])
-    if (statusCode != null) __obj.updateDynamic("statusCode")(statusCode.asInstanceOf[js.Any])
-    if (success != null) __obj.updateDynamic("success")(success.asInstanceOf[js.Any])
-    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(traditional)) __obj.updateDynamic("traditional")(traditional.get.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
-    if (xhr != null) __obj.updateDynamic("xhr")(js.Any.fromFunction0(xhr))
-    if (xhrFields != null) __obj.updateDynamic("xhrFields")(xhrFields.asInstanceOf[js.Any])
     __obj.asInstanceOf[AjaxSettingsBase[TContext]]
   }
+  @scala.inline
+  implicit class AjaxSettingsBaseOps[Self <: AjaxSettingsBase[_], TContext] (val x: Self with AjaxSettingsBase[TContext]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAccepts(value: PlainObject[String]): Self = this.set("accepts", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAccepts: Self = this.set("accepts", js.undefined)
+    @scala.inline
+    def setAsync(value: Boolean): Self = this.set("async", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAsync: Self = this.set("async", js.undefined)
+    @scala.inline
+    def setBeforeSend(
+      value: js.ThisFunction2[/* this */ TContext, /* jqXHR */ jqXHR[_], AjaxSettingsBase[TContext], `false` | Unit]
+    ): Self = this.set("beforeSend", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBeforeSend: Self = this.set("beforeSend", js.undefined)
+    @scala.inline
+    def setCache(value: Boolean): Self = this.set("cache", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCache: Self = this.set("cache", js.undefined)
+    @scala.inline
+    def setComplete(value: TypeOrArray[CompleteCallback[TContext]]): Self = this.set("complete", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteComplete: Self = this.set("complete", js.undefined)
+    @scala.inline
+    def setContentType(value: String | `false`): Self = this.set("contentType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContentType: Self = this.set("contentType", js.undefined)
+    @scala.inline
+    def setContents(value: PlainObject[js.RegExp]): Self = this.set("contents", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContents: Self = this.set("contents", js.undefined)
+    @scala.inline
+    def setContext(value: TContext): Self = this.set("context", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContext: Self = this.set("context", js.undefined)
+    @scala.inline
+    def setConverters(value: PlainObject[(js.Function1[/* value */ _, _]) | `true`]): Self = this.set("converters", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteConverters: Self = this.set("converters", js.undefined)
+    @scala.inline
+    def setCrossDomain(value: Boolean): Self = this.set("crossDomain", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCrossDomain: Self = this.set("crossDomain", js.undefined)
+    @scala.inline
+    def setData(value: PlainObject[_] | String): Self = this.set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteData: Self = this.set("data", js.undefined)
+    @scala.inline
+    def setDataFilter(value: (/* data */ String, /* type */ String) => _): Self = this.set("dataFilter", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteDataFilter: Self = this.set("dataFilter", js.undefined)
+    @scala.inline
+    def setDataType(value: xml | html | script | json | jsonp | text | String): Self = this.set("dataType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDataType: Self = this.set("dataType", js.undefined)
+    @scala.inline
+    def setEnctype(value: `applicationSlashx-www-form-urlencoded` | `multipartSlashform-data` | textSlashplain): Self = this.set("enctype", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEnctype: Self = this.set("enctype", js.undefined)
+    @scala.inline
+    def setError(value: TypeOrArray[ErrorCallback[TContext]]): Self = this.set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteError: Self = this.set("error", js.undefined)
+    @scala.inline
+    def setGlobal(value: Boolean): Self = this.set("global", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGlobal: Self = this.set("global", js.undefined)
+    @scala.inline
+    def setHeaders(value: PlainObject[js.UndefOr[String | Null]]): Self = this.set("headers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeaders: Self = this.set("headers", js.undefined)
+    @scala.inline
+    def setIfModified(value: Boolean): Self = this.set("ifModified", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIfModified: Self = this.set("ifModified", js.undefined)
+    @scala.inline
+    def setIsLocal(value: Boolean): Self = this.set("isLocal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIsLocal: Self = this.set("isLocal", js.undefined)
+    @scala.inline
+    def setJsonp(value: String | `false`): Self = this.set("jsonp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteJsonp: Self = this.set("jsonp", js.undefined)
+    @scala.inline
+    def setJsonpCallback(value: String | (js.ThisFunction0[/* this */ TContext, String])): Self = this.set("jsonpCallback", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteJsonpCallback: Self = this.set("jsonpCallback", js.undefined)
+    @scala.inline
+    def setMethod(value: String): Self = this.set("method", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMethod: Self = this.set("method", js.undefined)
+    @scala.inline
+    def setMimeType(value: String): Self = this.set("mimeType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMimeType: Self = this.set("mimeType", js.undefined)
+    @scala.inline
+    def setPassword(value: String): Self = this.set("password", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePassword: Self = this.set("password", js.undefined)
+    @scala.inline
+    def setProcessData(value: Boolean): Self = this.set("processData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteProcessData: Self = this.set("processData", js.undefined)
+    @scala.inline
+    def setScriptCharset(value: String): Self = this.set("scriptCharset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScriptCharset: Self = this.set("scriptCharset", js.undefined)
+    @scala.inline
+    def setStatusCode(value: StatusCodeCallbacks[TContext]): Self = this.set("statusCode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStatusCode: Self = this.set("statusCode", js.undefined)
+    @scala.inline
+    def setSuccess(value: TypeOrArray[SuccessCallback[TContext]]): Self = this.set("success", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSuccess: Self = this.set("success", js.undefined)
+    @scala.inline
+    def setTimeout(value: Double): Self = this.set("timeout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTimeout: Self = this.set("timeout", js.undefined)
+    @scala.inline
+    def setTraditional(value: Boolean): Self = this.set("traditional", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTraditional: Self = this.set("traditional", js.undefined)
+    @scala.inline
+    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteType: Self = this.set("type", js.undefined)
+    @scala.inline
+    def setUsername(value: String): Self = this.set("username", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUsername: Self = this.set("username", js.undefined)
+    @scala.inline
+    def setXhr(value: () => XMLHttpRequest): Self = this.set("xhr", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteXhr: Self = this.set("xhr", js.undefined)
+    @scala.inline
+    def setXhrFields(value: XHRFields): Self = this.set("xhrFields", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteXhrFields: Self = this.set("xhrFields", js.undefined)
+  }
+  
 }
 

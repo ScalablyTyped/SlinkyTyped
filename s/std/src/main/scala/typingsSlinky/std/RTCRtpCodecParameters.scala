@@ -14,17 +14,36 @@ trait RTCRtpCodecParameters extends js.Object {
 
 object RTCRtpCodecParameters {
   @scala.inline
-  def apply(
-    clockRate: Double,
-    mimeType: java.lang.String,
-    payloadType: Double,
-    channels: js.UndefOr[Double] = js.undefined,
-    sdpFmtpLine: java.lang.String = null
-  ): RTCRtpCodecParameters = {
+  def apply(clockRate: Double, mimeType: java.lang.String, payloadType: Double): RTCRtpCodecParameters = {
     val __obj = js.Dynamic.literal(clockRate = clockRate.asInstanceOf[js.Any], mimeType = mimeType.asInstanceOf[js.Any], payloadType = payloadType.asInstanceOf[js.Any])
-    if (!js.isUndefined(channels)) __obj.updateDynamic("channels")(channels.get.asInstanceOf[js.Any])
-    if (sdpFmtpLine != null) __obj.updateDynamic("sdpFmtpLine")(sdpFmtpLine.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCRtpCodecParameters]
   }
+  @scala.inline
+  implicit class RTCRtpCodecParametersOps[Self <: RTCRtpCodecParameters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setClockRate(value: Double): Self = this.set("clockRate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMimeType(value: java.lang.String): Self = this.set("mimeType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPayloadType(value: Double): Self = this.set("payloadType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChannels(value: Double): Self = this.set("channels", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChannels: Self = this.set("channels", js.undefined)
+    @scala.inline
+    def setSdpFmtpLine(value: java.lang.String): Self = this.set("sdpFmtpLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSdpFmtpLine: Self = this.set("sdpFmtpLine", js.undefined)
+  }
+  
 }
 

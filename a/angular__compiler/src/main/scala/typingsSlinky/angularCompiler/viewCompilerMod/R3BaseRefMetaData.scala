@@ -22,24 +22,49 @@ trait R3BaseRefMetaData extends js.Object {
 
 object R3BaseRefMetaData {
   @scala.inline
-  def apply(
-    name: String,
-    `type`: Expression,
-    typeSourceSpan: ParseSourceSpan,
-    host: R3HostMetadata = null,
-    inputs: StringDictionary[String | (js.Tuple2[String, String])] = null,
-    outputs: StringDictionary[String] = null,
-    queries: js.Array[R3QueryMetadata] = null,
-    viewQueries: js.Array[R3QueryMetadata] = null
-  ): R3BaseRefMetaData = {
+  def apply(name: String, `type`: Expression, typeSourceSpan: ParseSourceSpan): R3BaseRefMetaData = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], typeSourceSpan = typeSourceSpan.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (inputs != null) __obj.updateDynamic("inputs")(inputs.asInstanceOf[js.Any])
-    if (outputs != null) __obj.updateDynamic("outputs")(outputs.asInstanceOf[js.Any])
-    if (queries != null) __obj.updateDynamic("queries")(queries.asInstanceOf[js.Any])
-    if (viewQueries != null) __obj.updateDynamic("viewQueries")(viewQueries.asInstanceOf[js.Any])
     __obj.asInstanceOf[R3BaseRefMetaData]
   }
+  @scala.inline
+  implicit class R3BaseRefMetaDataOps[Self <: R3BaseRefMetaData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setType(value: Expression): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTypeSourceSpan(value: ParseSourceSpan): Self = this.set("typeSourceSpan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHost(value: R3HostMetadata): Self = this.set("host", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHost: Self = this.set("host", js.undefined)
+    @scala.inline
+    def setInputs(value: StringDictionary[String | (js.Tuple2[String, String])]): Self = this.set("inputs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInputs: Self = this.set("inputs", js.undefined)
+    @scala.inline
+    def setOutputs(value: StringDictionary[String]): Self = this.set("outputs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOutputs: Self = this.set("outputs", js.undefined)
+    @scala.inline
+    def setQueries(value: js.Array[R3QueryMetadata]): Self = this.set("queries", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteQueries: Self = this.set("queries", js.undefined)
+    @scala.inline
+    def setViewQueries(value: js.Array[R3QueryMetadata]): Self = this.set("viewQueries", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteViewQueries: Self = this.set("viewQueries", js.undefined)
+  }
+  
 }
 

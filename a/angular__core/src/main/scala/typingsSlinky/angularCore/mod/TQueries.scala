@@ -65,5 +65,32 @@ object TQueries {
     val __obj = js.Dynamic.literal(elementEnd = js.Any.fromFunction1(elementEnd), elementStart = js.Any.fromFunction2(elementStart), embeddedTView = js.Any.fromFunction1(embeddedTView), getByIndex = js.Any.fromFunction1(getByIndex), length = length.asInstanceOf[js.Any], template = js.Any.fromFunction2(template), track = js.Any.fromFunction1(track))
     __obj.asInstanceOf[TQueries]
   }
+  @scala.inline
+  implicit class TQueriesOps[Self <: TQueries] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setElementEnd(value: TNode => Unit): Self = this.set("elementEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def setElementStart(value: (TView, TNode) => Unit): Self = this.set("elementStart", js.Any.fromFunction2(value))
+    @scala.inline
+    def setEmbeddedTView(value: TNode => TQueries | Null): Self = this.set("embeddedTView", js.Any.fromFunction1(value))
+    @scala.inline
+    def setGetByIndex(value: Double => TQuery): Self = this.set("getByIndex", js.Any.fromFunction1(value))
+    @scala.inline
+    def setLength(value: Double): Self = this.set("length", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTemplate(value: (TView, TNode) => Unit): Self = this.set("template", js.Any.fromFunction2(value))
+    @scala.inline
+    def setTrack(value: TQuery => Unit): Self = this.set("track", js.Any.fromFunction1(value))
+  }
+  
 }
 

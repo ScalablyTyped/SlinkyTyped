@@ -13,10 +13,26 @@ trait ToDataURLOptions extends js.Object {
 
 object ToDataURLOptions {
   @scala.inline
-  def apply(scaleFactor: js.UndefOr[Double] = js.undefined): ToDataURLOptions = {
+  def apply(): ToDataURLOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(scaleFactor)) __obj.updateDynamic("scaleFactor")(scaleFactor.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ToDataURLOptions]
   }
+  @scala.inline
+  implicit class ToDataURLOptionsOps[Self <: ToDataURLOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setScaleFactor(value: Double): Self = this.set("scaleFactor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScaleFactor: Self = this.set("scaleFactor", js.undefined)
+  }
+  
 }
 

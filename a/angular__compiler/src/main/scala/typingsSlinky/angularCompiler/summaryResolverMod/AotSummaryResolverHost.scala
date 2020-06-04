@@ -40,5 +40,26 @@ object AotSummaryResolverHost {
     val __obj = js.Dynamic.literal(fromSummaryFileName = js.Any.fromFunction2(fromSummaryFileName), isSourceFile = js.Any.fromFunction1(isSourceFile), loadSummary = js.Any.fromFunction1(loadSummary), toSummaryFileName = js.Any.fromFunction2(toSummaryFileName))
     __obj.asInstanceOf[AotSummaryResolverHost]
   }
+  @scala.inline
+  implicit class AotSummaryResolverHostOps[Self <: AotSummaryResolverHost] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setFromSummaryFileName(value: (String, String) => String): Self = this.set("fromSummaryFileName", js.Any.fromFunction2(value))
+    @scala.inline
+    def setIsSourceFile(value: String => Boolean): Self = this.set("isSourceFile", js.Any.fromFunction1(value))
+    @scala.inline
+    def setLoadSummary(value: String => String | Null): Self = this.set("loadSummary", js.Any.fromFunction1(value))
+    @scala.inline
+    def setToSummaryFileName(value: (String, String) => String): Self = this.set("toSummaryFileName", js.Any.fromFunction2(value))
+  }
+  
 }
 

@@ -1,8 +1,11 @@
 package typingsSlinky.antd.anon
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
+import typingsSlinky.antd.statisticUtilsMod.FormatConfig
 import typingsSlinky.antd.statisticUtilsMod.Formatter
 import typingsSlinky.antd.statisticUtilsMod.countdownValueType
+import typingsSlinky.antd.statisticUtilsMod.valueType
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,40 +32,90 @@ trait PartialCountdownProps extends js.Object {
 
 object PartialCountdownProps {
   @scala.inline
-  def apply(
-    className: String = null,
-    decimalSeparator: String = null,
-    format: String = null,
-    formatter: Formatter = null,
-    groupSeparator: String = null,
-    onFinish: () => Unit = null,
-    precision: js.UndefOr[Double] = js.undefined,
-    prefix: TagMod[Any] = null,
-    prefixCls: String = null,
-    style: CSSProperties = null,
-    suffix: TagMod[Any] = null,
-    title: TagMod[Any] = null,
-    value: countdownValueType = null,
-    valueRender: /* node */ TagMod[Any] => TagMod[Any] = null,
-    valueStyle: CSSProperties = null
-  ): PartialCountdownProps = {
+  def apply(): PartialCountdownProps = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (decimalSeparator != null) __obj.updateDynamic("decimalSeparator")(decimalSeparator.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (formatter != null) __obj.updateDynamic("formatter")(formatter.asInstanceOf[js.Any])
-    if (groupSeparator != null) __obj.updateDynamic("groupSeparator")(groupSeparator.asInstanceOf[js.Any])
-    if (onFinish != null) __obj.updateDynamic("onFinish")(js.Any.fromFunction0(onFinish))
-    if (!js.isUndefined(precision)) __obj.updateDynamic("precision")(precision.get.asInstanceOf[js.Any])
-    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (suffix != null) __obj.updateDynamic("suffix")(suffix.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (valueRender != null) __obj.updateDynamic("valueRender")(js.Any.fromFunction1(valueRender))
-    if (valueStyle != null) __obj.updateDynamic("valueStyle")(valueStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialCountdownProps]
   }
+  @scala.inline
+  implicit class PartialCountdownPropsOps[Self <: PartialCountdownProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setDecimalSeparator(value: String): Self = this.set("decimalSeparator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDecimalSeparator: Self = this.set("decimalSeparator", js.undefined)
+    @scala.inline
+    def setFormat(value: String): Self = this.set("format", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFormat: Self = this.set("format", js.undefined)
+    @scala.inline
+    def setFormatterFunction2(value: (/* value */ valueType, /* config */ js.UndefOr[FormatConfig]) => TagMod[Any]): Self = this.set("formatter", js.Any.fromFunction2(value))
+    @scala.inline
+    def setFormatter(value: Formatter): Self = this.set("formatter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFormatter: Self = this.set("formatter", js.undefined)
+    @scala.inline
+    def setGroupSeparator(value: String): Self = this.set("groupSeparator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGroupSeparator: Self = this.set("groupSeparator", js.undefined)
+    @scala.inline
+    def setOnFinish(value: () => Unit): Self = this.set("onFinish", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnFinish: Self = this.set("onFinish", js.undefined)
+    @scala.inline
+    def setPrecision(value: Double): Self = this.set("precision", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrecision: Self = this.set("precision", js.undefined)
+    @scala.inline
+    def setPrefixReactElement(value: ReactElement): Self = this.set("prefix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPrefix(value: TagMod[Any]): Self = this.set("prefix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefix: Self = this.set("prefix", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+    @scala.inline
+    def setSuffixReactElement(value: ReactElement): Self = this.set("suffix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSuffix(value: TagMod[Any]): Self = this.set("suffix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSuffix: Self = this.set("suffix", js.undefined)
+    @scala.inline
+    def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
+    @scala.inline
+    def setValue(value: countdownValueType): Self = this.set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
+    @scala.inline
+    def setValueRender(value: /* node */ TagMod[Any] => TagMod[Any]): Self = this.set("valueRender", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteValueRender: Self = this.set("valueRender", js.undefined)
+    @scala.inline
+    def setValueStyle(value: CSSProperties): Self = this.set("valueStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValueStyle: Self = this.set("valueStyle", js.undefined)
+  }
+  
 }
 

@@ -19,20 +19,42 @@ trait CoordRendering extends js.Object {
 
 object CoordRendering {
   @scala.inline
-  def apply(
-    coordRendering: shortestPath | straightPath = null,
-    geodesic: js.UndefOr[Boolean] = js.undefined,
-    pixelRendering: jumpy | static = null,
-    projection: IProjection = null,
-    simplification: js.UndefOr[Boolean] = js.undefined
-  ): CoordRendering = {
+  def apply(): CoordRendering = {
     val __obj = js.Dynamic.literal()
-    if (coordRendering != null) __obj.updateDynamic("coordRendering")(coordRendering.asInstanceOf[js.Any])
-    if (!js.isUndefined(geodesic)) __obj.updateDynamic("geodesic")(geodesic.get.asInstanceOf[js.Any])
-    if (pixelRendering != null) __obj.updateDynamic("pixelRendering")(pixelRendering.asInstanceOf[js.Any])
-    if (projection != null) __obj.updateDynamic("projection")(projection.asInstanceOf[js.Any])
-    if (!js.isUndefined(simplification)) __obj.updateDynamic("simplification")(simplification.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CoordRendering]
   }
+  @scala.inline
+  implicit class CoordRenderingOps[Self <: CoordRendering] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCoordRendering(value: shortestPath | straightPath): Self = this.set("coordRendering", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCoordRendering: Self = this.set("coordRendering", js.undefined)
+    @scala.inline
+    def setGeodesic(value: Boolean): Self = this.set("geodesic", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGeodesic: Self = this.set("geodesic", js.undefined)
+    @scala.inline
+    def setPixelRendering(value: jumpy | static): Self = this.set("pixelRendering", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePixelRendering: Self = this.set("pixelRendering", js.undefined)
+    @scala.inline
+    def setProjection(value: IProjection): Self = this.set("projection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteProjection: Self = this.set("projection", js.undefined)
+    @scala.inline
+    def setSimplification(value: Boolean): Self = this.set("simplification", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSimplification: Self = this.set("simplification", js.undefined)
+  }
+  
 }
 

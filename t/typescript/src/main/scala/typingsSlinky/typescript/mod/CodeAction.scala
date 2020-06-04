@@ -18,14 +18,30 @@ trait CodeAction extends js.Object {
 
 object CodeAction {
   @scala.inline
-  def apply(
-    changes: js.Array[FileTextChanges],
-    description: java.lang.String,
-    commands: js.Array[CodeActionCommand] = null
-  ): CodeAction = {
+  def apply(changes: js.Array[FileTextChanges], description: java.lang.String): CodeAction = {
     val __obj = js.Dynamic.literal(changes = changes.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any])
-    if (commands != null) __obj.updateDynamic("commands")(commands.asInstanceOf[js.Any])
     __obj.asInstanceOf[CodeAction]
   }
+  @scala.inline
+  implicit class CodeActionOps[Self <: CodeAction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setChanges(value: js.Array[FileTextChanges]): Self = this.set("changes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDescription(value: java.lang.String): Self = this.set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCommands(value: js.Array[CodeActionCommand]): Self = this.set("commands", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCommands: Self = this.set("commands", js.undefined)
+  }
+  
 }
 

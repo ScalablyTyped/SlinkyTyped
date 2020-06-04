@@ -30,5 +30,26 @@ object SetVariableValueParameterType {
     val __obj = js.Dynamic.literal(callFrameId = callFrameId.asInstanceOf[js.Any], newValue = newValue.asInstanceOf[js.Any], scopeNumber = scopeNumber.asInstanceOf[js.Any], variableName = variableName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetVariableValueParameterType]
   }
+  @scala.inline
+  implicit class SetVariableValueParameterTypeOps[Self <: SetVariableValueParameterType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCallFrameId(value: CallFrameId): Self = this.set("callFrameId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNewValue(value: CallArgument): Self = this.set("newValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setScopeNumber(value: Double): Self = this.set("scopeNumber", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setVariableName(value: String): Self = this.set("variableName", value.asInstanceOf[js.Any])
+  }
+  
 }
 

@@ -1,13 +1,19 @@
 package typingsSlinky.coreJs
 
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("core-js/fn/date/formatUTC", JSImport.Namespace)
 @js.native
-object formatUTCMod extends js.Object {
-  def apply(date: Date, template: java.lang.String): java.lang.String = js.native
-  def apply(date: Date, template: java.lang.String, locale: java.lang.String): java.lang.String = js.native
-}
+object formatUTCMod
+  extends TopLevel[
+      js.Function3[
+        /* date */ Date, 
+        /* template */ java.lang.String, 
+        /* locale */ js.UndefOr[java.lang.String], 
+        java.lang.String
+      ]
+    ]
 

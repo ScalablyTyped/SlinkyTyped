@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,24 +42,52 @@ trait StrictResponsiveProps extends js.Object {
 
 object StrictResponsiveProps {
   @scala.inline
-  def apply(
-    as: js.Any = null,
-    children: TagMod[Any] = null,
-    fireOnMount: js.UndefOr[Boolean] = js.undefined,
-    getWidth: () => Double = null,
-    maxWidth: Double | String = null,
-    minWidth: Double | String = null,
-    onUpdate: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ ResponsiveOnUpdateData) => Unit = null
-  ): StrictResponsiveProps = {
+  def apply(): StrictResponsiveProps = {
     val __obj = js.Dynamic.literal()
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (!js.isUndefined(fireOnMount)) __obj.updateDynamic("fireOnMount")(fireOnMount.get.asInstanceOf[js.Any])
-    if (getWidth != null) __obj.updateDynamic("getWidth")(js.Any.fromFunction0(getWidth))
-    if (maxWidth != null) __obj.updateDynamic("maxWidth")(maxWidth.asInstanceOf[js.Any])
-    if (minWidth != null) __obj.updateDynamic("minWidth")(minWidth.asInstanceOf[js.Any])
-    if (onUpdate != null) __obj.updateDynamic("onUpdate")(js.Any.fromFunction2(onUpdate))
     __obj.asInstanceOf[StrictResponsiveProps]
   }
+  @scala.inline
+  implicit class StrictResponsivePropsOps[Self <: StrictResponsiveProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAs(value: js.Any): Self = this.set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAs: Self = this.set("as", js.undefined)
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setFireOnMount(value: Boolean): Self = this.set("fireOnMount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFireOnMount: Self = this.set("fireOnMount", js.undefined)
+    @scala.inline
+    def setGetWidth(value: () => Double): Self = this.set("getWidth", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteGetWidth: Self = this.set("getWidth", js.undefined)
+    @scala.inline
+    def setMaxWidth(value: Double | String): Self = this.set("maxWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxWidth: Self = this.set("maxWidth", js.undefined)
+    @scala.inline
+    def setMinWidth(value: Double | String): Self = this.set("minWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinWidth: Self = this.set("minWidth", js.undefined)
+    @scala.inline
+    def setOnUpdate(value: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ ResponsiveOnUpdateData) => Unit): Self = this.set("onUpdate", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnUpdate: Self = this.set("onUpdate", js.undefined)
+  }
+  
 }
 

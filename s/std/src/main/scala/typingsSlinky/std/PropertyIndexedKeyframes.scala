@@ -16,20 +16,34 @@ trait PropertyIndexedKeyframes
 
 object PropertyIndexedKeyframes {
   @scala.inline
-  def apply(
-    StringDictionary: /* property */ StringDictionary[
-      js.UndefOr[java.lang.String | (js.Array[Double | Null | java.lang.String]) | Double | Null]
-    ] = null,
-    composite: CompositeOperationOrAuto | js.Array[CompositeOperationOrAuto] = null,
-    easing: java.lang.String | js.Array[java.lang.String] = null,
-    offset: Double | (js.Array[Double | Null]) = null
-  ): PropertyIndexedKeyframes = {
+  def apply(): PropertyIndexedKeyframes = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (composite != null) __obj.updateDynamic("composite")(composite.asInstanceOf[js.Any])
-    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
     __obj.asInstanceOf[PropertyIndexedKeyframes]
   }
+  @scala.inline
+  implicit class PropertyIndexedKeyframesOps[Self <: PropertyIndexedKeyframes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setComposite(value: CompositeOperationOrAuto | js.Array[CompositeOperationOrAuto]): Self = this.set("composite", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteComposite: Self = this.set("composite", js.undefined)
+    @scala.inline
+    def setEasing(value: java.lang.String | js.Array[java.lang.String]): Self = this.set("easing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEasing: Self = this.set("easing", js.undefined)
+    @scala.inline
+    def setOffset(value: Double | (js.Array[Double | Null])): Self = this.set("offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOffset: Self = this.set("offset", js.undefined)
+  }
+  
 }
 

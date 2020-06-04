@@ -87,12 +87,47 @@ object Tween {
     prop: String,
     run: Double => Tween[TElement],
     start: Double,
-    unit: String,
-    pos: js.UndefOr[Double] = js.undefined
+    unit: String
   ): Tween[TElement] = {
     val __obj = js.Dynamic.literal(cur = js.Any.fromFunction0(cur), easing = easing.asInstanceOf[js.Any], elem = elem.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], now = now.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], prop = prop.asInstanceOf[js.Any], run = js.Any.fromFunction1(run), start = start.asInstanceOf[js.Any], unit = unit.asInstanceOf[js.Any])
-    if (!js.isUndefined(pos)) __obj.updateDynamic("pos")(pos.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Tween[TElement]]
   }
+  @scala.inline
+  implicit class TweenOps[Self <: Tween[_], TElement] (val x: Self with Tween[TElement]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCur(value: () => js.Any): Self = this.set("cur", js.Any.fromFunction0(value))
+    @scala.inline
+    def setEasing(value: String): Self = this.set("easing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setElem(value: TElement): Self = this.set("elem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEnd(value: Double): Self = this.set("end", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNow(value: Double): Self = this.set("now", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOptions(value: EffectsOptions[TElement]): Self = this.set("options", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setProp(value: String): Self = this.set("prop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRun(value: Double => Tween[TElement]): Self = this.set("run", js.Any.fromFunction1(value))
+    @scala.inline
+    def setStart(value: Double): Self = this.set("start", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUnit(value: String): Self = this.set("unit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPos(value: Double): Self = this.set("pos", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePos: Self = this.set("pos", js.undefined)
+  }
+  
 }
 

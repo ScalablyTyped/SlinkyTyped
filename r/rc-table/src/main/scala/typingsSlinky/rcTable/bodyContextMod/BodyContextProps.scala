@@ -58,5 +58,54 @@ object BodyContextProps {
     val __obj = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any], componentWidth = componentWidth.asInstanceOf[js.Any], expandIcon = js.Any.fromFunction1(expandIcon), expandIconColumnIndex = expandIconColumnIndex.asInstanceOf[js.Any], expandRowByClick = expandRowByClick.asInstanceOf[js.Any], expandableType = expandableType.asInstanceOf[js.Any], expandedRowClassName = js.Any.fromFunction3(expandedRowClassName), expandedRowRender = js.Any.fromFunction4(expandedRowRender), fixColumn = fixColumn.asInstanceOf[js.Any], fixHeader = fixHeader.asInstanceOf[js.Any], flattenColumns = flattenColumns.asInstanceOf[js.Any], horizonScroll = horizonScroll.asInstanceOf[js.Any], indentSize = indentSize.asInstanceOf[js.Any], onTriggerExpand = js.Any.fromFunction2(onTriggerExpand), rowClassName = rowClassName.asInstanceOf[js.Any], tableLayout = tableLayout.asInstanceOf[js.Any])
     __obj.asInstanceOf[BodyContextProps[RecordType]]
   }
+  @scala.inline
+  implicit class BodyContextPropsOps[Self <: BodyContextProps[_], RecordType] (val x: Self with BodyContextProps[RecordType]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setColumns(value: ColumnsType[RecordType]): Self = this.set("columns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setComponentWidth(value: Double): Self = this.set("componentWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setExpandIcon(value: /* props */ RenderExpandIconProps[RecordType] => TagMod[Any]): Self = this.set("expandIcon", js.Any.fromFunction1(value))
+    @scala.inline
+    def setExpandIconColumnIndex(value: Double): Self = this.set("expandIconColumnIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setExpandRowByClick(value: Boolean): Self = this.set("expandRowByClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setExpandableType(value: ExpandableType): Self = this.set("expandableType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setExpandedRowClassName(value: (RecordType, /* index */ Double, /* indent */ Double) => String): Self = this.set("expandedRowClassName", js.Any.fromFunction3(value))
+    @scala.inline
+    def setExpandedRowRender(
+      value: (RecordType, /* index */ Double, /* indent */ Double, /* expanded */ Boolean) => TagMod[Any]
+    ): Self = this.set("expandedRowRender", js.Any.fromFunction4(value))
+    @scala.inline
+    def setFixColumn(value: Boolean): Self = this.set("fixColumn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFixHeader(value: Boolean): Self = this.set("fixHeader", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFlattenColumns(value: js.Array[ColumnType[RecordType]]): Self = this.set("flattenColumns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHorizonScroll(value: Boolean): Self = this.set("horizonScroll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIndentSize(value: Double): Self = this.set("indentSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOnTriggerExpand(value: (RecordType, /* event */ SyntheticMouseEvent[HTMLElement]) => Unit): Self = this.set("onTriggerExpand", js.Any.fromFunction2(value))
+    @scala.inline
+    def setRowClassNameFunction3(value: (RecordType, /* index */ Double, /* indent */ Double) => String): Self = this.set("rowClassName", js.Any.fromFunction3(value))
+    @scala.inline
+    def setRowClassName(value: String | RowClassName[RecordType]): Self = this.set("rowClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTableLayout(value: TableLayout): Self = this.set("tableLayout", value.asInstanceOf[js.Any])
+  }
+  
 }
 

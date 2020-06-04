@@ -93,6 +93,7 @@
 | [jss](./j/jss) | A lib for generating Style Sheets with JavaScript. | jss, style, sheet, stylesheet, css, components, composable, css in js, css-in-js |
 | [leaflet](./l/leaflet) | JavaScript library for mobile-friendly interactive | gis, map |
 | [lodash](./l/lodash) | Lodash modular utilities. | modules, stdlib, util |
+| [material-ui](./m/material-ui) | React Components that Implement Google's Material  | react, react-component, material design, material-ui |
 | [material-ui__core](./m/material-ui__core) | React components that implement Google's Material  | react, react-component, material design, material-ui |
 | [material-ui__icons](./m/material-ui__icons) | Material Design Svg Icons converted to Material-UI | react, react-component, material design, material-ui, icons |
 | [mime](./m/mime) | A comprehensive library for mime-type mapping | util, mime |
@@ -118,6 +119,7 @@
 | [rc-tree-select](./r/rc-tree-select) | tree-select ui component for react | react, react-component, react-tree-select, tree-select |
 | [reach__router](./r/reach__router) | Next generation Routing for React. | react, react router |
 | [react](./r/react) | React is a JavaScript library for building user in | react |
+| [react-addons-linked-state](./r/react-addons-linked-state-mixin) | >**Note:** >This is a legacy React addon, and is n | react, react-addon |
 | [react-big-calendar](./r/react-big-calendar) | Calendar | scheduler, react-component, react, calendar, events, full calendar |
 | [react-dom](./r/react-dom) | React package for working with the DOM. | react |
 | [react-is](./r/react-is) | Brand checking of React Elements. | react |

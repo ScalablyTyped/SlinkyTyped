@@ -30,18 +30,38 @@ trait Settings extends js.Object {
 
 object Settings {
   @scala.inline
-  def apply(
-    args: js.Array[String] = null,
-    openAsHidden: js.UndefOr[Boolean] = js.undefined,
-    openAtLogin: js.UndefOr[Boolean] = js.undefined,
-    path: String = null
-  ): Settings = {
+  def apply(): Settings = {
     val __obj = js.Dynamic.literal()
-    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
-    if (!js.isUndefined(openAsHidden)) __obj.updateDynamic("openAsHidden")(openAsHidden.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(openAtLogin)) __obj.updateDynamic("openAtLogin")(openAtLogin.get.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
     __obj.asInstanceOf[Settings]
   }
+  @scala.inline
+  implicit class SettingsOps[Self <: Settings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setArgs(value: js.Array[String]): Self = this.set("args", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteArgs: Self = this.set("args", js.undefined)
+    @scala.inline
+    def setOpenAsHidden(value: Boolean): Self = this.set("openAsHidden", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOpenAsHidden: Self = this.set("openAsHidden", js.undefined)
+    @scala.inline
+    def setOpenAtLogin(value: Boolean): Self = this.set("openAtLogin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOpenAtLogin: Self = this.set("openAtLogin", js.undefined)
+    @scala.inline
+    def setPath(value: String): Self = this.set("path", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePath: Self = this.set("path", js.undefined)
+  }
+  
 }
 

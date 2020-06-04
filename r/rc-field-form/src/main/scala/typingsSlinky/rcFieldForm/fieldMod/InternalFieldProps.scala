@@ -2,6 +2,7 @@ package typingsSlinky.rcFieldForm.fieldMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
+import typingsSlinky.rcFieldForm.anon.Source
 import typingsSlinky.rcFieldForm.interfaceMod.EventArgs
 import typingsSlinky.rcFieldForm.interfaceMod.FormInstance
 import typingsSlinky.rcFieldForm.interfaceMod.InternalNamePath
@@ -45,40 +46,90 @@ trait InternalFieldProps extends js.Object {
 
 object InternalFieldProps {
   @scala.inline
-  def apply(
-    children: ReactElement | (js.Function3[/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance, TagMod[Any]]) = null,
-    dependencies: js.Array[NamePath] = null,
-    getValueFromEvent: /* args */ EventArgs => StoreValue = null,
-    getValueProps: /* value */ StoreValue => js.Object = null,
-    initialValue: js.Any = null,
-    messageVariables: Record[String, String] = null,
-    name: InternalNamePath = null,
-    normalize: (/* value */ StoreValue, /* prevValue */ StoreValue, /* allValues */ Store) => StoreValue = null,
-    onReset: () => Unit = null,
-    rules: js.Array[Rule] = null,
-    shouldUpdate: ShouldUpdate = null,
-    trigger: String = null,
-    validateFirst: js.UndefOr[Boolean] = js.undefined,
-    validateTrigger: String | js.Array[String] | `false` = null,
-    valuePropName: String = null
-  ): InternalFieldProps = {
+  def apply(): InternalFieldProps = {
     val __obj = js.Dynamic.literal()
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (dependencies != null) __obj.updateDynamic("dependencies")(dependencies.asInstanceOf[js.Any])
-    if (getValueFromEvent != null) __obj.updateDynamic("getValueFromEvent")(js.Any.fromFunction1(getValueFromEvent))
-    if (getValueProps != null) __obj.updateDynamic("getValueProps")(js.Any.fromFunction1(getValueProps))
-    if (initialValue != null) __obj.updateDynamic("initialValue")(initialValue.asInstanceOf[js.Any])
-    if (messageVariables != null) __obj.updateDynamic("messageVariables")(messageVariables.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (normalize != null) __obj.updateDynamic("normalize")(js.Any.fromFunction3(normalize))
-    if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction0(onReset))
-    if (rules != null) __obj.updateDynamic("rules")(rules.asInstanceOf[js.Any])
-    if (shouldUpdate != null) __obj.updateDynamic("shouldUpdate")(shouldUpdate.asInstanceOf[js.Any])
-    if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
-    if (!js.isUndefined(validateFirst)) __obj.updateDynamic("validateFirst")(validateFirst.get.asInstanceOf[js.Any])
-    if (validateTrigger != null) __obj.updateDynamic("validateTrigger")(validateTrigger.asInstanceOf[js.Any])
-    if (valuePropName != null) __obj.updateDynamic("valuePropName")(valuePropName.asInstanceOf[js.Any])
     __obj.asInstanceOf[InternalFieldProps]
   }
+  @scala.inline
+  implicit class InternalFieldPropsOps[Self <: InternalFieldProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildrenFunction3(value: (/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance) => TagMod[Any]): Self = this.set("children", js.Any.fromFunction3(value))
+    @scala.inline
+    def setChildren(
+      value: ReactElement | (js.Function3[/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance, TagMod[Any]])
+    ): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setDependencies(value: js.Array[NamePath]): Self = this.set("dependencies", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDependencies: Self = this.set("dependencies", js.undefined)
+    @scala.inline
+    def setGetValueFromEvent(value: /* args */ EventArgs => StoreValue): Self = this.set("getValueFromEvent", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteGetValueFromEvent: Self = this.set("getValueFromEvent", js.undefined)
+    @scala.inline
+    def setGetValueProps(value: /* value */ StoreValue => js.Object): Self = this.set("getValueProps", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteGetValueProps: Self = this.set("getValueProps", js.undefined)
+    @scala.inline
+    def setInitialValue(value: js.Any): Self = this.set("initialValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInitialValue: Self = this.set("initialValue", js.undefined)
+    @scala.inline
+    def setMessageVariables(value: Record[String, String]): Self = this.set("messageVariables", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMessageVariables: Self = this.set("messageVariables", js.undefined)
+    @scala.inline
+    def setName(value: InternalNamePath): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteName: Self = this.set("name", js.undefined)
+    @scala.inline
+    def setNormalize(value: (/* value */ StoreValue, /* prevValue */ StoreValue, /* allValues */ Store) => StoreValue): Self = this.set("normalize", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteNormalize: Self = this.set("normalize", js.undefined)
+    @scala.inline
+    def setOnReset(value: () => Unit): Self = this.set("onReset", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnReset: Self = this.set("onReset", js.undefined)
+    @scala.inline
+    def setRules(value: js.Array[Rule]): Self = this.set("rules", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRules: Self = this.set("rules", js.undefined)
+    @scala.inline
+    def setShouldUpdateFunction3(value: (/* prevValues */ Store, /* nextValues */ Store, /* info */ Source) => Boolean): Self = this.set("shouldUpdate", js.Any.fromFunction3(value))
+    @scala.inline
+    def setShouldUpdate(value: ShouldUpdate): Self = this.set("shouldUpdate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShouldUpdate: Self = this.set("shouldUpdate", js.undefined)
+    @scala.inline
+    def setTrigger(value: String): Self = this.set("trigger", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTrigger: Self = this.set("trigger", js.undefined)
+    @scala.inline
+    def setValidateFirst(value: Boolean): Self = this.set("validateFirst", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValidateFirst: Self = this.set("validateFirst", js.undefined)
+    @scala.inline
+    def setValidateTrigger(value: String | js.Array[String] | `false`): Self = this.set("validateTrigger", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValidateTrigger: Self = this.set("validateTrigger", js.undefined)
+    @scala.inline
+    def setValuePropName(value: String): Self = this.set("valuePropName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValuePropName: Self = this.set("valuePropName", js.undefined)
+  }
+  
 }
 

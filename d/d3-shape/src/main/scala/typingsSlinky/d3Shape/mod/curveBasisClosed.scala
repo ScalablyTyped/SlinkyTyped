@@ -1,25 +1,11 @@
 package typingsSlinky.d3Shape.mod
 
-import org.scalajs.dom.raw.CanvasRenderingContext2D
-import typingsSlinky.d3Path.mod.Path_
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("d3-shape", "curveBasisClosed")
 @js.native
-object curveBasisClosed extends js.Object {
-  /**
-    * Returns a curve generator which renders to the specified context.
-    *
-    * @param context A rendering context.
-    */
-  def apply(context: Path_): CurveGenerator = js.native
-  /**
-    * Returns a curve generator which renders to the specified context.
-    *
-    * @param context A rendering context.
-    */
-  def apply(context: CanvasRenderingContext2D): CurveGenerator = js.native
-}
+object curveBasisClosed extends TopLevel[CurveFactory]
 

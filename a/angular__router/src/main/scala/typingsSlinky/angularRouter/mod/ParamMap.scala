@@ -42,5 +42,26 @@ object ParamMap {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), getAll = js.Any.fromFunction1(getAll), has = js.Any.fromFunction1(has), keys = keys.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParamMap]
   }
+  @scala.inline
+  implicit class ParamMapOps[Self <: ParamMap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setGet(value: String => String | Null): Self = this.set("get", js.Any.fromFunction1(value))
+    @scala.inline
+    def setGetAll(value: String => js.Array[String]): Self = this.set("getAll", js.Any.fromFunction1(value))
+    @scala.inline
+    def setHas(value: String => Boolean): Self = this.set("has", js.Any.fromFunction1(value))
+    @scala.inline
+    def setKeys(value: js.Array[String]): Self = this.set("keys", value.asInstanceOf[js.Any])
+  }
+  
 }
 

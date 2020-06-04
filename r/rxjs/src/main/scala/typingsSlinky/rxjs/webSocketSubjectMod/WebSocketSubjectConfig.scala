@@ -53,29 +53,60 @@ trait WebSocketSubjectConfig[T] extends js.Object {
 
 object WebSocketSubjectConfig {
   @scala.inline
-  def apply[T](
-    url: String,
-    WebSocketCtor: Instantiable = null,
-    binaryType: blob | arraybuffer = null,
-    closeObserver: NextObserver[CloseEvent] = null,
-    closingObserver: NextObserver[Unit] = null,
-    deserializer: /* e */ MessageEvent => T = null,
-    openObserver: NextObserver[Event] = null,
-    protocol: String | js.Array[String] = null,
-    resultSelector: /* e */ MessageEvent => T = null,
-    serializer: /* value */ T => WebSocketMessage = null
-  ): WebSocketSubjectConfig[T] = {
+  def apply[T](url: String): WebSocketSubjectConfig[T] = {
     val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
-    if (WebSocketCtor != null) __obj.updateDynamic("WebSocketCtor")(WebSocketCtor.asInstanceOf[js.Any])
-    if (binaryType != null) __obj.updateDynamic("binaryType")(binaryType.asInstanceOf[js.Any])
-    if (closeObserver != null) __obj.updateDynamic("closeObserver")(closeObserver.asInstanceOf[js.Any])
-    if (closingObserver != null) __obj.updateDynamic("closingObserver")(closingObserver.asInstanceOf[js.Any])
-    if (deserializer != null) __obj.updateDynamic("deserializer")(js.Any.fromFunction1(deserializer))
-    if (openObserver != null) __obj.updateDynamic("openObserver")(openObserver.asInstanceOf[js.Any])
-    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
-    if (resultSelector != null) __obj.updateDynamic("resultSelector")(js.Any.fromFunction1(resultSelector))
-    if (serializer != null) __obj.updateDynamic("serializer")(js.Any.fromFunction1(serializer))
     __obj.asInstanceOf[WebSocketSubjectConfig[T]]
   }
+  @scala.inline
+  implicit class WebSocketSubjectConfigOps[Self <: WebSocketSubjectConfig[_], T] (val x: Self with WebSocketSubjectConfig[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setUrl(value: String): Self = this.set("url", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWebSocketCtor(value: Instantiable): Self = this.set("WebSocketCtor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWebSocketCtor: Self = this.set("WebSocketCtor", js.undefined)
+    @scala.inline
+    def setBinaryType(value: blob | arraybuffer): Self = this.set("binaryType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBinaryType: Self = this.set("binaryType", js.undefined)
+    @scala.inline
+    def setCloseObserver(value: NextObserver[CloseEvent]): Self = this.set("closeObserver", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCloseObserver: Self = this.set("closeObserver", js.undefined)
+    @scala.inline
+    def setClosingObserver(value: NextObserver[Unit]): Self = this.set("closingObserver", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClosingObserver: Self = this.set("closingObserver", js.undefined)
+    @scala.inline
+    def setDeserializer(value: /* e */ MessageEvent => T): Self = this.set("deserializer", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteDeserializer: Self = this.set("deserializer", js.undefined)
+    @scala.inline
+    def setOpenObserver(value: NextObserver[Event]): Self = this.set("openObserver", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOpenObserver: Self = this.set("openObserver", js.undefined)
+    @scala.inline
+    def setProtocol(value: String | js.Array[String]): Self = this.set("protocol", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteProtocol: Self = this.set("protocol", js.undefined)
+    @scala.inline
+    def setResultSelector(value: /* e */ MessageEvent => T): Self = this.set("resultSelector", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteResultSelector: Self = this.set("resultSelector", js.undefined)
+    @scala.inline
+    def setSerializer(value: /* value */ T => WebSocketMessage): Self = this.set("serializer", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteSerializer: Self = this.set("serializer", js.undefined)
+  }
+  
 }
 

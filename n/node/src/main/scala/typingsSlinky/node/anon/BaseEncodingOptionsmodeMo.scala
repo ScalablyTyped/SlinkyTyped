@@ -16,16 +16,36 @@ trait BaseEncodingOptionsmodeMo extends js.Object {
 
 object BaseEncodingOptionsmodeMo {
   @scala.inline
-  def apply(
-    encoding: js.UndefOr[Null | BufferEncoding] = js.undefined,
-    flag: OpenMode = null,
-    mode: Mode = null
-  ): BaseEncodingOptionsmodeMo = {
+  def apply(): BaseEncodingOptionsmodeMo = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(encoding)) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
-    if (flag != null) __obj.updateDynamic("flag")(flag.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseEncodingOptionsmodeMo]
   }
+  @scala.inline
+  implicit class BaseEncodingOptionsmodeMoOps[Self <: BaseEncodingOptionsmodeMo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setEncoding(value: BufferEncoding): Self = this.set("encoding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEncoding: Self = this.set("encoding", js.undefined)
+    @scala.inline
+    def setEncodingNull: Self = this.set("encoding", null)
+    @scala.inline
+    def setFlag(value: OpenMode): Self = this.set("flag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFlag: Self = this.set("flag", js.undefined)
+    @scala.inline
+    def setMode(value: Mode): Self = this.set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMode: Self = this.set("mode", js.undefined)
+  }
+  
 }
 

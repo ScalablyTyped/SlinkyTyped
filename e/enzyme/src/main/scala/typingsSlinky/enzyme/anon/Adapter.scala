@@ -19,10 +19,28 @@ trait Adapter extends js.Object {
 
 object Adapter {
   @scala.inline
-  def apply(adapter: EnzymeAdapter, disableLifecycleMethods: js.UndefOr[Boolean] = js.undefined): Adapter = {
+  def apply(adapter: EnzymeAdapter): Adapter = {
     val __obj = js.Dynamic.literal(adapter = adapter.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableLifecycleMethods)) __obj.updateDynamic("disableLifecycleMethods")(disableLifecycleMethods.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Adapter]
   }
+  @scala.inline
+  implicit class AdapterOps[Self <: Adapter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAdapter(value: EnzymeAdapter): Self = this.set("adapter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDisableLifecycleMethods(value: Boolean): Self = this.set("disableLifecycleMethods", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisableLifecycleMethods: Self = this.set("disableLifecycleMethods", js.undefined)
+  }
+  
 }
 

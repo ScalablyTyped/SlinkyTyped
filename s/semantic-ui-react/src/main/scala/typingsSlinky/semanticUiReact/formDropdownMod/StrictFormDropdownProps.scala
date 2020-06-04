@@ -4,16 +4,13 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.semanticUiReact.dropdownDropdownMod.DropdownOnSearchChangeData
 import typingsSlinky.semanticUiReact.dropdownDropdownMod.DropdownProps
 import typingsSlinky.semanticUiReact.dropdownItemMod.DropdownItemProps
 import typingsSlinky.semanticUiReact.formFieldMod.StrictFormFieldProps
-import typingsSlinky.semanticUiReact.genericMod.HtmlLabelProps
-import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
-import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
-import typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
 import typingsSlinky.semanticUiReact.labelLabelMod.LabelProps
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.`bottom left`
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.`bottom right`
@@ -264,158 +261,284 @@ import scala.scalajs.js.annotation._
 
 object StrictFormDropdownProps {
   @scala.inline
-  def apply(
-    additionLabel: Double | String | TagMod[Any] = null,
-    additionPosition: top | bottom = null,
-    allowAdditions: js.UndefOr[Boolean] = js.undefined,
-    as: js.Any = null,
-    basic: js.UndefOr[Boolean] = js.undefined,
-    button: js.UndefOr[Boolean] = js.undefined,
-    children: TagMod[Any] = null,
-    className: String = null,
-    clearable: js.UndefOr[Boolean] = js.undefined,
-    closeOnBlur: js.UndefOr[Boolean] = js.undefined,
-    closeOnChange: js.UndefOr[Boolean] = js.undefined,
-    closeOnEscape: js.UndefOr[Boolean] = js.undefined,
-    compact: js.UndefOr[Boolean] = js.undefined,
-    content: SemanticShorthandContent = null,
-    control: js.Any = null,
-    deburr: js.UndefOr[Boolean] = js.undefined,
-    defaultOpen: js.UndefOr[Boolean] = js.undefined,
-    defaultSearchQuery: String = null,
-    defaultSelectedLabel: Double | String = null,
-    defaultUpward: js.UndefOr[Boolean] = js.undefined,
-    defaultValue: String | Double | Boolean | (js.Array[Double | String | Boolean]) = null,
-    direction: left | right = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    error: js.Any = null,
-    floating: js.UndefOr[Boolean] = js.undefined,
-    fluid: js.UndefOr[Boolean] = js.undefined,
-    header: TagMod[Any] = null,
-    icon: js.Any = null,
-    id: Double | String = null,
-    `inline`: js.UndefOr[Boolean] = js.undefined,
-    item: js.UndefOr[Boolean] = js.undefined,
-    label: SemanticShorthandItem[HtmlLabelProps] = null,
-    labeled: js.UndefOr[Boolean] = js.undefined,
-    lazyLoad: js.UndefOr[Boolean] = js.undefined,
-    loading: js.UndefOr[Boolean] = js.undefined,
-    minCharacters: js.UndefOr[Double] = js.undefined,
-    multiple: js.UndefOr[Boolean] = js.undefined,
-    noResultsMessage: TagMod[Any] = null,
-    onAddItem: (/* event */ SyntheticKeyboardEvent[HTMLElement], /* data */ DropdownProps) => Unit = null,
-    onBlur: (/* event */ SyntheticKeyboardEvent[HTMLElement], /* data */ DropdownProps) => Unit = null,
-    onChange: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps) => Unit = null,
-    onClick: (/* event */ SyntheticKeyboardEvent[HTMLElement], /* data */ DropdownProps) => Unit = null,
-    onClose: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps) => Unit = null,
-    onFocus: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps) => Unit = null,
-    onLabelClick: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ LabelProps) => Unit = null,
-    onMouseDown: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ DropdownProps) => Unit = null,
-    onOpen: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps) => Unit = null,
-    onSearchChange: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownOnSearchChangeData) => Unit = null,
-    open: js.UndefOr[Boolean] = js.undefined,
-    openOnFocus: js.UndefOr[Boolean] = js.undefined,
-    options: js.Array[DropdownItemProps] = null,
-    placeholder: String = null,
-    pointing: Boolean | left | right | top | (`top left`) | (`top right`) | bottom | (`bottom left`) | (`bottom right`) = null,
-    renderLabel: (/* item */ DropdownItemProps, /* index */ Double, /* defaultLabelProps */ LabelProps) => _ = null,
-    required: js.Any = null,
-    scrolling: js.UndefOr[Boolean] = js.undefined,
-    search: Boolean | (js.Function2[
-      /* options */ js.Array[DropdownItemProps], 
-      /* value */ String, 
-      js.Array[DropdownItemProps]
-    ]) = null,
-    searchInput: js.Any = null,
-    searchQuery: String = null,
-    selectOnBlur: js.UndefOr[Boolean] = js.undefined,
-    selectOnNavigation: js.UndefOr[Boolean] = js.undefined,
-    selectedLabel: Double | String = null,
-    selection: js.Any = null,
-    simple: js.UndefOr[Boolean] = js.undefined,
-    tabIndex: Double | String = null,
-    text: String = null,
-    trigger: TagMod[Any] = null,
-    `type`: String = null,
-    upward: js.UndefOr[Boolean] = js.undefined,
-    value: Boolean | Double | String | (js.Array[Boolean | Double | String]) = null,
-    width: SemanticWIDTHS = null,
-    wrapSelection: js.UndefOr[Boolean] = js.undefined
-  ): StrictFormDropdownProps = {
+  def apply(): StrictFormDropdownProps = {
     val __obj = js.Dynamic.literal()
-    if (additionLabel != null) __obj.updateDynamic("additionLabel")(additionLabel.asInstanceOf[js.Any])
-    if (additionPosition != null) __obj.updateDynamic("additionPosition")(additionPosition.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowAdditions)) __obj.updateDynamic("allowAdditions")(allowAdditions.get.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (!js.isUndefined(basic)) __obj.updateDynamic("basic")(basic.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(button)) __obj.updateDynamic("button")(button.get.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(clearable)) __obj.updateDynamic("clearable")(clearable.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnBlur)) __obj.updateDynamic("closeOnBlur")(closeOnBlur.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnChange)) __obj.updateDynamic("closeOnChange")(closeOnChange.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnEscape)) __obj.updateDynamic("closeOnEscape")(closeOnEscape.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.get.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (control != null) __obj.updateDynamic("control")(control.asInstanceOf[js.Any])
-    if (!js.isUndefined(deburr)) __obj.updateDynamic("deburr")(deburr.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultOpen)) __obj.updateDynamic("defaultOpen")(defaultOpen.get.asInstanceOf[js.Any])
-    if (defaultSearchQuery != null) __obj.updateDynamic("defaultSearchQuery")(defaultSearchQuery.asInstanceOf[js.Any])
-    if (defaultSelectedLabel != null) __obj.updateDynamic("defaultSelectedLabel")(defaultSelectedLabel.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultUpward)) __obj.updateDynamic("defaultUpward")(defaultUpward.get.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (!js.isUndefined(floating)) __obj.updateDynamic("floating")(floating.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(fluid)) __obj.updateDynamic("fluid")(fluid.get.asInstanceOf[js.Any])
-    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(item)) __obj.updateDynamic("item")(item.get.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (!js.isUndefined(labeled)) __obj.updateDynamic("labeled")(labeled.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(lazyLoad)) __obj.updateDynamic("lazyLoad")(lazyLoad.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(minCharacters)) __obj.updateDynamic("minCharacters")(minCharacters.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(multiple)) __obj.updateDynamic("multiple")(multiple.get.asInstanceOf[js.Any])
-    if (noResultsMessage != null) __obj.updateDynamic("noResultsMessage")(noResultsMessage.asInstanceOf[js.Any])
-    if (onAddItem != null) __obj.updateDynamic("onAddItem")(js.Any.fromFunction2(onAddItem))
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction2(onBlur))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction2(onClose))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction2(onFocus))
-    if (onLabelClick != null) __obj.updateDynamic("onLabelClick")(js.Any.fromFunction2(onLabelClick))
-    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction2(onMouseDown))
-    if (onOpen != null) __obj.updateDynamic("onOpen")(js.Any.fromFunction2(onOpen))
-    if (onSearchChange != null) __obj.updateDynamic("onSearchChange")(js.Any.fromFunction2(onSearchChange))
-    if (!js.isUndefined(open)) __obj.updateDynamic("open")(open.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(openOnFocus)) __obj.updateDynamic("openOnFocus")(openOnFocus.get.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
-    if (pointing != null) __obj.updateDynamic("pointing")(pointing.asInstanceOf[js.Any])
-    if (renderLabel != null) __obj.updateDynamic("renderLabel")(js.Any.fromFunction3(renderLabel))
-    if (required != null) __obj.updateDynamic("required")(required.asInstanceOf[js.Any])
-    if (!js.isUndefined(scrolling)) __obj.updateDynamic("scrolling")(scrolling.get.asInstanceOf[js.Any])
-    if (search != null) __obj.updateDynamic("search")(search.asInstanceOf[js.Any])
-    if (searchInput != null) __obj.updateDynamic("searchInput")(searchInput.asInstanceOf[js.Any])
-    if (searchQuery != null) __obj.updateDynamic("searchQuery")(searchQuery.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectOnBlur)) __obj.updateDynamic("selectOnBlur")(selectOnBlur.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectOnNavigation)) __obj.updateDynamic("selectOnNavigation")(selectOnNavigation.get.asInstanceOf[js.Any])
-    if (selectedLabel != null) __obj.updateDynamic("selectedLabel")(selectedLabel.asInstanceOf[js.Any])
-    if (selection != null) __obj.updateDynamic("selection")(selection.asInstanceOf[js.Any])
-    if (!js.isUndefined(simple)) __obj.updateDynamic("simple")(simple.get.asInstanceOf[js.Any])
-    if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(upward)) __obj.updateDynamic("upward")(upward.get.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (!js.isUndefined(wrapSelection)) __obj.updateDynamic("wrapSelection")(wrapSelection.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictFormDropdownProps]
   }
+  @scala.inline
+  implicit class StrictFormDropdownPropsOps[Self <: StrictFormDropdownProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAdditionLabelReactElement(value: ReactElement): Self = this.set("additionLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAdditionLabel(value: Double | String | TagMod[Any]): Self = this.set("additionLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAdditionLabel: Self = this.set("additionLabel", js.undefined)
+    @scala.inline
+    def setAdditionPosition(value: top | bottom): Self = this.set("additionPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAdditionPosition: Self = this.set("additionPosition", js.undefined)
+    @scala.inline
+    def setAllowAdditions(value: Boolean): Self = this.set("allowAdditions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAllowAdditions: Self = this.set("allowAdditions", js.undefined)
+    @scala.inline
+    def setBasic(value: Boolean): Self = this.set("basic", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBasic: Self = this.set("basic", js.undefined)
+    @scala.inline
+    def setButton(value: Boolean): Self = this.set("button", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteButton: Self = this.set("button", js.undefined)
+    @scala.inline
+    def setClearable(value: Boolean): Self = this.set("clearable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClearable: Self = this.set("clearable", js.undefined)
+    @scala.inline
+    def setCloseOnBlur(value: Boolean): Self = this.set("closeOnBlur", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCloseOnBlur: Self = this.set("closeOnBlur", js.undefined)
+    @scala.inline
+    def setCloseOnChange(value: Boolean): Self = this.set("closeOnChange", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCloseOnChange: Self = this.set("closeOnChange", js.undefined)
+    @scala.inline
+    def setCloseOnEscape(value: Boolean): Self = this.set("closeOnEscape", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCloseOnEscape: Self = this.set("closeOnEscape", js.undefined)
+    @scala.inline
+    def setCompact(value: Boolean): Self = this.set("compact", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCompact: Self = this.set("compact", js.undefined)
+    @scala.inline
+    def setDeburr(value: Boolean): Self = this.set("deburr", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDeburr: Self = this.set("deburr", js.undefined)
+    @scala.inline
+    def setDefaultOpen(value: Boolean): Self = this.set("defaultOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultOpen: Self = this.set("defaultOpen", js.undefined)
+    @scala.inline
+    def setDefaultSearchQuery(value: String): Self = this.set("defaultSearchQuery", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultSearchQuery: Self = this.set("defaultSearchQuery", js.undefined)
+    @scala.inline
+    def setDefaultSelectedLabel(value: Double | String): Self = this.set("defaultSelectedLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultSelectedLabel: Self = this.set("defaultSelectedLabel", js.undefined)
+    @scala.inline
+    def setDefaultUpward(value: Boolean): Self = this.set("defaultUpward", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultUpward: Self = this.set("defaultUpward", js.undefined)
+    @scala.inline
+    def setDefaultValue(value: String | Double | Boolean | (js.Array[Double | String | Boolean])): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
+    @scala.inline
+    def setDirection(value: left | right): Self = this.set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDirection: Self = this.set("direction", js.undefined)
+    @scala.inline
+    def setError(value: js.Any): Self = this.set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteError: Self = this.set("error", js.undefined)
+    @scala.inline
+    def setFloating(value: Boolean): Self = this.set("floating", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFloating: Self = this.set("floating", js.undefined)
+    @scala.inline
+    def setFluid(value: Boolean): Self = this.set("fluid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFluid: Self = this.set("fluid", js.undefined)
+    @scala.inline
+    def setHeaderReactElement(value: ReactElement): Self = this.set("header", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHeader(value: TagMod[Any]): Self = this.set("header", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeader: Self = this.set("header", js.undefined)
+    @scala.inline
+    def setIcon(value: js.Any): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIcon: Self = this.set("icon", js.undefined)
+    @scala.inline
+    def setItem(value: Boolean): Self = this.set("item", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteItem: Self = this.set("item", js.undefined)
+    @scala.inline
+    def setLabeled(value: Boolean): Self = this.set("labeled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLabeled: Self = this.set("labeled", js.undefined)
+    @scala.inline
+    def setLazyLoad(value: Boolean): Self = this.set("lazyLoad", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLazyLoad: Self = this.set("lazyLoad", js.undefined)
+    @scala.inline
+    def setLoading(value: Boolean): Self = this.set("loading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLoading: Self = this.set("loading", js.undefined)
+    @scala.inline
+    def setMinCharacters(value: Double): Self = this.set("minCharacters", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinCharacters: Self = this.set("minCharacters", js.undefined)
+    @scala.inline
+    def setMultiple(value: Boolean): Self = this.set("multiple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMultiple: Self = this.set("multiple", js.undefined)
+    @scala.inline
+    def setNoResultsMessageReactElement(value: ReactElement): Self = this.set("noResultsMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNoResultsMessage(value: TagMod[Any]): Self = this.set("noResultsMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNoResultsMessage: Self = this.set("noResultsMessage", js.undefined)
+    @scala.inline
+    def setOnAddItem(value: (/* event */ SyntheticKeyboardEvent[HTMLElement], /* data */ DropdownProps) => Unit): Self = this.set("onAddItem", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnAddItem: Self = this.set("onAddItem", js.undefined)
+    @scala.inline
+    def setOnBlur(value: (/* event */ SyntheticKeyboardEvent[HTMLElement], /* data */ DropdownProps) => Unit): Self = this.set("onBlur", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnBlur: Self = this.set("onBlur", js.undefined)
+    @scala.inline
+    def setOnChange(value: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps) => Unit): Self = this.set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnChange: Self = this.set("onChange", js.undefined)
+    @scala.inline
+    def setOnClick(value: (/* event */ SyntheticKeyboardEvent[HTMLElement], /* data */ DropdownProps) => Unit): Self = this.set("onClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnClick: Self = this.set("onClick", js.undefined)
+    @scala.inline
+    def setOnClose(value: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps) => Unit): Self = this.set("onClose", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnClose: Self = this.set("onClose", js.undefined)
+    @scala.inline
+    def setOnFocus(value: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps) => Unit): Self = this.set("onFocus", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnFocus: Self = this.set("onFocus", js.undefined)
+    @scala.inline
+    def setOnLabelClick(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ LabelProps) => Unit): Self = this.set("onLabelClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnLabelClick: Self = this.set("onLabelClick", js.undefined)
+    @scala.inline
+    def setOnMouseDown(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ DropdownProps) => Unit): Self = this.set("onMouseDown", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnMouseDown: Self = this.set("onMouseDown", js.undefined)
+    @scala.inline
+    def setOnOpen(value: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps) => Unit): Self = this.set("onOpen", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnOpen: Self = this.set("onOpen", js.undefined)
+    @scala.inline
+    def setOnSearchChange(
+      value: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownOnSearchChangeData) => Unit
+    ): Self = this.set("onSearchChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnSearchChange: Self = this.set("onSearchChange", js.undefined)
+    @scala.inline
+    def setOpen(value: Boolean): Self = this.set("open", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOpen: Self = this.set("open", js.undefined)
+    @scala.inline
+    def setOpenOnFocus(value: Boolean): Self = this.set("openOnFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOpenOnFocus: Self = this.set("openOnFocus", js.undefined)
+    @scala.inline
+    def setOptions(value: js.Array[DropdownItemProps]): Self = this.set("options", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOptions: Self = this.set("options", js.undefined)
+    @scala.inline
+    def setPlaceholder(value: String): Self = this.set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePlaceholder: Self = this.set("placeholder", js.undefined)
+    @scala.inline
+    def setPointing(
+      value: Boolean | left | right | top | (`top left`) | (`top right`) | bottom | (`bottom left`) | (`bottom right`)
+    ): Self = this.set("pointing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePointing: Self = this.set("pointing", js.undefined)
+    @scala.inline
+    def setRenderLabel(value: (/* item */ DropdownItemProps, /* index */ Double, /* defaultLabelProps */ LabelProps) => _): Self = this.set("renderLabel", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteRenderLabel: Self = this.set("renderLabel", js.undefined)
+    @scala.inline
+    def setScrolling(value: Boolean): Self = this.set("scrolling", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScrolling: Self = this.set("scrolling", js.undefined)
+    @scala.inline
+    def setSearchFunction2(
+      value: (/* options */ js.Array[DropdownItemProps], /* value */ String) => js.Array[DropdownItemProps]
+    ): Self = this.set("search", js.Any.fromFunction2(value))
+    @scala.inline
+    def setSearch(
+      value: Boolean | (js.Function2[
+          /* options */ js.Array[DropdownItemProps], 
+          /* value */ String, 
+          js.Array[DropdownItemProps]
+        ])
+    ): Self = this.set("search", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSearch: Self = this.set("search", js.undefined)
+    @scala.inline
+    def setSearchInput(value: js.Any): Self = this.set("searchInput", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSearchInput: Self = this.set("searchInput", js.undefined)
+    @scala.inline
+    def setSearchQuery(value: String): Self = this.set("searchQuery", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSearchQuery: Self = this.set("searchQuery", js.undefined)
+    @scala.inline
+    def setSelectOnBlur(value: Boolean): Self = this.set("selectOnBlur", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelectOnBlur: Self = this.set("selectOnBlur", js.undefined)
+    @scala.inline
+    def setSelectOnNavigation(value: Boolean): Self = this.set("selectOnNavigation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelectOnNavigation: Self = this.set("selectOnNavigation", js.undefined)
+    @scala.inline
+    def setSelectedLabel(value: Double | String): Self = this.set("selectedLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelectedLabel: Self = this.set("selectedLabel", js.undefined)
+    @scala.inline
+    def setSelection(value: js.Any): Self = this.set("selection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelection: Self = this.set("selection", js.undefined)
+    @scala.inline
+    def setSimple(value: Boolean): Self = this.set("simple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSimple: Self = this.set("simple", js.undefined)
+    @scala.inline
+    def setTabIndex(value: Double | String): Self = this.set("tabIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTabIndex: Self = this.set("tabIndex", js.undefined)
+    @scala.inline
+    def setText(value: String): Self = this.set("text", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteText: Self = this.set("text", js.undefined)
+    @scala.inline
+    def setTriggerReactElement(value: ReactElement): Self = this.set("trigger", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTrigger(value: TagMod[Any]): Self = this.set("trigger", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTrigger: Self = this.set("trigger", js.undefined)
+    @scala.inline
+    def setUpward(value: Boolean): Self = this.set("upward", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUpward: Self = this.set("upward", js.undefined)
+    @scala.inline
+    def setValue(value: Boolean | Double | String | (js.Array[Boolean | Double | String])): Self = this.set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
+    @scala.inline
+    def setWrapSelection(value: Boolean): Self = this.set("wrapSelection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWrapSelection: Self = this.set("wrapSelection", js.undefined)
+  }
+  
 }
 

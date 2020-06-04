@@ -29,9 +29,30 @@ trait AnimateTimings extends js.Object {
 
 object AnimateTimings {
   @scala.inline
-  def apply(delay: Double, duration: Double, easing: String = null): AnimateTimings = {
-    val __obj = js.Dynamic.literal(delay = delay.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any], easing = easing.asInstanceOf[js.Any])
+  def apply(delay: Double, duration: Double): AnimateTimings = {
+    val __obj = js.Dynamic.literal(delay = delay.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnimateTimings]
   }
+  @scala.inline
+  implicit class AnimateTimingsOps[Self <: AnimateTimings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDelay(value: Double): Self = this.set("delay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDuration(value: Double): Self = this.set("duration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEasing(value: String): Self = this.set("easing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEasingNull: Self = this.set("easing", null)
+  }
+  
 }
 

@@ -34,22 +34,63 @@ object HeaderProps {
     navigation: NavigationStackProp[NavigationRoute[NavigationParams], NavigationParams],
     position: Value,
     scene: Scene,
-    scenes: js.Array[Scene],
-    backTitleVisible: js.UndefOr[Boolean] = js.undefined,
-    backgroundInterpolator: /* props */ SceneInterpolatorProps => _ = null,
-    leftInterpolator: /* props */ SceneInterpolatorProps => _ = null,
-    rightInterpolator: /* props */ SceneInterpolatorProps => _ = null,
-    titleInterpolator: /* props */ SceneInterpolatorProps => _ = null,
-    transitionPreset: HeaderTransitionPreset = null
+    scenes: js.Array[Scene]
   ): HeaderProps = {
     val __obj = js.Dynamic.literal(isLandscape = isLandscape.asInstanceOf[js.Any], layout = layout.asInstanceOf[js.Any], layoutPreset = layoutPreset.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], navigation = navigation.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], scene = scene.asInstanceOf[js.Any], scenes = scenes.asInstanceOf[js.Any])
-    if (!js.isUndefined(backTitleVisible)) __obj.updateDynamic("backTitleVisible")(backTitleVisible.get.asInstanceOf[js.Any])
-    if (backgroundInterpolator != null) __obj.updateDynamic("backgroundInterpolator")(js.Any.fromFunction1(backgroundInterpolator))
-    if (leftInterpolator != null) __obj.updateDynamic("leftInterpolator")(js.Any.fromFunction1(leftInterpolator))
-    if (rightInterpolator != null) __obj.updateDynamic("rightInterpolator")(js.Any.fromFunction1(rightInterpolator))
-    if (titleInterpolator != null) __obj.updateDynamic("titleInterpolator")(js.Any.fromFunction1(titleInterpolator))
-    if (transitionPreset != null) __obj.updateDynamic("transitionPreset")(transitionPreset.asInstanceOf[js.Any])
     __obj.asInstanceOf[HeaderProps]
   }
+  @scala.inline
+  implicit class HeaderPropsOps[Self <: HeaderProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setIsLandscape(value: Boolean): Self = this.set("isLandscape", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLayout(value: TransitionerLayout): Self = this.set("layout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLayoutPreset(value: HeaderLayoutPreset): Self = this.set("layoutPreset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMode(value: HeaderMode): Self = this.set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNavigation(value: NavigationStackProp[NavigationRoute[NavigationParams], NavigationParams]): Self = this.set("navigation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPosition(value: Value): Self = this.set("position", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setScene(value: Scene): Self = this.set("scene", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setScenes(value: js.Array[Scene]): Self = this.set("scenes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBackTitleVisible(value: Boolean): Self = this.set("backTitleVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBackTitleVisible: Self = this.set("backTitleVisible", js.undefined)
+    @scala.inline
+    def setBackgroundInterpolator(value: /* props */ SceneInterpolatorProps => _): Self = this.set("backgroundInterpolator", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteBackgroundInterpolator: Self = this.set("backgroundInterpolator", js.undefined)
+    @scala.inline
+    def setLeftInterpolator(value: /* props */ SceneInterpolatorProps => _): Self = this.set("leftInterpolator", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteLeftInterpolator: Self = this.set("leftInterpolator", js.undefined)
+    @scala.inline
+    def setRightInterpolator(value: /* props */ SceneInterpolatorProps => _): Self = this.set("rightInterpolator", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteRightInterpolator: Self = this.set("rightInterpolator", js.undefined)
+    @scala.inline
+    def setTitleInterpolator(value: /* props */ SceneInterpolatorProps => _): Self = this.set("titleInterpolator", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteTitleInterpolator: Self = this.set("titleInterpolator", js.undefined)
+    @scala.inline
+    def setTransitionPreset(value: HeaderTransitionPreset): Self = this.set("transitionPreset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTransitionPreset: Self = this.set("transitionPreset", js.undefined)
+  }
+  
 }
 

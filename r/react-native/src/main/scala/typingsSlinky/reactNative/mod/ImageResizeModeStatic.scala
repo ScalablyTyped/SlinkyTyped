@@ -46,5 +46,28 @@ object ImageResizeModeStatic {
     val __obj = js.Dynamic.literal(center = center.asInstanceOf[js.Any], contain = contain.asInstanceOf[js.Any], cover = cover.asInstanceOf[js.Any], repeat = repeat.asInstanceOf[js.Any], stretch = stretch.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImageResizeModeStatic]
   }
+  @scala.inline
+  implicit class ImageResizeModeStaticOps[Self <: ImageResizeModeStatic] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCenter(value: ImageResizeMode): Self = this.set("center", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContain(value: ImageResizeMode): Self = this.set("contain", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCover(value: ImageResizeMode): Self = this.set("cover", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRepeat(value: ImageResizeMode): Self = this.set("repeat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStretch(value: ImageResizeMode): Self = this.set("stretch", value.asInstanceOf[js.Any])
+  }
+  
 }
 

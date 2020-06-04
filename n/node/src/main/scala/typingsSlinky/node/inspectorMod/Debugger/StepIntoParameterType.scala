@@ -14,10 +14,26 @@ trait StepIntoParameterType extends js.Object {
 
 object StepIntoParameterType {
   @scala.inline
-  def apply(breakOnAsyncCall: js.UndefOr[Boolean] = js.undefined): StepIntoParameterType = {
+  def apply(): StepIntoParameterType = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(breakOnAsyncCall)) __obj.updateDynamic("breakOnAsyncCall")(breakOnAsyncCall.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StepIntoParameterType]
   }
+  @scala.inline
+  implicit class StepIntoParameterTypeOps[Self <: StepIntoParameterType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBreakOnAsyncCall(value: Boolean): Self = this.set("breakOnAsyncCall", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBreakOnAsyncCall: Self = this.set("breakOnAsyncCall", js.undefined)
+  }
+  
 }
 

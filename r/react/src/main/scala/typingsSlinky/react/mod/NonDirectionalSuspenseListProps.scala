@@ -22,16 +22,31 @@ trait NonDirectionalSuspenseListProps
 
 object NonDirectionalSuspenseListProps {
   @scala.inline
-  def apply(
-    children: slinky.core.facade.ReactElement | js.Iterable[slinky.core.facade.ReactElement],
-    revealOrder: Exclude[
-      typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseListRevealOrder, 
-      forwards | backwards
-    ] = null
-  ): NonDirectionalSuspenseListProps = {
+  def apply(children: slinky.core.facade.ReactElement | js.Iterable[slinky.core.facade.ReactElement]): NonDirectionalSuspenseListProps = {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-    if (revealOrder != null) __obj.updateDynamic("revealOrder")(revealOrder.asInstanceOf[js.Any])
     __obj.asInstanceOf[NonDirectionalSuspenseListProps]
   }
+  @scala.inline
+  implicit class NonDirectionalSuspenseListPropsOps[Self <: NonDirectionalSuspenseListProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setRevealOrder(
+      value: Exclude[
+          typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseListRevealOrder, 
+          forwards | backwards
+        ]
+    ): Self = this.set("revealOrder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRevealOrder: Self = this.set("revealOrder", js.undefined)
+  }
+  
 }
 

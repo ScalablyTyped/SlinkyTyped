@@ -31,15 +31,57 @@ object Animations {
     ngContentSelectors: js.Array[String],
     preserveWhitespaces: Boolean,
     styleUrls: js.Array[String],
-    styles: js.Array[String],
-    encapsulation: ViewEncapsulation = null,
-    htmlAst: ParseTreeResult = null,
-    interpolation: js.Tuple2[String, String] = null,
-    template: String = null,
-    templateUrl: String = null
+    styles: js.Array[String]
   ): Animations = {
-    val __obj = js.Dynamic.literal(animations = animations.asInstanceOf[js.Any], externalStylesheets = externalStylesheets.asInstanceOf[js.Any], isInline = isInline.asInstanceOf[js.Any], ngContentSelectors = ngContentSelectors.asInstanceOf[js.Any], preserveWhitespaces = preserveWhitespaces.asInstanceOf[js.Any], styleUrls = styleUrls.asInstanceOf[js.Any], styles = styles.asInstanceOf[js.Any], encapsulation = encapsulation.asInstanceOf[js.Any], htmlAst = htmlAst.asInstanceOf[js.Any], interpolation = interpolation.asInstanceOf[js.Any], template = template.asInstanceOf[js.Any], templateUrl = templateUrl.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(animations = animations.asInstanceOf[js.Any], externalStylesheets = externalStylesheets.asInstanceOf[js.Any], isInline = isInline.asInstanceOf[js.Any], ngContentSelectors = ngContentSelectors.asInstanceOf[js.Any], preserveWhitespaces = preserveWhitespaces.asInstanceOf[js.Any], styleUrls = styleUrls.asInstanceOf[js.Any], styles = styles.asInstanceOf[js.Any])
     __obj.asInstanceOf[Animations]
   }
+  @scala.inline
+  implicit class AnimationsOps[Self <: Animations] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAnimations(value: js.Array[_]): Self = this.set("animations", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setExternalStylesheets(value: js.Array[CompileStylesheetMetadata]): Self = this.set("externalStylesheets", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIsInline(value: Boolean): Self = this.set("isInline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNgContentSelectors(value: js.Array[String]): Self = this.set("ngContentSelectors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPreserveWhitespaces(value: Boolean): Self = this.set("preserveWhitespaces", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStyleUrls(value: js.Array[String]): Self = this.set("styleUrls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStyles(value: js.Array[String]): Self = this.set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEncapsulation(value: ViewEncapsulation): Self = this.set("encapsulation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEncapsulationNull: Self = this.set("encapsulation", null)
+    @scala.inline
+    def setHtmlAst(value: ParseTreeResult): Self = this.set("htmlAst", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHtmlAstNull: Self = this.set("htmlAst", null)
+    @scala.inline
+    def setInterpolation(value: js.Tuple2[String, String]): Self = this.set("interpolation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInterpolationNull: Self = this.set("interpolation", null)
+    @scala.inline
+    def setTemplate(value: String): Self = this.set("template", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTemplateNull: Self = this.set("template", null)
+    @scala.inline
+    def setTemplateUrl(value: String): Self = this.set("templateUrl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTemplateUrlNull: Self = this.set("templateUrl", null)
+  }
+  
 }
 

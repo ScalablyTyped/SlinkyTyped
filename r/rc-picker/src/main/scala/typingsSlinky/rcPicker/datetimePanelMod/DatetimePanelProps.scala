@@ -1,6 +1,7 @@
 package typingsSlinky.rcPicker.datetimePanelMod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.rcPicker.dateBodyMod.DateRender
 import typingsSlinky.rcPicker.generateMod.GenerateConfig
 import typingsSlinky.rcPicker.interfaceMod.DisabledTime
@@ -58,42 +59,113 @@ object DatetimePanelProps {
     onViewDateChange: /* value */ DateType => Unit,
     operationRef: MutableRefObject[PanelRefProps],
     prefixCls: String,
-    viewDate: DateType,
-    active: js.UndefOr[Boolean] = js.undefined,
-    dateRender: (DateType, DateType) => TagMod[Any] = null,
-    defaultPickerValue: DateType = null,
-    defaultValue: DateType = null,
-    disabledDate: /* date */ DateType => Boolean = null,
-    disabledTime: /* date */ DateType | Null => DisabledTimes = null,
-    keyboardConfig: KeyboardConfig = null,
-    nextIcon: TagMod[Any] = null,
-    panelName: String = null,
-    prefixColumn: /* date */ DateType => TagMod[Any] = null,
-    prevIcon: TagMod[Any] = null,
-    rowClassName: /* date */ DateType => String = null,
-    showTime: Boolean | SharedTimeProps[DateType] = null,
-    superNextIcon: TagMod[Any] = null,
-    superPrevIcon: TagMod[Any] = null,
-    value: js.UndefOr[Null | NullableDateType[DateType]] = js.undefined
+    viewDate: DateType
   ): DatetimePanelProps[DateType] = {
     val __obj = js.Dynamic.literal(generateConfig = generateConfig.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], onPanelChange = js.Any.fromFunction2(onPanelChange), onSelect = js.Any.fromFunction2(onSelect), onViewDateChange = js.Any.fromFunction1(onViewDateChange), operationRef = operationRef.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], viewDate = viewDate.asInstanceOf[js.Any])
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
-    if (dateRender != null) __obj.updateDynamic("dateRender")(js.Any.fromFunction2(dateRender))
-    if (defaultPickerValue != null) __obj.updateDynamic("defaultPickerValue")(defaultPickerValue.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (disabledDate != null) __obj.updateDynamic("disabledDate")(js.Any.fromFunction1(disabledDate))
-    if (disabledTime != null) __obj.updateDynamic("disabledTime")(js.Any.fromFunction1(disabledTime))
-    if (keyboardConfig != null) __obj.updateDynamic("keyboardConfig")(keyboardConfig.asInstanceOf[js.Any])
-    if (nextIcon != null) __obj.updateDynamic("nextIcon")(nextIcon.asInstanceOf[js.Any])
-    if (panelName != null) __obj.updateDynamic("panelName")(panelName.asInstanceOf[js.Any])
-    if (prefixColumn != null) __obj.updateDynamic("prefixColumn")(js.Any.fromFunction1(prefixColumn))
-    if (prevIcon != null) __obj.updateDynamic("prevIcon")(prevIcon.asInstanceOf[js.Any])
-    if (rowClassName != null) __obj.updateDynamic("rowClassName")(js.Any.fromFunction1(rowClassName))
-    if (showTime != null) __obj.updateDynamic("showTime")(showTime.asInstanceOf[js.Any])
-    if (superNextIcon != null) __obj.updateDynamic("superNextIcon")(superNextIcon.asInstanceOf[js.Any])
-    if (superPrevIcon != null) __obj.updateDynamic("superPrevIcon")(superPrevIcon.asInstanceOf[js.Any])
-    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[DatetimePanelProps[DateType]]
   }
+  @scala.inline
+  implicit class DatetimePanelPropsOps[Self <: DatetimePanelProps[_], DateType] (val x: Self with DatetimePanelProps[DateType]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setGenerateConfig(value: GenerateConfig[DateType]): Self = this.set("generateConfig", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLocale(value: Locale): Self = this.set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOnPanelChange(value: (/* mode */ PanelMode | Null, /* viewValue */ DateType) => Unit): Self = this.set("onPanelChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def setOnSelect(value: (DateType, /* type */ key | mouse | submit) => Unit): Self = this.set("onSelect", js.Any.fromFunction2(value))
+    @scala.inline
+    def setOnViewDateChange(value: /* value */ DateType => Unit): Self = this.set("onViewDateChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def setOperationRef(value: MutableRefObject[PanelRefProps]): Self = this.set("operationRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setViewDate(value: DateType): Self = this.set("viewDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setActive(value: Boolean): Self = this.set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteActive: Self = this.set("active", js.undefined)
+    @scala.inline
+    def setDateRender(value: (DateType, DateType) => TagMod[Any]): Self = this.set("dateRender", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteDateRender: Self = this.set("dateRender", js.undefined)
+    @scala.inline
+    def setDefaultPickerValue(value: DateType): Self = this.set("defaultPickerValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultPickerValue: Self = this.set("defaultPickerValue", js.undefined)
+    @scala.inline
+    def setDefaultValue(value: DateType): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
+    @scala.inline
+    def setDisabledDate(value: /* date */ DateType => Boolean): Self = this.set("disabledDate", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteDisabledDate: Self = this.set("disabledDate", js.undefined)
+    @scala.inline
+    def setDisabledTime(value: /* date */ DateType | Null => DisabledTimes): Self = this.set("disabledTime", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteDisabledTime: Self = this.set("disabledTime", js.undefined)
+    @scala.inline
+    def setKeyboardConfig(value: KeyboardConfig): Self = this.set("keyboardConfig", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKeyboardConfig: Self = this.set("keyboardConfig", js.undefined)
+    @scala.inline
+    def setNextIconReactElement(value: ReactElement): Self = this.set("nextIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNextIcon(value: TagMod[Any]): Self = this.set("nextIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNextIcon: Self = this.set("nextIcon", js.undefined)
+    @scala.inline
+    def setPanelName(value: String): Self = this.set("panelName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePanelName: Self = this.set("panelName", js.undefined)
+    @scala.inline
+    def setPrefixColumn(value: /* date */ DateType => TagMod[Any]): Self = this.set("prefixColumn", js.Any.fromFunction1(value))
+    @scala.inline
+    def deletePrefixColumn: Self = this.set("prefixColumn", js.undefined)
+    @scala.inline
+    def setPrevIconReactElement(value: ReactElement): Self = this.set("prevIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPrevIcon(value: TagMod[Any]): Self = this.set("prevIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrevIcon: Self = this.set("prevIcon", js.undefined)
+    @scala.inline
+    def setRowClassName(value: /* date */ DateType => String): Self = this.set("rowClassName", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteRowClassName: Self = this.set("rowClassName", js.undefined)
+    @scala.inline
+    def setShowTime(value: Boolean | SharedTimeProps[DateType]): Self = this.set("showTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowTime: Self = this.set("showTime", js.undefined)
+    @scala.inline
+    def setSuperNextIconReactElement(value: ReactElement): Self = this.set("superNextIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSuperNextIcon(value: TagMod[Any]): Self = this.set("superNextIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSuperNextIcon: Self = this.set("superNextIcon", js.undefined)
+    @scala.inline
+    def setSuperPrevIconReactElement(value: ReactElement): Self = this.set("superPrevIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSuperPrevIcon(value: TagMod[Any]): Self = this.set("superPrevIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSuperPrevIcon: Self = this.set("superPrevIcon", js.undefined)
+    @scala.inline
+    def setValue(value: NullableDateType[DateType]): Self = this.set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
+    @scala.inline
+    def setValueNull: Self = this.set("value", null)
+  }
+  
 }
 

@@ -1,6 +1,7 @@
 package typingsSlinky.antd.rateMod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,36 +25,76 @@ trait RateProps extends js.Object {
 
 object RateProps {
   @scala.inline
-  def apply(
-    allowClear: js.UndefOr[Boolean] = js.undefined,
-    allowHalf: js.UndefOr[Boolean] = js.undefined,
-    character: TagMod[Any] = null,
-    className: String = null,
-    count: js.UndefOr[Double] = js.undefined,
-    defaultValue: js.UndefOr[Double] = js.undefined,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    onChange: /* value */ Double => Unit = null,
-    onHoverChange: /* value */ Double => Unit = null,
-    prefixCls: String = null,
-    style: CSSProperties = null,
-    tooltips: js.Array[String] = null,
-    value: js.UndefOr[Double] = js.undefined
-  ): RateProps = {
+  def apply(): RateProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowClear)) __obj.updateDynamic("allowClear")(allowClear.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowHalf)) __obj.updateDynamic("allowHalf")(allowHalf.get.asInstanceOf[js.Any])
-    if (character != null) __obj.updateDynamic("character")(character.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(count)) __obj.updateDynamic("count")(count.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultValue)) __obj.updateDynamic("defaultValue")(defaultValue.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onHoverChange != null) __obj.updateDynamic("onHoverChange")(js.Any.fromFunction1(onHoverChange))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (tooltips != null) __obj.updateDynamic("tooltips")(tooltips.asInstanceOf[js.Any])
-    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RateProps]
   }
+  @scala.inline
+  implicit class RatePropsOps[Self <: RateProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAllowClear(value: Boolean): Self = this.set("allowClear", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAllowClear: Self = this.set("allowClear", js.undefined)
+    @scala.inline
+    def setAllowHalf(value: Boolean): Self = this.set("allowHalf", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAllowHalf: Self = this.set("allowHalf", js.undefined)
+    @scala.inline
+    def setCharacterReactElement(value: ReactElement): Self = this.set("character", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCharacter(value: TagMod[Any]): Self = this.set("character", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCharacter: Self = this.set("character", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setCount(value: Double): Self = this.set("count", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCount: Self = this.set("count", js.undefined)
+    @scala.inline
+    def setDefaultValue(value: Double): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setOnChange(value: /* value */ Double => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnChange: Self = this.set("onChange", js.undefined)
+    @scala.inline
+    def setOnHoverChange(value: /* value */ Double => Unit): Self = this.set("onHoverChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnHoverChange: Self = this.set("onHoverChange", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+    @scala.inline
+    def setTooltips(value: js.Array[String]): Self = this.set("tooltips", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTooltips: Self = this.set("tooltips", js.undefined)
+    @scala.inline
+    def setValue(value: Double): Self = this.set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
+  }
+  
 }
 

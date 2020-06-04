@@ -83,6 +83,7 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -102,7 +103,7 @@ object NativeSelect {
     @scala.inline
     def IconComponentComponentClass(value: ReactComponentClass[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def IconComponent(value: ReactComponentClass[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
+    def IconComponent(value: ReactType[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -270,7 +271,7 @@ object NativeSelect {
     @scala.inline
     def inputComponentComponentClass(value: ReactComponentClass[InputBaseComponentProps]): this.type = set("inputComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def inputComponent(value: ReactComponentClass[InputBaseComponentProps]): this.type = set("inputComponent", value.asInstanceOf[js.Any])
+    def inputComponent(value: ReactType[InputBaseComponentProps]): this.type = set("inputComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
     @scala.inline

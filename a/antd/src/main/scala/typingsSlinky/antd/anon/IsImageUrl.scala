@@ -32,5 +32,32 @@ object IsImageUrl {
     val __obj = js.Dynamic.literal(isImageUrl = js.Any.fromFunction1(isImageUrl), listType = listType.asInstanceOf[js.Any], previewFile = js.Any.fromFunction1(previewFile), progressAttr = progressAttr.asInstanceOf[js.Any], showDownloadIcon = showDownloadIcon.asInstanceOf[js.Any], showPreviewIcon = showPreviewIcon.asInstanceOf[js.Any], showRemoveIcon = showRemoveIcon.asInstanceOf[js.Any])
     __obj.asInstanceOf[IsImageUrl]
   }
+  @scala.inline
+  implicit class IsImageUrlOps[Self <: IsImageUrl] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setIsImageUrl(value: UploadFile[_] => Boolean): Self = this.set("isImageUrl", js.Any.fromFunction1(value))
+    @scala.inline
+    def setListType(value: UploadListType): Self = this.set("listType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPreviewFile(value: /* file */ File | Blob => js.Promise[String]): Self = this.set("previewFile", js.Any.fromFunction1(value))
+    @scala.inline
+    def setProgressAttr(value: ShowInfo): Self = this.set("progressAttr", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setShowDownloadIcon(value: Boolean): Self = this.set("showDownloadIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setShowPreviewIcon(value: Boolean): Self = this.set("showPreviewIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setShowRemoveIcon(value: Boolean): Self = this.set("showRemoveIcon", value.asInstanceOf[js.Any])
+  }
+  
 }
 

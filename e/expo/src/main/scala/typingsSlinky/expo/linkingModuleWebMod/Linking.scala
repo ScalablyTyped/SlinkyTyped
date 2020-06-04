@@ -28,5 +28,28 @@ object Linking {
     val __obj = js.Dynamic.literal(addEventListener = js.Any.fromFunction2(addEventListener), canOpenURL = js.Any.fromFunction1(canOpenURL), getInitialURL = js.Any.fromFunction0(getInitialURL), openURL = js.Any.fromFunction1(openURL), removeEventListener = js.Any.fromFunction2(removeEventListener))
     __obj.asInstanceOf[Linking]
   }
+  @scala.inline
+  implicit class LinkingOps[Self <: Linking] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAddEventListener(value: (url, URLListener) => Unit): Self = this.set("addEventListener", js.Any.fromFunction2(value))
+    @scala.inline
+    def setCanOpenURL(value: String => js.Promise[Boolean]): Self = this.set("canOpenURL", js.Any.fromFunction1(value))
+    @scala.inline
+    def setGetInitialURL(value: () => js.Promise[String]): Self = this.set("getInitialURL", js.Any.fromFunction0(value))
+    @scala.inline
+    def setOpenURL(value: String => js.Promise[Unit]): Self = this.set("openURL", js.Any.fromFunction1(value))
+    @scala.inline
+    def setRemoveEventListener(value: (url, URLListener) => Unit): Self = this.set("removeEventListener", js.Any.fromFunction2(value))
+  }
+  
 }
 

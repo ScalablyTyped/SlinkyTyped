@@ -20,13 +20,30 @@ trait ListProps extends js.Object {
 
 object ListProps {
   @scala.inline
-  def apply(
-    name: NamePath,
-    children: (/* fields */ js.Array[ListField], /* operations */ ListOperations) => ReactElement | TagMod[Any] = null
-  ): ListProps = {
+  def apply(name: NamePath): ListProps = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(js.Any.fromFunction2(children))
     __obj.asInstanceOf[ListProps]
   }
+  @scala.inline
+  implicit class ListPropsOps[Self <: ListProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setName(value: NamePath): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(
+      value: (/* fields */ js.Array[ListField], /* operations */ ListOperations) => ReactElement | TagMod[Any]
+    ): Self = this.set("children", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+  }
+  
 }
 

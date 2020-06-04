@@ -31,36 +31,74 @@ trait StepsProps extends js.Object {
 
 object StepsProps {
   @scala.inline
-  def apply(
-    className: String = null,
-    current: js.UndefOr[Double] = js.undefined,
-    direction: horizontal | vertical = null,
-    iconPrefix: String = null,
-    initial: js.UndefOr[Double] = js.undefined,
-    labelPlacement: horizontal | vertical = null,
-    onChange: /* current */ Double => Unit = null,
-    prefixCls: String = null,
-    progressDot: Boolean | js.Function = null,
-    size: typingsSlinky.antd.antdStrings.default | small = null,
-    status: wait | process | finish | error = null,
-    style: CSSProperties = null,
-    `type`: typingsSlinky.antd.antdStrings.default | navigation = null
-  ): StepsProps = {
+  def apply(): StepsProps = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(current)) __obj.updateDynamic("current")(current.get.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (iconPrefix != null) __obj.updateDynamic("iconPrefix")(iconPrefix.asInstanceOf[js.Any])
-    if (!js.isUndefined(initial)) __obj.updateDynamic("initial")(initial.get.asInstanceOf[js.Any])
-    if (labelPlacement != null) __obj.updateDynamic("labelPlacement")(labelPlacement.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (progressDot != null) __obj.updateDynamic("progressDot")(progressDot.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[StepsProps]
   }
+  @scala.inline
+  implicit class StepsPropsOps[Self <: StepsProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setCurrent(value: Double): Self = this.set("current", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCurrent: Self = this.set("current", js.undefined)
+    @scala.inline
+    def setDirection(value: horizontal | vertical): Self = this.set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDirection: Self = this.set("direction", js.undefined)
+    @scala.inline
+    def setIconPrefix(value: String): Self = this.set("iconPrefix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIconPrefix: Self = this.set("iconPrefix", js.undefined)
+    @scala.inline
+    def setInitial(value: Double): Self = this.set("initial", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInitial: Self = this.set("initial", js.undefined)
+    @scala.inline
+    def setLabelPlacement(value: horizontal | vertical): Self = this.set("labelPlacement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLabelPlacement: Self = this.set("labelPlacement", js.undefined)
+    @scala.inline
+    def setOnChange(value: /* current */ Double => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnChange: Self = this.set("onChange", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    @scala.inline
+    def setProgressDot(value: Boolean | js.Function): Self = this.set("progressDot", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteProgressDot: Self = this.set("progressDot", js.undefined)
+    @scala.inline
+    def setSize(value: typingsSlinky.antd.antdStrings.default | small): Self = this.set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
+    @scala.inline
+    def setStatus(value: wait | process | finish | error): Self = this.set("status", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStatus: Self = this.set("status", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+    @scala.inline
+    def setType(value: typingsSlinky.antd.antdStrings.default | navigation): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteType: Self = this.set("type", js.undefined)
+  }
+  
 }
 

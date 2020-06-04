@@ -52,24 +52,50 @@ trait TVViewPropsIOS extends js.Object {
 
 object TVViewPropsIOS {
   @scala.inline
-  def apply(
-    hasTVPreferredFocus: js.UndefOr[Boolean] = js.undefined,
-    isTVSelectable: js.UndefOr[Boolean] = js.undefined,
-    tvParallaxMagnification: js.UndefOr[Double] = js.undefined,
-    tvParallaxProperties: TVParallaxProperties = null,
-    tvParallaxShiftDistanceX: js.UndefOr[Double] = js.undefined,
-    tvParallaxShiftDistanceY: js.UndefOr[Double] = js.undefined,
-    tvParallaxTiltAngle: js.UndefOr[Double] = js.undefined
-  ): TVViewPropsIOS = {
+  def apply(): TVViewPropsIOS = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(hasTVPreferredFocus)) __obj.updateDynamic("hasTVPreferredFocus")(hasTVPreferredFocus.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(isTVSelectable)) __obj.updateDynamic("isTVSelectable")(isTVSelectable.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(tvParallaxMagnification)) __obj.updateDynamic("tvParallaxMagnification")(tvParallaxMagnification.get.asInstanceOf[js.Any])
-    if (tvParallaxProperties != null) __obj.updateDynamic("tvParallaxProperties")(tvParallaxProperties.asInstanceOf[js.Any])
-    if (!js.isUndefined(tvParallaxShiftDistanceX)) __obj.updateDynamic("tvParallaxShiftDistanceX")(tvParallaxShiftDistanceX.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(tvParallaxShiftDistanceY)) __obj.updateDynamic("tvParallaxShiftDistanceY")(tvParallaxShiftDistanceY.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(tvParallaxTiltAngle)) __obj.updateDynamic("tvParallaxTiltAngle")(tvParallaxTiltAngle.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TVViewPropsIOS]
   }
+  @scala.inline
+  implicit class TVViewPropsIOSOps[Self <: TVViewPropsIOS] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setHasTVPreferredFocus(value: Boolean): Self = this.set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHasTVPreferredFocus: Self = this.set("hasTVPreferredFocus", js.undefined)
+    @scala.inline
+    def setIsTVSelectable(value: Boolean): Self = this.set("isTVSelectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIsTVSelectable: Self = this.set("isTVSelectable", js.undefined)
+    @scala.inline
+    def setTvParallaxMagnification(value: Double): Self = this.set("tvParallaxMagnification", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTvParallaxMagnification: Self = this.set("tvParallaxMagnification", js.undefined)
+    @scala.inline
+    def setTvParallaxProperties(value: TVParallaxProperties): Self = this.set("tvParallaxProperties", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTvParallaxProperties: Self = this.set("tvParallaxProperties", js.undefined)
+    @scala.inline
+    def setTvParallaxShiftDistanceX(value: Double): Self = this.set("tvParallaxShiftDistanceX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTvParallaxShiftDistanceX: Self = this.set("tvParallaxShiftDistanceX", js.undefined)
+    @scala.inline
+    def setTvParallaxShiftDistanceY(value: Double): Self = this.set("tvParallaxShiftDistanceY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTvParallaxShiftDistanceY: Self = this.set("tvParallaxShiftDistanceY", js.undefined)
+    @scala.inline
+    def setTvParallaxTiltAngle(value: Double): Self = this.set("tvParallaxTiltAngle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTvParallaxTiltAngle: Self = this.set("tvParallaxTiltAngle", js.undefined)
+  }
+  
 }
 

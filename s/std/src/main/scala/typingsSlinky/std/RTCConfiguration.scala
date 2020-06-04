@@ -16,24 +16,50 @@ trait RTCConfiguration extends js.Object {
 
 object RTCConfiguration {
   @scala.inline
-  def apply(
-    bundlePolicy: org.scalajs.dom.experimental.webrtc.RTCBundlePolicy = null,
-    certificates: js.Array[RTCCertificate] = null,
-    iceCandidatePoolSize: js.UndefOr[Double] = js.undefined,
-    iceServers: js.Array[org.scalajs.dom.experimental.webrtc.RTCIceServer] = null,
-    iceTransportPolicy: org.scalajs.dom.experimental.webrtc.RTCIceTransportPolicy = null,
-    peerIdentity: java.lang.String = null,
-    rtcpMuxPolicy: RTCRtcpMuxPolicy = null
-  ): RTCConfiguration = {
+  def apply(): RTCConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (bundlePolicy != null) __obj.updateDynamic("bundlePolicy")(bundlePolicy.asInstanceOf[js.Any])
-    if (certificates != null) __obj.updateDynamic("certificates")(certificates.asInstanceOf[js.Any])
-    if (!js.isUndefined(iceCandidatePoolSize)) __obj.updateDynamic("iceCandidatePoolSize")(iceCandidatePoolSize.get.asInstanceOf[js.Any])
-    if (iceServers != null) __obj.updateDynamic("iceServers")(iceServers.asInstanceOf[js.Any])
-    if (iceTransportPolicy != null) __obj.updateDynamic("iceTransportPolicy")(iceTransportPolicy.asInstanceOf[js.Any])
-    if (peerIdentity != null) __obj.updateDynamic("peerIdentity")(peerIdentity.asInstanceOf[js.Any])
-    if (rtcpMuxPolicy != null) __obj.updateDynamic("rtcpMuxPolicy")(rtcpMuxPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCConfiguration]
   }
+  @scala.inline
+  implicit class RTCConfigurationOps[Self <: org.scalajs.dom.experimental.webrtc.RTCConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBundlePolicy(value: org.scalajs.dom.experimental.webrtc.RTCBundlePolicy): Self = this.set("bundlePolicy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBundlePolicy: Self = this.set("bundlePolicy", js.undefined)
+    @scala.inline
+    def setCertificates(value: js.Array[RTCCertificate]): Self = this.set("certificates", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCertificates: Self = this.set("certificates", js.undefined)
+    @scala.inline
+    def setIceCandidatePoolSize(value: Double): Self = this.set("iceCandidatePoolSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIceCandidatePoolSize: Self = this.set("iceCandidatePoolSize", js.undefined)
+    @scala.inline
+    def setIceServers(value: js.Array[org.scalajs.dom.experimental.webrtc.RTCIceServer]): Self = this.set("iceServers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIceServers: Self = this.set("iceServers", js.undefined)
+    @scala.inline
+    def setIceTransportPolicy(value: org.scalajs.dom.experimental.webrtc.RTCIceTransportPolicy): Self = this.set("iceTransportPolicy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIceTransportPolicy: Self = this.set("iceTransportPolicy", js.undefined)
+    @scala.inline
+    def setPeerIdentity(value: java.lang.String): Self = this.set("peerIdentity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePeerIdentity: Self = this.set("peerIdentity", js.undefined)
+    @scala.inline
+    def setRtcpMuxPolicy(value: RTCRtcpMuxPolicy): Self = this.set("rtcpMuxPolicy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRtcpMuxPolicy: Self = this.set("rtcpMuxPolicy", js.undefined)
+  }
+  
 }
 

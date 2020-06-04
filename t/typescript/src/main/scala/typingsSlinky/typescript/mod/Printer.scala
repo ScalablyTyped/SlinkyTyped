@@ -44,5 +44,26 @@ object Printer {
     val __obj = js.Dynamic.literal(printBundle = js.Any.fromFunction1(printBundle), printFile = js.Any.fromFunction1(printFile), printList = js.Any.fromFunction3(printList), printNode = js.Any.fromFunction3(printNode))
     __obj.asInstanceOf[Printer]
   }
+  @scala.inline
+  implicit class PrinterOps[Self <: Printer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setPrintBundle(value: Bundle => java.lang.String): Self = this.set("printBundle", js.Any.fromFunction1(value))
+    @scala.inline
+    def setPrintFile(value: SourceFile => java.lang.String): Self = this.set("printFile", js.Any.fromFunction1(value))
+    @scala.inline
+    def setPrintList(value: (ListFormat, NodeArray[js.Any], SourceFile) => java.lang.String): Self = this.set("printList", js.Any.fromFunction3(value))
+    @scala.inline
+    def setPrintNode(value: (EmitHint, Node, SourceFile) => java.lang.String): Self = this.set("printNode", js.Any.fromFunction3(value))
+  }
+  
 }
 

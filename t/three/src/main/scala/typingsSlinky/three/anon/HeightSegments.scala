@@ -30,5 +30,34 @@ object HeightSegments {
     val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], heightSegments = heightSegments.asInstanceOf[js.Any], openEnded = openEnded.asInstanceOf[js.Any], radialSegments = radialSegments.asInstanceOf[js.Any], radiusBottom = radiusBottom.asInstanceOf[js.Any], radiusTop = radiusTop.asInstanceOf[js.Any], thetaLength = thetaLength.asInstanceOf[js.Any], thetaStart = thetaStart.asInstanceOf[js.Any])
     __obj.asInstanceOf[HeightSegments]
   }
+  @scala.inline
+  implicit class HeightSegmentsOps[Self <: HeightSegments] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHeightSegments(value: Double): Self = this.set("heightSegments", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOpenEnded(value: Boolean): Self = this.set("openEnded", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRadialSegments(value: Double): Self = this.set("radialSegments", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRadiusBottom(value: Double): Self = this.set("radiusBottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRadiusTop(value: Double): Self = this.set("radiusTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setThetaLength(value: Double): Self = this.set("thetaLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setThetaStart(value: Double): Self = this.set("thetaStart", value.asInstanceOf[js.Any])
+  }
+  
 }
 

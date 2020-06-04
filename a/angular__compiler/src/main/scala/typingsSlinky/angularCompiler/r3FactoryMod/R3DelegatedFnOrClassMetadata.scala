@@ -1,6 +1,5 @@
 package typingsSlinky.angularCompiler.r3FactoryMod
 
-import typingsSlinky.angularCompiler.angularCompilerStrings.invalid
 import typingsSlinky.angularCompiler.outputAstMod.Expression
 import typingsSlinky.angularCompiler.outputAstMod.ExternalReference
 import typingsSlinky.angularCompiler.r3FactoryMod.R3FactoryDelegateType.Class
@@ -24,12 +23,30 @@ object R3DelegatedFnOrClassMetadata {
     delegateType: Class | Function,
     injectFn: ExternalReference,
     name: String,
-    `type`: Expression,
-    deps: js.Array[R3DependencyMetadata] | invalid = null
+    `type`: Expression
   ): R3DelegatedFnOrClassMetadata = {
-    val __obj = js.Dynamic.literal(delegate = delegate.asInstanceOf[js.Any], delegateDeps = delegateDeps.asInstanceOf[js.Any], delegateType = delegateType.asInstanceOf[js.Any], injectFn = injectFn.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], deps = deps.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(delegate = delegate.asInstanceOf[js.Any], delegateDeps = delegateDeps.asInstanceOf[js.Any], delegateType = delegateType.asInstanceOf[js.Any], injectFn = injectFn.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[R3DelegatedFnOrClassMetadata]
   }
+  @scala.inline
+  implicit class R3DelegatedFnOrClassMetadataOps[Self <: R3DelegatedFnOrClassMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDelegate(value: Expression): Self = this.set("delegate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDelegateDeps(value: js.Array[R3DependencyMetadata]): Self = this.set("delegateDeps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDelegateType(value: Class | Function): Self = this.set("delegateType", value.asInstanceOf[js.Any])
+  }
+  
 }
 

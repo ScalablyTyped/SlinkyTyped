@@ -3,7 +3,6 @@ package typingsSlinky.semanticUiReact.components
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
@@ -26,6 +25,7 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.ReactNodeArray
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.additions
@@ -281,7 +281,7 @@ object FormInput {
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def iconFunction3(
-      value: (/* component */ ReactComponentClass[InputProps], InputProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[InputProps], InputProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("icon", js.Any.fromFunction3(value))
     @scala.inline
     def icon(value: js.Any | SemanticShorthandItem[InputProps]): this.type = set("icon", value.asInstanceOf[js.Any])
@@ -297,7 +297,7 @@ object FormInput {
     def inputReactElement(value: ReactElement): this.type = set("input", value.asInstanceOf[js.Any])
     @scala.inline
     def inputFunction3(
-      value: (/* component */ ReactComponentClass[HtmlInputrops], HtmlInputrops, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[HtmlInputrops], HtmlInputrops, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("input", js.Any.fromFunction3(value))
     @scala.inline
     def input(value: SemanticShorthandItem[HtmlInputrops]): this.type = set("input", value.asInstanceOf[js.Any])
@@ -321,7 +321,7 @@ object FormInput {
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def labelFunction3(
-      value: (/* component */ ReactComponentClass[LabelProps], LabelProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[LabelProps], LabelProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("label", js.Any.fromFunction3(value))
     @scala.inline
     def label(value: SemanticShorthandItem[LabelProps]): this.type = set("label", value.asInstanceOf[js.Any])

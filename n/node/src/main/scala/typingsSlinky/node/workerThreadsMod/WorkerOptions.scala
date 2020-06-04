@@ -29,30 +29,62 @@ trait WorkerOptions extends js.Object {
 
 object WorkerOptions {
   @scala.inline
-  def apply(
-    argv: js.Array[_] = null,
-    env: Dict[String] | js.Symbol = null,
-    eval: js.UndefOr[Boolean] = js.undefined,
-    execArgv: js.Array[String] = null,
-    resourceLimits: ResourceLimits = null,
-    stderr: js.UndefOr[Boolean] = js.undefined,
-    stdin: js.UndefOr[Boolean] = js.undefined,
-    stdout: js.UndefOr[Boolean] = js.undefined,
-    transferList: js.Array[js.typedarray.ArrayBuffer | MessagePort] = null,
-    workerData: js.Any = null
-  ): WorkerOptions = {
+  def apply(): WorkerOptions = {
     val __obj = js.Dynamic.literal()
-    if (argv != null) __obj.updateDynamic("argv")(argv.asInstanceOf[js.Any])
-    if (env != null) __obj.updateDynamic("env")(env.asInstanceOf[js.Any])
-    if (!js.isUndefined(eval)) __obj.updateDynamic("eval")(eval.get.asInstanceOf[js.Any])
-    if (execArgv != null) __obj.updateDynamic("execArgv")(execArgv.asInstanceOf[js.Any])
-    if (resourceLimits != null) __obj.updateDynamic("resourceLimits")(resourceLimits.asInstanceOf[js.Any])
-    if (!js.isUndefined(stderr)) __obj.updateDynamic("stderr")(stderr.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(stdin)) __obj.updateDynamic("stdin")(stdin.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(stdout)) __obj.updateDynamic("stdout")(stdout.get.asInstanceOf[js.Any])
-    if (transferList != null) __obj.updateDynamic("transferList")(transferList.asInstanceOf[js.Any])
-    if (workerData != null) __obj.updateDynamic("workerData")(workerData.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkerOptions]
   }
+  @scala.inline
+  implicit class WorkerOptionsOps[Self <: WorkerOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setArgv(value: js.Array[_]): Self = this.set("argv", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteArgv: Self = this.set("argv", js.undefined)
+    @scala.inline
+    def setEnv(value: Dict[String] | js.Symbol): Self = this.set("env", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEnv: Self = this.set("env", js.undefined)
+    @scala.inline
+    def setEval(value: Boolean): Self = this.set("eval", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEval: Self = this.set("eval", js.undefined)
+    @scala.inline
+    def setExecArgv(value: js.Array[String]): Self = this.set("execArgv", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteExecArgv: Self = this.set("execArgv", js.undefined)
+    @scala.inline
+    def setResourceLimits(value: ResourceLimits): Self = this.set("resourceLimits", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteResourceLimits: Self = this.set("resourceLimits", js.undefined)
+    @scala.inline
+    def setStderr(value: Boolean): Self = this.set("stderr", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStderr: Self = this.set("stderr", js.undefined)
+    @scala.inline
+    def setStdin(value: Boolean): Self = this.set("stdin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStdin: Self = this.set("stdin", js.undefined)
+    @scala.inline
+    def setStdout(value: Boolean): Self = this.set("stdout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStdout: Self = this.set("stdout", js.undefined)
+    @scala.inline
+    def setTransferList(value: js.Array[js.typedarray.ArrayBuffer | MessagePort]): Self = this.set("transferList", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTransferList: Self = this.set("transferList", js.undefined)
+    @scala.inline
+    def setWorkerData(value: js.Any): Self = this.set("workerData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWorkerData: Self = this.set("workerData", js.undefined)
+  }
+  
 }
 

@@ -1,8 +1,12 @@
 package typingsSlinky.rcFieldForm.components
 
+import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcFieldForm.interfaceMod.NamePath
+import typingsSlinky.rcFieldForm.listMod.ListField
+import typingsSlinky.rcFieldForm.listMod.ListOperations
 import typingsSlinky.rcFieldForm.listMod.ListProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,11 +17,21 @@ object List {
   @js.native
   object component extends js.Object
   
-  def withProps(p: ListProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(name: NamePath): Default[tag.type, js.Object] = {
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def children(
+      value: (/* fields */ js.Array[ListField], /* operations */ ListOperations) => ReactElement | TagMod[Any]
+    ): this.type = set("children", js.Any.fromFunction2(value))
+  }
+  
+  def withProps(p: ListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(name: NamePath): Builder = {
     val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[ListProps]))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ListProps]))
   }
 }
 

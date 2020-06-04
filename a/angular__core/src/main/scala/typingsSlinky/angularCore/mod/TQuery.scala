@@ -83,11 +83,41 @@ object TQuery {
     embeddedTView: (TNode, Double) => TQuery | Null,
     indexInDeclarationView: Double,
     metadata: TQueryMetadata,
-    template: (TView, TNode) => Unit,
-    matches: js.Array[Double] = null
+    template: (TView, TNode) => Unit
   ): TQuery = {
-    val __obj = js.Dynamic.literal(crossesNgTemplate = crossesNgTemplate.asInstanceOf[js.Any], elementEnd = js.Any.fromFunction1(elementEnd), elementStart = js.Any.fromFunction2(elementStart), embeddedTView = js.Any.fromFunction2(embeddedTView), indexInDeclarationView = indexInDeclarationView.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], template = js.Any.fromFunction2(template), matches = matches.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(crossesNgTemplate = crossesNgTemplate.asInstanceOf[js.Any], elementEnd = js.Any.fromFunction1(elementEnd), elementStart = js.Any.fromFunction2(elementStart), embeddedTView = js.Any.fromFunction2(embeddedTView), indexInDeclarationView = indexInDeclarationView.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], template = js.Any.fromFunction2(template))
     __obj.asInstanceOf[TQuery]
   }
+  @scala.inline
+  implicit class TQueryOps[Self <: TQuery] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCrossesNgTemplate(value: Boolean): Self = this.set("crossesNgTemplate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setElementEnd(value: TNode => Unit): Self = this.set("elementEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def setElementStart(value: (TView, TNode) => Unit): Self = this.set("elementStart", js.Any.fromFunction2(value))
+    @scala.inline
+    def setEmbeddedTView(value: (TNode, Double) => TQuery | Null): Self = this.set("embeddedTView", js.Any.fromFunction2(value))
+    @scala.inline
+    def setIndexInDeclarationView(value: Double): Self = this.set("indexInDeclarationView", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMetadata(value: TQueryMetadata): Self = this.set("metadata", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTemplate(value: (TView, TNode) => Unit): Self = this.set("template", js.Any.fromFunction2(value))
+    @scala.inline
+    def setMatches(value: js.Array[Double]): Self = this.set("matches", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMatchesNull: Self = this.set("matches", null)
+  }
+  
 }
 

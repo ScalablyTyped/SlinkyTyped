@@ -22,11 +22,39 @@ object TagDefinition {
     contentType: TagContentType,
     ignoreFirstLf: Boolean,
     isClosedByChild: String => Boolean,
-    isVoid: Boolean,
-    implicitNamespacePrefix: String = null
+    isVoid: Boolean
   ): TagDefinition = {
-    val __obj = js.Dynamic.literal(canSelfClose = canSelfClose.asInstanceOf[js.Any], closedByParent = closedByParent.asInstanceOf[js.Any], contentType = contentType.asInstanceOf[js.Any], ignoreFirstLf = ignoreFirstLf.asInstanceOf[js.Any], isClosedByChild = js.Any.fromFunction1(isClosedByChild), isVoid = isVoid.asInstanceOf[js.Any], implicitNamespacePrefix = implicitNamespacePrefix.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(canSelfClose = canSelfClose.asInstanceOf[js.Any], closedByParent = closedByParent.asInstanceOf[js.Any], contentType = contentType.asInstanceOf[js.Any], ignoreFirstLf = ignoreFirstLf.asInstanceOf[js.Any], isClosedByChild = js.Any.fromFunction1(isClosedByChild), isVoid = isVoid.asInstanceOf[js.Any])
     __obj.asInstanceOf[TagDefinition]
   }
+  @scala.inline
+  implicit class TagDefinitionOps[Self <: TagDefinition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCanSelfClose(value: Boolean): Self = this.set("canSelfClose", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setClosedByParent(value: Boolean): Self = this.set("closedByParent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContentType(value: TagContentType): Self = this.set("contentType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIgnoreFirstLf(value: Boolean): Self = this.set("ignoreFirstLf", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIsClosedByChild(value: String => Boolean): Self = this.set("isClosedByChild", js.Any.fromFunction1(value))
+    @scala.inline
+    def setIsVoid(value: Boolean): Self = this.set("isVoid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setImplicitNamespacePrefix(value: String): Self = this.set("implicitNamespacePrefix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setImplicitNamespacePrefixNull: Self = this.set("implicitNamespacePrefix", null)
+  }
+  
 }
 

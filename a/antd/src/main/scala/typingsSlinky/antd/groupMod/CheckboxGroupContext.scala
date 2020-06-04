@@ -12,16 +12,34 @@ trait CheckboxGroupContext extends js.Object {
 
 object CheckboxGroupContext {
   @scala.inline
-  def apply(
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    toggleOption: /* option */ CheckboxOptionType => Unit = null,
-    value: js.Any = null
-  ): CheckboxGroupContext = {
+  def apply(): CheckboxGroupContext = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (toggleOption != null) __obj.updateDynamic("toggleOption")(js.Any.fromFunction1(toggleOption))
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[CheckboxGroupContext]
   }
+  @scala.inline
+  implicit class CheckboxGroupContextOps[Self <: CheckboxGroupContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setToggleOption(value: /* option */ CheckboxOptionType => Unit): Self = this.set("toggleOption", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteToggleOption: Self = this.set("toggleOption", js.undefined)
+    @scala.inline
+    def setValue(value: js.Any): Self = this.set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
+  }
+  
 }
 

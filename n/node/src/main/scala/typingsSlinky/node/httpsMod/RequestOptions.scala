@@ -194,88 +194,192 @@ trait RequestOptions extends js.Object {
 
 object RequestOptions {
   @scala.inline
-  def apply(
-    _defaultAgent: typingsSlinky.node.httpMod.Agent = null,
-    agent: typingsSlinky.node.httpMod.Agent | Boolean = null,
-    auth: js.UndefOr[Null | String] = js.undefined,
-    ca: String | Buffer | (js.Array[String | Buffer]) = null,
-    cert: String | Buffer | (js.Array[String | Buffer]) = null,
-    ciphers: String = null,
-    clientCertEngine: String = null,
-    createConnection: (/* options */ ClientRequestArgs, /* oncreate */ js.Function2[/* err */ js.Error, /* socket */ Socket, Unit]) => Socket = null,
-    crl: String | Buffer | (js.Array[String | Buffer]) = null,
-    defaultPort: Double | String = null,
-    dhparam: String | Buffer = null,
-    ecdhCurve: String = null,
-    family: js.UndefOr[Double] = js.undefined,
-    headers: OutgoingHttpHeaders = null,
-    honorCipherOrder: js.UndefOr[Boolean] = js.undefined,
-    host: js.UndefOr[Null | String] = js.undefined,
-    hostname: js.UndefOr[Null | String] = js.undefined,
-    key: String | Buffer | (js.Array[Buffer | KeyObject]) = null,
-    localAddress: String = null,
-    maxHeaderSize: js.UndefOr[Double] = js.undefined,
-    maxVersion: SecureVersion = null,
-    method: String = null,
-    minVersion: SecureVersion = null,
-    passphrase: String = null,
-    path: js.UndefOr[Null | String] = js.undefined,
-    pfx: String | Buffer | (js.Array[String | Buffer | PxfObject]) = null,
-    port: js.UndefOr[Null | Double | String] = js.undefined,
-    privateKeyEngine: String = null,
-    privateKeyIdentifier: String = null,
-    protocol: js.UndefOr[Null | String] = js.undefined,
-    rejectUnauthorized: js.UndefOr[Boolean] = js.undefined,
-    secureOptions: js.UndefOr[Double] = js.undefined,
-    secureProtocol: String = null,
-    servername: String = null,
-    sessionIdContext: String = null,
-    setHost: js.UndefOr[Boolean] = js.undefined,
-    sigalgs: String = null,
-    socketPath: String = null,
-    timeout: js.UndefOr[Double] = js.undefined
-  ): RequestOptions = {
+  def apply(): RequestOptions = {
     val __obj = js.Dynamic.literal()
-    if (_defaultAgent != null) __obj.updateDynamic("_defaultAgent")(_defaultAgent.asInstanceOf[js.Any])
-    if (agent != null) __obj.updateDynamic("agent")(agent.asInstanceOf[js.Any])
-    if (!js.isUndefined(auth)) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
-    if (ca != null) __obj.updateDynamic("ca")(ca.asInstanceOf[js.Any])
-    if (cert != null) __obj.updateDynamic("cert")(cert.asInstanceOf[js.Any])
-    if (ciphers != null) __obj.updateDynamic("ciphers")(ciphers.asInstanceOf[js.Any])
-    if (clientCertEngine != null) __obj.updateDynamic("clientCertEngine")(clientCertEngine.asInstanceOf[js.Any])
-    if (createConnection != null) __obj.updateDynamic("createConnection")(js.Any.fromFunction2(createConnection))
-    if (crl != null) __obj.updateDynamic("crl")(crl.asInstanceOf[js.Any])
-    if (defaultPort != null) __obj.updateDynamic("defaultPort")(defaultPort.asInstanceOf[js.Any])
-    if (dhparam != null) __obj.updateDynamic("dhparam")(dhparam.asInstanceOf[js.Any])
-    if (ecdhCurve != null) __obj.updateDynamic("ecdhCurve")(ecdhCurve.asInstanceOf[js.Any])
-    if (!js.isUndefined(family)) __obj.updateDynamic("family")(family.get.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (!js.isUndefined(honorCipherOrder)) __obj.updateDynamic("honorCipherOrder")(honorCipherOrder.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(host)) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (!js.isUndefined(hostname)) __obj.updateDynamic("hostname")(hostname.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (localAddress != null) __obj.updateDynamic("localAddress")(localAddress.asInstanceOf[js.Any])
-    if (!js.isUndefined(maxHeaderSize)) __obj.updateDynamic("maxHeaderSize")(maxHeaderSize.get.asInstanceOf[js.Any])
-    if (maxVersion != null) __obj.updateDynamic("maxVersion")(maxVersion.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (minVersion != null) __obj.updateDynamic("minVersion")(minVersion.asInstanceOf[js.Any])
-    if (passphrase != null) __obj.updateDynamic("passphrase")(passphrase.asInstanceOf[js.Any])
-    if (!js.isUndefined(path)) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (pfx != null) __obj.updateDynamic("pfx")(pfx.asInstanceOf[js.Any])
-    if (!js.isUndefined(port)) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
-    if (privateKeyEngine != null) __obj.updateDynamic("privateKeyEngine")(privateKeyEngine.asInstanceOf[js.Any])
-    if (privateKeyIdentifier != null) __obj.updateDynamic("privateKeyIdentifier")(privateKeyIdentifier.asInstanceOf[js.Any])
-    if (!js.isUndefined(protocol)) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
-    if (!js.isUndefined(rejectUnauthorized)) __obj.updateDynamic("rejectUnauthorized")(rejectUnauthorized.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(secureOptions)) __obj.updateDynamic("secureOptions")(secureOptions.get.asInstanceOf[js.Any])
-    if (secureProtocol != null) __obj.updateDynamic("secureProtocol")(secureProtocol.asInstanceOf[js.Any])
-    if (servername != null) __obj.updateDynamic("servername")(servername.asInstanceOf[js.Any])
-    if (sessionIdContext != null) __obj.updateDynamic("sessionIdContext")(sessionIdContext.asInstanceOf[js.Any])
-    if (!js.isUndefined(setHost)) __obj.updateDynamic("setHost")(setHost.get.asInstanceOf[js.Any])
-    if (sigalgs != null) __obj.updateDynamic("sigalgs")(sigalgs.asInstanceOf[js.Any])
-    if (socketPath != null) __obj.updateDynamic("socketPath")(socketPath.asInstanceOf[js.Any])
-    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestOptions]
   }
+  @scala.inline
+  implicit class RequestOptionsOps[Self <: RequestOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def set_defaultAgent(value: typingsSlinky.node.httpMod.Agent): Self = this.set("_defaultAgent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def delete_defaultAgent: Self = this.set("_defaultAgent", js.undefined)
+    @scala.inline
+    def setAgent(value: typingsSlinky.node.httpMod.Agent | Boolean): Self = this.set("agent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAgent: Self = this.set("agent", js.undefined)
+    @scala.inline
+    def setAuth(value: String): Self = this.set("auth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAuth: Self = this.set("auth", js.undefined)
+    @scala.inline
+    def setAuthNull: Self = this.set("auth", null)
+    @scala.inline
+    def setCa(value: String | Buffer | (js.Array[String | Buffer])): Self = this.set("ca", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCa: Self = this.set("ca", js.undefined)
+    @scala.inline
+    def setCert(value: String | Buffer | (js.Array[String | Buffer])): Self = this.set("cert", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCert: Self = this.set("cert", js.undefined)
+    @scala.inline
+    def setCiphers(value: String): Self = this.set("ciphers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCiphers: Self = this.set("ciphers", js.undefined)
+    @scala.inline
+    def setClientCertEngine(value: String): Self = this.set("clientCertEngine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClientCertEngine: Self = this.set("clientCertEngine", js.undefined)
+    @scala.inline
+    def setCreateConnection(
+      value: (/* options */ ClientRequestArgs, /* oncreate */ js.Function2[/* err */ js.Error, /* socket */ Socket, Unit]) => Socket
+    ): Self = this.set("createConnection", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteCreateConnection: Self = this.set("createConnection", js.undefined)
+    @scala.inline
+    def setCrl(value: String | Buffer | (js.Array[String | Buffer])): Self = this.set("crl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCrl: Self = this.set("crl", js.undefined)
+    @scala.inline
+    def setDefaultPort(value: Double | String): Self = this.set("defaultPort", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultPort: Self = this.set("defaultPort", js.undefined)
+    @scala.inline
+    def setDhparam(value: String | Buffer): Self = this.set("dhparam", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDhparam: Self = this.set("dhparam", js.undefined)
+    @scala.inline
+    def setEcdhCurve(value: String): Self = this.set("ecdhCurve", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEcdhCurve: Self = this.set("ecdhCurve", js.undefined)
+    @scala.inline
+    def setFamily(value: Double): Self = this.set("family", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFamily: Self = this.set("family", js.undefined)
+    @scala.inline
+    def setHeaders(value: OutgoingHttpHeaders): Self = this.set("headers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeaders: Self = this.set("headers", js.undefined)
+    @scala.inline
+    def setHonorCipherOrder(value: Boolean): Self = this.set("honorCipherOrder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHonorCipherOrder: Self = this.set("honorCipherOrder", js.undefined)
+    @scala.inline
+    def setHost(value: String): Self = this.set("host", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHost: Self = this.set("host", js.undefined)
+    @scala.inline
+    def setHostNull: Self = this.set("host", null)
+    @scala.inline
+    def setHostname(value: String): Self = this.set("hostname", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHostname: Self = this.set("hostname", js.undefined)
+    @scala.inline
+    def setHostnameNull: Self = this.set("hostname", null)
+    @scala.inline
+    def setKey(value: String | Buffer | (js.Array[Buffer | KeyObject])): Self = this.set("key", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKey: Self = this.set("key", js.undefined)
+    @scala.inline
+    def setLocalAddress(value: String): Self = this.set("localAddress", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLocalAddress: Self = this.set("localAddress", js.undefined)
+    @scala.inline
+    def setMaxHeaderSize(value: Double): Self = this.set("maxHeaderSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxHeaderSize: Self = this.set("maxHeaderSize", js.undefined)
+    @scala.inline
+    def setMaxVersion(value: SecureVersion): Self = this.set("maxVersion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxVersion: Self = this.set("maxVersion", js.undefined)
+    @scala.inline
+    def setMethod(value: String): Self = this.set("method", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMethod: Self = this.set("method", js.undefined)
+    @scala.inline
+    def setMinVersion(value: SecureVersion): Self = this.set("minVersion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMinVersion: Self = this.set("minVersion", js.undefined)
+    @scala.inline
+    def setPassphrase(value: String): Self = this.set("passphrase", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePassphrase: Self = this.set("passphrase", js.undefined)
+    @scala.inline
+    def setPath(value: String): Self = this.set("path", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePath: Self = this.set("path", js.undefined)
+    @scala.inline
+    def setPathNull: Self = this.set("path", null)
+    @scala.inline
+    def setPfx(value: String | Buffer | (js.Array[String | Buffer | PxfObject])): Self = this.set("pfx", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePfx: Self = this.set("pfx", js.undefined)
+    @scala.inline
+    def setPort(value: Double | String): Self = this.set("port", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePort: Self = this.set("port", js.undefined)
+    @scala.inline
+    def setPortNull: Self = this.set("port", null)
+    @scala.inline
+    def setPrivateKeyEngine(value: String): Self = this.set("privateKeyEngine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrivateKeyEngine: Self = this.set("privateKeyEngine", js.undefined)
+    @scala.inline
+    def setPrivateKeyIdentifier(value: String): Self = this.set("privateKeyIdentifier", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrivateKeyIdentifier: Self = this.set("privateKeyIdentifier", js.undefined)
+    @scala.inline
+    def setProtocol(value: String): Self = this.set("protocol", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteProtocol: Self = this.set("protocol", js.undefined)
+    @scala.inline
+    def setProtocolNull: Self = this.set("protocol", null)
+    @scala.inline
+    def setRejectUnauthorized(value: Boolean): Self = this.set("rejectUnauthorized", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRejectUnauthorized: Self = this.set("rejectUnauthorized", js.undefined)
+    @scala.inline
+    def setSecureOptions(value: Double): Self = this.set("secureOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSecureOptions: Self = this.set("secureOptions", js.undefined)
+    @scala.inline
+    def setSecureProtocol(value: String): Self = this.set("secureProtocol", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSecureProtocol: Self = this.set("secureProtocol", js.undefined)
+    @scala.inline
+    def setServername(value: String): Self = this.set("servername", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteServername: Self = this.set("servername", js.undefined)
+    @scala.inline
+    def setSessionIdContext(value: String): Self = this.set("sessionIdContext", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSessionIdContext: Self = this.set("sessionIdContext", js.undefined)
+    @scala.inline
+    def setSetHost(value: Boolean): Self = this.set("setHost", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSetHost: Self = this.set("setHost", js.undefined)
+    @scala.inline
+    def setSigalgs(value: String): Self = this.set("sigalgs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSigalgs: Self = this.set("sigalgs", js.undefined)
+    @scala.inline
+    def setSocketPath(value: String): Self = this.set("socketPath", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSocketPath: Self = this.set("socketPath", js.undefined)
+    @scala.inline
+    def setTimeout(value: Double): Self = this.set("timeout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTimeout: Self = this.set("timeout", js.undefined)
+  }
+  
 }
 

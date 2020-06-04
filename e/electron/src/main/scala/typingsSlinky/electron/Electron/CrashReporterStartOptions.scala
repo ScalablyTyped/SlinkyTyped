@@ -37,22 +37,46 @@ trait CrashReporterStartOptions extends js.Object {
 
 object CrashReporterStartOptions {
   @scala.inline
-  def apply(
-    companyName: String,
-    submitURL: String,
-    crashesDirectory: String = null,
-    extra: Extra = null,
-    ignoreSystemCrashHandler: js.UndefOr[Boolean] = js.undefined,
-    productName: String = null,
-    uploadToServer: js.UndefOr[Boolean] = js.undefined
-  ): CrashReporterStartOptions = {
+  def apply(companyName: String, submitURL: String): CrashReporterStartOptions = {
     val __obj = js.Dynamic.literal(companyName = companyName.asInstanceOf[js.Any], submitURL = submitURL.asInstanceOf[js.Any])
-    if (crashesDirectory != null) __obj.updateDynamic("crashesDirectory")(crashesDirectory.asInstanceOf[js.Any])
-    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreSystemCrashHandler)) __obj.updateDynamic("ignoreSystemCrashHandler")(ignoreSystemCrashHandler.get.asInstanceOf[js.Any])
-    if (productName != null) __obj.updateDynamic("productName")(productName.asInstanceOf[js.Any])
-    if (!js.isUndefined(uploadToServer)) __obj.updateDynamic("uploadToServer")(uploadToServer.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CrashReporterStartOptions]
   }
+  @scala.inline
+  implicit class CrashReporterStartOptionsOps[Self <: CrashReporterStartOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCompanyName(value: String): Self = this.set("companyName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSubmitURL(value: String): Self = this.set("submitURL", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCrashesDirectory(value: String): Self = this.set("crashesDirectory", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCrashesDirectory: Self = this.set("crashesDirectory", js.undefined)
+    @scala.inline
+    def setExtra(value: Extra): Self = this.set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteExtra: Self = this.set("extra", js.undefined)
+    @scala.inline
+    def setIgnoreSystemCrashHandler(value: Boolean): Self = this.set("ignoreSystemCrashHandler", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIgnoreSystemCrashHandler: Self = this.set("ignoreSystemCrashHandler", js.undefined)
+    @scala.inline
+    def setProductName(value: String): Self = this.set("productName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteProductName: Self = this.set("productName", js.undefined)
+    @scala.inline
+    def setUploadToServer(value: Boolean): Self = this.set("uploadToServer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUploadToServer: Self = this.set("uploadToServer", js.undefined)
+  }
+  
 }
 

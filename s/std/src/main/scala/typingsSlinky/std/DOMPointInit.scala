@@ -13,18 +13,38 @@ trait DOMPointInit extends js.Object {
 
 object DOMPointInit {
   @scala.inline
-  def apply(
-    w: js.UndefOr[Double] = js.undefined,
-    x: js.UndefOr[Double] = js.undefined,
-    y: js.UndefOr[Double] = js.undefined,
-    z: js.UndefOr[Double] = js.undefined
-  ): DOMPointInit = {
+  def apply(): DOMPointInit = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(w)) __obj.updateDynamic("w")(w.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(x)) __obj.updateDynamic("x")(x.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(y)) __obj.updateDynamic("y")(y.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(z)) __obj.updateDynamic("z")(z.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DOMPointInit]
   }
+  @scala.inline
+  implicit class DOMPointInitOps[Self <: DOMPointInit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setW(value: Double): Self = this.set("w", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteW: Self = this.set("w", js.undefined)
+    @scala.inline
+    def setX(value: Double): Self = this.set("x", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteX: Self = this.set("x", js.undefined)
+    @scala.inline
+    def setY(value: Double): Self = this.set("y", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteY: Self = this.set("y", js.undefined)
+    @scala.inline
+    def setZ(value: Double): Self = this.set("z", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteZ: Self = this.set("z", js.undefined)
+  }
+  
 }
 

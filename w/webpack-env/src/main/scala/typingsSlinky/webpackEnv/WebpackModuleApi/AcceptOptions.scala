@@ -45,28 +45,58 @@ trait AcceptOptions extends js.Object {
 
 object AcceptOptions {
   @scala.inline
-  def apply(
-    autoApply: js.UndefOr[Boolean] = js.undefined,
-    ignoreDeclined: js.UndefOr[Boolean] = js.undefined,
-    ignoreErrored: js.UndefOr[Boolean] = js.undefined,
-    ignoreUnaccepted: js.UndefOr[Boolean] = js.undefined,
-    onAccepted: /* info */ HotNotifierInfo => Unit = null,
-    onDeclined: /* info */ HotNotifierInfo => Unit = null,
-    onDisposed: /* info */ HotNotifierInfo => Unit = null,
-    onErrored: /* info */ HotNotifierInfo => Unit = null,
-    onUnaccepted: /* info */ HotNotifierInfo => Unit = null
-  ): AcceptOptions = {
+  def apply(): AcceptOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoApply)) __obj.updateDynamic("autoApply")(autoApply.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreDeclined)) __obj.updateDynamic("ignoreDeclined")(ignoreDeclined.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreErrored)) __obj.updateDynamic("ignoreErrored")(ignoreErrored.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreUnaccepted)) __obj.updateDynamic("ignoreUnaccepted")(ignoreUnaccepted.get.asInstanceOf[js.Any])
-    if (onAccepted != null) __obj.updateDynamic("onAccepted")(js.Any.fromFunction1(onAccepted))
-    if (onDeclined != null) __obj.updateDynamic("onDeclined")(js.Any.fromFunction1(onDeclined))
-    if (onDisposed != null) __obj.updateDynamic("onDisposed")(js.Any.fromFunction1(onDisposed))
-    if (onErrored != null) __obj.updateDynamic("onErrored")(js.Any.fromFunction1(onErrored))
-    if (onUnaccepted != null) __obj.updateDynamic("onUnaccepted")(js.Any.fromFunction1(onUnaccepted))
     __obj.asInstanceOf[AcceptOptions]
   }
+  @scala.inline
+  implicit class AcceptOptionsOps[Self <: AcceptOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAutoApply(value: Boolean): Self = this.set("autoApply", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAutoApply: Self = this.set("autoApply", js.undefined)
+    @scala.inline
+    def setIgnoreDeclined(value: Boolean): Self = this.set("ignoreDeclined", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIgnoreDeclined: Self = this.set("ignoreDeclined", js.undefined)
+    @scala.inline
+    def setIgnoreErrored(value: Boolean): Self = this.set("ignoreErrored", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIgnoreErrored: Self = this.set("ignoreErrored", js.undefined)
+    @scala.inline
+    def setIgnoreUnaccepted(value: Boolean): Self = this.set("ignoreUnaccepted", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIgnoreUnaccepted: Self = this.set("ignoreUnaccepted", js.undefined)
+    @scala.inline
+    def setOnAccepted(value: /* info */ HotNotifierInfo => Unit): Self = this.set("onAccepted", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnAccepted: Self = this.set("onAccepted", js.undefined)
+    @scala.inline
+    def setOnDeclined(value: /* info */ HotNotifierInfo => Unit): Self = this.set("onDeclined", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnDeclined: Self = this.set("onDeclined", js.undefined)
+    @scala.inline
+    def setOnDisposed(value: /* info */ HotNotifierInfo => Unit): Self = this.set("onDisposed", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnDisposed: Self = this.set("onDisposed", js.undefined)
+    @scala.inline
+    def setOnErrored(value: /* info */ HotNotifierInfo => Unit): Self = this.set("onErrored", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnErrored: Self = this.set("onErrored", js.undefined)
+    @scala.inline
+    def setOnUnaccepted(value: /* info */ HotNotifierInfo => Unit): Self = this.set("onUnaccepted", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnUnaccepted: Self = this.set("onUnaccepted", js.undefined)
+  }
+  
 }
 

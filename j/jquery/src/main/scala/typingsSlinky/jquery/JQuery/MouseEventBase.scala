@@ -3,7 +3,6 @@ package typingsSlinky.jquery.JQuery
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.MouseEvent
-import org.scalajs.dom.raw.TouchList
 import org.scalajs.dom.raw.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -281,37 +280,66 @@ object MouseEventBase {
     toElement: Element,
     `type`: String,
     view: Window,
-    which: Double,
-    changedTouches: TouchList = null,
-    char: String = null,
-    charCode: js.UndefOr[Double] = js.undefined,
-    key: String = null,
-    keyCode: js.UndefOr[Double] = js.undefined,
-    namespace: String = null,
-    originalEvent: MouseEvent = null,
-    pointerId: js.UndefOr[Double] = js.undefined,
-    pointerType: String = null,
-    relatedTarget: js.UndefOr[Null | EventTarget] = js.undefined,
-    result: js.Any = null,
-    targetTouches: TouchList = null,
-    touches: TouchList = null
+    which: Double
   ): MouseEventBase[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
     val __obj = js.Dynamic.literal(altKey = altKey.asInstanceOf[js.Any], bubbles = bubbles.asInstanceOf[js.Any], button = button.asInstanceOf[js.Any], buttons = buttons.asInstanceOf[js.Any], cancelable = cancelable.asInstanceOf[js.Any], clientX = clientX.asInstanceOf[js.Any], clientY = clientY.asInstanceOf[js.Any], ctrlKey = ctrlKey.asInstanceOf[js.Any], currentTarget = currentTarget.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], delegateTarget = delegateTarget.asInstanceOf[js.Any], detail = detail.asInstanceOf[js.Any], eventPhase = eventPhase.asInstanceOf[js.Any], isDefaultPrevented = js.Any.fromFunction0(isDefaultPrevented), isImmediatePropagationStopped = js.Any.fromFunction0(isImmediatePropagationStopped), isPropagationStopped = js.Any.fromFunction0(isPropagationStopped), metaKey = metaKey.asInstanceOf[js.Any], offsetX = offsetX.asInstanceOf[js.Any], offsetY = offsetY.asInstanceOf[js.Any], pageX = pageX.asInstanceOf[js.Any], pageY = pageY.asInstanceOf[js.Any], preventDefault = js.Any.fromFunction0(preventDefault), screenX = screenX.asInstanceOf[js.Any], screenY = screenY.asInstanceOf[js.Any], shiftKey = shiftKey.asInstanceOf[js.Any], stopImmediatePropagation = js.Any.fromFunction0(stopImmediatePropagation), stopPropagation = js.Any.fromFunction0(stopPropagation), target = target.asInstanceOf[js.Any], timeStamp = timeStamp.asInstanceOf[js.Any], toElement = toElement.asInstanceOf[js.Any], view = view.asInstanceOf[js.Any], which = which.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (changedTouches != null) __obj.updateDynamic("changedTouches")(changedTouches.asInstanceOf[js.Any])
-    if (char != null) __obj.updateDynamic("char")(char.asInstanceOf[js.Any])
-    if (!js.isUndefined(charCode)) __obj.updateDynamic("charCode")(charCode.get.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (!js.isUndefined(keyCode)) __obj.updateDynamic("keyCode")(keyCode.get.asInstanceOf[js.Any])
-    if (namespace != null) __obj.updateDynamic("namespace")(namespace.asInstanceOf[js.Any])
-    if (originalEvent != null) __obj.updateDynamic("originalEvent")(originalEvent.asInstanceOf[js.Any])
-    if (!js.isUndefined(pointerId)) __obj.updateDynamic("pointerId")(pointerId.get.asInstanceOf[js.Any])
-    if (pointerType != null) __obj.updateDynamic("pointerType")(pointerType.asInstanceOf[js.Any])
-    if (!js.isUndefined(relatedTarget)) __obj.updateDynamic("relatedTarget")(relatedTarget.asInstanceOf[js.Any])
-    if (result != null) __obj.updateDynamic("result")(result.asInstanceOf[js.Any])
-    if (targetTouches != null) __obj.updateDynamic("targetTouches")(targetTouches.asInstanceOf[js.Any])
-    if (touches != null) __obj.updateDynamic("touches")(touches.asInstanceOf[js.Any])
     __obj.asInstanceOf[MouseEventBase[TDelegateTarget, TData, TCurrentTarget, TTarget]]
   }
+  @scala.inline
+  implicit class MouseEventBaseOps[Self <: MouseEventBase[_, _, _, _], TDelegateTarget, TData, TCurrentTarget, TTarget] (val x: Self with (MouseEventBase[TDelegateTarget, TData, TCurrentTarget, TTarget])) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAltKey(value: Boolean): Self = this.set("altKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setButton(value: Double): Self = this.set("button", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setButtons(value: Double): Self = this.set("buttons", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setClientX(value: Double): Self = this.set("clientX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setClientY(value: Double): Self = this.set("clientY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCtrlKey(value: Boolean): Self = this.set("ctrlKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMetaKey(value: Boolean): Self = this.set("metaKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOffsetX(value: Double): Self = this.set("offsetX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOffsetY(value: Double): Self = this.set("offsetY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPageX(value: Double): Self = this.set("pageX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPageY(value: Double): Self = this.set("pageY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setScreenX(value: Double): Self = this.set("screenX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setScreenY(value: Double): Self = this.set("screenY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setShiftKey(value: Boolean): Self = this.set("shiftKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setToElement(value: Element): Self = this.set("toElement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWhich(value: Double): Self = this.set("which", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOriginalEvent(value: MouseEvent): Self = this.set("originalEvent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOriginalEvent: Self = this.set("originalEvent", js.undefined)
+    @scala.inline
+    def setRelatedTarget(value: EventTarget): Self = this.set("relatedTarget", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRelatedTarget: Self = this.set("relatedTarget", js.undefined)
+    @scala.inline
+    def setRelatedTargetNull: Self = this.set("relatedTarget", null)
+  }
+  
 }
 

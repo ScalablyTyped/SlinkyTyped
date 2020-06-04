@@ -17,17 +17,36 @@ trait ProjectReference extends js.Object {
 
 object ProjectReference {
   @scala.inline
-  def apply(
-    path: java.lang.String,
-    circular: js.UndefOr[Boolean] = js.undefined,
-    originalPath: java.lang.String = null,
-    prepend: js.UndefOr[Boolean] = js.undefined
-  ): ProjectReference = {
+  def apply(path: java.lang.String): ProjectReference = {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
-    if (!js.isUndefined(circular)) __obj.updateDynamic("circular")(circular.get.asInstanceOf[js.Any])
-    if (originalPath != null) __obj.updateDynamic("originalPath")(originalPath.asInstanceOf[js.Any])
-    if (!js.isUndefined(prepend)) __obj.updateDynamic("prepend")(prepend.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectReference]
   }
+  @scala.inline
+  implicit class ProjectReferenceOps[Self <: ProjectReference] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setPath(value: java.lang.String): Self = this.set("path", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCircular(value: Boolean): Self = this.set("circular", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCircular: Self = this.set("circular", js.undefined)
+    @scala.inline
+    def setOriginalPath(value: java.lang.String): Self = this.set("originalPath", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOriginalPath: Self = this.set("originalPath", js.undefined)
+    @scala.inline
+    def setPrepend(value: Boolean): Self = this.set("prepend", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrepend: Self = this.set("prepend", js.undefined)
+  }
+  
 }
 

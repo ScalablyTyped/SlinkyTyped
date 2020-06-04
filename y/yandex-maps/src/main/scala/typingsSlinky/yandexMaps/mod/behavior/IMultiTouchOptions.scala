@@ -10,10 +10,26 @@ trait IMultiTouchOptions extends js.Object {
 
 object IMultiTouchOptions {
   @scala.inline
-  def apply(tremor: js.UndefOr[Double] = js.undefined): IMultiTouchOptions = {
+  def apply(): IMultiTouchOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(tremor)) __obj.updateDynamic("tremor")(tremor.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMultiTouchOptions]
   }
+  @scala.inline
+  implicit class IMultiTouchOptionsOps[Self <: IMultiTouchOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setTremor(value: Double): Self = this.set("tremor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTremor: Self = this.set("tremor", js.undefined)
+  }
+  
 }
 

@@ -1,19 +1,6 @@
 package typingsSlinky.reactNative.mod
 
 import slinky.core.SyntheticEvent
-import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
-import typingsSlinky.reactNative.reactNativeStrings.`no-hide-descendants`
-import typingsSlinky.reactNative.reactNativeStrings.assertive
-import typingsSlinky.reactNative.reactNativeStrings.auto
-import typingsSlinky.reactNative.reactNativeStrings.button
-import typingsSlinky.reactNative.reactNativeStrings.no
-import typingsSlinky.reactNative.reactNativeStrings.none
-import typingsSlinky.reactNative.reactNativeStrings.polite
-import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
-import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
-import typingsSlinky.reactNative.reactNativeStrings.resize
-import typingsSlinky.reactNative.reactNativeStrings.scale
-import typingsSlinky.reactNative.reactNativeStrings.yes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -104,93 +91,84 @@ trait ImagePropsBase
 
 object ImagePropsBase {
   @scala.inline
-  def apply(
-    source: ImageSourcePropType,
-    accessibilityActions: js.Array[AccessibilityActionInfo] = null,
-    accessibilityComponentType: none | button | radiobutton_checked | radiobutton_unchecked = null,
-    accessibilityElementsHidden: js.UndefOr[Boolean] = js.undefined,
-    accessibilityHint: String = null,
-    accessibilityIgnoresInvertColors: js.UndefOr[Boolean] = js.undefined,
-    accessibilityLabel: String = null,
-    accessibilityLiveRegion: none | polite | assertive = null,
-    accessibilityRole: AccessibilityRole = null,
-    accessibilityState: AccessibilityState = null,
-    accessibilityTraits: AccessibilityTrait | js.Array[AccessibilityTrait] = null,
-    accessibilityValue: AccessibilityValue = null,
-    accessibilityViewIsModal: js.UndefOr[Boolean] = js.undefined,
-    accessible: js.UndefOr[Boolean] = js.undefined,
-    blurRadius: js.UndefOr[Double] = js.undefined,
-    borderBottomLeftRadius: js.UndefOr[Double] = js.undefined,
-    borderBottomRightRadius: js.UndefOr[Double] = js.undefined,
-    borderRadius: js.UndefOr[Double] = js.undefined,
-    borderTopLeftRadius: js.UndefOr[Double] = js.undefined,
-    borderTopRightRadius: js.UndefOr[Double] = js.undefined,
-    capInsets: Insets = null,
-    defaultSource: ImageURISource | Double = null,
-    fadeDuration: js.UndefOr[Double] = js.undefined,
-    height: js.UndefOr[Double] = js.undefined,
-    importantForAccessibility: auto | yes | no | `no-hide-descendants` = null,
-    loadingIndicatorSource: ImageURISource = null,
-    onAccessibilityAction: SyntheticEvent[NodeHandle, ReadonlyactionNamestring] => Unit = null,
-    onAccessibilityEscape: () => Unit = null,
-    onAccessibilityTap: () => Unit = null,
-    onError: SyntheticEvent[NodeHandle, ImageErrorEventData] => Unit = null,
-    onLayout: /* event */ LayoutChangeEvent => Unit = null,
-    onLoad: SyntheticEvent[NodeHandle, ImageLoadEventData] => Unit = null,
-    onLoadEnd: () => Unit = null,
-    onLoadStart: () => Unit = null,
-    onMagicTap: () => Unit = null,
-    onPartialLoad: () => Unit = null,
-    onProgress: SyntheticEvent[NodeHandle, ImageProgressEventDataIOS] => Unit = null,
-    progressiveRenderingEnabled: js.UndefOr[Boolean] = js.undefined,
-    resizeMethod: auto | resize | scale = null,
-    resizeMode: ImageResizeMode = null,
-    testID: String = null,
-    width: js.UndefOr[Double] = js.undefined
-  ): ImagePropsBase = {
+  def apply(source: ImageSourcePropType): ImagePropsBase = {
     val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any])
-    if (accessibilityActions != null) __obj.updateDynamic("accessibilityActions")(accessibilityActions.asInstanceOf[js.Any])
-    if (accessibilityComponentType != null) __obj.updateDynamic("accessibilityComponentType")(accessibilityComponentType.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessibilityElementsHidden)) __obj.updateDynamic("accessibilityElementsHidden")(accessibilityElementsHidden.get.asInstanceOf[js.Any])
-    if (accessibilityHint != null) __obj.updateDynamic("accessibilityHint")(accessibilityHint.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessibilityIgnoresInvertColors)) __obj.updateDynamic("accessibilityIgnoresInvertColors")(accessibilityIgnoresInvertColors.get.asInstanceOf[js.Any])
-    if (accessibilityLabel != null) __obj.updateDynamic("accessibilityLabel")(accessibilityLabel.asInstanceOf[js.Any])
-    if (accessibilityLiveRegion != null) __obj.updateDynamic("accessibilityLiveRegion")(accessibilityLiveRegion.asInstanceOf[js.Any])
-    if (accessibilityRole != null) __obj.updateDynamic("accessibilityRole")(accessibilityRole.asInstanceOf[js.Any])
-    if (accessibilityState != null) __obj.updateDynamic("accessibilityState")(accessibilityState.asInstanceOf[js.Any])
-    if (accessibilityTraits != null) __obj.updateDynamic("accessibilityTraits")(accessibilityTraits.asInstanceOf[js.Any])
-    if (accessibilityValue != null) __obj.updateDynamic("accessibilityValue")(accessibilityValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessibilityViewIsModal)) __obj.updateDynamic("accessibilityViewIsModal")(accessibilityViewIsModal.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessible)) __obj.updateDynamic("accessible")(accessible.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(blurRadius)) __obj.updateDynamic("blurRadius")(blurRadius.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(borderBottomLeftRadius)) __obj.updateDynamic("borderBottomLeftRadius")(borderBottomLeftRadius.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(borderBottomRightRadius)) __obj.updateDynamic("borderBottomRightRadius")(borderBottomRightRadius.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(borderRadius)) __obj.updateDynamic("borderRadius")(borderRadius.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(borderTopLeftRadius)) __obj.updateDynamic("borderTopLeftRadius")(borderTopLeftRadius.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(borderTopRightRadius)) __obj.updateDynamic("borderTopRightRadius")(borderTopRightRadius.get.asInstanceOf[js.Any])
-    if (capInsets != null) __obj.updateDynamic("capInsets")(capInsets.asInstanceOf[js.Any])
-    if (defaultSource != null) __obj.updateDynamic("defaultSource")(defaultSource.asInstanceOf[js.Any])
-    if (!js.isUndefined(fadeDuration)) __obj.updateDynamic("fadeDuration")(fadeDuration.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
-    if (importantForAccessibility != null) __obj.updateDynamic("importantForAccessibility")(importantForAccessibility.asInstanceOf[js.Any])
-    if (loadingIndicatorSource != null) __obj.updateDynamic("loadingIndicatorSource")(loadingIndicatorSource.asInstanceOf[js.Any])
-    if (onAccessibilityAction != null) __obj.updateDynamic("onAccessibilityAction")(js.Any.fromFunction1(onAccessibilityAction))
-    if (onAccessibilityEscape != null) __obj.updateDynamic("onAccessibilityEscape")(js.Any.fromFunction0(onAccessibilityEscape))
-    if (onAccessibilityTap != null) __obj.updateDynamic("onAccessibilityTap")(js.Any.fromFunction0(onAccessibilityTap))
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
-    if (onLayout != null) __obj.updateDynamic("onLayout")(js.Any.fromFunction1(onLayout))
-    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction1(onLoad))
-    if (onLoadEnd != null) __obj.updateDynamic("onLoadEnd")(js.Any.fromFunction0(onLoadEnd))
-    if (onLoadStart != null) __obj.updateDynamic("onLoadStart")(js.Any.fromFunction0(onLoadStart))
-    if (onMagicTap != null) __obj.updateDynamic("onMagicTap")(js.Any.fromFunction0(onMagicTap))
-    if (onPartialLoad != null) __obj.updateDynamic("onPartialLoad")(js.Any.fromFunction0(onPartialLoad))
-    if (onProgress != null) __obj.updateDynamic("onProgress")(js.Any.fromFunction1(onProgress))
-    if (!js.isUndefined(progressiveRenderingEnabled)) __obj.updateDynamic("progressiveRenderingEnabled")(progressiveRenderingEnabled.get.asInstanceOf[js.Any])
-    if (resizeMethod != null) __obj.updateDynamic("resizeMethod")(resizeMethod.asInstanceOf[js.Any])
-    if (resizeMode != null) __obj.updateDynamic("resizeMode")(resizeMode.asInstanceOf[js.Any])
-    if (testID != null) __obj.updateDynamic("testID")(testID.asInstanceOf[js.Any])
-    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImagePropsBase]
   }
+  @scala.inline
+  implicit class ImagePropsBaseOps[Self <: ImagePropsBase] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setSource(value: ImageSourcePropType): Self = this.set("source", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBorderBottomLeftRadius(value: Double): Self = this.set("borderBottomLeftRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderBottomLeftRadius: Self = this.set("borderBottomLeftRadius", js.undefined)
+    @scala.inline
+    def setBorderBottomRightRadius(value: Double): Self = this.set("borderBottomRightRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderBottomRightRadius: Self = this.set("borderBottomRightRadius", js.undefined)
+    @scala.inline
+    def setBorderRadius(value: Double): Self = this.set("borderRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderRadius: Self = this.set("borderRadius", js.undefined)
+    @scala.inline
+    def setBorderTopLeftRadius(value: Double): Self = this.set("borderTopLeftRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderTopLeftRadius: Self = this.set("borderTopLeftRadius", js.undefined)
+    @scala.inline
+    def setBorderTopRightRadius(value: Double): Self = this.set("borderTopRightRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderTopRightRadius: Self = this.set("borderTopRightRadius", js.undefined)
+    @scala.inline
+    def setDefaultSource(value: ImageURISource | Double): Self = this.set("defaultSource", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultSource: Self = this.set("defaultSource", js.undefined)
+    @scala.inline
+    def setLoadingIndicatorSource(value: ImageURISource): Self = this.set("loadingIndicatorSource", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLoadingIndicatorSource: Self = this.set("loadingIndicatorSource", js.undefined)
+    @scala.inline
+    def setOnError(value: SyntheticEvent[NodeHandle, ImageErrorEventData] => Unit): Self = this.set("onError", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnError: Self = this.set("onError", js.undefined)
+    @scala.inline
+    def setOnLayout(value: /* event */ LayoutChangeEvent => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnLayout: Self = this.set("onLayout", js.undefined)
+    @scala.inline
+    def setOnLoad(value: SyntheticEvent[NodeHandle, ImageLoadEventData] => Unit): Self = this.set("onLoad", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnLoad: Self = this.set("onLoad", js.undefined)
+    @scala.inline
+    def setOnLoadEnd(value: () => Unit): Self = this.set("onLoadEnd", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnLoadEnd: Self = this.set("onLoadEnd", js.undefined)
+    @scala.inline
+    def setOnLoadStart(value: () => Unit): Self = this.set("onLoadStart", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteOnLoadStart: Self = this.set("onLoadStart", js.undefined)
+    @scala.inline
+    def setProgressiveRenderingEnabled(value: Boolean): Self = this.set("progressiveRenderingEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteProgressiveRenderingEnabled: Self = this.set("progressiveRenderingEnabled", js.undefined)
+    @scala.inline
+    def setResizeMode(value: ImageResizeMode): Self = this.set("resizeMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteResizeMode: Self = this.set("resizeMode", js.undefined)
+    @scala.inline
+    def setTestID(value: String): Self = this.set("testID", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTestID: Self = this.set("testID", js.undefined)
+  }
+  
 }
 

@@ -1,11 +1,11 @@
 package typingsSlinky.semanticUiReact.components
 
-import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
@@ -61,7 +61,7 @@ object Table {
     def footerRowReactElement(value: ReactElement): this.type = set("footerRow", value.asInstanceOf[js.Any])
     @scala.inline
     def footerRowFunction3(
-      value: (/* component */ ReactComponentClass[TableRowProps], TableRowProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[TableRowProps], TableRowProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("footerRow", js.Any.fromFunction3(value))
     @scala.inline
     def footerRow(value: SemanticShorthandItem[TableRowProps]): this.type = set("footerRow", value.asInstanceOf[js.Any])
@@ -69,7 +69,7 @@ object Table {
     def headerRowReactElement(value: ReactElement): this.type = set("headerRow", value.asInstanceOf[js.Any])
     @scala.inline
     def headerRowFunction3(
-      value: (/* component */ ReactComponentClass[TableRowProps], TableRowProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[TableRowProps], TableRowProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("headerRow", js.Any.fromFunction3(value))
     @scala.inline
     def headerRow(value: SemanticShorthandItem[TableRowProps]): this.type = set("headerRow", value.asInstanceOf[js.Any])

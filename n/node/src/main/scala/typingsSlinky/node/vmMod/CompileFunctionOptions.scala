@@ -27,24 +27,38 @@ trait CompileFunctionOptions extends BaseOptions {
 
 object CompileFunctionOptions {
   @scala.inline
-  def apply(
-    cachedData: Buffer = null,
-    columnOffset: js.UndefOr[Double] = js.undefined,
-    contextExtensions: js.Array[js.Object] = null,
-    filename: String = null,
-    lineOffset: js.UndefOr[Double] = js.undefined,
-    parsingContext: Context = null,
-    produceCachedData: js.UndefOr[Boolean] = js.undefined
-  ): CompileFunctionOptions = {
+  def apply(): CompileFunctionOptions = {
     val __obj = js.Dynamic.literal()
-    if (cachedData != null) __obj.updateDynamic("cachedData")(cachedData.asInstanceOf[js.Any])
-    if (!js.isUndefined(columnOffset)) __obj.updateDynamic("columnOffset")(columnOffset.get.asInstanceOf[js.Any])
-    if (contextExtensions != null) __obj.updateDynamic("contextExtensions")(contextExtensions.asInstanceOf[js.Any])
-    if (filename != null) __obj.updateDynamic("filename")(filename.asInstanceOf[js.Any])
-    if (!js.isUndefined(lineOffset)) __obj.updateDynamic("lineOffset")(lineOffset.get.asInstanceOf[js.Any])
-    if (parsingContext != null) __obj.updateDynamic("parsingContext")(parsingContext.asInstanceOf[js.Any])
-    if (!js.isUndefined(produceCachedData)) __obj.updateDynamic("produceCachedData")(produceCachedData.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompileFunctionOptions]
   }
+  @scala.inline
+  implicit class CompileFunctionOptionsOps[Self <: CompileFunctionOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCachedData(value: Buffer): Self = this.set("cachedData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCachedData: Self = this.set("cachedData", js.undefined)
+    @scala.inline
+    def setContextExtensions(value: js.Array[js.Object]): Self = this.set("contextExtensions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContextExtensions: Self = this.set("contextExtensions", js.undefined)
+    @scala.inline
+    def setParsingContext(value: Context): Self = this.set("parsingContext", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteParsingContext: Self = this.set("parsingContext", js.undefined)
+    @scala.inline
+    def setProduceCachedData(value: Boolean): Self = this.set("produceCachedData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteProduceCachedData: Self = this.set("produceCachedData", js.undefined)
+  }
+  
 }
 

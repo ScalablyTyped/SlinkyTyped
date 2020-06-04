@@ -90,5 +90,40 @@ object Map_ {
     val __obj = js.Dynamic.literal(clear = js.Any.fromFunction0(clear), each = js.Any.fromFunction1(each), empty = js.Any.fromFunction0(empty), entries = js.Any.fromFunction0(entries), get = js.Any.fromFunction1(get), has = js.Any.fromFunction1(has), keys = js.Any.fromFunction0(keys), remove = js.Any.fromFunction1(remove), set = js.Any.fromFunction2(set), size = js.Any.fromFunction0(size), values = js.Any.fromFunction0(values))
     __obj.asInstanceOf[Map_[T]]
   }
+  @scala.inline
+  implicit class Map_Ops[Self <: Map_[_], T] (val x: Self with Map_[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setClear(value: () => Unit): Self = this.set("clear", js.Any.fromFunction0(value))
+    @scala.inline
+    def setEach(value: js.Function3[/* value */ T, /* key */ String, /* map */ Map_[T], Unit] => Unit): Self = this.set("each", js.Any.fromFunction1(value))
+    @scala.inline
+    def setEmpty(value: () => Boolean): Self = this.set("empty", js.Any.fromFunction0(value))
+    @scala.inline
+    def setEntries(value: () => js.Array[Key[T]]): Self = this.set("entries", js.Any.fromFunction0(value))
+    @scala.inline
+    def setGet(value: String => js.UndefOr[T]): Self = this.set("get", js.Any.fromFunction1(value))
+    @scala.inline
+    def setHas(value: String => Boolean): Self = this.set("has", js.Any.fromFunction1(value))
+    @scala.inline
+    def setKeys(value: () => js.Array[String]): Self = this.set("keys", js.Any.fromFunction0(value))
+    @scala.inline
+    def setRemove(value: String => Boolean): Self = this.set("remove", js.Any.fromFunction1(value))
+    @scala.inline
+    def setSet(value: (String, T) => Map_[T]): Self = this.set("set", js.Any.fromFunction2(value))
+    @scala.inline
+    def setSize(value: () => Double): Self = this.set("size", js.Any.fromFunction0(value))
+    @scala.inline
+    def setValues(value: () => js.Array[T]): Self = this.set("values", js.Any.fromFunction0(value))
+  }
+  
 }
 

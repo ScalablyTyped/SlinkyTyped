@@ -41,7 +41,7 @@ object Table {
   object component extends js.Object
   
   @scala.inline
-  class Builder[RecordType <: js.Object] (val args: js.Array[js.Any])
+  class Builder[/* <: js.Object */ RecordType] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
@@ -146,12 +146,12 @@ object Table {
     def title(value: /* data */ js.Array[RecordType] => TagMod[Any]): this.type = set("title", js.Any.fromFunction1(value))
   }
   
-  def withProps[RecordType <: js.Object](p: TableProps[RecordType]): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[/* <: js.Object */ RecordType](p: TableProps[RecordType]): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[RecordType <: js.Object](): Builder[RecordType] = {
+  def apply[/* <: js.Object */ RecordType](): Builder[RecordType] = {
     val __props = js.Dynamic.literal()
     new Builder[RecordType](js.Array(this.component, __props.asInstanceOf[TableProps[RecordType]]))
   }
-  implicit def make[RecordType <: js.Object](companion: Table.type): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make[/* <: js.Object */ RecordType](companion: Table.type): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, js.Dictionary.empty))()
 }
 

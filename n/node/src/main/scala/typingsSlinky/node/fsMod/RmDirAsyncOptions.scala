@@ -24,16 +24,30 @@ trait RmDirAsyncOptions extends RmDirOptions {
 
 object RmDirAsyncOptions {
   @scala.inline
-  def apply(
-    maxRetries: js.UndefOr[Double] = js.undefined,
-    recursive: js.UndefOr[Boolean] = js.undefined,
-    retryDelay: js.UndefOr[Double] = js.undefined
-  ): RmDirAsyncOptions = {
+  def apply(): RmDirAsyncOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(maxRetries)) __obj.updateDynamic("maxRetries")(maxRetries.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(recursive)) __obj.updateDynamic("recursive")(recursive.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(retryDelay)) __obj.updateDynamic("retryDelay")(retryDelay.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RmDirAsyncOptions]
   }
+  @scala.inline
+  implicit class RmDirAsyncOptionsOps[Self <: RmDirAsyncOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setMaxRetries(value: Double): Self = this.set("maxRetries", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMaxRetries: Self = this.set("maxRetries", js.undefined)
+    @scala.inline
+    def setRetryDelay(value: Double): Self = this.set("retryDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRetryDelay: Self = this.set("retryDelay", js.undefined)
+  }
+  
 }
 

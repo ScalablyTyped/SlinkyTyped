@@ -14,18 +14,38 @@ trait DateBodyPassProps[DateType] extends js.Object {
 
 object DateBodyPassProps {
   @scala.inline
-  def apply[DateType](
-    dateRender: (DateType, DateType) => TagMod[Any] = null,
-    disabledDate: /* date */ DateType => Boolean = null,
-    prefixColumn: /* date */ DateType => TagMod[Any] = null,
-    rowClassName: /* date */ DateType => String = null
-  ): DateBodyPassProps[DateType] = {
+  def apply[DateType](): DateBodyPassProps[DateType] = {
     val __obj = js.Dynamic.literal()
-    if (dateRender != null) __obj.updateDynamic("dateRender")(js.Any.fromFunction2(dateRender))
-    if (disabledDate != null) __obj.updateDynamic("disabledDate")(js.Any.fromFunction1(disabledDate))
-    if (prefixColumn != null) __obj.updateDynamic("prefixColumn")(js.Any.fromFunction1(prefixColumn))
-    if (rowClassName != null) __obj.updateDynamic("rowClassName")(js.Any.fromFunction1(rowClassName))
     __obj.asInstanceOf[DateBodyPassProps[DateType]]
   }
+  @scala.inline
+  implicit class DateBodyPassPropsOps[Self <: DateBodyPassProps[_], DateType] (val x: Self with DateBodyPassProps[DateType]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setDateRender(value: (DateType, DateType) => TagMod[Any]): Self = this.set("dateRender", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteDateRender: Self = this.set("dateRender", js.undefined)
+    @scala.inline
+    def setDisabledDate(value: /* date */ DateType => Boolean): Self = this.set("disabledDate", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteDisabledDate: Self = this.set("disabledDate", js.undefined)
+    @scala.inline
+    def setPrefixColumn(value: /* date */ DateType => TagMod[Any]): Self = this.set("prefixColumn", js.Any.fromFunction1(value))
+    @scala.inline
+    def deletePrefixColumn: Self = this.set("prefixColumn", js.undefined)
+    @scala.inline
+    def setRowClassName(value: /* date */ DateType => String): Self = this.set("rowClassName", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteRowClassName: Self = this.set("rowClassName", js.undefined)
+  }
+  
 }
 

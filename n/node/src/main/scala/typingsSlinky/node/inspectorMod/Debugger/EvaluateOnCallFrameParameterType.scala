@@ -42,24 +42,50 @@ trait EvaluateOnCallFrameParameterType extends js.Object {
 
 object EvaluateOnCallFrameParameterType {
   @scala.inline
-  def apply(
-    callFrameId: CallFrameId,
-    expression: String,
-    generatePreview: js.UndefOr[Boolean] = js.undefined,
-    includeCommandLineAPI: js.UndefOr[Boolean] = js.undefined,
-    objectGroup: String = null,
-    returnByValue: js.UndefOr[Boolean] = js.undefined,
-    silent: js.UndefOr[Boolean] = js.undefined,
-    throwOnSideEffect: js.UndefOr[Boolean] = js.undefined
-  ): EvaluateOnCallFrameParameterType = {
+  def apply(callFrameId: CallFrameId, expression: String): EvaluateOnCallFrameParameterType = {
     val __obj = js.Dynamic.literal(callFrameId = callFrameId.asInstanceOf[js.Any], expression = expression.asInstanceOf[js.Any])
-    if (!js.isUndefined(generatePreview)) __obj.updateDynamic("generatePreview")(generatePreview.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeCommandLineAPI)) __obj.updateDynamic("includeCommandLineAPI")(includeCommandLineAPI.get.asInstanceOf[js.Any])
-    if (objectGroup != null) __obj.updateDynamic("objectGroup")(objectGroup.asInstanceOf[js.Any])
-    if (!js.isUndefined(returnByValue)) __obj.updateDynamic("returnByValue")(returnByValue.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(throwOnSideEffect)) __obj.updateDynamic("throwOnSideEffect")(throwOnSideEffect.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[EvaluateOnCallFrameParameterType]
   }
+  @scala.inline
+  implicit class EvaluateOnCallFrameParameterTypeOps[Self <: EvaluateOnCallFrameParameterType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCallFrameId(value: CallFrameId): Self = this.set("callFrameId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setExpression(value: String): Self = this.set("expression", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setGeneratePreview(value: Boolean): Self = this.set("generatePreview", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGeneratePreview: Self = this.set("generatePreview", js.undefined)
+    @scala.inline
+    def setIncludeCommandLineAPI(value: Boolean): Self = this.set("includeCommandLineAPI", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIncludeCommandLineAPI: Self = this.set("includeCommandLineAPI", js.undefined)
+    @scala.inline
+    def setObjectGroup(value: String): Self = this.set("objectGroup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteObjectGroup: Self = this.set("objectGroup", js.undefined)
+    @scala.inline
+    def setReturnByValue(value: Boolean): Self = this.set("returnByValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteReturnByValue: Self = this.set("returnByValue", js.undefined)
+    @scala.inline
+    def setSilent(value: Boolean): Self = this.set("silent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSilent: Self = this.set("silent", js.undefined)
+    @scala.inline
+    def setThrowOnSideEffect(value: Boolean): Self = this.set("throwOnSideEffect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteThrowOnSideEffect: Self = this.set("throwOnSideEffect", js.undefined)
+  }
+  
 }
 

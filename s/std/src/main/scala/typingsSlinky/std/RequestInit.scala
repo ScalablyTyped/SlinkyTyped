@@ -61,36 +61,90 @@ trait RequestInit extends js.Object {
 
 object RequestInit {
   @scala.inline
-  def apply(
-    body: js.UndefOr[Null | BodyInit] = js.undefined,
-    cache: org.scalajs.dom.experimental.RequestCache = null,
-    credentials: org.scalajs.dom.experimental.RequestCredentials = null,
-    headers: HeadersInit = null,
-    integrity: java.lang.String = null,
-    keepalive: js.UndefOr[scala.Boolean] = js.undefined,
-    method: java.lang.String = null,
-    mode: org.scalajs.dom.experimental.RequestMode = null,
-    redirect: org.scalajs.dom.experimental.RequestRedirect = null,
-    referrer: java.lang.String = null,
-    referrerPolicy: org.scalajs.dom.experimental.ReferrerPolicy = null,
-    signal: js.UndefOr[Null | org.scalajs.dom.experimental.AbortSignal] = js.undefined,
-    window: js.Any = null
-  ): RequestInit = {
+  def apply(): RequestInit = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(body)) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (cache != null) __obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
-    if (credentials != null) __obj.updateDynamic("credentials")(credentials.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (integrity != null) __obj.updateDynamic("integrity")(integrity.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepalive)) __obj.updateDynamic("keepalive")(keepalive.get.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (redirect != null) __obj.updateDynamic("redirect")(redirect.asInstanceOf[js.Any])
-    if (referrer != null) __obj.updateDynamic("referrer")(referrer.asInstanceOf[js.Any])
-    if (referrerPolicy != null) __obj.updateDynamic("referrerPolicy")(referrerPolicy.asInstanceOf[js.Any])
-    if (!js.isUndefined(signal)) __obj.updateDynamic("signal")(signal.asInstanceOf[js.Any])
-    if (window != null) __obj.updateDynamic("window")(window.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestInit]
   }
+  @scala.inline
+  implicit class RequestInitOps[Self <: org.scalajs.dom.experimental.RequestInit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBodyFormData(value: org.scalajs.dom.raw.FormData): Self = this.set("body", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBodyReadableStream(value: org.scalajs.dom.experimental.ReadableStream[js.typedarray.Uint8Array]): Self = this.set("body", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBodyArrayBufferView(value: js.typedarray.ArrayBufferView): Self = this.set("body", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBodyBlob(value: org.scalajs.dom.raw.Blob): Self = this.set("body", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBodyArrayBuffer(value: js.typedarray.ArrayBuffer): Self = this.set("body", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBody(value: BodyInit): Self = this.set("body", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBody: Self = this.set("body", js.undefined)
+    @scala.inline
+    def setBodyNull: Self = this.set("body", null)
+    @scala.inline
+    def setCache(value: org.scalajs.dom.experimental.RequestCache): Self = this.set("cache", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCache: Self = this.set("cache", js.undefined)
+    @scala.inline
+    def setCredentials(value: org.scalajs.dom.experimental.RequestCredentials): Self = this.set("credentials", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCredentials: Self = this.set("credentials", js.undefined)
+    @scala.inline
+    def setHeadersHeaders(value: org.scalajs.dom.experimental.Headers): Self = this.set("headers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHeaders(value: HeadersInit): Self = this.set("headers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeaders: Self = this.set("headers", js.undefined)
+    @scala.inline
+    def setIntegrity(value: java.lang.String): Self = this.set("integrity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIntegrity: Self = this.set("integrity", js.undefined)
+    @scala.inline
+    def setKeepalive(value: scala.Boolean): Self = this.set("keepalive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKeepalive: Self = this.set("keepalive", js.undefined)
+    @scala.inline
+    def setMethod(value: java.lang.String): Self = this.set("method", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMethod: Self = this.set("method", js.undefined)
+    @scala.inline
+    def setMode(value: org.scalajs.dom.experimental.RequestMode): Self = this.set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMode: Self = this.set("mode", js.undefined)
+    @scala.inline
+    def setRedirect(value: org.scalajs.dom.experimental.RequestRedirect): Self = this.set("redirect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRedirect: Self = this.set("redirect", js.undefined)
+    @scala.inline
+    def setReferrer(value: java.lang.String): Self = this.set("referrer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteReferrer: Self = this.set("referrer", js.undefined)
+    @scala.inline
+    def setReferrerPolicy(value: org.scalajs.dom.experimental.ReferrerPolicy): Self = this.set("referrerPolicy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteReferrerPolicy: Self = this.set("referrerPolicy", js.undefined)
+    @scala.inline
+    def setSignal(value: org.scalajs.dom.experimental.AbortSignal): Self = this.set("signal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSignal: Self = this.set("signal", js.undefined)
+    @scala.inline
+    def setSignalNull: Self = this.set("signal", null)
+    @scala.inline
+    def setWindow(value: js.Any): Self = this.set("window", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWindow: Self = this.set("window", js.undefined)
+  }
+  
 }
 

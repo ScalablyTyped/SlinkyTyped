@@ -13,10 +13,30 @@ trait Route extends js.Object {
 
 object Route {
   @scala.inline
-  def apply(breadcrumbName: String, path: String, children: js.Array[OmitRoutechildren] = null): Route = {
+  def apply(breadcrumbName: String, path: String): Route = {
     val __obj = js.Dynamic.literal(breadcrumbName = breadcrumbName.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
     __obj.asInstanceOf[Route]
   }
+  @scala.inline
+  implicit class RouteOps[Self <: Route] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBreadcrumbName(value: String): Self = this.set("breadcrumbName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPath(value: String): Self = this.set("path", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: js.Array[OmitRoutechildren]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+  }
+  
 }
 

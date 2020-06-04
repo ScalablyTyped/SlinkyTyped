@@ -1,21 +1,21 @@
 organization := "org.scalablytyped.slinky"
 name := "angular__router"
-version := "8.2.14-09b340"
+version := "8.2.14-f51d5b"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "angular__common" % "8.2.14-7b2343",
-  "org.scalablytyped.slinky" %%% "angular__compiler" % "8.2.14-6598c3",
-  "org.scalablytyped.slinky" %%% "angular__core" % "8.2.14-9ae61a",
-  "org.scalablytyped.slinky" %%% "inquirer" % "6.5-dt-20200226Z-234cdc",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200519Z-717070",
-  "org.scalablytyped.slinky" %%% "rxjs" % "6.5.5-a158f0",
-  "org.scalablytyped.slinky" %%% "rxjs-compat" % "6.5.5-1d035b",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0",
-  "org.scalablytyped.slinky" %%% "through" % "0.0-unknown-dt-20200515Z-138488",
-  "org.scalablytyped.slinky" %%% "typescript" % "3.9.3-13a0c9")
+  "org.scalablytyped.slinky" %%% "angular__common" % "8.2.14-0743ac",
+  "org.scalablytyped.slinky" %%% "angular__compiler" % "8.2.14-2f620f",
+  "org.scalablytyped.slinky" %%% "angular__core" % "8.2.14-0520ba",
+  "org.scalablytyped.slinky" %%% "inquirer" % "6.5-dt-20200226Z-d3352a",
+  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200519Z-1736f1",
+  "org.scalablytyped.slinky" %%% "rxjs" % "6.5.5-bf0b8c",
+  "org.scalablytyped.slinky" %%% "rxjs-compat" % "6.5.5-f4b73d",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-ad7699",
+  "org.scalablytyped.slinky" %%% "through" % "0.0-unknown-dt-20200515Z-f7040a",
+  "org.scalablytyped.slinky" %%% "typescript" % "3.9.3-c54482")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

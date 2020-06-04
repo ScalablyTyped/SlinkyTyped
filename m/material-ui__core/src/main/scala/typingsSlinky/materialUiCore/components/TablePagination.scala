@@ -94,6 +94,7 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.std.HTMLTableHeaderCellElement
 import scala.scalajs.js
@@ -114,7 +115,7 @@ object TablePagination {
     @scala.inline
     def ActionsComponentComponentClass(value: ReactComponentClass[TablePaginationActionsProps]): this.type = set("ActionsComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def ActionsComponent(value: ReactComponentClass[TablePaginationActionsProps]): this.type = set("ActionsComponent", value.asInstanceOf[js.Any])
+    def ActionsComponent(value: ReactType[TablePaginationActionsProps]): this.type = set("ActionsComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def SelectProps(value: PartialSelectProps): this.type = set("SelectProps", value.asInstanceOf[js.Any])
     @scala.inline
@@ -242,7 +243,7 @@ object TablePagination {
     @scala.inline
     def componentComponentClass(value: ReactComponentClass[TablePaginationBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
-    def component(value: ReactComponentClass[TablePaginationBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: ReactType[TablePaginationBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
     @scala.inline

@@ -38,10 +38,28 @@ trait StaticClassProvider
 
 object StaticClassProvider {
   @scala.inline
-  def apply(deps: js.Array[_], provide: js.Any, useClass: Type[_], multi: js.UndefOr[Boolean] = js.undefined): StaticClassProvider = {
+  def apply(deps: js.Array[_], provide: js.Any, useClass: Type[_]): StaticClassProvider = {
     val __obj = js.Dynamic.literal(deps = deps.asInstanceOf[js.Any], provide = provide.asInstanceOf[js.Any], useClass = useClass.asInstanceOf[js.Any])
-    if (!js.isUndefined(multi)) __obj.updateDynamic("multi")(multi.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StaticClassProvider]
   }
+  @scala.inline
+  implicit class StaticClassProviderOps[Self <: StaticClassProvider] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setProvide(value: js.Any): Self = this.set("provide", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMulti(value: Boolean): Self = this.set("multi", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMulti: Self = this.set("multi", js.undefined)
+  }
+  
 }
 

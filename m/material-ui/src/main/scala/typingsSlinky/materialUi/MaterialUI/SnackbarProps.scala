@@ -1,6 +1,7 @@
 package typingsSlinky.materialUi.MaterialUI
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.MouseEventHandler
@@ -23,29 +24,62 @@ trait SnackbarProps extends js.Object {
 
 object SnackbarProps {
   @scala.inline
-  def apply(
-    open: Boolean,
-    action: TagMod[Any] = null,
-    autoHideDuration: js.UndefOr[Double] = js.undefined,
-    bodyStyle: CSSProperties = null,
-    className: String = null,
-    contentStyle: CSSProperties = null,
-    message: TagMod[Any] = null,
-    onActionClick: SyntheticMouseEvent[js.Object] => Unit = null,
-    onRequestClose: /* reason */ String => Unit = null,
-    style: CSSProperties = null
-  ): SnackbarProps = {
+  def apply(open: Boolean): SnackbarProps = {
     val __obj = js.Dynamic.literal(open = open.asInstanceOf[js.Any])
-    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoHideDuration)) __obj.updateDynamic("autoHideDuration")(autoHideDuration.get.asInstanceOf[js.Any])
-    if (bodyStyle != null) __obj.updateDynamic("bodyStyle")(bodyStyle.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (contentStyle != null) __obj.updateDynamic("contentStyle")(contentStyle.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (onActionClick != null) __obj.updateDynamic("onActionClick")(js.Any.fromFunction1(onActionClick))
-    if (onRequestClose != null) __obj.updateDynamic("onRequestClose")(js.Any.fromFunction1(onRequestClose))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[SnackbarProps]
   }
+  @scala.inline
+  implicit class SnackbarPropsOps[Self <: SnackbarProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setOpen(value: Boolean): Self = this.set("open", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setActionReactElement(value: ReactElement): Self = this.set("action", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAction(value: TagMod[Any]): Self = this.set("action", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAction: Self = this.set("action", js.undefined)
+    @scala.inline
+    def setAutoHideDuration(value: Double): Self = this.set("autoHideDuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAutoHideDuration: Self = this.set("autoHideDuration", js.undefined)
+    @scala.inline
+    def setBodyStyle(value: CSSProperties): Self = this.set("bodyStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBodyStyle: Self = this.set("bodyStyle", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setContentStyle(value: CSSProperties): Self = this.set("contentStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContentStyle: Self = this.set("contentStyle", js.undefined)
+    @scala.inline
+    def setMessage(value: TagMod[Any]): Self = this.set("message", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteMessage: Self = this.set("message", js.undefined)
+    @scala.inline
+    def setOnActionClick(value: SyntheticMouseEvent[js.Object] => Unit): Self = this.set("onActionClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnActionClick: Self = this.set("onActionClick", js.undefined)
+    @scala.inline
+    def setOnRequestClose(value: /* reason */ String => Unit): Self = this.set("onRequestClose", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnRequestClose: Self = this.set("onRequestClose", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+  }
+  
 }
 

@@ -76,6 +76,7 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.HTMLAttributes
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.std.Partial
 import scala.scalajs.js
@@ -96,7 +97,7 @@ object MenuItem {
     @scala.inline
     def ContainerComponentComponentClass(value: ReactComponentClass[HTMLAttributes[HTMLDivElement]]): this.type = set("ContainerComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def ContainerComponent(value: ReactComponentClass[HTMLAttributes[HTMLDivElement]]): this.type = set("ContainerComponent", value.asInstanceOf[js.Any])
+    def ContainerComponent(value: ReactType[HTMLAttributes[HTMLDivElement]]): this.type = set("ContainerComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def ContainerProps(value: HTMLAttributes[HTMLDivElement]): this.type = set("ContainerProps", value.asInstanceOf[js.Any])
     @scala.inline
@@ -236,7 +237,7 @@ object MenuItem {
     @scala.inline
     def componentComponentClass(value: ReactComponentClass[MenuItemProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
-    def component(value: ReactComponentClass[MenuItemProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: ReactType[MenuItemProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
     @scala.inline

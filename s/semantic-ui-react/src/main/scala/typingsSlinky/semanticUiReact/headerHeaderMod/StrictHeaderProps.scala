@@ -1,6 +1,7 @@
 package typingsSlinky.semanticUiReact.headerHeaderMod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
 import typingsSlinky.semanticUiReact.genericMod.SemanticFLOATS
 import typingsSlinky.semanticUiReact.genericMod.SemanticTEXTALIGNMENTS
@@ -54,44 +55,94 @@ trait StrictHeaderProps extends js.Object {
 
 object StrictHeaderProps {
   @scala.inline
-  def apply(
-    as: js.Any = null,
-    attached: Boolean | top | bottom = null,
-    block: js.UndefOr[Boolean] = js.undefined,
-    children: TagMod[Any] = null,
-    className: String = null,
-    color: SemanticCOLORS = null,
-    content: TagMod[Any] = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    dividing: js.UndefOr[Boolean] = js.undefined,
-    floated: SemanticFLOATS = null,
-    icon: js.Any = null,
-    image: js.Any = null,
-    inverted: js.UndefOr[Boolean] = js.undefined,
-    size: tiny | small | medium | large | huge = null,
-    sub: js.UndefOr[Boolean] = js.undefined,
-    subheader: js.Any = null,
-    textAlign: SemanticTEXTALIGNMENTS = null
-  ): StrictHeaderProps = {
+  def apply(): StrictHeaderProps = {
     val __obj = js.Dynamic.literal()
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (attached != null) __obj.updateDynamic("attached")(attached.asInstanceOf[js.Any])
-    if (!js.isUndefined(block)) __obj.updateDynamic("block")(block.get.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(dividing)) __obj.updateDynamic("dividing")(dividing.get.asInstanceOf[js.Any])
-    if (floated != null) __obj.updateDynamic("floated")(floated.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (!js.isUndefined(inverted)) __obj.updateDynamic("inverted")(inverted.get.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (!js.isUndefined(sub)) __obj.updateDynamic("sub")(sub.get.asInstanceOf[js.Any])
-    if (subheader != null) __obj.updateDynamic("subheader")(subheader.asInstanceOf[js.Any])
-    if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictHeaderProps]
   }
+  @scala.inline
+  implicit class StrictHeaderPropsOps[Self <: StrictHeaderProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAs(value: js.Any): Self = this.set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAs: Self = this.set("as", js.undefined)
+    @scala.inline
+    def setAttached(value: Boolean | top | bottom): Self = this.set("attached", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAttached: Self = this.set("attached", js.undefined)
+    @scala.inline
+    def setBlock(value: Boolean): Self = this.set("block", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBlock: Self = this.set("block", js.undefined)
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setColor(value: SemanticCOLORS): Self = this.set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteColor: Self = this.set("color", js.undefined)
+    @scala.inline
+    def setContentReactElement(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContent(value: TagMod[Any]): Self = this.set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContent: Self = this.set("content", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setDividing(value: Boolean): Self = this.set("dividing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDividing: Self = this.set("dividing", js.undefined)
+    @scala.inline
+    def setFloated(value: SemanticFLOATS): Self = this.set("floated", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFloated: Self = this.set("floated", js.undefined)
+    @scala.inline
+    def setIcon(value: js.Any): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIcon: Self = this.set("icon", js.undefined)
+    @scala.inline
+    def setImage(value: js.Any): Self = this.set("image", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteImage: Self = this.set("image", js.undefined)
+    @scala.inline
+    def setInverted(value: Boolean): Self = this.set("inverted", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInverted: Self = this.set("inverted", js.undefined)
+    @scala.inline
+    def setSize(value: tiny | small | medium | large | huge): Self = this.set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
+    @scala.inline
+    def setSub(value: Boolean): Self = this.set("sub", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSub: Self = this.set("sub", js.undefined)
+    @scala.inline
+    def setSubheader(value: js.Any): Self = this.set("subheader", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSubheader: Self = this.set("subheader", js.undefined)
+    @scala.inline
+    def setTextAlign(value: SemanticTEXTALIGNMENTS): Self = this.set("textAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTextAlign: Self = this.set("textAlign", js.undefined)
+  }
+  
 }
 

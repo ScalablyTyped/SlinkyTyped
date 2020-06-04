@@ -16,16 +16,33 @@ trait RippleBackgroundPropType
 
 object RippleBackgroundPropType {
   @scala.inline
-  def apply(
-    `type`: RippleAndroid,
-    borderless: js.UndefOr[Boolean] = js.undefined,
-    color: js.UndefOr[Double] = js.undefined
-  ): RippleBackgroundPropType = {
+  def apply(`type`: RippleAndroid): RippleBackgroundPropType = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(borderless)) __obj.updateDynamic("borderless")(borderless.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(color)) __obj.updateDynamic("color")(color.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RippleBackgroundPropType]
   }
+  @scala.inline
+  implicit class RippleBackgroundPropTypeOps[Self <: RippleBackgroundPropType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setType(value: RippleAndroid): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBorderless(value: Boolean): Self = this.set("borderless", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBorderless: Self = this.set("borderless", js.undefined)
+    @scala.inline
+    def setColor(value: Double): Self = this.set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteColor: Self = this.set("color", js.undefined)
+  }
+  
 }
 

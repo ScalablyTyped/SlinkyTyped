@@ -1,19 +1,13 @@
 package typingsSlinky.dayjs.minMaxMod
 
-import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.dayjs.mod.ConfigType
-import typingsSlinky.dayjs.mod.Dayjs
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.dayjs.mod.PluginFunc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("dayjs/plugin/minMax", JSImport.Namespace)
 @js.native
-object ^ extends js.Object {
-  def apply(
-    option: js.Any,
-    c: Instantiable1[js.UndefOr[/* config */ ConfigType], Dayjs],
-    d: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof dayjs */ js.Any
-  ): Unit = js.native
-}
+object ^
+  extends TopLevel[PluginFunc[js.Any]]
 

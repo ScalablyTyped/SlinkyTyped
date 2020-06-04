@@ -2,6 +2,7 @@ package typingsSlinky.antd.notificationMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,24 +19,52 @@ trait ConfigProps extends js.Object {
 
 object ConfigProps {
   @scala.inline
-  def apply(
-    bottom: js.UndefOr[Double] = js.undefined,
-    closeIcon: TagMod[Any] = null,
-    duration: js.UndefOr[Double] = js.undefined,
-    getContainer: () => HTMLElement = null,
-    placement: NotificationPlacement = null,
-    rtl: js.UndefOr[Boolean] = js.undefined,
-    top: js.UndefOr[Double] = js.undefined
-  ): ConfigProps = {
+  def apply(): ConfigProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(bottom)) __obj.updateDynamic("bottom")(bottom.get.asInstanceOf[js.Any])
-    if (closeIcon != null) __obj.updateDynamic("closeIcon")(closeIcon.asInstanceOf[js.Any])
-    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
-    if (getContainer != null) __obj.updateDynamic("getContainer")(js.Any.fromFunction0(getContainer))
-    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
-    if (!js.isUndefined(rtl)) __obj.updateDynamic("rtl")(rtl.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(top)) __obj.updateDynamic("top")(top.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigProps]
   }
+  @scala.inline
+  implicit class ConfigPropsOps[Self <: ConfigProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setBottom(value: Double): Self = this.set("bottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBottom: Self = this.set("bottom", js.undefined)
+    @scala.inline
+    def setCloseIconReactElement(value: ReactElement): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCloseIcon(value: TagMod[Any]): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCloseIcon: Self = this.set("closeIcon", js.undefined)
+    @scala.inline
+    def setDuration(value: Double): Self = this.set("duration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDuration: Self = this.set("duration", js.undefined)
+    @scala.inline
+    def setGetContainer(value: () => HTMLElement): Self = this.set("getContainer", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteGetContainer: Self = this.set("getContainer", js.undefined)
+    @scala.inline
+    def setPlacement(value: NotificationPlacement): Self = this.set("placement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePlacement: Self = this.set("placement", js.undefined)
+    @scala.inline
+    def setRtl(value: Boolean): Self = this.set("rtl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRtl: Self = this.set("rtl", js.undefined)
+    @scala.inline
+    def setTop(value: Double): Self = this.set("top", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTop: Self = this.set("top", js.undefined)
+  }
+  
 }
 

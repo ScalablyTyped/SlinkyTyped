@@ -45,5 +45,30 @@ object CertificatePrincipal {
     val __obj = js.Dynamic.literal(commonName = commonName.asInstanceOf[js.Any], country = country.asInstanceOf[js.Any], locality = locality.asInstanceOf[js.Any], organizationUnits = organizationUnits.asInstanceOf[js.Any], organizations = organizations.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
     __obj.asInstanceOf[CertificatePrincipal]
   }
+  @scala.inline
+  implicit class CertificatePrincipalOps[Self <: CertificatePrincipal] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setCommonName(value: String): Self = this.set("commonName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCountry(value: String): Self = this.set("country", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLocality(value: String): Self = this.set("locality", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOrganizationUnits(value: js.Array[String]): Self = this.set("organizationUnits", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOrganizations(value: js.Array[String]): Self = this.set("organizations", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setState(value: String): Self = this.set("state", value.asInstanceOf[js.Any])
+  }
+  
 }
 

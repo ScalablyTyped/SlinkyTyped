@@ -1,13 +1,13 @@
 package typingsSlinky.semanticUiReact.components
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
@@ -54,7 +54,7 @@ object Message {
     def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     @scala.inline
     def headerFunction3(
-      value: (/* component */ ReactComponentClass[MessageHeaderProps], MessageHeaderProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[MessageHeaderProps], MessageHeaderProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("header", js.Any.fromFunction3(value))
     @scala.inline
     def header(value: SemanticShorthandItem[MessageHeaderProps]): this.type = set("header", value.asInstanceOf[js.Any])

@@ -13,14 +13,26 @@ trait ProxyNativeModule
 
 object ProxyNativeModule {
   @scala.inline
-  def apply(
-    addListener: String => Unit,
-    removeListeners: Double => Unit,
-    StringDictionary: /* name */ StringDictionary[js.Any] = null
-  ): ProxyNativeModule = {
+  def apply(addListener: String => Unit, removeListeners: Double => Unit): ProxyNativeModule = {
     val __obj = js.Dynamic.literal(addListener = js.Any.fromFunction1(addListener), removeListeners = js.Any.fromFunction1(removeListeners))
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[ProxyNativeModule]
   }
+  @scala.inline
+  implicit class ProxyNativeModuleOps[Self <: ProxyNativeModule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setAddListener(value: String => Unit): Self = this.set("addListener", js.Any.fromFunction1(value))
+    @scala.inline
+    def setRemoveListeners(value: Double => Unit): Self = this.set("removeListeners", js.Any.fromFunction1(value))
+  }
+  
 }
 

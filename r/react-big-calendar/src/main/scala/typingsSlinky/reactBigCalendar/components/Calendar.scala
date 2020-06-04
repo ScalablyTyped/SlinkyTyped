@@ -33,7 +33,7 @@ object Calendar {
   object component extends js.Object
   
   @scala.inline
-  class Builder[TEvent <: js.Object, TResource <: js.Object] (val args: js.Array[js.Any])
+  class Builder[/* <: js.Object */ TEvent, /* <: js.Object */ TResource] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactBigCalendar.mod.Calendar[js.Any, js.Any]] {
     @scala.inline
@@ -178,9 +178,9 @@ object Calendar {
     def views(value: ViewsProps): this.type = set("views", value.asInstanceOf[js.Any])
   }
   
-  def withProps[TEvent <: js.Object, TResource <: js.Object](p: CalendarProps[TEvent, TResource]): Builder[TEvent, TResource] = new Builder[TEvent, TResource](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[/* <: js.Object */ TEvent, /* <: js.Object */ TResource](p: CalendarProps[TEvent, TResource]): Builder[TEvent, TResource] = new Builder[TEvent, TResource](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[TEvent <: js.Object, TResource <: js.Object](localizer: DateLocalizer): Builder[TEvent, TResource] = {
+  def apply[/* <: js.Object */ TEvent, /* <: js.Object */ TResource](localizer: DateLocalizer): Builder[TEvent, TResource] = {
     val __props = js.Dynamic.literal(localizer = localizer.asInstanceOf[js.Any])
     new Builder[TEvent, TResource](js.Array(this.component, __props.asInstanceOf[CalendarProps[TEvent, TResource]]))
   }

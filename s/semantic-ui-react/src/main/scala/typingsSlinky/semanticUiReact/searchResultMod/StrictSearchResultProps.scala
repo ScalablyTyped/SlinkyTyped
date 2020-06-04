@@ -47,31 +47,66 @@ trait StrictSearchResultProps extends js.Object {
 
 object StrictSearchResultProps {
   @scala.inline
-  def apply(
-    title: String,
-    active: js.UndefOr[Boolean] = js.undefined,
-    as: js.Any = null,
-    className: String = null,
-    content: SemanticShorthandContent = null,
-    description: String = null,
-    id: Double | String = null,
-    image: String = null,
-    onClick: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ SearchResultProps) => Unit = null,
-    price: String = null,
-    renderer: /* props */ SearchResultProps => js.Array[ReactElement] = null
-  ): StrictSearchResultProps = {
+  def apply(title: String): StrictSearchResultProps = {
     val __obj = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (price != null) __obj.updateDynamic("price")(price.asInstanceOf[js.Any])
-    if (renderer != null) __obj.updateDynamic("renderer")(js.Any.fromFunction1(renderer))
     __obj.asInstanceOf[StrictSearchResultProps]
   }
+  @scala.inline
+  implicit class StrictSearchResultPropsOps[Self <: StrictSearchResultProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setActive(value: Boolean): Self = this.set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteActive: Self = this.set("active", js.undefined)
+    @scala.inline
+    def setAs(value: js.Any): Self = this.set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAs: Self = this.set("as", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setContentReactElement(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContent(value: SemanticShorthandContent): Self = this.set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContent: Self = this.set("content", js.undefined)
+    @scala.inline
+    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDescription: Self = this.set("description", js.undefined)
+    @scala.inline
+    def setId(value: Double | String): Self = this.set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteId: Self = this.set("id", js.undefined)
+    @scala.inline
+    def setImage(value: String): Self = this.set("image", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteImage: Self = this.set("image", js.undefined)
+    @scala.inline
+    def setOnClick(value: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ SearchResultProps) => Unit): Self = this.set("onClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteOnClick: Self = this.set("onClick", js.undefined)
+    @scala.inline
+    def setPrice(value: String): Self = this.set("price", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrice: Self = this.set("price", js.undefined)
+    @scala.inline
+    def setRenderer(value: /* props */ SearchResultProps => js.Array[ReactElement]): Self = this.set("renderer", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteRenderer: Self = this.set("renderer", js.undefined)
+  }
+  
 }
 

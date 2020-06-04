@@ -21,5 +21,24 @@ object SVGUnitTypes {
     val __obj = js.Dynamic.literal(SVG_UNIT_TYPE_OBJECTBOUNDINGBOX = SVG_UNIT_TYPE_OBJECTBOUNDINGBOX.asInstanceOf[js.Any], SVG_UNIT_TYPE_UNKNOWN = SVG_UNIT_TYPE_UNKNOWN.asInstanceOf[js.Any], SVG_UNIT_TYPE_USERSPACEONUSE = SVG_UNIT_TYPE_USERSPACEONUSE.asInstanceOf[js.Any])
     __obj.asInstanceOf[SVGUnitTypes]
   }
+  @scala.inline
+  implicit class SVGUnitTypesOps[Self <: org.scalajs.dom.raw.SVGUnitTypes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: java.lang.String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setSVG_UNIT_TYPE_OBJECTBOUNDINGBOX(value: Double): Self = this.set("SVG_UNIT_TYPE_OBJECTBOUNDINGBOX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSVG_UNIT_TYPE_UNKNOWN(value: Double): Self = this.set("SVG_UNIT_TYPE_UNKNOWN", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSVG_UNIT_TYPE_USERSPACEONUSE(value: Double): Self = this.set("SVG_UNIT_TYPE_USERSPACEONUSE", value.asInstanceOf[js.Any])
+  }
+  
 }
 

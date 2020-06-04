@@ -5,7 +5,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.antdStrings.multiple
 import typingsSlinky.antd.antdStrings.tags
 import typingsSlinky.antd.selectMod.SelectProps
-import typingsSlinky.antd.selectMod.SelectValue
 import typingsSlinky.antd.selectMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,19 +16,19 @@ object Select {
   object component extends js.Object
   
   @scala.inline
-  class Builder[ValueType <: SelectValue] (val args: js.Array[js.Any])
+  class Builder[/* <: typingsSlinky.antd.selectMod.SelectValue */ ValueType] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default[js.Any]] {
     @scala.inline
     def mode(value: multiple | tags): this.type = set("mode", value.asInstanceOf[js.Any])
   }
   
-  def withProps[ValueType <: SelectValue](p: SelectProps[ValueType]): Builder[ValueType] = new Builder[ValueType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[/* <: typingsSlinky.antd.selectMod.SelectValue */ ValueType](p: SelectProps[ValueType]): Builder[ValueType] = new Builder[ValueType](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[ValueType <: SelectValue](): Builder[ValueType] = {
+  def apply[/* <: typingsSlinky.antd.selectMod.SelectValue */ ValueType](): Builder[ValueType] = {
     val __props = js.Dynamic.literal()
     new Builder[ValueType](js.Array(this.component, __props.asInstanceOf[SelectProps[ValueType]]))
   }
-  implicit def make[ValueType <: SelectValue](companion: Select.type): Builder[ValueType] = new Builder[ValueType](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make[/* <: typingsSlinky.antd.selectMod.SelectValue */ ValueType](companion: Select.type): Builder[ValueType] = new Builder[ValueType](js.Array(this.component, js.Dictionary.empty))()
 }
 

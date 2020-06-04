@@ -163,29 +163,76 @@ trait ZoneSpec extends js.Object {
 
 object ZoneSpec {
   @scala.inline
-  def apply(
-    name: String,
-    onCancelTask: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* task */ Task) => _ = null,
-    onFork: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* zoneSpec */ ZoneSpec) => Zone = null,
-    onHandleError: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* error */ js.Any) => Boolean = null,
-    onHasTask: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* hasTaskState */ HasTaskState) => Unit = null,
-    onIntercept: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* delegate */ js.Function, /* source */ String) => js.Function = null,
-    onInvoke: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* delegate */ js.Function, /* applyThis */ js.Any, /* applyArgs */ js.UndefOr[js.Array[_]], /* source */ js.UndefOr[String]) => _ = null,
-    onInvokeTask: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* task */ Task, /* applyThis */ js.Any, /* applyArgs */ js.UndefOr[js.Array[_]]) => _ = null,
-    onScheduleTask: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* task */ Task) => Task = null,
-    properties: StringDictionary[js.Any] = null
-  ): ZoneSpec = {
+  def apply(name: String): ZoneSpec = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    if (onCancelTask != null) __obj.updateDynamic("onCancelTask")(js.Any.fromFunction4(onCancelTask))
-    if (onFork != null) __obj.updateDynamic("onFork")(js.Any.fromFunction4(onFork))
-    if (onHandleError != null) __obj.updateDynamic("onHandleError")(js.Any.fromFunction4(onHandleError))
-    if (onHasTask != null) __obj.updateDynamic("onHasTask")(js.Any.fromFunction4(onHasTask))
-    if (onIntercept != null) __obj.updateDynamic("onIntercept")(js.Any.fromFunction5(onIntercept))
-    if (onInvoke != null) __obj.updateDynamic("onInvoke")(js.Any.fromFunction7(onInvoke))
-    if (onInvokeTask != null) __obj.updateDynamic("onInvokeTask")(js.Any.fromFunction6(onInvokeTask))
-    if (onScheduleTask != null) __obj.updateDynamic("onScheduleTask")(js.Any.fromFunction4(onScheduleTask))
-    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[ZoneSpec]
   }
+  @scala.inline
+  implicit class ZoneSpecOps[Self <: ZoneSpec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOnCancelTask(
+      value: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* task */ Task) => _
+    ): Self = this.set("onCancelTask", js.Any.fromFunction4(value))
+    @scala.inline
+    def deleteOnCancelTask: Self = this.set("onCancelTask", js.undefined)
+    @scala.inline
+    def setOnFork(
+      value: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* zoneSpec */ ZoneSpec) => Zone
+    ): Self = this.set("onFork", js.Any.fromFunction4(value))
+    @scala.inline
+    def deleteOnFork: Self = this.set("onFork", js.undefined)
+    @scala.inline
+    def setOnHandleError(
+      value: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* error */ js.Any) => Boolean
+    ): Self = this.set("onHandleError", js.Any.fromFunction4(value))
+    @scala.inline
+    def deleteOnHandleError: Self = this.set("onHandleError", js.undefined)
+    @scala.inline
+    def setOnHasTask(
+      value: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* hasTaskState */ HasTaskState) => Unit
+    ): Self = this.set("onHasTask", js.Any.fromFunction4(value))
+    @scala.inline
+    def deleteOnHasTask: Self = this.set("onHasTask", js.undefined)
+    @scala.inline
+    def setOnIntercept(
+      value: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* delegate */ js.Function, /* source */ String) => js.Function
+    ): Self = this.set("onIntercept", js.Any.fromFunction5(value))
+    @scala.inline
+    def deleteOnIntercept: Self = this.set("onIntercept", js.undefined)
+    @scala.inline
+    def setOnInvoke(
+      value: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* delegate */ js.Function, /* applyThis */ js.Any, /* applyArgs */ js.UndefOr[js.Array[_]], /* source */ js.UndefOr[String]) => _
+    ): Self = this.set("onInvoke", js.Any.fromFunction7(value))
+    @scala.inline
+    def deleteOnInvoke: Self = this.set("onInvoke", js.undefined)
+    @scala.inline
+    def setOnInvokeTask(
+      value: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* task */ Task, /* applyThis */ js.Any, /* applyArgs */ js.UndefOr[js.Array[_]]) => _
+    ): Self = this.set("onInvokeTask", js.Any.fromFunction6(value))
+    @scala.inline
+    def deleteOnInvokeTask: Self = this.set("onInvokeTask", js.undefined)
+    @scala.inline
+    def setOnScheduleTask(
+      value: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* task */ Task) => Task
+    ): Self = this.set("onScheduleTask", js.Any.fromFunction4(value))
+    @scala.inline
+    def deleteOnScheduleTask: Self = this.set("onScheduleTask", js.undefined)
+    @scala.inline
+    def setProperties(value: StringDictionary[js.Any]): Self = this.set("properties", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteProperties: Self = this.set("properties", js.undefined)
+  }
+  
 }
 

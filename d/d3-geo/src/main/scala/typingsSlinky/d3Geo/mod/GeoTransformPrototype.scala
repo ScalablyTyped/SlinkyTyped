@@ -50,28 +50,54 @@ trait GeoTransformPrototype extends js.Object {
 
 object GeoTransformPrototype {
   @scala.inline
-  def apply(
-    lineEnd: js.ThisFunction0[/* this */ GeoTransformPrototype with Stream, Unit] = null,
-    lineStart: js.ThisFunction0[/* this */ GeoTransformPrototype with Stream, Unit] = null,
-    point: js.ThisFunction3[
-      /* this */ GeoTransformPrototype with Stream, 
-      /* x */ Double, 
-      /* y */ Double, 
-      /* z */ js.UndefOr[Double], 
-      Unit
-    ] = null,
-    polygonEnd: js.ThisFunction0[/* this */ GeoTransformPrototype with Stream, Unit] = null,
-    polygonStart: js.ThisFunction0[/* this */ GeoTransformPrototype with Stream, Unit] = null,
-    sphere: js.ThisFunction0[/* this */ GeoTransformPrototype with Stream, Unit] = null
-  ): GeoTransformPrototype = {
+  def apply(): GeoTransformPrototype = {
     val __obj = js.Dynamic.literal()
-    if (lineEnd != null) __obj.updateDynamic("lineEnd")(lineEnd.asInstanceOf[js.Any])
-    if (lineStart != null) __obj.updateDynamic("lineStart")(lineStart.asInstanceOf[js.Any])
-    if (point != null) __obj.updateDynamic("point")(point.asInstanceOf[js.Any])
-    if (polygonEnd != null) __obj.updateDynamic("polygonEnd")(polygonEnd.asInstanceOf[js.Any])
-    if (polygonStart != null) __obj.updateDynamic("polygonStart")(polygonStart.asInstanceOf[js.Any])
-    if (sphere != null) __obj.updateDynamic("sphere")(sphere.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeoTransformPrototype]
   }
+  @scala.inline
+  implicit class GeoTransformPrototypeOps[Self <: GeoTransformPrototype] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setLineEnd(value: js.ThisFunction0[/* this */ GeoTransformPrototype with Stream, Unit]): Self = this.set("lineEnd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLineEnd: Self = this.set("lineEnd", js.undefined)
+    @scala.inline
+    def setLineStart(value: js.ThisFunction0[/* this */ GeoTransformPrototype with Stream, Unit]): Self = this.set("lineStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLineStart: Self = this.set("lineStart", js.undefined)
+    @scala.inline
+    def setPoint(
+      value: js.ThisFunction3[
+          /* this */ GeoTransformPrototype with Stream, 
+          /* x */ Double, 
+          /* y */ Double, 
+          /* z */ js.UndefOr[Double], 
+          Unit
+        ]
+    ): Self = this.set("point", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePoint: Self = this.set("point", js.undefined)
+    @scala.inline
+    def setPolygonEnd(value: js.ThisFunction0[/* this */ GeoTransformPrototype with Stream, Unit]): Self = this.set("polygonEnd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePolygonEnd: Self = this.set("polygonEnd", js.undefined)
+    @scala.inline
+    def setPolygonStart(value: js.ThisFunction0[/* this */ GeoTransformPrototype with Stream, Unit]): Self = this.set("polygonStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePolygonStart: Self = this.set("polygonStart", js.undefined)
+    @scala.inline
+    def setSphere(value: js.ThisFunction0[/* this */ GeoTransformPrototype with Stream, Unit]): Self = this.set("sphere", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSphere: Self = this.set("sphere", js.undefined)
+  }
+  
 }
 

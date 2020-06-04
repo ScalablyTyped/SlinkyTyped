@@ -40,32 +40,78 @@ trait NavigationContainerProps[State, Options, ScreenProps] extends js.Object {
 
 object NavigationContainerProps {
   @scala.inline
-  def apply[State, Options, ScreenProps](
-    enableURLHandling: js.UndefOr[Boolean] = js.undefined,
-    loadNavigationState: () => js.Promise[_] = null,
-    navigation: NavigationScreenProp[State, NavigationParams] = null,
-    navigationOptions: Options = null,
-    onNavigationStateChange: (/* prevNavigationState */ NavigationState, /* nextNavigationState */ NavigationState, /* action */ NavigationAction) => js.UndefOr[Unit | Null] = null,
-    persistNavigationState: /* state */ NavigationState => js.Promise[_] = null,
-    persistenceKey: js.UndefOr[Null | String] = js.undefined,
-    renderLoadingExperimental: ReactComponentClass[js.Object] = null,
-    screenProps: ScreenProps = null,
-    style: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
-    uriPrefix: String | js.RegExp = null
-  ): NavigationContainerProps[State, Options, ScreenProps] = {
+  def apply[State, Options, ScreenProps](): NavigationContainerProps[State, Options, ScreenProps] = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(enableURLHandling)) __obj.updateDynamic("enableURLHandling")(enableURLHandling.get.asInstanceOf[js.Any])
-    if (loadNavigationState != null) __obj.updateDynamic("loadNavigationState")(js.Any.fromFunction0(loadNavigationState))
-    if (navigation != null) __obj.updateDynamic("navigation")(navigation.asInstanceOf[js.Any])
-    if (navigationOptions != null) __obj.updateDynamic("navigationOptions")(navigationOptions.asInstanceOf[js.Any])
-    if (onNavigationStateChange != null) __obj.updateDynamic("onNavigationStateChange")(js.Any.fromFunction3(onNavigationStateChange))
-    if (persistNavigationState != null) __obj.updateDynamic("persistNavigationState")(js.Any.fromFunction1(persistNavigationState))
-    if (!js.isUndefined(persistenceKey)) __obj.updateDynamic("persistenceKey")(persistenceKey.asInstanceOf[js.Any])
-    if (renderLoadingExperimental != null) __obj.updateDynamic("renderLoadingExperimental")(renderLoadingExperimental.asInstanceOf[js.Any])
-    if (screenProps != null) __obj.updateDynamic("screenProps")(screenProps.asInstanceOf[js.Any])
-    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (uriPrefix != null) __obj.updateDynamic("uriPrefix")(uriPrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavigationContainerProps[State, Options, ScreenProps]]
   }
+  @scala.inline
+  implicit class NavigationContainerPropsOps[Self <: NavigationContainerProps[_, _, _], State, Options, ScreenProps] (val x: Self with (NavigationContainerProps[State, Options, ScreenProps])) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setEnableURLHandling(value: Boolean): Self = this.set("enableURLHandling", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEnableURLHandling: Self = this.set("enableURLHandling", js.undefined)
+    @scala.inline
+    def setLoadNavigationState(value: () => js.Promise[_]): Self = this.set("loadNavigationState", js.Any.fromFunction0(value))
+    @scala.inline
+    def deleteLoadNavigationState: Self = this.set("loadNavigationState", js.undefined)
+    @scala.inline
+    def setNavigation(value: NavigationScreenProp[State, NavigationParams]): Self = this.set("navigation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNavigation: Self = this.set("navigation", js.undefined)
+    @scala.inline
+    def setNavigationOptions(value: Options): Self = this.set("navigationOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteNavigationOptions: Self = this.set("navigationOptions", js.undefined)
+    @scala.inline
+    def setOnNavigationStateChange(
+      value: (/* prevNavigationState */ NavigationState, /* nextNavigationState */ NavigationState, /* action */ NavigationAction) => js.UndefOr[Unit | Null]
+    ): Self = this.set("onNavigationStateChange", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteOnNavigationStateChange: Self = this.set("onNavigationStateChange", js.undefined)
+    @scala.inline
+    def setPersistNavigationState(value: /* state */ NavigationState => js.Promise[_]): Self = this.set("persistNavigationState", js.Any.fromFunction1(value))
+    @scala.inline
+    def deletePersistNavigationState: Self = this.set("persistNavigationState", js.undefined)
+    @scala.inline
+    def setPersistenceKey(value: String): Self = this.set("persistenceKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePersistenceKey: Self = this.set("persistenceKey", js.undefined)
+    @scala.inline
+    def setPersistenceKeyNull: Self = this.set("persistenceKey", null)
+    @scala.inline
+    def setRenderLoadingExperimentalFunctionComponent(value: ReactComponentClass[js.Object]): Self = this.set("renderLoadingExperimental", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRenderLoadingExperimentalComponentClass(value: ReactComponentClass[js.Object]): Self = this.set("renderLoadingExperimental", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRenderLoadingExperimental(value: ReactComponentClass[js.Object]): Self = this.set("renderLoadingExperimental", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRenderLoadingExperimental: Self = this.set("renderLoadingExperimental", js.undefined)
+    @scala.inline
+    def setScreenProps(value: ScreenProps): Self = this.set("screenProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteScreenProps: Self = this.set("screenProps", js.undefined)
+    @scala.inline
+    def setStyle(value: StyleProp[ViewStyle]): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+    @scala.inline
+    def setStyleNull: Self = this.set("style", null)
+    @scala.inline
+    def setUriPrefixRegExp(value: js.RegExp): Self = this.set("uriPrefix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUriPrefix(value: String | js.RegExp): Self = this.set("uriPrefix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteUriPrefix: Self = this.set("uriPrefix", js.undefined)
+  }
+  
 }
 
