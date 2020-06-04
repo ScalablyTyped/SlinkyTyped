@@ -10,10 +10,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait FormItemProps
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped {[ P in std.Exclude<keyof / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify FieldProps * / any, 'children'> ]: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify FieldProps * / any[P]} */ trait FormItemProps
   extends FormItemLabelProps
-     with FormItemInputProps
-     with RcFieldProps {
+     with FormItemInputProps {
   var children: ChildrenType
   var className: js.UndefOr[String] = js.undefined
   /** Auto passed by List render props. User should not use this. */

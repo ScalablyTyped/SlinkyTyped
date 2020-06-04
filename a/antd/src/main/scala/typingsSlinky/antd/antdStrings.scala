@@ -343,6 +343,9 @@ object antdStrings {
   sealed trait checkedKeys extends js.Object
   
   @js.native
+  sealed trait children extends js.Object
+  
+  @js.native
   sealed trait circle
     extends ButtonShape
        with ProgressType
@@ -1087,6 +1090,9 @@ object antdStrings {
   sealed trait use12Hours extends js.Object
   
   @js.native
+  sealed trait validateMessages extends js.Object
+  
+  @js.native
   sealed trait validating extends ValidateStatus
   
   @js.native
@@ -1323,6 +1329,8 @@ object antdStrings {
   def checkbox: checkbox = "checkbox".asInstanceOf[checkbox]
   @scala.inline
   def checkedKeys: checkedKeys = "checkedKeys".asInstanceOf[checkedKeys]
+  @scala.inline
+  def children: children = "children".asInstanceOf[children]
   @scala.inline
   def circle: circle = "circle".asInstanceOf[circle]
   @scala.inline
@@ -1761,6 +1769,8 @@ object antdStrings {
   def url: url = "url".asInstanceOf[url]
   @scala.inline
   def use12Hours: use12Hours = "use12Hours".asInstanceOf[use12Hours]
+  @scala.inline
+  def validateMessages: validateMessages = "validateMessages".asInstanceOf[validateMessages]
   @scala.inline
   def validating: validating = "validating".asInstanceOf[validating]
   @scala.inline

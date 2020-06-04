@@ -24,7 +24,7 @@ object SlinkyTypedPlugin extends AutoPlugin {
         val `angular__platform-browser-dynamic` = "org.scalablytyped.slinky" % "angular__platform-browser-dynamic_sjs1_2.13" % "8.2.14-cbd42a"
         val angular__router = "org.scalablytyped.slinky" % "angular__router_sjs1_2.13" % "8.2.14-f51d5b"
         val `ant-design__react-slick` = "org.scalablytyped.slinky" % "ant-design__react-slick_sjs1_2.13" % "0.26.1-05eba3"
-        val antd = "org.scalablytyped.slinky" % "antd_sjs1_2.13" % "4.2.4-2f1875"
+        val antd = "org.scalablytyped.slinky" % "antd_sjs1_2.13" % "4.2.4-7b17b4"
         val axios = "org.scalablytyped.slinky" % "axios_sjs1_2.13" % "0.19.2-df2b01"
       }
       object B {
@@ -175,8 +175,8 @@ object SlinkyTypedPlugin extends AutoPlugin {
         val `react-native-vector-icons` = "org.scalablytyped.slinky" % "react-native-vector-icons_sjs1_2.13" % "6.4-dt-20200515Z-dad87f"
         val `react-native-view-shot` = "org.scalablytyped.slinky" % "react-native-view-shot_sjs1_2.13" % "2.6.0-d2bb1e"
         val `react-navigation` = "org.scalablytyped.slinky" % "react-navigation_sjs1_2.13" % "4.3.9-b248f2"
-        val `react-navigation-drawer` = "org.scalablytyped.slinky" % "react-navigation-drawer_sjs1_2.13" % "2.4.13-c5bfa1"
-        val `react-navigation-stack` = "org.scalablytyped.slinky" % "react-navigation-stack_sjs1_2.13" % "1.10.3-00f136"
+        val `react-navigation-drawer` = "org.scalablytyped.slinky" % "react-navigation-drawer_sjs1_2.13" % "2.4.13-949097"
+        val `react-navigation-stack` = "org.scalablytyped.slinky" % "react-navigation-stack_sjs1_2.13" % "1.10.3-758114"
         val `react-redux` = "org.scalablytyped.slinky" % "react-redux_sjs1_2.13" % "7.1-dt-20200519Z-35c021"
         val `react-router` = "org.scalablytyped.slinky" % "react-router_sjs1_2.13" % "5.1-dt-20200515Z-09dee5"
         val `react-router-dom` = "org.scalablytyped.slinky" % "react-router-dom_sjs1_2.13" % "5.1-dt-20200515Z-3aa544"
