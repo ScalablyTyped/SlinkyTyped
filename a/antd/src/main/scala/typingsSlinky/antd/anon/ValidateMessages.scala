@@ -5,9 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait ValidateMessages extends js.Object {
-  var validateMessages: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ValidateMessages */ js.Any
-  ] = js.undefined
+  var validateMessages: js.UndefOr[typingsSlinky.rcFieldForm.interfaceMod.ValidateMessages] = js.undefined
 }
 
 object ValidateMessages {
@@ -28,9 +26,7 @@ object ValidateMessages {
         x
     }
     @scala.inline
-    def setValidateMessages(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ValidateMessages */ js.Any
-    ): Self = this.set("validateMessages", value.asInstanceOf[js.Any])
+    def setValidateMessages(value: typingsSlinky.rcFieldForm.interfaceMod.ValidateMessages): Self = this.set("validateMessages", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteValidateMessages: Self = this.set("validateMessages", js.undefined)
   }

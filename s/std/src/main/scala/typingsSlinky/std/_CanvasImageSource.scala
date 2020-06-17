@@ -4,5 +4,5 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait _IDBValidKey extends js.Object
+trait _CanvasImageSource extends js.Object
 

@@ -6,8 +6,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ImageBitmapRenderingContext
-  extends OffscreenRenderingContext
-     with RenderingContext {
+  extends _OffscreenRenderingContext
+     with _RenderingContext {
   /**
     * Returns the canvas element that the context is bound to.
     */

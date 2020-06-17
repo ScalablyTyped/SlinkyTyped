@@ -8,10 +8,7 @@ import scala.scalajs.js.annotation._
 
 /** This Channel Messaging API interface represents one of the two ports of a MessageChannel, allowing messages to be sent from one port and listening out for them arriving at the other. */
 @js.native
-trait MessagePort
-  extends EventTarget
-     with Transferable
-     with _MessageEventSource {
+trait MessagePort extends EventTarget {
   var onmessage: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _]) | Null = js.native
   var onmessageerror: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _]) | Null = js.native
   @JSName("addEventListener")

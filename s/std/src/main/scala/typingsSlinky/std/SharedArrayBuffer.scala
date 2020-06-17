@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait SharedArrayBuffer extends ArrayBufferLike {
+trait SharedArrayBuffer extends js.Object {
   /**
     * Read-only. The length of the ArrayBuffer (in bytes).
     */

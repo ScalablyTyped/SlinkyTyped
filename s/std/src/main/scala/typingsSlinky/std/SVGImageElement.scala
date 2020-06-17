@@ -8,8 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SVGImageElement
   extends SVGGraphicsElement
-     with SVGURIReference
-     with HTMLOrSVGImageElement {
+     with SVGURIReference {
   val height: org.scalajs.dom.raw.SVGAnimatedLength = js.native
   val preserveAspectRatio: org.scalajs.dom.raw.SVGAnimatedPreserveAspectRatio = js.native
   val width: org.scalajs.dom.raw.SVGAnimatedLength = js.native

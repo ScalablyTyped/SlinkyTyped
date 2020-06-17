@@ -9,8 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ServiceWorker
   extends EventTarget
-     with AbstractWorker
-     with _MessageEventSource {
+     with AbstractWorker {
   var onstatechange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
   val scriptURL: java.lang.String = js.native
   val state: org.scalajs.dom.experimental.serviceworkers.ServiceWorkerState = js.native
