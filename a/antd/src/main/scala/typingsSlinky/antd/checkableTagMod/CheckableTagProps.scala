@@ -1,6 +1,8 @@
 package typingsSlinky.antd.checkableTagMod
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.MouseEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +11,7 @@ trait CheckableTagProps extends js.Object {
   var checked: Boolean
   var className: js.UndefOr[String] = js.undefined
   var onChange: js.UndefOr[js.Function1[/* checked */ Boolean, Unit]] = js.undefined
+  var onClick: js.UndefOr[js.Function1[/* e */ MouseEventHandler[HTMLElement], Unit]] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
 }
@@ -40,6 +43,10 @@ object CheckableTagProps {
     def setOnChange(value: /* checked */ Boolean => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def deleteOnChange: Self = this.set("onChange", js.undefined)
+    @scala.inline
+    def setOnClick(value: /* e */ MouseEventHandler[HTMLElement] => Unit): Self = this.set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnClick: Self = this.set("onClick", js.undefined)
     @scala.inline
     def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline

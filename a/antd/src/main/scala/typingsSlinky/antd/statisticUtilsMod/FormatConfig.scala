@@ -1,6 +1,6 @@
 package typingsSlinky.antd.statisticUtilsMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +35,7 @@ object FormatConfig {
     @scala.inline
     def deleteDecimalSeparator: Self = this.set("decimalSeparator", js.undefined)
     @scala.inline
-    def setFormatterFunction2(value: (/* value */ valueType, /* config */ js.UndefOr[FormatConfig]) => TagMod[Any]): Self = this.set("formatter", js.Any.fromFunction2(value))
+    def setFormatterFunction2(value: (/* value */ valueType, /* config */ js.UndefOr[FormatConfig]) => ReactElement): Self = this.set("formatter", js.Any.fromFunction2(value))
     @scala.inline
     def setFormatter(value: Formatter): Self = this.set("formatter", value.asInstanceOf[js.Any])
     @scala.inline

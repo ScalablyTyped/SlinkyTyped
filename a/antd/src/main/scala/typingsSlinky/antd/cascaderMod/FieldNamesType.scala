@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 trait FieldNamesType extends js.Object {
   var children: js.UndefOr[String] = js.undefined
   var label: js.UndefOr[String] = js.undefined
-  var value: js.UndefOr[String] = js.undefined
+  var value: js.UndefOr[String | Double] = js.undefined
 }
 
 object FieldNamesType {
@@ -36,7 +36,7 @@ object FieldNamesType {
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)
     @scala.inline
-    def setValue(value: String): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValue(value: String | Double): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
   }

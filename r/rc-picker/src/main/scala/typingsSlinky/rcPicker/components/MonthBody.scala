@@ -1,6 +1,6 @@
 package typingsSlinky.rcPicker.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcPicker.generateMod.GenerateConfig
@@ -22,7 +22,7 @@ object MonthBody {
     @scala.inline
     def disabledDate(value: DateType => Boolean): this.type = set("disabledDate", js.Any.fromFunction1(value))
     @scala.inline
-    def monthCellRender(value: (DateType, /* locale */ Locale) => TagMod[Any]): this.type = set("monthCellRender", js.Any.fromFunction2(value))
+    def monthCellRender(value: (DateType, /* locale */ Locale) => ReactElement): this.type = set("monthCellRender", js.Any.fromFunction2(value))
     @scala.inline
     def value(value: DateType): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

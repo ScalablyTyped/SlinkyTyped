@@ -1,7 +1,6 @@
 package typingsSlinky.antd.columnGroupMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.anon.Compare
@@ -14,6 +13,7 @@ import typingsSlinky.antd.tableInterfaceMod.FilterDropdownProps
 import typingsSlinky.antd.tableInterfaceMod.Key
 import typingsSlinky.antd.tableInterfaceMod.SortOrder
 import typingsSlinky.rcTable.interfaceMod.AlignType
+import typingsSlinky.rcTable.interfaceMod.CellEllipsisType
 import typingsSlinky.rcTable.interfaceMod.DataIndex
 import typingsSlinky.rcTable.interfaceMod.FixedType
 import typingsSlinky.rcTable.interfaceMod.GetComponentProps
@@ -32,10 +32,10 @@ trait ColumnGroupProps[RecordType] extends js.Object {
   var dataIndex: js.UndefOr[DataIndex] = js.undefined
   var defaultFilteredValue: js.UndefOr[js.Array[Key]] = js.undefined
   var defaultSortOrder: js.UndefOr[SortOrder] = js.undefined
-  var ellipsis: js.UndefOr[Boolean] = js.undefined
-  var filterDropdown: js.UndefOr[TagMod[Any] | (js.Function1[/* props */ FilterDropdownProps, TagMod[Any]])] = js.undefined
+  var ellipsis: js.UndefOr[CellEllipsisType] = js.undefined
+  var filterDropdown: js.UndefOr[ReactElement | (js.Function1[/* props */ FilterDropdownProps, ReactElement])] = js.undefined
   var filterDropdownVisible: js.UndefOr[Boolean] = js.undefined
-  var filterIcon: js.UndefOr[TagMod[Any] | (js.Function1[/* filtered */ Boolean, TagMod[Any]])] = js.undefined
+  var filterIcon: js.UndefOr[ReactElement | (js.Function1[/* filtered */ Boolean, ReactElement])] = js.undefined
   var filterMultiple: js.UndefOr[Boolean] = js.undefined
   var filtered: js.UndefOr[Boolean] = js.undefined
   var filteredValue: js.UndefOr[js.Array[Key]] = js.undefined
@@ -60,11 +60,12 @@ trait ColumnGroupProps[RecordType] extends js.Object {
       /* value */ js.Any, 
       /* record */ RecordType, 
       /* index */ Double, 
-      TagMod[Any] | RenderedCell[RecordType]
+      ReactElement | RenderedCell[RecordType]
     ]
   ] = js.undefined
   var responsive: js.UndefOr[js.Array[Breakpoint]] = js.undefined
   var rowSpan: js.UndefOr[Double] = js.undefined
+  var shouldCellUpdate: js.UndefOr[js.Function2[/* record */ RecordType, /* prevRecord */ RecordType, Boolean]] = js.undefined
   var showSorterTooltip: js.UndefOr[Boolean] = js.undefined
   var sortDirections: js.UndefOr[js.Array[SortOrder]] = js.undefined
   var sortOrder: js.UndefOr[SortOrder] = js.undefined
@@ -121,15 +122,15 @@ object ColumnGroupProps {
     @scala.inline
     def setDefaultSortOrderNull: Self = this.set("defaultSortOrder", null)
     @scala.inline
-    def setEllipsis(value: Boolean): Self = this.set("ellipsis", value.asInstanceOf[js.Any])
+    def setEllipsis(value: CellEllipsisType): Self = this.set("ellipsis", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEllipsis: Self = this.set("ellipsis", js.undefined)
     @scala.inline
     def setFilterDropdownReactElement(value: ReactElement): Self = this.set("filterDropdown", value.asInstanceOf[js.Any])
     @scala.inline
-    def setFilterDropdownFunction1(value: /* props */ FilterDropdownProps => TagMod[Any]): Self = this.set("filterDropdown", js.Any.fromFunction1(value))
+    def setFilterDropdownFunction1(value: /* props */ FilterDropdownProps => ReactElement): Self = this.set("filterDropdown", js.Any.fromFunction1(value))
     @scala.inline
-    def setFilterDropdown(value: TagMod[Any] | (js.Function1[/* props */ FilterDropdownProps, TagMod[Any]])): Self = this.set("filterDropdown", value.asInstanceOf[js.Any])
+    def setFilterDropdown(value: ReactElement | (js.Function1[/* props */ FilterDropdownProps, ReactElement])): Self = this.set("filterDropdown", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFilterDropdown: Self = this.set("filterDropdown", js.undefined)
     @scala.inline
@@ -139,9 +140,9 @@ object ColumnGroupProps {
     @scala.inline
     def setFilterIconReactElement(value: ReactElement): Self = this.set("filterIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setFilterIconFunction1(value: /* filtered */ Boolean => TagMod[Any]): Self = this.set("filterIcon", js.Any.fromFunction1(value))
+    def setFilterIconFunction1(value: /* filtered */ Boolean => ReactElement): Self = this.set("filterIcon", js.Any.fromFunction1(value))
     @scala.inline
-    def setFilterIcon(value: TagMod[Any] | (js.Function1[/* filtered */ Boolean, TagMod[Any]])): Self = this.set("filterIcon", value.asInstanceOf[js.Any])
+    def setFilterIcon(value: ReactElement | (js.Function1[/* filtered */ Boolean, ReactElement])): Self = this.set("filterIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFilterIcon: Self = this.set("filterIcon", js.undefined)
     @scala.inline
@@ -192,7 +193,7 @@ object ColumnGroupProps {
     def deleteOnHeaderCell: Self = this.set("onHeaderCell", js.undefined)
     @scala.inline
     def setRender(
-      value: (/* value */ js.Any, /* record */ RecordType, /* index */ Double) => TagMod[Any] | RenderedCell[RecordType]
+      value: (/* value */ js.Any, /* record */ RecordType, /* index */ Double) => ReactElement | RenderedCell[RecordType]
     ): Self = this.set("render", js.Any.fromFunction3(value))
     @scala.inline
     def deleteRender: Self = this.set("render", js.undefined)
@@ -204,6 +205,10 @@ object ColumnGroupProps {
     def setRowSpan(value: Double): Self = this.set("rowSpan", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRowSpan: Self = this.set("rowSpan", js.undefined)
+    @scala.inline
+    def setShouldCellUpdate(value: (/* record */ RecordType, /* prevRecord */ RecordType) => Boolean): Self = this.set("shouldCellUpdate", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteShouldCellUpdate: Self = this.set("shouldCellUpdate", js.undefined)
     @scala.inline
     def setShowSorterTooltip(value: Boolean): Self = this.set("showSorterTooltip", value.asInstanceOf[js.Any])
     @scala.inline
@@ -227,7 +232,7 @@ object ColumnGroupProps {
     @scala.inline
     def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTitleFunction1(value: /* props */ ColumnTitleProps[RecordType] => TagMod[Any]): Self = this.set("title", js.Any.fromFunction1(value))
+    def setTitleFunction1(value: /* props */ ColumnTitleProps[RecordType] => ReactElement): Self = this.set("title", js.Any.fromFunction1(value))
     @scala.inline
     def setTitle(value: ColumnTitle[RecordType]): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,6 +1,5 @@
 package typingsSlinky.materialUi.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
@@ -28,7 +27,7 @@ object EnhancedButton {
     @scala.inline
     def containerElementReactElement(value: ReactElement): this.type = set("containerElement", value.asInstanceOf[js.Any])
     @scala.inline
-    def containerElement(value: TagMod[Any] | String): this.type = set("containerElement", value.asInstanceOf[js.Any])
+    def containerElement(value: ReactElement | String): this.type = set("containerElement", value.asInstanceOf[js.Any])
     @scala.inline
     def disableFocusRipple(value: Boolean): this.type = set("disableFocusRipple", value.asInstanceOf[js.Any])
     @scala.inline

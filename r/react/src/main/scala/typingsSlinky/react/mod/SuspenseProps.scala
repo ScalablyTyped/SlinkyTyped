@@ -1,15 +1,14 @@
 package typingsSlinky.react.mod
 
-import slinky.core.TagMod
 import typingsSlinky.std.NonNullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait SuspenseProps extends js.Object {
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[slinky.core.facade.ReactElement] = js.undefined
   /** A fallback react tree to show when a Suspense child (like React.lazy) suspends */
-  var fallback: NonNullable[TagMod[Any]] | Null
+  var fallback: NonNullable[slinky.core.facade.ReactElement] | Null
   /**
     * Tells React whether to “skip” revealing this boundary during the initial load.
     * This API will likely be removed in a future release.
@@ -38,11 +37,11 @@ object SuspenseProps {
     @scala.inline
     def setChildrenReactElement(value: slinky.core.facade.ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: slinky.core.facade.ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
-    def setFallback(value: NonNullable[TagMod[Any]]): Self = this.set("fallback", value.asInstanceOf[js.Any])
+    def setFallback(value: NonNullable[slinky.core.facade.ReactElement]): Self = this.set("fallback", value.asInstanceOf[js.Any])
     @scala.inline
     def setFallbackNull: Self = this.set("fallback", null)
     @scala.inline

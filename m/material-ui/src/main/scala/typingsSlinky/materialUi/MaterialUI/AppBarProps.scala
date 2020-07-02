@@ -1,6 +1,5 @@
 package typingsSlinky.materialUi.MaterialUI
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.CSSProperties
@@ -22,7 +21,7 @@ trait AppBarProps extends js.Object {
   var onTitleClick: js.UndefOr[MouseEventHandler[js.Object]] = js.undefined
   var showMenuIconButton: js.UndefOr[Boolean] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
-  var title: js.UndefOr[TagMod[Any]] = js.undefined
+  var title: js.UndefOr[ReactElement] = js.undefined
   var titleStyle: js.UndefOr[CSSProperties] = js.undefined
   var zDepth: js.UndefOr[Double] = js.undefined
 }
@@ -95,7 +94,7 @@ object AppBarProps {
     @scala.inline
     def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
     @scala.inline

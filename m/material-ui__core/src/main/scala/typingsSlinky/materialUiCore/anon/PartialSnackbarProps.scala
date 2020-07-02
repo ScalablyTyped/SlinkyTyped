@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -98,7 +97,7 @@ trait PartialSnackbarProps extends js.Object {
   var TransitionProps: js.UndefOr[typingsSlinky.materialUiCore.transitionMod.TransitionProps] = js.native
   var about: js.UndefOr[String] = js.native
   var accessKey: js.UndefOr[String] = js.native
-  var action: js.UndefOr[TagMod[Any]] = js.native
+  var action: js.UndefOr[ReactElement] = js.native
   var anchorOrigin: js.UndefOr[SnackbarOrigin] = js.native
   var `aria-activedescendant`: js.UndefOr[String] = js.native
   var `aria-atomic`: js.UndefOr[Boolean] = js.native
@@ -152,7 +151,7 @@ trait PartialSnackbarProps extends js.Object {
   var autoCorrect: js.UndefOr[String] = js.native
   var autoHideDuration: js.UndefOr[Double] = js.native
   var autoSave: js.UndefOr[String] = js.native
-  var children: js.UndefOr[TagMod[Any]] = js.native
+  var children: js.UndefOr[ReactElement] = js.native
   var className: js.UndefOr[String] = js.native
   var classes: js.UndefOr[PartialClassNameMapSnackbAnchorOriginBottomCenter] = js.native
   var color: js.UndefOr[String] = js.native
@@ -177,7 +176,7 @@ trait PartialSnackbarProps extends js.Object {
   var itemScope: js.UndefOr[Boolean] = js.native
   var itemType: js.UndefOr[String] = js.native
   var lang: js.UndefOr[String] = js.native
-  var message: js.UndefOr[TagMod[Any]] = js.native
+  var message: js.UndefOr[ReactElement] = js.native
   var onAbort: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
   var onAnimationEnd: js.UndefOr[AnimationEventHandler[HTMLDivElement]] = js.native
   var onAnimationIteration: js.UndefOr[AnimationEventHandler[HTMLDivElement]] = js.native
@@ -336,7 +335,7 @@ object PartialSnackbarProps {
     @scala.inline
     def setActionReactElement(value: ReactElement): Self = this.set("action", value.asInstanceOf[js.Any])
     @scala.inline
-    def setAction(value: TagMod[Any]): Self = this.set("action", value.asInstanceOf[js.Any])
+    def setAction(value: ReactElement): Self = this.set("action", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAction: Self = this.set("action", js.undefined)
     @scala.inline
@@ -554,7 +553,7 @@ object PartialSnackbarProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -662,7 +661,7 @@ object PartialSnackbarProps {
     @scala.inline
     def setMessageReactElement(value: ReactElement): Self = this.set("message", value.asInstanceOf[js.Any])
     @scala.inline
-    def setMessage(value: TagMod[Any]): Self = this.set("message", value.asInstanceOf[js.Any])
+    def setMessage(value: ReactElement): Self = this.set("message", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMessage: Self = this.set("message", js.undefined)
     @scala.inline

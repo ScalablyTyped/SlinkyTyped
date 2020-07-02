@@ -1,7 +1,6 @@
 package typingsSlinky.rcFieldForm.formMod
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcFieldForm.interfaceMod.FieldData
 import typingsSlinky.rcFieldForm.interfaceMod.FormInstance
@@ -15,7 +14,7 @@ import scala.scalajs.js.annotation._
 
 trait FormProps extends BaseFormProps {
   @JSName("children")
-  var children_FormProps: js.UndefOr[RenderProps | TagMod[Any]] = js.undefined
+  var children_FormProps: js.UndefOr[RenderProps | ReactElement] = js.undefined
   var component: js.UndefOr[`false` | String | ReactComponentClass[_]] = js.undefined
   var fields: js.UndefOr[js.Array[FieldData]] = js.undefined
   var form: js.UndefOr[FormInstance] = js.undefined
@@ -27,6 +26,7 @@ trait FormProps extends BaseFormProps {
   var onFinishFailed: js.UndefOr[js.Function1[/* errorInfo */ ValidateErrorEntity, Unit]] = js.undefined
   var onValuesChange: js.UndefOr[js.Function2[/* changedValues */ Store, /* values */ Store, Unit]] = js.undefined
   var validateMessages: js.UndefOr[ValidateMessages] = js.undefined
+  var validateTrigger: js.UndefOr[String | js.Array[String] | `false`] = js.undefined
 }
 
 object FormProps {
@@ -49,9 +49,9 @@ object FormProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildrenFunction2(value: (/* values */ Store, /* form */ FormInstance) => ReactElement | TagMod[Any]): Self = this.set("children", js.Any.fromFunction2(value))
+    def setChildrenFunction2(value: (/* values */ Store, /* form */ FormInstance) => ReactElement): Self = this.set("children", js.Any.fromFunction2(value))
     @scala.inline
-    def setChildren(value: RenderProps | TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: RenderProps | ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -94,6 +94,10 @@ object FormProps {
     def setValidateMessages(value: ValidateMessages): Self = this.set("validateMessages", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteValidateMessages: Self = this.set("validateMessages", js.undefined)
+    @scala.inline
+    def setValidateTrigger(value: String | js.Array[String] | `false`): Self = this.set("validateTrigger", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteValidateTrigger: Self = this.set("validateTrigger", js.undefined)
   }
   
 }

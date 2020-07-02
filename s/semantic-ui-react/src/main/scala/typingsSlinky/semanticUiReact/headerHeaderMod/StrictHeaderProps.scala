@@ -1,6 +1,5 @@
 package typingsSlinky.semanticUiReact.headerHeaderMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
 import typingsSlinky.semanticUiReact.genericMod.SemanticFLOATS
@@ -24,13 +23,13 @@ trait StrictHeaderProps extends js.Object {
   /** Format header to appear inside a content block. */
   var block: js.UndefOr[Boolean] = js.undefined
   /** Primary content. */
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   /** Additional classes. */
   var className: js.UndefOr[String] = js.undefined
   /** Color of the header. */
   var color: js.UndefOr[SemanticCOLORS] = js.undefined
   /** Shorthand for primary content. */
-  var content: js.UndefOr[TagMod[Any]] = js.undefined
+  var content: js.UndefOr[ReactElement] = js.undefined
   /** Show that the header is inactive. */
   var disabled: js.UndefOr[Boolean] = js.undefined
   /** Divide header from the content below it. */
@@ -85,7 +84,7 @@ object StrictHeaderProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -99,7 +98,7 @@ object StrictHeaderProps {
     @scala.inline
     def setContentReactElement(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
     @scala.inline
-    def setContent(value: TagMod[Any]): Self = this.set("content", value.asInstanceOf[js.Any])
+    def setContent(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteContent: Self = this.set("content", js.undefined)
     @scala.inline

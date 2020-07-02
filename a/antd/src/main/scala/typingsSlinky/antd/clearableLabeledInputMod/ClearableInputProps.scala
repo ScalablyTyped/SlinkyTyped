@@ -1,7 +1,6 @@
 package typingsSlinky.antd.clearableLabeledInputMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.antdStrings.input
@@ -15,11 +14,11 @@ import scala.scalajs.js.annotation._
   * This props only for input.
   */
 trait ClearableInputProps extends BasicProps {
-  var addonAfter: js.UndefOr[TagMod[Any]] = js.undefined
-  var addonBefore: js.UndefOr[TagMod[Any]] = js.undefined
-  var prefix: js.UndefOr[TagMod[Any]] = js.undefined
+  var addonAfter: js.UndefOr[ReactElement] = js.undefined
+  var addonBefore: js.UndefOr[ReactElement] = js.undefined
+  var prefix: js.UndefOr[ReactElement] = js.undefined
   var size: js.UndefOr[SizeType] = js.undefined
-  var suffix: js.UndefOr[TagMod[Any]] = js.undefined
+  var suffix: js.UndefOr[ReactElement] = js.undefined
   def triggerFocus(): Unit
 }
 
@@ -51,19 +50,19 @@ object ClearableInputProps {
     @scala.inline
     def setAddonAfterReactElement(value: ReactElement): Self = this.set("addonAfter", value.asInstanceOf[js.Any])
     @scala.inline
-    def setAddonAfter(value: TagMod[Any]): Self = this.set("addonAfter", value.asInstanceOf[js.Any])
+    def setAddonAfter(value: ReactElement): Self = this.set("addonAfter", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAddonAfter: Self = this.set("addonAfter", js.undefined)
     @scala.inline
     def setAddonBeforeReactElement(value: ReactElement): Self = this.set("addonBefore", value.asInstanceOf[js.Any])
     @scala.inline
-    def setAddonBefore(value: TagMod[Any]): Self = this.set("addonBefore", value.asInstanceOf[js.Any])
+    def setAddonBefore(value: ReactElement): Self = this.set("addonBefore", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAddonBefore: Self = this.set("addonBefore", js.undefined)
     @scala.inline
     def setPrefixReactElement(value: ReactElement): Self = this.set("prefix", value.asInstanceOf[js.Any])
     @scala.inline
-    def setPrefix(value: TagMod[Any]): Self = this.set("prefix", value.asInstanceOf[js.Any])
+    def setPrefix(value: ReactElement): Self = this.set("prefix", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePrefix: Self = this.set("prefix", js.undefined)
     @scala.inline
@@ -73,7 +72,7 @@ object ClearableInputProps {
     @scala.inline
     def setSuffixReactElement(value: ReactElement): Self = this.set("suffix", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSuffix(value: TagMod[Any]): Self = this.set("suffix", value.asInstanceOf[js.Any])
+    def setSuffix(value: ReactElement): Self = this.set("suffix", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSuffix: Self = this.set("suffix", js.undefined)
   }

@@ -1,13 +1,13 @@
 package typingsSlinky.materialUi.MaterialUI
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait BadgeProps extends js.Object {
-  var badgeContent: TagMod[Any]
+  var badgeContent: ReactElement
   var badgeStyle: js.UndefOr[CSSProperties] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var primary: js.UndefOr[Boolean] = js.undefined
@@ -33,7 +33,7 @@ object BadgeProps {
         x
     }
     @scala.inline
-    def setBadgeContent(value: TagMod[Any]): Self = this.set("badgeContent", value.asInstanceOf[js.Any])
+    def setBadgeContent(value: ReactElement): Self = this.set("badgeContent", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBadgeContent: Self = this.set("badgeContent", js.undefined)
     @scala.inline

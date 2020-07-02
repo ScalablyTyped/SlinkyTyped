@@ -1,6 +1,6 @@
 package typingsSlinky.semanticUiReact.transitionablePortalTransitionablePortalMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.semanticUiReact.portalPortalMod.PortalProps
 import typingsSlinky.semanticUiReact.transitionTransitionMod.TransitionEventData
 import typingsSlinky.semanticUiReact.transitionTransitionMod.TransitionProps
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 
 trait StrictTransitionablePortalProps extends js.Object {
   /** Primary content. */
-  var children: TagMod[Any]
+  var children: ReactElement
   /**
     * Called when a close event happens.
     *
@@ -79,7 +79,7 @@ object StrictTransitionablePortalProps {
         x
     }
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline

@@ -1,7 +1,6 @@
 package typingsSlinky.semanticUiReact.components
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
@@ -66,7 +65,7 @@ object Popup {
     def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     @scala.inline
     def contentFunction3(
-      value: (/* component */ ReactType[PopupContentProps], PopupContentProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[PopupContentProps], PopupContentProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("content", js.Any.fromFunction3(value))
     @scala.inline
     def content(value: SemanticShorthandItem[PopupContentProps]): this.type = set("content", value.asInstanceOf[js.Any])
@@ -88,7 +87,7 @@ object Popup {
     def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     @scala.inline
     def headerFunction3(
-      value: (/* component */ ReactType[PopupHeaderProps], PopupHeaderProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[PopupHeaderProps], PopupHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("header", js.Any.fromFunction3(value))
     @scala.inline
     def header(value: SemanticShorthandItem[PopupHeaderProps]): this.type = set("header", value.asInstanceOf[js.Any])
@@ -143,7 +142,7 @@ object Popup {
     @scala.inline
     def triggerReactElement(value: ReactElement): this.type = set("trigger", value.asInstanceOf[js.Any])
     @scala.inline
-    def trigger(value: TagMod[Any]): this.type = set("trigger", value.asInstanceOf[js.Any])
+    def trigger(value: ReactElement): this.type = set("trigger", value.asInstanceOf[js.Any])
     @scala.inline
     def triggerRefRefObject(value: ReactRef[_]): this.type = set("triggerRef", value.asInstanceOf[js.Any])
     @scala.inline

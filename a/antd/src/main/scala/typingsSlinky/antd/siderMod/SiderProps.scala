@@ -1,7 +1,6 @@
 package typingsSlinky.antd.siderMod
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.antdStrings.lg
 import typingsSlinky.antd.antdStrings.md
@@ -26,7 +25,7 @@ trait SiderProps extends HTMLAttributes[HTMLDivElement] {
   var prefixCls: js.UndefOr[String] = js.undefined
   var reverseArrow: js.UndefOr[Boolean] = js.undefined
   var theme: js.UndefOr[SiderTheme] = js.undefined
-  var trigger: js.UndefOr[TagMod[Any]] = js.undefined
+  var trigger: js.UndefOr[ReactElement] = js.undefined
   var width: js.UndefOr[Double | String] = js.undefined
   var zeroWidthTriggerStyle: js.UndefOr[CSSProperties] = js.undefined
 }
@@ -91,7 +90,7 @@ object SiderProps {
     @scala.inline
     def setTriggerReactElement(value: ReactElement): Self = this.set("trigger", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTrigger(value: TagMod[Any]): Self = this.set("trigger", value.asInstanceOf[js.Any])
+    def setTrigger(value: ReactElement): Self = this.set("trigger", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTrigger: Self = this.set("trigger", js.undefined)
     @scala.inline

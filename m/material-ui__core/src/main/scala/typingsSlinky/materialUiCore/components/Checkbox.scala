@@ -6,7 +6,6 @@ import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -223,7 +222,7 @@ object Checkbox {
     @scala.inline
     def checkedIconReactElement(value: ReactElement): this.type = set("checkedIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def checkedIcon(value: TagMod[Any]): this.type = set("checkedIcon", value.asInstanceOf[js.Any])
+    def checkedIcon(value: ReactElement): this.type = set("checkedIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -285,7 +284,7 @@ object Checkbox {
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
@@ -293,7 +292,7 @@ object Checkbox {
     @scala.inline
     def indeterminateIconReactElement(value: ReactElement): this.type = set("indeterminateIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def indeterminateIcon(value: TagMod[Any]): this.type = set("indeterminateIcon", value.asInstanceOf[js.Any])
+    def indeterminateIcon(value: ReactElement): this.type = set("indeterminateIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
     @scala.inline

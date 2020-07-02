@@ -1,6 +1,5 @@
 package typingsSlinky.antd.timelineTimelineMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.antdStrings.alternate
 import typingsSlinky.antd.antdStrings.left
@@ -14,8 +13,8 @@ trait TimelineProps extends js.Object {
   var className: js.UndefOr[String] = js.undefined
   var mode: js.UndefOr[left | alternate | right] = js.undefined
   /** 指定最后一个幽灵节点是否存在或内容 */
-  var pending: js.UndefOr[TagMod[Any]] = js.undefined
-  var pendingDot: js.UndefOr[TagMod[Any]] = js.undefined
+  var pending: js.UndefOr[ReactElement] = js.undefined
+  var pendingDot: js.UndefOr[ReactElement] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
   var reverse: js.UndefOr[Boolean] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
@@ -49,13 +48,13 @@ object TimelineProps {
     @scala.inline
     def setPendingReactElement(value: ReactElement): Self = this.set("pending", value.asInstanceOf[js.Any])
     @scala.inline
-    def setPending(value: TagMod[Any]): Self = this.set("pending", value.asInstanceOf[js.Any])
+    def setPending(value: ReactElement): Self = this.set("pending", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePending: Self = this.set("pending", js.undefined)
     @scala.inline
     def setPendingDotReactElement(value: ReactElement): Self = this.set("pendingDot", value.asInstanceOf[js.Any])
     @scala.inline
-    def setPendingDot(value: TagMod[Any]): Self = this.set("pendingDot", value.asInstanceOf[js.Any])
+    def setPendingDot(value: ReactElement): Self = this.set("pendingDot", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePendingDot: Self = this.set("pendingDot", js.undefined)
     @scala.inline

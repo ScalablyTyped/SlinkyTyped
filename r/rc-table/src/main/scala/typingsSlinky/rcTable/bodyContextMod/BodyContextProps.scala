@@ -1,7 +1,7 @@
 package typingsSlinky.rcTable.bodyContextMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.rcTable.interfaceMod.ColumnType
 import typingsSlinky.rcTable.interfaceMod.ColumnsType
@@ -40,12 +40,12 @@ object BodyContextProps {
   def apply[RecordType](
     columns: ColumnsType[RecordType],
     componentWidth: Double,
-    expandIcon: /* props */ RenderExpandIconProps[RecordType] => TagMod[Any],
+    expandIcon: /* props */ RenderExpandIconProps[RecordType] => ReactElement,
     expandIconColumnIndex: Double,
     expandRowByClick: Boolean,
     expandableType: ExpandableType,
     expandedRowClassName: (RecordType, /* index */ Double, /* indent */ Double) => String,
-    expandedRowRender: (RecordType, /* index */ Double, /* indent */ Double, /* expanded */ Boolean) => TagMod[Any],
+    expandedRowRender: (RecordType, /* index */ Double, /* indent */ Double, /* expanded */ Boolean) => ReactElement,
     fixColumn: Boolean,
     fixHeader: Boolean,
     flattenColumns: js.Array[ColumnType[RecordType]],
@@ -74,7 +74,7 @@ object BodyContextProps {
     @scala.inline
     def setComponentWidth(value: Double): Self = this.set("componentWidth", value.asInstanceOf[js.Any])
     @scala.inline
-    def setExpandIcon(value: /* props */ RenderExpandIconProps[RecordType] => TagMod[Any]): Self = this.set("expandIcon", js.Any.fromFunction1(value))
+    def setExpandIcon(value: /* props */ RenderExpandIconProps[RecordType] => ReactElement): Self = this.set("expandIcon", js.Any.fromFunction1(value))
     @scala.inline
     def setExpandIconColumnIndex(value: Double): Self = this.set("expandIconColumnIndex", value.asInstanceOf[js.Any])
     @scala.inline
@@ -85,7 +85,7 @@ object BodyContextProps {
     def setExpandedRowClassName(value: (RecordType, /* index */ Double, /* indent */ Double) => String): Self = this.set("expandedRowClassName", js.Any.fromFunction3(value))
     @scala.inline
     def setExpandedRowRender(
-      value: (RecordType, /* index */ Double, /* indent */ Double, /* expanded */ Boolean) => TagMod[Any]
+      value: (RecordType, /* index */ Double, /* indent */ Double, /* expanded */ Boolean) => ReactElement
     ): Self = this.set("expandedRowRender", js.Any.fromFunction4(value))
     @scala.inline
     def setFixColumn(value: Boolean): Self = this.set("fixColumn", value.asInstanceOf[js.Any])

@@ -1,6 +1,5 @@
 package typingsSlinky.materialUi.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
@@ -32,7 +31,7 @@ object StepButton {
     @scala.inline
     def containerElementReactElement(value: ReactElement): this.type = set("containerElement", value.asInstanceOf[js.Any])
     @scala.inline
-    def containerElement(value: TagMod[Any] | String): this.type = set("containerElement", value.asInstanceOf[js.Any])
+    def containerElement(value: ReactElement | String): this.type = set("containerElement", value.asInstanceOf[js.Any])
     @scala.inline
     def disableFocusRipple(value: Boolean): this.type = set("disableFocusRipple", value.asInstanceOf[js.Any])
     @scala.inline
@@ -50,7 +49,7 @@ object StepButton {
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any] | String | Double): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement | String | Double): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def keyboardFocused(value: Boolean): this.type = set("keyboardFocused", value.asInstanceOf[js.Any])
     @scala.inline

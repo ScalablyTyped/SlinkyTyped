@@ -130,6 +130,8 @@ object ListView {
     @scala.inline
     def fadingEdgeLength(value: Double): this.type = set("fadingEdgeLength", value.asInstanceOf[js.Any])
     @scala.inline
+    def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
+    @scala.inline
     def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
     @scala.inline
     def hitSlop(value: Insets): this.type = set("hitSlop", value.asInstanceOf[js.Any])

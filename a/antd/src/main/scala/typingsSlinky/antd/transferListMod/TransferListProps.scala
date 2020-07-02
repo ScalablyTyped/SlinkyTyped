@@ -2,36 +2,37 @@ package typingsSlinky.antd.transferListMod
 
 import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.HTMLUListElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticUIEvent
 import typingsSlinky.antd.anon.SelectedCount
-import typingsSlinky.antd.renderListBodyMod.TransferListBodyProps
+import typingsSlinky.antd.listBodyMod.TransferListBodyProps
+import typingsSlinky.antd.transferInterfaceMod.PaginationType
 import typingsSlinky.antd.transferMod.RenderResult
 import typingsSlinky.antd.transferMod.SelectAllLabel
 import typingsSlinky.antd.transferMod.TransferDirection
 import typingsSlinky.antd.transferMod.TransferItem
+import typingsSlinky.antd.transferMod.TransferLocale
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait TransferListProps extends js.Object {
+trait TransferListProps extends TransferLocale {
   var checkedKeys: js.Array[String]
   var dataSource: js.Array[TransferItem]
   var direction: TransferDirection
   var disabled: js.UndefOr[Boolean] = js.undefined
   var filterOption: js.UndefOr[js.Function2[/* filterText */ String, /* item */ TransferItem, Boolean]] = js.undefined
-  var footer: js.UndefOr[js.Function1[/* props */ TransferListProps, TagMod[Any]]] = js.undefined
-  var itemUnit: String
-  var itemsUnit: String
-  var notFoundContent: TagMod[Any]
+  var footer: js.UndefOr[js.Function1[/* props */ TransferListProps, ReactElement]] = js.undefined
+  var onItemRemove: js.UndefOr[js.Function1[/* keys */ js.Array[String], Unit]] = js.undefined
+  var pagination: js.UndefOr[PaginationType] = js.undefined
   var prefixCls: String
+  /** render item */
   var render: js.UndefOr[js.Function1[/* item */ TransferItem, RenderResult]] = js.undefined
   var renderList: js.UndefOr[RenderListFunction] = js.undefined
-  var searchPlaceholder: String
   var selectAllLabel: js.UndefOr[SelectAllLabel] = js.undefined
+  var showRemove: js.UndefOr[Boolean] = js.undefined
   var showSearch: js.UndefOr[Boolean] = js.undefined
   var showSelectAll: js.UndefOr[Boolean] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
@@ -57,10 +58,17 @@ object TransferListProps {
     onItemSelectAll: (js.Array[String], Boolean) => Unit,
     onScroll: SyntheticUIEvent[HTMLUListElement] => Unit,
     prefixCls: String,
+    remove: String,
+    removeAll: String,
+    removeCurrent: String,
     searchPlaceholder: String,
-    titleText: String
+    selectAll: String,
+    selectCurrent: String,
+    selectInvert: String,
+    titleText: String,
+    titles: js.Array[String]
   ): TransferListProps = {
-    val __obj = js.Dynamic.literal(checkedKeys = checkedKeys.asInstanceOf[js.Any], dataSource = dataSource.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], handleClear = js.Any.fromFunction0(handleClear), handleFilter = js.Any.fromFunction1(handleFilter), itemUnit = itemUnit.asInstanceOf[js.Any], itemsUnit = itemsUnit.asInstanceOf[js.Any], onItemSelect = js.Any.fromFunction2(onItemSelect), onItemSelectAll = js.Any.fromFunction2(onItemSelectAll), onScroll = js.Any.fromFunction1(onScroll), prefixCls = prefixCls.asInstanceOf[js.Any], searchPlaceholder = searchPlaceholder.asInstanceOf[js.Any], titleText = titleText.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(checkedKeys = checkedKeys.asInstanceOf[js.Any], dataSource = dataSource.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], handleClear = js.Any.fromFunction0(handleClear), handleFilter = js.Any.fromFunction1(handleFilter), itemUnit = itemUnit.asInstanceOf[js.Any], itemsUnit = itemsUnit.asInstanceOf[js.Any], onItemSelect = js.Any.fromFunction2(onItemSelect), onItemSelectAll = js.Any.fromFunction2(onItemSelectAll), onScroll = js.Any.fromFunction1(onScroll), prefixCls = prefixCls.asInstanceOf[js.Any], remove = remove.asInstanceOf[js.Any], removeAll = removeAll.asInstanceOf[js.Any], removeCurrent = removeCurrent.asInstanceOf[js.Any], searchPlaceholder = searchPlaceholder.asInstanceOf[js.Any], selectAll = selectAll.asInstanceOf[js.Any], selectCurrent = selectCurrent.asInstanceOf[js.Any], selectInvert = selectInvert.asInstanceOf[js.Any], titleText = titleText.asInstanceOf[js.Any], titles = titles.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransferListProps]
   }
   @scala.inline
@@ -85,10 +93,6 @@ object TransferListProps {
     @scala.inline
     def setHandleFilter(value: ChangeEvent[HTMLInputElement] => Unit): Self = this.set("handleFilter", js.Any.fromFunction1(value))
     @scala.inline
-    def setItemUnit(value: String): Self = this.set("itemUnit", value.asInstanceOf[js.Any])
-    @scala.inline
-    def setItemsUnit(value: String): Self = this.set("itemsUnit", value.asInstanceOf[js.Any])
-    @scala.inline
     def setOnItemSelect(value: (String, Boolean) => Unit): Self = this.set("onItemSelect", js.Any.fromFunction2(value))
     @scala.inline
     def setOnItemSelectAll(value: (js.Array[String], Boolean) => Unit): Self = this.set("onItemSelectAll", js.Any.fromFunction2(value))
@@ -96,8 +100,6 @@ object TransferListProps {
     def setOnScroll(value: SyntheticUIEvent[HTMLUListElement] => Unit): Self = this.set("onScroll", js.Any.fromFunction1(value))
     @scala.inline
     def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
-    @scala.inline
-    def setSearchPlaceholder(value: String): Self = this.set("searchPlaceholder", value.asInstanceOf[js.Any])
     @scala.inline
     def setTitleText(value: String): Self = this.set("titleText", value.asInstanceOf[js.Any])
     @scala.inline
@@ -109,29 +111,37 @@ object TransferListProps {
     @scala.inline
     def deleteFilterOption: Self = this.set("filterOption", js.undefined)
     @scala.inline
-    def setFooter(value: /* props */ TransferListProps => TagMod[Any]): Self = this.set("footer", js.Any.fromFunction1(value))
+    def setFooter(value: /* props */ TransferListProps => ReactElement): Self = this.set("footer", js.Any.fromFunction1(value))
     @scala.inline
     def deleteFooter: Self = this.set("footer", js.undefined)
     @scala.inline
-    def setNotFoundContent(value: TagMod[Any]): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])
+    def setOnItemRemove(value: /* keys */ js.Array[String] => Unit): Self = this.set("onItemRemove", js.Any.fromFunction1(value))
     @scala.inline
-    def deleteNotFoundContent: Self = this.set("notFoundContent", js.undefined)
+    def deleteOnItemRemove: Self = this.set("onItemRemove", js.undefined)
+    @scala.inline
+    def setPagination(value: PaginationType): Self = this.set("pagination", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePagination: Self = this.set("pagination", js.undefined)
     @scala.inline
     def setRender(value: /* item */ TransferItem => RenderResult): Self = this.set("render", js.Any.fromFunction1(value))
     @scala.inline
     def deleteRender: Self = this.set("render", js.undefined)
     @scala.inline
-    def setRenderList(value: /* props */ TransferListBodyProps => TagMod[Any]): Self = this.set("renderList", js.Any.fromFunction1(value))
+    def setRenderList(value: /* props */ TransferListBodyProps => ReactElement): Self = this.set("renderList", js.Any.fromFunction1(value))
     @scala.inline
     def deleteRenderList: Self = this.set("renderList", js.undefined)
     @scala.inline
     def setSelectAllLabelReactElement(value: ReactElement): Self = this.set("selectAllLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSelectAllLabelFunction1(value: /* info */ SelectedCount => TagMod[Any]): Self = this.set("selectAllLabel", js.Any.fromFunction1(value))
+    def setSelectAllLabelFunction1(value: /* info */ SelectedCount => ReactElement): Self = this.set("selectAllLabel", js.Any.fromFunction1(value))
     @scala.inline
     def setSelectAllLabel(value: SelectAllLabel): Self = this.set("selectAllLabel", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSelectAllLabel: Self = this.set("selectAllLabel", js.undefined)
+    @scala.inline
+    def setShowRemove(value: Boolean): Self = this.set("showRemove", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowRemove: Self = this.set("showRemove", js.undefined)
     @scala.inline
     def setShowSearch(value: Boolean): Self = this.set("showSearch", value.asInstanceOf[js.Any])
     @scala.inline

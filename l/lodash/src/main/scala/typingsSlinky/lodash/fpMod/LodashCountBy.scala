@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LodashCountBy extends js.Object {
+trait LodashCountBy extends LodashConvertible {
   def apply[T](iteratee: ValueIteratee[T]): Dictionary[Double] = js.native
   def apply[T /* <: js.Object */](
     iteratee: ValueIteratee[

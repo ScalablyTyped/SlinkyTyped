@@ -56,6 +56,8 @@ object RadioButton {
     @scala.inline
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
     @scala.inline
+    def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
     def value(value: js.Any): this.type = set("value", value.asInstanceOf[js.Any])
   }
   

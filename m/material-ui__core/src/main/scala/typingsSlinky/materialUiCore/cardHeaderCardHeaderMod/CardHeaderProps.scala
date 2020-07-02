@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -95,7 +94,7 @@ import scala.scalajs.js.annotation._
 trait CardHeaderProps extends js.Object {
   var about: js.UndefOr[String] = js.native
   var accessKey: js.UndefOr[String] = js.native
-  var action: js.UndefOr[TagMod[Any]] = js.native
+  var action: js.UndefOr[ReactElement] = js.native
   var `aria-activedescendant`: js.UndefOr[String] = js.native
   var `aria-atomic`: js.UndefOr[Boolean] = js.native
   var `aria-autocomplete`: js.UndefOr[none | `inline` | list | both] = js.native
@@ -147,8 +146,8 @@ trait CardHeaderProps extends js.Object {
   var autoCapitalize: js.UndefOr[String] = js.native
   var autoCorrect: js.UndefOr[String] = js.native
   var autoSave: js.UndefOr[String] = js.native
-  var avatar: js.UndefOr[TagMod[Any]] = js.native
-  var children: js.UndefOr[TagMod[Any]] = js.native
+  var avatar: js.UndefOr[ReactElement] = js.native
+  var children: js.UndefOr[ReactElement] = js.native
   var className: js.UndefOr[String] = js.native
   var classes: js.UndefOr[PartialClassNameMapCardHe] = js.native
   var color: js.UndefOr[String] = js.native
@@ -264,12 +263,12 @@ trait CardHeaderProps extends js.Object {
   var slot: js.UndefOr[String] = js.native
   var spellCheck: js.UndefOr[Booleanish] = js.native
   var style: js.UndefOr[CSSProperties] = js.native
-  var subheader: js.UndefOr[TagMod[Any]] = js.native
+  var subheader: js.UndefOr[ReactElement] = js.native
   var subheaderTypographyProps: js.UndefOr[PartialTypographyProps] = js.native
   var suppressContentEditableWarning: js.UndefOr[Boolean] = js.native
   var suppressHydrationWarning: js.UndefOr[Boolean] = js.native
   var tabIndex: js.UndefOr[Double] = js.native
-  var title: js.UndefOr[TagMod[Any]] = js.native
+  var title: js.UndefOr[ReactElement] = js.native
   var titleTypographyProps: js.UndefOr[PartialTypographyProps] = js.native
   var translate: js.UndefOr[yes | no] = js.native
   var typeof: js.UndefOr[String] = js.native
@@ -305,7 +304,7 @@ object CardHeaderProps {
     @scala.inline
     def setActionReactElement(value: ReactElement): Self = this.set("action", value.asInstanceOf[js.Any])
     @scala.inline
-    def setAction(value: TagMod[Any]): Self = this.set("action", value.asInstanceOf[js.Any])
+    def setAction(value: ReactElement): Self = this.set("action", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAction: Self = this.set("action", js.undefined)
     @scala.inline
@@ -515,13 +514,13 @@ object CardHeaderProps {
     @scala.inline
     def setAvatarReactElement(value: ReactElement): Self = this.set("avatar", value.asInstanceOf[js.Any])
     @scala.inline
-    def setAvatar(value: TagMod[Any]): Self = this.set("avatar", value.asInstanceOf[js.Any])
+    def setAvatar(value: ReactElement): Self = this.set("avatar", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAvatar: Self = this.set("avatar", js.undefined)
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -997,7 +996,7 @@ object CardHeaderProps {
     @scala.inline
     def setSubheaderReactElement(value: ReactElement): Self = this.set("subheader", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSubheader(value: TagMod[Any]): Self = this.set("subheader", value.asInstanceOf[js.Any])
+    def setSubheader(value: ReactElement): Self = this.set("subheader", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSubheader: Self = this.set("subheader", js.undefined)
     @scala.inline
@@ -1019,7 +1018,7 @@ object CardHeaderProps {
     @scala.inline
     def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
     @scala.inline

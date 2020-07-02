@@ -1,7 +1,6 @@
 package typingsSlinky.rcMenu.subMenuMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
@@ -73,7 +72,7 @@ class SubMenu protected ()
   def onSubMenuClick(info: MenuInfo): Unit = js.native
   def onTitleClick(e: SyntheticKeyboardEvent[HTMLElement]): Unit = js.native
   def onTitleClick(e: SyntheticMouseEvent[HTMLElement]): Unit = js.native
-  def renderChildren(children: TagMod[Any]): ReactElement = js.native
+  def renderChildren(children: ReactElement): ReactElement = js.native
   def saveMenuInstance(c: MenuItem): Unit = js.native
   def saveSubMenuTitle(subMenuTitle: HTMLElement): Unit = js.native
   def triggerOpenChange(open: Boolean): Unit = js.native

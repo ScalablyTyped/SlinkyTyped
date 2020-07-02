@@ -1,6 +1,5 @@
 package typingsSlinky.materialUiCore.anon
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.materialUiCore.materialUiCoreStrings.bottom
@@ -16,14 +15,14 @@ import scala.scalajs.js.annotation._
 /* Inlined std.Partial<@material-ui/core.@material-ui/core/GridListTileBar.GridListTileBarProps> */
 @js.native
 trait PartialGridListTileBarPro extends js.Object {
-  var actionIcon: js.UndefOr[TagMod[Any]] = js.native
+  var actionIcon: js.UndefOr[ReactElement] = js.native
   var actionPosition: js.UndefOr[left | right] = js.native
   var className: js.UndefOr[String] = js.native
   var classes: js.UndefOr[PartialClassNameMapGridLiActionIcon] = js.native
   var innerRef: js.UndefOr[Ref[_] | ReactRef[_]] = js.native
   var style: js.UndefOr[CSSProperties] = js.native
-  var subtitle: js.UndefOr[TagMod[Any]] = js.native
-  var title: js.UndefOr[TagMod[Any]] = js.native
+  var subtitle: js.UndefOr[ReactElement] = js.native
+  var title: js.UndefOr[ReactElement] = js.native
   var titlePosition: js.UndefOr[top | bottom] = js.native
 }
 
@@ -47,7 +46,7 @@ object PartialGridListTileBarPro {
     @scala.inline
     def setActionIconReactElement(value: ReactElement): Self = this.set("actionIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setActionIcon(value: TagMod[Any]): Self = this.set("actionIcon", value.asInstanceOf[js.Any])
+    def setActionIcon(value: ReactElement): Self = this.set("actionIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteActionIcon: Self = this.set("actionIcon", js.undefined)
     @scala.inline
@@ -79,13 +78,13 @@ object PartialGridListTileBarPro {
     @scala.inline
     def setSubtitleReactElement(value: ReactElement): Self = this.set("subtitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSubtitle(value: TagMod[Any]): Self = this.set("subtitle", value.asInstanceOf[js.Any])
+    def setSubtitle(value: ReactElement): Self = this.set("subtitle", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSubtitle: Self = this.set("subtitle", js.undefined)
     @scala.inline
     def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
     @scala.inline

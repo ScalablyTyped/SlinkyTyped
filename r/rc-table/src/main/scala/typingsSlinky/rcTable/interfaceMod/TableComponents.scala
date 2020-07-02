@@ -1,7 +1,7 @@
 package typingsSlinky.rcTable.interfaceMod
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.rcTable.anon.Cell
 import typingsSlinky.rcTable.anon.OnScroll
 import scala.scalajs.js
@@ -32,7 +32,7 @@ object TableComponents {
         x
     }
     @scala.inline
-    def setBodyFunction2(value: (/* data */ js.Array[RecordType], /* info */ OnScroll) => TagMod[Any]): Self = this.set("body", js.Any.fromFunction2(value))
+    def setBodyFunction2(value: (/* data */ js.Array[RecordType], /* info */ OnScroll) => ReactElement): Self = this.set("body", js.Any.fromFunction2(value))
     @scala.inline
     def setBody(value: CustomizeScrollBody[RecordType] | Cell): Self = this.set("body", value.asInstanceOf[js.Any])
     @scala.inline

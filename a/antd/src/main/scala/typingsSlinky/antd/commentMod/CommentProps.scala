@@ -1,6 +1,5 @@
 package typingsSlinky.antd.commentMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -9,19 +8,19 @@ import scala.scalajs.js.annotation._
 
 trait CommentProps extends js.Object {
   /** List of action items rendered below the comment content */
-  var actions: js.UndefOr[js.Array[TagMod[Any]]] = js.undefined
+  var actions: js.UndefOr[js.Array[ReactElement]] = js.undefined
   /** The element to display as the comment author. */
-  var author: js.UndefOr[TagMod[Any]] = js.undefined
+  var author: js.UndefOr[ReactElement] = js.undefined
   /** The element to display as the comment avatar - generally an antd Avatar */
-  var avatar: js.UndefOr[TagMod[Any]] = js.undefined
+  var avatar: js.UndefOr[ReactElement] = js.undefined
   /** Nested comments should be provided as children of the Comment */
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   /** className of comment */
   var className: js.UndefOr[String] = js.undefined
   /** The main content of the comment */
-  var content: TagMod[Any]
+  var content: ReactElement
   /** A datetime element containing the time to be displayed */
-  var datetime: js.UndefOr[TagMod[Any]] = js.undefined
+  var datetime: js.UndefOr[ReactElement] = js.undefined
   /** Comment prefix defaults to '.ant-comment' */
   var prefixCls: js.UndefOr[String] = js.undefined
   /** Additional style for the comment */
@@ -46,25 +45,25 @@ object CommentProps {
         x
     }
     @scala.inline
-    def setActions(value: js.Array[TagMod[Any]]): Self = this.set("actions", value.asInstanceOf[js.Any])
+    def setActions(value: js.Array[ReactElement]): Self = this.set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteActions: Self = this.set("actions", js.undefined)
     @scala.inline
     def setAuthorReactElement(value: ReactElement): Self = this.set("author", value.asInstanceOf[js.Any])
     @scala.inline
-    def setAuthor(value: TagMod[Any]): Self = this.set("author", value.asInstanceOf[js.Any])
+    def setAuthor(value: ReactElement): Self = this.set("author", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAuthor: Self = this.set("author", js.undefined)
     @scala.inline
     def setAvatarReactElement(value: ReactElement): Self = this.set("avatar", value.asInstanceOf[js.Any])
     @scala.inline
-    def setAvatar(value: TagMod[Any]): Self = this.set("avatar", value.asInstanceOf[js.Any])
+    def setAvatar(value: ReactElement): Self = this.set("avatar", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAvatar: Self = this.set("avatar", js.undefined)
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -72,13 +71,13 @@ object CommentProps {
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
     @scala.inline
-    def setContent(value: TagMod[Any]): Self = this.set("content", value.asInstanceOf[js.Any])
+    def setContent(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteContent: Self = this.set("content", js.undefined)
     @scala.inline
     def setDatetimeReactElement(value: ReactElement): Self = this.set("datetime", value.asInstanceOf[js.Any])
     @scala.inline
-    def setDatetime(value: TagMod[Any]): Self = this.set("datetime", value.asInstanceOf[js.Any])
+    def setDatetime(value: ReactElement): Self = this.set("datetime", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDatetime: Self = this.set("datetime", js.undefined)
     @scala.inline

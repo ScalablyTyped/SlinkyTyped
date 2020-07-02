@@ -1,7 +1,6 @@
 package typingsSlinky.materialUi.components
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -35,7 +34,7 @@ object DatePickerDialog {
     @scala.inline
     def cancelLabelReactElement(value: ReactElement): this.type = set("cancelLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def cancelLabel(value: TagMod[Any]): this.type = set("cancelLabel", value.asInstanceOf[js.Any])
+    def cancelLabel(value: ReactElement): this.type = set("cancelLabel", value.asInstanceOf[js.Any])
     @scala.inline
     def container(value: dialog | `inline`): this.type = set("container", value.asInstanceOf[js.Any])
     @scala.inline
@@ -55,7 +54,7 @@ object DatePickerDialog {
     @scala.inline
     def okLabelReactElement(value: ReactElement): this.type = set("okLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def okLabel(value: TagMod[Any]): this.type = set("okLabel", value.asInstanceOf[js.Any])
+    def okLabel(value: ReactElement): this.type = set("okLabel", value.asInstanceOf[js.Any])
     @scala.inline
     def onAccept(value: /* d */ js.Date => Unit): this.type = set("onAccept", js.Any.fromFunction1(value))
     @scala.inline

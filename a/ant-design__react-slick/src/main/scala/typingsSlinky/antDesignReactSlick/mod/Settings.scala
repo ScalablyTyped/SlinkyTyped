@@ -1,6 +1,5 @@
 package typingsSlinky.antDesignReactSlick.mod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +9,7 @@ trait Settings extends js.Object {
   var accessibility: js.UndefOr[Boolean] = js.undefined
   var adaptiveHeight: js.UndefOr[Boolean] = js.undefined
   var afterChange: js.UndefOr[js.Function1[/* currentSlide */ Double, Unit]] = js.undefined
-  var appendDots: js.UndefOr[js.Function1[/* dots */ TagMod[Any], ReactElement]] = js.undefined
+  var appendDots: js.UndefOr[js.Function1[/* dots */ ReactElement, ReactElement]] = js.undefined
   var arrows: js.UndefOr[Boolean] = js.undefined
   var asNavFor: js.UndefOr[Slider] = js.undefined
   var autoplay: js.UndefOr[Boolean] = js.undefined
@@ -92,7 +91,7 @@ object Settings {
     @scala.inline
     def deleteAfterChange: Self = this.set("afterChange", js.undefined)
     @scala.inline
-    def setAppendDots(value: /* dots */ TagMod[Any] => ReactElement): Self = this.set("appendDots", js.Any.fromFunction1(value))
+    def setAppendDots(value: /* dots */ ReactElement => ReactElement): Self = this.set("appendDots", js.Any.fromFunction1(value))
     @scala.inline
     def deleteAppendDots: Self = this.set("appendDots", js.undefined)
     @scala.inline

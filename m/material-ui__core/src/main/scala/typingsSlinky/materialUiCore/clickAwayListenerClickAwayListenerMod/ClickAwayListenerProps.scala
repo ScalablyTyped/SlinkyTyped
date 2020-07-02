@@ -1,6 +1,6 @@
 package typingsSlinky.materialUiCore.clickAwayListenerClickAwayListenerMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.materialUiCore.materialUiCoreBooleans.`false`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.onClick
 import typingsSlinky.materialUiCore.materialUiCoreStrings.onMouseDown
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ClickAwayListenerProps extends js.Object {
-  var children: TagMod[Any] = js.native
+  var children: ReactElement = js.native
   var mouseEvent: js.UndefOr[onClick | onMouseDown | onMouseUp | `false`] = js.native
   var touchEvent: js.UndefOr[onTouchStart | onTouchEnd | `false`] = js.native
   def onClickAway(event: ChangeEvent[js.Object]): Unit = js.native
@@ -40,7 +40,7 @@ object ClickAwayListenerProps {
     @scala.inline
     def setOnClickAway(value: ChangeEvent[js.Object] => Unit): Self = this.set("onClickAway", js.Any.fromFunction1(value))
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline

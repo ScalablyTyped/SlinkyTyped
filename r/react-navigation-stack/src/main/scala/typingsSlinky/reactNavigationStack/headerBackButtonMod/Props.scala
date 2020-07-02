@@ -1,6 +1,6 @@
 package typingsSlinky.reactNavigationStack.headerBackButtonMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNavigationStack.anon.TintColor
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 /* Inlined std.Omit<react-navigation-stack.react-navigation-stack/lib/typescript/types.HeaderBackButtonProps, 'layoutPreset' | 'scene'> */
 trait Props extends js.Object {
   var allowFontScaling: js.UndefOr[Boolean] = js.undefined
-  var backImage: js.UndefOr[js.Function1[/* props */ TintColor, TagMod[Any]]] = js.undefined
+  var backImage: js.UndefOr[js.Function1[/* props */ TintColor, ReactElement]] = js.undefined
   var backTitleVisible: js.UndefOr[Boolean] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
   var onPress: js.Function0[Unit]
@@ -47,7 +47,7 @@ object Props {
     @scala.inline
     def deleteAllowFontScaling: Self = this.set("allowFontScaling", js.undefined)
     @scala.inline
-    def setBackImage(value: /* props */ TintColor => TagMod[Any]): Self = this.set("backImage", js.Any.fromFunction1(value))
+    def setBackImage(value: /* props */ TintColor => ReactElement): Self = this.set("backImage", js.Any.fromFunction1(value))
     @scala.inline
     def deleteBackImage: Self = this.set("backImage", js.undefined)
     @scala.inline

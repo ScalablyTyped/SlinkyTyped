@@ -2,7 +2,6 @@ package typingsSlinky.semanticUiReact.components
 
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
@@ -60,7 +59,7 @@ object Search {
     def inputReactElement(value: ReactElement): this.type = set("input", value.asInstanceOf[js.Any])
     @scala.inline
     def inputFunction3(
-      value: (/* component */ ReactType[InputProps], InputProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[InputProps], InputProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("input", js.Any.fromFunction3(value))
     @scala.inline
     def input(value: SemanticShorthandItem[InputProps]): this.type = set("input", value.asInstanceOf[js.Any])
@@ -71,11 +70,11 @@ object Search {
     @scala.inline
     def noResultsDescriptionReactElement(value: ReactElement): this.type = set("noResultsDescription", value.asInstanceOf[js.Any])
     @scala.inline
-    def noResultsDescription(value: TagMod[Any]): this.type = set("noResultsDescription", value.asInstanceOf[js.Any])
+    def noResultsDescription(value: ReactElement): this.type = set("noResultsDescription", value.asInstanceOf[js.Any])
     @scala.inline
     def noResultsMessageReactElement(value: ReactElement): this.type = set("noResultsMessage", value.asInstanceOf[js.Any])
     @scala.inline
-    def noResultsMessage(value: TagMod[Any]): this.type = set("noResultsMessage", value.asInstanceOf[js.Any])
+    def noResultsMessage(value: ReactElement): this.type = set("noResultsMessage", value.asInstanceOf[js.Any])
     @scala.inline
     def onBlur(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ SearchProps) => Unit): this.type = set("onBlur", js.Any.fromFunction2(value))
     @scala.inline

@@ -1,7 +1,6 @@
 package typingsSlinky.antd.components
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
@@ -28,7 +27,7 @@ object PageHeader {
     @scala.inline
     def backIconReactElement(value: ReactElement): this.type = set("backIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def backIcon(value: TagMod[Any]): this.type = set("backIcon", value.asInstanceOf[js.Any])
+    def backIcon(value: ReactElement): this.type = set("backIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def breadcrumb(value: BreadcrumbProps): this.type = set("breadcrumb", value.asInstanceOf[js.Any])
     @scala.inline
@@ -36,11 +35,11 @@ object PageHeader {
     @scala.inline
     def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
-    def extra(value: TagMod[Any]): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
     def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     @scala.inline
-    def footer(value: TagMod[Any]): this.type = set("footer", value.asInstanceOf[js.Any])
+    def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     @scala.inline
     def ghost(value: Boolean): this.type = set("ghost", value.asInstanceOf[js.Any])
     @scala.inline
@@ -52,13 +51,13 @@ object PageHeader {
     @scala.inline
     def subTitleReactElement(value: ReactElement): this.type = set("subTitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def subTitle(value: TagMod[Any]): this.type = set("subTitle", value.asInstanceOf[js.Any])
+    def subTitle(value: ReactElement): this.type = set("subTitle", value.asInstanceOf[js.Any])
     @scala.inline
     def tagsReactElement(value: ReactElement): this.type = set("tags", value.asInstanceOf[js.Any])
     @scala.inline
     def tags(value: ReactElement | js.Array[ReactElement]): this.type = set("tags", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: PageHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

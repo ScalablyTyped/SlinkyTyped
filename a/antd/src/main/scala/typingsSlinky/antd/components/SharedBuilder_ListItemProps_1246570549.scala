@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -82,7 +81,7 @@ class SharedBuilder_ListItemProps_1246570549 (val args: js.Array[js.Any])
   @scala.inline
   def accessKey(value: String): this.type = set("accessKey", value.asInstanceOf[js.Any])
   @scala.inline
-  def actions(value: js.Array[TagMod[Any]]): this.type = set("actions", value.asInstanceOf[js.Any])
+  def actions(value: js.Array[ReactElement]): this.type = set("actions", value.asInstanceOf[js.Any])
   @scala.inline
   def `aria-activedescendant`(value: String): this.type = set("aria-activedescendant", value.asInstanceOf[js.Any])
   @scala.inline
@@ -210,7 +209,7 @@ class SharedBuilder_ListItemProps_1246570549 (val args: js.Array[js.Any])
   @scala.inline
   def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
   @scala.inline
-  def extra(value: TagMod[Any]): this.type = set("extra", value.asInstanceOf[js.Any])
+  def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
   @scala.inline
   def grid(value: ListGridType): this.type = set("grid", value.asInstanceOf[js.Any])
   @scala.inline

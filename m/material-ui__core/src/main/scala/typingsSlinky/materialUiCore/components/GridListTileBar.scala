@@ -1,6 +1,5 @@
 package typingsSlinky.materialUiCore.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
@@ -30,7 +29,7 @@ object GridListTileBar {
     @scala.inline
     def actionIconReactElement(value: ReactElement): this.type = set("actionIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def actionIcon(value: TagMod[Any]): this.type = set("actionIcon", value.asInstanceOf[js.Any])
+    def actionIcon(value: ReactElement): this.type = set("actionIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def actionPosition(value: left | right): this.type = set("actionPosition", value.asInstanceOf[js.Any])
     @scala.inline
@@ -50,11 +49,11 @@ object GridListTileBar {
     @scala.inline
     def subtitleReactElement(value: ReactElement): this.type = set("subtitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def subtitle(value: TagMod[Any]): this.type = set("subtitle", value.asInstanceOf[js.Any])
+    def subtitle(value: ReactElement): this.type = set("subtitle", value.asInstanceOf[js.Any])
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def titlePosition(value: top | bottom): this.type = set("titlePosition", value.asInstanceOf[js.Any])
   }

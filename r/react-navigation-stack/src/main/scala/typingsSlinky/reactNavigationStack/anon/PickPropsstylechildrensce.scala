@@ -1,6 +1,6 @@
 package typingsSlinky.reactNavigationStack.anon
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.reactNative.mod.Animated.AnimatedInterpolation
 import typingsSlinky.reactNative.mod.Animated.Value
 import typingsSlinky.reactNative.mod.StyleProp
@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation._
 /* Inlined std.Pick<react-navigation-stack.react-navigation-stack/lib/typescript/views/StackView/StackViewCard.Props, 'style' | 'children' | 'scene' | 'navigation' | 'realPosition' | 'animatedStyle' | 'position' | 'transparent'> */
 trait PickPropsstylechildrensce extends js.Object {
   var animatedStyle: js.Any
-  var children: TagMod[Any]
+  var children: ReactElement
   var navigation: NavigationStackProp[NavigationRoute[NavigationParams], NavigationParams]
   var position: AnimatedInterpolation
   var realPosition: Value
@@ -59,7 +59,7 @@ object PickPropsstylechildrensce {
     @scala.inline
     def setScene(value: Scene): Self = this.set("scene", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline

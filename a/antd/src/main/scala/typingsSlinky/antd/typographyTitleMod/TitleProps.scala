@@ -1,6 +1,5 @@
 package typingsSlinky.antd.typographyTitleMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.antdNumbers.`1`
 import typingsSlinky.antd.antdNumbers.`2`
@@ -18,7 +17,7 @@ import scala.scalajs.js.annotation._
 /* Inlined antd.antd/lib/_util/type.Omit<antd.antd/lib/typography/Base.BlockProps & {  level ? :[1, 2, 3, 4][number]}, 'strong'> */
 trait TitleProps extends js.Object {
   var `aria-label`: js.UndefOr[String] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var code: js.UndefOr[Boolean] = js.undefined
   var copyable: js.UndefOr[Boolean | CopyConfig] = js.undefined
@@ -27,6 +26,7 @@ trait TitleProps extends js.Object {
   var editable: js.UndefOr[Boolean | EditConfig] = js.undefined
   var ellipsis: js.UndefOr[Boolean | EllipsisConfig] = js.undefined
   var id: js.UndefOr[String] = js.undefined
+  var keyboard: js.UndefOr[Boolean] = js.undefined
   var level: js.UndefOr[`1` | `2` | `3` | `4`] = js.undefined
   var mark: js.UndefOr[Boolean] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
@@ -60,7 +60,7 @@ object TitleProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -95,6 +95,10 @@ object TitleProps {
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteId: Self = this.set("id", js.undefined)
+    @scala.inline
+    def setKeyboard(value: Boolean): Self = this.set("keyboard", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKeyboard: Self = this.set("keyboard", js.undefined)
     @scala.inline
     def setLevel(value: `1` | `2` | `3` | `4`): Self = this.set("level", value.asInstanceOf[js.Any])
     @scala.inline

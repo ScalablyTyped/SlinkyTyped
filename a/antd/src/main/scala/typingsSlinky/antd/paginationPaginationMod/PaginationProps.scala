@@ -1,6 +1,5 @@
 package typingsSlinky.antd.paginationPaginationMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.GoButton
 import typingsSlinky.antd.antdStrings.`jump-next`
@@ -26,7 +25,7 @@ trait PaginationProps extends js.Object {
       /* page */ Double, 
       /* type */ page | prev | next | `jump-prev` | `jump-next`, 
       /* originalElement */ ReactElement, 
-      TagMod[Any]
+      ReactElement
     ]
   ] = js.undefined
   var locale: js.UndefOr[js.Object] = js.undefined
@@ -43,7 +42,7 @@ trait PaginationProps extends js.Object {
   var showSizeChanger: js.UndefOr[Boolean] = js.undefined
   var showTitle: js.UndefOr[Boolean] = js.undefined
   var showTotal: js.UndefOr[
-    js.Function2[/* total */ Double, /* range */ js.Tuple2[Double, Double], TagMod[Any]]
+    js.Function2[/* total */ Double, /* range */ js.Tuple2[Double, Double], ReactElement]
   ] = js.undefined
   var simple: js.UndefOr[Boolean] = js.undefined
   var size: js.UndefOr[typingsSlinky.antd.antdStrings.default | small] = js.undefined
@@ -94,7 +93,7 @@ object PaginationProps {
     def deleteHideOnSinglePage: Self = this.set("hideOnSinglePage", js.undefined)
     @scala.inline
     def setItemRender(
-      value: (/* page */ Double, /* type */ page | prev | next | `jump-prev` | `jump-next`, /* originalElement */ ReactElement) => TagMod[Any]
+      value: (/* page */ Double, /* type */ page | prev | next | `jump-prev` | `jump-next`, /* originalElement */ ReactElement) => ReactElement
     ): Self = this.set("itemRender", js.Any.fromFunction3(value))
     @scala.inline
     def deleteItemRender: Self = this.set("itemRender", js.undefined)
@@ -151,7 +150,7 @@ object PaginationProps {
     @scala.inline
     def deleteShowTitle: Self = this.set("showTitle", js.undefined)
     @scala.inline
-    def setShowTotal(value: (/* total */ Double, /* range */ js.Tuple2[Double, Double]) => TagMod[Any]): Self = this.set("showTotal", js.Any.fromFunction2(value))
+    def setShowTotal(value: (/* total */ Double, /* range */ js.Tuple2[Double, Double]) => ReactElement): Self = this.set("showTotal", js.Any.fromFunction2(value))
     @scala.inline
     def deleteShowTotal: Self = this.set("showTotal", js.undefined)
     @scala.inline

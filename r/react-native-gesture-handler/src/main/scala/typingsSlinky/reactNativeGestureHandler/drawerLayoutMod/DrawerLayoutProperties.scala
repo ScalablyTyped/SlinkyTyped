@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeGestureHandler.drawerLayoutMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.reactNative.mod.Animated.Value
 import typingsSlinky.reactNative.mod.StatusBarAnimation
 import typingsSlinky.reactNative.mod.StyleProp
@@ -26,12 +26,12 @@ trait DrawerLayoutProperties extends js.Object {
   var overlayColor: js.UndefOr[String] = js.undefined
   var statusBarAnimation: js.UndefOr[StatusBarAnimation] = js.undefined
   var useNativeAnimations: js.UndefOr[Boolean] = js.undefined
-  def renderNavigationView(progressAnimatedValue: Value): TagMod[Any]
+  def renderNavigationView(progressAnimatedValue: Value): ReactElement
 }
 
 object DrawerLayoutProperties {
   @scala.inline
-  def apply(renderNavigationView: Value => TagMod[Any]): DrawerLayoutProperties = {
+  def apply(renderNavigationView: Value => ReactElement): DrawerLayoutProperties = {
     val __obj = js.Dynamic.literal(renderNavigationView = js.Any.fromFunction1(renderNavigationView))
     __obj.asInstanceOf[DrawerLayoutProperties]
   }
@@ -47,7 +47,7 @@ object DrawerLayoutProperties {
         x
     }
     @scala.inline
-    def setRenderNavigationView(value: Value => TagMod[Any]): Self = this.set("renderNavigationView", js.Any.fromFunction1(value))
+    def setRenderNavigationView(value: Value => ReactElement): Self = this.set("renderNavigationView", js.Any.fromFunction1(value))
     @scala.inline
     def setContentContainerStyle(value: StyleProp[ViewStyle]): Self = this.set("contentContainerStyle", value.asInstanceOf[js.Any])
     @scala.inline

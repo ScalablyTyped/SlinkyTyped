@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "d3-brush"
-version := "1.1-dt-20200515Z-839013"
+version := "1.1-dt-20200605Z-b1b123"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

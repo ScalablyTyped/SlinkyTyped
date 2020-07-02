@@ -1,6 +1,5 @@
 package typingsSlinky.semanticUiReact.transitionTransitionMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.semanticUiReact.genericMod.SemanticTRANSITIONS
 import scala.scalajs.js
@@ -11,7 +10,7 @@ trait StrictTransitionProps extends js.Object {
   /** Named animation event to used. Must be defined in CSS. */
   var animation: js.UndefOr[SemanticTRANSITIONS | String] = js.undefined
   /** Primary content. */
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   /** Whether it is directional animation event or not. Use it only for custom transitions. */
   var directional: js.UndefOr[Boolean] = js.undefined
   /** Duration of the CSS transition animation in milliseconds. */
@@ -80,7 +79,7 @@ object StrictTransitionProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline

@@ -1,14 +1,13 @@
 package typingsSlinky.rcPicker.headerMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait HeaderProps extends js.Object {
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
-  var nextIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
+  var nextIcon: js.UndefOr[ReactElement] = js.undefined
   /** Next one step */
   var onNext: js.UndefOr[js.Function0[Unit]] = js.undefined
   /** Last one step */
@@ -18,9 +17,9 @@ trait HeaderProps extends js.Object {
   /** Last multiple steps */
   var onSuperPrev: js.UndefOr[js.Function0[Unit]] = js.undefined
   var prefixCls: String
-  var prevIcon: js.UndefOr[TagMod[Any]] = js.undefined
-  var superNextIcon: js.UndefOr[TagMod[Any]] = js.undefined
-  var superPrevIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var prevIcon: js.UndefOr[ReactElement] = js.undefined
+  var superNextIcon: js.UndefOr[ReactElement] = js.undefined
+  var superPrevIcon: js.UndefOr[ReactElement] = js.undefined
 }
 
 object HeaderProps {
@@ -45,13 +44,13 @@ object HeaderProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
     def setNextIconReactElement(value: ReactElement): Self = this.set("nextIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setNextIcon(value: TagMod[Any]): Self = this.set("nextIcon", value.asInstanceOf[js.Any])
+    def setNextIcon(value: ReactElement): Self = this.set("nextIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteNextIcon: Self = this.set("nextIcon", js.undefined)
     @scala.inline
@@ -73,19 +72,19 @@ object HeaderProps {
     @scala.inline
     def setPrevIconReactElement(value: ReactElement): Self = this.set("prevIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setPrevIcon(value: TagMod[Any]): Self = this.set("prevIcon", value.asInstanceOf[js.Any])
+    def setPrevIcon(value: ReactElement): Self = this.set("prevIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePrevIcon: Self = this.set("prevIcon", js.undefined)
     @scala.inline
     def setSuperNextIconReactElement(value: ReactElement): Self = this.set("superNextIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSuperNextIcon(value: TagMod[Any]): Self = this.set("superNextIcon", value.asInstanceOf[js.Any])
+    def setSuperNextIcon(value: ReactElement): Self = this.set("superNextIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSuperNextIcon: Self = this.set("superNextIcon", js.undefined)
     @scala.inline
     def setSuperPrevIconReactElement(value: ReactElement): Self = this.set("superPrevIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSuperPrevIcon(value: TagMod[Any]): Self = this.set("superPrevIcon", value.asInstanceOf[js.Any])
+    def setSuperPrevIcon(value: ReactElement): Self = this.set("superPrevIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSuperPrevIcon: Self = this.set("superPrevIcon", js.undefined)
   }

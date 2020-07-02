@@ -1,6 +1,5 @@
 package typingsSlinky.reactSlick.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -30,7 +29,7 @@ object ReactSlick {
     @scala.inline
     def afterChange(value: /* currentSlide */ Double => Unit): this.type = set("afterChange", js.Any.fromFunction1(value))
     @scala.inline
-    def appendDots(value: /* dots */ TagMod[Any] => ReactElement): this.type = set("appendDots", js.Any.fromFunction1(value))
+    def appendDots(value: /* dots */ ReactElement => ReactElement): this.type = set("appendDots", js.Any.fromFunction1(value))
     @scala.inline
     def arrows(value: Boolean): this.type = set("arrows", value.asInstanceOf[js.Any])
     @scala.inline

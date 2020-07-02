@@ -10,12 +10,12 @@ trait CascaderState extends js.Object {
   var inputValue: String
   var popupVisible: js.UndefOr[Boolean] = js.undefined
   var prevProps: CascaderProps
-  var value: js.Array[String]
+  var value: CascaderValueType
 }
 
 object CascaderState {
   @scala.inline
-  def apply(inputFocused: Boolean, inputValue: String, prevProps: CascaderProps, value: js.Array[String]): CascaderState = {
+  def apply(inputFocused: Boolean, inputValue: String, prevProps: CascaderProps, value: CascaderValueType): CascaderState = {
     val __obj = js.Dynamic.literal(inputFocused = inputFocused.asInstanceOf[js.Any], inputValue = inputValue.asInstanceOf[js.Any], prevProps = prevProps.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[CascaderState]
   }
@@ -37,7 +37,7 @@ object CascaderState {
     @scala.inline
     def setPrevProps(value: CascaderProps): Self = this.set("prevProps", value.asInstanceOf[js.Any])
     @scala.inline
-    def setValue(value: js.Array[String]): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValue(value: CascaderValueType): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def setFlattenOptions(value: js.Array[js.Array[CascaderOptionType]]): Self = this.set("flattenOptions", value.asInstanceOf[js.Any])
     @scala.inline

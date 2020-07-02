@@ -1,6 +1,5 @@
 package typingsSlinky.rcFieldForm.fieldMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcFieldForm.anon.Source
 import typingsSlinky.rcFieldForm.interfaceMod.EventArgs
@@ -19,12 +18,14 @@ import scala.scalajs.js.annotation._
 /* Inlined parent std.Omit<rc-field-form.rc-field-form/es/Field.InternalFieldProps, 'name'> */
 trait FieldProps extends js.Object {
   var children: js.UndefOr[
-    ReactElement | (js.Function3[/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance, TagMod[Any]])
+    ReactElement | (js.Function3[/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance, ReactElement])
   ] = js.undefined
   var dependencies: js.UndefOr[js.Array[NamePath]] = js.undefined
   var getValueFromEvent: js.UndefOr[js.Function1[/* args */ EventArgs, StoreValue]] = js.undefined
   var getValueProps: js.UndefOr[js.Function1[/* value */ StoreValue, js.Object]] = js.undefined
   var initialValue: js.UndefOr[js.Any] = js.undefined
+  /** @private Passed by Form.List props. */
+  var isListField: js.UndefOr[Boolean] = js.undefined
   var messageVariables: js.UndefOr[Record[String, String]] = js.undefined
   var name: js.UndefOr[NamePath] = js.undefined
   var normalize: js.UndefOr[
@@ -59,10 +60,10 @@ object FieldProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildrenFunction3(value: (/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance) => TagMod[Any]): Self = this.set("children", js.Any.fromFunction3(value))
+    def setChildrenFunction3(value: (/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance) => ReactElement): Self = this.set("children", js.Any.fromFunction3(value))
     @scala.inline
     def setChildren(
-      value: ReactElement | (js.Function3[/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance, TagMod[Any]])
+      value: ReactElement | (js.Function3[/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance, ReactElement])
     ): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
@@ -82,6 +83,10 @@ object FieldProps {
     def setInitialValue(value: js.Any): Self = this.set("initialValue", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteInitialValue: Self = this.set("initialValue", js.undefined)
+    @scala.inline
+    def setIsListField(value: Boolean): Self = this.set("isListField", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIsListField: Self = this.set("isListField", js.undefined)
     @scala.inline
     def setMessageVariables(value: Record[String, String]): Self = this.set("messageVariables", value.asInstanceOf[js.Any])
     @scala.inline

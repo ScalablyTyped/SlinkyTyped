@@ -1,6 +1,6 @@
 package typingsSlinky.antd.mod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.Spinning
 import typingsSlinky.antd.spinMod.SpinProps
 import typingsSlinky.antd.spinMod.default
@@ -19,6 +19,6 @@ class Spin protected () extends default {
 @js.native
 object Spin extends js.Object {
   var defaultProps: Spinning = js.native
-  def setDefaultIndicator(indicator: TagMod[Any]): Unit = js.native
+  def setDefaultIndicator(indicator: ReactElement): Unit = js.native
 }
 

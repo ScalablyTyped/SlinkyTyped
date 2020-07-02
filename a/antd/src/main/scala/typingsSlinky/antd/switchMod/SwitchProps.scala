@@ -1,7 +1,6 @@
 package typingsSlinky.antd.switchMod
 
 import org.scalajs.dom.raw.MouseEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -11,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait SwitchProps extends js.Object {
   var autoFocus: js.UndefOr[Boolean] = js.undefined
   var checked: js.UndefOr[Boolean] = js.undefined
-  var checkedChildren: js.UndefOr[TagMod[Any]] = js.undefined
+  var checkedChildren: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var defaultChecked: js.UndefOr[Boolean] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
@@ -22,7 +21,7 @@ trait SwitchProps extends js.Object {
   var size: js.UndefOr[SwitchSize] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
   var title: js.UndefOr[String] = js.undefined
-  var unCheckedChildren: js.UndefOr[TagMod[Any]] = js.undefined
+  var unCheckedChildren: js.UndefOr[ReactElement] = js.undefined
 }
 
 object SwitchProps {
@@ -53,7 +52,7 @@ object SwitchProps {
     @scala.inline
     def setCheckedChildrenReactElement(value: ReactElement): Self = this.set("checkedChildren", value.asInstanceOf[js.Any])
     @scala.inline
-    def setCheckedChildren(value: TagMod[Any]): Self = this.set("checkedChildren", value.asInstanceOf[js.Any])
+    def setCheckedChildren(value: ReactElement): Self = this.set("checkedChildren", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCheckedChildren: Self = this.set("checkedChildren", js.undefined)
     @scala.inline
@@ -99,7 +98,7 @@ object SwitchProps {
     @scala.inline
     def setUnCheckedChildrenReactElement(value: ReactElement): Self = this.set("unCheckedChildren", value.asInstanceOf[js.Any])
     @scala.inline
-    def setUnCheckedChildren(value: TagMod[Any]): Self = this.set("unCheckedChildren", value.asInstanceOf[js.Any])
+    def setUnCheckedChildren(value: ReactElement): Self = this.set("unCheckedChildren", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteUnCheckedChildren: Self = this.set("unCheckedChildren", js.undefined)
   }

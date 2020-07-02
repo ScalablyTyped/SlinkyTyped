@@ -1,14 +1,13 @@
 package typingsSlinky.reactNavigationDrawer.typesMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait NavigationDrawerOptions extends js.Object {
-  var drawerIcon: js.UndefOr[TagMod[Any] | (js.Function1[/* props */ DrawerIconProps, TagMod[Any]])] = js.undefined
-  var drawerLabel: js.UndefOr[TagMod[Any] | (js.Function1[/* props */ DrawerLabelProps, TagMod[Any]])] = js.undefined
+  var drawerIcon: js.UndefOr[ReactElement | (js.Function1[/* props */ DrawerIconProps, ReactElement])] = js.undefined
+  var drawerLabel: js.UndefOr[ReactElement | (js.Function1[/* props */ DrawerLabelProps, ReactElement])] = js.undefined
   var drawerLockMode: js.UndefOr[DrawerLockMode] = js.undefined
   var title: js.UndefOr[String] = js.undefined
 }
@@ -33,17 +32,17 @@ object NavigationDrawerOptions {
     @scala.inline
     def setDrawerIconReactElement(value: ReactElement): Self = this.set("drawerIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setDrawerIconFunction1(value: /* props */ DrawerIconProps => TagMod[Any]): Self = this.set("drawerIcon", js.Any.fromFunction1(value))
+    def setDrawerIconFunction1(value: /* props */ DrawerIconProps => ReactElement): Self = this.set("drawerIcon", js.Any.fromFunction1(value))
     @scala.inline
-    def setDrawerIcon(value: TagMod[Any] | (js.Function1[/* props */ DrawerIconProps, TagMod[Any]])): Self = this.set("drawerIcon", value.asInstanceOf[js.Any])
+    def setDrawerIcon(value: ReactElement | (js.Function1[/* props */ DrawerIconProps, ReactElement])): Self = this.set("drawerIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDrawerIcon: Self = this.set("drawerIcon", js.undefined)
     @scala.inline
     def setDrawerLabelReactElement(value: ReactElement): Self = this.set("drawerLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def setDrawerLabelFunction1(value: /* props */ DrawerLabelProps => TagMod[Any]): Self = this.set("drawerLabel", js.Any.fromFunction1(value))
+    def setDrawerLabelFunction1(value: /* props */ DrawerLabelProps => ReactElement): Self = this.set("drawerLabel", js.Any.fromFunction1(value))
     @scala.inline
-    def setDrawerLabel(value: TagMod[Any] | (js.Function1[/* props */ DrawerLabelProps, TagMod[Any]])): Self = this.set("drawerLabel", value.asInstanceOf[js.Any])
+    def setDrawerLabel(value: ReactElement | (js.Function1[/* props */ DrawerLabelProps, ReactElement])): Self = this.set("drawerLabel", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDrawerLabel: Self = this.set("drawerLabel", js.undefined)
     @scala.inline

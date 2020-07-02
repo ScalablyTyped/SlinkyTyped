@@ -1,6 +1,5 @@
 package typingsSlinky.antd.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -27,7 +26,7 @@ object TreeSelect {
     @scala.inline
     def suffixIconReactElement(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def suffixIcon(value: TagMod[Any]): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
+    def suffixIcon(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
   }
   
   def withProps[T](p: TreeSelectProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))

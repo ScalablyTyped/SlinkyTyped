@@ -1,6 +1,5 @@
 package typingsSlinky.materialUi.MaterialUI
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import typingsSlinky.materialUi.materialUiStrings.after
@@ -18,7 +17,7 @@ import scala.scalajs.js.annotation._
   var backgroundColor: js.UndefOr[String] = js.undefined
   var centerRipple: js.UndefOr[Boolean] = js.undefined
   var className: js.UndefOr[String] = js.undefined
-  var containerElement: js.UndefOr[TagMod[Any] | String] = js.undefined
+  var containerElement: js.UndefOr[ReactElement | String] = js.undefined
   var disableFocusRipple: js.UndefOr[Boolean] = js.undefined
   var disableKeyboardFocus: js.UndefOr[Boolean] = js.undefined
   var disableTouchRipple: js.UndefOr[Boolean] = js.undefined
@@ -28,9 +27,9 @@ import scala.scalajs.js.annotation._
   var fullWidth: js.UndefOr[Boolean] = js.undefined
   var hoverColor: js.UndefOr[String] = js.undefined
   var href: js.UndefOr[String] = js.undefined
-  var icon: js.UndefOr[TagMod[Any]] = js.undefined
+  var icon: js.UndefOr[ReactElement] = js.undefined
   var keyboardFocused: js.UndefOr[Boolean] = js.undefined
-  var label: js.UndefOr[TagMod[Any]] = js.undefined
+  var label: js.UndefOr[ReactElement] = js.undefined
   var labelPosition: js.UndefOr[before | after] = js.undefined
   var labelStyle: js.UndefOr[CSSProperties] = js.undefined
   var linkButton: js.UndefOr[Boolean] = js.undefined
@@ -80,7 +79,7 @@ object FlatButtonProps {
     @scala.inline
     def setContainerElementReactElement(value: ReactElement): Self = this.set("containerElement", value.asInstanceOf[js.Any])
     @scala.inline
-    def setContainerElement(value: TagMod[Any] | String): Self = this.set("containerElement", value.asInstanceOf[js.Any])
+    def setContainerElement(value: ReactElement | String): Self = this.set("containerElement", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteContainerElement: Self = this.set("containerElement", js.undefined)
     @scala.inline
@@ -122,7 +121,7 @@ object FlatButtonProps {
     @scala.inline
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setIcon(value: TagMod[Any]): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
     @scala.inline
@@ -132,7 +131,7 @@ object FlatButtonProps {
     @scala.inline
     def setLabelReactElement(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def setLabel(value: TagMod[Any]): Self = this.set("label", value.asInstanceOf[js.Any])
+    def setLabel(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)
     @scala.inline

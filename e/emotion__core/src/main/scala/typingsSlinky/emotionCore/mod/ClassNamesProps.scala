@@ -1,17 +1,17 @@
 package typingsSlinky.emotionCore.mod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait ClassNamesProps[Theme] extends js.Object {
-  def children(content: ClassNamesContent[Theme]): TagMod[Any]
+  def children(content: ClassNamesContent[Theme]): ReactElement
 }
 
 object ClassNamesProps {
   @scala.inline
-  def apply[Theme](children: ClassNamesContent[Theme] => TagMod[Any]): ClassNamesProps[Theme] = {
+  def apply[Theme](children: ClassNamesContent[Theme] => ReactElement): ClassNamesProps[Theme] = {
     val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children))
     __obj.asInstanceOf[ClassNamesProps[Theme]]
   }
@@ -27,7 +27,7 @@ object ClassNamesProps {
         x
     }
     @scala.inline
-    def setChildren(value: ClassNamesContent[Theme] => TagMod[Any]): Self = this.set("children", js.Any.fromFunction1(value))
+    def setChildren(value: ClassNamesContent[Theme] => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
   }
   
 }

@@ -1,7 +1,6 @@
 package typingsSlinky.semanticUiReact.labelLabelMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.ReactNodeArray
@@ -36,7 +35,7 @@ trait StrictLabelProps extends js.Object {
   /** A label can reduce its complexity. */
   var basic: js.UndefOr[Boolean] = js.undefined
   /** Primary content. */
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   /** A label can be circular. */
   var circular: js.UndefOr[Boolean] = js.undefined
   /** Additional classes. */
@@ -127,7 +126,7 @@ object StrictLabelProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -156,7 +155,7 @@ object StrictLabelProps {
     def setDetailReactElement(value: ReactElement): Self = this.set("detail", value.asInstanceOf[js.Any])
     @scala.inline
     def setDetailFunction3(
-      value: (/* component */ ReactType[LabelDetailProps], LabelDetailProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[LabelDetailProps], LabelDetailProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("detail", js.Any.fromFunction3(value))
     @scala.inline
     def setDetail(value: SemanticShorthandItem[LabelDetailProps]): Self = this.set("detail", value.asInstanceOf[js.Any])
@@ -178,7 +177,7 @@ object StrictLabelProps {
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def setIconFunction3(
-      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("icon", js.Any.fromFunction3(value))
     @scala.inline
     def setIcon(value: SemanticShorthandItem[IconProps]): Self = this.set("icon", value.asInstanceOf[js.Any])
@@ -208,7 +207,7 @@ object StrictLabelProps {
     def setRemoveIconReactElement(value: ReactElement): Self = this.set("removeIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def setRemoveIconFunction3(
-      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("removeIcon", js.Any.fromFunction3(value))
     @scala.inline
     def setRemoveIcon(value: SemanticShorthandItem[IconProps]): Self = this.set("removeIcon", value.asInstanceOf[js.Any])

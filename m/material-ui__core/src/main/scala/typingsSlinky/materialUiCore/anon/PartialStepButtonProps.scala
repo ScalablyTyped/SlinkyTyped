@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -157,7 +156,7 @@ trait PartialStepButtonProps extends js.Object {
   var autoSave: js.UndefOr[String] = js.native
   var buttonRef: js.UndefOr[Ref[_] | ReactRef[_]] = js.native
   var centerRipple: js.UndefOr[Boolean] = js.native
-  var children: js.UndefOr[TagMod[Any]] = js.native
+  var children: js.UndefOr[ReactElement] = js.native
   var className: js.UndefOr[String] = js.native
   var classes: js.UndefOr[PartialClassNameMapStepBu] = js.native
   var color: js.UndefOr[String] = js.native
@@ -281,7 +280,7 @@ trait PartialStepButtonProps extends js.Object {
   var onVolumeChange: js.UndefOr[ReactEventHandler[HTMLElement]] = js.native
   var onWaiting: js.UndefOr[ReactEventHandler[HTMLElement]] = js.native
   var onWheel: js.UndefOr[WheelEventHandler[HTMLElement]] = js.native
-  var optional: js.UndefOr[TagMod[Any]] = js.native
+  var optional: js.UndefOr[ReactElement] = js.native
   var orientation: js.UndefOr[Orientation] = js.native
   var ping: js.UndefOr[String] = js.native
   var placeholder: js.UndefOr[String] = js.native
@@ -576,7 +575,7 @@ object PartialStepButtonProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -1088,7 +1087,7 @@ object PartialStepButtonProps {
     @scala.inline
     def setOptionalReactElement(value: ReactElement): Self = this.set("optional", value.asInstanceOf[js.Any])
     @scala.inline
-    def setOptional(value: TagMod[Any]): Self = this.set("optional", value.asInstanceOf[js.Any])
+    def setOptional(value: ReactElement): Self = this.set("optional", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOptional: Self = this.set("optional", js.undefined)
     @scala.inline

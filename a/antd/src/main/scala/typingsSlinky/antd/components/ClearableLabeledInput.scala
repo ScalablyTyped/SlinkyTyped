@@ -1,7 +1,6 @@
 package typingsSlinky.antd.components
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
@@ -27,11 +26,11 @@ object ClearableLabeledInput {
     @scala.inline
     def addonAfterReactElement(value: ReactElement): this.type = set("addonAfter", value.asInstanceOf[js.Any])
     @scala.inline
-    def addonAfter(value: TagMod[Any]): this.type = set("addonAfter", value.asInstanceOf[js.Any])
+    def addonAfter(value: ReactElement): this.type = set("addonAfter", value.asInstanceOf[js.Any])
     @scala.inline
     def addonBeforeReactElement(value: ReactElement): this.type = set("addonBefore", value.asInstanceOf[js.Any])
     @scala.inline
-    def addonBefore(value: TagMod[Any]): this.type = set("addonBefore", value.asInstanceOf[js.Any])
+    def addonBefore(value: ReactElement): this.type = set("addonBefore", value.asInstanceOf[js.Any])
     @scala.inline
     def allowClear(value: Boolean): this.type = set("allowClear", value.asInstanceOf[js.Any])
     @scala.inline
@@ -45,7 +44,7 @@ object ClearableLabeledInput {
     @scala.inline
     def prefixReactElement(value: ReactElement): this.type = set("prefix", value.asInstanceOf[js.Any])
     @scala.inline
-    def prefix(value: TagMod[Any]): this.type = set("prefix", value.asInstanceOf[js.Any])
+    def prefix(value: ReactElement): this.type = set("prefix", value.asInstanceOf[js.Any])
     @scala.inline
     def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
     @scala.inline
@@ -55,7 +54,7 @@ object ClearableLabeledInput {
     @scala.inline
     def suffixReactElement(value: ReactElement): this.type = set("suffix", value.asInstanceOf[js.Any])
     @scala.inline
-    def suffix(value: TagMod[Any]): this.type = set("suffix", value.asInstanceOf[js.Any])
+    def suffix(value: ReactElement): this.type = set("suffix", value.asInstanceOf[js.Any])
     @scala.inline
     def value(value: js.Any): this.type = set("value", value.asInstanceOf[js.Any])
   }

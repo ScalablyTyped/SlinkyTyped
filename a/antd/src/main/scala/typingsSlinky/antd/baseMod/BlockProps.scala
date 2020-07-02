@@ -12,6 +12,7 @@ trait BlockProps extends TypographyProps {
   var disabled: js.UndefOr[Boolean] = js.undefined
   var editable: js.UndefOr[Boolean | EditConfig] = js.undefined
   var ellipsis: js.UndefOr[Boolean | EllipsisConfig] = js.undefined
+  var keyboard: js.UndefOr[Boolean] = js.undefined
   var mark: js.UndefOr[Boolean] = js.undefined
   var strong: js.UndefOr[Boolean] = js.undefined
   var title: js.UndefOr[String] = js.undefined
@@ -60,6 +61,10 @@ object BlockProps {
     def setEllipsis(value: Boolean | EllipsisConfig): Self = this.set("ellipsis", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEllipsis: Self = this.set("ellipsis", js.undefined)
+    @scala.inline
+    def setKeyboard(value: Boolean): Self = this.set("keyboard", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteKeyboard: Self = this.set("keyboard", js.undefined)
     @scala.inline
     def setMark(value: Boolean): Self = this.set("mark", value.asInstanceOf[js.Any])
     @scala.inline

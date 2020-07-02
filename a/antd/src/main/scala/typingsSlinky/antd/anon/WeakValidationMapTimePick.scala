@@ -3,7 +3,7 @@ package typingsSlinky.antd.anon
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
 import typingsSlinky.antd.antdStrings.additions
@@ -62,7 +62,7 @@ import scala.scalajs.js.annotation._
 
 /* Inlined react.react.WeakValidationMap<antd.antd/lib/time-picker.TimePickerProps & react.react.RefAttributes<any>> */
 trait WeakValidationMapTimePick extends js.Object {
-  var addon: js.UndefOr[Validator[js.UndefOr[js.Function0[TagMod[Any]] | Null]]] = js.undefined
+  var addon: js.UndefOr[Validator[js.UndefOr[js.Function0[ReactElement] | Null]]] = js.undefined
   var allowClear: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
   var `aria-activedescendant`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
   var `aria-atomic`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
@@ -118,7 +118,7 @@ trait WeakValidationMapTimePick extends js.Object {
   var autoFocus: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
   var bordered: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
   var className: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
-  var clearIcon: js.UndefOr[Validator[js.UndefOr[Null | TagMod[Any]]]] = js.undefined
+  var clearIcon: js.UndefOr[Validator[js.UndefOr[Null | ReactElement]]] = js.undefined
   var dateRender: js.UndefOr[Validator[js.UndefOr[DateRender[Moment] | Null]]] = js.undefined
   var defaultOpen: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
   var defaultOpenValue: js.UndefOr[Validator[js.UndefOr[Moment | Null]]] = js.undefined
@@ -180,7 +180,7 @@ trait WeakValidationMapTimePick extends js.Object {
   var popupStyle: js.UndefOr[Validator[js.UndefOr[CSSProperties | Null]]] = js.undefined
   var prefixCls: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
   var ref: js.UndefOr[Validator[js.UndefOr[Null | Ref[_]]]] = js.undefined
-  var renderExtraFooter: js.UndefOr[Validator[js.UndefOr[(js.Function1[/* mode */ PanelMode, TagMod[Any]]) | Null]]] = js.undefined
+  var renderExtraFooter: js.UndefOr[Validator[js.UndefOr[(js.Function1[/* mode */ PanelMode, ReactElement]) | Null]]] = js.undefined
   var role: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
   var secondStep: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
   var showHour: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
@@ -188,7 +188,7 @@ trait WeakValidationMapTimePick extends js.Object {
   var showSecond: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
   var size: js.UndefOr[Validator[js.UndefOr[Null | SizeType]]] = js.undefined
   var style: js.UndefOr[Validator[js.UndefOr[CSSProperties | Null]]] = js.undefined
-  var suffixIcon: js.UndefOr[Validator[js.UndefOr[Null | TagMod[Any]]]] = js.undefined
+  var suffixIcon: js.UndefOr[Validator[js.UndefOr[Null | ReactElement]]] = js.undefined
   var tabIndex: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
   var transitionName: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
   var use12Hours: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
@@ -213,7 +213,7 @@ object WeakValidationMapTimePick {
         x
     }
     @scala.inline
-    def setAddon(value: Validator[js.UndefOr[js.Function0[TagMod[Any]] | Null]]): Self = this.set("addon", value.asInstanceOf[js.Any])
+    def setAddon(value: Validator[js.UndefOr[js.Function0[ReactElement] | Null]]): Self = this.set("addon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAddon: Self = this.set("addon", js.undefined)
     @scala.inline
@@ -429,7 +429,7 @@ object WeakValidationMapTimePick {
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
     @scala.inline
-    def setClearIcon(value: Validator[js.UndefOr[Null | TagMod[Any]]]): Self = this.set("clearIcon", value.asInstanceOf[js.Any])
+    def setClearIcon(value: Validator[js.UndefOr[Null | ReactElement]]): Self = this.set("clearIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteClearIcon: Self = this.set("clearIcon", js.undefined)
     @scala.inline
@@ -623,7 +623,7 @@ object WeakValidationMapTimePick {
     @scala.inline
     def deleteRef: Self = this.set("ref", js.undefined)
     @scala.inline
-    def setRenderExtraFooter(value: Validator[js.UndefOr[(js.Function1[/* mode */ PanelMode, TagMod[Any]]) | Null]]): Self = this.set("renderExtraFooter", value.asInstanceOf[js.Any])
+    def setRenderExtraFooter(value: Validator[js.UndefOr[(js.Function1[/* mode */ PanelMode, ReactElement]) | Null]]): Self = this.set("renderExtraFooter", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRenderExtraFooter: Self = this.set("renderExtraFooter", js.undefined)
     @scala.inline
@@ -655,7 +655,7 @@ object WeakValidationMapTimePick {
     @scala.inline
     def deleteStyle: Self = this.set("style", js.undefined)
     @scala.inline
-    def setSuffixIcon(value: Validator[js.UndefOr[Null | TagMod[Any]]]): Self = this.set("suffixIcon", value.asInstanceOf[js.Any])
+    def setSuffixIcon(value: Validator[js.UndefOr[Null | ReactElement]]): Self = this.set("suffixIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSuffixIcon: Self = this.set("suffixIcon", js.undefined)
     @scala.inline

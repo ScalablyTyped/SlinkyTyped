@@ -1,6 +1,5 @@
 package typingsSlinky.antd.badgeMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.colorsMod.PresetColorType
 import typingsSlinky.antd.colorsMod.PresetStatusColorType
@@ -14,7 +13,7 @@ trait BadgeProps extends js.Object {
   var className: js.UndefOr[String] = js.undefined
   var color: js.UndefOr[LiteralUnion[PresetColorType, String]] = js.undefined
   /** Number to show in badge */
-  var count: js.UndefOr[TagMod[Any]] = js.undefined
+  var count: js.UndefOr[ReactElement] = js.undefined
   /** whether to show red dot without number */
   var dot: js.UndefOr[Boolean] = js.undefined
   var offset: js.UndefOr[js.Tuple2[Double | String, Double | String]] = js.undefined
@@ -25,7 +24,7 @@ trait BadgeProps extends js.Object {
   var showZero: js.UndefOr[Boolean] = js.undefined
   var status: js.UndefOr[PresetStatusColorType] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
-  var text: js.UndefOr[TagMod[Any]] = js.undefined
+  var text: js.UndefOr[ReactElement] = js.undefined
   var title: js.UndefOr[String] = js.undefined
 }
 
@@ -57,7 +56,7 @@ object BadgeProps {
     @scala.inline
     def setCountReactElement(value: ReactElement): Self = this.set("count", value.asInstanceOf[js.Any])
     @scala.inline
-    def setCount(value: TagMod[Any]): Self = this.set("count", value.asInstanceOf[js.Any])
+    def setCount(value: ReactElement): Self = this.set("count", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCount: Self = this.set("count", js.undefined)
     @scala.inline
@@ -95,7 +94,7 @@ object BadgeProps {
     @scala.inline
     def setTextReactElement(value: ReactElement): Self = this.set("text", value.asInstanceOf[js.Any])
     @scala.inline
-    def setText(value: TagMod[Any]): Self = this.set("text", value.asInstanceOf[js.Any])
+    def setText(value: ReactElement): Self = this.set("text", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteText: Self = this.set("text", js.undefined)
     @scala.inline

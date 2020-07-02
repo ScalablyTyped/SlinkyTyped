@@ -1,6 +1,5 @@
 package typingsSlinky.semanticUiReact.imageImageMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.react.mod.ReactType
@@ -27,7 +26,7 @@ trait StrictImageProps extends js.Object {
   /** An image can appear centered in a content block. */
   var centered: js.UndefOr[Boolean] = js.undefined
   /** Primary content. */
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   /** An image may appear circular. */
   var circular: js.UndefOr[Boolean] = js.undefined
   /** Additional classes. */
@@ -100,7 +99,7 @@ object StrictImageProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -121,7 +120,7 @@ object StrictImageProps {
     def setDimmerReactElement(value: ReactElement): Self = this.set("dimmer", value.asInstanceOf[js.Any])
     @scala.inline
     def setDimmerFunction3(
-      value: (/* component */ ReactType[DimmerProps], DimmerProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[DimmerProps], DimmerProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("dimmer", js.Any.fromFunction3(value))
     @scala.inline
     def setDimmer(value: SemanticShorthandItem[DimmerProps]): Self = this.set("dimmer", value.asInstanceOf[js.Any])
@@ -155,7 +154,7 @@ object StrictImageProps {
     def setLabelReactElement(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def setLabelFunction3(
-      value: (/* component */ ReactType[LabelProps], LabelProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[LabelProps], LabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("label", js.Any.fromFunction3(value))
     @scala.inline
     def setLabel(value: SemanticShorthandItem[LabelProps]): Self = this.set("label", value.asInstanceOf[js.Any])

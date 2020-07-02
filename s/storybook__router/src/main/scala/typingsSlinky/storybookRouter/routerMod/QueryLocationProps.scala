@@ -1,17 +1,17 @@
 package typingsSlinky.storybookRouter.routerMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait QueryLocationProps extends js.Object {
-  def children(renderData: RenderData): TagMod[Any]
+  def children(renderData: RenderData): ReactElement
 }
 
 object QueryLocationProps {
   @scala.inline
-  def apply(children: RenderData => TagMod[Any]): QueryLocationProps = {
+  def apply(children: RenderData => ReactElement): QueryLocationProps = {
     val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children))
     __obj.asInstanceOf[QueryLocationProps]
   }
@@ -27,7 +27,7 @@ object QueryLocationProps {
         x
     }
     @scala.inline
-    def setChildren(value: RenderData => TagMod[Any]): Self = this.set("children", js.Any.fromFunction1(value))
+    def setChildren(value: RenderData => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
   }
   
 }

@@ -1,7 +1,6 @@
 package typingsSlinky.materialUi.MaterialUI.List
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.materialUi.MaterialUI.EnhancedButtonProps
 import typingsSlinky.react.mod.CSSProperties
@@ -24,13 +23,13 @@ trait ListItemProps extends EnhancedButtonProps {
   var nestedListStyle: js.UndefOr[CSSProperties] = js.undefined
   var onNestedListToggle: js.UndefOr[js.Function1[ReactComponentClass[ListItemProps], Unit]] = js.undefined
   var open: js.UndefOr[Boolean] = js.undefined
-  var primaryText: js.UndefOr[TagMod[Any]] = js.undefined
+  var primaryText: js.UndefOr[ReactElement] = js.undefined
   var primaryTogglesNestedList: js.UndefOr[Boolean] = js.undefined
   var rightAvatar: js.UndefOr[ReactElement] = js.undefined
   var rightIcon: js.UndefOr[ReactElement] = js.undefined
   var rightIconButton: js.UndefOr[ReactElement] = js.undefined
   var rightToggle: js.UndefOr[ReactElement] = js.undefined
-  var secondaryText: js.UndefOr[TagMod[Any]] = js.undefined
+  var secondaryText: js.UndefOr[ReactElement] = js.undefined
   var secondaryTextLines: js.UndefOr[Double] = js.undefined
   var value: js.UndefOr[js.Any] = js.undefined
 }
@@ -107,7 +106,7 @@ object ListItemProps {
     @scala.inline
     def setPrimaryTextReactElement(value: ReactElement): Self = this.set("primaryText", value.asInstanceOf[js.Any])
     @scala.inline
-    def setPrimaryText(value: TagMod[Any]): Self = this.set("primaryText", value.asInstanceOf[js.Any])
+    def setPrimaryText(value: ReactElement): Self = this.set("primaryText", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePrimaryText: Self = this.set("primaryText", js.undefined)
     @scala.inline
@@ -133,7 +132,7 @@ object ListItemProps {
     @scala.inline
     def setSecondaryTextReactElement(value: ReactElement): Self = this.set("secondaryText", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSecondaryText(value: TagMod[Any]): Self = this.set("secondaryText", value.asInstanceOf[js.Any])
+    def setSecondaryText(value: ReactElement): Self = this.set("secondaryText", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSecondaryText: Self = this.set("secondaryText", js.undefined)
     @scala.inline

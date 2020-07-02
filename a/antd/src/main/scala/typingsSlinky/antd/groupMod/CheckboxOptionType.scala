@@ -1,6 +1,6 @@
 package typingsSlinky.antd.groupMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.checkboxCheckboxMod.CheckboxChangeEvent
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 
 trait CheckboxOptionType extends js.Object {
   var disabled: js.UndefOr[Boolean] = js.undefined
-  var label: TagMod[Any]
+  var label: ReactElement
   var onChange: js.UndefOr[js.Function1[/* e */ CheckboxChangeEvent, Unit]] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
   var value: CheckboxValueType
@@ -39,7 +39,7 @@ object CheckboxOptionType {
     @scala.inline
     def deleteDisabled: Self = this.set("disabled", js.undefined)
     @scala.inline
-    def setLabel(value: TagMod[Any]): Self = this.set("label", value.asInstanceOf[js.Any])
+    def setLabel(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)
     @scala.inline

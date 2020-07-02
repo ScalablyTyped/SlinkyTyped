@@ -1,6 +1,5 @@
 package typingsSlinky.rcFieldForm.listMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcFieldForm.interfaceMod.NamePath
 import scala.scalajs.js
@@ -9,11 +8,7 @@ import scala.scalajs.js.annotation._
 
 trait ListProps extends js.Object {
   var children: js.UndefOr[
-    js.Function2[
-      /* fields */ js.Array[ListField], 
-      /* operations */ ListOperations, 
-      ReactElement | TagMod[Any]
-    ]
+    js.Function2[/* fields */ js.Array[ListField], /* operations */ ListOperations, ReactElement]
   ] = js.undefined
   var name: NamePath
 }
@@ -38,9 +33,7 @@ object ListProps {
     @scala.inline
     def setName(value: NamePath): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(
-      value: (/* fields */ js.Array[ListField], /* operations */ ListOperations) => ReactElement | TagMod[Any]
-    ): Self = this.set("children", js.Any.fromFunction2(value))
+    def setChildren(value: (/* fields */ js.Array[ListField], /* operations */ ListOperations) => ReactElement): Self = this.set("children", js.Any.fromFunction2(value))
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
   }

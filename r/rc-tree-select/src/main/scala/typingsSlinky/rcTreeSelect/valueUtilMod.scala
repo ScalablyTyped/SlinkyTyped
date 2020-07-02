@@ -1,6 +1,6 @@
 package typingsSlinky.rcTreeSelect
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.rcTreeSelect.anon.FilterOption
 import typingsSlinky.rcTreeSelect.interfaceMod.DataNode
 import typingsSlinky.rcTreeSelect.interfaceMod.DefaultValueType
@@ -22,8 +22,13 @@ object valueUtilMod extends js.Object {
   def getRawValueLabeled(
     values: js.Array[RawValueType],
     prevValue: DefaultValueType,
-    getEntityByValue: js.Function2[/* value */ RawValueType, /* skipType */ js.UndefOr[SkipType], FlattenDataNode],
-    getLabelProp: js.Function1[/* node */ DataNode, TagMod[Any]]
+    getEntityByValue: js.Function3[
+      /* value */ RawValueType, 
+      /* skipType */ js.UndefOr[SkipType], 
+      /* ignoreDisabledCheck */ js.UndefOr[Boolean], 
+      FlattenDataNode
+    ],
+    getLabelProp: js.Function1[/* node */ DataNode, ReactElement]
   ): js.Array[LabelValueType] = js.native
   def isCheckDisabled(node: DataNode): Boolean = js.native
   def isValueDisabled(value: RawValueType, options: js.Array[FlattenDataNode]): Boolean = js.native

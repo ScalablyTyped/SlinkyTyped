@@ -1,7 +1,7 @@
 package typingsSlinky.rcTable.bodyMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.rcTable.interfaceMod.GetComponentProps
 import typingsSlinky.rcTable.interfaceMod.GetRowKey
 import typingsSlinky.rcTable.interfaceMod.Key
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 trait BodyProps[RecordType] extends js.Object {
   var childrenColumnName: String
   var data: js.Array[RecordType]
-  var emptyNode: TagMod[Any]
+  var emptyNode: ReactElement
   var expandedKeys: Set[Key]
   var getRowKey: GetRowKey[RecordType]
   var measureColumnWidth: Boolean
@@ -62,7 +62,7 @@ object BodyProps {
     @scala.inline
     def setRowExpandable(value: RecordType => Boolean): Self = this.set("rowExpandable", js.Any.fromFunction1(value))
     @scala.inline
-    def setEmptyNode(value: TagMod[Any]): Self = this.set("emptyNode", value.asInstanceOf[js.Any])
+    def setEmptyNode(value: ReactElement): Self = this.set("emptyNode", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEmptyNode: Self = this.set("emptyNode", js.undefined)
   }

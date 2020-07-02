@@ -1,6 +1,5 @@
 package typingsSlinky.materialUiCore.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -22,7 +21,7 @@ object NoSsr {
     @scala.inline
     def fallbackReactElement(value: ReactElement): this.type = set("fallback", value.asInstanceOf[js.Any])
     @scala.inline
-    def fallback(value: TagMod[Any]): this.type = set("fallback", value.asInstanceOf[js.Any])
+    def fallback(value: ReactElement): this.type = set("fallback", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: NoSsrProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

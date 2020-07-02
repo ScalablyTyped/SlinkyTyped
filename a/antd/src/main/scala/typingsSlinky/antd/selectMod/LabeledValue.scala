@@ -1,13 +1,13 @@
 package typingsSlinky.antd.selectMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait LabeledValue extends js.Object {
   var key: js.UndefOr[String] = js.undefined
-  var label: TagMod[Any]
+  var label: ReactElement
   var value: RawValue
 }
 
@@ -35,7 +35,7 @@ object LabeledValue {
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
     @scala.inline
-    def setLabel(value: TagMod[Any]): Self = this.set("label", value.asInstanceOf[js.Any])
+    def setLabel(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)
   }

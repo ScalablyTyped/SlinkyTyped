@@ -1,7 +1,6 @@
 package typingsSlinky.antd.libStepsMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.antdStrings.error
@@ -16,14 +15,14 @@ import scala.scalajs.js.annotation._
 
 trait StepProps extends js.Object {
   var className: js.UndefOr[String] = js.undefined
-  var description: js.UndefOr[TagMod[Any]] = js.undefined
+  var description: js.UndefOr[ReactElement] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
-  var icon: js.UndefOr[TagMod[Any]] = js.undefined
+  var icon: js.UndefOr[ReactElement] = js.undefined
   var onClick: js.UndefOr[MouseEventHandler[HTMLElement]] = js.undefined
   var status: js.UndefOr[wait | process | finish | error] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
-  var subTitle: js.UndefOr[TagMod[Any]] = js.undefined
-  var title: js.UndefOr[TagMod[Any]] = js.undefined
+  var subTitle: js.UndefOr[ReactElement] = js.undefined
+  var title: js.UndefOr[ReactElement] = js.undefined
 }
 
 object StepProps {
@@ -50,7 +49,7 @@ object StepProps {
     @scala.inline
     def setDescriptionReactElement(value: ReactElement): Self = this.set("description", value.asInstanceOf[js.Any])
     @scala.inline
-    def setDescription(value: TagMod[Any]): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setDescription(value: ReactElement): Self = this.set("description", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDescription: Self = this.set("description", js.undefined)
     @scala.inline
@@ -60,7 +59,7 @@ object StepProps {
     @scala.inline
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setIcon(value: TagMod[Any]): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
     @scala.inline
@@ -78,13 +77,13 @@ object StepProps {
     @scala.inline
     def setSubTitleReactElement(value: ReactElement): Self = this.set("subTitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSubTitle(value: TagMod[Any]): Self = this.set("subTitle", value.asInstanceOf[js.Any])
+    def setSubTitle(value: ReactElement): Self = this.set("subTitle", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSubTitle: Self = this.set("subTitle", js.undefined)
     @scala.inline
     def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
   }

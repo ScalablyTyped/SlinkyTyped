@@ -1,6 +1,5 @@
 package typingsSlinky.materialUi.MaterialUI.Stepper
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
@@ -15,7 +14,7 @@ trait StepButtonProps extends SharedEnhancedButtonProps[StepButton] {
   var active: js.UndefOr[Boolean] = js.undefined
   var completed: js.UndefOr[Boolean] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
-  var icon: js.UndefOr[TagMod[Any] | String | Double] = js.undefined
+  var icon: js.UndefOr[ReactElement | String | Double] = js.undefined
   var onMouseEnter: js.UndefOr[MouseEventHandler[js.Object]] = js.undefined
   var onMouseLeave: js.UndefOr[MouseEventHandler[js.Object]] = js.undefined
   var onTouchStart: js.UndefOr[TouchEventHandler[js.Object]] = js.undefined
@@ -53,7 +52,7 @@ object StepButtonProps {
     @scala.inline
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setIcon(value: TagMod[Any] | String | Double): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: ReactElement | String | Double): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
     @scala.inline

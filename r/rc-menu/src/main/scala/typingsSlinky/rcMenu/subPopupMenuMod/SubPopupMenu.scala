@@ -12,6 +12,7 @@ import typingsSlinky.rcMenu.interfaceMod.SelectEventHandler
 import typingsSlinky.rcMenu.menuItemMod.MenuItem
 import typingsSlinky.rcMenu.menuItemMod.MenuItemProps
 import typingsSlinky.react.mod.Component
+import typingsSlinky.react.mod.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,8 +43,7 @@ class SubPopupMenu protected ()
     */
   def onKeyDown(e: SyntheticKeyboardEvent[HTMLElement], callback: js.Function1[/* item */ MenuItem, Unit]): Double = js.native
   def renderCommonMenuItem(child: ReactElement, i: Double, extraProps: MenuItemProps): ReactElement = js.native
-  def renderMenuItem(c: ReactElement, i: Double, subMenuKey: String): ReactElement = js.native
-  def renderMenuItem(c: ReactElement, i: Double, subMenuKey: Double): ReactElement = js.native
+  def renderMenuItem(c: ReactElement, i: Double, subMenuKey: Key): ReactElement = js.native
   @JSName("shouldComponentUpdate")
   def shouldComponentUpdate_MSubPopupMenu(nextProps: SubPopupMenuProps): Boolean = js.native
   def step(direction: Double): MenuItem = js.native

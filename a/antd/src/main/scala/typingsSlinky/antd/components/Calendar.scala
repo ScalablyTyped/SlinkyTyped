@@ -1,6 +1,6 @@
 package typingsSlinky.antd.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.anon.OnChange
@@ -25,9 +25,9 @@ object Calendar {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
-    def dateCellRender(value: Moment => TagMod[Any]): this.type = set("dateCellRender", js.Any.fromFunction1(value))
+    def dateCellRender(value: Moment => ReactElement): this.type = set("dateCellRender", js.Any.fromFunction1(value))
     @scala.inline
-    def dateFullCellRender(value: Moment => TagMod[Any]): this.type = set("dateFullCellRender", js.Any.fromFunction1(value))
+    def dateFullCellRender(value: Moment => ReactElement): this.type = set("dateFullCellRender", js.Any.fromFunction1(value))
     @scala.inline
     def defaultValue(value: Moment): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -35,15 +35,15 @@ object Calendar {
     @scala.inline
     def fullscreen(value: Boolean): this.type = set("fullscreen", value.asInstanceOf[js.Any])
     @scala.inline
-    def headerRender(value: /* config */ OnChange[Moment] => TagMod[Any]): this.type = set("headerRender", js.Any.fromFunction1(value))
+    def headerRender(value: /* config */ OnChange[Moment] => ReactElement): this.type = set("headerRender", js.Any.fromFunction1(value))
     @scala.inline
     def locale(value: PickerLocale): this.type = set("locale", value.asInstanceOf[js.Any])
     @scala.inline
     def mode(value: CalendarMode): this.type = set("mode", value.asInstanceOf[js.Any])
     @scala.inline
-    def monthCellRender(value: Moment => TagMod[Any]): this.type = set("monthCellRender", js.Any.fromFunction1(value))
+    def monthCellRender(value: Moment => ReactElement): this.type = set("monthCellRender", js.Any.fromFunction1(value))
     @scala.inline
-    def monthFullCellRender(value: Moment => TagMod[Any]): this.type = set("monthFullCellRender", js.Any.fromFunction1(value))
+    def monthFullCellRender(value: Moment => ReactElement): this.type = set("monthFullCellRender", js.Any.fromFunction1(value))
     @scala.inline
     def onChange(value: Moment => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline

@@ -1,7 +1,6 @@
 package typingsSlinky.semanticUiReact.popupPopupMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
@@ -156,7 +155,7 @@ object StrictPopupProps {
     def setContentReactElement(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
     @scala.inline
     def setContentFunction3(
-      value: (/* component */ ReactType[PopupContentProps], PopupContentProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[PopupContentProps], PopupContentProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("content", js.Any.fromFunction3(value))
     @scala.inline
     def setContent(value: SemanticShorthandItem[PopupContentProps]): Self = this.set("content", value.asInstanceOf[js.Any])
@@ -184,7 +183,7 @@ object StrictPopupProps {
     def setHeaderReactElement(value: ReactElement): Self = this.set("header", value.asInstanceOf[js.Any])
     @scala.inline
     def setHeaderFunction3(
-      value: (/* component */ ReactType[PopupHeaderProps], PopupHeaderProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[PopupHeaderProps], PopupHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("header", js.Any.fromFunction3(value))
     @scala.inline
     def setHeader(value: SemanticShorthandItem[PopupHeaderProps]): Self = this.set("header", value.asInstanceOf[js.Any])

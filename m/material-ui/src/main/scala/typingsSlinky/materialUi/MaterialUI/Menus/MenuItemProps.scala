@@ -1,7 +1,6 @@
 package typingsSlinky.materialUi.MaterialUI.Menus
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.materialUi.MaterialUI.List.ListItemProps
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverAnimationProps
@@ -15,8 +14,8 @@ trait MenuItemProps extends ListItemProps {
   var checked: js.UndefOr[Boolean] = js.undefined
   var desktop: js.UndefOr[Boolean] = js.undefined
   var focusState: js.UndefOr[String] = js.undefined
-  var label: js.UndefOr[String | TagMod[Any]] = js.undefined
-  var menuItems: js.UndefOr[TagMod[Any]] = js.undefined
+  var label: js.UndefOr[String | ReactElement] = js.undefined
+  var menuItems: js.UndefOr[ReactElement] = js.undefined
 }
 
 object MenuItemProps {
@@ -55,13 +54,13 @@ object MenuItemProps {
     @scala.inline
     def setLabelReactElement(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def setLabel(value: String | TagMod[Any]): Self = this.set("label", value.asInstanceOf[js.Any])
+    def setLabel(value: String | ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)
     @scala.inline
     def setMenuItemsReactElement(value: ReactElement): Self = this.set("menuItems", value.asInstanceOf[js.Any])
     @scala.inline
-    def setMenuItems(value: TagMod[Any]): Self = this.set("menuItems", value.asInstanceOf[js.Any])
+    def setMenuItems(value: ReactElement): Self = this.set("menuItems", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMenuItems: Self = this.set("menuItems", js.undefined)
   }

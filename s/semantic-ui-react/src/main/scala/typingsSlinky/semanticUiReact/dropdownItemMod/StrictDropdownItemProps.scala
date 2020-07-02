@@ -1,7 +1,6 @@
 package typingsSlinky.semanticUiReact.dropdownItemMod
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.ReactNodeArray
@@ -23,7 +22,7 @@ trait StrictDropdownItemProps extends js.Object {
   /** An element type to render as (string or function). */
   var as: js.UndefOr[js.Any] = js.undefined
   /** Primary content. */
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   /** Additional classes. */
   var className: js.UndefOr[String] = js.undefined
   /** Shorthand for primary content. */
@@ -88,7 +87,7 @@ object StrictDropdownItemProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -105,7 +104,7 @@ object StrictDropdownItemProps {
     def setDescriptionReactElement(value: ReactElement): Self = this.set("description", value.asInstanceOf[js.Any])
     @scala.inline
     def setDescriptionFunction3(
-      value: (/* component */ ReactType[HtmlSpanProps], HtmlSpanProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[HtmlSpanProps], HtmlSpanProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("description", js.Any.fromFunction3(value))
     @scala.inline
     def setDescription(value: SemanticShorthandItem[HtmlSpanProps]): Self = this.set("description", value.asInstanceOf[js.Any])
@@ -119,7 +118,7 @@ object StrictDropdownItemProps {
     def setFlagReactElement(value: ReactElement): Self = this.set("flag", value.asInstanceOf[js.Any])
     @scala.inline
     def setFlagFunction3(
-      value: (/* component */ ReactType[FlagProps], FlagProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[FlagProps], FlagProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("flag", js.Any.fromFunction3(value))
     @scala.inline
     def setFlag(value: SemanticShorthandItem[FlagProps]): Self = this.set("flag", value.asInstanceOf[js.Any])
@@ -129,7 +128,7 @@ object StrictDropdownItemProps {
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def setIconFunction3(
-      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("icon", js.Any.fromFunction3(value))
     @scala.inline
     def setIcon(value: SemanticShorthandItem[IconProps]): Self = this.set("icon", value.asInstanceOf[js.Any])
@@ -139,7 +138,7 @@ object StrictDropdownItemProps {
     def setImageReactElement(value: ReactElement): Self = this.set("image", value.asInstanceOf[js.Any])
     @scala.inline
     def setImageFunction3(
-      value: (/* component */ ReactType[ImageProps], ImageProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ImageProps], ImageProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("image", js.Any.fromFunction3(value))
     @scala.inline
     def setImage(value: SemanticShorthandItem[ImageProps]): Self = this.set("image", value.asInstanceOf[js.Any])
@@ -149,7 +148,7 @@ object StrictDropdownItemProps {
     def setLabelReactElement(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def setLabelFunction3(
-      value: (/* component */ ReactType[LabelProps], LabelProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[LabelProps], LabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("label", js.Any.fromFunction3(value))
     @scala.inline
     def setLabel(value: SemanticShorthandItem[LabelProps]): Self = this.set("label", value.asInstanceOf[js.Any])

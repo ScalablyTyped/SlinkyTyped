@@ -1,6 +1,5 @@
 package typingsSlinky.semanticUiReact.tableRowMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
 import typingsSlinky.semanticUiReact.genericMod.SemanticVERTICALALIGNMENTS
@@ -22,7 +21,7 @@ trait StrictTableRowProps extends js.Object {
   /** Shorthand array of props for TableCell. */
   var cells: js.UndefOr[SemanticShorthandCollection[TableCellProps]] = js.undefined
   /** Primary content. */
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   /** Additional classes. */
   var className: js.UndefOr[String] = js.undefined
   /** A row can be disabled. */
@@ -77,7 +76,7 @@ object StrictTableRowProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline

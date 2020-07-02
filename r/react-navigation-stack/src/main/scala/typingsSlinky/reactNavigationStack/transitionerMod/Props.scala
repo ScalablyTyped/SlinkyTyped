@@ -1,6 +1,6 @@
 package typingsSlinky.reactNavigationStack.transitionerMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.reactNavigation.mod.NavigationParams
 import typingsSlinky.reactNavigation.mod.NavigationRoute
 import typingsSlinky.reactNavigationStack.typesMod.NavigationStackProp
@@ -36,7 +36,7 @@ trait Props extends js.Object {
     ]
   ] = js.native
   var screenProps: js.UndefOr[js.Any] = js.native
-  def render(current: TransitionProps): TagMod[Any] = js.native
-  def render(current: TransitionProps, previous: TransitionProps): TagMod[Any] = js.native
+  def render(current: TransitionProps): ReactElement = js.native
+  def render(current: TransitionProps, previous: TransitionProps): ReactElement = js.native
 }
 

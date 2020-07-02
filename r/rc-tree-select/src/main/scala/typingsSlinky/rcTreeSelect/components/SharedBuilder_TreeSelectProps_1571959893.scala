@@ -1,6 +1,5 @@
 package typingsSlinky.rcTreeSelect.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -40,13 +39,13 @@ class SharedBuilder_TreeSelectProps_1571959893[R <: js.Object, ValueType] (val a
   @scala.inline
   def maxTagCount(value: Double): this.type = set("maxTagCount", value.asInstanceOf[js.Any])
   @scala.inline
-  def maxTagPlaceholder(value: /* omittedValues */ js.Array[LabelValueType] => TagMod[Any]): this.type = set("maxTagPlaceholder", js.Any.fromFunction1(value))
+  def maxTagPlaceholder(value: /* omittedValues */ js.Array[LabelValueType] => ReactElement): this.type = set("maxTagPlaceholder", js.Any.fromFunction1(value))
   @scala.inline
   def maxTagTextLength(value: Double): this.type = set("maxTagTextLength", value.asInstanceOf[js.Any])
   @scala.inline
   def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
   @scala.inline
-  def onChange(value: (ValueType, /* labelList */ js.Array[TagMod[Any]], /* extra */ ChangeEventExtra) => Unit): this.type = set("onChange", js.Any.fromFunction3(value))
+  def onChange(value: (ValueType, /* labelList */ js.Array[ReactElement], /* extra */ ChangeEventExtra) => Unit): this.type = set("onChange", js.Any.fromFunction3(value))
   @scala.inline
   def onSearch(value: /* value */ String => Unit): this.type = set("onSearch", js.Any.fromFunction1(value))
   @scala.inline
@@ -58,11 +57,11 @@ class SharedBuilder_TreeSelectProps_1571959893[R <: js.Object, ValueType] (val a
   @scala.inline
   def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
   @scala.inline
-  def placeholder(value: TagMod[Any]): this.type = set("placeholder", value.asInstanceOf[js.Any])
+  def placeholder(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
   @scala.inline
   def searchPlaceholderReactElement(value: ReactElement): this.type = set("searchPlaceholder", value.asInstanceOf[js.Any])
   @scala.inline
-  def searchPlaceholder(value: TagMod[Any]): this.type = set("searchPlaceholder", value.asInstanceOf[js.Any])
+  def searchPlaceholder(value: ReactElement): this.type = set("searchPlaceholder", value.asInstanceOf[js.Any])
   @scala.inline
   def searchValue(value: String): this.type = set("searchValue", value.asInstanceOf[js.Any])
   @scala.inline
@@ -82,7 +81,7 @@ class SharedBuilder_TreeSelectProps_1571959893[R <: js.Object, ValueType] (val a
   @scala.inline
   def treeCheckableReactElement(value: ReactElement): this.type = set("treeCheckable", value.asInstanceOf[js.Any])
   @scala.inline
-  def treeCheckable(value: Boolean | TagMod[Any]): this.type = set("treeCheckable", value.asInstanceOf[js.Any])
+  def treeCheckable(value: Boolean | ReactElement): this.type = set("treeCheckable", value.asInstanceOf[js.Any])
   @scala.inline
   def treeData(value: js.Array[DataNode]): this.type = set("treeData", value.asInstanceOf[js.Any])
   @scala.inline

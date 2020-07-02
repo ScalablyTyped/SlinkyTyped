@@ -1,13 +1,13 @@
 package typingsSlinky.reactBigCalendar.mod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait ResourceHeaderProps extends js.Object {
   var index: Double
-  var label: TagMod[Any]
+  var label: ReactElement
   var resource: js.Object
 }
 
@@ -33,7 +33,7 @@ object ResourceHeaderProps {
     @scala.inline
     def setResource(value: js.Object): Self = this.set("resource", value.asInstanceOf[js.Any])
     @scala.inline
-    def setLabel(value: TagMod[Any]): Self = this.set("label", value.asInstanceOf[js.Any])
+    def setLabel(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)
   }

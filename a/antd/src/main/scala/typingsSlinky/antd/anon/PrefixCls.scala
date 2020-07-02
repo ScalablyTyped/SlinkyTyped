@@ -1,17 +1,20 @@
 package typingsSlinky.antd.anon
 
+import typingsSlinky.antd.sliderMod.HandleGeneratorInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait PrefixCls extends js.Object {
-  var prefixCls: String
+  var info: HandleGeneratorInfo
+  var prefixCls: js.UndefOr[String] = js.undefined
+  var tooltipPrefixCls: js.UndefOr[String] = js.undefined
 }
 
 object PrefixCls {
   @scala.inline
-  def apply(prefixCls: String): PrefixCls = {
-    val __obj = js.Dynamic.literal(prefixCls = prefixCls.asInstanceOf[js.Any])
+  def apply(info: HandleGeneratorInfo): PrefixCls = {
+    val __obj = js.Dynamic.literal(info = info.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrefixCls]
   }
   @scala.inline
@@ -26,7 +29,15 @@ object PrefixCls {
         x
     }
     @scala.inline
+    def setInfo(value: HandleGeneratorInfo): Self = this.set("info", value.asInstanceOf[js.Any])
+    @scala.inline
     def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    @scala.inline
+    def setTooltipPrefixCls(value: String): Self = this.set("tooltipPrefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTooltipPrefixCls: Self = this.set("tooltipPrefixCls", js.undefined)
   }
   
 }

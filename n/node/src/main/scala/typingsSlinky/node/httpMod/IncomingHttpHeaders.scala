@@ -18,6 +18,8 @@ trait IncomingHttpHeaders
   var `access-control-allow-origin`: js.UndefOr[String] = js.undefined
   var `access-control-expose-headers`: js.UndefOr[String] = js.undefined
   var `access-control-max-age`: js.UndefOr[String] = js.undefined
+  var `access-control-request-headers`: js.UndefOr[String] = js.undefined
+  var `access-control-request-method`: js.UndefOr[String] = js.undefined
   var age: js.UndefOr[String] = js.undefined
   var allow: js.UndefOr[String] = js.undefined
   var `alt-svc`: js.UndefOr[String] = js.undefined
@@ -44,6 +46,7 @@ trait IncomingHttpHeaders
   var `if-unmodified-since`: js.UndefOr[String] = js.undefined
   var `last-modified`: js.UndefOr[String] = js.undefined
   var location: js.UndefOr[String] = js.undefined
+  var origin: js.UndefOr[String] = js.undefined
   var pragma: js.UndefOr[String] = js.undefined
   var `proxy-authenticate`: js.UndefOr[String] = js.undefined
   var `proxy-authorization`: js.UndefOr[String] = js.undefined
@@ -121,6 +124,14 @@ object IncomingHttpHeaders {
     def `setAccess-control-max-age`(value: String): Self = this.set("access-control-max-age", value.asInstanceOf[js.Any])
     @scala.inline
     def `deleteAccess-control-max-age`: Self = this.set("access-control-max-age", js.undefined)
+    @scala.inline
+    def `setAccess-control-request-headers`(value: String): Self = this.set("access-control-request-headers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteAccess-control-request-headers`: Self = this.set("access-control-request-headers", js.undefined)
+    @scala.inline
+    def `setAccess-control-request-method`(value: String): Self = this.set("access-control-request-method", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `deleteAccess-control-request-method`: Self = this.set("access-control-request-method", js.undefined)
     @scala.inline
     def setAge(value: String): Self = this.set("age", value.asInstanceOf[js.Any])
     @scala.inline
@@ -225,6 +236,10 @@ object IncomingHttpHeaders {
     def setLocation(value: String): Self = this.set("location", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLocation: Self = this.set("location", js.undefined)
+    @scala.inline
+    def setOrigin(value: String): Self = this.set("origin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOrigin: Self = this.set("origin", js.undefined)
     @scala.inline
     def setPragma(value: String): Self = this.set("pragma", value.asInstanceOf[js.Any])
     @scala.inline

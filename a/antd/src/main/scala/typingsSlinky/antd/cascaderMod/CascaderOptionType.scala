@@ -1,7 +1,6 @@
 package typingsSlinky.antd.cascaderMod
 
 import org.scalablytyped.runtime.StringDictionary
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,9 +11,9 @@ trait CascaderOptionType
   var children: js.UndefOr[js.Array[CascaderOptionType]] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
   var isLeaf: js.UndefOr[Boolean] = js.undefined
-  var label: js.UndefOr[TagMod[Any]] = js.undefined
+  var label: js.UndefOr[ReactElement] = js.undefined
   var loading: js.UndefOr[Boolean] = js.undefined
-  var value: js.UndefOr[String] = js.undefined
+  var value: js.UndefOr[String | Double] = js.undefined
 }
 
 object CascaderOptionType {
@@ -49,7 +48,7 @@ object CascaderOptionType {
     @scala.inline
     def setLabelReactElement(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def setLabel(value: TagMod[Any]): Self = this.set("label", value.asInstanceOf[js.Any])
+    def setLabel(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)
     @scala.inline
@@ -57,7 +56,7 @@ object CascaderOptionType {
     @scala.inline
     def deleteLoading: Self = this.set("loading", js.undefined)
     @scala.inline
-    def setValue(value: String): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValue(value: String | Double): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
   }

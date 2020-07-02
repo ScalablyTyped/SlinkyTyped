@@ -1,12 +1,12 @@
 package typingsSlinky.antd.anon
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait ItemIcon extends js.Object {
-  var clearIcon: TagMod[Any]
+  var clearIcon: ReactElement
   var itemIcon: js.Object | Null
   var removeIcon: js.Object | Null
   var suffixIcon: js.Object | Null
@@ -30,7 +30,7 @@ object ItemIcon {
         x
     }
     @scala.inline
-    def setClearIcon(value: TagMod[Any]): Self = this.set("clearIcon", value.asInstanceOf[js.Any])
+    def setClearIcon(value: ReactElement): Self = this.set("clearIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteClearIcon: Self = this.set("clearIcon", js.undefined)
     @scala.inline

@@ -2,14 +2,14 @@ package typingsSlinky.antd.affixMod
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Window
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait AffixProps extends js.Object {
-  var children: TagMod[Any]
+  var children: ReactElement
   var className: js.UndefOr[String] = js.undefined
   /** 距离窗口底部达到指定偏移量后触发 */
   var offsetBottom: js.UndefOr[Double] = js.undefined
@@ -43,7 +43,7 @@ object AffixProps {
         x
     }
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline

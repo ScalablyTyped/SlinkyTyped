@@ -1,6 +1,6 @@
 package typingsSlinky.reachRouter.mod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait MatchProps[TParams] extends js.Object {
 
 object MatchProps {
   @scala.inline
-  def apply[TParams](children: /* props */ MatchRenderProps[TParams] => TagMod[Any], path: String): MatchProps[TParams] = {
+  def apply[TParams](children: /* props */ MatchRenderProps[TParams] => ReactElement, path: String): MatchProps[TParams] = {
     val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children), path = path.asInstanceOf[js.Any])
     __obj.asInstanceOf[MatchProps[TParams]]
   }
@@ -28,7 +28,7 @@ object MatchProps {
         x
     }
     @scala.inline
-    def setChildren(value: /* props */ MatchRenderProps[TParams] => TagMod[Any]): Self = this.set("children", js.Any.fromFunction1(value))
+    def setChildren(value: /* props */ MatchRenderProps[TParams] => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
     @scala.inline
     def setPath(value: String): Self = this.set("path", value.asInstanceOf[js.Any])
   }

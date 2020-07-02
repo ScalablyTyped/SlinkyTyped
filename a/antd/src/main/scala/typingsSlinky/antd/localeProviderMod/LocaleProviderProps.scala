@@ -1,6 +1,5 @@
 package typingsSlinky.antd.localeProviderMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 trait LocaleProviderProps extends js.Object {
   var _ANT_MARK__ : js.UndefOr[String] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var locale: Locale
 }
 
@@ -38,7 +37,7 @@ object LocaleProviderProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
   }

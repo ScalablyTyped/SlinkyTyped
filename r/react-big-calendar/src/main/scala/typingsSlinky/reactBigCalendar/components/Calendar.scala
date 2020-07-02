@@ -109,7 +109,7 @@ object Calendar {
     @scala.inline
     def onNavigate(value: (/* newDate */ js.Date, /* view */ View, /* action */ NavigateAction) => Unit): this.type = set("onNavigate", js.Any.fromFunction3(value))
     @scala.inline
-    def onRangeChange(value: /* range */ js.Array[js.Date] | Start => Unit): this.type = set("onRangeChange", js.Any.fromFunction1(value))
+    def onRangeChange(value: (/* range */ js.Array[js.Date] | Start, /* view */ js.UndefOr[View]) => Unit): this.type = set("onRangeChange", js.Any.fromFunction2(value))
     @scala.inline
     def onSelectEvent(value: (TEvent, /* e */ SyntheticEvent[org.scalajs.dom.raw.Event, HTMLElement]) => Unit): this.type = set("onSelectEvent", js.Any.fromFunction2(value))
     @scala.inline

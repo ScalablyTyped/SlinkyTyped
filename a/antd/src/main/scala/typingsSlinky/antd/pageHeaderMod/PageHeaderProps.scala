@@ -1,7 +1,6 @@
 package typingsSlinky.antd.pageHeaderMod
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.avatarMod.AvatarProps
@@ -13,18 +12,18 @@ import scala.scalajs.js.annotation._
 
 trait PageHeaderProps extends js.Object {
   var avatar: js.UndefOr[AvatarProps] = js.undefined
-  var backIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var backIcon: js.UndefOr[ReactElement] = js.undefined
   var breadcrumb: js.UndefOr[BreadcrumbProps] = js.undefined
   var className: js.UndefOr[String] = js.undefined
-  var extra: js.UndefOr[TagMod[Any]] = js.undefined
-  var footer: js.UndefOr[TagMod[Any]] = js.undefined
+  var extra: js.UndefOr[ReactElement] = js.undefined
+  var footer: js.UndefOr[ReactElement] = js.undefined
   var ghost: js.UndefOr[Boolean] = js.undefined
   var onBack: js.UndefOr[js.Function1[/* e */ SyntheticMouseEvent[HTMLDivElement], Unit]] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
-  var subTitle: js.UndefOr[TagMod[Any]] = js.undefined
+  var subTitle: js.UndefOr[ReactElement] = js.undefined
   var tags: js.UndefOr[ReactElement | js.Array[ReactElement]] = js.undefined
-  var title: TagMod[Any]
+  var title: ReactElement
 }
 
 object PageHeaderProps {
@@ -51,7 +50,7 @@ object PageHeaderProps {
     @scala.inline
     def setBackIconReactElement(value: ReactElement): Self = this.set("backIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setBackIcon(value: TagMod[Any]): Self = this.set("backIcon", value.asInstanceOf[js.Any])
+    def setBackIcon(value: ReactElement): Self = this.set("backIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBackIcon: Self = this.set("backIcon", js.undefined)
     @scala.inline
@@ -65,13 +64,13 @@ object PageHeaderProps {
     @scala.inline
     def setExtraReactElement(value: ReactElement): Self = this.set("extra", value.asInstanceOf[js.Any])
     @scala.inline
-    def setExtra(value: TagMod[Any]): Self = this.set("extra", value.asInstanceOf[js.Any])
+    def setExtra(value: ReactElement): Self = this.set("extra", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteExtra: Self = this.set("extra", js.undefined)
     @scala.inline
     def setFooterReactElement(value: ReactElement): Self = this.set("footer", value.asInstanceOf[js.Any])
     @scala.inline
-    def setFooter(value: TagMod[Any]): Self = this.set("footer", value.asInstanceOf[js.Any])
+    def setFooter(value: ReactElement): Self = this.set("footer", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFooter: Self = this.set("footer", js.undefined)
     @scala.inline
@@ -93,7 +92,7 @@ object PageHeaderProps {
     @scala.inline
     def setSubTitleReactElement(value: ReactElement): Self = this.set("subTitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSubTitle(value: TagMod[Any]): Self = this.set("subTitle", value.asInstanceOf[js.Any])
+    def setSubTitle(value: ReactElement): Self = this.set("subTitle", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSubTitle: Self = this.set("subTitle", js.undefined)
     @scala.inline
@@ -103,7 +102,7 @@ object PageHeaderProps {
     @scala.inline
     def deleteTags: Self = this.set("tags", js.undefined)
     @scala.inline
-    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
   }

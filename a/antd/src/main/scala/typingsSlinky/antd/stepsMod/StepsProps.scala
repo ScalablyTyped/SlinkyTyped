@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation._
 trait StepsProps extends ProgressProps {
   @JSName("steps")
   var steps_StepsProps: Double
+  @JSName("strokeColor")
+  var strokeColor_StepsProps: js.UndefOr[String] = js.undefined
 }
 
 object StepsProps {
@@ -29,6 +31,10 @@ object StepsProps {
     }
     @scala.inline
     def setSteps(value: Double): Self = this.set("steps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStrokeColor(value: String): Self = this.set("strokeColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStrokeColor: Self = this.set("strokeColor", js.undefined)
   }
   
 }

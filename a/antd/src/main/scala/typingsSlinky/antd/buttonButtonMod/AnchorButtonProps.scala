@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -142,7 +141,7 @@ trait AnchorButtonProps extends js.Object {
   var autoCorrect: js.UndefOr[String] = js.undefined
   var autoSave: js.UndefOr[String] = js.undefined
   var block: js.UndefOr[Boolean] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var color: js.UndefOr[String] = js.undefined
   var contentEditable: js.UndefOr[Booleanish | inherit] = js.undefined
@@ -159,7 +158,7 @@ trait AnchorButtonProps extends js.Object {
   var hidden: js.UndefOr[Boolean] = js.undefined
   var href: js.UndefOr[String] = js.undefined
   var hrefLang: js.UndefOr[String] = js.undefined
-  var icon: js.UndefOr[TagMod[Any]] = js.undefined
+  var icon: js.UndefOr[ReactElement] = js.undefined
   var id: js.UndefOr[String] = js.undefined
   var inlist: js.UndefOr[js.Any] = js.undefined
   var inputMode: js.UndefOr[none | text | tel | url | email | numeric | decimal | search] = js.undefined
@@ -516,7 +515,7 @@ object AnchorButtonProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -586,7 +585,7 @@ object AnchorButtonProps {
     @scala.inline
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setIcon(value: TagMod[Any]): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
     @scala.inline

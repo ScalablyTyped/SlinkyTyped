@@ -1,6 +1,6 @@
 package typingsSlinky.reactNavigationDrawer.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.reactNavigation.mod.NavigationParams
 import typingsSlinky.reactNavigation.mod.NavigationRoute
 import typingsSlinky.reactNavigationDrawer.anon.Focused
@@ -22,10 +22,10 @@ object DrawerNavigatorItems {
   @scala.inline
   def apply(
     drawerPosition: left | right,
-    getLabel: Scene => TagMod[Any],
+    getLabel: Scene => ReactElement,
     items: js.Array[NavigationRoute[NavigationParams]],
     onItemPress: Focused => Unit,
-    renderIcon: Scene => TagMod[Any],
+    renderIcon: Scene => ReactElement,
     screenProps: js.Any
   ): SharedBuilder_DrawerNavigatorItemsProps644699346[default] = {
     val __props = js.Dynamic.literal(drawerPosition = drawerPosition.asInstanceOf[js.Any], getLabel = js.Any.fromFunction1(getLabel), items = items.asInstanceOf[js.Any], onItemPress = js.Any.fromFunction1(onItemPress), renderIcon = js.Any.fromFunction1(renderIcon), screenProps = screenProps.asInstanceOf[js.Any])

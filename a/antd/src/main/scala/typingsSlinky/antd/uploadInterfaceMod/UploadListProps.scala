@@ -2,16 +2,15 @@ package typingsSlinky.antd.uploadInterfaceMod
 
 import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.File
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait UploadListProps[T] extends js.Object {
-  var downloadIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var downloadIcon: js.UndefOr[ReactElement] = js.undefined
   var iconRender: js.UndefOr[
-    js.Function2[/* file */ UploadFile[T], /* listType */ js.UndefOr[UploadListType], TagMod[Any]]
+    js.Function2[/* file */ UploadFile[T], /* listType */ js.UndefOr[UploadListType], ReactElement]
   ] = js.undefined
   var isImageUrl: js.UndefOr[js.Function1[/* file */ UploadFile[_], Boolean]] = js.undefined
   var items: js.UndefOr[js.Array[UploadFile[T]]] = js.undefined
@@ -22,8 +21,8 @@ trait UploadListProps[T] extends js.Object {
   var onRemove: js.UndefOr[js.Function1[/* file */ UploadFile[T], Unit | Boolean]] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
   var previewFile: js.UndefOr[PreviewFileHandler] = js.undefined
-  var progressAttr: js.UndefOr[js.Object] = js.undefined
-  var removeIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var progress: js.UndefOr[UploadListProgressProps] = js.undefined
+  var removeIcon: js.UndefOr[ReactElement] = js.undefined
   var showDownloadIcon: js.UndefOr[Boolean] = js.undefined
   var showPreviewIcon: js.UndefOr[Boolean] = js.undefined
   var showRemoveIcon: js.UndefOr[Boolean] = js.undefined
@@ -51,11 +50,11 @@ object UploadListProps {
     @scala.inline
     def setDownloadIconReactElement(value: ReactElement): Self = this.set("downloadIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setDownloadIcon(value: TagMod[Any]): Self = this.set("downloadIcon", value.asInstanceOf[js.Any])
+    def setDownloadIcon(value: ReactElement): Self = this.set("downloadIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDownloadIcon: Self = this.set("downloadIcon", js.undefined)
     @scala.inline
-    def setIconRender(value: (/* file */ UploadFile[T], /* listType */ js.UndefOr[UploadListType]) => TagMod[Any]): Self = this.set("iconRender", js.Any.fromFunction2(value))
+    def setIconRender(value: (/* file */ UploadFile[T], /* listType */ js.UndefOr[UploadListType]) => ReactElement): Self = this.set("iconRender", js.Any.fromFunction2(value))
     @scala.inline
     def deleteIconRender: Self = this.set("iconRender", js.undefined)
     @scala.inline
@@ -91,13 +90,13 @@ object UploadListProps {
     @scala.inline
     def deletePreviewFile: Self = this.set("previewFile", js.undefined)
     @scala.inline
-    def setProgressAttr(value: js.Object): Self = this.set("progressAttr", value.asInstanceOf[js.Any])
+    def setProgress(value: UploadListProgressProps): Self = this.set("progress", value.asInstanceOf[js.Any])
     @scala.inline
-    def deleteProgressAttr: Self = this.set("progressAttr", js.undefined)
+    def deleteProgress: Self = this.set("progress", js.undefined)
     @scala.inline
     def setRemoveIconReactElement(value: ReactElement): Self = this.set("removeIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setRemoveIcon(value: TagMod[Any]): Self = this.set("removeIcon", value.asInstanceOf[js.Any])
+    def setRemoveIcon(value: ReactElement): Self = this.set("removeIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRemoveIcon: Self = this.set("removeIcon", js.undefined)
     @scala.inline

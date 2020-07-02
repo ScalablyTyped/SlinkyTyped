@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -142,7 +141,7 @@ trait PartialListItemTextProps extends js.Object {
   var autoCapitalize: js.UndefOr[String] = js.native
   var autoCorrect: js.UndefOr[String] = js.native
   var autoSave: js.UndefOr[String] = js.native
-  var children: js.UndefOr[TagMod[Any]] = js.native
+  var children: js.UndefOr[ReactElement] = js.native
   var className: js.UndefOr[String] = js.native
   var classes: js.UndefOr[PartialClassNameMapListItDense] = js.native
   var color: js.UndefOr[String] = js.native
@@ -249,14 +248,14 @@ trait PartialListItemTextProps extends js.Object {
   var onWheel: js.UndefOr[WheelEventHandler[HTMLDivElement]] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var prefix: js.UndefOr[String] = js.native
-  var primary: js.UndefOr[TagMod[Any]] = js.native
+  var primary: js.UndefOr[ReactElement] = js.native
   var primaryTypographyProps: js.UndefOr[PartialTypographyPropsAbout] = js.native
   var property: js.UndefOr[String] = js.native
   var radioGroup: js.UndefOr[String] = js.native
   var resource: js.UndefOr[String] = js.native
   var results: js.UndefOr[Double] = js.native
   var role: js.UndefOr[String] = js.native
-  var secondary: js.UndefOr[TagMod[Any]] = js.native
+  var secondary: js.UndefOr[ReactElement] = js.native
   var secondaryTypographyProps: js.UndefOr[PartialTypographyPropsAbout] = js.native
   var security: js.UndefOr[String] = js.native
   var slot: js.UndefOr[String] = js.native
@@ -504,7 +503,7 @@ object PartialListItemTextProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -940,7 +939,7 @@ object PartialListItemTextProps {
     @scala.inline
     def setPrimaryReactElement(value: ReactElement): Self = this.set("primary", value.asInstanceOf[js.Any])
     @scala.inline
-    def setPrimary(value: TagMod[Any]): Self = this.set("primary", value.asInstanceOf[js.Any])
+    def setPrimary(value: ReactElement): Self = this.set("primary", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePrimary: Self = this.set("primary", js.undefined)
     @scala.inline
@@ -970,7 +969,7 @@ object PartialListItemTextProps {
     @scala.inline
     def setSecondaryReactElement(value: ReactElement): Self = this.set("secondary", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSecondary(value: TagMod[Any]): Self = this.set("secondary", value.asInstanceOf[js.Any])
+    def setSecondary(value: ReactElement): Self = this.set("secondary", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSecondary: Self = this.set("secondary", js.undefined)
     @scala.inline

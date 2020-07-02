@@ -1,6 +1,5 @@
 package typingsSlinky.rcMenu.menuItemGroupMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcMenu.interfaceMod.MenuClickEventHandler
 import typingsSlinky.rcMenu.interfaceMod.MenuInfo
@@ -21,7 +20,7 @@ trait MenuItemGroupProps extends js.Object {
   ] = js.undefined
   var rootPrefixCls: js.UndefOr[String] = js.undefined
   var subMenuKey: js.UndefOr[String] = js.undefined
-  var title: js.UndefOr[TagMod[Any]] = js.undefined
+  var title: js.UndefOr[ReactElement] = js.undefined
 }
 
 object MenuItemGroupProps {
@@ -76,7 +75,7 @@ object MenuItemGroupProps {
     @scala.inline
     def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
   }

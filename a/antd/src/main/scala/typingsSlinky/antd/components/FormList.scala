@@ -1,7 +1,8 @@
 package typingsSlinky.antd.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.antd.formListMod.FieldData
 import typingsSlinky.antd.formListMod.FormListProps
 import scala.scalajs.js
@@ -13,14 +14,14 @@ object FormList {
   @js.native
   object component extends js.Object
   
-  def withProps(p: FormListProps): typingsSlinky.StBuildingComponent.Default[tag.type, js.Object] = new typingsSlinky.StBuildingComponent.Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: FormListProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply(
-    children: (js.Array[FieldData], typingsSlinky.antd.formListMod.Operation) => TagMod[Any],
+    children: (js.Array[FieldData], typingsSlinky.antd.formListMod.Operation) => ReactElement,
     name: String | Double | (js.Array[String | Double])
-  ): typingsSlinky.StBuildingComponent.Default[tag.type, js.Object] = {
+  ): Default[tag.type, js.Object] = {
     val __props = js.Dynamic.literal(children = js.Any.fromFunction2(children), name = name.asInstanceOf[js.Any])
-    new typingsSlinky.StBuildingComponent.Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[FormListProps]))
+    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[FormListProps]))
   }
 }
 

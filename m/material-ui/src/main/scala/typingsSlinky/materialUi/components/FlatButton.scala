@@ -2,7 +2,6 @@ package typingsSlinky.materialUi.components
 
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -46,7 +45,7 @@ object FlatButton {
     @scala.inline
     def containerElementReactElement(value: ReactElement): this.type = set("containerElement", value.asInstanceOf[js.Any])
     @scala.inline
-    def containerElement(value: TagMod[Any] | String): this.type = set("containerElement", value.asInstanceOf[js.Any])
+    def containerElement(value: ReactElement | String): this.type = set("containerElement", value.asInstanceOf[js.Any])
     @scala.inline
     def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
     @scala.inline
@@ -70,13 +69,13 @@ object FlatButton {
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def keyboardFocused(value: Boolean): this.type = set("keyboardFocused", value.asInstanceOf[js.Any])
     @scala.inline
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def labelPosition(value: before | after): this.type = set("labelPosition", value.asInstanceOf[js.Any])
     @scala.inline

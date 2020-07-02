@@ -1,7 +1,6 @@
 package typingsSlinky.antd.listItemMod
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.listMod.ListGridType
 import typingsSlinky.react.mod.CSSProperties
@@ -11,9 +10,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait ListItemProps extends HTMLAttributes[HTMLDivElement] {
-  var actions: js.UndefOr[js.Array[TagMod[Any]]] = js.undefined
+  var actions: js.UndefOr[js.Array[ReactElement]] = js.undefined
   var colStyle: js.UndefOr[CSSProperties] = js.undefined
-  var extra: js.UndefOr[TagMod[Any]] = js.undefined
+  var extra: js.UndefOr[ReactElement] = js.undefined
   var grid: js.UndefOr[ListGridType] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
 }
@@ -36,7 +35,7 @@ object ListItemProps {
         x
     }
     @scala.inline
-    def setActions(value: js.Array[TagMod[Any]]): Self = this.set("actions", value.asInstanceOf[js.Any])
+    def setActions(value: js.Array[ReactElement]): Self = this.set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteActions: Self = this.set("actions", js.undefined)
     @scala.inline
@@ -46,7 +45,7 @@ object ListItemProps {
     @scala.inline
     def setExtraReactElement(value: ReactElement): Self = this.set("extra", value.asInstanceOf[js.Any])
     @scala.inline
-    def setExtra(value: TagMod[Any]): Self = this.set("extra", value.asInstanceOf[js.Any])
+    def setExtra(value: ReactElement): Self = this.set("extra", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteExtra: Self = this.set("extra", js.undefined)
     @scala.inline

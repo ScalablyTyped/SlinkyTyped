@@ -1,6 +1,6 @@
 package typingsSlinky.antd.collapseCollapseMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,7 @@ trait CollapseProps extends js.Object {
   var className: js.UndefOr[String] = js.undefined
   var defaultActiveKey: js.UndefOr[(js.Array[String | Double]) | String | Double] = js.undefined
   var destroyInactivePanel: js.UndefOr[Boolean] = js.undefined
-  var expandIcon: js.UndefOr[js.Function1[/* panelProps */ PanelProps, TagMod[Any]]] = js.undefined
+  var expandIcon: js.UndefOr[js.Function1[/* panelProps */ PanelProps, ReactElement]] = js.undefined
   var expandIconPosition: js.UndefOr[ExpandIconPosition] = js.undefined
   var onChange: js.UndefOr[js.Function1[/* key */ String | js.Array[String], Unit]] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
@@ -63,7 +63,7 @@ object CollapseProps {
     @scala.inline
     def deleteDestroyInactivePanel: Self = this.set("destroyInactivePanel", js.undefined)
     @scala.inline
-    def setExpandIcon(value: /* panelProps */ PanelProps => TagMod[Any]): Self = this.set("expandIcon", js.Any.fromFunction1(value))
+    def setExpandIcon(value: /* panelProps */ PanelProps => ReactElement): Self = this.set("expandIcon", js.Any.fromFunction1(value))
     @scala.inline
     def deleteExpandIcon: Self = this.set("expandIcon", js.undefined)
     @scala.inline

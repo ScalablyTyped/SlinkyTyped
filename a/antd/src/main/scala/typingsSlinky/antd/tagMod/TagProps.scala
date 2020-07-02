@@ -1,7 +1,6 @@
 package typingsSlinky.antd.tagMod
 
 import org.scalajs.dom.raw.HTMLSpanElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.colorsMod.PresetColorType
 import typingsSlinky.antd.colorsMod.PresetStatusColorType
@@ -15,7 +14,7 @@ trait TagProps extends HTMLAttributes[HTMLSpanElement] {
   var closable: js.UndefOr[Boolean] = js.undefined
   @JSName("color")
   var color_TagProps: js.UndefOr[LiteralUnion[PresetColorType | PresetStatusColorType, String]] = js.undefined
-  var icon: js.UndefOr[TagMod[Any]] = js.undefined
+  var icon: js.UndefOr[ReactElement] = js.undefined
   var onClose: js.UndefOr[js.Function] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
   var visible: js.UndefOr[Boolean] = js.undefined
@@ -49,7 +48,7 @@ object TagProps {
     @scala.inline
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setIcon(value: TagMod[Any]): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
     @scala.inline

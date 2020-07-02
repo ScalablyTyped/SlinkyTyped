@@ -1,6 +1,5 @@
 package typingsSlinky.semanticUiReact.itemContentMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.react.mod.ReactType
@@ -19,7 +18,7 @@ trait StrictItemContentProps extends js.Object {
   /** An element type to render as (string or function). */
   var as: js.UndefOr[js.Any] = js.undefined
   /** Primary content. */
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   /** Additional classes. */
   var className: js.UndefOr[String] = js.undefined
   /** Shorthand for primary content. */
@@ -60,7 +59,7 @@ object StrictItemContentProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -77,7 +76,7 @@ object StrictItemContentProps {
     def setDescriptionReactElement(value: ReactElement): Self = this.set("description", value.asInstanceOf[js.Any])
     @scala.inline
     def setDescriptionFunction3(
-      value: (/* component */ ReactType[ItemDescriptionProps], ItemDescriptionProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ItemDescriptionProps], ItemDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("description", js.Any.fromFunction3(value))
     @scala.inline
     def setDescription(value: SemanticShorthandItem[ItemDescriptionProps]): Self = this.set("description", value.asInstanceOf[js.Any])
@@ -87,7 +86,7 @@ object StrictItemContentProps {
     def setExtraReactElement(value: ReactElement): Self = this.set("extra", value.asInstanceOf[js.Any])
     @scala.inline
     def setExtraFunction3(
-      value: (/* component */ ReactType[ItemExtraProps], ItemExtraProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ItemExtraProps], ItemExtraProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("extra", js.Any.fromFunction3(value))
     @scala.inline
     def setExtra(value: SemanticShorthandItem[ItemExtraProps]): Self = this.set("extra", value.asInstanceOf[js.Any])
@@ -97,7 +96,7 @@ object StrictItemContentProps {
     def setHeaderReactElement(value: ReactElement): Self = this.set("header", value.asInstanceOf[js.Any])
     @scala.inline
     def setHeaderFunction3(
-      value: (/* component */ ReactType[ItemHeaderProps], ItemHeaderProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ItemHeaderProps], ItemHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("header", js.Any.fromFunction3(value))
     @scala.inline
     def setHeader(value: SemanticShorthandItem[ItemHeaderProps]): Self = this.set("header", value.asInstanceOf[js.Any])
@@ -107,7 +106,7 @@ object StrictItemContentProps {
     def setMetaReactElement(value: ReactElement): Self = this.set("meta", value.asInstanceOf[js.Any])
     @scala.inline
     def setMetaFunction3(
-      value: (/* component */ ReactType[ItemMetaProps], ItemMetaProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ItemMetaProps], ItemMetaProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("meta", js.Any.fromFunction3(value))
     @scala.inline
     def setMeta(value: SemanticShorthandItem[ItemMetaProps]): Self = this.set("meta", value.asInstanceOf[js.Any])

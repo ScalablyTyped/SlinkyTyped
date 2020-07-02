@@ -3,7 +3,7 @@ package typingsSlinky.materialUiCore.selectInputMod
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLSelectElement
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import typingsSlinky.materialUiCore.anon.PartialMenuProps
 import typingsSlinky.materialUiCore.anon.Value
@@ -32,7 +32,7 @@ trait SelectInputProps extends js.Object {
   var native: Boolean = js.native
   var onBlur: js.UndefOr[FocusEventHandler[_]] = js.native
   var onChange: js.UndefOr[
-    js.Function2[/* event */ ChangeEvent[HTMLSelectElement], /* child */ TagMod[Any], Unit]
+    js.Function2[/* event */ ChangeEvent[HTMLSelectElement], /* child */ ReactElement, Unit]
   ] = js.native
   var onClose: js.UndefOr[js.Function1[/* event */ ChangeEvent[js.Object], Unit]] = js.native
   var onFocus: js.UndefOr[FocusEventHandler[_]] = js.native
@@ -42,7 +42,7 @@ trait SelectInputProps extends js.Object {
   var renderValue: js.UndefOr[
     js.Function1[
       /* value */ String | Double | Boolean | (js.Array[String | Double | Boolean]), 
-      TagMod[Any]
+      ReactElement
     ]
   ] = js.native
   var tabIndex: js.UndefOr[Double] = js.native
@@ -117,7 +117,7 @@ object SelectInputProps {
     @scala.inline
     def deleteOnBlur: Self = this.set("onBlur", js.undefined)
     @scala.inline
-    def setOnChange(value: (/* event */ ChangeEvent[HTMLSelectElement], /* child */ TagMod[Any]) => Unit): Self = this.set("onChange", js.Any.fromFunction2(value))
+    def setOnChange(value: (/* event */ ChangeEvent[HTMLSelectElement], /* child */ ReactElement) => Unit): Self = this.set("onChange", js.Any.fromFunction2(value))
     @scala.inline
     def deleteOnChange: Self = this.set("onChange", js.undefined)
     @scala.inline
@@ -142,7 +142,7 @@ object SelectInputProps {
     def deleteReadOnly: Self = this.set("readOnly", js.undefined)
     @scala.inline
     def setRenderValue(
-      value: /* value */ String | Double | Boolean | (js.Array[String | Double | Boolean]) => TagMod[Any]
+      value: /* value */ String | Double | Boolean | (js.Array[String | Double | Boolean]) => ReactElement
     ): Self = this.set("renderValue", js.Any.fromFunction1(value))
     @scala.inline
     def deleteRenderValue: Self = this.set("renderValue", js.undefined)

@@ -2,7 +2,6 @@ package typingsSlinky.antd.components
 
 import org.scalajs.dom.raw.HTMLButtonElement
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.button.tag
@@ -34,7 +33,7 @@ object DropdownButton {
     @scala.inline
     def align(value: Align): this.type = set("align", value.asInstanceOf[js.Any])
     @scala.inline
-    def buttonsRender(value: /* buttons */ js.Array[TagMod[Any]] => js.Array[TagMod[Any]]): this.type = set("buttonsRender", js.Any.fromFunction1(value))
+    def buttonsRender(value: /* buttons */ js.Array[ReactElement] => js.Array[ReactElement]): this.type = set("buttonsRender", js.Any.fromFunction1(value))
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -50,7 +49,7 @@ object DropdownButton {
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def mouseEnterDelay(value: Double): this.type = set("mouseEnterDelay", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,6 +1,6 @@
 package typingsSlinky.rcTreeSelect.anon
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.rcTreeSelect.interfaceMod.DataNode
 import typingsSlinky.rcTreeSelect.interfaceMod.SimpleModeConfig
 import scala.scalajs.js
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 
 trait GetLabelProp extends js.Object {
   var simpleMode: Boolean | SimpleModeConfig
-  def getLabelProp(node: DataNode): TagMod[Any]
+  def getLabelProp(node: DataNode): ReactElement
 }
 
 object GetLabelProp {
   @scala.inline
-  def apply(getLabelProp: DataNode => TagMod[Any], simpleMode: Boolean | SimpleModeConfig): GetLabelProp = {
+  def apply(getLabelProp: DataNode => ReactElement, simpleMode: Boolean | SimpleModeConfig): GetLabelProp = {
     val __obj = js.Dynamic.literal(getLabelProp = js.Any.fromFunction1(getLabelProp), simpleMode = simpleMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetLabelProp]
   }
@@ -30,7 +30,7 @@ object GetLabelProp {
         x
     }
     @scala.inline
-    def setGetLabelProp(value: DataNode => TagMod[Any]): Self = this.set("getLabelProp", js.Any.fromFunction1(value))
+    def setGetLabelProp(value: DataNode => ReactElement): Self = this.set("getLabelProp", js.Any.fromFunction1(value))
     @scala.inline
     def setSimpleMode(value: Boolean | SimpleModeConfig): Self = this.set("simpleMode", value.asInstanceOf[js.Any])
   }

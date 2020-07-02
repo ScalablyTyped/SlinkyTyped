@@ -7,12 +7,12 @@ import scala.scalajs.js.annotation._
 trait FilledFieldNamesType extends js.Object {
   var children: String
   var label: String
-  var value: String
+  var value: String | Double
 }
 
 object FilledFieldNamesType {
   @scala.inline
-  def apply(children: String, label: String, value: String): FilledFieldNamesType = {
+  def apply(children: String, label: String, value: String | Double): FilledFieldNamesType = {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[FilledFieldNamesType]
   }
@@ -32,7 +32,7 @@ object FilledFieldNamesType {
     @scala.inline
     def setLabel(value: String): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def setValue(value: String): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValue(value: String | Double): Self = this.set("value", value.asInstanceOf[js.Any])
   }
   
 }

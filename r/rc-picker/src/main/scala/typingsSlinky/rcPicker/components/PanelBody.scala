@@ -1,6 +1,5 @@
 package typingsSlinky.rcPicker.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -22,13 +21,13 @@ object PanelBody {
     @scala.inline
     def disabledDate(value: DateType => Boolean): this.type = set("disabledDate", js.Any.fromFunction1(value))
     @scala.inline
-    def getCellNode(value: DateType => TagMod[Any]): this.type = set("getCellNode", js.Any.fromFunction1(value))
+    def getCellNode(value: DateType => ReactElement): this.type = set("getCellNode", js.Any.fromFunction1(value))
     @scala.inline
     def headerCellsReactElement(value: ReactElement): this.type = set("headerCells", value.asInstanceOf[js.Any])
     @scala.inline
-    def headerCells(value: TagMod[Any]): this.type = set("headerCells", value.asInstanceOf[js.Any])
+    def headerCells(value: ReactElement): this.type = set("headerCells", value.asInstanceOf[js.Any])
     @scala.inline
-    def prefixColumn(value: DateType => TagMod[Any]): this.type = set("prefixColumn", js.Any.fromFunction1(value))
+    def prefixColumn(value: DateType => ReactElement): this.type = set("prefixColumn", js.Any.fromFunction1(value))
     @scala.inline
     def rowClassName(value: DateType => String): this.type = set("rowClassName", js.Any.fromFunction1(value))
     @scala.inline
@@ -42,7 +41,7 @@ object PanelBody {
     colNum: Double,
     getCellClassName: DateType => Record[String, js.UndefOr[Boolean]],
     getCellDate: (DateType, Double) => DateType,
-    getCellText: DateType => TagMod[Any],
+    getCellText: DateType => ReactElement,
     onSelect: DateType => Unit,
     prefixCls: String,
     rowNum: Double

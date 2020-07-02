@@ -1,6 +1,5 @@
 package typingsSlinky.rcMenu.subMenuMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcMenu.anon.DomEvent
 import typingsSlinky.rcMenu.anon.Hover
@@ -31,7 +30,7 @@ import scala.scalajs.js.annotation._
 trait SubMenuProps extends js.Object {
   var active: js.UndefOr[Boolean] = js.undefined
   var builtinPlacements: js.UndefOr[BuiltinPlacements] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var direction: js.UndefOr[ltr | rtl] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
@@ -68,7 +67,7 @@ trait SubMenuProps extends js.Object {
   var store: js.UndefOr[MiniStore] = js.undefined
   var subMenuCloseDelay: js.UndefOr[Double] = js.undefined
   var subMenuOpenDelay: js.UndefOr[Double] = js.undefined
-  var title: js.UndefOr[TagMod[Any]] = js.undefined
+  var title: js.UndefOr[ReactElement] = js.undefined
   var triggerSubMenuAction: js.UndefOr[TriggerSubMenuAction] = js.undefined
 }
 
@@ -100,7 +99,7 @@ object SubMenuProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -122,7 +121,7 @@ object SubMenuProps {
     @scala.inline
     def setExpandIconReactElement(value: ReactElement): Self = this.set("expandIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setExpandIconFunction1(value: /* props */ js.Any => TagMod[Any]): Self = this.set("expandIcon", js.Any.fromFunction1(value))
+    def setExpandIconFunction1(value: /* props */ js.Any => ReactElement): Self = this.set("expandIcon", js.Any.fromFunction1(value))
     @scala.inline
     def setExpandIcon(value: RenderIconType): Self = this.set("expandIcon", value.asInstanceOf[js.Any])
     @scala.inline
@@ -142,7 +141,7 @@ object SubMenuProps {
     @scala.inline
     def setItemIconReactElement(value: ReactElement): Self = this.set("itemIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setItemIconFunction1(value: /* props */ js.Any => TagMod[Any]): Self = this.set("itemIcon", js.Any.fromFunction1(value))
+    def setItemIconFunction1(value: /* props */ js.Any => ReactElement): Self = this.set("itemIcon", js.Any.fromFunction1(value))
     @scala.inline
     def setItemIcon(value: RenderIconType): Self = this.set("itemIcon", value.asInstanceOf[js.Any])
     @scala.inline
@@ -252,7 +251,7 @@ object SubMenuProps {
     @scala.inline
     def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
     @scala.inline

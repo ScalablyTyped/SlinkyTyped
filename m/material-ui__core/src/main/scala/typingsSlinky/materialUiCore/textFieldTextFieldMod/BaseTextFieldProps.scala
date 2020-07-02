@@ -8,7 +8,6 @@ import org.scalajs.dom.raw.HTMLSelectElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -162,7 +161,7 @@ trait BaseTextFieldProps extends js.Object {
   var autoCorrect: js.UndefOr[String] = js.native
   var autoFocus: js.UndefOr[Boolean] = js.native
   var autoSave: js.UndefOr[String] = js.native
-  var children: js.UndefOr[TagMod[Any]] = js.native
+  var children: js.UndefOr[ReactElement] = js.native
   var className: js.UndefOr[String] = js.native
   var classes: js.UndefOr[PartialClassNameMapTextFi] = js.native
   var color: js.UndefOr[String] = js.native
@@ -178,7 +177,7 @@ trait BaseTextFieldProps extends js.Object {
   var draggable: js.UndefOr[Booleanish] = js.native
   var error: js.UndefOr[Boolean] = js.native
   var fullWidth: js.UndefOr[Boolean] = js.native
-  var helperText: js.UndefOr[TagMod[Any]] = js.native
+  var helperText: js.UndefOr[ReactElement] = js.native
   var hidden: js.UndefOr[Boolean] = js.native
   var id: js.UndefOr[String] = js.native
   var inlist: js.UndefOr[js.Any] = js.native
@@ -191,7 +190,7 @@ trait BaseTextFieldProps extends js.Object {
   var itemRef: js.UndefOr[String] = js.native
   var itemScope: js.UndefOr[Boolean] = js.native
   var itemType: js.UndefOr[String] = js.native
-  var label: js.UndefOr[TagMod[Any]] = js.native
+  var label: js.UndefOr[ReactElement] = js.native
   var lang: js.UndefOr[String] = js.native
   var manifest: js.UndefOr[String] = js.native
   var margin: js.UndefOr[Margin] = js.native
@@ -556,7 +555,7 @@ object BaseTextFieldProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -626,7 +625,7 @@ object BaseTextFieldProps {
     @scala.inline
     def setHelperTextReactElement(value: ReactElement): Self = this.set("helperText", value.asInstanceOf[js.Any])
     @scala.inline
-    def setHelperText(value: TagMod[Any]): Self = this.set("helperText", value.asInstanceOf[js.Any])
+    def setHelperText(value: ReactElement): Self = this.set("helperText", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHelperText: Self = this.set("helperText", js.undefined)
     @scala.inline
@@ -692,7 +691,7 @@ object BaseTextFieldProps {
     @scala.inline
     def setLabelReactElement(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def setLabel(value: TagMod[Any]): Self = this.set("label", value.asInstanceOf[js.Any])
+    def setLabel(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)
     @scala.inline

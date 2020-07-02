@@ -1,6 +1,7 @@
 package typingsSlinky.antd.components
 
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.antd.hookModalMod.HookModalProps
 import typingsSlinky.antd.hookModalMod.HookModalRef
 import typingsSlinky.antd.modalModalMod.ModalFuncProps
@@ -15,11 +16,11 @@ object HookModal {
   @js.native
   object component extends js.Object
   
-  def withProps(p: HookModalProps with RefAttributes[HookModalRef]): typingsSlinky.StBuildingComponent.Default[tag.type, Ref[js.Any] with js.Object] = new typingsSlinky.StBuildingComponent.Default[tag.type, Ref[js.Any] with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: HookModalProps with RefAttributes[HookModalRef]): Default[tag.type, Ref[js.Any] with js.Object] = new Default[tag.type, Ref[js.Any] with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(afterClose: () => Unit, config: ModalFuncProps): typingsSlinky.StBuildingComponent.Default[tag.type, Ref[js.Any] with js.Object] = {
+  def apply(afterClose: () => Unit, config: ModalFuncProps): Default[tag.type, Ref[js.Any] with js.Object] = {
     val __props = js.Dynamic.literal(afterClose = js.Any.fromFunction0(afterClose), config = config.asInstanceOf[js.Any])
-    new typingsSlinky.StBuildingComponent.Default[tag.type, Ref[js.Any] with js.Object](js.Array(this.component, __props.asInstanceOf[HookModalProps with RefAttributes[HookModalRef]]))
+    new Default[tag.type, Ref[js.Any] with js.Object](js.Array(this.component, __props.asInstanceOf[HookModalProps with RefAttributes[HookModalRef]]))
   }
 }
 

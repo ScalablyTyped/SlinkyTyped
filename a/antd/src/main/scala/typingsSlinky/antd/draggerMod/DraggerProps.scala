@@ -2,9 +2,11 @@ package typingsSlinky.antd.draggerMod
 
 import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.File
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
+import typingsSlinky.antd.antdStrings.PATCH
 import typingsSlinky.antd.antdStrings.POST
 import typingsSlinky.antd.antdStrings.PUT
+import typingsSlinky.antd.antdStrings.patch_
 import typingsSlinky.antd.antdStrings.post_
 import typingsSlinky.antd.antdStrings.put_
 import typingsSlinky.antd.uploadInterfaceMod.HttpRequestHeader
@@ -15,6 +17,7 @@ import typingsSlinky.antd.uploadInterfaceMod.ShowUploadListInterface
 import typingsSlinky.antd.uploadInterfaceMod.TransformFileHandler
 import typingsSlinky.antd.uploadInterfaceMod.UploadChangeParam
 import typingsSlinky.antd.uploadInterfaceMod.UploadFile
+import typingsSlinky.antd.uploadInterfaceMod.UploadListProgressProps
 import typingsSlinky.antd.uploadInterfaceMod.UploadListType
 import typingsSlinky.antd.uploadInterfaceMod.UploadLocale
 import typingsSlinky.antd.uploadInterfaceMod.UploadType
@@ -40,13 +43,13 @@ trait DraggerProps extends js.Object {
   var headers: js.UndefOr[HttpRequestHeader] = js.undefined
   var height: js.UndefOr[Double] = js.undefined
   var iconRender: js.UndefOr[
-    js.Function2[/* file */ UploadFile[_], /* listType */ js.UndefOr[UploadListType], TagMod[Any]]
+    js.Function2[/* file */ UploadFile[_], /* listType */ js.UndefOr[UploadListType], ReactElement]
   ] = js.undefined
   var id: js.UndefOr[String] = js.undefined
   var isImageUrl: js.UndefOr[js.Function1[/* file */ UploadFile[_], Boolean]] = js.undefined
   var listType: js.UndefOr[UploadListType] = js.undefined
   var locale: js.UndefOr[UploadLocale] = js.undefined
-  var method: js.UndefOr[POST | PUT | post_ | put_] = js.undefined
+  var method: js.UndefOr[POST | PUT | PATCH | post_ | put_ | patch_] = js.undefined
   var multiple: js.UndefOr[Boolean] = js.undefined
   var name: js.UndefOr[String] = js.undefined
   var onChange: js.UndefOr[js.Function1[/* info */ UploadChangeParam[UploadFile[_]], Unit]] = js.undefined
@@ -58,6 +61,7 @@ trait DraggerProps extends js.Object {
   var openFileDialogOnClick: js.UndefOr[Boolean] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
   var previewFile: js.UndefOr[PreviewFileHandler] = js.undefined
+  var progress: js.UndefOr[UploadListProgressProps] = js.undefined
   var showUploadList: js.UndefOr[Boolean | ShowUploadListInterface] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
   var supportServerRender: js.UndefOr[Boolean] = js.undefined
@@ -136,7 +140,7 @@ object DraggerProps {
     @scala.inline
     def deleteHeight: Self = this.set("height", js.undefined)
     @scala.inline
-    def setIconRender(value: (/* file */ UploadFile[_], /* listType */ js.UndefOr[UploadListType]) => TagMod[Any]): Self = this.set("iconRender", js.Any.fromFunction2(value))
+    def setIconRender(value: (/* file */ UploadFile[_], /* listType */ js.UndefOr[UploadListType]) => ReactElement): Self = this.set("iconRender", js.Any.fromFunction2(value))
     @scala.inline
     def deleteIconRender: Self = this.set("iconRender", js.undefined)
     @scala.inline
@@ -156,7 +160,7 @@ object DraggerProps {
     @scala.inline
     def deleteLocale: Self = this.set("locale", js.undefined)
     @scala.inline
-    def setMethod(value: POST | PUT | post_ | put_): Self = this.set("method", value.asInstanceOf[js.Any])
+    def setMethod(value: POST | PUT | PATCH | post_ | put_ | patch_): Self = this.set("method", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMethod: Self = this.set("method", js.undefined)
     @scala.inline
@@ -195,6 +199,10 @@ object DraggerProps {
     def setPreviewFile(value: /* file */ File | Blob => js.Thenable[String]): Self = this.set("previewFile", js.Any.fromFunction1(value))
     @scala.inline
     def deletePreviewFile: Self = this.set("previewFile", js.undefined)
+    @scala.inline
+    def setProgress(value: UploadListProgressProps): Self = this.set("progress", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteProgress: Self = this.set("progress", js.undefined)
     @scala.inline
     def setShowUploadList(value: Boolean | ShowUploadListInterface): Self = this.set("showUploadList", value.asInstanceOf[js.Any])
     @scala.inline

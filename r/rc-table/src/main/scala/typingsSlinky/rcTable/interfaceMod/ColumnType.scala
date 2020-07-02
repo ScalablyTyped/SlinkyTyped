@@ -1,7 +1,7 @@
 package typingsSlinky.rcTable.interfaceMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.HTMLAttributes
 import scala.scalajs.js
@@ -21,10 +21,11 @@ trait ColumnType[RecordType] extends ColumnSharedType[RecordType] {
       /* value */ js.Any, 
       /* record */ RecordType, 
       /* index */ Double, 
-      TagMod[Any] | RenderedCell[RecordType]
+      ReactElement | RenderedCell[RecordType]
     ]
   ] = js.undefined
   var rowSpan: js.UndefOr[Double] = js.undefined
+  var shouldCellUpdate: js.UndefOr[js.Function2[/* record */ RecordType, /* prevRecord */ RecordType, Boolean]] = js.undefined
   var width: js.UndefOr[Double | String] = js.undefined
 }
 
@@ -63,7 +64,7 @@ object ColumnType {
     def deleteOnCellClick: Self = this.set("onCellClick", js.undefined)
     @scala.inline
     def setRender(
-      value: (/* value */ js.Any, /* record */ RecordType, /* index */ Double) => TagMod[Any] | RenderedCell[RecordType]
+      value: (/* value */ js.Any, /* record */ RecordType, /* index */ Double) => ReactElement | RenderedCell[RecordType]
     ): Self = this.set("render", js.Any.fromFunction3(value))
     @scala.inline
     def deleteRender: Self = this.set("render", js.undefined)
@@ -71,6 +72,10 @@ object ColumnType {
     def setRowSpan(value: Double): Self = this.set("rowSpan", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRowSpan: Self = this.set("rowSpan", js.undefined)
+    @scala.inline
+    def setShouldCellUpdate(value: (/* record */ RecordType, /* prevRecord */ RecordType) => Boolean): Self = this.set("shouldCellUpdate", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteShouldCellUpdate: Self = this.set("shouldCellUpdate", js.undefined)
     @scala.inline
     def setWidth(value: Double | String): Self = this.set("width", value.asInstanceOf[js.Any])
     @scala.inline

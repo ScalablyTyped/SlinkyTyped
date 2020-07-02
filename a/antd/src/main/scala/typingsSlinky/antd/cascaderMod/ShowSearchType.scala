@@ -1,6 +1,6 @@
 package typingsSlinky.antd.cascaderMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.antdBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +23,7 @@ trait ShowSearchType extends js.Object {
       /* path */ js.Array[CascaderOptionType], 
       /* prefixCls */ js.UndefOr[String], 
       /* names */ FilledFieldNamesType, 
-      TagMod[Any]
+      ReactElement
     ]
   ] = js.undefined
   var sort: js.UndefOr[
@@ -70,7 +70,7 @@ object ShowSearchType {
     def deleteMatchInputWidth: Self = this.set("matchInputWidth", js.undefined)
     @scala.inline
     def setRender(
-      value: (/* inputValue */ String, /* path */ js.Array[CascaderOptionType], /* prefixCls */ js.UndefOr[String], /* names */ FilledFieldNamesType) => TagMod[Any]
+      value: (/* inputValue */ String, /* path */ js.Array[CascaderOptionType], /* prefixCls */ js.UndefOr[String], /* names */ FilledFieldNamesType) => ReactElement
     ): Self = this.set("render", js.Any.fromFunction4(value))
     @scala.inline
     def deleteRender: Self = this.set("render", js.undefined)

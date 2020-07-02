@@ -2,7 +2,6 @@ package typingsSlinky.semanticUiReact.components
 
 import org.scalajs.dom.raw.HTMLAnchorElement
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
@@ -44,7 +43,7 @@ object Confirm {
     def actionsReactElement(value: ReactElement): this.type = set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def actionsFunction3(
-      value: (/* component */ ReactType[ModalActionsProps], ModalActionsProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ModalActionsProps], ModalActionsProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("actions", js.Any.fromFunction3(value))
     @scala.inline
     def actions(value: SemanticShorthandItem[ModalActionsProps]): this.type = set("actions", value.asInstanceOf[js.Any])
@@ -56,7 +55,7 @@ object Confirm {
     def cancelButtonReactElement(value: ReactElement): this.type = set("cancelButton", value.asInstanceOf[js.Any])
     @scala.inline
     def cancelButtonFunction3(
-      value: (/* component */ ReactType[ButtonProps], ButtonProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ButtonProps], ButtonProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("cancelButton", js.Any.fromFunction3(value))
     @scala.inline
     def cancelButton(value: SemanticShorthandItem[ButtonProps]): this.type = set("cancelButton", value.asInstanceOf[js.Any])
@@ -84,7 +83,7 @@ object Confirm {
     def confirmButtonReactElement(value: ReactElement): this.type = set("confirmButton", value.asInstanceOf[js.Any])
     @scala.inline
     def confirmButtonFunction3(
-      value: (/* component */ ReactType[ButtonProps], ButtonProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ButtonProps], ButtonProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("confirmButton", js.Any.fromFunction3(value))
     @scala.inline
     def confirmButton(value: SemanticShorthandItem[ButtonProps]): this.type = set("confirmButton", value.asInstanceOf[js.Any])
@@ -92,7 +91,7 @@ object Confirm {
     def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     @scala.inline
     def contentFunction3(
-      value: (/* component */ ReactType[ModalContentProps], ModalContentProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ModalContentProps], ModalContentProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("content", js.Any.fromFunction3(value))
     @scala.inline
     def content(value: SemanticShorthandItem[ModalContentProps]): this.type = set("content", value.asInstanceOf[js.Any])
@@ -106,7 +105,7 @@ object Confirm {
     def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     @scala.inline
     def headerFunction3(
-      value: (/* component */ ReactType[ModalHeaderProps], ModalHeaderProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ModalHeaderProps], ModalHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("header", js.Any.fromFunction3(value))
     @scala.inline
     def header(value: SemanticShorthandItem[ModalHeaderProps]): this.type = set("header", value.asInstanceOf[js.Any])
@@ -145,7 +144,7 @@ object Confirm {
     @scala.inline
     def triggerReactElement(value: ReactElement): this.type = set("trigger", value.asInstanceOf[js.Any])
     @scala.inline
-    def trigger(value: TagMod[Any]): this.type = set("trigger", value.asInstanceOf[js.Any])
+    def trigger(value: ReactElement): this.type = set("trigger", value.asInstanceOf[js.Any])
     @scala.inline
     def triggerRefRefObject(value: ReactRef[_]): this.type = set("triggerRef", value.asInstanceOf[js.Any])
     @scala.inline

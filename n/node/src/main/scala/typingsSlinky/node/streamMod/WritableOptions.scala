@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait WritableOptions extends js.Object {
   var autoDestroy: js.UndefOr[Boolean] = js.undefined
   var decodeStrings: js.UndefOr[Boolean] = js.undefined
-  var defaultencoding: js.UndefOr[BufferEncoding] = js.undefined
+  var defaultEncoding: js.UndefOr[BufferEncoding] = js.undefined
   var destroy: js.UndefOr[
     js.ThisFunction2[
       /* this */ Writable, 
@@ -73,9 +73,9 @@ object WritableOptions {
     @scala.inline
     def deleteDecodeStrings: Self = this.set("decodeStrings", js.undefined)
     @scala.inline
-    def setDefaultencoding(value: BufferEncoding): Self = this.set("defaultencoding", value.asInstanceOf[js.Any])
+    def setDefaultEncoding(value: BufferEncoding): Self = this.set("defaultEncoding", value.asInstanceOf[js.Any])
     @scala.inline
-    def deleteDefaultencoding: Self = this.set("defaultencoding", js.undefined)
+    def deleteDefaultEncoding: Self = this.set("defaultEncoding", js.undefined)
     @scala.inline
     def setDestroy(
       value: js.ThisFunction2[

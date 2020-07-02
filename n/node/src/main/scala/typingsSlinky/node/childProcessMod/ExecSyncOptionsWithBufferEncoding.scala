@@ -1,19 +1,19 @@
 package typingsSlinky.node.childProcessMod
 
-import typingsSlinky.node.BufferEncoding
+import typingsSlinky.node.nodeStrings.buffer_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait ExecSyncOptionsWithBufferEncoding extends ExecSyncOptions {
   @JSName("encoding")
-  var encoding_ExecSyncOptionsWithBufferEncoding: BufferEncoding
+  var encoding_ExecSyncOptionsWithBufferEncoding: js.UndefOr[buffer_ | Null] = js.undefined
 }
 
 object ExecSyncOptionsWithBufferEncoding {
   @scala.inline
-  def apply(encoding: BufferEncoding): ExecSyncOptionsWithBufferEncoding = {
-    val __obj = js.Dynamic.literal(encoding = encoding.asInstanceOf[js.Any])
+  def apply(): ExecSyncOptionsWithBufferEncoding = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ExecSyncOptionsWithBufferEncoding]
   }
   @scala.inline
@@ -28,7 +28,11 @@ object ExecSyncOptionsWithBufferEncoding {
         x
     }
     @scala.inline
-    def setEncoding(value: BufferEncoding): Self = this.set("encoding", value.asInstanceOf[js.Any])
+    def setEncoding(value: buffer_): Self = this.set("encoding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteEncoding: Self = this.set("encoding", js.undefined)
+    @scala.inline
+    def setEncodingNull: Self = this.set("encoding", null)
   }
   
 }

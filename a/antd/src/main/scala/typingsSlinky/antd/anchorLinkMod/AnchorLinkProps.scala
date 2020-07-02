@@ -1,18 +1,17 @@
 package typingsSlinky.antd.anchorLinkMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait AnchorLinkProps extends js.Object {
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var href: String
   var prefixCls: js.UndefOr[String] = js.undefined
   var target: js.UndefOr[String] = js.undefined
-  var title: TagMod[Any]
+  var title: ReactElement
 }
 
 object AnchorLinkProps {
@@ -37,7 +36,7 @@ object AnchorLinkProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -53,7 +52,7 @@ object AnchorLinkProps {
     @scala.inline
     def deleteTarget: Self = this.set("target", js.undefined)
     @scala.inline
-    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
   }

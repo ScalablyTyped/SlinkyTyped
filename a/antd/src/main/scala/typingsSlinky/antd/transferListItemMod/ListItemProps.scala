@@ -1,6 +1,6 @@
 package typingsSlinky.antd.transferListItemMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.transferMod.TransferItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,9 +10,11 @@ trait ListItemProps extends js.Object {
   var checked: js.UndefOr[Boolean] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
   var item: TransferItem
+  var onRemove: js.UndefOr[js.Function1[/* item */ TransferItem, Unit]] = js.undefined
   var prefixCls: String
-  var renderedEl: TagMod[Any]
+  var renderedEl: ReactElement
   var renderedText: js.UndefOr[String | Double] = js.undefined
+  var showRemove: js.UndefOr[Boolean] = js.undefined
   def onClick(item: TransferItem): Unit
 }
 
@@ -48,13 +50,21 @@ object ListItemProps {
     @scala.inline
     def deleteDisabled: Self = this.set("disabled", js.undefined)
     @scala.inline
-    def setRenderedEl(value: TagMod[Any]): Self = this.set("renderedEl", value.asInstanceOf[js.Any])
+    def setOnRemove(value: /* item */ TransferItem => Unit): Self = this.set("onRemove", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnRemove: Self = this.set("onRemove", js.undefined)
+    @scala.inline
+    def setRenderedEl(value: ReactElement): Self = this.set("renderedEl", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRenderedEl: Self = this.set("renderedEl", js.undefined)
     @scala.inline
     def setRenderedText(value: String | Double): Self = this.set("renderedText", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRenderedText: Self = this.set("renderedText", js.undefined)
+    @scala.inline
+    def setShowRemove(value: Boolean): Self = this.set("showRemove", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowRemove: Self = this.set("showRemove", js.undefined)
   }
   
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.antd.generateCalendarMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.OnChange
 import typingsSlinky.antd.generatePickerMod.PickerLocale
 import typingsSlinky.react.mod.CSSProperties
@@ -10,16 +10,16 @@ import scala.scalajs.js.annotation._
 
 trait CalendarProps[DateType] extends js.Object {
   var className: js.UndefOr[String] = js.undefined
-  var dateCellRender: js.UndefOr[js.Function1[/* date */ DateType, TagMod[Any]]] = js.undefined
-  var dateFullCellRender: js.UndefOr[js.Function1[/* date */ DateType, TagMod[Any]]] = js.undefined
+  var dateCellRender: js.UndefOr[js.Function1[/* date */ DateType, ReactElement]] = js.undefined
+  var dateFullCellRender: js.UndefOr[js.Function1[/* date */ DateType, ReactElement]] = js.undefined
   var defaultValue: js.UndefOr[DateType] = js.undefined
   var disabledDate: js.UndefOr[js.Function1[/* date */ DateType, Boolean]] = js.undefined
   var fullscreen: js.UndefOr[Boolean] = js.undefined
   var headerRender: js.UndefOr[HeaderRender[DateType]] = js.undefined
   var locale: js.UndefOr[PickerLocale] = js.undefined
   var mode: js.UndefOr[CalendarMode] = js.undefined
-  var monthCellRender: js.UndefOr[js.Function1[/* date */ DateType, TagMod[Any]]] = js.undefined
-  var monthFullCellRender: js.UndefOr[js.Function1[/* date */ DateType, TagMod[Any]]] = js.undefined
+  var monthCellRender: js.UndefOr[js.Function1[/* date */ DateType, ReactElement]] = js.undefined
+  var monthFullCellRender: js.UndefOr[js.Function1[/* date */ DateType, ReactElement]] = js.undefined
   var onChange: js.UndefOr[js.Function1[/* date */ DateType, Unit]] = js.undefined
   var onPanelChange: js.UndefOr[js.Function2[/* date */ DateType, /* mode */ CalendarMode, Unit]] = js.undefined
   var onSelect: js.UndefOr[js.Function1[/* date */ DateType, Unit]] = js.undefined
@@ -51,11 +51,11 @@ object CalendarProps {
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
     @scala.inline
-    def setDateCellRender(value: /* date */ DateType => TagMod[Any]): Self = this.set("dateCellRender", js.Any.fromFunction1(value))
+    def setDateCellRender(value: /* date */ DateType => ReactElement): Self = this.set("dateCellRender", js.Any.fromFunction1(value))
     @scala.inline
     def deleteDateCellRender: Self = this.set("dateCellRender", js.undefined)
     @scala.inline
-    def setDateFullCellRender(value: /* date */ DateType => TagMod[Any]): Self = this.set("dateFullCellRender", js.Any.fromFunction1(value))
+    def setDateFullCellRender(value: /* date */ DateType => ReactElement): Self = this.set("dateFullCellRender", js.Any.fromFunction1(value))
     @scala.inline
     def deleteDateFullCellRender: Self = this.set("dateFullCellRender", js.undefined)
     @scala.inline
@@ -71,7 +71,7 @@ object CalendarProps {
     @scala.inline
     def deleteFullscreen: Self = this.set("fullscreen", js.undefined)
     @scala.inline
-    def setHeaderRender(value: /* config */ OnChange[DateType] => TagMod[Any]): Self = this.set("headerRender", js.Any.fromFunction1(value))
+    def setHeaderRender(value: /* config */ OnChange[DateType] => ReactElement): Self = this.set("headerRender", js.Any.fromFunction1(value))
     @scala.inline
     def deleteHeaderRender: Self = this.set("headerRender", js.undefined)
     @scala.inline
@@ -83,11 +83,11 @@ object CalendarProps {
     @scala.inline
     def deleteMode: Self = this.set("mode", js.undefined)
     @scala.inline
-    def setMonthCellRender(value: /* date */ DateType => TagMod[Any]): Self = this.set("monthCellRender", js.Any.fromFunction1(value))
+    def setMonthCellRender(value: /* date */ DateType => ReactElement): Self = this.set("monthCellRender", js.Any.fromFunction1(value))
     @scala.inline
     def deleteMonthCellRender: Self = this.set("monthCellRender", js.undefined)
     @scala.inline
-    def setMonthFullCellRender(value: /* date */ DateType => TagMod[Any]): Self = this.set("monthFullCellRender", js.Any.fromFunction1(value))
+    def setMonthFullCellRender(value: /* date */ DateType => ReactElement): Self = this.set("monthFullCellRender", js.Any.fromFunction1(value))
     @scala.inline
     def deleteMonthFullCellRender: Self = this.set("monthFullCellRender", js.undefined)
     @scala.inline

@@ -3,7 +3,6 @@ package typingsSlinky.rcPicker.pickerMod
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
@@ -253,7 +252,7 @@ trait PickerDateProps[DateType] extends PickerProps[DateType] {
   var autoComplete: js.UndefOr[String] = js.undefined
   var autoFocus: js.UndefOr[Boolean] = js.undefined
   var className: js.UndefOr[String] = js.undefined
-  var clearIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var clearIcon: js.UndefOr[ReactElement] = js.undefined
   var components: js.UndefOr[Components] = js.undefined
   var dateRender: js.UndefOr[DateRender[DateType]] = js.undefined
   var defaultOpen: js.UndefOr[Boolean] = js.undefined
@@ -277,7 +276,7 @@ trait PickerDateProps[DateType] extends PickerProps[DateType] {
   var mode: js.UndefOr[PanelMode] = js.undefined
   var monthCellRender: js.UndefOr[MonthCellRender[DateType]] = js.undefined
   var name: js.UndefOr[String] = js.undefined
-  var nextIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var nextIcon: js.UndefOr[ReactElement] = js.undefined
   var onBlur: js.UndefOr[FocusEventHandler[HTMLInputElement]] = js.undefined
   var onChange: js.UndefOr[js.Function2[/* value */ DateType | Null, /* dateString */ String, Unit]] = js.undefined
   var onClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
@@ -298,15 +297,15 @@ trait PickerDateProps[DateType] extends PickerProps[DateType] {
   var placeholder: js.UndefOr[String] = js.undefined
   var popupStyle: js.UndefOr[CSSProperties] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
-  var prevIcon: js.UndefOr[TagMod[Any]] = js.undefined
-  var renderExtraFooter: js.UndefOr[js.Function1[/* mode */ PanelMode, TagMod[Any]]] = js.undefined
+  var prevIcon: js.UndefOr[ReactElement] = js.undefined
+  var renderExtraFooter: js.UndefOr[js.Function1[/* mode */ PanelMode, ReactElement]] = js.undefined
   var role: js.UndefOr[String] = js.undefined
   var showTime: js.UndefOr[Boolean | SharedTimeProps[DateType]] = js.undefined
   var showToday: js.UndefOr[Boolean] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
-  var suffixIcon: js.UndefOr[TagMod[Any]] = js.undefined
-  var superNextIcon: js.UndefOr[TagMod[Any]] = js.undefined
-  var superPrevIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var suffixIcon: js.UndefOr[ReactElement] = js.undefined
+  var superNextIcon: js.UndefOr[ReactElement] = js.undefined
+  var superPrevIcon: js.UndefOr[ReactElement] = js.undefined
   var tabIndex: js.UndefOr[Double] = js.undefined
   var transitionName: js.UndefOr[String] = js.undefined
   var value: js.UndefOr[DateType] = js.undefined
@@ -544,7 +543,7 @@ object PickerDateProps {
     @scala.inline
     def setClearIconReactElement(value: ReactElement): Self = this.set("clearIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setClearIcon(value: TagMod[Any]): Self = this.set("clearIcon", value.asInstanceOf[js.Any])
+    def setClearIcon(value: ReactElement): Self = this.set("clearIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteClearIcon: Self = this.set("clearIcon", js.undefined)
     @scala.inline
@@ -552,7 +551,7 @@ object PickerDateProps {
     @scala.inline
     def deleteComponents: Self = this.set("components", js.undefined)
     @scala.inline
-    def setDateRender(value: (DateType, DateType) => TagMod[Any]): Self = this.set("dateRender", js.Any.fromFunction2(value))
+    def setDateRender(value: (DateType, DateType) => ReactElement): Self = this.set("dateRender", js.Any.fromFunction2(value))
     @scala.inline
     def deleteDateRender: Self = this.set("dateRender", js.undefined)
     @scala.inline
@@ -614,7 +613,7 @@ object PickerDateProps {
     @scala.inline
     def deleteMode: Self = this.set("mode", js.undefined)
     @scala.inline
-    def setMonthCellRender(value: (DateType, /* locale */ Locale) => TagMod[Any]): Self = this.set("monthCellRender", js.Any.fromFunction2(value))
+    def setMonthCellRender(value: (DateType, /* locale */ Locale) => ReactElement): Self = this.set("monthCellRender", js.Any.fromFunction2(value))
     @scala.inline
     def deleteMonthCellRender: Self = this.set("monthCellRender", js.undefined)
     @scala.inline
@@ -624,7 +623,7 @@ object PickerDateProps {
     @scala.inline
     def setNextIconReactElement(value: ReactElement): Self = this.set("nextIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setNextIcon(value: TagMod[Any]): Self = this.set("nextIcon", value.asInstanceOf[js.Any])
+    def setNextIcon(value: ReactElement): Self = this.set("nextIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteNextIcon: Self = this.set("nextIcon", js.undefined)
     @scala.inline
@@ -706,11 +705,11 @@ object PickerDateProps {
     @scala.inline
     def setPrevIconReactElement(value: ReactElement): Self = this.set("prevIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setPrevIcon(value: TagMod[Any]): Self = this.set("prevIcon", value.asInstanceOf[js.Any])
+    def setPrevIcon(value: ReactElement): Self = this.set("prevIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePrevIcon: Self = this.set("prevIcon", js.undefined)
     @scala.inline
-    def setRenderExtraFooter(value: /* mode */ PanelMode => TagMod[Any]): Self = this.set("renderExtraFooter", js.Any.fromFunction1(value))
+    def setRenderExtraFooter(value: /* mode */ PanelMode => ReactElement): Self = this.set("renderExtraFooter", js.Any.fromFunction1(value))
     @scala.inline
     def deleteRenderExtraFooter: Self = this.set("renderExtraFooter", js.undefined)
     @scala.inline
@@ -732,19 +731,19 @@ object PickerDateProps {
     @scala.inline
     def setSuffixIconReactElement(value: ReactElement): Self = this.set("suffixIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSuffixIcon(value: TagMod[Any]): Self = this.set("suffixIcon", value.asInstanceOf[js.Any])
+    def setSuffixIcon(value: ReactElement): Self = this.set("suffixIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSuffixIcon: Self = this.set("suffixIcon", js.undefined)
     @scala.inline
     def setSuperNextIconReactElement(value: ReactElement): Self = this.set("superNextIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSuperNextIcon(value: TagMod[Any]): Self = this.set("superNextIcon", value.asInstanceOf[js.Any])
+    def setSuperNextIcon(value: ReactElement): Self = this.set("superNextIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSuperNextIcon: Self = this.set("superNextIcon", js.undefined)
     @scala.inline
     def setSuperPrevIconReactElement(value: ReactElement): Self = this.set("superPrevIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSuperPrevIcon(value: TagMod[Any]): Self = this.set("superPrevIcon", value.asInstanceOf[js.Any])
+    def setSuperPrevIcon(value: ReactElement): Self = this.set("superPrevIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSuperPrevIcon: Self = this.set("superPrevIcon", js.undefined)
     @scala.inline

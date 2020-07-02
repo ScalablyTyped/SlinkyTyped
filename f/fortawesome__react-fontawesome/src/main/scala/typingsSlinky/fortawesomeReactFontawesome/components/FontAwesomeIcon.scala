@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.SVGSVGElement
 import slinky.core.SyntheticEvent
+import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
@@ -360,6 +361,12 @@ object FontAwesomeIcon {
     def fontWeight(value: Double | String): this.type = set("fontWeight", value.asInstanceOf[js.Any])
     @scala.inline
     def format(value: Double | String): this.type = set("format", value.asInstanceOf[js.Any])
+    @scala.inline
+    def forwardedRefRefObject(value: ReactRef[_]): this.type = set("forwardedRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def forwardedRefFunction1(value: /* e */ js.Any => Unit): this.type = set("forwardedRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def forwardedRef(value: (js.Function1[/* e */ js.Any, Unit]) | ReactRef[_]): this.type = set("forwardedRef", value.asInstanceOf[js.Any])
     @scala.inline
     def from(value: Double | String): this.type = set("from", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,6 +1,5 @@
 package typingsSlinky.rcTreeSelect.interfaceMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +9,7 @@ trait LabelValueType extends js.Object {
   /** Only works on `treeCheckStrictly` */
   var halfChecked: js.UndefOr[Boolean] = js.undefined
   var key: js.UndefOr[Key] = js.undefined
-  var label: js.UndefOr[TagMod[Any]] = js.undefined
+  var label: js.UndefOr[ReactElement] = js.undefined
   var value: js.UndefOr[RawValueType] = js.undefined
 }
 
@@ -42,7 +41,7 @@ object LabelValueType {
     @scala.inline
     def setLabelReactElement(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def setLabel(value: TagMod[Any]): Self = this.set("label", value.asInstanceOf[js.Any])
+    def setLabel(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)
     @scala.inline

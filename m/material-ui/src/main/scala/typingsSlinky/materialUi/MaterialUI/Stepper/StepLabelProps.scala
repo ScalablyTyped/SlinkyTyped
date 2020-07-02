@@ -1,6 +1,5 @@
 package typingsSlinky.materialUi.MaterialUI.Stepper
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -11,7 +10,7 @@ trait StepLabelProps extends js.Object {
   var active: js.UndefOr[Boolean] = js.undefined
   var completed: js.UndefOr[Boolean] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
-  var icon: js.UndefOr[TagMod[Any] | String | Double] = js.undefined
+  var icon: js.UndefOr[ReactElement | String | Double] = js.undefined
   var iconContainerStyle: js.UndefOr[CSSProperties] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
 }
@@ -48,7 +47,7 @@ object StepLabelProps {
     @scala.inline
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setIcon(value: TagMod[Any] | String | Double): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: ReactElement | String | Double): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
     @scala.inline

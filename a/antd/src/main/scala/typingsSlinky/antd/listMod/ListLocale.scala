@@ -1,13 +1,12 @@
 package typingsSlinky.antd.listMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait ListLocale extends js.Object {
-  var emptyText: TagMod[Any] | js.Function0[TagMod[Any]]
+  var emptyText: ReactElement | js.Function0[ReactElement]
 }
 
 object ListLocale {
@@ -30,9 +29,9 @@ object ListLocale {
     @scala.inline
     def setEmptyTextReactElement(value: ReactElement): Self = this.set("emptyText", value.asInstanceOf[js.Any])
     @scala.inline
-    def setEmptyTextFunction0(value: () => TagMod[Any]): Self = this.set("emptyText", js.Any.fromFunction0(value))
+    def setEmptyTextFunction0(value: () => ReactElement): Self = this.set("emptyText", js.Any.fromFunction0(value))
     @scala.inline
-    def setEmptyText(value: TagMod[Any] | js.Function0[TagMod[Any]]): Self = this.set("emptyText", value.asInstanceOf[js.Any])
+    def setEmptyText(value: ReactElement | js.Function0[ReactElement]): Self = this.set("emptyText", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEmptyText: Self = this.set("emptyText", js.undefined)
   }

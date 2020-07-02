@@ -2,7 +2,7 @@ package typingsSlinky.materialUiCore.components
 
 import org.scalajs.dom.raw.HTMLSelectElement
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.select.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.anon.Node
@@ -39,7 +39,7 @@ object NativeSelectInput {
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: (/* event */ ChangeEvent[HTMLSelectElement], /* child */ TagMod[Any]) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    def onChange(value: (/* event */ ChangeEvent[HTMLSelectElement], /* child */ ReactElement) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
     @scala.inline
     def value(value: (js.Array[String | Double | Boolean]) | String | Double | Boolean): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

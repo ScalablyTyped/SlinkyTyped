@@ -1,7 +1,6 @@
 package typingsSlinky.rcTreeSelect.components
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticUIEvent
 import slinky.web.html.div.tag
@@ -34,7 +33,7 @@ object OptionList {
     @scala.inline
     def notFoundContentReactElement(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
     @scala.inline
-    def notFoundContent(value: TagMod[Any]): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
+    def notFoundContent(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
     @scala.inline
     def virtual(value: Boolean): this.type = set("virtual", value.asInstanceOf[js.Any])
   }

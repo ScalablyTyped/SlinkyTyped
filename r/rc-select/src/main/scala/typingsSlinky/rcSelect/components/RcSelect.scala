@@ -3,7 +3,6 @@ package typingsSlinky.rcSelect.components
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.Node
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -60,7 +59,7 @@ object RcSelect {
     @scala.inline
     def maxTagPlaceholderReactElement(value: ReactElement): this.type = set("maxTagPlaceholder", value.asInstanceOf[js.Any])
     @scala.inline
-    def maxTagPlaceholder(value: TagMod[Any] | js.Function): this.type = set("maxTagPlaceholder", value.asInstanceOf[js.Any])
+    def maxTagPlaceholder(value: ReactElement | js.Function): this.type = set("maxTagPlaceholder", value.asInstanceOf[js.Any])
     @scala.inline
     def maxTagTextLength(value: Double): this.type = set("maxTagTextLength", value.asInstanceOf[js.Any])
     @scala.inline
@@ -90,7 +89,7 @@ object RcSelect {
     @scala.inline
     def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
-    def placeholder(value: TagMod[Any]): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    def placeholder(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline

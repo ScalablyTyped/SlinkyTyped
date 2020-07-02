@@ -1,6 +1,5 @@
 package typingsSlinky.rcPicker
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcPicker.interfaceMod.PanelMode
 import scala.scalajs.js
@@ -14,7 +13,7 @@ object getExtraFooterMod extends js.Object {
   def default(
     prefixCls: String,
     mode: PanelMode,
-    renderExtraFooter: js.Function1[/* mode */ PanelMode, TagMod[Any]]
+    renderExtraFooter: js.Function1[/* mode */ PanelMode, ReactElement]
   ): ReactElement = js.native
 }
 

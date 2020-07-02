@@ -2,7 +2,6 @@ package typingsSlinky.antd.dropdownButtonMod
 
 import org.scalajs.dom.raw.HTMLButtonElement
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.antdStrings.click
@@ -22,14 +21,14 @@ import scala.scalajs.js.annotation._
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.antd.dropdownDropdownMod.DropDownProps because var conflicts: className, prefixCls. Inlined trigger, overlay, onVisibleChange, visible, disabled, align, getPopupContainer, transitionName, placement, overlayClassName, overlayStyle, forceRender, mouseEnterDelay, mouseLeaveDelay, openClassName */ trait DropdownButtonProps extends ButtonGroupProps {
   var align: js.UndefOr[Align] = js.undefined
-  var buttonsRender: js.UndefOr[js.Function1[/* buttons */ js.Array[TagMod[Any]], js.Array[TagMod[Any]]]] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var buttonsRender: js.UndefOr[js.Function1[/* buttons */ js.Array[ReactElement], js.Array[ReactElement]]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
   var forceRender: js.UndefOr[Boolean] = js.undefined
   var getPopupContainer: js.UndefOr[js.Function1[/* triggerNode */ HTMLElement, HTMLElement]] = js.undefined
   var href: js.UndefOr[String] = js.undefined
   var htmlType: js.UndefOr[ButtonHTMLType] = js.undefined
-  var icon: js.UndefOr[TagMod[Any]] = js.undefined
+  var icon: js.UndefOr[ReactElement] = js.undefined
   var mouseEnterDelay: js.UndefOr[Double] = js.undefined
   var mouseLeaveDelay: js.UndefOr[Double] = js.undefined
   var onClick: js.UndefOr[MouseEventHandler[HTMLButtonElement]] = js.undefined
@@ -74,13 +73,13 @@ object DropdownButtonProps {
     @scala.inline
     def deleteAlign: Self = this.set("align", js.undefined)
     @scala.inline
-    def setButtonsRender(value: /* buttons */ js.Array[TagMod[Any]] => js.Array[TagMod[Any]]): Self = this.set("buttonsRender", js.Any.fromFunction1(value))
+    def setButtonsRender(value: /* buttons */ js.Array[ReactElement] => js.Array[ReactElement]): Self = this.set("buttonsRender", js.Any.fromFunction1(value))
     @scala.inline
     def deleteButtonsRender: Self = this.set("buttonsRender", js.undefined)
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -106,7 +105,7 @@ object DropdownButtonProps {
     @scala.inline
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setIcon(value: TagMod[Any]): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
     @scala.inline

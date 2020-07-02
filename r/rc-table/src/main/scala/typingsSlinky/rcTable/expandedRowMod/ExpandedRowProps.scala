@@ -1,7 +1,7 @@
 package typingsSlinky.rcTable.expandedRowMod
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.rcTable.interfaceMod.CustomizeComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 
 trait ExpandedRowProps[RecordType] extends js.Object {
   var cellComponent: CustomizeComponent
-  var children: TagMod[Any]
+  var children: ReactElement
   var className: String
   var colSpan: Double
   var component: CustomizeComponent
@@ -78,7 +78,7 @@ object ExpandedRowProps {
     @scala.inline
     def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
   }

@@ -1,6 +1,5 @@
 package typingsSlinky.antd.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -26,11 +25,11 @@ object TimelineItem {
     @scala.inline
     def dotReactElement(value: ReactElement): this.type = set("dot", value.asInstanceOf[js.Any])
     @scala.inline
-    def dot(value: TagMod[Any]): this.type = set("dot", value.asInstanceOf[js.Any])
+    def dot(value: ReactElement): this.type = set("dot", value.asInstanceOf[js.Any])
     @scala.inline
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def pending(value: Boolean): this.type = set("pending", value.asInstanceOf[js.Any])
     @scala.inline

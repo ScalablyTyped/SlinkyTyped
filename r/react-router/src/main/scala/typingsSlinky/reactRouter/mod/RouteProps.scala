@@ -1,7 +1,6 @@
 package typingsSlinky.reactRouter.mod
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.history.mod.Location
 import typingsSlinky.history.mod.LocationState
@@ -11,14 +10,14 @@ import scala.scalajs.js.annotation._
 
 trait RouteProps extends js.Object {
   var children: js.UndefOr[
-    (js.Function1[/* props */ RouteChildrenProps[_, LocationState], TagMod[Any]]) | TagMod[Any]
+    (js.Function1[/* props */ RouteChildrenProps[_, LocationState], ReactElement]) | ReactElement
   ] = js.undefined
   var component: js.UndefOr[ReactComponentClass[_ | (RouteComponentProps[_, StaticContext, LocationState])]] = js.undefined
   var exact: js.UndefOr[Boolean] = js.undefined
   var location: js.UndefOr[Location[LocationState]] = js.undefined
   var path: js.UndefOr[String | js.Array[String]] = js.undefined
   var render: js.UndefOr[
-    js.Function1[/* props */ RouteComponentProps[_, StaticContext, LocationState], TagMod[Any]]
+    js.Function1[/* props */ RouteComponentProps[_, StaticContext, LocationState], ReactElement]
   ] = js.undefined
   var sensitive: js.UndefOr[Boolean] = js.undefined
   var strict: js.UndefOr[Boolean] = js.undefined
@@ -44,9 +43,11 @@ object RouteProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildrenFunction1(value: /* props */ RouteChildrenProps[_, LocationState] => TagMod[Any]): Self = this.set("children", js.Any.fromFunction1(value))
+    def setChildrenFunction1(value: /* props */ RouteChildrenProps[_, LocationState] => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
     @scala.inline
-    def setChildren(value: (js.Function1[/* props */ RouteChildrenProps[_, LocationState], TagMod[Any]]) | TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(
+      value: (js.Function1[/* props */ RouteChildrenProps[_, LocationState], ReactElement]) | ReactElement
+    ): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -70,7 +71,7 @@ object RouteProps {
     @scala.inline
     def deletePath: Self = this.set("path", js.undefined)
     @scala.inline
-    def setRender(value: /* props */ RouteComponentProps[_, StaticContext, LocationState] => TagMod[Any]): Self = this.set("render", js.Any.fromFunction1(value))
+    def setRender(value: /* props */ RouteComponentProps[_, StaticContext, LocationState] => ReactElement): Self = this.set("render", js.Any.fromFunction1(value))
     @scala.inline
     def deleteRender: Self = this.set("render", js.undefined)
     @scala.inline

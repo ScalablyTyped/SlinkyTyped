@@ -1,6 +1,5 @@
 package typingsSlinky.semanticUiReact.tableTableMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.react.mod.ReactType
@@ -33,7 +32,7 @@ trait StrictTableProps extends js.Object {
   /** A table may be divided each row into separate cells. */
   var celled: js.UndefOr[Boolean | internally] = js.undefined
   /** Primary content. */
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   /** Additional classes. */
   var className: js.UndefOr[String] = js.undefined
   /** A table can be collapsing, taking up only as much space as its rows. */
@@ -128,7 +127,7 @@ object StrictTableProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -163,7 +162,7 @@ object StrictTableProps {
     def setFooterRowReactElement(value: ReactElement): Self = this.set("footerRow", value.asInstanceOf[js.Any])
     @scala.inline
     def setFooterRowFunction3(
-      value: (/* component */ ReactType[TableRowProps], TableRowProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[TableRowProps], TableRowProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("footerRow", js.Any.fromFunction3(value))
     @scala.inline
     def setFooterRow(value: SemanticShorthandItem[TableRowProps]): Self = this.set("footerRow", value.asInstanceOf[js.Any])
@@ -173,7 +172,7 @@ object StrictTableProps {
     def setHeaderRowReactElement(value: ReactElement): Self = this.set("headerRow", value.asInstanceOf[js.Any])
     @scala.inline
     def setHeaderRowFunction3(
-      value: (/* component */ ReactType[TableRowProps], TableRowProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[TableRowProps], TableRowProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("headerRow", js.Any.fromFunction3(value))
     @scala.inline
     def setHeaderRow(value: SemanticShorthandItem[TableRowProps]): Self = this.set("headerRow", value.asInstanceOf[js.Any])

@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -112,11 +111,11 @@ object Password {
     @scala.inline
     def addonAfterReactElement(value: ReactElement): this.type = set("addonAfter", value.asInstanceOf[js.Any])
     @scala.inline
-    def addonAfter(value: TagMod[Any]): this.type = set("addonAfter", value.asInstanceOf[js.Any])
+    def addonAfter(value: ReactElement): this.type = set("addonAfter", value.asInstanceOf[js.Any])
     @scala.inline
     def addonBeforeReactElement(value: ReactElement): this.type = set("addonBefore", value.asInstanceOf[js.Any])
     @scala.inline
-    def addonBefore(value: TagMod[Any]): this.type = set("addonBefore", value.asInstanceOf[js.Any])
+    def addonBefore(value: ReactElement): this.type = set("addonBefore", value.asInstanceOf[js.Any])
     @scala.inline
     def allowClear(value: Boolean): this.type = set("allowClear", value.asInstanceOf[js.Any])
     @scala.inline
@@ -271,6 +270,8 @@ object Password {
     def height(value: Double | String): this.type = set("height", value.asInstanceOf[js.Any])
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconRender(value: /* visible */ Boolean => ReactElement): this.type = set("iconRender", js.Any.fromFunction1(value))
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
@@ -474,7 +475,7 @@ object Password {
     @scala.inline
     def prefixReactElement(value: ReactElement): this.type = set("prefix", value.asInstanceOf[js.Any])
     @scala.inline
-    def prefix(value: TagMod[Any]): this.type = set("prefix", value.asInstanceOf[js.Any])
+    def prefix(value: ReactElement): this.type = set("prefix", value.asInstanceOf[js.Any])
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
@@ -508,7 +509,7 @@ object Password {
     @scala.inline
     def suffixReactElement(value: ReactElement): this.type = set("suffix", value.asInstanceOf[js.Any])
     @scala.inline
-    def suffix(value: TagMod[Any]): this.type = set("suffix", value.asInstanceOf[js.Any])
+    def suffix(value: ReactElement): this.type = set("suffix", value.asInstanceOf[js.Any])
     @scala.inline
     def suppressContentEditableWarning(value: Boolean): this.type = set("suppressContentEditableWarning", value.asInstanceOf[js.Any])
     @scala.inline

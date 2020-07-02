@@ -1,6 +1,5 @@
 package typingsSlinky.antd.breadcrumbBreadcrumbMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -15,13 +14,13 @@ trait BreadcrumbProps extends js.Object {
       /* params */ js.Any, 
       /* routes */ js.Array[Route], 
       /* paths */ js.Array[String], 
-      TagMod[Any]
+      ReactElement
     ]
   ] = js.undefined
   var params: js.UndefOr[js.Any] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
   var routes: js.UndefOr[js.Array[Route]] = js.undefined
-  var separator: js.UndefOr[TagMod[Any]] = js.undefined
+  var separator: js.UndefOr[ReactElement] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
 }
 
@@ -48,7 +47,7 @@ object BreadcrumbProps {
     def deleteClassName: Self = this.set("className", js.undefined)
     @scala.inline
     def setItemRender(
-      value: (/* route */ Route, /* params */ js.Any, /* routes */ js.Array[Route], /* paths */ js.Array[String]) => TagMod[Any]
+      value: (/* route */ Route, /* params */ js.Any, /* routes */ js.Array[Route], /* paths */ js.Array[String]) => ReactElement
     ): Self = this.set("itemRender", js.Any.fromFunction4(value))
     @scala.inline
     def deleteItemRender: Self = this.set("itemRender", js.undefined)
@@ -67,7 +66,7 @@ object BreadcrumbProps {
     @scala.inline
     def setSeparatorReactElement(value: ReactElement): Self = this.set("separator", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSeparator(value: TagMod[Any]): Self = this.set("separator", value.asInstanceOf[js.Any])
+    def setSeparator(value: ReactElement): Self = this.set("separator", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSeparator: Self = this.set("separator", js.undefined)
     @scala.inline

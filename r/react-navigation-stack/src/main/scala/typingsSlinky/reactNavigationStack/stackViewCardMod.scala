@@ -2,7 +2,7 @@ package typingsSlinky.reactNavigationStack
 
 import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Component
 import typingsSlinky.reactNative.mod.Animated.AnimatedInterpolation
 import typingsSlinky.reactNative.mod.Animated.Value
@@ -26,7 +26,7 @@ object stackViewCardMod extends js.Object {
   @js.native
   trait Props extends js.Object {
     var animatedStyle: js.Any = js.native
-    var children: TagMod[Any] = js.native
+    var children: ReactElement = js.native
     var navigation: NavigationStackProp[NavigationRoute[NavigationParams], NavigationParams] = js.native
     var pointerEvents: PointerEvents = js.native
     var position: AnimatedInterpolation = js.native

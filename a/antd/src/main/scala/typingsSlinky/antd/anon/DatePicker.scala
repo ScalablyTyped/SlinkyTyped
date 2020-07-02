@@ -16,7 +16,7 @@ trait DatePicker[DateType] extends js.Object {
       (Pick[
         PickerDateProps[DateType], 
         /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 98 */ js.Any
-      ]) with BorderedLocale, 
+      ]) with Bordered, 
       /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
     ]
   ]
@@ -25,7 +25,7 @@ trait DatePicker[DateType] extends js.Object {
       (Pick[
         PickerTimeProps[DateType], 
         /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 107 */ js.Any
-      ]) with BorderedLocale, 
+      ]) with Bordered, 
       /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 109 */ js.Any
     ]
   ]
@@ -34,7 +34,7 @@ trait DatePicker[DateType] extends js.Object {
       (Pick[
         PickerDateProps[DateType], 
         /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 98 */ js.Any
-      ]) with BorderedLocale, 
+      ]) with Bordered, 
       /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
     ]
   ]
@@ -43,7 +43,7 @@ trait DatePicker[DateType] extends js.Object {
       (Pick[
         PickerDateProps[DateType], 
         /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 98 */ js.Any
-      ]) with BorderedLocale, 
+      ]) with Bordered, 
       /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
     ]
   ]
@@ -58,7 +58,7 @@ object DatePicker {
         (Pick[
           PickerDateProps[DateType], 
           /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 98 */ js.Any
-        ]) with BorderedLocale, 
+        ]) with Bordered, 
         /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
       ]
     ],
@@ -67,7 +67,7 @@ object DatePicker {
         (Pick[
           PickerTimeProps[DateType], 
           /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 107 */ js.Any
-        ]) with BorderedLocale, 
+        ]) with Bordered, 
         /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 109 */ js.Any
       ]
     ],
@@ -76,7 +76,7 @@ object DatePicker {
         (Pick[
           PickerDateProps[DateType], 
           /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 98 */ js.Any
-        ]) with BorderedLocale, 
+        ]) with Bordered, 
         /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
       ]
     ],
@@ -85,7 +85,7 @@ object DatePicker {
         (Pick[
           PickerDateProps[DateType], 
           /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 98 */ js.Any
-        ]) with BorderedLocale, 
+        ]) with Bordered, 
         /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
       ]
     ]
@@ -113,7 +113,7 @@ object DatePicker {
             (Pick[
               PickerDateProps[DateType], 
               /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 98 */ js.Any
-            ]) with BorderedLocale, 
+            ]) with Bordered, 
             /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
           ]
         ]
@@ -125,7 +125,7 @@ object DatePicker {
             (Pick[
               PickerTimeProps[DateType], 
               /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 107 */ js.Any
-            ]) with BorderedLocale, 
+            ]) with Bordered, 
             /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 109 */ js.Any
           ]
         ]
@@ -137,7 +137,7 @@ object DatePicker {
             (Pick[
               PickerDateProps[DateType], 
               /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 98 */ js.Any
-            ]) with BorderedLocale, 
+            ]) with Bordered, 
             /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
           ]
         ]
@@ -149,7 +149,7 @@ object DatePicker {
             (Pick[
               PickerDateProps[DateType], 
               /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 98 */ js.Any
-            ]) with BorderedLocale, 
+            ]) with Bordered, 
             /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
           ]
         ]

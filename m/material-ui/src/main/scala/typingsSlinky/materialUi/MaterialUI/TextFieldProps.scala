@@ -3,7 +3,6 @@ package typingsSlinky.materialUi.MaterialUI
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
@@ -21,15 +20,15 @@ trait TextFieldProps extends js.Object {
   var defaultValue: js.UndefOr[String | Double] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
   var errorStyle: js.UndefOr[CSSProperties] = js.undefined
-  var errorText: js.UndefOr[TagMod[Any]] = js.undefined
+  var errorText: js.UndefOr[ReactElement] = js.undefined
   var floatingLabelFixed: js.UndefOr[Boolean] = js.undefined
   var floatingLabelFocusStyle: js.UndefOr[CSSProperties] = js.undefined
   var floatingLabelShrinkStyle: js.UndefOr[CSSProperties] = js.undefined
   var floatingLabelStyle: js.UndefOr[CSSProperties] = js.undefined
-  var floatingLabelText: js.UndefOr[TagMod[Any]] = js.undefined
+  var floatingLabelText: js.UndefOr[ReactElement] = js.undefined
   var fullWidth: js.UndefOr[Boolean] = js.undefined
   var hintStyle: js.UndefOr[CSSProperties] = js.undefined
-  var hintText: js.UndefOr[TagMod[Any]] = js.undefined
+  var hintText: js.UndefOr[ReactElement] = js.undefined
   var id: js.UndefOr[String] = js.undefined
   var inputStyle: js.UndefOr[CSSProperties] = js.undefined
   var max: js.UndefOr[Double] = js.undefined
@@ -106,7 +105,7 @@ object TextFieldProps {
     @scala.inline
     def setErrorTextReactElement(value: ReactElement): Self = this.set("errorText", value.asInstanceOf[js.Any])
     @scala.inline
-    def setErrorText(value: TagMod[Any]): Self = this.set("errorText", value.asInstanceOf[js.Any])
+    def setErrorText(value: ReactElement): Self = this.set("errorText", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteErrorText: Self = this.set("errorText", js.undefined)
     @scala.inline
@@ -128,7 +127,7 @@ object TextFieldProps {
     @scala.inline
     def setFloatingLabelTextReactElement(value: ReactElement): Self = this.set("floatingLabelText", value.asInstanceOf[js.Any])
     @scala.inline
-    def setFloatingLabelText(value: TagMod[Any]): Self = this.set("floatingLabelText", value.asInstanceOf[js.Any])
+    def setFloatingLabelText(value: ReactElement): Self = this.set("floatingLabelText", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFloatingLabelText: Self = this.set("floatingLabelText", js.undefined)
     @scala.inline
@@ -142,7 +141,7 @@ object TextFieldProps {
     @scala.inline
     def setHintTextReactElement(value: ReactElement): Self = this.set("hintText", value.asInstanceOf[js.Any])
     @scala.inline
-    def setHintText(value: TagMod[Any]): Self = this.set("hintText", value.asInstanceOf[js.Any])
+    def setHintText(value: ReactElement): Self = this.set("hintText", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHintText: Self = this.set("hintText", js.undefined)
     @scala.inline

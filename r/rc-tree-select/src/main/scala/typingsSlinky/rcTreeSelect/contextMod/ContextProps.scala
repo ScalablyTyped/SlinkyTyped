@@ -1,6 +1,5 @@
 package typingsSlinky.rcTreeSelect.contextMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcTreeSelect.interfaceMod.Key
 import typingsSlinky.rcTreeSelect.interfaceMod.LegacyDataNode
@@ -9,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait ContextProps extends js.Object {
-  var checkable: Boolean | TagMod[Any]
+  var checkable: Boolean | ReactElement
   var checkedKeys: js.Array[Key]
   var halfCheckedKeys: js.Array[Key]
   var showTreeIcon: Boolean
@@ -97,7 +96,7 @@ object ContextProps {
     @scala.inline
     def setCheckableReactElement(value: ReactElement): Self = this.set("checkable", value.asInstanceOf[js.Any])
     @scala.inline
-    def setCheckable(value: Boolean | TagMod[Any]): Self = this.set("checkable", value.asInstanceOf[js.Any])
+    def setCheckable(value: Boolean | ReactElement): Self = this.set("checkable", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCheckable: Self = this.set("checkable", js.undefined)
   }

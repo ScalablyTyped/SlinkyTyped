@@ -1,6 +1,5 @@
 package typingsSlinky.antd.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -19,6 +18,7 @@ import typingsSlinky.rcFieldForm.interfaceMod.Rule
 import typingsSlinky.rcFieldForm.interfaceMod.Store
 import typingsSlinky.rcFieldForm.interfaceMod.StoreValue
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.Key
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -36,7 +36,7 @@ object FormItem {
     @scala.inline
     def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def childrenFunction1(value: /* form */ FormInstance => TagMod[Any]): this.type = set("children", js.Any.fromFunction1(value))
+    def childrenFunction1(value: /* form */ FormInstance => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
     @scala.inline
     def children(value: ChildrenType): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
@@ -48,9 +48,9 @@ object FormItem {
     @scala.inline
     def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
-    def extra(value: TagMod[Any]): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
-    def fieldKey(value: Double): this.type = set("fieldKey", value.asInstanceOf[js.Any])
+    def fieldKey(value: Key | js.Array[Key]): this.type = set("fieldKey", value.asInstanceOf[js.Any])
     @scala.inline
     def getValueFromEvent(value: /* args */ EventArgs => StoreValue): this.type = set("getValueFromEvent", js.Any.fromFunction1(value))
     @scala.inline
@@ -60,7 +60,7 @@ object FormItem {
     @scala.inline
     def helpReactElement(value: ReactElement): this.type = set("help", value.asInstanceOf[js.Any])
     @scala.inline
-    def help(value: TagMod[Any]): this.type = set("help", value.asInstanceOf[js.Any])
+    def help(value: ReactElement): this.type = set("help", value.asInstanceOf[js.Any])
     @scala.inline
     def htmlFor(value: String): this.type = set("htmlFor", value.asInstanceOf[js.Any])
     @scala.inline
@@ -68,9 +68,11 @@ object FormItem {
     @scala.inline
     def initialValue(value: js.Any): this.type = set("initialValue", value.asInstanceOf[js.Any])
     @scala.inline
+    def isListField(value: Boolean): this.type = set("isListField", value.asInstanceOf[js.Any])
+    @scala.inline
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def labelAlign(value: FormLabelAlign): this.type = set("labelAlign", value.asInstanceOf[js.Any])
     @scala.inline

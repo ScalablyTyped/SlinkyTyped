@@ -1,6 +1,5 @@
 package typingsSlinky.antd.itemMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -8,9 +7,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait DescriptionsItemProps extends js.Object {
-  var children: TagMod[Any]
+  var children: ReactElement
   var className: js.UndefOr[String] = js.undefined
-  var label: js.UndefOr[TagMod[Any]] = js.undefined
+  var label: js.UndefOr[ReactElement] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
   var span: js.UndefOr[Double] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
@@ -34,7 +33,7 @@ object DescriptionsItemProps {
         x
     }
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -44,7 +43,7 @@ object DescriptionsItemProps {
     @scala.inline
     def setLabelReactElement(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def setLabel(value: TagMod[Any]): Self = this.set("label", value.asInstanceOf[js.Any])
+    def setLabel(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)
     @scala.inline

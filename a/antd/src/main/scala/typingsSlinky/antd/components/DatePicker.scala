@@ -3,7 +3,6 @@ package typingsSlinky.antd.components
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
@@ -182,9 +181,9 @@ object DatePicker {
       @scala.inline
       def clearIconReactElement(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
       @scala.inline
-      def clearIcon(value: TagMod[Any]): this.type = set("clearIcon", value.asInstanceOf[js.Any])
+      def clearIcon(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
       @scala.inline
-      def dateRender(value: (Moment, Moment) => TagMod[Any]): this.type = set("dateRender", js.Any.fromFunction2(value))
+      def dateRender(value: (Moment, Moment) => ReactElement): this.type = set("dateRender", js.Any.fromFunction2(value))
       @scala.inline
       def defaultOpen(value: Boolean): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
       @scala.inline
@@ -216,7 +215,7 @@ object DatePicker {
       @scala.inline
       def mode(value: PanelMode): this.type = set("mode", value.asInstanceOf[js.Any])
       @scala.inline
-      def monthCellRender(value: (Moment, /* locale */ Locale) => TagMod[Any]): this.type = set("monthCellRender", js.Any.fromFunction2(value))
+      def monthCellRender(value: (Moment, /* locale */ Locale) => ReactElement): this.type = set("monthCellRender", js.Any.fromFunction2(value))
       @scala.inline
       def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
       @scala.inline
@@ -256,7 +255,7 @@ object DatePicker {
       @scala.inline
       def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
       @scala.inline
-      def renderExtraFooter(value: /* mode */ PanelMode => TagMod[Any]): this.type = set("renderExtraFooter", js.Any.fromFunction1(value))
+      def renderExtraFooter(value: /* mode */ PanelMode => ReactElement): this.type = set("renderExtraFooter", js.Any.fromFunction1(value))
       @scala.inline
       def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
       @scala.inline
@@ -266,7 +265,7 @@ object DatePicker {
       @scala.inline
       def suffixIconReactElement(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
       @scala.inline
-      def suffixIcon(value: TagMod[Any]): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
+      def suffixIcon(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
       @scala.inline
       def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
       @scala.inline
@@ -401,9 +400,9 @@ object DatePicker {
       @scala.inline
       def clearIconReactElement(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
       @scala.inline
-      def clearIcon(value: TagMod[Any]): this.type = set("clearIcon", value.asInstanceOf[js.Any])
+      def clearIcon(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
       @scala.inline
-      def dateRender(value: (Moment, Moment) => TagMod[Any]): this.type = set("dateRender", js.Any.fromFunction2(value))
+      def dateRender(value: (Moment, Moment) => ReactElement): this.type = set("dateRender", js.Any.fromFunction2(value))
       @scala.inline
       def defaultOpen(value: Boolean): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
       @scala.inline
@@ -437,7 +436,7 @@ object DatePicker {
       @scala.inline
       def mode(value: PanelMode): this.type = set("mode", value.asInstanceOf[js.Any])
       @scala.inline
-      def monthCellRender(value: (Moment, /* locale */ Locale) => TagMod[Any]): this.type = set("monthCellRender", js.Any.fromFunction2(value))
+      def monthCellRender(value: (Moment, /* locale */ Locale) => ReactElement): this.type = set("monthCellRender", js.Any.fromFunction2(value))
       @scala.inline
       def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
       @scala.inline
@@ -479,7 +478,7 @@ object DatePicker {
       @scala.inline
       def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
       @scala.inline
-      def renderExtraFooter(value: /* mode */ PanelMode => TagMod[Any]): this.type = set("renderExtraFooter", js.Any.fromFunction1(value))
+      def renderExtraFooter(value: /* mode */ PanelMode => ReactElement): this.type = set("renderExtraFooter", js.Any.fromFunction1(value))
       @scala.inline
       def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
       @scala.inline
@@ -493,7 +492,7 @@ object DatePicker {
       @scala.inline
       def suffixIconReactElement(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
       @scala.inline
-      def suffixIcon(value: TagMod[Any]): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
+      def suffixIcon(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
       @scala.inline
       def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
       @scala.inline
@@ -624,9 +623,9 @@ object DatePicker {
       @scala.inline
       def clearIconReactElement(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
       @scala.inline
-      def clearIcon(value: TagMod[Any]): this.type = set("clearIcon", value.asInstanceOf[js.Any])
+      def clearIcon(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
       @scala.inline
-      def dateRender(value: (Moment, Moment) => TagMod[Any]): this.type = set("dateRender", js.Any.fromFunction2(value))
+      def dateRender(value: (Moment, Moment) => ReactElement): this.type = set("dateRender", js.Any.fromFunction2(value))
       @scala.inline
       def defaultOpen(value: Boolean): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
       @scala.inline
@@ -672,7 +671,7 @@ object DatePicker {
       @scala.inline
       def mode(value: PanelMode): this.type = set("mode", value.asInstanceOf[js.Any])
       @scala.inline
-      def monthCellRender(value: (Moment, /* locale */ Locale) => TagMod[Any]): this.type = set("monthCellRender", js.Any.fromFunction2(value))
+      def monthCellRender(value: (Moment, /* locale */ Locale) => ReactElement): this.type = set("monthCellRender", js.Any.fromFunction2(value))
       @scala.inline
       def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
       @scala.inline
@@ -712,7 +711,7 @@ object DatePicker {
       @scala.inline
       def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
       @scala.inline
-      def renderExtraFooter(value: /* mode */ PanelMode => TagMod[Any]): this.type = set("renderExtraFooter", js.Any.fromFunction1(value))
+      def renderExtraFooter(value: /* mode */ PanelMode => ReactElement): this.type = set("renderExtraFooter", js.Any.fromFunction1(value))
       @scala.inline
       def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
       @scala.inline
@@ -730,7 +729,7 @@ object DatePicker {
       @scala.inline
       def suffixIconReactElement(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
       @scala.inline
-      def suffixIcon(value: TagMod[Any]): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
+      def suffixIcon(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
       @scala.inline
       def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
       @scala.inline

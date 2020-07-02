@@ -18,6 +18,7 @@ trait TransferOperationProps extends js.Object {
   var leftArrowText: js.UndefOr[String] = js.undefined
   var moveToLeft: js.UndefOr[MouseEventHandler[HTMLButtonElement]] = js.undefined
   var moveToRight: js.UndefOr[MouseEventHandler[HTMLButtonElement]] = js.undefined
+  var oneWay: js.UndefOr[Boolean] = js.undefined
   var rightActive: js.UndefOr[Boolean] = js.undefined
   var rightArrowText: js.UndefOr[String] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
@@ -68,6 +69,10 @@ object TransferOperationProps {
     def setMoveToRight(value: SyntheticMouseEvent[HTMLButtonElement] => Unit): Self = this.set("moveToRight", js.Any.fromFunction1(value))
     @scala.inline
     def deleteMoveToRight: Self = this.set("moveToRight", js.undefined)
+    @scala.inline
+    def setOneWay(value: Boolean): Self = this.set("oneWay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOneWay: Self = this.set("oneWay", js.undefined)
     @scala.inline
     def setRightActive(value: Boolean): Self = this.set("rightActive", value.asInstanceOf[js.Any])
     @scala.inline

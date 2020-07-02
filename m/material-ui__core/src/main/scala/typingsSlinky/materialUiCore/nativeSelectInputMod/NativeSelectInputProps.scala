@@ -2,7 +2,7 @@ package typingsSlinky.materialUiCore.nativeSelectInputMod
 
 import org.scalajs.dom.raw.HTMLSelectElement
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.materialUiCore.anon.Node
 import typingsSlinky.materialUiCore.materialUiCoreStrings.filled
 import typingsSlinky.materialUiCore.materialUiCoreStrings.outlined
@@ -20,7 +20,7 @@ trait NativeSelectInputProps extends js.Object {
   var inputRef: js.UndefOr[js.Function1[/* ref */ HTMLSelectElement | Node, Unit]] = js.native
   var name: js.UndefOr[String] = js.native
   var onChange: js.UndefOr[
-    js.Function2[/* event */ ChangeEvent[HTMLSelectElement], /* child */ TagMod[Any], Unit]
+    js.Function2[/* event */ ChangeEvent[HTMLSelectElement], /* child */ ReactElement, Unit]
   ] = js.native
   var value: js.UndefOr[(js.Array[String | Double | Boolean]) | String | Double | Boolean] = js.native
   var variant: js.UndefOr[standard | outlined | filled] = js.native
@@ -64,7 +64,7 @@ object NativeSelectInputProps {
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
     @scala.inline
-    def setOnChange(value: (/* event */ ChangeEvent[HTMLSelectElement], /* child */ TagMod[Any]) => Unit): Self = this.set("onChange", js.Any.fromFunction2(value))
+    def setOnChange(value: (/* event */ ChangeEvent[HTMLSelectElement], /* child */ ReactElement) => Unit): Self = this.set("onChange", js.Any.fromFunction2(value))
     @scala.inline
     def deleteOnChange: Self = this.set("onChange", js.undefined)
     @scala.inline

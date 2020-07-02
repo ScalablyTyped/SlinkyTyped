@@ -1,6 +1,5 @@
 package typingsSlinky.antd.avatarMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.antdStrings.circle
 import typingsSlinky.antd.antdStrings.large
@@ -13,10 +12,12 @@ import scala.scalajs.js.annotation._
 
 trait AvatarProps extends js.Object {
   var alt: js.UndefOr[String] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
+  var draggable: js.UndefOr[Boolean] = js.undefined
+  var gap: js.UndefOr[Double] = js.undefined
   /** icon to be used in avatar */
-  var icon: js.UndefOr[TagMod[Any]] = js.undefined
+  var icon: js.UndefOr[ReactElement] = js.undefined
   var onError: js.UndefOr[js.Function0[Boolean]] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
   /** Shape of avatar, options:`circle`, `square` */
@@ -53,7 +54,7 @@ object AvatarProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -61,9 +62,17 @@ object AvatarProps {
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
     @scala.inline
+    def setDraggable(value: Boolean): Self = this.set("draggable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDraggable: Self = this.set("draggable", js.undefined)
+    @scala.inline
+    def setGap(value: Double): Self = this.set("gap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGap: Self = this.set("gap", js.undefined)
+    @scala.inline
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setIcon(value: TagMod[Any]): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
     @scala.inline

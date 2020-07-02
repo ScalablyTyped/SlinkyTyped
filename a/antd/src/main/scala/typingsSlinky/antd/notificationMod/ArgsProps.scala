@@ -1,7 +1,6 @@
 package typingsSlinky.antd.notificationMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -10,15 +9,15 @@ import scala.scalajs.js.annotation._
 
 trait ArgsProps extends js.Object {
   var bottom: js.UndefOr[Double] = js.undefined
-  var btn: js.UndefOr[TagMod[Any]] = js.undefined
+  var btn: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
-  var closeIcon: js.UndefOr[TagMod[Any]] = js.undefined
-  var description: js.UndefOr[TagMod[Any]] = js.undefined
+  var closeIcon: js.UndefOr[ReactElement] = js.undefined
+  var description: js.UndefOr[ReactElement] = js.undefined
   var duration: js.UndefOr[Double | Null] = js.undefined
   var getContainer: js.UndefOr[js.Function0[HTMLElement]] = js.undefined
-  var icon: js.UndefOr[TagMod[Any]] = js.undefined
+  var icon: js.UndefOr[ReactElement] = js.undefined
   var key: js.UndefOr[String] = js.undefined
-  var message: TagMod[Any]
+  var message: ReactElement
   var onClick: js.UndefOr[js.Function0[Unit]] = js.undefined
   var onClose: js.UndefOr[js.Function0[Unit]] = js.undefined
   var placement: js.UndefOr[NotificationPlacement] = js.undefined
@@ -52,7 +51,7 @@ object ArgsProps {
     @scala.inline
     def setBtnReactElement(value: ReactElement): Self = this.set("btn", value.asInstanceOf[js.Any])
     @scala.inline
-    def setBtn(value: TagMod[Any]): Self = this.set("btn", value.asInstanceOf[js.Any])
+    def setBtn(value: ReactElement): Self = this.set("btn", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBtn: Self = this.set("btn", js.undefined)
     @scala.inline
@@ -62,13 +61,13 @@ object ArgsProps {
     @scala.inline
     def setCloseIconReactElement(value: ReactElement): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setCloseIcon(value: TagMod[Any]): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
+    def setCloseIcon(value: ReactElement): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCloseIcon: Self = this.set("closeIcon", js.undefined)
     @scala.inline
     def setDescriptionReactElement(value: ReactElement): Self = this.set("description", value.asInstanceOf[js.Any])
     @scala.inline
-    def setDescription(value: TagMod[Any]): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setDescription(value: ReactElement): Self = this.set("description", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDescription: Self = this.set("description", js.undefined)
     @scala.inline
@@ -84,7 +83,7 @@ object ArgsProps {
     @scala.inline
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setIcon(value: TagMod[Any]): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
     @scala.inline
@@ -92,7 +91,7 @@ object ArgsProps {
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
     @scala.inline
-    def setMessage(value: TagMod[Any]): Self = this.set("message", value.asInstanceOf[js.Any])
+    def setMessage(value: ReactElement): Self = this.set("message", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMessage: Self = this.set("message", js.undefined)
     @scala.inline

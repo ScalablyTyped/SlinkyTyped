@@ -1,6 +1,5 @@
 package typingsSlinky.semanticUiReact.anon
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.react.mod.ReactType
@@ -13,7 +12,7 @@ import scala.scalajs.js.annotation._
 trait MenuItem extends js.Object {
   var menuItem: js.UndefOr[js.Any] = js.undefined
   var pane: js.UndefOr[SemanticShorthandItem[TabPaneProps]] = js.undefined
-  var render: js.UndefOr[js.Function0[TagMod[Any]]] = js.undefined
+  var render: js.UndefOr[js.Function0[ReactElement]] = js.undefined
 }
 
 object MenuItem {
@@ -41,14 +40,14 @@ object MenuItem {
     def setPaneReactElement(value: ReactElement): Self = this.set("pane", value.asInstanceOf[js.Any])
     @scala.inline
     def setPaneFunction3(
-      value: (/* component */ ReactType[TabPaneProps], TabPaneProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[TabPaneProps], TabPaneProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("pane", js.Any.fromFunction3(value))
     @scala.inline
     def setPane(value: SemanticShorthandItem[TabPaneProps]): Self = this.set("pane", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePane: Self = this.set("pane", js.undefined)
     @scala.inline
-    def setRender(value: () => TagMod[Any]): Self = this.set("render", js.Any.fromFunction0(value))
+    def setRender(value: () => ReactElement): Self = this.set("render", js.Any.fromFunction0(value))
     @scala.inline
     def deleteRender: Self = this.set("render", js.undefined)
   }

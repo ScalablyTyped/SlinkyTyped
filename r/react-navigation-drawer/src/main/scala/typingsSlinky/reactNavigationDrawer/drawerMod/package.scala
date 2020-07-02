@@ -7,6 +7,6 @@ import scala.scalajs.js.annotation._
 package object drawerMod {
   type Renderer = js.Function1[
     /* props */ typingsSlinky.reactNavigationDrawer.anon.Progress, 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
 }

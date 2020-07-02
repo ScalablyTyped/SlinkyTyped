@@ -1,7 +1,6 @@
 package typingsSlinky.antd.anchorAnchorMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.anon.Href
@@ -13,7 +12,7 @@ import scala.scalajs.js.annotation._
 trait AnchorProps extends js.Object {
   var affix: js.UndefOr[Boolean] = js.undefined
   var bounds: js.UndefOr[Double] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var getContainer: js.UndefOr[js.Function0[AnchorContainer]] = js.undefined
   /** Return customize highlight anchor */
@@ -57,7 +56,7 @@ object AnchorProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline

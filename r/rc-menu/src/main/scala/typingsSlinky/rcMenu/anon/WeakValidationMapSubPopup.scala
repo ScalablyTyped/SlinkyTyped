@@ -1,6 +1,6 @@
 package typingsSlinky.rcMenu.anon
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.rcMenu.interfaceMod.DestroyEventHandler
 import typingsSlinky.rcMenu.interfaceMod.LegacyFunctionRef
 import typingsSlinky.rcMenu.interfaceMod.MenuClickEventHandler
@@ -25,7 +25,7 @@ trait WeakValidationMapSubPopup extends js.Object {
   var builtinPlacements: js.UndefOr[
     Validator[js.UndefOr[typingsSlinky.rcMenu.interfaceMod.BuiltinPlacements | Null]]
   ] = js.undefined
-  var children: js.UndefOr[Validator[js.UndefOr[Null | TagMod[Any]]]] = js.undefined
+  var children: js.UndefOr[Validator[js.UndefOr[Null | ReactElement]]] = js.undefined
   var className: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
   var defaultActiveFirst: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
   var defaultOpenKeys: js.UndefOr[Validator[js.UndefOr[js.Array[String] | Null]]] = js.undefined
@@ -55,7 +55,7 @@ trait WeakValidationMapSubPopup extends js.Object {
   var onOpenChange: js.UndefOr[Validator[js.UndefOr[Null | OpenEventHandler]]] = js.undefined
   var onSelect: js.UndefOr[Validator[js.UndefOr[Null | SelectEventHandler]]] = js.undefined
   var openKeys: js.UndefOr[Validator[js.UndefOr[js.Array[String] | Null]]] = js.undefined
-  var overflowedIndicator: js.UndefOr[Validator[js.UndefOr[Null | TagMod[Any]]]] = js.undefined
+  var overflowedIndicator: js.UndefOr[Validator[js.UndefOr[Null | ReactElement]]] = js.undefined
   var parentMenu: js.UndefOr[Validator[js.UndefOr[Null | ReactInstance]]] = js.undefined
   var prefixCls: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
   var role: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
@@ -95,7 +95,7 @@ object WeakValidationMapSubPopup {
     @scala.inline
     def deleteBuiltinPlacements: Self = this.set("builtinPlacements", js.undefined)
     @scala.inline
-    def setChildren(value: Validator[js.UndefOr[Null | TagMod[Any]]]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: Validator[js.UndefOr[Null | ReactElement]]): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -197,7 +197,7 @@ object WeakValidationMapSubPopup {
     @scala.inline
     def deleteOpenKeys: Self = this.set("openKeys", js.undefined)
     @scala.inline
-    def setOverflowedIndicator(value: Validator[js.UndefOr[Null | TagMod[Any]]]): Self = this.set("overflowedIndicator", value.asInstanceOf[js.Any])
+    def setOverflowedIndicator(value: Validator[js.UndefOr[Null | ReactElement]]): Self = this.set("overflowedIndicator", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOverflowedIndicator: Self = this.set("overflowedIndicator", js.undefined)
     @scala.inline

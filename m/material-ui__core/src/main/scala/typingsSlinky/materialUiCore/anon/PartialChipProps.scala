@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -150,7 +149,7 @@ trait PartialChipProps extends js.Object {
   var autoCorrect: js.UndefOr[String] = js.native
   var autoSave: js.UndefOr[String] = js.native
   var avatar: js.UndefOr[ReactElement] = js.native
-  var children: js.UndefOr[TagMod[Any]] = js.native
+  var children: js.UndefOr[ReactElement] = js.native
   var className: js.UndefOr[String] = js.native
   var classes: js.UndefOr[PartialClassNameMapChipCl] = js.native
   var clickable: js.UndefOr[Boolean] = js.native
@@ -177,7 +176,7 @@ trait PartialChipProps extends js.Object {
   var itemRef: js.UndefOr[String] = js.native
   var itemScope: js.UndefOr[Boolean] = js.native
   var itemType: js.UndefOr[String] = js.native
-  var label: js.UndefOr[TagMod[Any]] = js.native
+  var label: js.UndefOr[ReactElement] = js.native
   var lang: js.UndefOr[String] = js.native
   var onAbort: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
   var onAnimationEnd: js.UndefOr[AnimationEventHandler[HTMLDivElement]] = js.native
@@ -517,7 +516,7 @@ object PartialChipProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -637,7 +636,7 @@ object PartialChipProps {
     @scala.inline
     def setLabelReactElement(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def setLabel(value: TagMod[Any]): Self = this.set("label", value.asInstanceOf[js.Any])
+    def setLabel(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)
     @scala.inline

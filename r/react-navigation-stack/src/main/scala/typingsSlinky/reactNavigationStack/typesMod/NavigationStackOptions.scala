@@ -1,6 +1,5 @@
 package typingsSlinky.reactNavigationStack.typesMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
@@ -19,24 +18,24 @@ trait NavigationStackOptions extends js.Object {
   var gestureDirection: js.UndefOr[inverted | normal] = js.undefined
   var gestureResponseDistance: js.UndefOr[Horizontal] = js.undefined
   var gesturesEnabled: js.UndefOr[Boolean] = js.undefined
-  var header: js.UndefOr[(js.Function1[/* props */ HeaderProps, TagMod[Any]]) | Null] = js.undefined
+  var header: js.UndefOr[(js.Function1[/* props */ HeaderProps, ReactElement]) | Null] = js.undefined
   var headerBackAllowFontScaling: js.UndefOr[Boolean] = js.undefined
-  var headerBackImage: js.UndefOr[js.Function1[/* props */ TintColor, TagMod[Any]]] = js.undefined
+  var headerBackImage: js.UndefOr[js.Function1[/* props */ TintColor, ReactElement]] = js.undefined
   var headerBackTitle: js.UndefOr[String | Null] = js.undefined
   var headerBackTitleStyle: js.UndefOr[StyleProp[TextStyle]] = js.undefined
-  var headerBackground: js.UndefOr[js.Function0[TagMod[Any]] | TagMod[Any]] = js.undefined
+  var headerBackground: js.UndefOr[js.Function0[ReactElement] | ReactElement] = js.undefined
   var headerForceInset: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: react.react.ComponentProps<react.react.ComponentClass<react-navigation.react-navigation.SafeAreaViewProps, react.react.ComponentState> & new (props : react-navigation.react-navigation.SafeAreaViewProps): react-navigation.react-navigation.SafeAreaView>['forceInset'] */ js.Any
   ] = js.undefined
-  var headerLeft: js.UndefOr[(js.Function1[/* props */ HeaderBackButtonProps, TagMod[Any]]) | TagMod[Any]] = js.undefined
+  var headerLeft: js.UndefOr[(js.Function1[/* props */ HeaderBackButtonProps, ReactElement]) | ReactElement] = js.undefined
   var headerLeftContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
   var headerPressColorAndroid: js.UndefOr[String] = js.undefined
-  var headerRight: js.UndefOr[js.Function0[TagMod[Any]] | TagMod[Any]] = js.undefined
+  var headerRight: js.UndefOr[js.Function0[ReactElement] | ReactElement] = js.undefined
   var headerRightContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
   var headerShown: js.UndefOr[Boolean] = js.undefined
   var headerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
   var headerTintColor: js.UndefOr[String] = js.undefined
-  var headerTitle: js.UndefOr[(js.Function1[/* props */ TextPropschildrenstring, TagMod[Any]]) | TagMod[Any]] = js.undefined
+  var headerTitle: js.UndefOr[(js.Function1[/* props */ TextPropschildrenstring, ReactElement]) | ReactElement] = js.undefined
   var headerTitleAllowFontScaling: js.UndefOr[Boolean] = js.undefined
   var headerTitleContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
   var headerTitleStyle: js.UndefOr[StyleProp[TextStyle]] = js.undefined
@@ -79,7 +78,7 @@ object NavigationStackOptions {
     @scala.inline
     def deleteGesturesEnabled: Self = this.set("gesturesEnabled", js.undefined)
     @scala.inline
-    def setHeader(value: /* props */ HeaderProps => TagMod[Any]): Self = this.set("header", js.Any.fromFunction1(value))
+    def setHeader(value: /* props */ HeaderProps => ReactElement): Self = this.set("header", js.Any.fromFunction1(value))
     @scala.inline
     def deleteHeader: Self = this.set("header", js.undefined)
     @scala.inline
@@ -89,7 +88,7 @@ object NavigationStackOptions {
     @scala.inline
     def deleteHeaderBackAllowFontScaling: Self = this.set("headerBackAllowFontScaling", js.undefined)
     @scala.inline
-    def setHeaderBackImage(value: /* props */ TintColor => TagMod[Any]): Self = this.set("headerBackImage", js.Any.fromFunction1(value))
+    def setHeaderBackImage(value: /* props */ TintColor => ReactElement): Self = this.set("headerBackImage", js.Any.fromFunction1(value))
     @scala.inline
     def deleteHeaderBackImage: Self = this.set("headerBackImage", js.undefined)
     @scala.inline
@@ -107,9 +106,9 @@ object NavigationStackOptions {
     @scala.inline
     def setHeaderBackgroundReactElement(value: ReactElement): Self = this.set("headerBackground", value.asInstanceOf[js.Any])
     @scala.inline
-    def setHeaderBackgroundFunction0(value: () => TagMod[Any]): Self = this.set("headerBackground", js.Any.fromFunction0(value))
+    def setHeaderBackgroundFunction0(value: () => ReactElement): Self = this.set("headerBackground", js.Any.fromFunction0(value))
     @scala.inline
-    def setHeaderBackground(value: js.Function0[TagMod[Any]] | TagMod[Any]): Self = this.set("headerBackground", value.asInstanceOf[js.Any])
+    def setHeaderBackground(value: js.Function0[ReactElement] | ReactElement): Self = this.set("headerBackground", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHeaderBackground: Self = this.set("headerBackground", js.undefined)
     @scala.inline
@@ -121,9 +120,9 @@ object NavigationStackOptions {
     @scala.inline
     def setHeaderLeftReactElement(value: ReactElement): Self = this.set("headerLeft", value.asInstanceOf[js.Any])
     @scala.inline
-    def setHeaderLeftFunction1(value: /* props */ HeaderBackButtonProps => TagMod[Any]): Self = this.set("headerLeft", js.Any.fromFunction1(value))
+    def setHeaderLeftFunction1(value: /* props */ HeaderBackButtonProps => ReactElement): Self = this.set("headerLeft", js.Any.fromFunction1(value))
     @scala.inline
-    def setHeaderLeft(value: (js.Function1[/* props */ HeaderBackButtonProps, TagMod[Any]]) | TagMod[Any]): Self = this.set("headerLeft", value.asInstanceOf[js.Any])
+    def setHeaderLeft(value: (js.Function1[/* props */ HeaderBackButtonProps, ReactElement]) | ReactElement): Self = this.set("headerLeft", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHeaderLeft: Self = this.set("headerLeft", js.undefined)
     @scala.inline
@@ -139,9 +138,9 @@ object NavigationStackOptions {
     @scala.inline
     def setHeaderRightReactElement(value: ReactElement): Self = this.set("headerRight", value.asInstanceOf[js.Any])
     @scala.inline
-    def setHeaderRightFunction0(value: () => TagMod[Any]): Self = this.set("headerRight", js.Any.fromFunction0(value))
+    def setHeaderRightFunction0(value: () => ReactElement): Self = this.set("headerRight", js.Any.fromFunction0(value))
     @scala.inline
-    def setHeaderRight(value: js.Function0[TagMod[Any]] | TagMod[Any]): Self = this.set("headerRight", value.asInstanceOf[js.Any])
+    def setHeaderRight(value: js.Function0[ReactElement] | ReactElement): Self = this.set("headerRight", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHeaderRight: Self = this.set("headerRight", js.undefined)
     @scala.inline
@@ -167,9 +166,9 @@ object NavigationStackOptions {
     @scala.inline
     def setHeaderTitleReactElement(value: ReactElement): Self = this.set("headerTitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def setHeaderTitleFunction1(value: /* props */ TextPropschildrenstring => TagMod[Any]): Self = this.set("headerTitle", js.Any.fromFunction1(value))
+    def setHeaderTitleFunction1(value: /* props */ TextPropschildrenstring => ReactElement): Self = this.set("headerTitle", js.Any.fromFunction1(value))
     @scala.inline
-    def setHeaderTitle(value: (js.Function1[/* props */ TextPropschildrenstring, TagMod[Any]]) | TagMod[Any]): Self = this.set("headerTitle", value.asInstanceOf[js.Any])
+    def setHeaderTitle(value: (js.Function1[/* props */ TextPropschildrenstring, ReactElement]) | ReactElement): Self = this.set("headerTitle", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHeaderTitle: Self = this.set("headerTitle", js.undefined)
     @scala.inline

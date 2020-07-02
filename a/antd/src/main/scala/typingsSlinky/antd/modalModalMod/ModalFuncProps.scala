@@ -1,7 +1,6 @@
 package typingsSlinky.antd.modalModalMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.antdBooleans.`false`
 import typingsSlinky.antd.antdStrings.cancel
@@ -16,12 +15,13 @@ import scala.scalajs.js.annotation._
 trait ModalFuncProps extends js.Object {
   var autoFocusButton: js.UndefOr[Null | ok | cancel] = js.undefined
   var cancelButtonProps: js.UndefOr[ButtonProps] = js.undefined
-  var cancelText: js.UndefOr[TagMod[Any]] = js.undefined
+  var cancelText: js.UndefOr[ReactElement] = js.undefined
   var centered: js.UndefOr[Boolean] = js.undefined
   var className: js.UndefOr[String] = js.undefined
-  var content: js.UndefOr[TagMod[Any]] = js.undefined
+  var content: js.UndefOr[ReactElement] = js.undefined
+  var direction: js.UndefOr[String] = js.undefined
   var getContainer: js.UndefOr[String | HTMLElement | getContainerFunc | `false` | Null] = js.undefined
-  var icon: js.UndefOr[TagMod[Any]] = js.undefined
+  var icon: js.UndefOr[ReactElement] = js.undefined
   var keyboard: js.UndefOr[Boolean] = js.undefined
   var mask: js.UndefOr[Boolean] = js.undefined
   var maskClosable: js.UndefOr[Boolean] = js.undefined
@@ -29,13 +29,13 @@ trait ModalFuncProps extends js.Object {
   var maskTransitionName: js.UndefOr[String] = js.undefined
   var okButtonProps: js.UndefOr[ButtonProps] = js.undefined
   var okCancel: js.UndefOr[Boolean] = js.undefined
-  var okText: js.UndefOr[TagMod[Any]] = js.undefined
+  var okText: js.UndefOr[ReactElement] = js.undefined
   var okType: js.UndefOr[LegacyButtonType] = js.undefined
   var onCancel: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.undefined
   var onOk: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
-  var title: js.UndefOr[TagMod[Any]] = js.undefined
+  var title: js.UndefOr[ReactElement] = js.undefined
   var transitionName: js.UndefOr[String] = js.undefined
   var `type`: js.UndefOr[String] = js.undefined
   var visible: js.UndefOr[Boolean] = js.undefined
@@ -73,7 +73,7 @@ object ModalFuncProps {
     @scala.inline
     def setCancelTextReactElement(value: ReactElement): Self = this.set("cancelText", value.asInstanceOf[js.Any])
     @scala.inline
-    def setCancelText(value: TagMod[Any]): Self = this.set("cancelText", value.asInstanceOf[js.Any])
+    def setCancelText(value: ReactElement): Self = this.set("cancelText", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCancelText: Self = this.set("cancelText", js.undefined)
     @scala.inline
@@ -87,9 +87,13 @@ object ModalFuncProps {
     @scala.inline
     def setContentReactElement(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
     @scala.inline
-    def setContent(value: TagMod[Any]): Self = this.set("content", value.asInstanceOf[js.Any])
+    def setContent(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteContent: Self = this.set("content", js.undefined)
+    @scala.inline
+    def setDirection(value: String): Self = this.set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDirection: Self = this.set("direction", js.undefined)
     @scala.inline
     def setGetContainerHTMLElement(value: HTMLElement): Self = this.set("getContainer", value.asInstanceOf[js.Any])
     @scala.inline
@@ -103,7 +107,7 @@ object ModalFuncProps {
     @scala.inline
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setIcon(value: TagMod[Any]): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
     @scala.inline
@@ -137,7 +141,7 @@ object ModalFuncProps {
     @scala.inline
     def setOkTextReactElement(value: ReactElement): Self = this.set("okText", value.asInstanceOf[js.Any])
     @scala.inline
-    def setOkText(value: TagMod[Any]): Self = this.set("okText", value.asInstanceOf[js.Any])
+    def setOkText(value: ReactElement): Self = this.set("okText", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOkText: Self = this.set("okText", js.undefined)
     @scala.inline
@@ -163,7 +167,7 @@ object ModalFuncProps {
     @scala.inline
     def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
     @scala.inline

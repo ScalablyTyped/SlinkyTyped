@@ -2,7 +2,6 @@ package typingsSlinky.antd.menuMod
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.menuContextMod.MenuTheme
 import typingsSlinky.react.mod.CSSProperties
@@ -31,7 +30,7 @@ trait MenuProps extends js.Object {
   var openAnimation: js.UndefOr[String] = js.undefined
   var openKeys: js.UndefOr[js.Array[String]] = js.undefined
   var openTransitionName: js.UndefOr[String] = js.undefined
-  var overflowedIndicator: js.UndefOr[TagMod[Any]] = js.undefined
+  var overflowedIndicator: js.UndefOr[ReactElement] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
   var selectable: js.UndefOr[Boolean] = js.undefined
   var selectedKeys: js.UndefOr[js.Array[String]] = js.undefined
@@ -141,7 +140,7 @@ object MenuProps {
     @scala.inline
     def setOverflowedIndicatorReactElement(value: ReactElement): Self = this.set("overflowedIndicator", value.asInstanceOf[js.Any])
     @scala.inline
-    def setOverflowedIndicator(value: TagMod[Any]): Self = this.set("overflowedIndicator", value.asInstanceOf[js.Any])
+    def setOverflowedIndicator(value: ReactElement): Self = this.set("overflowedIndicator", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOverflowedIndicator: Self = this.set("overflowedIndicator", js.undefined)
     @scala.inline

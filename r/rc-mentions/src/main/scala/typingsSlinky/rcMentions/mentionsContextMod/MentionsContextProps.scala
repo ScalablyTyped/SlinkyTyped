@@ -1,7 +1,7 @@
 package typingsSlinky.rcMentions.mentionsContextMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import typingsSlinky.rcMentions.optionMod.OptionProps
 import typingsSlinky.react.mod.FocusEventHandler
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 
 trait MentionsContextProps extends js.Object {
   var activeIndex: Double
-  var notFoundContent: TagMod[Any]
+  var notFoundContent: ReactElement
   var onBlur: FocusEventHandler[HTMLElement]
   var onFocus: FocusEventHandler[HTMLElement]
   def selectOption(option: OptionProps): Unit
@@ -52,7 +52,7 @@ object MentionsContextProps {
     @scala.inline
     def setSetActiveIndex(value: Double => Unit): Self = this.set("setActiveIndex", js.Any.fromFunction1(value))
     @scala.inline
-    def setNotFoundContent(value: TagMod[Any]): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])
+    def setNotFoundContent(value: ReactElement): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteNotFoundContent: Self = this.set("notFoundContent", js.undefined)
   }

@@ -1,13 +1,13 @@
 package typingsSlinky.antd.anon
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Href extends js.Object {
   var href: String
-  var title: TagMod[Any]
+  var title: ReactElement
 }
 
 object Href {
@@ -30,7 +30,7 @@ object Href {
     @scala.inline
     def setHref(value: String): Self = this.set("href", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
   }

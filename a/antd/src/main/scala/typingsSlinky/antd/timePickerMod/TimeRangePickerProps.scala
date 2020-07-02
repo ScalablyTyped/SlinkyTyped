@@ -3,7 +3,6 @@ package typingsSlinky.antd.timePickerMod
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
@@ -51,7 +50,7 @@ import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.generatePickerMod.PickerLocale
 import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.moment.mod.Moment
-import typingsSlinky.rcPicker.dateBodyMod.DateRender
+import typingsSlinky.rcPicker.anon.Range
 import typingsSlinky.rcPicker.interfaceMod.DisabledTimes
 import typingsSlinky.rcPicker.interfaceMod.EventValue
 import typingsSlinky.rcPicker.interfaceMod.Locale
@@ -59,6 +58,7 @@ import typingsSlinky.rcPicker.interfaceMod.PanelMode
 import typingsSlinky.rcPicker.interfaceMod.RangeValue
 import typingsSlinky.rcPicker.monthBodyMod.MonthCellRender
 import typingsSlinky.rcPicker.pickerMod.PickerRefConfig
+import typingsSlinky.rcPicker.rangePickerMod.RangeDateRender
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.FocusEventHandler
 import typingsSlinky.react.mod.MouseEventHandler
@@ -126,8 +126,8 @@ trait TimeRangePickerProps extends js.Object {
   var autoFocus: js.UndefOr[Boolean] = js.undefined
   var bordered: js.UndefOr[Boolean] = js.undefined
   var className: js.UndefOr[String] = js.undefined
-  var clearIcon: js.UndefOr[TagMod[Any]] = js.undefined
-  var dateRender: js.UndefOr[DateRender[Moment]] = js.undefined
+  var clearIcon: js.UndefOr[ReactElement] = js.undefined
+  var dateRender: js.UndefOr[RangeDateRender[Moment]] = js.undefined
   var defaultOpen: js.UndefOr[Boolean] = js.undefined
   var defaultOpenValue: js.UndefOr[Moment] = js.undefined
   var defaultPickerValue: js.UndefOr[js.Tuple2[Moment, Moment]] = js.undefined
@@ -188,16 +188,16 @@ trait TimeRangePickerProps extends js.Object {
       (Exclude[RangeValue[Moment], Null]) | (js.Function0[Exclude[RangeValue[Moment], Null]])
     ]
   ] = js.undefined
-  var renderExtraFooter: js.UndefOr[js.Function1[/* mode */ PanelMode, TagMod[Any]]] = js.undefined
+  var renderExtraFooter: js.UndefOr[js.Function1[/* mode */ PanelMode, ReactElement]] = js.undefined
   var role: js.UndefOr[String] = js.undefined
   var secondStep: js.UndefOr[Double] = js.undefined
-  var separator: js.UndefOr[TagMod[Any]] = js.undefined
+  var separator: js.UndefOr[ReactElement] = js.undefined
   var showHour: js.UndefOr[Boolean] = js.undefined
   var showMinute: js.UndefOr[Boolean] = js.undefined
   var showSecond: js.UndefOr[Boolean] = js.undefined
   var size: js.UndefOr[SizeType] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
-  var suffixIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var suffixIcon: js.UndefOr[ReactElement] = js.undefined
   var tabIndex: js.UndefOr[Double] = js.undefined
   var transitionName: js.UndefOr[String] = js.undefined
   var use12Hours: js.UndefOr[Boolean] = js.undefined
@@ -446,11 +446,11 @@ object TimeRangePickerProps {
     @scala.inline
     def setClearIconReactElement(value: ReactElement): Self = this.set("clearIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setClearIcon(value: TagMod[Any]): Self = this.set("clearIcon", value.asInstanceOf[js.Any])
+    def setClearIcon(value: ReactElement): Self = this.set("clearIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteClearIcon: Self = this.set("clearIcon", js.undefined)
     @scala.inline
-    def setDateRender(value: (Moment, Moment) => TagMod[Any]): Self = this.set("dateRender", js.Any.fromFunction2(value))
+    def setDateRender(value: (Moment, Moment, /* info */ Range) => ReactElement): Self = this.set("dateRender", js.Any.fromFunction3(value))
     @scala.inline
     def deleteDateRender: Self = this.set("dateRender", js.undefined)
     @scala.inline
@@ -546,7 +546,7 @@ object TimeRangePickerProps {
     @scala.inline
     def deleteMode: Self = this.set("mode", js.undefined)
     @scala.inline
-    def setMonthCellRender(value: (Moment, /* locale */ Locale) => TagMod[Any]): Self = this.set("monthCellRender", js.Any.fromFunction2(value))
+    def setMonthCellRender(value: (Moment, /* locale */ Locale) => ReactElement): Self = this.set("monthCellRender", js.Any.fromFunction2(value))
     @scala.inline
     def deleteMonthCellRender: Self = this.set("monthCellRender", js.undefined)
     @scala.inline
@@ -639,7 +639,7 @@ object TimeRangePickerProps {
     @scala.inline
     def deleteRanges: Self = this.set("ranges", js.undefined)
     @scala.inline
-    def setRenderExtraFooter(value: /* mode */ PanelMode => TagMod[Any]): Self = this.set("renderExtraFooter", js.Any.fromFunction1(value))
+    def setRenderExtraFooter(value: /* mode */ PanelMode => ReactElement): Self = this.set("renderExtraFooter", js.Any.fromFunction1(value))
     @scala.inline
     def deleteRenderExtraFooter: Self = this.set("renderExtraFooter", js.undefined)
     @scala.inline
@@ -653,7 +653,7 @@ object TimeRangePickerProps {
     @scala.inline
     def setSeparatorReactElement(value: ReactElement): Self = this.set("separator", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSeparator(value: TagMod[Any]): Self = this.set("separator", value.asInstanceOf[js.Any])
+    def setSeparator(value: ReactElement): Self = this.set("separator", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSeparator: Self = this.set("separator", js.undefined)
     @scala.inline
@@ -679,7 +679,7 @@ object TimeRangePickerProps {
     @scala.inline
     def setSuffixIconReactElement(value: ReactElement): Self = this.set("suffixIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSuffixIcon(value: TagMod[Any]): Self = this.set("suffixIcon", value.asInstanceOf[js.Any])
+    def setSuffixIcon(value: ReactElement): Self = this.set("suffixIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSuffixIcon: Self = this.set("suffixIcon", js.undefined)
     @scala.inline

@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.Node
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -30,7 +29,7 @@ trait SelectProps extends js.Object {
   var id: js.UndefOr[String] = js.undefined
   var labelInValue: js.UndefOr[Boolean] = js.undefined
   var maxTagCount: js.UndefOr[Double] = js.undefined
-  var maxTagPlaceholder: js.UndefOr[TagMod[Any] | js.Function] = js.undefined
+  var maxTagPlaceholder: js.UndefOr[ReactElement | js.Function] = js.undefined
   var maxTagTextLength: js.UndefOr[Double] = js.undefined
   var multiple: js.UndefOr[Boolean] = js.undefined
   var notFoundContent: js.UndefOr[String] = js.undefined
@@ -44,7 +43,7 @@ trait SelectProps extends js.Object {
   var onSelect: js.UndefOr[js.Function2[/* value */ String, ReactComponentClass[OptionProps], Unit]] = js.undefined
   var optionFilterProp: js.UndefOr[String] = js.undefined
   var optionLabelProp: js.UndefOr[String] = js.undefined
-  var placeholder: js.UndefOr[TagMod[Any]] = js.undefined
+  var placeholder: js.UndefOr[ReactElement] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
   var showAction: js.UndefOr[js.Array[String]] = js.undefined
   var showArrow: js.UndefOr[Boolean] = js.undefined
@@ -151,7 +150,7 @@ object SelectProps {
     @scala.inline
     def setMaxTagPlaceholderReactElement(value: ReactElement): Self = this.set("maxTagPlaceholder", value.asInstanceOf[js.Any])
     @scala.inline
-    def setMaxTagPlaceholder(value: TagMod[Any] | js.Function): Self = this.set("maxTagPlaceholder", value.asInstanceOf[js.Any])
+    def setMaxTagPlaceholder(value: ReactElement | js.Function): Self = this.set("maxTagPlaceholder", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMaxTagPlaceholder: Self = this.set("maxTagPlaceholder", js.undefined)
     @scala.inline
@@ -209,7 +208,7 @@ object SelectProps {
     @scala.inline
     def setPlaceholderReactElement(value: ReactElement): Self = this.set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
-    def setPlaceholder(value: TagMod[Any]): Self = this.set("placeholder", value.asInstanceOf[js.Any])
+    def setPlaceholder(value: ReactElement): Self = this.set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePlaceholder: Self = this.set("placeholder", js.undefined)
     @scala.inline

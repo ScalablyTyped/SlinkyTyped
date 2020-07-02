@@ -1,13 +1,13 @@
 package typingsSlinky.antd.treeTreeMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait AntdTreeNodeAttribute extends js.Object {
   var checked: Boolean
-  var children: TagMod[Any]
+  var children: ReactElement
   var className: String
   var disableCheckbox: Boolean
   var disabled: Boolean
@@ -22,7 +22,7 @@ trait AntdTreeNodeAttribute extends js.Object {
   var prefixCls: String
   var selectable: Boolean
   var selected: Boolean
-  var title: TagMod[Any]
+  var title: ReactElement
 }
 
 object AntdTreeNodeAttribute {
@@ -89,11 +89,11 @@ object AntdTreeNodeAttribute {
     @scala.inline
     def setSelected(value: Boolean): Self = this.set("selected", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
-    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
   }

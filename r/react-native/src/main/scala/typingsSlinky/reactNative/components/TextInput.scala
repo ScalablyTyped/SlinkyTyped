@@ -171,6 +171,8 @@ object TextInput {
     @scala.inline
     def enablesReturnKeyAutomatically(value: Boolean): this.type = set("enablesReturnKeyAutomatically", value.asInstanceOf[js.Any])
     @scala.inline
+    def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
+    @scala.inline
     def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
     @scala.inline
     def hitSlop(value: Insets): this.type = set("hitSlop", value.asInstanceOf[js.Any])

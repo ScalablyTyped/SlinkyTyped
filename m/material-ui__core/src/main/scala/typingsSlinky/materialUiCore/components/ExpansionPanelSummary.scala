@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -255,7 +254,7 @@ object ExpansionPanelSummary {
     @scala.inline
     def expandIconReactElement(value: ReactElement): this.type = set("expandIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def expandIcon(value: TagMod[Any]): this.type = set("expandIcon", value.asInstanceOf[js.Any])
+    def expandIcon(value: ReactElement): this.type = set("expandIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def expanded(value: Boolean): this.type = set("expanded", value.asInstanceOf[js.Any])
     @scala.inline

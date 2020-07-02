@@ -1,6 +1,7 @@
 package typingsSlinky.antd.baseMod
 
 import org.scalajs.dom.raw.HTMLElement
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.MouseEventHandler
 import scala.scalajs.js
@@ -13,6 +14,7 @@ trait EllipsisConfig extends js.Object {
   var onExpand: js.UndefOr[MouseEventHandler[HTMLElement]] = js.undefined
   var rows: js.UndefOr[Double] = js.undefined
   var suffix: js.UndefOr[String] = js.undefined
+  var symbol: js.UndefOr[ReactElement] = js.undefined
 }
 
 object EllipsisConfig {
@@ -52,6 +54,12 @@ object EllipsisConfig {
     def setSuffix(value: String): Self = this.set("suffix", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSuffix: Self = this.set("suffix", js.undefined)
+    @scala.inline
+    def setSymbolReactElement(value: ReactElement): Self = this.set("symbol", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSymbol(value: ReactElement): Self = this.set("symbol", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSymbol: Self = this.set("symbol", js.undefined)
   }
   
 }

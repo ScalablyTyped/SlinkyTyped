@@ -1,6 +1,5 @@
 package typingsSlinky.materialUi.MaterialUI.Card
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -11,7 +10,7 @@ trait CardMediaProps extends js.Object {
   var actAsExpander: js.UndefOr[Boolean] = js.undefined
   var expandable: js.UndefOr[Boolean] = js.undefined
   var mediaStyle: js.UndefOr[CSSProperties] = js.undefined
-  var overlay: js.UndefOr[TagMod[Any]] = js.undefined
+  var overlay: js.UndefOr[ReactElement] = js.undefined
   var overlayContainerStyle: js.UndefOr[CSSProperties] = js.undefined
   var overlayContentStyle: js.UndefOr[CSSProperties] = js.undefined
   var overlayStyle: js.UndefOr[CSSProperties] = js.undefined
@@ -50,7 +49,7 @@ object CardMediaProps {
     @scala.inline
     def setOverlayReactElement(value: ReactElement): Self = this.set("overlay", value.asInstanceOf[js.Any])
     @scala.inline
-    def setOverlay(value: TagMod[Any]): Self = this.set("overlay", value.asInstanceOf[js.Any])
+    def setOverlay(value: ReactElement): Self = this.set("overlay", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOverlay: Self = this.set("overlay", js.undefined)
     @scala.inline

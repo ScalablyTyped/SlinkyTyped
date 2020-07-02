@@ -2,13 +2,11 @@ package typingsSlinky.antd.components
 
 import org.scalajs.dom.raw.HTMLButtonElement
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.alertMod.AlertProps
-import typingsSlinky.antd.alertMod.default
 import typingsSlinky.antd.antdStrings.error
 import typingsSlinky.antd.antdStrings.info
 import typingsSlinky.antd.antdStrings.success
@@ -26,7 +24,7 @@ object Alert {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def afterClose(value: () => Unit): this.type = set("afterClose", js.Any.fromFunction0(value))
     @scala.inline
@@ -38,17 +36,17 @@ object Alert {
     @scala.inline
     def closeTextReactElement(value: ReactElement): this.type = set("closeText", value.asInstanceOf[js.Any])
     @scala.inline
-    def closeText(value: TagMod[Any]): this.type = set("closeText", value.asInstanceOf[js.Any])
+    def closeText(value: ReactElement): this.type = set("closeText", value.asInstanceOf[js.Any])
     @scala.inline
     def descriptionReactElement(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
     @scala.inline
-    def description(value: TagMod[Any]): this.type = set("description", value.asInstanceOf[js.Any])
+    def description(value: ReactElement): this.type = set("description", value.asInstanceOf[js.Any])
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def message(value: TagMod[Any]): this.type = set("message", value.asInstanceOf[js.Any])
+    def message(value: ReactElement): this.type = set("message", value.asInstanceOf[js.Any])
     @scala.inline
     def onClick(value: SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline

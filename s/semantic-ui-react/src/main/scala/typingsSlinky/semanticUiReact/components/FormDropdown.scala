@@ -3,7 +3,6 @@ package typingsSlinky.semanticUiReact.components
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
@@ -44,7 +43,7 @@ object FormDropdown {
     @scala.inline
     def additionLabelReactElement(value: ReactElement): this.type = set("additionLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def additionLabel(value: Double | String | TagMod[Any]): this.type = set("additionLabel", value.asInstanceOf[js.Any])
+    def additionLabel(value: Double | String | ReactElement): this.type = set("additionLabel", value.asInstanceOf[js.Any])
     @scala.inline
     def additionPosition(value: top | bottom): this.type = set("additionPosition", value.asInstanceOf[js.Any])
     @scala.inline
@@ -98,7 +97,7 @@ object FormDropdown {
     @scala.inline
     def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     @scala.inline
-    def header(value: TagMod[Any]): this.type = set("header", value.asInstanceOf[js.Any])
+    def header(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     @scala.inline
     def icon(value: js.Any): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
@@ -111,7 +110,7 @@ object FormDropdown {
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def labelFunction3(
-      value: (/* component */ ReactType[HtmlLabelProps], HtmlLabelProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[HtmlLabelProps], HtmlLabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("label", js.Any.fromFunction3(value))
     @scala.inline
     def label(value: SemanticShorthandItem[HtmlLabelProps]): this.type = set("label", value.asInstanceOf[js.Any])
@@ -128,7 +127,7 @@ object FormDropdown {
     @scala.inline
     def noResultsMessageReactElement(value: ReactElement): this.type = set("noResultsMessage", value.asInstanceOf[js.Any])
     @scala.inline
-    def noResultsMessage(value: TagMod[Any]): this.type = set("noResultsMessage", value.asInstanceOf[js.Any])
+    def noResultsMessage(value: ReactElement): this.type = set("noResultsMessage", value.asInstanceOf[js.Any])
     @scala.inline
     def onAddItem(value: (/* event */ SyntheticKeyboardEvent[HTMLElement], /* data */ DropdownProps) => Unit): this.type = set("onAddItem", js.Any.fromFunction2(value))
     @scala.inline
@@ -202,7 +201,7 @@ object FormDropdown {
     @scala.inline
     def triggerReactElement(value: ReactElement): this.type = set("trigger", value.asInstanceOf[js.Any])
     @scala.inline
-    def trigger(value: TagMod[Any]): this.type = set("trigger", value.asInstanceOf[js.Any])
+    def trigger(value: ReactElement): this.type = set("trigger", value.asInstanceOf[js.Any])
     @scala.inline
     def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
     @scala.inline

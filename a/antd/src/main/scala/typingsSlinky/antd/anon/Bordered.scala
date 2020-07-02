@@ -1,17 +1,21 @@
 package typingsSlinky.antd.anon
 
+import typingsSlinky.antd.generatePickerMod.PickerLocale
+import typingsSlinky.antd.sizeContextMod.SizeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Bordered extends js.Object {
-  var bordered: Boolean
+  var bordered: js.UndefOr[Boolean] = js.undefined
+  var locale: js.UndefOr[PickerLocale] = js.undefined
+  var size: js.UndefOr[SizeType] = js.undefined
 }
 
 object Bordered {
   @scala.inline
-  def apply(bordered: Boolean): Bordered = {
-    val __obj = js.Dynamic.literal(bordered = bordered.asInstanceOf[js.Any])
+  def apply(): Bordered = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[Bordered]
   }
   @scala.inline
@@ -27,6 +31,16 @@ object Bordered {
     }
     @scala.inline
     def setBordered(value: Boolean): Self = this.set("bordered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBordered: Self = this.set("bordered", js.undefined)
+    @scala.inline
+    def setLocale(value: PickerLocale): Self = this.set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteLocale: Self = this.set("locale", js.undefined)
+    @scala.inline
+    def setSize(value: SizeType): Self = this.set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
   }
   
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.rcPicker.pickerPanelMod
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.rcPicker.dateBodyMod.DateRender
 import typingsSlinky.rcPicker.generateMod.GenerateConfig
@@ -45,7 +45,7 @@ trait PickerPanelSharedProps[DateType] extends js.Object {
   /** [Legacy] Set default display picker view date */
   var pickerValue: js.UndefOr[DateType] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
-  var renderExtraFooter: js.UndefOr[js.Function1[/* mode */ PanelMode, TagMod[Any]]] = js.undefined
+  var renderExtraFooter: js.UndefOr[js.Function1[/* mode */ PanelMode, ReactElement]] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
   var tabIndex: js.UndefOr[Double] = js.undefined
   var value: js.UndefOr[DateType | Null] = js.undefined
@@ -81,7 +81,7 @@ object PickerPanelSharedProps {
     @scala.inline
     def deleteComponents: Self = this.set("components", js.undefined)
     @scala.inline
-    def setDateRender(value: (DateType, DateType) => TagMod[Any]): Self = this.set("dateRender", js.Any.fromFunction2(value))
+    def setDateRender(value: (DateType, DateType) => ReactElement): Self = this.set("dateRender", js.Any.fromFunction2(value))
     @scala.inline
     def deleteDateRender: Self = this.set("dateRender", js.undefined)
     @scala.inline
@@ -109,7 +109,7 @@ object PickerPanelSharedProps {
     @scala.inline
     def deleteMode: Self = this.set("mode", js.undefined)
     @scala.inline
-    def setMonthCellRender(value: (DateType, /* locale */ Locale) => TagMod[Any]): Self = this.set("monthCellRender", js.Any.fromFunction2(value))
+    def setMonthCellRender(value: (DateType, /* locale */ Locale) => ReactElement): Self = this.set("monthCellRender", js.Any.fromFunction2(value))
     @scala.inline
     def deleteMonthCellRender: Self = this.set("monthCellRender", js.undefined)
     @scala.inline
@@ -145,7 +145,7 @@ object PickerPanelSharedProps {
     @scala.inline
     def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
     @scala.inline
-    def setRenderExtraFooter(value: /* mode */ PanelMode => TagMod[Any]): Self = this.set("renderExtraFooter", js.Any.fromFunction1(value))
+    def setRenderExtraFooter(value: /* mode */ PanelMode => ReactElement): Self = this.set("renderExtraFooter", js.Any.fromFunction1(value))
     @scala.inline
     def deleteRenderExtraFooter: Self = this.set("renderExtraFooter", js.undefined)
     @scala.inline

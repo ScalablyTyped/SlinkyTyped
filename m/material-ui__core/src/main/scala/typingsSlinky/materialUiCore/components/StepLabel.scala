@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -436,7 +435,7 @@ object StepLabel {
     @scala.inline
     def optionalReactElement(value: ReactElement): this.type = set("optional", value.asInstanceOf[js.Any])
     @scala.inline
-    def optional(value: TagMod[Any]): this.type = set("optional", value.asInstanceOf[js.Any])
+    def optional(value: ReactElement): this.type = set("optional", value.asInstanceOf[js.Any])
     @scala.inline
     def orientation(value: Orientation): this.type = set("orientation", value.asInstanceOf[js.Any])
     @scala.inline

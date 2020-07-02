@@ -1,7 +1,6 @@
 package typingsSlinky.semanticUiReact.cardCardMod
 
 import org.scalajs.dom.raw.HTMLAnchorElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.ReactNodeArray
@@ -23,7 +22,7 @@ trait StrictCardProps extends js.Object {
   /** A Card can center itself inside its container. */
   var centered: js.UndefOr[Boolean] = js.undefined
   /** Primary content. */
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   /** Additional classes. */
   var className: js.UndefOr[String] = js.undefined
   /** A Card can be formatted to display different colors. */
@@ -88,7 +87,7 @@ object StrictCardProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -109,7 +108,7 @@ object StrictCardProps {
     def setDescriptionReactElement(value: ReactElement): Self = this.set("description", value.asInstanceOf[js.Any])
     @scala.inline
     def setDescriptionFunction3(
-      value: (/* component */ ReactType[CardDescriptionProps], CardDescriptionProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[CardDescriptionProps], CardDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("description", js.Any.fromFunction3(value))
     @scala.inline
     def setDescription(value: SemanticShorthandItem[CardDescriptionProps]): Self = this.set("description", value.asInstanceOf[js.Any])
@@ -129,7 +128,7 @@ object StrictCardProps {
     def setHeaderReactElement(value: ReactElement): Self = this.set("header", value.asInstanceOf[js.Any])
     @scala.inline
     def setHeaderFunction3(
-      value: (/* component */ ReactType[CardHeaderProps], CardHeaderProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[CardHeaderProps], CardHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("header", js.Any.fromFunction3(value))
     @scala.inline
     def setHeader(value: SemanticShorthandItem[CardHeaderProps]): Self = this.set("header", value.asInstanceOf[js.Any])
@@ -143,7 +142,7 @@ object StrictCardProps {
     def setImageReactElement(value: ReactElement): Self = this.set("image", value.asInstanceOf[js.Any])
     @scala.inline
     def setImageFunction3(
-      value: (/* component */ ReactType[ImageProps], ImageProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ImageProps], ImageProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("image", js.Any.fromFunction3(value))
     @scala.inline
     def setImage(value: SemanticShorthandItem[ImageProps]): Self = this.set("image", value.asInstanceOf[js.Any])
@@ -157,7 +156,7 @@ object StrictCardProps {
     def setMetaReactElement(value: ReactElement): Self = this.set("meta", value.asInstanceOf[js.Any])
     @scala.inline
     def setMetaFunction3(
-      value: (/* component */ ReactType[CardMetaProps], CardMetaProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[CardMetaProps], CardMetaProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("meta", js.Any.fromFunction3(value))
     @scala.inline
     def setMeta(value: SemanticShorthandItem[CardMetaProps]): Self = this.set("meta", value.asInstanceOf[js.Any])

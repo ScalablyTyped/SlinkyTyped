@@ -72,6 +72,8 @@ object SafeAreaView {
     @scala.inline
     def collapsable(value: Boolean): this.type = set("collapsable", value.asInstanceOf[js.Any])
     @scala.inline
+    def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
+    @scala.inline
     def forceInset(value: Bottom): this.type = set("forceInset", value.asInstanceOf[js.Any])
     @scala.inline
     def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])

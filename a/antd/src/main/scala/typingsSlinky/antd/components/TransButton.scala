@@ -208,6 +208,8 @@ object TransButton {
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
     @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])

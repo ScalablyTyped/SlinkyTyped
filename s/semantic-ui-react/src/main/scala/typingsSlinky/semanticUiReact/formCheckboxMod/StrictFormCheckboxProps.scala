@@ -1,6 +1,5 @@
 package typingsSlinky.semanticUiReact.formCheckboxMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.react.mod.ReactType
@@ -55,7 +54,7 @@ object StrictFormCheckboxProps {
     def setErrorReactElement(value: ReactElement): Self = this.set("error", value.asInstanceOf[js.Any])
     @scala.inline
     def setErrorFunction3(
-      value: (/* component */ ReactType[LabelProps], LabelProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[LabelProps], LabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("error", js.Any.fromFunction3(value))
     @scala.inline
     def setError(value: Boolean | SemanticShorthandItem[LabelProps]): Self = this.set("error", value.asInstanceOf[js.Any])

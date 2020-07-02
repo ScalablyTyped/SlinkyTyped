@@ -1,6 +1,5 @@
 package typingsSlinky.antd.timelineItemMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -10,8 +9,8 @@ import scala.scalajs.js.annotation._
 trait TimeLineItemProps extends js.Object {
   var className: js.UndefOr[String] = js.undefined
   var color: js.UndefOr[String] = js.undefined
-  var dot: js.UndefOr[TagMod[Any]] = js.undefined
-  var label: js.UndefOr[TagMod[Any]] = js.undefined
+  var dot: js.UndefOr[ReactElement] = js.undefined
+  var label: js.UndefOr[ReactElement] = js.undefined
   var pending: js.UndefOr[Boolean] = js.undefined
   var position: js.UndefOr[String] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
@@ -46,13 +45,13 @@ object TimeLineItemProps {
     @scala.inline
     def setDotReactElement(value: ReactElement): Self = this.set("dot", value.asInstanceOf[js.Any])
     @scala.inline
-    def setDot(value: TagMod[Any]): Self = this.set("dot", value.asInstanceOf[js.Any])
+    def setDot(value: ReactElement): Self = this.set("dot", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDot: Self = this.set("dot", js.undefined)
     @scala.inline
     def setLabelReactElement(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def setLabel(value: TagMod[Any]): Self = this.set("label", value.asInstanceOf[js.Any])
+    def setLabel(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)
     @scala.inline

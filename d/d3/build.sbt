@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "d3"
-version := "5.7-dt-20200515Z-e039d5"
+version := "5.7-dt-20200515Z-8fe9e7"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
@@ -8,7 +8,7 @@ libraryDependencies ++= Seq(
   "me.shadaj" %%% "slinky-web" % "0.6.5",
   "org.scalablytyped.slinky" %%% "d3-array" % "2.0-dt-20200515Z-5df2a0",
   "org.scalablytyped.slinky" %%% "d3-axis" % "1.0-dt-20200515Z-183176",
-  "org.scalablytyped.slinky" %%% "d3-brush" % "1.1-dt-20200515Z-839013",
+  "org.scalablytyped.slinky" %%% "d3-brush" % "1.1-dt-20200605Z-b1b123",
   "org.scalablytyped.slinky" %%% "d3-chord" % "1.0-dt-20200515Z-13d4ca",
   "org.scalablytyped.slinky" %%% "d3-collection" % "1.0-dt-20200515Z-4c4cb3",
   "org.scalablytyped.slinky" %%% "d3-color" % "1.2-dt-20200515Z-3f1e5c",

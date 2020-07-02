@@ -5,14 +5,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait ListField extends js.Object {
+  var isListField: Boolean
   var key: Double
   var name: Double
 }
 
 object ListField {
   @scala.inline
-  def apply(key: Double, name: Double): ListField = {
-    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(isListField: Boolean, key: Double, name: Double): ListField = {
+    val __obj = js.Dynamic.literal(isListField = isListField.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListField]
   }
   @scala.inline
@@ -26,6 +27,8 @@ object ListField {
         x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
         x
     }
+    @scala.inline
+    def setIsListField(value: Boolean): Self = this.set("isListField", value.asInstanceOf[js.Any])
     @scala.inline
     def setKey(value: Double): Self = this.set("key", value.asInstanceOf[js.Any])
     @scala.inline

@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 
 trait TransButtonProps extends HTMLAttributes[HTMLDivElement] {
   var autoFocus: js.UndefOr[Boolean] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
   var noStyle: js.UndefOr[Boolean] = js.undefined
   @JSName("onClick")
   var onClick_TransButtonProps: js.UndefOr[js.Function1[/* e */ js.UndefOr[SyntheticMouseEvent[HTMLDivElement]], Unit]] = js.undefined
@@ -35,6 +36,10 @@ object TransButtonProps {
     def setAutoFocus(value: Boolean): Self = this.set("autoFocus", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAutoFocus: Self = this.set("autoFocus", js.undefined)
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
     @scala.inline
     def setNoStyle(value: Boolean): Self = this.set("noStyle", value.asInstanceOf[js.Any])
     @scala.inline

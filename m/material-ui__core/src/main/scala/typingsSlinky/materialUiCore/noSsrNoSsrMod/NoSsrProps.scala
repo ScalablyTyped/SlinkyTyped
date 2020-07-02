@@ -1,6 +1,5 @@
 package typingsSlinky.materialUiCore.noSsrNoSsrMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,8 +7,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait NoSsrProps extends js.Object {
-  var children: TagMod[Any] = js.native
-  var fallback: js.UndefOr[TagMod[Any]] = js.native
+  var children: ReactElement = js.native
+  var fallback: js.UndefOr[ReactElement] = js.native
 }
 
 object NoSsrProps {
@@ -30,13 +29,13 @@ object NoSsrProps {
         x
     }
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
     def setFallbackReactElement(value: ReactElement): Self = this.set("fallback", value.asInstanceOf[js.Any])
     @scala.inline
-    def setFallback(value: TagMod[Any]): Self = this.set("fallback", value.asInstanceOf[js.Any])
+    def setFallback(value: ReactElement): Self = this.set("fallback", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFallback: Self = this.set("fallback", js.undefined)
   }

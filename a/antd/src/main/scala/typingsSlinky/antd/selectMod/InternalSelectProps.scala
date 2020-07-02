@@ -1,6 +1,5 @@
 package typingsSlinky.antd.selectMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.antdStrings.SECRET_COMBOBOX_MODE_DO_NOT_USE
 import typingsSlinky.antd.antdStrings.multiple
@@ -15,7 +14,7 @@ import scala.scalajs.js.annotation._
   var bordered: js.UndefOr[Boolean] = js.undefined
   var mode: js.UndefOr[multiple | tags | SECRET_COMBOBOX_MODE_DO_NOT_USE] = js.undefined
   var size: js.UndefOr[SizeType] = js.undefined
-  var suffixIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var suffixIcon: js.UndefOr[ReactElement] = js.undefined
 }
 
 object InternalSelectProps {
@@ -50,7 +49,7 @@ object InternalSelectProps {
     @scala.inline
     def setSuffixIconReactElement(value: ReactElement): Self = this.set("suffixIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSuffixIcon(value: TagMod[Any]): Self = this.set("suffixIcon", value.asInstanceOf[js.Any])
+    def setSuffixIcon(value: ReactElement): Self = this.set("suffixIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSuffixIcon: Self = this.set("suffixIcon", js.undefined)
   }

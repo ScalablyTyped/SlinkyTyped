@@ -7,10 +7,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.node.streamMod.WritableOptions because var conflicts: autoDestroy, destroy, highWaterMark, objectMode. Inlined decodeStrings, defaultencoding, emitClose, write, writev, `final` */ trait DuplexOptions extends ReadableOptions {
+- typingsSlinky.node.streamMod.WritableOptions because var conflicts: autoDestroy, destroy, highWaterMark, objectMode. Inlined decodeStrings, defaultEncoding, emitClose, write, writev, `final` */ trait DuplexOptions extends ReadableOptions {
   var allowHalfOpen: js.UndefOr[Boolean] = js.undefined
   var decodeStrings: js.UndefOr[Boolean] = js.undefined
-  var defaultencoding: js.UndefOr[BufferEncoding] = js.undefined
+  var defaultEncoding: js.UndefOr[BufferEncoding] = js.undefined
   @JSName("destroy")
   var destroy_DuplexOptions: js.UndefOr[
     js.ThisFunction2[
@@ -80,9 +80,9 @@ object DuplexOptions {
     @scala.inline
     def deleteDecodeStrings: Self = this.set("decodeStrings", js.undefined)
     @scala.inline
-    def setDefaultencoding(value: BufferEncoding): Self = this.set("defaultencoding", value.asInstanceOf[js.Any])
+    def setDefaultEncoding(value: BufferEncoding): Self = this.set("defaultEncoding", value.asInstanceOf[js.Any])
     @scala.inline
-    def deleteDefaultencoding: Self = this.set("defaultencoding", js.undefined)
+    def deleteDefaultEncoding: Self = this.set("defaultEncoding", js.undefined)
     @scala.inline
     def setDestroy(
       value: js.ThisFunction2[

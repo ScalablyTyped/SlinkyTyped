@@ -1,6 +1,6 @@
 package typingsSlinky.reachRouter.mod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait LocationProps extends js.Object {
 
 object LocationProps {
   @scala.inline
-  def apply(children: /* context */ LocationContext => TagMod[Any]): LocationProps = {
+  def apply(children: /* context */ LocationContext => ReactElement): LocationProps = {
     val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children))
     __obj.asInstanceOf[LocationProps]
   }
@@ -27,7 +27,7 @@ object LocationProps {
         x
     }
     @scala.inline
-    def setChildren(value: /* context */ LocationContext => TagMod[Any]): Self = this.set("children", js.Any.fromFunction1(value))
+    def setChildren(value: /* context */ LocationContext => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
   }
   
 }

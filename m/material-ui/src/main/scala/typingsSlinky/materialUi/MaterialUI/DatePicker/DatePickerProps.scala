@@ -1,6 +1,5 @@
 package typingsSlinky.materialUi.MaterialUI.DatePicker
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
@@ -23,7 +22,7 @@ trait DatePickerProps extends js.Object {
   // <TextField/> is the element that get the 'other' properties
   var DateTimeFormat: js.UndefOr[Call] = js.undefined
   var autoOk: js.UndefOr[Boolean] = js.undefined
-  var cancelLabel: js.UndefOr[TagMod[Any]] = js.undefined
+  var cancelLabel: js.UndefOr[ReactElement] = js.undefined
   // From <TextField />
   var className: js.UndefOr[String] = js.undefined
   var container: js.UndefOr[dialog | `inline`] = js.undefined
@@ -33,15 +32,15 @@ trait DatePickerProps extends js.Object {
   var disableYearSelection: js.UndefOr[Boolean] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
   var errorStyle: js.UndefOr[CSSProperties] = js.undefined
-  var errorText: js.UndefOr[TagMod[Any]] = js.undefined
+  var errorText: js.UndefOr[ReactElement] = js.undefined
   var firstDayOfWeek: js.UndefOr[Double] = js.undefined
   var floatingLabelStyle: js.UndefOr[CSSProperties] = js.undefined
-  var floatingLabelText: js.UndefOr[TagMod[Any]] = js.undefined
+  var floatingLabelText: js.UndefOr[ReactElement] = js.undefined
   var formatDate: js.UndefOr[js.Function1[/* date */ js.Date, String]] = js.undefined
   var fullWidth: js.UndefOr[Boolean] = js.undefined
   var hideCalendarDate: js.UndefOr[Boolean] = js.undefined
   var hintStyle: js.UndefOr[CSSProperties] = js.undefined
-  var hintText: js.UndefOr[TagMod[Any]] = js.undefined
+  var hintText: js.UndefOr[ReactElement] = js.undefined
   var id: js.UndefOr[String] = js.undefined
   var inputStyle: js.UndefOr[CSSProperties] = js.undefined
   var locale: js.UndefOr[String] = js.undefined
@@ -49,7 +48,7 @@ trait DatePickerProps extends js.Object {
   var minDate: js.UndefOr[js.Date] = js.undefined
   var mode: js.UndefOr[portrait | landscape] = js.undefined
   var name: js.UndefOr[String] = js.undefined
-  var okLabel: js.UndefOr[TagMod[Any]] = js.undefined
+  var okLabel: js.UndefOr[ReactElement] = js.undefined
   var onBlur: js.UndefOr[FocusEventHandler[js.Object]] = js.undefined
   var onChange: js.UndefOr[js.Function2[/* e */ js.Any, /* date */ js.Date, Unit]] = js.undefined
   var onClick: js.UndefOr[TouchEventHandler[js.Object]] = js.undefined
@@ -101,7 +100,7 @@ object DatePickerProps {
     @scala.inline
     def setCancelLabelReactElement(value: ReactElement): Self = this.set("cancelLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def setCancelLabel(value: TagMod[Any]): Self = this.set("cancelLabel", value.asInstanceOf[js.Any])
+    def setCancelLabel(value: ReactElement): Self = this.set("cancelLabel", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCancelLabel: Self = this.set("cancelLabel", js.undefined)
     @scala.inline
@@ -139,7 +138,7 @@ object DatePickerProps {
     @scala.inline
     def setErrorTextReactElement(value: ReactElement): Self = this.set("errorText", value.asInstanceOf[js.Any])
     @scala.inline
-    def setErrorText(value: TagMod[Any]): Self = this.set("errorText", value.asInstanceOf[js.Any])
+    def setErrorText(value: ReactElement): Self = this.set("errorText", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteErrorText: Self = this.set("errorText", js.undefined)
     @scala.inline
@@ -153,7 +152,7 @@ object DatePickerProps {
     @scala.inline
     def setFloatingLabelTextReactElement(value: ReactElement): Self = this.set("floatingLabelText", value.asInstanceOf[js.Any])
     @scala.inline
-    def setFloatingLabelText(value: TagMod[Any]): Self = this.set("floatingLabelText", value.asInstanceOf[js.Any])
+    def setFloatingLabelText(value: ReactElement): Self = this.set("floatingLabelText", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFloatingLabelText: Self = this.set("floatingLabelText", js.undefined)
     @scala.inline
@@ -175,7 +174,7 @@ object DatePickerProps {
     @scala.inline
     def setHintTextReactElement(value: ReactElement): Self = this.set("hintText", value.asInstanceOf[js.Any])
     @scala.inline
-    def setHintText(value: TagMod[Any]): Self = this.set("hintText", value.asInstanceOf[js.Any])
+    def setHintText(value: ReactElement): Self = this.set("hintText", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHintText: Self = this.set("hintText", js.undefined)
     @scala.inline
@@ -209,7 +208,7 @@ object DatePickerProps {
     @scala.inline
     def setOkLabelReactElement(value: ReactElement): Self = this.set("okLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def setOkLabel(value: TagMod[Any]): Self = this.set("okLabel", value.asInstanceOf[js.Any])
+    def setOkLabel(value: ReactElement): Self = this.set("okLabel", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOkLabel: Self = this.set("okLabel", js.undefined)
     @scala.inline

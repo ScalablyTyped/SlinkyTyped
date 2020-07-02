@@ -7,7 +7,6 @@ import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -154,7 +153,7 @@ trait FilledInputProps extends js.Object {
   var autoCorrect: js.UndefOr[String] = js.native
   var autoFocus: js.UndefOr[Boolean] = js.native
   var autoSave: js.UndefOr[String] = js.native
-  var children: js.UndefOr[TagMod[Any]] = js.native
+  var children: js.UndefOr[ReactElement] = js.native
   var className: js.UndefOr[String] = js.native
   var classes: js.UndefOr[PartialClassNameMapFilled] = js.native
   var color: js.UndefOr[String] = js.native
@@ -170,7 +169,7 @@ trait FilledInputProps extends js.Object {
   var disableUnderline: js.UndefOr[Boolean] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
   var draggable: js.UndefOr[Booleanish] = js.native
-  var endAdornment: js.UndefOr[TagMod[Any]] = js.native
+  var endAdornment: js.UndefOr[ReactElement] = js.native
   var error: js.UndefOr[Boolean] = js.native
   var fullWidth: js.UndefOr[Boolean] = js.native
   var hidden: js.UndefOr[Boolean] = js.native
@@ -276,7 +275,7 @@ trait FilledInputProps extends js.Object {
   var property: js.UndefOr[String] = js.native
   var radioGroup: js.UndefOr[String] = js.native
   var readOnly: js.UndefOr[Boolean] = js.native
-  var renderPrefix: js.UndefOr[js.Function1[/* state */ Disabled, TagMod[Any]]] = js.native
+  var renderPrefix: js.UndefOr[js.Function1[/* state */ Disabled, ReactElement]] = js.native
   var required: js.UndefOr[Boolean] = js.native
   var resource: js.UndefOr[String] = js.native
   var results: js.UndefOr[Double] = js.native
@@ -286,7 +285,7 @@ trait FilledInputProps extends js.Object {
   var security: js.UndefOr[String] = js.native
   var slot: js.UndefOr[String] = js.native
   var spellCheck: js.UndefOr[Booleanish] = js.native
-  var startAdornment: js.UndefOr[TagMod[Any]] = js.native
+  var startAdornment: js.UndefOr[ReactElement] = js.native
   var style: js.UndefOr[CSSProperties] = js.native
   var suppressContentEditableWarning: js.UndefOr[Boolean] = js.native
   var suppressHydrationWarning: js.UndefOr[Boolean] = js.native
@@ -542,7 +541,7 @@ object FilledInputProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -600,7 +599,7 @@ object FilledInputProps {
     @scala.inline
     def setEndAdornmentReactElement(value: ReactElement): Self = this.set("endAdornment", value.asInstanceOf[js.Any])
     @scala.inline
-    def setEndAdornment(value: TagMod[Any]): Self = this.set("endAdornment", value.asInstanceOf[js.Any])
+    def setEndAdornment(value: ReactElement): Self = this.set("endAdornment", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEndAdornment: Self = this.set("endAdornment", js.undefined)
     @scala.inline
@@ -1040,7 +1039,7 @@ object FilledInputProps {
     @scala.inline
     def deleteReadOnly: Self = this.set("readOnly", js.undefined)
     @scala.inline
-    def setRenderPrefix(value: /* state */ Disabled => TagMod[Any]): Self = this.set("renderPrefix", js.Any.fromFunction1(value))
+    def setRenderPrefix(value: /* state */ Disabled => ReactElement): Self = this.set("renderPrefix", js.Any.fromFunction1(value))
     @scala.inline
     def deleteRenderPrefix: Self = this.set("renderPrefix", js.undefined)
     @scala.inline
@@ -1082,7 +1081,7 @@ object FilledInputProps {
     @scala.inline
     def setStartAdornmentReactElement(value: ReactElement): Self = this.set("startAdornment", value.asInstanceOf[js.Any])
     @scala.inline
-    def setStartAdornment(value: TagMod[Any]): Self = this.set("startAdornment", value.asInstanceOf[js.Any])
+    def setStartAdornment(value: ReactElement): Self = this.set("startAdornment", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStartAdornment: Self = this.set("startAdornment", js.undefined)
     @scala.inline

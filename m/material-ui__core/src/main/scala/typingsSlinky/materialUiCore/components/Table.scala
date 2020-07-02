@@ -456,6 +456,8 @@ object Table {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: TableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

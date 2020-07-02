@@ -3,7 +3,7 @@ package typingsSlinky.materialUiCore.components
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLSelectElement
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.html.select.tag
 import typingsSlinky.StBuildingComponent
@@ -51,7 +51,7 @@ object SelectInput {
     @scala.inline
     def onBlur(value: SyntheticFocusEvent[_] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: (/* event */ ChangeEvent[HTMLSelectElement], /* child */ TagMod[Any]) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    def onChange(value: (/* event */ ChangeEvent[HTMLSelectElement], /* child */ ReactElement) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
     @scala.inline
     def onClose(value: /* event */ ChangeEvent[js.Object] => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
     @scala.inline
@@ -64,7 +64,7 @@ object SelectInput {
     def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
     @scala.inline
     def renderValue(
-      value: /* value */ String | Double | Boolean | (js.Array[String | Double | Boolean]) => TagMod[Any]
+      value: /* value */ String | Double | Boolean | (js.Array[String | Double | Boolean]) => ReactElement
     ): this.type = set("renderValue", js.Any.fromFunction1(value))
     @scala.inline
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])

@@ -1,6 +1,6 @@
 package typingsSlinky.storybookRouter.routerMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ trait RouteProps extends js.Object {
   var hideOnly: Boolean
   var path: String
   var startsWith: Boolean
-  def children(renderData: RenderData): TagMod[Any]
+  def children(renderData: RenderData): ReactElement
 }
 
 object RouteProps {
   @scala.inline
-  def apply(children: RenderData => TagMod[Any], hideOnly: Boolean, path: String, startsWith: Boolean): RouteProps = {
+  def apply(children: RenderData => ReactElement, hideOnly: Boolean, path: String, startsWith: Boolean): RouteProps = {
     val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children), hideOnly = hideOnly.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], startsWith = startsWith.asInstanceOf[js.Any])
     __obj.asInstanceOf[RouteProps]
   }
@@ -30,7 +30,7 @@ object RouteProps {
         x
     }
     @scala.inline
-    def setChildren(value: RenderData => TagMod[Any]): Self = this.set("children", js.Any.fromFunction1(value))
+    def setChildren(value: RenderData => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
     @scala.inline
     def setHideOnly(value: Boolean): Self = this.set("hideOnly", value.asInstanceOf[js.Any])
     @scala.inline

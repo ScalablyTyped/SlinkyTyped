@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -259,7 +258,7 @@ class SharedBuilder_MentionsProps1504682567[R <: js.Object] (val args: js.Array[
   @scala.inline
   def notFoundContentReactElement(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
   @scala.inline
-  def notFoundContent(value: TagMod[Any]): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
+  def notFoundContent(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
   @scala.inline
   def onAbort(value: SyntheticEvent[Event, HTMLTextAreaElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
   @scala.inline

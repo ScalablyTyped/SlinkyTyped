@@ -1,7 +1,6 @@
 package typingsSlinky.antd.cascaderMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.react.mod.CSSProperties
@@ -12,6 +11,8 @@ import scala.scalajs.js.annotation._
 trait CascaderProps extends js.Object {
   /** 是否支持清除 */
   var allowClear: js.UndefOr[Boolean] = js.undefined
+  /** 自动获取焦点 */
+  var autoFocus: js.UndefOr[Boolean] = js.undefined
   /** whether has border style */
   var bordered: js.UndefOr[Boolean] = js.undefined
   /** 当此项为 true 时，点选每级菜单选项值都会发生变化 */
@@ -19,7 +20,7 @@ trait CascaderProps extends js.Object {
   /** 自定义类名 */
   var className: js.UndefOr[String] = js.undefined
   /** 默认的选中项 */
-  var defaultValue: js.UndefOr[js.Array[String]] = js.undefined
+  var defaultValue: js.UndefOr[CascaderValueType] = js.undefined
   /** 禁用 */
   var disabled: js.UndefOr[Boolean] = js.undefined
   /** 选择后展示的渲染函数 */
@@ -27,7 +28,7 @@ trait CascaderProps extends js.Object {
     js.Function2[
       /* label */ js.Array[String], 
       /* selectedOptions */ js.UndefOr[js.Array[CascaderOptionType]], 
-      TagMod[Any]
+      ReactElement
     ]
   ] = js.undefined
   /** 次级菜单的展开方式，可选 'click' 和 'hover' */
@@ -39,11 +40,11 @@ trait CascaderProps extends js.Object {
   var loadData: js.UndefOr[
     js.Function1[/* selectedOptions */ js.UndefOr[js.Array[CascaderOptionType]], Unit]
   ] = js.undefined
-  var notFoundContent: js.UndefOr[TagMod[Any]] = js.undefined
+  var notFoundContent: js.UndefOr[ReactElement] = js.undefined
   /** 选择完成后的回调 */
   var onChange: js.UndefOr[
     js.Function2[
-      /* value */ js.Array[String], 
+      /* value */ CascaderValueType, 
       /* selectedOptions */ js.UndefOr[js.Array[CascaderOptionType]], 
       Unit
     ]
@@ -65,9 +66,9 @@ trait CascaderProps extends js.Object {
   var size: js.UndefOr[SizeType] = js.undefined
   /** 自定义样式 */
   var style: js.UndefOr[CSSProperties] = js.undefined
-  var suffixIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var suffixIcon: js.UndefOr[ReactElement] = js.undefined
   /** 指定选中项 */
-  var value: js.UndefOr[js.Array[String]] = js.undefined
+  var value: js.UndefOr[CascaderValueType] = js.undefined
 }
 
 object CascaderProps {
@@ -94,6 +95,10 @@ object CascaderProps {
     @scala.inline
     def deleteAllowClear: Self = this.set("allowClear", js.undefined)
     @scala.inline
+    def setAutoFocus(value: Boolean): Self = this.set("autoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAutoFocus: Self = this.set("autoFocus", js.undefined)
+    @scala.inline
     def setBordered(value: Boolean): Self = this.set("bordered", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBordered: Self = this.set("bordered", js.undefined)
@@ -106,7 +111,7 @@ object CascaderProps {
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
     @scala.inline
-    def setDefaultValue(value: js.Array[String]): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
+    def setDefaultValue(value: CascaderValueType): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
     @scala.inline
@@ -115,7 +120,7 @@ object CascaderProps {
     def deleteDisabled: Self = this.set("disabled", js.undefined)
     @scala.inline
     def setDisplayRender(
-      value: (/* label */ js.Array[String], /* selectedOptions */ js.UndefOr[js.Array[CascaderOptionType]]) => TagMod[Any]
+      value: (/* label */ js.Array[String], /* selectedOptions */ js.UndefOr[js.Array[CascaderOptionType]]) => ReactElement
     ): Self = this.set("displayRender", js.Any.fromFunction2(value))
     @scala.inline
     def deleteDisplayRender: Self = this.set("displayRender", js.undefined)
@@ -142,12 +147,12 @@ object CascaderProps {
     @scala.inline
     def setNotFoundContentReactElement(value: ReactElement): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])
     @scala.inline
-    def setNotFoundContent(value: TagMod[Any]): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])
+    def setNotFoundContent(value: ReactElement): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteNotFoundContent: Self = this.set("notFoundContent", js.undefined)
     @scala.inline
     def setOnChange(
-      value: (/* value */ js.Array[String], /* selectedOptions */ js.UndefOr[js.Array[CascaderOptionType]]) => Unit
+      value: (/* value */ CascaderValueType, /* selectedOptions */ js.UndefOr[js.Array[CascaderOptionType]]) => Unit
     ): Self = this.set("onChange", js.Any.fromFunction2(value))
     @scala.inline
     def deleteOnChange: Self = this.set("onChange", js.undefined)
@@ -190,11 +195,11 @@ object CascaderProps {
     @scala.inline
     def setSuffixIconReactElement(value: ReactElement): Self = this.set("suffixIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSuffixIcon(value: TagMod[Any]): Self = this.set("suffixIcon", value.asInstanceOf[js.Any])
+    def setSuffixIcon(value: ReactElement): Self = this.set("suffixIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSuffixIcon: Self = this.set("suffixIcon", js.undefined)
     @scala.inline
-    def setValue(value: js.Array[String]): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValue(value: CascaderValueType): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
   }

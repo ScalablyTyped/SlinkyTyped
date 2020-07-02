@@ -1,6 +1,6 @@
 package typingsSlinky.antd.localeReceiverMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
 trait LocaleReceiverProps extends js.Object {
   var componentName: js.UndefOr[String] = js.native
   var defaultLocale: js.UndefOr[js.Object | js.Function] = js.native
-  def children(locale: js.Object): TagMod[Any] = js.native
-  def children(locale: js.Object, localeCode: String): TagMod[Any] = js.native
-  def children(locale: js.Object, localeCode: String, fullLocale: js.Object): TagMod[Any] = js.native
+  def children(locale: js.Object): ReactElement = js.native
+  def children(locale: js.Object, localeCode: String): ReactElement = js.native
+  def children(locale: js.Object, localeCode: String, fullLocale: js.Object): ReactElement = js.native
 }
 

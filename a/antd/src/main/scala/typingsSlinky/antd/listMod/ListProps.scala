@@ -1,6 +1,5 @@
 package typingsSlinky.antd.listMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.antdBooleans.`false`
 import typingsSlinky.antd.paginationPaginationMod.PaginationConfig
@@ -12,21 +11,21 @@ import scala.scalajs.js.annotation._
 
 trait ListProps[T] extends js.Object {
   var bordered: js.UndefOr[Boolean] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var dataSource: js.UndefOr[js.Array[T]] = js.undefined
-  var extra: js.UndefOr[TagMod[Any]] = js.undefined
-  var footer: js.UndefOr[TagMod[Any]] = js.undefined
+  var extra: js.UndefOr[ReactElement] = js.undefined
+  var footer: js.UndefOr[ReactElement] = js.undefined
   var grid: js.UndefOr[ListGridType] = js.undefined
-  var header: js.UndefOr[TagMod[Any]] = js.undefined
+  var header: js.UndefOr[ReactElement] = js.undefined
   var id: js.UndefOr[String] = js.undefined
   var itemLayout: js.UndefOr[ListItemLayout] = js.undefined
-  var loadMore: js.UndefOr[TagMod[Any]] = js.undefined
+  var loadMore: js.UndefOr[ReactElement] = js.undefined
   var loading: js.UndefOr[Boolean | SpinProps] = js.undefined
   var locale: js.UndefOr[ListLocale] = js.undefined
   var pagination: js.UndefOr[PaginationConfig | `false`] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
-  var renderItem: js.UndefOr[js.Function2[/* item */ T, /* index */ Double, TagMod[Any]]] = js.undefined
+  var renderItem: js.UndefOr[js.Function2[/* item */ T, /* index */ Double, ReactElement]] = js.undefined
   var rowKey: js.UndefOr[(js.Function1[/* item */ T, String]) | String] = js.undefined
   var size: js.UndefOr[ListSize] = js.undefined
   var split: js.UndefOr[Boolean] = js.undefined
@@ -57,7 +56,7 @@ object ListProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -71,13 +70,13 @@ object ListProps {
     @scala.inline
     def setExtraReactElement(value: ReactElement): Self = this.set("extra", value.asInstanceOf[js.Any])
     @scala.inline
-    def setExtra(value: TagMod[Any]): Self = this.set("extra", value.asInstanceOf[js.Any])
+    def setExtra(value: ReactElement): Self = this.set("extra", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteExtra: Self = this.set("extra", js.undefined)
     @scala.inline
     def setFooterReactElement(value: ReactElement): Self = this.set("footer", value.asInstanceOf[js.Any])
     @scala.inline
-    def setFooter(value: TagMod[Any]): Self = this.set("footer", value.asInstanceOf[js.Any])
+    def setFooter(value: ReactElement): Self = this.set("footer", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFooter: Self = this.set("footer", js.undefined)
     @scala.inline
@@ -87,7 +86,7 @@ object ListProps {
     @scala.inline
     def setHeaderReactElement(value: ReactElement): Self = this.set("header", value.asInstanceOf[js.Any])
     @scala.inline
-    def setHeader(value: TagMod[Any]): Self = this.set("header", value.asInstanceOf[js.Any])
+    def setHeader(value: ReactElement): Self = this.set("header", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHeader: Self = this.set("header", js.undefined)
     @scala.inline
@@ -101,7 +100,7 @@ object ListProps {
     @scala.inline
     def setLoadMoreReactElement(value: ReactElement): Self = this.set("loadMore", value.asInstanceOf[js.Any])
     @scala.inline
-    def setLoadMore(value: TagMod[Any]): Self = this.set("loadMore", value.asInstanceOf[js.Any])
+    def setLoadMore(value: ReactElement): Self = this.set("loadMore", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLoadMore: Self = this.set("loadMore", js.undefined)
     @scala.inline
@@ -121,7 +120,7 @@ object ListProps {
     @scala.inline
     def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
     @scala.inline
-    def setRenderItem(value: (/* item */ T, /* index */ Double) => TagMod[Any]): Self = this.set("renderItem", js.Any.fromFunction2(value))
+    def setRenderItem(value: (/* item */ T, /* index */ Double) => ReactElement): Self = this.set("renderItem", js.Any.fromFunction2(value))
     @scala.inline
     def deleteRenderItem: Self = this.set("renderItem", js.undefined)
     @scala.inline

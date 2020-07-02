@@ -1,7 +1,6 @@
 package typingsSlinky.rcTable.interfaceMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.HTMLAttributes
 import scala.scalajs.js
@@ -11,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait ColumnSharedType[RecordType] extends js.Object {
   var align: js.UndefOr[AlignType] = js.undefined
   var className: js.UndefOr[String] = js.undefined
-  var ellipsis: js.UndefOr[Boolean] = js.undefined
+  var ellipsis: js.UndefOr[CellEllipsisType] = js.undefined
   var fixed: js.UndefOr[FixedType] = js.undefined
   var key: js.UndefOr[Key] = js.undefined
   var onHeaderCell: js.UndefOr[
@@ -19,7 +18,7 @@ trait ColumnSharedType[RecordType] extends js.Object {
       /* import warning: importer.ImportType#apply Failed type conversion: rc-table.rc-table/lib/interface.ColumnsType<RecordType>[number] */ js.Any
     ]
   ] = js.undefined
-  var title: js.UndefOr[TagMod[Any]] = js.undefined
+  var title: js.UndefOr[ReactElement] = js.undefined
 }
 
 object ColumnSharedType {
@@ -48,7 +47,7 @@ object ColumnSharedType {
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
     @scala.inline
-    def setEllipsis(value: Boolean): Self = this.set("ellipsis", value.asInstanceOf[js.Any])
+    def setEllipsis(value: CellEllipsisType): Self = this.set("ellipsis", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEllipsis: Self = this.set("ellipsis", js.undefined)
     @scala.inline
@@ -68,7 +67,7 @@ object ColumnSharedType {
     @scala.inline
     def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
   }

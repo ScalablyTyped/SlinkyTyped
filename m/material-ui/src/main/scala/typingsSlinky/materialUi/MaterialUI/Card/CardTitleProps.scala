@@ -1,6 +1,5 @@
 package typingsSlinky.materialUi.MaterialUI.Card
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -12,10 +11,10 @@ trait CardTitleProps extends js.Object {
   var expandable: js.UndefOr[Boolean] = js.undefined
   var showExpandableButton: js.UndefOr[Boolean] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
-  var subtitle: js.UndefOr[TagMod[Any]] = js.undefined
+  var subtitle: js.UndefOr[ReactElement] = js.undefined
   var subtitleColor: js.UndefOr[String] = js.undefined
   var subtitleStyle: js.UndefOr[CSSProperties] = js.undefined
-  var title: js.UndefOr[TagMod[Any]] = js.undefined
+  var title: js.UndefOr[ReactElement] = js.undefined
   var titleColor: js.UndefOr[String] = js.undefined
   var titleStyle: js.UndefOr[CSSProperties] = js.undefined
 }
@@ -56,7 +55,7 @@ object CardTitleProps {
     @scala.inline
     def setSubtitleReactElement(value: ReactElement): Self = this.set("subtitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSubtitle(value: TagMod[Any]): Self = this.set("subtitle", value.asInstanceOf[js.Any])
+    def setSubtitle(value: ReactElement): Self = this.set("subtitle", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSubtitle: Self = this.set("subtitle", js.undefined)
     @scala.inline
@@ -70,7 +69,7 @@ object CardTitleProps {
     @scala.inline
     def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
     @scala.inline

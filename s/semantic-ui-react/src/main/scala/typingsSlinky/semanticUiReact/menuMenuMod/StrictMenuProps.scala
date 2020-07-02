@@ -1,7 +1,6 @@
 package typingsSlinky.semanticUiReact.menuMenuMod
 
 import org.scalajs.dom.raw.HTMLAnchorElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
@@ -33,7 +32,7 @@ trait StrictMenuProps extends js.Object {
   /** A menu item or menu can have no borders. */
   var borderless: js.UndefOr[Boolean] = js.undefined
   /** Primary content. */
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   /** Additional classes. */
   var className: js.UndefOr[String] = js.undefined
   /** Additional colors can be specified. */
@@ -119,7 +118,7 @@ object StrictMenuProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline

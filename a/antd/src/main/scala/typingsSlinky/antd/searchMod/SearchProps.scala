@@ -2,7 +2,6 @@ package typingsSlinky.antd.searchMod
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
@@ -13,7 +12,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait SearchProps extends InputProps {
-  var enterButton: js.UndefOr[TagMod[Any]] = js.undefined
+  var enterButton: js.UndefOr[ReactElement] = js.undefined
   var inputPrefixCls: js.UndefOr[String] = js.undefined
   var loading: js.UndefOr[Boolean] = js.undefined
   var onSearch: js.UndefOr[
@@ -47,7 +46,7 @@ object SearchProps {
     @scala.inline
     def setEnterButtonReactElement(value: ReactElement): Self = this.set("enterButton", value.asInstanceOf[js.Any])
     @scala.inline
-    def setEnterButton(value: TagMod[Any]): Self = this.set("enterButton", value.asInstanceOf[js.Any])
+    def setEnterButton(value: ReactElement): Self = this.set("enterButton", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEnterButton: Self = this.set("enterButton", js.undefined)
     @scala.inline

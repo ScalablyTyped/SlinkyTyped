@@ -1,6 +1,5 @@
 package typingsSlinky.materialUi.MaterialUI.Switches
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.InputHTMLAttributes
@@ -14,7 +13,7 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.react.mod.Props because var conflicts: children. Inlined key, ref */ trait CommonEnhancedSwitchProps[T]
   extends InputHTMLAttributes[js.Object] {
   var key: js.UndefOr[Key] = js.undefined
-  var label: js.UndefOr[TagMod[Any]] = js.undefined
+  var label: js.UndefOr[ReactElement] = js.undefined
   var ref: js.UndefOr[LegacyRef[T]] = js.undefined
 }
 
@@ -42,7 +41,7 @@ object CommonEnhancedSwitchProps {
     @scala.inline
     def setLabelReactElement(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def setLabel(value: TagMod[Any]): Self = this.set("label", value.asInstanceOf[js.Any])
+    def setLabel(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)
     @scala.inline

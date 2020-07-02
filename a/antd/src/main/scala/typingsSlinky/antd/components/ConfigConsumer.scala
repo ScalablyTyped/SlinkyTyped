@@ -1,6 +1,6 @@
 package typingsSlinky.antd.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
@@ -24,7 +24,7 @@ object ConfigConsumer {
   
   def withProps(p: ConsumerProps[ConfigConsumerProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(children: ConfigConsumerProps => TagMod[Any]): Builder = {
+  def apply(children: ConfigConsumerProps => ReactElement): Builder = {
     val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
     new Builder(js.Array(this.component, __props.asInstanceOf[ConsumerProps[ConfigConsumerProps]]))
   }

@@ -1,7 +1,6 @@
 package typingsSlinky.rcNotification.noticeMod
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.CSSProperties
@@ -11,10 +10,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait NoticeProps extends js.Object {
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var closable: js.UndefOr[Boolean] = js.undefined
-  var closeIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var closeIcon: js.UndefOr[ReactElement] = js.undefined
   var duration: js.UndefOr[Double | Null] = js.undefined
   /** @private Only for internal usage. We don't promise that we will refactor this */
   var holder: js.UndefOr[HTMLDivElement] = js.undefined
@@ -48,7 +47,7 @@ object NoticeProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -62,7 +61,7 @@ object NoticeProps {
     @scala.inline
     def setCloseIconReactElement(value: ReactElement): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setCloseIcon(value: TagMod[Any]): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
+    def setCloseIcon(value: ReactElement): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCloseIcon: Self = this.set("closeIcon", js.undefined)
     @scala.inline

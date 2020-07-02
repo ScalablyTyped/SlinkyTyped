@@ -2,12 +2,13 @@ package typingsSlinky.node.childProcessMod
 
 import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.Signals
+import typingsSlinky.node.nodeStrings.buffer_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait ExecSyncOptions extends CommonOptions {
-  var encoding: js.UndefOr[BufferEncoding] = js.undefined
+  var encoding: js.UndefOr[BufferEncoding | buffer_ | Null] = js.undefined
   var input: js.UndefOr[String | js.typedarray.Uint8Array] = js.undefined
   var killSignal: js.UndefOr[Signals | Double] = js.undefined
   var maxBuffer: js.UndefOr[Double] = js.undefined
@@ -33,9 +34,11 @@ object ExecSyncOptions {
         x
     }
     @scala.inline
-    def setEncoding(value: BufferEncoding): Self = this.set("encoding", value.asInstanceOf[js.Any])
+    def setEncoding(value: BufferEncoding | buffer_): Self = this.set("encoding", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEncoding: Self = this.set("encoding", js.undefined)
+    @scala.inline
+    def setEncodingNull: Self = this.set("encoding", null)
     @scala.inline
     def setInputUint8Array(value: js.typedarray.Uint8Array): Self = this.set("input", value.asInstanceOf[js.Any])
     @scala.inline

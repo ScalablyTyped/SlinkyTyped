@@ -18,9 +18,11 @@ trait TdHTMLAttributes[T] extends HTMLAttributes[T] {
   var align: js.UndefOr[left | center | right | justify | char] = js.undefined
   var colSpan: js.UndefOr[Double] = js.undefined
   var headers: js.UndefOr[String] = js.undefined
+  var height: js.UndefOr[Double | String] = js.undefined
   var rowSpan: js.UndefOr[Double] = js.undefined
   var scope: js.UndefOr[String] = js.undefined
   var valign: js.UndefOr[top | middle | bottom | baseline] = js.undefined
+  var width: js.UndefOr[Double | String] = js.undefined
 }
 
 object TdHTMLAttributes {
@@ -57,6 +59,10 @@ object TdHTMLAttributes {
     @scala.inline
     def deleteHeaders: Self = this.set("headers", js.undefined)
     @scala.inline
+    def setHeight(value: Double | String): Self = this.set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeight: Self = this.set("height", js.undefined)
+    @scala.inline
     def setRowSpan(value: Double): Self = this.set("rowSpan", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRowSpan: Self = this.set("rowSpan", js.undefined)
@@ -68,6 +74,10 @@ object TdHTMLAttributes {
     def setValign(value: top | middle | bottom | baseline): Self = this.set("valign", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteValign: Self = this.set("valign", js.undefined)
+    @scala.inline
+    def setWidth(value: Double | String): Self = this.set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWidth: Self = this.set("width", js.undefined)
   }
   
 }

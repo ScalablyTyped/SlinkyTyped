@@ -1,7 +1,6 @@
 package typingsSlinky.rcNotification.notificationMod
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.rcNotification.noticeMod.DivProps
@@ -16,8 +15,8 @@ import scala.scalajs.js.annotation._
 trait NoticeContent extends js.Object {
   var className: js.UndefOr[String] = js.undefined
   var closable: js.UndefOr[Boolean] = js.undefined
-  var closeIcon: js.UndefOr[TagMod[Any]] = js.undefined
-  var content: js.UndefOr[TagMod[Any]] = js.undefined
+  var closeIcon: js.UndefOr[ReactElement] = js.undefined
+  var content: js.UndefOr[ReactElement] = js.undefined
   var duration: js.UndefOr[Double] = js.undefined
   var holder: js.UndefOr[HTMLDivElement] = js.undefined
   var key: js.UndefOr[Key] = js.undefined
@@ -58,13 +57,13 @@ object NoticeContent {
     @scala.inline
     def setCloseIconReactElement(value: ReactElement): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setCloseIcon(value: TagMod[Any]): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
+    def setCloseIcon(value: ReactElement): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCloseIcon: Self = this.set("closeIcon", js.undefined)
     @scala.inline
     def setContentReactElement(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
     @scala.inline
-    def setContent(value: TagMod[Any]): Self = this.set("content", value.asInstanceOf[js.Any])
+    def setContent(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteContent: Self = this.set("content", js.undefined)
     @scala.inline

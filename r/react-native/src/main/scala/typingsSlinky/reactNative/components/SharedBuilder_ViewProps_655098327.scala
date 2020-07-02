@@ -65,6 +65,8 @@ class SharedBuilder_ViewProps_655098327[R <: js.Object] (val args: js.Array[js.A
   @scala.inline
   def collapsable(value: Boolean): this.type = set("collapsable", value.asInstanceOf[js.Any])
   @scala.inline
+  def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
+  @scala.inline
   def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
   @scala.inline
   def hitSlop(value: Insets): this.type = set("hitSlop", value.asInstanceOf[js.Any])

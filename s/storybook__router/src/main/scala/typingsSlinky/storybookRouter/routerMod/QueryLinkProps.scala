@@ -1,12 +1,12 @@
 package typingsSlinky.storybookRouter.routerMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait QueryLinkProps extends js.Object {
-  var children: TagMod[Any]
+  var children: ReactElement
   var to: String
 }
 
@@ -30,7 +30,7 @@ object QueryLinkProps {
     @scala.inline
     def setTo(value: String): Self = this.set("to", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
   }

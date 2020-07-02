@@ -1,6 +1,5 @@
 package typingsSlinky.rcPicker.datetimePanelMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcPicker.dateBodyMod.DateRender
 import typingsSlinky.rcPicker.generateMod.GenerateConfig
@@ -32,19 +31,19 @@ trait DatetimePanelProps[DateType] extends js.Object {
   var generateConfig: GenerateConfig[DateType]
   var keyboardConfig: js.UndefOr[KeyboardConfig] = js.undefined
   var locale: Locale
-  var nextIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var nextIcon: js.UndefOr[ReactElement] = js.undefined
   var onPanelChange: js.Function2[/* mode */ PanelMode | Null, /* viewValue */ DateType, Unit]
   var onSelect: OnSelect[DateType]
   var onViewDateChange: js.Function1[/* value */ DateType, Unit]
   var operationRef: MutableRefObject[PanelRefProps]
   var panelName: js.UndefOr[String] = js.undefined
   var prefixCls: String
-  var prefixColumn: js.UndefOr[js.Function1[/* date */ DateType, TagMod[Any]]] = js.undefined
-  var prevIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var prefixColumn: js.UndefOr[js.Function1[/* date */ DateType, ReactElement]] = js.undefined
+  var prevIcon: js.UndefOr[ReactElement] = js.undefined
   var rowClassName: js.UndefOr[js.Function1[/* date */ DateType, String]] = js.undefined
   var showTime: js.UndefOr[Boolean | SharedTimeProps[DateType]] = js.undefined
-  var superNextIcon: js.UndefOr[TagMod[Any]] = js.undefined
-  var superPrevIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var superNextIcon: js.UndefOr[ReactElement] = js.undefined
+  var superPrevIcon: js.UndefOr[ReactElement] = js.undefined
   var value: js.UndefOr[NullableDateType[DateType]] = js.undefined
   var viewDate: DateType
 }
@@ -96,7 +95,7 @@ object DatetimePanelProps {
     @scala.inline
     def deleteActive: Self = this.set("active", js.undefined)
     @scala.inline
-    def setDateRender(value: (DateType, DateType) => TagMod[Any]): Self = this.set("dateRender", js.Any.fromFunction2(value))
+    def setDateRender(value: (DateType, DateType) => ReactElement): Self = this.set("dateRender", js.Any.fromFunction2(value))
     @scala.inline
     def deleteDateRender: Self = this.set("dateRender", js.undefined)
     @scala.inline
@@ -122,7 +121,7 @@ object DatetimePanelProps {
     @scala.inline
     def setNextIconReactElement(value: ReactElement): Self = this.set("nextIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setNextIcon(value: TagMod[Any]): Self = this.set("nextIcon", value.asInstanceOf[js.Any])
+    def setNextIcon(value: ReactElement): Self = this.set("nextIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteNextIcon: Self = this.set("nextIcon", js.undefined)
     @scala.inline
@@ -130,13 +129,13 @@ object DatetimePanelProps {
     @scala.inline
     def deletePanelName: Self = this.set("panelName", js.undefined)
     @scala.inline
-    def setPrefixColumn(value: /* date */ DateType => TagMod[Any]): Self = this.set("prefixColumn", js.Any.fromFunction1(value))
+    def setPrefixColumn(value: /* date */ DateType => ReactElement): Self = this.set("prefixColumn", js.Any.fromFunction1(value))
     @scala.inline
     def deletePrefixColumn: Self = this.set("prefixColumn", js.undefined)
     @scala.inline
     def setPrevIconReactElement(value: ReactElement): Self = this.set("prevIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setPrevIcon(value: TagMod[Any]): Self = this.set("prevIcon", value.asInstanceOf[js.Any])
+    def setPrevIcon(value: ReactElement): Self = this.set("prevIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePrevIcon: Self = this.set("prevIcon", js.undefined)
     @scala.inline
@@ -150,13 +149,13 @@ object DatetimePanelProps {
     @scala.inline
     def setSuperNextIconReactElement(value: ReactElement): Self = this.set("superNextIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSuperNextIcon(value: TagMod[Any]): Self = this.set("superNextIcon", value.asInstanceOf[js.Any])
+    def setSuperNextIcon(value: ReactElement): Self = this.set("superNextIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSuperNextIcon: Self = this.set("superNextIcon", js.undefined)
     @scala.inline
     def setSuperPrevIconReactElement(value: ReactElement): Self = this.set("superPrevIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSuperPrevIcon(value: TagMod[Any]): Self = this.set("superPrevIcon", value.asInstanceOf[js.Any])
+    def setSuperPrevIcon(value: ReactElement): Self = this.set("superPrevIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSuperPrevIcon: Self = this.set("superPrevIcon", js.undefined)
     @scala.inline

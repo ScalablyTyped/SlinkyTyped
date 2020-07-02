@@ -1,6 +1,5 @@
 package typingsSlinky.materialUi.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -25,13 +24,13 @@ object CardHeader {
     @scala.inline
     def avatarReactElement(value: ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
     @scala.inline
-    def avatar(value: TagMod[Any]): this.type = set("avatar", value.asInstanceOf[js.Any])
+    def avatar(value: ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def closeIcon(value: TagMod[Any]): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    def closeIcon(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def expandable(value: Boolean): this.type = set("expandable", value.asInstanceOf[js.Any])
     @scala.inline
@@ -39,7 +38,7 @@ object CardHeader {
     @scala.inline
     def openIconReactElement(value: ReactElement): this.type = set("openIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def openIcon(value: TagMod[Any]): this.type = set("openIcon", value.asInstanceOf[js.Any])
+    def openIcon(value: ReactElement): this.type = set("openIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def showExpandableButton(value: Boolean): this.type = set("showExpandableButton", value.asInstanceOf[js.Any])
     @scala.inline
@@ -47,7 +46,7 @@ object CardHeader {
     @scala.inline
     def subtitleReactElement(value: ReactElement): this.type = set("subtitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def subtitle(value: TagMod[Any]): this.type = set("subtitle", value.asInstanceOf[js.Any])
+    def subtitle(value: ReactElement): this.type = set("subtitle", value.asInstanceOf[js.Any])
     @scala.inline
     def subtitleColor(value: String): this.type = set("subtitleColor", value.asInstanceOf[js.Any])
     @scala.inline
@@ -57,7 +56,7 @@ object CardHeader {
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def titleColor(value: String): this.type = set("titleColor", value.asInstanceOf[js.Any])
     @scala.inline

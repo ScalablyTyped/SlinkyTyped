@@ -243,6 +243,8 @@ object TableCell {
     @scala.inline
     def headers(value: String): this.type = set("headers", value.asInstanceOf[js.Any])
     @scala.inline
+    def height(value: Double | String): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -482,6 +484,8 @@ object TableCell {
     def variant(value: head | body | footer): this.type = set("variant", value.asInstanceOf[js.Any])
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: TableCellProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

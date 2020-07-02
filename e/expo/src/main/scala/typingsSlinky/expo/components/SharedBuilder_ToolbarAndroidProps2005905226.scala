@@ -73,6 +73,8 @@ class SharedBuilder_ToolbarAndroidProps2005905226[R <: js.Object] (val args: js.
   @scala.inline
   def contentInsetStart(value: Double): this.type = set("contentInsetStart", value.asInstanceOf[js.Any])
   @scala.inline
+  def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
+  @scala.inline
   def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
   @scala.inline
   def hitSlop(value: Insets): this.type = set("hitSlop", value.asInstanceOf[js.Any])

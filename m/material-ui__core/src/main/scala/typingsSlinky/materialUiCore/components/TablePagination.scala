@@ -7,7 +7,6 @@ import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -263,6 +262,8 @@ object TablePagination {
     @scala.inline
     def headers(value: String): this.type = set("headers", value.asInstanceOf[js.Any])
     @scala.inline
+    def height(value: Double | String): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -291,11 +292,11 @@ object TablePagination {
     @scala.inline
     def itemType(value: String): this.type = set("itemType", value.asInstanceOf[js.Any])
     @scala.inline
-    def labelDisplayedRows(value: /* paginationInfo */ LabelDisplayedRowsArgs => TagMod[Any]): this.type = set("labelDisplayedRows", js.Any.fromFunction1(value))
+    def labelDisplayedRows(value: /* paginationInfo */ LabelDisplayedRowsArgs => ReactElement): this.type = set("labelDisplayedRows", js.Any.fromFunction1(value))
     @scala.inline
     def labelRowsPerPageReactElement(value: ReactElement): this.type = set("labelRowsPerPage", value.asInstanceOf[js.Any])
     @scala.inline
-    def labelRowsPerPage(value: TagMod[Any]): this.type = set("labelRowsPerPage", value.asInstanceOf[js.Any])
+    def labelRowsPerPage(value: ReactElement): this.type = set("labelRowsPerPage", value.asInstanceOf[js.Any])
     @scala.inline
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     @scala.inline
@@ -514,6 +515,8 @@ object TablePagination {
     def variant(value: head | body | footer): this.type = set("variant", value.asInstanceOf[js.Any])
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: TablePaginationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

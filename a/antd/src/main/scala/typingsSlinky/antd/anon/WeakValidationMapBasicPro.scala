@@ -1,7 +1,7 @@
 package typingsSlinky.antd.anon
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
 import typingsSlinky.antd.antdStrings.additions
@@ -126,7 +126,7 @@ trait WeakValidationMapBasicPro extends js.Object {
   var autoCapitalize: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
   var autoCorrect: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
   var autoSave: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
-  var children: js.UndefOr[Validator[js.UndefOr[Null | TagMod[Any]]]] = js.undefined
+  var children: js.UndefOr[Validator[js.UndefOr[Null | ReactElement]]] = js.undefined
   var className: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
   var color: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
   var contentEditable: js.UndefOr[Validator[js.UndefOr[inherit | Booleanish | Null]]] = js.undefined
@@ -482,7 +482,7 @@ object WeakValidationMapBasicPro {
     @scala.inline
     def deleteAutoSave: Self = this.set("autoSave", js.undefined)
     @scala.inline
-    def setChildren(value: Validator[js.UndefOr[Null | TagMod[Any]]]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: Validator[js.UndefOr[Null | ReactElement]]): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline

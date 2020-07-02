@@ -8,6 +8,6 @@ package object monthBodyMod {
   type MonthCellRender[DateType] = js.Function2[
     /* currentDate */ DateType, 
     /* locale */ typingsSlinky.rcPicker.interfaceMod.Locale, 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
 }

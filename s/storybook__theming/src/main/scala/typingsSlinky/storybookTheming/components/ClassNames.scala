@@ -1,6 +1,6 @@
 package typingsSlinky.storybookTheming.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.emotionCore.mod.ClassNamesContent
@@ -21,7 +21,7 @@ object ClassNames {
   
   def withProps[Theme](p: ClassNamesProps[Theme]): Builder[Theme] = new Builder[Theme](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[Theme](children: ClassNamesContent[Theme] => TagMod[Any]): Builder[Theme] = {
+  def apply[Theme](children: ClassNamesContent[Theme] => ReactElement): Builder[Theme] = {
     val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
     new Builder[Theme](js.Array(this.component, __props.asInstanceOf[ClassNamesProps[Theme]]))
   }

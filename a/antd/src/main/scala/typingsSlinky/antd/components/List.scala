@@ -1,6 +1,5 @@
 package typingsSlinky.antd.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -35,17 +34,17 @@ object List {
     @scala.inline
     def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
-    def extra(value: TagMod[Any]): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
     def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     @scala.inline
-    def footer(value: TagMod[Any]): this.type = set("footer", value.asInstanceOf[js.Any])
+    def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     @scala.inline
     def grid(value: ListGridType): this.type = set("grid", value.asInstanceOf[js.Any])
     @scala.inline
     def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     @scala.inline
-    def header(value: TagMod[Any]): this.type = set("header", value.asInstanceOf[js.Any])
+    def header(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
@@ -53,7 +52,7 @@ object List {
     @scala.inline
     def loadMoreReactElement(value: ReactElement): this.type = set("loadMore", value.asInstanceOf[js.Any])
     @scala.inline
-    def loadMore(value: TagMod[Any]): this.type = set("loadMore", value.asInstanceOf[js.Any])
+    def loadMore(value: ReactElement): this.type = set("loadMore", value.asInstanceOf[js.Any])
     @scala.inline
     def loading(value: Boolean | SpinProps): this.type = set("loading", value.asInstanceOf[js.Any])
     @scala.inline
@@ -63,7 +62,7 @@ object List {
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
-    def renderItem(value: (T, /* index */ Double) => TagMod[Any]): this.type = set("renderItem", js.Any.fromFunction2(value))
+    def renderItem(value: (T, /* index */ Double) => ReactElement): this.type = set("renderItem", js.Any.fromFunction2(value))
     @scala.inline
     def rowKeyFunction1(value: T => String): this.type = set("rowKey", js.Any.fromFunction1(value))
     @scala.inline

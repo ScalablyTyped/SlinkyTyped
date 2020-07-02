@@ -1,7 +1,6 @@
 package typingsSlinky.semanticUiReact.embedEmbedMod
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.ReactNodeArray
@@ -31,7 +30,7 @@ trait StrictEmbedProps extends js.Object {
   /** Whether to show networks branded UI like title cards, or after video calls to action. */
   var brandedUI: js.UndefOr[Boolean] = js.undefined
   /** Primary content. */
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   /** Additional classes. */
   var className: js.UndefOr[String] = js.undefined
   /** Specifies a default chrome color with Vimeo or YouTube. */
@@ -105,7 +104,7 @@ object StrictEmbedProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -134,7 +133,7 @@ object StrictEmbedProps {
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def setIconFunction3(
-      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("icon", js.Any.fromFunction3(value))
     @scala.inline
     def setIcon(value: SemanticShorthandItem[IconProps]): Self = this.set("icon", value.asInstanceOf[js.Any])
@@ -148,7 +147,7 @@ object StrictEmbedProps {
     def setIframeReactElement(value: ReactElement): Self = this.set("iframe", value.asInstanceOf[js.Any])
     @scala.inline
     def setIframeFunction3(
-      value: (/* component */ ReactType[HtmlIframeProps], HtmlIframeProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[HtmlIframeProps], HtmlIframeProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("iframe", js.Any.fromFunction3(value))
     @scala.inline
     def setIframe(value: SemanticShorthandItem[HtmlIframeProps]): Self = this.set("iframe", value.asInstanceOf[js.Any])

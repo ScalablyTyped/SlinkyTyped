@@ -1,7 +1,6 @@
 package typingsSlinky.rcNotification.components
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
@@ -30,7 +29,7 @@ object Notice {
     @scala.inline
     def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def closeIcon(value: TagMod[Any]): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    def closeIcon(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def duration(value: Double): this.type = set("duration", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,12 +1,12 @@
 package typingsSlinky.antd.anon
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Content extends js.Object {
-  var content: TagMod[Any]
+  var content: ReactElement
   var ellipsis: Boolean
   var text: String
 }
@@ -33,7 +33,7 @@ object Content {
     @scala.inline
     def setText(value: String): Self = this.set("text", value.asInstanceOf[js.Any])
     @scala.inline
-    def setContent(value: TagMod[Any]): Self = this.set("content", value.asInstanceOf[js.Any])
+    def setContent(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteContent: Self = this.set("content", js.undefined)
   }

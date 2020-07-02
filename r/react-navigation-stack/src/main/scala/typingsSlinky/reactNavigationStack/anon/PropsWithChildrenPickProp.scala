@@ -1,6 +1,5 @@
 package typingsSlinky.reactNavigationStack.anon
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.reactNative.mod.Animated.Value
 import typingsSlinky.reactNavigation.mod.NavigationParams
@@ -20,7 +19,7 @@ import scala.scalajs.js.annotation._
 trait PropsWithChildrenPickProp extends js.Object {
   var backTitleVisible: js.UndefOr[Boolean] = js.undefined
   var backgroundInterpolator: js.UndefOr[js.Function1[/* props */ SceneInterpolatorProps, _]] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var layout: TransitionerLayout
   var layoutInterpolator: js.Function1[/* props */ SceneInterpolatorProps, _]
   var layoutPreset: HeaderLayoutPreset
@@ -104,7 +103,7 @@ object PropsWithChildrenPickProp {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline

@@ -1,6 +1,5 @@
 package typingsSlinky.rcFieldForm.fieldMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcFieldForm.anon.Source
 import typingsSlinky.rcFieldForm.interfaceMod.EventArgs
@@ -19,7 +18,7 @@ import scala.scalajs.js.annotation._
 
 trait InternalFieldProps extends js.Object {
   var children: js.UndefOr[
-    ReactElement | (js.Function3[/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance, TagMod[Any]])
+    ReactElement | (js.Function3[/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance, ReactElement])
   ] = js.undefined
   /**
     * Set up `dependencies` field.
@@ -64,10 +63,10 @@ object InternalFieldProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildrenFunction3(value: (/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance) => TagMod[Any]): Self = this.set("children", js.Any.fromFunction3(value))
+    def setChildrenFunction3(value: (/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance) => ReactElement): Self = this.set("children", js.Any.fromFunction3(value))
     @scala.inline
     def setChildren(
-      value: ReactElement | (js.Function3[/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance, TagMod[Any]])
+      value: ReactElement | (js.Function3[/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance, ReactElement])
     ): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)

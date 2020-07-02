@@ -1,7 +1,7 @@
 package typingsSlinky.antd.sliderMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.tooltipMod.TooltipPlacement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -26,7 +26,7 @@ trait SliderProps extends js.Object {
   var reverse: js.UndefOr[Boolean] = js.undefined
   var step: js.UndefOr[Double | Null] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
-  var tipFormatter: js.UndefOr[Null | (js.Function1[/* value */ Double, TagMod[Any]])] = js.undefined
+  var tipFormatter: js.UndefOr[Null | (js.Function1[/* value */ Double, ReactElement])] = js.undefined
   var tooltipPlacement: js.UndefOr[TooltipPlacement] = js.undefined
   var tooltipPrefixCls: js.UndefOr[String] = js.undefined
   var tooltipVisible: js.UndefOr[Boolean] = js.undefined
@@ -122,7 +122,7 @@ object SliderProps {
     @scala.inline
     def deleteStyle: Self = this.set("style", js.undefined)
     @scala.inline
-    def setTipFormatter(value: /* value */ Double => TagMod[Any]): Self = this.set("tipFormatter", js.Any.fromFunction1(value))
+    def setTipFormatter(value: /* value */ Double => ReactElement): Self = this.set("tipFormatter", js.Any.fromFunction1(value))
     @scala.inline
     def deleteTipFormatter: Self = this.set("tipFormatter", js.undefined)
     @scala.inline

@@ -3,11 +3,12 @@ package typingsSlinky.antd.components
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLUListElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.ul.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.anon.PartialTransferLocale
-import typingsSlinky.antd.renderListBodyMod.TransferListBodyProps
+import typingsSlinky.antd.listBodyMod.TransferListBodyProps
+import typingsSlinky.antd.transferInterfaceMod.PaginationType
 import typingsSlinky.antd.transferListMod.TransferListProps
 import typingsSlinky.antd.transferMod.ListStyle
 import typingsSlinky.antd.transferMod.RenderResult
@@ -31,7 +32,7 @@ object Transfer {
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
     @scala.inline
-    def children(value: /* props */ TransferListBodyProps => TagMod[Any]): this.type = set("children", js.Any.fromFunction1(value))
+    def children(value: /* props */ TransferListBodyProps => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -39,7 +40,7 @@ object Transfer {
     @scala.inline
     def filterOption(value: (/* inputValue */ String, /* item */ TransferItem) => Boolean): this.type = set("filterOption", js.Any.fromFunction2(value))
     @scala.inline
-    def footer(value: /* props */ TransferListProps => TagMod[Any]): this.type = set("footer", js.Any.fromFunction1(value))
+    def footer(value: /* props */ TransferListProps => ReactElement): this.type = set("footer", js.Any.fromFunction1(value))
     @scala.inline
     def locale(value: PartialTransferLocale): this.type = set("locale", value.asInstanceOf[js.Any])
     @scala.inline
@@ -57,9 +58,13 @@ object Transfer {
       value: (/* sourceSelectedKeys */ js.Array[String], /* targetSelectedKeys */ js.Array[String]) => Unit
     ): this.type = set("onSelectChange", js.Any.fromFunction2(value))
     @scala.inline
+    def oneWay(value: Boolean): this.type = set("oneWay", value.asInstanceOf[js.Any])
+    @scala.inline
     def operationStyle(value: CSSProperties): this.type = set("operationStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def operations(value: js.Array[String]): this.type = set("operations", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pagination(value: PaginationType): this.type = set("pagination", value.asInstanceOf[js.Any])
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline

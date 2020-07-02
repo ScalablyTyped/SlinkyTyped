@@ -3,7 +3,6 @@ package typingsSlinky.materialUi.components
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
@@ -54,7 +53,7 @@ object AutoComplete {
     @scala.inline
     def errorTextReactElement(value: ReactElement): this.type = set("errorText", value.asInstanceOf[js.Any])
     @scala.inline
-    def errorText(value: TagMod[Any]): this.type = set("errorText", value.asInstanceOf[js.Any])
+    def errorText(value: ReactElement): this.type = set("errorText", value.asInstanceOf[js.Any])
     @scala.inline
     def filter(value: (/* searchText */ String, /* key */ String, js.Any) => Boolean): this.type = set("filter", js.Any.fromFunction3(value))
     @scala.inline
@@ -68,7 +67,7 @@ object AutoComplete {
     @scala.inline
     def floatingLabelTextReactElement(value: ReactElement): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
     @scala.inline
-    def floatingLabelText(value: TagMod[Any]): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
+    def floatingLabelText(value: ReactElement): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
     @scala.inline
     def fullWidth(value: Boolean): this.type = set("fullWidth", value.asInstanceOf[js.Any])
     @scala.inline
@@ -76,7 +75,7 @@ object AutoComplete {
     @scala.inline
     def hintTextReactElement(value: ReactElement): this.type = set("hintText", value.asInstanceOf[js.Any])
     @scala.inline
-    def hintText(value: TagMod[Any]): this.type = set("hintText", value.asInstanceOf[js.Any])
+    def hintText(value: ReactElement): this.type = set("hintText", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline

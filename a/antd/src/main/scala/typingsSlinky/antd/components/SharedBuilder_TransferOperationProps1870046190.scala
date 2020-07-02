@@ -30,6 +30,8 @@ class SharedBuilder_TransferOperationProps1870046190 (val args: js.Array[js.Any]
   @scala.inline
   def moveToRight(value: SyntheticMouseEvent[HTMLButtonElement] => Unit): this.type = set("moveToRight", js.Any.fromFunction1(value))
   @scala.inline
+  def oneWay(value: Boolean): this.type = set("oneWay", value.asInstanceOf[js.Any])
+  @scala.inline
   def rightActive(value: Boolean): this.type = set("rightActive", value.asInstanceOf[js.Any])
   @scala.inline
   def rightArrowText(value: String): this.type = set("rightArrowText", value.asInstanceOf[js.Any])

@@ -1,8 +1,9 @@
 package typingsSlinky.antd.popconfirmMod
 
+import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
+import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.buttonButtonMod.LegacyButtonType
 import typingsSlinky.antd.buttonButtonMod.NativeButtonProps
@@ -14,18 +15,22 @@ import scala.scalajs.js.annotation._
 
 trait PopconfirmProps extends AbstractTooltipProps {
   var cancelButtonProps: js.UndefOr[NativeButtonProps] = js.undefined
-  var cancelText: js.UndefOr[TagMod[Any]] = js.undefined
+  var cancelText: js.UndefOr[ReactElement] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
-  var icon: js.UndefOr[TagMod[Any]] = js.undefined
+  var icon: js.UndefOr[ReactElement] = js.undefined
   var okButtonProps: js.UndefOr[NativeButtonProps] = js.undefined
-  var okText: js.UndefOr[TagMod[Any]] = js.undefined
+  var okText: js.UndefOr[ReactElement] = js.undefined
   var okType: js.UndefOr[LegacyButtonType] = js.undefined
   var onCancel: js.UndefOr[js.Function1[/* e */ js.UndefOr[SyntheticMouseEvent[HTMLElement]], Unit]] = js.undefined
   var onConfirm: js.UndefOr[js.Function1[/* e */ js.UndefOr[SyntheticMouseEvent[HTMLElement]], Unit]] = js.undefined
   var onVisibleChange: js.UndefOr[
-    js.Function2[/* visible */ Boolean, /* e */ js.UndefOr[SyntheticMouseEvent[HTMLElement]], Unit]
+    js.Function2[
+      /* visible */ Boolean, 
+      /* e */ js.UndefOr[SyntheticMouseEvent[HTMLElement] | SyntheticKeyboardEvent[HTMLDivElement]], 
+      Unit
+    ]
   ] = js.undefined
-  var title: TagMod[Any] | RenderFunction
+  var title: ReactElement | RenderFunction
 }
 
 object PopconfirmProps {
@@ -52,7 +57,7 @@ object PopconfirmProps {
     @scala.inline
     def setCancelTextReactElement(value: ReactElement): Self = this.set("cancelText", value.asInstanceOf[js.Any])
     @scala.inline
-    def setCancelText(value: TagMod[Any]): Self = this.set("cancelText", value.asInstanceOf[js.Any])
+    def setCancelText(value: ReactElement): Self = this.set("cancelText", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCancelText: Self = this.set("cancelText", js.undefined)
     @scala.inline
@@ -62,7 +67,7 @@ object PopconfirmProps {
     @scala.inline
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setIcon(value: TagMod[Any]): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
     @scala.inline
@@ -72,7 +77,7 @@ object PopconfirmProps {
     @scala.inline
     def setOkTextReactElement(value: ReactElement): Self = this.set("okText", value.asInstanceOf[js.Any])
     @scala.inline
-    def setOkText(value: TagMod[Any]): Self = this.set("okText", value.asInstanceOf[js.Any])
+    def setOkText(value: ReactElement): Self = this.set("okText", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOkText: Self = this.set("okText", js.undefined)
     @scala.inline
@@ -88,15 +93,17 @@ object PopconfirmProps {
     @scala.inline
     def deleteOnConfirm: Self = this.set("onConfirm", js.undefined)
     @scala.inline
-    def setOnVisibleChange(value: (/* visible */ Boolean, /* e */ js.UndefOr[SyntheticMouseEvent[HTMLElement]]) => Unit): Self = this.set("onVisibleChange", js.Any.fromFunction2(value))
+    def setOnVisibleChange(
+      value: (/* visible */ Boolean, /* e */ js.UndefOr[SyntheticMouseEvent[HTMLElement] | SyntheticKeyboardEvent[HTMLDivElement]]) => Unit
+    ): Self = this.set("onVisibleChange", js.Any.fromFunction2(value))
     @scala.inline
     def deleteOnVisibleChange: Self = this.set("onVisibleChange", js.undefined)
     @scala.inline
     def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTitleFunction0(value: () => TagMod[Any]): Self = this.set("title", js.Any.fromFunction0(value))
+    def setTitleFunction0(value: () => ReactElement): Self = this.set("title", js.Any.fromFunction0(value))
     @scala.inline
-    def setTitle(value: TagMod[Any] | RenderFunction): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement | RenderFunction): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
   }

@@ -7,7 +7,6 @@ import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -233,7 +232,7 @@ object FilledInput {
     @scala.inline
     def endAdornmentReactElement(value: ReactElement): this.type = set("endAdornment", value.asInstanceOf[js.Any])
     @scala.inline
-    def endAdornment(value: TagMod[Any]): this.type = set("endAdornment", value.asInstanceOf[js.Any])
+    def endAdornment(value: ReactElement): this.type = set("endAdornment", value.asInstanceOf[js.Any])
     @scala.inline
     def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
     @scala.inline
@@ -461,7 +460,7 @@ object FilledInput {
     @scala.inline
     def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
     @scala.inline
-    def renderPrefix(value: /* state */ Disabled => TagMod[Any]): this.type = set("renderPrefix", js.Any.fromFunction1(value))
+    def renderPrefix(value: /* state */ Disabled => ReactElement): this.type = set("renderPrefix", js.Any.fromFunction1(value))
     @scala.inline
     def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
     @scala.inline
@@ -483,7 +482,7 @@ object FilledInput {
     @scala.inline
     def startAdornmentReactElement(value: ReactElement): this.type = set("startAdornment", value.asInstanceOf[js.Any])
     @scala.inline
-    def startAdornment(value: TagMod[Any]): this.type = set("startAdornment", value.asInstanceOf[js.Any])
+    def startAdornment(value: ReactElement): this.type = set("startAdornment", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

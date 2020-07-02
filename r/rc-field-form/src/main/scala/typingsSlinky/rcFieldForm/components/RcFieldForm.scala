@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLFormElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -207,9 +206,9 @@ object RcFieldForm {
     @scala.inline
     def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def childrenFunction2(value: (/* values */ Store, /* form */ FormInstance) => ReactElement | TagMod[Any]): this.type = set("children", js.Any.fromFunction2(value))
+    def childrenFunction2(value: (/* values */ Store, /* form */ FormInstance) => ReactElement): this.type = set("children", js.Any.fromFunction2(value))
     @scala.inline
-    def children(value: RenderProps | TagMod[Any]): this.type = set("children", value.asInstanceOf[js.Any])
+    def children(value: RenderProps | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -476,6 +475,8 @@ object RcFieldForm {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     @scala.inline
     def validateMessages(value: ValidateMessages): this.type = set("validateMessages", value.asInstanceOf[js.Any])
+    @scala.inline
+    def validateTrigger(value: String | js.Array[String] | `false`): this.type = set("validateTrigger", value.asInstanceOf[js.Any])
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }

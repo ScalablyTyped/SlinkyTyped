@@ -1,6 +1,5 @@
 package typingsSlinky.semanticUiReact.transitionGroupMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.semanticUiReact.genericMod.SemanticTRANSITIONS
 import typingsSlinky.semanticUiReact.transitionTransitionMod.TransitionPropDuration
@@ -14,7 +13,7 @@ trait StrictTransitionGroupProps extends js.Object {
   /** An element type to render as (string or function). */
   var as: js.UndefOr[js.Any] = js.undefined
   /** Primary content. */
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   /** Whether it is directional animation event or not. Use it only for custom transitions. */
   var directional: js.UndefOr[Boolean] = js.undefined
   /** Duration of the CSS transition animation in milliseconds. */
@@ -49,7 +48,7 @@ object StrictTransitionGroupProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline

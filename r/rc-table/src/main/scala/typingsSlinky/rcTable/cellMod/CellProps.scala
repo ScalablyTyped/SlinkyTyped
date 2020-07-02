@@ -2,14 +2,17 @@ package typingsSlinky.rcTable.cellMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcTable.interfaceMod.AlignType
+import typingsSlinky.rcTable.interfaceMod.CellEllipsisType
 import typingsSlinky.rcTable.interfaceMod.CustomizeComponent
 import typingsSlinky.rcTable.interfaceMod.DataIndex
 import typingsSlinky.rcTable.interfaceMod.DefaultRecordType
 import typingsSlinky.rcTable.interfaceMod.RenderedCell
 import typingsSlinky.rcTable.rcTableBooleans.`false`
+import typingsSlinky.rcTable.rcTableStrings.body
+import typingsSlinky.rcTable.rcTableStrings.footer
+import typingsSlinky.rcTable.rcTableStrings.header
 import typingsSlinky.react.mod.HTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,13 +22,13 @@ trait CellProps[RecordType /* <: DefaultRecordType */] extends js.Object {
   var additionalProps: js.UndefOr[HTMLAttributes[HTMLElement]] = js.undefined
   var align: js.UndefOr[AlignType] = js.undefined
   /** @private Used for `expandable` with nest tree */
-  var appendNode: js.UndefOr[TagMod[Any]] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var appendNode: js.UndefOr[ReactElement] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var colSpan: js.UndefOr[Double] = js.undefined
   var component: js.UndefOr[CustomizeComponent] = js.undefined
   var dataIndex: js.UndefOr[DataIndex] = js.undefined
-  var ellipsis: js.UndefOr[Boolean] = js.undefined
+  var ellipsis: js.UndefOr[CellEllipsisType] = js.undefined
   var firstFixLeft: js.UndefOr[Boolean] = js.undefined
   var firstFixRight: js.UndefOr[Boolean] = js.undefined
   var fixLeft: js.UndefOr[Double | `false`] = js.undefined
@@ -41,10 +44,12 @@ trait CellProps[RecordType /* <: DefaultRecordType */] extends js.Object {
       /* value */ js.Any, 
       /* record */ RecordType, 
       /* index */ Double, 
-      TagMod[Any] | RenderedCell[RecordType]
+      ReactElement | RenderedCell[RecordType]
     ]
   ] = js.undefined
   var rowSpan: js.UndefOr[Double] = js.undefined
+  var rowType: js.UndefOr[header | body | footer] = js.undefined
+  var shouldCellUpdate: js.UndefOr[js.Function2[/* record */ RecordType, /* prevRecord */ RecordType, Boolean]] = js.undefined
 }
 
 object CellProps {
@@ -75,13 +80,13 @@ object CellProps {
     @scala.inline
     def setAppendNodeReactElement(value: ReactElement): Self = this.set("appendNode", value.asInstanceOf[js.Any])
     @scala.inline
-    def setAppendNode(value: TagMod[Any]): Self = this.set("appendNode", value.asInstanceOf[js.Any])
+    def setAppendNode(value: ReactElement): Self = this.set("appendNode", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAppendNode: Self = this.set("appendNode", js.undefined)
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -105,7 +110,7 @@ object CellProps {
     @scala.inline
     def deleteDataIndex: Self = this.set("dataIndex", js.undefined)
     @scala.inline
-    def setEllipsis(value: Boolean): Self = this.set("ellipsis", value.asInstanceOf[js.Any])
+    def setEllipsis(value: CellEllipsisType): Self = this.set("ellipsis", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEllipsis: Self = this.set("ellipsis", js.undefined)
     @scala.inline
@@ -146,7 +151,7 @@ object CellProps {
     def deleteRecord: Self = this.set("record", js.undefined)
     @scala.inline
     def setRender(
-      value: (/* value */ js.Any, /* record */ RecordType, /* index */ Double) => TagMod[Any] | RenderedCell[RecordType]
+      value: (/* value */ js.Any, /* record */ RecordType, /* index */ Double) => ReactElement | RenderedCell[RecordType]
     ): Self = this.set("render", js.Any.fromFunction3(value))
     @scala.inline
     def deleteRender: Self = this.set("render", js.undefined)
@@ -154,6 +159,14 @@ object CellProps {
     def setRowSpan(value: Double): Self = this.set("rowSpan", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRowSpan: Self = this.set("rowSpan", js.undefined)
+    @scala.inline
+    def setRowType(value: header | body | footer): Self = this.set("rowType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRowType: Self = this.set("rowType", js.undefined)
+    @scala.inline
+    def setShouldCellUpdate(value: (/* record */ RecordType, /* prevRecord */ RecordType) => Boolean): Self = this.set("shouldCellUpdate", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteShouldCellUpdate: Self = this.set("shouldCellUpdate", js.undefined)
   }
   
 }

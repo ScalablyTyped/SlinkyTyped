@@ -1,7 +1,6 @@
 package typingsSlinky.antd.notificationMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,10 +8,11 @@ import scala.scalajs.js.annotation._
 
 trait ConfigProps extends js.Object {
   var bottom: js.UndefOr[Double] = js.undefined
-  var closeIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var closeIcon: js.UndefOr[ReactElement] = js.undefined
   var duration: js.UndefOr[Double] = js.undefined
   var getContainer: js.UndefOr[js.Function0[HTMLElement]] = js.undefined
   var placement: js.UndefOr[NotificationPlacement] = js.undefined
+  var prefixCls: js.UndefOr[String] = js.undefined
   var rtl: js.UndefOr[Boolean] = js.undefined
   var top: js.UndefOr[Double] = js.undefined
 }
@@ -41,7 +41,7 @@ object ConfigProps {
     @scala.inline
     def setCloseIconReactElement(value: ReactElement): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setCloseIcon(value: TagMod[Any]): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
+    def setCloseIcon(value: ReactElement): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCloseIcon: Self = this.set("closeIcon", js.undefined)
     @scala.inline
@@ -56,6 +56,10 @@ object ConfigProps {
     def setPlacement(value: NotificationPlacement): Self = this.set("placement", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePlacement: Self = this.set("placement", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
     @scala.inline
     def setRtl(value: Boolean): Self = this.set("rtl", value.asInstanceOf[js.Any])
     @scala.inline

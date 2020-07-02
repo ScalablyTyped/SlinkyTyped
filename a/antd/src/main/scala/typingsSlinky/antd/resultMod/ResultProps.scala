@@ -1,6 +1,5 @@
 package typingsSlinky.antd.resultMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -9,13 +8,13 @@ import scala.scalajs.js.annotation._
 
 trait ResultProps extends js.Object {
   var className: js.UndefOr[String] = js.undefined
-  var extra: js.UndefOr[TagMod[Any]] = js.undefined
-  var icon: js.UndefOr[TagMod[Any]] = js.undefined
+  var extra: js.UndefOr[ReactElement] = js.undefined
+  var icon: js.UndefOr[ReactElement] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
   var status: js.UndefOr[ResultStatusType] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
-  var subTitle: js.UndefOr[TagMod[Any]] = js.undefined
-  var title: js.UndefOr[TagMod[Any]] = js.undefined
+  var subTitle: js.UndefOr[ReactElement] = js.undefined
+  var title: js.UndefOr[ReactElement] = js.undefined
 }
 
 object ResultProps {
@@ -42,13 +41,13 @@ object ResultProps {
     @scala.inline
     def setExtraReactElement(value: ReactElement): Self = this.set("extra", value.asInstanceOf[js.Any])
     @scala.inline
-    def setExtra(value: TagMod[Any]): Self = this.set("extra", value.asInstanceOf[js.Any])
+    def setExtra(value: ReactElement): Self = this.set("extra", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteExtra: Self = this.set("extra", js.undefined)
     @scala.inline
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setIcon(value: TagMod[Any]): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
     @scala.inline
@@ -66,13 +65,13 @@ object ResultProps {
     @scala.inline
     def setSubTitleReactElement(value: ReactElement): Self = this.set("subTitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSubTitle(value: TagMod[Any]): Self = this.set("subTitle", value.asInstanceOf[js.Any])
+    def setSubTitle(value: ReactElement): Self = this.set("subTitle", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSubTitle: Self = this.set("subTitle", js.undefined)
     @scala.inline
     def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
   }

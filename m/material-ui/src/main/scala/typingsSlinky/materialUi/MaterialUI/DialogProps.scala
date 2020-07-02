@@ -1,6 +1,5 @@
 package typingsSlinky.materialUi.MaterialUI
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.CSSProperties
@@ -37,7 +36,7 @@ import scala.scalajs.js.annotation._
   var ref: js.UndefOr[LegacyRef[Dialog]] = js.undefined
   var repositionOnUpdate: js.UndefOr[Boolean] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
-  var title: js.UndefOr[TagMod[Any]] = js.undefined
+  var title: js.UndefOr[ReactElement] = js.undefined
   var titleClassName: js.UndefOr[String] = js.undefined
   var titleStyle: js.UndefOr[CSSProperties] = js.undefined
 }
@@ -154,7 +153,7 @@ object DialogProps {
     @scala.inline
     def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
     @scala.inline

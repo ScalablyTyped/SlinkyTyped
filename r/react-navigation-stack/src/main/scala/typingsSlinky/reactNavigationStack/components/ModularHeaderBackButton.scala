@@ -1,7 +1,7 @@
 package typingsSlinky.reactNavigationStack.components
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
@@ -27,7 +27,7 @@ object ModularHeaderBackButton {
     @scala.inline
     def allowFontScaling(value: Boolean): this.type = set("allowFontScaling", value.asInstanceOf[js.Any])
     @scala.inline
-    def backImage(value: /* props */ TintColor => TagMod[Any]): this.type = set("backImage", js.Any.fromFunction1(value))
+    def backImage(value: /* props */ TintColor => ReactElement): this.type = set("backImage", js.Any.fromFunction1(value))
     @scala.inline
     def backTitleVisible(value: Boolean): this.type = set("backTitleVisible", value.asInstanceOf[js.Any])
     @scala.inline

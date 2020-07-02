@@ -2,7 +2,6 @@ package typingsSlinky.semanticUiReact.searchSearchMod
 
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.ReactNodeArray
@@ -70,9 +69,9 @@ trait StrictSearchProps extends js.Object {
   /** Minimum characters to query for results. */
   var minCharacters: js.UndefOr[Double] = js.undefined
   /** Additional text for "No Results" message with less emphasis. */
-  var noResultsDescription: js.UndefOr[TagMod[Any]] = js.undefined
+  var noResultsDescription: js.UndefOr[ReactElement] = js.undefined
   /** Message to display when there are no results. */
-  var noResultsMessage: js.UndefOr[TagMod[Any]] = js.undefined
+  var noResultsMessage: js.UndefOr[ReactElement] = js.undefined
   // ------------------------------------
   // Callbacks
   // ------------------------------------
@@ -216,7 +215,7 @@ object StrictSearchProps {
     def setInputReactElement(value: ReactElement): Self = this.set("input", value.asInstanceOf[js.Any])
     @scala.inline
     def setInputFunction3(
-      value: (/* component */ ReactType[InputProps], InputProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[InputProps], InputProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("input", js.Any.fromFunction3(value))
     @scala.inline
     def setInput(value: SemanticShorthandItem[InputProps]): Self = this.set("input", value.asInstanceOf[js.Any])
@@ -233,13 +232,13 @@ object StrictSearchProps {
     @scala.inline
     def setNoResultsDescriptionReactElement(value: ReactElement): Self = this.set("noResultsDescription", value.asInstanceOf[js.Any])
     @scala.inline
-    def setNoResultsDescription(value: TagMod[Any]): Self = this.set("noResultsDescription", value.asInstanceOf[js.Any])
+    def setNoResultsDescription(value: ReactElement): Self = this.set("noResultsDescription", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteNoResultsDescription: Self = this.set("noResultsDescription", js.undefined)
     @scala.inline
     def setNoResultsMessageReactElement(value: ReactElement): Self = this.set("noResultsMessage", value.asInstanceOf[js.Any])
     @scala.inline
-    def setNoResultsMessage(value: TagMod[Any]): Self = this.set("noResultsMessage", value.asInstanceOf[js.Any])
+    def setNoResultsMessage(value: ReactElement): Self = this.set("noResultsMessage", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteNoResultsMessage: Self = this.set("noResultsMessage", js.undefined)
     @scala.inline

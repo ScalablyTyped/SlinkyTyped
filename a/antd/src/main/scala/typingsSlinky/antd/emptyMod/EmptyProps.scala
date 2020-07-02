@@ -1,6 +1,5 @@
 package typingsSlinky.antd.emptyMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -8,10 +7,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait EmptyProps extends js.Object {
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
-  var description: js.UndefOr[TagMod[Any]] = js.undefined
-  var image: js.UndefOr[TagMod[Any]] = js.undefined
+  var description: js.UndefOr[ReactElement] = js.undefined
+  var image: js.UndefOr[ReactElement] = js.undefined
   /**
     * @since 3.16.0
     */
@@ -40,7 +39,7 @@ object EmptyProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -50,13 +49,13 @@ object EmptyProps {
     @scala.inline
     def setDescriptionReactElement(value: ReactElement): Self = this.set("description", value.asInstanceOf[js.Any])
     @scala.inline
-    def setDescription(value: TagMod[Any]): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setDescription(value: ReactElement): Self = this.set("description", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDescription: Self = this.set("description", js.undefined)
     @scala.inline
     def setImageReactElement(value: ReactElement): Self = this.set("image", value.asInstanceOf[js.Any])
     @scala.inline
-    def setImage(value: TagMod[Any]): Self = this.set("image", value.asInstanceOf[js.Any])
+    def setImage(value: ReactElement): Self = this.set("image", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteImage: Self = this.set("image", js.undefined)
     @scala.inline

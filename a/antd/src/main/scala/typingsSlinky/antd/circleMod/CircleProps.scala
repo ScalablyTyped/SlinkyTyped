@@ -1,13 +1,13 @@
 package typingsSlinky.antd.circleMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.progressProgressMod.ProgressProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait CircleProps extends ProgressProps {
-  var children: TagMod[Any]
+  var children: ReactElement
   @JSName("prefixCls")
   var prefixCls_CircleProps: String
   var progressStatus: String
@@ -35,7 +35,7 @@ object CircleProps {
     @scala.inline
     def setProgressStatus(value: String): Self = this.set("progressStatus", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
   }

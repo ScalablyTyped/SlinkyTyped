@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object generateCalendarMod {
   type HeaderRender[DateType] = js.Function1[
     /* config */ typingsSlinky.antd.anon.OnChange[DateType], 
-    slinky.core.TagMod[scala.Any]
+    slinky.core.facade.ReactElement
   ]
   type InjectDefaultProps[Props] = (typingsSlinky.std.Omit[
     Props, 

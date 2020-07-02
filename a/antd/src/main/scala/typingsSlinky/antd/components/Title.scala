@@ -44,6 +44,8 @@ object Title {
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
+    def keyboard(value: Boolean): this.type = set("keyboard", value.asInstanceOf[js.Any])
+    @scala.inline
     def level(value: `1` | `2` | `3` | `4`): this.type = set("level", value.asInstanceOf[js.Any])
     @scala.inline
     def mark(value: Boolean): this.type = set("mark", value.asInstanceOf[js.Any])

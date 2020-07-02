@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SummaryCell {
-  @JSImport("rc-table/lib", "Summary.Cell")
+  @JSImport("rc-table", "Summary.Cell")
   @js.native
   object component extends js.Object
   

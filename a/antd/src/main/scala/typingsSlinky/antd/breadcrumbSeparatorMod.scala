@@ -1,8 +1,6 @@
 package typingsSlinky.antd
 
-import slinky.core.facade.ReactElement
-import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
-import typingsSlinky.react.mod.Component
+import typingsSlinky.react.mod.FunctionComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,19 +9,11 @@ import scala.scalajs.js.annotation._
 @js.native
 object breadcrumbSeparatorMod extends js.Object {
   @js.native
-  trait BreadcrumbSeparator
-    extends Component[js.Any, js.Object, js.Any] {
-    def renderSeparator(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
-  }
-  
-  @js.native
-  class default () extends BreadcrumbSeparator
-  
-  /* static members */
-  @js.native
-  object default extends js.Object {
+  trait BreadcrumbSeparatorInterface
+    extends FunctionComponent[js.Object] {
     var __ANT_BREADCRUMB_SEPARATOR: Boolean = js.native
   }
   
+  val default: BreadcrumbSeparatorInterface = js.native
 }
 

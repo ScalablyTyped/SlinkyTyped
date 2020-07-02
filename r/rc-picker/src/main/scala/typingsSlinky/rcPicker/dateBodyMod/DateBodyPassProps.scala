@@ -1,6 +1,6 @@
 package typingsSlinky.rcPicker.dateBodyMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 trait DateBodyPassProps[DateType] extends js.Object {
   var dateRender: js.UndefOr[DateRender[DateType]] = js.undefined
   var disabledDate: js.UndefOr[js.Function1[/* date */ DateType, Boolean]] = js.undefined
-  var prefixColumn: js.UndefOr[js.Function1[/* date */ DateType, TagMod[Any]]] = js.undefined
+  var prefixColumn: js.UndefOr[js.Function1[/* date */ DateType, ReactElement]] = js.undefined
   var rowClassName: js.UndefOr[js.Function1[/* date */ DateType, String]] = js.undefined
 }
 
@@ -30,7 +30,7 @@ object DateBodyPassProps {
         x
     }
     @scala.inline
-    def setDateRender(value: (DateType, DateType) => TagMod[Any]): Self = this.set("dateRender", js.Any.fromFunction2(value))
+    def setDateRender(value: (DateType, DateType) => ReactElement): Self = this.set("dateRender", js.Any.fromFunction2(value))
     @scala.inline
     def deleteDateRender: Self = this.set("dateRender", js.undefined)
     @scala.inline
@@ -38,7 +38,7 @@ object DateBodyPassProps {
     @scala.inline
     def deleteDisabledDate: Self = this.set("disabledDate", js.undefined)
     @scala.inline
-    def setPrefixColumn(value: /* date */ DateType => TagMod[Any]): Self = this.set("prefixColumn", js.Any.fromFunction1(value))
+    def setPrefixColumn(value: /* date */ DateType => ReactElement): Self = this.set("prefixColumn", js.Any.fromFunction1(value))
     @scala.inline
     def deletePrefixColumn: Self = this.set("prefixColumn", js.undefined)
     @scala.inline

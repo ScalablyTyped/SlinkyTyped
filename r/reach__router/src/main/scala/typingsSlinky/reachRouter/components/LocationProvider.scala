@@ -1,6 +1,5 @@
 package typingsSlinky.reachRouter.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -24,9 +23,9 @@ object LocationProvider {
     @scala.inline
     def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def childrenFunction1(value: /* context */ LocationContext => TagMod[Any]): this.type = set("children", js.Any.fromFunction1(value))
+    def childrenFunction1(value: /* context */ LocationContext => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
     @scala.inline
-    def children(value: TagMod[Any] | LocationProviderRenderFn): this.type = set("children", value.asInstanceOf[js.Any])
+    def children(value: ReactElement | LocationProviderRenderFn): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def history(value: History): this.type = set("history", value.asInstanceOf[js.Any])
   }

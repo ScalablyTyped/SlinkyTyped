@@ -33,7 +33,7 @@ trait Cascader
   def handlePopupVisibleChange(popupVisible: Boolean): Unit = js.native
   def renderCascader(hasGetPopupContainerGetPrefixClsRenderEmptyDirection: ConfigConsumerProps, locale: CascaderLocale): ReactElement = js.native
   def saveInput(node: typingsSlinky.antd.inputMod.default): Unit = js.native
-  def setValue(value: js.Array[String]): Unit = js.native
-  def setValue(value: js.Array[String], selectedOptions: js.Array[CascaderOptionType]): Unit = js.native
+  def setValue(value: CascaderValueType): Unit = js.native
+  def setValue(value: CascaderValueType, selectedOptions: js.Array[CascaderOptionType]): Unit = js.native
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.antd.descriptionsMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.PartialRecordBreakpointnu
 import typingsSlinky.antd.antdStrings.horizontal
@@ -14,7 +13,7 @@ import scala.scalajs.js.annotation._
 
 trait DescriptionsProps extends js.Object {
   var bordered: js.UndefOr[Boolean] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var colon: js.UndefOr[Boolean] = js.undefined
   var column: js.UndefOr[Double | PartialRecordBreakpointnu] = js.undefined
@@ -22,7 +21,7 @@ trait DescriptionsProps extends js.Object {
   var prefixCls: js.UndefOr[String] = js.undefined
   var size: js.UndefOr[middle | small | typingsSlinky.antd.antdStrings.default] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
-  var title: js.UndefOr[TagMod[Any]] = js.undefined
+  var title: js.UndefOr[ReactElement] = js.undefined
 }
 
 object DescriptionsProps {
@@ -49,7 +48,7 @@ object DescriptionsProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -83,7 +82,7 @@ object DescriptionsProps {
     @scala.inline
     def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
   }

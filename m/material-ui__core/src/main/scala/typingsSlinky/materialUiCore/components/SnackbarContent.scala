@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -96,7 +95,7 @@ object SnackbarContent {
     @scala.inline
     def actionReactElement(value: ReactElement): this.type = set("action", value.asInstanceOf[js.Any])
     @scala.inline
-    def action(value: TagMod[Any]): this.type = set("action", value.asInstanceOf[js.Any])
+    def action(value: ReactElement): this.type = set("action", value.asInstanceOf[js.Any])
     @scala.inline
     def `aria-activedescendant`(value: String): this.type = set("aria-activedescendant", value.asInstanceOf[js.Any])
     @scala.inline
@@ -262,7 +261,7 @@ object SnackbarContent {
     @scala.inline
     def messageReactElement(value: ReactElement): this.type = set("message", value.asInstanceOf[js.Any])
     @scala.inline
-    def message(value: TagMod[Any]): this.type = set("message", value.asInstanceOf[js.Any])
+    def message(value: ReactElement): this.type = set("message", value.asInstanceOf[js.Any])
     @scala.inline
     def onAbort(value: SyntheticEvent[Event, HTMLDivElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
     @scala.inline

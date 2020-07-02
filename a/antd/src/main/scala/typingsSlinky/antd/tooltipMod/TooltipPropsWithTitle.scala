@@ -1,6 +1,5 @@
 package typingsSlinky.antd.tooltipMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,8 +8,8 @@ import scala.scalajs.js.annotation._
 trait TooltipPropsWithTitle
   extends AbstractTooltipProps
      with TooltipProps {
-  var overlay: js.UndefOr[TagMod[Any] | RenderFunction] = js.undefined
-  var title: TagMod[Any] | RenderFunction
+  var overlay: js.UndefOr[ReactElement | RenderFunction] = js.undefined
+  var title: ReactElement | RenderFunction
 }
 
 object TooltipPropsWithTitle {
@@ -33,17 +32,17 @@ object TooltipPropsWithTitle {
     @scala.inline
     def setOverlayReactElement(value: ReactElement): Self = this.set("overlay", value.asInstanceOf[js.Any])
     @scala.inline
-    def setOverlayFunction0(value: () => TagMod[Any]): Self = this.set("overlay", js.Any.fromFunction0(value))
+    def setOverlayFunction0(value: () => ReactElement): Self = this.set("overlay", js.Any.fromFunction0(value))
     @scala.inline
-    def setOverlay(value: TagMod[Any] | RenderFunction): Self = this.set("overlay", value.asInstanceOf[js.Any])
+    def setOverlay(value: ReactElement | RenderFunction): Self = this.set("overlay", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOverlay: Self = this.set("overlay", js.undefined)
     @scala.inline
     def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTitleFunction0(value: () => TagMod[Any]): Self = this.set("title", js.Any.fromFunction0(value))
+    def setTitleFunction0(value: () => ReactElement): Self = this.set("title", js.Any.fromFunction0(value))
     @scala.inline
-    def setTitle(value: TagMod[Any] | RenderFunction): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement | RenderFunction): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
   }

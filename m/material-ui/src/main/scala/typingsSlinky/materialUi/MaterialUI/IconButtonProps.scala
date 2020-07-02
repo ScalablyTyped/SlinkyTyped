@@ -1,6 +1,5 @@
 package typingsSlinky.materialUi.MaterialUI
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import typingsSlinky.materialUi.MaterialUI.propTypes.cornersAndCenter
@@ -14,7 +13,7 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.materialUi.MaterialUI.SharedEnhancedButtonProps because var conflicts: onBlur, onClick, onFocus, onKeyDown, onKeyUp, style, tabIndex. Inlined centerRipple, disableFocusRipple, disableKeyboardFocus, disableTouchRipple, focusRippleColor, focusRippleOpacity, href, keyboardFocused, onKeyboardFocus, target, touchRippleColor, touchRippleOpacity, `type`, containerElement */ trait IconButtonProps
   extends HTMLAttributes[js.Object] {
   var centerRipple: js.UndefOr[Boolean] = js.undefined
-  var containerElement: js.UndefOr[TagMod[Any] | String] = js.undefined
+  var containerElement: js.UndefOr[ReactElement | String] = js.undefined
   var disableFocusRipple: js.UndefOr[Boolean] = js.undefined
   var disableKeyboardFocus: js.UndefOr[Boolean] = js.undefined
   var disableTouchRipple: js.UndefOr[Boolean] = js.undefined
@@ -30,7 +29,7 @@ import scala.scalajs.js.annotation._
     js.Function2[/* e */ SyntheticFocusEvent[js.Object], /* isKeyboardFocused */ Boolean, Unit]
   ] = js.undefined
   var target: js.UndefOr[String] = js.undefined
-  var tooltip: js.UndefOr[TagMod[Any] | String] = js.undefined
+  var tooltip: js.UndefOr[ReactElement | String] = js.undefined
   var tooltipPosition: js.UndefOr[cornersAndCenter] = js.undefined
   var tooltipStyles: js.UndefOr[CSSProperties] = js.undefined
   var touch: js.UndefOr[Boolean] = js.undefined
@@ -63,7 +62,7 @@ object IconButtonProps {
     @scala.inline
     def setContainerElementReactElement(value: ReactElement): Self = this.set("containerElement", value.asInstanceOf[js.Any])
     @scala.inline
-    def setContainerElement(value: TagMod[Any] | String): Self = this.set("containerElement", value.asInstanceOf[js.Any])
+    def setContainerElement(value: ReactElement | String): Self = this.set("containerElement", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteContainerElement: Self = this.set("containerElement", js.undefined)
     @scala.inline
@@ -121,7 +120,7 @@ object IconButtonProps {
     @scala.inline
     def setTooltipReactElement(value: ReactElement): Self = this.set("tooltip", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTooltip(value: TagMod[Any] | String): Self = this.set("tooltip", value.asInstanceOf[js.Any])
+    def setTooltip(value: ReactElement | String): Self = this.set("tooltip", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTooltip: Self = this.set("tooltip", js.undefined)
     @scala.inline

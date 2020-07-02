@@ -1,6 +1,5 @@
 package typingsSlinky.rcPicker.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -52,11 +51,11 @@ object TimePanel {
     @scala.inline
     def nextIconReactElement(value: ReactElement): this.type = set("nextIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def nextIcon(value: TagMod[Any]): this.type = set("nextIcon", value.asInstanceOf[js.Any])
+    def nextIcon(value: ReactElement): this.type = set("nextIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def prevIconReactElement(value: ReactElement): this.type = set("prevIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def prevIcon(value: TagMod[Any]): this.type = set("prevIcon", value.asInstanceOf[js.Any])
+    def prevIcon(value: ReactElement): this.type = set("prevIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def secondStep(value: Double): this.type = set("secondStep", value.asInstanceOf[js.Any])
     @scala.inline
@@ -68,11 +67,11 @@ object TimePanel {
     @scala.inline
     def superNextIconReactElement(value: ReactElement): this.type = set("superNextIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def superNextIcon(value: TagMod[Any]): this.type = set("superNextIcon", value.asInstanceOf[js.Any])
+    def superNextIcon(value: ReactElement): this.type = set("superNextIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def superPrevIconReactElement(value: ReactElement): this.type = set("superPrevIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def superPrevIcon(value: TagMod[Any]): this.type = set("superPrevIcon", value.asInstanceOf[js.Any])
+    def superPrevIcon(value: ReactElement): this.type = set("superPrevIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def use12Hours(value: Boolean): this.type = set("use12Hours", value.asInstanceOf[js.Any])
     @scala.inline

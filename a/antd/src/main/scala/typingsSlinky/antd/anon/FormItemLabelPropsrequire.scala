@@ -1,6 +1,5 @@
 package typingsSlinky.antd.anon
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.gridColMod.ColProps
 import typingsSlinky.antd.interfaceMod.FormLabelAlign
@@ -12,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait FormItemLabelPropsrequire extends js.Object {
   var colon: js.UndefOr[Boolean] = js.undefined
   var htmlFor: js.UndefOr[String] = js.undefined
-  var label: js.UndefOr[TagMod[Any]] = js.undefined
+  var label: js.UndefOr[ReactElement] = js.undefined
   var labelAlign: js.UndefOr[FormLabelAlign] = js.undefined
   var labelCol: js.UndefOr[ColProps] = js.undefined
   var prefixCls: String
@@ -49,7 +48,7 @@ object FormItemLabelPropsrequire {
     @scala.inline
     def setLabelReactElement(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def setLabel(value: TagMod[Any]): Self = this.set("label", value.asInstanceOf[js.Any])
+    def setLabel(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)
     @scala.inline

@@ -1,6 +1,5 @@
 package typingsSlinky.antd.tableInterfaceMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.Compare
 import typingsSlinky.antd.responsiveObserveMod.Breakpoint
@@ -12,9 +11,9 @@ trait ColumnType[RecordType]
   extends typingsSlinky.rcTable.interfaceMod.ColumnType[RecordType] {
   var defaultFilteredValue: js.UndefOr[js.Array[Key] | Null] = js.undefined
   var defaultSortOrder: js.UndefOr[SortOrder] = js.undefined
-  var filterDropdown: js.UndefOr[TagMod[Any] | (js.Function1[/* props */ FilterDropdownProps, TagMod[Any]])] = js.undefined
+  var filterDropdown: js.UndefOr[ReactElement | (js.Function1[/* props */ FilterDropdownProps, ReactElement])] = js.undefined
   var filterDropdownVisible: js.UndefOr[Boolean] = js.undefined
-  var filterIcon: js.UndefOr[TagMod[Any] | (js.Function1[/* filtered */ Boolean, TagMod[Any]])] = js.undefined
+  var filterIcon: js.UndefOr[ReactElement | (js.Function1[/* filtered */ Boolean, ReactElement])] = js.undefined
   var filterMultiple: js.UndefOr[Boolean] = js.undefined
   var filtered: js.UndefOr[Boolean] = js.undefined
   var filteredValue: js.UndefOr[js.Array[Key] | Null] = js.undefined
@@ -62,9 +61,9 @@ object ColumnType {
     @scala.inline
     def setFilterDropdownReactElement(value: ReactElement): Self = this.set("filterDropdown", value.asInstanceOf[js.Any])
     @scala.inline
-    def setFilterDropdownFunction1(value: /* props */ FilterDropdownProps => TagMod[Any]): Self = this.set("filterDropdown", js.Any.fromFunction1(value))
+    def setFilterDropdownFunction1(value: /* props */ FilterDropdownProps => ReactElement): Self = this.set("filterDropdown", js.Any.fromFunction1(value))
     @scala.inline
-    def setFilterDropdown(value: TagMod[Any] | (js.Function1[/* props */ FilterDropdownProps, TagMod[Any]])): Self = this.set("filterDropdown", value.asInstanceOf[js.Any])
+    def setFilterDropdown(value: ReactElement | (js.Function1[/* props */ FilterDropdownProps, ReactElement])): Self = this.set("filterDropdown", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFilterDropdown: Self = this.set("filterDropdown", js.undefined)
     @scala.inline
@@ -74,9 +73,9 @@ object ColumnType {
     @scala.inline
     def setFilterIconReactElement(value: ReactElement): Self = this.set("filterIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setFilterIconFunction1(value: /* filtered */ Boolean => TagMod[Any]): Self = this.set("filterIcon", js.Any.fromFunction1(value))
+    def setFilterIconFunction1(value: /* filtered */ Boolean => ReactElement): Self = this.set("filterIcon", js.Any.fromFunction1(value))
     @scala.inline
-    def setFilterIcon(value: TagMod[Any] | (js.Function1[/* filtered */ Boolean, TagMod[Any]])): Self = this.set("filterIcon", value.asInstanceOf[js.Any])
+    def setFilterIcon(value: ReactElement | (js.Function1[/* filtered */ Boolean, ReactElement])): Self = this.set("filterIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFilterIcon: Self = this.set("filterIcon", js.undefined)
     @scala.inline

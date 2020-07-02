@@ -1,7 +1,6 @@
 package typingsSlinky.antd.components
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -39,7 +38,7 @@ object Drawer {
     @scala.inline
     def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     @scala.inline
-    def footer(value: TagMod[Any]): this.type = set("footer", value.asInstanceOf[js.Any])
+    def footer(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
     @scala.inline
     def footerStyle(value: CSSProperties): this.type = set("footerStyle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -53,7 +52,7 @@ object Drawer {
     @scala.inline
     def handlerReactElement(value: ReactElement): this.type = set("handler", value.asInstanceOf[js.Any])
     @scala.inline
-    def handler(value: TagMod[Any]): this.type = set("handler", value.asInstanceOf[js.Any])
+    def handler(value: ReactElement): this.type = set("handler", value.asInstanceOf[js.Any])
     @scala.inline
     def headerStyle(value: CSSProperties): this.type = set("headerStyle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -79,7 +78,7 @@ object Drawer {
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
     @scala.inline

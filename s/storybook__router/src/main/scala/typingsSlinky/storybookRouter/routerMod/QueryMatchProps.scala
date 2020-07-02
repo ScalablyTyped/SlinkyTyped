@@ -1,6 +1,6 @@
 package typingsSlinky.storybookRouter.routerMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 trait QueryMatchProps extends js.Object {
   var path: String
   var startsWith: Boolean
-  def children(matchingData: MatchingData): TagMod[Any]
+  def children(matchingData: MatchingData): ReactElement
 }
 
 object QueryMatchProps {
   @scala.inline
-  def apply(children: MatchingData => TagMod[Any], path: String, startsWith: Boolean): QueryMatchProps = {
+  def apply(children: MatchingData => ReactElement, path: String, startsWith: Boolean): QueryMatchProps = {
     val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children), path = path.asInstanceOf[js.Any], startsWith = startsWith.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryMatchProps]
   }
@@ -29,7 +29,7 @@ object QueryMatchProps {
         x
     }
     @scala.inline
-    def setChildren(value: MatchingData => TagMod[Any]): Self = this.set("children", js.Any.fromFunction1(value))
+    def setChildren(value: MatchingData => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
     @scala.inline
     def setPath(value: String): Self = this.set("path", value.asInstanceOf[js.Any])
     @scala.inline

@@ -3,7 +3,6 @@ package typingsSlinky.materialUi.MaterialUI.Menus
 import org.scalajs.dom.raw.Event
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverAnimationProps
 import typingsSlinky.materialUi.MaterialUI.propTypes.origin
@@ -19,7 +18,7 @@ trait DropDownMenuProps extends js.Object {
   var animation: js.UndefOr[ReactComponentClass[PopoverAnimationProps]] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
-  var iconButton: js.UndefOr[TagMod[Any]] = js.undefined
+  var iconButton: js.UndefOr[ReactElement] = js.undefined
   var iconStyle: js.UndefOr[CSSProperties] = js.undefined
   var labelStyle: js.UndefOr[CSSProperties] = js.undefined
   var listStyle: js.UndefOr[CSSProperties] = js.undefined
@@ -85,7 +84,7 @@ object DropDownMenuProps {
     @scala.inline
     def setIconButtonReactElement(value: ReactElement): Self = this.set("iconButton", value.asInstanceOf[js.Any])
     @scala.inline
-    def setIconButton(value: TagMod[Any]): Self = this.set("iconButton", value.asInstanceOf[js.Any])
+    def setIconButton(value: ReactElement): Self = this.set("iconButton", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIconButton: Self = this.set("iconButton", js.undefined)
     @scala.inline

@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -414,7 +413,7 @@ object ListItemText {
     @scala.inline
     def primaryReactElement(value: ReactElement): this.type = set("primary", value.asInstanceOf[js.Any])
     @scala.inline
-    def primary(value: TagMod[Any]): this.type = set("primary", value.asInstanceOf[js.Any])
+    def primary(value: ReactElement): this.type = set("primary", value.asInstanceOf[js.Any])
     @scala.inline
     def primaryTypographyProps(value: PartialTypographyProps): this.type = set("primaryTypographyProps", value.asInstanceOf[js.Any])
     @scala.inline
@@ -430,7 +429,7 @@ object ListItemText {
     @scala.inline
     def secondaryReactElement(value: ReactElement): this.type = set("secondary", value.asInstanceOf[js.Any])
     @scala.inline
-    def secondary(value: TagMod[Any]): this.type = set("secondary", value.asInstanceOf[js.Any])
+    def secondary(value: ReactElement): this.type = set("secondary", value.asInstanceOf[js.Any])
     @scala.inline
     def secondaryTypographyProps(value: PartialTypographyProps): this.type = set("secondaryTypographyProps", value.asInstanceOf[js.Any])
     @scala.inline

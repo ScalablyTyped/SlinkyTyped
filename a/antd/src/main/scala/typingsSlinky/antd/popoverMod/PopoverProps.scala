@@ -1,6 +1,5 @@
 package typingsSlinky.antd.popoverMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.getRenderPropValueMod.RenderFunction
 import typingsSlinky.antd.tooltipMod.AbstractTooltipProps
@@ -9,8 +8,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait PopoverProps extends AbstractTooltipProps {
-  var content: js.UndefOr[TagMod[Any] | RenderFunction] = js.undefined
-  var title: js.UndefOr[TagMod[Any] | RenderFunction] = js.undefined
+  var content: js.UndefOr[ReactElement | RenderFunction] = js.undefined
+  var title: js.UndefOr[ReactElement | RenderFunction] = js.undefined
 }
 
 object PopoverProps {
@@ -33,17 +32,17 @@ object PopoverProps {
     @scala.inline
     def setContentReactElement(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
     @scala.inline
-    def setContentFunction0(value: () => TagMod[Any]): Self = this.set("content", js.Any.fromFunction0(value))
+    def setContentFunction0(value: () => ReactElement): Self = this.set("content", js.Any.fromFunction0(value))
     @scala.inline
-    def setContent(value: TagMod[Any] | RenderFunction): Self = this.set("content", value.asInstanceOf[js.Any])
+    def setContent(value: ReactElement | RenderFunction): Self = this.set("content", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteContent: Self = this.set("content", js.undefined)
     @scala.inline
     def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTitleFunction0(value: () => TagMod[Any]): Self = this.set("title", js.Any.fromFunction0(value))
+    def setTitleFunction0(value: () => ReactElement): Self = this.set("title", js.Any.fromFunction0(value))
     @scala.inline
-    def setTitle(value: TagMod[Any] | RenderFunction): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement | RenderFunction): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
   }

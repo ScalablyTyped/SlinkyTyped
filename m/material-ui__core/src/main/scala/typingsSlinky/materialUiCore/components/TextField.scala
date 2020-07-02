@@ -8,7 +8,6 @@ import org.scalajs.dom.raw.HTMLSelectElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -257,7 +256,7 @@ object TextField {
       @scala.inline
       def helperTextReactElement(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
       @scala.inline
-      def helperText(value: TagMod[Any]): this.type = set("helperText", value.asInstanceOf[js.Any])
+      def helperText(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
       @scala.inline
       def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
       @scala.inline
@@ -297,7 +296,7 @@ object TextField {
       @scala.inline
       def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
       @scala.inline
-      def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+      def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
       @scala.inline
       def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
       @scala.inline
@@ -690,7 +689,7 @@ object TextField {
       @scala.inline
       def helperTextReactElement(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
       @scala.inline
-      def helperText(value: TagMod[Any]): this.type = set("helperText", value.asInstanceOf[js.Any])
+      def helperText(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
       @scala.inline
       def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
       @scala.inline
@@ -730,7 +729,7 @@ object TextField {
       @scala.inline
       def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
       @scala.inline
-      def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+      def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
       @scala.inline
       def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
       @scala.inline
@@ -1123,7 +1122,7 @@ object TextField {
       @scala.inline
       def helperTextReactElement(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
       @scala.inline
-      def helperText(value: TagMod[Any]): this.type = set("helperText", value.asInstanceOf[js.Any])
+      def helperText(value: ReactElement): this.type = set("helperText", value.asInstanceOf[js.Any])
       @scala.inline
       def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
       @scala.inline
@@ -1163,7 +1162,7 @@ object TextField {
       @scala.inline
       def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
       @scala.inline
-      def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+      def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
       @scala.inline
       def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
       @scala.inline

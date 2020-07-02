@@ -1,6 +1,5 @@
 package typingsSlinky.rcPicker.panelBodyMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.std.Record
 import scala.scalajs.js
@@ -11,16 +10,16 @@ trait PanelBodyProps[DateType] extends js.Object {
   var baseDate: DateType
   var colNum: Double
   var disabledDate: js.UndefOr[js.Function1[/* date */ DateType, Boolean]] = js.undefined
-  var getCellNode: js.UndefOr[js.Function1[/* date */ DateType, TagMod[Any]]] = js.undefined
-  var headerCells: js.UndefOr[TagMod[Any]] = js.undefined
+  var getCellNode: js.UndefOr[js.Function1[/* date */ DateType, ReactElement]] = js.undefined
+  var headerCells: js.UndefOr[ReactElement] = js.undefined
   var prefixCls: String
-  var prefixColumn: js.UndefOr[js.Function1[/* date */ DateType, TagMod[Any]]] = js.undefined
+  var prefixColumn: js.UndefOr[js.Function1[/* date */ DateType, ReactElement]] = js.undefined
   var rowClassName: js.UndefOr[js.Function1[/* date */ DateType, String]] = js.undefined
   var rowNum: Double
   var titleCell: js.UndefOr[js.Function1[/* date */ DateType, String]] = js.undefined
   def getCellClassName(date: DateType): Record[String, js.UndefOr[Boolean]]
   def getCellDate(date: DateType, offset: Double): DateType
-  def getCellText(date: DateType): TagMod[Any]
+  def getCellText(date: DateType): ReactElement
   def onSelect(value: DateType): Unit
 }
 
@@ -31,7 +30,7 @@ object PanelBodyProps {
     colNum: Double,
     getCellClassName: DateType => Record[String, js.UndefOr[Boolean]],
     getCellDate: (DateType, Double) => DateType,
-    getCellText: DateType => TagMod[Any],
+    getCellText: DateType => ReactElement,
     onSelect: DateType => Unit,
     prefixCls: String,
     rowNum: Double
@@ -59,7 +58,7 @@ object PanelBodyProps {
     @scala.inline
     def setGetCellDate(value: (DateType, Double) => DateType): Self = this.set("getCellDate", js.Any.fromFunction2(value))
     @scala.inline
-    def setGetCellText(value: DateType => TagMod[Any]): Self = this.set("getCellText", js.Any.fromFunction1(value))
+    def setGetCellText(value: DateType => ReactElement): Self = this.set("getCellText", js.Any.fromFunction1(value))
     @scala.inline
     def setOnSelect(value: DateType => Unit): Self = this.set("onSelect", js.Any.fromFunction1(value))
     @scala.inline
@@ -71,17 +70,17 @@ object PanelBodyProps {
     @scala.inline
     def deleteDisabledDate: Self = this.set("disabledDate", js.undefined)
     @scala.inline
-    def setGetCellNode(value: /* date */ DateType => TagMod[Any]): Self = this.set("getCellNode", js.Any.fromFunction1(value))
+    def setGetCellNode(value: /* date */ DateType => ReactElement): Self = this.set("getCellNode", js.Any.fromFunction1(value))
     @scala.inline
     def deleteGetCellNode: Self = this.set("getCellNode", js.undefined)
     @scala.inline
     def setHeaderCellsReactElement(value: ReactElement): Self = this.set("headerCells", value.asInstanceOf[js.Any])
     @scala.inline
-    def setHeaderCells(value: TagMod[Any]): Self = this.set("headerCells", value.asInstanceOf[js.Any])
+    def setHeaderCells(value: ReactElement): Self = this.set("headerCells", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHeaderCells: Self = this.set("headerCells", js.undefined)
     @scala.inline
-    def setPrefixColumn(value: /* date */ DateType => TagMod[Any]): Self = this.set("prefixColumn", js.Any.fromFunction1(value))
+    def setPrefixColumn(value: /* date */ DateType => ReactElement): Self = this.set("prefixColumn", js.Any.fromFunction1(value))
     @scala.inline
     def deletePrefixColumn: Self = this.set("prefixColumn", js.undefined)
     @scala.inline

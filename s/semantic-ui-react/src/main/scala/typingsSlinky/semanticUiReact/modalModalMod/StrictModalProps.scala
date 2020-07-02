@@ -1,7 +1,6 @@
 package typingsSlinky.semanticUiReact.modalModalMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.CSSProperties
@@ -117,7 +116,7 @@ object StrictModalProps {
     def setActionsReactElement(value: ReactElement): Self = this.set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def setActionsFunction3(
-      value: (/* component */ ReactType[ModalActionsProps], ModalActionsProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ModalActionsProps], ModalActionsProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("actions", js.Any.fromFunction3(value))
     @scala.inline
     def setActions(value: SemanticShorthandItem[ModalActionsProps]): Self = this.set("actions", value.asInstanceOf[js.Any])
@@ -151,7 +150,7 @@ object StrictModalProps {
     def setContentReactElement(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
     @scala.inline
     def setContentFunction3(
-      value: (/* component */ ReactType[ModalContentProps], ModalContentProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ModalContentProps], ModalContentProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("content", js.Any.fromFunction3(value))
     @scala.inline
     def setContent(value: SemanticShorthandItem[ModalContentProps]): Self = this.set("content", value.asInstanceOf[js.Any])
@@ -165,7 +164,7 @@ object StrictModalProps {
     def setHeaderReactElement(value: ReactElement): Self = this.set("header", value.asInstanceOf[js.Any])
     @scala.inline
     def setHeaderFunction3(
-      value: (/* component */ ReactType[ModalHeaderProps], ModalHeaderProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ModalHeaderProps], ModalHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("header", js.Any.fromFunction3(value))
     @scala.inline
     def setHeader(value: SemanticShorthandItem[ModalHeaderProps]): Self = this.set("header", value.asInstanceOf[js.Any])

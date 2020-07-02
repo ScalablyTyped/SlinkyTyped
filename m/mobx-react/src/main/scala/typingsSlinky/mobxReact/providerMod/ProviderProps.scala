@@ -1,13 +1,13 @@
 package typingsSlinky.mobxReact.providerMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
 - Dropped {[ P in string ]: any} */ trait ProviderProps extends js.Object {
-  var children: TagMod[Any]
+  var children: ReactElement
 }
 
 object ProviderProps {
@@ -28,7 +28,7 @@ object ProviderProps {
         x
     }
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
   }

@@ -3,6 +3,7 @@ package typingsSlinky.antd.backTopMod
 import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Window
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.MouseEventHandler
@@ -11,6 +12,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait BackTopProps extends js.Object {
+  var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var onClick: js.UndefOr[MouseEventHandler[HTMLElement]] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
@@ -37,6 +39,12 @@ object BackTopProps {
         x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
         x
     }
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
     def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
     @scala.inline

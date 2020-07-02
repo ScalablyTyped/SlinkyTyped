@@ -178,6 +178,8 @@ object VirtualizedList {
     @scala.inline
     def fadingEdgeLength(value: Double): this.type = set("fadingEdgeLength", value.asInstanceOf[js.Any])
     @scala.inline
+    def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
+    @scala.inline
     def getItem(value: (/* data */ js.Any, /* index */ Double) => ItemT): this.type = set("getItem", js.Any.fromFunction2(value))
     @scala.inline
     def getItemCount(value: /* data */ js.Any => Double): this.type = set("getItemCount", js.Any.fromFunction1(value))

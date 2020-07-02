@@ -1,7 +1,6 @@
 package typingsSlinky.antd.drawerMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.antdBooleans.`false`
 import typingsSlinky.react.mod.CSSProperties
@@ -17,11 +16,11 @@ trait DrawerProps extends js.Object {
   var destroyOnClose: js.UndefOr[Boolean] = js.undefined
   /** wrapper dom node style of header and body */
   var drawerStyle: js.UndefOr[CSSProperties] = js.undefined
-  var footer: js.UndefOr[TagMod[Any]] = js.undefined
+  var footer: js.UndefOr[ReactElement] = js.undefined
   var footerStyle: js.UndefOr[CSSProperties] = js.undefined
   var forceRender: js.UndefOr[Boolean] = js.undefined
   var getContainer: js.UndefOr[String | HTMLElement | getContainerFunc | `false`] = js.undefined
-  var handler: js.UndefOr[TagMod[Any]] = js.undefined
+  var handler: js.UndefOr[ReactElement] = js.undefined
   var headerStyle: js.UndefOr[CSSProperties] = js.undefined
   var height: js.UndefOr[Double | String] = js.undefined
   var keyboard: js.UndefOr[Boolean] = js.undefined
@@ -33,7 +32,7 @@ trait DrawerProps extends js.Object {
   var prefixCls: js.UndefOr[String] = js.undefined
   var push: js.UndefOr[Boolean] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
-  var title: js.UndefOr[TagMod[Any]] = js.undefined
+  var title: js.UndefOr[ReactElement] = js.undefined
   var visible: js.UndefOr[Boolean] = js.undefined
   var width: js.UndefOr[Double | String] = js.undefined
   var zIndex: js.UndefOr[Double] = js.undefined
@@ -83,7 +82,7 @@ object DrawerProps {
     @scala.inline
     def setFooterReactElement(value: ReactElement): Self = this.set("footer", value.asInstanceOf[js.Any])
     @scala.inline
-    def setFooter(value: TagMod[Any]): Self = this.set("footer", value.asInstanceOf[js.Any])
+    def setFooter(value: ReactElement): Self = this.set("footer", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFooter: Self = this.set("footer", js.undefined)
     @scala.inline
@@ -105,7 +104,7 @@ object DrawerProps {
     @scala.inline
     def setHandlerReactElement(value: ReactElement): Self = this.set("handler", value.asInstanceOf[js.Any])
     @scala.inline
-    def setHandler(value: TagMod[Any]): Self = this.set("handler", value.asInstanceOf[js.Any])
+    def setHandler(value: ReactElement): Self = this.set("handler", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHandler: Self = this.set("handler", js.undefined)
     @scala.inline
@@ -155,7 +154,7 @@ object DrawerProps {
     @scala.inline
     def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
     @scala.inline

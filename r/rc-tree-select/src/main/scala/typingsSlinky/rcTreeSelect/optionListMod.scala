@@ -1,7 +1,7 @@
 package typingsSlinky.rcTreeSelect
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.rcTreeSelect.anon.Selected
 import typingsSlinky.rcTreeSelect.interfaceMod.DataNode
 import typingsSlinky.rcTreeSelect.interfaceMod.FlattenDataNode
@@ -27,7 +27,7 @@ object optionListMod extends js.Object {
     var itemHeight: Double = js.native
     var menuItemSelectedIcon: js.UndefOr[js.Any] = js.native
     var multiple: Boolean = js.native
-    var notFoundContent: js.UndefOr[TagMod[Any]] = js.native
+    var notFoundContent: js.UndefOr[ReactElement] = js.native
     var onScroll: UIEventHandler[HTMLDivElement] = js.native
     var open: Boolean = js.native
     var options: OptionsType = js.native

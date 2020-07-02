@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent react-transition-group.react-transition-group/Transition.TransitionActions */
-/* Inlined parent std.Partial<std.Pick<react-transition-group.react-transition-group/Transition.TransitionProps, @material-ui/core.@material-ui/core/transitions/transition.TransitionKeys>> */
+/* Inlined parent std.Partial<std.Pick<react-transition-group.react-transition-group/Transition.TransitionProps<undefined>, @material-ui/core.@material-ui/core/transitions/transition.TransitionKeys>> */
 @js.native
 trait TransitionProps extends js.Object {
   var addEndListener: js.UndefOr[js.Any] = js.native

@@ -1,6 +1,5 @@
 package typingsSlinky.antd.anon
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,8 +9,14 @@ import scala.scalajs.js.annotation._
 trait PartialTransferLocale extends js.Object {
   var itemUnit: js.UndefOr[String] = js.undefined
   var itemsUnit: js.UndefOr[String] = js.undefined
-  var notFoundContent: js.UndefOr[TagMod[Any]] = js.undefined
+  var notFoundContent: js.UndefOr[ReactElement] = js.undefined
+  var remove: js.UndefOr[String] = js.undefined
+  var removeAll: js.UndefOr[String] = js.undefined
+  var removeCurrent: js.UndefOr[String] = js.undefined
   var searchPlaceholder: js.UndefOr[String] = js.undefined
+  var selectAll: js.UndefOr[String] = js.undefined
+  var selectCurrent: js.UndefOr[String] = js.undefined
+  var selectInvert: js.UndefOr[String] = js.undefined
   var titles: js.UndefOr[js.Array[String]] = js.undefined
 }
 
@@ -43,13 +48,37 @@ object PartialTransferLocale {
     @scala.inline
     def setNotFoundContentReactElement(value: ReactElement): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])
     @scala.inline
-    def setNotFoundContent(value: TagMod[Any]): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])
+    def setNotFoundContent(value: ReactElement): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteNotFoundContent: Self = this.set("notFoundContent", js.undefined)
+    @scala.inline
+    def setRemove(value: String): Self = this.set("remove", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRemove: Self = this.set("remove", js.undefined)
+    @scala.inline
+    def setRemoveAll(value: String): Self = this.set("removeAll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRemoveAll: Self = this.set("removeAll", js.undefined)
+    @scala.inline
+    def setRemoveCurrent(value: String): Self = this.set("removeCurrent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRemoveCurrent: Self = this.set("removeCurrent", js.undefined)
     @scala.inline
     def setSearchPlaceholder(value: String): Self = this.set("searchPlaceholder", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSearchPlaceholder: Self = this.set("searchPlaceholder", js.undefined)
+    @scala.inline
+    def setSelectAll(value: String): Self = this.set("selectAll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelectAll: Self = this.set("selectAll", js.undefined)
+    @scala.inline
+    def setSelectCurrent(value: String): Self = this.set("selectCurrent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelectCurrent: Self = this.set("selectCurrent", js.undefined)
+    @scala.inline
+    def setSelectInvert(value: String): Self = this.set("selectInvert", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSelectInvert: Self = this.set("selectInvert", js.undefined)
     @scala.inline
     def setTitles(value: js.Array[String]): Self = this.set("titles", value.asInstanceOf[js.Any])
     @scala.inline

@@ -19,6 +19,7 @@ trait RcFieldProps extends js.Object {
   var getValueFromEvent: js.UndefOr[js.Function1[/* args */ EventArgs, StoreValue]] = js.undefined
   var getValueProps: js.UndefOr[js.Function1[/* value */ StoreValue, js.Object]] = js.undefined
   var initialValue: js.UndefOr[js.Any] = js.undefined
+  var isListField: js.UndefOr[Boolean] = js.undefined
   var messageVariables: js.UndefOr[Record[String, String]] = js.undefined
   var name: js.UndefOr[NamePath] = js.undefined
   var normalize: js.UndefOr[
@@ -66,6 +67,10 @@ object RcFieldProps {
     def setInitialValue(value: js.Any): Self = this.set("initialValue", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteInitialValue: Self = this.set("initialValue", js.undefined)
+    @scala.inline
+    def setIsListField(value: Boolean): Self = this.set("isListField", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIsListField: Self = this.set("isListField", js.undefined)
     @scala.inline
     def setMessageVariables(value: Record[String, String]): Self = this.set("messageVariables", value.asInstanceOf[js.Any])
     @scala.inline

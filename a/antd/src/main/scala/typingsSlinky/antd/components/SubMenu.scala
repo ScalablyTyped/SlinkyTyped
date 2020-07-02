@@ -1,6 +1,5 @@
 package typingsSlinky.antd.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -28,7 +27,9 @@ object SubMenu {
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def level(value: Double): this.type = set("level", value.asInstanceOf[js.Any])
     @scala.inline
     def onTitleClick(value: /* e */ TitleEventEntity => Unit): this.type = set("onTitleClick", js.Any.fromFunction1(value))
     @scala.inline
@@ -46,7 +47,7 @@ object SubMenu {
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SubMenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

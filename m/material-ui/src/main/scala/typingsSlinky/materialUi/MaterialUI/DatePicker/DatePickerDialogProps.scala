@@ -1,7 +1,6 @@
 package typingsSlinky.materialUi.MaterialUI.DatePicker
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverAnimationProps
 import typingsSlinky.materialUi.MaterialUI.propTypes.utils
@@ -20,7 +19,7 @@ trait DatePickerDialogProps extends js.Object {
   var DateTimeFormat: js.UndefOr[Call] = js.undefined
   var animation: js.UndefOr[ReactComponentClass[PopoverAnimationProps]] = js.undefined
   var autoOk: js.UndefOr[Boolean] = js.undefined
-  var cancelLabel: js.UndefOr[TagMod[Any]] = js.undefined
+  var cancelLabel: js.UndefOr[ReactElement] = js.undefined
   var container: js.UndefOr[dialog | `inline`] = js.undefined
   var disableYearSelection: js.UndefOr[Boolean] = js.undefined
   var firstDayOfWeek: js.UndefOr[Double] = js.undefined
@@ -29,7 +28,7 @@ trait DatePickerDialogProps extends js.Object {
   var maxDate: js.UndefOr[js.Date] = js.undefined
   var minDate: js.UndefOr[js.Date] = js.undefined
   var mode: js.UndefOr[portrait | landscape] = js.undefined
-  var okLabel: js.UndefOr[TagMod[Any]] = js.undefined
+  var okLabel: js.UndefOr[ReactElement] = js.undefined
   var onAccept: js.UndefOr[js.Function1[/* d */ js.Date, Unit]] = js.undefined
   var onDismiss: js.UndefOr[js.Function0[Unit]] = js.undefined
   var onShow: js.UndefOr[js.Function0[Unit]] = js.undefined
@@ -70,7 +69,7 @@ object DatePickerDialogProps {
     @scala.inline
     def setCancelLabelReactElement(value: ReactElement): Self = this.set("cancelLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def setCancelLabel(value: TagMod[Any]): Self = this.set("cancelLabel", value.asInstanceOf[js.Any])
+    def setCancelLabel(value: ReactElement): Self = this.set("cancelLabel", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCancelLabel: Self = this.set("cancelLabel", js.undefined)
     @scala.inline
@@ -108,7 +107,7 @@ object DatePickerDialogProps {
     @scala.inline
     def setOkLabelReactElement(value: ReactElement): Self = this.set("okLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def setOkLabel(value: TagMod[Any]): Self = this.set("okLabel", value.asInstanceOf[js.Any])
+    def setOkLabel(value: ReactElement): Self = this.set("okLabel", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOkLabel: Self = this.set("okLabel", js.undefined)
     @scala.inline

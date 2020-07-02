@@ -1,6 +1,6 @@
 package typingsSlinky.rcPicker.monthBodyMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.rcPicker.generateMod.GenerateConfig
 import typingsSlinky.rcPicker.interfaceMod.Locale
 import scala.scalajs.js
@@ -56,7 +56,7 @@ object MonthBodyProps {
     @scala.inline
     def deleteDisabledDate: Self = this.set("disabledDate", js.undefined)
     @scala.inline
-    def setMonthCellRender(value: (DateType, /* locale */ Locale) => TagMod[Any]): Self = this.set("monthCellRender", js.Any.fromFunction2(value))
+    def setMonthCellRender(value: (DateType, /* locale */ Locale) => ReactElement): Self = this.set("monthCellRender", js.Any.fromFunction2(value))
     @scala.inline
     def deleteMonthCellRender: Self = this.set("monthCellRender", js.undefined)
     @scala.inline

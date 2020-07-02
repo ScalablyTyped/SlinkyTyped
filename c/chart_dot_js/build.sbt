@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "chart_dot_js"
-version := "2.9-dt-20200519Z-8bfb81"
+version := "2.9-dt-20200617Z-365a34"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

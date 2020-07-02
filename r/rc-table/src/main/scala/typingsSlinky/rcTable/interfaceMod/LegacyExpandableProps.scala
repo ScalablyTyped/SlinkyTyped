@@ -1,6 +1,6 @@
 package typingsSlinky.rcTable.interfaceMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -62,7 +62,7 @@ object LegacyExpandableProps {
     @scala.inline
     def deleteDefaultExpandedRowKeys: Self = this.set("defaultExpandedRowKeys", js.undefined)
     @scala.inline
-    def setExpandIcon(value: /* props */ RenderExpandIconProps[RecordType] => TagMod[Any]): Self = this.set("expandIcon", js.Any.fromFunction1(value))
+    def setExpandIcon(value: /* props */ RenderExpandIconProps[RecordType] => ReactElement): Self = this.set("expandIcon", js.Any.fromFunction1(value))
     @scala.inline
     def deleteExpandIcon: Self = this.set("expandIcon", js.undefined)
     @scala.inline
@@ -83,7 +83,7 @@ object LegacyExpandableProps {
     def deleteExpandedRowKeys: Self = this.set("expandedRowKeys", js.undefined)
     @scala.inline
     def setExpandedRowRender(
-      value: (RecordType, /* index */ Double, /* indent */ Double, /* expanded */ Boolean) => TagMod[Any]
+      value: (RecordType, /* index */ Double, /* indent */ Double, /* expanded */ Boolean) => ReactElement
     ): Self = this.set("expandedRowRender", js.Any.fromFunction4(value))
     @scala.inline
     def deleteExpandedRowRender: Self = this.set("expandedRowRender", js.undefined)

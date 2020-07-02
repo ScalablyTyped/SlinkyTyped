@@ -2,7 +2,6 @@ package typingsSlinky.antd.breadcrumbItemMod
 
 import org.scalajs.dom.raw.HTMLAnchorElement
 import org.scalajs.dom.raw.HTMLSpanElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.dropdownDropdownMod.DropDownProps
@@ -18,7 +17,7 @@ trait BreadcrumbItemProps extends js.Object {
   var onClick: js.UndefOr[MouseEventHandler[HTMLAnchorElement | HTMLSpanElement]] = js.undefined
   var overlay: js.UndefOr[ReactElement | OverlayFunc] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
-  var separator: js.UndefOr[TagMod[Any]] = js.undefined
+  var separator: js.UndefOr[ReactElement] = js.undefined
 }
 
 object BreadcrumbItemProps {
@@ -65,7 +64,7 @@ object BreadcrumbItemProps {
     @scala.inline
     def setSeparatorReactElement(value: ReactElement): Self = this.set("separator", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSeparator(value: TagMod[Any]): Self = this.set("separator", value.asInstanceOf[js.Any])
+    def setSeparator(value: ReactElement): Self = this.set("separator", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSeparator: Self = this.set("separator", js.undefined)
   }

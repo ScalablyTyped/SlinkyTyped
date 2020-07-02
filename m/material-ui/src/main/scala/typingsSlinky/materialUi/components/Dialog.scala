@@ -2,7 +2,6 @@ package typingsSlinky.materialUi.components
 
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -237,7 +236,7 @@ object Dialog {
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def titleClassName(value: String): this.type = set("titleClassName", value.asInstanceOf[js.Any])
     @scala.inline

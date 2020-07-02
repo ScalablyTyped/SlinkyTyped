@@ -3,7 +3,6 @@ package typingsSlinky.antd.components
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
@@ -53,6 +52,7 @@ import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.generatePickerMod.PickerLocale
 import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.moment.mod.Moment
+import typingsSlinky.rcPicker.anon.Range
 import typingsSlinky.rcPicker.interfaceMod.DisabledTimes
 import typingsSlinky.rcPicker.interfaceMod.EventValue
 import typingsSlinky.rcPicker.interfaceMod.Locale
@@ -184,9 +184,9 @@ class SharedBuilder_RangePickerProps1198066462 (val args: js.Array[js.Any])
   @scala.inline
   def clearIconReactElement(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
   @scala.inline
-  def clearIcon(value: TagMod[Any]): this.type = set("clearIcon", value.asInstanceOf[js.Any])
+  def clearIcon(value: ReactElement): this.type = set("clearIcon", value.asInstanceOf[js.Any])
   @scala.inline
-  def dateRender(value: (Moment, Moment) => TagMod[Any]): this.type = set("dateRender", js.Any.fromFunction2(value))
+  def dateRender(value: (Moment, Moment, /* info */ Range) => ReactElement): this.type = set("dateRender", js.Any.fromFunction3(value))
   @scala.inline
   def defaultOpen(value: Boolean): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
   @scala.inline
@@ -222,7 +222,7 @@ class SharedBuilder_RangePickerProps1198066462 (val args: js.Array[js.Any])
   @scala.inline
   def mode(value: js.Tuple2[PanelMode, PanelMode]): this.type = set("mode", value.asInstanceOf[js.Any])
   @scala.inline
-  def monthCellRender(value: (Moment, /* locale */ Locale) => TagMod[Any]): this.type = set("monthCellRender", js.Any.fromFunction2(value))
+  def monthCellRender(value: (Moment, /* locale */ Locale) => ReactElement): this.type = set("monthCellRender", js.Any.fromFunction2(value))
   @scala.inline
   def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
   @scala.inline
@@ -269,13 +269,13 @@ class SharedBuilder_RangePickerProps1198066462 (val args: js.Array[js.Any])
     ]
   ): this.type = set("ranges", value.asInstanceOf[js.Any])
   @scala.inline
-  def renderExtraFooter(value: /* mode */ PanelMode => TagMod[Any]): this.type = set("renderExtraFooter", js.Any.fromFunction1(value))
+  def renderExtraFooter(value: /* mode */ PanelMode => ReactElement): this.type = set("renderExtraFooter", js.Any.fromFunction1(value))
   @scala.inline
   def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
   @scala.inline
   def separatorReactElement(value: ReactElement): this.type = set("separator", value.asInstanceOf[js.Any])
   @scala.inline
-  def separator(value: TagMod[Any]): this.type = set("separator", value.asInstanceOf[js.Any])
+  def separator(value: ReactElement): this.type = set("separator", value.asInstanceOf[js.Any])
   @scala.inline
   def size(value: SizeType): this.type = set("size", value.asInstanceOf[js.Any])
   @scala.inline
@@ -283,7 +283,7 @@ class SharedBuilder_RangePickerProps1198066462 (val args: js.Array[js.Any])
   @scala.inline
   def suffixIconReactElement(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
   @scala.inline
-  def suffixIcon(value: TagMod[Any]): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
+  def suffixIcon(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
   @scala.inline
   def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
   @scala.inline

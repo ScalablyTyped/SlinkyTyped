@@ -1,6 +1,6 @@
 package typingsSlinky.antd.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.antdStrings.active
@@ -35,7 +35,7 @@ object Circle {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
-    def format(value: (/* percent */ js.UndefOr[Double], /* successPercent */ js.UndefOr[Double]) => TagMod[Any]): this.type = set("format", js.Any.fromFunction2(value))
+    def format(value: (/* percent */ js.UndefOr[Double], /* successPercent */ js.UndefOr[Double]) => ReactElement): this.type = set("format", js.Any.fromFunction2(value))
     @scala.inline
     def gapDegree(value: Double): this.type = set("gapDegree", value.asInstanceOf[js.Any])
     @scala.inline

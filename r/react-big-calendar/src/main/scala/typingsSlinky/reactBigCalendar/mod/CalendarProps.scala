@@ -56,7 +56,9 @@ trait CalendarProps[TEvent /* <: js.Object */, TResource /* <: js.Object */] ext
   var onNavigate: js.UndefOr[
     js.Function3[/* newDate */ js.Date, /* view */ View, /* action */ NavigateAction, Unit]
   ] = js.undefined
-  var onRangeChange: js.UndefOr[js.Function1[/* range */ js.Array[js.Date] | Start, Unit]] = js.undefined
+  var onRangeChange: js.UndefOr[
+    js.Function2[/* range */ js.Array[js.Date] | Start, /* view */ js.UndefOr[View], Unit]
+  ] = js.undefined
   var onSelectEvent: js.UndefOr[
     js.Function2[
       /* event */ TEvent, 
@@ -235,7 +237,7 @@ object CalendarProps {
     @scala.inline
     def deleteOnNavigate: Self = this.set("onNavigate", js.undefined)
     @scala.inline
-    def setOnRangeChange(value: /* range */ js.Array[js.Date] | Start => Unit): Self = this.set("onRangeChange", js.Any.fromFunction1(value))
+    def setOnRangeChange(value: (/* range */ js.Array[js.Date] | Start, /* view */ js.UndefOr[View]) => Unit): Self = this.set("onRangeChange", js.Any.fromFunction2(value))
     @scala.inline
     def deleteOnRangeChange: Self = this.set("onRangeChange", js.undefined)
     @scala.inline

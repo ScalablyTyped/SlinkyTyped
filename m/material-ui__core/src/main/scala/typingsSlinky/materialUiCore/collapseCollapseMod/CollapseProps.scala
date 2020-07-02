@@ -1,7 +1,6 @@
 package typingsSlinky.materialUiCore.collapseCollapseMod
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.materialUiCore.anon.PartialClassNameMapCollap
@@ -19,7 +18,7 @@ import scala.scalajs.js.annotation._
 trait CollapseProps extends js.Object {
   var addEndListener: js.UndefOr[js.Any] = js.native
   var appear: js.UndefOr[Boolean] = js.native
-  var children: js.UndefOr[TagMod[Any]] = js.native
+  var children: js.UndefOr[ReactElement] = js.native
   var className: js.UndefOr[String] = js.native
   var classes: js.UndefOr[PartialClassNameMapCollap] = js.native
   var collapsedHeight: js.UndefOr[String] = js.native
@@ -69,7 +68,7 @@ object CollapseProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline

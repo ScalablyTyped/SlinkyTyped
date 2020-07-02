@@ -3,7 +3,6 @@ package typingsSlinky.semanticUiReact.formDropdownMod
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
@@ -27,7 +26,7 @@ import scala.scalajs.js.annotation._
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.semanticUiReact.dropdownDropdownMod.StrictDropdownProps because var conflicts: as, children, className, disabled, error, `inline`. Inlined additionLabel, additionPosition, allowAdditions, basic, button, clearable, closeOnBlur, closeOnEscape, closeOnChange, compact, deburr, defaultOpen, defaultSearchQuery, defaultSelectedLabel, defaultUpward, defaultValue, direction, floating, fluid, header, icon, item, labeled, lazyLoad, loading, minCharacters, multiple, noResultsMessage, onAddItem, onBlur, onChange, onClick, onClose, onFocus, onLabelClick, onMouseDown, onOpen, onSearchChange, open, openOnFocus, options, placeholder, pointing, renderLabel, scrolling, search, searchInput, searchQuery, selectOnBlur, selectOnNavigation, selectedLabel, selection, simple, tabIndex, text, trigger, value, upward, wrapSelection */ trait StrictFormDropdownProps extends StrictFormFieldProps {
   /** Label prefixed to an option added by a user. */
-  var additionLabel: js.UndefOr[Double | String | TagMod[Any]] = js.undefined
+  var additionLabel: js.UndefOr[Double | String | ReactElement] = js.undefined
   /** Position of the `Add: ...` option in the dropdown list ('top' or 'bottom'). */
   var additionPosition: js.UndefOr[top | bottom] = js.undefined
   /**
@@ -75,7 +74,7 @@ import scala.scalajs.js.annotation._
   /** A dropdown can take the full width of its parent */
   var fluid: js.UndefOr[Boolean] = js.undefined
   /** A dropdown menu can contain a header. */
-  var header: js.UndefOr[TagMod[Any]] = js.undefined
+  var header: js.UndefOr[ReactElement] = js.undefined
   /** Shorthand for Icon. */
   var icon: js.UndefOr[js.Any] = js.undefined
   /** A dropdown can be formatted as a Menu item. */
@@ -91,7 +90,7 @@ import scala.scalajs.js.annotation._
   /** A selection dropdown can allow multiple selections. */
   var multiple: js.UndefOr[Boolean] = js.undefined
   /** Message to display when there are no results. */
-  var noResultsMessage: js.UndefOr[TagMod[Any]] = js.undefined
+  var noResultsMessage: js.UndefOr[ReactElement] = js.undefined
   /**
     * Called when a user adds a new item. Use this to update the options list.
     *
@@ -247,7 +246,7 @@ import scala.scalajs.js.annotation._
   /** The text displayed in the dropdown, usually for the active item. */
   var text: js.UndefOr[String] = js.undefined
   /** Custom element to trigger the menu to become visible. Takes place of 'text'. */
-  var trigger: js.UndefOr[TagMod[Any]] = js.undefined
+  var trigger: js.UndefOr[ReactElement] = js.undefined
   /** Controls whether the dropdown will open upward. */
   var upward: js.UndefOr[Boolean] = js.undefined
   /** Current value or value array if multiple. Creates a controlled component. */
@@ -279,7 +278,7 @@ object StrictFormDropdownProps {
     @scala.inline
     def setAdditionLabelReactElement(value: ReactElement): Self = this.set("additionLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def setAdditionLabel(value: Double | String | TagMod[Any]): Self = this.set("additionLabel", value.asInstanceOf[js.Any])
+    def setAdditionLabel(value: Double | String | ReactElement): Self = this.set("additionLabel", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAdditionLabel: Self = this.set("additionLabel", js.undefined)
     @scala.inline
@@ -361,7 +360,7 @@ object StrictFormDropdownProps {
     @scala.inline
     def setHeaderReactElement(value: ReactElement): Self = this.set("header", value.asInstanceOf[js.Any])
     @scala.inline
-    def setHeader(value: TagMod[Any]): Self = this.set("header", value.asInstanceOf[js.Any])
+    def setHeader(value: ReactElement): Self = this.set("header", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHeader: Self = this.set("header", js.undefined)
     @scala.inline
@@ -395,7 +394,7 @@ object StrictFormDropdownProps {
     @scala.inline
     def setNoResultsMessageReactElement(value: ReactElement): Self = this.set("noResultsMessage", value.asInstanceOf[js.Any])
     @scala.inline
-    def setNoResultsMessage(value: TagMod[Any]): Self = this.set("noResultsMessage", value.asInstanceOf[js.Any])
+    def setNoResultsMessage(value: ReactElement): Self = this.set("noResultsMessage", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteNoResultsMessage: Self = this.set("noResultsMessage", js.undefined)
     @scala.inline
@@ -523,7 +522,7 @@ object StrictFormDropdownProps {
     @scala.inline
     def setTriggerReactElement(value: ReactElement): Self = this.set("trigger", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTrigger(value: TagMod[Any]): Self = this.set("trigger", value.asInstanceOf[js.Any])
+    def setTrigger(value: ReactElement): Self = this.set("trigger", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTrigger: Self = this.set("trigger", js.undefined)
     @scala.inline

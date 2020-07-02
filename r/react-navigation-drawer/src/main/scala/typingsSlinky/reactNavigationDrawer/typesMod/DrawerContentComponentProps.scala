@@ -1,6 +1,6 @@
 package typingsSlinky.reactNavigationDrawer.typesMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -33,9 +33,9 @@ trait DrawerContentComponentProps extends js.Object {
   var labelStyle: js.UndefOr[StyleProp[TextStyle]] = js.undefined
   var navigation: NavigationScreenProp[NavigationDrawerState, NavigationParams]
   var screenProps: js.Any
-  def getLabel(scene: Scene): TagMod[Any]
+  def getLabel(scene: Scene): ReactElement
   def onItemPress(scene: Focused): Unit
-  def renderIcon(scene: Scene): TagMod[Any]
+  def renderIcon(scene: Scene): ReactElement
 }
 
 object DrawerContentComponentProps {
@@ -44,11 +44,11 @@ object DrawerContentComponentProps {
     descriptors: SceneDescriptorMap,
     drawerOpenProgress: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Animated.Node<number> */ js.Any,
     drawerPosition: left | right,
-    getLabel: Scene => TagMod[Any],
+    getLabel: Scene => ReactElement,
     items: js.Array[NavigationRoute[NavigationParams]],
     navigation: NavigationScreenProp[NavigationDrawerState, NavigationParams],
     onItemPress: Focused => Unit,
-    renderIcon: Scene => TagMod[Any],
+    renderIcon: Scene => ReactElement,
     screenProps: js.Any
   ): DrawerContentComponentProps = {
     val __obj = js.Dynamic.literal(descriptors = descriptors.asInstanceOf[js.Any], drawerOpenProgress = drawerOpenProgress.asInstanceOf[js.Any], drawerPosition = drawerPosition.asInstanceOf[js.Any], getLabel = js.Any.fromFunction1(getLabel), items = items.asInstanceOf[js.Any], navigation = navigation.asInstanceOf[js.Any], onItemPress = js.Any.fromFunction1(onItemPress), renderIcon = js.Any.fromFunction1(renderIcon), screenProps = screenProps.asInstanceOf[js.Any])
@@ -74,7 +74,7 @@ object DrawerContentComponentProps {
     @scala.inline
     def setDrawerPosition(value: left | right): Self = this.set("drawerPosition", value.asInstanceOf[js.Any])
     @scala.inline
-    def setGetLabel(value: Scene => TagMod[Any]): Self = this.set("getLabel", js.Any.fromFunction1(value))
+    def setGetLabel(value: Scene => ReactElement): Self = this.set("getLabel", js.Any.fromFunction1(value))
     @scala.inline
     def setItems(value: js.Array[NavigationRoute[NavigationParams]]): Self = this.set("items", value.asInstanceOf[js.Any])
     @scala.inline
@@ -82,7 +82,7 @@ object DrawerContentComponentProps {
     @scala.inline
     def setOnItemPress(value: Focused => Unit): Self = this.set("onItemPress", js.Any.fromFunction1(value))
     @scala.inline
-    def setRenderIcon(value: Scene => TagMod[Any]): Self = this.set("renderIcon", js.Any.fromFunction1(value))
+    def setRenderIcon(value: Scene => ReactElement): Self = this.set("renderIcon", js.Any.fromFunction1(value))
     @scala.inline
     def setScreenProps(value: js.Any): Self = this.set("screenProps", value.asInstanceOf[js.Any])
     @scala.inline

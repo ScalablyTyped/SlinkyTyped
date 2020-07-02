@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -108,8 +107,8 @@ trait InputProps extends js.Object {
   var about: js.UndefOr[String] = js.undefined
   var accept: js.UndefOr[String] = js.undefined
   var accessKey: js.UndefOr[String] = js.undefined
-  var addonAfter: js.UndefOr[TagMod[Any]] = js.undefined
-  var addonBefore: js.UndefOr[TagMod[Any]] = js.undefined
+  var addonAfter: js.UndefOr[ReactElement] = js.undefined
+  var addonBefore: js.UndefOr[ReactElement] = js.undefined
   var allowClear: js.UndefOr[Boolean] = js.undefined
   var alt: js.UndefOr[String] = js.undefined
   var `aria-activedescendant`: js.UndefOr[String] = js.undefined
@@ -167,7 +166,7 @@ trait InputProps extends js.Object {
   var autoSave: js.UndefOr[String] = js.undefined
   var capture: js.UndefOr[Boolean | String] = js.undefined
   var checked: js.UndefOr[Boolean] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var color: js.UndefOr[String] = js.undefined
   var contentEditable: js.UndefOr[Booleanish | inherit] = js.undefined
@@ -287,7 +286,7 @@ trait InputProps extends js.Object {
   var onWheel: js.UndefOr[WheelEventHandler[HTMLInputElement]] = js.undefined
   var pattern: js.UndefOr[String] = js.undefined
   var placeholder: js.UndefOr[String] = js.undefined
-  var prefix: js.UndefOr[TagMod[Any]] = js.undefined
+  var prefix: js.UndefOr[ReactElement] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
   var property: js.UndefOr[String] = js.undefined
   var radioGroup: js.UndefOr[String] = js.undefined
@@ -303,7 +302,7 @@ trait InputProps extends js.Object {
   var src: js.UndefOr[String] = js.undefined
   var step: js.UndefOr[Double | String] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
-  var suffix: js.UndefOr[TagMod[Any]] = js.undefined
+  var suffix: js.UndefOr[ReactElement] = js.undefined
   var suppressContentEditableWarning: js.UndefOr[Boolean] = js.undefined
   var suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined
   var tabIndex: js.UndefOr[Double] = js.undefined
@@ -354,13 +353,13 @@ object InputProps {
     @scala.inline
     def setAddonAfterReactElement(value: ReactElement): Self = this.set("addonAfter", value.asInstanceOf[js.Any])
     @scala.inline
-    def setAddonAfter(value: TagMod[Any]): Self = this.set("addonAfter", value.asInstanceOf[js.Any])
+    def setAddonAfter(value: ReactElement): Self = this.set("addonAfter", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAddonAfter: Self = this.set("addonAfter", js.undefined)
     @scala.inline
     def setAddonBeforeReactElement(value: ReactElement): Self = this.set("addonBefore", value.asInstanceOf[js.Any])
     @scala.inline
-    def setAddonBefore(value: TagMod[Any]): Self = this.set("addonBefore", value.asInstanceOf[js.Any])
+    def setAddonBefore(value: ReactElement): Self = this.set("addonBefore", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAddonBefore: Self = this.set("addonBefore", js.undefined)
     @scala.inline
@@ -594,7 +593,7 @@ object InputProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -1076,7 +1075,7 @@ object InputProps {
     @scala.inline
     def setPrefixReactElement(value: ReactElement): Self = this.set("prefix", value.asInstanceOf[js.Any])
     @scala.inline
-    def setPrefix(value: TagMod[Any]): Self = this.set("prefix", value.asInstanceOf[js.Any])
+    def setPrefix(value: ReactElement): Self = this.set("prefix", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePrefix: Self = this.set("prefix", js.undefined)
     @scala.inline
@@ -1142,7 +1141,7 @@ object InputProps {
     @scala.inline
     def setSuffixReactElement(value: ReactElement): Self = this.set("suffix", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSuffix(value: TagMod[Any]): Self = this.set("suffix", value.asInstanceOf[js.Any])
+    def setSuffix(value: ReactElement): Self = this.set("suffix", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSuffix: Self = this.set("suffix", js.undefined)
     @scala.inline

@@ -1,18 +1,17 @@
 package typingsSlinky.antd.anon
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait ClearIcon extends js.Object {
-  var clearIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var clearIcon: js.UndefOr[ReactElement] = js.undefined
   var loading: js.UndefOr[Boolean] = js.undefined
-  var menuItemSelectedIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var menuItemSelectedIcon: js.UndefOr[ReactElement] = js.undefined
   var multiple: js.UndefOr[Boolean] = js.undefined
-  var removeIcon: js.UndefOr[TagMod[Any]] = js.undefined
-  var suffixIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var removeIcon: js.UndefOr[ReactElement] = js.undefined
+  var suffixIcon: js.UndefOr[ReactElement] = js.undefined
 }
 
 object ClearIcon {
@@ -35,7 +34,7 @@ object ClearIcon {
     @scala.inline
     def setClearIconReactElement(value: ReactElement): Self = this.set("clearIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setClearIcon(value: TagMod[Any]): Self = this.set("clearIcon", value.asInstanceOf[js.Any])
+    def setClearIcon(value: ReactElement): Self = this.set("clearIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteClearIcon: Self = this.set("clearIcon", js.undefined)
     @scala.inline
@@ -45,7 +44,7 @@ object ClearIcon {
     @scala.inline
     def setMenuItemSelectedIconReactElement(value: ReactElement): Self = this.set("menuItemSelectedIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setMenuItemSelectedIcon(value: TagMod[Any]): Self = this.set("menuItemSelectedIcon", value.asInstanceOf[js.Any])
+    def setMenuItemSelectedIcon(value: ReactElement): Self = this.set("menuItemSelectedIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMenuItemSelectedIcon: Self = this.set("menuItemSelectedIcon", js.undefined)
     @scala.inline
@@ -55,13 +54,13 @@ object ClearIcon {
     @scala.inline
     def setRemoveIconReactElement(value: ReactElement): Self = this.set("removeIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setRemoveIcon(value: TagMod[Any]): Self = this.set("removeIcon", value.asInstanceOf[js.Any])
+    def setRemoveIcon(value: ReactElement): Self = this.set("removeIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRemoveIcon: Self = this.set("removeIcon", js.undefined)
     @scala.inline
     def setSuffixIconReactElement(value: ReactElement): Self = this.set("suffixIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSuffixIcon(value: TagMod[Any]): Self = this.set("suffixIcon", value.asInstanceOf[js.Any])
+    def setSuffixIcon(value: ReactElement): Self = this.set("suffixIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSuffixIcon: Self = this.set("suffixIcon", js.undefined)
   }

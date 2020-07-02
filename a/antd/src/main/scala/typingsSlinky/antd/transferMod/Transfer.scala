@@ -8,8 +8,6 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.ItemsUnit
 import typingsSlinky.antd.anon.LeftDataSource
 import typingsSlinky.antd.anon.NotFoundContent
-import typingsSlinky.antd.antdStrings.sourceSelectedKeys
-import typingsSlinky.antd.antdStrings.targetSelectedKeys
 import typingsSlinky.antd.renderEmptyMod.RenderEmptyHandler
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
@@ -20,10 +18,9 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Transfer
-  extends Component[TransferProps, js.Any, js.Any] {
+  extends Component[TransferProps, TransferState, js.Any] {
   var separatedDataSource: LeftDataSource | Null = js.native
   def getLocale(transferLocale: TransferLocale, renderEmpty: RenderEmptyHandler): ItemsUnit | NotFoundContent = js.native
-  def getSelectedKeysName(direction: TransferDirection): sourceSelectedKeys | targetSelectedKeys = js.native
   def getTitles(transferLocale: TransferLocale): js.Array[String] = js.native
   def handleClear(direction: TransferDirection): Unit = js.native
   def handleFilter(direction: TransferDirection, e: ChangeEvent[HTMLInputElement]): Unit = js.native
@@ -44,9 +41,15 @@ trait Transfer
   def onItemSelectAll(direction: TransferDirection, selectedKeys: js.Array[String], checkAll: Boolean): Unit = js.native
   def onLeftItemSelect(selectedKey: String, checked: Boolean): Unit = js.native
   def onLeftItemSelectAll(selectedKeys: js.Array[String], checkAll: Boolean): Unit = js.native
+  def onRightItemRemove(selectedKeys: js.Array[String]): Unit = js.native
   def onRightItemSelect(selectedKey: String, checked: Boolean): Unit = js.native
   def onRightItemSelectAll(selectedKeys: js.Array[String], checkAll: Boolean): Unit = js.native
   def renderTransfer(transferLocale: TransferLocale): ReactElement = js.native
   def separateDataSource(): LeftDataSource = js.native
+  def setStateKeys(direction: TransferDirection, keys: js.Array[String]): Unit = js.native
+  def setStateKeys(
+    direction: TransferDirection,
+    keys: js.Function1[/* prevKeys */ js.Array[String], js.Array[String]]
+  ): Unit = js.native
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.antd.transferListMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.transferMod.TransferItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 trait RenderedItem extends js.Object {
   var item: TransferItem
-  var renderedEl: TagMod[Any]
+  var renderedEl: ReactElement
   var renderedText: String
 }
 
@@ -34,7 +34,7 @@ object RenderedItem {
     @scala.inline
     def setRenderedText(value: String): Self = this.set("renderedText", value.asInstanceOf[js.Any])
     @scala.inline
-    def setRenderedEl(value: TagMod[Any]): Self = this.set("renderedEl", value.asInstanceOf[js.Any])
+    def setRenderedEl(value: ReactElement): Self = this.set("renderedEl", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRenderedEl: Self = this.set("renderedEl", js.undefined)
   }

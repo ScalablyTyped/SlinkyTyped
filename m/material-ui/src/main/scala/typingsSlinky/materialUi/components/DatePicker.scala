@@ -1,6 +1,5 @@
 package typingsSlinky.materialUi.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
@@ -34,7 +33,7 @@ object DatePicker {
     @scala.inline
     def cancelLabelReactElement(value: ReactElement): this.type = set("cancelLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def cancelLabel(value: TagMod[Any]): this.type = set("cancelLabel", value.asInstanceOf[js.Any])
+    def cancelLabel(value: ReactElement): this.type = set("cancelLabel", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -54,7 +53,7 @@ object DatePicker {
     @scala.inline
     def errorTextReactElement(value: ReactElement): this.type = set("errorText", value.asInstanceOf[js.Any])
     @scala.inline
-    def errorText(value: TagMod[Any]): this.type = set("errorText", value.asInstanceOf[js.Any])
+    def errorText(value: ReactElement): this.type = set("errorText", value.asInstanceOf[js.Any])
     @scala.inline
     def firstDayOfWeek(value: Double): this.type = set("firstDayOfWeek", value.asInstanceOf[js.Any])
     @scala.inline
@@ -62,7 +61,7 @@ object DatePicker {
     @scala.inline
     def floatingLabelTextReactElement(value: ReactElement): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
     @scala.inline
-    def floatingLabelText(value: TagMod[Any]): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
+    def floatingLabelText(value: ReactElement): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
     @scala.inline
     def formatDate(value: /* date */ js.Date => String): this.type = set("formatDate", js.Any.fromFunction1(value))
     @scala.inline
@@ -74,7 +73,7 @@ object DatePicker {
     @scala.inline
     def hintTextReactElement(value: ReactElement): this.type = set("hintText", value.asInstanceOf[js.Any])
     @scala.inline
-    def hintText(value: TagMod[Any]): this.type = set("hintText", value.asInstanceOf[js.Any])
+    def hintText(value: ReactElement): this.type = set("hintText", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
@@ -92,7 +91,7 @@ object DatePicker {
     @scala.inline
     def okLabelReactElement(value: ReactElement): this.type = set("okLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def okLabel(value: TagMod[Any]): this.type = set("okLabel", value.asInstanceOf[js.Any])
+    def okLabel(value: ReactElement): this.type = set("okLabel", value.asInstanceOf[js.Any])
     @scala.inline
     def onBlur(value: SyntheticFocusEvent[js.Object] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline

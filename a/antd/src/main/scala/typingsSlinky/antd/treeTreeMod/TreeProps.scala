@@ -1,7 +1,6 @@
 package typingsSlinky.antd.treeTreeMod
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.Checked
 import typingsSlinky.rcTree.mod.CheckData
@@ -37,7 +36,7 @@ trait TreeProps extends js.Object {
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
     ]) | Checked
   ] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   /** 默认选中复选框的树节点 */
   var defaultCheckedKeys: js.UndefOr[
@@ -74,7 +73,9 @@ trait TreeProps extends js.Object {
   /** 点击树节点触发 */
   var filterAntTreeNode: js.UndefOr[js.Function1[ReactComponentClass[AntTreeNodeProps], Boolean]] = js.undefined
   var filterTreeNode: js.UndefOr[js.Function1[ReactComponentClass[InternalTreeNodeProps], Boolean]] = js.undefined
-  var icon: js.UndefOr[(js.Function1[/* nodeProps */ AntdTreeNodeAttribute, TagMod[Any]]) | TagMod[Any]] = js.undefined
+  var icon: js.UndefOr[
+    (js.Function1[/* nodeProps */ AntdTreeNodeAttribute, ReactElement]) | ReactElement
+  ] = js.undefined
   var loadData: js.UndefOr[js.Function1[ReactComponentClass[InternalTreeNodeProps], js.Promise[_]]] = js.undefined
   var loadedKeys: js.UndefOr[
     js.Array[
@@ -153,7 +154,7 @@ object TreeProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -219,9 +220,9 @@ object TreeProps {
     @scala.inline
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setIconFunction1(value: /* nodeProps */ AntdTreeNodeAttribute => TagMod[Any]): Self = this.set("icon", js.Any.fromFunction1(value))
+    def setIconFunction1(value: /* nodeProps */ AntdTreeNodeAttribute => ReactElement): Self = this.set("icon", js.Any.fromFunction1(value))
     @scala.inline
-    def setIcon(value: (js.Function1[/* nodeProps */ AntdTreeNodeAttribute, TagMod[Any]]) | TagMod[Any]): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: (js.Function1[/* nodeProps */ AntdTreeNodeAttribute, ReactElement]) | ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
     @scala.inline

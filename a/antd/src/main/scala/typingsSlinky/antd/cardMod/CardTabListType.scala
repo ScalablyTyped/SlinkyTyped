@@ -1,6 +1,6 @@
 package typingsSlinky.antd.cardMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 trait CardTabListType extends js.Object {
   var disabled: js.UndefOr[Boolean] = js.undefined
   var key: String
-  var tab: TagMod[Any]
+  var tab: ReactElement
 }
 
 object CardTabListType {
@@ -35,7 +35,7 @@ object CardTabListType {
     @scala.inline
     def deleteDisabled: Self = this.set("disabled", js.undefined)
     @scala.inline
-    def setTab(value: TagMod[Any]): Self = this.set("tab", value.asInstanceOf[js.Any])
+    def setTab(value: ReactElement): Self = this.set("tab", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTab: Self = this.set("tab", js.undefined)
   }

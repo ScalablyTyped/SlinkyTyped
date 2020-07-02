@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.SVGSVGElement
 import slinky.core.SyntheticEvent
+import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
@@ -240,6 +241,7 @@ trait FontAwesomeIconProps extends js.Object {
   var fontVariant: js.UndefOr[Double | String] = js.undefined
   var fontWeight: js.UndefOr[Double | String] = js.undefined
   var format: js.UndefOr[Double | String] = js.undefined
+  var forwardedRef: js.UndefOr[(js.Function1[/* e */ js.Any, Unit]) | ReactRef[_]] = js.undefined
   var from: js.UndefOr[Double | String] = js.undefined
   var fx: js.UndefOr[Double | String] = js.undefined
   var fy: js.UndefOr[Double | String] = js.undefined
@@ -1030,6 +1032,14 @@ object FontAwesomeIconProps {
     def setFormat(value: Double | String): Self = this.set("format", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFormat: Self = this.set("format", js.undefined)
+    @scala.inline
+    def setForwardedRefRefObject(value: ReactRef[_]): Self = this.set("forwardedRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setForwardedRefFunction1(value: /* e */ js.Any => Unit): Self = this.set("forwardedRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def setForwardedRef(value: (js.Function1[/* e */ js.Any, Unit]) | ReactRef[_]): Self = this.set("forwardedRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteForwardedRef: Self = this.set("forwardedRef", js.undefined)
     @scala.inline
     def setFrom(value: Double | String): Self = this.set("from", value.asInstanceOf[js.Any])
     @scala.inline

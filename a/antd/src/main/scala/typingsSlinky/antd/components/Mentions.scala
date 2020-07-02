@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -21,7 +20,6 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.textarea.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.mentionsMod.MentionProps
-import typingsSlinky.antd.mentionsMod.default
 import typingsSlinky.rcMentions.mentionsMod.Direction
 import typingsSlinky.rcMentions.mentionsMod.Placement
 import typingsSlinky.rcMentions.optionMod.OptionProps
@@ -75,6 +73,8 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -87,7 +87,7 @@ object Mentions {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -267,7 +267,7 @@ object Mentions {
     @scala.inline
     def notFoundContentReactElement(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
     @scala.inline
-    def notFoundContent(value: TagMod[Any]): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
+    def notFoundContent(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
     @scala.inline
     def onAbort(value: SyntheticEvent[Event, HTMLTextAreaElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
     @scala.inline
@@ -488,7 +488,7 @@ object Mentions {
     def wrap(value: String): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MentionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: MentionProps with RefAttributes[HTMLElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Mentions.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

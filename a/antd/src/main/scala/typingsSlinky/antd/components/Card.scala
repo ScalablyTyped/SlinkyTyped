@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -91,7 +90,7 @@ object Card {
     @scala.inline
     def accessKey(value: String): this.type = set("accessKey", value.asInstanceOf[js.Any])
     @scala.inline
-    def actions(value: js.Array[TagMod[Any]]): this.type = set("actions", value.asInstanceOf[js.Any])
+    def actions(value: js.Array[ReactElement]): this.type = set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def activeTabKey(value: String): this.type = set("activeTabKey", value.asInstanceOf[js.Any])
     @scala.inline
@@ -211,7 +210,7 @@ object Card {
     @scala.inline
     def coverReactElement(value: ReactElement): this.type = set("cover", value.asInstanceOf[js.Any])
     @scala.inline
-    def cover(value: TagMod[Any]): this.type = set("cover", value.asInstanceOf[js.Any])
+    def cover(value: ReactElement): this.type = set("cover", value.asInstanceOf[js.Any])
     @scala.inline
     def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
     @scala.inline
@@ -229,7 +228,7 @@ object Card {
     @scala.inline
     def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
-    def extra(value: TagMod[Any]): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
     def headStyle(value: CSSProperties): this.type = set("headStyle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -451,7 +450,7 @@ object Card {
     @scala.inline
     def tabBarExtraContentReactElement(value: ReactElement): this.type = set("tabBarExtraContent", value.asInstanceOf[js.Any])
     @scala.inline
-    def tabBarExtraContent(value: TagMod[Any]): this.type = set("tabBarExtraContent", value.asInstanceOf[js.Any])
+    def tabBarExtraContent(value: ReactElement): this.type = set("tabBarExtraContent", value.asInstanceOf[js.Any])
     @scala.inline
     def tabBarExtraContentNull: this.type = set("tabBarExtraContent", null)
     @scala.inline
@@ -463,7 +462,7 @@ object Card {
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def translate(value: yes | no): this.type = set("translate", value.asInstanceOf[js.Any])
     @scala.inline

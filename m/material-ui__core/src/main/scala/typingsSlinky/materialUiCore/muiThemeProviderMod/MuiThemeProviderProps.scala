@@ -1,6 +1,6 @@
 package typingsSlinky.materialUiCore.muiThemeProviderMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.materialUiCore.createMuiThemeMod.Theme
 import typingsSlinky.materialUiCore.withStylesMod.StylesCreator
 import typingsSlinky.std.Map
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait MuiThemeProviderProps extends js.Object {
-  var children: TagMod[Any] = js.native
+  var children: ReactElement = js.native
   var disableStylesGeneration: js.UndefOr[Boolean] = js.native
   var sheetsManager: js.UndefOr[Map[StylesCreator, Map[Theme, SheetManagerTheme]]] = js.native
   var theme: Theme | (js.Function1[/* outer */ Theme | Null, Theme]) = js.native
@@ -38,7 +38,7 @@ object MuiThemeProviderProps {
     @scala.inline
     def setTheme(value: Theme | (js.Function1[/* outer */ Theme | Null, Theme])): Self = this.set("theme", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline

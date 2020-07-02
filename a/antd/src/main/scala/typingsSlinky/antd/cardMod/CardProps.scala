@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -89,7 +88,7 @@ import scala.scalajs.js.annotation._
 trait CardProps extends js.Object {
   var about: js.UndefOr[String] = js.undefined
   var accessKey: js.UndefOr[String] = js.undefined
-  var actions: js.UndefOr[js.Array[TagMod[Any]]] = js.undefined
+  var actions: js.UndefOr[js.Array[ReactElement]] = js.undefined
   var activeTabKey: js.UndefOr[String] = js.undefined
   var `aria-activedescendant`: js.UndefOr[String] = js.undefined
   var `aria-atomic`: js.UndefOr[Boolean] = js.undefined
@@ -144,12 +143,12 @@ trait CardProps extends js.Object {
   var autoSave: js.UndefOr[String] = js.undefined
   var bodyStyle: js.UndefOr[CSSProperties] = js.undefined
   var bordered: js.UndefOr[Boolean] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var color: js.UndefOr[String] = js.undefined
   var contentEditable: js.UndefOr[Booleanish | inherit] = js.undefined
   var contextMenu: js.UndefOr[String] = js.undefined
-  var cover: js.UndefOr[TagMod[Any]] = js.undefined
+  var cover: js.UndefOr[ReactElement] = js.undefined
   var dangerouslySetInnerHTML: js.UndefOr[Html] = js.undefined
   var datatype: js.UndefOr[String] = js.undefined
   var defaultActiveTabKey: js.UndefOr[String] = js.undefined
@@ -157,7 +156,7 @@ trait CardProps extends js.Object {
   var defaultValue: js.UndefOr[String | Double | js.Array[String]] = js.undefined
   var dir: js.UndefOr[String] = js.undefined
   var draggable: js.UndefOr[Booleanish] = js.undefined
-  var extra: js.UndefOr[TagMod[Any]] = js.undefined
+  var extra: js.UndefOr[ReactElement] = js.undefined
   var headStyle: js.UndefOr[CSSProperties] = js.undefined
   var hidden: js.UndefOr[Boolean] = js.undefined
   var hoverable: js.UndefOr[Boolean] = js.undefined
@@ -267,11 +266,11 @@ trait CardProps extends js.Object {
   var style: js.UndefOr[CSSProperties] = js.undefined
   var suppressContentEditableWarning: js.UndefOr[Boolean] = js.undefined
   var suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined
-  var tabBarExtraContent: js.UndefOr[TagMod[Any] | Null] = js.undefined
+  var tabBarExtraContent: js.UndefOr[ReactElement | Null] = js.undefined
   var tabIndex: js.UndefOr[Double] = js.undefined
   var tabList: js.UndefOr[js.Array[CardTabListType]] = js.undefined
   var tabProps: js.UndefOr[TabsProps] = js.undefined
-  var title: js.UndefOr[TagMod[Any]] = js.undefined
+  var title: js.UndefOr[ReactElement] = js.undefined
   var translate: js.UndefOr[yes | no] = js.undefined
   var `type`: js.UndefOr[CardType] = js.undefined
   var typeof: js.UndefOr[String] = js.undefined
@@ -305,7 +304,7 @@ object CardProps {
     @scala.inline
     def deleteAccessKey: Self = this.set("accessKey", js.undefined)
     @scala.inline
-    def setActions(value: js.Array[TagMod[Any]]): Self = this.set("actions", value.asInstanceOf[js.Any])
+    def setActions(value: js.Array[ReactElement]): Self = this.set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteActions: Self = this.set("actions", js.undefined)
     @scala.inline
@@ -527,7 +526,7 @@ object CardProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -549,7 +548,7 @@ object CardProps {
     @scala.inline
     def setCoverReactElement(value: ReactElement): Self = this.set("cover", value.asInstanceOf[js.Any])
     @scala.inline
-    def setCover(value: TagMod[Any]): Self = this.set("cover", value.asInstanceOf[js.Any])
+    def setCover(value: ReactElement): Self = this.set("cover", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCover: Self = this.set("cover", js.undefined)
     @scala.inline
@@ -583,7 +582,7 @@ object CardProps {
     @scala.inline
     def setExtraReactElement(value: ReactElement): Self = this.set("extra", value.asInstanceOf[js.Any])
     @scala.inline
-    def setExtra(value: TagMod[Any]): Self = this.set("extra", value.asInstanceOf[js.Any])
+    def setExtra(value: ReactElement): Self = this.set("extra", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteExtra: Self = this.set("extra", js.undefined)
     @scala.inline
@@ -1025,7 +1024,7 @@ object CardProps {
     @scala.inline
     def setTabBarExtraContentReactElement(value: ReactElement): Self = this.set("tabBarExtraContent", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTabBarExtraContent(value: TagMod[Any]): Self = this.set("tabBarExtraContent", value.asInstanceOf[js.Any])
+    def setTabBarExtraContent(value: ReactElement): Self = this.set("tabBarExtraContent", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTabBarExtraContent: Self = this.set("tabBarExtraContent", js.undefined)
     @scala.inline
@@ -1045,7 +1044,7 @@ object CardProps {
     @scala.inline
     def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
     @scala.inline

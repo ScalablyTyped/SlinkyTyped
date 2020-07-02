@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeGestureHandler.swipeableMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactNative.mod.Animated.AnimatedInterpolation
@@ -66,7 +66,7 @@ trait SwipeableProperties extends js.Object {
     js.Function2[
       /* progressAnimatedValue */ AnimatedInterpolation, 
       /* dragAnimatedValue */ AnimatedInterpolation, 
-      TagMod[Any]
+      ReactElement
     ]
   ] = js.undefined
   /**
@@ -83,7 +83,7 @@ trait SwipeableProperties extends js.Object {
     js.Function2[
       /* progressAnimatedValue */ AnimatedInterpolation, 
       /* dragAnimatedValue */ AnimatedInterpolation, 
-      TagMod[Any]
+      ReactElement
     ]
   ] = js.undefined
   var rightThreshold: js.UndefOr[Double] = js.undefined
@@ -256,13 +256,13 @@ object SwipeableProperties {
     def deleteOvershootRight: Self = this.set("overshootRight", js.undefined)
     @scala.inline
     def setRenderLeftActions(
-      value: (/* progressAnimatedValue */ AnimatedInterpolation, /* dragAnimatedValue */ AnimatedInterpolation) => TagMod[Any]
+      value: (/* progressAnimatedValue */ AnimatedInterpolation, /* dragAnimatedValue */ AnimatedInterpolation) => ReactElement
     ): Self = this.set("renderLeftActions", js.Any.fromFunction2(value))
     @scala.inline
     def deleteRenderLeftActions: Self = this.set("renderLeftActions", js.undefined)
     @scala.inline
     def setRenderRightActions(
-      value: (/* progressAnimatedValue */ AnimatedInterpolation, /* dragAnimatedValue */ AnimatedInterpolation) => TagMod[Any]
+      value: (/* progressAnimatedValue */ AnimatedInterpolation, /* dragAnimatedValue */ AnimatedInterpolation) => ReactElement
     ): Self = this.set("renderRightActions", js.Any.fromFunction2(value))
     @scala.inline
     def deleteRenderRightActions: Self = this.set("renderRightActions", js.undefined)

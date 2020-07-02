@@ -1,6 +1,5 @@
 package typingsSlinky.antd.cellMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -12,9 +11,9 @@ trait CellProps extends js.Object {
   var className: js.UndefOr[String] = js.undefined
   var colon: js.UndefOr[Boolean] = js.undefined
   var component: String
-  var content: js.UndefOr[TagMod[Any]] = js.undefined
+  var content: js.UndefOr[ReactElement] = js.undefined
   var itemPrefixCls: String
-  var label: js.UndefOr[TagMod[Any]] = js.undefined
+  var label: js.UndefOr[ReactElement] = js.undefined
   var span: Double
   var style: js.UndefOr[CSSProperties] = js.undefined
 }
@@ -57,13 +56,13 @@ object CellProps {
     @scala.inline
     def setContentReactElement(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
     @scala.inline
-    def setContent(value: TagMod[Any]): Self = this.set("content", value.asInstanceOf[js.Any])
+    def setContent(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteContent: Self = this.set("content", js.undefined)
     @scala.inline
     def setLabelReactElement(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def setLabel(value: TagMod[Any]): Self = this.set("label", value.asInstanceOf[js.Any])
+    def setLabel(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)
     @scala.inline

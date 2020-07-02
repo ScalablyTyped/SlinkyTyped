@@ -1,6 +1,5 @@
 package typingsSlinky.materialUiCore.anon
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.materialUiCore.materialUiCoreStrings.dense
 import typingsSlinky.materialUiCore.materialUiCoreStrings.none
@@ -17,7 +16,7 @@ trait Disabled extends js.Object {
   var focused: js.UndefOr[Boolean] = js.native
   var margin: js.UndefOr[dense | none | normal] = js.native
   var required: js.UndefOr[Boolean] = js.native
-  var startAdornment: js.UndefOr[TagMod[Any]] = js.native
+  var startAdornment: js.UndefOr[ReactElement] = js.native
 }
 
 object Disabled {
@@ -64,7 +63,7 @@ object Disabled {
     @scala.inline
     def setStartAdornmentReactElement(value: ReactElement): Self = this.set("startAdornment", value.asInstanceOf[js.Any])
     @scala.inline
-    def setStartAdornment(value: TagMod[Any]): Self = this.set("startAdornment", value.asInstanceOf[js.Any])
+    def setStartAdornment(value: ReactElement): Self = this.set("startAdornment", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStartAdornment: Self = this.set("startAdornment", js.undefined)
   }

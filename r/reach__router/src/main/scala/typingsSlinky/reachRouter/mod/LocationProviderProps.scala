@@ -1,13 +1,12 @@
 package typingsSlinky.reachRouter.mod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait LocationProviderProps extends js.Object {
-  var children: js.UndefOr[TagMod[Any] | LocationProviderRenderFn] = js.undefined
+  var children: js.UndefOr[ReactElement | LocationProviderRenderFn] = js.undefined
   var history: js.UndefOr[History] = js.undefined
 }
 
@@ -31,9 +30,9 @@ object LocationProviderProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildrenFunction1(value: /* context */ LocationContext => TagMod[Any]): Self = this.set("children", js.Any.fromFunction1(value))
+    def setChildrenFunction1(value: /* context */ LocationContext => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
     @scala.inline
-    def setChildren(value: TagMod[Any] | LocationProviderRenderFn): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement | LocationProviderRenderFn): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline

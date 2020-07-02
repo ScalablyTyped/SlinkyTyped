@@ -1,7 +1,6 @@
 package typingsSlinky.rcTable.anon
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.rcTable.interfaceMod.ColumnsType
@@ -18,7 +17,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Columns[RecordType] extends js.Object {
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var columns: js.UndefOr[ColumnsType[RecordType]] = js.undefined
   var direction: js.UndefOr[ltr | rtl] = js.undefined
   var expandIcon: js.UndefOr[RenderExpandIcon[RecordType]] = js.undefined
@@ -65,7 +64,7 @@ object Columns {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -77,7 +76,7 @@ object Columns {
     @scala.inline
     def deleteDirection: Self = this.set("direction", js.undefined)
     @scala.inline
-    def setExpandIcon(value: /* props */ RenderExpandIconProps[RecordType] => TagMod[Any]): Self = this.set("expandIcon", js.Any.fromFunction1(value))
+    def setExpandIcon(value: /* props */ RenderExpandIconProps[RecordType] => ReactElement): Self = this.set("expandIcon", js.Any.fromFunction1(value))
     @scala.inline
     def deleteExpandIcon: Self = this.set("expandIcon", js.undefined)
     @scala.inline

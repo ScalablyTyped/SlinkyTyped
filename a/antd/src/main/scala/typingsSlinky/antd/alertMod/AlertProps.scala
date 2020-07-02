@@ -2,7 +2,6 @@ package typingsSlinky.antd.alertMod
 
 import org.scalajs.dom.raw.HTMLButtonElement
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.antdStrings.error
@@ -23,12 +22,12 @@ trait AlertProps extends js.Object {
   /** Whether Alert can be closed */
   var closable: js.UndefOr[Boolean] = js.undefined
   /** Close text to show */
-  var closeText: js.UndefOr[TagMod[Any]] = js.undefined
+  var closeText: js.UndefOr[ReactElement] = js.undefined
   /** Additional content of Alert */
-  var description: js.UndefOr[TagMod[Any]] = js.undefined
-  var icon: js.UndefOr[TagMod[Any]] = js.undefined
+  var description: js.UndefOr[ReactElement] = js.undefined
+  var icon: js.UndefOr[ReactElement] = js.undefined
   /** Content of Alert */
-  var message: TagMod[Any]
+  var message: ReactElement
   var onClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
   /** Callback when close Alert */
   var onClose: js.UndefOr[MouseEventHandler[HTMLButtonElement]] = js.undefined
@@ -82,23 +81,23 @@ object AlertProps {
     @scala.inline
     def setCloseTextReactElement(value: ReactElement): Self = this.set("closeText", value.asInstanceOf[js.Any])
     @scala.inline
-    def setCloseText(value: TagMod[Any]): Self = this.set("closeText", value.asInstanceOf[js.Any])
+    def setCloseText(value: ReactElement): Self = this.set("closeText", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCloseText: Self = this.set("closeText", js.undefined)
     @scala.inline
     def setDescriptionReactElement(value: ReactElement): Self = this.set("description", value.asInstanceOf[js.Any])
     @scala.inline
-    def setDescription(value: TagMod[Any]): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setDescription(value: ReactElement): Self = this.set("description", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDescription: Self = this.set("description", js.undefined)
     @scala.inline
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setIcon(value: TagMod[Any]): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
     @scala.inline
-    def setMessage(value: TagMod[Any]): Self = this.set("message", value.asInstanceOf[js.Any])
+    def setMessage(value: ReactElement): Self = this.set("message", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMessage: Self = this.set("message", js.undefined)
     @scala.inline

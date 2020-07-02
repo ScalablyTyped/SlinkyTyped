@@ -1,7 +1,6 @@
 package typingsSlinky.semanticUiReact.tableCellMod
 
 import org.scalajs.dom.raw.HTMLTableCellElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.react.mod.ReactType
@@ -48,7 +47,8 @@ trait StrictTableCellProps extends TdHTMLAttributes[HTMLTableCellElement] {
   /** A cell may warn a user. */
   var warning: js.UndefOr[Boolean] = js.undefined
   /** A table can specify the width of individual columns independently. */
-  var width: js.UndefOr[SemanticWIDTHS] = js.undefined
+  @JSName("width")
+  var width_StrictTableCellProps: js.UndefOr[SemanticWIDTHS] = js.undefined
 }
 
 object StrictTableCellProps {
@@ -98,7 +98,7 @@ object StrictTableCellProps {
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def setIconFunction3(
-      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("icon", js.Any.fromFunction3(value))
     @scala.inline
     def setIcon(value: SemanticShorthandItem[IconProps]): Self = this.set("icon", value.asInstanceOf[js.Any])

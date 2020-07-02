@@ -66,10 +66,13 @@ object antdStrings {
   sealed trait `404` extends ExceptionStatusType
   
   @js.native
-  sealed trait `4Dot2Dot4` extends js.Object
+  sealed trait `4Dot3Dot4` extends js.Object
   
   @js.native
   sealed trait `500` extends ExceptionStatusType
+  
+  @js.native
+  sealed trait PATCH extends js.Object
   
   @js.native
   sealed trait POST extends js.Object
@@ -109,12 +112,6 @@ object antdStrings {
   
   @js.native
   sealed trait alternate extends js.Object
-  
-  @js.native
-  sealed trait `ant-click-animating` extends js.Object
-  
-  @js.native
-  sealed trait `ant-click-animating-without-extra-node` extends js.Object
   
   @js.native
   sealed trait `aria-activedescendant` extends js.Object
@@ -815,6 +812,9 @@ object antdStrings {
   sealed trait password extends js.Object
   
   @js.native
+  sealed trait patch_ extends js.Object
+  
+  @js.native
   sealed trait picker extends js.Object
   
   @js.native
@@ -979,9 +979,6 @@ object antdStrings {
   sealed trait solid extends RadioGroupButtonStyle
   
   @js.native
-  sealed trait sourceSelectedKeys extends js.Object
-  
-  @js.native
   sealed trait `space-around` extends js.Object
   
   @js.native
@@ -1032,13 +1029,12 @@ object antdStrings {
   sealed trait tags extends js.Object
   
   @js.native
-  sealed trait targetSelectedKeys extends js.Object
-  
-  @js.native
   sealed trait tel extends js.Object
   
   @js.native
-  sealed trait text extends UploadListType
+  sealed trait text
+    extends ButtonType
+       with UploadListType
   
   @js.native
   sealed trait time extends js.Object
@@ -1150,9 +1146,11 @@ object antdStrings {
   @scala.inline
   def `404`: `404` = "404".asInstanceOf[`404`]
   @scala.inline
-  def `4Dot2Dot4`: `4Dot2Dot4` = "4.2.4".asInstanceOf[`4Dot2Dot4`]
+  def `4Dot3Dot4`: `4Dot3Dot4` = "4.3.4".asInstanceOf[`4Dot3Dot4`]
   @scala.inline
   def `500`: `500` = "500".asInstanceOf[`500`]
+  @scala.inline
+  def PATCH: PATCH = "PATCH".asInstanceOf[PATCH]
   @scala.inline
   def POST: POST = "POST".asInstanceOf[POST]
   @scala.inline
@@ -1179,10 +1177,6 @@ object antdStrings {
   def allowClear: allowClear = "allowClear".asInstanceOf[allowClear]
   @scala.inline
   def alternate: alternate = "alternate".asInstanceOf[alternate]
-  @scala.inline
-  def `ant-click-animating`: `ant-click-animating` = "ant-click-animating".asInstanceOf[`ant-click-animating`]
-  @scala.inline
-  def `ant-click-animating-without-extra-node`: `ant-click-animating-without-extra-node` = "ant-click-animating-without-extra-node".asInstanceOf[`ant-click-animating-without-extra-node`]
   @scala.inline
   def `aria-activedescendant`: `aria-activedescendant` = "aria-activedescendant".asInstanceOf[`aria-activedescendant`]
   @scala.inline
@@ -1606,6 +1600,8 @@ object antdStrings {
   @scala.inline
   def password: password = "password".asInstanceOf[password]
   @scala.inline
+  def patch_ : patch_ = "patch".asInstanceOf[patch_]
+  @scala.inline
   def picker: picker = "picker".asInstanceOf[picker]
   @scala.inline
   def pickerRef: pickerRef = "pickerRef".asInstanceOf[pickerRef]
@@ -1704,8 +1700,6 @@ object antdStrings {
   @scala.inline
   def solid: solid = "solid".asInstanceOf[solid]
   @scala.inline
-  def sourceSelectedKeys: sourceSelectedKeys = "sourceSelectedKeys".asInstanceOf[sourceSelectedKeys]
-  @scala.inline
   def `space-around`: `space-around` = "space-around".asInstanceOf[`space-around`]
   @scala.inline
   def `space-between`: `space-between` = "space-between".asInstanceOf[`space-between`]
@@ -1735,8 +1729,6 @@ object antdStrings {
   def tabIndex: tabIndex = "tabIndex".asInstanceOf[tabIndex]
   @scala.inline
   def tags: tags = "tags".asInstanceOf[tags]
-  @scala.inline
-  def targetSelectedKeys: targetSelectedKeys = "targetSelectedKeys".asInstanceOf[targetSelectedKeys]
   @scala.inline
   def tel: tel = "tel".asInstanceOf[tel]
   @scala.inline

@@ -1,12 +1,11 @@
 package typingsSlinky.react.mod
 
-import slinky.core.TagMod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait ReactPortal extends ReactElement {
-  var children: TagMod[Any]
+  var children: slinky.core.facade.ReactElement
 }
 
 object ReactPortal {
@@ -28,7 +27,7 @@ object ReactPortal {
         x
     }
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: slinky.core.facade.ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
   }

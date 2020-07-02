@@ -8,6 +8,7 @@ trait TableHTMLAttributes[T] extends HTMLAttributes[T] {
   var cellPadding: js.UndefOr[Double | String] = js.undefined
   var cellSpacing: js.UndefOr[Double | String] = js.undefined
   var summary: js.UndefOr[String] = js.undefined
+  var width: js.UndefOr[Double | String] = js.undefined
 }
 
 object TableHTMLAttributes {
@@ -39,6 +40,10 @@ object TableHTMLAttributes {
     def setSummary(value: String): Self = this.set("summary", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSummary: Self = this.set("summary", js.undefined)
+    @scala.inline
+    def setWidth(value: Double | String): Self = this.set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWidth: Self = this.set("width", js.undefined)
   }
   
 }

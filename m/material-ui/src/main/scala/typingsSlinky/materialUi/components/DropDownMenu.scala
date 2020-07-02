@@ -2,7 +2,6 @@ package typingsSlinky.materialUi.components
 
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -37,7 +36,7 @@ object DropDownMenu {
     @scala.inline
     def iconButtonReactElement(value: ReactElement): this.type = set("iconButton", value.asInstanceOf[js.Any])
     @scala.inline
-    def iconButton(value: TagMod[Any]): this.type = set("iconButton", value.asInstanceOf[js.Any])
+    def iconButton(value: ReactElement): this.type = set("iconButton", value.asInstanceOf[js.Any])
     @scala.inline
     def iconStyle(value: CSSProperties): this.type = set("iconStyle", value.asInstanceOf[js.Any])
     @scala.inline

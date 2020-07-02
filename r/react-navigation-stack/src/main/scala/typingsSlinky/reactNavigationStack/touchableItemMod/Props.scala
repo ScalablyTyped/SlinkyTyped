@@ -110,6 +110,10 @@ trait Props extends js.Object {
   var delayPressIn: js.UndefOr[Double] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
   /**
+    * Whether this `View` should be focusable with a non-touch input device, eg. receive focus with a hardware keyboard.
+    */
+  var focusable: js.UndefOr[Boolean] = js.undefined
+  /**
     * *(Apple TV only)* May be set to true to force the Apple TV focus engine to move focus to this view.
     *
     * @platform ios
@@ -446,6 +450,10 @@ object Props {
     def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setFocusable(value: Boolean): Self = this.set("focusable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFocusable: Self = this.set("focusable", js.undefined)
     @scala.inline
     def setHasTVPreferredFocus(value: Boolean): Self = this.set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
     @scala.inline

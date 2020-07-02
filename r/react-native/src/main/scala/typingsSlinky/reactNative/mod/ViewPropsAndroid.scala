@@ -12,6 +12,10 @@ trait ViewPropsAndroid extends js.Object {
     */
   var collapsable: js.UndefOr[Boolean] = js.undefined
   /**
+    * Whether this `View` should be focusable with a non-touch input device, eg. receive focus with a hardware keyboard.
+    */
+  var focusable: js.UndefOr[Boolean] = js.undefined
+  /**
     * Whether this view needs to rendered offscreen and composited with an alpha in order to preserve 100% correct colors and blending behavior.
     * The default (false) falls back to drawing the component and its children
     * with an alpha applied to the paint used to draw each element instead of rendering the full component offscreen and compositing it back with an alpha value.
@@ -57,6 +61,10 @@ object ViewPropsAndroid {
     def setCollapsable(value: Boolean): Self = this.set("collapsable", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCollapsable: Self = this.set("collapsable", js.undefined)
+    @scala.inline
+    def setFocusable(value: Boolean): Self = this.set("focusable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFocusable: Self = this.set("focusable", js.undefined)
     @scala.inline
     def setNeedsOffscreenAlphaCompositing(value: Boolean): Self = this.set("needsOffscreenAlphaCompositing", value.asInstanceOf[js.Any])
     @scala.inline

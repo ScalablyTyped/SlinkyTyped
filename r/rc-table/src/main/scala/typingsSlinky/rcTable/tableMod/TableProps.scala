@@ -1,7 +1,6 @@
 package typingsSlinky.rcTable.tableMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcTable.anon.Body
 import typingsSlinky.rcTable.anon.X
@@ -25,13 +24,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait TableProps[RecordType] extends LegacyExpandableProps[RecordType] {
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var columns: js.UndefOr[ColumnsType[RecordType]] = js.undefined
   var components: js.UndefOr[TableComponents[RecordType]] = js.undefined
   var data: js.UndefOr[js.Array[RecordType]] = js.undefined
   var direction: js.UndefOr[ltr | rtl] = js.undefined
-  var emptyText: js.UndefOr[TagMod[Any] | js.Function0[TagMod[Any]]] = js.undefined
+  var emptyText: js.UndefOr[ReactElement | js.Function0[ReactElement]] = js.undefined
   /** Config expand rows */
   var expandable: js.UndefOr[ExpandableConfig[RecordType]] = js.undefined
   var footer: js.UndefOr[PanelRender[RecordType]] = js.undefined
@@ -56,7 +55,7 @@ trait TableProps[RecordType] extends LegacyExpandableProps[RecordType] {
   var scroll: js.UndefOr[X] = js.undefined
   var showHeader: js.UndefOr[Boolean] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
-  var summary: js.UndefOr[js.Function1[/* data */ js.Array[RecordType], TagMod[Any]]] = js.undefined
+  var summary: js.UndefOr[js.Function1[/* data */ js.Array[RecordType], ReactElement]] = js.undefined
   var tableLayout: js.UndefOr[TableLayout] = js.undefined
   var title: js.UndefOr[PanelRender[RecordType]] = js.undefined
   /**
@@ -87,7 +86,7 @@ object TableProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -113,9 +112,9 @@ object TableProps {
     @scala.inline
     def setEmptyTextReactElement(value: ReactElement): Self = this.set("emptyText", value.asInstanceOf[js.Any])
     @scala.inline
-    def setEmptyTextFunction0(value: () => TagMod[Any]): Self = this.set("emptyText", js.Any.fromFunction0(value))
+    def setEmptyTextFunction0(value: () => ReactElement): Self = this.set("emptyText", js.Any.fromFunction0(value))
     @scala.inline
-    def setEmptyText(value: TagMod[Any] | js.Function0[TagMod[Any]]): Self = this.set("emptyText", value.asInstanceOf[js.Any])
+    def setEmptyText(value: ReactElement | js.Function0[ReactElement]): Self = this.set("emptyText", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEmptyText: Self = this.set("emptyText", js.undefined)
     @scala.inline
@@ -123,7 +122,7 @@ object TableProps {
     @scala.inline
     def deleteExpandable: Self = this.set("expandable", js.undefined)
     @scala.inline
-    def setFooter(value: /* data */ js.Array[RecordType] => TagMod[Any]): Self = this.set("footer", js.Any.fromFunction1(value))
+    def setFooter(value: /* data */ js.Array[RecordType] => ReactElement): Self = this.set("footer", js.Any.fromFunction1(value))
     @scala.inline
     def deleteFooter: Self = this.set("footer", js.undefined)
     @scala.inline
@@ -177,7 +176,7 @@ object TableProps {
     @scala.inline
     def deleteStyle: Self = this.set("style", js.undefined)
     @scala.inline
-    def setSummary(value: /* data */ js.Array[RecordType] => TagMod[Any]): Self = this.set("summary", js.Any.fromFunction1(value))
+    def setSummary(value: /* data */ js.Array[RecordType] => ReactElement): Self = this.set("summary", js.Any.fromFunction1(value))
     @scala.inline
     def deleteSummary: Self = this.set("summary", js.undefined)
     @scala.inline
@@ -185,7 +184,7 @@ object TableProps {
     @scala.inline
     def deleteTableLayout: Self = this.set("tableLayout", js.undefined)
     @scala.inline
-    def setTitle(value: /* data */ js.Array[RecordType] => TagMod[Any]): Self = this.set("title", js.Any.fromFunction1(value))
+    def setTitle(value: /* data */ js.Array[RecordType] => ReactElement): Self = this.set("title", js.Any.fromFunction1(value))
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
     @scala.inline

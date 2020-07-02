@@ -1,6 +1,6 @@
 package typingsSlinky.antd.anon
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Validator
 import scala.scalajs.js
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 /* Inlined react.react.WeakValidationMap<antd.antd/lib/typography/Typography.TypographyProps> */
 trait WeakValidationMapTypograp extends js.Object {
   var `aria-label`: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
-  var children: js.UndefOr[Validator[js.UndefOr[Null | TagMod[Any]]]] = js.undefined
+  var children: js.UndefOr[Validator[js.UndefOr[Null | ReactElement]]] = js.undefined
   var className: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
   var id: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
   var prefixCls: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
@@ -39,7 +39,7 @@ object WeakValidationMapTypograp {
     @scala.inline
     def `deleteAria-label`: Self = this.set("aria-label", js.undefined)
     @scala.inline
-    def setChildren(value: Validator[js.UndefOr[Null | TagMod[Any]]]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: Validator[js.UndefOr[Null | ReactElement]]): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline

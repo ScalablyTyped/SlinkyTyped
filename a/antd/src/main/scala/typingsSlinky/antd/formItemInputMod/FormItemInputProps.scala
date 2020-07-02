@@ -1,6 +1,5 @@
 package typingsSlinky.antd.formItemInputMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.gridColMod.ColProps
 import scala.scalajs.js
@@ -8,8 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait FormItemInputProps extends js.Object {
-  var extra: js.UndefOr[TagMod[Any]] = js.undefined
-  var help: js.UndefOr[TagMod[Any]] = js.undefined
+  var extra: js.UndefOr[ReactElement] = js.undefined
+  var help: js.UndefOr[ReactElement] = js.undefined
   var wrapperCol: js.UndefOr[ColProps] = js.undefined
 }
 
@@ -33,13 +32,13 @@ object FormItemInputProps {
     @scala.inline
     def setExtraReactElement(value: ReactElement): Self = this.set("extra", value.asInstanceOf[js.Any])
     @scala.inline
-    def setExtra(value: TagMod[Any]): Self = this.set("extra", value.asInstanceOf[js.Any])
+    def setExtra(value: ReactElement): Self = this.set("extra", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteExtra: Self = this.set("extra", js.undefined)
     @scala.inline
     def setHelpReactElement(value: ReactElement): Self = this.set("help", value.asInstanceOf[js.Any])
     @scala.inline
-    def setHelp(value: TagMod[Any]): Self = this.set("help", value.asInstanceOf[js.Any])
+    def setHelp(value: ReactElement): Self = this.set("help", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHelp: Self = this.set("help", js.undefined)
     @scala.inline

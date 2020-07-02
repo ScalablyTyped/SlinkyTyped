@@ -1,13 +1,12 @@
 package typingsSlinky.antd.anon
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait GoButton extends js.Object {
-  var goButton: js.UndefOr[TagMod[Any]] = js.undefined
+  var goButton: js.UndefOr[ReactElement] = js.undefined
 }
 
 object GoButton {
@@ -30,7 +29,7 @@ object GoButton {
     @scala.inline
     def setGoButtonReactElement(value: ReactElement): Self = this.set("goButton", value.asInstanceOf[js.Any])
     @scala.inline
-    def setGoButton(value: TagMod[Any]): Self = this.set("goButton", value.asInstanceOf[js.Any])
+    def setGoButton(value: ReactElement): Self = this.set("goButton", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteGoButton: Self = this.set("goButton", js.undefined)
   }

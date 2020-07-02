@@ -155,6 +155,7 @@ import scala.scalajs.js.annotation._
 // isInteger
 // isLength
 // isMap
+// isMatch
 // isNaN
 // isNative
 // isNil

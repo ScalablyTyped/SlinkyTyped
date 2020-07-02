@@ -1,7 +1,6 @@
 package typingsSlinky.antd.tableInterfaceMod
 
 import org.scalajs.dom.raw.Event
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.PartialOmitCheckboxPropsc
 import typingsSlinky.antd.useSelectionMod.INTERNAL_SELECTION_ITEM
@@ -11,11 +10,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait TableRowSelection[T] extends js.Object {
-  var columnTitle: js.UndefOr[String | TagMod[Any]] = js.undefined
+  var columnTitle: js.UndefOr[String | ReactElement] = js.undefined
   var columnWidth: js.UndefOr[String | Double] = js.undefined
   var fixed: js.UndefOr[Boolean] = js.undefined
   var getCheckboxProps: js.UndefOr[js.Function1[/* record */ T, PartialOmitCheckboxPropsc]] = js.undefined
-  var hideDefaultSelections: js.UndefOr[Boolean] = js.undefined
+  var hideSelectAll: js.UndefOr[Boolean] = js.undefined
   var onChange: js.UndefOr[
     js.Function2[/* selectedRowKeys */ js.Array[Key], /* selectedRows */ js.Array[T], Unit]
   ] = js.undefined
@@ -44,8 +43,8 @@ trait TableRowSelection[T] extends js.Object {
       /* value */ Boolean, 
       /* record */ T, 
       /* index */ Double, 
-      /* originNode */ TagMod[Any], 
-      TagMod[Any] | RenderedCell[T]
+      /* originNode */ ReactElement, 
+      ReactElement | RenderedCell[T]
     ]
   ] = js.undefined
   var selectedRowKeys: js.UndefOr[js.Array[Key]] = js.undefined
@@ -73,7 +72,7 @@ object TableRowSelection {
     @scala.inline
     def setColumnTitleReactElement(value: ReactElement): Self = this.set("columnTitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def setColumnTitle(value: String | TagMod[Any]): Self = this.set("columnTitle", value.asInstanceOf[js.Any])
+    def setColumnTitle(value: String | ReactElement): Self = this.set("columnTitle", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteColumnTitle: Self = this.set("columnTitle", js.undefined)
     @scala.inline
@@ -89,9 +88,9 @@ object TableRowSelection {
     @scala.inline
     def deleteGetCheckboxProps: Self = this.set("getCheckboxProps", js.undefined)
     @scala.inline
-    def setHideDefaultSelections(value: Boolean): Self = this.set("hideDefaultSelections", value.asInstanceOf[js.Any])
+    def setHideSelectAll(value: Boolean): Self = this.set("hideSelectAll", value.asInstanceOf[js.Any])
     @scala.inline
-    def deleteHideDefaultSelections: Self = this.set("hideDefaultSelections", js.undefined)
+    def deleteHideSelectAll: Self = this.set("hideSelectAll", js.undefined)
     @scala.inline
     def setOnChange(value: (/* selectedRowKeys */ js.Array[Key], /* selectedRows */ js.Array[T]) => Unit): Self = this.set("onChange", js.Any.fromFunction2(value))
     @scala.inline
@@ -120,7 +119,7 @@ object TableRowSelection {
     def deleteOnSelectMultiple: Self = this.set("onSelectMultiple", js.undefined)
     @scala.inline
     def setRenderCell(
-      value: (/* value */ Boolean, /* record */ T, /* index */ Double, /* originNode */ TagMod[Any]) => TagMod[Any] | RenderedCell[T]
+      value: (/* value */ Boolean, /* record */ T, /* index */ Double, /* originNode */ ReactElement) => ReactElement | RenderedCell[T]
     ): Self = this.set("renderCell", js.Any.fromFunction4(value))
     @scala.inline
     def deleteRenderCell: Self = this.set("renderCell", js.undefined)

@@ -1,6 +1,5 @@
 package typingsSlinky.rcMenu.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -48,7 +47,7 @@ object SubMenu {
     @scala.inline
     def expandIconReactElement(value: ReactElement): this.type = set("expandIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def expandIconFunction1(value: /* props */ js.Any => TagMod[Any]): this.type = set("expandIcon", js.Any.fromFunction1(value))
+    def expandIconFunction1(value: /* props */ js.Any => ReactElement): this.type = set("expandIcon", js.Any.fromFunction1(value))
     @scala.inline
     def expandIcon(value: RenderIconType): this.type = set("expandIcon", value.asInstanceOf[js.Any])
     @scala.inline
@@ -60,7 +59,7 @@ object SubMenu {
     @scala.inline
     def itemIconReactElement(value: ReactElement): this.type = set("itemIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def itemIconFunction1(value: /* props */ js.Any => TagMod[Any]): this.type = set("itemIcon", js.Any.fromFunction1(value))
+    def itemIconFunction1(value: /* props */ js.Any => ReactElement): this.type = set("itemIcon", js.Any.fromFunction1(value))
     @scala.inline
     def itemIcon(value: RenderIconType): this.type = set("itemIcon", value.asInstanceOf[js.Any])
     @scala.inline
@@ -118,7 +117,7 @@ object SubMenu {
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def triggerSubMenuAction(value: TriggerSubMenuAction): this.type = set("triggerSubMenuAction", value.asInstanceOf[js.Any])
   }

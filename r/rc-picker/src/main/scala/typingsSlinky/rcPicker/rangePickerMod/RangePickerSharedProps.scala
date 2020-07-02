@@ -1,9 +1,9 @@
 package typingsSlinky.rcPicker.rangePickerMod
 
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
+import typingsSlinky.rcPicker.anon.Range
 import typingsSlinky.rcPicker.interfaceMod.DisabledTimes
 import typingsSlinky.rcPicker.interfaceMod.EventValue
 import typingsSlinky.rcPicker.interfaceMod.PanelMode
@@ -26,6 +26,7 @@ trait RangePickerSharedProps[DateType] extends js.Object {
   var activePickerIndex: js.UndefOr[`0` | `1`] = js.undefined
   var allowEmpty: js.UndefOr[js.Tuple2[Boolean, Boolean]] = js.undefined
   var autoComplete: js.UndefOr[String] = js.undefined
+  var dateRender: js.UndefOr[RangeDateRender[DateType]] = js.undefined
   var defaultPickerValue: js.UndefOr[js.Tuple2[DateType, DateType]] = js.undefined
   var defaultValue: js.UndefOr[RangeValue[DateType]] = js.undefined
   var direction: js.UndefOr[ltr | rtl] = js.undefined
@@ -62,7 +63,7 @@ trait RangePickerSharedProps[DateType] extends js.Object {
       (Exclude[RangeValue[DateType], Null]) | (js.Function0[Exclude[RangeValue[DateType], Null]])
     ]
   ] = js.undefined
-  var separator: js.UndefOr[TagMod[Any]] = js.undefined
+  var separator: js.UndefOr[ReactElement] = js.undefined
   var value: js.UndefOr[RangeValue[DateType]] = js.undefined
 }
 
@@ -95,6 +96,10 @@ object RangePickerSharedProps {
     def setAutoComplete(value: String): Self = this.set("autoComplete", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAutoComplete: Self = this.set("autoComplete", js.undefined)
+    @scala.inline
+    def setDateRender(value: (DateType, DateType, /* info */ Range) => ReactElement): Self = this.set("dateRender", js.Any.fromFunction3(value))
+    @scala.inline
+    def deleteDateRender: Self = this.set("dateRender", js.undefined)
     @scala.inline
     def setDefaultPickerValue(value: js.Tuple2[DateType, DateType]): Self = this.set("defaultPickerValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -165,7 +170,7 @@ object RangePickerSharedProps {
     @scala.inline
     def setSeparatorReactElement(value: ReactElement): Self = this.set("separator", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSeparator(value: TagMod[Any]): Self = this.set("separator", value.asInstanceOf[js.Any])
+    def setSeparator(value: ReactElement): Self = this.set("separator", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSeparator: Self = this.set("separator", js.undefined)
     @scala.inline

@@ -1,7 +1,6 @@
 package typingsSlinky.semanticUiReact.components
 
 import org.scalajs.dom.raw.HTMLAnchorElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.a.tag
@@ -39,7 +38,7 @@ object Pagination {
     def ellipsisItemReactElement(value: ReactElement): this.type = set("ellipsisItem", value.asInstanceOf[js.Any])
     @scala.inline
     def ellipsisItemFunction3(
-      value: (/* component */ ReactType[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("ellipsisItem", js.Any.fromFunction3(value))
     @scala.inline
     def ellipsisItem(value: SemanticShorthandItem[PaginationItemProps]): this.type = set("ellipsisItem", value.asInstanceOf[js.Any])
@@ -47,7 +46,7 @@ object Pagination {
     def firstItemReactElement(value: ReactElement): this.type = set("firstItem", value.asInstanceOf[js.Any])
     @scala.inline
     def firstItemFunction3(
-      value: (/* component */ ReactType[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("firstItem", js.Any.fromFunction3(value))
     @scala.inline
     def firstItem(value: SemanticShorthandItem[PaginationItemProps]): this.type = set("firstItem", value.asInstanceOf[js.Any])
@@ -55,7 +54,7 @@ object Pagination {
     def lastItemReactElement(value: ReactElement): this.type = set("lastItem", value.asInstanceOf[js.Any])
     @scala.inline
     def lastItemFunction3(
-      value: (/* component */ ReactType[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("lastItem", js.Any.fromFunction3(value))
     @scala.inline
     def lastItem(value: SemanticShorthandItem[PaginationItemProps]): this.type = set("lastItem", value.asInstanceOf[js.Any])
@@ -63,7 +62,7 @@ object Pagination {
     def nextItemReactElement(value: ReactElement): this.type = set("nextItem", value.asInstanceOf[js.Any])
     @scala.inline
     def nextItemFunction3(
-      value: (/* component */ ReactType[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("nextItem", js.Any.fromFunction3(value))
     @scala.inline
     def nextItem(value: SemanticShorthandItem[PaginationItemProps]): this.type = set("nextItem", value.asInstanceOf[js.Any])
@@ -73,7 +72,7 @@ object Pagination {
     def pageItemReactElement(value: ReactElement): this.type = set("pageItem", value.asInstanceOf[js.Any])
     @scala.inline
     def pageItemFunction3(
-      value: (/* component */ ReactType[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("pageItem", js.Any.fromFunction3(value))
     @scala.inline
     def pageItem(value: SemanticShorthandItem[PaginationItemProps]): this.type = set("pageItem", value.asInstanceOf[js.Any])
@@ -81,7 +80,7 @@ object Pagination {
     def prevItemReactElement(value: ReactElement): this.type = set("prevItem", value.asInstanceOf[js.Any])
     @scala.inline
     def prevItemFunction3(
-      value: (/* component */ ReactType[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("prevItem", js.Any.fromFunction3(value))
     @scala.inline
     def prevItem(value: SemanticShorthandItem[PaginationItemProps]): this.type = set("prevItem", value.asInstanceOf[js.Any])

@@ -1,7 +1,7 @@
 package typingsSlinky.antd.filterDropdownMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.tableInterfaceMod.ColumnType
 import typingsSlinky.antd.tableInterfaceMod.GetPopupContainer
 import typingsSlinky.antd.tableInterfaceMod.Key
@@ -12,7 +12,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait FilterDropdownProps[RecordType] extends js.Object {
-  var children: TagMod[Any]
+  var children: ReactElement
   var column: ColumnType[RecordType]
   var columnKey: Key
   var dropdownPrefixCls: String
@@ -64,7 +64,7 @@ object FilterDropdownProps {
     @scala.inline
     def setTriggerFilter(value: FilterState[RecordType] => Unit): Self = this.set("triggerFilter", js.Any.fromFunction1(value))
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline

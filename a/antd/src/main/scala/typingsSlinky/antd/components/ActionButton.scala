@@ -3,7 +3,6 @@ package typingsSlinky.antd.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.actionButtonMod.ActionButtonProps
-import typingsSlinky.antd.actionButtonMod.default
 import typingsSlinky.antd.buttonButtonMod.ButtonProps
 import typingsSlinky.antd.buttonButtonMod.LegacyButtonType
 import scala.scalajs.js
@@ -18,7 +17,7 @@ object ActionButton {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def actionFn(value: /* repeated */ js.Any => _ | js.Thenable[_]): this.type = set("actionFn", js.Any.fromFunction1(value))
     @scala.inline

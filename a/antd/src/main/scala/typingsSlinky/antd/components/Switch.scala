@@ -2,7 +2,6 @@ package typingsSlinky.antd.components
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -31,7 +30,7 @@ object Switch {
     @scala.inline
     def checkedChildrenReactElement(value: ReactElement): this.type = set("checkedChildren", value.asInstanceOf[js.Any])
     @scala.inline
-    def checkedChildren(value: TagMod[Any]): this.type = set("checkedChildren", value.asInstanceOf[js.Any])
+    def checkedChildren(value: ReactElement): this.type = set("checkedChildren", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -55,7 +54,7 @@ object Switch {
     @scala.inline
     def unCheckedChildrenReactElement(value: ReactElement): this.type = set("unCheckedChildren", value.asInstanceOf[js.Any])
     @scala.inline
-    def unCheckedChildren(value: TagMod[Any]): this.type = set("unCheckedChildren", value.asInstanceOf[js.Any])
+    def unCheckedChildren(value: ReactElement): this.type = set("unCheckedChildren", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SwitchProps with RefAttributes[HTMLElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

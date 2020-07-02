@@ -7,7 +7,6 @@ import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -207,9 +206,9 @@ object Popper {
     @scala.inline
     def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def childrenFunction1(value: /* props */ Placement => TagMod[Any]): this.type = set("children", js.Any.fromFunction1(value))
+    def childrenFunction1(value: /* props */ Placement => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
     @scala.inline
-    def children(value: TagMod[Any] | (js.Function1[/* props */ Placement, TagMod[Any]])): this.type = set("children", value.asInstanceOf[js.Any])
+    def children(value: ReactElement | (js.Function1[/* props */ Placement, ReactElement])): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

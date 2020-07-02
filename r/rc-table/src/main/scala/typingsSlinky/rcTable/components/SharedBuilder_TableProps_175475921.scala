@@ -1,7 +1,6 @@
 package typingsSlinky.rcTable.components
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -46,11 +45,11 @@ class SharedBuilder_TableProps_175475921[/* <: typingsSlinky.rcTable.interfaceMo
   @scala.inline
   def emptyTextReactElement(value: ReactElement): this.type = set("emptyText", value.asInstanceOf[js.Any])
   @scala.inline
-  def emptyTextFunction0(value: () => TagMod[Any]): this.type = set("emptyText", js.Any.fromFunction0(value))
+  def emptyTextFunction0(value: () => ReactElement): this.type = set("emptyText", js.Any.fromFunction0(value))
   @scala.inline
-  def emptyText(value: TagMod[Any] | js.Function0[TagMod[Any]]): this.type = set("emptyText", value.asInstanceOf[js.Any])
+  def emptyText(value: ReactElement | js.Function0[ReactElement]): this.type = set("emptyText", value.asInstanceOf[js.Any])
   @scala.inline
-  def expandIcon(value: /* props */ RenderExpandIconProps[RecordType] => TagMod[Any]): this.type = set("expandIcon", js.Any.fromFunction1(value))
+  def expandIcon(value: /* props */ RenderExpandIconProps[RecordType] => ReactElement): this.type = set("expandIcon", js.Any.fromFunction1(value))
   @scala.inline
   def expandIconColumnIndex(value: Double): this.type = set("expandIconColumnIndex", value.asInstanceOf[js.Any])
   @scala.inline
@@ -63,10 +62,10 @@ class SharedBuilder_TableProps_175475921[/* <: typingsSlinky.rcTable.interfaceMo
   def expandedRowKeys(value: js.Array[Key]): this.type = set("expandedRowKeys", value.asInstanceOf[js.Any])
   @scala.inline
   def expandedRowRender(
-    value: (RecordType, /* index */ Double, /* indent */ Double, /* expanded */ Boolean) => TagMod[Any]
+    value: (RecordType, /* index */ Double, /* indent */ Double, /* expanded */ Boolean) => ReactElement
   ): this.type = set("expandedRowRender", js.Any.fromFunction4(value))
   @scala.inline
-  def footer(value: /* data */ js.Array[RecordType] => TagMod[Any]): this.type = set("footer", js.Any.fromFunction1(value))
+  def footer(value: /* data */ js.Array[RecordType] => ReactElement): this.type = set("footer", js.Any.fromFunction1(value))
   @scala.inline
   def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
   @scala.inline
@@ -102,11 +101,11 @@ class SharedBuilder_TableProps_175475921[/* <: typingsSlinky.rcTable.interfaceMo
   @scala.inline
   def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   @scala.inline
-  def summary(value: /* data */ js.Array[RecordType] => TagMod[Any]): this.type = set("summary", js.Any.fromFunction1(value))
+  def summary(value: /* data */ js.Array[RecordType] => ReactElement): this.type = set("summary", js.Any.fromFunction1(value))
   @scala.inline
   def tableLayout(value: TableLayout): this.type = set("tableLayout", value.asInstanceOf[js.Any])
   @scala.inline
-  def title(value: /* data */ js.Array[RecordType] => TagMod[Any]): this.type = set("title", js.Any.fromFunction1(value))
+  def title(value: /* data */ js.Array[RecordType] => ReactElement): this.type = set("title", js.Any.fromFunction1(value))
   @scala.inline
   def transformColumns(value: /* columns */ ColumnsType[RecordType] => ColumnsType[RecordType]): this.type = set("transformColumns", js.Any.fromFunction1(value))
 }

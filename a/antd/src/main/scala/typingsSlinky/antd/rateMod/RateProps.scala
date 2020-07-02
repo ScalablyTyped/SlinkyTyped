@@ -1,6 +1,5 @@
 package typingsSlinky.antd.rateMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -10,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait RateProps extends js.Object {
   var allowClear: js.UndefOr[Boolean] = js.undefined
   var allowHalf: js.UndefOr[Boolean] = js.undefined
-  var character: js.UndefOr[TagMod[Any]] = js.undefined
+  var character: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var count: js.UndefOr[Double] = js.undefined
   var defaultValue: js.UndefOr[Double] = js.undefined
@@ -51,7 +50,7 @@ object RateProps {
     @scala.inline
     def setCharacterReactElement(value: ReactElement): Self = this.set("character", value.asInstanceOf[js.Any])
     @scala.inline
-    def setCharacter(value: TagMod[Any]): Self = this.set("character", value.asInstanceOf[js.Any])
+    def setCharacter(value: ReactElement): Self = this.set("character", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCharacter: Self = this.set("character", js.undefined)
     @scala.inline

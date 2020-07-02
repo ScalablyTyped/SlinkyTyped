@@ -1,6 +1,5 @@
 package typingsSlinky.antd.collapsePanelMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -10,9 +9,9 @@ import scala.scalajs.js.annotation._
 trait CollapsePanelProps extends js.Object {
   var className: js.UndefOr[String] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
-  var extra: js.UndefOr[TagMod[Any]] = js.undefined
+  var extra: js.UndefOr[ReactElement] = js.undefined
   var forceRender: js.UndefOr[Boolean] = js.undefined
-  var header: TagMod[Any]
+  var header: ReactElement
   var id: js.UndefOr[String] = js.undefined
   var key: String | Double
   var prefixCls: js.UndefOr[String] = js.undefined
@@ -50,7 +49,7 @@ object CollapsePanelProps {
     @scala.inline
     def setExtraReactElement(value: ReactElement): Self = this.set("extra", value.asInstanceOf[js.Any])
     @scala.inline
-    def setExtra(value: TagMod[Any]): Self = this.set("extra", value.asInstanceOf[js.Any])
+    def setExtra(value: ReactElement): Self = this.set("extra", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteExtra: Self = this.set("extra", js.undefined)
     @scala.inline
@@ -58,7 +57,7 @@ object CollapsePanelProps {
     @scala.inline
     def deleteForceRender: Self = this.set("forceRender", js.undefined)
     @scala.inline
-    def setHeader(value: TagMod[Any]): Self = this.set("header", value.asInstanceOf[js.Any])
+    def setHeader(value: ReactElement): Self = this.set("header", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHeader: Self = this.set("header", js.undefined)
     @scala.inline

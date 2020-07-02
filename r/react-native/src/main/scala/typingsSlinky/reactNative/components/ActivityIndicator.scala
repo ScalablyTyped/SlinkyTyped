@@ -77,6 +77,8 @@ object ActivityIndicator {
     @scala.inline
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
+    def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
+    @scala.inline
     def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
     @scala.inline
     def hidesWhenStopped(value: Boolean): this.type = set("hidesWhenStopped", value.asInstanceOf[js.Any])

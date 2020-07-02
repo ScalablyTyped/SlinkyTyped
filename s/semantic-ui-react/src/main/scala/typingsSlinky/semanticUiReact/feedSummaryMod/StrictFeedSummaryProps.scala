@@ -1,6 +1,5 @@
 package typingsSlinky.semanticUiReact.feedSummaryMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.react.mod.ReactType
@@ -16,7 +15,7 @@ trait StrictFeedSummaryProps extends js.Object {
   /** An element type to render as (string or function). */
   var as: js.UndefOr[js.Any] = js.undefined
   /** Primary content. */
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   /** Additional classes. */
   var className: js.UndefOr[String] = js.undefined
   /** Shorthand for primary content. */
@@ -51,7 +50,7 @@ object StrictFeedSummaryProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -68,7 +67,7 @@ object StrictFeedSummaryProps {
     def setDateReactElement(value: ReactElement): Self = this.set("date", value.asInstanceOf[js.Any])
     @scala.inline
     def setDateFunction3(
-      value: (/* component */ ReactType[FeedDateProps], FeedDateProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[FeedDateProps], FeedDateProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("date", js.Any.fromFunction3(value))
     @scala.inline
     def setDate(value: SemanticShorthandItem[FeedDateProps]): Self = this.set("date", value.asInstanceOf[js.Any])
@@ -78,7 +77,7 @@ object StrictFeedSummaryProps {
     def setUserReactElement(value: ReactElement): Self = this.set("user", value.asInstanceOf[js.Any])
     @scala.inline
     def setUserFunction3(
-      value: (/* component */ ReactType[FeedUserProps], FeedUserProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[FeedUserProps], FeedUserProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("user", js.Any.fromFunction3(value))
     @scala.inline
     def setUser(value: SemanticShorthandItem[FeedUserProps]): Self = this.set("user", value.asInstanceOf[js.Any])

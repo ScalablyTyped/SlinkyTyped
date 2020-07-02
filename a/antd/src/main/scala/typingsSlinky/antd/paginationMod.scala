@@ -1,6 +1,7 @@
 package typingsSlinky.antd
 
-import typingsSlinky.antd.paginationPaginationMod.Pagination
+import slinky.core.ReactComponentClass
+import typingsSlinky.antd.paginationPaginationMod.PaginationProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,8 +9,6 @@ import scala.scalajs.js.annotation._
 @JSImport("antd/lib/pagination", JSImport.Namespace)
 @js.native
 object paginationMod extends js.Object {
-  @js.native
-  class default () extends Pagination
-  
+  val default: ReactComponentClass[PaginationProps] = js.native
 }
 

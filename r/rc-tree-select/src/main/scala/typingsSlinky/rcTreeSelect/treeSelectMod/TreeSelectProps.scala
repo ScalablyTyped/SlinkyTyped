@@ -1,6 +1,5 @@
 package typingsSlinky.rcTreeSelect.treeSelectMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcTreeSelect.interfaceMod.ChangeEventExtra
 import typingsSlinky.rcTreeSelect.interfaceMod.DataNode
@@ -16,7 +15,7 @@ import scala.scalajs.js.annotation._
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
 - Dropped {[ P in std.Exclude<keyof / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SelectProps<Array<DataNode>, ValueType> * / any, 'onChange' | 'mode' | 'menuItemSelectedIcon' | 'dropdownRender' | 'dropdownAlign' | 'backfill' | 'getInputElement' | 'optionLabelProp' | 'tokenSeparators' | 'filterOption'> ]: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SelectProps<Array<DataNode>, ValueType> * / any[P]} */ trait TreeSelectProps[ValueType] extends js.Object {
   var autoClearSearchValue: js.UndefOr[Boolean] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var defaultOpen: js.UndefOr[Boolean] = js.undefined
   var defaultValue: js.UndefOr[ValueType] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
@@ -28,13 +27,13 @@ import scala.scalajs.js.annotation._
   var inputValue: js.UndefOr[String] = js.undefined
   var loadData: js.UndefOr[js.Function1[/* dataNode */ LegacyDataNode, js.Promise[_]]] = js.undefined
   var maxTagCount: js.UndefOr[Double] = js.undefined
-  var maxTagPlaceholder: js.UndefOr[js.Function1[/* omittedValues */ js.Array[LabelValueType], TagMod[Any]]] = js.undefined
+  var maxTagPlaceholder: js.UndefOr[js.Function1[/* omittedValues */ js.Array[LabelValueType], ReactElement]] = js.undefined
   var maxTagTextLength: js.UndefOr[Double] = js.undefined
   var multiple: js.UndefOr[Boolean] = js.undefined
   var onChange: js.UndefOr[
     js.Function3[
       /* value */ ValueType, 
-      /* labelList */ js.Array[TagMod[Any]], 
+      /* labelList */ js.Array[ReactElement], 
       /* extra */ ChangeEventExtra, 
       Unit
     ]
@@ -43,9 +42,9 @@ import scala.scalajs.js.annotation._
   var onTreeExpand: js.UndefOr[js.Function1[/* expandedKeys */ js.Array[Key], Unit]] = js.undefined
   var onTreeLoad: js.UndefOr[js.Function1[/* loadedKeys */ js.Array[Key], Unit]] = js.undefined
   var open: js.UndefOr[Boolean] = js.undefined
-  var placeholder: js.UndefOr[TagMod[Any]] = js.undefined
+  var placeholder: js.UndefOr[ReactElement] = js.undefined
   /** `searchPlaceholder` has been removed since search box has been merged into input box */
-  var searchPlaceholder: js.UndefOr[TagMod[Any]] = js.undefined
+  var searchPlaceholder: js.UndefOr[ReactElement] = js.undefined
   var searchValue: js.UndefOr[String] = js.undefined
   var showArrow: js.UndefOr[Boolean] = js.undefined
   var showCheckedStrategy: js.UndefOr[CheckedStrategy] = js.undefined
@@ -55,7 +54,7 @@ import scala.scalajs.js.annotation._
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconType */ js.Any
   ] = js.undefined
   var treeCheckStrictly: js.UndefOr[Boolean] = js.undefined
-  var treeCheckable: js.UndefOr[Boolean | TagMod[Any]] = js.undefined
+  var treeCheckable: js.UndefOr[Boolean | ReactElement] = js.undefined
   var treeData: js.UndefOr[js.Array[DataNode]] = js.undefined
   var treeDataSimpleMode: js.UndefOr[Boolean | SimpleModeConfig] = js.undefined
   var treeDefaultExpandAll: js.UndefOr[Boolean] = js.undefined
@@ -96,7 +95,7 @@ object TreeSelectProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -134,7 +133,7 @@ object TreeSelectProps {
     @scala.inline
     def deleteMaxTagCount: Self = this.set("maxTagCount", js.undefined)
     @scala.inline
-    def setMaxTagPlaceholder(value: /* omittedValues */ js.Array[LabelValueType] => TagMod[Any]): Self = this.set("maxTagPlaceholder", js.Any.fromFunction1(value))
+    def setMaxTagPlaceholder(value: /* omittedValues */ js.Array[LabelValueType] => ReactElement): Self = this.set("maxTagPlaceholder", js.Any.fromFunction1(value))
     @scala.inline
     def deleteMaxTagPlaceholder: Self = this.set("maxTagPlaceholder", js.undefined)
     @scala.inline
@@ -147,7 +146,7 @@ object TreeSelectProps {
     def deleteMultiple: Self = this.set("multiple", js.undefined)
     @scala.inline
     def setOnChange(
-      value: (/* value */ ValueType, /* labelList */ js.Array[TagMod[Any]], /* extra */ ChangeEventExtra) => Unit
+      value: (/* value */ ValueType, /* labelList */ js.Array[ReactElement], /* extra */ ChangeEventExtra) => Unit
     ): Self = this.set("onChange", js.Any.fromFunction3(value))
     @scala.inline
     def deleteOnChange: Self = this.set("onChange", js.undefined)
@@ -170,13 +169,13 @@ object TreeSelectProps {
     @scala.inline
     def setPlaceholderReactElement(value: ReactElement): Self = this.set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
-    def setPlaceholder(value: TagMod[Any]): Self = this.set("placeholder", value.asInstanceOf[js.Any])
+    def setPlaceholder(value: ReactElement): Self = this.set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePlaceholder: Self = this.set("placeholder", js.undefined)
     @scala.inline
     def setSearchPlaceholderReactElement(value: ReactElement): Self = this.set("searchPlaceholder", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSearchPlaceholder(value: TagMod[Any]): Self = this.set("searchPlaceholder", value.asInstanceOf[js.Any])
+    def setSearchPlaceholder(value: ReactElement): Self = this.set("searchPlaceholder", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSearchPlaceholder: Self = this.set("searchPlaceholder", js.undefined)
     @scala.inline
@@ -212,7 +211,7 @@ object TreeSelectProps {
     @scala.inline
     def setTreeCheckableReactElement(value: ReactElement): Self = this.set("treeCheckable", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTreeCheckable(value: Boolean | TagMod[Any]): Self = this.set("treeCheckable", value.asInstanceOf[js.Any])
+    def setTreeCheckable(value: Boolean | ReactElement): Self = this.set("treeCheckable", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTreeCheckable: Self = this.set("treeCheckable", js.undefined)
     @scala.inline

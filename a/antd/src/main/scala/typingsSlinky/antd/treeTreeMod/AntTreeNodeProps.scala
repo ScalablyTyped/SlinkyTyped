@@ -1,7 +1,6 @@
 package typingsSlinky.antd.treeTreeMod
 
 import org.scalablytyped.runtime.StringDictionary
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,13 +10,15 @@ trait AntTreeNodeProps
   extends /* customProp */ StringDictionary[js.Any] {
   var checkable: js.UndefOr[Boolean] = js.undefined
   var checked: js.UndefOr[Boolean] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var disableCheckbox: js.UndefOr[Boolean] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
   var eventKey: js.UndefOr[String] = js.undefined
   var expanded: js.UndefOr[Boolean] = js.undefined
-  var icon: js.UndefOr[(js.Function1[/* treeNode */ AntdTreeNodeAttribute, TagMod[Any]]) | TagMod[Any]] = js.undefined
+  var icon: js.UndefOr[
+    (js.Function1[/* treeNode */ AntdTreeNodeAttribute, ReactElement]) | ReactElement
+  ] = js.undefined
   var isLeaf: js.UndefOr[Boolean] = js.undefined
   var key: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ js.Any
@@ -25,7 +26,7 @@ trait AntTreeNodeProps
   var loading: js.UndefOr[Boolean] = js.undefined
   var selectable: js.UndefOr[Boolean] = js.undefined
   var selected: js.UndefOr[Boolean] = js.undefined
-  var title: js.UndefOr[String | TagMod[Any]] = js.undefined
+  var title: js.UndefOr[String | ReactElement] = js.undefined
 }
 
 object AntTreeNodeProps {
@@ -56,7 +57,7 @@ object AntTreeNodeProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -82,9 +83,9 @@ object AntTreeNodeProps {
     @scala.inline
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setIconFunction1(value: /* treeNode */ AntdTreeNodeAttribute => TagMod[Any]): Self = this.set("icon", js.Any.fromFunction1(value))
+    def setIconFunction1(value: /* treeNode */ AntdTreeNodeAttribute => ReactElement): Self = this.set("icon", js.Any.fromFunction1(value))
     @scala.inline
-    def setIcon(value: (js.Function1[/* treeNode */ AntdTreeNodeAttribute, TagMod[Any]]) | TagMod[Any]): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: (js.Function1[/* treeNode */ AntdTreeNodeAttribute, ReactElement]) | ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
     @scala.inline
@@ -112,7 +113,7 @@ object AntTreeNodeProps {
     @scala.inline
     def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTitle(value: String | TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: String | ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
   }

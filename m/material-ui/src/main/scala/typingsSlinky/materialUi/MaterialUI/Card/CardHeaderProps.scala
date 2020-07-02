@@ -1,6 +1,5 @@
 package typingsSlinky.materialUi.MaterialUI.Card
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -9,19 +8,19 @@ import scala.scalajs.js.annotation._
 
 trait CardHeaderProps extends js.Object {
   var actAsExpander: js.UndefOr[Boolean] = js.undefined
-  var avatar: js.UndefOr[TagMod[Any]] = js.undefined
+  var avatar: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
-  var closeIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var closeIcon: js.UndefOr[ReactElement] = js.undefined
   var expandable: js.UndefOr[Boolean] = js.undefined
   var iconStyle: js.UndefOr[CSSProperties] = js.undefined
-  var openIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var openIcon: js.UndefOr[ReactElement] = js.undefined
   var showExpandableButton: js.UndefOr[Boolean] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
-  var subtitle: js.UndefOr[TagMod[Any]] = js.undefined
+  var subtitle: js.UndefOr[ReactElement] = js.undefined
   var subtitleColor: js.UndefOr[String] = js.undefined
   var subtitleStyle: js.UndefOr[CSSProperties] = js.undefined
   var textStyle: js.UndefOr[CSSProperties] = js.undefined
-  var title: js.UndefOr[TagMod[Any]] = js.undefined
+  var title: js.UndefOr[ReactElement] = js.undefined
   var titleColor: js.UndefOr[String] = js.undefined
   var titleStyle: js.UndefOr[CSSProperties] = js.undefined
 }
@@ -50,7 +49,7 @@ object CardHeaderProps {
     @scala.inline
     def setAvatarReactElement(value: ReactElement): Self = this.set("avatar", value.asInstanceOf[js.Any])
     @scala.inline
-    def setAvatar(value: TagMod[Any]): Self = this.set("avatar", value.asInstanceOf[js.Any])
+    def setAvatar(value: ReactElement): Self = this.set("avatar", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAvatar: Self = this.set("avatar", js.undefined)
     @scala.inline
@@ -60,7 +59,7 @@ object CardHeaderProps {
     @scala.inline
     def setCloseIconReactElement(value: ReactElement): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setCloseIcon(value: TagMod[Any]): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
+    def setCloseIcon(value: ReactElement): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCloseIcon: Self = this.set("closeIcon", js.undefined)
     @scala.inline
@@ -74,7 +73,7 @@ object CardHeaderProps {
     @scala.inline
     def setOpenIconReactElement(value: ReactElement): Self = this.set("openIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setOpenIcon(value: TagMod[Any]): Self = this.set("openIcon", value.asInstanceOf[js.Any])
+    def setOpenIcon(value: ReactElement): Self = this.set("openIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOpenIcon: Self = this.set("openIcon", js.undefined)
     @scala.inline
@@ -88,7 +87,7 @@ object CardHeaderProps {
     @scala.inline
     def setSubtitleReactElement(value: ReactElement): Self = this.set("subtitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSubtitle(value: TagMod[Any]): Self = this.set("subtitle", value.asInstanceOf[js.Any])
+    def setSubtitle(value: ReactElement): Self = this.set("subtitle", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSubtitle: Self = this.set("subtitle", js.undefined)
     @scala.inline
@@ -106,7 +105,7 @@ object CardHeaderProps {
     @scala.inline
     def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
     @scala.inline

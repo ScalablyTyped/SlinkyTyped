@@ -23,7 +23,7 @@ package object mod {
   type ClipboardEventHandler[T] = typingsSlinky.react.mod.EventHandler[slinky.web.SyntheticClipboardEvent[T]]
   type ComponentFactory[P, T /* <: slinky.core.ReactComponentClass[P] */] = js.Function2[
     /* props */ js.UndefOr[typingsSlinky.react.mod.ClassAttributes[T] with P], 
-    /* repeated */ slinky.core.TagMod[scala.Any], 
+    /* repeated */ slinky.core.facade.ReactElement, 
     typingsSlinky.react.mod.CElement[P, T]
   ]
   /**
@@ -40,7 +40,7 @@ package object mod {
   type ContextType[C /* <: typingsSlinky.react.mod.Context[_] */] = js.Any
   type DOMFactory[P /* <: typingsSlinky.react.mod.DOMAttributes[T] */, T /* <: org.scalajs.dom.raw.Element */] = js.Function2[
     /* props */ js.UndefOr[(typingsSlinky.react.mod.ClassAttributes[T] with P) | scala.Null], 
-    /* repeated */ slinky.core.TagMod[scala.Any], 
+    /* repeated */ slinky.core.facade.ReactElement, 
     slinky.core.facade.ReactElement
   ]
   // Any prop that has a default prop becomes optional, but its type is unchanged
@@ -90,7 +90,7 @@ package object mod {
     * @todo In Flow, this works a little different with forwarded refs and the `AbstractComponent` that
     *       `React.forwardRef()` returns.
     */
-  type ElementRef[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 178 */ js.Any */] = js.UndefOr[js.Any | typingsSlinky.std.InstanceType[C]]
+  type ElementRef[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 178 */ js.Any */] = js.Any
   //
   // React Elements
   // ----------------------------------------------------------------------
@@ -106,7 +106,7 @@ package object mod {
   // ----------------------------------------------------------------------
   type Factory[P] = js.Function2[
     /* props */ js.UndefOr[typingsSlinky.react.mod.Attributes with P], 
-    /* repeated */ slinky.core.TagMod[scala.Any], 
+    /* repeated */ slinky.core.facade.ReactElement, 
     slinky.core.facade.ReactElement
   ]
   type FocusEventHandler[T] = typingsSlinky.react.mod.EventHandler[slinky.web.SyntheticFocusEvent[T]]
@@ -117,7 +117,7 @@ package object mod {
   ]
   type FunctionComponentFactory[P] = js.Function2[
     /* props */ js.UndefOr[typingsSlinky.react.mod.Attributes with P], 
-    /* repeated */ slinky.core.TagMod[scala.Any], 
+    /* repeated */ slinky.core.facade.ReactElement, 
     typingsSlinky.react.mod.FunctionComponentElement[P]
   ]
   type GetDerivedStateFromError[P, S] = /**

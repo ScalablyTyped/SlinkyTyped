@@ -54,6 +54,7 @@ class FormStore protected () extends js.Object {
   var store: js.Any = js.native
   var submit: js.Any = js.native
   var subscribable: js.Any = js.native
+  var timeoutId: js.Any = js.native
   var triggerOnFieldsChange: js.Any = js.native
   var updateValue: js.Any = js.native
   var useSubscribe: js.Any = js.native

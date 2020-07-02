@@ -1,6 +1,5 @@
 package typingsSlinky.semanticUiReact.feedEventMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.react.mod.ReactType
@@ -19,7 +18,7 @@ trait StrictFeedEventProps extends js.Object {
   /** An element type to render as (string or function). */
   var as: js.UndefOr[js.Any] = js.undefined
   /** Primary content. */
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   /** Additional classes. */
   var className: js.UndefOr[String] = js.undefined
   /** Shorthand for FeedContent. */
@@ -64,7 +63,7 @@ object StrictFeedEventProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -75,7 +74,7 @@ object StrictFeedEventProps {
     def setContentReactElement(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
     @scala.inline
     def setContentFunction3(
-      value: (/* component */ ReactType[FeedContentProps], FeedContentProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[FeedContentProps], FeedContentProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("content", js.Any.fromFunction3(value))
     @scala.inline
     def setContent(value: SemanticShorthandItem[FeedContentProps]): Self = this.set("content", value.asInstanceOf[js.Any])
@@ -85,7 +84,7 @@ object StrictFeedEventProps {
     def setDateReactElement(value: ReactElement): Self = this.set("date", value.asInstanceOf[js.Any])
     @scala.inline
     def setDateFunction3(
-      value: (/* component */ ReactType[FeedDateProps], FeedDateProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[FeedDateProps], FeedDateProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("date", js.Any.fromFunction3(value))
     @scala.inline
     def setDate(value: SemanticShorthandItem[FeedDateProps]): Self = this.set("date", value.asInstanceOf[js.Any])
@@ -95,7 +94,7 @@ object StrictFeedEventProps {
     def setExtraImagesReactElement(value: ReactElement): Self = this.set("extraImages", value.asInstanceOf[js.Any])
     @scala.inline
     def setExtraImagesFunction3(
-      value: (/* component */ ReactType[FeedExtraProps], FeedExtraProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[FeedExtraProps], FeedExtraProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("extraImages", js.Any.fromFunction3(value))
     @scala.inline
     def setExtraImages(value: SemanticShorthandItem[FeedExtraProps]): Self = this.set("extraImages", value.asInstanceOf[js.Any])
@@ -105,7 +104,7 @@ object StrictFeedEventProps {
     def setExtraTextReactElement(value: ReactElement): Self = this.set("extraText", value.asInstanceOf[js.Any])
     @scala.inline
     def setExtraTextFunction3(
-      value: (/* component */ ReactType[FeedExtraProps], FeedExtraProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[FeedExtraProps], FeedExtraProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("extraText", js.Any.fromFunction3(value))
     @scala.inline
     def setExtraText(value: SemanticShorthandItem[FeedExtraProps]): Self = this.set("extraText", value.asInstanceOf[js.Any])
@@ -115,7 +114,7 @@ object StrictFeedEventProps {
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def setIconFunction3(
-      value: (/* component */ ReactType[FeedLabelProps], FeedLabelProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[FeedLabelProps], FeedLabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("icon", js.Any.fromFunction3(value))
     @scala.inline
     def setIcon(value: SemanticShorthandItem[FeedLabelProps]): Self = this.set("icon", value.asInstanceOf[js.Any])
@@ -125,7 +124,7 @@ object StrictFeedEventProps {
     def setImageReactElement(value: ReactElement): Self = this.set("image", value.asInstanceOf[js.Any])
     @scala.inline
     def setImageFunction3(
-      value: (/* component */ ReactType[FeedLabelProps], FeedLabelProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[FeedLabelProps], FeedLabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("image", js.Any.fromFunction3(value))
     @scala.inline
     def setImage(value: SemanticShorthandItem[FeedLabelProps]): Self = this.set("image", value.asInstanceOf[js.Any])
@@ -135,7 +134,7 @@ object StrictFeedEventProps {
     def setMetaReactElement(value: ReactElement): Self = this.set("meta", value.asInstanceOf[js.Any])
     @scala.inline
     def setMetaFunction3(
-      value: (/* component */ ReactType[FeedMetaProps], FeedMetaProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[FeedMetaProps], FeedMetaProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("meta", js.Any.fromFunction3(value))
     @scala.inline
     def setMeta(value: SemanticShorthandItem[FeedMetaProps]): Self = this.set("meta", value.asInstanceOf[js.Any])
@@ -145,7 +144,7 @@ object StrictFeedEventProps {
     def setSummaryReactElement(value: ReactElement): Self = this.set("summary", value.asInstanceOf[js.Any])
     @scala.inline
     def setSummaryFunction3(
-      value: (/* component */ ReactType[FeedSummaryProps], FeedSummaryProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[FeedSummaryProps], FeedSummaryProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("summary", js.Any.fromFunction3(value))
     @scala.inline
     def setSummary(value: SemanticShorthandItem[FeedSummaryProps]): Self = this.set("summary", value.asInstanceOf[js.Any])

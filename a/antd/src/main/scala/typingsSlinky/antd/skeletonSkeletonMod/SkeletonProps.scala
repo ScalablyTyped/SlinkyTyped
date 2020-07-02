@@ -1,6 +1,5 @@
 package typingsSlinky.antd.skeletonSkeletonMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.paragraphMod.SkeletonParagraphProps
 import typingsSlinky.antd.titleMod.SkeletonTitleProps
@@ -11,11 +10,12 @@ import scala.scalajs.js.annotation._
 trait SkeletonProps extends js.Object {
   var active: js.UndefOr[Boolean] = js.undefined
   var avatar: js.UndefOr[SkeletonAvatarProps | Boolean] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var loading: js.UndefOr[Boolean] = js.undefined
   var paragraph: js.UndefOr[SkeletonParagraphProps | Boolean] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
+  var round: js.UndefOr[Boolean] = js.undefined
   var title: js.UndefOr[SkeletonTitleProps | Boolean] = js.undefined
 }
 
@@ -47,7 +47,7 @@ object SkeletonProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -66,6 +66,10 @@ object SkeletonProps {
     def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    @scala.inline
+    def setRound(value: Boolean): Self = this.set("round", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRound: Self = this.set("round", js.undefined)
     @scala.inline
     def setTitle(value: SkeletonTitleProps | Boolean): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline

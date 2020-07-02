@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -154,7 +153,7 @@ trait PartialExpansionPanelSumm extends js.Object {
   var autoSave: js.UndefOr[String] = js.native
   var buttonRef: js.UndefOr[Ref[_] | ReactRef[_]] = js.native
   var centerRipple: js.UndefOr[Boolean] = js.native
-  var children: js.UndefOr[TagMod[Any]] = js.native
+  var children: js.UndefOr[ReactElement] = js.native
   var className: js.UndefOr[String] = js.native
   var classes: js.UndefOr[PartialClassNameMapExpansContent] = js.native
   var color: js.UndefOr[String] = js.native
@@ -171,7 +170,7 @@ trait PartialExpansionPanelSumm extends js.Object {
   var disabled: js.UndefOr[Boolean] = js.native
   var download: js.UndefOr[js.Any] = js.native
   var draggable: js.UndefOr[Booleanish] = js.native
-  var expandIcon: js.UndefOr[TagMod[Any]] = js.native
+  var expandIcon: js.UndefOr[ReactElement] = js.native
   var expanded: js.UndefOr[Boolean] = js.native
   var focusRipple: js.UndefOr[Boolean] = js.native
   var focusVisibleClassName: js.UndefOr[String] = js.native
@@ -566,7 +565,7 @@ object PartialExpansionPanelSumm {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -640,7 +639,7 @@ object PartialExpansionPanelSumm {
     @scala.inline
     def setExpandIconReactElement(value: ReactElement): Self = this.set("expandIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setExpandIcon(value: TagMod[Any]): Self = this.set("expandIcon", value.asInstanceOf[js.Any])
+    def setExpandIcon(value: ReactElement): Self = this.set("expandIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteExpandIcon: Self = this.set("expandIcon", js.undefined)
     @scala.inline

@@ -1,7 +1,6 @@
 package typingsSlinky.antd.inputGroupMod
 
 import org.scalajs.dom.raw.HTMLSpanElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
@@ -15,7 +14,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait GroupProps extends js.Object {
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var compact: js.UndefOr[Boolean] = js.undefined
   var onBlur: js.UndefOr[FocusEventHandler[HTMLSpanElement]] = js.undefined
@@ -47,7 +46,7 @@ object GroupProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline

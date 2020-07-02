@@ -1,12 +1,11 @@
 package typingsSlinky.antd.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.collapseCollapseMod.CollapseProps
 import typingsSlinky.antd.collapseCollapseMod.ExpandIconPosition
 import typingsSlinky.antd.collapseCollapseMod.PanelProps
-import typingsSlinky.antd.collapseMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,7 +19,7 @@ object Collapse {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def accordion(value: Boolean): this.type = set("accordion", value.asInstanceOf[js.Any])
     @scala.inline
@@ -34,7 +33,7 @@ object Collapse {
     @scala.inline
     def destroyInactivePanel(value: Boolean): this.type = set("destroyInactivePanel", value.asInstanceOf[js.Any])
     @scala.inline
-    def expandIcon(value: /* panelProps */ PanelProps => TagMod[Any]): this.type = set("expandIcon", js.Any.fromFunction1(value))
+    def expandIcon(value: /* panelProps */ PanelProps => ReactElement): this.type = set("expandIcon", js.Any.fromFunction1(value))
     @scala.inline
     def expandIconPosition(value: ExpandIconPosition): this.type = set("expandIconPosition", value.asInstanceOf[js.Any])
     @scala.inline

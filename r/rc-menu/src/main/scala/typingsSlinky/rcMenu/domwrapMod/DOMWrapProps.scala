@@ -1,6 +1,5 @@
 package typingsSlinky.rcMenu.domwrapMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcMenu.interfaceMod.MenuMode
 import typingsSlinky.react.mod.CSSProperties
@@ -13,7 +12,7 @@ trait DOMWrapProps extends js.Object {
   var className: js.UndefOr[String] = js.undefined
   var level: js.UndefOr[Double] = js.undefined
   var mode: js.UndefOr[MenuMode] = js.undefined
-  var overflowedIndicator: js.UndefOr[TagMod[Any]] = js.undefined
+  var overflowedIndicator: js.UndefOr[ReactElement] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
   var tag: js.UndefOr[String] = js.undefined
@@ -57,7 +56,7 @@ object DOMWrapProps {
     @scala.inline
     def setOverflowedIndicatorReactElement(value: ReactElement): Self = this.set("overflowedIndicator", value.asInstanceOf[js.Any])
     @scala.inline
-    def setOverflowedIndicator(value: TagMod[Any]): Self = this.set("overflowedIndicator", value.asInstanceOf[js.Any])
+    def setOverflowedIndicator(value: ReactElement): Self = this.set("overflowedIndicator", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOverflowedIndicator: Self = this.set("overflowedIndicator", js.undefined)
     @scala.inline

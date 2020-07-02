@@ -7,7 +7,6 @@ import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -170,7 +169,7 @@ trait PartialTablePaginationPro extends js.Object {
   var autoCorrect: js.UndefOr[String] = js.native
   var autoSave: js.UndefOr[String] = js.native
   var backIconButtonProps: js.UndefOr[PartialIconButtonProps] = js.native
-  var children: js.UndefOr[TagMod[Any]] = js.native
+  var children: js.UndefOr[ReactElement] = js.native
   var className: js.UndefOr[String] = js.native
   var classes: js.UndefOr[PartialClassNameMapTableP] = js.native
   var colSpan: js.UndefOr[Double] = js.native
@@ -186,6 +185,7 @@ trait PartialTablePaginationPro extends js.Object {
   var dir: js.UndefOr[String] = js.native
   var draggable: js.UndefOr[Booleanish] = js.native
   var headers: js.UndefOr[String] = js.native
+  var height: js.UndefOr[Double | String] = js.native
   var hidden: js.UndefOr[Boolean] = js.native
   var id: js.UndefOr[String] = js.native
   var inlist: js.UndefOr[js.Any] = js.native
@@ -197,8 +197,8 @@ trait PartialTablePaginationPro extends js.Object {
   var itemRef: js.UndefOr[String] = js.native
   var itemScope: js.UndefOr[Boolean] = js.native
   var itemType: js.UndefOr[String] = js.native
-  var labelDisplayedRows: js.UndefOr[js.Function1[/* paginationInfo */ LabelDisplayedRowsArgs, TagMod[Any]]] = js.native
-  var labelRowsPerPage: js.UndefOr[TagMod[Any]] = js.native
+  var labelDisplayedRows: js.UndefOr[js.Function1[/* paginationInfo */ LabelDisplayedRowsArgs, ReactElement]] = js.native
+  var labelRowsPerPage: js.UndefOr[ReactElement] = js.native
   var lang: js.UndefOr[String] = js.native
   var nextIconButtonProps: js.UndefOr[PartialIconButtonProps] = js.native
   var numeric: js.UndefOr[Boolean] = js.native
@@ -313,6 +313,7 @@ trait PartialTablePaginationPro extends js.Object {
   var valign: js.UndefOr[top | middle | bottom | baseline] = js.native
   var variant: js.UndefOr[head | body | footer] = js.native
   var vocab: js.UndefOr[String] = js.native
+  var width: js.UndefOr[Double | String] = js.native
 }
 
 object PartialTablePaginationPro {
@@ -571,7 +572,7 @@ object PartialTablePaginationPro {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -639,6 +640,10 @@ object PartialTablePaginationPro {
     @scala.inline
     def deleteHeaders: Self = this.set("headers", js.undefined)
     @scala.inline
+    def setHeight(value: Double | String): Self = this.set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeight: Self = this.set("height", js.undefined)
+    @scala.inline
     def setHidden(value: Boolean): Self = this.set("hidden", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHidden: Self = this.set("hidden", js.undefined)
@@ -689,13 +694,13 @@ object PartialTablePaginationPro {
     @scala.inline
     def deleteItemType: Self = this.set("itemType", js.undefined)
     @scala.inline
-    def setLabelDisplayedRows(value: /* paginationInfo */ LabelDisplayedRowsArgs => TagMod[Any]): Self = this.set("labelDisplayedRows", js.Any.fromFunction1(value))
+    def setLabelDisplayedRows(value: /* paginationInfo */ LabelDisplayedRowsArgs => ReactElement): Self = this.set("labelDisplayedRows", js.Any.fromFunction1(value))
     @scala.inline
     def deleteLabelDisplayedRows: Self = this.set("labelDisplayedRows", js.undefined)
     @scala.inline
     def setLabelRowsPerPageReactElement(value: ReactElement): Self = this.set("labelRowsPerPage", value.asInstanceOf[js.Any])
     @scala.inline
-    def setLabelRowsPerPage(value: TagMod[Any]): Self = this.set("labelRowsPerPage", value.asInstanceOf[js.Any])
+    def setLabelRowsPerPage(value: ReactElement): Self = this.set("labelRowsPerPage", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLabelRowsPerPage: Self = this.set("labelRowsPerPage", js.undefined)
     @scala.inline
@@ -1146,6 +1151,10 @@ object PartialTablePaginationPro {
     def setVocab(value: String): Self = this.set("vocab", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteVocab: Self = this.set("vocab", js.undefined)
+    @scala.inline
+    def setWidth(value: Double | String): Self = this.set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWidth: Self = this.set("width", js.undefined)
   }
   
 }

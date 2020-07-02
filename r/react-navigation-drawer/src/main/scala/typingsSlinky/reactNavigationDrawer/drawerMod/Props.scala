@@ -1,7 +1,7 @@
 package typingsSlinky.reactNavigationDrawer.drawerMod
 
 import org.scalablytyped.runtime.Instantiable0
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeGestureHandler.mod.PanGestureHandler
@@ -51,8 +51,8 @@ object Props {
     onClose: () => Unit,
     onOpen: () => Unit,
     open: Boolean,
-    renderDrawerContent: /* props */ Progress => TagMod[Any],
-    renderSceneContent: /* props */ Progress => TagMod[Any],
+    renderDrawerContent: /* props */ Progress => ReactElement,
+    renderSceneContent: /* props */ Progress => ReactElement,
     statusBarAnimation: slide | none | fade,
     swipeEdgeWidth: Double,
     swipeVelocityThreshold: Double
@@ -88,9 +88,9 @@ object Props {
     @scala.inline
     def setOpen(value: Boolean): Self = this.set("open", value.asInstanceOf[js.Any])
     @scala.inline
-    def setRenderDrawerContent(value: /* props */ Progress => TagMod[Any]): Self = this.set("renderDrawerContent", js.Any.fromFunction1(value))
+    def setRenderDrawerContent(value: /* props */ Progress => ReactElement): Self = this.set("renderDrawerContent", js.Any.fromFunction1(value))
     @scala.inline
-    def setRenderSceneContent(value: /* props */ Progress => TagMod[Any]): Self = this.set("renderSceneContent", js.Any.fromFunction1(value))
+    def setRenderSceneContent(value: /* props */ Progress => ReactElement): Self = this.set("renderSceneContent", js.Any.fromFunction1(value))
     @scala.inline
     def setStatusBarAnimation(value: slide | none | fade): Self = this.set("statusBarAnimation", value.asInstanceOf[js.Any])
     @scala.inline

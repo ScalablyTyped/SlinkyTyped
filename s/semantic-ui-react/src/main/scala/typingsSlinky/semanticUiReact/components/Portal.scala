@@ -1,7 +1,6 @@
 package typingsSlinky.semanticUiReact.components
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
@@ -63,7 +62,7 @@ object Portal {
     @scala.inline
     def triggerReactElement(value: ReactElement): this.type = set("trigger", value.asInstanceOf[js.Any])
     @scala.inline
-    def trigger(value: TagMod[Any]): this.type = set("trigger", value.asInstanceOf[js.Any])
+    def trigger(value: ReactElement): this.type = set("trigger", value.asInstanceOf[js.Any])
     @scala.inline
     def triggerRefRefObject(value: ReactRef[_]): this.type = set("triggerRef", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,14 +1,13 @@
 package typingsSlinky.antd.errorBoundaryMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait ErrorBoundaryProps extends js.Object {
-  var description: js.UndefOr[TagMod[Any]] = js.undefined
-  var message: js.UndefOr[TagMod[Any]] = js.undefined
+  var description: js.UndefOr[ReactElement] = js.undefined
+  var message: js.UndefOr[ReactElement] = js.undefined
 }
 
 object ErrorBoundaryProps {
@@ -31,13 +30,13 @@ object ErrorBoundaryProps {
     @scala.inline
     def setDescriptionReactElement(value: ReactElement): Self = this.set("description", value.asInstanceOf[js.Any])
     @scala.inline
-    def setDescription(value: TagMod[Any]): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setDescription(value: ReactElement): Self = this.set("description", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDescription: Self = this.set("description", js.undefined)
     @scala.inline
     def setMessageReactElement(value: ReactElement): Self = this.set("message", value.asInstanceOf[js.Any])
     @scala.inline
-    def setMessage(value: TagMod[Any]): Self = this.set("message", value.asInstanceOf[js.Any])
+    def setMessage(value: ReactElement): Self = this.set("message", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMessage: Self = this.set("message", js.undefined)
   }

@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.materialUiCore.anon.Placement
 import typingsSlinky.popperJs.mod.ReferenceObject
@@ -20,7 +19,7 @@ trait PopperProps extends HTMLAttributes[HTMLDivElement] {
     Null | HTMLElement | ReferenceObject | (js.Function1[/* element */ HTMLElement, HTMLElement])
   ] = js.native
   @JSName("children")
-  var children_PopperProps: TagMod[Any] | (js.Function1[/* props */ Placement, TagMod[Any]]) = js.native
+  var children_PopperProps: ReactElement | (js.Function1[/* props */ Placement, ReactElement]) = js.native
   var container: js.UndefOr[ReactInstance | js.Function0[ReactInstance] | Null] = js.native
   var disablePortal: js.UndefOr[Boolean] = js.native
   var keepMounted: js.UndefOr[Boolean] = js.native
@@ -63,9 +62,9 @@ object PopperProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildrenFunction1(value: /* props */ Placement => TagMod[Any]): Self = this.set("children", js.Any.fromFunction1(value))
+    def setChildrenFunction1(value: /* props */ Placement => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
     @scala.inline
-    def setChildren(value: TagMod[Any] | (js.Function1[/* props */ Placement, TagMod[Any]])): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement | (js.Function1[/* props */ Placement, ReactElement])): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline

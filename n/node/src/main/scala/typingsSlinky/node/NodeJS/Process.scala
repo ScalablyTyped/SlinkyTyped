@@ -3,6 +3,7 @@ package typingsSlinky.node.NodeJS
 import typingsSlinky.node.anon.Debug
 import typingsSlinky.node.anon.SwallowErrors
 import typingsSlinky.node.anon.Targetdefaults
+import typingsSlinky.node.nodeBooleans.`true`
 import typingsSlinky.node.nodeStrings.beforeExit
 import typingsSlinky.node.nodeStrings.disconnect
 import typingsSlinky.node.nodeStrings.exit
@@ -149,9 +150,9 @@ trait Process extends EventEmitter {
   def hasUncaughtExceptionCaptureCallback(): Boolean = js.native
   def hrtime(): js.Tuple2[Double, Double] = js.native
   def hrtime(time: js.Tuple2[Double, Double]): js.Tuple2[Double, Double] = js.native
-  def kill(pid: Double): Unit = js.native
-  def kill(pid: Double, signal: String): Unit = js.native
-  def kill(pid: Double, signal: Double): Unit = js.native
+  def kill(pid: Double): `true` = js.native
+  def kill(pid: Double, signal: String): `true` = js.native
+  def kill(pid: Double, signal: Double): `true` = js.native
   def listeners(event: Signals): js.Array[SignalsListener] = js.native
   @JSName("listeners")
   def listeners_beforeExit(event: beforeExit): js.Array[BeforeExitListener] = js.native

@@ -1,6 +1,5 @@
 package typingsSlinky.materialUi.MaterialUI
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import typingsSlinky.react.mod.HTMLAttributes
@@ -13,7 +12,7 @@ import scala.scalajs.js.annotation._
   extends HTMLAttributes[js.Object] {
   var centerRipple: js.UndefOr[Boolean] = js.undefined
   // container element, <button/>, or <span/>(if disabled link) is the element that get the 'other' properties
-  var containerElement: js.UndefOr[TagMod[Any] | String] = js.undefined
+  var containerElement: js.UndefOr[ReactElement | String] = js.undefined
   var disableFocusRipple: js.UndefOr[Boolean] = js.undefined
   var disableKeyboardFocus: js.UndefOr[Boolean] = js.undefined
   var disableTouchRipple: js.UndefOr[Boolean] = js.undefined
@@ -55,7 +54,7 @@ object EnhancedButtonProps {
     @scala.inline
     def setContainerElementReactElement(value: ReactElement): Self = this.set("containerElement", value.asInstanceOf[js.Any])
     @scala.inline
-    def setContainerElement(value: TagMod[Any] | String): Self = this.set("containerElement", value.asInstanceOf[js.Any])
+    def setContainerElement(value: ReactElement | String): Self = this.set("containerElement", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteContainerElement: Self = this.set("containerElement", js.undefined)
     @scala.inline

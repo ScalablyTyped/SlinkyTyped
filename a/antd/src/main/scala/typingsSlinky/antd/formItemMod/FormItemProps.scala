@@ -1,11 +1,11 @@
 package typingsSlinky.antd.formItemMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.formItemInputMod.FormItemInputProps
 import typingsSlinky.antd.formItemLabelMod.FormItemLabelProps
 import typingsSlinky.rcFieldForm.interfaceMod.FormInstance
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait FormItemProps
   var children: ChildrenType
   var className: js.UndefOr[String] = js.undefined
   /** Auto passed by List render props. User should not use this. */
-  var fieldKey: js.UndefOr[Double] = js.undefined
+  var fieldKey: js.UndefOr[Key | js.Array[Key]] = js.undefined
   var hasFeedback: js.UndefOr[Boolean] = js.undefined
   var id: js.UndefOr[String] = js.undefined
   var noStyle: js.UndefOr[Boolean] = js.undefined
@@ -47,7 +47,7 @@ object FormItemProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildrenFunction1(value: /* form */ FormInstance => TagMod[Any]): Self = this.set("children", js.Any.fromFunction1(value))
+    def setChildrenFunction1(value: /* form */ FormInstance => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
     @scala.inline
     def setChildren(value: ChildrenType): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
@@ -57,7 +57,7 @@ object FormItemProps {
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
     @scala.inline
-    def setFieldKey(value: Double): Self = this.set("fieldKey", value.asInstanceOf[js.Any])
+    def setFieldKey(value: Key | js.Array[Key]): Self = this.set("fieldKey", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFieldKey: Self = this.set("fieldKey", js.undefined)
     @scala.inline

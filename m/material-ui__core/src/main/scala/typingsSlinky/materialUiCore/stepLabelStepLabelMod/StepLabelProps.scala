@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -152,7 +151,7 @@ trait StepLabelProps extends js.Object {
   var autoCapitalize: js.UndefOr[String] = js.native
   var autoCorrect: js.UndefOr[String] = js.native
   var autoSave: js.UndefOr[String] = js.native
-  var children: TagMod[Any] = js.native
+  var children: ReactElement = js.native
   var className: js.UndefOr[String] = js.native
   var classes: js.UndefOr[PartialClassNameMapStepLa] = js.native
   var color: js.UndefOr[String] = js.native
@@ -260,7 +259,7 @@ trait StepLabelProps extends js.Object {
   var onVolumeChange: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
   var onWaiting: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
   var onWheel: js.UndefOr[WheelEventHandler[HTMLDivElement]] = js.native
-  var optional: js.UndefOr[TagMod[Any]] = js.native
+  var optional: js.UndefOr[ReactElement] = js.native
   var orientation: js.UndefOr[Orientation] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var prefix: js.UndefOr[String] = js.native
@@ -533,7 +532,7 @@ object StepLabelProps {
     @scala.inline
     def deleteAutoSave: Self = this.set("autoSave", js.undefined)
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -977,7 +976,7 @@ object StepLabelProps {
     @scala.inline
     def setOptionalReactElement(value: ReactElement): Self = this.set("optional", value.asInstanceOf[js.Any])
     @scala.inline
-    def setOptional(value: TagMod[Any]): Self = this.set("optional", value.asInstanceOf[js.Any])
+    def setOptional(value: ReactElement): Self = this.set("optional", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOptional: Self = this.set("optional", js.undefined)
     @scala.inline

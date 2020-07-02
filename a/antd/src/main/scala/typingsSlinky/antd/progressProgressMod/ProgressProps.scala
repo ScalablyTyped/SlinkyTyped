@@ -1,6 +1,6 @@
 package typingsSlinky.antd.progressProgressMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.antdStrings.active
 import typingsSlinky.antd.antdStrings.bottom
 import typingsSlinky.antd.antdStrings.butt
@@ -23,7 +23,7 @@ trait ProgressProps extends js.Object {
     js.Function2[
       /* percent */ js.UndefOr[Double], 
       /* successPercent */ js.UndefOr[Double], 
-      TagMod[Any]
+      ReactElement
     ]
   ] = js.undefined
   var gapDegree: js.UndefOr[Double] = js.undefined
@@ -66,7 +66,7 @@ object ProgressProps {
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
     @scala.inline
-    def setFormat(value: (/* percent */ js.UndefOr[Double], /* successPercent */ js.UndefOr[Double]) => TagMod[Any]): Self = this.set("format", js.Any.fromFunction2(value))
+    def setFormat(value: (/* percent */ js.UndefOr[Double], /* successPercent */ js.UndefOr[Double]) => ReactElement): Self = this.set("format", js.Any.fromFunction2(value))
     @scala.inline
     def deleteFormat: Self = this.set("format", js.undefined)
     @scala.inline

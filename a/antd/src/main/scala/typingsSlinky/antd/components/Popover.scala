@@ -1,10 +1,10 @@
 package typingsSlinky.antd.components
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.antd.colorsMod.PresetColorType
 import typingsSlinky.antd.getRenderPropValueMod.RenderFunction
 import typingsSlinky.antd.placementsMod.AdjustOverflow
 import typingsSlinky.antd.popoverMod.PopoverProps
@@ -36,11 +36,13 @@ object Popover {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
+    def color(value: PresetColorType): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
     def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     @scala.inline
-    def contentFunction0(value: () => TagMod[Any]): this.type = set("content", js.Any.fromFunction0(value))
+    def contentFunction0(value: () => ReactElement): this.type = set("content", js.Any.fromFunction0(value))
     @scala.inline
-    def content(value: TagMod[Any] | RenderFunction): this.type = set("content", value.asInstanceOf[js.Any])
+    def content(value: ReactElement | RenderFunction): this.type = set("content", value.asInstanceOf[js.Any])
     @scala.inline
     def getPopupContainer(value: /* triggerNode */ HTMLElement => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
     @scala.inline
@@ -52,9 +54,9 @@ object Popover {
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def titleFunction0(value: () => TagMod[Any]): this.type = set("title", js.Any.fromFunction0(value))
+    def titleFunction0(value: () => ReactElement): this.type = set("title", js.Any.fromFunction0(value))
     @scala.inline
-    def title(value: TagMod[Any] | RenderFunction): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement | RenderFunction): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: PopoverProps with RefAttributes[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

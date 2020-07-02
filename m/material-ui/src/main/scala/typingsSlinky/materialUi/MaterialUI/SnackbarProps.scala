@@ -1,6 +1,5 @@
 package typingsSlinky.materialUi.MaterialUI
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.CSSProperties
@@ -10,12 +9,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait SnackbarProps extends js.Object {
-  var action: js.UndefOr[TagMod[Any]] = js.undefined
+  var action: js.UndefOr[ReactElement] = js.undefined
   var autoHideDuration: js.UndefOr[Double] = js.undefined
   var bodyStyle: js.UndefOr[CSSProperties] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var contentStyle: js.UndefOr[CSSProperties] = js.undefined
-  var message: TagMod[Any]
+  var message: ReactElement
   var onActionClick: js.UndefOr[MouseEventHandler[js.Object]] = js.undefined
   var onRequestClose: js.UndefOr[js.Function1[/* reason */ String, Unit]] = js.undefined
   var open: Boolean
@@ -44,7 +43,7 @@ object SnackbarProps {
     @scala.inline
     def setActionReactElement(value: ReactElement): Self = this.set("action", value.asInstanceOf[js.Any])
     @scala.inline
-    def setAction(value: TagMod[Any]): Self = this.set("action", value.asInstanceOf[js.Any])
+    def setAction(value: ReactElement): Self = this.set("action", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAction: Self = this.set("action", js.undefined)
     @scala.inline
@@ -64,7 +63,7 @@ object SnackbarProps {
     @scala.inline
     def deleteContentStyle: Self = this.set("contentStyle", js.undefined)
     @scala.inline
-    def setMessage(value: TagMod[Any]): Self = this.set("message", value.asInstanceOf[js.Any])
+    def setMessage(value: ReactElement): Self = this.set("message", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMessage: Self = this.set("message", js.undefined)
     @scala.inline

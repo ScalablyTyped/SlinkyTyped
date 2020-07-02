@@ -1,7 +1,6 @@
 package typingsSlinky.antd.components
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -94,9 +93,9 @@ object Tree {
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def iconFunction1(value: /* nodeProps */ AntdTreeNodeAttribute => TagMod[Any]): this.type = set("icon", js.Any.fromFunction1(value))
+    def iconFunction1(value: /* nodeProps */ AntdTreeNodeAttribute => ReactElement): this.type = set("icon", js.Any.fromFunction1(value))
     @scala.inline
-    def icon(value: (js.Function1[/* nodeProps */ AntdTreeNodeAttribute, TagMod[Any]]) | TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: (js.Function1[/* nodeProps */ AntdTreeNodeAttribute, ReactElement]) | ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def loadData(value: ReactComponentClass[InternalTreeNodeProps] => js.Promise[_]): this.type = set("loadData", js.Any.fromFunction1(value))
     @scala.inline

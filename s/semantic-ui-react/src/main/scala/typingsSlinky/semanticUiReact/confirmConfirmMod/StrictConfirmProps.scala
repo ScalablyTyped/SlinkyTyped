@@ -1,7 +1,6 @@
 package typingsSlinky.semanticUiReact.confirmConfirmMod
 
 import org.scalajs.dom.raw.HTMLAnchorElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.ReactNodeArray
@@ -59,7 +58,7 @@ object StrictConfirmProps {
     def setCancelButtonReactElement(value: ReactElement): Self = this.set("cancelButton", value.asInstanceOf[js.Any])
     @scala.inline
     def setCancelButtonFunction3(
-      value: (/* component */ ReactType[ButtonProps], ButtonProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ButtonProps], ButtonProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("cancelButton", js.Any.fromFunction3(value))
     @scala.inline
     def setCancelButton(value: SemanticShorthandItem[ButtonProps]): Self = this.set("cancelButton", value.asInstanceOf[js.Any])
@@ -69,7 +68,7 @@ object StrictConfirmProps {
     def setConfirmButtonReactElement(value: ReactElement): Self = this.set("confirmButton", value.asInstanceOf[js.Any])
     @scala.inline
     def setConfirmButtonFunction3(
-      value: (/* component */ ReactType[ButtonProps], ButtonProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactType[ButtonProps], ButtonProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("confirmButton", js.Any.fromFunction3(value))
     @scala.inline
     def setConfirmButton(value: SemanticShorthandItem[ButtonProps]): Self = this.set("confirmButton", value.asInstanceOf[js.Any])

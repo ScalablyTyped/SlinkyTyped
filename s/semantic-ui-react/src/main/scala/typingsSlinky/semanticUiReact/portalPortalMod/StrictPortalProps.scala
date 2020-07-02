@@ -1,7 +1,6 @@
 package typingsSlinky.semanticUiReact.portalPortalMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
@@ -12,7 +11,7 @@ import scala.scalajs.js.annotation._
 
 trait StrictPortalProps extends js.Object {
   /** Primary content. */
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   /** Controls whether or not the portal should close on a click outside. */
   var closeOnDocumentClick: js.UndefOr[Boolean] = js.undefined
   /** Controls whether or not the portal should close when escape is pressed is displayed. */
@@ -80,7 +79,7 @@ trait StrictPortalProps extends js.Object {
   /** Controls whether or not the portal should open when mousing over the trigger. */
   var openOnTriggerMouseEnter: js.UndefOr[Boolean] = js.undefined
   /** Element to be rendered in-place where the portal is defined. */
-  var trigger: js.UndefOr[TagMod[Any]] = js.undefined
+  var trigger: js.UndefOr[ReactElement] = js.undefined
   /** Called with a ref to the trigger node. */
   var triggerRef: js.UndefOr[Ref[_]] = js.undefined
 }
@@ -105,7 +104,7 @@ object StrictPortalProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -187,7 +186,7 @@ object StrictPortalProps {
     @scala.inline
     def setTriggerReactElement(value: ReactElement): Self = this.set("trigger", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTrigger(value: TagMod[Any]): Self = this.set("trigger", value.asInstanceOf[js.Any])
+    def setTrigger(value: ReactElement): Self = this.set("trigger", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTrigger: Self = this.set("trigger", js.undefined)
     @scala.inline

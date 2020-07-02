@@ -1,6 +1,6 @@
 package typingsSlinky.antd
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.Name
 import typingsSlinky.antd.antdBooleans.`false`
 import typingsSlinky.scrollIntoViewIfNeeded.mod.Options
@@ -31,10 +31,10 @@ object formUtilMod extends js.Object {
   @JSName("toArray")
   def toArray_false[T](candidate: `false`): js.Array[T] = js.native
   def useCacheErrors(
-    errors: js.Array[TagMod[Any]],
+    errors: js.Array[ReactElement],
     changeTrigger: js.Function1[/* visible */ Boolean, Unit],
     directly: Boolean
-  ): js.Tuple2[Boolean, js.Array[TagMod[Any]]] = js.native
+  ): js.Tuple2[Boolean, js.Array[ReactElement]] = js.native
   def useForm(): js.Array[FormInstance] = js.native
   def useForm(form: FormInstance): js.Array[FormInstance] = js.native
   def useFrameState[ValueType](defaultValue: ValueType): js.Tuple2[ValueType, js.Function1[/* updater */ Updater[ValueType], Unit]] = js.native

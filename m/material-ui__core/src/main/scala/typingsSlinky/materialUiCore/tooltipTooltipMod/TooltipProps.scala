@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -292,7 +291,7 @@ trait TooltipProps extends js.Object {
   var suppressContentEditableWarning: js.UndefOr[Boolean] = js.native
   var suppressHydrationWarning: js.UndefOr[Boolean] = js.native
   var tabIndex: js.UndefOr[Double] = js.native
-  var title: TagMod[Any] = js.native
+  var title: ReactElement = js.native
   var translate: js.UndefOr[yes | no] = js.native
   var typeof: js.UndefOr[String] = js.native
   var unselectable: js.UndefOr[on | off] = js.native
@@ -1067,7 +1066,7 @@ object TooltipProps {
     @scala.inline
     def deleteTabIndex: Self = this.set("tabIndex", js.undefined)
     @scala.inline
-    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
     @scala.inline

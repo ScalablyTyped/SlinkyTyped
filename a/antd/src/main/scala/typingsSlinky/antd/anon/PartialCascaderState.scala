@@ -2,6 +2,7 @@ package typingsSlinky.antd.anon
 
 import typingsSlinky.antd.cascaderMod.CascaderOptionType
 import typingsSlinky.antd.cascaderMod.CascaderProps
+import typingsSlinky.antd.cascaderMod.CascaderValueType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +14,7 @@ trait PartialCascaderState extends js.Object {
   var inputValue: js.UndefOr[String] = js.undefined
   var popupVisible: js.UndefOr[Boolean] = js.undefined
   var prevProps: js.UndefOr[CascaderProps] = js.undefined
-  var value: js.UndefOr[js.Array[String]] = js.undefined
+  var value: js.UndefOr[CascaderValueType] = js.undefined
 }
 
 object PartialCascaderState {
@@ -54,7 +55,7 @@ object PartialCascaderState {
     @scala.inline
     def deletePrevProps: Self = this.set("prevProps", js.undefined)
     @scala.inline
-    def setValue(value: js.Array[String]): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValue(value: CascaderValueType): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
   }

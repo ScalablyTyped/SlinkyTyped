@@ -1,7 +1,6 @@
 package typingsSlinky.rcMentions.mentionsMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcMentions.optionMod.OptionProps
 import typingsSlinky.rcMentions.rcMentionsBooleans.`false`
@@ -17,7 +16,7 @@ trait MentionsProps extends BaseTextareaAttrs {
     `false` | (js.Function2[/* input */ String, /* hasValue */ OptionProps, Boolean])
   ] = js.undefined
   var getPopupContainer: js.UndefOr[js.Function0[HTMLElement]] = js.undefined
-  var notFoundContent: js.UndefOr[TagMod[Any]] = js.undefined
+  var notFoundContent: js.UndefOr[ReactElement] = js.undefined
   var onChange: js.UndefOr[js.Function1[/* text */ String, Unit]] = js.undefined
   var onSearch: js.UndefOr[js.Function2[/* text */ String, /* prefix */ String, Unit]] = js.undefined
   var onSelect: js.UndefOr[js.Function2[/* option */ OptionProps, /* prefix */ String, Unit]] = js.undefined
@@ -69,7 +68,7 @@ object MentionsProps {
     @scala.inline
     def setNotFoundContentReactElement(value: ReactElement): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])
     @scala.inline
-    def setNotFoundContent(value: TagMod[Any]): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])
+    def setNotFoundContent(value: ReactElement): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteNotFoundContent: Self = this.set("notFoundContent", js.undefined)
     @scala.inline

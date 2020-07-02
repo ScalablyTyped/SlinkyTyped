@@ -1,13 +1,13 @@
 package typingsSlinky.antd.tableInterfaceMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait ColumnFilterItem extends js.Object {
   var children: js.UndefOr[js.Array[ColumnFilterItem]] = js.undefined
-  var text: TagMod[Any]
+  var text: ReactElement
   var value: String | Double | Boolean
 }
 
@@ -35,7 +35,7 @@ object ColumnFilterItem {
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
-    def setText(value: TagMod[Any]): Self = this.set("text", value.asInstanceOf[js.Any])
+    def setText(value: ReactElement): Self = this.set("text", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteText: Self = this.set("text", js.undefined)
   }

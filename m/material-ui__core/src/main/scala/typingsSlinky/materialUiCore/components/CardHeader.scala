@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -96,7 +95,7 @@ object CardHeader {
     @scala.inline
     def actionReactElement(value: ReactElement): this.type = set("action", value.asInstanceOf[js.Any])
     @scala.inline
-    def action(value: TagMod[Any]): this.type = set("action", value.asInstanceOf[js.Any])
+    def action(value: ReactElement): this.type = set("action", value.asInstanceOf[js.Any])
     @scala.inline
     def `aria-activedescendant`(value: String): this.type = set("aria-activedescendant", value.asInstanceOf[js.Any])
     @scala.inline
@@ -202,7 +201,7 @@ object CardHeader {
     @scala.inline
     def avatarReactElement(value: ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
     @scala.inline
-    def avatar(value: TagMod[Any]): this.type = set("avatar", value.asInstanceOf[js.Any])
+    def avatar(value: ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -446,7 +445,7 @@ object CardHeader {
     @scala.inline
     def subheaderReactElement(value: ReactElement): this.type = set("subheader", value.asInstanceOf[js.Any])
     @scala.inline
-    def subheader(value: TagMod[Any]): this.type = set("subheader", value.asInstanceOf[js.Any])
+    def subheader(value: ReactElement): this.type = set("subheader", value.asInstanceOf[js.Any])
     @scala.inline
     def subheaderTypographyProps(value: PartialTypographyProps): this.type = set("subheaderTypographyProps", value.asInstanceOf[js.Any])
     @scala.inline
@@ -458,7 +457,7 @@ object CardHeader {
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def titleTypographyProps(value: PartialTypographyProps): this.type = set("titleTypographyProps", value.asInstanceOf[js.Any])
     @scala.inline

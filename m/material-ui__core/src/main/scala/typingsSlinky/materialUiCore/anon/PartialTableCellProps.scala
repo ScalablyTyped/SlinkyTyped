@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
@@ -160,7 +159,7 @@ trait PartialTableCellProps extends js.Object {
   var autoCapitalize: js.UndefOr[String] = js.native
   var autoCorrect: js.UndefOr[String] = js.native
   var autoSave: js.UndefOr[String] = js.native
-  var children: js.UndefOr[TagMod[Any]] = js.native
+  var children: js.UndefOr[ReactElement] = js.native
   var className: js.UndefOr[String] = js.native
   var classes: js.UndefOr[PartialClassNameMapTableCBody] = js.native
   var colSpan: js.UndefOr[Double] = js.native
@@ -175,6 +174,7 @@ trait PartialTableCellProps extends js.Object {
   var dir: js.UndefOr[String] = js.native
   var draggable: js.UndefOr[Booleanish] = js.native
   var headers: js.UndefOr[String] = js.native
+  var height: js.UndefOr[Double | String] = js.native
   var hidden: js.UndefOr[Boolean] = js.native
   var id: js.UndefOr[String] = js.native
   var inlist: js.UndefOr[js.Any] = js.native
@@ -292,6 +292,7 @@ trait PartialTableCellProps extends js.Object {
   var valign: js.UndefOr[top | middle | bottom | baseline] = js.native
   var variant: js.UndefOr[head | body | footer] = js.native
   var vocab: js.UndefOr[String] = js.native
+  var width: js.UndefOr[Double | String] = js.native
 }
 
 object PartialTableCellProps {
@@ -534,7 +535,7 @@ object PartialTableCellProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -597,6 +598,10 @@ object PartialTableCellProps {
     def setHeaders(value: String): Self = this.set("headers", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHeaders: Self = this.set("headers", js.undefined)
+    @scala.inline
+    def setHeight(value: Double | String): Self = this.set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHeight: Self = this.set("height", js.undefined)
     @scala.inline
     def setHidden(value: Boolean): Self = this.set("hidden", value.asInstanceOf[js.Any])
     @scala.inline
@@ -1071,6 +1076,10 @@ object PartialTableCellProps {
     def setVocab(value: String): Self = this.set("vocab", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteVocab: Self = this.set("vocab", js.undefined)
+    @scala.inline
+    def setWidth(value: Double | String): Self = this.set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteWidth: Self = this.set("width", js.undefined)
   }
   
 }

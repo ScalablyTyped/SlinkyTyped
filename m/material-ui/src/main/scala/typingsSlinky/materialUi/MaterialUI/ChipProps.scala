@@ -1,7 +1,6 @@
 package typingsSlinky.materialUi.MaterialUI
 
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
@@ -15,7 +14,7 @@ import scala.scalajs.js.annotation._
 trait ChipProps extends js.Object {
   var backgroundColor: js.UndefOr[String] = js.undefined
   var className: js.UndefOr[String] = js.undefined
-  var containerElement: js.UndefOr[TagMod[Any] | String] = js.undefined
+  var containerElement: js.UndefOr[ReactElement | String] = js.undefined
   var deleteIconStyle: js.UndefOr[CSSProperties] = js.undefined
   var labelColor: js.UndefOr[String] = js.undefined
   var labelStyle: js.UndefOr[CSSProperties] = js.undefined
@@ -52,7 +51,7 @@ object ChipProps {
     @scala.inline
     def setContainerElementReactElement(value: ReactElement): Self = this.set("containerElement", value.asInstanceOf[js.Any])
     @scala.inline
-    def setContainerElement(value: TagMod[Any] | String): Self = this.set("containerElement", value.asInstanceOf[js.Any])
+    def setContainerElement(value: ReactElement | String): Self = this.set("containerElement", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteContainerElement: Self = this.set("containerElement", js.undefined)
     @scala.inline

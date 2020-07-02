@@ -1,7 +1,6 @@
 package typingsSlinky.antd.anon
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
@@ -16,7 +15,7 @@ import scala.scalajs.js.annotation._
 /* Inlined std.Partial<std.Omit<antd.antd/lib/checkbox.CheckboxProps, 'checked' | 'defaultChecked'>> */
 trait PartialOmitCheckboxPropsc extends js.Object {
   var autoFocus: js.UndefOr[Boolean] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
   var id: js.UndefOr[String] = js.undefined
@@ -31,6 +30,7 @@ trait PartialOmitCheckboxPropsc extends js.Object {
   var prefixCls: js.UndefOr[String] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
   var tabIndex: js.UndefOr[Double] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
   var value: js.UndefOr[js.Any] = js.undefined
 }
 
@@ -58,7 +58,7 @@ object PartialOmitCheckboxPropsc {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -117,6 +117,10 @@ object PartialOmitCheckboxPropsc {
     def setTabIndex(value: Double): Self = this.set("tabIndex", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTabIndex: Self = this.set("tabIndex", js.undefined)
+    @scala.inline
+    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteType: Self = this.set("type", js.undefined)
     @scala.inline
     def setValue(value: js.Any): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline

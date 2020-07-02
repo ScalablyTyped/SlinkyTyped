@@ -1,6 +1,6 @@
 package typingsSlinky.rcTreeSelect
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.rcTreeSelect.interfaceMod.ChangeEventExtra
 import typingsSlinky.rcTreeSelect.interfaceMod.DataNode
 import typingsSlinky.rcTreeSelect.interfaceMod.InnerDataNode
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 @JSImport("rc-tree-select/lib/utils/legacyUtil", JSImport.Namespace)
 @js.native
 object legacyUtilMod extends js.Object {
-  def convertChildrenToData(nodes: TagMod[Any]): js.Array[DataNode] = js.native
+  def convertChildrenToData(nodes: ReactElement): js.Array[DataNode] = js.native
   def fillAdditionalInfo(
     extra: ChangeEventExtra,
     triggerValue: RawValueType,

@@ -4,7 +4,7 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.ListStyle
 import typingsSlinky.antd.anon.SourceSelectedKeys
 import typingsSlinky.antd.anon.TypeofList
-import typingsSlinky.antd.anon.TypeofSearchInstantiable
+import typingsSlinky.antd.anon.TypeofSearch
 import typingsSlinky.antd.operationMod.TransferOperationProps
 import typingsSlinky.antd.transferMod.TransferProps
 import typingsSlinky.antd.transferMod.default
@@ -23,11 +23,11 @@ class Transfer protected () extends default {
 @js.native
 object Transfer extends js.Object {
   var List: TypeofList = js.native
-  var Search: TypeofSearchInstantiable = js.native
+  var Search: TypeofSearch = js.native
   var defaultProps: ListStyle = js.native
   def Operation(
-    hasDisabledMoveToLeftMoveToRightLeftArrowTextRightArrowTextLeftActiveRightActiveClassNameStyleDirection: TransferOperationProps
+    hasDisabledMoveToLeftMoveToRightLeftArrowTextRightArrowTextLeftActiveRightActiveClassNameStyleDirectionOneWay: TransferOperationProps
   ): ReactElement = js.native
-  def getDerivedStateFromProps(nextProps: TransferProps): SourceSelectedKeys | Null = js.native
+  def getDerivedStateFromProps(hasSelectedKeysTargetKeysPaginationChildren: TransferProps): SourceSelectedKeys | Null = js.native
 }
 

@@ -1,6 +1,7 @@
 package typingsSlinky.antd.tooltipMod
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.antd.colorsMod.PresetColorType
 import typingsSlinky.antd.placementsMod.AdjustOverflow
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -15,6 +16,7 @@ import scala.scalajs.js.annotation._
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BuildInPlacements */ js.Any
   ] = js.undefined
   var className: js.UndefOr[String] = js.undefined
+  var color: js.UndefOr[PresetColorType] = js.undefined
   var getPopupContainer: js.UndefOr[js.Function1[/* triggerNode */ HTMLElement, HTMLElement]] = js.undefined
   var openClassName: js.UndefOr[String] = js.undefined
   var placement: js.UndefOr[TooltipPlacement] = js.undefined
@@ -56,6 +58,10 @@ object AbstractTooltipProps {
     def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setColor(value: PresetColorType): Self = this.set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteColor: Self = this.set("color", js.undefined)
     @scala.inline
     def setGetPopupContainer(value: /* triggerNode */ HTMLElement => HTMLElement): Self = this.set("getPopupContainer", js.Any.fromFunction1(value))
     @scala.inline

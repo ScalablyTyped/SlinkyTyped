@@ -1,6 +1,6 @@
 package typingsSlinky.rcTreeSelect
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.rcTreeSelect.interfaceMod.DataNode
 import typingsSlinky.rcTreeSelect.interfaceMod.FlattenDataNode
 import typingsSlinky.rcTreeSelect.interfaceMod.Key
@@ -28,9 +28,11 @@ object useSelectValuesMod extends js.Object {
     var value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify DefaultValueType */ js.Any = js.native
     def getEntityByKey(key: Key): FlattenDataNode = js.native
     def getEntityByKey(key: Key, skipType: SkipType): FlattenDataNode = js.native
+    def getEntityByKey(key: Key, skipType: SkipType, ignoreDisabledCheck: Boolean): FlattenDataNode = js.native
     def getEntityByValue(value: RawValueType): FlattenDataNode = js.native
     def getEntityByValue(value: RawValueType, skipType: SkipType): FlattenDataNode = js.native
-    def getLabelProp(node: DataNode): TagMod[Any] = js.native
+    def getEntityByValue(value: RawValueType, skipType: SkipType, ignoreDisabledCheck: Boolean): FlattenDataNode = js.native
+    def getLabelProp(node: DataNode): ReactElement = js.native
   }
   
   def default(

@@ -1,10 +1,10 @@
 package typingsSlinky.rcTable.columnGroupMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.rcTable.interfaceMod.AlignType
+import typingsSlinky.rcTable.interfaceMod.CellEllipsisType
 import typingsSlinky.rcTable.interfaceMod.DataIndex
 import typingsSlinky.rcTable.interfaceMod.FixedType
 import typingsSlinky.rcTable.interfaceMod.GetComponentProps
@@ -22,7 +22,7 @@ trait ColumnGroupProps[RecordType] extends js.Object {
   var className: js.UndefOr[String] = js.undefined
   var colSpan: js.UndefOr[Double] = js.undefined
   var dataIndex: js.UndefOr[DataIndex] = js.undefined
-  var ellipsis: js.UndefOr[Boolean] = js.undefined
+  var ellipsis: js.UndefOr[CellEllipsisType] = js.undefined
   var fixed: js.UndefOr[FixedType] = js.undefined
   var key: js.UndefOr[Key] = js.undefined
   var onCell: js.UndefOr[GetComponentProps[RecordType]] = js.undefined
@@ -39,11 +39,12 @@ trait ColumnGroupProps[RecordType] extends js.Object {
       /* value */ js.Any, 
       /* record */ RecordType, 
       /* index */ Double, 
-      TagMod[Any] | RenderedCell[RecordType]
+      ReactElement | RenderedCell[RecordType]
     ]
   ] = js.undefined
   var rowSpan: js.UndefOr[Double] = js.undefined
-  var title: js.UndefOr[TagMod[Any]] = js.undefined
+  var shouldCellUpdate: js.UndefOr[js.Function2[/* record */ RecordType, /* prevRecord */ RecordType, Boolean]] = js.undefined
+  var title: js.UndefOr[ReactElement] = js.undefined
   var width: js.UndefOr[Double | String] = js.undefined
 }
 
@@ -85,7 +86,7 @@ object ColumnGroupProps {
     @scala.inline
     def deleteDataIndex: Self = this.set("dataIndex", js.undefined)
     @scala.inline
-    def setEllipsis(value: Boolean): Self = this.set("ellipsis", value.asInstanceOf[js.Any])
+    def setEllipsis(value: CellEllipsisType): Self = this.set("ellipsis", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEllipsis: Self = this.set("ellipsis", js.undefined)
     @scala.inline
@@ -112,7 +113,7 @@ object ColumnGroupProps {
     def deleteOnHeaderCell: Self = this.set("onHeaderCell", js.undefined)
     @scala.inline
     def setRender(
-      value: (/* value */ js.Any, /* record */ RecordType, /* index */ Double) => TagMod[Any] | RenderedCell[RecordType]
+      value: (/* value */ js.Any, /* record */ RecordType, /* index */ Double) => ReactElement | RenderedCell[RecordType]
     ): Self = this.set("render", js.Any.fromFunction3(value))
     @scala.inline
     def deleteRender: Self = this.set("render", js.undefined)
@@ -121,9 +122,13 @@ object ColumnGroupProps {
     @scala.inline
     def deleteRowSpan: Self = this.set("rowSpan", js.undefined)
     @scala.inline
+    def setShouldCellUpdate(value: (/* record */ RecordType, /* prevRecord */ RecordType) => Boolean): Self = this.set("shouldCellUpdate", js.Any.fromFunction2(value))
+    @scala.inline
+    def deleteShouldCellUpdate: Self = this.set("shouldCellUpdate", js.undefined)
+    @scala.inline
     def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTitle(value: TagMod[Any]): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
     @scala.inline

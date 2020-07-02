@@ -1,7 +1,7 @@
 package typingsSlinky.antd.components
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.anon.AutoComplete
@@ -12,7 +12,6 @@ import typingsSlinky.antd.antdStrings.ltr
 import typingsSlinky.antd.antdStrings.rtl
 import typingsSlinky.antd.configProviderContextMod.CSPConfig
 import typingsSlinky.antd.configProviderMod.ConfigProviderProps
-import typingsSlinky.antd.configProviderMod.default
 import typingsSlinky.antd.localeProviderMod.Locale
 import typingsSlinky.antd.sizeContextMod.SizeType
 import scala.scalajs.js
@@ -27,7 +26,7 @@ object ConfigProvider {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def autoInsertSpaceInButton(value: Boolean): this.type = set("autoInsertSpaceInButton", value.asInstanceOf[js.Any])
     @scala.inline
@@ -36,6 +35,8 @@ object ConfigProvider {
     def csp(value: CSPConfig): this.type = set("csp", value.asInstanceOf[js.Any])
     @scala.inline
     def direction(value: ltr | rtl): this.type = set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dropdownMatchSelectWidth(value: Boolean): this.type = set("dropdownMatchSelectWidth", value.asInstanceOf[js.Any])
     @scala.inline
     def form(value: ValidateMessages): this.type = set("form", value.asInstanceOf[js.Any])
     @scala.inline
@@ -51,9 +52,11 @@ object ConfigProvider {
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
-    def renderEmpty(value: /* componentName */ js.UndefOr[String] => TagMod[Any]): this.type = set("renderEmpty", js.Any.fromFunction1(value))
+    def renderEmpty(value: /* componentName */ js.UndefOr[String] => ReactElement): this.type = set("renderEmpty", js.Any.fromFunction1(value))
     @scala.inline
     def space(value: Size): this.type = set("space", value.asInstanceOf[js.Any])
+    @scala.inline
+    def virtual(value: Boolean): this.type = set("virtual", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ConfigProviderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

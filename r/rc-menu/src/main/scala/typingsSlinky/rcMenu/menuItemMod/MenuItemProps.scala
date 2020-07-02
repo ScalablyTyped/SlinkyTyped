@@ -2,7 +2,6 @@ package typingsSlinky.rcMenu.menuItemMod
 
 import org.scalajs.dom.raw.Element
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcMenu.anon.Hover
 import typingsSlinky.rcMenu.interfaceMod.DestroyEventHandler
@@ -29,7 +28,7 @@ trait MenuItemProps extends js.Object {
   var active: js.UndefOr[Boolean] = js.undefined
   /** @deprecated No place to use this. Should remove */
   var attribute: js.UndefOr[Record[String, String]] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var direction: js.UndefOr[ltr | rtl] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
@@ -84,7 +83,7 @@ object MenuItemProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -114,7 +113,7 @@ object MenuItemProps {
     @scala.inline
     def setItemIconReactElement(value: ReactElement): Self = this.set("itemIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setItemIconFunction1(value: /* props */ js.Any => TagMod[Any]): Self = this.set("itemIcon", js.Any.fromFunction1(value))
+    def setItemIconFunction1(value: /* props */ js.Any => ReactElement): Self = this.set("itemIcon", js.Any.fromFunction1(value))
     @scala.inline
     def setItemIcon(value: RenderIconType): Self = this.set("itemIcon", value.asInstanceOf[js.Any])
     @scala.inline

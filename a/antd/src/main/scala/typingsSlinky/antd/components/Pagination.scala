@@ -1,17 +1,16 @@
 package typingsSlinky.antd.components
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.anon.GoButton
 import typingsSlinky.antd.antdStrings.`jump-next`
 import typingsSlinky.antd.antdStrings.`jump-prev`
+import typingsSlinky.antd.antdStrings.default
 import typingsSlinky.antd.antdStrings.next
 import typingsSlinky.antd.antdStrings.page
 import typingsSlinky.antd.antdStrings.prev
 import typingsSlinky.antd.antdStrings.small
-import typingsSlinky.antd.paginationMod.default
 import typingsSlinky.antd.paginationPaginationMod.PaginationProps
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -26,7 +25,7 @@ object Pagination {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -41,7 +40,7 @@ object Pagination {
     def hideOnSinglePage(value: Boolean): this.type = set("hideOnSinglePage", value.asInstanceOf[js.Any])
     @scala.inline
     def itemRender(
-      value: (/* page */ Double, /* type */ page | prev | next | `jump-prev` | `jump-next`, /* originalElement */ ReactElement) => TagMod[Any]
+      value: (/* page */ Double, /* type */ page | prev | next | `jump-prev` | `jump-next`, /* originalElement */ ReactElement) => ReactElement
     ): this.type = set("itemRender", js.Any.fromFunction3(value))
     @scala.inline
     def locale(value: js.Object): this.type = set("locale", value.asInstanceOf[js.Any])
@@ -70,11 +69,11 @@ object Pagination {
     @scala.inline
     def showTitle(value: Boolean): this.type = set("showTitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def showTotal(value: (/* total */ Double, /* range */ js.Tuple2[Double, Double]) => TagMod[Any]): this.type = set("showTotal", js.Any.fromFunction2(value))
+    def showTotal(value: (/* total */ Double, /* range */ js.Tuple2[Double, Double]) => ReactElement): this.type = set("showTotal", js.Any.fromFunction2(value))
     @scala.inline
     def simple(value: Boolean): this.type = set("simple", value.asInstanceOf[js.Any])
     @scala.inline
-    def size(value: typingsSlinky.antd.antdStrings.default | small): this.type = set("size", value.asInstanceOf[js.Any])
+    def size(value: default | small): this.type = set("size", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

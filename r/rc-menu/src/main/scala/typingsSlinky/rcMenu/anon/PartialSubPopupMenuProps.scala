@@ -2,7 +2,6 @@ package typingsSlinky.rcMenu.anon
 
 import org.scalajs.dom.raw.Element
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcMenu.interfaceMod.DestroyEventHandler
 import typingsSlinky.rcMenu.interfaceMod.LegacyFunctionRef
@@ -27,7 +26,7 @@ import scala.scalajs.js.annotation._
 trait PartialSubPopupMenuProps extends js.Object {
   var activeKey: js.UndefOr[String] = js.undefined
   var builtinPlacements: js.UndefOr[typingsSlinky.rcMenu.interfaceMod.BuiltinPlacements] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var defaultActiveFirst: js.UndefOr[Boolean] = js.undefined
   var defaultOpenKeys: js.UndefOr[js.Array[String]] = js.undefined
@@ -53,7 +52,7 @@ trait PartialSubPopupMenuProps extends js.Object {
   var onOpenChange: js.UndefOr[OpenEventHandler] = js.undefined
   var onSelect: js.UndefOr[SelectEventHandler] = js.undefined
   var openKeys: js.UndefOr[js.Array[String]] = js.undefined
-  var overflowedIndicator: js.UndefOr[TagMod[Any]] = js.undefined
+  var overflowedIndicator: js.UndefOr[ReactElement] = js.undefined
   var parentMenu: js.UndefOr[ReactInstance] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
   var role: js.UndefOr[String] = js.undefined
@@ -95,7 +94,7 @@ object PartialSubPopupMenuProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -125,7 +124,7 @@ object PartialSubPopupMenuProps {
     @scala.inline
     def setExpandIconReactElement(value: ReactElement): Self = this.set("expandIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setExpandIconFunction1(value: /* props */ js.Any => TagMod[Any]): Self = this.set("expandIcon", js.Any.fromFunction1(value))
+    def setExpandIconFunction1(value: /* props */ js.Any => ReactElement): Self = this.set("expandIcon", js.Any.fromFunction1(value))
     @scala.inline
     def setExpandIcon(value: RenderIconType): Self = this.set("expandIcon", value.asInstanceOf[js.Any])
     @scala.inline
@@ -149,7 +148,7 @@ object PartialSubPopupMenuProps {
     @scala.inline
     def setItemIconReactElement(value: ReactElement): Self = this.set("itemIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setItemIconFunction1(value: /* props */ js.Any => TagMod[Any]): Self = this.set("itemIcon", js.Any.fromFunction1(value))
+    def setItemIconFunction1(value: /* props */ js.Any => ReactElement): Self = this.set("itemIcon", js.Any.fromFunction1(value))
     @scala.inline
     def setItemIcon(value: RenderIconType): Self = this.set("itemIcon", value.asInstanceOf[js.Any])
     @scala.inline
@@ -203,7 +202,7 @@ object PartialSubPopupMenuProps {
     @scala.inline
     def setOverflowedIndicatorReactElement(value: ReactElement): Self = this.set("overflowedIndicator", value.asInstanceOf[js.Any])
     @scala.inline
-    def setOverflowedIndicator(value: TagMod[Any]): Self = this.set("overflowedIndicator", value.asInstanceOf[js.Any])
+    def setOverflowedIndicator(value: ReactElement): Self = this.set("overflowedIndicator", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOverflowedIndicator: Self = this.set("overflowedIndicator", js.undefined)
     @scala.inline

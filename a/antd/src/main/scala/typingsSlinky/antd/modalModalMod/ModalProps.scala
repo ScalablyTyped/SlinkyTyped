@@ -1,7 +1,6 @@
 package typingsSlinky.antd.modalModalMod
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.antdBooleans.`false`
@@ -17,18 +16,18 @@ trait ModalProps extends js.Object {
   var bodyStyle: js.UndefOr[CSSProperties] = js.undefined
   var cancelButtonProps: js.UndefOr[ButtonProps] = js.undefined
   /** 取消按钮文字 */
-  var cancelText: js.UndefOr[TagMod[Any]] = js.undefined
+  var cancelText: js.UndefOr[ReactElement] = js.undefined
   /** 垂直居中 */
   var centered: js.UndefOr[Boolean] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   /** 是否显示右上角的关闭按钮 */
   var closable: js.UndefOr[Boolean] = js.undefined
-  var closeIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var closeIcon: js.UndefOr[ReactElement] = js.undefined
   /** 确定按钮 loading */
   var confirmLoading: js.UndefOr[Boolean] = js.undefined
   var destroyOnClose: js.UndefOr[Boolean] = js.undefined
   /** 底部内容 */
-  var footer: js.UndefOr[TagMod[Any]] = js.undefined
+  var footer: js.UndefOr[ReactElement] = js.undefined
   /** 强制渲染 Modal */
   var forceRender: js.UndefOr[Boolean] = js.undefined
   var getContainer: js.UndefOr[String | HTMLElement | getContainerFunc | `false` | Null] = js.undefined
@@ -40,7 +39,7 @@ trait ModalProps extends js.Object {
   var maskTransitionName: js.UndefOr[String] = js.undefined
   var okButtonProps: js.UndefOr[ButtonProps] = js.undefined
   /** 确认按钮文字 */
-  var okText: js.UndefOr[TagMod[Any]] = js.undefined
+  var okText: js.UndefOr[ReactElement] = js.undefined
   /** 确认按钮类型 */
   var okType: js.UndefOr[LegacyButtonType] = js.undefined
   /** 点击模态框右上角叉、取消按钮、Props.maskClosable 值为 true 时的遮罩层或键盘按下 Esc 时的回调 */
@@ -50,7 +49,7 @@ trait ModalProps extends js.Object {
   var prefixCls: js.UndefOr[String] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
   /** 标题 */
-  var title: js.UndefOr[TagMod[Any] | String] = js.undefined
+  var title: js.UndefOr[ReactElement | String] = js.undefined
   var transitionName: js.UndefOr[String] = js.undefined
   /** 对话框是否可见 */
   var visible: js.UndefOr[Boolean] = js.undefined
@@ -93,7 +92,7 @@ object ModalProps {
     @scala.inline
     def setCancelTextReactElement(value: ReactElement): Self = this.set("cancelText", value.asInstanceOf[js.Any])
     @scala.inline
-    def setCancelText(value: TagMod[Any]): Self = this.set("cancelText", value.asInstanceOf[js.Any])
+    def setCancelText(value: ReactElement): Self = this.set("cancelText", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCancelText: Self = this.set("cancelText", js.undefined)
     @scala.inline
@@ -111,7 +110,7 @@ object ModalProps {
     @scala.inline
     def setCloseIconReactElement(value: ReactElement): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setCloseIcon(value: TagMod[Any]): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
+    def setCloseIcon(value: ReactElement): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCloseIcon: Self = this.set("closeIcon", js.undefined)
     @scala.inline
@@ -125,7 +124,7 @@ object ModalProps {
     @scala.inline
     def setFooterReactElement(value: ReactElement): Self = this.set("footer", value.asInstanceOf[js.Any])
     @scala.inline
-    def setFooter(value: TagMod[Any]): Self = this.set("footer", value.asInstanceOf[js.Any])
+    def setFooter(value: ReactElement): Self = this.set("footer", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFooter: Self = this.set("footer", js.undefined)
     @scala.inline
@@ -169,7 +168,7 @@ object ModalProps {
     @scala.inline
     def setOkTextReactElement(value: ReactElement): Self = this.set("okText", value.asInstanceOf[js.Any])
     @scala.inline
-    def setOkText(value: TagMod[Any]): Self = this.set("okText", value.asInstanceOf[js.Any])
+    def setOkText(value: ReactElement): Self = this.set("okText", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOkText: Self = this.set("okText", js.undefined)
     @scala.inline
@@ -195,7 +194,7 @@ object ModalProps {
     @scala.inline
     def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTitle(value: TagMod[Any] | String): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: ReactElement | String): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
     @scala.inline

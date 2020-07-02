@@ -1,6 +1,6 @@
 package typingsSlinky.storybookRouter.components
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.storybookRouter.routerMod.QueryLocationProps
@@ -16,7 +16,7 @@ object Location {
   
   def withProps(p: QueryLocationProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(children: RenderData => TagMod[Any]): Default[tag.type, js.Object] = {
+  def apply(children: RenderData => ReactElement): Default[tag.type, js.Object] = {
     val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
     new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[QueryLocationProps]))
   }

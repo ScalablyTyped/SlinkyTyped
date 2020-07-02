@@ -1,6 +1,5 @@
 package typingsSlinky.materialUi.MaterialUI.Tabs
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.materialUi.MaterialUI.SharedEnhancedButtonProps
 import typingsSlinky.react.mod.CSSProperties
@@ -12,8 +11,8 @@ trait TabProps extends SharedEnhancedButtonProps[Tab] {
   var buttonStyle: js.UndefOr[CSSProperties] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
-  var icon: js.UndefOr[TagMod[Any]] = js.undefined
-  var label: js.UndefOr[TagMod[Any]] = js.undefined
+  var icon: js.UndefOr[ReactElement] = js.undefined
+  var label: js.UndefOr[ReactElement] = js.undefined
   var onActive: js.UndefOr[js.Function1[/* tab */ Tab, Unit]] = js.undefined
   var value: js.UndefOr[js.Any] = js.undefined
 }
@@ -50,13 +49,13 @@ object TabProps {
     @scala.inline
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setIcon(value: TagMod[Any]): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
     @scala.inline
     def setLabelReactElement(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def setLabel(value: TagMod[Any]): Self = this.set("label", value.asInstanceOf[js.Any])
+    def setLabel(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)
     @scala.inline

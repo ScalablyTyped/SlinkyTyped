@@ -1,14 +1,14 @@
 package typingsSlinky.antd.formItemInputMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.formItemMod.ValidateStatus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait FormItemInputMiscProps extends js.Object {
-  var children: TagMod[Any]
-  var errors: js.Array[TagMod[Any]]
+  var children: ReactElement
+  var errors: js.Array[ReactElement]
   var hasFeedback: js.UndefOr[Boolean] = js.undefined
   var prefixCls: String
   var validateStatus: js.UndefOr[ValidateStatus] = js.undefined
@@ -17,7 +17,7 @@ trait FormItemInputMiscProps extends js.Object {
 
 object FormItemInputMiscProps {
   @scala.inline
-  def apply(errors: js.Array[TagMod[Any]], onDomErrorVisibleChange: Boolean => Unit, prefixCls: String): FormItemInputMiscProps = {
+  def apply(errors: js.Array[ReactElement], onDomErrorVisibleChange: Boolean => Unit, prefixCls: String): FormItemInputMiscProps = {
     val __obj = js.Dynamic.literal(errors = errors.asInstanceOf[js.Any], onDomErrorVisibleChange = js.Any.fromFunction1(onDomErrorVisibleChange), prefixCls = prefixCls.asInstanceOf[js.Any])
     __obj.asInstanceOf[FormItemInputMiscProps]
   }
@@ -33,13 +33,13 @@ object FormItemInputMiscProps {
         x
     }
     @scala.inline
-    def setErrors(value: js.Array[TagMod[Any]]): Self = this.set("errors", value.asInstanceOf[js.Any])
+    def setErrors(value: js.Array[ReactElement]): Self = this.set("errors", value.asInstanceOf[js.Any])
     @scala.inline
     def setOnDomErrorVisibleChange(value: Boolean => Unit): Self = this.set("onDomErrorVisibleChange", js.Any.fromFunction1(value))
     @scala.inline
     def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline

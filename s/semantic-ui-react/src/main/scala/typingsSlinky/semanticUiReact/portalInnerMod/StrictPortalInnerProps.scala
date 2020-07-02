@@ -1,6 +1,6 @@
 package typingsSlinky.semanticUiReact.portalInnerMod
 
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 
 trait StrictPortalInnerProps extends js.Object {
   /** Primary content. */
-  var children: TagMod[Any]
+  var children: ReactElement
   /** Called with a ref to the inner node. */
   var innerRef: js.UndefOr[Ref[_]] = js.undefined
   /** The node where the portal should mount. */
@@ -48,7 +48,7 @@ object StrictPortalInnerProps {
         x
     }
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline

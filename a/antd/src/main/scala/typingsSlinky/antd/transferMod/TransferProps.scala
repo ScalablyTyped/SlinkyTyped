@@ -3,9 +3,10 @@ package typingsSlinky.antd.transferMod
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLUListElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.PartialTransferLocale
-import typingsSlinky.antd.renderListBodyMod.TransferListBodyProps
+import typingsSlinky.antd.listBodyMod.TransferListBodyProps
+import typingsSlinky.antd.transferInterfaceMod.PaginationType
 import typingsSlinky.antd.transferListMod.TransferListProps
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -13,12 +14,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait TransferProps extends js.Object {
-  var children: js.UndefOr[js.Function1[/* props */ TransferListBodyProps, TagMod[Any]]] = js.undefined
+  var children: js.UndefOr[js.Function1[/* props */ TransferListBodyProps, ReactElement]] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var dataSource: js.Array[TransferItem]
   var disabled: js.UndefOr[Boolean] = js.undefined
   var filterOption: js.UndefOr[js.Function2[/* inputValue */ String, /* item */ TransferItem, Boolean]] = js.undefined
-  var footer: js.UndefOr[js.Function1[/* props */ TransferListProps, TagMod[Any]]] = js.undefined
+  var footer: js.UndefOr[js.Function1[/* props */ TransferListProps, ReactElement]] = js.undefined
   var listStyle: (js.Function1[/* style */ ListStyle, CSSProperties]) | CSSProperties
   var locale: js.UndefOr[PartialTransferLocale] = js.undefined
   var onChange: js.UndefOr[
@@ -44,8 +45,10 @@ trait TransferProps extends js.Object {
       Unit
     ]
   ] = js.undefined
+  var oneWay: js.UndefOr[Boolean] = js.undefined
   var operationStyle: js.UndefOr[CSSProperties] = js.undefined
   var operations: js.UndefOr[js.Array[String]] = js.undefined
+  var pagination: js.UndefOr[PaginationType] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
   var render: js.UndefOr[TransferRender] = js.undefined
   var rowKey: js.UndefOr[js.Function1[/* record */ TransferItem, String]] = js.undefined
@@ -85,7 +88,7 @@ object TransferProps {
     @scala.inline
     def setListStyle(value: (js.Function1[/* style */ ListStyle, CSSProperties]) | CSSProperties): Self = this.set("listStyle", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: /* props */ TransferListBodyProps => TagMod[Any]): Self = this.set("children", js.Any.fromFunction1(value))
+    def setChildren(value: /* props */ TransferListBodyProps => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -101,7 +104,7 @@ object TransferProps {
     @scala.inline
     def deleteFilterOption: Self = this.set("filterOption", js.undefined)
     @scala.inline
-    def setFooter(value: /* props */ TransferListProps => TagMod[Any]): Self = this.set("footer", js.Any.fromFunction1(value))
+    def setFooter(value: /* props */ TransferListProps => ReactElement): Self = this.set("footer", js.Any.fromFunction1(value))
     @scala.inline
     def deleteFooter: Self = this.set("footer", js.undefined)
     @scala.inline
@@ -131,6 +134,10 @@ object TransferProps {
     @scala.inline
     def deleteOnSelectChange: Self = this.set("onSelectChange", js.undefined)
     @scala.inline
+    def setOneWay(value: Boolean): Self = this.set("oneWay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOneWay: Self = this.set("oneWay", js.undefined)
+    @scala.inline
     def setOperationStyle(value: CSSProperties): Self = this.set("operationStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOperationStyle: Self = this.set("operationStyle", js.undefined)
@@ -138,6 +145,10 @@ object TransferProps {
     def setOperations(value: js.Array[String]): Self = this.set("operations", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOperations: Self = this.set("operations", js.undefined)
+    @scala.inline
+    def setPagination(value: PaginationType): Self = this.set("pagination", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePagination: Self = this.set("pagination", js.undefined)
     @scala.inline
     def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline

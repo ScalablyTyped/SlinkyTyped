@@ -1,17 +1,19 @@
 package typingsSlinky.antd.messageMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait ArgsProps extends js.Object {
-  var content: TagMod[Any]
+  var className: js.UndefOr[String] = js.undefined
+  var content: ReactElement
   var duration: Double | Null
-  var icon: js.UndefOr[TagMod[Any]] = js.undefined
+  var icon: js.UndefOr[ReactElement] = js.undefined
   var key: js.UndefOr[String | Double] = js.undefined
   var onClose: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
   var `type`: NoticeType
 }
 
@@ -36,7 +38,11 @@ object ArgsProps {
     @scala.inline
     def setType(value: NoticeType): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
-    def setContent(value: TagMod[Any]): Self = this.set("content", value.asInstanceOf[js.Any])
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setContent(value: ReactElement): Self = this.set("content", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteContent: Self = this.set("content", js.undefined)
     @scala.inline
@@ -46,7 +52,7 @@ object ArgsProps {
     @scala.inline
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setIcon(value: TagMod[Any]): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
     @scala.inline
@@ -57,6 +63,10 @@ object ArgsProps {
     def setOnClose(value: () => Unit): Self = this.set("onClose", js.Any.fromFunction0(value))
     @scala.inline
     def deleteOnClose: Self = this.set("onClose", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
   }
   
 }

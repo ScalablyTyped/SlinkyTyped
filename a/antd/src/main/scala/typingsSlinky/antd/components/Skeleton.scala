@@ -32,6 +32,8 @@ object Skeleton {
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
+    def round(value: Boolean): this.type = set("round", value.asInstanceOf[js.Any])
+    @scala.inline
     def title(value: SkeletonTitleProps | Boolean): this.type = set("title", value.asInstanceOf[js.Any])
   }
   

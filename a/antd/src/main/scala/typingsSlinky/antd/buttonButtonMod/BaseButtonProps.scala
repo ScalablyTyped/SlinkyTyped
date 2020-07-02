@@ -1,6 +1,5 @@
 package typingsSlinky.antd.buttonButtonMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.Delay
 import typingsSlinky.antd.sizeContextMod.SizeType
@@ -10,11 +9,11 @@ import scala.scalajs.js.annotation._
 
 trait BaseButtonProps extends js.Object {
   var block: js.UndefOr[Boolean] = js.undefined
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var danger: js.UndefOr[Boolean] = js.undefined
   var ghost: js.UndefOr[Boolean] = js.undefined
-  var icon: js.UndefOr[TagMod[Any]] = js.undefined
+  var icon: js.UndefOr[ReactElement] = js.undefined
   var loading: js.UndefOr[Boolean | Delay] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
   var shape: js.UndefOr[ButtonShape] = js.undefined
@@ -46,7 +45,7 @@ object BaseButtonProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def setChildren(value: TagMod[Any]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
@@ -64,7 +63,7 @@ object BaseButtonProps {
     @scala.inline
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setIcon(value: TagMod[Any]): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
     @scala.inline

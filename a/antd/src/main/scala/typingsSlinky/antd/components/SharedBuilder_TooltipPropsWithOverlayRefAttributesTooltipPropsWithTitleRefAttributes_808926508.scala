@@ -1,10 +1,10 @@
 package typingsSlinky.antd.components
 
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.antd.colorsMod.PresetColorType
 import typingsSlinky.antd.placementsMod.AdjustOverflow
 import typingsSlinky.antd.tooltipMod.RenderFunction
 import typingsSlinky.antd.tooltipMod.TooltipPlacement
@@ -28,15 +28,17 @@ class SharedBuilder_TooltipPropsWithOverlayRefAttributesTooltipPropsWithTitleRef
   @scala.inline
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   @scala.inline
+  def color(value: PresetColorType): this.type = set("color", value.asInstanceOf[js.Any])
+  @scala.inline
   def getPopupContainer(value: /* triggerNode */ HTMLElement => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
   @scala.inline
   def openClassName(value: String): this.type = set("openClassName", value.asInstanceOf[js.Any])
   @scala.inline
   def overlayReactElement(value: ReactElement): this.type = set("overlay", value.asInstanceOf[js.Any])
   @scala.inline
-  def overlayFunction0(value: () => TagMod[Any]): this.type = set("overlay", js.Any.fromFunction0(value))
+  def overlayFunction0(value: () => ReactElement): this.type = set("overlay", js.Any.fromFunction0(value))
   @scala.inline
-  def overlay(value: TagMod[Any] | RenderFunction): this.type = set("overlay", value.asInstanceOf[js.Any])
+  def overlay(value: ReactElement | RenderFunction): this.type = set("overlay", value.asInstanceOf[js.Any])
   @scala.inline
   def placement(value: TooltipPlacement): this.type = set("placement", value.asInstanceOf[js.Any])
   @scala.inline
@@ -44,8 +46,8 @@ class SharedBuilder_TooltipPropsWithOverlayRefAttributesTooltipPropsWithTitleRef
   @scala.inline
   def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   @scala.inline
-  def titleFunction0(value: () => TagMod[Any]): this.type = set("title", js.Any.fromFunction0(value))
+  def titleFunction0(value: () => ReactElement): this.type = set("title", js.Any.fromFunction0(value))
   @scala.inline
-  def title(value: TagMod[Any] | RenderFunction): this.type = set("title", value.asInstanceOf[js.Any])
+  def title(value: ReactElement | RenderFunction): this.type = set("title", value.asInstanceOf[js.Any])
 }
 
